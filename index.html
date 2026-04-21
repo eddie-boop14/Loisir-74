@@ -441,7 +441,7 @@ function updateStat(){
 async function loadAndRender(){
   grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--muted);font-size:0.9rem">Chargement des lieux…</div>';
   try {
-    const res = await fetch('/lieux.json', { cache: 'no-cache' });
+    const res = await fetch('/lieux.json?v=' + Date.now(), { cache: 'no-store' });
     if (!res.ok) throw new Error('fetch failed');
     const data = await res.json();
     if (!Array.isArray(data)) throw new Error('bad data');
