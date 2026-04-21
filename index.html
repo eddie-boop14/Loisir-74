@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <title>Loisirs 74 · Le guide des lieux de loisirs publics en Haute-Savoie</title>
-<meta name="description" content="Un guide indépendant des lieux de loisirs publics en Haute-Savoie. Parcs, lacs, cascades, pumptracks, voies vertes — infos issues de sources officielles, gratuits à visiter.">
+<meta name="description" content="Un guide indépendant des lieux de loisirs publics en Haute-Savoie. Parcs, lacs, cascades, points de vue — sources officielles, accès libre, gratuits à visiter.">
 
 <link rel="canonical" href="https://loisirs74.fr/">
 <link rel="alternate" hreflang="fr" href="https://loisirs74.fr/">
@@ -15,14 +15,14 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Loisirs 74 · Le guide des lieux de loisirs publics en Haute-Savoie">
-<meta property="og:description" content="Parcs, lacs, cascades, pumptracks, voies vertes. Sources officielles, accès libre, gratuits.">
+<meta property="og:description" content="Parcs, lacs, cascades, voies vertes, points de vue. Sources officielles, accès libre, gratuits.">
 <meta property="og:url" content="https://loisirs74.fr/">
 <meta property="og:site_name" content="Loisirs 74">
 <meta property="og:locale" content="fr_FR">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Loisirs 74 · Le guide des lieux de loisirs publics en Haute-Savoie">
-<meta name="twitter:description" content="Parcs, lacs, cascades, pumptracks, voies vertes. Sources officielles, accès libre, gratuits.">
+<meta name="twitter:description" content="Parcs, lacs, cascades, voies vertes, points de vue. Sources officielles, accès libre, gratuits.">
 
 <meta name="geo.region" content="FR-74">
 <meta name="geo.placename" content="Haute-Savoie">
@@ -89,7 +89,7 @@
 *{-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--header-h) + 1rem)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
-body{font-family:'Inter',system-ui,sans-serif;color:var(--text);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;font-size:16.5px;overflow-x:hidden;text-rendering:optimizeLegibility;font-feature-settings:"kern","liga","calt"}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--text);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;font-size:16.5px;overflow-x:hidden;overflow-wrap:break-word;word-wrap:break-word}
 img{max-width:100%;display:block;height:auto}
 button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
 a{color:var(--gold);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s var(--ease),color .15s var(--ease)}
@@ -130,45 +130,54 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--moss);outline-offse
 .menu-backdrop{position:fixed;inset:0;background:rgba(13,26,15,0.5);backdrop-filter:blur(2px);z-index:54;opacity:0;visibility:hidden;transition:opacity 0.3s}
 .menu-backdrop.visible{opacity:1;visibility:visible}
 
-.hero{max-width:960px;margin:0 auto;padding:clamp(2.5rem,8vw,5rem) var(--space) clamp(1.5rem,4vw,3rem)}
+.hero{max-width:960px;margin:0 auto;padding:clamp(2.5rem,8vw,5rem) var(--space) clamp(1rem,3vw,2rem)}
 .hero-eyebrow{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--moss);font-weight:600;margin-bottom:1rem}
-.hero h1{font-family:'Fraunces',serif;font-size:clamp(2.4rem,6.5vw,4.2rem);font-weight:500;color:var(--ink);line-height:1.02;letter-spacing:-0.025em;margin-bottom:1.25rem}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(2.2rem,6vw,3.8rem);font-weight:500;color:var(--ink);line-height:1.05;letter-spacing:-0.025em;margin-bottom:1.1rem;overflow-wrap:break-word}
 .hero h1 em{font-style:italic;color:var(--moss);font-weight:500}
-.hero-lead{font-size:clamp(1.05rem,1.7vw,1.22rem);color:var(--muted);line-height:1.55;max-width:640px}
+.hero-lead{font-size:clamp(1rem,1.7vw,1.18rem);color:var(--muted);line-height:1.55;max-width:640px}
 
-.stats{max-width:960px;margin:2rem auto;padding:0 var(--space);display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.75rem}
-.stat{background:var(--cream);border-radius:var(--r-lg);padding:1.25rem 1.4rem;border:1px solid var(--rule)}
-.stat-number{font-family:'Fraunces',serif;font-size:2.1rem;font-weight:500;color:var(--moss);line-height:1;letter-spacing:-0.02em}
-.stat-label{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-top:0.4rem;font-weight:600}
+.stats{max-width:960px;margin:1.5rem auto;padding:0 var(--space);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(170px,100%),1fr));gap:0.6rem}
+.stat{background:var(--cream);border-radius:var(--r-lg);padding:1rem 1.2rem;border:1px solid var(--rule);min-width:0}
+.stat-number{font-family:'Fraunces',serif;font-size:1.9rem;font-weight:500;color:var(--moss);line-height:1;letter-spacing:-0.02em}
+.stat-label{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-top:0.4rem;font-weight:600}
 
-.section-title{max-width:1180px;margin:4rem auto 1.5rem;padding:0 var(--space);display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-.section-title h2{font-family:'Fraunces',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:500;color:var(--ink);letter-spacing:-0.015em;line-height:1.1}
-.section-title p{font-size:0.9rem;color:var(--muted);margin:0}
+/* FILTERS */
+.filters{max-width:1180px;margin:2.5rem auto 1rem;padding:0 var(--space)}
+.filter-search{position:relative;margin-bottom:0.9rem}
+.filter-search input{width:100%;padding:0.8rem 1rem 0.8rem 2.6rem;font-family:inherit;font-size:0.95rem;color:var(--ink);background:var(--white);border:1px solid var(--rule);border-radius:var(--r);transition:border-color 0.15s,box-shadow 0.15s}
+.filter-search input::placeholder{color:var(--muted)}
+.filter-search input:focus{outline:none;border-color:var(--moss);box-shadow:0 0 0 3px var(--moss-pale)}
+.filter-search svg{position:absolute;left:0.9rem;top:50%;transform:translateY(-50%);width:18px;height:18px;stroke:var(--muted);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.filter-chips{display:flex;gap:0.4rem;flex-wrap:wrap;align-items:center}
+.chip{font-family:inherit;font-size:0.82rem;font-weight:500;color:var(--text);background:var(--cream);border:1px solid var(--rule);padding:0.4rem 0.9rem;border-radius:99px;transition:all 0.15s var(--ease);white-space:nowrap}
+.chip:hover{border-color:var(--moss);color:var(--moss)}
+.chip[aria-pressed="true"]{background:var(--moss);color:#fff;border-color:var(--moss)}
+.chip .count{display:inline-block;font-size:0.72rem;font-weight:600;margin-left:0.3rem;opacity:0.7}
 
-.lieux{max-width:1180px;margin:0 auto 3rem;padding:0 var(--space);display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
-.lieu-card{display:block;background:var(--white);border:1px solid var(--rule);border-radius:var(--r-lg);overflow:hidden;transition:transform 0.25s var(--ease),border-color 0.25s var(--ease),box-shadow 0.25s var(--ease)}
+.results-meta{max-width:1180px;margin:0 auto;padding:0.4rem var(--space) 0;font-size:0.78rem;color:var(--muted);letter-spacing:0.01em}
+
+/* LIEUX GRID */
+.lieux{max-width:1180px;margin:0.5rem auto 3rem;padding:0 var(--space);display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:1rem}
+.lieu-card{display:block;background:var(--white);border:1px solid var(--rule);border-radius:var(--r-lg);overflow:hidden;transition:transform 0.25s var(--ease),border-color 0.25s var(--ease),box-shadow 0.25s var(--ease);min-width:0}
 .lieu-card:hover{transform:translateY(-3px);border-color:var(--moss-pale);box-shadow:var(--shadow-md)}
 .lieu-card-img{aspect-ratio:16/10;background:var(--cream);overflow:hidden;position:relative}
 .lieu-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s var(--ease)}
 .lieu-card:hover .lieu-card-img img{transform:scale(1.03)}
 .lieu-card-cat{position:absolute;top:0.6rem;left:0.6rem;background:rgba(13,26,15,0.85);color:var(--gold-pale);font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.25rem 0.6rem;border-radius:3px;backdrop-filter:blur(4px)}
-.lieu-card-body{padding:1.15rem 1.3rem 1.3rem}
-.lieu-card h3{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;color:var(--ink);margin-bottom:0.3rem;letter-spacing:-0.01em;line-height:1.25}
-.lieu-card .commune{font-size:0.75rem;color:var(--moss);font-weight:600;letter-spacing:0.02em;margin-bottom:0.55rem}
-.lieu-card .desc{font-size:0.85rem;color:var(--muted);line-height:1.5;margin-bottom:0.75rem}
-.lieu-card .meta{font-size:0.7rem;color:var(--muted);letter-spacing:0.02em;display:flex;gap:0.5rem;flex-wrap:wrap}
-.lieu-card .meta span{background:var(--moss-pale);color:var(--moss);padding:0.15rem 0.5rem;border-radius:10px;font-weight:600;text-transform:uppercase;font-size:0.62rem;letter-spacing:0.08em}
-.lieu-card.coming{background:var(--cream);border-style:dashed;text-align:center;padding:2rem 1.3rem;display:flex;flex-direction:column;justify-content:center;min-height:280px}
-.lieu-card.coming:hover{transform:none;box-shadow:none}
-.lieu-card.coming .icon{font-size:2rem;margin-bottom:0.75rem;opacity:0.5}
-.lieu-card.coming h3{color:var(--muted);margin-bottom:0.5rem}
-.lieu-card.coming p{font-size:0.85rem;color:var(--muted);line-height:1.55}
+.lieu-card-body{padding:1.1rem 1.25rem 1.25rem;min-width:0}
+.lieu-card h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:0.3rem;letter-spacing:-0.01em;line-height:1.25;overflow-wrap:break-word}
+.lieu-card .commune{font-size:0.75rem;color:var(--moss);font-weight:600;letter-spacing:0.02em;margin-bottom:0.5rem}
+.lieu-card .desc{font-size:0.85rem;color:var(--muted);line-height:1.5;margin-bottom:0.7rem;overflow-wrap:break-word}
+
+.empty{max-width:520px;margin:3rem auto;padding:2rem 1.5rem;text-align:center;color:var(--muted);font-size:0.95rem;background:var(--cream);border-radius:var(--r-lg);border:1px dashed var(--rule)}
+.empty strong{display:block;font-family:'Fraunces',serif;font-size:1.1rem;color:var(--ink);margin-bottom:0.4rem}
 
 .about-box{max-width:820px;margin:4rem auto 0;padding:0 var(--space)}
 .about-inner{background:var(--moss-pale);border-radius:var(--r-lg);padding:2rem 2.25rem;border:1px solid var(--rule)}
 .about-inner h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:500;color:var(--moss);margin-bottom:0.85rem;letter-spacing:-0.01em}
 .about-inner p{font-size:0.95rem;line-height:1.7;color:var(--text);margin-bottom:0.9rem}
 .about-inner p:last-child{margin-bottom:0}
+.about-inner strong{color:var(--ink);font-weight:600}
 
 .partner-section{max-width:960px;margin:3rem auto 2rem;padding:0 var(--space)}
 .partner-box{background:var(--white);border:1.5px dashed var(--gold);border-radius:var(--r-lg);padding:2rem 2.25rem;text-align:center}
@@ -240,39 +249,35 @@ footer.site .bottom{max-width:1180px;margin:2.5rem auto 0;padding-top:1.5rem;bor
 <section class="hero">
   <p class="hero-eyebrow">Haute-Savoie · Guide indépendant</p>
   <h1>Les lieux de loisirs <em>gratuits</em><br>qu'on connaît vraiment.</h1>
-  <p class="hero-lead">Un guide des parcs, lacs, cascades, pumptracks et voies vertes en accès libre du département. Chaque fait vient de sources officielles, croisées et datées. Pas de remplissage, pas de baratin.</p>
+  <p class="hero-lead">Un guide des parcs, lacs, cascades, voies vertes et points de vue en accès libre du département. Chaque fait vient de sources officielles, croisées et datées. Pas de remplissage, pas de baratin.</p>
 </section>
 
 <div class="stats reveal">
-  <div class="stat"><div class="stat-number">1</div><div class="stat-label">Lieu publié</div></div>
+  <div class="stat"><div class="stat-number" id="stat-count">—</div><div class="stat-label">Lieux publiés</div></div>
   <div class="stat"><div class="stat-number">100%</div><div class="stat-label">Accès libre &amp; gratuit</div></div>
   <div class="stat"><div class="stat-number">0</div><div class="stat-label">Publicités · Trackers</div></div>
   <div class="stat"><div class="stat-number">74</div><div class="stat-label">Haute-Savoie uniquement</div></div>
 </div>
 
-<div class="section-title">
-  <h2>Les lieux couverts</h2>
-  <p>Nouveaux lieux ajoutés au fur et à mesure des visites.</p>
+<section class="filters" aria-label="Filtres">
+  <div class="filter-search">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="search" id="search-input" placeholder="Chercher un lieu, une commune…" aria-label="Chercher un lieu ou une commune">
+  </div>
+  <div class="filter-chips" id="filter-chips" role="group" aria-label="Filtrer par catégorie">
+    <!-- Populated by JS -->
+  </div>
+</section>
+
+<div class="results-meta" id="results-meta" aria-live="polite"></div>
+
+<div class="lieux" id="lieux-grid">
+  <!-- Populated by JS -->
 </div>
 
-<div class="lieux">
-  <a href="/domaine-du-tornet.html" class="lieu-card">
-    <div class="lieu-card-img">
-      <span class="lieu-card-cat">Parc</span>
-      <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=800&q=80" alt="Domaine du Tornet, parc public à La Balme-de-Sillingy" loading="lazy">
-    </div>
-    <div class="lieu-card-body">
-      <div class="commune">La Balme-de-Sillingy</div>
-      <h3>Domaine du Tornet</h3>
-      <p class="desc">Lac de 7 ha, pumptrack, aire de jeux neuve, cerisiers à fleurs d'Asie, ponton. Accès libre toute l'année.</p>
-      <div class="meta"><span>Libre</span><span>Chiens ok</span><span>Parking</span></div>
-    </div>
-  </a>
-  <div class="lieu-card coming">
-    <div class="icon" aria-hidden="true">🏔️</div>
-    <h3>D'autres lieux arrivent</h3>
-    <p>Cascade d'Angon, Voie verte La Belle Via, Gorges du Chéran… La liste s'allonge au fil des vérifications et publications.</p>
-  </div>
+<div class="empty" id="empty-state" style="display:none">
+  <strong>Aucun lieu ne correspond</strong>
+  Essayez un autre mot-clé ou retirez les filtres pour voir tout le site.
 </div>
 
 <section class="about-box reveal" id="a-propos">
@@ -329,6 +334,145 @@ footer.site .bottom{max-width:1180px;margin:2.5rem auto 0;padding-top:1.5rem;bor
 <script>
 (function(){
 'use strict';
+
+// =====================================================================
+// LIEUX DATA — loaded from /lieux.json at page load.
+// To add a new lieu to the homepage: edit lieux.json, not this file.
+// =====================================================================
+let LIEUX = [];
+
+// =====================================================================
+// CATEGORY LABELS — displayed on filter chips and card badges
+// =====================================================================
+const CATEGORY_LABELS = {
+  "parc": "Parcs",
+  "lac": "Lacs",
+  "cascade": "Cascades",
+  "voie-verte": "Voies vertes",
+  "point-de-vue": "Points de vue",
+  "grotte": "Grottes",
+  "sentier": "Sentiers",
+  "zone-humide": "Zones humides"
+};
+
+// =====================================================================
+// FILTER STATE
+// =====================================================================
+let activeCategory = "all";
+let searchQuery = "";
+
+const grid = document.getElementById('lieux-grid');
+const chipsWrap = document.getElementById('filter-chips');
+const searchInput = document.getElementById('search-input');
+const emptyState = document.getElementById('empty-state');
+const resultsMeta = document.getElementById('results-meta');
+const statCount = document.getElementById('stat-count');
+
+// Build category counts (only count those that have at least one lieu)
+function buildCategoryCounts(){
+  const counts = { all: LIEUX.length };
+  LIEUX.forEach(l => { counts[l.category] = (counts[l.category] || 0) + 1; });
+  return counts;
+}
+
+// Render filter chips
+function renderChips(){
+  const counts = buildCategoryCounts();
+  const categoriesInUse = Object.keys(CATEGORY_LABELS).filter(k => counts[k] > 0);
+  const chips = [
+    `<button class="chip" data-cat="all" aria-pressed="true">Tous<span class="count">${counts.all}</span></button>`,
+    ...categoriesInUse.map(k =>
+      `<button class="chip" data-cat="${k}" aria-pressed="false">${CATEGORY_LABELS[k]}<span class="count">${counts[k]}</span></button>`
+    )
+  ];
+  chipsWrap.innerHTML = chips.join('');
+  chipsWrap.querySelectorAll('.chip').forEach(c => {
+    c.addEventListener('click', () => {
+      chipsWrap.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed','false'));
+      c.setAttribute('aria-pressed','true');
+      activeCategory = c.dataset.cat;
+      renderGrid();
+    });
+  });
+}
+
+// Normalize string for search (lowercase + strip accents)
+function norm(s){
+  return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+}
+
+// Render grid according to filters
+function renderGrid(){
+  const q = norm(searchQuery.trim());
+  const filtered = LIEUX.filter(l => {
+    if (activeCategory !== "all" && l.category !== activeCategory) return false;
+    if (!q) return true;
+    return norm(l.name).includes(q) || norm(l.commune).includes(q) || norm(l.desc).includes(q);
+  });
+  if (filtered.length === 0) {
+    grid.innerHTML = '';
+    emptyState.style.display = 'block';
+    resultsMeta.textContent = '';
+    return;
+  }
+  emptyState.style.display = 'none';
+  resultsMeta.textContent = `${filtered.length} lieu${filtered.length > 1 ? 'x' : ''} affiché${filtered.length > 1 ? 's' : ''}`;
+  grid.innerHTML = filtered.map(l => `
+    <a href="/${l.slug}.html" class="lieu-card">
+      <div class="lieu-card-img">
+        <span class="lieu-card-cat">${CATEGORY_LABELS[l.category] || l.category}</span>
+        <img src="${l.img}" alt="${l.name}, ${l.commune}" loading="lazy">
+      </div>
+      <div class="lieu-card-body">
+        <div class="commune">${l.commune}</div>
+        <h3>${l.name}</h3>
+        <p class="desc">${l.desc}</p>
+      </div>
+    </a>
+  `).join('');
+}
+
+// Update hero stat
+function updateStat(){
+  if (statCount) statCount.textContent = LIEUX.length;
+}
+
+// Load lieux.json, then paint
+async function loadAndRender(){
+  grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--muted);font-size:0.9rem">Chargement des lieux…</div>';
+  try {
+    const res = await fetch('/lieux.json', { cache: 'no-cache' });
+    if (!res.ok) throw new Error('fetch failed');
+    const data = await res.json();
+    if (!Array.isArray(data)) throw new Error('bad data');
+    LIEUX = data;
+    updateStat();
+    renderChips();
+    renderGrid();
+  } catch (err) {
+    console.error('lieux.json load failed:', err);
+    grid.innerHTML = '';
+    emptyState.innerHTML = '<strong>Impossible de charger la liste</strong>Les lieux ne peuvent pas s\'afficher. Rafraîchissez la page, ou revenez plus tard.';
+    emptyState.style.display = 'block';
+    resultsMeta.textContent = '';
+  }
+}
+
+loadAndRender();
+
+// Search input (debounced)
+let searchTimer;
+searchInput?.addEventListener('input', () => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => {
+    searchQuery = searchInput.value;
+    renderGrid();
+  }, 120);
+});
+
+// =====================================================================
+// CHROME (theme toggle, progress, menu) — same as template
+// =====================================================================
 const themeToggle = document.getElementById('theme-toggle');
 const root = document.documentElement;
 const savedTheme = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -347,6 +491,7 @@ function updateThemeIcon(t){
   svg.querySelectorAll('.sun').forEach(e => e.style.display = t === 'light' ? '' : 'none');
   svg.querySelectorAll('.moon').forEach(e => e.style.display = t === 'dark' ? '' : 'none');
 }
+
 const progressFill = document.getElementById('progress-fill');
 let tick = false;
 window.addEventListener('scroll', () => {
@@ -360,10 +505,12 @@ window.addEventListener('scroll', () => {
     tick = true;
   }
 }, { passive: true });
+
 const header = document.getElementById('site-header');
 window.addEventListener('scroll', () => {
   if (header) header.classList.toggle('scrolled', window.scrollY > 8);
 }, { passive: true });
+
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 const backdrop = document.getElementById('menu-backdrop');
@@ -377,6 +524,7 @@ menuToggle?.addEventListener('click', () => setMenu(menuToggle.getAttribute('ari
 backdrop?.addEventListener('click', () => setMenu(false));
 document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
@@ -390,4 +538,3 @@ if ('IntersectionObserver' in window) {
 
 </body>
 </html>
-
