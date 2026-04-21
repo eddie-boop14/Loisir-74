@@ -37,11 +37,22 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
 
-# HTML: short cache so updates propagate fast
+# HTML: no browser cache so updates propagate immediately (Netlify's CDN still handles fast delivery).
 [[headers]]
   for = "/*.html"
   [headers.values]
-    Cache-Control = "public, max-age=300, must-revalidate"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# JSON & XML data files: always revalidate so the homepage grid and sitemap stay fresh after deploys
+[[headers]]
+  for = "/*.json"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 # Images: long cache
 [[headers]]
