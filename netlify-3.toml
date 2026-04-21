@@ -1,0 +1,81 @@
+# Netlify configuration · Loisirs 74
+
+[build]
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# =====================================================================
+# REDIRECTS
+# =====================================================================
+
+# Force apex (no www) once domain is pointed. Netlify-subdomain stage: harmless.
+[[redirects]]
+  from = "https://www.loisirs74.fr/*"
+  to = "https://loisirs74.fr/:splat"
+  status = 301
+  force = true
+
+# 404 fallback on anything not matching a file
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# =====================================================================
+# HEADERS
+# =====================================================================
+
+# Security headers everywhere
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+# HTML: short cache so updates propagate fast
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+
+# Images: long cache
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# =====================================================================
+# POST-PROCESSING
+# =====================================================================
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.css]
+  bundle = false
+  minify = false
+
+[build.processing.js]
+  bundle = false
+  minify = false
+
+[build.processing.images]
+  compress = true
