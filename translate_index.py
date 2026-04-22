@@ -12,8 +12,8 @@ from pathlib import Path
 import re
 import sys
 
-SRC = Path('/home/claude/work/deploy/index.html')
-OUT_DIR = Path('/home/claude/work/deploy')
+SRC = Path('index.html')
+OUT_DIR = Path('.')
 
 # Language-specific translations. Keys = French source strings. Values = dict of translations.
 # Ordered by rough appearance in the file. Uses unambiguous strings to avoid collisions.
@@ -465,4 +465,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
