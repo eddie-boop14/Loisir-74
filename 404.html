@@ -2,57 +2,112 @@
 <html lang="fr" data-theme="light">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page introuvable — Loisirs 74</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Page introuvable · Loisirs 74</title>
+<meta name="description" content="Cette page n'existe pas ou plus. Retour à la liste des lieux de loisirs publics de Haute-Savoie.">
 <meta name="robots" content="noindex, follow">
+
+<meta name="theme-color" content="#2f5740" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1a0f" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E🏞️%3C/text%3E%3C/svg%3E">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#0d1a0f;--paper:#faf8f3;--cream:#f1ece0;--rule:#e7e1d1;--moss:#2f5740;--moss2:#3b6b4c;--moss-pale:#eef3ef;--gold:#b8822f;--gold-pale:#f0dfc0;--muted:#6a706b;--r:6px;--r-lg:12px}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',system-ui,sans-serif;color:#2a2f2b;background:var(--paper);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
-a{color:var(--gold);text-decoration:none;border-bottom:1px solid transparent;transition:border-color 0.15s}
-a:hover{border-bottom-color:var(--gold)}
 
-.topbar{padding:1rem 1.5rem;border-bottom:1px solid var(--rule)}
-.brand{display:inline-flex;align-items:center;gap:0.55rem;font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--ink);border-bottom:none}
-.brand-mark{width:28px;height:28px;background:var(--moss);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold-pale);font-size:0.9rem}
+<style>
+:root{
+  --ink:#0d1a0f; --paper:#faf8f3; --cream:#f1ece0; --rule:#e7e1d1;
+  --moss:#2f5740; --moss-pale:#eef3ef;
+  --gold:#b8822f; --gold-light:#d4a15a;
+  --text:#2a2f2b; --muted:#6a706b;
+  --r:6px; --r-lg:12px;
+  --ease:cubic-bezier(0.4,0,0.2,1);
+}
+[data-theme="dark"]{
+  --ink:#f5f3ee; --paper:#0f1612; --cream:#1a231c; --rule:#2a3329;
+  --moss:#7ba88a; --moss-pale:#1e2821;
+  --gold:#d4a15a; --gold-light:#e5bc7a;
+  --text:#d7d4cc; --muted:#8a9088;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme]){
+    --ink:#f5f3ee; --paper:#0f1612; --cream:#1a231c; --rule:#2a3329;
+    --moss:#7ba88a; --moss-pale:#1e2821;
+    --gold:#d4a15a; --gold-light:#e5bc7a;
+    --text:#d7d4cc; --muted:#8a9088;
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;min-height:100vh}
+
+.wrap{flex:1;display:flex;align-items:center;justify-content:center;padding:clamp(2rem,5vw,4rem) clamp(1rem,3vw,2rem)}
+.card{max-width:520px;width:100%;text-align:center}
+
+.brand{display:inline-flex;align-items:center;gap:0.55rem;font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--ink);letter-spacing:-0.01em;margin-bottom:2.5rem;text-decoration:none}
+.brand-mark{width:32px;height:32px;background:var(--moss);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:1rem}
 .brand em{font-style:italic;color:var(--moss);font-weight:500}
 
-main{flex:1;display:flex;align-items:center;justify-content:center;padding:2rem 1.5rem}
-.wrap{max-width:540px;text-align:center}
-.number{font-family:'Fraunces',serif;font-size:clamp(5rem,18vw,9rem);font-weight:500;color:var(--moss);line-height:0.9;letter-spacing:-0.04em;margin-bottom:1rem}
-.number em{font-style:italic;color:var(--gold)}
-h1{font-family:'Fraunces',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:500;color:var(--ink);line-height:1.15;letter-spacing:-0.02em;margin-bottom:1rem}
-p{color:var(--muted);font-size:1rem;line-height:1.65;margin-bottom:1.75rem;max-width:440px;margin-left:auto;margin-right:auto}
-.cta{display:inline-block;background:var(--moss);color:#fff;font-size:0.9rem;font-weight:600;padding:0.75rem 1.4rem;border-radius:var(--r);border-bottom:none;transition:background 0.15s,transform 0.15s}
-.cta:hover{background:var(--moss2);transform:translateX(2px);border-bottom:none}
+.code{font-family:'Fraunces',serif;font-size:clamp(4rem,14vw,7rem);font-weight:500;color:var(--moss);line-height:1;letter-spacing:-0.03em;margin-bottom:0.5rem}
+.code em{font-style:italic;color:var(--gold)}
 
-footer{text-align:center;padding:1.5rem;font-size:0.78rem;color:var(--muted);border-top:1px solid var(--rule);font-family:'Fraunces',serif;font-style:italic}
+h1{font-family:'Fraunces',serif;font-size:clamp(1.4rem,3vw,1.8rem);font-weight:600;color:var(--ink);letter-spacing:-0.015em;margin-bottom:1rem;line-height:1.2}
+h1 em{font-style:italic;color:var(--moss);font-weight:500}
+
+p{color:var(--muted);font-size:1rem;line-height:1.6;max-width:42ch;margin:0 auto 2rem}
+
+.actions{display:flex;gap:0.65rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 1.3rem;border-radius:var(--r);font-size:0.92rem;font-weight:600;text-decoration:none;transition:all 0.2s var(--ease);white-space:nowrap;border:1px solid transparent}
+.btn-primary{background:var(--moss);color:var(--paper)}
+.btn-primary:hover{background:var(--ink)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--rule)}
+.btn-ghost:hover{background:var(--cream);border-color:var(--moss)}
+.btn svg{width:14px;height:14px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform 0.2s var(--ease)}
+.btn-primary:hover svg{transform:translateX(3px)}
+
+.langs{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--rule);font-size:0.85rem;color:var(--muted);display:flex;gap:1.25rem;justify-content:center;flex-wrap:wrap}
+.langs a{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;transition:all 0.15s var(--ease)}
+.langs a:hover{color:var(--moss);border-bottom-color:var(--moss)}
+.langs span{color:var(--rule)}
 </style>
 </head>
 <body>
 
-<header class="topbar">
-  <a href="/" class="brand">
-    <span class="brand-mark" aria-hidden="true">🏞️</span>
-    <span>Loisirs <em>74</em></span>
-  </a>
-</header>
+<main class="wrap">
+  <div class="card">
+    <a href="/" class="brand">
+      <span class="brand-mark" aria-hidden="true">🏞️</span>
+      <span>Loisirs <em>74</em></span>
+    </a>
 
-<main>
-  <div class="wrap">
-    <div class="number">4<em>0</em>4</div>
-    <h1>Ce lieu n'existe pas (encore)</h1>
-    <p>La page que vous cherchez n'a pas été trouvée. Peut-être une URL mal copiée, ou un lieu qu'on n'a pas encore publié.</p>
-    <a href="/" class="cta">← Retour à la liste des lieux</a>
+    <div class="code">4<em>0</em>4</div>
+    <h1>Cette page n'existe <em>pas</em>.</h1>
+    <p>Elle a peut-être été déplacée, ou le lien que vous avez suivi est obsolète. Retour à l'index pour retrouver les cinquante lieux documentés.</p>
+
+    <div class="actions">
+      <a href="/" class="btn btn-primary">
+        Retour à l'accueil
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/contact" class="btn btn-ghost">Signaler le lien cassé</a>
+    </div>
+
+    <nav class="langs" aria-label="Autres langues">
+      <a href="/">Français</a>
+      <span aria-hidden="true">·</span>
+      <a href="/en/">English</a>
+      <span aria-hidden="true">·</span>
+      <a href="/de/">Deutsch</a>
+      <span aria-hidden="true">·</span>
+      <a href="/it/">Italiano</a>
+    </nav>
   </div>
 </main>
 
-<footer>© 2026 bleu-canard édition, Edmaster &amp; Claudius</footer>
-
 </body>
 </html>
-
