@@ -2,486 +2,1086 @@
 <html lang="fr" data-theme="light">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Loisirs 74 — Espaces de loisirs publics en Haute-Savoie</title>
-<meta name="description" content="Lacs, cascades, sentiers, parcs en Haute-Savoie. Accès, parking, tarifs, chiens. Ce qu'il faut savoir avant de partir.">
-<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- TITLE & DESCRIPTION -->
+<title>Loisirs 74 — Guide des lieux publics de Haute-Savoie</title>
+<meta name="description" content="Cinquante lieux de loisirs publics et gratuits en Haute-Savoie : lacs, cascades, voies vertes, parcs, points de vue. Sources officielles, infos vérifiées.">
+
+<!-- CANONICAL & LANGUAGE ALTERNATES -->
 <link rel="canonical" href="https://loisirs74.fr/">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://loisirs74.fr/">
-<meta property="og:title" content="Loisirs 74 — Espaces de loisirs publics en Haute-Savoie">
-<meta property="og:description" content="Lacs, cascades, sentiers, parcs en Haute-Savoie. Accès, parking, tarifs, chiens. Ce qu'il faut savoir avant de partir.">
-<meta property="og:locale" content="fr_FR">
-<meta property="og:site_name" content="Loisirs 74">
-<meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" hreflang="fr" href="https://loisirs74.fr/">
 <link rel="alternate" hreflang="en" href="https://loisirs74.fr/en/">
 <link rel="alternate" hreflang="de" href="https://loisirs74.fr/de/">
 <link rel="alternate" hreflang="it" href="https://loisirs74.fr/it/">
 <link rel="alternate" hreflang="x-default" href="https://loisirs74.fr/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Loisirs 74","url":"https://loisirs74.fr","description":"Guide des espaces de loisirs publics en Haute-Savoie","inLanguage":["fr","en","de","it"]}</script>
+
+<!-- ROBOTS & CRAWLING -->
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+
+<!-- OPEN GRAPH -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Loisirs 74 — Guide des lieux publics de Haute-Savoie">
+<meta property="og:description" content="Cinquante lieux de loisirs publics et gratuits en Haute-Savoie : lacs, cascades, voies vertes, parcs, points de vue. Sources officielles, infos vérifiées.">
+<meta property="og:url" content="https://loisirs74.fr/">
+<meta property="og:site_name" content="Loisirs 74">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="it_IT">
+
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Loisirs 74 — Guide des lieux publics de Haute-Savoie">
+<meta name="twitter:description" content="Cinquante lieux de loisirs publics et gratuits en Haute-Savoie, documentés à partir de sources officielles.">
+
+<!-- GEO -->
+<meta name="geo.region" content="FR-74">
+<meta name="geo.placename" content="Haute-Savoie">
+
+<!-- THEME & APP -->
+<meta name="theme-color" content="#2f5740" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1a0f" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Loisirs 74">
+<meta name="application-name" content="Loisirs 74">
+
+<!-- FAVICON -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E🏞️%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- PRELOAD -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://loisirs74.fr/#website",
+      "url": "https://loisirs74.fr/",
+      "name": "Loisirs 74",
+      "description": "Guide indépendant des lieux de loisirs publics en Haute-Savoie",
+      "publisher": { "@id": "https://loisirs74.fr/#publisher" },
+      "inLanguage": "fr-FR",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": { "@type": "EntryPoint", "urlTemplate": "https://loisirs74.fr/?q={search_term_string}" },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://loisirs74.fr/#publisher",
+      "name": "Loisirs 74",
+      "url": "https://loisirs74.fr/",
+      "logo": { "@type": "ImageObject", "url": "https://loisirs74.fr/logo.png", "width": 512, "height": 512 }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://loisirs74.fr/#collection",
+      "url": "https://loisirs74.fr/",
+      "name": "Lieux de loisirs publics en Haute-Savoie",
+      "description": "Cinquante lieux publics, gratuits ou quasi-gratuits, documentés à partir de sources officielles.",
+      "isPartOf": { "@id": "https://loisirs74.fr/#website" },
+      "inLanguage": "fr-FR",
+      "mainEntity": { "@id": "https://loisirs74.fr/#lieux-list" }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://loisirs74.fr/#lieux-list",
+      "name": "Lieux de Haute-Savoie",
+      "numberOfItems": 50,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "url": "https://loisirs74.fr/domaine-du-tornet", "name": "Domaine du Tornet" },
+        { "@type": "ListItem", "position": 2, "url": "https://loisirs74.fr/cascade-d-angon", "name": "Cascade d'Angon" },
+        { "@type": "ListItem", "position": 3, "url": "https://loisirs74.fr/voie-verte-la-belle-via", "name": "Voie verte La Belle Via" },
+        { "@type": "ListItem", "position": 4, "url": "https://loisirs74.fr/roc-de-chere", "name": "Réserve naturelle du Roc de Chère" },
+        { "@type": "ListItem", "position": 5, "url": "https://loisirs74.fr/mont-veyrier", "name": "Mont Veyrier" },
+        { "@type": "ListItem", "position": 6, "url": "https://loisirs74.fr/lac-des-dronieres", "name": "Lac des Dronières" },
+        { "@type": "ListItem", "position": 7, "url": "https://loisirs74.fr/plan-d-eau-de-sciez", "name": "Plan d'eau de Sciez" },
+        { "@type": "ListItem", "position": 8, "url": "https://loisirs74.fr/plan-d-eau-des-ilettes", "name": "Plan d'eau des Îlettes" },
+        { "@type": "ListItem", "position": 9, "url": "https://loisirs74.fr/etang-de-crosagny", "name": "Étang de Crosagny" },
+        { "@type": "ListItem", "position": 10, "url": "https://loisirs74.fr/lac-vert-passy", "name": "Lac Vert" }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- CRITICAL CSS INLINED -->
 <style>
 :root{
-  --bg:#f4f1ea;--bg2:#edeae1;--surface:#fff;--border:#ddd8cc;
-  --ink:#1c1b18;--ink2:#4a4740;--muted:#8c8880;
-  --accent:#2b5c3f;--al:#e6f0ea;--chip:#e8e4db;
-  --sh:0 2px 12px rgba(0,0,0,.07);--shl:0 8px 28px rgba(0,0,0,.12);
-  --r:10px;--nav:62px;--fd:'Cormorant Garamond',Georgia,serif;--fb:'Outfit',sans-serif;--t:.18s ease;
+  --ink:#0d1a0f; --paper:#faf8f3; --cream:#f1ece0; --rule:#e7e1d1;
+  --moss:#2f5740; --moss2:#3b6b4c; --moss-pale:#eef3ef;
+  --gold:#b8822f; --gold-light:#d4a15a; --gold-pale:#f0dfc0;
+  --text:#2a2f2b; --muted:#6a706b; --white:#ffffff;
+  --r:6px; --r-lg:12px;
+  --ease:cubic-bezier(0.4,0,0.2,1);
+  --ease-out:cubic-bezier(0.16,1,0.3,1);
+  --shadow-sm:0 1px 3px rgba(13,26,15,0.06), 0 1px 2px rgba(13,26,15,0.08);
+  --shadow-md:0 4px 12px rgba(13,26,15,0.08), 0 2px 4px rgba(13,26,15,0.05);
+  --shadow-lg:0 12px 32px rgba(13,26,15,0.12), 0 4px 8px rgba(13,26,15,0.06);
+  --space:clamp(1rem, 2vw, 1.5rem);
+  --header-h:3.5rem;
 }
+
 [data-theme="dark"]{
-  --bg:#141412;--bg2:#1c1b18;--surface:#222120;--border:#2e2c28;
-  --ink:#f0ede6;--ink2:#b0ada6;--muted:#6e6a62;--accent:#4a9466;--al:#182d22;--chip:#2a2825;
-  --sh:0 2px 12px rgba(0,0,0,.35);--shl:0 8px 28px rgba(0,0,0,.5);
+  --ink:#f5f3ee; --paper:#0f1612; --cream:#1a231c; --rule:#2a3329;
+  --moss:#7ba88a; --moss2:#5d8f6d; --moss-pale:#1e2821;
+  --gold:#d4a15a; --gold-light:#e5bc7a; --gold-pale:#3a2d1a;
+  --text:#d7d4cc; --muted:#8a9088; --white:#1a231c;
 }
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--fb);background:var(--bg);color:var(--ink);min-height:100vh;font-size:15px;line-height:1.6;overflow-x:hidden}
+*{-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:calc(var(--header-h) + 1rem)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important}}
+body{font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:16.5px;overflow-x:hidden;text-rendering:optimizeLegibility;font-feature-settings:"kern","liga","calt";overflow-wrap:break-word}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;height:var(--nav);background:var(--bg);border-bottom:1px solid var(--border);z-index:1000;transition:background var(--t),box-shadow var(--t)}
-nav.scrolled{box-shadow:var(--sh)}
-.nav-i{max-width:1160px;margin:0 auto;height:100%;display:flex;align-items:center;padding:0 24px;gap:20px}
-.logo{font-family:var(--fd);font-size:24px;font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:-.3px;flex-shrink:0}
-.logo span{color:var(--accent)}
-.nav-links{display:flex;gap:2px;list-style:none;margin-left:8px}
-.nav-links a{font-size:14px;color:var(--ink2);text-decoration:none;padding:6px 12px;border-radius:6px;transition:color var(--t),background var(--t)}
-.nav-links a:hover{color:var(--ink);background:var(--chip)}
+img{max-width:100%;display:block;height:auto}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input,select{font-family:inherit;font-size:inherit;color:inherit}
+a{color:var(--gold);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s var(--ease),color .15s var(--ease)}
+a:hover{border-bottom-color:var(--gold)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--moss);outline-offset:3px;border-radius:2px}
 
-/* LANG */
-.ldd{position:relative;margin-left:auto;z-index:1001}
-.ldd-btn{display:flex;align-items:center;gap:6px;padding:7px 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--ink);font-family:var(--fb);font-size:13px;font-weight:500;cursor:pointer;transition:border-color var(--t);white-space:nowrap}
-.ldd-btn:hover,.ldd-btn:focus{border-color:var(--accent);outline:none}
-.ldd-btn svg{width:12px;height:12px;transition:transform var(--t)}
-.ldd.open .ldd-btn svg{transform:rotate(180deg)}
-.ldd-menu{position:absolute;top:calc(100% + 6px);right:0;background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:var(--shl);min-width:148px;overflow:hidden;opacity:0;transform:translateY(-6px);pointer-events:none;transition:opacity var(--t),transform var(--t)}
-.ldd.open .ldd-menu{opacity:1;transform:none;pointer-events:all}
-.ldd-menu a{display:flex;align-items:center;gap:10px;padding:10px 14px;font-size:13px;color:var(--ink);text-decoration:none;transition:background var(--t)}
-.ldd-menu a:hover{background:var(--bg2)}
-.ldd-menu a.active{color:var(--accent);font-weight:600}
+.skip-link{position:absolute;left:-9999px;top:1rem;background:var(--ink);color:var(--paper);padding:0.6rem 1rem;border-radius:var(--r);font-size:0.85rem;font-weight:600;z-index:1000;transition:left 0.15s}
+.skip-link:focus{left:1rem}
 
-/* THEME BTN */
-.tbtn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:8px;background:var(--surface);cursor:pointer;color:var(--ink);transition:all var(--t);flex-shrink:0}
-.tbtn:hover{border-color:var(--accent);color:var(--accent)}
-.tbtn svg{width:17px;height:17px}
+/* HEADER — identical to lieu pages */
+.header{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--paper) 85%, transparent);backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid transparent;transition:border-color 0.2s var(--ease),background 0.2s var(--ease)}
+.header.scrolled{border-bottom-color:var(--rule);background:color-mix(in srgb, var(--paper) 95%, transparent)}
+.header-inner{max-width:1280px;margin:0 auto;padding:0.75rem var(--space);display:flex;align-items:center;justify-content:space-between;gap:1rem;height:var(--header-h)}
+.brand{display:flex;align-items:center;gap:0.55rem;font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--ink);letter-spacing:-0.01em;border-bottom:none}
+.brand:hover{color:var(--moss);border-bottom:none}
+.brand-mark{width:28px;height:28px;background:var(--moss);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold-pale);font-size:0.9rem;flex-shrink:0}
+.brand em{font-style:italic;color:var(--moss);font-weight:500}
 
-/* HAM */
-.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none;flex-shrink:0}
-.ham span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all var(--t)}
-.ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.ham.open span:nth-child(2){opacity:0}
-.ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mob-menu{position:fixed;top:var(--nav);left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);padding:12px 24px 20px;z-index:999;transform:translateY(-110%);opacity:0;transition:transform var(--t),opacity var(--t);display:flex;flex-direction:column;gap:2px}
-.mob-menu.open{transform:none;opacity:1}
-.mob-menu a{font-size:15px;color:var(--ink);text-decoration:none;padding:11px 0;border-bottom:1px solid var(--border)}
-.mob-langs{display:flex;gap:8px;padding-top:12px}
-.mob-lang{padding:6px 14px;border:1px solid var(--border);border-radius:6px;font-family:var(--fb);font-size:12px;font-weight:500;color:var(--ink);background:var(--surface);text-decoration:none;transition:all var(--t)}
-.mob-lang.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.nav-desktop{display:flex;align-items:center;gap:0.25rem}
+.nav-desktop a{font-size:0.88rem;color:var(--text);font-weight:500;padding:0.45rem 0.8rem;border-radius:var(--r);border-bottom:none;transition:background 0.15s var(--ease),color 0.15s var(--ease)}
+.nav-desktop a:hover{background:var(--moss-pale);color:var(--moss)}
+.nav-desktop a[aria-current="page"]{color:var(--moss);background:var(--moss-pale)}
+@media(max-width:880px){.nav-desktop{display:none}}
+
+.header-tools{display:flex;align-items:center;gap:0.35rem}
+.icon-btn{width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;border-radius:var(--r);transition:background 0.15s var(--ease)}
+.icon-btn:hover{background:var(--moss-pale)}
+.icon-btn svg{width:18px;height:18px;stroke:var(--text);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+.lang-switch{display:flex;gap:0.1rem;padding:0.2rem;background:var(--cream);border-radius:var(--r);font-size:0.72rem;font-weight:600}
+.lang-switch a{padding:0.25rem 0.45rem;color:var(--muted);border-radius:3px;border-bottom:none;text-transform:uppercase;letter-spacing:0.5px;transition:all 0.15s var(--ease)}
+.lang-switch a:hover{color:var(--ink);border-bottom:none}
+.lang-switch a[aria-current="true"]{background:var(--moss);color:var(--paper)}
+
+.menu-toggle{display:none;width:36px;height:36px;flex-direction:column;justify-content:center;align-items:center;gap:5px;border-radius:var(--r);transition:background 0.15s var(--ease)}
+.menu-toggle:hover{background:var(--moss-pale)}
+.menu-toggle span{display:block;width:18px;height:2px;background:var(--text);border-radius:1px;transition:transform 0.25s var(--ease),opacity 0.25s var(--ease)}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:880px){.menu-toggle{display:flex}}
+
+.nav-mobile{position:fixed;top:0;right:0;bottom:0;width:min(340px,85vw);background:var(--paper);box-shadow:-12px 0 32px rgba(0,0,0,0.15);z-index:55;transform:translateX(100%);transition:transform 0.35s var(--ease-out);padding:calc(var(--header-h) + 1.5rem) 1.5rem 1.5rem;overflow-y:auto;visibility:hidden}
+.nav-mobile.open{transform:translateX(0);visibility:visible}
+.nav-mobile ul{list-style:none}
+.nav-mobile li{border-bottom:1px solid var(--rule)}
+.nav-mobile a{display:block;padding:1rem 0;font-size:1.05rem;color:var(--ink);font-weight:500;border-bottom:none}
+.nav-mobile a[aria-current="page"]{color:var(--moss)}
+.nav-mobile .mobile-lang{display:flex;gap:0.5rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--rule)}
+.nav-mobile .mobile-lang a{padding:0.5rem 0.9rem;border:1px solid var(--rule);border-radius:var(--r);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.5px;font-weight:600}
+.nav-mobile .mobile-lang a[aria-current="true"]{background:var(--moss);color:var(--paper);border-color:var(--moss)}
+.menu-backdrop{position:fixed;inset:0;background:rgba(13,26,15,0.5);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);z-index:54;opacity:0;visibility:hidden;transition:opacity 0.3s var(--ease)}
+.menu-backdrop.visible{opacity:1;visibility:visible}
 
 /* HERO */
-.hero{position:relative;min-height:460px;padding-top:var(--nav);display:flex;flex-direction:column;overflow:hidden}
-.hero-map-bg{position:absolute;inset:0;z-index:0}
-#hero-map{width:100%;height:100%}
-.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(244,241,234,.88) 0%,rgba(244,241,234,.75) 55%,rgba(244,241,234,.97) 100%)}
-[data-theme="dark"] .hero-overlay{background:linear-gradient(to bottom,rgba(20,20,18,.9) 0%,rgba(20,20,18,.8) 55%,rgba(20,20,18,.98) 100%)}
-.hero-content{position:relative;z-index:2;max-width:1160px;margin:0 auto;padding:48px 24px 44px;width:100%}
-.hero-ey{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.hero-ey::before{content:'';display:block;width:20px;height:1px;background:var(--accent)}
-.hero h1{font-family:var(--fd);font-size:clamp(34px,5vw,62px);font-weight:600;line-height:1.08;letter-spacing:-.4px;margin-bottom:14px;max-width:680px}
-.hero h1 em{font-style:italic;color:var(--accent)}
-.hero-sub{font-size:15px;color:var(--ink2);font-weight:300;line-height:1.8;max-width:460px}
+main{display:block}
+.hero{max-width:1100px;margin:0 auto;padding:clamp(2rem,5vw,4rem) var(--space) clamp(1.5rem,3vw,2.5rem);text-align:left}
+.hero-eyebrow{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--moss);font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--moss)}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(2.2rem,6vw,4rem);font-weight:500;color:var(--ink);line-height:1.05;letter-spacing:-0.025em;margin-bottom:1.25rem;max-width:18ch}
+.hero h1 em{font-style:italic;color:var(--moss);font-weight:500}
+.hero-lead{font-size:clamp(1.05rem,1.7vw,1.2rem);color:var(--muted);line-height:1.6;max-width:56ch;margin-bottom:0}
 
-/* FILTER BAR — z-index above everything */
-.fbar{position:sticky;top:var(--nav);z-index:500;background:var(--bg);border-bottom:1px solid var(--border);border-top:1px solid var(--border)}
-.fbar-i{max-width:1160px;margin:0 auto;padding:0 24px;height:52px;display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none}
-.fbar-i::-webkit-scrollbar{display:none}
-.fsep{width:1px;height:18px;background:var(--border);flex-shrink:0;margin:0 2px}
+/* CATEGORIES QUICK NAV */
+.cat-nav{max-width:1100px;margin:0 auto 2.5rem;padding:0 var(--space)}
+.cat-nav-title{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:0.85rem}
+.cat-nav-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:0.5rem}
+.cat-pill{display:flex;flex-direction:column;gap:0.2rem;padding:0.9rem 1rem;background:var(--white);border:1px solid var(--rule);border-radius:var(--r-lg);border-bottom:1px solid var(--rule);transition:all 0.18s var(--ease);min-width:0}
+.cat-pill:hover{border-color:var(--moss);background:var(--moss-pale);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.cat-pill-name{font-family:'Fraunces',serif;font-weight:600;color:var(--ink);font-size:1rem;letter-spacing:-0.01em;display:flex;align-items:center;gap:0.45rem}
+.cat-pill-icon{font-size:0.95rem;opacity:0.85}
+.cat-pill-count{font-size:0.78rem;color:var(--muted);font-weight:500}
 
-/* TYPE DROPDOWN — z-index high */
-.fdd{position:relative;flex-shrink:0;z-index:501}
-.fdd-btn{display:flex;align-items:center;gap:6px;padding:7px 14px;border:1px solid var(--border);border-radius:100px;background:var(--surface);color:var(--ink);font-family:var(--fb);font-size:13px;cursor:pointer;white-space:nowrap;transition:all var(--t)}
-.fdd-btn:hover{border-color:var(--accent)}
-.fdd-btn.sel{background:var(--accent);border-color:var(--accent);color:#fff}
-.fdd-btn svg{width:12px;height:12px;transition:transform var(--t);flex-shrink:0}
-.fdd.open .fdd-btn svg{transform:rotate(180deg)}
-.fdd-menu{position:absolute;top:calc(100% + 8px);left:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shl);min-width:190px;padding:8px;opacity:0;transform:translateY(-6px);pointer-events:none;transition:opacity var(--t),transform var(--t);z-index:600}
-.fdd.open .fdd-menu{opacity:1;transform:none;pointer-events:all}
-.fdd-opt{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;cursor:pointer;font-size:13px;color:var(--ink);transition:background var(--t);user-select:none}
-.fdd-opt:hover{background:var(--bg2)}
-.fdd-opt.sel{color:var(--accent);font-weight:500}
-.fchk{width:16px;height:16px;border:1.5px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all var(--t)}
-.fdd-opt.sel .fchk{background:var(--accent);border-color:var(--accent)}
-.fmark{display:none;width:4px;height:7px;border:2px solid #fff;border-top:none;border-left:none;transform:rotate(45deg) translateY(-1px)}
-.fdd-opt.sel .fmark{display:block}
+/* FILTER BAR */
+.filter{max-width:1100px;margin:0 auto 1.5rem;padding:0 var(--space);position:sticky;top:var(--header-h);z-index:40;background:var(--paper);padding-top:0.75rem;padding-bottom:0.75rem}
+.filter-inner{background:var(--white);border:1px solid var(--rule);border-radius:var(--r-lg);padding:0.75rem;display:grid;grid-template-columns:1fr auto auto auto;gap:0.5rem;box-shadow:var(--shadow-sm);align-items:center}
+@media(max-width:720px){.filter-inner{grid-template-columns:1fr 1fr;gap:0.5rem}.filter-search{grid-column:1 / -1}}
+.filter-search{position:relative}
+.filter-search svg{position:absolute;left:0.85rem;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--muted);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.filter-search input{width:100%;padding:0.65rem 0.75rem 0.65rem 2.35rem;border:1px solid var(--rule);background:var(--paper);border-radius:var(--r);font-size:0.92rem;color:var(--ink);transition:border-color 0.15s var(--ease),background 0.15s var(--ease)}
+.filter-search input:focus{border-color:var(--moss);background:var(--white);outline:none}
+.filter-search input::placeholder{color:var(--muted)}
+.filter select{padding:0.65rem 2rem 0.65rem 0.85rem;border:1px solid var(--rule);background:var(--paper);border-radius:var(--r);font-size:0.9rem;color:var(--ink);cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236a706b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0.6rem center;background-size:14px;transition:border-color 0.15s var(--ease)}
+.filter select:hover{border-color:var(--moss)}
+.filter-clear{padding:0.65rem 0.9rem;border:1px solid transparent;border-radius:var(--r);font-size:0.82rem;color:var(--muted);font-weight:500;transition:all 0.15s var(--ease);white-space:nowrap}
+.filter-clear:hover{color:var(--ink);background:var(--cream)}
+.filter-clear:disabled{opacity:0.35;cursor:not-allowed}
 
-/* PILLS */
-.pill{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;border-radius:100px;border:1px solid var(--border);background:var(--surface);font-family:var(--fb);font-size:13px;color:var(--ink);cursor:pointer;white-space:nowrap;transition:all var(--t);flex-shrink:0;user-select:none}
-.pill:hover{border-color:var(--accent)}
-.pill.on{background:var(--accent);border-color:var(--accent);color:#fff}
-.clr{font-size:12px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--fb);padding:4px 8px;text-decoration:underline;flex-shrink:0;display:none;white-space:nowrap}
-.clr.show{display:inline}
-
-/* CONTENT */
-.wrap{max-width:1160px;margin:0 auto;padding:0 24px 80px}
-.rrow{padding:18px 0 12px;display:flex;align-items:center;justify-content:space-between}
-.rcount{font-size:13px;color:var(--muted)}
-.rcount strong{color:var(--ink);font-weight:500}
-.vtgl{display:flex;gap:3px}
-.vbtn{padding:6px 10px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--muted);cursor:pointer;font-size:14px;transition:all var(--t)}
-.vbtn.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.filter-meta{max-width:1100px;margin:0 auto;padding:0 var(--space) 0.75rem;font-size:0.8rem;color:var(--muted);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.filter-meta strong{color:var(--ink);font-weight:600}
 
 /* GRID */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.grid-wrap{max-width:1100px;margin:0 auto;padding:0 var(--space) 3rem}
+.lieux-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:0.85rem}
 
-/* LIST MODE */
-.grid.list{display:flex;flex-direction:column;gap:8px}
-.grid.list .card{flex-direction:row;align-items:center;padding:12px 16px;gap:16px;min-height:0}
-.grid.list .card-head{padding:0;flex-shrink:0;width:auto}
-.grid.list .card-body{padding:0;flex:1;min-width:0}
-.grid.list .card-name{font-size:15px;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.grid.list .card-desc{display:none}
-.grid.list .card-chips{padding:0;flex-wrap:nowrap;overflow:hidden;flex-shrink:0}
-.grid.list .card-foot{display:none}
+.lieu{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--rule);border-radius:var(--r-lg);padding:1.15rem 1.2rem 1.1rem;transition:transform 0.25s var(--ease),border-color 0.25s var(--ease),box-shadow 0.25s var(--ease);position:relative;overflow:hidden;min-height:160px}
+.lieu::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--moss);transform:scaleX(0);transform-origin:left;transition:transform 0.3s var(--ease-out)}
+.lieu:hover::before{transform:scaleX(1)}
+.lieu.is-live:hover{transform:translateY(-2px);border-color:var(--moss-pale);box-shadow:var(--shadow-md)}
+.lieu.is-draft{opacity:0.78}
+.lieu.is-draft::before{background:var(--gold-light)}
 
-/* CARD */
-.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform var(--t),box-shadow var(--t);animation:fadeUp .25s ease both}
-.card:hover{transform:translateY(-2px);box-shadow:var(--shl)}
-.card.hidden{display:none!important}
-@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.card-head{padding:14px 14px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
-.card-cat{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--accent);background:var(--al);padding:3px 8px;border-radius:4px;flex-shrink:0}
-.card-comm{font-size:11px;color:var(--muted);text-align:right;line-height:1.3}
-.card-body{padding:10px 14px;flex:1}
-.card-name{font-family:var(--fd);font-size:19px;font-weight:600;line-height:1.2;margin-bottom:5px;letter-spacing:-.2px}
-.card-desc{font-size:13px;color:var(--ink2);line-height:1.5;font-weight:300}
-.card-chips{padding:0 14px 12px;display:flex;flex-wrap:wrap;gap:5px}
-.chip{font-size:11px;padding:3px 8px;border-radius:4px;background:var(--chip);color:var(--ink2);white-space:nowrap}
-.card-foot{border-top:1px solid var(--border);padding:9px 14px;display:flex;align-items:center;justify-content:space-between}
-.lps{display:flex;gap:3px}
-.lp{font-size:10px;font-weight:600;color:var(--muted);background:var(--chip);padding:2px 5px;border-radius:3px}
-.arr{font-size:14px;color:var(--muted);transition:transform var(--t),color var(--t)}
-.card:hover .arr{transform:translateX(4px);color:var(--accent)}
+.lieu-cat{font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--moss);font-weight:700;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem}
+.lieu-cat-dot{width:6px;height:6px;border-radius:50%;background:var(--moss);flex-shrink:0}
+.lieu.is-draft .lieu-cat{color:var(--gold)}
+.lieu.is-draft .lieu-cat-dot{background:var(--gold-light)}
 
-/* EMPTY */
-.empty{padding:48px 0;text-align:center;display:none}
-.empty.show{display:block}
-.empty p{font-size:16px;color:var(--muted);margin-bottom:6px}
-.empty small{font-size:13px;color:var(--muted)}
+.lieu-name{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;color:var(--ink);line-height:1.25;letter-spacing:-0.01em;margin-bottom:0.35rem;overflow-wrap:break-word}
+.lieu-name a{color:inherit;border-bottom:none}
+.lieu-name a:hover{color:var(--moss);border-bottom:none}
+.lieu-name a::after{content:'';position:absolute;inset:0;z-index:1}
+.lieu-commune{font-size:0.85rem;color:var(--muted);line-height:1.4;margin-bottom:0.8rem;flex:1}
+.lieu-foot{display:flex;justify-content:space-between;align-items:center;gap:0.5rem;font-size:0.74rem;color:var(--muted);font-weight:500;padding-top:0.7rem;border-top:1px solid var(--rule)}
+.lieu-status{display:inline-flex;align-items:center;gap:0.35rem}
+.lieu-status.live{color:var(--moss);font-weight:600}
+.lieu-status.draft{color:var(--gold)}
+.lieu-arrow{color:var(--muted);font-size:0.9rem;transition:transform 0.2s var(--ease),color 0.2s var(--ease)}
+.lieu.is-live:hover .lieu-arrow{transform:translateX(3px);color:var(--moss)}
+.lieu.is-draft .lieu-arrow{opacity:0.4}
 
-/* MAP VIEW */
-#mapview{display:none;padding-top:20px}
-#mapview.show{display:block}
-#fullmap{width:100%;height:520px;border-radius:14px;border:1px solid var(--border);overflow:hidden}
+.no-results{grid-column:1/-1;padding:3rem 1rem;text-align:center;color:var(--muted)}
+.no-results strong{display:block;font-family:'Fraunces',serif;font-size:1.2rem;color:var(--ink);font-weight:600;margin-bottom:0.5rem}
 
-/* FOOTER */
-footer{border-top:1px solid var(--border);padding:20px 24px;text-align:center;font-size:12px;color:var(--ink2)}
-footer a{color:var(--ink2);text-decoration:none}
-footer a:hover{text-decoration:underline}
+/* EDITORIAL SECTION (about + method) */
+.editorial{background:var(--cream);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:clamp(3rem,6vw,5rem) 0;margin:1rem 0 0}
+.editorial-inner{max-width:1100px;margin:0 auto;padding:0 var(--space);display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem)}
+@media(max-width:800px){.editorial-inner{grid-template-columns:1fr}}
+.editorial h2{font-family:'Fraunces',serif;font-size:clamp(1.6rem,2.8vw,2.1rem);font-weight:600;color:var(--ink);line-height:1.15;letter-spacing:-0.015em;margin-bottom:1rem}
+.editorial h2 em{font-style:italic;color:var(--moss);font-weight:500}
+.editorial p{color:var(--text);margin-bottom:1rem;max-width:48ch}
+.editorial-list{list-style:none;margin:1rem 0 0}
+.editorial-list li{position:relative;padding:0.45rem 0 0.45rem 1.6rem;line-height:1.55;color:var(--text);font-size:0.95rem}
+.editorial-list li::before{content:'';position:absolute;left:0;top:1em;width:12px;height:2px;background:var(--gold);border-radius:1px}
 
-@media(max-width:860px){
-  .nav-links,.ldd{display:none}
-  .ham{display:flex}
-}
-@media(max-width:560px){
-  .hero h1{font-size:32px}
-  .wrap,.fbar-i{padding-left:16px;padding-right:16px}
-  .grid{grid-template-columns:1fr}
-}
+/* PARTNER CTA STRIP */
+.partner-cta{max-width:1100px;margin:0 auto;padding:clamp(2.5rem,5vw,4rem) var(--space)}
+.partner-cta-inner{background:var(--ink);color:var(--paper);border-radius:var(--r-lg);padding:clamp(2rem,4vw,3rem);display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:center;position:relative;overflow:hidden}
+@media(max-width:760px){.partner-cta-inner{grid-template-columns:1fr;padding:2rem 1.5rem}}
+.partner-cta-inner::before{content:'';position:absolute;top:-50%;right:-20%;width:400px;height:400px;background:radial-gradient(circle, color-mix(in srgb, var(--moss) 40%, transparent), transparent 70%);pointer-events:none}
+.partner-cta h2{font-family:'Fraunces',serif;font-size:clamp(1.5rem,2.6vw,2rem);font-weight:500;color:var(--paper);line-height:1.2;letter-spacing:-0.015em;margin-bottom:0.85rem;position:relative;z-index:1}
+.partner-cta h2 em{font-style:italic;color:var(--gold-light);font-weight:500}
+.partner-cta p{color:color-mix(in srgb, var(--paper) 75%, transparent);margin-bottom:1.25rem;line-height:1.55;position:relative;z-index:1}
+.partner-cta-types{display:flex;gap:0.4rem;flex-wrap:wrap;position:relative;z-index:1}
+.partner-cta-type{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-light);font-weight:600;padding:0.35rem 0.7rem;border:1px solid color-mix(in srgb, var(--gold-light) 30%, transparent);border-radius:999px}
+.partner-cta-btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.4rem;background:var(--gold);color:var(--ink);font-weight:600;border-radius:var(--r);font-size:0.95rem;border-bottom:none;transition:all 0.2s var(--ease);position:relative;z-index:1;white-space:nowrap}
+.partner-cta-btn:hover{background:var(--gold-light);transform:translateY(-1px);border-bottom:none;box-shadow:var(--shadow-md)}
+.partner-cta-btn svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform 0.2s var(--ease)}
+.partner-cta-btn:hover svg{transform:translateX(3px)}
+.partner-cta-right{position:relative;z-index:1}
+
+/* BACK TO TOP */
+.to-top{position:fixed;bottom:1.5rem;right:1.5rem;width:44px;height:44px;background:var(--ink);color:var(--paper);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;transform:translateY(10px);transition:all 0.25s var(--ease);z-index:40}
+.to-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+.to-top:hover{background:var(--moss);transform:translateY(-2px)}
+.to-top svg{width:18px;height:18px;stroke:currentColor;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* FOOTER — identical to lieu pages */
+footer.site{background:var(--ink);color:color-mix(in srgb, var(--paper) 80%, transparent);padding:clamp(2.5rem,5vw,4rem) var(--space) 1.5rem;margin-top:0}
+footer.site .inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2.5rem}
+@media(max-width:760px){footer.site .inner{grid-template-columns:1fr;gap:2rem}}
+footer.site h4{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--paper);margin-bottom:0.85rem;letter-spacing:-0.01em}
+footer.site p{font-size:0.88rem;line-height:1.55;margin-bottom:0.75rem;color:color-mix(in srgb, var(--paper) 72%, transparent)}
+footer.site .tagline{font-size:0.92rem;color:color-mix(in srgb, var(--paper) 85%, transparent)}
+footer.site .disclaimer{font-size:0.78rem;color:color-mix(in srgb, var(--paper) 55%, transparent);line-height:1.5}
+footer.site ul{list-style:none}
+footer.site ul li{margin-bottom:0.45rem}
+footer.site ul a{font-size:0.88rem;color:color-mix(in srgb, var(--paper) 72%, transparent);border-bottom:none;transition:color 0.15s var(--ease)}
+footer.site ul a:hover{color:var(--gold-light);border-bottom:none}
+footer.site .bottom{max-width:1180px;margin:2.5rem auto 0;padding-top:1.5rem;border-top:1px solid color-mix(in srgb, var(--paper) 15%, transparent);display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;font-size:0.78rem;color:color-mix(in srgb, var(--paper) 55%, transparent)}
+footer.site .credit{font-style:italic}
+
+/* utility — filter hidden state */
+.lieu[hidden]{display:none}
 </style>
 </head>
 <body>
 
-<nav id="nav">
-  <div class="nav-i">
-    <a href="/" class="logo">Loisirs<span>74</span></a>
-    <ul class="nav-links">
-      <li><a href="#lieux">Les lieux</a></li>
-      <li><a href="#carte">Carte</a></li>
-      <li><a href="/a-propos">À propos</a></li>
-      <li><a href="/devenir-partenaire">Partenaires</a></li>
-    </ul>
-    <div class="ldd" id="ldd">
-      <button class="ldd-btn" id="ldd-btn" type="button">
-        🇫🇷 FR <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="ldd-menu" id="ldd-menu">
-        <a href="/" class="active">🇫🇷 Français</a>
-        <a href="/en/">🇬🇧 English</a>
-        <a href="/de/">🇩🇪 Deutsch</a>
-        <a href="/it/">🇮🇹 Italiano</a>
+<a href="#main" class="skip-link">Aller au contenu</a>
+
+<header class="header" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="brand" aria-label="Loisirs 74 · Accueil" aria-current="page">
+      <span class="brand-mark" aria-hidden="true">🏞️</span>
+      <span>Loisirs <em>74</em></span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Navigation principale">
+      <a href="#cat-lac">Lacs</a>
+      <a href="#cat-cascade">Cascades</a>
+      <a href="#cat-voie-verte">Voies vertes</a>
+      <a href="#cat-parc">Parcs</a>
+      <a href="#a-propos">À propos</a>
+    </nav>
+
+    <div class="header-tools">
+      <div class="lang-switch" role="navigation" aria-label="Changer de langue">
+        <a href="/" aria-current="true" hreflang="fr">FR</a>
+        <a href="/en/" hreflang="en">EN</a>
+        <a href="/de/" hreflang="de">DE</a>
+        <a href="/it/" hreflang="it">IT</a>
       </div>
+      <button class="icon-btn" id="theme-toggle" aria-label="Changer de thème (clair/sombre)" title="Changer de thème">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="sun" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.36-6.36l-.7.7M5.34 18.66l-.7.7m14.02 0l-.7-.7M5.34 5.34l-.7-.7"/><circle class="sun" cx="12" cy="12" r="4"/><path class="moon" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" style="display:none"/></svg>
+      </button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <button class="tbtn" id="tbtn" type="button">
-      <svg id="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-      <svg id="ico-sun" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-    </button>
-    <button class="ham" id="ham" type="button"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="menu-backdrop" id="menu-backdrop" aria-hidden="true"></div>
+<nav class="nav-mobile" id="mobile-menu" aria-label="Menu mobile">
+  <ul>
+    <li><a href="#cat-lac">Lacs &amp; plans d'eau</a></li>
+    <li><a href="#cat-cascade">Cascades</a></li>
+    <li><a href="#cat-voie-verte">Voies vertes</a></li>
+    <li><a href="#cat-parc">Parcs &amp; jardins</a></li>
+    <li><a href="#cat-sentier">Sentiers</a></li>
+    <li><a href="#cat-point-de-vue">Points de vue</a></li>
+    <li><a href="#a-propos">À propos du site</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+  <div class="mobile-lang">
+    <a href="/" aria-current="true" hreflang="fr">Français</a>
+    <a href="/en/" hreflang="en">English</a>
+    <a href="/de/" hreflang="de">Deutsch</a>
+    <a href="/it/" hreflang="it">Italiano</a>
   </div>
 </nav>
 
-<div class="mob-menu" id="mob-menu">
-  <a href="#lieux">Les lieux</a>
-  <a href="#carte">Carte</a>
-  <a href="/a-propos">À propos</a>
-  <a href="/devenir-partenaire">Partenaires</a>
-  <div class="mob-langs">
-    <a href="/" class="mob-lang active">🇫🇷 FR</a>
-    <a href="/en/" class="mob-lang">🇬🇧 EN</a>
-    <a href="/de/" class="mob-lang">🇩🇪 DE</a>
-    <a href="/it/" class="mob-lang">🇮🇹 IT</a>
-  </div>
-</div>
+<main id="main">
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-map-bg"><div id="hero-map"></div></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-ey">Haute-Savoie</div>
-    <h1>Les espaces de loisirs <em>publics</em> de Haute-Savoie</h1>
-    <p class="hero-sub">Lacs, cascades, sentiers, parcs. Accès, parking, tarifs, chiens. Ce qu'il faut savoir avant de partir.</p>
+  <div class="hero-eyebrow">Haute-Savoie &middot; guide indépendant</div>
+  <h1>Cinquante lieux publics de <em>Haute-Savoie</em>, documentés.</h1>
+  <p class="hero-lead">Lacs, cascades, voies vertes, parcs, points de vue. Accès libre ou presque. Chaque fiche est montée à partir de sources officielles — communes, offices de tourisme, ONF, Natura 2000. Rien d'inventé.</p>
+</section>
+
+<!-- CATEGORIES QUICK NAV -->
+<section class="cat-nav" aria-label="Catégories de lieux">
+  <div class="cat-nav-title">Par catégorie</div>
+  <div class="cat-nav-grid">
+    <a href="#cat-lac" class="cat-pill" data-cat-link="lac">
+      <span class="cat-pill-name"><span class="cat-pill-icon" aria-hidden="true">🌊</span> Lacs &amp; plans d'eau</span>
+      <span class="cat-pill-count" data-cat-count="lac">—</span>
+    </a>
+    <a href="#cat-cascade" class="cat-pill" data-cat-link="cascade">
+      <span class="cat-pill-name"><span class="cat-pill-icon" aria-hidden="true">💧</span> Cascades</span>
+      <span class="cat-pill-count" data-cat-count="cascade">—</span>
+    </a>
+    <a href="#cat-sentier" class="cat-pill" data-cat-link="sentier">
+      <span class="cat-pill-name"><span class="cat-pill-icon" aria-hidden="true">🥾</span> Sentiers</span>
+      <span class="cat-pill-count" data-cat-count="sentier">—</span>
+    </a>
+    <a href="#cat-parc" class="cat-pill" data-cat-link="parc">
+      <span class="cat-pill-name"><span class="cat-pill-icon" aria-hidden="true">🌳</span> Parcs &amp; jardins</span>
+      <span class="cat-pill-count" data-cat-count="parc">—</span>
+    </a>
+    <a href="#cat-point-de-vue" class="cat-pill" data-cat-link="point-de-vue">
+      <span class="cat-pill-name"><span class="cat-pill-icon" aria-hidden="true">⛰️</span> Points de vue</span>
+      <span class="cat-pill-count" data-cat-count="point-de-vue">—</span>
+    </a>
+    <a href="#cat-voie-verte" class="cat-pill" data-cat-link="voie-verte">
+      <span class="cat-pill-name"><span class="cat-pill-icon" aria-hidden="true">🚴</span> Voies vertes</span>
+      <span class="cat-pill-count" data-cat-count="voie-verte">—</span>
+    </a>
+    <a href="#cat-zone-humide" class="cat-pill" data-cat-link="zone-humide">
+      <span class="cat-pill-name"><span class="cat-pill-icon" aria-hidden="true">🪷</span> Zones humides</span>
+      <span class="cat-pill-count" data-cat-count="zone-humide">—</span>
+    </a>
+    <a href="#cat-grotte" class="cat-pill" data-cat-link="grotte">
+      <span class="cat-pill-name"><span class="cat-pill-icon" aria-hidden="true">🕳️</span> Grottes</span>
+      <span class="cat-pill-count" data-cat-count="grotte">—</span>
+    </a>
   </div>
 </section>
 
-<div class="fbar" id="lieux">
-  <div class="fbar-i">
-    <div class="fdd" id="fdd">
-      <button class="fdd-btn" id="fdd-btn" type="button">
-        Type de lieu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="fdd-menu" id="fdd-menu"></div>
+<!-- FILTER BAR -->
+<section class="filter" aria-label="Filtrer les lieux">
+  <div class="filter-inner">
+    <div class="filter-search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="search" id="filter-q" placeholder="Chercher un lieu, une commune…" aria-label="Chercher un lieu ou une commune" autocomplete="off" spellcheck="false">
     </div>
-    <div class="fsep"></div>
-    <button class="pill" data-feat="swimming" type="button">🏊 Baignade</button>
-    <button class="pill" data-feat="dogs" type="button">🐕 Chiens</button>
-    <button class="pill" data-feat="stroller" type="button">🍼 Poussette</button>
-    <button class="pill" data-feat="parking" type="button">🅿️ Parking</button>
-    <button class="pill" data-feat="picnic" type="button">🧺 Pique-nique</button>
-    <button class="pill" data-feat="free" type="button">✓ Gratuit</button>
-    <div class="fsep"></div>
-    <button class="clr" id="clr" type="button">Effacer</button>
+    <select id="filter-cat" aria-label="Filtrer par catégorie">
+      <option value="">Toutes catégories</option>
+      <option value="lac">Lacs &amp; plans d'eau</option>
+      <option value="cascade">Cascades</option>
+      <option value="sentier">Sentiers</option>
+      <option value="parc">Parcs &amp; jardins</option>
+      <option value="point-de-vue">Points de vue</option>
+      <option value="voie-verte">Voies vertes</option>
+      <option value="zone-humide">Zones humides</option>
+      <option value="grotte">Grottes</option>
+    </select>
+    <select id="filter-status" aria-label="Filtrer par état de publication">
+      <option value="">Toutes fiches</option>
+      <option value="live">Fiches publiées</option>
+      <option value="draft">En préparation</option>
+    </select>
+    <button type="button" class="filter-clear" id="filter-clear" disabled>Effacer</button>
   </div>
+</section>
+
+<div class="filter-meta" aria-live="polite">
+  <span><strong id="result-count">50</strong> lieux affichés</span>
+  <span id="result-detail"><strong id="live-count">1</strong> fiche publiée &middot; <strong id="draft-count">49</strong> en préparation</span>
 </div>
 
-<div class="wrap">
-  <div class="rrow">
-    <span class="rcount" id="rcount"></span>
-    <div class="vtgl">
-      <button class="vbtn on" id="vb-grid" type="button" title="Grille">⊞</button>
-      <button class="vbtn" id="vb-list" type="button" title="Liste">≡</button>
-      <button class="vbtn" id="vb-map" type="button" title="Carte">◎</button>
+<!-- GRID -->
+<section class="grid-wrap" aria-label="Lieux de Haute-Savoie">
+  <div class="lieux-grid" id="lieux-grid">
+<!-- ============================================================
+     50 LIEUX — ordre : lac, cascade, voie-verte, parc,
+     point-de-vue, sentier, zone-humide, grotte
+     status="live" = page publiée · "draft" = à venir
+     ============================================================ -->
+
+<!-- LACS & PLANS D'EAU -->
+<article class="lieu is-draft" data-cat="lac" data-status="draft" data-name="lac des dronières cruseilles" data-commune="cruseilles" id="cat-lac">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Lac</div>
+  <h3 class="lieu-name">Lac des Dronières</h3>
+  <div class="lieu-commune">Cruseilles</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="lac parc" data-status="draft" data-name="plan d'eau de sciez" data-commune="sciez">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Lac</div>
+  <h3 class="lieu-name">Plan d'eau de Sciez</h3>
+  <div class="lieu-commune">Sciez</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="lac parc" data-status="draft" data-name="plan d'eau des îlettes sallanches" data-commune="sallanches">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Lac</div>
+  <h3 class="lieu-name">Plan d'eau des Îlettes</h3>
+  <div class="lieu-commune">Sallanches</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="lac sentier" data-status="draft" data-name="lac vert passy" data-commune="passy">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Lac</div>
+  <h3 class="lieu-name">Lac Vert</h3>
+  <div class="lieu-commune">Passy</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="lac parc" data-status="draft" data-name="plan d'eau de seyssel" data-commune="seyssel">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Lac</div>
+  <h3 class="lieu-name">Plan d'eau de Seyssel</h3>
+  <div class="lieu-commune">Seyssel</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="lac parc" data-status="draft" data-name="plan d'eau de machilly" data-commune="machilly">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Lac</div>
+  <h3 class="lieu-name">Plan d'eau de Machilly</h3>
+  <div class="lieu-commune">Machilly</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="lac sentier" data-status="draft" data-name="lac de roy megève" data-commune="megève">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Lac</div>
+  <h3 class="lieu-name">Lac de Roy</h3>
+  <div class="lieu-commune">Megève</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="lac parc" data-status="draft" data-name="plan d'eau de publier" data-commune="publier">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Lac</div>
+  <h3 class="lieu-name">Plan d'eau de Publier</h3>
+  <div class="lieu-commune">Publier</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="lac sentier" data-status="draft" data-name="lac de vallon sixt-fer-à-cheval" data-commune="sixt-fer-à-cheval">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Lac</div>
+  <h3 class="lieu-name">Lac de Vallon</h3>
+  <div class="lieu-commune">Sixt-Fer-à-Cheval</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="lac sentier" data-status="draft" data-name="lac de montriond" data-commune="montriond">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Lac</div>
+  <h3 class="lieu-name">Lac de Montriond</h3>
+  <div class="lieu-commune">Montriond</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="lac sentier" data-status="draft" data-name="lac d'arvouin morzine" data-commune="morzine">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Lac</div>
+  <h3 class="lieu-name">Lac d'Arvouin</h3>
+  <div class="lieu-commune">Morzine</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="lac" data-status="draft" data-name="plage de la puya annecy" data-commune="annecy">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Lac</div>
+  <h3 class="lieu-name">Plage de la Puya</h3>
+  <div class="lieu-commune">Annecy</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="lac" data-status="draft" data-name="plage des marquisats annecy" data-commune="annecy">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Lac</div>
+  <h3 class="lieu-name">Plage des Marquisats</h3>
+  <div class="lieu-commune">Annecy</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<!-- CASCADES -->
+<article class="lieu is-draft" data-cat="cascade sentier" data-status="draft" data-name="cascade d'angon talloires-montmin" data-commune="talloires-montmin" id="cat-cascade">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Cascade</div>
+  <h3 class="lieu-name">Cascade d'Angon</h3>
+  <div class="lieu-commune">Talloires-Montmin</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="cascade sentier" data-status="draft" data-name="cascade du dard thônes" data-commune="thônes">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Cascade</div>
+  <h3 class="lieu-name">Cascade du Dard</h3>
+  <div class="lieu-commune">Thônes</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="cascade sentier" data-status="draft" data-name="cascade de seythenex" data-commune="seythenex">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Cascade</div>
+  <h3 class="lieu-name">Cascade de Seythenex</h3>
+  <div class="lieu-commune">Seythenex</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="cascade sentier" data-status="draft" data-name="cascade de la diozaz sixt-fer-à-cheval" data-commune="sixt-fer-à-cheval">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Cascade</div>
+  <h3 class="lieu-name">Cascade de la Diozaz</h3>
+  <div class="lieu-commune">Sixt-Fer-à-Cheval</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="cascade sentier" data-status="draft" data-name="cascade des combes morzine" data-commune="morzine">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Cascade</div>
+  <h3 class="lieu-name">Cascade des Combes</h3>
+  <div class="lieu-commune">Morzine</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="cascade sentier" data-status="draft" data-name="cascade du rouget sixt-fer-à-cheval" data-commune="sixt-fer-à-cheval">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Cascade</div>
+  <h3 class="lieu-name">Cascade du Rouget</h3>
+  <div class="lieu-commune">Sixt-Fer-à-Cheval</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<!-- VOIES VERTES -->
+<article class="lieu is-draft" data-cat="voie-verte" data-status="draft" data-name="voie verte la belle via annecy frangy" data-commune="annecy" id="cat-voie-verte">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Voie verte</div>
+  <h3 class="lieu-name">Voie verte La Belle Via</h3>
+  <div class="lieu-commune">Annecy → Frangy</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<!-- PARCS & JARDINS -->
+<article class="lieu is-live" data-cat="parc lac" data-status="live" data-name="domaine du tornet la balme-de-sillingy" data-commune="la balme-de-sillingy" id="cat-parc">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Parc</div>
+  <h3 class="lieu-name"><a href="/domaine-du-tornet">Domaine du Tornet</a></h3>
+  <div class="lieu-commune">La Balme-de-Sillingy</div>
+  <div class="lieu-foot"><span class="lieu-status live">● Fiche publiée</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="parc" data-status="draft" data-name="parc charles bosson annecy" data-commune="annecy">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Parc</div>
+  <h3 class="lieu-name">Parc Charles Bosson</h3>
+  <div class="lieu-commune">Annecy</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="parc" data-status="draft" data-name="jardins de l'europe annecy" data-commune="annecy">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Parc</div>
+  <h3 class="lieu-name">Jardins de l'Europe</h3>
+  <div class="lieu-commune">Annecy</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="parc" data-status="draft" data-name="parc des glaisins annecy-le-vieux" data-commune="annecy-le-vieux">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Parc</div>
+  <h3 class="lieu-name">Parc des Glaisins</h3>
+  <div class="lieu-commune">Annecy-le-Vieux</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="parc" data-status="draft" data-name="parc du haut crêt seynod" data-commune="seynod">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Parc</div>
+  <h3 class="lieu-name">Parc du Haut Crêt</h3>
+  <div class="lieu-commune">Seynod</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<!-- POINTS DE VUE -->
+<article class="lieu is-draft" data-cat="point-de-vue sentier" data-status="draft" data-name="belvédère de planfait talloires-montmin" data-commune="talloires-montmin" id="cat-point-de-vue">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Point de vue</div>
+  <h3 class="lieu-name">Belvédère de Planfait</h3>
+  <div class="lieu-commune">Talloires-Montmin</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="point-de-vue" data-status="draft" data-name="col de la colombière le reposoir" data-commune="le reposoir">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Point de vue</div>
+  <h3 class="lieu-name">Col de la Colombière</h3>
+  <div class="lieu-commune">Le Reposoir</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="point-de-vue" data-status="draft" data-name="pont de la caille cruseilles allonzier" data-commune="cruseilles / allonzier">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Point de vue</div>
+  <h3 class="lieu-name">Pont de la Caille</h3>
+  <div class="lieu-commune">Cruseilles / Allonzier</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="point-de-vue" data-status="draft" data-name="pont de l'abîme cusy" data-commune="cusy">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Point de vue</div>
+  <h3 class="lieu-name">Pont de l'Abîme</h3>
+  <div class="lieu-commune">Cusy</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="point-de-vue" data-status="draft" data-name="col des aravis la giettaz saint-jean-de-sixt" data-commune="la giettaz / saint-jean-de-sixt">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Point de vue</div>
+  <h3 class="lieu-name">Col des Aravis</h3>
+  <div class="lieu-commune">La Giettaz / Saint-Jean-de-Sixt</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<!-- SENTIERS -->
+<article class="lieu is-draft" data-cat="sentier lac" data-status="draft" data-name="réserve naturelle du roc de chère talloires-montmin" data-commune="talloires-montmin" id="cat-sentier">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Sentier</div>
+  <h3 class="lieu-name">Réserve naturelle du Roc de Chère</h3>
+  <div class="lieu-commune">Talloires-Montmin</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="sentier" data-status="draft" data-name="mont veyrier veyrier-du-lac" data-commune="veyrier-du-lac">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Sentier</div>
+  <h3 class="lieu-name">Mont Veyrier</h3>
+  <div class="lieu-commune">Veyrier-du-Lac</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="sentier" data-status="draft" data-name="gorges du chéran cusy" data-commune="cusy">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Sentier</div>
+  <h3 class="lieu-name">Gorges du Chéran</h3>
+  <div class="lieu-commune">Cusy</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="sentier" data-status="draft" data-name="gorges de la borne saint-pierre-en-faucigny" data-commune="saint-pierre-en-faucigny">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Sentier</div>
+  <h3 class="lieu-name">Gorges de la Borne</h3>
+  <div class="lieu-commune">Saint-Pierre-en-Faucigny</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="sentier" data-status="draft" data-name="plateau des glières thorens-glières" data-commune="thorens-glières">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Sentier</div>
+  <h3 class="lieu-name">Plateau des Glières</h3>
+  <div class="lieu-commune">Thorens-Glières</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="sentier" data-status="draft" data-name="le môle saint-jean-de-tholome" data-commune="saint-jean-de-tholome">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Sentier</div>
+  <h3 class="lieu-name">Le Môle</h3>
+  <div class="lieu-commune">Saint-Jean-de-Tholome</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="sentier" data-status="draft" data-name="montagne de sulens manigod" data-commune="manigod">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Sentier</div>
+  <h3 class="lieu-name">Montagne de Sulens</h3>
+  <div class="lieu-commune">Manigod</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="sentier" data-status="draft" data-name="défilés de dingy dingy-saint-clair" data-commune="dingy-saint-clair">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Sentier</div>
+  <h3 class="lieu-name">Défilés de Dingy</h3>
+  <div class="lieu-commune">Dingy-Saint-Clair</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="sentier" data-status="draft" data-name="alpage de beauregard la giettaz" data-commune="la giettaz">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Sentier</div>
+  <h3 class="lieu-name">Alpage de Beauregard</h3>
+  <div class="lieu-commune">La Giettaz</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="sentier" data-status="draft" data-name="sentier des clefs thônes" data-commune="thônes">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Sentier</div>
+  <h3 class="lieu-name">Sentier des Clefs</h3>
+  <div class="lieu-commune">Thônes</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="sentier" data-status="draft" data-name="vallée verte de boëge" data-commune="boëge">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Sentier</div>
+  <h3 class="lieu-name">Vallée verte de Boëge</h3>
+  <div class="lieu-commune">Boëge</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="sentier lac" data-status="draft" data-name="sentier du tour du lac saint-jorioz" data-commune="saint-jorioz">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Sentier</div>
+  <h3 class="lieu-name">Sentier du tour du lac</h3>
+  <div class="lieu-commune">Saint-Jorioz</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="sentier" data-status="draft" data-name="forêt du crêt du maure annecy" data-commune="annecy">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Sentier</div>
+  <h3 class="lieu-name">Forêt du Crêt du Maure</h3>
+  <div class="lieu-commune">Annecy</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="sentier" data-status="draft" data-name="semnoz versant est viuz-la-chiésaz" data-commune="viuz-la-chiésaz">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Sentier</div>
+  <h3 class="lieu-name">Semnoz — versant est</h3>
+  <div class="lieu-commune">Viuz-la-Chiésaz</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="sentier" data-status="draft" data-name="forêt de cessens" data-commune="cessens">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Sentier</div>
+  <h3 class="lieu-name">Forêt de Cessens</h3>
+  <div class="lieu-commune">Cessens</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<!-- ZONES HUMIDES -->
+<article class="lieu is-draft" data-cat="zone-humide sentier" data-status="draft" data-name="étang de crosagny saint-félix" data-commune="saint-félix" id="cat-zone-humide">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Zone humide</div>
+  <h3 class="lieu-name">Étang de Crosagny</h3>
+  <div class="lieu-commune">Saint-Félix</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="zone-humide parc sentier" data-status="draft" data-name="parc de la naturelière annecy" data-commune="annecy">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Zone humide</div>
+  <h3 class="lieu-name">Parc de la Naturelière</h3>
+  <div class="lieu-commune">Annecy</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="zone-humide sentier lac" data-status="draft" data-name="réserve naturelle du bout du lac doussard" data-commune="doussard">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Zone humide</div>
+  <h3 class="lieu-name">Réserve naturelle du Bout du Lac</h3>
+  <div class="lieu-commune">Doussard</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<article class="lieu is-draft" data-cat="zone-humide sentier" data-status="draft" data-name="marais de la combe groisy" data-commune="groisy">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Zone humide</div>
+  <h3 class="lieu-name">Marais de la Combe</h3>
+  <div class="lieu-commune">Groisy</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+<!-- GROTTES -->
+<article class="lieu is-draft" data-cat="grotte sentier" data-status="draft" data-name="gorges du pont du diable saint-jeoire" data-commune="saint-jeoire" id="cat-grotte">
+  <div class="lieu-cat"><span class="lieu-cat-dot"></span>Grotte</div>
+  <h3 class="lieu-name">Gorges du Pont du Diable</h3>
+  <div class="lieu-commune">Saint-Jeoire</div>
+  <div class="lieu-foot"><span class="lieu-status draft">● En préparation</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
+</article>
+
+    <div class="no-results" id="no-results" hidden>
+      <strong>Aucun lieu ne correspond</strong>
+      Essayez un autre terme ou effacez les filtres.
     </div>
   </div>
-  <div class="grid" id="grid"></div>
-  <div class="empty" id="empty">
-    <p>Aucun lieu ne correspond à ces filtres.</p>
-    <small>Retirez un filtre pour élargir la recherche.</small>
-  </div>
-  <div id="mapview" id="carte"><div id="fullmap"></div></div>
-</div>
+</section>
 
-<footer>© 2026 Loisirs 74 · <a href="/mentions-legales">Mentions légales</a> · <a href="/contact">Contact</a></footer>
+<!-- EDITORIAL : about + method -->
+<section class="editorial" id="a-propos">
+  <div class="editorial-inner">
+    <div>
+      <h2 id="methode">Notre <em>méthode</em>, en dix lignes.</h2>
+      <p>Loisirs 74 existe parce qu'il manquait un endroit où trouver l'info juste sur les lieux de loisirs publics de Haute-Savoie. Les PDF des mairies ne sortent jamais sur Google. Les fiches des offices de tourisme se ressemblent. Les blogs généralistes recopient ce qu'ils trouvent, souvent mal, souvent vieux.</p>
+      <ul class="editorial-list">
+        <li>Au moins trois sources officielles par lieu — commune, OT, ONF, Natura 2000, data.gouv.</li>
+        <li>Les blogs, Visorando, Komoot, TripAdvisor ne sont pas des sources.</li>
+        <li>Si un fait n'est confirmé nulle part, il n'apparaît pas. Jamais de « généralement ».</li>
+        <li>GPS vérifiés sur OpenStreetMap. Dates de publication et de mise à jour visibles.</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Qui <em>édite</em> ce site ?</h2>
+      <p>Loisirs 74 est un projet indépendant de <strong>bleu-canard édition</strong>, sans lien avec les communes, les offices de tourisme ou les gestionnaires mentionnés.</p>
+      <p>Pas de publicité programmatique, pas de tracking à outrance. Le site vit grâce à des emplacements partenaires sobres : un restaurant, un commerce ou un hébergement près de chaque lieu, lorsqu'ils veulent apparaître auprès des visiteurs.</p>
+      <p>Une info obsolète ? Une erreur ? <a href="/contact">Écrivez-nous</a> — on corrige dans la journée.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER CTA -->
+<section class="partner-cta">
+  <div class="partner-cta-inner">
+    <div>
+      <h2>Vous accueillez les visiteurs d'un de ces <em>lieux</em> ?</h2>
+      <p>Restaurant, gîte, boulangerie, location de vélos, office de tourisme local. Apparaissez sur la page du lieu que vous servez. Un emplacement par commerce, pas de surenchère, lien direct vers votre site.</p>
+      <div class="partner-cta-types">
+        <span class="partner-cta-type">Restaurant</span>
+        <span class="partner-cta-type">Hébergement</span>
+        <span class="partner-cta-type">Commerce</span>
+        <span class="partner-cta-type">Location</span>
+      </div>
+    </div>
+    <div class="partner-cta-right">
+      <a href="/devenir-partenaire" class="partner-cta-btn">
+        Devenir partenaire
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<button class="to-top" id="to-top" aria-label="Retour en haut de page" title="Haut de page">
+  <svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- FOOTER — identical structure to lieu pages -->
+<footer class="site">
+  <div class="inner">
+    <div>
+      <h4>Loisirs 74</h4>
+      <p class="tagline">Le guide indépendant des lieux de loisirs publics en Haute-Savoie. Sources officielles, croisées, datées.</p>
+      <p class="disclaimer">Loisirs 74 est un site indépendant, non-officiel, sans lien avec les communes ou offices de tourisme mentionnés. Les informations proviennent de sources officielles et sont vérifiées à la date de publication, mais peuvent évoluer sans préavis.</p>
+    </div>
+    <div>
+      <h4>Explorer</h4>
+      <ul>
+        <li><a href="#cat-lac">Lacs &amp; plans d'eau</a></li>
+        <li><a href="#cat-cascade">Cascades &amp; gorges</a></li>
+        <li><a href="#cat-voie-verte">Voies vertes</a></li>
+        <li><a href="#cat-parc">Parcs &amp; jardins</a></li>
+        <li><a href="#cat-point-de-vue">Points de vue</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Le site</h4>
+      <ul>
+        <li><a href="#a-propos">À propos</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/devenir-partenaire">Devenir partenaire</a></li>
+        <li><a href="/mentions-legales-loisirs74-phase1.html">Mentions légales</a></li>
+        <li><a href="/politique-confidentialite-loisirs74-phase1.html">Confidentialité</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom">
+    <div>© 2026 Loisirs 74 · Guide des lieux de détente en Haute-Savoie</div>
+    <div class="credit">© 2026 bleu-canard édition, Edmaster &amp; Claudius, tout droit réservé</div>
+  </div>
+</footer>
 
 <script>
-// ── LIEUX — add one object per live page ─────────────────────────────
-const LIEUX = [
-  {slug:"domaine-du-tornet",name:"Domaine du Tornet",commune:"La Balme-de-Sillingy",cat:"parc",desc:"Lac de 7 ha, pumptrack, aire de jeux, cerisiers à fleurs d'Asie, camping-car.",feats:["dogs","stroller","parking","picnic","free"],lat:45.9633,lng:6.0378},
-];
+(function(){
+'use strict';
 
-const CAT={lac:"Lac",cascade:"Cascade",sentier:"Sentier",parc:"Parc","voie-verte":"Voie verte","point-de-vue":"Vue","zone-humide":"Zone humide",grotte:"Gorges / grotte"};
-const EMO={lac:"🏞",cascade:"💧",sentier:"🥾",parc:"🌳","voie-verte":"🚲","point-de-vue":"🔭","zone-humide":"🦆",grotte:"🪨"};
-const FL={swimming:"🏊 Baignade",dogs:"🐕 Chiens",stroller:"🍼 Poussette",parking:"🅿️ Parking",picnic:"🧺 Pique-nique",free:"✓ Gratuit"};
+// ===== THEME =====
+const themeToggle = document.getElementById('theme-toggle');
+const root = document.documentElement;
+const savedTheme = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+root.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+themeToggle?.addEventListener('click', () => {
+  const cur = root.getAttribute('data-theme');
+  const next = cur === 'light' ? 'dark' : 'light';
+  root.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  updateThemeIcon(next);
+});
+function updateThemeIcon(t){
+  const svg = themeToggle?.querySelector('svg');
+  if (!svg) return;
+  svg.querySelectorAll('.sun').forEach(e => e.style.display = t === 'light' ? '' : 'none');
+  svg.querySelectorAll('.moon').forEach(e => e.style.display = t === 'dark' ? '' : 'none');
+}
 
-let aTypes=new Set(), aFeats=new Set(), curV='grid';
-let hMap=null, fMap=null, markers=[];
+// ===== HEADER SCROLLED =====
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  if (header) header.classList.toggle('scrolled', window.scrollY > 8);
+}, { passive: true });
 
-// THEME — runs before paint
-(()=>{
-  const s=localStorage.getItem('l74t');
-  if(s==='dark'){
-    document.documentElement.setAttribute('data-theme','dark');
-    document.getElementById('ico-moon').style.display='none';
-    document.getElementById('ico-sun').style.display='block';
+// ===== MOBILE MENU =====
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const backdrop = document.getElementById('menu-backdrop');
+function setMenu(open){
+  menuToggle?.setAttribute('aria-expanded', String(open));
+  mobileMenu?.classList.toggle('open', open);
+  backdrop?.classList.toggle('visible', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+menuToggle?.addEventListener('click', () => {
+  const open = menuToggle.getAttribute('aria-expanded') === 'true';
+  setMenu(!open);
+});
+backdrop?.addEventListener('click', () => setMenu(false));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+// ===== BACK TO TOP =====
+const toTop = document.getElementById('to-top');
+window.addEventListener('scroll', () => {
+  toTop?.classList.toggle('visible', window.scrollY > 600);
+}, { passive: true });
+toTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ===== CATEGORY COUNTS =====
+// A lieu can belong to multiple categories (space-separated in data-cat).
+// Primary category = first token; drives section anchor + dot color.
+// Secondary categories = match the filter, expand discoverability.
+const lieux = Array.from(document.querySelectorAll('.lieu'));
+const counts = {};
+lieux.forEach(l => {
+  const cats = (l.dataset.cat || '').split(/\s+/).filter(Boolean);
+  cats.forEach(c => { counts[c] = (counts[c] || 0) + 1; });
+});
+document.querySelectorAll('[data-cat-count]').forEach(el => {
+  const c = el.dataset.catCount;
+  const n = counts[c] || 0;
+  el.textContent = n + (n > 1 ? ' lieux' : ' lieu');
+});
+
+// ===== FILTER =====
+const qInput = document.getElementById('filter-q');
+const catSel = document.getElementById('filter-cat');
+const statusSel = document.getElementById('filter-status');
+const clearBtn = document.getElementById('filter-clear');
+const noResults = document.getElementById('no-results');
+const resultCount = document.getElementById('result-count');
+const liveCount = document.getElementById('live-count');
+const draftCount = document.getElementById('draft-count');
+
+// strip accents for forgiving search
+function norm(s){
+  return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+}
+
+function applyFilters(){
+  const q = norm(qInput.value.trim());
+  const cat = catSel.value;
+  const status = statusSel.value;
+  let visible = 0, live = 0, draft = 0;
+
+  lieux.forEach(l => {
+    const name = norm(l.dataset.name);
+    const commune = norm(l.dataset.commune);
+    const cats = (l.dataset.cat || '').split(/\s+/).filter(Boolean);
+    const matchQ = !q || name.includes(q) || commune.includes(q);
+    const matchCat = !cat || cats.includes(cat);
+    const matchStatus = !status || l.dataset.status === status;
+    const show = matchQ && matchCat && matchStatus;
+    l.hidden = !show;
+    if (show){
+      visible++;
+      if (l.dataset.status === 'live') live++;
+      else draft++;
+    }
+  });
+
+  resultCount.textContent = visible;
+  liveCount.textContent = live;
+  draftCount.textContent = draft;
+  noResults.hidden = visible !== 0;
+
+  const hasFilter = !!(q || cat || status);
+  clearBtn.disabled = !hasFilter;
+}
+
+let debounce;
+qInput?.addEventListener('input', () => {
+  clearTimeout(debounce);
+  debounce = setTimeout(applyFilters, 80);
+});
+catSel?.addEventListener('change', applyFilters);
+statusSel?.addEventListener('change', applyFilters);
+clearBtn?.addEventListener('click', () => {
+  qInput.value = '';
+  catSel.value = '';
+  statusSel.value = '';
+  applyFilters();
+  qInput.focus();
+});
+
+// category pills pre-filter on click
+document.querySelectorAll('[data-cat-link]').forEach(pill => {
+  pill.addEventListener('click', (e) => {
+    // allow default jump; also pre-set the filter for clarity after scroll
+    const c = pill.dataset.catLink;
+    catSel.value = c;
+    applyFilters();
+  });
+});
+
+// read ?q= / ?cat= from URL on load
+const params = new URLSearchParams(location.search);
+if (params.get('q')) qInput.value = params.get('q');
+if (params.get('cat')) catSel.value = params.get('cat');
+if (params.get('status')) statusSel.value = params.get('status');
+applyFilters();
+
+// keyboard : focus search with "/"
+document.addEventListener('keydown', e => {
+  if (e.key === '/' && document.activeElement !== qInput && !e.ctrlKey && !e.metaKey){
+    e.preventDefault();
+    qInput.focus();
+    qInput.select();
   }
+});
+
 })();
-
-document.getElementById('tbtn').addEventListener('click',()=>{
-  const dark=document.documentElement.getAttribute('data-theme')==='dark';
-  document.documentElement.setAttribute('data-theme',dark?'light':'dark');
-  document.getElementById('ico-moon').style.display=dark?'block':'none';
-  document.getElementById('ico-sun').style.display=dark?'none':'block';
-  localStorage.setItem('l74t',dark?'light':'dark');
-});
-
-// NAV SCROLL
-window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>10),{passive:true});
-
-// HAMBURGER
-document.getElementById('ham').addEventListener('click',()=>{
-  document.getElementById('ham').classList.toggle('open');
-  document.getElementById('mob-menu').classList.toggle('open');
-});
-
-// LANG DROPDOWN
-document.getElementById('ldd-btn').addEventListener('click',e=>{
-  e.stopPropagation();
-  document.getElementById('ldd').classList.toggle('open');
-});
-
-// Close all dropdowns on outside click
-document.addEventListener('click',e=>{
-  if(!e.target.closest('#ldd')) document.getElementById('ldd').classList.remove('open');
-  if(!e.target.closest('#fdd')) document.getElementById('fdd').classList.remove('open');
-});
-
-// TYPE DROPDOWN — built from live data
-(()=>{
-  const menu=document.getElementById('fdd-menu');
-  const cats=[...new Set(LIEUX.map(l=>l.cat))].sort();
-  cats.forEach(cat=>{
-    const d=document.createElement('div');
-    d.className='fdd-opt';
-    d.innerHTML=`<span class="fchk"><span class="fmark"></span></span>${EMO[cat]||''} ${CAT[cat]||cat}`;
-    d.addEventListener('click',e=>{
-      e.stopPropagation();
-      d.classList.toggle('sel');
-      aTypes.has(cat)?aTypes.delete(cat):aTypes.add(cat);
-      updateTypeTrigger();
-      filter();
-    });
-    menu.appendChild(d);
-  });
-  document.getElementById('fdd-btn').addEventListener('click',e=>{
-    e.stopPropagation();
-    document.getElementById('fdd').classList.toggle('open');
-  });
-})();
-
-function updateTypeTrigger(){
-  const btn=document.getElementById('fdd-btn');
-  const svg='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>';
-  if(aTypes.size===0){btn.classList.remove('sel');btn.innerHTML='Type de lieu '+svg;}
-  else{btn.classList.add('sel');btn.innerHTML=[...aTypes].map(c=>CAT[c]).join(', ')+' '+svg;}
-}
-
-// FEATURE PILLS
-document.querySelectorAll('.pill').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    const f=btn.dataset.feat;
-    btn.classList.toggle('on');
-    aFeats.has(f)?aFeats.delete(f):aFeats.add(f);
-    filter();
-  });
-});
-
-document.getElementById('clr').addEventListener('click',()=>{
-  aTypes.clear();aFeats.clear();
-  document.querySelectorAll('.pill.on').forEach(b=>b.classList.remove('on'));
-  document.querySelectorAll('.fdd-opt.sel').forEach(b=>b.classList.remove('sel'));
-  updateTypeTrigger();
-  filter();
-});
-
-// FILTER
-function filter(){
-  let vis=0;
-  LIEUX.forEach(l=>{
-    const el=document.getElementById('c-'+l.slug);
-    if(!el)return;
-    const ok=(aTypes.size===0||aTypes.has(l.cat))&&(aFeats.size===0||[...aFeats].every(f=>l.feats.includes(f)));
-    el.classList.toggle('hidden',!ok);
-    if(ok)vis++;
-  });
-  const hasF=aTypes.size>0||aFeats.size>0;
-  document.getElementById('rcount').innerHTML=hasF
-    ?`<strong>${vis}</strong> lieu${vis>1?'x':''} trouvé${vis>1?'s':''}`
-    :`<strong>${LIEUX.length}</strong> lieu${LIEUX.length>1?'x':''}`;
-  document.getElementById('clr').classList.toggle('show',hasF);
-  document.getElementById('empty').classList.toggle('show',vis===0);
-  syncMarkers();
-}
-
-// VIEW TOGGLE
-document.getElementById('vb-grid').addEventListener('click',()=>setView('grid'));
-document.getElementById('vb-list').addEventListener('click',()=>setView('list'));
-document.getElementById('vb-map').addEventListener('click',()=>setView('map'));
-
-function setView(v){
-  curV=v;
-  ['grid','list','map'].forEach(id=>document.getElementById('vb-'+id).classList.toggle('on',id===v));
-  const g=document.getElementById('grid');
-  const mv=document.getElementById('mapview');
-  if(v==='map'){
-    g.style.display='none';
-    mv.classList.add('show');
-    if(!fMap)initFullMap();else fMap.invalidateSize();
-  } else {
-    g.style.display='';
-    mv.classList.remove('show');
-    g.className='grid'+(v==='list'?' list':'');
-  }
-}
-
-// BUILD CARDS
-(()=>{
-  const grid=document.getElementById('grid');
-  LIEUX.forEach((l,i)=>{
-    const a=document.createElement('a');
-    a.id='c-'+l.slug;
-    a.className='card';
-    a.href='/'+l.slug+'.fr.html';
-    a.style.animationDelay=(i*20)+'ms';
-    const chips=l.feats.map(f=>`<span class="chip">${FL[f]}</span>`).join('');
-    a.innerHTML=`
-      <div class="card-head">
-        <span class="card-cat">${CAT[l.cat]||l.cat}</span>
-        <span class="card-comm">${l.commune}</span>
-      </div>
-      <div class="card-body">
-        <div class="card-name">${l.name}</div>
-        <div class="card-desc">${l.desc}</div>
-      </div>
-      <div class="card-chips">${chips}</div>
-      <div class="card-foot">
-        <div class="lps"><span class="lp">FR</span><span class="lp">EN</span><span class="lp">DE</span><span class="lp">IT</span></div>
-        <span class="arr">→</span>
-      </div>`;
-    grid.appendChild(a);
-  });
-})();
-
-// MAPS
-function initHeroMap(){
-  hMap=L.map('hero-map',{zoomControl:false,scrollWheelZoom:false,attributionControl:false,dragging:false,keyboard:false,touchZoom:false,doubleClickZoom:false}).setView([45.92,6.22],9);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:17}).addTo(hMap);
-  const ic=L.divIcon({className:'',html:'<div style="width:10px;height:10px;border-radius:50%;background:#2b5c3f;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.5)"></div>',iconSize:[10,10],iconAnchor:[5,5]});
-  LIEUX.forEach(l=>L.marker([l.lat,l.lng],{icon:ic}).addTo(hMap));
-}
-
-function initFullMap(){
-  fMap=L.map('fullmap').setView([45.92,6.22],9);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:17,attribution:'© OpenStreetMap'}).addTo(fMap);
-  const ic=L.divIcon({className:'',html:'<div style="width:12px;height:12px;border-radius:50%;background:#2b5c3f;border:2px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.4)"></div>',iconSize:[12,12],iconAnchor:[6,6]});
-  LIEUX.forEach(l=>{
-    const m=L.marker([l.lat,l.lng],{icon:ic}).addTo(fMap)
-      .bindPopup(`<strong style="font-family:Georgia,serif">${l.name}</strong><br><small>${CAT[l.cat]} · ${l.commune}</small><br><a href="/${l.slug}.fr.html" style="color:#2b5c3f;font-size:13px">Voir →</a>`);
-    markers.push({l,m});
-  });
-}
-
-function syncMarkers(){
-  if(!fMap)return;
-  markers.forEach(({l,m})=>{
-    const ok=(aTypes.size===0||aTypes.has(l.cat))&&(aFeats.size===0||[...aFeats].every(f=>l.feats.includes(f)));
-    ok?m.addTo(fMap):fMap.removeLayer(m);
-  });
-}
-
-initHeroMap();
-filter();
 </script>
+
 </body>
 </html>
