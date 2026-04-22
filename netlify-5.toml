@@ -1,0 +1,146 @@
+# =====================================================================
+# Netlify configuration · Loisirs 74
+# =====================================================================
+# URL scheme (decided) :
+#   /               → index.html            (FR master)
+#   /en/            → en/index.html         (EN homepage)
+#   /de/            → de/index.html         (DE homepage)
+#   /it/            → it/index.html         (IT homepage)
+#   /<slug>         → <slug>.html           (FR lieu, pretty URL)
+#   /en/<slug>      → en/<slug>.html        (EN lieu)
+#   /de/<slug>      → de/<slug>.html        (DE lieu)
+#   /it/<slug>      → it/<slug>.html        (IT lieu)
+# =====================================================================
+
+[build]
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# =====================================================================
+# REDIRECTS
+# Order matters : the first matching rule wins.
+# =====================================================================
+
+# --- Apex canonicalization (no www) ----------------------------------
+[[redirects]]
+  from = "https://www.loisirs74.fr/*"
+  to = "https://loisirs74.fr/:splat"
+  status = 301
+  force = true
+
+# --- Legacy render-script filenames (.fr.html / .en.html / …) --------
+# Redirect old filenames to the clean URL scheme.
+# Keeps backlinks and any previously-indexed URLs working.
+[[redirects]]
+  from = "/*.fr.html"
+  to = "/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*.en.html"
+  to = "/en/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*.de.html"
+  to = "/de/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*.it.html"
+  to = "/it/:splat"
+  status = 301
+  force = true
+
+# --- 404 ------------------------------------------------------------
+# No catch-all redirect. Netlify serves /404.html automatically
+# for any URL that doesn't match a file. Catch-all rules eat pretty URLs.
+
+# =====================================================================
+# HEADERS
+# =====================================================================
+
+# Security headers everywhere
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+# HTML: no browser cache — updates propagate immediately after deploy.
+# Netlify's CDN still delivers fast.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# JSON & XML : always revalidate so sitemap + lieu data stay fresh
+[[headers]]
+  for = "/*.json"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Static images : long cache, immutable (rename file to bust)
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# =====================================================================
+# POST-PROCESSING
+# =====================================================================
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.css]
+  bundle = false
+  minify = false
+
+[build.processing.js]
+  bundle = false
+  minify = false
+
+[build.processing.images]
+  compress = true
