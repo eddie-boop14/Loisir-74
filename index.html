@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Loisirs 74 — Espaces de loisirs publics en Haute-Savoie</title>
+<meta name="description" content="Lacs, cascades, sentiers, parcs en Haute-Savoie. Accès, parking, tarifs, chiens. Ce qu'il faut savoir avant de partir.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://loisirs74.fr/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://loisirs74.fr/">
+<meta property="og:title" content="Loisirs 74 — Espaces de loisirs publics en Haute-Savoie">
+<meta property="og:description" content="Lacs, cascades, sentiers, parcs en Haute-Savoie. Accès, parking, tarifs, chiens. Ce qu'il faut savoir avant de partir.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Loisirs 74">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="alternate" hreflang="fr" href="https://loisirs74.fr/">
+<link rel="alternate" hreflang="en" href="https://loisirs74.fr/en/">
+<link rel="alternate" hreflang="de" href="https://loisirs74.fr/de/">
+<link rel="alternate" hreflang="it" href="https://loisirs74.fr/it/">
+<link rel="alternate" hreflang="x-default" href="https://loisirs74.fr/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Loisirs 74",
+  "url": "https://loisirs74.fr",
+  "description": "Guide des espaces de loisirs publics en Haute-Savoie",
+  "inLanguage": ["fr","en","de","it"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<style>
+:root {
+  --bg: #f4f1ea;
+  --bg2: #edeae1;
+  --surface: #ffffff;
+  --border: #ddd8cc;
+  --ink: #1c1b18;
+  --ink2: #4a4740;
+  --muted: #8c8880;
+  --accent: #2b5c3f;
+  --accent-light: #e6f0ea;
+  --chip: #e8e4db;
+  --warn-light: #fdf0ea;
+  --warn: #c0440e;
+  --shadow: 0 2px 12px rgba(0,0,0,.07);
+  --shadow-lg: 0 8px 28px rgba(0,0,0,.12);
+  --r: 10px;
+  --nav: 62px;
+  --fd: 'Cormorant Garamond', Georgia, serif;
+  --fb: 'Outfit', sans-serif;
+  --t: .18s cubic-bezier(.4,0,.2,1);
+}
+[data-theme="dark"] {
+  --bg:#141412; --bg2:#1c1b18; --surface:#222120;
+  --border:#2e2c28; --ink:#f0ede6; --ink2:#b0ada6;
+  --muted:#6e6a62; --accent:#4a9466; --accent-light:#182d22;
+  --chip:#2a2825; --warn-light:#2a1508; --warn:#e05a1a;
+  --shadow:0 2px 12px rgba(0,0,0,.35); --shadow-lg:0 8px 28px rgba(0,0,0,.5);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--ink);min-height:100vh;font-size:15px;line-height:1.6;transition:background var(--t),color var(--t);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;height:var(--nav);background:var(--bg);border-bottom:1px solid var(--border);z-index:1000;transition:background var(--t),box-shadow var(--t)}
+nav.scrolled{box-shadow:var(--shadow)}
+.nav-inner{max-width:1160px;margin:0 auto;height:100%;display:flex;align-items:center;padding:0 24px;gap:20px}
+.logo{font-family:var(--fd);font-size:24px;font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:-.3px;flex-shrink:0}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:2px;list-style:none;margin-left:8px}
+.nav-links a{font-size:14px;color:var(--ink2);text-decoration:none;padding:6px 12px;border-radius:6px;transition:color var(--t),background var(--t)}
+.nav-links a:hover{color:var(--ink);background:var(--chip)}
+
+/* Lang */
+.lang-dd{position:relative;margin-left:auto}
+.lang-trigger{display:flex;align-items:center;gap:6px;padding:7px 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--ink);font-family:var(--fb);font-size:13px;font-weight:500;cursor:pointer;transition:border-color var(--t);white-space:nowrap}
+.lang-trigger:hover{border-color:var(--accent)}
+.lang-trigger svg{width:12px;height:12px;transition:transform var(--t)}
+.lang-dd.open .lang-trigger svg{transform:rotate(180deg)}
+.lang-menu{position:absolute;top:calc(100% + 6px);right:0;background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:var(--shadow-lg);min-width:148px;overflow:hidden;opacity:0;transform:translateY(-6px);pointer-events:none;transition:opacity var(--t),transform var(--t);z-index:200}
+.lang-dd.open .lang-menu{opacity:1;transform:none;pointer-events:all}
+.lang-menu a{display:flex;align-items:center;gap:10px;padding:10px 14px;font-size:13px;color:var(--ink);text-decoration:none;transition:background var(--t)}
+.lang-menu a:hover{background:var(--bg2)}
+.lang-menu a.active{color:var(--accent);font-weight:600}
+
+/* Theme */
+.theme-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);border-radius:8px;background:var(--surface);cursor:pointer;color:var(--ink);transition:all var(--t);flex-shrink:0}
+.theme-btn:hover{border-color:var(--accent);color:var(--accent)}
+.theme-btn svg{width:17px;height:17px}
+
+/* Ham */
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none}
+.ham span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all var(--t)}
+.ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Mobile menu */
+.mob-menu{position:fixed;top:var(--nav);left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);padding:12px 24px 20px;z-index:999;transform:translateY(-110%);opacity:0;transition:transform var(--t),opacity var(--t);display:flex;flex-direction:column;gap:2px}
+.mob-menu.open{transform:none;opacity:1}
+.mob-menu a{font-size:15px;color:var(--ink);text-decoration:none;padding:11px 0;border-bottom:1px solid var(--border)}
+.mob-langs{display:flex;gap:8px;padding-top:12px}
+.mob-lang{padding:6px 14px;border:1px solid var(--border);border-radius:6px;font-family:var(--fb);font-size:12px;font-weight:500;color:var(--ink);background:var(--surface);text-decoration:none;transition:all var(--t)}
+.mob-lang.active{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* HERO */
+.hero{padding:calc(var(--nav) + 64px) 24px 52px;max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero-eyebrow{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.hero-eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--accent)}
+.hero h1{font-family:var(--fd);font-size:clamp(38px,4.5vw,62px);font-weight:600;line-height:1.08;letter-spacing:-.4px;margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero-sub{font-size:15px;color:var(--ink2);font-weight:300;line-height:1.8;max-width:420px}
+.hero-map-box{border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-lg);height:360px;flex-shrink:0}
+#hero-map{width:100%;height:100%}
+
+/* FILTER BAR */
+.filter-bar{position:sticky;top:var(--nav);z-index:90;background:var(--bg);border-bottom:1px solid var(--border)}
+.filter-inner{max-width:1160px;margin:0 auto;padding:0 24px;height:52px;display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none}
+.filter-inner::-webkit-scrollbar{display:none}
+.fsep{width:1px;height:18px;background:var(--border);flex-shrink:0;margin:0 2px}
+
+/* Type dropdown */
+.fdd{position:relative;flex-shrink:0;z-index:91}
+.fdd-trigger{display:flex;align-items:center;gap:6px;padding:7px 14px;border:1px solid var(--border);border-radius:100px;background:var(--surface);color:var(--ink);font-family:var(--fb);font-size:13px;cursor:pointer;white-space:nowrap;transition:all var(--t)}
+.fdd-trigger:hover{border-color:var(--accent)}
+.fdd-trigger.sel{background:var(--accent);border-color:var(--accent);color:#fff}
+.fdd-trigger svg{width:12px;height:12px;transition:transform var(--t)}
+.fdd.open .fdd-trigger svg{transform:rotate(180deg)}
+.fdd-menu{position:absolute;top:calc(100% + 8px);left:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow-lg);min-width:190px;padding:8px;opacity:0;transform:translateY(-6px);pointer-events:none;transition:opacity var(--t),transform var(--t);z-index:300}
+.fdd.open .fdd-menu{opacity:1;transform:none;pointer-events:all}
+.fdd-opt{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;cursor:pointer;font-size:13px;color:var(--ink);transition:background var(--t);user-select:none}
+.fdd-opt:hover{background:var(--bg2)}
+.fdd-opt.sel{color:var(--accent);font-weight:500}
+.fdd-chk{width:16px;height:16px;border:1.5px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all var(--t)}
+.fdd-opt.sel .fdd-chk{background:var(--accent);border-color:var(--accent)}
+.fdd-mark{display:none;width:4px;height:7px;border:2px solid #fff;border-top:none;border-left:none;transform:rotate(45deg) translateY(-1px)}
+.fdd-opt.sel .fdd-mark{display:block}
+
+/* Pills */
+.pill{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;border-radius:100px;border:1px solid var(--border);background:var(--surface);font-family:var(--fb);font-size:13px;color:var(--ink);cursor:pointer;white-space:nowrap;transition:all var(--t);flex-shrink:0;user-select:none}
+.pill:hover{border-color:var(--accent)}
+.pill.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.clear-btn{font-size:12px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--fb);padding:4px 8px;text-decoration:underline;flex-shrink:0;display:none;white-space:nowrap}
+.clear-btn.show{display:inline}
+
+/* RESULTS */
+.results-row{max-width:1160px;margin:0 auto;padding:20px 24px 10px;display:flex;align-items:center;justify-content:space-between}
+.rcount{font-size:13px;color:var(--muted)}
+.rcount strong{color:var(--ink);font-weight:500}
+.view-tgl{display:flex;gap:3px}
+.vbtn{padding:6px 10px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--muted);cursor:pointer;font-size:14px;transition:all var(--t)}
+.vbtn.on{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* GRID */
+.grid-wrap{max-width:1160px;margin:0 auto;padding:0 24px 80px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.grid.list{grid-template-columns:1fr;gap:8px}
+
+/* Card */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform var(--t),box-shadow var(--t);animation:fadeUp .25s ease both}
+.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.card.hidden{display:none!important}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* List overrides */
+.grid.list .card{flex-direction:row;align-items:center;padding:13px 16px;gap:14px;border-radius:8px}
+.grid.list .card-head{padding:0;flex-shrink:0}
+.grid.list .card-body{padding:0;flex:1}
+.grid.list .card-name{font-size:15px;margin:0}
+.grid.list .card-desc{display:none}
+.grid.list .card-chips{padding:0;margin-left:auto;flex-wrap:nowrap}
+.grid.list .card-foot{display:none}
+
+.card-head{padding:14px 14px 0;display:flex;justify-content:space-between;align-items:flex-start}
+.card-cat{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--accent);background:var(--accent-light);padding:3px 8px;border-radius:4px}
+.card-comm{font-size:11px;color:var(--muted);text-align:right;line-height:1.3;max-width:130px}
+.card-body{padding:10px 14px 10px;flex:1}
+.card-name{font-family:var(--fd);font-size:19px;font-weight:600;line-height:1.2;margin-bottom:5px;letter-spacing:-.2px}
+.card-desc{font-size:13px;color:var(--ink2);line-height:1.5;font-weight:300}
+.card-chips{padding:0 14px 12px;display:flex;flex-wrap:wrap;gap:5px}
+.chip{font-size:11px;padding:3px 8px;border-radius:4px;background:var(--chip);color:var(--ink2);white-space:nowrap}
+.card-foot{border-top:1px solid var(--border);padding:9px 14px;display:flex;align-items:center;justify-content:space-between}
+.lang-pills{display:flex;gap:3px}
+.lp{font-size:10px;font-weight:600;color:var(--muted);background:var(--chip);padding:2px 5px;border-radius:3px}
+.card-arrow{font-size:14px;color:var(--muted);transition:transform var(--t),color var(--t)}
+.card:hover .card-arrow{transform:translateX(4px);color:var(--accent)}
+
+/* Empty */
+.empty{padding:64px 0;text-align:center;display:none}
+.empty.show{display:block}
+.empty p{font-size:16px;color:var(--muted);margin-bottom:6px}
+.empty small{font-size:13px;color:var(--muted)}
+
+/* MAP VIEW */
+#map-view{display:none;max-width:1160px;margin:0 auto;padding:0 24px 80px}
+#map-view.show{display:block}
+#full-map{width:100%;height:560px;border-radius:14px;border:1px solid var(--border);overflow:hidden}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:20px 24px;text-align:center;font-size:12px;color:var(--ink2)}
+footer a{color:var(--ink2)}
+
+/* RESPONSIVE */
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr;padding-top:calc(var(--nav) + 40px);gap:28px}
+  .hero-map-box{height:240px}
+  .nav-links,.lang-dd{display:none}
+  .ham{display:flex}
+  .hero-sub{max-width:100%}
+}
+@media(max-width:560px){
+  .hero h1{font-size:36px}
+  .hero,.grid-wrap,.results-row{padding-left:16px;padding-right:16px}
+  .filter-inner{padding:0 16px}
+  .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">Loisirs<span>74</span></a>
+    <ul class="nav-links">
+      <li><a href="#lieux">Les lieux</a></li>
+      <li><a href="#carte">Carte</a></li>
+      <li><a href="/a-propos">À propos</a></li>
+      <li><a href="/devenir-partenaire">Partenaires</a></li>
+    </ul>
+
+    <div class="lang-dd" id="lang-dd">
+      <button class="lang-trigger" id="lang-btn">
+        🇫🇷 FR <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="lang-menu">
+        <a href="/" class="active">🇫🇷 Français</a>
+        <a href="/en/">🇬🇧 English</a>
+        <a href="/de/">🇩🇪 Deutsch</a>
+        <a href="/it/">🇮🇹 Italiano</a>
+      </div>
+    </div>
+
+    <button class="theme-btn" id="theme-btn">
+      <svg id="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      <svg id="ico-sun" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    </button>
+
+    <button class="ham" id="ham"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mob-menu">
+  <a href="#lieux">Les lieux</a>
+  <a href="#carte">Carte</a>
+  <a href="/a-propos">À propos</a>
+  <a href="/devenir-partenaire">Partenaires</a>
+  <div class="mob-langs">
+    <a href="/" class="mob-lang active">🇫🇷 FR</a>
+    <a href="/en/" class="mob-lang">🇬🇧 EN</a>
+    <a href="/de/" class="mob-lang">🇩🇪 DE</a>
+    <a href="/it/" class="mob-lang">🇮🇹 IT</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Haute-Savoie</div>
+    <h1>Les espaces de loisirs <em>publics</em> de Haute-Savoie</h1>
+    <p class="hero-sub">Lacs, cascades, sentiers, parcs. Accès, parking, tarifs, chiens. Ce qu'il faut savoir avant de partir.</p>
+  </div>
+  <div class="hero-map-box">
+    <div id="hero-map"></div>
+  </div>
+</section>
+
+<div class="filter-bar" id="lieux">
+  <div class="filter-inner">
+    <div class="fdd" id="dd-type">
+      <button class="fdd-trigger" id="dd-type-btn">
+        Type de lieu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="fdd-menu" id="dd-type-menu"></div>
+    </div>
+    <div class="fsep"></div>
+    <button class="pill" data-feat="swimming">🏊 Baignade</button>
+    <button class="pill" data-feat="dogs">🐕 Chiens</button>
+    <button class="pill" data-feat="stroller">🍼 Poussette</button>
+    <button class="pill" data-feat="parking">🅿️ Parking</button>
+    <button class="pill" data-feat="picnic">🧺 Pique-nique</button>
+    <button class="pill" data-feat="free">✓ Gratuit</button>
+    <div class="fsep"></div>
+    <button class="clear-btn" id="clear-btn">Effacer</button>
+  </div>
+</div>
+
+<div class="results-row">
+  <span class="rcount" id="rcount"></span>
+  <div class="view-tgl">
+    <button class="vbtn on" id="vb-grid" title="Grille">⊞</button>
+    <button class="vbtn" id="vb-list" title="Liste">≡</button>
+    <button class="vbtn" id="vb-map" title="Carte" >◎</button>
+  </div>
+</div>
+
+<div class="grid-wrap">
+  <div class="grid" id="main-grid"></div>
+  <div class="empty" id="empty">
+    <p>Aucun lieu ne correspond à ces filtres.</p>
+    <small>Retirez un filtre pour élargir la recherche.</small>
+  </div>
+</div>
+
+<div id="map-view" id="carte">
+  <div id="full-map"></div>
+</div>
+
+<footer>
+  © 2026 Loisirs 74 · <a href="/mentions-legales">Mentions légales</a> · <a href="/contact">Contact</a>
+</footer>
+
+<script>
+// ── DATA — only add a lieu when its page is live ──────────────────
+// To publish a new lieu: add one object to this array.
+// Fields: slug, name, commune, cat, desc, feats[], lat, lng
+// feats options: swimming | dogs | stroller | parking | picnic | free
+const LIEUX = [
+  {
+    slug: "domaine-du-tornet",
+    name: "Domaine du Tornet",
+    commune: "La Balme-de-Sillingy",
+    cat: "parc",
+    desc: "Lac de 7 ha, pumptrack, aire de jeux, cerisiers à fleurs d'Asie, camping-car.",
+    feats: ["dogs","stroller","parking","picnic","free"],
+    lat: 45.9633, lng: 6.0378
+  },
+  // next lieu goes here
+];
+
+const CAT = {lac:"Lac",cascade:"Cascade",sentier:"Sentier",parc:"Parc","voie-verte":"Voie verte","point-de-vue":"Vue","zone-humide":"Zone humide",grotte:"Gorges / grotte"};
+const EMOJI = {lac:"🏞",cascade:"💧",sentier:"🥾",parc:"🌳","voie-verte":"🚲","point-de-vue":"🔭","zone-humide":"🦆",grotte:"🪨"};
+const FL = {swimming:"🏊 Baignade",dogs:"🐕 Chiens",stroller:"🍼 Poussette",parking:"🅿️ Parking",picnic:"🧺 Pique-nique",free:"✓ Gratuit"};
+
+let activeTypes = new Set(), activeFeats = new Set(), curView = 'grid';
+let heroMap = null, fullMap = null, allMarkers = [];
+
+// THEME
+document.getElementById('theme-btn').addEventListener('click', () => {
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.documentElement.setAttribute('data-theme', dark ? 'light' : 'dark');
+  document.getElementById('ico-moon').style.display = dark ? 'block' : 'none';
+  document.getElementById('ico-sun').style.display = dark ? 'none' : 'block';
+  localStorage.setItem('l74t', dark ? 'light' : 'dark');
+});
+(()=>{if(localStorage.getItem('l74t')==='dark'){document.documentElement.setAttribute('data-theme','dark');document.getElementById('ico-moon').style.display='none';document.getElementById('ico-sun').style.display='block';}})();
+
+// NAV SCROLL
+window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', scrollY > 10), {passive:true});
+
+// HAMBURGER
+document.getElementById('ham').addEventListener('click', () => {
+  document.getElementById('ham').classList.toggle('open');
+  document.getElementById('mob-menu').classList.toggle('open');
+});
+
+// LANG
+document.getElementById('lang-btn').addEventListener('click', () => document.getElementById('lang-dd').classList.toggle('open'));
+
+// Close dropdowns on outside click
+document.addEventListener('click', e => {
+  if (!e.target.closest('#lang-dd')) document.getElementById('lang-dd').classList.remove('open');
+  if (!e.target.closest('.fdd')) document.querySelectorAll('.fdd.open').forEach(d => d.classList.remove('open'));
+});
+
+// TYPE DROPDOWN — built from actual data
+(()=>{
+  const menu = document.getElementById('dd-type-menu');
+  const cats = [...new Set(LIEUX.map(l => l.cat))].sort();
+  cats.forEach(cat => {
+    const d = document.createElement('div');
+    d.className = 'fdd-opt';
+    d.innerHTML = `<span class="fdd-chk"><span class="fdd-mark"></span></span>${EMOJI[cat]||''} ${CAT[cat]||cat}`;
+    d.addEventListener('click', () => {
+      d.classList.toggle('sel');
+      activeTypes.has(cat) ? activeTypes.delete(cat) : activeTypes.add(cat);
+      updateTypeTrigger();
+      filter();
+    });
+    menu.appendChild(d);
+  });
+  document.getElementById('dd-type-btn').addEventListener('click', () => document.getElementById('dd-type').classList.toggle('open'));
+})();
+
+function updateTypeTrigger() {
+  const btn = document.getElementById('dd-type-btn');
+  if (activeTypes.size === 0) {
+    btn.classList.remove('sel');
+    btn.innerHTML = 'Type de lieu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>';
+  } else {
+    btn.classList.add('sel');
+    btn.innerHTML = [...activeTypes].map(c => CAT[c]).join(', ') + ' <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>';
+  }
+}
+
+// PILLS
+document.querySelectorAll('.pill').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const f = btn.dataset.feat;
+    btn.classList.toggle('on');
+    activeFeats.has(f) ? activeFeats.delete(f) : activeFeats.add(f);
+    filter();
+  });
+});
+
+document.getElementById('clear-btn').addEventListener('click', () => {
+  activeTypes.clear(); activeFeats.clear();
+  document.querySelectorAll('.pill.on').forEach(b => b.classList.remove('on'));
+  document.querySelectorAll('.fdd-opt.sel').forEach(b => b.classList.remove('sel'));
+  updateTypeTrigger();
+  filter();
+});
+
+// FILTER
+function filter() {
+  let vis = 0;
+  LIEUX.forEach(l => {
+    const el = document.getElementById('c-' + l.slug);
+    if (!el) return;
+    const ok = (activeTypes.size === 0 || activeTypes.has(l.cat)) &&
+               (activeFeats.size === 0 || [...activeFeats].every(f => l.feats.includes(f)));
+    el.classList.toggle('hidden', !ok);
+    if (ok) vis++;
+  });
+  const hasF = activeTypes.size > 0 || activeFeats.size > 0;
+  document.getElementById('rcount').innerHTML = hasF
+    ? `<strong>${vis}</strong> lieu${vis > 1 ? 'x' : ''} trouvé${vis > 1 ? 's' : ''}`
+    : `<strong>${LIEUX.length}</strong> lieu${LIEUX.length > 1 ? 'x' : ''}`;
+  document.getElementById('clear-btn').classList.toggle('show', hasF);
+  document.getElementById('empty').classList.toggle('show', vis === 0);
+  syncMapMarkers();
+}
+
+// VIEW
+document.getElementById('vb-grid').addEventListener('click', () => setView('grid'));
+document.getElementById('vb-list').addEventListener('click', () => setView('list'));
+document.getElementById('vb-map').addEventListener('click', () => setView('map'));
+
+function setView(v) {
+  curView = v;
+  ['grid','list','map'].forEach(id => document.getElementById('vb-' + id).classList.toggle('on', id === v));
+  const gw = document.querySelector('.grid-wrap');
+  const mv = document.getElementById('map-view');
+  if (v === 'map') {
+    gw.style.display = 'none';
+    mv.classList.add('show');
+    if (!fullMap) initFullMap(); else fullMap.invalidateSize();
+  } else {
+    gw.style.display = '';
+    mv.classList.remove('show');
+    document.getElementById('main-grid').classList.toggle('list', v === 'list');
+  }
+}
+
+// BUILD CARDS
+(()=>{
+  const grid = document.getElementById('main-grid');
+  LIEUX.forEach((l, i) => {
+    const a = document.createElement('a');
+    a.id = 'c-' + l.slug;
+    a.className = 'card';
+    a.href = '/' + l.slug + '.fr.html';
+    a.style.animationDelay = (i * 20) + 'ms';
+    const chips = l.feats.map(f => `<span class="chip">${FL[f]}</span>`).join('');
+    a.innerHTML = `
+      <div class="card-head">
+        <span class="card-cat">${CAT[l.cat] || l.cat}</span>
+        <span class="card-comm">${l.commune}</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name">${l.name}</div>
+        <div class="card-desc">${l.desc}</div>
+      </div>
+      <div class="card-chips">${chips}</div>
+      <div class="card-foot">
+        <div class="lang-pills"><span class="lp">FR</span><span class="lp">EN</span><span class="lp">DE</span><span class="lp">IT</span></div>
+        <span class="card-arrow">→</span>
+      </div>`;
+    grid.appendChild(a);
+  });
+})();
+
+// MAPS
+function initHeroMap() {
+  heroMap = L.map('hero-map', {zoomControl:false, scrollWheelZoom:false, attributionControl:false, dragging:false}).setView([45.92, 6.22], 9);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:17}).addTo(heroMap);
+  const ic = L.divIcon({className:'', html:'<div style="width:10px;height:10px;border-radius:50%;background:#2b5c3f;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4)"></div>', iconSize:[10,10], iconAnchor:[5,5]});
+  LIEUX.forEach(l => L.marker([l.lat, l.lng], {icon:ic}).addTo(heroMap).bindPopup(`<b style="font-family:Georgia,serif">${l.name}</b><br><small>${l.commune}</small>`));
+}
+
+function initFullMap() {
+  fullMap = L.map('full-map').setView([45.92, 6.22], 9);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:17, attribution:'© OpenStreetMap'}).addTo(fullMap);
+  const ic = L.divIcon({className:'', html:'<div style="width:12px;height:12px;border-radius:50%;background:#2b5c3f;border:2px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.4)"></div>', iconSize:[12,12], iconAnchor:[6,6]});
+  LIEUX.forEach(l => {
+    const m = L.marker([l.lat, l.lng], {icon:ic}).addTo(fullMap)
+      .bindPopup(`<strong style="font-family:Georgia,serif;font-size:14px">${l.name}</strong><br><small style="color:#666">${CAT[l.cat]} · ${l.commune}</small><br><a href="/${l.slug}.fr.html" style="color:#2b5c3f;font-size:13px">Voir la page →</a>`);
+    allMarkers.push({l, m});
+  });
+}
+
+function syncMapMarkers() {
+  if (!fullMap) return;
+  allMarkers.forEach(({l, m}) => {
+    const ok = (activeTypes.size === 0 || activeTypes.has(l.cat)) &&
+               (activeFeats.size === 0 || [...activeFeats].every(f => l.feats.includes(f)));
+    ok ? m.addTo(fullMap) : fullMap.removeLayer(m);
+  });
+}
+
+initHeroMap();
+filter();
+</script>
+</body>
+</html>
+
