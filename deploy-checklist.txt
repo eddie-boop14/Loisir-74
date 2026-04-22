@@ -1,0 +1,107 @@
+LOISIRS 74 â€” DEPLOY CHECKLIST (this shipment)
+================================================
+
+Goal : fix URL structure so site is internally coherent + ready to
+scale to 50 lieux Ã— 4 langs without further plumbing work.
+
+
+FILES IN THIS SHIPMENT (drop into repo root)
+--------------------------------------------
+  index.html           â† was index.fr.html (renamed)
+  sitemap.xml          â† replaces existing
+  netlify.toml         â† replaces existing
+  robots.txt           â† replaces existing (if present)
+  404.html             â† new
+
+
+EXISTING FILES TO RENAME ON NETLIFY
+-----------------------------------
+
+  domaine-du-tornet.fr.html  â†’  domaine-du-tornet.html         (stays at root)
+  domaine-du-tornet.en.html  â†’  en/domaine-du-tornet.html      (move to /en/)
+  domaine-du-tornet.de.html  â†’  de/domaine-du-tornet.html      (move to /de/)
+  domaine-du-tornet.it.html  â†’  it/domaine-du-tornet.html      (move to /it/)
+
+Json folder : keep the filenames as they are (source data, not served).
+  domaine-du-tornet.fr.json  â†’  no change
+  domaine-du-tornet.en.json  â†’  no change
+  (etc.)
+
+Typo to fix :
+  mentios-legales-loisirs74-phase1.html  â†’  mentions-legales-loisirs74-phase1.html
+
+
+FINAL DEPLOY TREE
+-----------------
+
+  /
+  â”œâ”€ index.html                                         (FR homepage)
+  â”œâ”€ 404.html
+  â”œâ”€ sitemap.xml
+  â”œâ”€ robots.txt
+  â”œâ”€ netlify.toml
+  â”œâ”€ domaine-du-tornet.html                             (FR lieu)
+  â”œâ”€ mentions-legales-loisirs74-phase1.html
+  â”œâ”€ politique-confidentialite-loisirs74-phase1.html
+  â”œâ”€ devenir-partenaire.html                            (to build)
+  â”œâ”€ en/
+  â”‚   â”œâ”€ index.html                                     (EN homepage â€” to build)
+  â”‚   â””â”€ domaine-du-tornet.html                         (EN lieu)
+  â”œâ”€ de/
+  â”‚   â”œâ”€ index.html                                     (DE homepage â€” to build)
+  â”‚   â””â”€ domaine-du-tornet.html                         (DE lieu)
+  â”œâ”€ it/
+  â”‚   â”œâ”€ index.html                                     (IT homepage â€” to build)
+  â”‚   â””â”€ domaine-du-tornet.html                         (IT lieu)
+  â”œâ”€ Json/                                              (source data, not served)
+  â”‚   â”œâ”€ domaine-du-tornet.fr.json
+  â”‚   â”œâ”€ domaine-du-tornet.en.json
+  â”‚   â”œâ”€ domaine-du-tornet.de.json
+  â”‚   â””â”€ domaine-du-tornet.it.json
+  â””â”€ loisirs74-template-v3.html                         (template, not served)
+
+
+HOW PRETTY URLS WORK AFTER THIS
+--------------------------------
+
+  Visitor types              â†’  Netlify serves
+  â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€     â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  /                             index.html
+  /domaine-du-tornet            domaine-du-tornet.html
+  /en/                          en/index.html
+  /en/domaine-du-tornet         en/domaine-du-tornet.html
+  /anything-that-does-not-exist 404.html
+
+
+WHAT STILL NEEDS TO BE BUILT (not in this shipment)
+---------------------------------------------------
+
+  1. index.en.html â†’ save as en/index.html
+  2. index.de.html â†’ save as de/index.html
+  3. index.it.html â†’ save as it/index.html
+  4. devenir-partenaire.html
+  5. Update render-v3.py to output slug.html + en/slug.html + de/slug.html + it/slug.html
+     (currently outputs slug.fr.html, slug.en.html, etc.)
+     After the render script is fixed, regenerate the Tornet 4 HTMLs from the JSONs
+     â€” the content won't change, only the filenames and paths.
+
+
+ADDING A NEW LIEU â€” THE LOOP
+----------------------------
+
+  1. Produce the 4 JSONs                          (already defined workflow)
+  2. Run render-v3.py Ã— 4                         (once Render-v3.py is fixed)
+  3. Upload slug.html, en/slug.html, de/slug.html, it/slug.html
+  4. Add 4 <url> blocks in sitemap.xml            (copy the Tornet template)
+  5. No other plumbing work â€” the URL scheme is locked.
+
+
+VERIFY AFTER DEPLOY
+-------------------
+
+  https://loisirs74.fr/                            â†’ 200, French index
+  https://loisirs74.fr/domaine-du-tornet           â†’ 200, French lieu
+  https://loisirs74.fr/en/domaine-du-tornet        â†’ 200, English lieu
+  https://loisirs74.fr/does-not-exist              â†’ 404, branded page
+  https://loisirs74.fr/sitemap.xml                 â†’ valid XML, 15 URLs
+  https://loisirs74.fr/robots.txt                  â†’ 200
