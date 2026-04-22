@@ -568,20 +568,40 @@ def validate(d):
         print(f"⚠ Unknown category '{d.get('category')}' — falling back to 'parc' hero", file=sys.stderr)
 
 
+def default_output(slug, lang):
+    """FR master lands at root; other languages go in /<lang>/slug.html."""
+    if lang == "fr":
+        return Path(f"{slug}.html")
+    return Path(lang) / f"{slug}.html"
+
+
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("input_json")
+    ap = argparse.ArgumentParser(
+        description="Render a lieu page from its JSON. "
+                    "FR master outputs to ./slug.html, other languages to ./<lang>/slug.html."
+    )
+    ap.add_argument("input_json", help="Path to the JSON file (e.g. Json/domaine-du-tornet.fr.json)")
     ap.add_argument("--template", default="loisirs74-template-v3.html")
-    ap.add_argument("--output", default=None)
+    ap.add_argument("--output", default=None,
+                    help="Override output path. If omitted, computed from slug + lang.")
     ap.add_argument("--lang", default="fr", choices=LANGS)
     args = ap.parse_args()
+
     data = json.loads(Path(args.input_json).read_text(encoding="utf-8"))
     validate(data)
-    out = args.output or f"{data['slug']}.html"
-    Path(out).write_text(build_page(data, args.template, lang=args.lang), encoding="utf-8")
+
+    # If JSON declares its own lang, trust it over --lang (unless --lang explicitly overrides)
+    json_lang = data.get("lang")
+    if json_lang and json_lang in LANGS and "--lang" not in sys.argv:
+        lang = json_lang
+    else:
+        lang = args.lang
+
+    out = Path(args.output) if args.output else default_output(data["slug"], lang)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(build_page(data, args.template, lang=lang), encoding="utf-8")
     print(f"✓ Wrote {out}")
 
 
 if __name__ == "__main__":
     main()
-
