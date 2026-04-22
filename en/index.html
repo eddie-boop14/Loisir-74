@@ -56,7 +56,7 @@
 <link rel="manifest" href="/site.webmanifest">
 
 <!-- PRELOAD -->
-<link rel="preload" as="image" href="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=2000&q=80" fetchpriority="high">
+<link rel="preload" as="image" href="https://commons.wikimedia.org/wiki/Special:FilePath/Panorama%20Lac%20d%27Annecy%20depuis%20le%20Taillefer%20(printemps%202023).JPG?width=1600" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -207,18 +207,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .menu-backdrop{position:fixed;inset:0;background:rgba(13,26,15,0.5);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);z-index:54;opacity:0;visibility:hidden;transition:opacity 0.3s var(--ease)}
 .menu-backdrop.visible{opacity:1;visibility:visible}
 
-/* HERO with background image */
+/* HERO — split layout, photo beside text (desktop) or above (mobile) */
 main{display:block}
-.hero{position:relative;overflow:hidden;isolation:isolate;min-height:clamp(460px,70vh,640px);display:flex;align-items:flex-end;margin-bottom:0}
-.hero-bg{position:absolute;inset:0;z-index:-2}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
-.hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg, rgba(13,26,15,0.15) 0%, rgba(13,26,15,0.45) 55%, rgba(13,26,15,0.85) 100%)}
-.hero-inner{max-width:1100px;width:100%;margin:0 auto;padding:clamp(3rem,6vw,5rem) var(--space) clamp(2rem,4vw,3rem);color:var(--paper)}
-.hero-eyebrow{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem;text-shadow:0 1px 2px rgba(0,0,0,0.35)}
-.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold-light)}
-.hero h1{font-family:'Fraunces',serif;font-size:clamp(2.2rem,6vw,4rem);font-weight:500;color:var(--paper);line-height:1.05;letter-spacing:-0.025em;margin-bottom:1.25rem;max-width:18ch;text-shadow:0 2px 12px rgba(0,0,0,0.35)}
-.hero h1 em{font-style:italic;color:var(--gold-light);font-weight:500}
-.hero-lead{font-size:clamp(1.05rem,1.7vw,1.2rem);color:color-mix(in srgb, var(--paper) 92%, transparent);line-height:1.6;max-width:56ch;margin-bottom:0;text-shadow:0 1px 3px rgba(0,0,0,0.4)}
+.hero{max-width:1180px;margin:0 auto;padding:clamp(1.5rem,3vw,2.5rem) var(--space) clamp(1.5rem,3vw,2.5rem);display:grid;grid-template-columns:1fr;gap:clamp(1.5rem,3vw,2.5rem);align-items:center}
+@media(min-width:880px){.hero{grid-template-columns:1fr 1.1fr;gap:clamp(2rem,4vw,3.5rem)}}
+.hero-bg{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:16/10;background:var(--cream);box-shadow:var(--shadow-lg);order:1}
+@media(min-width:880px){.hero-bg{order:2;aspect-ratio:4/5;max-height:560px}}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-inner{order:2}
+@media(min-width:880px){.hero-inner{order:1}}
+.hero-eyebrow{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--moss);font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--moss)}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3.4rem);font-weight:500;color:var(--ink);line-height:1.05;letter-spacing:-0.025em;margin-bottom:1.25rem;max-width:18ch}
+.hero h1 em{font-style:italic;color:var(--moss);font-weight:500}
+.hero-lead{font-size:clamp(1rem,1.5vw,1.15rem);color:var(--muted);line-height:1.6;max-width:56ch;margin-bottom:0}
 
 /* CATEGORIES QUICK NAV */
 .cat-nav{max-width:1100px;margin:0 auto 2.5rem;padding:0 var(--space)}
@@ -232,16 +234,16 @@ main{display:block}
 
 /* FILTER BAR */
 .filter{max-width:1100px;margin:0 auto 1.5rem;padding:0 var(--space);position:sticky;top:var(--header-h);z-index:40;background:var(--paper);padding-top:0.75rem;padding-bottom:0.75rem}
-.filter-inner{background:var(--white);border:1px solid var(--rule);border-radius:var(--r-lg);padding:0.75rem;display:grid;grid-template-columns:1fr auto auto auto;gap:0.5rem;box-shadow:var(--shadow-sm);align-items:center}
-@media(max-width:720px){.filter-inner{grid-template-columns:1fr 1fr;gap:0.5rem}.filter-search{grid-column:1 / -1}}
-.filter-search{position:relative}
+.filter-inner{background:var(--white);border:1px solid var(--rule);border-radius:var(--r-lg);padding:0.65rem;display:flex;flex-wrap:wrap;gap:0.5rem;box-shadow:var(--shadow-sm);align-items:center}
+.filter-search{flex:1 1 100%;position:relative;min-width:0}
+@media(min-width:640px){.filter-search{flex:2 1 240px}}
 .filter-search svg{position:absolute;left:0.85rem;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--muted);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
 .filter-search input{width:100%;padding:0.65rem 0.75rem 0.65rem 2.35rem;border:1px solid var(--rule);background:var(--paper);border-radius:var(--r);font-size:0.92rem;color:var(--ink);transition:border-color 0.15s var(--ease),background 0.15s var(--ease)}
 .filter-search input:focus{border-color:var(--moss);background:var(--white);outline:none}
 .filter-search input::placeholder{color:var(--muted)}
-.filter select{padding:0.65rem 2rem 0.65rem 0.85rem;border:1px solid var(--rule);background:var(--paper);border-radius:var(--r);font-size:0.9rem;color:var(--ink);cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236a706b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0.6rem center;background-size:14px;transition:border-color 0.15s var(--ease)}
+.filter select{flex:1 1 auto;min-width:140px;padding:0.65rem 2rem 0.65rem 0.85rem;border:1px solid var(--rule);background:var(--paper);border-radius:var(--r);font-size:0.9rem;color:var(--ink);cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236a706b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0.6rem center;background-size:14px;transition:border-color 0.15s var(--ease);text-overflow:ellipsis}
 .filter select:hover{border-color:var(--moss)}
-.filter-clear{padding:0.65rem 0.9rem;border:1px solid transparent;border-radius:var(--r);font-size:0.82rem;color:var(--muted);font-weight:500;transition:all 0.15s var(--ease);white-space:nowrap}
+.filter-clear{flex:0 0 auto;padding:0.65rem 0.9rem;border:1px solid transparent;border-radius:var(--r);font-size:0.82rem;color:var(--muted);font-weight:500;transition:all 0.15s var(--ease);white-space:nowrap}
 .filter-clear:hover{color:var(--ink);background:var(--cream)}
 .filter-clear:disabled{opacity:0.35;cursor:not-allowed}
 
@@ -392,8 +394,8 @@ footer.site .credit{font-style:italic}
 
 <!-- HERO with background image -->
 <section class="hero">
-  <div class="hero-bg" aria-hidden="true">
-    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=2000&q=80" alt="" loading="eager" fetchpriority="high" width="2000" height="1125">
+  <div class="hero-bg">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Panorama%20Lac%20d%27Annecy%20depuis%20le%20Taillefer%20(printemps%202023).JPG?width=1600" alt="Panoramic view of Lake Annecy from the summit of Le Taillefer, in spring" loading="eager" fetchpriority="high" width="1600" height="1000">
   </div>
   <div class="hero-inner">
     <div class="hero-eyebrow">Haute-Savoie &middot; independent guide</div>
@@ -470,7 +472,7 @@ footer.site .credit{font-style:italic}
 
 <div class="filter-meta" aria-live="polite">
   <span><strong id="result-count">50</strong> sites shown</span>
-  <span id="result-detail"><strong id="live-count">1</strong> published &middot; <strong id="draft-count">49</strong> en préparation</span>
+  <span id="result-detail"><strong id="live-count">1</strong> published &middot; <strong id="draft-count">49</strong> in preparation</span>
 </div>
 
 <!-- GRID -->
@@ -863,7 +865,7 @@ footer.site .credit{font-style:italic}
     <div>
       <h2>Who <em>publishes</em> this site?</h2>
       <p>Loisirs 74 is an independent project by <strong>bleu-canard édition</strong>, with no affiliation to the municipalities, tourist offices or site managers mentioned.</p>
-      <p>Une info obsolète, une erreur ? <a href="/en/contact">Écrivez-nous</a>.</p>
+      <p>Outdated info, a mistake? <a href="/en/contact">Get in touch</a>.</p>
     </div>
   </div>
 </section>
@@ -1094,4 +1096,3 @@ document.addEventListener('keydown', e => {
 
 </body>
 </html>
-
