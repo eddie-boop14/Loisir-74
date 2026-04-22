@@ -56,6 +56,7 @@
 <link rel="manifest" href="/site.webmanifest">
 
 <!-- PRELOAD -->
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=2000&q=80" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -206,14 +207,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .menu-backdrop{position:fixed;inset:0;background:rgba(13,26,15,0.5);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);z-index:54;opacity:0;visibility:hidden;transition:opacity 0.3s var(--ease)}
 .menu-backdrop.visible{opacity:1;visibility:visible}
 
-/* HERO */
+/* HERO with background image */
 main{display:block}
-.hero{max-width:1100px;margin:0 auto;padding:clamp(2rem,5vw,4rem) var(--space) clamp(1.5rem,3vw,2.5rem);text-align:left}
-.hero-eyebrow{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--moss);font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem}
-.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--moss)}
-.hero h1{font-family:'Fraunces',serif;font-size:clamp(2.2rem,6vw,4rem);font-weight:500;color:var(--ink);line-height:1.05;letter-spacing:-0.025em;margin-bottom:1.25rem;max-width:18ch}
-.hero h1 em{font-style:italic;color:var(--moss);font-weight:500}
-.hero-lead{font-size:clamp(1.05rem,1.7vw,1.2rem);color:var(--muted);line-height:1.6;max-width:56ch;margin-bottom:0}
+.hero{position:relative;overflow:hidden;isolation:isolate;min-height:clamp(460px,70vh,640px);display:flex;align-items:flex-end;margin-bottom:0}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg, rgba(13,26,15,0.15) 0%, rgba(13,26,15,0.45) 55%, rgba(13,26,15,0.85) 100%)}
+.hero-inner{max-width:1100px;width:100%;margin:0 auto;padding:clamp(3rem,6vw,5rem) var(--space) clamp(2rem,4vw,3rem);color:var(--paper)}
+.hero-eyebrow{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem;text-shadow:0 1px 2px rgba(0,0,0,0.35)}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold-light)}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(2.2rem,6vw,4rem);font-weight:500;color:var(--paper);line-height:1.05;letter-spacing:-0.025em;margin-bottom:1.25rem;max-width:18ch;text-shadow:0 2px 12px rgba(0,0,0,0.35)}
+.hero h1 em{font-style:italic;color:var(--gold-light);font-weight:500}
+.hero-lead{font-size:clamp(1.05rem,1.7vw,1.2rem);color:color-mix(in srgb, var(--paper) 92%, transparent);line-height:1.6;max-width:56ch;margin-bottom:0;text-shadow:0 1px 3px rgba(0,0,0,0.4)}
 
 /* CATEGORIES QUICK NAV */
 .cat-nav{max-width:1100px;margin:0 auto 2.5rem;padding:0 var(--space)}
@@ -247,7 +252,7 @@ main{display:block}
 .grid-wrap{max-width:1100px;margin:0 auto;padding:0 var(--space) 3rem}
 .lieux-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:0.85rem}
 
-.lieu{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--rule);border-radius:var(--r-lg);padding:1.15rem 1.2rem 1.1rem;transition:transform 0.25s var(--ease),border-color 0.25s var(--ease),box-shadow 0.25s var(--ease);position:relative;overflow:hidden;min-height:160px}
+.lieu{display:flex;flex-direction:column;background:var(--white);background-image:radial-gradient(circle, color-mix(in srgb, var(--moss) 14%, transparent) 1px, transparent 1.5px);background-size:14px 14px;background-position:0 0;border:1px solid var(--rule);border-radius:var(--r-lg);padding:1.15rem 1.2rem 1.1rem;transition:transform 0.25s var(--ease),border-color 0.25s var(--ease),box-shadow 0.25s var(--ease),background-color 0.25s var(--ease);position:relative;overflow:hidden;min-height:160px}
 .lieu::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--moss);transform:scaleX(0);transform-origin:left;transition:transform 0.3s var(--ease-out)}
 .lieu:hover::before{transform:scaleX(1)}
 .lieu.is-live:hover{transform:translateY(-2px);border-color:var(--moss-pale);box-shadow:var(--shadow-md)}
@@ -385,11 +390,16 @@ footer.site .credit{font-style:italic}
 
 <main id="main">
 
-<!-- HERO -->
+<!-- HERO with background image -->
 <section class="hero">
-  <div class="hero-eyebrow">Haute-Savoie &middot; guide indépendant</div>
-  <h1>Cinquante lieux publics de <em>Haute-Savoie</em>, documentés.</h1>
-  <p class="hero-lead">Lacs, cascades, voies vertes, parcs, points de vue. Accès libre ou presque. Chaque fiche est montée à partir de sources officielles — communes, offices de tourisme, ONF, Natura 2000. Rien d'inventé.</p>
+  <div class="hero-bg" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=2000&q=80" alt="" loading="eager" fetchpriority="high" width="2000" height="1125">
+  </div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Haute-Savoie &middot; guide indépendant</div>
+    <h1>Cinquante lieux publics de <em>Haute-Savoie</em>, documentés.</h1>
+    <p class="hero-lead">Lacs, cascades, voies vertes, parcs, points de vue. Accès libre ou presque. Chaque fiche est montée à partir de sources officielles — communes, offices de tourisme, ONF, Natura 2000. Rien d'inventé.</p>
+  </div>
 </section>
 
 <!-- CATEGORIES QUICK NAV -->
@@ -618,7 +628,7 @@ footer.site .credit{font-style:italic}
 <!-- PARCS & JARDINS -->
 <article class="lieu is-live" data-cat="parc lac" data-status="live" data-name="domaine du tornet la balme-de-sillingy" data-commune="la balme-de-sillingy" id="cat-parc">
   <div class="lieu-cat"><span class="lieu-cat-dot"></span>Parc</div>
-  <h3 class="lieu-name"><a href="/domaine-du-tornet">Domaine du Tornet</a></h3>
+  <h3 class="lieu-name"><a href="/domaine-du-tornet.fr.html">Domaine du Tornet</a></h3>
   <div class="lieu-commune">La Balme-de-Sillingy</div>
   <div class="lieu-foot"><span class="lieu-status live">● Fiche publiée</span><span class="lieu-arrow" aria-hidden="true">→</span></div>
 </article>
@@ -853,8 +863,7 @@ footer.site .credit{font-style:italic}
     <div>
       <h2>Qui <em>édite</em> ce site ?</h2>
       <p>Loisirs 74 est un projet indépendant de <strong>bleu-canard édition</strong>, sans lien avec les communes, les offices de tourisme ou les gestionnaires mentionnés.</p>
-      <p>Pas de publicité programmatique, pas de tracking à outrance. Le site vit grâce à des emplacements partenaires sobres : un restaurant, un commerce ou un hébergement près de chaque lieu, lorsqu'ils veulent apparaître auprès des visiteurs.</p>
-      <p>Une info obsolète ? Une erreur ? <a href="/contact">Écrivez-nous</a> — on corrige dans la journée.</p>
+      <p>Une info obsolète, une erreur ? <a href="/contact">Écrivez-nous</a>.</p>
     </div>
   </div>
 </section>
@@ -864,7 +873,7 @@ footer.site .credit{font-style:italic}
   <div class="partner-cta-inner">
     <div>
       <h2>Vous accueillez les visiteurs d'un de ces <em>lieux</em> ?</h2>
-      <p>Restaurant, gîte, boulangerie, location de vélos, office de tourisme local. Apparaissez sur la page du lieu que vous servez. Un emplacement par commerce, pas de surenchère, lien direct vers votre site.</p>
+      <p>Restaurant, gîte, boulangerie, location de vélos, office de tourisme local. Apparaissez sur la page du lieu que vous servez.</p>
       <div class="partner-cta-types">
         <span class="partner-cta-type">Restaurant</span>
         <span class="partner-cta-type">Hébergement</span>
