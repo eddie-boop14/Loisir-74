@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Loisirs 74 · Studio</title>
+<style>
+  :root {
+    --ink: #0d1a0f; --moss: #2d5a3d; --moss-pale: #c8dccf;
+    --paper: #faf8f3; --cream: #f0ece1; --rule: #e2ded1; --muted: #6b7163;
+    --red: #b8392b; --amber: #c68a1f; --green: #2d5a3d;
+    --r: 4px; --r-lg: 8px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--paper); color: var(--ink); line-height: 1.5; font-size: 15px;
+  }
+  .app { max-width: 860px; margin: 0 auto; padding: 1rem; }
+  h1 { font-family: Georgia, serif; font-weight: 700; font-size: 1.5rem; margin: 0 0 0.2rem; }
+  .tag { color: var(--muted); margin: 0 0 1.2rem; font-size: 0.85rem; }
+
+  .step {
+    background: var(--cream); border-radius: var(--r-lg); padding: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  .step h2 {
+    font-family: Georgia, serif; font-size: 1rem; margin: 0 0 0.4rem;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .step .num {
+    width: 1.4rem; height: 1.4rem; border-radius: 50%;
+    background: var(--moss); color: var(--paper);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 0.8rem; font-weight: 700;
+  }
+
+  .drop {
+    border: 2px dashed var(--moss-pale); border-radius: var(--r);
+    padding: 1.5rem 1rem; text-align: center; background: var(--paper);
+    transition: all 0.15s;
+  }
+  .drop.dragover { border-color: var(--moss); background: var(--moss-pale); }
+  .drop p { margin: 0.2rem 0; font-size: 0.85rem; }
+  .drop label.file-btn {
+    display: inline-block; background: var(--moss); color: var(--paper);
+    padding: 0.45rem 0.9rem; border-radius: var(--r); cursor: pointer;
+    font-size: 0.82rem; font-weight: 600; margin-top: 0.3rem;
+  }
+  .drop input[type=file] { display: none; }
+  .paste-btn {
+    background: none; border: 1px solid var(--rule); color: var(--muted);
+    padding: 0.4rem 0.8rem; border-radius: var(--r); cursor: pointer;
+    font-size: 0.78rem; margin-left: 0.3rem;
+  }
+  .paste-area {
+    display: none; width: 100%; min-height: 140px; margin-top: 0.5rem;
+    padding: 0.5rem; border: 1px solid var(--rule); border-radius: var(--r);
+    font-family: ui-monospace, Menlo, monospace; font-size: 0.72rem; background: var(--paper);
+  }
+  .paste-area.open { display: block; }
+
+  .manifest-form {
+    background: var(--paper); border: 1px solid var(--rule); border-radius: var(--r);
+    padding: 0.7rem; margin-top: 0.5rem; font-size: 0.82rem;
+  }
+  .manifest-form label {
+    display: block; margin-top: 0.4rem; font-weight: 600; font-size: 0.78rem;
+    color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .manifest-form input {
+    width: 100%; padding: 0.4rem 0.5rem; border: 1px solid var(--rule);
+    border-radius: var(--r); font-size: 0.85rem; margin-top: 0.2rem;
+  }
+  .lang-row { font-size: 0.78rem; color: var(--muted); margin-top: 0.3rem; }
+  .lang-row div { padding: 0.1rem 0; }
+
+  .checks {
+    background: var(--paper); border: 1px solid var(--rule); border-radius: var(--r);
+    padding: 0.7rem 0.9rem; font-size: 0.8rem;
+  }
+  .check { display: flex; align-items: flex-start; gap: 0.4rem; padding: 0.15rem 0; }
+  .check .mark { flex: 0 0 0.9rem; font-weight: 700; }
+  .pass .mark { color: var(--green); }
+  .warn .mark { color: var(--amber); }
+  .fail .mark { color: var(--red); }
+
+  .actions {
+    display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem;
+  }
+  .btn {
+    padding: 0.7rem 1rem; border: none; border-radius: var(--r);
+    font-size: 0.88rem; font-weight: 600; cursor: pointer;
+    flex: 1; min-width: 140px;
+  }
+  .btn-primary { background: var(--moss); color: var(--paper); }
+  .btn-primary:disabled { background: var(--muted); cursor: not-allowed; }
+
+  .file-list {
+    font-family: ui-monospace, Menlo, monospace; font-size: 0.72rem;
+    background: var(--paper); border-radius: var(--r); padding: 0.5rem 0.7rem;
+    margin-top: 0.5rem; max-height: 240px; overflow-y: auto;
+  }
+  .file-list div { padding: 0.1rem 0; color: var(--muted); }
+  .file-list .ok { color: var(--green); }
+
+  .notice {
+    background: #fff8e1; border-left: 3px solid var(--amber);
+    padding: 0.5rem 0.7rem; font-size: 0.78rem; border-radius: 2px;
+    margin-top: 0.5rem;
+  }
+  .notice.err { background: #f9d9d4; border-left-color: var(--red); }
+  .notice.ok { background: #e5f1e7; border-left-color: var(--green); }
+  code {
+    background: var(--cream); padding: 0.08rem 0.3rem;
+    border-radius: 2px; font-size: 0.85em; font-family: ui-monospace, Menlo, monospace;
+  }
+  .hidden { display: none !important; }
+  .boot-status {
+    font-size: 0.75rem; color: var(--muted); padding: 0.3rem 0;
+  }
+  .boot-status.err { color: var(--red); font-weight: 600; }
+  .boot-status.ok { color: var(--green); }
+</style>
+</head>
+<body>
+<div class="app">
+
+<h1>Loisirs 74 · Studio</h1>
+<p class="tag">Dépose un JSON unifié. Produit les 5 HTMLs + met à jour index &amp; sitemap. ZIP téléchargeable.</p>
+
+<div id="boot-status" class="boot-status">Chargement des modules…</div>
+
+<div class="step">
+  <h2><span class="num">1</span>Fichier JSON du lieu</h2>
+  <div class="drop" id="drop">
+    <p><strong>Dépose <code>&lt;slug&gt;.json</code></strong></p>
+    <label for="file" class="file-btn">Choisir un fichier</label>
+    <input type="file" id="file" accept=".json,application/json">
+    <button class="paste-btn" id="paste-toggle">ou coller</button>
+    <textarea class="paste-area" id="paste" placeholder='{ "slug": "...", "i18n": {...} }'></textarea>
+  </div>
+</div>
+
+<div class="step hidden" id="step-manifest">
+  <h2><span class="num">2</span>Entrée pour lieux.json</h2>
+  <p class="tag">Pré-rempli depuis le JSON. Ajuste les catégories si besoin.</p>
+  <div class="manifest-form">
+    <label>Slug (auto)</label>
+    <input id="mf-slug" readonly>
+    <label>Catégories (séparées par espace)</label>
+    <input id="mf-cats" placeholder="ex: cascade">
+    <div class="lang-row"><em>Valides : lac, cascade, voie-verte, parc, point-de-vue, sentier, zone-humide, grotte</em></div>
+    <div class="lang-row" id="mf-langs"></div>
+  </div>
+</div>
+
+<div class="step hidden" id="step-existing">
+  <h2><span class="num">3</span>lieux.json actuel <em style="font-weight:normal;">(optionnel, recommandé)</em></h2>
+  <p class="tag">Si tu le fournis, les index seront régénérés avec tous tes lieux. Sinon seul ce nouveau lieu y figurera.</p>
+  <div class="drop" id="drop-manifest" style="padding: 1rem;">
+    <p style="font-size:0.8rem;"><strong>Dépose <code>lieux.json</code> depuis la racine du repo</strong></p>
+    <label for="file-manifest" class="file-btn">Choisir un fichier</label>
+    <input type="file" id="file-manifest" accept=".json">
+  </div>
+  <div id="existing-status" class="lang-row"></div>
+</div>
+
+<div class="step hidden" id="step-checks">
+  <h2><span class="num">4</span>Contrôles</h2>
+  <div class="checks" id="checks"></div>
+</div>
+
+<div class="step hidden" id="step-build">
+  <h2><span class="num">5</span>Produire les fichiers</h2>
+  <div class="actions">
+    <button id="btn-build" class="btn btn-primary">Construire + télécharger ZIP</button>
+  </div>
+  <div class="file-list hidden" id="file-list"></div>
+  <div id="build-status"></div>
+</div>
+
+</div>
+
+<script src="studio-consts.js"></script>
+<script src="studio-templates.js"></script>
+<script src="studio-render.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+<script>
+(function() {
+  'use strict';
+
+  const bootEl = document.getElementById('boot-status');
+  const missing = [];
+  if (!window.STUDIO_CONSTS) missing.push('studio-consts.js');
+  if (!window.STUDIO_TEMPLATES) missing.push('studio-templates.js');
+  if (!window.renderLieu || !window.buildIndexes || !window.buildSitemap) missing.push('studio-render.js');
+  if (typeof JSZip === 'undefined') missing.push('JSZip (CDN)');
+  if (missing.length) {
+    bootEl.className = 'boot-status err';
+    bootEl.textContent = 'Modules non chargés : ' + missing.join(', ') + '. Place tous les fichiers dans le même dossier.';
+    return;
+  }
+  bootEl.className = 'boot-status ok';
+  bootEl.textContent = 'Studio prêt · ' + Object.keys(window.STUDIO_CONSTS.UI_STRINGS).length + ' langues · templates ' +
+                      window.STUDIO_TEMPLATES.lieu.length + ' + ' + window.STUDIO_TEMPLATES.index.length + ' chars';
+
+  const VALID_CATS = window.STUDIO_CONSTS.VALID_CATEGORIES;
+  const LANGS = window.STUDIO_CONSTS.LANGS;
+  const BANNED_FR = ["écrin de verdure","lieu d'exception","incontournable","à couper le souffle","généralement","souvent"];
+
+  let currentJson = null;
+  let existingManifest = null;
+
+  function escHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  function loadJson(text) {
+    let parsed;
+    try { parsed = JSON.parse(text); }
+    catch (e) { alert('JSON invalide : ' + e.message); return; }
+    currentJson = parsed;
+    document.getElementById('step-manifest').classList.remove('hidden');
+    document.getElementById('step-existing').classList.remove('hidden');
+    document.getElementById('step-checks').classList.remove('hidden');
+    document.getElementById('step-build').classList.remove('hidden');
+    prefillManifestForm();
+    renderChecks();
+  }
+
+  function prefillManifestForm() {
+    const d = currentJson;
+    document.getElementById('mf-slug').value = d.slug || '';
+    document.getElementById('mf-cats').value = d.category || '';
+    const i18n = d.i18n || {};
+    const rows = LANGS.map(l => {
+      const x = i18n[l] || {};
+      const name = x.name || '(manquant)';
+      const commune = d.commune || x.commune || '(pas de commune)';
+      return '<div>[' + l.toUpperCase() + '] ' + escHtml(name) + ' · ' + escHtml(commune) + '</div>';
+    }).join('');
+    document.getElementById('mf-langs').innerHTML = rows;
+  }
+
+  function renderChecks() {
+    const d = currentJson;
+    const checks = [];
+    const push = (s, l) => checks.push({ s: s, l: l });
+
+    if (!d.slug) push('fail', 'slug manquant');
+    else push('pass', 'slug : ' + d.slug);
+
+    if (!d.i18n) { push('fail', 'bloc i18n absent'); renderChecksOut(checks); return; }
+
+    const missingLangs = LANGS.filter(l => !d.i18n[l]);
+    if (!missingLangs.length) push('pass', '5 langues présentes');
+    else push('fail', 'langues manquantes : ' + missingLangs.join(', '));
+
+    const srcs = d.sources || [];
+    if (srcs.length >= 3) push('pass', srcs.length + ' sources');
+    else push('fail', srcs.length + ' source(s) — 3 minimum');
+
+    const bad = srcs.filter(s => /(visorando|komoot|alltrails|tripadvisor|getyourguide|booking|viator)/i.test(s.url || ''));
+    if (bad.length) push('fail', 'source(s) interdite(s) : ' + bad.map(s => s.name).join(', '));
+
+    if (d.latitude && d.longitude) push('pass', 'GPS : ' + d.latitude + ', ' + d.longitude);
+    else push('warn', 'GPS manquant');
+
+    for (const lang of LANGS) {
+      if (!d.i18n[lang]) continue;
+      const x = d.i18n[lang];
+      const L = '[' + lang.toUpperCase() + ']';
+      const mt = x.meta_title || '';
+      const md = x.meta_description || '';
+      if (!mt) push('fail', L + ' meta_title manquant');
+      else if (mt.length > 65) push('fail', L + ' meta_title ' + mt.length + '/65');
+      else push('pass', L + ' meta_title ' + mt.length + '/65');
+      if (!md) push('fail', L + ' meta_description manquant');
+      else if (md.length > 160) push('fail', L + ' meta_description ' + md.length + '/160');
+      else push('pass', L + ' meta_description ' + md.length + '/160');
+
+      const faq = x.faq || [];
+      if (faq.length < 6) push('warn', L + ' FAQ ' + faq.length + ' (6 min)');
+      else if (faq.length > 10) push('warn', L + ' FAQ ' + faq.length + ' (10 max)');
+      else push('pass', L + ' FAQ ' + faq.length + ' entrées');
+
+      const name = x.name || '';
+      if (name && faq.length) {
+        const missingName = faq.filter(f => !(f.q || '').includes(name) || !(f.a || '').includes(name));
+        if (!missingName.length) push('pass', L + ' nom du lieu dans chaque FAQ');
+        else push('fail', L + ' ' + missingName.length + ' FAQ sans le nom du lieu');
+      }
+    }
+
+    if (d.i18n.fr) {
+      const frText = JSON.stringify(d.i18n.fr).toLowerCase();
+      const found = BANNED_FR.filter(w => frText.includes(w));
+      if (found.length) push('warn', 'mots bannis : ' + found.join(', '));
+      else push('pass', 'aucun mot banni (FR)');
+    }
+
+    renderChecksOut(checks);
+  }
+
+  function renderChecksOut(checks) {
+    const pass = checks.filter(c => c.s === 'pass').length;
+    const warn = checks.filter(c => c.s === 'warn').length;
+    const fail = checks.filter(c => c.s === 'fail').length;
+    const el = document.getElementById('checks');
+    el.innerHTML = checks.map(c => {
+      const mark = c.s === 'pass' ? '✓' : c.s === 'warn' ? '⚠' : '✗';
+      return '<div class="check ' + c.s + '"><span class="mark">' + mark + '</span><span>' + escHtml(c.l) + '</span></div>';
+    }).join('') +
+    '<div style="margin-top:0.4rem;font-weight:600;padding-top:0.4rem;border-top:1px solid var(--rule);">Total : ' +
+    pass + ' ✓ · ' + warn + ' ⚠ · ' + fail + ' ✗</div>';
+    const btn = document.getElementById('btn-build');
+    if (fail > 0) {
+      btn.disabled = true;
+      btn.textContent = 'Corrige les ' + fail + ' erreur(s) pour construire';
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Construire + télécharger ZIP';
+    }
+  }
+
+  function setupDrop(dropEl, fileEl, pasteToggle, pasteArea, onLoad) {
+    ['dragenter','dragover'].forEach(ev => dropEl.addEventListener(ev, e => {
+      e.preventDefault(); dropEl.classList.add('dragover');
+    }));
+    ['dragleave','drop'].forEach(ev => dropEl.addEventListener(ev, e => {
+      e.preventDefault(); dropEl.classList.remove('dragover');
+    }));
+    dropEl.addEventListener('drop', e => {
+      const file = e.dataTransfer.files[0];
+      if (!file) return;
+      const r = new FileReader(); r.onload = () => onLoad(r.result); r.readAsText(file);
+    });
+    fileEl.addEventListener('change', e => {
+      const file = e.target.files[0]; if (!file) return;
+      const r = new FileReader(); r.onload = () => onLoad(r.result); r.readAsText(file);
+    });
+    if (pasteToggle && pasteArea) {
+      pasteToggle.addEventListener('click', () => {
+        pasteArea.classList.toggle('open');
+        if (pasteArea.classList.contains('open')) pasteArea.focus();
+      });
+      pasteArea.addEventListener('input', () => {
+        const t = pasteArea.value.trim();
+        if (t.length < 10) return;
+        try { JSON.parse(t); onLoad(t); } catch (_) {}
+      });
+    }
+  }
+
+  setupDrop(
+    document.getElementById('drop'),
+    document.getElementById('file'),
+    document.getElementById('paste-toggle'),
+    document.getElementById('paste'),
+    loadJson
+  );
+
+  setupDrop(
+    document.getElementById('drop-manifest'),
+    document.getElementById('file-manifest'),
+    null, null,
+    (txt) => {
+      try {
+        existingManifest = JSON.parse(txt);
+        const n = (existingManifest.lieux || []).length;
+        document.getElementById('existing-status').innerHTML = '<span style="color:var(--green);">✓ ' + n + ' lieux existants chargés</span>';
+      } catch (e) {
+        document.getElementById('existing-status').innerHTML = '<span style="color:var(--red);">✗ ' + escHtml(e.message) + '</span>';
+      }
+    }
+  );
+
+  async function build() {
+    const d = currentJson;
+    const slug = d.slug;
+    const catsStr = document.getElementById('mf-cats').value.trim();
+    const cats = catsStr.split(/\s+/).filter(Boolean);
+    const badCats = cats.filter(c => !VALID_CATS.includes(c));
+    if (badCats.length) { alert('Catégorie invalide : ' + badCats.join(', ')); return; }
+    if (!cats.length) { alert('Au moins une catégorie requise.'); return; }
+
+    const statusEl = document.getElementById('build-status');
+    statusEl.innerHTML = '<div class="notice">Construction en cours…</div>';
+
+    const rendered = {};
+
+    for (const lang of LANGS) {
+      const path = lang === 'fr' ? slug + '.html' : lang + '/' + slug + '.html';
+      rendered[path] = window.renderLieu(d, window.STUDIO_TEMPLATES.lieu, lang);
+    }
+
+    let manifest;
+    if (existingManifest) {
+      manifest = JSON.parse(JSON.stringify(existingManifest));
+      manifest.lieux = (manifest.lieux || []).filter(l => l.slug !== slug);
+    } else {
+      manifest = {
+        _comment: "Source of truth for what appears on the homepage grid. Add a new lieu = add an entry here. Order in this file = order shown on the page.",
+        lieux: []
+      };
+    }
+
+    const manifestEntry = { slug: slug, categories: cats, i18n: {} };
+    for (const lang of LANGS) {
+      const x = d.i18n[lang] || {};
+      manifestEntry.i18n[lang] = {
+        name: x.name || '',
+        commune: d.commune || x.commune || ''
+      };
+    }
+    manifest.lieux.push(manifestEntry);
+
+    rendered['lieux.json'] = JSON.stringify(manifest, null, 2) + '\n';
+
+    try {
+      const indexes = window.buildIndexes(manifest, window.STUDIO_TEMPLATES.index);
+      for (const [path, html] of Object.entries(indexes)) {
+        rendered[path] = html;
+      }
+    } catch (e) {
+      statusEl.innerHTML = '<div class="notice err">Échec build indexes : ' + escHtml(e.message) + '</div>';
+      return;
+    }
+
+    rendered['sitemap.xml'] = window.buildSitemap(manifest);
+    rendered['Json/' + slug + '.json'] = JSON.stringify(d, null, 2) + '\n';
+
+    const fl = document.getElementById('file-list');
+    fl.classList.remove('hidden');
+    const totalBytes = Object.values(rendered).reduce((a, b) => a + b.length, 0);
+    fl.innerHTML = Object.keys(rendered).sort().map(p =>
+      '<div class="ok">✓ ' + escHtml(p) + ' <span style="color:var(--muted);">(' + rendered[p].length + ' bytes)</span></div>'
+    ).join('') +
+    '<div style="margin-top:0.3rem;font-weight:600;padding-top:0.3rem;border-top:1px solid var(--rule);">' +
+    Object.keys(rendered).length + ' fichiers · ' + totalBytes + ' bytes total</div>';
+
+    try {
+      const zip = new JSZip();
+      for (const [path, content] of Object.entries(rendered)) {
+        zip.file(path, content);
+      }
+      const blob = await zip.generateAsync({ type: 'blob' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'loisirs74-' + slug + '.zip';
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      statusEl.innerHTML = '<div class="notice ok">✓ ZIP téléchargé. Extrais-le à la racine de ton repo et commit.</div>';
+    } catch (e) {
+      statusEl.innerHTML = '<div class="notice err">Échec ZIP : ' + escHtml(e.message) + '</div>';
+    }
+  }
+
+  document.getElementById('btn-build').addEventListener('click', build);
+})();
+</script>
+</body>
+</html>
