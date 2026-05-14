@@ -2166,6 +2166,48 @@ function bumpCost(model, inputTokens, cacheReadTokens, outputTokens) {
   return cost;
 }
 
+// Rate-limit aware sleep. Anthropic returns 429 with a `retry-after` header (seconds).
+// Returns the delay it slept for. Logs progress every second so the user knows we're alive.
+async function sleepWithLog(ms, label, hooks) {
+  const start = Date.now();
+  const end = start + ms;
+  while (Date.now() < end) {
+    const remain = Math.ceil((end - Date.now()) / 1000);
+    if (hooks?.setStatus) hooks.setStatus(`${label} (${remain}s)`);
+    await new Promise(r => setTimeout(r, Math.min(1000, end - Date.now())));
+  }
+  return ms;
+}
+
+// Wrap an async fn so 429 (rate-limit) responses trigger retry-with-backoff.
+// The wrapped fn must accept a single `attempt` argument and throw an Error
+// whose .message contains "429" if it was rate-limited.
+async function withRateLimitRetry(fn, hooks, maxRetries = 4) {
+  let attempt = 0;
+  while (true) {
+    try {
+      return await fn(attempt);
+    } catch (err) {
+      const msg = err && err.message || String(err);
+      const is429 = msg.includes('429') || msg.includes('rate_limit');
+      if (!is429 || attempt >= maxRetries) throw err;
+      attempt++;
+      // Try to parse retry-after seconds from the error message; otherwise exponential
+      let waitS = 0;
+      const retryAfterMatch = msg.match(/retry[- ]?after[":\s]+(\d+)/i);
+      if (retryAfterMatch) {
+        waitS = parseInt(retryAfterMatch[1], 10);
+      } else {
+        // 30k tokens/min limit → resets each minute; back off generously
+        waitS = [15, 45, 75, 120][attempt - 1] || 120;
+      }
+      if (hooks?.logStep) hooks.logStep(`⏳ 429 rate limit · attente ${waitS}s avant retry ${attempt}/${maxRetries}`, 'warn');
+      await sleepWithLog(waitS * 1000, `rate-limit retry ${attempt}/${maxRetries}`, hooks);
+      if (hooks?.logStep) hooks.logStep(`↻ retry ${attempt}/${maxRetries}…`, 'info');
+    }
+  }
+}
+
 async function callClaude(lieuName, model, budget, hooks) {
   // hooks: { setStatus(label), logStep(msg, kind), signal: AbortSignal }
   const apiKey = apiKeyInput.value.trim();
@@ -2201,7 +2243,7 @@ Output ONLY the JSON code block. Nothing else.`;
     system: [{ type: 'text', text: SYSTEM_PROMPT, cache_control: { type: 'ephemeral' } }],
     tools: [
       { type: 'web_search_20250305', name: 'web_search', max_uses: budget },
-      { type: 'web_fetch_20250910', name: 'web_fetch', max_uses: budget },
+      { type: 'web_fetch_20250910', name: 'web_fetch', max_uses: budget, max_content_tokens: 20000 },
     ],
     messages: [{ role: 'user', content: userMessage }],
   };
@@ -2585,13 +2627,24 @@ async function translateAll(frBlock, lieuMeta, hooks) {
   targets.forEach(l => hooks.setLangStatus(l, 'queued'));
   hooks.logStep(`  • translating to ${targets.join(', ')} (parallel, Haiku)`, 'info');
 
+  // Helper: a translate call wrapped in 429-aware retry-with-backoff,
+  // plus a final "regular failure" retry once after that.
+  const translateWith429 = (lang) =>
+    withRateLimitRetry(
+      async (attempt) => {
+        if (attempt > 0) hooks.logStep(`  ↻ ${lang} retry ${attempt} (after rate-limit)…`, 'info');
+        return await callTranslate(lang, frBlock, lieuMeta, hooks);
+      },
+      { setStatus: (s) => hooks.setLangStatus(lang, s), logStep: (m, k) => hooks.logStep(`  [${lang}] ${m}`, k) }
+    );
+
   const results = await Promise.allSettled(
-    targets.map(lang => callTranslate(lang, frBlock, lieuMeta, hooks)
+    targets.map(lang => translateWith429(lang)
       .then(r => { hooks.setLangStatus(lang, '✓'); return { lang, ...r }; })
       .catch(err => {
         hooks.setLangStatus(lang, '✗');
         hooks.logStep(`  ✗ ${lang}: ${err.message}`, 'err');
-        // Auto-retry once on failure
+        // Final simple retry once on non-429 failure
         hooks.logStep(`  ↺ retry ${lang}…`, 'warn');
         return callTranslate(lang, frBlock, lieuMeta, hooks)
           .then(r => { hooks.setLangStatus(lang, '✓ retry'); return { lang, ...r }; })
@@ -2782,12 +2835,22 @@ async function startResearch() {
       log(`─── [${i+1}/${names.length}] ${name} ───`, 'info');
 
       // ── STEP 1: research + author FR (with chosen model)
-      const result = await callClaude(name, model, budget, {
-        setStatus,
-        logStep: (m, k) => log(m, k),
-        signal: activeController.signal,
-        controller: activeController,
-      });
+      // Wrapped in withRateLimitRetry so 429 from the org rate-limit triggers
+      // a backoff + retry instead of killing the lieu.
+      const result = await withRateLimitRetry(
+        async (attempt) => {
+          if (attempt > 0) {
+            log(`  ↻ research retry ${attempt}…`, 'info');
+          }
+          return await callClaude(name, model, budget, {
+            setStatus,
+            logStep: (m, k) => log(m, k),
+            signal: activeController.signal,
+            controller: activeController,
+          });
+        },
+        { setStatus, logStep: (m, k) => log(m, k) }
+      );
 
       const json = result.json;
       const frBlock = json.i18n?.fr;
