@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a5a3a">
+<title>Waterfalls — Loisirs 74</title>
+<meta name="description" content="Waterfalls in Haute-Savoie · 14 venues.">
+<link rel="canonical" href="https://loisirs-74.netlify.app/en/waterfalls/">
+<link rel="alternate" hreflang="fr" href="https://loisirs-74.netlify.app/cascades/">
+<link rel="alternate" hreflang="en" href="https://loisirs-74.netlify.app/en/waterfalls/">
+<link rel="alternate" hreflang="de" href="https://loisirs-74.netlify.app/de/wasserfaelle/">
+<link rel="alternate" hreflang="it" href="https://loisirs-74.netlify.app/it/cascate/">
+<link rel="alternate" hreflang="es" href="https://loisirs-74.netlify.app/es/cascadas/">
+<link rel="alternate" hreflang="x-default" href="https://loisirs-74.netlify.app/cascades/">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<style>*,*::before,*::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}body,h1,h2,h3,p,ul,ol{margin:0}ul,ol{padding-left:0;list-style:none}img,svg{display:block;max-width:100%;height:auto}a{color:inherit;text-decoration:none}:root{--bg:#fafaf7;--surface:#ffffff;--surface-2:#f3f3ee;--ink:#0b0d10;--ink-soft:#3a3f47;--ink-mute:#6a727d;--line:#e3e3dc;--accent:#0a5a3a;--accent-2:#063b25;--accent-ink:#ffffff;--focus:#0a5a3a;--max:72rem;--radius:14px;--radius-lg:20px;--shadow:0 1px 0 rgba(11,13,16,.04),0 8px 24px -12px rgba(11,13,16,.18);--pad:clamp(1rem,3vw,2rem);--font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;--serif:ui-serif,Georgia,Cambria,"Times New Roman",serif;--ease:cubic-bezier(.2,.7,.2,1)}@media (prefers-color-scheme:dark){:root{--bg:#0b0d10;--surface:#13171c;--surface-2:#181d23;--ink:#f4f6f8;--ink-soft:#c8cfd8;--ink-mute:#8b95a1;--line:#262c34;--accent:#6cf0a8;--accent-2:#9af6c2;--accent-ink:#0b0d10}}html,body{background:var(--bg);color:var(--ink)}body{font-family:var(--font);font-size:clamp(1rem,.96rem + .2vw,1.0625rem);line-height:1.6;-webkit-font-smoothing:antialiased}.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
+/* HEADER */
+header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.85rem}.brand{display:flex;align-items:center;gap:.6rem;font-weight:700;letter-spacing:-.01em;font-size:1.0625rem;color:var(--ink)}.brand .mark{width:30px;height:30px;border-radius:9px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center}.brand .mark svg{width:18px;height:18px}
+.lang-picker{position:relative}.lang-picker summary{cursor:pointer;padding:.5rem .75rem;font-size:.9375rem;color:var(--ink-soft);border-radius:8px;list-style:none}.lang-picker summary::-webkit-details-marker{display:none}.lang-picker[open] > .lang-menu{display:flex}.lang-menu{display:none;position:absolute;top:calc(100% + .35rem);right:0;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.35rem;min-width:9rem;z-index:60}.lang-menu a{padding:.5rem .65rem;border-radius:6px;font-size:.9rem;color:var(--ink-soft)}.lang-menu a:hover{background:var(--surface-2);color:var(--ink)}.lang-menu a[aria-current="true"]{background:var(--surface-2);color:var(--ink);font-weight:600}
+/* HERO */
+.hero{padding:clamp(2rem,5vw,4rem) 0 clamp(1.5rem,3vw,2.5rem);position:relative;overflow:hidden}.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(900px 400px at 80% -10%,color-mix(in srgb,var(--accent) 12%,transparent),transparent 70%),radial-gradient(700px 300px at 0% 10%,color-mix(in srgb,var(--accent) 8%,transparent),transparent 70%)}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.8125rem;font-weight:600;letter-spacing:.04em;color:var(--ink-soft);padding:.4rem .7rem;border:1px solid var(--line);border-radius:999px;background:var(--surface);margin-bottom:1.25rem}.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 18%,transparent)}
+h1{font-size:clamp(2rem,1.5rem + 3vw,3.25rem);line-height:1.06;letter-spacing:-.025em;font-weight:800;text-wrap:balance;margin-bottom:1rem;max-width:32ch}h1 em{font-style:italic;font-family:var(--serif);font-weight:500;color:var(--accent)}
+.lede{font-size:clamp(1rem,1rem + .4vw,1.1875rem);color:var(--ink-soft);max-width:42rem;text-wrap:pretty;margin-bottom:1rem}
+/* CATEGORY NAV */
+.cat-nav{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;margin-bottom:.5rem}.cat-nav a{font-size:.85rem;font-weight:600;padding:.45rem .85rem;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--ink-soft);transition:all .2s var(--ease)}.cat-nav a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);transform:translateY(-1px)}
+/* SECTION */
+section.cat{padding:clamp(2rem,4vw,3.5rem) 0;border-top:1px solid var(--line)}section.cat:first-of-type{border-top:0}.cat-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1.25rem;flex-wrap:wrap}h2{font-size:clamp(1.3rem,1.1rem + .8vw,1.85rem);line-height:1.15;letter-spacing:-.015em;font-weight:800;text-wrap:balance}h2 .count{font-size:.85rem;font-weight:600;color:var(--ink-mute);margin-left:.4rem}.see-all{font-size:.875rem;font-weight:700;color:var(--accent);display:inline-flex;align-items:center;gap:.3rem;white-space:nowrap}.see-all:hover{text-decoration:underline}.see-all svg{width:14px;height:14px}
+/* CAROUSEL */
+.carousel{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem}@media(max-width:680px){.carousel{display:flex;gap:.85rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}.carousel::-webkit-scrollbar{display:none}.carousel > .card{flex:0 0 75vw;max-width:18rem;scroll-snap-align:start}}
+/* CARD */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s var(--ease),border-color .2s var(--ease),box-shadow .2s var(--ease)}.card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 30%,var(--line));box-shadow:var(--shadow)}.card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative}.card-photo img{width:100%;height:100%;object-fit:cover;transition:transform .35s var(--ease)}.card:hover .card-photo img{transform:scale(1.03)}.card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute)}.card-photo .placeholder svg{width:32px;height:32px;opacity:.4}.card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}.card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}.card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em}.card-body a.title:hover{color:var(--accent)}.card-commune{font-size:.78rem;color:var(--ink-mute);display:flex;align-items:center;gap:.3rem}.card-commune svg{width:11px;height:11px;flex-shrink:0}.card-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45;margin:.15rem 0 .65rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.card-actions{display:flex;gap:.4rem;margin-top:auto}.card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);transition:all .2s var(--ease)}.card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}.card-actions a svg{width:13px;height:13px}
+/* FOOTER */
+footer.site{background:var(--surface);border-top:1px solid var(--line);padding:clamp(2.5rem,5vw,4rem) 0 2rem;color:var(--ink-soft);font-size:.9rem;margin-top:3rem}.foot-grid{display:grid;grid-template-columns:1fr;gap:2rem;margin-bottom:2rem}@media (min-width:720px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}.foot-col h4{font-size:.8125rem;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.85rem}.foot-col ul{display:flex;flex-direction:column;gap:.5rem}.foot-col p{color:var(--ink-mute);max-width:24rem;line-height:1.6}.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-top:1.5rem;border-top:1px solid var(--line);color:var(--ink-mute);font-size:.8125rem}
+:where(a,button,summary,input,textarea):focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+.cat-hero{padding:clamp(1.5rem,3vw,2.5rem) 0 1rem;border-bottom:1px solid var(--line)}
+.cat-hero h1{font-size:clamp(1.75rem,1.5rem + 1.5vw,2.75rem);line-height:1.05;letter-spacing:-.02em;font-weight:800;margin:0 0 .35rem}
+.cat-hero .meta{color:var(--ink-mute);font-size:.95rem}
+#cat-map{height:50vh;max-height:420px;min-height:280px;width:100%;border-bottom:1px solid var(--line);position:relative;z-index:1}
+.filter-bar{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line);z-index:30;padding:.65rem 0}
+.filter-bar .wrap{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center}
+.filter-bar label{display:flex;flex-direction:column;gap:.15rem;font-size:.7rem;font-weight:700;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.05em}
+.filter-bar select{padding:.5rem .7rem;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:.85rem;font-weight:500;font-family:inherit;min-width:8rem}
+.filter-bar .access-group{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.filter-bar .access-group button{padding:.5rem .8rem;border:0;background:transparent;color:var(--ink-soft);font-size:.78rem;font-weight:600;cursor:pointer;font-family:inherit;border-right:1px solid var(--line)}
+.filter-bar .access-group button:last-child{border-right:0}
+.filter-bar .access-group button.active{background:var(--accent);color:var(--accent-ink)}
+.commune-section{padding:clamp(1.5rem,3vw,2.5rem) 0;border-top:1px solid var(--line)}
+.commune-section:first-of-type{border-top:0}
+.commune-head{margin-bottom:1.25rem}
+.commune-head h3{font-size:clamp(1.15rem,1rem + .5vw,1.45rem);font-weight:800;letter-spacing:-.01em;margin:0 0 .55rem;color:var(--ink)}
+.commune-head .commune-count{font-size:.78rem;font-weight:500;color:var(--ink-mute);margin-left:.25rem;display:block;margin-top:.2rem}
+.transport-block{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:.7rem .9rem;font-size:.8rem;line-height:1.4;display:flex;flex-direction:column;gap:.25rem}
+.transport-block .transport-label{font-size:.7rem;font-weight:700;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.15rem}
+.transport-row{display:flex;gap:.5rem;flex-wrap:wrap;align-items:baseline}
+.transport-row .t-k{font-weight:700;color:var(--ink-soft);font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;min-width:5rem}
+.transport-row .t-v{color:var(--ink);font-size:.85rem}
+.transport-empty{font-style:italic}
+.transport-empty p{margin:0;color:var(--ink-mute);font-size:.82rem}
+.commune-section.hidden{display:none}
+.commune-section .card.hidden{display:none}
+.leaflet-popup-content{margin:8px 12px;font-family:var(--font);font-size:.85rem;line-height:1.4}
+.leaflet-popup-content a{color:var(--accent);font-weight:600;text-decoration:none}
+.leaflet-popup-content .commune-pop{display:block;color:var(--ink-mute);font-size:.72rem;margin-top:.15rem}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="https://loisirs-74.netlify.app/en/" class="brand">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>
+      Loisirs 74
+    </a>
+    <details class="lang-picker">
+      <summary>English</summary>
+      <div class="lang-menu"><a href="https://loisirs-74.netlify.app/cascades/" hreflang="fr">Français</a><a href="https://loisirs-74.netlify.app/en/waterfalls/" aria-current="true" hreflang="en">English</a><a href="https://loisirs-74.netlify.app/de/wasserfaelle/" hreflang="de">Deutsch</a><a href="https://loisirs-74.netlify.app/it/cascate/" hreflang="it">Italiano</a><a href="https://loisirs-74.netlify.app/es/cascadas/" hreflang="es">Español</a></div>
+    </details>
+  </div>
+</header>
+
+<section class="cat-hero">
+  <div class="wrap">
+    <h1>Waterfalls</h1>
+    <p class="meta">14 venues · 11 town(s) · Haute-Savoie</p>
+  </div>
+</section>
+
+<div id="cat-map" aria-label="Carte des Waterfalls"></div>
+
+<div class="filter-bar">
+  <div class="wrap">
+    <label>
+      <span>Town</span>
+      <select id="filt-commune"><option value="">All towns</option><option value="Bellevaux">Bellevaux</option><option value="Chamonix-Mont-Blanc">Chamonix-Mont-Blanc</option><option value="Faverges-Seythenex">Faverges-Seythenex</option><option value="Le Grand-Bornand">Le Grand-Bornand</option><option value="Megève">Megève</option><option value="Montriond">Montriond</option><option value="Morzine">Morzine</option><option value="Passy">Passy</option><option value="Sallanches">Sallanches</option><option value="Sixt-Fer-à-Cheval">Sixt-Fer-à-Cheval</option><option value="Talloires-Montmin">Talloires-Montmin</option></select>
+    </label>
+    <label>
+      <span>Access</span>
+      <div class="access-group" id="filt-access">
+        <button data-v="all" class="active">All</button>
+        <button data-v="free">Free</button>
+        <button data-v="paid">Paid</button>
+      </div>
+    </label>
+    <label>
+      <span>Sort</span>
+      <select id="filt-sort">
+        <option value="commune">By town</option>
+        <option value="alpha">A → Z</option>
+      </select>
+    </label>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    <div class="commune-section" data-commune="Bellevaux">
+      <div class="commune-head">
+        <h3>Bellevaux <span class="commune-count">1 venue(s) in Bellevaux</span></h3>
+        <div class="transport-block">
+    <div class="transport-label">How to get there</div>
+    <div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Thonon (25 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">SAT Vallée verte</span></div>
+  </div>
+      </div>
+      <div class="carousel"><article class="card">
+    <a href="https://loisirs-74.netlify.app/en/cascade-de-la-diomaz" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Cascade_des_Chartreux.jpg" alt="Cascade de la Diomaz and natural potholes carved in rock, near Vallon Lake, Bellevaux, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Free</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs-74.netlify.app/en/cascade-de-la-diomaz" class="title">Cascade de la Diomaz</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Bellevaux</span></div>
+      <p class="card-desc">Multiple waterfalls carving natural potholes into the rock, reached in 30 minutes of walking from Vallon Lake.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20de%20la%20Diomaz%2C%20Bellevaux%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+        
+      </div>
+    </div>
+  </article></div>
+    </div>
+<div class="commune-section" data-commune="Chamonix-Mont-Blanc">
+      <div class="commune-head">
+        <h3>Chamonix-Mont-Blanc <span class="commune-count">1 venue(s) in Chamonix-Mont-Blanc</span></h3>
+        <div class="transport-block">
+    <div class="transport-label">How to get there</div>
+    <div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Chamonix-Mont-Blanc</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">Chamonix Bus · Mont-Blanc Express</span></div>
+  </div>
+      </div>
+      <div class="carousel"><article class="card">
+    <a href="https://loisirs-74.netlify.app/en/cascade-du-dard" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Cascade_du_Dard_01.jpg" alt="Cascade du Dard plunging 20 metres through the forest near the Mont-Blanc tunnel entrance, Chamonix-Mont-Blanc, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Free</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs-74.netlify.app/en/cascade-du-dard" class="title">Cascade du Dard</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Chamonix-Mont-Blanc</span></div>
+      <p class="card-desc">A 20-metre waterfall located at 1,233 m altitude on the Dard torrent, which descends from the Pélerins Glacier.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20du%20Dard%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+        
+      </div>
+    </div>
+  </article></div>
+    </div>
+<div class="commune-section" data-commune="Faverges-Seythenex">
+      <div class="commune-head">
+        <h3>Faverges-Seythenex <span class="commune-count">1 venue(s) in Faverges-Seythenex</span></h3>
+        <div class="transport-block">
+    <div class="transport-label">How to get there</div>
+    <div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Annecy (28 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">LIHSA Y14</span></div>
+  </div>
+      </div>
+      <div class="carousel"><article class="card">
+    <a href="https://loisirs-74.netlify.app/en/grotte-et-cascade-de-seythenex" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Grotte_et_cascade_de_Seythenex_10.jpg" alt="Seythenex Cave, underground gallery with limestone geological formation, Bauges Massif, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Paid</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs-74.netlify.app/en/grotte-et-cascade-de-seythenex" class="title">Grotte et Cascade de Seythenex</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Faverges-Seythenex</span></div>
+      <p class="card-desc">The only underground gallery open to the public in Haute-Savoie.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Grotte%20et%20Cascade%20de%20Seythenex%2C%20Faverges-Seythenex%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+        <a href="https://www.grotte-cascade-seythenex.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
+      </div>
+    </div>
+  </article></div>
+    </div>
+<div class="commune-section" data-commune="Le Grand-Bornand">
+      <div class="commune-head">
+        <h3>Le Grand-Bornand <span class="commune-count">1 venue(s) in Le Grand-Bornand</span></h3>
+        <div class="transport-block">
+    <div class="transport-label">How to get there</div>
+    <div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Annecy (35 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">LIHSA Y62</span></div>
+  </div>
+      </div>
+      <div class="carousel"><article class="card">
+    <a href="https://loisirs-74.netlify.app/en/cascade-du-chinaillon" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Cascade_du_Rouget_Sixt-Fer-%C3%A0-Cheval.jpg/600px-Cascade_du_Rouget_Sixt-Fer-%C3%A0-Cheval.jpg" alt="Cascade du Chinaillon tumbling down a narrow gorge in the beech forest, Grand-Bornand Chinaillon, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Free</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs-74.netlify.app/en/cascade-du-chinaillon" class="title">Cascade du Chinaillon</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Le Grand-Bornand</span></div>
+      <p class="card-desc">A 30-meter waterfall cascading down a narrow gorge on the Nant du Chinaillon, accessible in 20 minutes&#39; walk from the resort.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20du%20Chinaillon%2C%20Le%20Grand-Bornand%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+        
+      </div>
+    </div>
+  </article></div>
+    </div>
+<div class="commune-section" data-commune="Megève">
+      <div class="commune-head">
+        <h3>Megève <span class="commune-count">1 venue(s) in Megève</span></h3>
+        <div class="transport-block">
+    <div class="transport-label">How to get there</div>
+    <div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Sallanches (10 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">SAT Mont-Blanc</span></div>
+  </div>
+      </div>
+      <div class="carousel"><article class="card">
+    <a href="https://loisirs-74.netlify.app/en/cascade-de-la-belle-au-bois" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Cascade_d%27Arpenaz_Sallanches.jpg/600px-Cascade_d%27Arpenaz_Sallanches.jpg" alt="Cascade de la Belle au Bois surrounded by dense forest, turquoise pools and wet rocks, Megève, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Free</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs-74.netlify.app/en/cascade-de-la-belle-au-bois" class="title">Cascade de la Belle au Bois</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Megève</span></div>
+      <p class="card-desc">A 30-metre waterfall carving turquoise pools, nestled in forest 30 minutes&#39; walk from Megève town centre.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20de%20la%20Belle%20au%20Bois%2C%20Meg%C3%A8ve%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+        
+      </div>
+    </div>
+  </article></div>
+    </div>
+<div class="commune-section" data-commune="Montriond">
+      <div class="commune-head">
+        <h3>Montriond <span class="commune-count">1 venue(s) in Montriond</span></h3>
+        <div class="transport-block">
+    <div class="transport-label">How to get there</div>
+    <div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Cluses (32 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">SAT</span></div>
+  </div>
+      </div>
+      <div class="carousel"><article class="card">
+    <a href="https://loisirs-74.netlify.app/en/cascade-des-brochaux" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Cascade_d%27Arpenaz_Sallanches.jpg/600px-Cascade_d%27Arpenaz_Sallanches.jpg" alt="Cascade des Brochaux with its natural pool, hiking trail starting from Les Lindarets, Montriond, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Free</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs-74.netlify.app/en/cascade-des-brochaux" class="title">Cascade des Brochaux</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Montriond</span></div>
+      <p class="card-desc">30-meter waterfall with natural basins, accessible in 30 to 40 minutes on foot from the village of Les Lindarets, in the heart of Vallée d&#39;Aulps.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20des%20Brochaux%2C%20Montriond%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+        
+      </div>
+    </div>
+  </article></div>
+    </div>
+<div class="commune-section" data-commune="Morzine">
+      <div class="commune-head">
+        <h3>Morzine <span class="commune-count">1 venue(s) in Morzine</span></h3>
+        <div class="transport-block">
+    <div class="transport-label">How to get there</div>
+    <div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Cluses (35 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">SAT Vallée d&#39;Aulps</span></div>
+  </div>
+      </div>
+      <div class="carousel"><article class="card">
+    <a href="https://loisirs-74.netlify.app/en/cascade-de-nyon" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Cascade_de_Nyon_%286%29.jpg" alt="Cascade de Nyon in its gorge, Morzine, Haute-Savoie, canyoning and hiking site" loading="lazy">
+      <span class="card-tag">Free</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs-74.netlify.app/en/cascade-de-nyon" class="title">Cascade de Nyon</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Morzine</span></div>
+      <p class="card-desc">Natural 10-meter waterfall at the bottom of a gorge on the Dranse de la Manche, reached in 15 minutes on foot from the Nyon cable car parking area.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20de%20Nyon%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+        
+      </div>
+    </div>
+  </article></div>
+    </div>
+<div class="commune-section" data-commune="Passy">
+      <div class="commune-head">
+        <h3>Passy <span class="commune-count">1 venue(s) in Passy</span></h3>
+        <div class="transport-block">
+    <div class="transport-label">How to get there</div>
+    <div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Passy-Plaine-Joux halt</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">SAT Mont-Blanc</span></div>
+  </div>
+      </div>
+      <div class="carousel"><article class="card">
+    <a href="https://loisirs-74.netlify.app/en/cascade-de-chedde" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Cascade_du_Rouget_Sixt-Fer-%C3%A0-Cheval.jpg/600px-Cascade_du_Rouget_Sixt-Fer-%C3%A0-Cheval.jpg" alt="Cascade de Chedde heart-shaped waterfall, Ugine torrent, Passy-Chedde, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Free</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs-74.netlify.app/en/cascade-de-chedde" class="title">Cascade de Chedde</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Passy</span></div>
+      <p class="card-desc">Natural waterfall where the waters of the Ugine torrent divide into two branches around a heart of stone, creating a distinctive shape that earned it the nickname Heart Cascade.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20de%20Chedde%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+        
+      </div>
+    </div>
+  </article></div>
+    </div>
+<div class="commune-section" data-commune="Sallanches">
+      <div class="commune-head">
+        <h3>Sallanches <span class="commune-count">3 venue(s) in Sallanches</span></h3>
+        <div class="transport-block">
+    <div class="transport-label">How to get there</div>
+    <div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Sallanches-Combloux-Megève</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">SAT Mont-Blanc</span></div>
+  </div>
+      </div>
+      <div class="carousel"><article class="card">
+    <a href="https://loisirs-74.netlify.app/en/cascade-de-doran" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Cascade_d%27Arpenaz_Sallanches.jpg/600px-Cascade_d%27Arpenaz_Sallanches.jpg" alt="Cascade de Doran dropping 70 meters through a broadleaf forest, Sallanches, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Free</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs-74.netlify.app/en/cascade-de-doran" class="title">Cascade de Doran</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sallanches</span></div>
+      <p class="card-desc">70-meter mountain waterfall perched at 1,200 m elevation, designated a Natural Monument since 1909, in the heart of a broadleaf forest overlooking the Arve valley.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20de%20Doran%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+        
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs-74.netlify.app/en/cascade-de-l-arpenaz" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Sallanches_Cascade_de_l%27Arpenaz_2.jpg" alt="Cascade de l&#39;Arpenaz, 270-meter waterfall on limestone cliff, Sallanches, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Free</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs-74.netlify.app/en/cascade-de-l-arpenaz" class="title">Cascade de l&#39;Arpenaz</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sallanches</span></div>
+      <p class="card-desc">A 270-meter waterfall overlooking the hamlet of Luzier, ranked as the 3rd highest waterfall in France and the highest in the French Alps.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20de%20l&#39;Arpenaz%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+        
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs-74.netlify.app/en/cascade-des-fours" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Cascade_des_Fours2.jpg" alt="View of the Cascade des Fours in the Combe des Fours, Aravis massif, Sallanches, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Free</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs-74.netlify.app/en/cascade-des-fours" class="title">Cascade des Fours</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sallanches</span></div>
+      <p class="card-desc">High alpine waterfall originating from the Gouille des Fours (2,030 m), at the foot of Pierre Fendue in the Aravis massif, accessible by steep trail from Lintre.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20des%20Fours%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+        
+      </div>
+    </div>
+  </article></div>
+    </div>
+<div class="commune-section" data-commune="Sixt-Fer-à-Cheval">
+      <div class="commune-head">
+        <h3>Sixt-Fer-à-Cheval <span class="commune-count">2 venue(s) in Sixt-Fer-à-Cheval</span></h3>
+        <div class="transport-block">
+    <div class="transport-label">How to get there</div>
+    <div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Cluses (28 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">SAT Haut-Giffre</span></div>
+  </div>
+      </div>
+      <div class="carousel"><article class="card">
+    <a href="https://loisirs-74.netlify.app/en/cascade-du-rouget" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cascade_du_Rouget_en_%C3%A9t%C3%A9_%28juillet_2023%29_2.JPG" alt="Cascade du Rouget with its three drops and impressive flow, Giffre Valley, Sixt-Fer-à-Cheval, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Free</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs-74.netlify.app/en/cascade-du-rouget" class="title">Cascade du Rouget</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sixt-Fer-à-Cheval</span></div>
+      <p class="card-desc">Spectacular waterfall 80 to 90 metres high formed by three successive drops in the Giffre Valley, nicknamed the &#39;Queen of the Alps&#39; for its power and beauty.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20du%20Rouget%2C%20Sixt-Fer-%C3%A0-Cheval%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+        
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs-74.netlify.app/en/cirque-du-fer-a-cheval" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Sixt-Fer-%C3%A0-Cheval_Cirque_de_Fer-%C3%A0-Cheval_01.jpg" alt="Cirque du Fer-à-Cheval with its limestone cliffs and waterfalls, Sixt-Fer-à-Cheval, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Free</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs-74.netlify.app/en/cirque-du-fer-a-cheval" class="title">Cirque du Fer-à-Cheval</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sixt-Fer-à-Cheval</span></div>
+      <p class="card-desc">A limestone amphitheatre spanning 4 to 5 km, the largest mountain cirque in the Alps with walls 500 to 700 m high and over thirty waterfalls cascading in spring.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cirque%20du%20Fer-%C3%A0-Cheval%2C%20Sixt-Fer-%C3%A0-Cheval%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+        
+      </div>
+    </div>
+  </article></div>
+    </div>
+<div class="commune-section" data-commune="Talloires-Montmin">
+      <div class="commune-head">
+        <h3>Talloires-Montmin <span class="commune-count">1 venue(s) in Talloires-Montmin</span></h3>
+        <div class="transport-block">
+    <div class="transport-label">How to get there</div>
+    <div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Annecy (15 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">Sibra ligne 60</span></div>
+  </div>
+      </div>
+      <div class="carousel"><article class="card">
+    <a href="https://loisirs-74.netlify.app/en/cascade-d-angon" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Cascade_du_Rouget_Sixt-Fer-%C3%A0-Cheval.jpg/600px-Cascade_du_Rouget_Sixt-Fer-%C3%A0-Cheval.jpg" alt="Cascade d&#39;Angon at the canyon&#39;s end, accessible by secure trail, Talloires-Montmin, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Free</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs-74.netlify.app/en/cascade-d-angon" class="title">Cascade d&#39;Angon</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Talloires-Montmin</span></div>
+      <p class="card-desc">A 60-meter waterfall in a spectacular canyon, accessible via a secure trail carved into the cliff face above Lake Annecy.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20d&#39;Angon%2C%20Talloires-Montmin%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+        
+      </div>
+    </div>
+  </article></div>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <h4>Loisirs 74</h4>
+        <p>Independent guide to leisure venues in Haute-Savoie</p>
+      </div>
+      <div class="foot-col">
+        <h4>Categories</h4>
+        <ul><li><a href="https://loisirs-74.netlify.app/en/lakes/">Lakes &amp; beaches</a></li><li><a href="https://loisirs-74.netlify.app/en/waterfalls/">Waterfalls</a></li><li><a href="https://loisirs-74.netlify.app/en/leisure-parks/">Leisure parks</a></li><li><a href="https://loisirs-74.netlify.app/en/viewpoints/">Viewpoints</a></li><li><a href="https://loisirs-74.netlify.app/en/cable-cars/">Cable cars</a></li><li><a href="https://loisirs-74.netlify.app/en/museums/">Museums</a></li><li><a href="https://loisirs-74.netlify.app/en/castles/">Castles &amp; forts</a></li><li><a href="https://loisirs-74.netlify.app/en/greenways/">Greenways</a></li><li><a href="https://loisirs-74.netlify.app/en/attractions/">Attractions &amp; activities</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h4>Language</h4>
+        <ul><li><a href="https://loisirs-74.netlify.app/cascades/" hreflang="fr">Français</a></li><li><a href="https://loisirs-74.netlify.app/en/waterfalls/" hreflang="en">English</a></li><li><a href="https://loisirs-74.netlify.app/de/wasserfaelle/" hreflang="de">Deutsch</a></li><li><a href="https://loisirs-74.netlify.app/it/cascate/" hreflang="it">Italiano</a></li><li><a href="https://loisirs-74.netlify.app/es/cascadas/" hreflang="es">Español</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Published by Blue Canard Éditions · Edmaster. All rights reserved.</span>
+      <span style="font-family:ui-monospace,monospace;font-size:.72rem">Edmaster & Claudius</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+(function(){
+  const PINS = [{"slug":"cascade-de-doran","name":"Cascade de Doran","commune":"Sallanches","lat":45.9696,"lng":6.5975,"url":"https://loisirs-74.netlify.app/en/cascade-de-doran","paid":false},{"slug":"cascade-de-chedde","name":"Cascade de Chedde","commune":"Passy","lat":45.9287,"lng":6.6933,"url":"https://loisirs-74.netlify.app/en/cascade-de-chedde","paid":false},{"slug":"cascade-du-dard","name":"Cascade du Dard","commune":"Chamonix-Mont-Blanc","lat":45.9197,"lng":6.8847,"url":"https://loisirs-74.netlify.app/en/cascade-du-dard","paid":false},{"slug":"cascade-de-l-arpenaz","name":"Cascade de l'Arpenaz","commune":"Sallanches","lat":45.976999,"lng":6.642309,"url":"https://loisirs-74.netlify.app/en/cascade-de-l-arpenaz","paid":false},{"slug":"cascade-des-fours","name":"Cascade des Fours","commune":"Sallanches","lat":45.938288,"lng":6.559696,"url":"https://loisirs-74.netlify.app/en/cascade-des-fours","paid":false},{"slug":"cirque-du-fer-a-cheval","name":"Cirque du Fer-à-Cheval","commune":"Sixt-Fer-à-Cheval","lat":46.0633,"lng":6.7978,"url":"https://loisirs-74.netlify.app/en/cirque-du-fer-a-cheval","paid":false},{"slug":"cascade-de-la-belle-au-bois","name":"Cascade de la Belle au Bois","commune":"Megève","lat":45.8565,"lng":6.6215,"url":"https://loisirs-74.netlify.app/en/cascade-de-la-belle-au-bois","paid":false},{"slug":"cascade-de-nyon","name":"Cascade de Nyon","commune":"Morzine","lat":46.16556,"lng":6.71161,"url":"https://loisirs-74.netlify.app/en/cascade-de-nyon","paid":false},{"slug":"cascade-d-angon","name":"Cascade d'Angon","commune":"Talloires-Montmin","lat":45.83278,"lng":6.21639,"url":"https://loisirs-74.netlify.app/en/cascade-d-angon","paid":false},{"slug":"cascade-du-chinaillon","name":"Cascade du Chinaillon","commune":"Le Grand-Bornand","lat":45.962517,"lng":6.439147,"url":"https://loisirs-74.netlify.app/en/cascade-du-chinaillon","paid":false},{"slug":"cascade-des-brochaux","name":"Cascade des Brochaux","commune":"Montriond","lat":46.2106,"lng":6.7743,"url":"https://loisirs-74.netlify.app/en/cascade-des-brochaux","paid":false},{"slug":"cascade-du-rouget","name":"Cascade du Rouget","commune":"Sixt-Fer-à-Cheval","lat":46.0564,"lng":6.7786,"url":"https://loisirs-74.netlify.app/en/cascade-du-rouget","paid":false},{"slug":"grotte-et-cascade-de-seythenex","name":"Grotte et Cascade de Seythenex","commune":"Faverges-Seythenex","lat":45.732217,"lng":6.299157,"url":"https://loisirs-74.netlify.app/en/grotte-et-cascade-de-seythenex","paid":true}];
+  const FREE_LABEL = "Free";
+  const PAID_LABEL = "Paid";
+  
+  // ── MAP ──
+  if (typeof L === 'undefined' || PINS.length === 0) return;
+  const map = L.map('cat-map', { scrollWheelZoom: false });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
+  }).addTo(map);
+  const layers = {};
+  const markers = [];
+  for (const p of PINS) {
+    const m = L.marker([p.lat, p.lng]).addTo(map);
+    const tag = p.paid ? PAID_LABEL : FREE_LABEL;
+    m.bindPopup('<a href="'+p.url+'">'+p.name+'</a> <span style="color:#888;font-size:.7rem">· '+tag+'</span><span class="commune-pop">'+p.commune+'</span>');
+    layers[p.slug] = m;
+    markers.push(m);
+  }
+  const group = L.featureGroup(markers);
+  map.fitBounds(group.getBounds().pad(0.15));
+  
+  // ── FILTERS ──
+  const communeSel = document.getElementById('filt-commune');
+  const accessGroup = document.getElementById('filt-access');
+  const sortSel = document.getElementById('filt-sort');
+  
+  let curCommune = '';
+  let curAccess = 'all';
+  let curSort = 'commune';
+  
+  function pinPaid(slug) {
+    const p = PINS.find(x => x.slug === slug);
+    return p ? p.paid : false;
+  }
+  
+  function applyFilters() {
+    const sections = document.querySelectorAll('.commune-section');
+    let visibleMarkers = [];
+    sections.forEach(sec => {
+      const commune = sec.dataset.commune;
+      const communeMatch = !curCommune || commune === curCommune;
+      let visibleCards = 0;
+      sec.querySelectorAll('.card').forEach(card => {
+        const titleLink = card.querySelector('a.title');
+        const href = titleLink ? titleLink.getAttribute('href') : '';
+        const slug = href.split('/').pop();
+        const isPaid = pinPaid(slug);
+        const accessMatch = curAccess === 'all' || (curAccess === 'free' && !isPaid) || (curAccess === 'paid' && isPaid);
+        const show = communeMatch && accessMatch;
+        card.classList.toggle('hidden', !show);
+        if (show) {
+          visibleCards++;
+          if (layers[slug]) visibleMarkers.push(layers[slug]);
+        }
+      });
+      sec.classList.toggle('hidden', visibleCards === 0);
+    });
+    // Re-fit map to visible markers
+    if (visibleMarkers.length) {
+      const fg = L.featureGroup(visibleMarkers);
+      map.fitBounds(fg.getBounds().pad(0.15));
+    }
+  }
+  
+  function applySort() {
+    const main = document.querySelector('main .wrap');
+    const sections = Array.from(main.querySelectorAll('.commune-section'));
+    if (curSort === 'alpha') {
+      // Pull all cards out, sort alphabetically, put back into a single section
+      // Simpler: keep commune grouping for 'commune', allow re-grouping for alpha later. For now stay grouped, sort cards within each commune alphabetically.
+      sections.forEach(sec => {
+        const carousel = sec.querySelector('.carousel');
+        const cards = Array.from(carousel.querySelectorAll('.card'));
+        cards.sort((a, b) => {
+          const na = a.querySelector('a.title')?.textContent || '';
+          const nb = b.querySelector('a.title')?.textContent || '';
+          return na.localeCompare(nb);
+        });
+        cards.forEach(c => carousel.appendChild(c));
+      });
+    }
+    // 'commune' sort is the default order — nothing to do
+  }
+  
+  communeSel.addEventListener('change', e => { curCommune = e.target.value; applyFilters(); });
+  accessGroup.addEventListener('click', e => {
+    if (e.target.tagName === 'BUTTON') {
+      accessGroup.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      curAccess = e.target.dataset.v;
+      applyFilters();
+    }
+  });
+  sortSel.addEventListener('change', e => { curSort = e.target.value; applySort(); });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "url": "https://loisirs-74.netlify.app/en/waterfalls/",
+  "name": "Waterfalls",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://loisirs-74.netlify.app/en/",
+    "name": "Loisirs 74"
+  },
+  "numberOfItems": 14
+}
+</script>
+
+</body>
+</html>
