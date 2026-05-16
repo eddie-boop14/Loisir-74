@@ -911,6 +911,36 @@ footer.site .bottom{max-width:1180px;margin:2.5rem auto 0;padding-top:1.5rem;bor
 
 </div>
 
+<section class="lieu-gallery" style="margin:2.5rem 0;"><h2 style="font-family:Fraunces,serif;margin-bottom:1rem;">Photos de Dronières Lake</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem;"><button class="gallery-thumb" data-lb-src="/lac-des-dronieres-1.jpg" data-lb-credit="" style="border:none;padding:0;cursor:zoom-in;background:none;border-radius:8px;overflow:hidden;display:block;width:100%;"><img src="/lac-des-dronieres-1.jpg" alt="Dronières Lake — photo 2" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3;"></button><button class="gallery-thumb" data-lb-src="/lac-des-dronieres-2.jpg" data-lb-credit="" style="border:none;padding:0;cursor:zoom-in;background:none;border-radius:8px;overflow:hidden;display:block;width:100%;"><img src="/lac-des-dronieres-2.jpg" alt="Dronières Lake — photo 3" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3;"></button><button class="gallery-thumb" data-lb-src="/lac-des-dronieres-3.jpg" data-lb-credit="" style="border:none;padding:0;cursor:zoom-in;background:none;border-radius:8px;overflow:hidden;display:block;width:100%;"><img src="/lac-des-dronieres-3.jpg" alt="Dronières Lake — photo 4" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3;"></button></div></section>
+<div id="ll-lightbox" style="display:none;position:fixed;inset:0;background:rgba(10,16,18,0.95);z-index:9999;align-items:center;justify-content:center;flex-direction:column;padding:2rem;cursor:zoom-out;">
+  <button onclick="closeLB()" aria-label="Fermer" style="position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,0.1);color:#fff;border:none;width:44px;height:44px;border-radius:50%;font-size:1.5rem;cursor:pointer;">✕</button>
+  <img id="ll-lb-img" src="" alt="" style="max-width:100%;max-height:80vh;object-fit:contain;">
+  <div id="ll-lb-credit" style="margin-top:1rem;color:rgba(255,255,255,0.85);font-size:0.85rem;text-align:center;max-width:600px;"></div>
+</div>
+<script>
+function openLB(btn){
+  var lb=document.getElementById('ll-lightbox');
+  var img=document.getElementById('ll-lb-img');
+  var c=document.getElementById('ll-lb-credit');
+  img.src=btn.dataset.lbSrc;
+  img.alt=btn.querySelector('img').alt;
+  var creditHtml=btn.dataset.lbCredit||'';
+  c.innerHTML=creditHtml;
+  lb.style.display='flex';
+  document.body.style.overflow='hidden';
+}
+function closeLB(){
+  document.getElementById('ll-lightbox').style.display='none';
+  document.body.style.overflow='';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.gallery-thumb').forEach(function(b){b.addEventListener('click',function(){openLB(b)})});
+  var lb=document.getElementById('ll-lightbox');
+  if(lb){lb.addEventListener('click',function(e){if(e.target.id==='ll-lightbox')closeLB()})}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLB()});
+});
+</script>
+
 </main>
 
 <!-- LIGHTBOX -->
