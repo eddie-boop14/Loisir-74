@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0b0d10">
 <title>Loisirs 74 · Studio</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1c4f62">
 <style>
 *,*::before,*::after{box-sizing:border-box}
 body,h1,h2,h3,p,ul,ol{margin:0}
@@ -3703,12 +3709,12 @@ ${hreflangHtml}
 <meta property="og:url" content="${canonical}">
 <meta property="og:locale" content="${LOCALE_MAP[lang]}">
 <meta property="og:site_name" content="Loisirs 74">
-<meta property="og:image" content="${esc(heroUrl)}">
+<meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta property="og:image:alt" content="${esc(heroAlt)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(block.meta_title.split(' · ')[0])}">
 <meta name="twitter:description" content="${esc(block.meta_description)}">
-<meta name="twitter:image" content="${esc(heroUrl)}">
+<meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="geo.region" content="FR-74">
 <meta name="geo.placename" content="${esc(commune)}">
 <meta name="geo.position" content="${d.latitude||''};${d.longitude||''}">
@@ -3721,7 +3727,7 @@ ${hreflangHtml}
 <body>
 <a class="skip" href="#main">${esc(ui.skip)}</a>
 <header class="site"><div class="wrap">
-  <a class="brand" href="${homeUrl(lang)}" aria-label="Loisirs 74"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 18 L9 9 L13 14 L18 7 L21 18 Z"/></svg></span><span>Loisirs 74</span></a>
+  <a class="brand" href="${homeUrl(lang)}" aria-label="Loisirs 74"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a>
   <nav><details class="lang-picker"><summary aria-label="${esc(ui.lang)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>${lang.toUpperCase()}</summary><div class="lang-menu">${langMenuHtml}</div></details></nav>
 </div></header>
 <main id="main">
@@ -3750,7 +3756,7 @@ ${whenToVisitBlock}
 </main>
 <div class="action-bar" id="actionBar"><div class="wrap">${actionBarHtml}</div></div>
 <footer class="site"><div class="wrap"><div class="foot-grid">
-  <div class="foot-col"><a class="brand" href="${homeUrl(lang)}" style="margin-bottom:.85rem"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 18 L9 9 L13 14 L18 7 L21 18 Z"/></svg></span><span>Loisirs 74</span></a><p>${esc(ui.tagline)}</p></div>
+  <div class="foot-col"><a class="brand" href="${homeUrl(lang)}" style="margin-bottom:.85rem"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a><p>${esc(ui.tagline)}</p></div>
   <div class="foot-col"><h4>${esc(ui.foot_explore)}</h4><ul><li><a href="${homeUrl(lang)}">${esc(ui.home)}</a></li></ul></div>
   <div class="foot-col"><h4>${esc(ui.foot_contribute)}</h4><ul><li><a href="mailto:photos@loisirs74.fr">${esc(ui.send_photos)}</a></li></ul></div>
   <div class="foot-col"><h4>${esc(ui.foot_legal)}</h4><ul><li><a href="${homeUrl(lang)}mentions-legales">${esc(ui.legal_notice)}</a></li><li><a href="${homeUrl(lang)}confidentialite">${esc(ui.privacy)}</a></li></ul></div>
