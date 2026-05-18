@@ -1,0 +1,37 @@
+/content/*
+  Content-Type: text/markdown; charset=utf-8
+  X-Robots-Tag: index, follow
+  Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
+
+/llms.txt
+  Content-Type: text/markdown; charset=utf-8
+  X-Robots-Tag: index, follow
+  Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
+
+/llms-full.txt
+  Content-Type: text/markdown; charset=utf-8
+  X-Robots-Tag: index, follow
+  Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
+
+/api/lieux.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
+
+/.well-known/ai-info.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=86400
+  Access-Control-Allow-Origin: *
+
+/robots-ai.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400
+  Access-Control-Allow-Origin: *
+
+# AI policy headers for all pages
+/*
+  X-AI-Policy: citation-allowed, training-restricted
+  X-AI-Discovery: https://loisirs74.fr/.well-known/ai-info.json

@@ -1,4 +1,36 @@
 User-agent: *
 Allow: /
 
+# Don't index thank-you pages
+Disallow: /merci-signalement
+Disallow: /merci-partenaire
+Disallow: /merci-signalement.html
+Disallow: /merci-partenaire.html
+
+# Image search bots — full access
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI bots — allow with citation, see robots-ai.txt for granular policy
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Discovery files
 Sitemap: https://loisirs74.fr/sitemap.xml
+
+# AI Discovery (llms.txt v1.7.0)
+# See also: https://loisirs74.fr/robots-ai.txt
+# See also: https://loisirs74.fr/llms.txt
+# See also: https://loisirs74.fr/.well-known/ai-info.json
