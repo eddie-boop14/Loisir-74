@@ -39,7 +39,40 @@ section.cat{padding:clamp(2rem,4vw,3.5rem) 0;border-top:1px solid var(--line)}se
 /* FOOTER */
 footer.site{background:var(--surface);border-top:1px solid var(--line);padding:clamp(2.5rem,5vw,4rem) 0 2rem;color:var(--ink-soft);font-size:.9rem;margin-top:3rem}.foot-grid{display:grid;grid-template-columns:1fr;gap:2rem;margin-bottom:2rem}@media (min-width:720px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}.foot-col h4{font-size:.8125rem;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.85rem}.foot-col ul{display:flex;flex-direction:column;gap:.5rem}.foot-col p{color:var(--ink-mute);max-width:24rem;line-height:1.6}.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-top:1.5rem;border-top:1px solid var(--line);color:var(--ink-mute);font-size:.8125rem}
 :where(a,button,summary,input,textarea):focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}}</style>
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+/* ===== GÉNÉRIQUE FALLBACK MARKER =====
+   When an image is using the category-level générique fallback
+   (data-generique="true"), the image's parent gets a small
+   "Générique" tag in the corner. This is intentional — it lets
+   us see at a glance which images are still placeholders waiting
+   for a real photo. */
+[data-generique="true"] {
+  /* placement only; the marker is on the parent via ::after */
+}
+.card-photo:has(> img[data-generique="true"])::after,
+.hero-img:has(> img[data-generique="true"])::after,
+.hero-bg:has(> img[data-generique="true"])::after {
+  content: "Générique";
+  position: absolute;
+  bottom: .45rem;
+  right: .45rem;
+  background: rgba(13, 26, 15, 0.78);
+  color: #f0dfc0;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.5rem;
+  border-radius: 3px;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 2;
+}
+.card-photo, .hero-img, .hero-bg {
+  position: relative;
+}
+</style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
 <!-- AI discovery: homepage markdown mirror + AI policy -->
@@ -103,7 +136,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
         </div>
         <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/plage-de-saint-jorioz" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-lac.jpg" alt="Image générique — Lac" loading="lazy" data-generique="true" data-generique-cat="lac">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -118,7 +151,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/plage-albigny" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-lac.jpg" alt="Image générique — Lac" loading="lazy" data-generique="true" data-generique-cat="lac">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -133,7 +166,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/plage-des-marquisats" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-lac.jpg" alt="Image générique — Lac" loading="lazy" data-generique="true" data-generique-cat="lac">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -148,7 +181,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/plage-de-la-pinede" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-lac.jpg" alt="Image générique — Lac" loading="lazy" data-generique="true" data-generique-cat="lac">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -163,7 +196,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/plage-de-saint-disdille" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-lac.jpg" alt="Image générique — Lac" loading="lazy" data-generique="true" data-generique-cat="lac">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -178,7 +211,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/plage-de-sciez-sur-leman" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-lac.jpg" alt="Image générique — Lac" loading="lazy" data-generique="true" data-generique-cat="lac">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -201,7 +234,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
         </div>
         <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/cascade-de-doran" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-cascade.jpg" alt="Image générique — Cascade" loading="lazy" data-generique="true" data-generique-cat="cascade">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -231,7 +264,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/cascade-de-chedde" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-cascade.jpg" alt="Image générique — Cascade" loading="lazy" data-generique="true" data-generique-cat="cascade">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -246,7 +279,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/cascade-du-dard" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-cascade.jpg" alt="Image générique — Cascade" loading="lazy" data-generique="true" data-generique-cat="cascade">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -261,7 +294,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/cascade-de-l-arpenaz" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-cascade.jpg" alt="Image générique — Cascade" loading="lazy" data-generique="true" data-generique-cat="cascade">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -276,7 +309,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/cascade-des-fours" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-cascade.jpg" alt="Image générique — Cascade" loading="lazy" data-generique="true" data-generique-cat="cascade">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -299,7 +332,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
         </div>
         <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/domaine-du-tornet" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -314,7 +347,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/base-de-loisirs-des-ilettes" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -329,7 +362,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/lac-des-ilettes" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -344,7 +377,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/base-de-loisirs-du-lac-des-iles" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -359,7 +392,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/domaine-de-guidou" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -374,7 +407,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/parc-des-dereches" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -397,7 +430,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
         </div>
         <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/mont-veyrier" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-point-de-vue.jpg" alt="Image générique — Point de vue" loading="lazy" data-generique="true" data-generique-cat="point-de-vue">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -442,7 +475,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/aire-de-decollage-parapente-plaine-joux" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-point-de-vue.jpg" alt="Image générique — Point de vue" loading="lazy" data-generique="true" data-generique-cat="point-de-vue">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -457,7 +490,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/col-de-la-forclaz" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-point-de-vue.jpg" alt="Image générique — Point de vue" loading="lazy" data-generique="true" data-generique-cat="point-de-vue">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -472,7 +505,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/col-des-glieres" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-point-de-vue.jpg" alt="Image générique — Point de vue" loading="lazy" data-generique="true" data-generique-cat="point-de-vue">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -495,7 +528,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
         </div>
         <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/telepherique-du-brevent" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-telecabine.jpg" alt="Image générique — Télécabine" loading="lazy" data-generique="true" data-generique-cat="telecabine">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -510,7 +543,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/tramway-du-mont-blanc" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-telecabine.jpg" alt="Image générique — Télécabine" loading="lazy" data-generique="true" data-generique-cat="telecabine">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -540,7 +573,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/telecabine-du-jaillet" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-telecabine.jpg" alt="Image générique — Télécabine" loading="lazy" data-generique="true" data-generique-cat="telecabine">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -555,7 +588,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/telecabine-pleney-morzine" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-telecabine.jpg" alt="Image générique — Télécabine" loading="lazy" data-generique="true" data-generique-cat="telecabine">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -570,7 +603,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/telecabine-des-chavannes-les-gets" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-telecabine.jpg" alt="Image générique — Télécabine" loading="lazy" data-generique="true" data-generique-cat="telecabine">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -593,7 +626,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
         </div>
         <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/chateau-des-rubins-observatoire-des-alpes" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-musee.jpg" alt="Image générique — Musée" loading="lazy" data-generique="true" data-generique-cat="musee">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -608,7 +641,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/palais-lumiere" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-musee.jpg" alt="Image générique — Musée" loading="lazy" data-generique="true" data-generique-cat="musee">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -631,7 +664,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
         </div>
         <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/thermes-evian" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-chateau.jpg" alt="Image générique — Château" loading="lazy" data-generique="true" data-generique-cat="chateau">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -646,7 +679,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/chateau-de-menthon-saint-bernard" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-chateau.jpg" alt="Image générique — Château" loading="lazy" data-generique="true" data-generique-cat="chateau">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -661,7 +694,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/chateau-de-thorens" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-chateau.jpg" alt="Image générique — Château" loading="lazy" data-generique="true" data-generique-cat="chateau">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -676,7 +709,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/abbaye-d-aulps" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-chateau.jpg" alt="Image générique — Château" loading="lazy" data-generique="true" data-generique-cat="chateau">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -691,7 +724,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/abbaye-de-sixt" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-chateau.jpg" alt="Image générique — Château" loading="lazy" data-generique="true" data-generique-cat="chateau">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -706,7 +739,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/chateau-et-donjon-des-seigneurs-de-faverges" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-chateau.jpg" alt="Image générique — Château" loading="lazy" data-generique="true" data-generique-cat="chateau">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -729,7 +762,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
         </div>
         <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/les-aigles-du-leman" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-attraction.jpg" alt="Image générique — Attraction" loading="lazy" data-generique="true" data-generique-cat="attraction">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -744,7 +777,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/passy-accro-lac" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-attraction.jpg" alt="Image générique — Attraction" loading="lazy" data-generique="true" data-generique-cat="attraction">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -759,7 +792,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/parcours-aventure-de-sciez" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-attraction.jpg" alt="Image générique — Attraction" loading="lazy" data-generique="true" data-generique-cat="attraction">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -774,7 +807,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/aquariaz" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-attraction.jpg" alt="Image générique — Attraction" loading="lazy" data-generique="true" data-generique-cat="attraction">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -789,7 +822,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/cascade-aventure" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-attraction.jpg" alt="Image générique — Attraction" loading="lazy" data-generique="true" data-generique-cat="attraction">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -804,7 +837,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/cote-2000-aventure" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-attraction.jpg" alt="Image générique — Attraction" loading="lazy" data-generique="true" data-generique-cat="attraction">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">

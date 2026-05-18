@@ -60,6 +60,39 @@ footer.site{background:var(--ink);color:rgba(245,241,232,0.65);padding:2rem 1.5r
 footer.site a{color:var(--gold-pale);text-decoration:none}
 footer.site .credit{font-family:'Fraunces',serif;font-style:italic;color:var(--gold-pale);margin-top:0.5rem;display:block;font-size:0.75rem}
 code{background:var(--cream);padding:0.08rem 0.35rem;border-radius:3px;font-size:0.88em;color:var(--moss)}
+
+/* ===== GÉNÉRIQUE FALLBACK MARKER =====
+   When an image is using the category-level générique fallback
+   (data-generique="true"), the image's parent gets a small
+   "Générique" tag in the corner. This is intentional — it lets
+   us see at a glance which images are still placeholders waiting
+   for a real photo. */
+[data-generique="true"] {
+  /* placement only; the marker is on the parent via ::after */
+}
+.card-photo:has(> img[data-generique="true"])::after,
+.hero-img:has(> img[data-generique="true"])::after,
+.hero-bg:has(> img[data-generique="true"])::after {
+  content: "Générique";
+  position: absolute;
+  bottom: .45rem;
+  right: .45rem;
+  background: rgba(13, 26, 15, 0.78);
+  color: #f0dfc0;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.5rem;
+  border-radius: 3px;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 2;
+}
+.card-photo, .hero-img, .hero-bg {
+  position: relative;
+}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
