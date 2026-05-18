@@ -610,6 +610,10 @@ footer.site .bottom{max-width:1180px;margin:2.5rem auto 0;padding-top:1.5rem;bor
   h2{page-break-after:avoid}
 }
 </style>
+<!-- AI discovery: per-lieu markdown mirror -->
+<link rel="alternate" type="text/markdown" href="/content/pont-de-la-caille.md" title="Markdown version">
+<meta name="ai:content-url" content="https://loisirs74.fr/content/pont-de-la-caille.md">
+<meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
 </head>
 
 <body>
@@ -794,11 +798,27 @@ footer.site .bottom{max-width:1180px;margin:2.5rem auto 0;padding-top:1.5rem;bor
 </div>
 
 <h2 id="photos" class="reveal">Fotos von Pont de la Caille</h2>
-<div class="gallery-wrap reveal"><button class="tile gallery-thumb" data-lb-src="/pont-de-la-caille-hero.jpg" data-lb-credit="" style="border:none;padding:0;cursor:zoom-in;background:none;overflow:hidden;"><img src="/pont-de-la-caille-hero.jpg" alt="pont-de-la-caille photo 1" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></button>
-<button class="tile gallery-thumb" data-lb-src="/pont-de-la-caille-1.jpg" data-lb-credit="" style="border:none;padding:0;cursor:zoom-in;background:none;overflow:hidden;"><img src="/pont-de-la-caille-1.jpg" alt="pont-de-la-caille photo 2" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></button>
-<button class="tile gallery-thumb" data-lb-src="/pont-de-la-caille-2.jpg" data-lb-credit="" style="border:none;padding:0;cursor:zoom-in;background:none;overflow:hidden;"><img src="/pont-de-la-caille-2.jpg" alt="pont-de-la-caille photo 3" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></button>
-<button class="tile gallery-thumb" data-lb-src="/pont-de-la-caille-3.jpg" data-lb-credit="" style="border:none;padding:0;cursor:zoom-in;background:none;overflow:hidden;"><img src="/pont-de-la-caille-3.jpg" alt="pont-de-la-caille photo 4" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></button>
-<button class="tile gallery-thumb" data-lb-src="/pont-de-la-caille-4.jpg" data-lb-credit="" style="border:none;padding:0;cursor:zoom-in;background:none;overflow:hidden;"><img src="/pont-de-la-caille-4.jpg" alt="pont-de-la-caille photo 5" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></button></div>
+<div class="gallery-wrap reveal">
+  <div class="gallery">
+    <div class="gallery-tile placeholder" data-slot="1">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+    </div>
+    <div class="gallery-tile placeholder" data-slot="2">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+    </div>
+    <div class="gallery-tile placeholder" data-slot="3">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+    </div>
+    <div class="gallery-tile placeholder" data-slot="4">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+    </div>
+    <div class="gallery-tile placeholder" data-slot="5">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+    </div>
+    <div class="gallery-tile placeholder" data-slot="6">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+    </div>
+  </div>
   <div class="gallery-invite">
     <div class="gallery-invite-icon" aria-hidden="true">📸</div>
     <div class="gallery-invite-body">
@@ -1082,23 +1102,6 @@ lightboxClose?.addEventListener('click', closeLightbox);
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
 })();
-</script>
-
-
-<div id="ll-lightbox" style="display:none;position:fixed;inset:0;background:rgba(10,16,18,0.95);z-index:9999;align-items:center;justify-content:center;flex-direction:column;padding:2rem;cursor:zoom-out;">
-  <button onclick="closeLB()" aria-label="Fermer" style="position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,0.1);color:#fff;border:none;width:44px;height:44px;border-radius:50%;font-size:1.5rem;cursor:pointer;">✕</button>
-  <img id="ll-lb-img" src="" alt="" style="max-width:100%;max-height:80vh;object-fit:contain;">
-  <div id="ll-lb-credit" style="margin-top:1rem;color:rgba(255,255,255,0.85);font-size:0.85rem;text-align:center;max-width:600px;"></div>
-</div>
-<script>
-function openLB(btn){var lb=document.getElementById('ll-lightbox');var img=document.getElementById('ll-lb-img');var c=document.getElementById('ll-lb-credit');img.src=btn.dataset.lbSrc;img.alt=btn.querySelector('img').alt;c.innerHTML=btn.dataset.lbCredit||'';lb.style.display='flex';document.body.style.overflow='hidden';}
-function closeLB(){document.getElementById('ll-lightbox').style.display='none';document.body.style.overflow='';}
-document.addEventListener('DOMContentLoaded',function(){
-  document.querySelectorAll('.gallery-thumb').forEach(function(b){b.addEventListener('click',function(){openLB(b)})});
-  var lb=document.getElementById('ll-lightbox');
-  if(lb){lb.addEventListener('click',function(e){if(e.target.id==='ll-lightbox')closeLB()})}
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLB()});
-});
 </script>
 
 </body>
