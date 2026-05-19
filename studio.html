@@ -172,6 +172,39 @@ header.h .sub{color:var(--ink-mute);font-size:.85rem;margin-top:.25rem}
 .lang-pill.running{border-color:var(--accent);color:var(--accent)}
 .lang-pill.ok{background:color-mix(in srgb,var(--good) 15%,transparent);border-color:color-mix(in srgb,var(--good) 35%,transparent);color:var(--good)}
 .lang-pill.bad{background:var(--bad-bg);border-color:var(--bad);color:var(--bad)}
+
+/* ===== GÉNÉRIQUE FALLBACK MARKER =====
+   When an image is using the category-level générique fallback
+   (data-generique="true"), the image's parent gets a small
+   "Générique" tag in the corner. This is intentional — it lets
+   us see at a glance which images are still placeholders waiting
+   for a real photo. */
+[data-generique="true"] {
+  /* placement only; the marker is on the parent via ::after */
+}
+.card-photo:has(> img[data-generique="true"])::after,
+.hero-img:has(> img[data-generique="true"])::after,
+.hero-bg:has(> img[data-generique="true"])::after {
+  content: "Générique";
+  position: absolute;
+  bottom: .45rem;
+  right: .45rem;
+  background: rgba(13, 26, 15, 0.78);
+  color: #f0dfc0;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.5rem;
+  border-radius: 3px;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 2;
+}
+.card-photo, .hero-img, .hero-bg {
+  position: relative;
+}
 </style>
 </head>
 <body>
