@@ -70,6 +70,39 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
 .leaflet-popup-content{margin:8px 12px;font-family:var(--font);font-size:.85rem;line-height:1.4}
 .leaflet-popup-content a{color:var(--accent);font-weight:600;text-decoration:none}
 .leaflet-popup-content .commune-pop{display:block;color:var(--ink-mute);font-size:.72rem;margin-top:.15rem}
+
+/* ===== GÉNÉRIQUE FALLBACK MARKER =====
+   When an image is using the category-level générique fallback
+   (data-generique="true"), the image's parent gets a small
+   "Générique" tag in the corner. This is intentional — it lets
+   us see at a glance which images are still placeholders waiting
+   for a real photo. */
+[data-generique="true"] {
+  /* placement only; the marker is on the parent via ::after */
+}
+.card-photo:has(> img[data-generique="true"])::after,
+.hero-img:has(> img[data-generique="true"])::after,
+.hero-bg:has(> img[data-generique="true"])::after {
+  content: "Générique";
+  position: absolute;
+  bottom: .45rem;
+  right: .45rem;
+  background: rgba(13, 26, 15, 0.78);
+  color: #f0dfc0;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.5rem;
+  border-radius: 3px;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 2;
+}
+.card-photo, .hero-img, .hero-bg {
+  position: relative;
+}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -409,7 +442,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
       </div>
       <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/parc-des-dronieres" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -433,7 +466,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
       </div>
       <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/domaine-du-tornet" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -457,7 +490,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
       </div>
       <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/parc-de-loisirs-du-pontet" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -481,7 +514,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
       </div>
       <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/base-de-loisirs-du-lac-bleu" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -505,7 +538,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
       </div>
       <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/parc-des-dereches" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -529,7 +562,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
       </div>
       <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/base-de-loisirs-du-lac-des-iles" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -553,7 +586,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
       </div>
       <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/base-de-loisirs-de-la-beunaz" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
@@ -577,7 +610,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
       </div>
       <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/base-de-loisirs-des-ilettes" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -592,7 +625,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/lac-des-ilettes" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -616,7 +649,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
       </div>
       <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/base-de-loisirs-du-lac-aux-dames" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -640,7 +673,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
       </div>
       <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/domaine-de-guidou" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
@@ -664,7 +697,7 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
       </div>
       <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/domaine-de-rovoree-la-chataigniere" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
