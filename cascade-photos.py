@@ -25,6 +25,16 @@ CAMERA = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
 PHOTOS = {
     'cascade-de-doran':            ('/cascade-de-doran-hero.jpg', None),
     'cascade-de-la-belle-au-bois': ('/cascade-de-la-belle-au-bois-hero.jpg', None),
+    'cascade-des-brochaux': (
+        'https://upload.wikimedia.org/wikipedia/commons/e/e0/Cascade_des_Brochaux.jpg',
+        'Nouill · CC BY 4.0 · Wikimedia Commons'),
+    'cascade-du-chinaillon': (
+        'https://upload.wikimedia.org/wikipedia/commons/4/4f/'
+        'Le_Chinaillon_%40_Pont_des_Romains_%40_Le_Grand-Bornand_%2851027594708%29.jpg',
+        'Guilhem Vellut · CC BY 2.0 · Wikimedia Commons'),
+    'grotte-et-cascade-de-seythenex': (
+        'https://upload.wikimedia.org/wikipedia/commons/7/7f/Grotte_et_cascade_de_Seythenex_10.jpg',
+        'Rémih · CC BY-SA 4.0 · Wikimedia Commons'),
 }
 
 HERO_IMG = re.compile(r'<img\b[^>]*\bfetchpriority="high"[^>]*>')
