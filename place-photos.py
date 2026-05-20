@@ -91,6 +91,10 @@ PHOTOS = {
         'https://upload.wikimedia.org/wikipedia/commons/8/82/'
         'T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg',
         'Rémih · CC BY-SA 4.0 · Wikimedia Commons'),
+    'domaine-de-rovoree-la-chataigniere': (
+        'https://upload.wikimedia.org/wikipedia/commons/f/f8/'
+        'Embarcad%C3%A8re_du_Domaine_de_La_Ch%C3%A2taigni%C3%A8re.jpg',
+        'Chrbenoit · CC BY-SA 4.0 · Wikimedia Commons'),
 }
 
 HERO_IMG = re.compile(r'<img\b[^>]*\bfetchpriority="high"[^>]*>')
