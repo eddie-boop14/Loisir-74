@@ -1,121 +1,1287 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
-<title>Page introuvable · Loisirs 74</title>
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#1c4f62">
-<meta name="description" content="Cette page n'existe pas ou plus. Retour à la liste des lieux de loisirs publics de Haute-Savoie.">
-<meta name="robots" content="noindex, follow">
-
-<meta name="theme-color" content="#2f5740" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0d1a0f" media="(prefers-color-scheme: dark)">
-<meta name="color-scheme" content="light dark">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>404 — Perdu sur le lac · Loisirs74</title>
+<meta name="description" content="Page introuvable. Le kayakiste cherche encore le chemin du retour." />
+<meta name="theme-color" content="#0d3550" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@300;400;500&family=Familjen+Grotesk:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --ink:#0d1a0f; --paper:#faf8f3; --cream:#f1ece0; --rule:#e7e1d1;
-  --moss:#2f5740; --moss-pale:#eef3ef;
-  --gold:#b8822f; --gold-light:#d4a15a;
-  --text:#2a2f2b; --muted:#6a706b;
-  --r:6px; --r-lg:12px;
-  --ease:cubic-bezier(0.4,0,0.2,1);
-}
-[data-theme="dark"]{
-  --ink:#f5f3ee; --paper:#0f1612; --cream:#1a231c; --rule:#2a3329;
-  --moss:#7ba88a; --moss-pale:#1e2821;
-  --gold:#d4a15a; --gold-light:#e5bc7a;
-  --text:#d7d4cc; --muted:#8a9088;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme]){
-    --ink:#f5f3ee; --paper:#0f1612; --cream:#1a231c; --rule:#2a3329;
-    --moss:#7ba88a; --moss-pale:#1e2821;
-    --gold:#d4a15a; --gold-light:#e5bc7a;
-    --text:#d7d4cc; --muted:#8a9088;
+  :root{
+    --sky-1:#bfe0ec;
+    --sky-2:#7fb8d4;
+    --glacier:#2d7090;
+    --glacier-deep:#0d3550;
+    --water:#4a9bb8;
+    --snow:#fcfdfe;
+    --granite:#5a6770;
+    --granite-deep:#2c3640;
+    --meadow:#8cc051;
+    --gold:#f0a830;
+    --sunset:#ff6b6b;
+    --ink:#0d2030;
+    --paper:#f7fafc;
+    --hairline:rgba(13,32,48,.12);
+    --hairline-strong:rgba(13,32,48,.22);
   }
-}
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html,body{height:100%;overflow:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body{
+    font-family:'Familjen Grotesk', system-ui, sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg, var(--sky-1) 0%, #e0f0f5 40%, #b8dde8 65%, var(--water) 100%);
+    position:relative;user-select:none;
+  }
 
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;min-height:100vh}
+  /* ── ALPINE BACKDROP — inside kayak-wrap, not on body ──── */
+  .mountains{position:absolute;left:0;right:0;bottom:0;height:55%;z-index:1;pointer-events:none;overflow:hidden}
+  .mountains svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;display:block}
+  .mountains svg.layer-far{opacity:.45;bottom:18%}
+  .mountains svg.layer-mid{opacity:.7;bottom:8%}
+  .mountains svg.layer-near{opacity:.95;bottom:0}
+  .mountains svg{transition:transform 1s cubic-bezier(.2,.7,.2,1)}
 
-.wrap{flex:1;display:flex;align-items:center;justify-content:center;padding:clamp(2rem,5vw,4rem) clamp(1rem,3vw,2rem)}
-.card{max-width:520px;width:100%;text-align:center}
+  /* Sun + soft halo */
+  .sun{position:fixed;top:8%;right:14%;width:90px;height:90px;border-radius:50%;
+    background:radial-gradient(circle at 35% 35%, #fff7d6, #ffd870 55%, #ff9c40);
+    box-shadow:0 0 80px 20px rgba(255,200,90,.45);z-index:0;pointer-events:none}
+  .sun::before{content:"";position:absolute;inset:-40px;border-radius:50%;
+    background:radial-gradient(circle, rgba(255,236,160,.2), transparent 60%)}
 
-.brand{display:inline-flex;align-items:center;gap:0.55rem;font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--ink);letter-spacing:-0.01em;margin-bottom:2.5rem;text-decoration:none}
-.brand-mark{width:32px;height:32px;background:var(--moss);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:1rem}
-.brand em{font-style:italic;color:var(--moss);font-weight:500}
+  /* Clouds (drifting wispy svgs) */
+  .cloud{position:fixed;z-index:1;pointer-events:none;opacity:.85}
+  .c1{top:10%;left:-50px;animation:drift1 35s ease-in-out infinite}
+  .c2{top:18%;right:8%;animation:drift2 42s ease-in-out infinite;transform:scale(.7)}
+  .c3{top:5%;left:35%;animation:drift1 50s ease-in-out infinite reverse;transform:scale(.5);opacity:.6}
+  @keyframes drift1{0%,100%{transform:translateX(0)}50%{transform:translateX(40px)}}
+  @keyframes drift2{0%,100%{transform:translateX(0) scale(.7)}50%{transform:translateX(-30px) scale(.7)}}
 
-.code{font-family:'Fraunces',serif;font-size:clamp(4rem,14vw,7rem);font-weight:500;color:var(--moss);line-height:1;letter-spacing:-0.03em;margin-bottom:0.5rem}
-.code em{font-style:italic;color:var(--gold)}
+  /* Birds — tiny V-shaped silhouettes */
+  .birds{position:fixed;top:14%;left:30%;z-index:1;pointer-events:none;
+    animation:birdsFly 60s linear infinite}
+  @keyframes birdsFly{0%{transform:translateX(0)}100%{transform:translateX(80vw)}}
+  .birds span{display:inline-block;margin-right:14px;color:var(--ink);opacity:.5;font-size:14px;
+    animation:flap 1s ease-in-out infinite}
+  .birds span:nth-child(2){animation-delay:.2s}
+  .birds span:nth-child(3){animation-delay:.4s}
+  @keyframes flap{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.4)}}
 
-h1{font-family:'Fraunces',serif;font-size:clamp(1.4rem,3vw,1.8rem);font-weight:600;color:var(--ink);letter-spacing:-0.015em;margin-bottom:1rem;line-height:1.2}
-h1 em{font-style:italic;color:var(--moss);font-weight:500}
+  /* Paper grain */
+  .grain{position:fixed;inset:0;pointer-events:none;z-index:48;opacity:.08;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
 
-p{color:var(--muted);font-size:1rem;line-height:1.6;max-width:42ch;margin:0 auto 2rem}
+  /* ── LAYOUT ─────────────────────────────────── */
+  .stage{position:fixed;inset:0;display:flex;flex-direction:column;z-index:5}
 
-.actions{display:flex;gap:0.65rem;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 1.3rem;border-radius:var(--r);font-size:0.92rem;font-weight:600;text-decoration:none;transition:all 0.2s var(--ease);white-space:nowrap;border:1px solid transparent}
-.btn-primary{background:var(--moss);color:var(--paper)}
-.btn-primary:hover{background:var(--ink)}
-.btn-ghost{background:transparent;color:var(--ink);border-color:var(--rule)}
-.btn-ghost:hover{background:var(--cream);border-color:var(--moss)}
-.btn svg{width:14px;height:14px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform 0.2s var(--ease)}
-.btn-primary:hover svg{transform:translateX(3px)}
+  header{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 24px;font-family:'JetBrains Mono',monospace;
+    font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);
+    flex-shrink:0;
+  }
+  header .brand{display:flex;align-items:center;gap:10px;font-weight:500}
+  header .compass{width:18px;height:18px;border:1.5px solid var(--ink);border-radius:50%;
+    position:relative;animation:compass 10s linear infinite}
+  header .compass::before{content:"";position:absolute;top:1px;left:50%;width:1.5px;height:6px;
+    background:var(--sunset);transform:translateX(-50%);border-radius:1px}
+  header .compass::after{content:"";position:absolute;bottom:1px;left:50%;width:1.5px;height:6px;
+    background:var(--ink);transform:translateX(-50%);border-radius:1px}
+  @keyframes compass{0%,8%{transform:rotate(0)}10%{transform:rotate(40deg)}20%{transform:rotate(-15deg)}30%{transform:rotate(8deg)}40%,100%{transform:rotate(0)}}
+  header .stats{display:flex;gap:18px;font-size:9px;color:var(--granite)}
+  header .stats .val{color:var(--ink);font-weight:500}
+  header .stats .strokes{
+    background:rgba(255,255,255,.5);backdrop-filter:blur(8px);
+    border:1px solid var(--hairline);
+    padding:5px 10px;border-radius:999px;display:inline-flex;align-items:center;gap:6px
+  }
+  header .stats .strokes .dot{width:5px;height:5px;border-radius:50%;background:var(--meadow);
+    box-shadow:0 0 6px var(--meadow);animation:strokePulse 1.8s ease-in-out infinite}
+  @keyframes strokePulse{0%,100%{opacity:1}50%{opacity:.4}}
 
-.langs{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--rule);font-size:0.85rem;color:var(--muted);display:flex;gap:1.25rem;justify-content:center;flex-wrap:wrap}
-.langs a{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;transition:all 0.15s var(--ease)}
-.langs a:hover{color:var(--moss);border-bottom-color:var(--moss)}
-.langs span{color:var(--rule)}
+  .scene{flex:1;min-height:0;display:flex;flex-direction:column;position:relative}
+
+  /* kayak stage */
+  .kayak-wrap{position:relative;flex:1 1 auto;min-height:340px;width:100%;order:1;overflow:hidden}
+  #kayak-canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab;touch-action:none;display:block;z-index:2}
+  #kayak-canvas.dragging{cursor:grabbing}
+
+  /* speech / info card */
+  .info-card{
+    position:absolute;top:8%;right:5%;z-index:7;
+    background:var(--snow);
+    border:1.5px solid var(--ink);
+    padding:13px 16px;
+    border-radius:14px 14px 14px 4px;
+    font-family:'Familjen Grotesk',sans-serif;font-weight:700;
+    font-size:14px;line-height:1.25;color:var(--ink);
+    max-width:175px;
+    box-shadow:5px 5px 0 0 var(--ink), 0 16px 30px -10px rgba(13,32,48,.3);
+    pointer-events:none;
+  }
+  .info-card::after{
+    content:"";position:absolute;bottom:-9px;left:18px;width:14px;height:14px;
+    background:var(--snow);border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);
+    transform:rotate(45deg);
+  }
+  .info-card .label{display:flex;align-items:center;gap:6px;
+    font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:500;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--glacier);
+    margin-bottom:6px}
+  .info-card .label::before{content:"";width:5px;height:5px;background:var(--gold);border-radius:50%}
+  .info-card .big{display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;
+    font-size:26px;letter-spacing:-.02em;line-height:.95;color:var(--ink)}
+  .info-card .big .accent{color:var(--glacier);font-style:italic}
+
+  /* copy section */
+  .copy{position:relative;z-index:6;padding:14px 24px 16px;flex-shrink:0;order:2;
+    background:linear-gradient(180deg, rgba(247,250,252,.85), rgba(247,250,252,1) 30%);
+    backdrop-filter:blur(8px)}
+  @media (min-width:860px){
+    .copy{background:transparent;backdrop-filter:none}
+  }
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--glacier);margin-bottom:8px;display:inline-flex;align-items:center;gap:8px;font-weight:500}
+  .eyebrow::before{content:"";display:inline-block;width:6px;height:6px;background:var(--meadow);border-radius:50%;
+    box-shadow:0 0 8px var(--meadow)}
+  .eyebrow .alt{color:var(--granite);opacity:.7}
+
+  h1{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:800;
+    font-variation-settings:"opsz" 96;
+    font-size:clamp(56px, 16vw, 128px);
+    line-height:.88;letter-spacing:-.04em;color:var(--ink);
+    margin-bottom:8px;
+  }
+  h1 .four-a, h1 .four-b{display:inline-block}
+  h1 .zero{display:inline-block;position:relative;color:var(--glacier);font-style:italic;
+    transform:rotate(-4deg) translateY(3px);margin:0 .02em}
+  h1 .zero::after{
+    content:"";position:absolute;left:-6%;right:-6%;bottom:14%;height:5px;
+    background:var(--gold);z-index:-1;transform:skewX(-12deg);border-radius:2px}
+
+  .lede{font-size:14px;line-height:1.5;color:var(--granite-deep);max-width:48ch;margin-bottom:16px;font-weight:500}
+  .lede em{font-style:italic;color:var(--glacier-deep);font-weight:700;
+    background:linear-gradient(180deg, transparent 60%, rgba(240,168,48,.35) 60%);padding:0 2px}
+  .lede .pin{display:inline-flex;align-items:center;gap:4px;
+    font-family:'JetBrains Mono',monospace;font-size:.85em;font-weight:500;
+    background:var(--ink);color:var(--paper);padding:2px 8px;border-radius:4px;letter-spacing:.05em}
+
+  .actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .cta{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--ink);color:var(--paper);text-decoration:none;
+    padding:14px 22px;font-family:'JetBrains Mono',monospace;
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;
+    border-radius:999px;
+    box-shadow:0 5px 0 0 var(--glacier-deep), 0 14px 24px -8px rgba(13,32,48,.4);
+    transition:transform .15s ease, box-shadow .15s ease;
+    position:relative;overflow:hidden;
+  }
+  .cta::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(120deg, transparent 30%, rgba(240,168,48,.45) 50%, transparent 70%);
+    transform:translateX(-120%);transition:transform .6s ease}
+  .cta:hover::before{transform:translateX(120%)}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 7px 0 0 var(--glacier-deep), 0 18px 30px -8px rgba(13,32,48,.45)}
+  .cta:active{transform:translateY(3px);box-shadow:0 2px 0 0 var(--glacier-deep), 0 8px 14px -6px rgba(13,32,48,.4)}
+  .cta .arrow{font-family:monospace}
+
+  .secondary{
+    display:inline-flex;align-items:center;gap:8px;color:var(--granite-deep);
+    font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;
+    text-transform:uppercase;text-decoration:none;font-weight:500;
+    border-bottom:1px dashed var(--granite);padding-bottom:2px;
+    transition:color .2s, border-color .2s}
+  .secondary:hover{color:var(--glacier);border-color:var(--glacier)}
+
+  .hint{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--granite);display:flex;align-items:center;gap:8px;margin-top:14px;opacity:.75}
+  .hint .pulse{width:5px;height:5px;border-radius:50%;background:var(--meadow);animation:pulse 1.4s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(2);opacity:.3}}
+
+  /* desktop */
+  @media (min-width:860px){
+    .scene{display:grid;grid-template-columns:1fr 1.15fr;align-items:center;padding:0 6vw;gap:48px;flex:1}
+    .copy{padding:0;order:0;max-width:540px}
+    .kayak-wrap{height:100%;order:0;min-height:0}
+    h1{font-size:clamp(100px,12vw,200px)}
+    .lede{font-size:17px}
+    .info-card{font-size:17px;max-width:230px;padding:16px 20px}
+    .info-card .big{font-size:34px}
+  }
+  @media (max-width:520px){
+    header{padding:16px 18px}
+    header .stats .strokes{padding:4px 9px;font-size:9px}
+    .copy{padding:0 20px 14px}
+    .info-card{font-size:13px;max-width:155px;padding:11px 14px}
+    .info-card .big{font-size:22px}
+  }
+
+  /* footer */
+  footer{
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    padding:13px 24px 16px;
+    font-family:'JetBrains Mono',monospace;font-size:9px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--granite-deep);
+    z-index:6;flex-shrink:0;
+    border-top:1px solid var(--hairline);
+    background:rgba(247,250,252,.6);backdrop-filter:blur(8px);
+  }
+  footer .sig{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+  footer .sig .sep{display:inline-block;width:3px;height:3px;border-radius:50%;background:var(--meadow);flex-shrink:0}
+  footer .sig .accent{color:var(--glacier);font-weight:500}
+  footer a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--granite);
+    padding-bottom:1px;white-space:nowrap;transition:color .2s, border-color .2s}
+  footer a:hover{color:var(--glacier);border-color:var(--glacier)}
+  @media (max-width:520px){
+    footer{font-size:8.5px;letter-spacing:.12em;padding:11px 18px 14px}
+  }
+
+  /* loader */
+  .loader{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--granite);pointer-events:none;z-index:8;
+    transition:opacity .4s ease}
+  .loader.hidden{opacity:0}
+  .loader span{animation:loadDot 1.4s ease-in-out infinite;display:inline-block}
+  .loader span:nth-child(2){animation-delay:.2s}
+  .loader span:nth-child(3){animation-delay:.4s}
+  @keyframes loadDot{0%,100%{opacity:.3;transform:translateY(0)}50%{opacity:1;transform:translateY(-3px)}}
+
+  /* reveals */
+  .reveal{opacity:0;transform:translateY(14px);animation:reveal 1s cubic-bezier(.2,.7,.2,1) forwards}
+  .reveal.d1{animation-delay:.1s}.reveal.d2{animation-delay:.25s}.reveal.d3{animation-delay:.4s}
+  .reveal.d4{animation-delay:.55s}.reveal.d5{animation-delay:.7s}.reveal.d6{animation-delay:.85s}
+  @keyframes reveal{to{opacity:1;transform:translateY(0)}}
+
+  /* toast */
+  .toast{position:fixed;left:50%;top:30px;transform:translateX(-50%) translateY(-80px);
+    background:var(--snow);color:var(--ink);
+    padding:11px 18px;border:1.5px solid var(--ink);border-radius:999px;
+    font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;
+    box-shadow:4px 4px 0 0 var(--ink), 0 16px 30px -10px rgba(13,32,48,.4);
+    transition:transform .5s cubic-bezier(.34,1.56,.64,1);z-index:80;pointer-events:none}
+  .toast.show{transform:translateX(-50%) translateY(0)}
+  .toast .icon{color:var(--meadow);margin-right:8px}
+
+  /* sound toggle */
+  .sound-toggle{position:fixed;bottom:60px;right:20px;z-index:30;
+    width:42px;height:42px;border-radius:50%;
+    background:rgba(13,32,48,.7);backdrop-filter:blur(8px);
+    border:1px solid rgba(255,255,255,.2);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--paper);cursor:pointer;
+    transition:transform .2s, background .2s}
+  .sound-toggle:hover{transform:scale(1.1);background:var(--glacier)}
+  .sound-toggle svg{width:18px;height:18px}
+
+  /* ── TAKEOVER ─────────────────────────────── */
+  .takeover{position:fixed;inset:0;z-index:90;
+    display:flex;align-items:center;justify-content:center;padding:24px;
+    background:var(--glacier-deep);
+    opacity:0;pointer-events:none;
+    transition:opacity .4s ease}
+  .takeover.show{opacity:1}
+  .takeover .scenic-bg{position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse at 50% 30%, rgba(240,168,48,.18), transparent 60%),
+      linear-gradient(180deg, #1a4a68 0%, var(--glacier-deep) 70%);
+    overflow:hidden}
+  .takeover .scenic-bg::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(2px 2px at 20px 30px, white, transparent),
+      radial-gradient(2px 2px at 60px 70px, white, transparent),
+      radial-gradient(1.5px 1.5px at 110px 50px, white, transparent),
+      radial-gradient(2px 2px at 180px 90px, white, transparent),
+      radial-gradient(1.5px 1.5px at 240px 40px, white, transparent),
+      radial-gradient(2px 2px at 320px 100px, white, transparent),
+      radial-gradient(1.5px 1.5px at 360px 60px, white, transparent);
+    background-size:400px 200px;
+    background-repeat:repeat;opacity:.4;
+    animation:starDrift 60s linear infinite}
+  @keyframes starDrift{from{background-position:0 0}to{background-position:400px 0}}
+  /* layered mountain svgs over the dark bg */
+  .takeover .mtn-1, .takeover .mtn-2{position:absolute;left:-5%;right:-5%;width:110%;height:auto;pointer-events:none}
+  .takeover .mtn-1{bottom:0;opacity:.5;filter:hue-rotate(-10deg)}
+  .takeover .mtn-2{bottom:0;opacity:.85}
+
+  .takeover .stamp{
+    position:relative;z-index:2;
+    background:var(--snow);color:var(--ink);
+    padding:24px 28px;border-radius:18px;
+    border:2px solid var(--ink);
+    box-shadow:8px 8px 0 0 var(--ink), 0 30px 60px -10px rgba(0,0,0,.6);
+    font-family:'Familjen Grotesk',sans-serif;
+    text-align:left;
+    transform:translateY(40px) scale(.95);opacity:0;
+    transition:all .6s cubic-bezier(.34,1.56,.64,1) .15s;
+    max-width:min(92vw, 500px);width:100%}
+  .takeover.show .stamp{transform:translateY(0) scale(1);opacity:1}
+  .takeover .stamp .kicker{
+    display:flex;justify-content:space-between;align-items:center;gap:14px;
+    font-family:'JetBrains Mono',monospace;font-size:10px;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--glacier);
+    margin-bottom:12px;padding-bottom:10px;border-bottom:1px dashed var(--hairline-strong);font-weight:500}
+  .takeover .stamp .kicker .badge{background:var(--gold);color:var(--ink);padding:3px 8px;font-size:9px;font-weight:600;border-radius:3px}
+  .takeover .stamp .big{display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;
+    font-size:clamp(28px,6vw,42px);line-height:1.0;letter-spacing:-.02em;margin-bottom:12px;color:var(--ink)}
+  .takeover .stamp .big .accent{color:var(--glacier);font-style:italic}
+  .takeover .stamp .sub{display:block;font-size:14px;line-height:1.5;color:var(--granite-deep);margin-bottom:18px;font-weight:500}
+  .takeover .stamp .data-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;
+    font-family:'JetBrains Mono',monospace;font-size:10px;padding-top:14px;border-top:1px dashed var(--hairline-strong)}
+  .takeover .stamp .data-grid .item{display:flex;flex-direction:column;gap:3px}
+  .takeover .stamp .data-grid .lbl{color:var(--granite);font-size:9px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+  .takeover .stamp .data-grid .val{color:var(--ink);font-weight:700;font-size:15px;font-family:'Bricolage Grotesque',sans-serif}
+  .takeover .stamp .data-grid .val.gold{color:var(--gold)}
+  .takeover .stamp .data-grid .val.meadow{color:var(--meadow)}
+  .takeover .stamp .data-grid .val.sunset{color:var(--sunset)}
+
+  /* number badge top-right */
+  .takeover .count{position:absolute;top:24px;right:24px;z-index:3;
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:800;
+    font-size:clamp(48px,10vw,84px);line-height:.85;color:var(--paper);
+    letter-spacing:-.04em;opacity:0;transform:translateY(-20px);
+    transition:all .6s ease .3s;text-shadow:0 4px 20px rgba(0,0,0,.6)}
+  .takeover.show .count{transform:translateY(0);opacity:.95}
+  .takeover .count::before{content:"#";font-size:.5em;color:var(--gold);margin-right:.05em;vertical-align:.3em}
+
+  .takeover .corner-badge{position:absolute;top:24px;left:24px;z-index:3;
+    background:rgba(247,250,252,.12);border:1px solid rgba(247,250,252,.3);
+    padding:7px 14px;border-radius:999px;
+    font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--paper);backdrop-filter:blur(8px);
+    transform:translateY(-20px);opacity:0;transition:all .6s ease .35s}
+  .takeover.show .corner-badge{transform:translateY(0);opacity:1}
+
+  .takeover .close-hint{position:absolute;bottom:16px;right:24px;z-index:3;
+    font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--paper);opacity:0;
+    transform:translateY(20px);transition:all .6s ease .5s}
+  .takeover.show .close-hint{opacity:.55;transform:translateY(0)}
+
+  /* per-takeover personalities */
+  /* Trophy (100) — golden medal aesthetic */
+  .takeover.trophy .stamp{border-color:var(--gold);box-shadow:8px 8px 0 0 var(--gold), 0 30px 60px -10px rgba(0,0,0,.6)}
+  .takeover.trophy .stamp::before{
+    content:"🏆";position:absolute;top:-22px;left:50%;transform:translateX(-50%);
+    background:var(--gold);color:var(--ink);padding:8px 12px;border-radius:50%;
+    font-size:18px;border:2px solid var(--ink);box-shadow:0 6px 14px rgba(0,0,0,.3)}
+
+  /* Full Send (150) — alpine sunset party */
+  .takeover.send .scenic-bg{
+    background:radial-gradient(ellipse at 50% 40%, #ff8a4a, #d84a7a 40%, #5a2068 100%)}
+  .takeover.send .stamp{
+    background:linear-gradient(135deg, #ffd086, #ff8a9a, #b86eff);
+    color:var(--ink);border-color:var(--ink);
+    animation:sendShake .25s ease-in-out infinite}
+  @keyframes sendShake{0%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-2px) rotate(-.5deg)}75%{transform:translateY(2px) rotate(.5deg)}}
+  .takeover.send .stamp .kicker{color:var(--glacier-deep)}
+  .takeover.send .stamp .data-grid{border-color:rgba(13,32,48,.3)}
+  .takeover.send .count{animation:hueRotate 1.2s linear infinite}
+  @keyframes hueRotate{from{filter:hue-rotate(0)}to{filter:hue-rotate(360deg)}}
+
+  /* Confetti */
+  .confetti{position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden}
+  .confetti span{position:absolute;width:6px;height:14px;top:-20px;
+    animation:confettiFall linear forwards}
+  @keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg)}}
+
+  /* Rave / aurora mode permanent post-150 */
+  body.aurora{
+    background:linear-gradient(180deg, #2a1850 0%, #4a2880 30%, #1a4a78 60%, var(--water) 100%);
+    animation:auroraShift 8s ease-in-out infinite}
+  @keyframes auroraShift{0%,100%{filter:hue-rotate(0)}50%{filter:hue-rotate(40deg)}}
+  body.aurora .sun{background:radial-gradient(circle at 35% 35%, #fff, #d8a0ff 55%, #ff7ac0)}
+
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
+  }
 </style>
-<meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
-<meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
 </head>
 <body>
 
-<main class="wrap">
-  <div class="card">
-    <a href="/" class="brand">
-      <span class="brand-mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span>
-      <span>Loisirs <em>74</em></span>
-    </a>
+<div class="sun"></div>
 
-    <div class="code">4<em>0</em>4</div>
-    <h1>Cette page n'existe <em>pas</em>.</h1>
-    <p>Elle a peut-être été déplacée, ou le lien que vous avez suivi est obsolète. Retour à l'index pour retrouver tous les lieux documentés.</p>
+<!-- Clouds -->
+<div class="cloud c1">
+  <svg width="160" height="50" viewBox="0 0 160 50" fill="none">
+    <ellipse cx="40" cy="32" rx="32" ry="16" fill="white"/>
+    <ellipse cx="78" cy="24" rx="38" ry="20" fill="white"/>
+    <ellipse cx="115" cy="30" rx="32" ry="18" fill="white"/>
+  </svg>
+</div>
+<div class="cloud c2">
+  <svg width="120" height="42" viewBox="0 0 120 42" fill="none">
+    <ellipse cx="30" cy="26" rx="25" ry="14" fill="white"/>
+    <ellipse cx="62" cy="22" rx="28" ry="16" fill="white"/>
+    <ellipse cx="90" cy="26" rx="24" ry="14" fill="white"/>
+  </svg>
+</div>
+<div class="cloud c3">
+  <svg width="100" height="36" viewBox="0 0 100 36" fill="none">
+    <ellipse cx="28" cy="22" rx="22" ry="12" fill="white"/>
+    <ellipse cx="55" cy="18" rx="25" ry="14" fill="white"/>
+    <ellipse cx="78" cy="22" rx="20" ry="12" fill="white"/>
+  </svg>
+</div>
 
-    <div class="actions">
-      <a href="/" class="btn btn-primary">
-        Retour à l'accueil
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
-      <a href="/contact" class="btn btn-ghost">Signaler le lien cassé</a>
+<!-- Birds -->
+<div class="birds"><span>ᗨ</span><span>ᗨ</span><span>ᗨ</span></div>
+
+<div class="grain"></div>
+
+<!-- Toast -->
+<div class="toast" id="toast"><span class="icon">▸</span><span id="toast-text">Coup de pagaie enregistré</span></div>
+
+<!-- Takeover -->
+<div class="takeover" id="takeover">
+  <div class="scenic-bg">
+    <svg class="mtn-1" viewBox="0 0 1400 250" preserveAspectRatio="none">
+      <path d="M0,250 L0,140 L150,80 L300,130 L450,50 L600,110 L750,40 L900,100 L1050,60 L1200,120 L1400,90 L1400,250 Z" fill="#1a3a58"/>
+    </svg>
+    <svg class="mtn-2" viewBox="0 0 1400 250" preserveAspectRatio="none">
+      <path d="M0,250 L0,180 L120,120 L240,160 L380,100 L520,150 L660,90 L800,140 L940,80 L1080,130 L1240,100 L1400,150 L1400,250 Z" fill="#0a1f30"/>
+      <path d="M375,104 L383,100 L391,118 L383,122 Z" fill="#fcfdfe" opacity=".85"/>
+      <path d="M655,94 L663,90 L671,108 L663,112 Z" fill="#fcfdfe" opacity=".85"/>
+      <path d="M935,84 L943,80 L951,98 L943,102 Z" fill="#fcfdfe" opacity=".85"/>
+    </svg>
+  </div>
+  <div class="confetti" id="takeover-confetti"></div>
+  <div class="corner-badge" id="takeover-badge">CARNET DE BORD</div>
+  <div class="count" id="takeover-count">050</div>
+  <div class="stamp" id="takeover-stamp">
+    <div class="kicker">
+      <span id="takeover-kicker">SESSION · KAYAK</span>
+      <span class="badge" id="takeover-badge2">PADDLED</span>
+    </div>
+    <span class="big" id="takeover-big">CINQUANTE COUPS DE PAGAIE</span>
+    <span class="sub" id="takeover-sub">Le kayakiste te salue. La page reste introuvable.</span>
+    <div class="data-grid" id="takeover-data"></div>
+  </div>
+  <div class="close-hint">Tape pour fermer · Auto 5s</div>
+</div>
+
+<button class="sound-toggle" id="sound-toggle" aria-label="Audio">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>
+  </svg>
+</button>
+
+<div class="stage">
+
+  <header class="reveal d1">
+    <div class="brand">
+      <span class="compass"></span>
+      <span>Loisirs74 · Haute-Savoie</span>
+    </div>
+    <div class="stats">
+      <span class="strokes"><span class="dot"></span><span id="strokes">0 coups</span></span>
+    </div>
+  </header>
+
+  <main class="scene">
+
+    <div class="kayak-wrap reveal d2">
+      <div class="mountains">
+        <svg class="layer-far" viewBox="0 0 1400 400" preserveAspectRatio="none">
+          <path d="M0,400 L0,260 L120,180 L240,230 L350,140 L480,200 L600,120 L740,180 L880,100 L1000,170 L1120,140 L1260,200 L1400,160 L1400,400 Z"
+            fill="#9bbcd0"/>
+        </svg>
+        <svg class="layer-mid" viewBox="0 0 1400 400" preserveAspectRatio="none">
+          <path d="M0,400 L0,290 L100,220 L200,260 L320,180 L420,240 L560,160 L680,220 L820,150 L960,210 L1080,180 L1200,240 L1320,200 L1400,250 L1400,400 Z"
+            fill="#5a8aa8"/>
+          <path d="M310,184 L320,180 L334,196 L320,200 Z" fill="#fcfdfe" opacity=".8"/>
+          <path d="M550,164 L560,160 L572,180 L560,184 Z" fill="#fcfdfe" opacity=".8"/>
+          <path d="M810,154 L820,150 L834,170 L820,174 Z" fill="#fcfdfe" opacity=".8"/>
+        </svg>
+        <svg class="layer-near" viewBox="0 0 1400 400" preserveAspectRatio="none">
+          <path d="M0,400 L0,340 L80,280 L180,320 L280,260 L380,300 L500,240 L620,290 L740,250 L860,280 L980,240 L1100,290 L1240,260 L1400,300 L1400,400 Z"
+            fill="#2c5670"/>
+          <g fill="#1a3a4a" opacity=".8">
+            <path d="M100,335 L105,320 L110,335 Z"/>
+            <path d="M130,332 L137,310 L143,332 Z"/>
+            <path d="M340,310 L348,290 L356,310 Z"/>
+            <path d="M520,278 L528,256 L536,278 Z"/>
+            <path d="M720,288 L728,266 L736,288 Z"/>
+            <path d="M920,272 L928,250 L936,272 Z"/>
+            <path d="M1140,300 L1148,278 L1156,300 Z"/>
+          </g>
+        </svg>
+      </div>
+      <div class="loader" id="loader">recherche du kayakiste<span>.</span><span>.</span><span>.</span></div>
+      <canvas id="kayak-canvas"></canvas>
+      <div class="info-card" id="info-card">
+        <span class="label">Position GPS</span>
+        <span class="big">Lac · <span class="accent">perdu</span></span>
+      </div>
     </div>
 
-    <nav class="langs" aria-label="Autres langues">
-      <a href="/">Français</a>
-      <span aria-hidden="true">·</span>
-      <a href="/en/">English</a>
-      <span aria-hidden="true">·</span>
-      <a href="/de/">Deutsch</a>
-      <span aria-hidden="true">·</span>
-      <a href="/it/">Italiano</a>
-    </nav>
-  </div>
-</main>
+    <div class="copy">
+      <span class="eyebrow reveal d3">Erreur 404 <span class="alt">· dérive sur l'eau</span></span>
+      <h1 class="reveal d3"><span class="four-a">4</span><span class="zero">0</span><span class="four-b">4</span></h1>
+      <p class="lede reveal d4">
+        Cette page <em>s'est échouée au fond du lac</em>. Le kayakiste pagaye encore — on l'a vu passer du côté de <span class="pin">📍 Annecy</span>, mais il refuse de demander son chemin.
+      </p>
+      <div class="actions reveal d5">
+        <a href="https://loisirs74.fr" class="cta">
+          <span class="arrow">←</span>
+          <span>Retour au camp de base</span>
+        </a>
+        <a href="https://loisirs74.fr" class="secondary">
+          <span>loisirs74.fr</span>
+        </a>
+      </div>
+      <div class="hint reveal d6">
+        <span class="pulse"></span>
+        <span>Tape · Glisse · Le kayak adore</span>
+      </div>
+    </div>
 
-<footer style="text-align:center;padding:1.6rem 1rem;font-size:.72rem;color:#8a8f98;">© 2026 bleu-canard édition · Edmaster &amp; Claudius · tous droits réservés</footer>
+  </main>
+
+  <footer class="reveal d6">
+    <div class="sig">
+      <span class="accent">Loisirs74</span>
+      <span class="sep"></span>
+      <span>Haute-Savoie</span>
+      <span class="sep"></span>
+      <span>© 2026 bleu-canard édition</span>
+      <span class="sep"></span>
+      <span class="accent">Edmaster &amp; Claudius</span>
+    </div>
+    <a href="https://loisirs74.fr">accueil →</a>
+  </footer>
+
+</div>
+
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+
+const canvas = document.getElementById('kayak-canvas');
+const loader = document.getElementById('loader');
+const infoCard = document.getElementById('info-card');
+const strokesEl = document.getElementById('strokes');
+const toastEl = document.getElementById('toast');
+const toastText = document.getElementById('toast-text');
+
+const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(34, 1, 0.1, 100);
+camera.position.set(0, 1.6, 7);
+camera.lookAt(0, 0.3, 0);
+
+// Lights — bright alpine daylight
+scene.add(new THREE.HemisphereLight(0xfff4d6, 0x8aa8c0, 0.9));
+const key = new THREE.DirectionalLight(0xffffff, 1.6);
+key.position.set(4, 6, 3);
+key.castShadow = true;
+key.shadow.mapSize.set(1024,1024);
+key.shadow.camera.near = 1; key.shadow.camera.far = 20;
+key.shadow.camera.left=-5; key.shadow.camera.right=5; key.shadow.camera.top=5; key.shadow.camera.bottom=-5;
+key.shadow.bias = -0.0005;
+scene.add(key);
+const rim = new THREE.DirectionalLight(0x9ad8ff, 0.5);
+rim.position.set(-3, 2, -3);
+scene.add(rim);
+const fill = new THREE.DirectionalLight(0xfff0c8, 0.4);
+fill.position.set(0, -2, 4);
+scene.add(fill);
+
+// Materials
+const matKayak = new THREE.MeshStandardMaterial({color:0xf0a830, roughness:0.5, metalness:0.0});  // gold/orange kayak
+const matKayakBottom = new THREE.MeshStandardMaterial({color:0xc8841f, roughness:0.6, metalness:0.0});
+const matKayakRim = new THREE.MeshStandardMaterial({color:0x0d2030, roughness:0.6, metalness:0.0});
+const matKayakStripe = new THREE.MeshStandardMaterial({color:0x0d3550, roughness:0.5});
+const matSkin = new THREE.MeshStandardMaterial({color:0xfac896, roughness:0.6});
+const matJacket = new THREE.MeshStandardMaterial({color:0x8cc051, roughness:0.5, metalness:0.0});  // life vest meadow green
+const matJacketStrap = new THREE.MeshStandardMaterial({color:0x0d2030, roughness:0.6});
+const matHelmet = new THREE.MeshStandardMaterial({color:0xd84545, roughness:0.4, metalness:0.05}); // red helmet
+const matHair = new THREE.MeshStandardMaterial({color:0x3a2818, roughness:0.7});
+const matPaddleShaft = new THREE.MeshStandardMaterial({color:0xc8a070, roughness:0.6});
+const matPaddleBlade = new THREE.MeshStandardMaterial({color:0x2d7090, roughness:0.5});
+
+// ── KAYAK GROUP (kayak + paddler + paddle) ─────────
+const kayakGroup = new THREE.Group();
+scene.add(kayakGroup);
+
+// KAYAK HULL — built from a stretched, tapered shape using lathe-like form
+// Use a CapsuleGeometry stretched, then add details
+const hullGeo = new THREE.CapsuleGeometry(0.42, 2.6, 12, 24);
+const hull = new THREE.Mesh(hullGeo, matKayak);
+hull.rotation.z = Math.PI/2;
+hull.scale.set(1, 1, 0.5); // flatten Z
+hull.castShadow = true; hull.receiveShadow = true;
+kayakGroup.add(hull);
+
+// Pointy tips at bow and stern — small cones to give it the right silhouette
+const tipGeo = new THREE.ConeGeometry(0.32, 0.7, 16);
+const bow = new THREE.Mesh(tipGeo, matKayak);
+bow.rotation.z = -Math.PI/2;
+bow.position.set(1.6, 0.05, 0);
+bow.scale.set(1, 1, 0.5);
+bow.castShadow = true;
+kayakGroup.add(bow);
+const stern = new THREE.Mesh(tipGeo, matKayak);
+stern.rotation.z = Math.PI/2;
+stern.position.set(-1.6, 0.05, 0);
+stern.scale.set(1, 1, 0.5);
+stern.castShadow = true;
+kayakGroup.add(stern);
+
+// Bottom darker stripe (along belly)
+const bottomGeo = new THREE.BoxGeometry(3.0, 0.05, 0.4);
+const bottom = new THREE.Mesh(bottomGeo, matKayakBottom);
+bottom.position.set(0, -0.4, 0);
+kayakGroup.add(bottom);
+
+// Deck stripe (cosmetic line along top)
+const stripeGeo = new THREE.BoxGeometry(2.6, 0.02, 0.06);
+const stripe = new THREE.Mesh(stripeGeo, matKayakStripe);
+stripe.position.set(0, 0.15, 0);
+kayakGroup.add(stripe);
+
+// COCKPIT (oval hole where paddler sits) — black ring
+const cockpitRing = new THREE.Mesh(
+  new THREE.TorusGeometry(0.32, 0.04, 8, 32),
+  matKayakRim
+);
+cockpitRing.rotation.x = -Math.PI/2;
+cockpitRing.position.set(0, 0.18, 0);
+cockpitRing.scale.set(1, 1, 0.7);
+kayakGroup.add(cockpitRing);
+
+// Cockpit darkness inside (small dark disc)
+const cockpitDark = new THREE.Mesh(
+  new THREE.CircleGeometry(0.32, 24),
+  new THREE.MeshBasicMaterial({color:0x0a1a28})
+);
+cockpitDark.rotation.x = -Math.PI/2;
+cockpitDark.position.set(0, 0.16, 0);
+cockpitDark.scale.set(1, 0.7, 1);
+kayakGroup.add(cockpitDark);
+
+// ── PADDLER ───────────────────────────────────
+const paddlerGroup = new THREE.Group();
+paddlerGroup.position.set(0, 0.22, 0);
+kayakGroup.add(paddlerGroup);
+
+// Torso — slightly leaned forward, with life jacket
+const torsoGeo = new THREE.SphereGeometry(0.32, 24, 18);
+const torso = new THREE.Mesh(torsoGeo, matJacket);
+torso.scale.set(0.85, 0.95, 0.7);
+torso.position.set(0, 0.32, 0);
+torso.castShadow = true;
+paddlerGroup.add(torso);
+
+// Life jacket straps (cross pattern)
+const strapGeo = new THREE.BoxGeometry(0.06, 0.42, 0.02);
+const strapL = new THREE.Mesh(strapGeo, matJacketStrap);
+strapL.position.set(-0.1, 0.3, 0.22);
+strapL.rotation.z = 0.15;
+paddlerGroup.add(strapL);
+const strapR = new THREE.Mesh(strapGeo, matJacketStrap);
+strapR.position.set(0.1, 0.3, 0.22);
+strapR.rotation.z = -0.15;
+paddlerGroup.add(strapR);
+
+// Head + neck
+const neckGeo = new THREE.CylinderGeometry(0.07, 0.09, 0.1, 12);
+const neck = new THREE.Mesh(neckGeo, matSkin);
+neck.position.set(0, 0.62, 0);
+paddlerGroup.add(neck);
+
+const headGeo = new THREE.SphereGeometry(0.19, 24, 18);
+const head = new THREE.Mesh(headGeo, matSkin);
+head.position.set(0, 0.78, 0);
+head.castShadow = true;
+paddlerGroup.add(head);
+
+// Hair (back of head)
+const hairGeo = new THREE.SphereGeometry(0.18, 24, 18);
+const hair = new THREE.Mesh(hairGeo, matHair);
+hair.position.set(0, 0.81, -0.05);
+hair.scale.set(1, 0.9, 1);
+paddlerGroup.add(hair);
+
+// Helmet
+const helmetGeo = new THREE.SphereGeometry(0.21, 24, 18, 0, Math.PI*2, 0, Math.PI*0.55);
+const helmet = new THREE.Mesh(helmetGeo, matHelmet);
+helmet.position.set(0, 0.79, 0);
+helmet.castShadow = true;
+paddlerGroup.add(helmet);
+
+// Helmet visor strip
+const visorGeo = new THREE.BoxGeometry(0.36, 0.04, 0.04);
+const visor = new THREE.Mesh(visorGeo, matJacketStrap);
+visor.position.set(0, 0.78, 0.18);
+visor.rotation.x = -0.3;
+paddlerGroup.add(visor);
+
+// Eyes (small dark dots)
+function makeEye(x){
+  const g = new THREE.SphereGeometry(0.025, 10, 8);
+  const m = new THREE.Mesh(g, matKayakRim);
+  m.position.set(x, 0.78, 0.18);
+  return m;
+}
+paddlerGroup.add(makeEye(-0.07));
+paddlerGroup.add(makeEye(0.07));
+
+// Smile (small curve)
+const smileGeo = new THREE.TorusGeometry(0.045, 0.008, 6, 16, Math.PI);
+const smile = new THREE.Mesh(smileGeo, matKayakRim);
+smile.position.set(0, 0.72, 0.16);
+smile.rotation.x = -0.3;
+paddlerGroup.add(smile);
+
+// Arms — built as groups so we can pivot them when paddling
+const armGeo = new THREE.CapsuleGeometry(0.06, 0.32, 6, 12);
+
+function makeArm(side){
+  const arm = new THREE.Group();
+  arm.position.set(side * 0.25, 0.46, 0);
+  const upperArm = new THREE.Mesh(armGeo, matJacket);
+  upperArm.position.y = -0.18;
+  upperArm.castShadow = true;
+  arm.add(upperArm);
+  // hand (forearm + hand combined as one capsule)
+  const forearm = new THREE.Mesh(
+    new THREE.CapsuleGeometry(0.055, 0.28, 6, 12),
+    matSkin
+  );
+  forearm.position.set(side * 0.18, -0.42, 0.18);
+  arm.add(forearm);
+  return arm;
+}
+const armL = makeArm(-1);
+const armR = makeArm(1);
+paddlerGroup.add(armL);
+paddlerGroup.add(armR);
+
+// ── PADDLE ──────────────────────────────────
+const paddleGroup = new THREE.Group();
+paddleGroup.position.set(0, 0.55, 0.05);
+paddlerGroup.add(paddleGroup);
+
+// shaft
+const shaftGeo = new THREE.CylinderGeometry(0.025, 0.025, 1.8, 12);
+const shaft = new THREE.Mesh(shaftGeo, matPaddleShaft);
+shaft.rotation.z = Math.PI/2;
+paddleGroup.add(shaft);
+
+// Two paddle blades (one each end)
+function makeBlade(side){
+  const blade = new THREE.Mesh(
+    new THREE.BoxGeometry(0.26, 0.4, 0.03),
+    matPaddleBlade
+  );
+  blade.position.set(side * 0.95, 0, 0);
+  blade.castShadow = true;
+  return blade;
+}
+paddleGroup.add(makeBlade(-1));
+paddleGroup.add(makeBlade(1));
+
+// ── WATER PLANE WITH SHADER ────────────────
+const waterGeo = new THREE.PlaneGeometry(20, 20, 80, 80);
+const waterMat = new THREE.ShaderMaterial({
+  transparent:true,
+  uniforms:{
+    uTime:{value:0},
+    uColor:{value:new THREE.Color(0x4a9bb8)},
+    uHighlight:{value:new THREE.Color(0xb8dde8)},
+    uClickPos:{value:new THREE.Vector2(0,0)},
+    uClickTime:{value:-10}
+  },
+  vertexShader:`
+    uniform float uTime;
+    uniform vec2 uClickPos;
+    uniform float uClickTime;
+    varying vec2 vUv;
+    varying float vWave;
+    varying float vRipple;
+    void main(){
+      vUv = uv;
+      vec3 p = position;
+      float w = sin(p.x*1.5 + uTime*1.2)*0.05 + cos(p.y*1.8 + uTime*0.9)*0.05;
+      float dt = uTime - uClickTime;
+      float dist = distance(p.xy, uClickPos);
+      float r = sin(dist*7.0 - dt*7.0) * exp(-dist*0.6) * exp(-dt*0.9);
+      r = max(0.0, r) * 0.18;
+      p.z += w + r;
+      vWave = w;
+      vRipple = r;
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.0);
+    }
+  `,
+  fragmentShader:`
+    uniform vec3 uColor;
+    uniform vec3 uHighlight;
+    varying vec2 vUv;
+    varying float vWave;
+    varying float vRipple;
+    void main(){
+      vec3 c = mix(uColor, uHighlight, smoothstep(-0.05, 0.06, vWave));
+      c = mix(c, uHighlight, vRipple*5.0);
+      float d = distance(vUv, vec2(0.5));
+      float alpha = smoothstep(0.55, 0.15, d) * 0.85;
+      gl_FragColor = vec4(c, alpha);
+    }
+  `,
+  side:THREE.DoubleSide
+});
+const water = new THREE.Mesh(waterGeo, waterMat);
+water.rotation.x = -Math.PI/2;
+water.position.y = -0.25;
+scene.add(water);
+
+// Soft shadow under kayak
+const shadow = new THREE.Mesh(
+  new THREE.PlaneGeometry(3.5, 1.2),
+  new THREE.MeshBasicMaterial({color:0x000000, transparent:true, opacity:0.18})
+);
+shadow.rotation.x = -Math.PI/2;
+shadow.position.y = -0.24;
+scene.add(shadow);
+
+// Splash droplet particles (created on click)
+const splashes = [];
+const splashGeo = new THREE.SphereGeometry(0.04, 8, 6);
+const splashMat = new THREE.MeshStandardMaterial({color:0xffffff, transparent:true, opacity:0.85});
+
+function spawnSplash(x){
+  for (let i=0;i<5;i++){
+    const s = new THREE.Mesh(splashGeo, splashMat.clone());
+    s.position.set(x + (Math.random()-0.5)*0.4, -0.2, (Math.random()-0.5)*0.4);
+    s.userData = {
+      vy: 0.04 + Math.random()*0.05,
+      vx: (Math.random()-0.5)*0.04,
+      vz: (Math.random()-0.5)*0.04,
+      life: 0
+    };
+    scene.add(s);
+    splashes.push(s);
+  }
+}
+
+kayakGroup.rotation.y = -0.2;
+setTimeout(()=>loader.classList.add('hidden'), 300);
+
+// ── INTERACTION ────────────────────────────
+let isDown = false, lastX = 0, lastY = 0, velX = 0, velY = 0;
+let targetRotX = kayakGroup.rotation.x;
+let targetRotY = kayakGroup.rotation.y;
+let paddleSpeedTarget = 1; // 1 = normal cadence, >1 when clicked
+let paddleSpeed = 1;
+let bobIntensity = 1;
+let clickCount = 0;
+
+function pointerDown(e){
+  isDown = true;
+  canvas.classList.add('dragging');
+  const p = ('touches' in e && e.touches[0]) ? e.touches[0] : e;
+  lastX = p.clientX; lastY = p.clientY;
+  velX = 0; velY = 0;
+}
+function pointerMove(e){
+  if(!isDown) return;
+  const p = ('touches' in e && e.touches[0]) ? e.touches[0] : e;
+  const dx = p.clientX - lastX;
+  const dy = p.clientY - lastY;
+  lastX = p.clientX; lastY = p.clientY;
+  targetRotY += dx * 0.008;
+  targetRotX += dy * 0.005;
+  targetRotX = Math.max(-0.4, Math.min(0.4, targetRotX));
+  velX = dy * 0.005;
+  velY = dx * 0.008;
+  if (e.cancelable) e.preventDefault();
+}
+function pointerUp(){
+  isDown = false;
+  canvas.classList.remove('dragging');
+}
+
+canvas.addEventListener('mousedown', pointerDown);
+window.addEventListener('mousemove', pointerMove);
+window.addEventListener('mouseup', pointerUp);
+canvas.addEventListener('touchstart', pointerDown, {passive:false});
+window.addEventListener('touchmove', pointerMove, {passive:false});
+window.addEventListener('touchend', pointerUp);
+
+let lastTap = 0;
+canvas.addEventListener('click', (e)=>{
+  const now = Date.now();
+  const isDouble = (now - lastTap < 350);
+  lastTap = now;
+  if (isDouble){ velY = 0.5; return; }
+
+  clickCount++;
+  updateStrokes();
+  paddleSpeedTarget = 4;
+  bobIntensity = 2.5;
+  spawnSplash(Math.random() > 0.5 ? 0.95 : -0.95);
+  triggerWaterRipple(e);
+  triggerPaddleSound();
+  setTimeout(()=>{ paddleSpeedTarget = 1; bobIntensity = 1; }, 500);
+
+  if (clickCount === 10) showToast("▸ 10 coups · ça paddle propre");
+  else if (clickCount === 25) showToast("▸ 25 coups · cadence régulière");
+  else if (clickCount === 50) triggerTakeover('paddled');
+  else if (clickCount === 100) triggerTakeover('trophy');
+  else if (clickCount === 150) {
+    triggerTakeover('send');
+    document.body.classList.add('aurora');
+  }
+});
+
+function updateStrokes(){
+  strokesEl.textContent = `${clickCount} coup${clickCount>1?'s':''}`;
+}
+
+function triggerWaterRipple(ev){
+  const rect = canvas.getBoundingClientRect();
+  const x = ((ev.clientX - rect.left) / rect.width) * 2 - 1;
+  const y = -((ev.clientY - rect.top) / rect.height) * 2 + 1;
+  waterMat.uniforms.uClickPos.value.set(x*2, y*2);
+  waterMat.uniforms.uClickTime.value = clock.getElapsedTime();
+}
+
+function showToast(msg){
+  toastText.textContent = msg;
+  toastEl.classList.add('show');
+  clearTimeout(toastEl._t);
+  toastEl._t = setTimeout(()=>toastEl.classList.remove('show'), 3500);
+}
+
+// Idle behaviors
+let idleTimer = null;
+function scheduleIdle(){
+  clearTimeout(idleTimer);
+  idleTimer = setTimeout(()=>{
+    if (isDown) { scheduleIdle(); return; }
+    const choice = Math.floor(Math.random()*3);
+    if (choice === 0) velY = 0.3;
+    else if (choice === 1) bobIntensity = 2.5;
+    else paddleSpeedTarget = 3;
+    setTimeout(()=>{ bobIntensity = 1; paddleSpeedTarget = 1; }, 1200);
+    scheduleIdle();
+  }, 6000 + Math.random()*4000);
+}
+scheduleIdle();
+
+// ── TAKEOVERS ──────────────────────────────
+const takeoverEl = document.getElementById('takeover');
+const takeoverCount = document.getElementById('takeover-count');
+const takeoverKicker = document.getElementById('takeover-kicker');
+const takeoverBadge2 = document.getElementById('takeover-badge2');
+const takeoverBig = document.getElementById('takeover-big');
+const takeoverSub = document.getElementById('takeover-sub');
+const takeoverData = document.getElementById('takeover-data');
+const takeoverCornerBadge = document.getElementById('takeover-badge');
+const takeoverConfetti = document.getElementById('takeover-confetti');
+
+const TAKEOVERS = {
+  paddled: {
+    cls:'paddled', num:'050',
+    kicker:'SESSION · KAYAK',
+    badge:'PADDLED',
+    big:'CINQUANTE COUPS DE PAGAIE',
+    sub:"Le kayakiste te salue. La page reste introuvable, mais la cadence est excellente.",
+    cornerBadge:'CARNET DE BORD',
+    data:[
+      {lbl:'Coups', val:'50', cls:'meadow'},
+      {lbl:'Distance', val:'0.4 km'},
+      {lbl:'Calories', val:'72 kcal'},
+      {lbl:'Statut', val:'En forme', cls:'meadow'}
+    ],
+    duration:5000,
+    confettiColors:['#8cc051','#f0a830','#2d7090','#fcfdfe']
+  },
+  trophy: {
+    cls:'trophy', num:'100',
+    kicker:'TROPHÉE DU LAC',
+    badge:'OR',
+    big:'CHAMPION DU CLIC',
+    sub:"100 coups de pagaie au compteur. Médaille d'or de la persévérance navale.",
+    cornerBadge:'PALMARÈS · OFFICIEL',
+    data:[
+      {lbl:'Coups', val:'100', cls:'gold'},
+      {lbl:'Catégorie', val:'Senior'},
+      {lbl:'Lac', val:'Annecy'},
+      {lbl:'Année', val:'2026', cls:'gold'}
+    ],
+    duration:5500,
+    confettiColors:['#f0a830','#8cc051','#fcfdfe','#2d7090']
+  },
+  send: {
+    cls:'send', num:'150',
+    kicker:'MODE · FULL SEND',
+    badge:'SEND IT',
+    big:"AURORE DÉCLENCHÉE",
+    sub:"Tu as tellement pagayé que le lac a changé de couleur. C'est de ta faute. Bravo.",
+    cornerBadge:'CHAOS · ACTIVÉ',
+    data:[
+      {lbl:'Coups', val:'150', cls:'sunset'},
+      {lbl:'BPM', val:'182', cls:'sunset'},
+      {lbl:'Vibe', val:'Légendaire'},
+      {lbl:'Aurore', val:'ON', cls:'sunset'}
+    ],
+    duration:6000,
+    confettiColors:['#ff6b6b','#f0a830','#8cc051','#fcfdfe','#b86eff']
+  }
+};
+
+function triggerTakeover(key){
+  const t = TAKEOVERS[key];
+  if (!t) return;
+  takeoverEl.className = 'takeover ' + t.cls;
+  takeoverCount.textContent = t.num;
+  takeoverKicker.textContent = t.kicker;
+  takeoverBadge2.textContent = t.badge;
+  takeoverBig.textContent = t.big;
+  takeoverSub.textContent = t.sub;
+  takeoverCornerBadge.textContent = t.cornerBadge;
+
+  takeoverData.innerHTML = '';
+  t.data.forEach(d => {
+    const item = document.createElement('div');
+    item.className = 'item';
+    item.innerHTML = `<span class="lbl">${d.lbl}</span><span class="val ${d.cls||''}">${d.val}</span>`;
+    takeoverData.appendChild(item);
+  });
+
+  takeoverConfetti.innerHTML = '';
+  const n = key === 'send' ? 100 : 60;
+  for (let i=0;i<n;i++){
+    const c = document.createElement('span');
+    c.style.left = (Math.random()*100)+'%';
+    c.style.background = t.confettiColors[i % t.confettiColors.length];
+    c.style.animationDuration = (1.5 + Math.random()*2.5)+'s';
+    c.style.animationDelay = (Math.random()*0.7)+'s';
+    c.style.transform = `rotate(${Math.random()*360}deg)`;
+    if (Math.random()>0.5) c.style.width = '4px';
+    takeoverConfetti.appendChild(c);
+  }
+
+  requestAnimationFrame(()=>{
+    takeoverEl.classList.add('show');
+    takeoverEl.style.pointerEvents = 'auto';
+  });
+  if (soundOn) playStingFor(key);
+
+  let closed = false;
+  const close = ()=>{
+    if (closed) return; closed = true;
+    takeoverEl.classList.remove('show');
+    takeoverEl.style.pointerEvents = 'none';
+    takeoverEl.removeEventListener('click', close);
+  };
+  takeoverEl.addEventListener('click', close);
+  setTimeout(close, t.duration);
+}
+
+// Dev shortcuts
+window.addEventListener('keydown',(e)=>{
+  if (e.key === '1') triggerTakeover('paddled');
+  else if (e.key === '2') triggerTakeover('trophy');
+  else if (e.key === '3') triggerTakeover('send');
+});
+
+// ── SOUND ──────────────────────────────────
+let audioCtx = null;
+let soundOn = false;
+let ambientNodes = [];
+const soundToggle = document.getElementById('sound-toggle');
+
+soundToggle.addEventListener('click', ()=>{
+  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  soundOn = !soundOn;
+  soundToggle.style.background = soundOn ? 'var(--meadow)' : 'rgba(13,32,48,.7)';
+  if (soundOn) startLakeAmbient();
+  else stopAmbient();
+});
+
+function startLakeAmbient(){
+  if (!audioCtx) return;
+  // Soft lake breeze: pink noise + low pad
+  const bufferSize = 2 * audioCtx.sampleRate;
+  const buf = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+  const out = buf.getChannelData(0);
+  let b0=0,b1=0,b2=0,b3=0,b4=0,b5=0,b6=0;
+  for (let i=0;i<bufferSize;i++){
+    const w = Math.random()*2-1;
+    b0=0.99886*b0+w*0.0555179;
+    b1=0.99332*b1+w*0.0750759;
+    b2=0.96900*b2+w*0.1538520;
+    b3=0.86650*b3+w*0.3104856;
+    b4=0.55000*b4+w*0.5329522;
+    b5=-0.7616*b5-w*0.0168980;
+    out[i]=(b0+b1+b2+b3+b4+b5+b6+w*0.5362)*0.04;
+    b6=w*0.115926;
+  }
+  const noise = audioCtx.createBufferSource(); noise.buffer = buf; noise.loop = true;
+  const filt = audioCtx.createBiquadFilter(); filt.type = 'lowpass'; filt.frequency.value = 600;
+  const gain = audioCtx.createGain(); gain.gain.value = 0.18;
+  noise.connect(filt); filt.connect(gain); gain.connect(audioCtx.destination);
+  noise.start();
+  ambientNodes.push(noise, filt, gain);
+}
+function stopAmbient(){
+  ambientNodes.forEach(n=>{try{n.stop?.();n.disconnect?.();}catch(e){}});
+  ambientNodes = [];
+}
+function triggerPaddleSound(){
+  if (!soundOn || !audioCtx) return;
+  // Water plop: filtered burst
+  const now = audioCtx.currentTime;
+  const dur = 0.12;
+  const buf = audioCtx.createBuffer(1, audioCtx.sampleRate*dur, audioCtx.sampleRate);
+  const d = buf.getChannelData(0);
+  for (let i=0;i<d.length;i++) d[i] = (Math.random()*2-1) * (1 - i/d.length);
+  const src = audioCtx.createBufferSource(); src.buffer = buf;
+  const filt = audioCtx.createBiquadFilter(); filt.type = 'bandpass'; filt.frequency.value = 400; filt.Q.value = 6;
+  const g = audioCtx.createGain(); g.gain.value = 0.25;
+  src.connect(filt); filt.connect(g); g.connect(audioCtx.destination);
+  src.start(now); src.stop(now + dur);
+}
+function playStingFor(key){
+  if (!audioCtx) return;
+  const now = audioCtx.currentTime;
+  const notes = {
+    paddled:[440, 554, 659],
+    trophy:[523, 659, 784, 988],
+    send:[440, 523, 622, 740, 880]
+  }[key] || [440];
+  notes.forEach((freq, i)=>{
+    const osc = audioCtx.createOscillator();
+    osc.type = 'triangle'; osc.frequency.value = freq;
+    const g = audioCtx.createGain();
+    g.gain.setValueAtTime(0, now + i*0.09);
+    g.gain.linearRampToValueAtTime(0.1, now + i*0.09 + 0.02);
+    g.gain.exponentialRampToValueAtTime(0.001, now + i*0.09 + 0.5);
+    osc.connect(g); g.connect(audioCtx.destination);
+    osc.start(now + i*0.09); osc.stop(now + i*0.09 + 0.55);
+  });
+}
+
+// Mouse parallax on mountains
+let mx = 0, my = 0, tmx = 0, tmy = 0;
+window.addEventListener('mousemove',(e)=>{
+  tmx = (e.clientX/innerWidth - 0.5);
+  tmy = (e.clientY/innerHeight - 0.5);
+});
+
+// Resize
+function resize(){
+  const w = canvas.clientWidth, h = canvas.clientHeight;
+  if (w === 0 || h === 0) return;
+  renderer.setSize(w, h, false);
+  camera.aspect = w/h;
+  camera.updateProjectionMatrix();
+}
+new ResizeObserver(resize).observe(canvas);
+resize();
+
+// ── ANIMATION LOOP ───────────────────────────
+const clock = new THREE.Clock();
+const mtnFar = document.querySelector('.mountains svg.layer-far');
+const mtnMid = document.querySelector('.mountains svg.layer-mid');
+const mtnNear = document.querySelector('.mountains svg.layer-near');
+
+function tick(){
+  const t = clock.getElapsedTime();
+  const dt = clock.getDelta();
+
+  // smooth parallax for mountain layers
+  mx += (tmx - mx)*0.04;
+  my += (tmy - my)*0.04;
+  if (mtnFar) mtnFar.style.transform = `translateX(${-mx*12}px)`;
+  if (mtnMid) mtnMid.style.transform = `translateX(${-mx*20}px)`;
+  if (mtnNear) mtnNear.style.transform = `translateX(${-mx*30}px)`;
+
+  // kayak rotation w/ inertia
+  if(!isDown){
+    targetRotY += velY;
+    targetRotX += velX;
+    velY *= 0.94;
+    velX *= 0.94;
+    targetRotX = Math.max(-0.4, Math.min(0.4, targetRotX));
+    if (Math.abs(velY) < 0.001 && Math.abs(velX) < 0.001){
+      targetRotY += (-0.2 - targetRotY) * 0.005;
+      targetRotX += (0 - targetRotX) * 0.01;
+    }
+  }
+  kayakGroup.rotation.y += (targetRotY - kayakGroup.rotation.y) * 0.12;
+  kayakGroup.rotation.x += (targetRotX - kayakGroup.rotation.x) * 0.12;
+
+  // floating bob
+  kayakGroup.position.y = (Math.sin(t*1.4)*0.08 + Math.sin(t*3.6)*0.02) * bobIntensity;
+  kayakGroup.position.x = Math.sin(t*0.9)*0.05;
+  // gentle list left/right
+  kayakGroup.rotation.z = Math.sin(t*1.6)*0.05;
+
+  // paddle smooth speed
+  paddleSpeed += (paddleSpeedTarget - paddleSpeed) * 0.1;
+
+  // PADDLING ANIMATION
+  // paddle rotates around shaft axis (z)
+  const paddleCycle = t * paddleSpeed * 2;
+  paddleGroup.rotation.z = Math.sin(paddleCycle) * 0.7;
+  // also tilt slightly
+  paddleGroup.rotation.x = Math.sin(paddleCycle * 2) * 0.15;
+  // ARMS swing opposite each other
+  armL.rotation.x = Math.sin(paddleCycle) * 0.5 - 0.2;
+  armR.rotation.x = -Math.sin(paddleCycle) * 0.5 - 0.2;
+  // torso slight twist
+  paddlerGroup.rotation.y = Math.sin(paddleCycle) * 0.08;
+  // head tracks slightly
+  head.rotation.y = Math.sin(paddleCycle*0.5) * 0.1;
+  hair.rotation.y = head.rotation.y;
+  helmet.rotation.y = head.rotation.y;
+  visor.rotation.y = head.rotation.y;
+
+  // splash particles
+  for (let i = splashes.length - 1; i >= 0; i--){
+    const s = splashes[i];
+    s.position.x += s.userData.vx;
+    s.position.y += s.userData.vy;
+    s.position.z += s.userData.vz;
+    s.userData.vy -= 0.004; // gravity
+    s.userData.life += dt;
+    s.material.opacity = Math.max(0, 0.85 - s.userData.life*1.5);
+    if (s.userData.life > 1 || s.position.y < -0.3){
+      scene.remove(s);
+      splashes.splice(i, 1);
+    }
+  }
+
+  // water
+  waterMat.uniforms.uTime.value = t;
+
+  // shadow follow + scale
+  shadow.position.x = kayakGroup.position.x;
+  shadow.scale.setScalar(Math.max(0.7, 1 - kayakGroup.position.y*0.3));
+
+  renderer.render(scene, camera);
+  requestAnimationFrame(tick);
+}
+tick();
+</script>
 
 </body>
 </html>
