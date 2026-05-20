@@ -95,6 +95,17 @@ PHOTOS = {
         'https://upload.wikimedia.org/wikipedia/commons/f/f8/'
         'Embarcad%C3%A8re_du_Domaine_de_La_Ch%C3%A2taigni%C3%A8re.jpg',
         'Chrbenoit · CC BY-SA 4.0 · Wikimedia Commons'),
+    'belvedere-du-mont-baron': (
+        'https://upload.wikimedia.org/wikipedia/commons/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg',
+        'Myrabella · CC BY-SA 3.0 · Wikimedia Commons'),
+    'mont-joly': (
+        'https://upload.wikimedia.org/wikipedia/commons/5/54/'
+        'Meg%C3%A8ve%2C_depuis_la_cha%C3%AEne_du_Mont-Joly.jpg',
+        'CBougault · CC BY-SA 4.0 · Wikimedia Commons'),
+    'col-des-pitons-saleve': (
+        'https://upload.wikimedia.org/wikipedia/commons/6/68/'
+        'La_Tour_des_Pitons%2C_point_culminant_du_Sal%C3%A8ve_%281379m%29.JPG',
+        'Martial GAILLARD-GRENADIER · CC BY-SA 3.0 · Wikimedia Commons'),
 }
 
 HERO_IMG = re.compile(r'<img\b[^>]*\bfetchpriority="high"[^>]*>')
