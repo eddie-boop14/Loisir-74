@@ -106,6 +106,10 @@ PHOTOS = {
         'https://upload.wikimedia.org/wikipedia/commons/6/68/'
         'La_Tour_des_Pitons%2C_point_culminant_du_Sal%C3%A8ve_%281379m%29.JPG',
         'Martial GAILLARD-GRENADIER · CC BY-SA 3.0 · Wikimedia Commons'),
+    'base-de-loisirs-du-lac-des-iles': (
+        'https://upload.wikimedia.org/wikipedia/commons/b/bd/'
+        'Les_ARAVIS_depuis_le_LAC_DE_PASSY_-_panoramio.jpg',
+        'CEDRIC BRUN · CC BY 3.0 · Wikimedia Commons'),
 }
 
 HERO_IMG = re.compile(r'<img\b[^>]*\bfetchpriority="high"[^>]*>')
