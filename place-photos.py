@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-cascade-photos.py — Loisirs 74
-==============================
-Assign real hero photos to cascade pages that were on a générique
+place-photos.py — Loisirs 74
+============================
+Assign real hero photos to place pages that were on a générique
 placeholder, and propagate the photo to every card for that place
 (category hub, "à proximité", homepage) in all five locales.
 
@@ -35,6 +35,23 @@ PHOTOS = {
     'grotte-et-cascade-de-seythenex': (
         'https://upload.wikimedia.org/wikipedia/commons/7/7f/Grotte_et_cascade_de_Seythenex_10.jpg',
         'Rémih · CC BY-SA 4.0 · Wikimedia Commons'),
+    'plage-des-marquisats': (
+        'https://upload.wikimedia.org/wikipedia/commons/b/b2/Annecy-8.jpg',
+        'Dingy · CC BY-SA 3.0 · Wikimedia Commons'),
+    'plage-de-sciez-sur-leman': (
+        'https://upload.wikimedia.org/wikipedia/commons/a/a1/Sciez-regate.jpg',
+        'SciezChablais · CC BY-SA 4.0 · Wikimedia Commons'),
+    'plage-de-saint-disdille': (
+        'https://upload.wikimedia.org/wikipedia/commons/6/67/Plage_thonon.jpg',
+        'Dmnt44 · CC BY-SA 4.0 · Wikimedia Commons'),
+    'plage-d-excenevex': (
+        'https://upload.wikimedia.org/wikipedia/commons/c/cd/'
+        'Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG',
+        'Florian Pépellin · CC BY-SA 4.0 · Wikimedia Commons'),
+    'plage-de-la-pinede': (
+        'https://upload.wikimedia.org/wikipedia/commons/e/e2/'
+        'Thonon-les-Bains._Promenade_du_L%C3%A9man._2015-06-21.jpg',
+        'Espirat · CC BY-SA 4.0 · Wikimedia Commons'),
 }
 
 HERO_IMG = re.compile(r'<img\b[^>]*\bfetchpriority="high"[^>]*>')
