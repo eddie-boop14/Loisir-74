@@ -110,6 +110,12 @@ PHOTOS = {
         'https://upload.wikimedia.org/wikipedia/commons/b/bd/'
         'Les_ARAVIS_depuis_le_LAC_DE_PASSY_-_panoramio.jpg',
         'CEDRIC BRUN · CC BY 3.0 · Wikimedia Commons'),
+    'cote-2000-aventure': (
+        'https://upload.wikimedia.org/wikipedia/commons/d/de/Seilpark_Gantrisch_-_03.jpg',
+        'David Haberthür · CC BY 2.0 · Wikimedia Commons'),
+    'indiana-ventures-saint-paul-en-chablais': (
+        'https://upload.wikimedia.org/wikipedia/commons/2/21/La_plage_de_La_Beunaz.jpg',
+        'Saint-Paul-en-Chablais · CC BY-SA 4.0 · Wikimedia Commons'),
 }
 
 HERO_IMG = re.compile(r'<img\b[^>]*\bfetchpriority="high"[^>]*>')
