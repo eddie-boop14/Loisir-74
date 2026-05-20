@@ -26,18 +26,14 @@ LOCALES = ['de', 'en', 'es', 'it']
 
 # (dead slug, keeper slug, locales where the dead .html exists incl. '' for root)
 MERGES = [
-    ('cascade-d-arpenaz', 'cascade-de-l-arpenaz', ['', 'en']),
-    ('plaine-de-joux',    'aire-de-decollage-parapente-plaine-joux', [''] + LOCALES),
-    ('lac-vert',          'lac-vert-passy',       [''] + LOCALES),
+    ('lac-des-ilettes', 'base-de-loisirs-des-ilettes', [''] + LOCALES),
 ]
 DEAD = {d: k for d, k, _ in MERGES}          # dead -> keeper
 KEEPERS = set(DEAD.values())
 
 # Image files belonging to a dead slug.
-IMG_RENAME = {'lac-vert-hero.jpg': 'lac-vert-passy-hero.jpg'}
-IMG_RENAME.update({f'lac-vert-{i}.jpg': f'lac-vert-passy-{i}.jpg' for i in range(1, 6)})
-IMG_DELETE = ['cascade-d-arpenaz-hero.jpg',
-              'plaine-de-joux-hero.jpg', 'plaine-de-joux-2.jpg', 'plaine-de-joux-3.jpg']
+IMG_RENAME = {}
+IMG_DELETE = []
 
 DEAD_FILES = set()
 for d, _, locs in MERGES:
