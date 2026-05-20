@@ -52,6 +52,19 @@ PHOTOS = {
         'https://upload.wikimedia.org/wikipedia/commons/e/e2/'
         'Thonon-les-Bains._Promenade_du_L%C3%A9man._2015-06-21.jpg',
         'Espirat · CC BY-SA 4.0 · Wikimedia Commons'),
+    'les-aigles-du-leman': (
+        'https://upload.wikimedia.org/wikipedia/commons/8/80/'
+        'Female_falcon_handler_with_eagle_%2825513995343%29.jpg',
+        'Thomas Quine · CC BY 2.0 · Wikimedia Commons'),
+    'acro-aventures-reignier': (
+        'https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg',
+        'LP1968 · CC BY-SA 4.0 · Wikimedia Commons'),
+    'parcours-aventure-de-sciez': (
+        'https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg',
+        'LP1968 · CC BY-SA 4.0 · Wikimedia Commons'),
+    'passy-accro-lac': (
+        'https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg',
+        'LP1968 · CC BY-SA 4.0 · Wikimedia Commons'),
 }
 
 HERO_IMG = re.compile(r'<img\b[^>]*\bfetchpriority="high"[^>]*>')
