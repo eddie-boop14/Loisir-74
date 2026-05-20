@@ -116,6 +116,10 @@ PHOTOS = {
     'indiana-ventures-saint-paul-en-chablais': (
         'https://upload.wikimedia.org/wikipedia/commons/2/21/La_plage_de_La_Beunaz.jpg',
         'Saint-Paul-en-Chablais · CC BY-SA 4.0 · Wikimedia Commons'),
+    'parc-des-dereches': (
+        'https://upload.wikimedia.org/wikipedia/commons/7/70/'
+        'Horse_riding_in_the_valley_of_the_Edigan_River.jpg',
+        'Obakeneko · CC BY 3.0 · Wikimedia Commons'),
 }
 
 HERO_IMG = re.compile(r'<img\b[^>]*\bfetchpriority="high"[^>]*>')
