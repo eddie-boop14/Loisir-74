@@ -65,6 +65,32 @@ PHOTOS = {
     'passy-accro-lac': (
         'https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg',
         'LP1968 · CC BY-SA 4.0 · Wikimedia Commons'),
+    'tramway-du-mont-blanc': (
+        'https://upload.wikimedia.org/wikipedia/commons/e/e3/Tramway_Mont-Blanc.jpg',
+        'Frédéric Bonifas · GFDL · Wikimedia Commons'),
+    'telepherique-du-brevent': (
+        'https://upload.wikimedia.org/wikipedia/commons/2/2a/Brevent_cable_car.jpg',
+        'Victoria Lunyak · CC BY-SA 4.0 · Wikimedia Commons'),
+    'telecabine-des-chavannes-les-gets': (
+        'https://upload.wikimedia.org/wikipedia/commons/8/82/'
+        'T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg',
+        'Rémih · CC BY-SA 4.0 · Wikimedia Commons'),
+    'telecabine-du-jaillet': (
+        'https://upload.wikimedia.org/wikipedia/commons/8/82/'
+        'T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg',
+        'Rémih · CC BY-SA 4.0 · Wikimedia Commons'),
+    'telecabine-du-mont-chery-les-gets': (
+        'https://upload.wikimedia.org/wikipedia/commons/8/82/'
+        'T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg',
+        'Rémih · CC BY-SA 4.0 · Wikimedia Commons'),
+    'telecabine-pleney-morzine': (
+        'https://upload.wikimedia.org/wikipedia/commons/8/82/'
+        'T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg',
+        'Rémih · CC BY-SA 4.0 · Wikimedia Commons'),
+    'telecabine-super-chatel': (
+        'https://upload.wikimedia.org/wikipedia/commons/8/82/'
+        'T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg',
+        'Rémih · CC BY-SA 4.0 · Wikimedia Commons'),
 }
 
 HERO_IMG = re.compile(r'<img\b[^>]*\bfetchpriority="high"[^>]*>')
