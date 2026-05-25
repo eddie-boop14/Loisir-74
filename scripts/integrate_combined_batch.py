@@ -705,12 +705,7 @@ def update_root_index():
         )
 
     # 7b. Section counts
-    # Lacs & plages: 16 → 27
-    s = re.sub(
-        r'(<h2>Lacs &amp; plages<span class="count">)\d+ lieux',
-        r'\g<1>27 lieux',
-        s,
-    )
+    # Lacs & plages: stays at 16 (beaches not added to /lacs/, only to /plages/)
     # Attractions & loisirs: 11 → 42
     s = re.sub(
         r'(<h2>Attractions &amp; loisirs<span class="count">)\d+ lieux',
@@ -737,7 +732,9 @@ def main():
     update_api_lieux_json()
     update_sitemap()
     update_hub("attractions/index.html", ATTRACTION_SLUGS_ORDER, "attractions", "attractions")
-    update_hub("lacs/index.html", BEACH_SLUGS_ORDER, "lacs et plages", "lacs")
+    # NOTE: /lacs/ is NOT updated with the 11 new beaches. Per user decision,
+    # the new beaches live only in /plages/. The 8 existing beach cards already
+    # in /lacs/ stay there (cross-listed).
     build_plages_hub()
     update_root_index()
     print("=" * 60)
