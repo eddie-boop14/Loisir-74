@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0a5a3a">
+<meta name="theme-color" content="#f6f1e7">
 <title>Supervised beaches in Haute-Savoie · Loisirs 74</title>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -18,70 +18,224 @@
 <link rel="alternate" hreflang="it" href="https://loisirs74.fr/it/spiagge/">
 <link rel="alternate" hreflang="es" href="https://loisirs74.fr/es/playas/">
 <link rel="alternate" hreflang="x-default" href="https://loisirs74.fr/plages/">
-<meta property="og:locale" content="en_US">
-<meta property="og:url" content="https://loisirs74.fr/en/beaches/">
-<meta property="og:title" content="Supervised beaches in Haute-Savoie · Loisirs 74">
-<meta property="og:description" content="Guide to the 19 officially lifeguard-supervised beaches in Haute-Savoie: Lake Annecy, Lake Geneva and Lake Montriond. Prices, access, facilities and interactive map.">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-<style>*,*::before,*::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}body,h1,h2,h3,p,ul,ol{margin:0}ul,ol{padding-left:0;list-style:none}img,svg{display:block;max-width:100%;height:auto}a{color:inherit;text-decoration:none}:root{--bg:#fafaf7;--surface:#ffffff;--surface-2:#f3f3ee;--ink:#0b0d10;--ink-soft:#3a3f47;--ink-mute:#6a727d;--line:#e3e3dc;--accent:#0a5a3a;--accent-2:#063b25;--accent-ink:#ffffff;--focus:#0a5a3a;--max:72rem;--radius:14px;--radius-lg:20px;--shadow:0 1px 0 rgba(11,13,16,.04),0 8px 24px -12px rgba(11,13,16,.18);--pad:clamp(1rem,3vw,2rem);--font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;--serif:ui-serif,Georgia,Cambria,"Times New Roman",serif;--ease:cubic-bezier(.2,.7,.2,1)}@media (prefers-color-scheme:dark){:root{--bg:#0b0d10;--surface:#13171c;--surface-2:#181d23;--ink:#f4f6f8;--ink-soft:#c8cfd8;--ink-mute:#8b95a1;--line:#262c34;--accent:#6cf0a8;--accent-2:#9af6c2;--accent-ink:#0b0d10}}html,body{background:var(--bg);color:var(--ink)}body{font-family:var(--font);font-size:clamp(1rem,.96rem + .2vw,1.0625rem);line-height:1.6;-webkit-font-smoothing:antialiased}.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
-header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.85rem}.brand{display:flex;align-items:center;gap:.6rem;font-weight:700;letter-spacing:-.01em;font-size:1.0625rem;color:var(--ink)}.brand .mark{width:30px;height:30px;border-radius:9px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center}.brand .mark svg{width:18px;height:18px}
-.lang-picker{position:relative}.lang-picker summary{cursor:pointer;padding:.5rem .75rem;font-size:.9375rem;color:var(--ink-soft);border-radius:8px;list-style:none}.lang-picker summary::-webkit-details-marker{display:none}.lang-picker[open] > .lang-menu{display:flex}.lang-menu{display:none;position:absolute;top:calc(100% + .35rem);right:0;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.35rem;min-width:9rem;z-index:60}.lang-menu a{padding:.5rem .65rem;border-radius:6px;font-size:.9rem;color:var(--ink-soft)}.lang-menu a:hover{background:var(--surface-2);color:var(--ink)}.lang-menu a[aria-current="true"]{background:var(--surface-2);color:var(--ink);font-weight:600}
-.cat-hero{padding:clamp(1.5rem,3vw,2.5rem) 0 1rem;border-bottom:1px solid var(--line)}
-.cat-hero h1{font-size:clamp(1.75rem,1.5rem + 1.5vw,2.75rem);line-height:1.05;letter-spacing:-.02em;font-weight:800;margin:0 0 .35rem}
-.cat-hero .meta{color:var(--ink-mute);font-size:.95rem}
-#cat-map{height:50vh;max-height:420px;min-height:280px;width:100%;border-bottom:1px solid var(--line);position:relative;z-index:1}
-.filter-bar{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line);z-index:30;padding:.65rem 0}
-.filter-bar .wrap{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center}
-.filter-bar label{display:flex;flex-direction:column;gap:.15rem;font-size:.7rem;font-weight:700;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.05em}
-.filter-bar select{padding:.5rem .7rem;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:.85rem;font-weight:500;font-family:inherit;min-width:8rem}
-.filter-bar .access-group{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
-.filter-bar .access-group button{padding:.5rem .8rem;border:0;background:transparent;color:var(--ink-soft);font-size:.78rem;font-weight:600;cursor:pointer;font-family:inherit;border-right:1px solid var(--line)}
-.filter-bar .access-group button:last-child{border-right:0}
-.filter-bar .access-group button.active{background:var(--accent);color:var(--accent-ink)}
-.commune-section{padding:clamp(1.5rem,3vw,2.5rem) 0;border-top:1px solid var(--line)}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,50;1,9..144,300..500,50&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+ul,ol{list-style:none}
+img,svg{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+
+:root{
+  --paper:#f6f1e7;
+  --paper-2:#efe6d4;
+  --paper-3:#e6dac1;
+  --ink:#1c1814;
+  --ink-2:#3d342a;
+  --ink-3:#7a6b58;
+  --ink-4:#b3a48d;
+  --line:#d9cdb3;
+  --line-2:#c9bb9e;
+  --snow:#fdfaf3;
+  --pine:#2e4a3a;
+  --pine-deep:#1a2e22;
+  --pine-light:#3f6049;
+  --lake:#3d6e80;
+  --lake-deep:#1f4a5c;
+  --lake-light:#6a92a3;
+  --alpenglow:#e07a3f;
+  --alpenglow-soft:#f4b88a;
+
+  --max:1280px;
+  --pad:clamp(1.25rem,3.5vw,2rem);
+  --serif:"Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+  --sans:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+  --ease:cubic-bezier(.4,0,.2,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+}
+
+html,body{background:var(--paper);color:var(--ink)}
+body{font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--alpenglow);color:var(--snow)}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad);position:relative}
+
+.cursor-glow{position:fixed;width:600px;height:600px;pointer-events:none;z-index:2;border-radius:50%;background:radial-gradient(circle, rgba(224,122,63,.10) 0%, rgba(224,122,63,0) 60%);transform:translate(-50%,-50%);mix-blend-mode:multiply;will-change:transform}
+@media (hover:none){.cursor-glow{display:none}}
+
+header.site{position:sticky;top:0;left:0;right:0;z-index:60;padding:.85rem var(--pad);display:flex;align-items:center;justify-content:space-between;background:rgba(246,241,231,.88);backdrop-filter:blur(14px) saturate(1.1);-webkit-backdrop-filter:blur(14px) saturate(1.1);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:.75rem;color:var(--ink);font-family:var(--serif);font-weight:500}
+.brand .mark{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center}
+.brand .mark svg{width:100%;height:100%;transition:transform .6s var(--ease-out)}
+.brand:hover .mark svg{transform:rotate(-12deg) scale(1.08)}
+.brand b{font-size:1.2rem;line-height:1;font-weight:500}
+.brand i{font-style:normal;color:var(--ink-3);font-size:.82rem;font-weight:400;letter-spacing:.06em}
+
+.lang-picker{position:relative}
+.lang-picker summary{cursor:pointer;font-size:.75rem;letter-spacing:.08em;color:var(--ink-3);padding:.4rem .85rem;border:1px solid var(--line-2);border-radius:999px;display:inline-flex;align-items:center;gap:.5rem;list-style:none;transition:all .25s var(--ease)}
+.lang-picker summary::-webkit-details-marker{display:none}
+.lang-picker summary b{color:var(--ink);font-weight:500}
+.lang-picker summary::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--alpenglow);animation:breathe 2.4s ease-in-out infinite}
+.lang-picker:hover summary{border-color:var(--ink-2);color:var(--ink)}
+@keyframes breathe{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.85)}}
+.lang-picker[open] > .lang-menu{display:flex}
+.lang-menu{display:none;position:absolute;top:calc(100% + .5rem);right:0;flex-direction:column;background:var(--snow);border:1px solid var(--line);border-radius:8px;padding:.4rem;min-width:10rem;z-index:60;box-shadow:0 18px 40px -18px rgba(28,24,20,.25)}
+.lang-menu a{padding:.5rem .75rem;font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink-3);border-radius:5px;transition:all .2s var(--ease)}
+.lang-menu a:hover{background:var(--paper-2);color:var(--ink)}
+.lang-menu a[aria-current="true"]{color:var(--alpenglow);font-weight:500}
+
+.crumb{padding:1.5rem var(--pad) 0;max-width:var(--max);margin-inline:auto;font-size:.78rem;color:var(--ink-3);letter-spacing:.04em;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+.crumb a{color:var(--ink-3);transition:color .2s var(--ease)}
+.crumb a:hover{color:var(--alpenglow)}
+.crumb b{color:var(--ink);font-weight:500}
+.crumb .sep{color:var(--ink-4)}
+
+.hub-hero{padding:1.5rem 0 2rem;position:relative;overflow:hidden}
+.hub-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(800px 300px at 85% 0%, rgba(224,122,63,.10), transparent 70%),radial-gradient(600px 250px at 5% 30%, rgba(46,74,58,.06), transparent 70%)}
+.kicker{display:inline-flex;align-items:center;gap:.65rem;font-size:.72rem;color:var(--ink-3);letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-bottom:1.25rem;opacity:0;animation:rise .8s var(--ease-out) .1s forwards}
+.kicker::before{content:"";width:1.5rem;height:1px;background:var(--alpenglow)}
+.hub-hero h1{font-family:var(--serif);font-size:clamp(2.25rem,1.8rem + 2.8vw,4rem);line-height:1.02;letter-spacing:-.025em;font-weight:400;font-variation-settings:"SOFT" 50;color:var(--ink);max-width:18ch;opacity:0;animation:rise .8s var(--ease-out) .25s forwards}
+.hub-hero h1 em{font-style:italic;font-weight:300;color:var(--alpenglow)}
+.hub-hero .meta{margin-top:1.25rem;font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--ink-3);display:flex;gap:.7rem;flex-wrap:wrap;align-items:baseline;opacity:0;animation:rise .8s var(--ease-out) .4s forwards}
+.hub-hero .meta b{font-family:var(--sans);font-style:normal;color:var(--ink);font-weight:600;font-size:.85rem;letter-spacing:.04em}
+.hub-hero .meta .dot{color:var(--ink-4);font-style:normal}
+@keyframes rise{to{opacity:1;transform:translateY(0)}}
+.kicker, .hub-hero h1, .hub-hero .meta { transform:translateY(20px) }
+
+#cat-map{height:50vh;max-height:440px;min-height:300px;width:100%;border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;z-index:1;background:var(--paper-2)}
+.leaflet-popup-content-wrapper{border-radius:8px;background:var(--snow);box-shadow:0 18px 40px -18px rgba(28,24,20,.3);border:1px solid var(--line)}
+.leaflet-popup-tip{background:var(--snow);border:1px solid var(--line)}
+.leaflet-popup-content{margin:.7rem .9rem;font-family:var(--sans);font-size:.88rem;line-height:1.45;color:var(--ink-2)}
+.leaflet-popup-content a{color:var(--ink);font-family:var(--serif);font-size:1.05rem;font-weight:500;letter-spacing:-.005em}
+.leaflet-popup-content a:hover{color:var(--alpenglow)}
+.leaflet-popup-content .commune-pop{display:block;color:var(--ink-3);font-size:.72rem;margin-top:.2rem;letter-spacing:.06em}
+.leaflet-control-attribution{background:rgba(253,250,243,.85)!important;font-family:var(--sans);font-size:.65rem}
+
+.filter-bar{position:sticky;top:0;background:rgba(246,241,231,.92);backdrop-filter:blur(14px) saturate(1.1);-webkit-backdrop-filter:blur(14px) saturate(1.1);border-bottom:1px solid var(--line);z-index:30;padding:.85rem 0}
+.filter-bar .wrap{display:flex;gap:1.25rem;flex-wrap:wrap;align-items:flex-end}
+.filter-bar label{display:flex;flex-direction:column;gap:.35rem;font-size:.65rem;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.14em}
+.filter-bar select{padding:.55rem .8rem;border:1px solid var(--line-2);background:var(--snow);color:var(--ink);font-size:.88rem;font-weight:500;font-family:var(--sans);min-width:10rem;border-radius:6px;transition:border-color .2s var(--ease);cursor:pointer}
+.filter-bar select:hover, .filter-bar select:focus{border-color:var(--alpenglow);outline:none}
+.access-group{display:flex;border:1px solid var(--line-2);border-radius:6px;overflow:hidden;background:var(--snow)}
+.access-group button{padding:.55rem 1rem;border:0;background:transparent;color:var(--ink-3);font-size:.78rem;font-weight:600;cursor:pointer;font-family:var(--sans);letter-spacing:.04em;border-right:1px solid var(--line-2);transition:all .2s var(--ease)}
+.access-group button:last-child{border-right:0}
+.access-group button:hover{color:var(--ink);background:var(--paper-2)}
+.access-group button.active{background:var(--ink);color:var(--snow)}
+.access-group button.active[data-v="paid"]{background:var(--alpenglow)}
+.access-group button.active[data-v="free"]{background:var(--pine)}
+.filter-bar .count-live{margin-left:auto;font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink-3);padding-bottom:.2rem}
+.filter-bar .count-live b{font-style:normal;color:var(--ink);font-weight:500}
+
+main{position:relative;z-index:3;padding-bottom:2rem}
+.commune-section{padding:clamp(2rem,3.5vw,3rem) 0;position:relative;border-top:1px solid var(--line)}
 .commune-section:first-of-type{border-top:0}
-.commune-head{margin-bottom:1.25rem}
-.commune-head h3{font-size:clamp(1.15rem,1rem + .5vw,1.45rem);font-weight:800;letter-spacing:-.01em;margin:0 0 .55rem;color:var(--ink)}
-.commune-head .commune-count{font-size:.78rem;font-weight:500;color:var(--ink-mute);margin-left:.25rem;display:block;margin-top:.2rem}
-.carousel{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s var(--ease),border-color .2s var(--ease),box-shadow .2s var(--ease)}.card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 30%,var(--line));box-shadow:var(--shadow)}.card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative}.card-photo img{width:100%;height:100%;object-fit:cover;transition:transform .35s var(--ease)}.card:hover .card-photo img{transform:scale(1.03)}.card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}.card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}.card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em}.card-body a.title:hover{color:var(--accent)}.card-commune{font-size:.78rem;color:var(--ink-mute);display:flex;align-items:center;gap:.3rem}.card-commune svg{width:11px;height:11px;flex-shrink:0}.card-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45;margin:.15rem 0 .65rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.card-actions{display:flex;gap:.4rem;margin-top:auto}.card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);transition:all .2s var(--ease)}.card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}.card-actions a svg{width:13px;height:13px}
-footer.site{background:var(--surface);border-top:1px solid var(--line);padding:clamp(2.5rem,5vw,4rem) 0 2rem;color:var(--ink-soft);font-size:.9rem;margin-top:3rem}.foot-grid{display:grid;grid-template-columns:1fr;gap:2rem;margin-bottom:2rem}@media (min-width:720px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}.foot-col h4{font-size:.8125rem;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.85rem}.foot-col ul{display:flex;flex-direction:column;gap:.5rem}.foot-col p{color:var(--ink-mute);max-width:24rem;line-height:1.6}.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-top:1.5rem;border-top:1px solid var(--line);color:var(--ink-mute);font-size:.8125rem}
-:where(a,button,summary,input,textarea):focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
 .commune-section.hidden{display:none}
-.commune-section .card.hidden{display:none}
-.leaflet-popup-content{margin:8px 12px;font-family:var(--font);font-size:.85rem;line-height:1.4}
-.leaflet-popup-content a{color:var(--accent);font-weight:600;text-decoration:none}
-.leaflet-popup-content .commune-pop{display:block;color:var(--ink-mute);font-size:.72rem;margin-top:.15rem}
+.commune-head{margin-bottom:1.25rem;display:flex;align-items:baseline;gap:.85rem;flex-wrap:wrap}
+.commune-head h3{font-family:var(--serif);font-size:clamp(1.5rem,1.2rem + .8vw,2rem);line-height:1.05;letter-spacing:-.02em;font-weight:400;font-variation-settings:"SOFT" 50;color:var(--ink)}
+.commune-head h3 em{font-style:italic;color:var(--alpenglow);font-weight:300}
+.commune-count{font-family:var(--sans)!important;font-size:.7rem;font-weight:500;color:var(--ink-3);letter-spacing:.14em;text-transform:uppercase}
+
+.transport-block{background:var(--snow);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.1rem;font-size:.85rem;line-height:1.45;display:flex;flex-direction:column;gap:.3rem;margin-bottom:1.5rem;max-width:36rem}
+.transport-block .transport-label{font-size:.65rem;font-weight:600;color:var(--alpenglow);text-transform:uppercase;letter-spacing:.18em;margin-bottom:.25rem;font-family:var(--sans)}
+.transport-row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:baseline}
+.transport-row .t-k{font-family:var(--sans);font-weight:600;color:var(--ink-3);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;min-width:5.5rem}
+.transport-row .t-v{color:var(--ink-2);font-size:.9rem;font-family:var(--serif);font-style:italic}
+.transport-empty p{color:var(--ink-3);font-style:italic;font-family:var(--serif);font-size:.85rem;margin:0}
+
+.carousel{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:2rem 1.5rem}
+@media(max-width:680px){.carousel{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}.carousel::-webkit-scrollbar{display:none}.carousel > .card{flex:0 0 78vw;max-width:19rem;scroll-snap-align:start}}
+
+.card{background:var(--snow);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:transform .5s var(--ease-out), box-shadow .5s var(--ease), border-color .3s, opacity .3s;position:relative}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 50px -25px rgba(28,24,20,.22);border-color:var(--ink-4)}
+.card.hidden{display:none}
+.card-photo{display:block;aspect-ratio:4/3;background:linear-gradient(180deg, var(--lake-light) 0%, var(--lake) 60%, var(--lake-deep) 100%);overflow:hidden;position:relative}
+.card-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease-out), filter .3s var(--ease);filter:saturate(.95)}
+.card:hover .card-photo img{transform:scale(1.06);filter:saturate(1.05)}
+.card-tag{position:absolute;top:14px;right:14px;background:rgba(253,250,243,.95);color:var(--ink);padding:.3rem .7rem;border-radius:999px;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:var(--sans);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:2}
+.card-tag.is-payant{background:var(--alpenglow);color:var(--snow)}
+.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}
+.card-body{padding:1.25rem 1.35rem 1.35rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
+.card-commune{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:.15rem;order:-1}
+.card-commune svg{display:none}
+.card-body a.title{font-family:var(--serif);font-weight:500;font-size:1.35rem;color:var(--ink);line-height:1.15;letter-spacing:-.01em;transition:color .2s var(--ease)}
+.card-body a.title:hover{color:var(--alpenglow)}
+.card-desc{font-family:var(--sans);font-size:.88rem;color:var(--ink-2);line-height:1.5;margin:.1rem 0 .85rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card-actions{display:flex;gap:1.25rem;margin-top:auto;padding-top:.8rem;border-top:1px dashed var(--line);font-size:.72rem}
+.card-actions a{font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);transition:color .2s var(--ease), transform .3s var(--ease-out);display:inline-flex;align-items:center;gap:.3rem;font-family:var(--sans)}
+.card-actions a:hover{color:var(--alpenglow);transform:translateX(2px)}
+.card-actions a svg{display:none}
+.card-actions a::after{content:" \2197";font-size:.9rem;letter-spacing:0}
+
+.card-photo:has(> img[data-generique="true"])::after{content:"Générique";position:absolute;bottom:.55rem;right:.55rem;background:rgba(20,18,16,.78);color:#f0dfc0;font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px;pointer-events:none;z-index:2;font-family:var(--sans);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+
+.empty-state{padding:4rem 0;text-align:center;font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--ink-3)}
+.empty-state b{display:block;font-family:var(--sans);font-style:normal;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--alpenglow);font-weight:600;margin-bottom:.75rem}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease-out), transform .8s var(--ease-out)}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+footer.site{background:var(--paper-2);border-top:1px solid var(--line);padding:clamp(3rem,6vw,5rem) 0 2.25rem;color:var(--ink-2);font-size:.9rem;margin-top:3rem;position:relative}
+footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:60px;pointer-events:none;opacity:.5;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1440' height='60' viewBox='0 0 1440 60' preserveAspectRatio='none'><g fill='%232e4a3a' opacity='.12'><polygon points='0,60 20,35 35,48 55,22 75,42 95,18 115,40 140,15 165,38 190,22 215,44 240,16 265,40 290,24 315,44 340,15 365,38 390,22 415,44 440,16 465,40 490,24 515,44 540,15 565,38 590,22 615,44 640,16 665,40 690,24 715,44 740,15 765,38 790,22 815,44 840,16 865,40 890,24 915,44 940,15 965,38 990,22 1015,44 1040,16 1065,40 1090,24 1115,44 1140,15 1165,38 1190,22 1215,44 1240,16 1265,40 1290,24 1315,44 1340,15 1365,38 1390,28 1415,44 1440,35 1440,60'/></g></svg>");background-repeat:no-repeat;background-size:100% 100%}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;margin-bottom:2.5rem;position:relative;z-index:1}
+@media (min-width:720px){.foot-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
+.foot-col h4{font-family:var(--sans);font-size:.7rem;font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:.18em;margin-bottom:1rem}
+.foot-col ul{display:flex;flex-direction:column;gap:.55rem}
+.foot-col ul a{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--ink-2);transition:color .2s var(--ease)}
+.foot-col ul a:hover{color:var(--alpenglow)}
+.foot-col p{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--ink-3);max-width:24rem;line-height:1.55}
+.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-top:2rem;border-top:1px solid var(--line);color:var(--ink-3);font-size:.75rem;letter-spacing:.06em;position:relative;z-index:1}
+
+:where(a,button,summary,input,textarea,select):focus-visible{outline:2px solid var(--alpenglow);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}.kicker,.hub-hero h1,.hub-hero .meta{opacity:1;transform:none;animation:none}.reveal{opacity:1;transform:none}.cursor-glow{display:none}}
+@media (max-width:600px){.filter-bar .wrap{gap:.85rem}.filter-bar .count-live{margin-left:0;font-size:.8rem;width:100%;order:99}.filter-bar select{min-width:8rem;font-size:.82rem}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ItemList","@id":"https://loisirs74.fr/en/beaches/#itemlist","name":"Supervised beaches in Haute-Savoie","description":"List of 19 supervised beaches in Haute-Savoie","numberOfItems":19,"itemListOrder":"https://schema.org/ItemListOrderAscending","inLanguage":"en","isPartOf":{"@type":"CollectionPage","@id":"https://loisirs74.fr/en/beaches/"}}
-</script>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","@id":"https://loisirs74.fr/en/beaches/#itemlist","name":"Supervised beaches in Haute-Savoie","description":"List of 19 supervised beaches in Haute-Savoie","numberOfItems":19,"itemListOrder":"https://schema.org/ItemListOrderAscending","inLanguage":"en","isPartOf":{"@type":"CollectionPage","@id":"https://loisirs74.fr/en/beaches/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","url":"https://loisirs74.fr/en/beaches/","name":"Supervised beaches in Haute-Savoie","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://loisirs74.fr/en/","name":"Loisirs 74"},"numberOfItems":19}</script>
 </head>
 <body>
 
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
 <header class="site">
-  <div class="wrap">
-    <a href="https://loisirs74.fr/en/" class="brand">
-      <span class="mark"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;"></span>
-      Loisirs 74
-    </a>
-    <details class="lang-picker">
-      <summary>English</summary>
-      <div class="lang-menu"><a href="https://loisirs74.fr/plages/" hreflang="fr">Français</a><a href="https://loisirs74.fr/en/beaches/" aria-current="true" hreflang="en">English</a><a href="https://loisirs74.fr/de/straende/" hreflang="de">Deutsch</a><a href="https://loisirs74.fr/it/spiagge/" hreflang="it">Italiano</a><a href="https://loisirs74.fr/es/playas/" hreflang="es">Español</a></div>
-    </details>
-  </div>
+  <a href="https://loisirs74.fr/" class="brand">
+    <span class="mark" aria-hidden="true">
+      <svg viewBox="0 0 34 34" fill="none">
+        <path d="M3 28 L11 12 L16 20 L22 6 L31 28 Z" fill="#1c1814"/>
+        <polygon points="22,6 25,11 19,11" fill="#fdfaf3"/>
+        <circle cx="28" cy="10" r="2.5" fill="#e07a3f"/>
+      </svg>
+    </span>
+    <span><b>loisirs74</b> <i>· Haute-Savoie</i></span>
+  </a>
+  <details class="lang-picker">
+    <summary><b>EN</b> · 5 languages</summary>
+    <div class="lang-menu">
+      <a href="https://loisirs74.fr/plages/" hreflang="fr">Français</a><a href="https://loisirs74.fr/en/beaches/" aria-current="true" hreflang="en">English</a><a href="https://loisirs74.fr/de/straende/" hreflang="de">Deutsch</a><a href="https://loisirs74.fr/it/spiagge/" hreflang="it">Italiano</a><a href="https://loisirs74.fr/es/playas/" hreflang="es">Español</a>
+    </div>
+  </details>
 </header>
 
-<section class="cat-hero">
+<nav class="crumb" aria-label="breadcrumb">
+  <a href="https://loisirs74.fr/en/">Home</a>
+  <span class="sep">/</span>
+  <b>Supervised beaches</b>
+</nav>
+
+<section class="hub-hero">
   <div class="wrap">
+    <div class="kicker">Haute-Savoie</div>
     <h1>Supervised beaches</h1>
-    <p class="meta">19 venues · 14 commune(s) · Haute-Savoie</p>
+    <p class="meta"><b>19 places</b><span class="dot">·</span><span>14 communes</span></p>
   </div>
 </section>
 
-<div id="cat-map" aria-label="Map of supervised beaches"></div>
+<div id="cat-map" aria-label="Map"></div>
 
 <div class="filter-bar">
   <div class="wrap">
@@ -99,390 +253,367 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
     </label>
     <label>
       <span>Sort</span>
-      <select id="filt-sort">
-        <option value="commune">By commune</option>
-        <option value="alpha">A → Z</option>
-      </select>
+      <select id="filt-sort"><option value="commune">By commune</option><option value="alpha">A → Z</option></select>
     </label>
+    <div class="count-live"><b id="count-n">0</b> <span id="count-label">places shown</span></div>
   </div>
 </div>
 
 <main>
   <div class="wrap">
-    <div class="commune-section" data-commune="Annecy">
-      <div class="commune-head">
-        <h3>Annecy <span class="commune-count">3 venue(s) in Annecy</span></h3>
-      </div>
-      <div class="carousel">
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-albigny" class="card-photo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Plage_d%27Albigny_%C3%A0_Annecy.jpg" alt="Plage d'Albigny on the shore of Lake Annecy with lawn and mountain views, Albigny district, Annecy" loading="lazy">
-            <span class="card-tag">Free</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-albigny" class="title">Plage d&#39;Albigny</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Annecy</span></div>
-            <p class="card-desc">The largest free beach on Lake Annecy: 400 m of grass and sand, summer lifeguards, free showers and toilets. Albigny district, Annecy.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20d%27Albigny%2C%20Annecy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-            </div>
-          </div>
-        </article>
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-des-marquisats" class="card-photo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Annecy-8.jpg" alt="Grassy Plage des Marquisats on the shore of Lake Annecy with bathers and mountain views, Haute-Savoie" loading="lazy">
-            <span class="card-tag">Free</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-des-marquisats" class="title">Plage des Marquisats</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Annecy</span></div>
-            <p class="card-desc">Free grassy beach on Lake Annecy, shaded, lifeguarded in summer. 10 min walk from the town centre, bus-accessible, wheelchair-friendly. Showers and snack bar.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20des%20Marquisats%2C%20Annecy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-            </div>
-          </div>
-        </article>
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-imperial-annecy" class="card-photo">
-            <img src="/plage-imperial-annecy-hero.jpg" alt="Imported sand beach + 17,000 m² lawn Plage de l'Impérial at Annecy Lake Annecy Haute-Savoie 74" loading="lazy">
-            <span class="card-tag">Free</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-imperial-annecy" class="title">Plage de l&#39;Impérial</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Annecy</span></div>
-            <p class="card-desc">ANNECY&#39;S ICONIC BEACH 17,000 M² between Albigny and the Pâquier. ⚠️ MAJOR CHANGE 2026: the beach becomes PAID in summer season.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20l%27Imp%C3%A9rial%2C%20Annecy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
+
+<div class="commune-section" data-commune="Annecy">
+<div class="commune-head"><h3>Annecy</h3><span class="commune-count">3 places</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-albigny">
+<img alt="Plage d'Albigny on the shore of Lake Annecy with lawn and mountain views, Albigny district, Annecy" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Plage_d%27Albigny_%C3%A0_Annecy.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/en/plage-albigny">Plage d'Albigny</a>
+
+<p class="card-desc">The largest free beach on Lake Annecy: 400 m of grass and sand, summer lifeguards, free showers and toilets. Albigny district, Annecy.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20d%27Albigny%2C%20Annecy%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-des-marquisats">
+<img alt="Grassy Plage des Marquisats on the shore of Lake Annecy with bathers and mountain views, Haute-Savoie" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Annecy-8.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/en/plage-des-marquisats">Plage des Marquisats</a>
+
+<p class="card-desc">Free grassy beach on Lake Annecy, shaded, lifeguarded in summer. 10 min walk from the town centre, bus-accessible, wheelchair-friendly. Showers and snack bar.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20des%20Marquisats%2C%20Annecy%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-imperial-annecy">
+<img alt="Imported sand beach + 17,000 m² lawn Plage de l'Impérial at Annecy Lake Annecy Haute-Savoie 74" loading="lazy" src="/plage-imperial-annecy-hero.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/en/plage-imperial-annecy">Plage de l'Impérial</a>
+
+<p class="card-desc">ANNECY'S ICONIC BEACH 17,000 M² between Albigny and the Pâquier. ⚠️ MAJOR CHANGE 2026: the beach becomes PAID in summer season.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20l%27Imp%C3%A9rial%2C%20Annecy%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Doussard">
+<div class="commune-head"><h3>Doussard</h3><span class="commune-count">1 place</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-de-doussard">
+<img alt="Sand + lawn beach next to the Bout du Lac nature reserve, Plage de Doussard at Doussard, Lake Annecy, Haute-Savoie 74" loading="lazy" src="/plage-de-doussard-hero.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Doussard</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-doussard">Plage de Doussard</a>
+
+<p class="card-desc">BEACH AT THE SOUTH END OF LAKE ANNECY — sand + lawn, floating pontoon, watersports centre next door. BORDERED BY THE BOUT DU LAC NATURE RESERVE.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Doussard%2C%20Doussard%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://www.doussard.fr/" rel="noopener" target="_blank">Official site</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Excenevex">
+<div class="commune-head"><h3>Excenevex</h3><span class="commune-count">1 place</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-d-excenevex">
+<img alt="Fine sand beach at Excenevex on Lake Geneva with view of the Dent d'Oche and the Swiss Alps, Haute-Savoie" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Excenevex</span></div><a class="title" href="https://loisirs74.fr/en/plage-d-excenevex">Plage d'Excenevex</a>
+
+<p class="card-desc">The only natural fine-sand beach on the French side of Lake Geneva. Gentle slope, water at 25°C in summer, lifeguarded bathing. Parking €6 in season, beach free.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20d%27Excenevex%2C%20Excenevex%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Menthon-Saint-Bernard">
+<div class="commune-head"><h3>Menthon-Saint-Bernard</h3><span class="commune-count">1 place</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-de-menthon-saint-bernard">
+<img alt="Municipal beach of Menthon-Saint-Bernard on the shore of Lake Annecy with a view of the Semnoz, Haute-Savoie" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Plage_municipale_de_Menthon-Saint-Bernard.jpg"/>
+<span class="card-tag is-payant">Paid</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Menthon-Saint-Bernard</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-menthon-saint-bernard">Plage de Menthon-Saint-Bernard</a>
+
+<p class="card-desc">Large 12,000 m² grass beach on the shore of Lake Annecy, lifeguarded in summer. Paddling pool, pontoons, diving boards, snack bar. Paid in July–August, free the rest of the year.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Menthon-Saint-Bernard%2C%20Menthon-Saint-Bernard%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Montriond">
+<div class="commune-head"><h3>Montriond</h3><span class="commune-count">1 place</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-du-lac-de-montriond">
+<img alt="Mountain lake beach at 1,072 m — 3rd-largest lake in Haute-Savoie, Plage du Lac de Montriond at Montriond, Lake Montriond, Haute-Savoie 74" loading="lazy" src="/plage-du-lac-de-montriond-hero.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Montriond</span></div><a class="title" href="https://loisirs74.fr/en/plage-du-lac-de-montriond">Plage du Lac de Montriond</a>
+
+<p class="card-desc">LAKE MONTRIOND — 3rd-LARGEST LAKE IN HAUTE-SAVOIE by surface area. Enclosed by CLIFFS + CONIFERS. EMERALD WATERS ('green lake'). Rural mountain setting.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20du%20Lac%20de%20Montriond%2C%20Montriond%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://www.montriond.fr/" rel="noopener" target="_blank">Official site</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Publier">
+<div class="commune-head"><h3>Publier</h3><span class="commune-count">1 place</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-d-amphion-publier">
+<img alt="15,000 m² lawn + pebble shore beach — Blue Flag award, Plage Municipale d'Amphion at Publier, Lake Geneva, Haute-Savoie 74" loading="lazy" src="/plage-d-amphion-publier-hero.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Publier</span></div><a class="title" href="https://loisirs74.fr/en/plage-d-amphion-publier">Plage Municipale d'Amphion</a>
+
+<p class="card-desc">BLUE FLAG 2026 — 15,000 m² LAWN + PEBBLE SHORE. Play area, BEACH VOLLEY, table tennis, pétanque. 2 OPEN-AIR CAFÉS + snack bar. NORDIC SAUNA AREA.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20Municipale%20d%27Amphion%2C%20Publier%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://www.publier.fr/" rel="noopener" target="_blank">Official site</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Saint-Gingolph">
+<div class="commune-head"><h3>Saint-Gingolph</h3><span class="commune-count">1 place</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-de-saint-gingolph">
+<img alt="Municipal beach on the French–Swiss border, Plage Municipale de Saint-Gingolph at Saint-Gingolph, Lake Geneva, Haute-Savoie 74" loading="lazy" src="/plage-de-saint-gingolph-hero.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Saint-Gingolph</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-saint-gingolph">Plage Municipale de Saint-Gingolph</a>
+
+<p class="card-desc">NEW BLUE FLAG 2026 (Teragir ranking 2026 — first year). The last French commune before SWITZERLAND — literal Franco-Swiss border.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20Municipale%20de%20Saint-Gingolph%2C%20Saint-Gingolph%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://www.saint-gingolph.fr/" rel="noopener" target="_blank">Official site</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Saint-Jorioz">
+<div class="commune-head"><h3>Saint-Jorioz</h3><span class="commune-count">1 place</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-de-saint-jorioz">
+<img alt="Plage de Saint-Jorioz on the shore of Lake Annecy with natural sand, lawns and a view of the Dents de Lanfon and La Tournette" loading="lazy" src="/plage-de-saint-jorioz-hero.jpg"/>
+<span class="card-tag is-payant">Paid</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Saint-Jorioz</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-saint-jorioz">Plage de Saint-Jorioz</a>
+
+<p class="card-desc">Large sandy beach on Lake Annecy facing the Dents de Lanfon. Paid in July–August (€2.60), free the rest of the year. Blue Flag.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Saint-Jorioz%2C%20Saint-Jorioz%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://saint-jorioz.fr/fr/rb/1110735/decouvrir-la-plage" rel="noopener" target="_blank">Official site</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Sciez">
+<div class="commune-head"><h3>Sciez</h3><span class="commune-count">1 place</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-de-sciez-sur-leman">
+<img alt="Grassy beach at Sciez-sur-Léman with a view of Lake Geneva, near the marina, Haute-Savoie" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Sciez-regate.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Sciez</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-sciez-sur-leman">Plage de Sciez-sur-Léman</a>
+
+<p class="card-desc">Grassy Lake Geneva beach with summer lifeguards, a dog area, playgrounds, pétanque and table tennis. Free access year-round in Sciez, Haute-Savoie.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Sciez-sur-L%C3%A9man%2C%20Sciez%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Sévrier">
+<div class="commune-head"><h3>Sévrier</h3><span class="commune-count">1 place</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-de-sevrier">
+<img alt="Recently renovated lawn + fine gravel beach, Plage de Sévrier at Sévrier, Lake Annecy, Haute-Savoie 74" loading="lazy" src="/plage-de-sevrier-hero.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Sévrier</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-sevrier">Plage de Sévrier</a>
+
+<p class="card-desc">RECENTLY RENOVATED BEACH — lawn + fine gravel on the western shore of Lake Annecy. 94 BIKE SPACES — direct access to the Lake Annecy greenway.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20S%C3%A9vrier%2C%20S%C3%A9vrier%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://www.sevrier.fr/" rel="noopener" target="_blank">Official site</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Talloires-Montmin">
+<div class="commune-head"><h3>Talloires-Montmin</h3><span class="commune-count">2 places</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-de-talloires">
+<img alt="250x200 m sand + lawn beach with paddling pool, diving boards, slide, Plage de Talloires at Talloires-Montmin, Lake Annecy, Haute-Savoie 74" loading="lazy" src="/plage-de-talloires-hero.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Talloires-Montmin</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-talloires">Plage de Talloires</a>
+
+<p class="card-desc">250×200 M SAND + LAWN BEACH with PADDLING POOL, DIVING BOARDS, SLIDE and integrated watersports centre. REOPENING MAY 2026 after waterfront refurbishment.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Talloires%2C%20Talloires-Montmin%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://www.talloires-montmin.fr/" rel="noopener" target="_blank">Official site</a>
+</div>
+</div>
+</article>
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-d-angon-talloires">
+<img alt="Vast shaded lawn beach with view of the Château de Duingt, Plage d'Angon at Talloires-Montmin, Lake Annecy, Haute-Savoie 74" loading="lazy" src="/plage-d-angon-talloires-hero.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Talloires-Montmin</span></div><a class="title" href="https://loisirs74.fr/en/plage-d-angon-talloires">Plage d'Angon</a>
+
+<p class="card-desc">QUIET, SHADED BEACH — vast lawn with tall trees, far from the bustle of central Talloires. EXCEPTIONAL VIEW OF THE CHÂTEAU DE DUINGT.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20d%27Angon%2C%20Talloires-Montmin%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://www.talloires-montmin.fr/" rel="noopener" target="_blank">Official site</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Thonon-les-Bains">
+<div class="commune-head"><h3>Thonon-les-Bains</h3><span class="commune-count">3 places</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-de-la-pinede">
+<img alt="Natural pebble shoreline of Plage de la Pinède on the shore of Lake Geneva, Thonon-les-Bains, Haute-Savoie" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Thonon-les-Bains._Promenade_du_L%C3%A9man._2015-06-21.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-la-pinede">Plage de la Pinède</a>
+
+<p class="card-desc">A 3 km succession of natural pebble beaches on the shore of Lake Geneva, bordering the Château de Ripaille estate. Free access, listed shoreline.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20la%20Pin%C3%A8de%2C%20Thonon-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-de-saint-disdille">
+<img alt="Plage de Saint-Disdille on the shore of Lake Geneva with chestnut-shaded area, Thonon-les-Bains, Haute-Savoie" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/6/67/Plage_thonon.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-saint-disdille">Plage de Saint-Disdille</a>
+
+<p class="card-desc">Free Blue Flag beach on Lake Geneva, summer lifeguards, next to the Châtaigneraie park in Thonon-les-Bains, Haute-Savoie.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Saint-Disdille%2C%20Thonon-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-municipale-thonon">
+<img alt="3 ha beach + 50 m Olympic pool + Blue Flag, Plage Municipale de Thonon-les-Bains at Thonon-les-Bains, Lake Geneva, Haute-Savoie 74" loading="lazy" src="/plage-municipale-thonon-hero.jpg"/>
+<span class="card-tag is-payant">Paid</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/en/plage-municipale-thonon">Plage Municipale de Thonon-les-Bains</a>
+
+<p class="card-desc">3-HECTARE BEACH + 50 M OLYMPIC POOL + 1.50/3/5/10 m diving boards + 100 M WATERSLIDE + 3,000 m² Lake Geneva swim area. BLUE FLAG 2026.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20Municipale%20de%20Thonon-les-Bains%2C%20Thonon-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Veyrier-du-Lac">
+<div class="commune-head"><h3>Veyrier-du-Lac</h3><span class="commune-count">1 place</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-de-la-brune-veyrier">
+<img alt="7,000 m² lawn beach + sand banks — Blue Flag, Plage de La Brune at Veyrier-du-Lac, Lake Annecy, Haute-Savoie 74" loading="lazy" src="/plage-de-la-brune-veyrier-hero.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Veyrier-du-Lac</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-la-brune-veyrier">Plage de La Brune</a>
+
+<p class="card-desc">BLUE FLAG BEACH SINCE 2009 (Teragir 2026 ranking confirmed). 7,000 m² of lawn + sand banks with paddling pool, T-shaped pontoon, diving boards.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20La%20Brune%2C%20Veyrier-du-Lac%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://www.veyrier-du-lac.fr/plages/" rel="noopener" target="_blank">Official site</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Évian-les-Bains">
+<div class="commune-head"><h3>Évian-les-Bains</h3><span class="commune-count">1 place</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-d-evian-centre-nautique">
+<img alt="3.5 ha beach + 50 m Olympic pool + 160 m waterslide, Plage du Centre Nautique d'Évian at Évian-les-Bains, Lake Geneva, Haute-Savoie 74" loading="lazy" src="/plage-d-evian-centre-nautique-hero.jpg"/>
+<span class="card-tag is-payant">Paid</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Évian-les-Bains</span></div><a class="title" href="https://loisirs74.fr/en/plage-d-evian-centre-nautique">Plage du Centre Nautique d'Évian</a>
+
+<p class="card-desc">BLUE FLAG SINCE 2020 (Teragir 2026 ranking confirmed). 3.5 ha LAWNS + 50 M OLYMPIC POOL + 160 M WATERSLIDE + direct access to Lake Geneva.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20du%20Centre%20Nautique%20d%27%C3%89vian%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://www.evianresort.com/" rel="noopener" target="_blank">Official site</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+
+<div class="empty-state" id="empty-state" style="display:none">
+      <b>No results</b>
+      No place matches these filters.
     </div>
-    <div class="commune-section" data-commune="Doussard">
-      <div class="commune-head">
-        <h3>Doussard <span class="commune-count">1 venue(s) in Doussard</span></h3>
-      </div>
-      <div class="carousel">
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-de-doussard" class="card-photo">
-            <img src="/plage-de-doussard-hero.jpg" alt="Sand + lawn beach next to the Bout du Lac nature reserve, Plage de Doussard at Doussard, Lake Annecy, Haute-Savoie 74" loading="lazy">
-            <span class="card-tag">Free</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-de-doussard" class="title">Plage de Doussard</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Doussard</span></div>
-            <p class="card-desc">BEACH AT THE SOUTH END OF LAKE ANNECY — sand + lawn, floating pontoon, watersports centre next door. BORDERED BY THE BOUT DU LAC NATURE RESERVE.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Doussard%2C%20Doussard%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-              <a href="https://www.doussard.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="commune-section" data-commune="Excenevex">
-      <div class="commune-head">
-        <h3>Excenevex <span class="commune-count">1 venue(s) in Excenevex</span></h3>
-      </div>
-      <div class="carousel">
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-d-excenevex" class="card-photo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG" alt="Fine sand beach at Excenevex on Lake Geneva with view of the Dent d'Oche and the Swiss Alps, Haute-Savoie" loading="lazy">
-            <span class="card-tag">Free</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-d-excenevex" class="title">Plage d&#39;Excenevex</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Excenevex</span></div>
-            <p class="card-desc">The only natural fine-sand beach on the French side of Lake Geneva. Gentle slope, water at 25°C in summer, lifeguarded bathing. Parking €6 in season, beach free.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20d%27Excenevex%2C%20Excenevex%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="commune-section" data-commune="Menthon-Saint-Bernard">
-      <div class="commune-head">
-        <h3>Menthon-Saint-Bernard <span class="commune-count">1 venue(s) in Menthon-Saint-Bernard</span></h3>
-      </div>
-      <div class="carousel">
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-de-menthon-saint-bernard" class="card-photo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Plage_municipale_de_Menthon-Saint-Bernard.jpg" alt="Municipal beach of Menthon-Saint-Bernard on the shore of Lake Annecy with a view of the Semnoz, Haute-Savoie" loading="lazy">
-            <span class="card-tag">Paid</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-de-menthon-saint-bernard" class="title">Plage de Menthon-Saint-Bernard</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Menthon-Saint-Bernard</span></div>
-            <p class="card-desc">Large 12,000 m² grass beach on the shore of Lake Annecy, lifeguarded in summer. Paddling pool, pontoons, diving boards, snack bar. Paid in July–August, free the rest of the year.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Menthon-Saint-Bernard%2C%20Menthon-Saint-Bernard%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="commune-section" data-commune="Montriond">
-      <div class="commune-head">
-        <h3>Montriond <span class="commune-count">1 venue(s) in Montriond</span></h3>
-      </div>
-      <div class="carousel">
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-du-lac-de-montriond" class="card-photo">
-            <img src="/plage-du-lac-de-montriond-hero.jpg" alt="Mountain lake beach at 1,072 m — 3rd-largest lake in Haute-Savoie, Plage du Lac de Montriond at Montriond, Lake Montriond, Haute-Savoie 74" loading="lazy">
-            <span class="card-tag">Free</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-du-lac-de-montriond" class="title">Plage du Lac de Montriond</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Montriond</span></div>
-            <p class="card-desc">LAKE MONTRIOND — 3rd-LARGEST LAKE IN HAUTE-SAVOIE by surface area. Enclosed by CLIFFS + CONIFERS. EMERALD WATERS (&#39;green lake&#39;). Rural mountain setting.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20du%20Lac%20de%20Montriond%2C%20Montriond%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-              <a href="https://www.montriond.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="commune-section" data-commune="Publier">
-      <div class="commune-head">
-        <h3>Publier <span class="commune-count">1 venue(s) in Publier</span></h3>
-      </div>
-      <div class="carousel">
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-d-amphion-publier" class="card-photo">
-            <img src="/plage-d-amphion-publier-hero.jpg" alt="15,000 m² lawn + pebble shore beach — Blue Flag award, Plage Municipale d'Amphion at Publier, Lake Geneva, Haute-Savoie 74" loading="lazy">
-            <span class="card-tag">Free</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-d-amphion-publier" class="title">Plage Municipale d&#39;Amphion</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Publier</span></div>
-            <p class="card-desc">BLUE FLAG 2026 — 15,000 m² LAWN + PEBBLE SHORE. Play area, BEACH VOLLEY, table tennis, pétanque. 2 OPEN-AIR CAFÉS + snack bar. NORDIC SAUNA AREA.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20Municipale%20d%27Amphion%2C%20Publier%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-              <a href="https://www.publier.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="commune-section" data-commune="Saint-Gingolph">
-      <div class="commune-head">
-        <h3>Saint-Gingolph <span class="commune-count">1 venue(s) in Saint-Gingolph</span></h3>
-      </div>
-      <div class="carousel">
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-de-saint-gingolph" class="card-photo">
-            <img src="/plage-de-saint-gingolph-hero.jpg" alt="Municipal beach on the French–Swiss border, Plage Municipale de Saint-Gingolph at Saint-Gingolph, Lake Geneva, Haute-Savoie 74" loading="lazy">
-            <span class="card-tag">Free</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-de-saint-gingolph" class="title">Plage Municipale de Saint-Gingolph</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Saint-Gingolph</span></div>
-            <p class="card-desc">NEW BLUE FLAG 2026 (Teragir ranking 2026 — first year). The last French commune before SWITZERLAND — literal Franco-Swiss border.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20Municipale%20de%20Saint-Gingolph%2C%20Saint-Gingolph%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-              <a href="https://www.saint-gingolph.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="commune-section" data-commune="Saint-Jorioz">
-      <div class="commune-head">
-        <h3>Saint-Jorioz <span class="commune-count">1 venue(s) in Saint-Jorioz</span></h3>
-      </div>
-      <div class="carousel">
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-de-saint-jorioz" class="card-photo">
-            <img src="/plage-de-saint-jorioz-hero.jpg" alt="Plage de Saint-Jorioz on the shore of Lake Annecy with natural sand, lawns and a view of the Dents de Lanfon and La Tournette" loading="lazy">
-            <span class="card-tag">Paid</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-de-saint-jorioz" class="title">Plage de Saint-Jorioz</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Saint-Jorioz</span></div>
-            <p class="card-desc">Large sandy beach on Lake Annecy facing the Dents de Lanfon. Paid in July–August (€2.60), free the rest of the year. Blue Flag.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Saint-Jorioz%2C%20Saint-Jorioz%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-              <a href="https://saint-jorioz.fr/fr/rb/1110735/decouvrir-la-plage" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="commune-section" data-commune="Sciez">
-      <div class="commune-head">
-        <h3>Sciez <span class="commune-count">1 venue(s) in Sciez</span></h3>
-      </div>
-      <div class="carousel">
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-de-sciez-sur-leman" class="card-photo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Sciez-regate.jpg" alt="Grassy beach at Sciez-sur-Léman with a view of Lake Geneva, near the marina, Haute-Savoie" loading="lazy">
-            <span class="card-tag">Free</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-de-sciez-sur-leman" class="title">Plage de Sciez-sur-Léman</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sciez</span></div>
-            <p class="card-desc">Grassy Lake Geneva beach with summer lifeguards, a dog area, playgrounds, pétanque and table tennis. Free access year-round in Sciez, Haute-Savoie.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Sciez-sur-L%C3%A9man%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="commune-section" data-commune="Sévrier">
-      <div class="commune-head">
-        <h3>Sévrier <span class="commune-count">1 venue(s) in Sévrier</span></h3>
-      </div>
-      <div class="carousel">
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-de-sevrier" class="card-photo">
-            <img src="/plage-de-sevrier-hero.jpg" alt="Recently renovated lawn + fine gravel beach, Plage de Sévrier at Sévrier, Lake Annecy, Haute-Savoie 74" loading="lazy">
-            <span class="card-tag">Free</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-de-sevrier" class="title">Plage de Sévrier</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sévrier</span></div>
-            <p class="card-desc">RECENTLY RENOVATED BEACH — lawn + fine gravel on the western shore of Lake Annecy. 94 BIKE SPACES — direct access to the Lake Annecy greenway.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20S%C3%A9vrier%2C%20S%C3%A9vrier%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-              <a href="https://www.sevrier.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="commune-section" data-commune="Talloires-Montmin">
-      <div class="commune-head">
-        <h3>Talloires-Montmin <span class="commune-count">2 venue(s) in Talloires-Montmin</span></h3>
-      </div>
-      <div class="carousel">
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-de-talloires" class="card-photo">
-            <img src="/plage-de-talloires-hero.jpg" alt="250x200 m sand + lawn beach with paddling pool, diving boards, slide, Plage de Talloires at Talloires-Montmin, Lake Annecy, Haute-Savoie 74" loading="lazy">
-            <span class="card-tag">Free</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-de-talloires" class="title">Plage de Talloires</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Talloires-Montmin</span></div>
-            <p class="card-desc">250×200 M SAND + LAWN BEACH with PADDLING POOL, DIVING BOARDS, SLIDE and integrated watersports centre. REOPENING MAY 2026 after waterfront refurbishment.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Talloires%2C%20Talloires-Montmin%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-              <a href="https://www.talloires-montmin.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
-            </div>
-          </div>
-        </article>
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-d-angon-talloires" class="card-photo">
-            <img src="/plage-d-angon-talloires-hero.jpg" alt="Vast shaded lawn beach with view of the Château de Duingt, Plage d'Angon at Talloires-Montmin, Lake Annecy, Haute-Savoie 74" loading="lazy">
-            <span class="card-tag">Free</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-d-angon-talloires" class="title">Plage d&#39;Angon</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Talloires-Montmin</span></div>
-            <p class="card-desc">QUIET, SHADED BEACH — vast lawn with tall trees, far from the bustle of central Talloires. EXCEPTIONAL VIEW OF THE CHÂTEAU DE DUINGT.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20d%27Angon%2C%20Talloires-Montmin%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-              <a href="https://www.talloires-montmin.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="commune-section" data-commune="Thonon-les-Bains">
-      <div class="commune-head">
-        <h3>Thonon-les-Bains <span class="commune-count">3 venue(s) in Thonon-les-Bains</span></h3>
-      </div>
-      <div class="carousel">
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-de-la-pinede" class="card-photo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Thonon-les-Bains._Promenade_du_L%C3%A9man._2015-06-21.jpg" alt="Natural pebble shoreline of Plage de la Pinède on the shore of Lake Geneva, Thonon-les-Bains, Haute-Savoie" loading="lazy">
-            <span class="card-tag">Free</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-de-la-pinede" class="title">Plage de la Pinède</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Thonon-les-Bains</span></div>
-            <p class="card-desc">A 3 km succession of natural pebble beaches on the shore of Lake Geneva, bordering the Château de Ripaille estate. Free access, listed shoreline.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20la%20Pin%C3%A8de%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-            </div>
-          </div>
-        </article>
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-de-saint-disdille" class="card-photo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Plage_thonon.jpg" alt="Plage de Saint-Disdille on the shore of Lake Geneva with chestnut-shaded area, Thonon-les-Bains, Haute-Savoie" loading="lazy">
-            <span class="card-tag">Free</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-de-saint-disdille" class="title">Plage de Saint-Disdille</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Thonon-les-Bains</span></div>
-            <p class="card-desc">Free Blue Flag beach on Lake Geneva, summer lifeguards, next to the Châtaigneraie park in Thonon-les-Bains, Haute-Savoie.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Saint-Disdille%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-            </div>
-          </div>
-        </article>
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-municipale-thonon" class="card-photo">
-            <img src="/plage-municipale-thonon-hero.jpg" alt="3 ha beach + 50 m Olympic pool + Blue Flag, Plage Municipale de Thonon-les-Bains at Thonon-les-Bains, Lake Geneva, Haute-Savoie 74" loading="lazy">
-            <span class="card-tag">Paid</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-municipale-thonon" class="title">Plage Municipale de Thonon-les-Bains</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Thonon-les-Bains</span></div>
-            <p class="card-desc">3-HECTARE BEACH + 50 M OLYMPIC POOL + 1.50/3/5/10 m diving boards + 100 M WATERSLIDE + 3,000 m² Lake Geneva swim area. BLUE FLAG 2026.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20Municipale%20de%20Thonon-les-Bains%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="commune-section" data-commune="Veyrier-du-Lac">
-      <div class="commune-head">
-        <h3>Veyrier-du-Lac <span class="commune-count">1 venue(s) in Veyrier-du-Lac</span></h3>
-      </div>
-      <div class="carousel">
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-de-la-brune-veyrier" class="card-photo">
-            <img src="/plage-de-la-brune-veyrier-hero.jpg" alt="7,000 m² lawn beach + sand banks — Blue Flag, Plage de La Brune at Veyrier-du-Lac, Lake Annecy, Haute-Savoie 74" loading="lazy">
-            <span class="card-tag">Free</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-de-la-brune-veyrier" class="title">Plage de La Brune</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Veyrier-du-Lac</span></div>
-            <p class="card-desc">BLUE FLAG BEACH SINCE 2009 (Teragir 2026 ranking confirmed). 7,000 m² of lawn + sand banks with paddling pool, T-shaped pontoon, diving boards.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20La%20Brune%2C%20Veyrier-du-Lac%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-              <a href="https://www.veyrier-du-lac.fr/plages/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="commune-section" data-commune="Évian-les-Bains">
-      <div class="commune-head">
-        <h3>Évian-les-Bains <span class="commune-count">1 venue(s) in Évian-les-Bains</span></h3>
-      </div>
-      <div class="carousel">
-        <article class="card">
-          <a href="https://loisirs74.fr/en/plage-d-evian-centre-nautique" class="card-photo">
-            <img src="/plage-d-evian-centre-nautique-hero.jpg" alt="3.5 ha beach + 50 m Olympic pool + 160 m waterslide, Plage du Centre Nautique d'Évian at Évian-les-Bains, Lake Geneva, Haute-Savoie 74" loading="lazy">
-            <span class="card-tag">Paid</span>
-          </a>
-          <div class="card-body">
-            <a href="https://loisirs74.fr/en/plage-d-evian-centre-nautique" class="title">Plage du Centre Nautique d&#39;Évian</a>
-            <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Évian-les-Bains</span></div>
-            <p class="card-desc">BLUE FLAG SINCE 2020 (Teragir 2026 ranking confirmed). 3.5 ha LAWNS + 50 M OLYMPIC POOL + 160 M WATERSLIDE + direct access to Lake Geneva.</p>
-            <div class="card-actions">
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20du%20Centre%20Nautique%20d%27%C3%89vian%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-              <a href="https://www.evianresort.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
+
   </div>
 </main>
 
@@ -491,65 +622,102 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
     <div class="foot-grid">
       <div class="foot-col">
         <h4>Loisirs 74</h4>
-        <p>Independent guide to leisure venues in Haute-Savoie</p>
+        <p>Independent guide to leisure venues in Haute-Savoie. Each page: an official source, an address, a map.</p>
       </div>
       <div class="foot-col">
         <h4>Categories</h4>
-        <ul><li><a href="https://loisirs74.fr/en/lakes/">Lakes &amp; beaches</a></li><li><a href="https://loisirs74.fr/en/waterfalls/">Waterfalls</a></li><li><a href="https://loisirs74.fr/en/leisure-parks/">Leisure parks</a></li><li><a href="https://loisirs74.fr/en/viewpoints/">Viewpoints</a></li><li><a href="https://loisirs74.fr/en/cable-cars/">Cable cars</a></li><li><a href="https://loisirs74.fr/en/museums/">Museums</a></li><li><a href="https://loisirs74.fr/en/castles/">Castles &amp; forts</a></li><li><a href="https://loisirs74.fr/en/greenways/">Greenways</a></li><li><a href="https://loisirs74.fr/en/trails/">Hiking trails</a></li><li><a href="https://loisirs74.fr/en/attractions/">Attractions &amp; activities</a></li><li><a href="https://loisirs74.fr/en/other/">Other</a></li></ul>
+        <ul><li><a href="https://loisirs74.fr/en/lakes/">Lakes & beaches</a></li><li><a href="https://loisirs74.fr/en/waterfalls/">Waterfalls</a></li><li><a href="https://loisirs74.fr/en/leisure-parks/">Leisure parks</a></li><li><a href="https://loisirs74.fr/en/viewpoints/">Viewpoints</a></li><li><a href="https://loisirs74.fr/en/cable-cars/">Cable cars</a></li><li><a href="https://loisirs74.fr/en/museums/">Museums</a></li><li><a href="https://loisirs74.fr/en/castles/">Castles & forts</a></li><li><a href="https://loisirs74.fr/en/greenways/">Greenways</a></li><li><a href="https://loisirs74.fr/en/attractions/">Attractions</a></li></ul>
       </div>
       <div class="foot-col">
         <h4>Language</h4>
         <ul><li><a href="https://loisirs74.fr/plages/" hreflang="fr">Français</a></li><li><a href="https://loisirs74.fr/en/beaches/" hreflang="en">English</a></li><li><a href="https://loisirs74.fr/de/straende/" hreflang="de">Deutsch</a></li><li><a href="https://loisirs74.fr/it/spiagge/" hreflang="it">Italiano</a></li><li><a href="https://loisirs74.fr/es/playas/" hreflang="es">Español</a></li></ul>
       </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul><li><a href="https://loisirs74.fr/mentions-legales">Legal notice</a></li><li><a href="https://loisirs74.fr/confidentialite">Privacy</a></li><li><a href="https://loisirs74.fr/cgv">Terms</a></li><li><a href="https://loisirs74.fr/signaler">Report an issue</a></li><li><a href="https://loisirs74.fr/devenir-partenaire">Become a partner</a></li></ul>
+      </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Published by Blue Canard Éditions · Edmaster. All rights reserved.</span>
-      <span style="font-family:ui-monospace,monospace;font-size:.72rem">Edmaster &amp; Claudius</span>
+      <span>© 2026 bleu canard éditions · Edmaster &amp; Claudius</span>
     </div>
   </div>
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
+// Cursor halo
 (function(){
-  const PINS = [{"slug":"plage-albigny","name":"Plage d'Albigny","commune":"Annecy","lat":45.9067,"lng":6.1489,"url":"https://loisirs74.fr/en/plage-albigny","paid":false},{"slug":"plage-d-excenevex","name":"Plage d'Excenevex","commune":"Excenevex","lat":46.3528,"lng":6.3489,"url":"https://loisirs74.fr/en/plage-d-excenevex","paid":false},{"slug":"plage-de-la-pinede","name":"Plage de la Pinède","commune":"Thonon-les-Bains","lat":46.3736,"lng":6.4776,"url":"https://loisirs74.fr/en/plage-de-la-pinede","paid":false},{"slug":"plage-de-menthon-saint-bernard","name":"Plage de Menthon-Saint-Bernard","commune":"Menthon-Saint-Bernard","lat":45.863626,"lng":6.186161,"url":"https://loisirs74.fr/en/plage-de-menthon-saint-bernard","paid":true},{"slug":"plage-de-saint-disdille","name":"Plage de Saint-Disdille","commune":"Thonon-les-Bains","lat":46.401,"lng":6.5026,"url":"https://loisirs74.fr/en/plage-de-saint-disdille","paid":false},{"slug":"plage-de-saint-jorioz","name":"Plage de Saint-Jorioz","commune":"Saint-Jorioz","lat":45.8335,"lng":6.1565,"url":"https://loisirs74.fr/en/plage-de-saint-jorioz","paid":true},{"slug":"plage-de-sciez-sur-leman","name":"Plage de Sciez-sur-Léman","commune":"Sciez","lat":46.33251,"lng":6.38413,"url":"https://loisirs74.fr/en/plage-de-sciez-sur-leman","paid":false},{"slug":"plage-des-marquisats","name":"Plage des Marquisats","commune":"Annecy","lat":45.893443,"lng":6.136465,"url":"https://loisirs74.fr/en/plage-des-marquisats","paid":false},{"slug":"plage-imperial-annecy","name":"Plage de l'Impérial","commune":"Annecy","lat":45.9081,"lng":6.1392,"url":"https://loisirs74.fr/en/plage-imperial-annecy","paid":false},{"slug":"plage-de-la-brune-veyrier","name":"Plage de La Brune","commune":"Veyrier-du-Lac","lat":45.8975,"lng":6.1664,"url":"https://loisirs74.fr/en/plage-de-la-brune-veyrier","paid":false},{"slug":"plage-de-doussard","name":"Plage de Doussard","commune":"Doussard","lat":45.7831,"lng":6.2169,"url":"https://loisirs74.fr/en/plage-de-doussard","paid":false},{"slug":"plage-de-sevrier","name":"Plage de Sévrier","commune":"Sévrier","lat":45.8631,"lng":6.1453,"url":"https://loisirs74.fr/en/plage-de-sevrier","paid":false},{"slug":"plage-de-talloires","name":"Plage de Talloires","commune":"Talloires-Montmin","lat":45.8417,"lng":6.2147,"url":"https://loisirs74.fr/en/plage-de-talloires","paid":false},{"slug":"plage-municipale-thonon","name":"Plage Municipale de Thonon-les-Bains","commune":"Thonon-les-Bains","lat":46.3692,"lng":6.4742,"url":"https://loisirs74.fr/en/plage-municipale-thonon","paid":true},{"slug":"plage-d-amphion-publier","name":"Plage Municipale d'Amphion","commune":"Publier","lat":46.3897,"lng":6.5519,"url":"https://loisirs74.fr/en/plage-d-amphion-publier","paid":false},{"slug":"plage-d-evian-centre-nautique","name":"Plage du Centre Nautique d'Évian","commune":"Évian-les-Bains","lat":46.4019,"lng":6.5856,"url":"https://loisirs74.fr/en/plage-d-evian-centre-nautique","paid":true},{"slug":"plage-de-saint-gingolph","name":"Plage Municipale de Saint-Gingolph","commune":"Saint-Gingolph","lat":46.3917,"lng":6.8025,"url":"https://loisirs74.fr/en/plage-de-saint-gingolph","paid":false},{"slug":"plage-d-angon-talloires","name":"Plage d'Angon","commune":"Talloires-Montmin","lat":45.8333,"lng":6.2208,"url":"https://loisirs74.fr/en/plage-d-angon-talloires","paid":false},{"slug":"plage-du-lac-de-montriond","name":"Plage du Lac de Montriond","commune":"Montriond","lat":46.1864,"lng":6.7178,"url":"https://loisirs74.fr/en/plage-du-lac-de-montriond","paid":false}];
-  const FREE_LABEL = "Free";
-  const PAID_LABEL = "Paid";
+  if (matchMedia('(hover:none)').matches) return;
+  const glow = document.getElementById('cursorGlow');
+  let mx = innerWidth/2, my = innerHeight/2, gx = mx, gy = my;
+  window.addEventListener('pointermove', e=>{ mx = e.clientX; my = e.clientY; }, {passive:true});
+  function tick(){
+    gx += (mx-gx)*0.08; gy += (my-gy)*0.08;
+    glow.style.transform = 'translate(' + gx + 'px,' + gy + 'px) translate(-50%,-50%)';
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
 
+// Reveal on scroll
+(function(){
+  const els = document.querySelectorAll('.commune-section, .card');
+  els.forEach(el => el.classList.add('reveal'));
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:.08, rootMargin:'0px 0px -6% 0px'});
+  els.forEach(el => io.observe(el));
+})();
+
+// MAP + FILTERS
+(function(){
+  const PINS = [{"slug": "plage-albigny", "name": "Plage d'Albigny", "commune": "Annecy", "lat": 45.9067, "lng": 6.1489, "url": "https://loisirs74.fr/en/plage-albigny", "paid": false}, {"slug": "plage-d-excenevex", "name": "Plage d'Excenevex", "commune": "Excenevex", "lat": 46.3528, "lng": 6.3489, "url": "https://loisirs74.fr/en/plage-d-excenevex", "paid": false}, {"slug": "plage-de-la-pinede", "name": "Plage de la Pinède", "commune": "Thonon-les-Bains", "lat": 46.3736, "lng": 6.4776, "url": "https://loisirs74.fr/en/plage-de-la-pinede", "paid": false}, {"slug": "plage-de-menthon-saint-bernard", "name": "Plage de Menthon-Saint-Bernard", "commune": "Menthon-Saint-Bernard", "lat": 45.863626, "lng": 6.186161, "url": "https://loisirs74.fr/en/plage-de-menthon-saint-bernard", "paid": true}, {"slug": "plage-de-saint-disdille", "name": "Plage de Saint-Disdille", "commune": "Thonon-les-Bains", "lat": 46.401, "lng": 6.5026, "url": "https://loisirs74.fr/en/plage-de-saint-disdille", "paid": false}, {"slug": "plage-de-saint-jorioz", "name": "Plage de Saint-Jorioz", "commune": "Saint-Jorioz", "lat": 45.8335, "lng": 6.1565, "url": "https://loisirs74.fr/en/plage-de-saint-jorioz", "paid": true}, {"slug": "plage-de-sciez-sur-leman", "name": "Plage de Sciez-sur-Léman", "commune": "Sciez", "lat": 46.33251, "lng": 6.38413, "url": "https://loisirs74.fr/en/plage-de-sciez-sur-leman", "paid": false}, {"slug": "plage-des-marquisats", "name": "Plage des Marquisats", "commune": "Annecy", "lat": 45.893443, "lng": 6.136465, "url": "https://loisirs74.fr/en/plage-des-marquisats", "paid": false}, {"slug": "plage-imperial-annecy", "name": "Plage de l'Impérial", "commune": "Annecy", "lat": 45.9081, "lng": 6.1392, "url": "https://loisirs74.fr/en/plage-imperial-annecy", "paid": false}, {"slug": "plage-de-la-brune-veyrier", "name": "Plage de La Brune", "commune": "Veyrier-du-Lac", "lat": 45.8975, "lng": 6.1664, "url": "https://loisirs74.fr/en/plage-de-la-brune-veyrier", "paid": false}, {"slug": "plage-de-doussard", "name": "Plage de Doussard", "commune": "Doussard", "lat": 45.7831, "lng": 6.2169, "url": "https://loisirs74.fr/en/plage-de-doussard", "paid": false}, {"slug": "plage-de-sevrier", "name": "Plage de Sévrier", "commune": "Sévrier", "lat": 45.8631, "lng": 6.1453, "url": "https://loisirs74.fr/en/plage-de-sevrier", "paid": false}, {"slug": "plage-de-talloires", "name": "Plage de Talloires", "commune": "Talloires-Montmin", "lat": 45.8417, "lng": 6.2147, "url": "https://loisirs74.fr/en/plage-de-talloires", "paid": false}, {"slug": "plage-municipale-thonon", "name": "Plage Municipale de Thonon-les-Bains", "commune": "Thonon-les-Bains", "lat": 46.3692, "lng": 6.4742, "url": "https://loisirs74.fr/en/plage-municipale-thonon", "paid": true}, {"slug": "plage-d-amphion-publier", "name": "Plage Municipale d'Amphion", "commune": "Publier", "lat": 46.3897, "lng": 6.5519, "url": "https://loisirs74.fr/en/plage-d-amphion-publier", "paid": false}, {"slug": "plage-d-evian-centre-nautique", "name": "Plage du Centre Nautique d'Évian", "commune": "Évian-les-Bains", "lat": 46.4019, "lng": 6.5856, "url": "https://loisirs74.fr/en/plage-d-evian-centre-nautique", "paid": true}, {"slug": "plage-de-saint-gingolph", "name": "Plage Municipale de Saint-Gingolph", "commune": "Saint-Gingolph", "lat": 46.3917, "lng": 6.8025, "url": "https://loisirs74.fr/en/plage-de-saint-gingolph", "paid": false}, {"slug": "plage-d-angon-talloires", "name": "Plage d'Angon", "commune": "Talloires-Montmin", "lat": 45.8333, "lng": 6.2208, "url": "https://loisirs74.fr/en/plage-d-angon-talloires", "paid": false}, {"slug": "plage-du-lac-de-montriond", "name": "Plage du Lac de Montriond", "commune": "Montriond", "lat": 46.1864, "lng": 6.7178, "url": "https://loisirs74.fr/en/plage-du-lac-de-montriond", "paid": false}];
+  const SHOWN_SG = "place shown";
+  const SHOWN_PL = "places shown";
   if (typeof L === 'undefined' || PINS.length === 0) return;
   const map = L.map('cat-map', { scrollWheelZoom: false });
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
     attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
   }).addTo(map);
+
+  function makeIcon(paid){
+    const color = paid ? '#e07a3f' : '#2e4a3a';
+    const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="36" viewBox="0 0 28 36"><path d="M14 0C6.3 0 0 6.3 0 14c0 10.5 14 22 14 22s14-11.5 14-22C28 6.3 21.7 0 14 0z" fill="'+color+'"/><circle cx="14" cy="14" r="5" fill="#fdfaf3"/></svg>';
+    return L.divIcon({ className:'l74-pin', html: svg, iconSize:[28,36], iconAnchor:[14,36], popupAnchor:[0,-32] });
+  }
+
   const layers = {};
   const markers = [];
   for (const p of PINS) {
-    const m = L.marker([p.lat, p.lng]).addTo(map);
-    const tag = p.paid ? PAID_LABEL : FREE_LABEL;
-    m.bindPopup('<a href="'+p.url+'">'+p.name+'</a> <span style="color:#888;font-size:.7rem">· '+tag+'</span><span class="commune-pop">'+p.commune+'</span>');
+    const m = L.marker([p.lat, p.lng], {icon: makeIcon(!!p.paid)}).addTo(map);
+    m.bindPopup('<a href="'+p.url+'">'+p.name+'</a><span class="commune-pop">'+p.commune+'</span>');
     layers[p.slug] = m;
     markers.push(m);
   }
   const group = L.featureGroup(markers);
   map.fitBounds(group.getBounds().pad(0.15));
 
+  // FILTERS
   const communeSel = document.getElementById('filt-commune');
   const accessGroup = document.getElementById('filt-access');
   const sortSel = document.getElementById('filt-sort');
+  const countN = document.getElementById('count-n');
+  const countLabel = document.getElementById('count-label');
+  const emptyState = document.getElementById('empty-state');
 
   let curCommune = '';
   let curAccess = 'all';
   let curSort = 'commune';
 
-  function pinPaid(slug) {
-    const p = PINS.find(x => x.slug === slug);
-    return p ? p.paid : false;
-  }
+  function pinPaid(slug){ const p = PINS.find(x => x.slug === slug); return p ? !!p.paid : false; }
 
-  function applyFilters() {
+  function applyFilters(){
     const sections = document.querySelectorAll('.commune-section');
     let visibleMarkers = [];
+    let total = 0;
     sections.forEach(sec => {
       const commune = sec.dataset.commune;
       const communeMatch = !curCommune || commune === curCommune;
@@ -562,23 +730,19 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
         const accessMatch = curAccess === 'all' || (curAccess === 'free' && !isPaid) || (curAccess === 'paid' && isPaid);
         const show = communeMatch && accessMatch;
         card.classList.toggle('hidden', !show);
-        if (show) {
-          visibleCards++;
-          if (layers[slug]) visibleMarkers.push(layers[slug]);
-        }
+        if (show){ visibleCards++; total++; if (layers[slug]) visibleMarkers.push(layers[slug]); }
       });
       sec.classList.toggle('hidden', visibleCards === 0);
     });
-    if (visibleMarkers.length) {
-      const fg = L.featureGroup(visibleMarkers);
-      map.fitBounds(fg.getBounds().pad(0.15));
-    }
+    if (countN) countN.textContent = total;
+    if (countLabel) countLabel.textContent = total === 1 ? SHOWN_SG : SHOWN_PL;
+    if (emptyState) emptyState.style.display = total === 0 ? 'block' : 'none';
+    if (visibleMarkers.length){ const fg = L.featureGroup(visibleMarkers); map.fitBounds(fg.getBounds().pad(0.15)); }
   }
 
-  function applySort() {
-    const main = document.querySelector('main .wrap');
-    const sections = Array.from(main.querySelectorAll('.commune-section'));
-    if (curSort === 'alpha') {
+  function applySort(){
+    const sections = Array.from(document.querySelectorAll('.commune-section'));
+    if (curSort === 'alpha'){
       sections.forEach(sec => {
         const carousel = sec.querySelector('.carousel');
         const cards = Array.from(carousel.querySelectorAll('.card'));
@@ -592,21 +756,20 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
     }
   }
 
-  communeSel.addEventListener('change', e => { curCommune = e.target.value; applyFilters(); });
-  accessGroup.addEventListener('click', e => {
-    if (e.target.tagName === 'BUTTON') {
+  if (communeSel) communeSel.addEventListener('change', e => { curCommune = e.target.value; applyFilters(); });
+  if (accessGroup) accessGroup.addEventListener('click', e => {
+    if (e.target.tagName === 'BUTTON'){
       accessGroup.querySelectorAll('button').forEach(b => b.classList.remove('active'));
       e.target.classList.add('active');
       curAccess = e.target.dataset.v;
       applyFilters();
     }
   });
-  sortSel.addEventListener('change', e => { curSort = e.target.value; applySort(); });
-})();
-</script>
+  if (sortSel) sortSel.addEventListener('change', e => { curSort = e.target.value; applySort(); });
 
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"CollectionPage","url":"https://loisirs74.fr/en/beaches/","name":"Supervised beaches in Haute-Savoie","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://loisirs74.fr/en/","name":"Loisirs 74"},"numberOfItems":19}
+  // Init count
+  applyFilters();
+})();
 </script>
 
 </body>
