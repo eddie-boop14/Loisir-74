@@ -1070,6 +1070,43 @@ footer.site{background:var(--surface);border-top:1px solid var(--line);padding:c
   }
 }
 </script>
+<script>
+// Auto-update homepage section counts from /lieux.json (single source of truth).
+// Maps section id -> registry categories. Idempotent and safe to ship as-is.
+(function(){
+  var CAT_MAP = {
+    'lac': ['lac','plage'],
+    'cascade': ['cascade'],
+    'domaine': ['domaine','parc'],
+    'point-de-vue': ['point-de-vue'],
+    'telecabine': ['telecabine'],
+    'musee': ['musee'],
+    'chateau': ['chateau'],
+    'divers': ['divers'],
+    'attraction': ['attraction'],
+    'voie-verte': ['voie-verte'],
+    'sentier': ['sentier']
+  };
+  fetch('/lieux.json', {cache: 'no-cache'}).then(function(r){return r.json();}).then(function(d){
+    var lieux = (d && d.lieux) || [];
+    Object.keys(CAT_MAP).forEach(function(sid){
+      var section = document.getElementById(sid);
+      if (!section) return;
+      var span = section.querySelector('h2 .count');
+      if (!span) return;
+      var cats = CAT_MAP[sid];
+      var n = 0;
+      for (var i = 0; i < lieux.length; i++) {
+        var lc = lieux[i].categories || [];
+        for (var j = 0; j < lc.length; j++) {
+          if (cats.indexOf(lc[j]) !== -1) { n++; break; }
+        }
+      }
+      span.textContent = span.textContent.replace(/^\d+/, n);
+    });
+  }).catch(function(){/* keep static fallback */});
+})();
+</script>
 
 </body>
 </html>
