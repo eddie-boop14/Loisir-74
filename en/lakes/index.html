@@ -604,16 +604,20 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <div class="filter-bar">
   <div class="wrap">
     <label>
+      <span>Lake</span>
+      <select id="filt-lac"><option value="">All lakes</option><option value="annecy">Lake Annecy</option><option value="leman">Lake Geneva</option><option value="petits">Smaller mountain lakes</option></select>
+    </label>
+    <label>
       <span>Town</span>
       <select id="filt-commune"><option value="">All communes</option><option value="Annecy">Annecy</option><option value="Bellevaux">Bellevaux</option><option value="Chamonix-Mont-Blanc">Chamonix-Mont-Blanc</option><option value="Cruseilles">Cruseilles</option><option value="Excenevex">Excenevex</option><option value="La Clusaz">La Clusaz</option><option value="Menthon-Saint-Bernard">Menthon-Saint-Bernard</option><option value="Mont-Saxonnex">Mont-Saxonnex</option><option value="Passy">Passy</option><option value="Saint-Jorioz">Saint-Jorioz</option><option value="Sciez">Sciez</option><option value="Thonon-les-Bains">Thonon-les-Bains</option></select>
     </label>
     <label>
       <span>Access</span>
       <div class="access-group" id="filt-access">
-        <button data-v="all" class="active">All</button>
-        <button data-v="free">Free</button>
-        <button data-v="paid">Paid</button>
-      </div>
+<button class="active" data-v="all">All</button>
+<button data-v="free">Free</button>
+<button data-v="paid">Paid</button>
+</div>
     </label>
     <label>
       <span>Sort</span>
@@ -626,221 +630,222 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <main>
   <div class="wrap">
 
-<div class="commune-section" data-commune="Annecy">
-<div class="commune-head"><h3>Annecy</h3><span class="commune-count">2 places</span></div><div class="transport-block">
-<div class="transport-label">How to get there</div>
-<div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Annecy</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">Sibra (réseau urbain) · LIHSA Y4 Albertville · LIHSA Y3 Genève</span></div>
-</div>
-<div class="carousel"><article class="card">
+<div class="commune-section" data-lac="annecy">
+<div class="commune-head"><h3>Lake Annecy</h3><span class="commune-count">4 places</span></div>
+<div class="carousel">
+<article class="card" data-commune="Annecy">
 <a class="card-photo" href="https://loisirs74.fr/en/plage-albigny">
 <div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
 <span class="card-tag is-gratuit">Free</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/en/plage-albigny">Plage d'Albigny</a>
-
 <p class="card-desc">The largest public beach on Lake Annecy, featuring 400 meters of grassy shoreline facing the mountains.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20d'Albigny%2C%20Annecy%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
 </div>
 </div>
 </article>
-<article class="card">
+<article class="card" data-commune="Annecy">
 <a class="card-photo" href="https://loisirs74.fr/en/plage-des-marquisats">
 <div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
 <span class="card-tag is-gratuit">Free</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/en/plage-des-marquisats">Plage des Marquisats</a>
-
 <p class="card-desc">Grassy beach 200 meters long on the west shore of Lake Annecy, supervised in summer, with disability access facilities and 10 minutes walk from the old town.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20des%20Marquisats%2C%20Annecy%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
 </div>
 </div>
-</article></div>
-</div>
-<div class="commune-section" data-commune="Bellevaux">
-<div class="commune-head"><h3>Bellevaux</h3><span class="commune-count">1 place</span></div><div class="transport-block">
-<div class="transport-label">How to get there</div>
-<div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Thonon (25 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">SAT Vallée verte</span></div>
-</div>
-<div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/lac-de-vallon">
-<img alt="Lac de Vallon at the foot of Roc d'Enfer, Bellevaux, Haute-Savoie" loading="lazy" src="/lac-de-vallon-hero.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Bellevaux</span></div><a class="title" href="https://loisirs74.fr/en/lac-de-vallon">Lac de Vallon</a>
-
-<p class="card-desc">Fifteen hectares of emerald water at 1080 m altitude, born on the night of 11–12 March 1943 when the mountain slid and blocked the Brévon river.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20de%20Vallon%2C%20Bellevaux%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-</div>
-</div>
-</article></div>
-</div>
-<div class="commune-section" data-commune="Chamonix-Mont-Blanc">
-<div class="commune-head"><h3>Chamonix-Mont-Blanc</h3><span class="commune-count">2 places</span></div><div class="transport-block">
-<div class="transport-label">How to get there</div>
-<div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Chamonix-Mont-Blanc</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">Chamonix Bus · Mont-Blanc Express</span></div>
-</div>
-<div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/lac-blanc">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-gratuit">Free</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/en/lac-blanc">Lac Blanc</a>
-
-<p class="card-desc">Iconic glacial lake at 2,352 m elevation in the Aiguilles Rouges natural reserve, offering exceptional panoramic views facing Mont-Blanc massif, Aiguille Verte, and Grandes Jorasses.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20Blanc%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-</div>
-</div>
 </article>
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/lac-cornu">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-gratuit">Free</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/en/lac-cornu">Lac Cornu</a>
-
-<p class="card-desc">High-altitude lake nestled in a wild cirque of the Aiguilles Rouges Nature Reserve, accessible via a mountain trail from the Planpraz cable car.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20Cornu%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-</div>
-</div>
-</article></div>
-</div>
-<div class="commune-section" data-commune="Cruseilles">
-<div class="commune-head"><h3>Cruseilles</h3><span class="commune-count">1 place</span></div><div class="transport-block transport-empty">
-<div class="transport-label">How to get there</div>
-<p>Limited public transport. Car recommended.</p>
-</div>
-<div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/lac-des-dronieres">
-<img alt="Dronières Lake in Cruseilles, Haute-Savoie" loading="lazy" src="/lac-des-dronieres-hero.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Cruseilles</span></div><a class="title" href="https://loisirs74.fr/en/lac-des-dronieres">Dronières Lake</a>
-
-<p class="card-desc">A lake at 790 m altitude at the heart of the Parc des Dronières, 400 m from the centre of Cruseilles.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Droni%C3%A8res%20Lake%2C%20Cruseilles%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-</div>
-</div>
-</article></div>
-</div>
-<div class="commune-section" data-commune="Excenevex">
-<div class="commune-head"><h3>Excenevex</h3><span class="commune-count">1 place</span></div><div class="transport-block">
-<div class="transport-label">How to get there</div>
-<div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Perrignier (8 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">Lihsa Y71</span></div>
-</div>
-<div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/plage-d-excenevex">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-gratuit">Free</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Excenevex</span></div><a class="title" href="https://loisirs74.fr/en/plage-d-excenevex">Plage d'Excenevex</a>
-
-<p class="card-desc">The only natural fine sand beach on the French shore of Lake Geneva, with a gentle slope extending several tens of metres and shallow waters reaching 25°C in summer.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20d'Excenevex%2C%20Excenevex%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-</div>
-</div>
-</article></div>
-</div>
-<div class="commune-section" data-commune="La Clusaz">
-<div class="commune-head"><h3>La Clusaz</h3><span class="commune-count">1 place</span></div><div class="transport-block">
-<div class="transport-label">How to get there</div>
-<div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Annecy (32 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">LIHSA Y62</span></div>
-</div>
-<div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/lac-des-confins">
-<img alt="Lac des Confins surrounded by alpine meadows and the Aravis range, La Clusaz, Haute-Savoie" loading="lazy" src="/lac-des-confins-hero.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>La Clusaz</span></div><a class="title" href="https://loisirs74.fr/en/lac-des-confins">Lac des Confins</a>
-
-<p class="card-desc">Small 3-hectare glacial lake nestled at the foot of the Aravis range, starting point for summer hikes and 65 km cross-country skiing domain in winter.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20des%20Confins%2C%20La%20Clusaz%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-</div>
-</div>
-</article></div>
-</div>
-<div class="commune-section" data-commune="Menthon-Saint-Bernard">
-<div class="commune-head"><h3>Menthon-Saint-Bernard</h3><span class="commune-count">1 place</span></div><div class="transport-block">
-<div class="transport-label">How to get there</div>
-<div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Annecy (10 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">Sibra ligne 60</span></div>
-</div>
-<div class="carousel"><article class="card">
+<article class="card" data-commune="Menthon-Saint-Bernard">
 <a class="card-photo" href="https://loisirs74.fr/en/plage-de-menthon-saint-bernard">
 <div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
 <span class="card-tag is-gratuit">Free</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Menthon-Saint-Bernard</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-menthon-saint-bernard">Plage de Menthon-Saint-Bernard</a>
-
 <p class="card-desc">Large municipal grass beach of 12,000 m² on the shores of Lake Annecy, with paddling pool, fixed and floating jetties, diving boards, showers and snack bar on site.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Menthon-Saint-Bernard%2C%20Menthon-Saint-Bernard%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
 </div>
 </div>
-</article></div>
+</article>
+<article class="card" data-commune="Saint-Jorioz">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-de-saint-jorioz">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">Paid</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Saint-Jorioz</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-saint-jorioz">Plage de Saint-Jorioz</a>
+<p class="card-desc">The only large natural sand beach on Lake Annecy, equipped with shaded lawns, diving board and accessible facilities.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Saint-Jorioz%2C%20Saint-Jorioz%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://saint-jorioz.fr/fr/rb/1110735/decouvrir-la-plage" rel="noopener" target="_blank">Official site</a>
 </div>
-<div class="commune-section" data-commune="Mont-Saxonnex">
-<div class="commune-head"><h3>Mont-Saxonnex</h3><span class="commune-count">1 place</span></div><div class="transport-block transport-empty">
-<div class="transport-label">How to get there</div>
-<p>Limited public transport. Car recommended.</p>
 </div>
-<div class="carousel"><article class="card">
+</article>
+</div>
+</div>
+<div class="commune-section" data-lac="leman">
+<div class="commune-head"><h3>Lake Geneva</h3><span class="commune-count">4 places</span></div>
+<div class="carousel">
+<article class="card" data-commune="Excenevex">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-d-excenevex">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Excenevex</span></div><a class="title" href="https://loisirs74.fr/en/plage-d-excenevex">Plage d'Excenevex</a>
+<p class="card-desc">The only natural fine sand beach on the French shore of Lake Geneva, with a gentle slope extending several tens of metres and shallow waters reaching 25°C in summer.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20d'Excenevex%2C%20Excenevex%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+<article class="card" data-commune="Sciez">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-de-sciez-sur-leman">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Sciez</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-sciez-sur-leman">Plage de Sciez-sur-Léman</a>
+<p class="card-desc">Grassy and tree-lined beach on the shores of Lake Geneva, with supervised swimming in summer, a dedicated dog area, children's games and accessible facilities.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Sciez-sur-L%C3%A9man%2C%20Sciez%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+<article class="card" data-commune="Thonon-les-Bains">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-de-la-pinede">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-la-pinede">Plage de la Pinède</a>
+<p class="card-desc">A succession of small natural pebble beaches connected by maintained trails, bordering the historic Ripaille Castle estate on the wild shores of Lake Léman.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20la%20Pin%C3%A8de%2C%20Thonon-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+<article class="card" data-commune="Thonon-les-Bains">
+<a class="card-photo" href="https://loisirs74.fr/en/plage-de-saint-disdille">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-saint-disdille">Plage de Saint-Disdille</a>
+<p class="card-desc">Grass and pebble beach on Lake Léman, Blue Flag certified since 2010, at the edge of Châtaigneraie park and Ripaille forest.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Saint-Disdille%2C%20Thonon-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-lac="petits">
+<div class="commune-head"><h3>Smaller mountain lakes</h3><span class="commune-count">8 places</span></div>
+<div class="carousel">
+<article class="card" data-commune="Bellevaux">
+<a class="card-photo" href="https://loisirs74.fr/en/lac-de-vallon">
+<img alt="Lac de Vallon at the foot of Roc d'Enfer, Bellevaux, Haute-Savoie" loading="lazy" src="/lac-de-vallon-hero.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Bellevaux</span></div><a class="title" href="https://loisirs74.fr/en/lac-de-vallon">Lac de Vallon</a>
+<p class="card-desc">Fifteen hectares of emerald water at 1080 m altitude, born on the night of 11–12 March 1943 when the mountain slid and blocked the Brévon river.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20de%20Vallon%2C%20Bellevaux%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+<article class="card" data-commune="Chamonix-Mont-Blanc">
+<a class="card-photo" href="https://loisirs74.fr/en/lac-blanc">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/en/lac-blanc">Lac Blanc</a>
+<p class="card-desc">Iconic glacial lake at 2,352 m elevation in the Aiguilles Rouges natural reserve, offering exceptional panoramic views facing Mont-Blanc massif, Aiguille Verte, and Grandes Jorasses.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20Blanc%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+<article class="card" data-commune="Chamonix-Mont-Blanc">
+<a class="card-photo" href="https://loisirs74.fr/en/lac-cornu">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/en/lac-cornu">Lac Cornu</a>
+<p class="card-desc">High-altitude lake nestled in a wild cirque of the Aiguilles Rouges Nature Reserve, accessible via a mountain trail from the Planpraz cable car.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20Cornu%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+<article class="card" data-commune="Cruseilles">
+<a class="card-photo" href="https://loisirs74.fr/en/lac-des-dronieres">
+<img alt="Dronières Lake in Cruseilles, Haute-Savoie" loading="lazy" src="/lac-des-dronieres-hero.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Cruseilles</span></div><a class="title" href="https://loisirs74.fr/en/lac-des-dronieres">Dronières Lake</a>
+<p class="card-desc">A lake at 790 m altitude at the heart of the Parc des Dronières, 400 m from the centre of Cruseilles.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Droni%C3%A8res%20Lake%2C%20Cruseilles%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+<article class="card" data-commune="La Clusaz">
+<a class="card-photo" href="https://loisirs74.fr/en/lac-des-confins">
+<img alt="Lac des Confins surrounded by alpine meadows and the Aravis range, La Clusaz, Haute-Savoie" loading="lazy" src="/lac-des-confins-hero.jpg"/>
+<span class="card-tag is-gratuit">Free</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>La Clusaz</span></div><a class="title" href="https://loisirs74.fr/en/lac-des-confins">Lac des Confins</a>
+<p class="card-desc">Small 3-hectare glacial lake nestled at the foot of the Aravis range, starting point for summer hikes and 65 km cross-country skiing domain in winter.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20des%20Confins%2C%20La%20Clusaz%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+</div>
+</div>
+</article>
+<article class="card" data-commune="Mont-Saxonnex">
 <a class="card-photo" href="https://loisirs74.fr/en/lac-benit">
 <img alt="Lac Bénit at the foot of the Bargy massif, Mont-Saxonnex, Haute-Savoie" loading="lazy" src="/lac-benit-hero.jpg"/>
 <span class="card-tag is-gratuit">Free</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Mont-Saxonnex</span></div><a class="title" href="https://loisirs74.fr/en/lac-benit">Lac Bénit</a>
-
 <p class="card-desc">A small 4.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20B%C3%A9nit%2C%20Mont-Saxonnex%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
 </div>
 </div>
-</article></div>
-</div>
-<div class="commune-section" data-commune="Passy">
-<div class="commune-head"><h3>Passy</h3><span class="commune-count">2 places</span></div><div class="transport-block">
-<div class="transport-label">How to get there</div>
-<div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Passy-Plaine-Joux halt</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">SAT Mont-Blanc</span></div>
-</div>
-<div class="carousel"><article class="card">
+</article>
+<article class="card" data-commune="Passy">
 <a class="card-photo" href="https://loisirs74.fr/en/lac-de-passy">
 <div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
 <span class="card-tag is-gratuit">Free</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Passy</span></div><a class="title" href="https://loisirs74.fr/en/lac-de-passy">Lac de Passy</a>
-
 <p class="card-desc">The largest developed lake in the Mont-Blanc region, located at 547 m elevation with sandy beach, supervised swimming zone in summer and panoramic views of the Mont-Blanc massif.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20de%20Passy%2C%20Passy%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
 </div>
 </div>
 </article>
-<article class="card">
+<article class="card" data-commune="Passy">
 <a class="card-photo" href="https://loisirs74.fr/en/lac-vert-passy">
 <img alt="Lac Vert in Passy, emerald-green waters, facing Mont Blanc, Haute-Savoie" loading="lazy" src="/lac-vert-passy-hero.jpg"/>
 <span class="card-tag is-gratuit">Free</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Passy</span></div><a class="title" href="https://loisirs74.fr/en/lac-vert-passy">Lac Vert</a>
-
 <p class="card-desc">Emerald-green mountain lake at 1,266 m, fringed with spruce trees and facing Mont Blanc.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20Vert%2C%20Passy%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
@@ -849,84 +854,9 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Saint-Jorioz">
-<div class="commune-head"><h3>Saint-Jorioz</h3><span class="commune-count">1 place</span></div><div class="transport-block">
-<div class="transport-label">How to get there</div>
-<div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Annecy (10 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">Sibra ligne 51</span></div>
-</div>
-<div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/plage-de-saint-jorioz">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-payant">Paid</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Saint-Jorioz</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-saint-jorioz">Plage de Saint-Jorioz</a>
-
-<p class="card-desc">The only large natural sand beach on Lake Annecy, equipped with shaded lawns, diving board and accessible facilities.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Saint-Jorioz%2C%20Saint-Jorioz%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://saint-jorioz.fr/fr/rb/1110735/decouvrir-la-plage" rel="noopener" target="_blank">Official site</a>
-</div>
-</div>
-</article></div>
-</div>
-<div class="commune-section" data-commune="Sciez">
-<div class="commune-head"><h3>Sciez</h3><span class="commune-count">1 place</span></div><div class="transport-block">
-<div class="transport-label">How to get there</div>
-<div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Perrignier (5 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">TPN</span></div>
-</div>
-<div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/plage-de-sciez-sur-leman">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-gratuit">Free</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Sciez</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-sciez-sur-leman">Plage de Sciez-sur-Léman</a>
-
-<p class="card-desc">Grassy and tree-lined beach on the shores of Lake Geneva, with supervised swimming in summer, a dedicated dog area, children's games and accessible facilities.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Sciez-sur-L%C3%A9man%2C%20Sciez%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-</div>
-</div>
-</article></div>
-</div>
-<div class="commune-section" data-commune="Thonon-les-Bains">
-<div class="commune-head"><h3>Thonon-les-Bains</h3><span class="commune-count">2 places</span></div><div class="transport-block">
-<div class="transport-label">How to get there</div>
-<div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Thonon-les-Bains</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">TPN · Lihsa Y61 Évian</span></div>
-</div>
-<div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/plage-de-la-pinede">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-gratuit">Free</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-la-pinede">Plage de la Pinède</a>
-
-<p class="card-desc">A succession of small natural pebble beaches connected by maintained trails, bordering the historic Ripaille Castle estate on the wild shores of Lake Léman.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20la%20Pin%C3%A8de%2C%20Thonon-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-</div>
-</div>
-</article>
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/plage-de-saint-disdille">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-gratuit">Free</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-saint-disdille">Plage de Saint-Disdille</a>
-
-<p class="card-desc">Grass and pebble beach on Lake Léman, Blue Flag certified since 2010, at the edge of Châtaigneraie park and Ripaille forest.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Saint-Disdille%2C%20Thonon-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-</div>
-</div>
-</article></div>
-</div>
 
 <div class="empty-state" id="empty-state" style="display:none">
-      <b>No results</b>
+<b>No results</b>
       No place matches these filters.
     </div>
 
@@ -965,6 +895,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 (function(){
   if (matchMedia('(hover:none)').matches) return;
   const glow = document.getElementById('cursorGlow');
+  if (!glow) return;
   let mx = innerWidth/2, my = innerHeight/2, gx = mx, gy = my;
   window.addEventListener('pointermove', e=>{ mx = e.clientX; my = e.clientY; }, {passive:true});
   function tick(){
@@ -987,7 +918,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
   els.forEach(el => io.observe(el));
 })();
 
-// MAP + FILTERS
+// MAP + FILTERS (lake + commune + access)
 (function(){
   const PINS = [{"slug": "plage-de-saint-jorioz", "name": "Plage de Saint-Jorioz", "commune": "Saint-Jorioz", "lat": 45.8335, "lng": 6.1565, "url": "https://loisirs74.fr/en/plage-de-saint-jorioz", "paid": true}, {"slug": "plage-albigny", "name": "Plage d'Albigny", "commune": "Annecy", "lat": 45.9067, "lng": 6.1489, "url": "https://loisirs74.fr/en/plage-albigny", "paid": false}, {"slug": "plage-des-marquisats", "name": "Plage des Marquisats", "commune": "Annecy", "lat": 45.893443, "lng": 6.136465, "url": "https://loisirs74.fr/en/plage-des-marquisats", "paid": false}, {"slug": "plage-de-la-pinede", "name": "Plage de la Pinède", "commune": "Thonon-les-Bains", "lat": 46.3736, "lng": 6.4776, "url": "https://loisirs74.fr/en/plage-de-la-pinede", "paid": false}, {"slug": "plage-de-saint-disdille", "name": "Plage de Saint-Disdille", "commune": "Thonon-les-Bains", "lat": 46.401, "lng": 6.5026, "url": "https://loisirs74.fr/en/plage-de-saint-disdille", "paid": false}, {"slug": "plage-de-sciez-sur-leman", "name": "Plage de Sciez-sur-Léman", "commune": "Sciez", "lat": 46.33251, "lng": 6.38413, "url": "https://loisirs74.fr/en/plage-de-sciez-sur-leman", "paid": false}, {"slug": "lac-de-passy", "name": "Lac de Passy", "commune": "Passy", "lat": 45.9267, "lng": 6.695, "url": "https://loisirs74.fr/en/lac-de-passy", "paid": false}, {"slug": "lac-vert-passy", "name": "Lac Vert", "commune": "Passy", "lat": 45.9217, "lng": 6.7047, "url": "https://loisirs74.fr/en/lac-vert-passy", "paid": false}, {"slug": "lac-blanc", "name": "Lac Blanc", "commune": "Chamonix-Mont-Blanc", "lat": 45.9772, "lng": 6.8969, "url": "https://loisirs74.fr/en/lac-blanc", "paid": false}, {"slug": "lac-cornu", "name": "Lac Cornu", "commune": "Chamonix-Mont-Blanc", "lat": 45.936024, "lng": 6.853158, "url": "https://loisirs74.fr/en/lac-cornu", "paid": false}, {"slug": "plage-de-menthon-saint-bernard", "name": "Plage de Menthon-Saint-Bernard", "commune": "Menthon-Saint-Bernard", "lat": 45.863626, "lng": 6.186161, "url": "https://loisirs74.fr/en/plage-de-menthon-saint-bernard", "paid": false}, {"slug": "lac-des-confins", "name": "Lac des Confins", "commune": "La Clusaz", "lat": 45.91583, "lng": 6.47611, "url": "https://loisirs74.fr/en/lac-des-confins", "paid": false}, {"slug": "plage-d-excenevex", "name": "Plage d'Excenevex", "commune": "Excenevex", "lat": 46.3528, "lng": 6.3489, "url": "https://loisirs74.fr/en/plage-d-excenevex", "paid": false}, {"slug": "lac-benit", "name": "Lac Bénit", "commune": "Mont-Saxonnex", "lat": 46.0287, "lng": 6.5051, "url": "https://loisirs74.fr/en/lac-benit", "paid": false}, {"slug": "lac-de-vallon", "name": "Lac de Vallon", "commune": "Bellevaux", "lat": 46.216, "lng": 6.559, "url": "https://loisirs74.fr/en/lac-de-vallon", "paid": false}, {"slug": "lac-des-dronieres", "name": "Dronières Lake", "commune": "Cruseilles", "lat": 46.0403, "lng": 6.1218, "url": "https://loisirs74.fr/en/lac-des-dronieres", "paid": false}];
   const SHOWN_SG = "place shown";
@@ -1016,7 +947,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
   const group = L.featureGroup(markers);
   map.fitBounds(group.getBounds().pad(0.15));
 
-  // FILTERS
+  const lacSel = document.getElementById('filt-lac');
   const communeSel = document.getElementById('filt-commune');
   const accessGroup = document.getElementById('filt-access');
   const sortSel = document.getElementById('filt-sort');
@@ -1024,6 +955,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
   const countLabel = document.getElementById('count-label');
   const emptyState = document.getElementById('empty-state');
 
+  let curLac = '';
   let curCommune = '';
   let curAccess = 'all';
   let curSort = 'commune';
@@ -1035,16 +967,16 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
     let visibleMarkers = [];
     let total = 0;
     sections.forEach(sec => {
-      const commune = sec.dataset.commune;
-      const communeMatch = !curCommune || commune === curCommune;
+      const lacMatch = !curLac || sec.dataset.lac === curLac;
       let visibleCards = 0;
       sec.querySelectorAll('.card').forEach(card => {
+        const communeMatch = !curCommune || card.dataset.commune === curCommune;
         const titleLink = card.querySelector('a.title');
         const href = titleLink ? titleLink.getAttribute('href') : '';
-        const slug = href.split('/').pop();
+        const slug = href.replace(/\/$/, '').split('/').pop();
         const isPaid = pinPaid(slug);
         const accessMatch = curAccess === 'all' || (curAccess === 'free' && !isPaid) || (curAccess === 'paid' && isPaid);
-        const show = communeMatch && accessMatch;
+        const show = lacMatch && communeMatch && accessMatch;
         card.classList.toggle('hidden', !show);
         if (show){ visibleCards++; total++; if (layers[slug]) visibleMarkers.push(layers[slug]); }
       });
@@ -1072,6 +1004,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
     }
   }
 
+  if (lacSel) lacSel.addEventListener('change', e => { curLac = e.target.value; applyFilters(); });
   if (communeSel) communeSel.addEventListener('change', e => { curCommune = e.target.value; applyFilters(); });
   if (accessGroup) accessGroup.addEventListener('click', e => {
     if (e.target.tagName === 'BUTTON'){
@@ -1083,7 +1016,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
   });
   if (sortSel) sortSel.addEventListener('change', e => { curSort = e.target.value; applySort(); });
 
-  // Init count
   applyFilters();
 })();
 </script>
