@@ -240,86 +240,81 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <div class="filter-bar">
   <div class="wrap">
     <label>
+      <span>Lago</span>
+      <select id="filt-lac"><option value="">Todos los lagos</option><option value="annecy">Lago de Annecy</option><option value="leman">Lago Lemán</option><option value="montriond">Lago de Montriond</option></select>
+    </label>
+    <label>
       <span>Municipio</span>
       <select id="filt-commune"><option value="">Todas las comunas</option><option value="Annecy">Annecy</option><option value="Doussard">Doussard</option><option value="Excenevex">Excenevex</option><option value="Menthon-Saint-Bernard">Menthon-Saint-Bernard</option><option value="Montriond">Montriond</option><option value="Publier">Publier</option><option value="Saint-Gingolph">Saint-Gingolph</option><option value="Saint-Jorioz">Saint-Jorioz</option><option value="Sciez">Sciez</option><option value="Sévrier">Sévrier</option><option value="Talloires-Montmin">Talloires-Montmin</option><option value="Thonon-les-Bains">Thonon-les-Bains</option><option value="Veyrier-du-Lac">Veyrier-du-Lac</option><option value="Évian-les-Bains">Évian-les-Bains</option></select>
     </label>
     <label>
       <span>Acceso</span>
       <div class="access-group" id="filt-access">
-        <button data-v="all" class="active">Todos</button>
-        <button data-v="free">Gratis</button>
-        <button data-v="paid">De pago</button>
-      </div>
+<button class="active" data-v="all">Todos</button>
+<button data-v="free">Gratis</button>
+<button data-v="paid">De pago</button>
+</div>
     </label>
     <label>
       <span>Ordenar</span>
       <select id="filt-sort"><option value="commune">Por municipio</option><option value="alpha">A → Z</option></select>
     </label>
-    <div class="count-live"><b id="count-n">0</b> <span id="count-label">lugares mostrados</span></div>
+    <div class="count-live"><b id="count-n">0</b> <span id="count-label">playas mostradas</span></div>
   </div>
 </div>
 
 <main>
   <div class="wrap">
 
-<div class="commune-section" data-commune="Annecy">
-<div class="commune-head"><h3>Annecy</h3><span class="commune-count">3 lugares</span></div>
+<div class="commune-section" data-lac="annecy">
+<div class="commune-head"><h3>Lago de Annecy</h3><span class="commune-count">10 playas</span></div>
 <div class="carousel">
-<article class="card">
+<article class="card" data-commune="Annecy">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-albigny">
 <img alt="Plage d'Albigny a orillas del lago de Annecy con césped y vistas a las montañas, barrio de Albigny, Annecy" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Plage_d%27Albigny_%C3%A0_Annecy.jpg"/>
 <span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/es/plage-albigny">Plage d'Albigny</a>
-
 <p class="card-desc">La mayor playa gratuita del lago de Annecy: 400 m de césped y arena, vigilancia estival, duchas y aseos gratuitos. Barrio Albigny, Annecy.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20d%27Albigny%2C%20Annecy%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
 </div>
 </div>
 </article>
-<article class="card">
+<article class="card" data-commune="Annecy">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-des-marquisats">
 <img alt="Playa de césped Plage des Marquisats a orillas del lago de Annecy con bañistas y vistas a las montañas, Haute-Savoie" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Annecy-8.jpg"/>
 <span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/es/plage-des-marquisats">Plage des Marquisats</a>
-
 <p class="card-desc">Playa gratuita de césped a orillas del lago de Annecy, con sombra, vigilada en verano. A 10 min a pie del centro, accesible en autobús, adaptada a PMR. Duchas y snack.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20des%20Marquisats%2C%20Annecy%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
 </div>
 </div>
 </article>
-<article class="card">
+<article class="card" data-commune="Annecy">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-imperial-annecy">
 <img alt="Playa de arena aportada + césped 17 000 m² Plage de l'Impérial en Annecy, lago de Annecy, Haute-Savoie 74" loading="lazy" src="/plage-imperial-annecy-hero.jpg"/>
 <span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/es/plage-imperial-annecy">Plage de l'Impérial</a>
-
 <p class="card-desc">PLAYA EMBLEMÁTICA DE ANNECY 17 000 M² entre Albigny y el Pâquier. ⚠️ GRAN CAMBIO 2026: la playa pasa a ser DE PAGO en temporada estival.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20l%27Imp%C3%A9rial%2C%20Annecy%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
 </div>
 </div>
 </article>
-</div>
-</div>
-<div class="commune-section" data-commune="Doussard">
-<div class="commune-head"><h3>Doussard</h3><span class="commune-count">1 lugar</span></div>
-<div class="carousel">
-<article class="card">
+<article class="card" data-commune="Doussard">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-de-doussard">
 <img alt="Playa de arena + césped junto a la Reserva natural Bout du Lac, Plage de Doussard en Doussard, lago de Annecy, Haute-Savoie 74" loading="lazy" src="/plage-de-doussard-hero.jpg"/>
 <span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Doussard</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-doussard">Plage de Doussard</a>
-
 <p class="card-desc">PLAYA EN EL EXTREMO SUR DEL LAGO DE ANNECY — arena + césped, pontón flotante, centro náutico anexo. LINDA CON LA RESERVA NATURAL DEL BOUT DU LAC.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Doussard%2C%20Doussard%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
@@ -327,117 +322,26 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </div>
 </div>
 </article>
-</div>
-</div>
-<div class="commune-section" data-commune="Excenevex">
-<div class="commune-head"><h3>Excenevex</h3><span class="commune-count">1 lugar</span></div>
-<div class="carousel">
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/es/plage-d-excenevex">
-<img alt="Playa de arena fina de Excenevex en el lago Lemán con vista a la Dent d'Oche y los Alpes suizos, Haute-Savoie" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG"/>
-<span class="card-tag is-gratuit">Gratis</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Excenevex</span></div><a class="title" href="https://loisirs74.fr/es/plage-d-excenevex">Plage d'Excenevex</a>
-
-<p class="card-desc">Única playa natural de arena fina del lago Lemán del lado francés. Pendiente suave, aguas a 25°C en verano, baño vigilado. Aparcamiento 6 € en temporada, playa gratuita.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20d%27Excenevex%2C%20Excenevex%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
-</div>
-</div>
-</article>
-</div>
-</div>
-<div class="commune-section" data-commune="Menthon-Saint-Bernard">
-<div class="commune-head"><h3>Menthon-Saint-Bernard</h3><span class="commune-count">1 lugar</span></div>
-<div class="carousel">
-<article class="card">
+<article class="card" data-commune="Menthon-Saint-Bernard">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-de-menthon-saint-bernard">
 <img alt="Playa municipal de Menthon-Saint-Bernard a orillas del lago de Annecy con vistas al Semnoz, Haute-Savoie" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Plage_municipale_de_Menthon-Saint-Bernard.jpg"/>
 <span class="card-tag is-payant">De pago</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Menthon-Saint-Bernard</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-menthon-saint-bernard">Plage de Menthon-Saint-Bernard</a>
-
 <p class="card-desc">Gran playa de césped de 12 000 m² a orillas del lago de Annecy, vigilada en verano. Piscina para niños, pontones, trampolines, snack. De pago en julio-agosto, gratis el resto del año.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Menthon-Saint-Bernard%2C%20Menthon-Saint-Bernard%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
 </div>
 </div>
 </article>
-</div>
-</div>
-<div class="commune-section" data-commune="Montriond">
-<div class="commune-head"><h3>Montriond</h3><span class="commune-count">1 lugar</span></div>
-<div class="carousel">
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/es/plage-du-lac-de-montriond">
-<img alt="Playa de lago de montaña a 1 072 m — 3er lago en superficie de Haute-Savoie, Plage du Lac de Montriond en Montriond, lago de Montriond, Haute-Savoie 74" loading="lazy" src="/plage-du-lac-de-montriond-hero.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Montriond</span></div><a class="title" href="https://loisirs74.fr/es/plage-du-lac-de-montriond">Plage du Lac de Montriond</a>
-
-<p class="card-desc">LAGO DE MONTRIOND — 3er LAGO DE HAUTE-SAVOIE por superficie. Encajado entre ACANTILADOS + CONÍFERAS. AGUAS ESMERALDA ('lago verde'). Entorno rural de montaña.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20du%20Lac%20de%20Montriond%2C%20Montriond%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
-<a href="https://www.montriond.fr/" rel="noopener" target="_blank">Sitio oficial</a>
-</div>
-</div>
-</article>
-</div>
-</div>
-<div class="commune-section" data-commune="Publier">
-<div class="commune-head"><h3>Publier</h3><span class="commune-count">1 lugar</span></div>
-<div class="carousel">
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/es/plage-d-amphion-publier">
-<img alt="Playa 15 000 m² césped + orilla de guijarros — Bandera Azul, Plage Municipale d'Amphion en Publier, lago Lemán, Haute-Savoie 74" loading="lazy" src="/plage-d-amphion-publier-hero.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Publier</span></div><a class="title" href="https://loisirs74.fr/es/plage-d-amphion-publier">Plage Municipale d'Amphion</a>
-
-<p class="card-desc">BANDERA AZUL 2026 — 15 000 m² CÉSPED + ORILLA DE GUIJARROS. Área de juegos, VOLEY PLAYA, ping-pong, petanca. 2 MERENDEROS + snack. ZONA DE SAUNA NÓRDICA.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20Municipale%20d%27Amphion%2C%20Publier%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
-<a href="https://www.publier.fr/" rel="noopener" target="_blank">Sitio oficial</a>
-</div>
-</div>
-</article>
-</div>
-</div>
-<div class="commune-section" data-commune="Saint-Gingolph">
-<div class="commune-head"><h3>Saint-Gingolph</h3><span class="commune-count">1 lugar</span></div>
-<div class="carousel">
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/es/plage-de-saint-gingolph">
-<img alt="Playa municipal en la frontera franco-suiza, Plage Municipale de Saint-Gingolph en Saint-Gingolph, lago Lemán, Haute-Savoie 74" loading="lazy" src="/plage-de-saint-gingolph-hero.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Saint-Gingolph</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-saint-gingolph">Plage Municipale de Saint-Gingolph</a>
-
-<p class="card-desc">NUEVA BANDERA AZUL 2026 (palmarés Teragir 2026 — primer año). Último municipio francés antes de SUIZA — frontera franco-suiza que atraviesa literalmente el pueblo.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20Municipale%20de%20Saint-Gingolph%2C%20Saint-Gingolph%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
-<a href="https://www.saint-gingolph.fr/" rel="noopener" target="_blank">Sitio oficial</a>
-</div>
-</div>
-</article>
-</div>
-</div>
-<div class="commune-section" data-commune="Saint-Jorioz">
-<div class="commune-head"><h3>Saint-Jorioz</h3><span class="commune-count">1 lugar</span></div>
-<div class="carousel">
-<article class="card">
+<article class="card" data-commune="Saint-Jorioz">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-de-saint-jorioz">
 <img alt="Plage de Saint-Jorioz a orillas del lago de Annecy con arena natural, céspedes y vista a las Dents de Lanfon y la Tournette" loading="lazy" src="/plage-de-saint-jorioz-hero.jpg"/>
 <span class="card-tag is-payant">De pago</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Saint-Jorioz</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-saint-jorioz">Plage de Saint-Jorioz</a>
-
 <p class="card-desc">Gran playa de arena a orillas del lago de Annecy frente a las Dents de Lanfon. De pago en julio-agosto (2,60 €), gratis el resto del año. Bandera Azul.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Saint-Jorioz%2C%20Saint-Jorioz%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
@@ -445,38 +349,13 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </div>
 </div>
 </article>
-</div>
-</div>
-<div class="commune-section" data-commune="Sciez">
-<div class="commune-head"><h3>Sciez</h3><span class="commune-count">1 lugar</span></div>
-<div class="carousel">
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/es/plage-de-sciez-sur-leman">
-<img alt="Playa de césped de Sciez-sur-Léman con vistas al lago, cerca del puerto deportivo, Haute-Savoie" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Sciez-regate.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Sciez</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-sciez-sur-leman">Plage de Sciez-sur-Léman</a>
-
-<p class="card-desc">Playa de césped del lago Lemán con baño vigilado en verano, zona canina, juegos, petanca y ping-pong. Acceso libre todo el año en Sciez, Haute-Savoie.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Sciez-sur-L%C3%A9man%2C%20Sciez%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
-</div>
-</div>
-</article>
-</div>
-</div>
-<div class="commune-section" data-commune="Sévrier">
-<div class="commune-head"><h3>Sévrier</h3><span class="commune-count">1 lugar</span></div>
-<div class="carousel">
-<article class="card">
+<article class="card" data-commune="Sévrier">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-de-sevrier">
 <img alt="Playa recientemente renovada césped + gravilla fina, Plage de Sévrier en Sévrier, lago de Annecy, Haute-Savoie 74" loading="lazy" src="/plage-de-sevrier-hero.jpg"/>
 <span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Sévrier</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-sevrier">Plage de Sévrier</a>
-
 <p class="card-desc">PLAYA RECIENTEMENTE RENOVADA — césped + gravilla fina en la orilla oeste del lago de Annecy. 94 PLAZAS DE BICICLETAS — acceso directo a la vía verde del lago.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20S%C3%A9vrier%2C%20S%C3%A9vrier%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
@@ -484,19 +363,13 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </div>
 </div>
 </article>
-</div>
-</div>
-<div class="commune-section" data-commune="Talloires-Montmin">
-<div class="commune-head"><h3>Talloires-Montmin</h3><span class="commune-count">2 lugares</span></div>
-<div class="carousel">
-<article class="card">
+<article class="card" data-commune="Talloires-Montmin">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-de-talloires">
 <img alt="Playa 250×200 m arena + césped — piscina infantil, trampolines, tobogán, Plage de Talloires en Talloires-Montmin, lago de Annecy, Haute-Savoie 74" loading="lazy" src="/plage-de-talloires-hero.jpg"/>
 <span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Talloires-Montmin</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-talloires">Plage de Talloires</a>
-
 <p class="card-desc">PLAYA 250×200 M ARENA + CÉSPED con PISCINA INFANTIL, TRAMPOLINES, TOBOGÁN y centro náutico integrado. REAPERTURA MAYO 2026 tras la remodelación del frente lacustre.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Talloires%2C%20Talloires-Montmin%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
@@ -504,14 +377,13 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </div>
 </div>
 </article>
-<article class="card">
+<article class="card" data-commune="Talloires-Montmin">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-d-angon-talloires">
 <img alt="Playa amplia de césped y sombra — vista al Castillo de Duingt, Plage d'Angon en Talloires-Montmin, lago de Annecy, Haute-Savoie 74" loading="lazy" src="/plage-d-angon-talloires-hero.jpg"/>
 <span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Talloires-Montmin</span></div><a class="title" href="https://loisirs74.fr/es/plage-d-angon-talloires">Plage d'Angon</a>
-
 <p class="card-desc">PLAYA TRANQUILA Y CON SOMBRA — amplio césped con árboles grandes, ambiente alejado del bullicio del centro de Talloires. VISTA EXCEPCIONAL AL CASTILLO DE DUINGT.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20d%27Angon%2C%20Talloires-Montmin%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
@@ -519,66 +391,13 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </div>
 </div>
 </article>
-</div>
-</div>
-<div class="commune-section" data-commune="Thonon-les-Bains">
-<div class="commune-head"><h3>Thonon-les-Bains</h3><span class="commune-count">3 lugares</span></div>
-<div class="carousel">
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/es/plage-de-la-pinede">
-<img alt="Orillas naturales de guijarros de la Plage de la Pinède en el lago Lemán, Thonon-les-Bains, Haute-Savoie" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Thonon-les-Bains._Promenade_du_L%C3%A9man._2015-06-21.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-la-pinede">Plage de la Pinède</a>
-
-<p class="card-desc">Sucesión de playas naturales de guijarros a lo largo de 3 km en el lago Lemán, bordeando el dominio del Castillo de Ripaille. Acceso libre, orillas catalogadas.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20la%20Pin%C3%A8de%2C%20Thonon-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
-</div>
-</div>
-</article>
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/es/plage-de-saint-disdille">
-<img alt="Plage de Saint-Disdille a orillas del lago Lemán con zona umbría de castaños, Thonon-les-Bains, Haute-Savoie" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/6/67/Plage_thonon.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-saint-disdille">Plage de Saint-Disdille</a>
-
-<p class="card-desc">Playa gratuita con Bandera Azul en el lago Lemán, baño vigilado en verano, junto al parque de la Châtaigneraie en Thonon-les-Bains, Haute-Savoie.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Saint-Disdille%2C%20Thonon-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
-</div>
-</div>
-</article>
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/es/plage-municipale-thonon">
-<img alt="Playa 3 ha + piscina olímpica 50 m + Bandera Azul, Plage Municipale de Thonon-les-Bains en Thonon-les-Bains, lago Lemán, Haute-Savoie 74" loading="lazy" src="/plage-municipale-thonon-hero.jpg"/>
-<span class="card-tag is-payant">De pago</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/es/plage-municipale-thonon">Plage Municipale de Thonon-les-Bains</a>
-
-<p class="card-desc">PLAYA DE 3 HECTÁREAS + PISCINA OLÍMPICA 50 M + trampolines 1,50/3/5/10 m + TOBOGÁN ACUÁTICO 100 M + baño Lemán 3 000 m². BANDERA AZUL 2026.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20Municipale%20de%20Thonon-les-Bains%2C%20Thonon-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
-</div>
-</div>
-</article>
-</div>
-</div>
-<div class="commune-section" data-commune="Veyrier-du-Lac">
-<div class="commune-head"><h3>Veyrier-du-Lac</h3><span class="commune-count">1 lugar</span></div>
-<div class="carousel">
-<article class="card">
+<article class="card" data-commune="Veyrier-du-Lac">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-de-la-brune-veyrier">
 <img alt="Playa de césped 7 000 m² + bancos de arena — Bandera Azul, Plage de La Brune en Veyrier-du-Lac, lago de Annecy, Haute-Savoie 74" loading="lazy" src="/plage-de-la-brune-veyrier-hero.jpg"/>
 <span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Veyrier-du-Lac</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-la-brune-veyrier">Plage de La Brune</a>
-
 <p class="card-desc">PLAYA CON BANDERA AZUL DESDE 2009 (palmarés Teragir 2026 confirmado). 7 000 m² de césped + bancos de arena con piscina infantil, pontón en T, trampolines.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20La%20Brune%2C%20Veyrier-du-Lac%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
@@ -588,17 +407,109 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Évian-les-Bains">
-<div class="commune-head"><h3>Évian-les-Bains</h3><span class="commune-count">1 lugar</span></div>
+<div class="commune-section" data-lac="leman">
+<div class="commune-head"><h3>Lago Lemán</h3><span class="commune-count">8 playas</span></div>
 <div class="carousel">
-<article class="card">
+<article class="card" data-commune="Excenevex">
+<a class="card-photo" href="https://loisirs74.fr/es/plage-d-excenevex">
+<img alt="Playa de arena fina de Excenevex en el lago Lemán con vista a la Dent d'Oche y los Alpes suizos, Haute-Savoie" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG"/>
+<span class="card-tag is-gratuit">Gratis</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Excenevex</span></div><a class="title" href="https://loisirs74.fr/es/plage-d-excenevex">Plage d'Excenevex</a>
+<p class="card-desc">Única playa natural de arena fina del lago Lemán del lado francés. Pendiente suave, aguas a 25°C en verano, baño vigilado. Aparcamiento 6 € en temporada, playa gratuita.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20d%27Excenevex%2C%20Excenevex%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
+</div>
+</div>
+</article>
+<article class="card" data-commune="Publier">
+<a class="card-photo" href="https://loisirs74.fr/es/plage-d-amphion-publier">
+<img alt="Playa 15 000 m² césped + orilla de guijarros — Bandera Azul, Plage Municipale d'Amphion en Publier, lago Lemán, Haute-Savoie 74" loading="lazy" src="/plage-d-amphion-publier-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratis</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Publier</span></div><a class="title" href="https://loisirs74.fr/es/plage-d-amphion-publier">Plage Municipale d'Amphion</a>
+<p class="card-desc">BANDERA AZUL 2026 — 15 000 m² CÉSPED + ORILLA DE GUIJARROS. Área de juegos, VOLEY PLAYA, ping-pong, petanca. 2 MERENDEROS + snack. ZONA DE SAUNA NÓRDICA.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20Municipale%20d%27Amphion%2C%20Publier%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
+<a href="https://www.publier.fr/" rel="noopener" target="_blank">Sitio oficial</a>
+</div>
+</div>
+</article>
+<article class="card" data-commune="Saint-Gingolph">
+<a class="card-photo" href="https://loisirs74.fr/es/plage-de-saint-gingolph">
+<img alt="Playa municipal en la frontera franco-suiza, Plage Municipale de Saint-Gingolph en Saint-Gingolph, lago Lemán, Haute-Savoie 74" loading="lazy" src="/plage-de-saint-gingolph-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratis</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Saint-Gingolph</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-saint-gingolph">Plage Municipale de Saint-Gingolph</a>
+<p class="card-desc">NUEVA BANDERA AZUL 2026 (palmarés Teragir 2026 — primer año). Último municipio francés antes de SUIZA — frontera franco-suiza que atraviesa literalmente el pueblo.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20Municipale%20de%20Saint-Gingolph%2C%20Saint-Gingolph%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
+<a href="https://www.saint-gingolph.fr/" rel="noopener" target="_blank">Sitio oficial</a>
+</div>
+</div>
+</article>
+<article class="card" data-commune="Sciez">
+<a class="card-photo" href="https://loisirs74.fr/es/plage-de-sciez-sur-leman">
+<img alt="Playa de césped de Sciez-sur-Léman con vistas al lago, cerca del puerto deportivo, Haute-Savoie" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Sciez-regate.jpg"/>
+<span class="card-tag is-gratuit">Gratis</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Sciez</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-sciez-sur-leman">Plage de Sciez-sur-Léman</a>
+<p class="card-desc">Playa de césped del lago Lemán con baño vigilado en verano, zona canina, juegos, petanca y ping-pong. Acceso libre todo el año en Sciez, Haute-Savoie.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Sciez-sur-L%C3%A9man%2C%20Sciez%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
+</div>
+</div>
+</article>
+<article class="card" data-commune="Thonon-les-Bains">
+<a class="card-photo" href="https://loisirs74.fr/es/plage-de-la-pinede">
+<img alt="Orillas naturales de guijarros de la Plage de la Pinède en el lago Lemán, Thonon-les-Bains, Haute-Savoie" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Thonon-les-Bains._Promenade_du_L%C3%A9man._2015-06-21.jpg"/>
+<span class="card-tag is-gratuit">Gratis</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-la-pinede">Plage de la Pinède</a>
+<p class="card-desc">Sucesión de playas naturales de guijarros a lo largo de 3 km en el lago Lemán, bordeando el dominio del Castillo de Ripaille. Acceso libre, orillas catalogadas.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20la%20Pin%C3%A8de%2C%20Thonon-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
+</div>
+</div>
+</article>
+<article class="card" data-commune="Thonon-les-Bains">
+<a class="card-photo" href="https://loisirs74.fr/es/plage-de-saint-disdille">
+<img alt="Plage de Saint-Disdille a orillas del lago Lemán con zona umbría de castaños, Thonon-les-Bains, Haute-Savoie" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/6/67/Plage_thonon.jpg"/>
+<span class="card-tag is-gratuit">Gratis</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-saint-disdille">Plage de Saint-Disdille</a>
+<p class="card-desc">Playa gratuita con Bandera Azul en el lago Lemán, baño vigilado en verano, junto al parque de la Châtaigneraie en Thonon-les-Bains, Haute-Savoie.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Saint-Disdille%2C%20Thonon-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
+</div>
+</div>
+</article>
+<article class="card" data-commune="Thonon-les-Bains">
+<a class="card-photo" href="https://loisirs74.fr/es/plage-municipale-thonon">
+<img alt="Playa 3 ha + piscina olímpica 50 m + Bandera Azul, Plage Municipale de Thonon-les-Bains en Thonon-les-Bains, lago Lemán, Haute-Savoie 74" loading="lazy" src="/plage-municipale-thonon-hero.jpg"/>
+<span class="card-tag is-payant">De pago</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/es/plage-municipale-thonon">Plage Municipale de Thonon-les-Bains</a>
+<p class="card-desc">PLAYA DE 3 HECTÁREAS + PISCINA OLÍMPICA 50 M + trampolines 1,50/3/5/10 m + TOBOGÁN ACUÁTICO 100 M + baño Lemán 3 000 m². BANDERA AZUL 2026.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20Municipale%20de%20Thonon-les-Bains%2C%20Thonon-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
+</div>
+</div>
+</article>
+<article class="card" data-commune="Évian-les-Bains">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-d-evian-centre-nautique">
 <img alt="Playa 3,5 ha + piscina olímpica 50 m + tobogán 160 m, Plage du Centre Nautique d'Évian en Évian-les-Bains, lago Lemán, Haute-Savoie 74" loading="lazy" src="/plage-d-evian-centre-nautique-hero.jpg"/>
 <span class="card-tag is-payant">De pago</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Évian-les-Bains</span></div><a class="title" href="https://loisirs74.fr/es/plage-d-evian-centre-nautique">Plage du Centre Nautique d'Évian</a>
-
 <p class="card-desc">BANDERA AZUL DESDE 2020 (palmarés Teragir 2026 confirmado). 3,5 ha de CÉSPED + PISCINA OLÍMPICA 50 M + TOBOGÁN 160 M + acceso directo al Lemán.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20du%20Centre%20Nautique%20d%27%C3%89vian%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
@@ -608,9 +519,28 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
+<div class="commune-section" data-lac="montriond">
+<div class="commune-head"><h3>Lago de Montriond</h3><span class="commune-count">1 playa</span></div>
+<div class="carousel">
+<article class="card" data-commune="Montriond">
+<a class="card-photo" href="https://loisirs74.fr/es/plage-du-lac-de-montriond">
+<img alt="Playa de lago de montaña a 1 072 m — 3er lago en superficie de Haute-Savoie, Plage du Lac de Montriond en Montriond, lago de Montriond, Haute-Savoie 74" loading="lazy" src="/plage-du-lac-de-montriond-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratis</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Montriond</span></div><a class="title" href="https://loisirs74.fr/es/plage-du-lac-de-montriond">Plage du Lac de Montriond</a>
+<p class="card-desc">LAGO DE MONTRIOND — 3er LAGO DE HAUTE-SAVOIE por superficie. Encajado entre ACANTILADOS + CONÍFERAS. AGUAS ESMERALDA ('lago verde'). Entorno rural de montaña.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20du%20Lac%20de%20Montriond%2C%20Montriond%2C%20Haute-Savoie" rel="noopener" target="_blank">Cómo llegar</a>
+<a href="https://www.montriond.fr/" rel="noopener" target="_blank">Sitio oficial</a>
+</div>
+</div>
+</article>
+</div>
+</div>
 
 <div class="empty-state" id="empty-state" style="display:none">
-      <b>Sin resultados</b>
+<b>Sin resultados</b>
       Ningún lugar coincide con estos filtros.
     </div>
 
@@ -649,6 +579,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 (function(){
   if (matchMedia('(hover:none)').matches) return;
   const glow = document.getElementById('cursorGlow');
+  if (!glow) return;
   let mx = innerWidth/2, my = innerHeight/2, gx = mx, gy = my;
   window.addEventListener('pointermove', e=>{ mx = e.clientX; my = e.clientY; }, {passive:true});
   function tick(){
@@ -671,11 +602,11 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
   els.forEach(el => io.observe(el));
 })();
 
-// MAP + FILTERS
+// MAP + FILTERS (lake + commune + access)
 (function(){
   const PINS = [{"slug": "plage-albigny", "name": "Plage d'Albigny", "commune": "Annecy", "lat": 45.9067, "lng": 6.1489, "url": "https://loisirs74.fr/es/plage-albigny", "paid": false}, {"slug": "plage-d-excenevex", "name": "Plage d'Excenevex", "commune": "Excenevex", "lat": 46.3528, "lng": 6.3489, "url": "https://loisirs74.fr/es/plage-d-excenevex", "paid": false}, {"slug": "plage-de-la-pinede", "name": "Plage de la Pinède", "commune": "Thonon-les-Bains", "lat": 46.3736, "lng": 6.4776, "url": "https://loisirs74.fr/es/plage-de-la-pinede", "paid": false}, {"slug": "plage-de-menthon-saint-bernard", "name": "Plage de Menthon-Saint-Bernard", "commune": "Menthon-Saint-Bernard", "lat": 45.863626, "lng": 6.186161, "url": "https://loisirs74.fr/es/plage-de-menthon-saint-bernard", "paid": true}, {"slug": "plage-de-saint-disdille", "name": "Plage de Saint-Disdille", "commune": "Thonon-les-Bains", "lat": 46.401, "lng": 6.5026, "url": "https://loisirs74.fr/es/plage-de-saint-disdille", "paid": false}, {"slug": "plage-de-saint-jorioz", "name": "Plage de Saint-Jorioz", "commune": "Saint-Jorioz", "lat": 45.8335, "lng": 6.1565, "url": "https://loisirs74.fr/es/plage-de-saint-jorioz", "paid": true}, {"slug": "plage-de-sciez-sur-leman", "name": "Plage de Sciez-sur-Léman", "commune": "Sciez", "lat": 46.33251, "lng": 6.38413, "url": "https://loisirs74.fr/es/plage-de-sciez-sur-leman", "paid": false}, {"slug": "plage-des-marquisats", "name": "Plage des Marquisats", "commune": "Annecy", "lat": 45.893443, "lng": 6.136465, "url": "https://loisirs74.fr/es/plage-des-marquisats", "paid": false}, {"slug": "plage-imperial-annecy", "name": "Plage de l'Impérial", "commune": "Annecy", "lat": 45.9081, "lng": 6.1392, "url": "https://loisirs74.fr/es/plage-imperial-annecy", "paid": false}, {"slug": "plage-de-la-brune-veyrier", "name": "Plage de La Brune", "commune": "Veyrier-du-Lac", "lat": 45.8975, "lng": 6.1664, "url": "https://loisirs74.fr/es/plage-de-la-brune-veyrier", "paid": false}, {"slug": "plage-de-doussard", "name": "Plage de Doussard", "commune": "Doussard", "lat": 45.7831, "lng": 6.2169, "url": "https://loisirs74.fr/es/plage-de-doussard", "paid": false}, {"slug": "plage-de-sevrier", "name": "Plage de Sévrier", "commune": "Sévrier", "lat": 45.8631, "lng": 6.1453, "url": "https://loisirs74.fr/es/plage-de-sevrier", "paid": false}, {"slug": "plage-de-talloires", "name": "Plage de Talloires", "commune": "Talloires-Montmin", "lat": 45.8417, "lng": 6.2147, "url": "https://loisirs74.fr/es/plage-de-talloires", "paid": false}, {"slug": "plage-municipale-thonon", "name": "Plage Municipale de Thonon-les-Bains", "commune": "Thonon-les-Bains", "lat": 46.3692, "lng": 6.4742, "url": "https://loisirs74.fr/es/plage-municipale-thonon", "paid": true}, {"slug": "plage-d-amphion-publier", "name": "Plage Municipale d'Amphion", "commune": "Publier", "lat": 46.3897, "lng": 6.5519, "url": "https://loisirs74.fr/es/plage-d-amphion-publier", "paid": false}, {"slug": "plage-d-evian-centre-nautique", "name": "Plage du Centre Nautique d'Évian", "commune": "Évian-les-Bains", "lat": 46.4019, "lng": 6.5856, "url": "https://loisirs74.fr/es/plage-d-evian-centre-nautique", "paid": true}, {"slug": "plage-de-saint-gingolph", "name": "Plage Municipale de Saint-Gingolph", "commune": "Saint-Gingolph", "lat": 46.3917, "lng": 6.8025, "url": "https://loisirs74.fr/es/plage-de-saint-gingolph", "paid": false}, {"slug": "plage-d-angon-talloires", "name": "Plage d'Angon", "commune": "Talloires-Montmin", "lat": 45.8333, "lng": 6.2208, "url": "https://loisirs74.fr/es/plage-d-angon-talloires", "paid": false}, {"slug": "plage-du-lac-de-montriond", "name": "Plage du Lac de Montriond", "commune": "Montriond", "lat": 46.1864, "lng": 6.7178, "url": "https://loisirs74.fr/es/plage-du-lac-de-montriond", "paid": false}];
-  const SHOWN_SG = "lugar mostrado";
-  const SHOWN_PL = "lugares mostrados";
+  const SHOWN_SG = "playa mostrada";
+  const SHOWN_PL = "playas mostradas";
   if (typeof L === 'undefined' || PINS.length === 0) return;
   const map = L.map('cat-map', { scrollWheelZoom: false });
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -700,7 +631,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
   const group = L.featureGroup(markers);
   map.fitBounds(group.getBounds().pad(0.15));
 
-  // FILTERS
+  const lacSel = document.getElementById('filt-lac');
   const communeSel = document.getElementById('filt-commune');
   const accessGroup = document.getElementById('filt-access');
   const sortSel = document.getElementById('filt-sort');
@@ -708,6 +639,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
   const countLabel = document.getElementById('count-label');
   const emptyState = document.getElementById('empty-state');
 
+  let curLac = '';
   let curCommune = '';
   let curAccess = 'all';
   let curSort = 'commune';
@@ -719,16 +651,16 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
     let visibleMarkers = [];
     let total = 0;
     sections.forEach(sec => {
-      const commune = sec.dataset.commune;
-      const communeMatch = !curCommune || commune === curCommune;
+      const lacMatch = !curLac || sec.dataset.lac === curLac;
       let visibleCards = 0;
       sec.querySelectorAll('.card').forEach(card => {
+        const communeMatch = !curCommune || card.dataset.commune === curCommune;
         const titleLink = card.querySelector('a.title');
         const href = titleLink ? titleLink.getAttribute('href') : '';
-        const slug = href.split('/').pop();
+        const slug = href.replace(/\/$/, '').split('/').pop();
         const isPaid = pinPaid(slug);
         const accessMatch = curAccess === 'all' || (curAccess === 'free' && !isPaid) || (curAccess === 'paid' && isPaid);
-        const show = communeMatch && accessMatch;
+        const show = lacMatch && communeMatch && accessMatch;
         card.classList.toggle('hidden', !show);
         if (show){ visibleCards++; total++; if (layers[slug]) visibleMarkers.push(layers[slug]); }
       });
@@ -756,6 +688,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
     }
   }
 
+  if (lacSel) lacSel.addEventListener('change', e => { curLac = e.target.value; applyFilters(); });
   if (communeSel) communeSel.addEventListener('change', e => { curCommune = e.target.value; applyFilters(); });
   if (accessGroup) accessGroup.addEventListener('click', e => {
     if (e.target.tagName === 'BUTTON'){
@@ -767,7 +700,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
   });
   if (sortSel) sortSel.addEventListener('change', e => { curSort = e.target.value; applySort(); });
 
-  // Init count
   applyFilters();
 })();
 </script>
