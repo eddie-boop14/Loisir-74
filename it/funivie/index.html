@@ -104,7 +104,7 @@ header.site{position:sticky;top:0;left:0;right:0;z-index:60;padding:.85rem var(-
 @keyframes rise{to{opacity:1;transform:translateY(0)}}
 .kicker, .hub-hero h1, .hub-hero .meta { transform:translateY(20px) }
 
-#cat-map{height:50vh;max-height:440px;min-height:300px;width:100%;border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;z-index:1;background:var(--paper-2)}
+#cat-map{height:220px;width:100%;border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;z-index:1;background:var(--paper-2)}
 .leaflet-popup-content-wrapper{border-radius:8px;background:var(--snow);box-shadow:0 18px 40px -18px rgba(28,24,20,.3);border:1px solid var(--line)}
 .leaflet-popup-tip{background:var(--snow);border:1px solid var(--line)}
 .leaflet-popup-content{margin:.7rem .9rem;font-family:var(--sans);font-size:.88rem;line-height:1.45;color:var(--ink-2)}
@@ -113,7 +113,7 @@ header.site{position:sticky;top:0;left:0;right:0;z-index:60;padding:.85rem var(-
 .leaflet-popup-content .commune-pop{display:block;color:var(--ink-3);font-size:.72rem;margin-top:.2rem;letter-spacing:.06em}
 .leaflet-control-attribution{background:rgba(253,250,243,.85)!important;font-family:var(--sans);font-size:.65rem}
 
-.filter-bar{position:sticky;top:0;background:rgba(246,241,231,.92);backdrop-filter:blur(14px) saturate(1.1);-webkit-backdrop-filter:blur(14px) saturate(1.1);border-bottom:1px solid var(--line);z-index:30;padding:.85rem 0}
+.filter-bar{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);z-index:30;padding:.85rem 0;box-shadow:0 8px 20px -16px rgba(0,0,0,.3)}
 .filter-bar .wrap{display:flex;gap:1.25rem;flex-wrap:wrap;align-items:flex-end}
 .filter-bar label{display:flex;flex-direction:column;gap:.35rem;font-size:.65rem;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.14em}
 .filter-bar select{padding:.55rem .8rem;border:1px solid var(--line-2);background:var(--snow);color:var(--ink);font-size:.88rem;font-weight:500;font-family:var(--sans);min-width:10rem;border-radius:6px;transition:border-color .2s var(--ease);cursor:pointer}
@@ -245,8 +245,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
     <p class="meta"><b>8 luoghi</b><span class="dot">·</span><span>6 comuni</span></p>
   </div>
 </section>
-
-<div id="cat-map" aria-label="Map"></div>
 
 <div class="filter-bar">
   <div class="wrap">
@@ -437,6 +435,8 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 
   </div>
 </main>
+
+<div id="cat-map" aria-label="Map"></div>
 
 <footer class="site">
   <div class="wrap">
