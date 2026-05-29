@@ -3622,7 +3622,12 @@ function renderActionBar(d, lang, ui, name, commune) {
 }
 
 function renderHreflangs(slug) {
-  const out = LANGS.map(l => `<link rel="alternate" hreflang="${l}" href="${urlFor(l,slug)}">`);
+  const out = LANGS.map(l => `<link rel="alternate" hreflang="fr" href="https://loisirs74.fr/studio">
+<link rel="alternate" hreflang="en" href="https://loisirs74.fr/en/studio">
+<link rel="alternate" hreflang="de" href="https://loisirs74.fr/de/studio">
+<link rel="alternate" hreflang="it" href="https://loisirs74.fr/it/studio">
+<link rel="alternate" hreflang="es" href="https://loisirs74.fr/es/studio">
+<link rel="alternate" hreflang="x-default" href="https://loisirs74.fr/studio">`);
   out.push(`<link rel="alternate" hreflang="x-default" href="${urlFor('fr',slug)}">`);
   return out.join('\n');
 }
