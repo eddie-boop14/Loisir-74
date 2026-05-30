@@ -151,7 +151,7 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .transport-empty p{color:var(--ink-3);font-style:italic;font-family:var(--serif);font-size:.85rem;margin:0}
 
 .carousel{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:2rem 1.5rem}
-@media(max-width:680px){.carousel{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x proximity;touch-action:pan-x pinch-zoom;overscroll-behavior-x:contain;padding-bottom:.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}.carousel::-webkit-scrollbar{display:none}.carousel > .card{flex:0 0 78vw;max-width:19rem;scroll-snap-align:start}}
+@media(max-width:680px){.carousel{display:flex;gap:1rem;overflow-x:auto;overscroll-behavior-x:contain;padding-bottom:.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}.carousel::-webkit-scrollbar{display:none}.carousel > .card{flex:0 0 78vw;max-width:19rem}}
 
 .card{background:var(--snow);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:transform .5s var(--ease-out), box-shadow .5s var(--ease), border-color .3s, opacity .3s;position:relative}
 .card:hover{transform:translateY(-6px);box-shadow:0 30px 50px -25px rgba(28,24,20,.22);border-color:var(--ink-4)}

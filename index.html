@@ -371,12 +371,12 @@ h2 .count{
 @media(max-width:680px){
   .carousel{
     display:flex;gap:1rem;overflow-x:auto;
-    scroll-snap-type:x proximity;touch-action:pan-x pinch-zoom;overscroll-behavior-x:contain;
+    overscroll-behavior-x:contain;
     padding-bottom:.5rem;
     -webkit-overflow-scrolling:touch;scrollbar-width:none;
   }
   .carousel::-webkit-scrollbar{display:none}
-  .carousel > .card{flex:0 0 78vw;max-width:19rem;scroll-snap-align:start}
+  .carousel > .card{flex:0 0 78vw;max-width:19rem}
 }
 
 .card{
