@@ -439,13 +439,21 @@ def hero_block(d):
     commune = d["commune"]
     q = url_q(f'{name}, {commune}, Haute-Savoie, France')
 
+    GENERIC_ON_DISK = {"attraction", "cascade", "chateau", "domaine", "lac",
+                       "musee", "parc", "point-de-vue", "sentier", "telecabine", "voie-verte"}
     img = d.get("hero_image") or ""
     if img.startswith("generique-"):
         img_src = f"/{img}"
-        gen_attr = ' data-generique="true"'
-    else:
-        img_src = f"/{img}" if img else "/og-image.jpg"
+        gen_cat = img[len("generique-"):].rsplit(".", 1)[0]
+        gen_attr = f' data-generique="true" data-generique-cat="{gen_cat}"'
+    elif img:
+        img_src = f"/{img}"
         gen_attr = ""
+    else:
+        cat = d.get("category") or "attraction"
+        eff_cat = cat if cat in GENERIC_ON_DISK else "attraction"
+        img_src = f"/generique-{eff_cat}.jpg"
+        gen_attr = f' data-generique="true" data-generique-cat="{eff_cat}"'
 
     eyebrow_text = clean_eyebrow(badge, is_free)
     cta_buttons = []
