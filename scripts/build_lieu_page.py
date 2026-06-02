@@ -370,7 +370,11 @@ SVG_CHECK = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-
              'stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>')
 
 def _filled_partner_card(p):
-    """Render a tier:partner, tier:recommended or tier:featured partner card (flip card)."""
+    """Render a partner card.
+
+    tier:partner / tier:recommended → flip card (compact, 3-col grid fit).
+    tier:featured → static rich card with always-visible contact info (no flip).
+    """
     tier = p.get("tier", "partner")
     badge_text = "Recommandé" if tier == "recommended" else "Partenaire"
     badge_icon = "" if tier == "recommended" else SVG_CHECK
@@ -378,22 +382,38 @@ def _filled_partner_card(p):
     desc = p.get("i18n", {}).get("fr", {}).get("description") or p.get("description", "")
     url = p.get("url", "#")
     cta = p.get("cta_text") or "Voir le site"
-    address = p.get("address", "")
-    phone = p.get("phone", "")
-    phone_tel = p.get("phone_tel") or (re.sub(r"[^\d+]", "", phone) if phone else "")
-    email = p.get("email", "")
-    hours = p.get("hours", "")
-    extras = []
-    if address:
-        extras.append(f'<div class="partner-row"><span class="label">Adresse</span>{esc(address)}</div>')
-    if phone:
-        href = f"tel:{phone_tel}" if phone_tel else f"tel:{re.sub(chr(32), '', phone)}"
-        extras.append(f'<div class="partner-row"><span class="label">Téléphone</span><a href="{attr(href)}">{esc(phone)}</a></div>')
-    if email:
-        extras.append(f'<div class="partner-row"><span class="label">Email</span><a href="mailto:{attr(email)}">{esc(email)}</a></div>')
-    if hours:
-        extras.append(f'<div class="partner-row"><span class="label">Horaires</span>{esc(hours)}</div>')
-    extras_html = f'<div class="partner-extras">{"".join(extras)}</div>' if extras else ""
+
+    if tier == "featured":
+        address = p.get("address", "")
+        phone = p.get("phone", "")
+        phone_tel = p.get("phone_tel") or (re.sub(r"[^\d+]", "", phone) if phone else "")
+        email = p.get("email", "")
+        hours = p.get("hours", "")
+        extras = []
+        if address:
+            extras.append(f'<div class="partner-row"><span class="label">Adresse</span><span>{esc(address)}</span></div>')
+        if phone:
+            href = f"tel:{phone_tel}" if phone_tel else f"tel:{phone.replace(' ', '')}"
+            extras.append(f'<div class="partner-row"><span class="label">Téléphone</span><a href="{attr(href)}">{esc(phone)}</a></div>')
+        if email:
+            extras.append(f'<div class="partner-row"><span class="label">Email</span><a href="mailto:{attr(email)}">{esc(email)}</a></div>')
+        if hours:
+            extras.append(f'<div class="partner-row"><span class="label">Horaires</span><span>{esc(hours)}</span></div>')
+        extras_html = f'<div class="partner-extras">{"".join(extras)}</div>' if extras else ""
+        cta_html = (
+            f'<a class="cta" href="{attr(url)}" target="_blank" rel="noopener">{esc(cta)} {SVG_EXT}</a>'
+            if url and url != "#" else ""
+        )
+        return (
+            f'<article class="partner static tier-featured">'
+            f'<span class="badge">{badge_icon} {esc(badge_text)}</span>'
+            f'<h4>{esc(name)}</h4>'
+            f'<p class="desc">{esc(desc)}</p>'
+            f'{extras_html}'
+            f'{cta_html}'
+            f'</article>'
+        )
+
     return (
         f'<button type="button" class="partner flip tier-{attr(tier)}" aria-label="{attr(name)}">'
         '<div class="flip-inner">'
@@ -406,7 +426,6 @@ def _filled_partner_card(p):
         '<div class="flip-back">'
         f'<h4>{esc(name)}</h4>'
         f'<p>{esc(desc)}</p>'
-        f'{extras_html}'
         f'<a class="cta" href="{attr(url)}" target="_blank" rel="noopener">{esc(cta)} {SVG_EXT}</a>'
         '</div>'
         '</div>'
