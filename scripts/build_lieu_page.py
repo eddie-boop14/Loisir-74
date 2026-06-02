@@ -80,6 +80,32 @@ FACT_ORDER = [
 ]
 
 
+CAT_TO_FR_HUB = {
+    "attraction": ("attractions", "Attractions"),
+    "cascade": ("cascades", "Cascades"),
+    "chateau": ("chateaux", "Châteaux"),
+    "divers": ("divers", "Divers"),
+    "domaine": ("bases-de-loisirs", "Bases de loisirs"),
+    "lac": ("lacs", "Lacs"),
+    "musee": ("musees", "Musées"),
+    "parc": ("bases-de-loisirs", "Bases de loisirs"),
+    "plage": ("plages", "Plages"),
+    "point-de-vue": ("points-de-vue", "Points de vue"),
+    "sentier": ("sentiers", "Sentiers"),
+    "telecabine": ("telecabines", "Télécabines"),
+    "voie-verte": ("voies-vertes", "Voies vertes"),
+}
+
+
+def primary_hub(d):
+    """Return (hub_slug, hub_label) FR pair from d.categories or d.category, or None."""
+    cats = d.get("categories") or ([d.get("category")] if d.get("category") else [])
+    for c in cats:
+        if c in CAT_TO_FR_HUB:
+            return CAT_TO_FR_HUB[c]
+    return None
+
+
 def hammer_h1(name):
     """Wrap name as hammer-animated h1 with the last word italicised."""
     parts = name.split()
@@ -707,8 +733,14 @@ def build_ldjson(d):
             "@id": f"{page_url}#breadcrumb",
             "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Accueil", "item": f"{BASE_URL}/"},
-                {"@type": "ListItem", "position": 2, "name": commune,
-                 "item": f"{BASE_URL}/#{commune.lower().replace(' ', '-')}"},
+                (
+                    {"@type": "ListItem", "position": 2,
+                     "name": primary_hub(d)[1],
+                     "item": f"{BASE_URL}/{primary_hub(d)[0]}/"}
+                    if primary_hub(d) else
+                    {"@type": "ListItem", "position": 2, "name": commune,
+                     "item": f"{BASE_URL}/#{commune.lower().replace(' ', '-')}"}
+                ),
                 {"@type": "ListItem", "position": 3, "name": name},
             ],
         },
@@ -825,6 +857,12 @@ def build_head(d):
 def build_header(d):
     """Sticky site header with brand + lang picker (FR-only batch → minimal lang menu)."""
     slug = d["slug"]
+    hub = primary_hub(d)
+    if hub:
+        hub_slug, hub_label = hub
+        crumb_mid = f'<a href="{BASE_URL}/{hub_slug}/">{esc(hub_label)}</a>'
+    else:
+        crumb_mid = f'<span>{esc(d["commune"])}</span>'
     return f"""<body>
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="site"><div class="wrap">
@@ -832,7 +870,7 @@ def build_header(d):
   <nav><details class="lang-picker"><summary aria-label="Choisir la langue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>FR</summary><div class="lang-menu"><a href="{BASE_URL}/{slug}" aria-current="true" hreflang="fr">Français</a></div></details></nav>
 </div></header>
 <main id="main">
-<div class="wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="{BASE_URL}/">Accueil</a><span class="sep">/</span><span>{esc(d['commune'])}</span><span class="sep">/</span><span aria-current="page">{esc(d['i18n']['fr']['name'])}</span></nav></div>"""
+<div class="wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="{BASE_URL}/">Accueil</a><span class="sep">/</span>{crumb_mid}<span class="sep">/</span><span aria-current="page">{esc(d['i18n']['fr']['name'])}</span></nav></div>"""
 
 
 def build_footer_block(date_pub, date_mod):
