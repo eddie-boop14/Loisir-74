@@ -121,6 +121,8 @@ def facts_block(facts):
             f'<div class="fact"><div class="k">{esc(label)}</div>'
             f'<div class="v">{esc(v)}</div></div>'
         )
+    if not items:
+        return ""
     return (
         '<section class="block"><div class="wrap"><div class="kicker reveal">'
         "En un coup d&#39;œil</div>"
@@ -130,7 +132,9 @@ def facts_block(facts):
 
 def body_block(name, body):
     """Render the 'Qu'est-ce que <name>' section. body is dict with 'what_is' HTML."""
-    what_is = body.get("what_is", "") if isinstance(body, dict) else str(body)
+    what_is = body.get("what_is", "") if isinstance(body, dict) else str(body or "")
+    if not what_is.strip():
+        return ""
     return (
         '<section class="block"><div class="wrap">'
         f'<h2 class="reveal">Qu&#39;est-ce que {esc(name)}</h2>'
@@ -539,6 +543,9 @@ def hero_block(d):
         img_src = f"/{img}"
         gen_cat = img[len("generique-"):].rsplit(".", 1)[0]
         gen_attr = f' data-generique="true" data-generique-cat="{gen_cat}"'
+    elif img.startswith(("http://", "https://", "//", "/")):
+        img_src = img
+        gen_attr = ""
     elif img:
         img_src = f"/{img}"
         gen_attr = ""
