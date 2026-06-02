@@ -366,14 +366,30 @@ SVG_CHECK = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-
              'stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>')
 
 def _filled_partner_card(p):
-    """Render a tier:partner or tier:recommended partner card (flip card)."""
+    """Render a tier:partner, tier:recommended or tier:featured partner card (flip card)."""
     tier = p.get("tier", "partner")
-    badge_text = "Partenaire" if tier == "partner" else "Recommandé"
-    badge_icon = SVG_CHECK if tier == "partner" else ""
+    badge_text = "Recommandé" if tier == "recommended" else "Partenaire"
+    badge_icon = "" if tier == "recommended" else SVG_CHECK
     name = p.get("name", "")
-    desc = p.get("i18n", {}).get("fr", {}).get("description", "")
+    desc = p.get("i18n", {}).get("fr", {}).get("description") or p.get("description", "")
     url = p.get("url", "#")
     cta = p.get("cta_text") or "Voir le site"
+    address = p.get("address", "")
+    phone = p.get("phone", "")
+    phone_tel = p.get("phone_tel") or (re.sub(r"[^\d+]", "", phone) if phone else "")
+    email = p.get("email", "")
+    hours = p.get("hours", "")
+    extras = []
+    if address:
+        extras.append(f'<div class="partner-row"><span class="label">Adresse</span>{esc(address)}</div>')
+    if phone:
+        href = f"tel:{phone_tel}" if phone_tel else f"tel:{re.sub(chr(32), '', phone)}"
+        extras.append(f'<div class="partner-row"><span class="label">Téléphone</span><a href="{attr(href)}">{esc(phone)}</a></div>')
+    if email:
+        extras.append(f'<div class="partner-row"><span class="label">Email</span><a href="mailto:{attr(email)}">{esc(email)}</a></div>')
+    if hours:
+        extras.append(f'<div class="partner-row"><span class="label">Horaires</span>{esc(hours)}</div>')
+    extras_html = f'<div class="partner-extras">{"".join(extras)}</div>' if extras else ""
     return (
         f'<button type="button" class="partner flip tier-{attr(tier)}" aria-label="{attr(name)}">'
         '<div class="flip-inner">'
@@ -386,6 +402,7 @@ def _filled_partner_card(p):
         '<div class="flip-back">'
         f'<h4>{esc(name)}</h4>'
         f'<p>{esc(desc)}</p>'
+        f'{extras_html}'
         f'<a class="cta" href="{attr(url)}" target="_blank" rel="noopener">{esc(cta)} {SVG_EXT}</a>'
         '</div>'
         '</div>'
@@ -426,13 +443,16 @@ def _default_invites(d):
     ]
 
 def partners_block(d):
-    """Render the 'À proximité' section from d['partners'] or fall back to venue-parameterized invites."""
+    """Render the 'À proximité' section. Reads featured_businesses + partners; falls back to venue-parameterized invites."""
     slug = d["slug"]
-    partners = d.get("partners") or _default_invites(d)
+    featured = d.get("featured_businesses") or []
+    partners = d.get("partners") or []
+    if not featured and not partners:
+        partners = _default_invites(d)
     cards = []
-    for p in partners:
+    for p in featured + partners:
         tier = p.get("tier", "invite")
-        if tier in ("partner", "recommended"):
+        if tier in ("partner", "recommended", "featured"):
             cards.append(_filled_partner_card(p))
         else:
             cards.append(_invite_card(p, slug))
