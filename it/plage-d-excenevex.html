@@ -238,8 +238,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -255,19 +253,18 @@
   <div class="wrap">
     <p class="kicker">Nelle vicinanze</p>
     <h2>Nelle vicinanze</h2>
-    <p class="lead">Altri luoghi da scoprire in zona e nella stessa categoria</p>
+    <p class="lead">Altri luoghi da esplorare nei dintorni e nella stessa categoria</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/it/domaine-de-rovoree-la-chataigniere" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Embarcad%C3%A8re_du_Domaine_de_La_Ch%C3%A2taigni%C3%A8re.jpg" alt="Domaine de Rovorée-La Châtaignière sulle rive del lago Lemano, Yvoire, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/domaine-de-rovoree-la-chataigniere" class="title">Domaine de Rovorée-La Châtaignière</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Yvoire</span></div>
-      <p class="card-desc">Spazio naturale sensibile di 24 ettari sulle rive del lago Lemano: foresta antica, castagni centenari, rive lacustri e biodiversità straordinaria.</p>
+      <p class="card-desc">Spazio naturale di 24 ha sulle rive del Lemano: foresta antica, castagni centenari, rive lacustri, vestigia medievali. Accesso libero tutto l'anno.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Domaine%20de%20Rovor%C3%A9e-La%20Ch%C3%A2taigni%C3%A8re%2C%20Yvoire%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Domaine%20de%20Rovor%C3%A9e-La%20Ch%C3%A2taigni%C3%A8re%2C%20Yvoire%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a>
       </div>
     </div>
   </article>
@@ -279,70 +276,65 @@
     <div class="card-body">
       <a href="https://loisirs74.fr/it/jardin-des-cinq-sens" class="title">Jardin des Cinq Sens</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Yvoire</span></div>
-      <p class="card-desc">Labirinto vegetale ispirato ai giardini medievali, con oltre 1.</p>
+      <p class="card-desc">Giardino Remarquable di 2.600 m² nel cuore di Yvoire, ispirato ai labirinti medievali. Oltre 1.500 varietà di piante, 5 giardini sensoriali. Adulto 15 €, bambino 8,50 €.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Jardin%20des%20Cinq%20Sens%2C%20Yvoire%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        <a href="https://jardin5sens.net/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Jardin%20des%20Cinq%20Sens%2C%20Yvoire%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a><a href="https://jardin5sens.net/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/it/parcours-aventure-de-sciez" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg" alt="Percorso avventura nelle querce centenarie del Domaine de Coudrée a Sciez, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
+    <a href="https://loisirs74.fr/it/croisiere-cgn-yvoire" class="card-photo">
+      <img src="/croisiere-cgn-yvoire-hero.jpg" alt="CGN escale Yvoire" loading="lazy">
       <span class="card-tag">A pagamento</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/it/parcours-aventure-de-sciez" class="title">Parcours Aventure de Sciez</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sciez</span></div>
-      <p class="card-desc">Parco avventura nel cuore di una foresta di querce centenarie del Domaine de Coudrée, tra Thonon-les-Bains e Douvaine, con più di 40 percorsi acrobatici negli alberi.</p>
+      <a href="https://loisirs74.fr/it/croisiere-cgn-yvoire" class="title">CGN escale Yvoire</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Yvoire</span></div>
+      
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parcours%20Aventure%20de%20Sciez%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        <a href="https://www.parcoursaventure-sciez.com/home/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=CGN%20escale%20Yvoire%2C%20Yvoire%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a><a href="https://www.cgn.ch/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/it/plage-de-sciez-sur-leman" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Sciez-regate.jpg" alt="Spiaggia erbosa di Sciez-sur-Léman con vista sul lago, vicino al porto turistico, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/plage-de-sciez-sur-leman" class="title">Plage de Sciez-sur-Léman</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sciez</span></div>
-      <p class="card-desc">Spiaggia erbosa e alberata sulle rive del lago Lemano, con balneazione sorvegliata in estate, area dedicata ai cani, giochi per bambini e attrezzature per persone con mobilità ridotta.</p>
+      <p class="card-desc">Spiaggia erbosa del Lemano con balneazione sorvegliata in estate, area cani, giochi, bocce e ping-pong. Accesso libero tutto l'anno a Sciez, Alta Savoia.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Sciez-sur-L%C3%A9man%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Plage%20de%20Sciez-sur-L%C3%A9man%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/it/plage-de-la-pinede" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Thonon-les-Bains._Promenade_du_L%C3%A9man._2015-06-21.jpg" alt="Rive naturali in ciottoli della Plage de la Pinède sul lago Lemano, Thonon-les-Bains, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/plage-de-la-pinede" class="title">Plage de la Pinède</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Thonon-les-Bains</span></div>
-      <p class="card-desc">Successione di piccole spiagge naturali in ciottoli collegate da sentieri attrezzati, che bordano il dominio storico del Castello di Ripaille sulle rive selvagge del Lemano.</p>
+      <p class="card-desc">Successione di spiagge naturali in ciottoli per 3 km sulle rive del lago Lemano, che bordano il dominio del Castello di Ripaille. Accesso libero, rive classificate.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20la%20Pin%C3%A8de%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Plage%20de%20la%20Pin%C3%A8de%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/it/plage-de-saint-disdille" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Plage_thonon.jpg" alt="Plage de Saint-Disdille sul lago Lemano con area ombreggiata da castagni, Thonon-les-Bains, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/plage-de-saint-disdille" class="title">Plage de Saint-Disdille</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Thonon-les-Bains</span></div>
-      <p class="card-desc">Spiaggia con erba e ciottoli sul lago Lemano, certificata bandiera blu dal 2010, ai margini del parco della Châtaigneraie e della foresta di Ripaille.</p>
+      <p class="card-desc">Spiaggia gratuita con bandiera blu sul lago Lemano, sorveglianza estiva, adiacente al parco della Châtaigneraie a Thonon-les-Bains, Alta Savoia.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Saint-Disdille%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Plage%20de%20Saint-Disdille%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a>
       </div>
     </div>
   </article></div>

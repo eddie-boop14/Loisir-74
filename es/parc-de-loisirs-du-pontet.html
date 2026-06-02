@@ -266,8 +266,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -283,83 +281,91 @@
   <div class="wrap">
     <p class="kicker">Cerca</p>
     <h2>Cerca</h2>
-    <p class="lead">Más lugares por descubrir en la zona y categoría</p>
+    <p class="lead">Otros lugares para explorar en la zona y en la misma categoría</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/es/mont-joly" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Meg%C3%A8ve%2C_depuis_la_cha%C3%AEne_du_Mont-Joly.jpg" alt="Cima del Mont Joly a 2.525 m con vista panorámica sobre el macizo del Mont-Blanc, Saint-Gervais-les-Bains, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/mont-joly" class="title">Mont Joly</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Saint-Gervais-les-Bains</span></div>
-      <p class="card-desc">Cumbre emblemática a 2.</p>
+      <p class="card-desc">Cumbre panorámica a 2.525 m frente al Mont-Blanc. Senderismo deportivo desde Saint-Gervais, Megève o Les Contamines. Mesa de orientación en la cima. Acceso libre.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mont%20Joly%2C%20Saint-Gervais-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Mont%20Joly%2C%20Saint-Gervais-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/es/cote-2000-aventure" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+    <a href="https://loisirs74.fr/es/parc-aventure-mont-blanc-saint-gervais" class="card-photo">
+      <img src="/parc-aventure-mont-blanc-saint-gervais-hero.jpg" alt="Mont-Blanc Parc Aventure" loading="lazy">
       <span class="card-tag">De pago</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/es/cote-2000-aventure" class="title">Côte 2000 Aventure</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Megève</span></div>
-      <p class="card-desc">Parque de acrobranche al pie de las Agujas Croches con 70 talleres repartidos en 3 niveles de dificultad, incluyendo una tirolesa de 90 metros.</p>
+      <a href="https://loisirs74.fr/es/parc-aventure-mont-blanc-saint-gervais" class="title">Mont-Blanc Parc Aventure</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Saint-Gervais-les-Bains</span></div>
+      
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=C%C3%B4te%202000%20Aventure%2C%20Meg%C3%A8ve%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        <a href="https://www.cote2000aventure.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Mont-Blanc%20Parc%20Aventure%2C%20Saint-Gervais-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="https://www.montblancparcaventure.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/es/cascade-de-la-belle-au-bois" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <span class="card-tag">Gratis</span>
+    <a href="https://loisirs74.fr/es/maison-forte-hautetour-saint-gervais" class="card-photo">
+      <img src="/generique-chateau.jpg" alt="Maison Forte de Hautetour" loading="lazy">
+      <span class="card-tag">De pago</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/es/cascade-de-la-belle-au-bois" class="title">Cascade de la Belle au Bois</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Megève</span></div>
-      <p class="card-desc">Cascada de 30 metros que erosiona pozas turquesas, ubicada en el bosque a 30 minutos a pie desde el centro de Megève.</p>
+      <a href="https://loisirs74.fr/es/maison-forte-hautetour-saint-gervais" class="title">Maison Forte de Hautetour</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Saint-Gervais-les-Bains</span></div>
+      
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20de%20la%20Belle%20au%20Bois%2C%20Meg%C3%A8ve%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Maison%20Forte%20de%20Hautetour%2C%20Saint-Gervais-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="https://www.saintgervais.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/es/base-de-loisirs-du-lac-des-iles" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Les_ARAVIS_depuis_le_LAC_DE_PASSY_-_panoramio.jpg" alt="Playa del Lago de las Îles con vista al Mont-Blanc, Passy, Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/base-de-loisirs-du-lac-des-iles" class="title">Base de loisirs du Lac des Îles</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Passy</span></div>
-      <p class="card-desc">El mayor lago acondicionado del País del Mont-Blanc: playa de arena, baño vigilado en verano, actividades náuticas y terrestres en un entorno verde con vistas al macizo.</p>
+      <p class="card-desc">Base de loisirs frente al Mont-Blanc: playa vigilada, baño, paddle, patines acuáticos, circuito de salud, minigolf, karting. Acceso gratuito todo el año en Passy.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20de%20loisirs%20du%20Lac%20des%20%C3%8Eles%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Base%20de%20loisirs%20du%20Lac%20des%20%C3%8Eles%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/es/base-de-loisirs-des-ilettes" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Sallanches-69%C2%A9studio_k.jpg" alt="Base de loisirs des Ilettes con sus tres lagos y prados verdes, Sallanches, Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/es/base-de-loisirs-des-ilettes" class="title">Lacs des Ilettes</a>
+      <a href="https://loisirs74.fr/es/base-de-loisirs-des-ilettes" class="title">Base de loisirs des Ilettes</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sallanches</span></div>
-      <p class="card-desc">Tres lagos artificiales creados en 1977 que ofrecen un remanso de paz a dos kilómetros del centro de Sallanches: pesca, baño vigilado, deportes acuáticos y paseo familiar.</p>
+      <p class="card-desc">Complejo de 3 lagos en Sallanches: pesca, baño vigilado en verano, windsurf, paddle, circuito de salud y zona de picnic. Acceso libre todo el año.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lacs%20des%20Ilettes%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Base%20de%20loisirs%20des%20Ilettes%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
       </div>
     </div>
   </article>
-</div>
+<article class="card">
+    <a href="https://loisirs74.fr/es/base-de-loisirs-du-lac-aux-dames" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Lac_aux_Dames_%C3%A0_Samo%C3%ABns_en_%C3%A9t%C3%A9_%28juillet_2023%29_1.JPG" alt="Base de loisirs du Lac aux Dames en Samoëns con sus dos lagos y espacios verdes en Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">Gratis</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/es/base-de-loisirs-du-lac-aux-dames" class="title">Base de loisirs du Lac aux Dames</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Samoëns</span></div>
+      <p class="card-desc">Base de ocio de 10 hectáreas alrededor de dos lagos en Samoëns. Baño vigilado en verano, áreas de juegos, pistas deportivas, pesca, paddle. Acceso libre.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Base%20de%20loisirs%20du%20Lac%20aux%20Dames%2C%20Samo%C3%ABns%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
+      </div>
+    </div>
+  </article></div>
   </div>
 </section>
 <footer class="site"><div class="wrap"><div class="foot-grid">

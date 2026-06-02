@@ -238,8 +238,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -255,79 +253,88 @@
   <div class="wrap">
     <p class="kicker">Cerca</p>
     <h2>Cerca</h2>
-    <p class="lead">Más lugares por descubrir en la zona y categoría</p>
+    <p class="lead">Otros lugares para explorar en la zona y en la misma categoría</p>
     <div class="carousel"><article class="card">
+    <a href="https://loisirs74.fr/es/chateau-des-rubins-sallanches" class="card-photo">
+      <img src="/generique-chateau.jpg" alt="Château des Rubins" loading="lazy">
+      <span class="card-tag">De pago</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/es/chateau-des-rubins-sallanches" class="title">Château des Rubins</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sallanches</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Ch%C3%A2teau%20des%20Rubins%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="https://sallanchesmontblanc.com/vivre-sallanches/chateau-des-rubins-observatoire-des-alpes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
     <a href="https://loisirs74.fr/es/cascade-de-chedde" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Cascade_de_Cheddes_-_btv1b10123413v.jpg" alt="Cascade de Chedde en forma de corazón, torrente Ugine, Passy-Chedde, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/cascade-de-chedde" class="title">Cascade de Chedde</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Passy</span></div>
-      <p class="card-desc">Cascada natural cuyas aguas del torrente Ugine se dividen en dos ramas alrededor de un corazón de piedra, creando una forma distintiva que le valió el apodo de Cascada de Corazón.</p>
+      <p class="card-desc">Cascada en forma de corazón en Passy-Chedde, formada por el torrente Ugine. 5 min a pie desde el aparcamiento gratuito. Acceso libre todo el año, sitio clasificado.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20de%20Chedde%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Cascade%20de%20Chedde%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/es/lac-de-passy" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Lac_vert_de_passy_%281%29.JPG" alt="Vista aérea del Lago de Passy con el Mont-Blanc al fondo, Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/lac-de-passy" class="title">Lac de Passy</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Passy</span></div>
-      <p class="card-desc">Lago más grande acondicionado del país del Mont-Blanc, situado a 547 m de altitud con playa de arena, zona de baño vigilada en verano y vista panorámica sobre la cadena del Mont-Blanc.</p>
+      <p class="card-desc">Lago artificial de 50 ha con playa vigilada, baño, patinetes acuáticos, paddle, karts y vistas al Mont-Blanc. Acceso libre todo el año en Passy.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20de%20Passy%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/es/passy-accro-lac" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <span class="card-tag">De pago</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/es/passy-accro-lac" class="title">Passy Accro Lac</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Passy</span></div>
-      <p class="card-desc">Parque de aventura multiaventura a orillas del lago de Passy: 10 circuitos de tirolina aérea con línea de vida continua, tirolinas, airbag, catapulta humana y escape games al aire libre.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Passy%20Accro%20Lac%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        <a href="https://www.passyaccrolac.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Lac%20de%20Passy%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/es/base-de-loisirs-des-ilettes" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Sallanches-69%C2%A9studio_k.jpg" alt="Base de loisirs des Ilettes con sus tres lagos y prados verdes, Sallanches, Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/es/base-de-loisirs-des-ilettes" class="title">Lacs des Ilettes</a>
+      <a href="https://loisirs74.fr/es/base-de-loisirs-des-ilettes" class="title">Base de loisirs des Ilettes</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sallanches</span></div>
-      <p class="card-desc">Tres lagos artificiales creados en 1977 que ofrecen un remanso de paz a dos kilómetros del centro de Sallanches: pesca, baño vigilado, deportes acuáticos y paseo familiar.</p>
+      <p class="card-desc">Complejo de 3 lagos en Sallanches: pesca, baño vigilado en verano, windsurf, paddle, circuito de salud y zona de picnic. Acceso libre todo el año.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lacs%20des%20Ilettes%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Base%20de%20loisirs%20des%20Ilettes%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/es/parc-de-loisirs-du-pontet" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Lac_de_p%C3%AAche_%40_Parc_de_loisirs_du_Pontet_%40_Val_Montjoie_%2850921651901%29.jpg" alt="Parc de Loisirs du Pontet con lago de montaña y espacios verdes, Les Contamines-Montjoie, al pie del macizo del Mont-Blanc" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/parc-de-loisirs-du-pontet" class="title">Parc de Loisirs du Pontet</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Les Contamines-Montjoie</span></div>
-      <p class="card-desc">El mayor parque de ocio del País del Mont-Blanc: 30 hectáreas de naturaleza al pie de la Reserva Natural de Les Contamines, con lagos de montaña, playa de baño gratuito y más de 20 actividades para toda la familia.</p>
+      <p class="card-desc">El mayor parque de ocio del País del Mont-Blanc: 30 hectáreas, 2 lagos, baño gratuito, 20+ actividades deportivas y de ocio. Acceso libre toda la temporada.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parc%20de%20Loisirs%20du%20Pontet%2C%20Les%20Contamines-Montjoie%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Parc%20de%20Loisirs%20du%20Pontet%2C%20Les%20Contamines-Montjoie%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/es/base-de-loisirs-du-lac-bleu" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Morillon_-_vue_sur_le_lac_bleu_et_le_criou.jpg" alt="Base de loisirs du Lac Bleu con playa de arena y prados sombreados, Morillon, Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">Gratis</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/es/base-de-loisirs-du-lac-bleu" class="title">Base de loisirs du Lac Bleu</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Morillon</span></div>
+      <p class="card-desc">Base de ocio con lago de montaña, playa vigilada, juegos infantiles, parque de aventura, pumptrack, áreas de pícnic. Acceso gratuito todo el año en Morillon.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Base%20de%20loisirs%20du%20Lac%20Bleu%2C%20Morillon%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
       </div>
     </div>
   </article></div>

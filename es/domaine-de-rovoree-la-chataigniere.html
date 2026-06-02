@@ -238,8 +238,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -255,94 +253,88 @@
   <div class="wrap">
     <p class="kicker">Cerca</p>
     <h2>Cerca</h2>
-    <p class="lead">Más lugares por descubrir en la zona y categoría</p>
+    <p class="lead">Otros lugares para explorar en la zona y en la misma categoría</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/es/jardin-des-cinq-sens" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Yvoire_Jardin_Cinq_Sens.jpg" alt="Laberinto vegetal del Jardin des Cinq Sens en Yvoire, con carmelinas y manzanos espalierados" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/jardin-des-cinq-sens" class="title">Jardin des Cinq Sens</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Yvoire</span></div>
-      <p class="card-desc">Laberinto vegetal inspirado en jardines medievales, con más de 1.</p>
+      <p class="card-desc">Jardín Notable de 2.600 m² en el corazón de Yvoire, inspirado en laberintos medievales. Más de 1.500 variedades vegetales, 5 jardines sensoriales. Adulto 15 €, niño 8,50 €.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Jardin%20des%20Cinq%20Sens%2C%20Yvoire%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        <a href="https://jardin5sens.net/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Jardin%20des%20Cinq%20Sens%2C%20Yvoire%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="https://jardin5sens.net/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/es/croisiere-cgn-yvoire" class="card-photo">
+      <img src="/croisiere-cgn-yvoire-hero.jpg" alt="CGN escale Yvoire" loading="lazy">
+      <span class="card-tag">De pago</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/es/croisiere-cgn-yvoire" class="title">CGN escale Yvoire</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Yvoire</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=CGN%20escale%20Yvoire%2C%20Yvoire%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="https://www.cgn.ch/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/es/plage-d-excenevex" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG" alt="Playa de arena fina de Excenevex en el lago Lemán con vista a la Dent d&#x27;Oche y los Alpes suizos, Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/plage-d-excenevex" class="title">Playa de Excenevex</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Excenevex</span></div>
-      <p class="card-desc">Única playa natural de arena fina de la orilla francesa del lago Lemán, con pendiente suave durante varias decenas de metros y aguas poco profundas que alcanzan 25°C en verano.</p>
+      <p class="card-desc">Única playa natural de arena fina del lago Lemán en la orilla francesa. Pendiente suave, aguas a 25°C en verano, baño vigilado. Aparcamiento 6 € en temporada, playa gratuita.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Playa%20de%20Excenevex%2C%20Excenevex%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/es/parcours-aventure-de-sciez" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <span class="card-tag">De pago</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/es/parcours-aventure-de-sciez" class="title">Parcours Aventure de Sciez</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sciez</span></div>
-      <p class="card-desc">Parque de aventura en el corazón de un bosque de robles centenarios del Domaine de Coudrée, entre Thonon-les-Bains y Douvaine, con más de 40 talleres en los árboles.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parcours%20Aventure%20de%20Sciez%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        <a href="https://www.parcoursaventure-sciez.com/home/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Playa%20de%20Excenevex%2C%20Excenevex%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/es/domaine-de-guidou" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Pradera inundable y observatorio ornitológico del Domaine de Guidou en Sciez, sitio Natura 2000 a orillas del lago Lemán" loading="lazy">
       <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/domaine-de-guidou" class="title">Domaine de Guidou</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sciez</span></div>
-      <p class="card-desc">Sitio natural protegido de 85 hectáreas clasificado Natura 2000, que reúne un mosaico de hábitats diversificados con observatorio ornitológico y dunas fósiles únicas en Europa.</p>
+      <p class="card-desc">Sitio natural protegido de 85 ha clasificado Natura 2000 en Sciez. Mosaico de hábitats, dunas fósiles únicas, observatorio ornitológico. Acceso libre todo el año.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Domaine%20de%20Guidou%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Domaine%20de%20Guidou%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/es/plaine-de-loisirs-de-la-grangette" class="card-photo">
+      <img src="/plaine-de-loisirs-de-la-grangette-hero.jpg" alt="Plaine de loisirs de la Grangette" loading="lazy">
+      <span class="card-tag">Gratis</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/es/plaine-de-loisirs-de-la-grangette" class="title">Plaine de loisirs de la Grangette</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Thonon-les-Bains</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Plaine%20de%20loisirs%20de%20la%20Grangette%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/es/base-de-loisirs-de-la-beunaz" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/La_plage_de_La_Beunaz.jpg" alt="Base de loisirs de la Beunaz con lago natural de montaña, baño vigilado y actividades náuticas en el Chablais, Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/base-de-loisirs-de-la-beunaz" class="title">Base de loisirs de la Beunaz</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Saint-Paul-en-Chablais</span></div>
-      <p class="card-desc">Base de ocio acondicionada alrededor de un lago natural de montaña templado a 900 m de altitud, creada en 1951 por André Caza, que ofrece baño, circuito aventura, actividades náuticas y alojamientos singulares.</p>
+      <p class="card-desc">Base de ocio alrededor de un lago natural templado a 900 m de altitud. Baño vigilado, circuito aventura, actividades náuticas. Pase diario 18 €, entrada 3,80 €.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20de%20loisirs%20de%20la%20Beunaz%2C%20Saint-Paul-en-Chablais%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        <a href="https://indianaventures.com/plage-de-la-beunaz/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/es/parc-des-dereches" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <span class="card-tag">Gratis</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/es/parc-des-dereches" class="title">Parc des Dérêches</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Morzine</span></div>
-      <p class="card-desc">Parque natural de más de 5 km junto al Dranse, en el corazón de Morzine, con circuito de salud, senderos sombreados e infraestructuras deportivas para toda la familia.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parc%20des%20D%C3%A9r%C3%AAches%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Base%20de%20loisirs%20de%20la%20Beunaz%2C%20Saint-Paul-en-Chablais%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="https://indianaventures.com/plage-de-la-beunaz/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
       </div>
     </div>
   </article></div>

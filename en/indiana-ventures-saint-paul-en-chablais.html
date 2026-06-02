@@ -234,8 +234,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -251,94 +249,88 @@
   <div class="wrap">
     <p class="kicker">Nearby</p>
     <h2>Nearby</h2>
-    <p class="lead">More places to explore in this zone and category</p>
+    <p class="lead">Other places to explore in the area and in the same category</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/en/base-de-loisirs-de-la-beunaz" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/La_plage_de_La_Beunaz.jpg" alt="Base de loisirs de la Beunaz with natural mountain lake, supervised swimming and water sports in Chablais, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Paid</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/base-de-loisirs-de-la-beunaz" class="title">Base de loisirs de la Beunaz</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Saint-Paul-en-Chablais</span></div>
-      <p class="card-desc">Leisure complex set around a temperate natural mountain lake at 900 m altitude, founded in 1951 by André Caza, offering swimming, adventure course, water sports and unusual accommodation.</p>
+      <p class="card-desc">Leisure complex around a temperate natural lake at 900 m altitude. Supervised swimming, adventure course, water sports. Day pass €18, entry €3.80.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20de%20loisirs%20de%20la%20Beunaz%2C%20Saint-Paul-en-Chablais%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        <a href="https://indianaventures.com/plage-de-la-beunaz/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Base%20de%20loisirs%20de%20la%20Beunaz%2C%20Saint-Paul-en-Chablais%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a><a href="https://indianaventures.com/plage-de-la-beunaz/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/en/palais-lumiere" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/PalaisLumi%C3%A8re-DSCN1105.jpg" alt="Belle Époque façade of Palais Lumière with its restored dome, quai Charles-Albert Besson, Évian-les-Bains, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Paid</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/palais-lumiere" class="title">Palais Lumière</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Évian-les-Bains</span></div>
-      <p class="card-desc">A former 1902 thermal establishment repurposed as an excellent exhibition center, facing Lake Léman.</p>
+      <p class="card-desc">Former thermal establishment (1902) converted into an exhibition space. Full price €9, reduced €7, free under 16. Painting, sculpture, photography exhibitions.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Palais%20Lumi%C3%A8re%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Palais%20Lumi%C3%A8re%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a><a href="https://ville-evian.fr/palais-lumiere/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/en/thermes-evian" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Anciens_thermes_Evian_5.jpg" alt="Wellness area of Thermes d&#x27;Évian with views of Lake Léman, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Paid</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/en/thermes-evian" class="title">Thermes d&#39;Évian</a>
+      <a href="https://loisirs74.fr/en/thermes-evian" class="title">Thermes d'Évian</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Évian-les-Bains</span></div>
-      <p class="card-desc">Historic thermal center on the shores of Lake Léman offering medical cures (rheumatology, digestive and urinary conditions), wellness treatments with natural evian® mineral water, fitness area and wellness access.</p>
+      <p class="card-desc">Thermal spa and wellness center in Évian-les-Bains: medical cures, treatments with natural evian® mineral water, fitness and wellness access. Online booking available.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Thermes%20d&#39;%C3%89vian%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        <a href="https://lesthermesevian.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Thermes%20d%27%C3%89vian%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a><a href="https://lesthermesevian.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/en/cascade-aventure" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+    <a href="https://loisirs74.fr/en/croisiere-cgn-evian" class="card-photo">
+      <img src="/croisiere-cgn-evian-hero.jpg" alt="CGN escale Évian" loading="lazy">
       <span class="card-tag">Paid</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/en/cascade-aventure" class="title">Cascade Aventure</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Morzine</span></div>
-      <p class="card-desc">Forest adventure park in the heart of the mountains, accessible to all from age 3, with giant ziplines flying over Nyon waterfall, treetop courses and guided canyoning.</p>
+      <a href="https://loisirs74.fr/en/croisiere-cgn-evian" class="title">CGN escale Évian</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Évian-les-Bains</span></div>
+      
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20Aventure%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        <a href="https://cascadeaventure.wixsite.com/cascade-aventure" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=CGN%20escale%20%C3%89vian%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a><a href="https://www.cgn.ch/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/en/les-aigles-du-leman" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+    <a href="https://loisirs74.fr/en/casino-evian-resort-evian" class="card-photo">
+      <img src="/casino-evian-resort-evian-hero.jpg" alt="Casino Évian Resort" loading="lazy">
       <span class="card-tag">Paid</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/en/les-aigles-du-leman" class="title">Les Aigles du Léman</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sciez</span></div>
-      <p class="card-desc">Specialized bird of prey park featuring the world&#39;s largest aviary, daily free-flight shows, and a white-tailed eagle reintroduction program.</p>
+      <a href="https://loisirs74.fr/en/casino-evian-resort-evian" class="title">Casino Évian Resort</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Évian-les-Bains</span></div>
+      
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Les%20Aigles%20du%20L%C3%A9man%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        <a href="https://www.lesaiglesduleman.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Casino%20%C3%89vian%20Resort%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a><a href="https://casino.evianresort.com/en" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/en/parcours-aventure-de-sciez" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+    <a href="https://loisirs74.fr/en/aquaparc-thonon-piscine-olympique-thonon" class="card-photo">
+      <img src="/aquaparc-thonon-piscine-olympique-thonon-hero.jpg" alt="Piscine Olympique de Thonon" loading="lazy">
       <span class="card-tag">Paid</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/en/parcours-aventure-de-sciez" class="title">Parcours Aventure de Sciez</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sciez</span></div>
-      <p class="card-desc">Treetop adventure park in the heart of a forest of century-old oak trees in the Coudrée Estate, between Thonon-les-Bains and Douvaine, with over 40 activities in the trees.</p>
+      <a href="https://loisirs74.fr/en/aquaparc-thonon-piscine-olympique-thonon" class="title">Piscine Olympique de Thonon</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Thonon-les-Bains</span></div>
+      
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parcours%20Aventure%20de%20Sciez%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        <a href="https://www.parcoursaventure-sciez.com/home/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Piscine%20Olympique%20de%20Thonon%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a><a href="https://www.thononlesbains.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
       </div>
     </div>
   </article></div>

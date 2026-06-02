@@ -236,8 +236,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -253,94 +251,88 @@
   <div class="wrap">
     <p class="kicker">Nelle vicinanze</p>
     <h2>Nelle vicinanze</h2>
-    <p class="lead">Altri luoghi da scoprire in zona e nella stessa categoria</p>
+    <p class="lead">Altri luoghi da esplorare nei dintorni e nella stessa categoria</p>
     <div class="carousel"><article class="card">
-    <a href="https://loisirs74.fr/it/acro-aventures-reignier" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg" alt="Percorso accrobranche tra gli alberi ad Acro&#39;Aventures Reignier, foresta delle Rocailles, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
+    <a href="https://loisirs74.fr/it/sentier-maison-saleve-pomier-presilly" class="card-photo">
+      <img src="/generique-sentier.jpg" alt="sentier-maison-saleve-pomier-presilly" loading="lazy">
+      <span class="card-tag">Gratis</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/it/sentier-maison-saleve-pomier-presilly" class="title">sentier-maison-saleve-pomier-presilly</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Présilly</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=sentier-maison-saleve-pomier-presilly%2C%20Pr%C3%A9silly%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a><a href="https://www.haute-savoie-tourisme.org/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/it/vitam-neydens" class="card-photo">
+      <img src="/generique-parc.jpg" alt="Vitam Neydens" loading="lazy">
       <span class="card-tag">A pagamento</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/it/acro-aventures-reignier" class="title">Acro&#39;Aventures Reignier</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Reignier-Ésery</span></div>
-      <p class="card-desc">Parco avventura tra gli alberi con percorsi accrobranche da 1 m e Acro&#39;Filet sospeso, situato nella foresta delle Rocailles a 20 km da Ginevra.</p>
+      <a href="https://loisirs74.fr/it/vitam-neydens" class="title">Vitam Neydens</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Neydens</span></div>
+      
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Acro&#39;Aventures%20Reignier%2C%20Reignier-%C3%89sery%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        <a href="https://acro-aventures.com/reignier/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Vitam%20Neydens%2C%20Neydens%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a><a href="https://www.vitam.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/it/parc-des-dronieres" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Parc_de_Loisirs_des_Droni%C3%A8res_%40_Cruseilles_%2850969087497%29.jpg" alt="Parc des Dronières con il suo lago, i sentieri forestali e il parco faunistico, Cruseilles, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuito</span>
+    <a href="https://loisirs74.fr/it/filenvol-monnetier-mornex" class="card-photo">
+      <img src="/generique-parc.jpg" alt="Filenvol" loading="lazy">
+      <span class="card-tag">A pagamento</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/it/parc-des-dronieres" class="title">Parc des Dronières</a>
+      <a href="https://loisirs74.fr/it/filenvol-monnetier-mornex" class="title">Filenvol</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Monnetier-Mornex</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Filenvol%2C%20Monnetier-Mornex%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a><a href="https://www.filenvol.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/it/telepherique-du-saleve" class="card-photo">
+      <img src="/generique-point-de-vue.jpg" alt="Téléphérique du Salève" loading="lazy">
+      <span class="card-tag">A pagamento</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/it/telepherique-du-saleve" class="title">Téléphérique du Salève</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Étrembières</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=T%C3%A9l%C3%A9ph%C3%A9rique%20du%20Sal%C3%A8ve%2C%20%C3%89trembi%C3%A8res%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a><a href="https://www.telepherique-du-saleve.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/it/mont-saleve" class="card-photo">
+      <img src="/mont-saleve-hero.jpg" alt="Mont Salève visto dal piemonte ginevrino, Alta Savoia" loading="lazy">
+      <span class="card-tag">Gratis</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/it/mont-saleve" class="title">Mont Salève</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Monnetier-Mornex</span></div>
+      <p class="card-desc">Vetta a 1379 m, 250 km di sentieri segnalati, sito Natura 2000, funivia da Étrembières. Accesso libero al massiccio, Alta Savoia.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Mont%20Sal%C3%A8ve%2C%20Monnetier-Mornex%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/it/pont-de-la-caille" class="card-photo">
+      <img src="/pont-de-la-caille-hero.jpg" alt="Pont de la Caille a Cruseilles, Alta Savoia" loading="lazy">
+      <span class="card-tag">Gratis</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/it/pont-de-la-caille" class="title">Pont de la Caille</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cruseilles</span></div>
-      <p class="card-desc">Complesso di svaghi ad accesso libero con lago, sentieri forestali, parco faunistico con daini, aree pic-nic e molteplici attività sportive e ricreative per tutti.</p>
+      <p class="card-desc">Ponte sospeso del 1839, 180 m di lunghezza, 147 m sopra le Usses. Monumento Storico, percorso interpretativo, accesso libero. Cruseilles, Alta Savoia.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parc%20des%20Droni%C3%A8res%2C%20Cruseilles%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/it/col-des-glieres" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Plateau_des_Gli%C3%A8res_%40_Montagne_des_Auges.jpg" alt="Altopiano dei Glières in estate con vista sui pascoli d&#39;altura e il Monumento Nazionale della Resistenza, Fillière, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuito</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/it/col-des-glieres" class="title">Col des Glières</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Fillière</span></div>
-      <p class="card-desc">Valico e altopiano d&#39;altura (1.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Col%20des%20Gli%C3%A8res%2C%20Filli%C3%A8re%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/it/tete-du-parmelan" class="card-photo">
-      <img src="/tete-du-parmelan-hero.jpg" alt="Vista dalla Tête du Parmelan con la sua croce di vetta e il rifugio Camille Dunant che sovrasta Annecy, massiccio delle Bornes, Alta Savoia" loading="lazy">
-      <span class="card-tag">Gratuito</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/it/tete-du-parmelan" class="title">Tête du Parmelan</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Dingy-Saint-Clair</span></div>
-      <p class="card-desc">La vetta emblematica dell&#39;altopiano del Parmelan, vasto balcone calcareo a 1.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=T%C3%AAte%20du%20Parmelan%2C%20Dingy-Saint-Clair%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/it/mont-veyrier" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg" alt="Vista panoramica dalla vetta del Mont Veyrier sul lago d&#39;Annecy e il massiccio delle Bauges, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuito</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/it/mont-veyrier" class="title">Mont Veyrier</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Annecy</span></div>
-      <p class="card-desc">Montagna emblematica di Annecy che raggiunge 1.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mont%20Veyrier%2C%20Annecy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/it/plateau-des-glieres" class="card-photo">
-      <img src="/plateau-des-glieres-hero.jpg" alt="Plateau des Glières con il Monumento nazionale alla Resistenza di Émile Gilioli sotto il cielo di montagna, Fillière, Alta Savoia" loading="lazy">
-      <span class="card-tag">Gratuito</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/it/plateau-des-glieres" class="title">Plateau des Glières</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Fillière</span></div>
-      <p class="card-desc">Altopiano calcareo del massiccio delle Borne a 1.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plateau%20des%20Gli%C3%A8res%2C%20Filli%C3%A8re%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Pont%20de%20la%20Caille%2C%20Cruseilles%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a>
       </div>
     </div>
   </article></div>

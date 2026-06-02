@@ -236,8 +236,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -253,94 +251,74 @@
   <div class="wrap">
     <p class="kicker">Nearby</p>
     <h2>Nearby</h2>
-    <p class="lead">More places to explore in this zone and category</p>
+    <p class="lead">Other places to explore in the area and in the same category</p>
     <div class="carousel"><article class="card">
+    <a href="https://loisirs74.fr/en/voie-verte-du-chablais" class="card-photo">
+      <img src="/voie-verte-du-chablais-hero.jpg" alt="Voie Verte du Chablais" loading="lazy">
+      <span class="card-tag">Free</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/en/voie-verte-du-chablais" class="title">Voie Verte du Chablais</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Abondance</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Voie%20Verte%20du%20Chablais%2C%20Abondance%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
     <a href="https://loisirs74.fr/en/lac-de-vallon" class="card-photo">
-      <img src="/lac-de-vallon-hero.jpg" alt="Lac de Vallon at the foot of Roc d&#39;Enfer, Bellevaux, Haute-Savoie" loading="lazy">
+      <img src="/lac-de-vallon-hero.jpg" alt="Lac de Vallon at the foot of Roc d&#x27;Enfer, Bellevaux, Haute-Savoie" loading="lazy">
       <span class="card-tag">Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/lac-de-vallon" class="title">Lac de Vallon</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Bellevaux</span></div>
-      <p class="card-desc">Fifteen hectares of emerald water at 1080 m altitude, born on the night of 11–12 March 1943 when the mountain slid and blocked the Brévon river.</p>
+      <p class="card-desc">Mountain lake 15 ha, 1080 m, formed by a landslide in 1943. UNESCO geosite, interpretation trail, fishing. Bellevaux, Haute-Savoie.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20de%20Vallon%2C%20Bellevaux%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Lac%20de%20Vallon%2C%20Bellevaux%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/en/cascade-aventure" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <span class="card-tag">Paid</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Cascade_de_Nyon_%282%29.jpg" alt="Cascade Aventure, treetop adventure park and outdoor activities near Nyon waterfall in Morzine, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/cascade-aventure" class="title">Cascade Aventure</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Morzine</span></div>
-      <p class="card-desc">Forest adventure park in the heart of the mountains, accessible to all from age 3, with giant ziplines flying over Nyon waterfall, treetop courses and guided canyoning.</p>
+      <p class="card-desc">Outdoor adventure park in Morzine: treetop courses, ziplines, canyoning and via ferrata above Nyon waterfall. Open in summer.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20Aventure%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        <a href="https://cascadeaventure.wixsite.com/cascade-aventure" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/en/parc-des-dereches" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <span class="card-tag">Free</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/en/parc-des-dereches" class="title">Parc des Dérêches</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Morzine</span></div>
-      <p class="card-desc">Natural park stretching over 5 km along the Dranse, in the heart of Morzine, with fitness trail, shaded paths and sports facilities for the whole family.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parc%20des%20D%C3%A9r%C3%AAches%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/en/chateaux-des-allinges" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <span class="card-tag">Free</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/en/chateaux-des-allinges" class="title">Châteaux des Allinges</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Allinges</span></div>
-      <p class="card-desc">Two rival medieval fortresses facing each other at the summit of a hilltop overlooking Thonon and Lake Léman, with a listed Romanesque chapel and frescoes from the 11th century.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Ch%C3%A2teaux%20des%20Allinges%2C%20Allinges%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Cascade%20Aventure%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a><a href="https://cascadeaventure.wixsite.com/cascade-aventure" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/en/thermes-evian" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Anciens_thermes_Evian_5.jpg" alt="Wellness area of Thermes d&#x27;Évian with views of Lake Léman, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Paid</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/en/thermes-evian" class="title">Thermes d&#39;Évian</a>
+      <a href="https://loisirs74.fr/en/thermes-evian" class="title">Thermes d'Évian</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Évian-les-Bains</span></div>
-      <p class="card-desc">Historic thermal center on the shores of Lake Léman offering medical cures (rheumatology, digestive and urinary conditions), wellness treatments with natural evian® mineral water, fitness area and wellness access.</p>
+      <p class="card-desc">Thermal spa and wellness center in Évian-les-Bains: medical cures, treatments with natural evian® mineral water, fitness and wellness access. Online booking available.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Thermes%20d&#39;%C3%89vian%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        <a href="https://lesthermesevian.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Thermes%20d%27%C3%89vian%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a><a href="https://lesthermesevian.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/en/abbaye-de-sixt" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Sixt_abbey_02.jpg" alt="Abbaye de Sixt and its 13th-century abbey church, Sixt-Fer-à-Cheval, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/abbaye-de-sixt" class="title">Abbaye de Sixt</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sixt-Fer-à-Cheval</span></div>
-      <p class="card-desc">Former abbey of regular canons founded in 1144, listed as a Historic Monument.</p>
+      <p class="card-desc">12th-century abbey listed as a Historic Monument. Free summer exhibition, 13th-century church and restored abbots' lodge. Free visit in Sixt-Fer-à-Cheval.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Abbaye%20de%20Sixt%2C%20Sixt-Fer-%C3%A0-Cheval%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Abbaye%20de%20Sixt%2C%20Sixt-Fer-%C3%A0-Cheval%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
       </div>
     </div>
   </article></div>

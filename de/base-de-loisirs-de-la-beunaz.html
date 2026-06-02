@@ -263,8 +263,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -280,94 +278,88 @@
   <div class="wrap">
     <p class="kicker">In der Nähe</p>
     <h2>In der Nähe</h2>
-    <p class="lead">Weitere Orte in dieser Zone und Kategorie</p>
+    <p class="lead">Weitere Orte in der Umgebung und in derselben Kategorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/de/indiana-ventures-saint-paul-en-chablais" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/La_plage_de_La_Beunaz.jpg" alt="Kletterwald-Parcours in den Bäumen bei Indiana&#x27;Ventures, Plage de la Beunaz, Saint-Paul-en-Chablais, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Kostenpflichtig</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/de/indiana-ventures-saint-paul-en-chablais" class="title">Indiana&#39;Ventures Saint-Paul-en-Chablais</a>
+      <a href="https://loisirs74.fr/de/indiana-ventures-saint-paul-en-chablais" class="title">Indiana'Ventures Saint-Paul-en-Chablais</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Saint-Paul-en-Chablais</span></div>
-      <p class="card-desc">Kletterpark mit 7 Parcours in aufsteigender Schwierigkeit, ab 2 Jahren zugänglich, auf dem Gelände der Plage de la Beunaz, ein natürlicher Bergsee auf 900 m Höhe.</p>
+      <p class="card-desc">Kletterpark an der Plage de la Beunaz (Saint-Paul-en-Chablais). 7 Parcours ab 2 Jahren. Erwachsene 23 €, Kinder 11 €. Juli–August geöffnet. Buchung online.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Indiana&#39;Ventures%20Saint-Paul-en-Chablais%2C%20Saint-Paul-en-Chablais%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
-        <a href="https://indianaventures.com/en/plage-de-la-beunaz/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Offizielle Website</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Indiana%27Ventures%20Saint-Paul-en-Chablais%2C%20Saint-Paul-en-Chablais%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a><a href="https://indianaventures.com/en/plage-de-la-beunaz/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Website</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/de/palais-lumiere" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/PalaisLumi%C3%A8re-DSCN1105.jpg" alt="Gründerzeitliche Fassade des Palais Lumière mit seiner restaurierten Kuppel, Quai Charles-Albert Besson, Évian-les-Bains, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Kostenpflichtig</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/palais-lumiere" class="title">Palais Lumière</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Évian-les-Bains</span></div>
-      <p class="card-desc">Ehemaliges Thermalbad von 1902, umfunktioniert zu einem erstklassigen Ausstellungszentrum mit Blick auf den Genfersee.</p>
+      <p class="card-desc">Ehemaliges Thermalbad (1902) umgewandelt in einen Ausstellungsraum. Normalpreis 9 €, ermäßigt 7 €, kostenlos unter 16 Jahren. Ausstellungen Malerei, Skulptur, Fotografie.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Palais%20Lumi%C3%A8re%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Palais%20Lumi%C3%A8re%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a><a href="https://ville-evian.fr/palais-lumiere/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Website</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/de/thermes-evian" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Anciens_thermes_Evian_5.jpg" alt="Wellness-Bereich der Thermes d&#x27;Évian mit Blick auf den Genfersee, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Kostenpflichtig</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/de/thermes-evian" class="title">Thermes d&#39;Évian</a>
+      <a href="https://loisirs74.fr/de/thermes-evian" class="title">Thermes d'Évian</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Évian-les-Bains</span></div>
-      <p class="card-desc">Historisches Thermalbad am Genfersee mit medizinischen Kuren (Rheumatologie, Magen-Darm- und Urogenitalerkrankungen), Wellness-Behandlungen mit natürlichem Mineralwasser evian®, Fitnessbereich und Wellnessangebot.</p>
+      <p class="card-desc">Thermalbad und Wellness-Spa in Évian-les-Bains: medizinische Kuren, Behandlungen mit natürlichem Mineralwasser evian®, Fitness und Wellness-Zugang. Online-Buchung.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Thermes%20d&#39;%C3%89vian%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
-        <a href="https://lesthermesevian.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Offizielle Website</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Thermes%20d%27%C3%89vian%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a><a href="https://lesthermesevian.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Website</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/de/plaine-de-loisirs-de-la-grangette" class="card-photo">
+      <img src="/plaine-de-loisirs-de-la-grangette-hero.jpg" alt="Plaine de loisirs de la Grangette" loading="lazy">
+      <span class="card-tag">Kostenlos</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/de/plaine-de-loisirs-de-la-grangette" class="title">Plaine de loisirs de la Grangette</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Thonon-les-Bains</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Plaine%20de%20loisirs%20de%20la%20Grangette%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/de/parc-des-dereches" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Horse_riding_in_the_valley_of_the_Edigan_River.jpg" alt="Wege des Parc des Dérêches entlang der Dranse, Morzine, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Kostenlos</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/parc-des-dereches" class="title">Parc des Dérêches</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Morzine</span></div>
-      <p class="card-desc">Naturpark von über 5 km entlang der Dranse im Herzen von Morzine mit Fitnessparcours, schattigen Wegen und Sportanlagen für die ganze Familie.</p>
+      <p class="card-desc">Naturpark 5 km entlang der Dranse in Morzine. Fitnessparcours 20 Stationen, schattige Wege, Skatepark, Tennis, Reitcenter. Kostenlos.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parc%20des%20D%C3%A9r%C3%AAches%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Parc%20des%20D%C3%A9r%C3%AAches%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/de/domaine-de-guidou" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="/generique-domaine.jpg" alt="Überschwemmungswiese und Vogelbeobachtungsstation des Domaine de Guidou in Sciez, Natura-2000-Gebiet am Genfersee" loading="lazy">
       <span class="card-tag">Kostenlos</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/domaine-de-guidou" class="title">Domaine de Guidou</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sciez</span></div>
-      <p class="card-desc">Geschütztes Naturschutzgebiet von 85 Hektar mit Natura-2000-Status, das eine Mosaik vielfältiger Lebensräume mit Vogelbeobachtungsstation und in Europa einzigartigen fossilen Dünen vereint.</p>
+      <p class="card-desc">Geschütztes Naturschutzgebiet von 85 ha mit Natura-2000-Status in Sciez. Vielfältige Lebensräume, einzigartige fossile Dünen, Vogelbeobachtungsstation. Freier Zugang das ganze Jahr über.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Domaine%20de%20Guidou%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/de/domaine-de-rovoree-la-chataigniere" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <span class="card-tag">Kostenlos</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/de/domaine-de-rovoree-la-chataigniere" class="title">Domaine de Rovorée-La Châtaignière</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Yvoire</span></div>
-      <p class="card-desc">Empfindliches Naturschutzgebiet mit 24 Hektar am Ufer des Genfersees: Urwald, jahrhundertealte Kastanienbäume, Seeufer und bemerkenswerte Biodiversität.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Domaine%20de%20Rovor%C3%A9e-La%20Ch%C3%A2taigni%C3%A8re%2C%20Yvoire%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Domaine%20de%20Guidou%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
       </div>
     </div>
   </article></div>

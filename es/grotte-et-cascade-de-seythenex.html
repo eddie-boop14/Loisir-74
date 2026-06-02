@@ -233,8 +233,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -250,49 +248,60 @@
   <div class="wrap">
     <p class="kicker">Cerca</p>
     <h2>Cerca</h2>
-    <p class="lead">Más lugares por descubrir en la zona y categoría</p>
+    <p class="lead">Otros lugares para explorar en la zona y en la misma categoría</p>
     <div class="carousel"><article class="card">
+    <a href="https://loisirs74.fr/es/museum-des-papillons-et-insectes-faverges" class="card-photo">
+      <img src="/generique-musee.jpg" alt="Muséum des Papillons et Insectes" loading="lazy">
+      <span class="card-tag">De pago</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/es/museum-des-papillons-et-insectes-faverges" class="title">Muséum des Papillons et Insectes</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Faverges-Seythenex</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Mus%C3%A9um%20des%20Papillons%20et%20Insectes%2C%20Faverges-Seythenex%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="https://museumfaverges.wordpress.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
     <a href="https://loisirs74.fr/es/chateau-et-donjon-des-seigneurs-de-faverges" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Chambellon_%40_Pont_de_Seythenex.jpg" alt="Donjon de los Señores de Faverges en el patio interior del castillo, torre redonda del siglo XIII inscrita en Monumentos Históricos" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/chateau-et-donjon-des-seigneurs-de-faverges" class="title">Château et Donjon des Seigneurs de Faverges</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Faverges-Seythenex</span></div>
-      <p class="card-desc">Donjon medieval del siglo XIII en el corazón del castillo, ofreciendo una vista panorámica de 360° sobre la ciudad de Faverges y los macizos circundantes tras ascender 145 escalones.</p>
+      <p class="card-desc">Donjon medieval del siglo XIII, 145 escalones, vista 360° sobre los Bauges y el valle de Faverges. Visita libre, inscrito en Monumentos Históricos.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Ch%C3%A2teau%20et%20Donjon%20des%20Seigneurs%20de%20Faverges%2C%20Faverges-Seythenex%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Ch%C3%A2teau%20et%20Donjon%20des%20Seigneurs%20de%20Faverges%2C%20Faverges-Seythenex%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/es/col-de-la-forclaz" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <span class="card-tag">Gratis</span>
+    <a href="https://loisirs74.fr/es/musee-archeologique-viuz-faverges" class="card-photo">
+      <img src="/generique-musee.jpg" alt="Musée Archéologique de Viuz-Faverges" loading="lazy">
+      <span class="card-tag">De pago</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/es/col-de-la-forclaz" class="title">Col de la Forclaz</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Talloires-Montmin</span></div>
-      <p class="card-desc">Puerto de montaña alpino a 1 147 m de altitud que ofrece una de las vistas más espectaculares del lago Annecy, enmarcado por los macizos de los Bauges y los Aravis.</p>
+      <a href="https://loisirs74.fr/es/musee-archeologique-viuz-faverges" class="title">Musée Archéologique de Viuz-Faverges</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Faverges-Seythenex</span></div>
+      
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Col%20de%20la%20Forclaz%2C%20Talloires-Montmin%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Mus%C3%A9e%20Arch%C3%A9ologique%20de%20Viuz-Faverges%2C%20Faverges-Seythenex%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="https://www.archeoviuz.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/es/cascade-d-angon" class="card-photo">
-      <img src="/cascade-d-angon-hero.jpg" alt="Cascade d&#39;Angon al fondo del cañón, accesible por sendero seguro, Talloires-Montmin, Haute-Savoie" loading="lazy">
+      <img src="/cascade-d-angon-hero.jpg" alt="Cascade d&#x27;Angon al fondo del cañón, accesible por sendero seguro, Talloires-Montmin, Haute-Savoie" loading="lazy">
       <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/es/cascade-d-angon" class="title">Cascade d&#39;Angon</a>
+      <a href="https://loisirs74.fr/es/cascade-d-angon" class="title">Cascade d'Angon</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Talloires-Montmin</span></div>
-      <p class="card-desc">Caída de agua de 60 metros de altura en un cañón espectacular, accesible por un sendero seguro excavado en la ladera del acantilado sobre el lago de Annecy.</p>
+      <p class="card-desc">Cascada de 60 m accesible por sendero seguro en 30 min a 1h desde Angon, Vérel o Talloires. Acceso libre todo el año sobre el lago de Annecy.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20d&#39;Angon%2C%20Talloires-Montmin%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Cascade%20d%27Angon%2C%20Talloires-Montmin%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
       </div>
     </div>
   </article>
@@ -304,40 +313,23 @@
     <div class="card-body">
       <a href="https://loisirs74.fr/es/gorges-du-fier" class="title">Gorges du Fier</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Lovagny</span></div>
-      <p class="card-desc">Un cañón excavado por el Fier durante 20 000 años, recorrido desde 1869 por 250 m de pasarelas fijadas en la roca a 25 m sobre el torrente.</p>
+      <p class="card-desc">Cañón del Fier, pasarelas a 25 m sobre el torrente y Chemin des Châteaux de acceso libre. En Lovagny, 10 km de Annecy, Alta Saboya.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Gorges%20du%20Fier%2C%20Lovagny%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Gorges%20du%20Fier%2C%20Lovagny%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/es/cascade-du-chinaillon" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Le_Chinaillon_%40_Pont_des_Romains_%40_Le_Grand-Bornand_%2851027594708%29.jpg" alt="Cascade du Chinaillon descendiendo por una garganta estrecha en el bosque de hayas, Le Grand-Bornand Chinaillon, Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/cascade-du-chinaillon" class="title">Cascade du Chinaillon</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Le Grand-Bornand</span></div>
-      <p class="card-desc">Cascada de 30 metros que desciende por una garganta estrecha en el Nant du Chinaillon, accesible en 20 minutos a pie desde la estación.</p>
+      <p class="card-desc">Cascada de 30 metros en el Nant du Chinaillon, accesible en 20 minutos a pie desde Chinaillon. Leyenda local, gargantas esculpidas, paseo fácil todo el año.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20du%20Chinaillon%2C%20Le%20Grand-Bornand%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/es/cascade-de-la-belle-au-bois" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <span class="card-tag">Gratis</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/es/cascade-de-la-belle-au-bois" class="title">Cascade de la Belle au Bois</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Megève</span></div>
-      <p class="card-desc">Cascada de 30 metros que erosiona pozas turquesas, ubicada en el bosque a 30 minutos a pie desde el centro de Megève.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20de%20la%20Belle%20au%20Bois%2C%20Meg%C3%A8ve%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Cascade%20du%20Chinaillon%2C%20Le%20Grand-Bornand%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
       </div>
     </div>
   </article></div>

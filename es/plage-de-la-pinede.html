@@ -212,8 +212,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -229,94 +227,88 @@
   <div class="wrap">
     <p class="kicker">Cerca</p>
     <h2>Cerca</h2>
-    <p class="lead">Más lugares por descubrir en la zona y categoría</p>
+    <p class="lead">Otros lugares para explorar en la zona y en la misma categoría</p>
     <div class="carousel"><article class="card">
+    <a href="https://loisirs74.fr/es/musee-du-chablais-thonon-les-bains" class="card-photo">
+      <img src="/generique-musee.jpg" alt="Musée du Chablais" loading="lazy">
+      <span class="card-tag">De pago</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/es/musee-du-chablais-thonon-les-bains" class="title">Musée du Chablais</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Thonon-les-Bains</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Mus%C3%A9e%20du%20Chablais%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="https://www.ville-thonon.fr/decouvrir-la-ville/culture/expositions/musee-du-chablais/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/es/chateau-bellegarde-thonon" class="card-photo">
+      <img src="/generique-chateau.jpg" alt="Château de Bellegarde" loading="lazy">
+      <span class="card-tag">Gratis</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/es/chateau-bellegarde-thonon" class="title">Château de Bellegarde</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Thonon-les-Bains</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Ch%C3%A2teau%20de%20Bellegarde%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="https://www.thononlesbains.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/es/viarhona-ev17-bas-chablais-thonon" class="card-photo">
+      <img src="/generique-voie-verte.jpg" alt="viarhona-ev17-bas-chablais-thonon" loading="lazy">
+      <span class="card-tag">Gratis</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/es/viarhona-ev17-bas-chablais-thonon" class="title">viarhona-ev17-bas-chablais-thonon</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Thonon-les-Bains</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=viarhona-ev17-bas-chablais-thonon%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="https://www.viarhona.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
     <a href="https://loisirs74.fr/es/plage-de-saint-disdille" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Plage_thonon.jpg" alt="Plage de Saint-Disdille a orillas del lago Lemán con zona sombreada por castaños, Thonon-les-Bains, Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/plage-de-saint-disdille" class="title">Plage de Saint-Disdille</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Thonon-les-Bains</span></div>
-      <p class="card-desc">Playa de hierba y guijarros a orillas del lago Lemán, certificada Bandera Azul desde 2010, en los límites del parque de la Châtaigneraie y del bosque de Ripaille.</p>
+      <p class="card-desc">Playa gratuita certificada Bandera Azul en el lago Lemán, vigilancia de baño en verano, adyacente al parque de la Châtaigneraie en Thonon-les-Bains, Alta Saboya.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Saint-Disdille%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/es/chateaux-des-allinges" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <span class="card-tag">Gratis</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/es/chateaux-des-allinges" class="title">Châteaux des Allinges</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Allinges</span></div>
-      <p class="card-desc">Dos fortalezas medievales rivales frente a frente en la cima de una colina dominando Thonon y el lago Lemán, con capilla románica catalogada y frescos del siglo XI.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Ch%C3%A2teaux%20des%20Allinges%2C%20Allinges%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Plage%20de%20Saint-Disdille%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/es/plage-de-sciez-sur-leman" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Sciez-regate.jpg" alt="Playa con césped de Sciez-sur-Léman con vistas al lago, cerca del puerto deportivo, Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/plage-de-sciez-sur-leman" class="title">Plage de Sciez-sur-Léman</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sciez</span></div>
-      <p class="card-desc">Playa con césped y árboles a orillas del lago Leman, con baño vigilado en verano, zona dedicada para perros, juegos para niños e instalaciones de accesibilidad.</p>
+      <p class="card-desc">Playa con césped del Leman con baño vigilado en verano, zona para perros, juegos, petanca y ping-pong. Acceso gratuito todo el año en Sciez.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Sciez-sur-L%C3%A9man%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Plage%20de%20Sciez-sur-L%C3%A9man%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/es/plage-d-excenevex" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG" alt="Playa de arena fina de Excenevex en el lago Lemán con vista a la Dent d&#x27;Oche y los Alpes suizos, Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/plage-d-excenevex" class="title">Playa de Excenevex</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Excenevex</span></div>
-      <p class="card-desc">Única playa natural de arena fina de la orilla francesa del lago Lemán, con pendiente suave durante varias decenas de metros y aguas poco profundas que alcanzan 25°C en verano.</p>
+      <p class="card-desc">Única playa natural de arena fina del lago Lemán en la orilla francesa. Pendiente suave, aguas a 25°C en verano, baño vigilado. Aparcamiento 6 € en temporada, playa gratuita.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Playa%20de%20Excenevex%2C%20Excenevex%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/es/lac-de-vallon" class="card-photo">
-      <img src="/lac-de-vallon-hero.jpg" alt="Lac de Vallon al pie del Roc d&#39;Enfer, Bellevaux, Alta Saboya" loading="lazy">
-      <span class="card-tag">Gratis</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/es/lac-de-vallon" class="title">Lac de Vallon</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Bellevaux</span></div>
-      <p class="card-desc">Quince hectáreas de aguas color esmeralda a 1080 m de altitud, nacidas en la noche del 11 al 12 de marzo de 1943 cuando la montaña se deslizó y cerró el curso del Brévon.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20de%20Vallon%2C%20Bellevaux%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/es/lac-benit" class="card-photo">
-      <img src="/lac-benit-hero.jpg" alt="Lac Bénit al pie del macizo del Bargy, Mont-Saxonnex, Alta Saboya" loading="lazy">
-      <span class="card-tag">Gratis</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/es/lac-benit" class="title">Lac Bénit</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Mont-Saxonnex</span></div>
-      <p class="card-desc">Pequeño lago glaciar de 4,1 hectáreas a 1 452 m de altitud, al pie de las paredes del Bargy.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20B%C3%A9nit%2C%20Mont-Saxonnex%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Playa%20de%20Excenevex%2C%20Excenevex%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a>
       </div>
     </div>
   </article></div>

@@ -267,8 +267,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -284,79 +282,88 @@
   <div class="wrap">
     <p class="kicker">Nearby</p>
     <h2>Nearby</h2>
-    <p class="lead">More places to explore in this zone and category</p>
+    <p class="lead">Other places to explore in the area and in the same category</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/en/chateau-des-rubins-observatoire-des-alpes" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Ch%C3%A2teau_des_Rubins_%40_Sallanches_%2851008901708%29.jpg" alt="Château des Rubins – Observatoire des Alpes, mountain museum in Sallanches, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Paid</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/chateau-des-rubins-observatoire-des-alpes" class="title">Château des Rubins – Observatoire des Alpes</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sallanches</span></div>
-      <p class="card-desc">Mountain museum in a 14th-century medieval castle.</p>
+      <p class="card-desc">Interactive mountain museum in a 14th-century castle in Sallanches. 500 m² of immersive scenography across 4 floors. Adult entry €7.50.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Ch%C3%A2teau%20des%20Rubins%20%E2%80%93%20Observatoire%20des%20Alpes%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        <a href="https://sallanchesmontblanc.com/vivre-sallanches/chateau-des-rubins-observatoire-des-alpes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Ch%C3%A2teau%20des%20Rubins%20%E2%80%93%20Observatoire%20des%20Alpes%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a><a href="https://sallanchesmontblanc.com/vivre-sallanches/chateau-des-rubins-observatoire-des-alpes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/en/cascade-de-l-arpenaz" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+    <a href="https://loisirs74.fr/en/grp-tour-pays-mont-blanc-sallanches" class="card-photo">
+      <img src="/generique-sentier.jpg" alt="grp-tour-pays-mont-blanc-sallanches" loading="lazy">
       <span class="card-tag">Free</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/en/cascade-de-l-arpenaz" class="title">Cascade de l&#39;Arpenaz</a>
+      <a href="https://loisirs74.fr/en/grp-tour-pays-mont-blanc-sallanches" class="title">grp-tour-pays-mont-blanc-sallanches</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sallanches</span></div>
-      <p class="card-desc">A 270-meter waterfall overlooking the hamlet of Luzier, ranked as the 3rd highest waterfall in France and the highest in the French Alps.</p>
+      
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20de%20l&#39;Arpenaz%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=grp-tour-pays-mont-blanc-sallanches%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a><a href="https://www.ffrandonnee.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/en/chateau-des-rubins-sallanches" class="card-photo">
+      <img src="/generique-chateau.jpg" alt="Château des Rubins" loading="lazy">
+      <span class="card-tag">Paid</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/en/chateau-des-rubins-sallanches" class="title">Château des Rubins</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sallanches</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Ch%C3%A2teau%20des%20Rubins%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a><a href="https://sallanchesmontblanc.com/vivre-sallanches/chateau-des-rubins-observatoire-des-alpes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/en/base-de-loisirs-du-lac-des-iles" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Les_ARAVIS_depuis_le_LAC_DE_PASSY_-_panoramio.jpg" alt="Beach of Lake Îles with view of Mont-Blanc, Passy, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/base-de-loisirs-du-lac-des-iles" class="title">Base de loisirs du Lac des Îles</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Passy</span></div>
-      <p class="card-desc">The largest developed lake in the Mont-Blanc region: sandy beach, supervised swimming in summer, water and land activities in a green setting facing the massif.</p>
+      <p class="card-desc">Leisure park facing Mont-Blanc: supervised beach, swimming, paddle, pedal boats, fitness trail, mini-golf, go-kart. Free access year-round in Passy.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20de%20loisirs%20du%20Lac%20des%20%C3%8Eles%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Base%20de%20loisirs%20du%20Lac%20des%20%C3%8Eles%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/en/base-de-loisirs-du-lac-bleu" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Morillon_-_vue_sur_le_lac_bleu_et_le_criou.jpg" alt="Base de loisirs du Lac Bleu with sandy beach and shaded lawns, Morillon, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/base-de-loisirs-du-lac-bleu" class="title">Base de loisirs du Lac Bleu</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Morillon</span></div>
-      <p class="card-desc">Family recreational complex centred on a small 2.</p>
+      <p class="card-desc">Mountain lake leisure park with supervised beach, children's playground, tree-top course, pumptrack, picnic areas. Free access year-round in Morillon.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20de%20loisirs%20du%20Lac%20Bleu%2C%20Morillon%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Base%20de%20loisirs%20du%20Lac%20Bleu%2C%20Morillon%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/en/parc-de-loisirs-du-pontet" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Lac_de_p%C3%AAche_%40_Parc_de_loisirs_du_Pontet_%40_Val_Montjoie_%2850921651901%29.jpg" alt="Parc de Loisirs du Pontet with mountain lake and green spaces, Les Contamines-Montjoie, at the foot of the Mont-Blanc massif" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/parc-de-loisirs-du-pontet" class="title">Parc de Loisirs du Pontet</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Les Contamines-Montjoie</span></div>
-      <p class="card-desc">The largest leisure park in Mont-Blanc country: 30 hectares of nature at the foot of the Contamines Nature Reserve, with mountain lakes, free swimming beach and over 20 activities for the whole family.</p>
+      <p class="card-desc">The largest leisure park in Mont-Blanc country: 30 hectares, 2 lakes, free swimming, 20+ sports and relaxation activities. Free access all season in Les Contamines-Montjoie.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parc%20de%20Loisirs%20du%20Pontet%2C%20Les%20Contamines-Montjoie%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Parc%20de%20Loisirs%20du%20Pontet%2C%20Les%20Contamines-Montjoie%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
       </div>
     </div>
   </article></div>

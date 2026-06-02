@@ -239,8 +239,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -256,49 +254,74 @@
   <div class="wrap">
     <p class="kicker">In der Nähe</p>
     <h2>In der Nähe</h2>
-    <p class="lead">Weitere Orte in dieser Zone und Kategorie</p>
+    <p class="lead">Weitere Orte in der Umgebung und in derselben Kategorie</p>
     <div class="carousel"><article class="card">
-    <a href="https://loisirs74.fr/de/mont-baron" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+    <a href="https://loisirs74.fr/de/plage-de-la-brune-veyrier" class="card-photo">
+      <img src="/plage-de-la-brune-veyrier-hero.jpg" alt="Plage de La Brune" loading="lazy">
       <span class="card-tag">Kostenlos</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/de/mont-baron" class="title">Mont Baron</a>
+      <a href="https://loisirs74.fr/de/plage-de-la-brune-veyrier" class="title">Plage de La Brune</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Veyrier-du-Lac</span></div>
-      <p class="card-desc">Felsbalkon auf 1299 Metern Höhe über dem Annecy-See, verbunden mit dem Mont Veyrier durch einen spektakulären Kammweg mit herrlichem Blick auf den See, die Bauges und den Mont Blanc.</p>
+      
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mont%20Baron%2C%20Veyrier-du-Lac%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/de/belvedere-du-mont-baron" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <span class="card-tag">Kostenlos</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/de/belvedere-du-mont-baron" class="title">Belvédère du Mont Baron</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Veyrier-du-Lac</span></div>
-      <p class="card-desc">Betonierte Panoramaplattform auf 1.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Belv%C3%A9d%C3%A8re%20du%20Mont%20Baron%2C%20Veyrier-du-Lac%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Plage%20de%20La%20Brune%2C%20Veyrier-du-Lac%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a><a href="https://www.veyrier-du-lac.fr/plages/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Website</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/de/plage-albigny" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Plage_d%27Albigny_%C3%A0_Annecy.jpg" alt="Plage d&#x27;Albigny am Ufer des Lac d&#x27;Annecy mit Rasen und Bergblick, Viertel Albigny, Annecy" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Kostenlos</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/de/plage-albigny" class="title">Plage d&#39;Albigny</a>
+      <a href="https://loisirs74.fr/de/plage-albigny" class="title">Plage d'Albigny</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Annecy</span></div>
-      <p class="card-desc">Der größte öffentliche Strand des Lac d&#39;Annecy mit 400 Metern Uferlandschaft gegenüber den Bergen.</p>
+      <p class="card-desc">Der größte kostenlose Strand des Lac d'Annecy: 400 m Rasen und Sand, Sommerbewachung, kostenlose Duschen und Toiletten. Viertel Albigny, Annecy.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20d&#39;Albigny%2C%20Annecy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Plage%20d%27Albigny%2C%20Annecy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/de/casino-imperial-palace-annecy" class="card-photo">
+      <img src="/casino-imperial-palace-annecy-hero.jpg" alt="Casino Impérial Palace Annecy" loading="lazy">
+      <span class="card-tag">Kostenpflichtig</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/de/casino-imperial-palace-annecy" class="title">Casino Impérial Palace Annecy</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Annecy</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Casino%20Imp%C3%A9rial%20Palace%20Annecy%2C%20Annecy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a><a href="https://www.lac-annecy.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Website</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/de/mont-baron" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Mont_Baron_%40_Veyrier-du-Lac_%2851213738648%29.jpg" alt="Panoramablick vom Gipfel des Mont Baron auf den Annecy-See und das Bauges-Massiv, Veyrier-du-Lac, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">Kostenlos</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/de/mont-baron" class="title">Mont Baron</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Veyrier-du-Lac</span></div>
+      <p class="card-desc">Panoramagipfel auf 1299 m über dem Annecy-See, zugänglich über Kammwege. Freier Zugang ganzjährig ab Annecy-le-Vieux. Blick auf Mont Blanc und Bauges.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Mont%20Baron%2C%20Veyrier-du-Lac%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/de/belvedere-du-mont-baron" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg" alt="Belvédère du Mont Baron mit Panoramablick auf den Annecy-See und die Massivgruppen Bauges, Veyrier-du-Lac, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">Kostenlos</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/de/belvedere-du-mont-baron" class="title">Belvédère du Mont Baron</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Veyrier-du-Lac</span></div>
+      <p class="card-desc">Panoramaplattform auf 1254 m, Überrest der ehemaligen Seilbahn des Mont Veyrier. 180°-Blick auf den Annecy-See, die Bauges und den Mont-Blanc. Freier Zugang.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Belv%C3%A9d%C3%A8re%20du%20Mont%20Baron%2C%20Veyrier-du-Lac%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
       </div>
     </div>
   </article>
@@ -310,40 +333,9 @@
     <div class="card-body">
       <a href="https://loisirs74.fr/de/tete-du-parmelan" class="title">Tête du Parmelan</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Dingy-Saint-Clair</span></div>
-      <p class="card-desc">Der emblematische Gipfel des Parmelan-Plateaus, ein riesiges Kalksteinplateau auf 1.</p>
+      <p class="card-desc">Emblematischer Gipfel des Parmelan auf 1.832 m mit Panoramablick auf Annecy, seinen See und das Mont-Blanc-Massiv. Freier Zugang über markierte Wege.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=T%C3%AAte%20du%20Parmelan%2C%20Dingy-Saint-Clair%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/de/pont-de-la-caille" class="card-photo">
-      <img src="/pont-de-la-caille-hero.jpg" alt="Pont de la Caille in Cruseilles, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Kostenlos</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/de/pont-de-la-caille" class="title">Pont de la Caille</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cruseilles</span></div>
-      <p class="card-desc">Zwei Brücken nebeneinander über den Usses-Schluchten: die Pont Charles-Albert, Hängebrücke, eingeweiht 1839, heute nur für Fußgänger und seit 1966 als Historisches Denkmal eingetragen; und die Pont Caquot, Betonbogen von 1928, auf dem die RD1201 verläuft.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Pont%20de%20la%20Caille%2C%20Cruseilles%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/de/col-de-la-forclaz" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <span class="card-tag">Kostenlos</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/de/col-de-la-forclaz" class="title">Col de la Forclaz</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Talloires-Montmin</span></div>
-      <p class="card-desc">Alpiner Gebirgspass auf 1.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Col%20de%20la%20Forclaz%2C%20Talloires-Montmin%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=T%C3%AAte%20du%20Parmelan%2C%20Dingy-Saint-Clair%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a>
       </div>
     </div>
   </article></div>

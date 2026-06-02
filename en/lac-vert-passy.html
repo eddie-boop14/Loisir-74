@@ -234,8 +234,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -251,79 +249,88 @@
   <div class="wrap">
     <p class="kicker">Nearby</p>
     <h2>Nearby</h2>
-    <p class="lead">More places to explore in this zone and category</p>
+    <p class="lead">Other places to explore in the area and in the same category</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/en/passy-accro-lac" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg" alt="Treetop course in forest with zip-lines on the edge of Passy lake, facing Mont-Blanc massif, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Paid</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/passy-accro-lac" class="title">Passy Accro Lac</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Passy</span></div>
-      <p class="card-desc">Multi-activity adventure park on the edge of Passy lake: 10 treetop courses with continuous safety lines, zip-lines, airbag, human catapult and outdoor escape games.</p>
+      <p class="card-desc">Multi-activity adventure park facing Mont-Blanc: 10 treetop courses, 1.2 km of zip-lines, airbag, human catapult, outdoor escape games. From €6.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Passy%20Accro%20Lac%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        <a href="https://www.passyaccrolac.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/en/lac-de-passy" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <span class="card-tag">Free</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/en/lac-de-passy" class="title">Lac de Passy</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Passy</span></div>
-      <p class="card-desc">The largest developed lake in the Mont-Blanc region, located at 547 m elevation with sandy beach, supervised swimming zone in summer and panoramic views of the Mont-Blanc massif.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20de%20Passy%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Passy%20Accro%20Lac%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a><a href="https://www.passyaccrolac.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/en/cascade-de-chedde" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Cascade_de_Cheddes_-_btv1b10123413v.jpg" alt="Cascade de Chedde heart-shaped waterfall, Ugine torrent, Passy-Chedde, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/cascade-de-chedde" class="title">Cascade de Chedde</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Passy</span></div>
-      <p class="card-desc">Natural waterfall where the waters of the Ugine torrent divide into two branches around a heart of stone, creating a distinctive shape that earned it the nickname Heart Cascade.</p>
+      <p class="card-desc">Heart-shaped waterfall in Passy-Chedde, formed by the Ugine torrent. 5 min walk from free parking. Free access year-round, classified natural site.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20de%20Chedde%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Cascade%20de%20Chedde%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/en/jardin-cimes-passy" class="card-photo">
+      <img src="/jardin-cimes-passy-hero.jpg" alt="Jardin des Cimes" loading="lazy">
+      <span class="card-tag">Paid</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/en/jardin-cimes-passy" class="title">Jardin des Cimes</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Passy</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Jardin%20des%20Cimes%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a><a href="https://www.passy-mont-blanc.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Official site</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/en/lac-de-passy" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Lac_vert_de_passy_%281%29.JPG" alt="Aerial view of Lac de Passy with Mont-Blanc in the background, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">Free</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/en/lac-de-passy" class="title">Lac de Passy</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Passy</span></div>
+      <p class="card-desc">Artificial 50-hectare lake with supervised beach, swimming, pedal boats, paddle, go-kart racing and Mont-Blanc views. Free access year-round in Passy.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Lac%20de%20Passy%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/en/lac-cornu" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Lac_Cornu_%40_Hike_to_Lacs_des_Ch%C3%A9serys%2C_Lac_Blanc%2C_Lac_Cornu_%26_Lacs_Noirs_%40_Chamonix_%2815174603960%29.jpg" alt="Lac Cornu in the Aiguilles Rouges, view from Cornu Pass, Chamonix-Mont-Blanc, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/lac-cornu" class="title">Lac Cornu</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Chamonix-Mont-Blanc</span></div>
-      <p class="card-desc">High-altitude lake nestled in a wild cirque of the Aiguilles Rouges Nature Reserve, accessible via a mountain trail from the Planpraz cable car.</p>
+      <p class="card-desc">High mountain lake at 2,275 m in the Aiguilles Rouges Nature Reserve. Free access via trail from Planpraz, 3h30 round trip. Fishing permitted, distinctive crescent shape.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20Cornu%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Lac%20Cornu%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/en/lac-blanc" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Lac_Blanc.JPG" alt="Lac Blanc at 2,352 m elevation with views of Mont-Blanc massif and Aiguilles Rouges, Chamonix, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/lac-blanc" class="title">Lac Blanc</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Chamonix-Mont-Blanc</span></div>
-      <p class="card-desc">Iconic glacial lake at 2,352 m elevation in the Aiguilles Rouges natural reserve, offering exceptional panoramic views facing Mont-Blanc massif, Aiguille Verte, and Grandes Jorasses.</p>
+      <p class="card-desc">High-altitude lake at 2,352 m in the Aiguilles Rouges reserve, facing Mont-Blanc massif. Access via Flégère or Col des Montets, Chamonix.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20Blanc%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Lac%20Blanc%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Directions</span></a>
       </div>
     </div>
   </article></div>

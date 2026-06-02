@@ -302,8 +302,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -319,49 +317,74 @@
   <div class="wrap">
     <p class="kicker">À proximité</p>
     <h2>À proximité</h2>
-    <p class="lead">D’autres lieux à explorer dans le coin et dans la même catégorie</p>
+    <p class="lead">D'autres lieux à explorer dans le coin et dans la même catégorie</p>
     <div class="carousel"><article class="card">
+    <a href="https://loisirs74.fr/musee-montagnard-les-houches" class="card-photo">
+      <img src="/generique-musee.jpg" alt="Façade en bois et pierre de la maison de 1750 abritant le Musée Montagnard des Houches au cœur du village" loading="lazy">
+      <span class="card-tag">Payant</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/musee-montagnard-les-houches" class="title">Musée Montagnard des Houches</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Les Houches</span></div>
+      <p class="card-desc">Musée d'arts et traditions populaires des Houches dans une maison de 1750. Collection Albert Laprade. Adulte 5 €, gratuit -18 ans. Pass CCVCMB 25 €/an.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Mus%C3%A9e%20Montagnard%20des%20Houches%2C%20Les%20Houches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://musee-alpin-chamonix.fr/en/museums-network/musee-montagnard" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/tour-du-mont-blanc-les-houches" class="card-photo">
+      <img src="/generique-sentier.jpg" alt="Sentier du Tour du Mont-Blanc TMB face au massif du Mont-Blanc et à l&#x27;Aiguille Verte avec randonneurs et balisage GR® blanc-rouge Haute-Savoie" loading="lazy">
+      <span class="card-tag">Gratuit</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/tour-du-mont-blanc-les-houches" class="title">Tour du Mont-Blanc</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Les Houches</span></div>
+      <p class="card-desc">170 km en 11 étapes anti-horaire (215 km variantes GR®) à travers France-Italie-Suisse. 10 000 m D+. Départ Les Houches. Saison mi-juin à mi-septembre.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Tour%20du%20Mont-Blanc%2C%20Les%20Houches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.ffrandonnee.fr/randonner/sentiers/gr-tmb-le-tour-du-mont-blanc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
     <a href="https://loisirs74.fr/telepherique-du-brevent" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Brevent_cable_car.jpg" alt="Téléphérique du Brévent" loading="lazy" referrerpolicy="no-referrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Brevent_cable_car.jpg" alt="Vue depuis le sommet du Brévent à 2 525 m sur le massif du Mont Blanc et le glacier des Bossons, Chamonix-Mont-Blanc" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/telepherique-du-brevent" class="title">Téléphérique du Brévent</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Chamonix-Mont-Blanc</span></div>
-      <p class="card-desc">Le Brévent offre la vue la plus frontale sur le massif du Mont Blanc depuis Chamonix.</p>
+      <p class="card-desc">Le Brévent (2 525 m) face au Mont Blanc depuis Chamonix. AR adulte 41,20 €, horaires été, réservation directe chez l'exploitant Compagnie du Mont-Blanc.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=T%C3%A9l%C3%A9ph%C3%A9rique%20du%20Br%C3%A9vent%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        <a href="https://domaineschamonix.montblancnaturalresort.com/en/area/brevent" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=T%C3%A9l%C3%A9ph%C3%A9rique%20du%20Br%C3%A9vent%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://domaineschamonix.montblancnaturalresort.com/en/area/brevent" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/lac-cornu" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Lac_Cornu_%40_Hike_to_Lacs_des_Ch%C3%A9serys%2C_Lac_Blanc%2C_Lac_Cornu_%26_Lacs_Noirs_%40_Chamonix_%2815174603960%29.jpg" alt="Lac Cornu dans les Aiguilles Rouges, vue depuis le col Cornu, Chamonix-Mont-Blanc, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuit</span>
+    <a href="https://loisirs74.fr/patinoire-richard-bozon-chamonix" class="card-photo">
+      <img src="/patinoire-richard-bozon-chamonix-hero.jpg" alt="Patinoire olympique couverte 60×30m + extérieure 26×56m Patinoire Richard Bozon à Chamonix-Mont-Blanc Haute-Savoie 74" loading="lazy">
+      <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/lac-cornu" class="title">Lac Cornu</a>
+      <a href="https://loisirs74.fr/patinoire-richard-bozon-chamonix" class="title">Patinoire Richard Bozon</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Chamonix-Mont-Blanc</span></div>
-      <p class="card-desc">Lac de haute altitude niché dans un cirque sauvage de la Réserve Naturelle des Aiguilles Rouges, accessible par un sentier de montagne depuis la télécabine de Planpraz.</p>
+      <p class="card-desc">PATINOIRE OLYMPIQUE 60×30 M COUVERTE + PATINOIRE EXTÉRIEURE 26×56 M en hiver. Centre Sportif Richard Bozon - équipement majeur du Pays du Mo.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lac%20Cornu%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Patinoire%20Richard%20Bozon%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.chamonix.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/cascade-du-dard" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Cascade_du_Dard_01.jpg" alt="Cascade du Dard dévalant 20 mètres dans la forêt près de l&#39;entrée du tunnel du Mont-Blanc, Chamonix-Mont-Blanc, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuit</span>
+    <a href="https://loisirs74.fr/parc-aventure-mont-blanc-saint-gervais" class="card-photo">
+      <img src="/parc-aventure-mont-blanc-saint-gervais-hero.jpg" alt="Parc accrobranche - 7 parcours, tyroliennes 400m, via ferrata Mont-Blanc Parc Aventure à Saint-Gervais-les-Bains Haute-Savoie 74" loading="lazy">
+      <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/cascade-du-dard" class="title">Cascade du Dard</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Chamonix-Mont-Blanc</span></div>
-      <p class="card-desc">Cascade de 20 mètres de hauteur située à 1 233 m d&#39;altitude, sur le torrent du Dard descendant du glacier des Pélerins.</p>
+      <a href="https://loisirs74.fr/parc-aventure-mont-blanc-saint-gervais" class="title">Mont-Blanc Parc Aventure</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Saint-Gervais-les-Bains</span></div>
+      <p class="card-desc">7 PARCOURS ACCROBRANCHE de différents niveaux + TYROLIENNES JUSQU'À 400 M + VIA FERRATA dans le Parc Thermal de Saint-Gervais. Le plus impor.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20du%20Dard%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Mont-Blanc%20Parc%20Aventure%2C%20Saint-Gervais-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.montblancparcaventure.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
       </div>
     </div>
   </article>
@@ -373,40 +396,9 @@
     <div class="card-body">
       <a href="https://loisirs74.fr/passy-accro-lac" class="title">Passy Accro Lac</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Passy</span></div>
-      <p class="card-desc">Parc aventure multi-activités au bord du lac de Passy : 10 parcours d&#39;accrobranche avec ligne de vie continue, tyroliennes, airbag, catapulte humaine et escape games outdoor.</p>
+      <p class="card-desc">Parc multi-activités face au Mont-Blanc : 10 parcours accrobranche, 1,2 km de tyroliennes, airbag, catapulte humaine, escape games en plein air. À partir de 6 €.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Passy%20Accro%20Lac%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        <a href="https://www.passyaccrolac.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/cote-2000-aventure" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Seilpark_Gantrisch_-_03.jpg" alt="Parcours accrobranche dans les arbres à Côte 2000 Aventure, Megève, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Payant</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/cote-2000-aventure" class="title">Côte 2000 Aventure</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Megève</span></div>
-      <p class="card-desc">Parc d&#39;accrobranche au pied des Aiguilles Croches avec 70 ateliers répartis sur 3 niveaux de difficulté, dont une tyrolienne de 90 mètres.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=C%C3%B4te%202000%20Aventure%2C%20Meg%C3%A8ve%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        <a href="https://www.cote2000aventure.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/aquariaz" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Aquariaz.jpg" alt="Bassins et végétation tropicale du centre aquatique Aquariaz à Avoriaz, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Payant</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/aquariaz" class="title">Aquariaz</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Morzine</span></div>
-      <p class="card-desc">Centre aqualudique tropical de 2 400 m² perché à 1 800 m d&#39;altitude au cœur de la station d&#39;Avoriaz, avec bassins chauffés, rivière à courant, toboggans et jacuzzi extérieur vue sommets.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Aquariaz%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        <a href="https://www.avoriaz.com/activites-hiver/centre-aquatique/aquariaz/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Passy%20Accro%20Lac%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.passyaccrolac.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
       </div>
     </div>
   </article></div>

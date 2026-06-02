@@ -239,8 +239,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -256,83 +254,91 @@
   <div class="wrap">
     <p class="kicker">Nelle vicinanze</p>
     <h2>Nelle vicinanze</h2>
-    <p class="lead">Altri luoghi da scoprire in zona e nella stessa categoria</p>
+    <p class="lead">Altri luoghi da esplorare nei dintorni e nella stessa categoria</p>
     <div class="carousel"><article class="card">
-    <a href="https://loisirs74.fr/it/base-de-loisirs-du-lac-aux-dames" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Lac_aux_Dames_%C3%A0_Samo%C3%ABns_en_%C3%A9t%C3%A9_%28juillet_2023%29_1.JPG" alt="Base di svago del Lago aux Dames a Samoëns con i suoi due laghi e spazi verdi in Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuito</span>
+    <a href="https://loisirs74.fr/it/jardin-jaysinia-samoens" class="card-photo">
+      <img src="/jardin-jaysinia-samoens-hero.jpg" alt="Jardin botanique alpin La Jaÿsinia" loading="lazy">
+      <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/it/base-de-loisirs-du-lac-aux-dames" class="title">Base di svago del Lago aux Dames</a>
+      <a href="https://loisirs74.fr/it/jardin-jaysinia-samoens" class="title">Jardin botanique alpin La Jaÿsinia</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Samoëns</span></div>
-      <p class="card-desc">Base di svago di 10 ettari costruita attorno a due laghi, appartata dal centro del villaggio di Samoëns, con nuoto sorvegliato in estate, aree giochi, campi sportivi e accesso libero.</p>
+      
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20di%20svago%20del%20Lago%20aux%20Dames%2C%20Samo%C3%ABns%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Jardin%20botanique%20alpin%20La%20Ja%C3%BFsinia%2C%20Samo%C3%ABns%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a><a href="https://www.samoens.com/en/alpine-botanical-garden-la-jaysinia/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/it/plateau-de-loex" class="card-photo">
+      <img src="/plateau-de-loex-hero.jpg" alt="Plateau de Loëx" loading="lazy">
+      <span class="card-tag">Gratis</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/it/plateau-de-loex" class="title">Plateau de Loëx</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Taninges</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Plateau%20de%20Lo%C3%ABx%2C%20Taninges%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/it/abbaye-de-sixt" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Sixt_abbey_02.jpg" alt="Abbaye de Sixt e la sua chiesa abbaziale del XIII secolo, Sixt-Fer-à-Cheval, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/abbaye-de-sixt" class="title">Abbaye de Sixt</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sixt-Fer-à-Cheval</span></div>
-      <p class="card-desc">Antica abbazia di canonici regolari fondata nel 1144, iscritta a Monumento Storico.</p>
+      <p class="card-desc">Abbazia del XII secolo iscritta a Monumento Storico. Mostra estiva gratuita, chiesa del XIII secolo e dimora abbaziale restaurata. Visita libera a Sixt-Fer-à-Cheval.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Abbaye%20de%20Sixt%2C%20Sixt-Fer-%C3%A0-Cheval%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Abbaye%20de%20Sixt%2C%20Sixt-Fer-%C3%A0-Cheval%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/it/telecabine-du-mont-chery-les-gets" class="card-photo">
-      <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <span class="card-tag">A pagamento</span>
+    <a href="https://loisirs74.fr/it/base-de-loisirs-du-lac-aux-dames" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Lac_aux_Dames_%C3%A0_Samo%C3%ABns_en_%C3%A9t%C3%A9_%28juillet_2023%29_1.JPG" alt="Base di svago del Lago aux Dames a Samoëns con i suoi due laghi e spazi verdi in Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/it/telecabine-du-mont-chery-les-gets" class="title">Telecabina del Mont-Chéry</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Les Gets</span></div>
-      <p class="card-desc">Il versante nord più tranquillo di Les Gets: 5 minuti in telecabina alla cima del Mont-Chéry (1.</p>
+      <a href="https://loisirs74.fr/it/base-de-loisirs-du-lac-aux-dames" class="title">Base di svago del Lago aux Dames</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Samoëns</span></div>
+      <p class="card-desc">Base di svago di 10 ettari attorno a due laghi a Samoëns. Nuoto sorvegliato in estate, aree giochi, campi sportivi, pesca, paddle. Accesso libero.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Telecabina%20del%20Mont-Ch%C3%A9ry%2C%20Les%20Gets%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        <a href="https://www.lesgets.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Base%20di%20svago%20del%20Lago%20aux%20Dames%2C%20Samo%C3%ABns%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/it/parc-des-dereches" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Horse_riding_in_the_valley_of_the_Edigan_River.jpg" alt="Sentieri del Parc des Dérêches lungo la Dranse, Morzine, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/parc-des-dereches" class="title">Parc des Dérêches</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Morzine</span></div>
-      <p class="card-desc">Parco naturale di oltre 5 km lungo la Dranse, nel cuore di Morzine, con percorso salute, sentieri ombreggiati e infrastrutture sportive per tutta la famiglia.</p>
+      <p class="card-desc">Parco naturale di 5 km lungo la Dranse a Morzine. Percorso salute 20 stazioni, sentieri ombreggiati, skate park, tennis, centro equestre. Accesso libero.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parc%20des%20D%C3%A9r%C3%AAches%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Parc%20des%20D%C3%A9r%C3%AAches%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/it/base-de-loisirs-des-ilettes" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Sallanches-69%C2%A9studio_k.jpg" alt="Lacs des Ilettes a Sallanches, base di svago con tre laghi, vista sulle montagne circostanti e il Mont-Joli, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuito</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Sallanches-69%C2%A9studio_k.jpg" alt="Base di svago delle Ilettes con i suoi tre laghi e prati verdi, Sallanches, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/it/base-de-loisirs-des-ilettes" class="title">Lacs des Ilettes</a>
+      <a href="https://loisirs74.fr/it/base-de-loisirs-des-ilettes" class="title">Base di svago delle Ilettes</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sallanches</span></div>
-      <p class="card-desc">Tre laghi artificiali creati nel 1977 che offrono un&#39;oasi di pace a due chilometri dal centro di Sallanches: pesca, bagni sorvegliati, sport acquatici e passeggiate in famiglia.</p>
+      <p class="card-desc">Complesso di 3 laghi a Sallanches: pesca, nuoto sorvegliato in estate, windsurf, paddle, percorso fitness e area pic-nic. Accesso libero tutto l'anno.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lacs%20des%20Ilettes%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Base%20di%20svago%20delle%20Ilettes%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a>
       </div>
     </div>
-  </article>
-</div>
+  </article></div>
   </div>
 </section>
 <footer class="site"><div class="wrap"><div class="foot-grid">

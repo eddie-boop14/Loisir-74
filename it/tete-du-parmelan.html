@@ -240,8 +240,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -257,94 +255,88 @@
   <div class="wrap">
     <p class="kicker">Nelle vicinanze</p>
     <h2>Nelle vicinanze</h2>
-    <p class="lead">Altri luoghi da scoprire in zona e nella stessa categoria</p>
+    <p class="lead">Altri luoghi da esplorare nei dintorni e nella stessa categoria</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/it/chateau-de-thorens" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Filli%C3%A8re%C2%B0Thorens-Gli%C3%A8res_-_74570_-_2019.06.04_-_Ch%C3%A2teau_de_Thorens_%28vue_de_face%29_%C2%A9_Anthony_Levrot.jpg" alt="Facciata del Château de Thorens con le sue torri medievali e l&#39;architettura barocca, Fillière, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">A pagamento</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Filli%C3%A8re%C2%B0Thorens-Gli%C3%A8res_-_74570_-_2019.06.04_-_Ch%C3%A2teau_de_Thorens_%28vue_de_face%29_%C2%A9_Anthony_Levrot.jpg" alt="Facciata del Château de Thorens con le sue torri medievali e l&#x27;architettura barocca, Fillière, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/chateau-de-thorens" class="title">Château de Thorens</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Fillière</span></div>
-      <p class="card-desc">Castello familiare della famiglia de Sales da oltre 500 anni, trasformato in hotel 4 stelle e location per ricevimenti.</p>
+      <p class="card-desc">Castello storico abitato dalla famiglia de Sales dal 1559. Hotel 4 stelle, location per ricevimenti e seminari. Collezioni di San Francesco di Sales e Cavour. Chiuso alle visite pubbliche.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Ch%C3%A2teau%20de%20Thorens%2C%20Filli%C3%A8re%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        <a href="https://chateaudethorens.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Ch%C3%A2teau%20de%20Thorens%2C%20Filli%C3%A8re%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a><a href="https://chateaudethorens.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/it/base-de-loisirs-du-vuaz-filliere" class="card-photo">
+      <img src="/generique-parc.jpg" alt="Base de loisirs du Vuaz" loading="lazy">
+      <span class="card-tag">Gratis</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/it/base-de-loisirs-du-vuaz-filliere" class="title">Base de loisirs du Vuaz</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Fillière</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Base%20de%20loisirs%20du%20Vuaz%2C%20Filli%C3%A8re%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a><a href="https://www.commune-filliere.fr/aviernoz/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/it/sentier-decouverte-plateau-glieres-thorens-glieres" class="card-photo">
+      <img src="/generique-sentier.jpg" alt="sentier-decouverte-plateau-glieres-thorens-glieres" loading="lazy">
+      <span class="card-tag">Gratis</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/it/sentier-decouverte-plateau-glieres-thorens-glieres" class="title">sentier-decouverte-plateau-glieres-thorens-glieres</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Thorens-Glières</span></div>
+      
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=sentier-decouverte-plateau-glieres-thorens-glieres%2C%20Thorens-Gli%C3%A8res%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a><a href="https://hautesavoie.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/it/mont-veyrier" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg" alt="Vista panoramica dalla vetta del Mont Veyrier sul lago d&#39;Annecy e il massiccio delle Bauges, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuito</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg" alt="Vista panoramica dalla vetta del Mont Veyrier sul lago d&#x27;Annecy e il massiccio delle Bauges, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/mont-veyrier" class="title">Mont Veyrier</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Annecy</span></div>
-      <p class="card-desc">Montagna emblematica di Annecy che raggiunge 1.</p>
+      <p class="card-desc">Vetta a 1.291 m che domina il lago d'Annecy con vista a 360° sulle Bauges, gli Aravis e il Monte Bianco. Sentiero delle Creste, accesso libero, partenza Piccolo Porto.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mont%20Veyrier%2C%20Annecy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Mont%20Veyrier%2C%20Annecy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/it/plateau-des-glieres" class="card-photo">
       <img src="/plateau-des-glieres-hero.jpg" alt="Plateau des Glières con il Monumento nazionale alla Resistenza di Émile Gilioli sotto il cielo di montagna, Fillière, Alta Savoia" loading="lazy">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/plateau-des-glieres" class="title">Plateau des Glières</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Fillière</span></div>
-      <p class="card-desc">Altopiano calcareo del massiccio delle Borne a 1.</p>
+      <p class="card-desc">Altopiano calcareo a 1.450 m di altitudine, luogo storico della Resistenza nel 1944. Monumento nazionale, sentiero storico, sci di fondo, escursionismo. Accesso libero.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plateau%20des%20Gli%C3%A8res%2C%20Filli%C3%A8re%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Plateau%20des%20Gli%C3%A8res%2C%20Filli%C3%A8re%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/it/belvedere-du-mont-baron" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg" alt="Belvedere del Mont Baron con vista panoramica sul lago d&#39;Annecy e i massicci dei Bauges, Veyrier-du-Lac, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuito</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg" alt="Belvedere del Mont Baron con vista panoramica sul lago d&#x27;Annecy e i massicci dei Bauges, Veyrier-du-Lac, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/belvedere-du-mont-baron" class="title">Belvedere del Mont Baron</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Veyrier-du-Lac</span></div>
-      <p class="card-desc">Piattaforma panoramica in cemento a 1.</p>
+      <p class="card-desc">Piattaforma panoramica a 1254 m, vestigio dell'antica funivia del Mont Veyrier. Vista a 180° sul lago d'Annecy, i Bauges e il Monte Bianco. Accesso libero.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Belvedere%20del%20Mont%20Baron%2C%20Veyrier-du-Lac%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/it/mont-baron" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Mont_Baron_%40_Veyrier-du-Lac_%2851213738648%29.jpg" alt="Vista panoramica dal vertice del Mont Baron sul lago d&#39;Annecy e il massiccio delle Bauges, Veyrier-du-Lac, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuito</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/it/mont-baron" class="title">Mont Baron</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Veyrier-du-Lac</span></div>
-      <p class="card-desc">Balcone roccioso a 1299 metri di altitudine sopra il lago d&#39;Annecy, collegato al Mont Veyrier da un sentiero di cresta che offre una vista magnifica sul lago, sulle Bauges e sul Monte Bianco.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mont%20Baron%2C%20Veyrier-du-Lac%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/it/col-des-glieres" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Plateau_des_Gli%C3%A8res_%40_Montagne_des_Auges.jpg" alt="Altopiano dei Glières in estate con vista sui pascoli d&#39;altura e il Monumento Nazionale della Resistenza, Fillière, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuito</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/it/col-des-glieres" class="title">Col des Glières</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Fillière</span></div>
-      <p class="card-desc">Valico e altopiano d&#39;altura (1.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Col%20des%20Gli%C3%A8res%2C%20Filli%C3%A8re%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinerario</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Belvedere%20del%20Mont%20Baron%2C%20Veyrier-du-Lac%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a>
       </div>
     </div>
   </article></div>

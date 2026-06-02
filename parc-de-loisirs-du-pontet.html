@@ -299,8 +299,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -316,7 +314,7 @@
   <div class="wrap">
     <p class="kicker">À proximité</p>
     <h2>À proximité</h2>
-    <p class="lead">D’autres lieux à explorer dans le coin et dans la même catégorie</p>
+    <p class="lead">D'autres lieux à explorer dans le coin et dans la même catégorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/mont-joly" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Meg%C3%A8ve%2C_depuis_la_cha%C3%AEne_du_Mont-Joly.jpg" alt="Sommet du Mont Joly à 2 525 m avec vue panoramique sur le massif du Mont-Blanc, Saint-Gervais-les-Bains, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
@@ -325,40 +323,37 @@
     <div class="card-body">
       <a href="https://loisirs74.fr/mont-joly" class="title">Mont Joly</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Saint-Gervais-les-Bains</span></div>
-      <p class="card-desc">Sommet emblématique à 2 525 m d&#39;altitude offrant un panorama à 360° sur le massif du Mont-Blanc, le Beaufortain, les Aravis, les Fiz et les Bauges.</p>
+      <p class="card-desc">Sommet panoramique à 2 525 m face au Mont-Blanc. Randonnée sportive depuis Saint-Gervais, Megève ou Les Contamines. Table d'orientation au sommet. Accès libre.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mont%20Joly%2C%20Saint-Gervais-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Mont%20Joly%2C%20Saint-Gervais-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/cote-2000-aventure" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Seilpark_Gantrisch_-_03.jpg" alt="Parcours accrobranche dans les arbres à Côte 2000 Aventure, Megève, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
+    <a href="https://loisirs74.fr/parc-aventure-mont-blanc-saint-gervais" class="card-photo">
+      <img src="/parc-aventure-mont-blanc-saint-gervais-hero.jpg" alt="Parc accrobranche - 7 parcours, tyroliennes 400m, via ferrata Mont-Blanc Parc Aventure à Saint-Gervais-les-Bains Haute-Savoie 74" loading="lazy">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/cote-2000-aventure" class="title">Côte 2000 Aventure</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Megève</span></div>
-      <p class="card-desc">Parc d&#39;accrobranche au pied des Aiguilles Croches avec 70 ateliers répartis sur 3 niveaux de difficulté, dont une tyrolienne de 90 mètres.</p>
+      <a href="https://loisirs74.fr/parc-aventure-mont-blanc-saint-gervais" class="title">Mont-Blanc Parc Aventure</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Saint-Gervais-les-Bains</span></div>
+      <p class="card-desc">7 PARCOURS ACCROBRANCHE de différents niveaux + TYROLIENNES JUSQU'À 400 M + VIA FERRATA dans le Parc Thermal de Saint-Gervais. Le plus impor.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=C%C3%B4te%202000%20Aventure%2C%20Meg%C3%A8ve%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        <a href="https://www.cote2000aventure.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Mont-Blanc%20Parc%20Aventure%2C%20Saint-Gervais-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.montblancparcaventure.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/cascade-de-la-belle-au-bois" class="card-photo">
-      <img src="/cascade-de-la-belle-au-bois-hero.jpg" alt="Cascade de la Belle au Bois entourée de forêt dense, vasques turquoise et rochers humides, Megève, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuit</span>
+    <a href="https://loisirs74.fr/maison-forte-hautetour-saint-gervais" class="card-photo">
+      <img src="/generique-chateau.jpg" alt="Façade médiévale de la Maison Forte de Hautetour datant du XIIIe siècle au cœur du village de Saint-Gervais-les-Bains face au massif du Mont-Blanc" loading="lazy">
+      <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/cascade-de-la-belle-au-bois" class="title">Cascade de la Belle au Bois</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Megève</span></div>
-      <p class="card-desc">Cascade de 30 mètres creusant des vasques turquoise, nichée en forêt à 30 minutes de marche depuis le centre de Megève.</p>
+      <a href="https://loisirs74.fr/maison-forte-hautetour-saint-gervais" class="title">Maison Forte de Hautetour</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Saint-Gervais-les-Bains</span></div>
+      <p class="card-desc">Maison forte XIIIe siècle restaurée : scénographie 'Mont-Blanc côté Val Montjoie', expo 'Secours en montagne' déc 2025-avr 2026, Pôle Archipel. Adulte 5 €.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20de%20la%20Belle%20au%20Bois%2C%20Meg%C3%A8ve%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Maison%20Forte%20de%20Hautetour%2C%20Saint-Gervais-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.saintgervais.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
       </div>
     </div>
   </article>
@@ -370,29 +365,40 @@
     <div class="card-body">
       <a href="https://loisirs74.fr/base-de-loisirs-du-lac-des-iles" class="title">Base de loisirs du Lac des Îles</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Passy</span></div>
-      <p class="card-desc">Le plus grand lac aménagé du Pays du Mont-Blanc : plage de sable, baignade surveillée en été, activités nautiques et terrestres dans un écrin de verdure face au massif.</p>
+      <p class="card-desc">Base de loisirs face au Mont-Blanc : plage surveillée, baignade, paddle, pédalos, parcours santé, mini-golf, karting. Accès libre toute l'année à Passy.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20de%20loisirs%20du%20Lac%20des%20%C3%8Eles%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Base%20de%20loisirs%20du%20Lac%20des%20%C3%8Eles%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/base-de-loisirs-des-ilettes" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Sallanches-69%C2%A9studio_k.jpg" alt="Lacs des Ilettes à Sallanches, base de loisirs avec trois lacs, vue sur les montagnes environnantes et le Mont-Joli, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Sallanches-69%C2%A9studio_k.jpg" alt="Base de loisirs des Ilettes avec ses trois lacs et pelouses verdoyantes, Sallanches, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/base-de-loisirs-des-ilettes" class="title">Lacs des Ilettes</a>
+      <a href="https://loisirs74.fr/base-de-loisirs-des-ilettes" class="title">Base de loisirs des Ilettes</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sallanches</span></div>
-      <p class="card-desc">Trois lacs artificiels créés en 1977 offrant un havre de paix à deux kilomètres du centre-ville de Sallanches : pêche, baignade surveillée, sports nautiques et promenade en famille.</p>
+      <p class="card-desc">Complexe de 3 lacs à Sallanches : pêche, baignade surveillée l'été, planche à voile, paddle, parcours santé et aire de pique-nique. Accès libre toute l'année.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Lacs%20des%20Ilettes%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Base%20de%20loisirs%20des%20Ilettes%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
       </div>
     </div>
   </article>
-</div>
+<article class="card">
+    <a href="https://loisirs74.fr/base-de-loisirs-du-lac-aux-dames" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Lac_aux_Dames_%C3%A0_Samo%C3%ABns_en_%C3%A9t%C3%A9_%28juillet_2023%29_1.JPG" alt="Base de loisirs du Lac aux Dames à Samoëns avec ses deux lacs et espaces verts en Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">Gratuit</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/base-de-loisirs-du-lac-aux-dames" class="title">Base de loisirs du Lac aux Dames</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Samoëns</span></div>
+      <p class="card-desc">Base de loisirs de 10 hectares autour de deux lacs à Samoëns. Baignade surveillée l'été, aires de jeux, terrains de sport, pêche, paddle. Accès libre.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Base%20de%20loisirs%20du%20Lac%20aux%20Dames%2C%20Samo%C3%ABns%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
+      </div>
+    </div>
+  </article></div>
   </div>
 </section>
 <footer class="site"><div class="wrap"><div class="foot-grid">

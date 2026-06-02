@@ -275,8 +275,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -292,8 +290,22 @@
   <div class="wrap">
     <p class="kicker">À proximité</p>
     <h2>À proximité</h2>
-    <p class="lead">D’autres lieux à explorer dans le coin et dans la même catégorie</p>
+    <p class="lead">D'autres lieux à explorer dans le coin et dans la même catégorie</p>
     <div class="carousel"><article class="card">
+    <a href="https://loisirs74.fr/base-de-loisirs-du-vuaz-filliere" class="card-photo">
+      <img src="/generique-parc.jpg" alt="Aire de jeux et tables de pique-nique de la base de loisirs gratuite du Vuaz à Aviernoz au pied du Parmelan" loading="lazy">
+      <span class="card-tag">Gratuit</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/base-de-loisirs-du-vuaz-filliere" class="title">Base de loisirs du Vuaz</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Fillière</span></div>
+      <p class="card-desc">Aire de loisirs gratuite et libre toute l'année à Aviernoz (Fillière), au pied du Parmelan : jeux enfants, pique-nique, barbecue. Animaux acceptés.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Base%20de%20loisirs%20du%20Vuaz%2C%20Filli%C3%A8re%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.commune-filliere.fr/aviernoz/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
     <a href="https://loisirs74.fr/tete-du-parmelan" class="card-photo">
       <img src="/tete-du-parmelan-hero.jpg" alt="Vue depuis la Tête du Parmelan avec sa croix sommitale et le refuge Camille Dunant surplombant Annecy, massif des Bornes, Haute-Savoie" loading="lazy">
       <span class="card-tag">Gratuit</span>
@@ -301,85 +313,65 @@
     <div class="card-body">
       <a href="https://loisirs74.fr/tete-du-parmelan" class="title">Tête du Parmelan</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Dingy-Saint-Clair</span></div>
-      <p class="card-desc">Le sommet emblématique du plateau du Parmelan, vaste balcon calcaire à 1 832 m offrant une vue panoramique sur le bassin annécien, les Aravis et le massif du Mont-Blanc.</p>
+      <p class="card-desc">Point culminant emblématique du Parmelan à 1 832 m, vue panoramique sur Annecy, son lac et le Mont-Blanc. Accès libre par sentiers balisés depuis Villaz ou Dingy-Saint-Clair.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=T%C3%AAte%20du%20Parmelan%2C%20Dingy-Saint-Clair%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=T%C3%AAte%20du%20Parmelan%2C%20Dingy-Saint-Clair%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/mont-veyrier" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg" alt="Vue panoramique depuis le sommet du Mont Veyrier sur le lac d&#39;Annecy et le massif des Bauges, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
+    <a href="https://loisirs74.fr/sentier-espagnols-pas-du-roc-glieres" class="card-photo">
+      <img src="/generique-sentier.jpg" alt="Sentier historique - Plateau des Glières Sentier des Espagnols / Pas du Roc à Thorens-Glières Haute-Savoie - Boucle 8 km · 600 m D+ modérée" loading="lazy">
       <span class="card-tag">Gratuit</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/mont-veyrier" class="title">Mont Veyrier</a>
+      <a href="https://loisirs74.fr/sentier-espagnols-pas-du-roc-glieres" class="title">Sentier des Espagnols / Pas du Roc</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Thorens-Glières</span></div>
+      <p class="card-desc">Sentier historique sur le Plateau des Glières par le Pas du Roc - marches en falaise creusées par des Républicains espagnols réfugiés en 1830.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Sentier%20des%20Espagnols%20%2F%20Pas%20du%20Roc%2C%20Thorens-Gli%C3%A8res%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://hautesavoie.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/chateau-comtes-de-geneve-annecy" class="card-photo">
+      <img src="/generique-chateau.jpg" alt="Façade médiévale et Tour de la Reine du Château d&#x27;Annecy dominant la vieille ville et le canal du Thiou en Haute-Savoie" loading="lazy">
+      <span class="card-tag">Payant</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/chateau-comtes-de-geneve-annecy" class="title">Château d'Annecy</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Annecy</span></div>
-      <p class="card-desc">Montagne emblématique d&#39;Annecy culminant à 1 291 mètres, offrant un panorama exceptionnel sur le lac d&#39;Annecy, les Bauges, les Aravis et le Mont-Blanc depuis le Sentier des Crêtes.</p>
+      <p class="card-desc">Forteresse des comtes de Genève : Tour de la Reine, 4 logis XIIIe-XVIIe, musée régional. Adulte 6,50 €, gratuit -12 ans et 1er dim. oct-mai.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mont%20Veyrier%2C%20Annecy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/plateau-des-glieres" class="card-photo">
-      <img src="/plateau-des-glieres-hero.jpg" alt="Plateau des Glières avec le Monument national à la Résistance d&#39;Émile Gilioli sous le ciel de montagne, Fillière, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuit</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/plateau-des-glieres" class="title">Plateau des Glières</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Fillière</span></div>
-      <p class="card-desc">Plateau calcaire du massif des Bornes à 1 450 m d&#39;altitude, haut lieu de mémoire de la Résistance française et site naturel classé Natura 2000.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plateau%20des%20Gli%C3%A8res%2C%20Filli%C3%A8re%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Ch%C3%A2teau%20d%27Annecy%2C%20Annecy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://musees.annecy.fr/Musee-Chateau" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/chateau-de-menthon-saint-bernard" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Ch%C3%A2teau_de_Menthon-Saint-Bernard_%28novembre_2024%29.JPG" alt="Château de Menthon-Saint-Bernard dominant le lac d&#39;Annecy, avec ses tours médiévales et son architecture romantique du XIXᵉ siècle" loading="lazy" referrerpolicy="no-referrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Ch%C3%A2teau_de_Menthon-Saint-Bernard_%28novembre_2024%29.JPG" alt="Château de Menthon-Saint-Bernard dominant le lac d&#x27;Annecy, avec ses tours médiévales et son architecture romantique du XIXᵉ siècle" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/chateau-de-menthon-saint-bernard" class="title">Château de Menthon-Saint-Bernard</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Menthon-Saint-Bernard</span></div>
-      <p class="card-desc">Château médiéval habité sans interruption par la famille de Menthon depuis près de 1 000 ans, perché sur un éperon rocheux face au lac d&#39;Annecy.</p>
+      <p class="card-desc">Château médiéval habité par la même famille depuis le XIᵉ siècle, surplombant le lac d'Annecy. Visite guidée 12 €, jardins et terrasses, ouvert avril-nov.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Ch%C3%A2teau%20de%20Menthon-Saint-Bernard%2C%20Menthon-Saint-Bernard%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        <a href="https://www.chateau-de-menthon.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Ch%C3%A2teau%20de%20Menthon-Saint-Bernard%2C%20Menthon-Saint-Bernard%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.chateau-de-menthon.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/chateau-et-donjon-des-seigneurs-de-faverges" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Chambellon_%40_Pont_de_Seythenex.jpg" alt="Donjon des Seigneurs de Faverges dans la cour intérieure du château, tour ronde du XIIIe siècle inscrite aux Monuments Historiques" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuit</span>
+    <a href="https://loisirs74.fr/chateau-sires-faucigny-bonneville" class="card-photo">
+      <img src="/generique-chateau.jpg" alt="Tour Noire 21 m et Tour Blanche 15 m subsistant du Château des Sires de Faucigny construit vers 1260 à Bonneville Haute-Savoie" loading="lazy">
+      <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/chateau-et-donjon-des-seigneurs-de-faverges" class="title">Château et Donjon des Seigneurs de Faverges</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Faverges-Seythenex</span></div>
-      <p class="card-desc">Donjon médiéval du XIIIe siècle au cœur du château, offrant une vue panoramique à 360° sur la ville de Faverges et les massifs environnants après l&#39;ascension de 145 marches.</p>
+      <a href="https://loisirs74.fr/chateau-sires-faucigny-bonneville" class="title">Château des Sires de Faucigny</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Bonneville</span></div>
+      <p class="card-desc">Château 1260 par Béatrice de Faucigny : Tour Noire 21 m + Tour Blanche 15 m, prison XVIe-1934. Visite guidée 5 €. Extérieurs libres toute l'année.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Ch%C3%A2teau%20et%20Donjon%20des%20Seigneurs%20de%20Faverges%2C%20Faverges-Seythenex%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/abbaye-de-sixt" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Sixt_abbey_02.jpg" alt="Abbaye de Sixt et son église abbatiale du XIIIᵉ siècle, Sixt-Fer-à-Cheval, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuit</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/abbaye-de-sixt" class="title">Abbaye de Sixt</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sixt-Fer-à-Cheval</span></div>
-      <p class="card-desc">Ancienne abbaye de chanoines réguliers fondée en 1144, inscrite Monument Historique.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Abbaye%20de%20Sixt%2C%20Sixt-Fer-%C3%A0-Cheval%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Ch%C3%A2teau%20des%20Sires%20de%20Faucigny%2C%20Bonneville%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.bonneville.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
       </div>
     </div>
   </article></div>

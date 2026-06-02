@@ -271,8 +271,6 @@
 .related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
 .related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .related .card:hover .card-photo img{transform:scale(1.03)}
-.related .card-photo .placeholder{width:100%;height:100%;display:grid;place-items:center;color:var(--ink-mute);background:var(--surface-2)}
-.related .card-photo .placeholder svg{width:32px !important;height:32px !important;opacity:.4}
 .related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
 .related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
@@ -288,8 +286,22 @@
   <div class="wrap">
     <p class="kicker">À proximité</p>
     <h2>À proximité</h2>
-    <p class="lead">D’autres lieux à explorer dans le coin et dans la même catégorie</p>
+    <p class="lead">D'autres lieux à explorer dans le coin et dans la même catégorie</p>
     <div class="carousel"><article class="card">
+    <a href="https://loisirs74.fr/croisiere-cgn-evian" class="card-photo">
+      <img src="/croisiere-cgn-evian-hero.jpg" alt="Croisière passagers Léman - ligne N1 Lausanne-Évian CGN escale Évian à Évian-les-Bains Haute-Savoie 74" loading="lazy">
+      <span class="card-tag">Payant</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/croisiere-cgn-evian" class="title">CGN escale Évian</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Évian-les-Bains</span></div>
+      <p class="card-desc">FLOTTE BELLE ÉPOQUE LA PLUS PRESTIGIEUSE AU MONDE - 5 bateaux historiques fin XIXe-début XXe classés monuments suisses + flotte moderne. Lia.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=CGN%20escale%20%C3%89vian%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.cgn.ch/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
     <a href="https://loisirs74.fr/palais-lumiere" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/PalaisLumi%C3%A8re-DSCN1105.jpg" alt="Façade Belle Époque du Palais Lumière avec son dôme restauré, quai Charles-Albert Besson, Évian-les-Bains, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Payant</span>
@@ -297,70 +309,37 @@
     <div class="card-body">
       <a href="https://loisirs74.fr/palais-lumiere" class="title">Palais Lumière</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Évian-les-Bains</span></div>
-      <p class="card-desc">Ancien établissement thermal de 1902 reconverti en centre d&#39;expositions d&#39;excellence, face au lac Léman.</p>
+      <p class="card-desc">Ancien établissement thermal (1902) transformé en espace d'expositions. Plein tarif 9 €, réduit 7 €, gratuit -16 ans. Expositions peinture, sculpture, photo.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Palais%20Lumi%C3%A8re%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Palais%20Lumi%C3%A8re%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://ville-evian.fr/palais-lumiere/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
       </div>
     </div>
   </article>
 <article class="card">
-    <a href="https://loisirs74.fr/indiana-ventures-saint-paul-en-chablais" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/La_plage_de_La_Beunaz.jpg" alt="Parcours accrobranche dans les arbres à Indiana&#39;Ventures, Plage de la Beunaz, Saint-Paul-en-Chablais, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
+    <a href="https://loisirs74.fr/casino-evian-resort-evian" class="card-photo">
+      <img src="/casino-evian-resort-evian-hero.jpg" alt="Casino jeux historique - Belle Époque Casino Évian Resort à Évian-les-Bains Haute-Savoie 74" loading="lazy">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/indiana-ventures-saint-paul-en-chablais" class="title">Indiana&#39;Ventures Saint-Paul-en-Chablais</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Saint-Paul-en-Chablais</span></div>
-      <p class="card-desc">Parc d&#39;accrobranche avec 7 parcours de difficulté croissante, accessible dès 2 ans, sur le site de la Plage de la Beunaz, lac naturel de montagne à 900 m d&#39;altitude.</p>
+      <a href="https://loisirs74.fr/casino-evian-resort-evian" class="title">Casino Évian Resort</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Évian-les-Bains</span></div>
+      <p class="card-desc">CASINO HISTORIQUE BELLE ÉPOQUE D'ÉVIAN - Quai Charles Albert Besson au bord du Léman. Patrimoine architectural Belle Époque + machines à sou.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Indiana&#39;Ventures%20Saint-Paul-en-Chablais%2C%20Saint-Paul-en-Chablais%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        <a href="https://indianaventures.com/en/plage-de-la-beunaz/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/plage-de-saint-disdille" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Plage_thonon.jpg" alt="Plage de Saint-Disdille au bord du lac Léman avec zone ombragée par les châtaigniers, Thonon-les-Bains, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuit</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/plage-de-saint-disdille" class="title">Plage de Saint-Disdille</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Thonon-les-Bains</span></div>
-      <p class="card-desc">Plage en herbe et galets au bord du lac Léman, labellisée Pavillon Bleu depuis 2010, à la lisière du parc de la Châtaigneraie et de la forêt de Ripaille.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plage%20de%20Saint-Disdille%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        
-      </div>
-    </div>
-  </article>
-<article class="card">
-    <a href="https://loisirs74.fr/chateaux-des-allinges" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Allinges_Chateau_Clocher.jpg" alt="Ruines du Château-Neuf d&#39;Allinges avec vue panoramique sur le lac Léman et les Préalpes, Allinges, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratuit</span>
-    </a>
-    <div class="card-body">
-      <a href="https://loisirs74.fr/chateaux-des-allinges" class="title">Châteaux des Allinges</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Allinges</span></div>
-      <p class="card-desc">Deux forteresses médiévales rivales face à face au sommet d&#39;une colline dominant Thonon et le Léman, avec chapelle romane classée et fresques du XIe siècle.</p>
-      <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Ch%C3%A2teaux%20des%20Allinges%2C%20Allinges%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Casino%20%C3%89vian%20Resort%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://casino.evianresort.com/en" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
       </div>
     </div>
   </article>
 <article class="card">
     <a href="https://loisirs74.fr/abbaye-d-aulps" class="card-photo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Aulps_abbey_01.jpg" alt="Vestiges de l&#39;abbatiale de l&#39;Abbaye d&#39;Aulps avec façade monumentale classée Monument Historique, Saint-Jean-d&#39;Aulps, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Aulps_abbey_01.jpg" alt="Vestiges de l&#x27;abbatiale de l&#x27;Abbaye d&#x27;Aulps avec façade monumentale classée Monument Historique, Saint-Jean-d&#x27;Aulps, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
       <span class="card-tag">Payant</span>
     </a>
     <div class="card-body">
-      <a href="https://loisirs74.fr/abbaye-d-aulps" class="title">Abbaye d&#39;Aulps</a>
-      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Saint-Jean-d&#39;Aulps</span></div>
-      <p class="card-desc">Abbaye cistercienne fondée vers 1094, classée Monument Historique, avec centre d&#39;interprétation unique en France consacré à la vie monastique médiévale et visite 3D immersive.</p>
+      <a href="https://loisirs74.fr/abbaye-d-aulps" class="title">Abbaye d'Aulps</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Saint-Jean-d'Aulps</span></div>
+      <p class="card-desc">Abbaye cistercienne du XIe siècle avec centre d'interprétation et visite 3D. Tarifs : 7 € adulte, 3,50 € enfant. Ouvert toute l'année à Saint-Jean-d'Aulps.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Abbaye%20d&#39;Aulps%2C%20Saint-Jean-d&#39;Aulps%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        <a href="https://www.abbayedaulps.fr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Abbaye%20d%27Aulps%2C%20Saint-Jean-d%27Aulps%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.abbayedaulps.fr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
       </div>
     </div>
   </article>
@@ -372,10 +351,9 @@
     <div class="card-body">
       <a href="https://loisirs74.fr/abbaye-de-sixt" class="title">Abbaye de Sixt</a>
       <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sixt-Fer-à-Cheval</span></div>
-      <p class="card-desc">Ancienne abbaye de chanoines réguliers fondée en 1144, inscrite Monument Historique.</p>
+      <p class="card-desc">Abbaye du XIIᵉ siècle inscrite Monument Historique. Exposition estivale gratuite, église du XIIIᵉ siècle et logis abbatial restauré. Visite libre à Sixt-Fer-à-Cheval.</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Abbaye%20de%20Sixt%2C%20Sixt-Fer-%C3%A0-Cheval%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
-        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Abbaye%20de%20Sixt%2C%20Sixt-Fer-%C3%A0-Cheval%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>
       </div>
     </div>
   </article></div>
