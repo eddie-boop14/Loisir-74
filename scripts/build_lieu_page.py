@@ -325,10 +325,15 @@ def sources_block(sources):
         return ""
     items = []
     for src in sources:
-        domain = re.sub(r"^https?://(www\.)?", "", src).split("/")[0]
+        if isinstance(src, dict):
+            url = src.get("url", "")
+            label = src.get("name") or re.sub(r"^https?://(www\.)?", "", url).split("/")[0]
+        else:
+            url = src
+            label = re.sub(r"^https?://(www\.)?", "", url).split("/")[0]
         items.append(
-            f'<li>{LINK_ICON}<a href="{attr(src)}" target="_blank" rel="noopener">'
-            f"{esc(domain)}</a></li>"
+            f'<li>{LINK_ICON}<a href="{attr(url)}" target="_blank" rel="noopener">'
+            f"{esc(label)}</a></li>"
         )
     return (
         '<section class="block"><div class="wrap">'
