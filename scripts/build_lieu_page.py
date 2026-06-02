@@ -341,28 +341,96 @@ def sources_block(sources):
     )
 
 
-def partners_block(slug):
-    """Boilerplate 3 partner-invite cards."""
-    invite = lambda icon, title, p: (
+PARTNER_TYPE_ICON = {
+    "restaurant": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2V2M5 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>',
+    "commerce":   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>',
+    "hebergement":'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+}
+SVG_ARROW = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+             'stroke-linecap="round" stroke-linejoin="round">'
+             '<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>')
+SVG_EXT = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+           'stroke-linecap="round" stroke-linejoin="round">'
+           '<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>'
+           '<polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>')
+SVG_ROTATE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+              'stroke-linecap="round" stroke-linejoin="round">'
+              '<polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>'
+              '<path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>')
+SVG_CHECK = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" '
+             'stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>')
+
+def _filled_partner_card(p):
+    """Render a tier:partner or tier:recommended partner card (flip card)."""
+    tier = p.get("tier", "partner")
+    badge_text = "Partenaire" if tier == "partner" else "Recommandé"
+    badge_icon = SVG_CHECK if tier == "partner" else ""
+    name = p.get("name", "")
+    desc = p.get("i18n", {}).get("fr", {}).get("description", "")
+    url = p.get("url", "#")
+    cta = p.get("cta_text") or "Voir le site"
+    return (
+        f'<button type="button" class="partner flip tier-{attr(tier)}" aria-label="{attr(name)}">'
+        '<div class="flip-inner">'
+        '<div class="flip-front">'
+        f'<span class="badge">{badge_icon} {esc(badge_text)}</span>'
+        f'<h4>{esc(name)}</h4>'
+        f'<p class="preview">{esc(desc)}</p>'
+        f'<span class="hint">{SVG_ROTATE} Survoler pour voir le site</span>'
+        '</div>'
+        '<div class="flip-back">'
+        f'<h4>{esc(name)}</h4>'
+        f'<p>{esc(desc)}</p>'
+        f'<a class="cta" href="{attr(url)}" target="_blank" rel="noopener">{esc(cta)} {SVG_EXT}</a>'
+        '</div>'
+        '</div>'
+        '</button>'
+    )
+
+def _invite_card(p, slug):
+    """Render a tier:invite partner card."""
+    invite_type = p.get("invite_type", "restaurant")
+    icon = PARTNER_TYPE_ICON.get(invite_type, PARTNER_TYPE_ICON["restaurant"])
+    fr = p.get("i18n", {}).get("fr", {})
+    title = fr.get("title") or p.get("invite_title", "")
+    desc = fr.get("desc") or p.get("invite_desc", "")
+    return (
         '<article class="partner-invite">'
         f'<div class="invite-icon" aria-hidden="true">{icon}</div>'
-        f'<h4>{esc(title)}</h4><p>{esc(p)}</p>'
+        f'<h4>{esc(title)}</h4><p>{esc(desc)}</p>'
         f'<a class="cta" href="https://loisirs74.fr/devenir-partenaire?lieu={attr(slug)}">'
-        'Devenir partenaire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
-        'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
-        '<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>'
-        '</svg></a></article>'
+        f'Devenir partenaire {SVG_ARROW}</a>'
+        '</article>'
     )
-    icons = [
-        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2V2M5 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>',
-        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>',
-        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+
+def _default_invites(d):
+    """Venue-parameterized invite tiers when JSON has no partners block."""
+    name = d.get("i18n", {}).get("fr", {}).get("name", "ce lieu")
+    commune = d.get("commune", "")
+    here = f"à {commune}" if commune else ""
+    return [
+        {"tier":"invite","invite_type":"restaurant","i18n":{"fr":{
+            "title": f"Un restaurant {here} ?".strip(),
+            "desc": f"Vous accueillez les visiteurs de {name} ? Apparaissez ici."}}},
+        {"tier":"invite","invite_type":"commerce","i18n":{"fr":{
+            "title": f"Une boulangerie, un commerce {here} ?".strip(),
+            "desc": f"Partagez horaires et spécialités avec les visiteurs de {name}."}}},
+        {"tier":"invite","invite_type":"hebergement","i18n":{"fr":{
+            "title": f"Un hébergement proche ?",
+            "desc": f"Gîte, chambre d'hôtes, camping, location {here}.".strip()}}},
     ]
-    cards = [
-        invite(icons[0], "Restaurant, café, bar", "Vous servez les visiteurs de ce lieu ? Apparaissez ici."),
-        invite(icons[1], "Boulangerie, commerce", "Partagez horaires et spécialités avec les visiteurs."),
-        invite(icons[2], "Hébergement", "Gîte, chambre d'hôtes, camping, location."),
-    ]
+
+def partners_block(d):
+    """Render the 'À proximité' section from d['partners'] or fall back to venue-parameterized invites."""
+    slug = d["slug"]
+    partners = d.get("partners") or _default_invites(d)
+    cards = []
+    for p in partners:
+        tier = p.get("tier", "invite")
+        if tier in ("partner", "recommended"):
+            cards.append(_filled_partner_card(p))
+        else:
+            cards.append(_invite_card(p, slug))
     return (
         '<section class="block"><div class="wrap">'
         '<div class="kicker reveal">À proximité</div>'
@@ -733,7 +801,7 @@ def build_page(d):
     out.append(practical_block(fr.get("practical_info", []), fr["name"], d["commune"]))
     out.append(how_to_block(fr.get("how_to_get_there", {}), fr["name"], d["commune"]))
     out.append(when_to_visit_block(fr.get("when_to_visit", ""), fr.get("events", "")))
-    out.append(partners_block(d["slug"]))
+    out.append(partners_block(d))
     out.append(gallery_block(fr["name"]))
     out.append(faq_block(fr.get("faq", [])))
     out.append(sources_block(d.get("sources", [])))
