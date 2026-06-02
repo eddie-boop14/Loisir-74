@@ -488,15 +488,29 @@ def partners_block(d):
     )
 
 
-def gallery_block(name):
-    """6 placeholder tiles + invite."""
-    tile = (
+def gallery_block(name, photos=None):
+    """Real-photo tiles when `photos` provided (list of {src, alt, credit}); else 6 placeholders."""
+    placeholder = (
         '<div class="tile placeholder"><svg viewBox="0 0 24 24" fill="none" '
         'stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" '
         'height="18" rx="2"/><circle cx="9" cy="9" r="2"/>'
         '<path d="M21 15l-5-5L5 21"/></svg></div>'
     )
-    tiles = tile * 6
+    if photos:
+        parts = []
+        for p in photos:
+            src = p.get("src", "")
+            if not src:
+                continue
+            url = src if src.startswith(("http://", "https://", "/")) else f"/{src}"
+            alt = p.get("alt") or name
+            parts.append(
+                f'<div class="tile"><img src="{attr(url)}" alt="{attr(alt)}" '
+                'loading="lazy" width="600" height="600"></div>'
+            )
+        tiles = "".join(parts) if parts else placeholder * 6
+    else:
+        tiles = placeholder * 6
     return (
         '<section class="block"><div class="wrap">'
         '<div class="kicker reveal">Photos</div>'
@@ -842,18 +856,22 @@ SITE_FOOTER = (
 
 def build_page(d):
     fr = d["i18n"]["fr"]
+    body = fr.get("body") if isinstance(fr.get("body"), dict) else {}
+    def _bf(key, default):
+        v = body.get(key) if body else None
+        return v if v not in (None, "", [], {}) else fr.get(key, default)
     out = []
     out.append(build_head(d))
     out.append(build_header(d))
     out.append(hero_block(d))
     out.append(facts_block(fr.get("facts", {})))
-    out.append(body_block(fr["name"], fr.get("body", {})))
-    out.append(activities_block(fr.get("activities", [])))
-    out.append(practical_block(fr.get("practical_info", []), fr["name"], d["commune"]))
-    out.append(how_to_block(fr.get("how_to_get_there", {}), fr["name"], d["commune"]))
-    out.append(when_to_visit_block(fr.get("when_to_visit", ""), fr.get("events", "")))
+    out.append(body_block(fr["name"], body))
+    out.append(activities_block(_bf("activities", [])))
+    out.append(practical_block(_bf("practical_info", []), fr["name"], d["commune"]))
+    out.append(how_to_block(_bf("how_to_get_there", {}), fr["name"], d["commune"]))
+    out.append(when_to_visit_block(_bf("when_to_visit", ""), _bf("events", "")))
     out.append(partners_block(d))
-    out.append(gallery_block(fr["name"]))
+    out.append(gallery_block(fr["name"], d.get("gallery_photos")))
     out.append(faq_block(fr.get("faq", [])))
     out.append(sources_block(d.get("sources", [])))
     out.append(build_footer_block(
