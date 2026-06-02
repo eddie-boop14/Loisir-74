@@ -36,6 +36,8 @@ KICKER = {
     "Sources": ["Sources", "Quellen", "Fonti", "Fuentes"],
     "En un coup d&#39;œil": ["At a glance", "Auf einen Blick", "In sintesi", "De un vistazo"],
 }
+# Partner-card badge translations (À proximité tier:recommended).
+BADGE_PROXIMITY = {"en": "Nearby", "de": "In der Nähe", "it": "Nelle vicinanze", "es": "Cerca"}
 H2 = {
     "Ce qu&#39;on peut y faire": ["What you can do here", "Was man hier machen kann", "Cosa si può fare", "Qué se puede hacer"],
     "Infos pratiques": ["Practical information", "Praktische Informationen", "Informazioni pratiche", "Información práctica"],
@@ -126,6 +128,8 @@ def localize(fr_html, lang, slug):
     t = t.replace("Publié le ", f"{PUBLISHED[lang]} ")
     t = t.replace("Mis à jour le ", f"{UPDATED[lang]} ")
     t = t.replace('content: "Générique"', f'content: "{GENERIC[lang]}"')
+    # 10. partner-card badge "À proximité" → localized
+    t = t.replace('<span class="badge"> À proximité</span>', f'<span class="badge"> {BADGE_PROXIMITY[lang]}</span>')
     return t
 
 
