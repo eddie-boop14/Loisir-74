@@ -402,7 +402,7 @@ def _filled_partner_card(p):
     tier:featured → static rich card with always-visible contact info (no flip).
     """
     tier = p.get("tier", "partner")
-    badge_text = "Recommandé" if tier == "recommended" else "Partenaire"
+    badge_text = "À proximité" if tier == "recommended" else "Partenaire"
     badge_icon = "" if tier == "recommended" else SVG_CHECK
     name = p.get("name", "")
     desc = p.get("i18n", {}).get("fr", {}).get("description") or p.get("description", "")
