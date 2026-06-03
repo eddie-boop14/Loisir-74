@@ -55,12 +55,69 @@ OUTDOOR_SECTIONS = ["lac", "cascade", "point-de-vue", "sentier", "voie-verte", "
 MIX_SECTIONS = ["chateau"]
 INDOOR_SECTIONS = ["musee", "attraction", "divers"]
 
+# lieux.json `categories` value → homepage section id.
+# `plage` shares the `#lac` section ("Lacs & plages"); `parc` shares `#domaine`
+# ("Bases de loisirs"). Everything else is 1:1.
+CAT_TO_SECTION = {
+    "lac": "lac", "plage": "lac",
+    "cascade": "cascade",
+    "point-de-vue": "point-de-vue",
+    "sentier": "sentier",
+    "voie-verte": "voie-verte",
+    "telecabine": "telecabine",
+    "domaine": "domaine", "parc": "domaine",
+    "chateau": "chateau",
+    "musee": "musee",
+    "attraction": "attraction",
+    "divers": "divers",
+}
+
+# Per-slug override: venues whose lieux.json category is `divers` per the
+# "uncertain → divers" rule but which are clearly OUTDOOR and should sit under
+# the ☀ band on the homepage, not under ☂ rain. Routes 14 venues out of
+# #divers; the rainy #divers shrinks to abbayes + thermes + bureau-des-guides.
+HOMEPAGE_SECTION_OVERRIDE = {
+    # jardins (botanical gardens)
+    "jardin-cimes-passy": "domaine",
+    "jardin-des-cinq-sens": "domaine",
+    "jardin-jaysinia-samoens": "domaine",
+    # parcs animaliers (outdoor wildlife parks)
+    "les-aigles-du-leman": "domaine",
+    "parc-de-merlet": "domaine",
+    # croisières (lake boat tours — outdoor lake experience)
+    "croisiere-bateaux-annecy-annecy": "lac",
+    "croisiere-cgn-evian": "lac",
+    "croisiere-cgn-thonon": "lac",
+    "croisiere-cgn-yvoire": "lac",
+    # karting (mostly open-air circuits)
+    "karting-mk-circuit-scientrier": "domaine",
+    "karting-mont-blanc-passy": "domaine",
+    "karting-onlykart-roche-sur-foron": "domaine",
+    "karting-rumilly-rumilly": "domaine",
+    "karting-team-bouvier-pringy": "domaine",
+}
+
+
+def section_for_slug(slug: str) -> str | None:
+    """Map a slug to its target homepage section. Returns None if the lieu
+    can't be placed (no known category)."""
+    if slug in HOMEPAGE_SECTION_OVERRIDE:
+        return HOMEPAGE_SECTION_OVERRIDE[slug]
+    lieu = BY_SLUG.get(slug)
+    if not lieu:
+        return None
+    for cat in lieu.get("categories", []):
+        sid = CAT_TO_SECTION.get(cat)
+        if sid:
+            return sid
+    return None
+
 # Per-locale chrome strings.
 STRINGS = {
     "fr": {
         "brand_tag_clear": "· Haute-Savoie",
         "brand_tag_var": "· le ciel hésite",
-        "brand_tag_rain": "· what to do",
+        "brand_tag_rain": "· côté abri",
         "kicker": "Le guide de la Haute-Savoie",
         "h1_top": "Où aller en",
         "h1_em": "Haute-Savoie",
@@ -70,7 +127,7 @@ STRINGS = {
         "wn_label_var": "Ça se couvre",
         "wn_text_var": "le ciel hésite — gardez un plan B au chaud.",
         "wn_label_rain": "Il pleut",
-        "wn_text_rain": "escape rooms, piscines, spas, musées — on rentre à l’intérieur.",
+        "wn_text_rain": "piscines, spas, musées, bowlings — on passe à l’intérieur.",
         "footstate_clear": "Météo : grand beau",
         "footstate_var": "Météo : variable",
         "footstate_rain": "Météo : pluie",
@@ -78,7 +135,7 @@ STRINGS = {
         "wband_in": "☂ Quand il pleut",
         "wband_mix": "☀☂ Beau temps ou pluie",
         "cross_text": "…et puis le ciel se couvre.",
-        "cross_small": "continuez à descendre — on rentre à l’intérieur",
+        "cross_small": "continuez à descendre, on passe à l’intérieur",
         "btn_auto": "Auto",
         "btn_sun": "☀ Beau",
         "btn_rain": "☂ Pluie",
@@ -88,12 +145,11 @@ STRINGS = {
         "btn_near_demo": "◎ Depuis Annecy (démo)",
         "btn_near_off": "géoloc indisponible",
         "see_all_fallback": "Voir tout",
-        "count_label": "lieux",
     },
     "en": {
         "brand_tag_clear": "· Haute-Savoie",
         "brand_tag_var": "· clouds rolling in",
-        "brand_tag_rain": "· what to do indoors",
+        "brand_tag_rain": "· indoor side",
         "kicker": "The Haute-Savoie leisure guide",
         "h1_top": "Where to go in",
         "h1_em": "Haute-Savoie",
@@ -103,7 +159,7 @@ STRINGS = {
         "wn_label_var": "Clouding over",
         "wn_text_var": "the sky is hesitating — keep a plan B in your pocket.",
         "wn_label_rain": "Raining",
-        "wn_text_rain": "escape rooms, pools, spas, museums — we head indoors.",
+        "wn_text_rain": "pools, spas, museums, bowling — let’s head inside.",
         "footstate_clear": "Weather: clear",
         "footstate_var": "Weather: variable",
         "footstate_rain": "Weather: rain",
@@ -111,7 +167,7 @@ STRINGS = {
         "wband_in": "☂ When it rains",
         "wband_mix": "☀☂ Rain or shine",
         "cross_text": "…and then the sky clouds over.",
-        "cross_small": "keep scrolling — we head inside",
+        "cross_small": "keep scrolling, we’re heading inside",
         "btn_auto": "Auto",
         "btn_sun": "☀ Sun",
         "btn_rain": "☂ Rain",
@@ -121,12 +177,11 @@ STRINGS = {
         "btn_near_demo": "◎ From Annecy (demo)",
         "btn_near_off": "geolocation unavailable",
         "see_all_fallback": "View all",
-        "count_label": "places",
     },
     "de": {
         "brand_tag_clear": "· Haute-Savoie",
         "brand_tag_var": "· der Himmel zögert",
-        "brand_tag_rain": "· was tun bei Regen",
+        "brand_tag_rain": "· drinnen",
         "kicker": "Der Freizeitführer der Haute-Savoie",
         "h1_top": "Wohin in der",
         "h1_em": "Haute-Savoie",
@@ -136,7 +191,7 @@ STRINGS = {
         "wn_label_var": "Es zieht sich zu",
         "wn_text_var": "der Himmel zögert — halten Sie einen Plan B bereit.",
         "wn_label_rain": "Es regnet",
-        "wn_text_rain": "Escape Rooms, Schwimmbäder, Spas, Museen — wir gehen rein.",
+        "wn_text_rain": "Schwimmbäder, Spas, Museen, Bowling — wir gehen rein.",
         "footstate_clear": "Wetter: strahlend",
         "footstate_var": "Wetter: wechselhaft",
         "footstate_rain": "Wetter: Regen",
@@ -144,7 +199,7 @@ STRINGS = {
         "wband_in": "☂ Wenn es regnet",
         "wband_mix": "☀☂ Bei jedem Wetter",
         "cross_text": "…und dann zieht der Himmel zu.",
-        "cross_small": "weiter scrollen — wir gehen rein",
+        "cross_small": "weiter scrollen, wir gehen nach drinnen",
         "btn_auto": "Auto",
         "btn_sun": "☀ Sonne",
         "btn_rain": "☂ Regen",
@@ -154,12 +209,11 @@ STRINGS = {
         "btn_near_demo": "◎ Ab Annecy (Demo)",
         "btn_near_off": "Standort nicht verfügbar",
         "see_all_fallback": "Alle anzeigen",
-        "count_label": "Orte",
     },
     "it": {
         "brand_tag_clear": "· Alta Savoia",
         "brand_tag_var": "· il cielo è incerto",
-        "brand_tag_rain": "· cosa fare al chiuso",
+        "brand_tag_rain": "· al coperto",
         "kicker": "La guida del tempo libero dell’Alta Savoia",
         "h1_top": "Dove andare in",
         "h1_em": "Alta Savoia",
@@ -169,7 +223,7 @@ STRINGS = {
         "wn_label_var": "Si annuvola",
         "wn_text_var": "il cielo è incerto — tenete un piano B al caldo.",
         "wn_label_rain": "Piove",
-        "wn_text_rain": "escape room, piscine, terme, musei — si rientra al chiuso.",
+        "wn_text_rain": "piscine, terme, musei, bowling — si va al coperto.",
         "footstate_clear": "Meteo: splendido",
         "footstate_var": "Meteo: variabile",
         "footstate_rain": "Meteo: pioggia",
@@ -177,7 +231,7 @@ STRINGS = {
         "wband_in": "☂ Quando piove",
         "wband_mix": "☀☂ Con sole o pioggia",
         "cross_text": "…e poi il cielo si copre.",
-        "cross_small": "continuate a scorrere — si rientra",
+        "cross_small": "continuate a scorrere, si va al coperto",
         "btn_auto": "Auto",
         "btn_sun": "☀ Sole",
         "btn_rain": "☂ Pioggia",
@@ -187,12 +241,11 @@ STRINGS = {
         "btn_near_demo": "◎ Da Annecy (demo)",
         "btn_near_off": "geolocalizzazione non disponibile",
         "see_all_fallback": "Vedi tutto",
-        "count_label": "luoghi",
     },
     "es": {
         "brand_tag_clear": "· Alta Saboya",
         "brand_tag_var": "· el cielo duda",
-        "brand_tag_rain": "· qué hacer bajo techo",
+        "brand_tag_rain": "· bajo techo",
         "kicker": "La guía del ocio en la Alta Saboya",
         "h1_top": "A dónde ir en",
         "h1_em": "Alta Saboya",
@@ -202,7 +255,7 @@ STRINGS = {
         "wn_label_var": "Se nubla",
         "wn_text_var": "el cielo duda — guarde un plan B a mano.",
         "wn_label_rain": "Llueve",
-        "wn_text_rain": "escape rooms, piscinas, balnearios, museos — entramos bajo techo.",
+        "wn_text_rain": "piscinas, balnearios, museos, boleras — entramos bajo techo.",
         "footstate_clear": "Tiempo: despejado",
         "footstate_var": "Tiempo: variable",
         "footstate_rain": "Tiempo: lluvia",
@@ -210,7 +263,7 @@ STRINGS = {
         "wband_in": "☂ Cuando llueve",
         "wband_mix": "☀☂ Con sol o lluvia",
         "cross_text": "…y luego el cielo se cubre.",
-        "cross_small": "siga bajando — entramos al interior",
+        "cross_small": "siga bajando, entramos a cubierto",
         "btn_auto": "Auto",
         "btn_sun": "☀ Sol",
         "btn_rain": "☂ Lluvia",
@@ -220,7 +273,6 @@ STRINGS = {
         "btn_near_demo": "◎ Desde Annecy (demo)",
         "btn_near_off": "geolocalización no disponible",
         "see_all_fallback": "Ver todo",
-        "count_label": "lugares",
     },
 }
 
@@ -240,6 +292,53 @@ SEE_ALL_RE_B = re.compile(
 )
 CARD_RE = re.compile(r'<article class="card">.*?</article>', re.S)
 CARD_HREF_RE = re.compile(r'<a\s+href="https://loisirs74\.fr/(?:[a-z]{2}/)?([a-z0-9-]+)"\s+class="card-photo"')
+# Hubs use the reversed attribute order; this matches either.
+CARD_SLUG_RE = re.compile(r'<a\s+(?:href="https://loisirs74\.fr/(?:[a-z]{2}/)?([a-z0-9-]+)"\s+class="card-photo"|class="card-photo"\s+href="https://loisirs74\.fr/(?:[a-z]{2}/)?([a-z0-9-]+)")')
+
+
+def slug_from_card_html(card_html: str) -> str | None:
+    m = CARD_SLUG_RE.search(card_html)
+    if not m:
+        return None
+    return m.group(1) or m.group(2)
+
+
+# Where to read top-up indoor cards from per locale (the hub pages).
+HUB_PATH_FOR_LOCALE = {
+    "fr": "attractions/index.html",
+    "en": "en/attractions/index.html",
+    "de": "de/attraktionen/index.html",
+    "it": "it/attrazioni/index.html",
+    "es": "es/atraciones/index.html",
+}
+
+
+def topup_attraction_cards(loc_code: str, existing_slugs: set[str], desired: int = 6) -> list[str]:
+    """Pull additional <article class="card"> blocks from the locale's
+    attractions hub for slugs whose lieux.json category is still 'attraction'.
+    Returns up to (desired - len(existing slugs in #attraction)) cards."""
+    rel = HUB_PATH_FOR_LOCALE.get(loc_code)
+    if not rel:
+        return []
+    p = REPO / rel
+    if not p.exists():
+        return []
+    html = p.read_text(encoding="utf-8")
+    out: list[str] = []
+    for card in CARD_RE.findall(html):
+        slug = slug_from_card_html(card)
+        if not slug or slug in existing_slugs:
+            continue
+        lieu = BY_SLUG.get(slug)
+        if not lieu:
+            continue
+        if "attraction" not in (lieu.get("categories") or []):
+            continue
+        out.append(card)
+        existing_slugs.add(slug)
+        if len(out) >= desired:
+            break
+    return out
 HEAD_RE = re.compile(r'(?P<head><head>.*?</head>)', re.S)
 STYLE_BLOCK_RE = re.compile(r'<style[^>]*>.*?</style>', re.S)
 TITLE_RE = re.compile(r'<title>(?P<t>.*?)</title>', re.S)
@@ -451,12 +550,14 @@ section.cat h2 .count{font:600 .7rem var(--sans);letter-spacing:.16em;text-trans
 @media(max-width:680px){.carousel{display:flex;gap:1rem;overflow-x:auto;padding-bottom:.5rem;scrollbar-width:none}
   .carousel::-webkit-scrollbar{display:none}.carousel>.card{flex:0 0 78vw;max-width:19rem}}
 .card{background:var(--card);border:1px solid var(--card-line);border-radius:10px;overflow:hidden;
-  display:flex;flex-direction:column;position:relative;color:var(--card-ink);
+  display:flex;flex-direction:column;position:relative;color:var(--card-ink);min-width:0;
   transition:transform .5s var(--ease-out),box-shadow .5s var(--ease),background-color 1.1s var(--ease),border-color 1.1s var(--ease)}
 .card:hover{transform:translateY(-6px);box-shadow:0 30px 55px -25px rgba(0,0,0,.4)}
-.card-photo{display:block;aspect-ratio:4/3;position:relative;overflow:hidden;
+.card-photo{display:block;width:100%;aspect-ratio:4/3;position:relative;overflow:hidden;
   background:linear-gradient(135deg,#2c3a52,#1f2836 60%,#161d29)}
-.card-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease-out)}
+.card-photo::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(120% 90% at 75% 110%,rgba(243,166,75,.22),rgba(224,113,47,.06) 35%,rgba(31,40,54,0) 70%)}
+.card-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease-out);font-size:0;color:transparent}
 .card:hover .card-photo img{transform:scale(1.06)}
 .card-photo .placeholder{position:absolute;inset:0;display:grid;place-items:center;color:rgba(243,238,227,.45)}
 .card-photo .placeholder svg{width:48px;height:48px;opacity:.55}
@@ -548,14 +649,14 @@ def render_hero(s: dict) -> str:
 
 
 def render_section(sid: str, h2_html: str, see_all_href: str, see_all_label: str,
-                   band_text: str, cards: list[str], count_label: str, count: int) -> str:
+                   band_text: str, cards: list[str]) -> str:
     cards_html = "\n      ".join(cards)
     return f'''<section class="cat" id="{sid}">
   <div class="wrap">
     <div class="cat-head">
       <div class="cat-head-left">
         <span class="weather-band">{band_text}</span>
-        <h2>{h2_html} <span class="count">{count} {count_label}</span></h2>
+        <h2>{h2_html}</h2>
       </div>
       <a href="{see_all_href}" class="see-all">{see_all_label}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -838,39 +939,76 @@ def build(loc: dict) -> None:
     home_url = f"https://loisirs74.fr/{(subdir + '/') if subdir else ''}"
     lang_picker_html = render_lang_picker(code)
 
-    # build each section in the new order
-    built_sections: list[str] = []
+    # Phase A routing: extract every card from every source section, then
+    # bucket each card by its lieux.json category (with HOMEPAGE_SECTION_OVERRIDE
+    # for jardins). This replaces the prior "card lives in whatever section it
+    # was extracted from" rule, which inherited the lieux.json miscategorisation
+    # that put outdoor venues under the indoor #attraction band.
+
+    # cards_by_section[sid] -> list of card HTML, preserving source-section
+    # order then per-slug source order within each bucket.
+    cards_by_section: dict[str, list[str]] = {}
     slugs_present: set[str] = set()
+    placed: set[str] = set()
+    # per-source section header pieces: we still want the existing localized
+    # h2 text and see-all link for each section, so capture them up front.
+    section_chrome: dict[str, dict[str, str]] = {}
+    for sid, body in sections.items():
+        section_chrome[sid] = {
+            "h2": extract_h2_text(body) or sid,
+            "see_href": extract_see_all(body, s["see_all_fallback"])[0],
+            "see_label": extract_see_all(body, s["see_all_fallback"])[1],
+        }
+        for card in extract_cards(body):
+            slug_match = CARD_HREF_RE.search(card)
+            if not slug_match:
+                continue
+            slug = slug_match.group(1)
+            if slug in placed:
+                continue  # dedupe — a slug routes to exactly one section
+            target = section_for_slug(slug) or sid
+            cards_by_section.setdefault(target, []).append(card)
+            placed.add(slug)
+            slugs_present.add(slug)
 
-    def add_section(sid: str, band_text: str) -> None:
-        if sid not in sections:
-            return
-        body = sections[sid]
-        cards = extract_cards(body)
+    def render_for(sid: str, band_text: str) -> str | None:
+        cards = cards_by_section.get(sid)
         if not cards:
-            return
-        h2_html = extract_h2_text(body) or sid
-        see_href, see_label = extract_see_all(body, s["see_all_fallback"])
-        for c in cards:
-            for m in CARD_HREF_RE.finditer(c):
-                slugs_present.add(m.group(1))
-        built_sections.append(
-            render_section(sid, h2_html, see_href, see_label, band_text, cards, s["count_label"], len(cards))
-        )
+            return None
+        chrome = section_chrome.get(sid)
+        if not chrome:
+            # the section header didn't exist in source (rare); fall back to
+            # the first source section's chrome to keep the See-all link sensible
+            chrome = next(iter(section_chrome.values()), {"h2": sid, "see_href": "#", "see_label": s["see_all_fallback"]})
+        return render_section(sid, chrome["h2"], chrome["see_href"], chrome["see_label"], band_text, cards)
 
-    for sid in OUTDOOR_SECTIONS:
-        add_section(sid, s["wband_out"])
-    for sid in MIX_SECTIONS:
-        add_section(sid, s["wband_mix"])
-    crossover_html = render_crossover(s)
-    indoor_html: list[str] = []
+    built_outdoor: list[str] = []
+    for sid in OUTDOOR_SECTIONS + MIX_SECTIONS:
+        band = s["wband_out"] if sid in OUTDOOR_SECTIONS else s["wband_mix"]
+        rendered = render_for(sid, band)
+        if rendered:
+            built_outdoor.append(rendered)
+
+    # top up #attraction from the locale hub so the indoor section doesn't look
+    # anaemic (Phase B moved 4-5 outdoor cards out of the pre-rewrite teaser).
+    attraction_cards = cards_by_section.get("attraction", [])
+    if len(attraction_cards) < 6:
+        topup = topup_attraction_cards(code, set(slugs_present), desired=6 - len(attraction_cards))
+        for card in topup:
+            attraction_cards.append(card)
+            m = CARD_SLUG_RE.search(card)
+            if m:
+                slugs_present.add(m.group(1) or m.group(2))
+        cards_by_section["attraction"] = attraction_cards
+
+    built_indoor: list[str] = []
     for sid in INDOOR_SECTIONS:
-        before = len(built_sections)
-        add_section(sid, s["wband_in"])
-        if len(built_sections) > before:
-            indoor_html.append(built_sections.pop())
+        rendered = render_for(sid, s["wband_in"])
+        if rendered:
+            built_indoor.append(rendered)
 
-    sections_html = "\n\n".join(built_sections) + "\n\n" + crossover_html + "\n\n" + "\n\n".join(indoor_html)
+    crossover_html = render_crossover(s)
+    sections_html = "\n\n".join(built_outdoor) + "\n\n" + crossover_html + "\n\n" + "\n\n".join(built_indoor)
 
     footer_cats = extract_footer_categories(html)
     data_block = render_data_block(slugs_present)
