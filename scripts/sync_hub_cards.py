@@ -46,15 +46,39 @@ CAT_TO_HUB = {
     "domaine": "bases-de-loisirs",
     "parc": "bases-de-loisirs",
     "divers": "divers",
+    "lac": "lacs",
+    "plage": "plages",
+    "cascade": "cascades",
+    "point-de-vue": "points-de-vue",
+    "sentier": "sentiers",
+    "voie-verte": "voies-vertes",
+    "telecabine": "telecabines",
+    "musee": "musees",
+    "chateau": "chateaux",
 }
 
 # Locale-specific path of each hub.
 HUB_PATH = {
-    "fr": {"attractions": "attractions", "bases-de-loisirs": "bases-de-loisirs", "divers": "divers"},
-    "en": {"attractions": "en/attractions", "bases-de-loisirs": "en/leisure-parks", "divers": "en/other"},
-    "de": {"attractions": "de/attraktionen", "bases-de-loisirs": "de/freizeitparks", "divers": "de/sonstiges"},
-    "it": {"attractions": "it/attrazioni", "bases-de-loisirs": "it/aree-recreative", "divers": "it/altro"},
-    "es": {"attractions": "es/atraciones", "bases-de-loisirs": "es/areas-de-ocio", "divers": "es/otros"},
+    "fr": {"attractions": "attractions", "bases-de-loisirs": "bases-de-loisirs", "divers": "divers",
+           "lacs": "lacs", "plages": "plages", "cascades": "cascades",
+           "points-de-vue": "points-de-vue", "sentiers": "sentiers", "voies-vertes": "voies-vertes",
+           "telecabines": "telecabines", "musees": "musees", "chateaux": "chateaux"},
+    "en": {"attractions": "en/attractions", "bases-de-loisirs": "en/leisure-parks", "divers": "en/other",
+           "lacs": "en/lakes", "plages": "en/beaches", "cascades": "en/waterfalls",
+           "points-de-vue": "en/viewpoints", "sentiers": "en/trails", "voies-vertes": "en/greenways",
+           "telecabines": "en/cable-cars", "musees": "en/museums", "chateaux": "en/castles"},
+    "de": {"attractions": "de/attraktionen", "bases-de-loisirs": "de/freizeitparks", "divers": "de/sonstiges",
+           "lacs": "de/seen", "plages": "de/straende", "cascades": "de/wasserfaelle",
+           "points-de-vue": "de/aussichtspunkte", "sentiers": "de/wanderwege", "voies-vertes": "de/radwege",
+           "telecabines": "de/seilbahnen", "musees": "de/museen", "chateaux": "de/schloesser"},
+    "it": {"attractions": "it/attrazioni", "bases-de-loisirs": "it/aree-recreative", "divers": "it/altro",
+           "lacs": "it/laghi", "plages": "it/spiagge", "cascades": "it/cascate",
+           "points-de-vue": "it/punti-panoramici", "sentiers": "it/sentieri", "voies-vertes": "it/vie-verdi",
+           "telecabines": "it/funivie", "musees": "it/musei", "chateaux": "it/castelli"},
+    "es": {"attractions": "es/atraciones", "bases-de-loisirs": "es/areas-de-ocio", "divers": "es/otros",
+           "lacs": "es/lagos", "plages": "es/playas", "cascades": "es/cascadas",
+           "points-de-vue": "es/miradores", "sentiers": "es/senderos", "voies-vertes": "es/vias-verdes",
+           "telecabines": "es/telefericos", "musees": "es/museos", "chateaux": "es/castillos"},
 }
 
 # Plural words by language: (singular, plural, communes_singular, communes_plural).
@@ -105,6 +129,51 @@ def per_fiche(slug: str) -> dict:
         return json.loads(p.read_text(encoding="utf-8"))
     except Exception:
         return {}
+
+
+def synth_locale_card_html(slug: str, lang: str) -> str:
+    """Card for a locale hub. Same shape as the existing locale hub cards
+    (placeholder SVG instead of <img>, locale chrome labels). Use FR name
+    if no locale name available."""
+    lieu = BY_SLUG.get(slug, {})
+    fiche = per_fiche(slug)
+    name = (lieu.get("i18n", {}).get(lang, {}).get("name")
+            or fiche.get("i18n", {}).get(lang, {}).get("name")
+            or lieu.get("i18n", {}).get("fr", {}).get("name")
+            or slug.replace("-", " ").title())
+    commune = (lieu.get("i18n", {}).get("fr", {}).get("commune")
+               or fiche.get("commune") or "")
+    # Use locale meta_description if present, else FR
+    desc = (fiche.get("i18n", {}).get(lang, {}).get("meta_description")
+            or fiche.get("i18n", {}).get("fr", {}).get("meta_description") or "")
+    if len(desc) > 200:
+        cut = desc.rfind(" ", 0, 200)
+        if cut > 0:
+            desc = desc[:cut].rstrip(".,;:") + "."
+    is_free = bool(lieu.get("is_free", False))
+    tag_class = "is-gratuit" if is_free else "is-payant"
+    tag_text = LABELS[lang]["free"] if is_free else LABELS[lang]["paid"]
+    from urllib.parse import quote
+    map_q = quote(f"{name}, {commune}, Haute-Savoie", safe="")
+    map_url = f"https://www.google.com/maps/dir/?api=1&amp;destination={map_q}"
+    site = fiche.get("official_site_url") or ""
+    actions = (f'<a href="{map_url}" rel="noopener" target="_blank">{LABELS[lang]["route"]}</a>')
+    if site:
+        actions += f'\n<a href="{site}" rel="noopener" target="_blank">{LABELS[lang]["site"]}</a>'
+    return (
+        f'<article class="card">\n'
+        f'<a class="card-photo" href="https://loisirs74.fr/{lang}/{slug}">\n'
+        f'<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>\n'
+        f'<span class="card-tag {tag_class}">{tag_text}</span>\n'
+        f'</a>\n'
+        f'<div class="card-body">\n'
+        f'<div class="card-commune"><span>{commune}</span></div>'
+        f'<a class="title" href="https://loisirs74.fr/{lang}/{slug}">{name}</a>\n\n'
+        f'<p class="card-desc">{desc}</p>\n'
+        f'<div class="card-actions">\n{actions}\n</div>\n'
+        f'</div>\n'
+        f'</article>'
+    )
 
 
 def synth_fr_card_html(slug: str) -> str:
@@ -259,7 +328,8 @@ def add_cards_to_hub(soup: BeautifulSoup, lang: str, slugs_to_add: list[str]) ->
         lieu = BY_SLUG.get(slug, {})
         commune = (lieu.get("i18n", {}).get("fr", {}).get("commune")
                    or per_fiche(slug).get("commune") or "Haute-Savoie")
-        by_commune[commune].append(synth_fr_card_html(slug))
+        card_html = synth_fr_card_html(slug) if lang == "fr" else synth_locale_card_html(slug, lang)
+        by_commune[commune].append(card_html)
 
     # Build a single HTML string of new commune-sections.
     blocks = []
@@ -280,6 +350,12 @@ def add_cards_to_hub(soup: BeautifulSoup, lang: str, slugs_to_add: list[str]) ->
     return len(slugs_to_add)
 
 
+# Hubs where we should both REMOVE stale and ADD missing — only the
+# Phase-B-impacted attraction family. Other hubs are additive-only so we
+# don't disturb intentional cross-listings (lacs ↔ plages share fiches).
+REMOVE_ALSO = {"attractions", "bases-de-loisirs", "divers"}
+
+
 def patch_hub(lang: str, hub: str, log: list[str]) -> None:
     rel = HUB_PATH[lang][hub]
     path = REPO / rel / "index.html"
@@ -291,15 +367,18 @@ def patch_hub(lang: str, hub: str, log: list[str]) -> None:
     soup = BeautifulSoup(html, "html.parser")
 
     pre = len(soup.find_all("article", class_="card"))
-    removed = remove_stale_articles(soup, keep)
-    dropped = drop_empty_commune_sections(soup)
+    removed = 0
+    dropped = 0
+    if hub in REMOVE_ALSO:
+        removed = remove_stale_articles(soup, keep)
+        dropped = drop_empty_commune_sections(soup)
 
-    added = 0
-    if lang == "fr" and hub in {"bases-de-loisirs", "divers"}:
-        existing = {article_slug(a) for a in soup.find_all("article", class_="card")}
-        to_add = sorted([s for s in (keep - existing)
-                         if s and (REPO / "Json" / f"{s}.json").exists()])
-        added = add_cards_to_hub(soup, lang, to_add)
+    # Add cards for slugs that should be here but aren't.
+    existing = {article_slug(a) for a in soup.find_all("article", class_="card")}
+    existing.discard(None)
+    to_add = sorted([s for s in (keep - existing)
+                     if s and (REPO / "Json" / f"{s}.json").exists()])
+    added = add_cards_to_hub(soup, lang, to_add)
 
     update_commune_counts(soup, lang)
     post = len(soup.find_all("article", class_="card"))
@@ -317,13 +396,20 @@ def patch_hub(lang: str, hub: str, log: list[str]) -> None:
 
 def main() -> None:
     log: list[str] = []
-    log.append("=== /attractions/ family — remove reclassified cards ===")
+    log.append("=== /attractions/ family — remove reclassified + add ===")
     for lang in ["fr", "en", "de", "it", "es"]:
         patch_hub(lang, "attractions", log)
-    log.append("=== FR /bases-de-loisirs/ — add reclassified cards ===")
-    patch_hub("fr", "bases-de-loisirs", log)
-    log.append("=== FR /divers/ — add reclassified cards ===")
-    patch_hub("fr", "divers", log)
+    log.append("=== /bases-de-loisirs/ family — add reclassified ===")
+    for lang in ["fr", "en", "de", "it", "es"]:
+        patch_hub(lang, "bases-de-loisirs", log)
+    log.append("=== /divers/ family — add reclassified ===")
+    for lang in ["fr", "en", "de", "it", "es"]:
+        patch_hub(lang, "divers", log)
+    log.append("=== other hubs — additive only (no removals) ===")
+    for hub in ["lacs", "plages", "cascades", "points-de-vue", "sentiers",
+                "voies-vertes", "telecabines", "musees", "chateaux"]:
+        for lang in ["fr", "en", "de", "it", "es"]:
+            patch_hub(lang, hub, log)
     print("\n".join(log))
     (REPO / "scripts" / "sync_hub_cards.log").write_text(
         "\n".join(log) + "\n", encoding="utf-8"

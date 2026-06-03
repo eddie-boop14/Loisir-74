@@ -1,26 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="it">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f6f1e7">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#f6f1e7" name="theme-color"/>
 <title>Aree ricreative — Loisirs 74</title>
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="description" content="Aree ricreative a Haute-Savoie · 12 luoghi.">
-<link rel="canonical" href="https://loisirs74.fr/it/aree-recreative/">
-<link rel="alternate" hreflang="fr" href="https://loisirs74.fr/bases-de-loisirs/">
-<link rel="alternate" hreflang="en" href="https://loisirs74.fr/en/leisure-parks/">
-<link rel="alternate" hreflang="it" href="https://loisirs74.fr/it/aree-recreative/">
-<link rel="alternate" hreflang="es" href="https://loisirs74.fr/es/areas-de-ocio/">
-<link rel="alternate" hreflang="x-default" href="https://loisirs74.fr/bases-de-loisirs/">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,50;1,9..144,300..500,50&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<meta content="Aree ricreative a Haute-Savoie · 42 luoghi" name="description"/>
+<link href="https://loisirs74.fr/it/aree-recreative/" rel="canonical"/>
+<link href="https://loisirs74.fr/bases-de-loisirs/" hreflang="fr" rel="alternate"/>
+<link href="https://loisirs74.fr/en/leisure-parks/" hreflang="en" rel="alternate"/>
+<link href="https://loisirs74.fr/it/aree-recreative/" hreflang="it" rel="alternate"/>
+<link href="https://loisirs74.fr/es/areas-de-ocio/" hreflang="es" rel="alternate"/>
+<link href="https://loisirs74.fr/bases-de-loisirs/" hreflang="x-default" rel="alternate"/>
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,50;1,9..144,300..500,50&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
@@ -196,10 +197,8 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}.kicker,.hub-hero h1,.hub-hero .meta{opacity:1;transform:none;animation:none}.reveal{opacity:1;transform:none}.cursor-glow{display:none}}
 @media (min-width:680px){.filter-toggle{display:none}.filter-bar .wrap{display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-end}.filter-panel{display:contents;padding-top:0}.filter-bar__head{order:99;margin-left:auto;align-items:baseline;padding-bottom:.2rem}}
 </style>
-<meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
-<meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
-
-
+<meta content="https://loisirs74.fr/og-image.jpg" property="og:image"/>
+<meta content="https://loisirs74.fr/og-image.jpg" name="twitter:image"/>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "CollectionPage",
@@ -215,75 +214,68 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 }</script>
 </head>
 <body>
-
-<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-
+<div aria-hidden="true" class="cursor-glow" id="cursorGlow"></div>
 <header class="site">
-  <a href="https://loisirs74.fr/" class="brand">
-    <span class="mark" aria-hidden="true">
-      <svg viewBox="0 0 34 34" fill="none">
-        <path d="M3 28 L11 12 L16 20 L22 6 L31 28 Z" fill="#1c1814"/>
-        <polygon points="22,6 25,11 19,11" fill="#fdfaf3"/>
-        <circle cx="28" cy="10" r="2.5" fill="#e07a3f"/>
-      </svg>
-    </span>
-    <span><b>loisirs74</b> <i>· Haute-Savoie</i></span>
-  </a>
-  <details class="lang-picker">
-    <summary><b>IT</b> · 5 lingue</summary>
-    <div class="lang-menu">
-      <a href="https://loisirs74.fr/bases-de-loisirs/" hreflang="fr">Français</a><a href="https://loisirs74.fr/en/leisure-parks/" hreflang="en">English</a><a href="https://loisirs74.fr/de/freizeitparks/" hreflang="de">Deutsch</a><a href="https://loisirs74.fr/es/areas-de-ocio/" hreflang="es">Español</a>
-    </div>
-  </details>
-</header>
-
-<nav class="crumb" aria-label="breadcrumb">
-  <a href="https://loisirs74.fr/it/">Home</a>
-  <span class="sep">/</span>
-  <b>Aree ricreative</b>
-</nav>
-
-<section class="hub-hero">
-  <div class="wrap">
-    <h1>Aree ricreative</h1>
-    <p class="meta"><b>11 luoghi</b><span class="dot">·</span><span>11 comuni</span></p>
-  </div>
-</section>
-
-<div class="filter-bar">
-  <div class="wrap">
-    <div class="filter-bar__head">
-      <div class="count-live"><b id="count-n">0</b> <span id="count-label">luoghi mostrati</span></div>
-      <button type="button" class="filter-toggle" aria-expanded="false" aria-controls="filter-panel">
-        <span>Filtri</span>
-        <span class="filter-toggle__badge" id="filter-toggle-badge" hidden>0</span>
-        <svg class="filter-toggle__chev" width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </button>
-    </div>
-    <div class="filter-panel" id="filter-panel">
-    <label>
-      <span>Comune</span>
-      <select id="filt-commune"><option value="">Tutti i comuni</option><option value="Cruseilles">Cruseilles</option><option value="La Balme-de-Sillingy">La Balme-de-Sillingy</option><option value="Les Contamines-Montjoie">Les Contamines-Montjoie</option><option value="Morillon">Morillon</option><option value="Morzine">Morzine</option><option value="Passy">Passy</option><option value="Saint-Paul-en-Chablais">Saint-Paul-en-Chablais</option><option value="Sallanches">Sallanches</option><option value="Samoëns">Samoëns</option><option value="Sciez">Sciez</option><option value="Yvoire">Yvoire</option></select>
-    </label>
-    <label>
-      <span>Accesso</span>
-      <div class="access-group" id="filt-access">
-        <button data-v="all" class="active">Tutti</button>
-        <button data-v="free">Gratuito</button>
-        <button data-v="paid">A pagamento</button>
-      </div>
-    </label>
-    <label>
-      <span>Ordinamento</span>
-      <select id="filt-sort"><option value="commune">Per comune</option><option value="alpha">A → Z</option></select>
-    </label>
-    </div>
-  </div>
+<a class="brand" href="https://loisirs74.fr/">
+<span aria-hidden="true" class="mark">
+<svg fill="none" viewbox="0 0 34 34">
+<path d="M3 28 L11 12 L16 20 L22 6 L31 28 Z" fill="#1c1814"></path>
+<polygon fill="#fdfaf3" points="22,6 25,11 19,11"></polygon>
+<circle cx="28" cy="10" fill="#e07a3f" r="2.5"></circle>
+</svg>
+</span>
+<span><b>loisirs74</b> <i>· Haute-Savoie</i></span>
+</a>
+<details class="lang-picker">
+<summary><b>IT</b> · 5 lingue</summary>
+<div class="lang-menu">
+<a href="https://loisirs74.fr/bases-de-loisirs/" hreflang="fr">Français</a><a href="https://loisirs74.fr/en/leisure-parks/" hreflang="en">English</a><a href="https://loisirs74.fr/de/freizeitparks/" hreflang="de">Deutsch</a><a href="https://loisirs74.fr/es/areas-de-ocio/" hreflang="es">Español</a>
 </div>
-
+</details>
+</header>
+<nav aria-label="breadcrumb" class="crumb">
+<a href="https://loisirs74.fr/it/">Home</a>
+<span class="sep">/</span>
+<b>Aree ricreative</b>
+</nav>
+<section class="hub-hero">
+<div class="wrap">
+<h1>Aree ricreative</h1>
+<p class="meta"><b>42 luoghi</b><span class="dot">·</span><span>32 comuni</span></p>
+</div>
+</section>
+<div class="filter-bar">
+<div class="wrap">
+<div class="filter-bar__head">
+<div class="count-live"><b id="count-n">0</b> <span id="count-label">luoghi mostrati</span></div>
+<button aria-controls="filter-panel" aria-expanded="false" class="filter-toggle" type="button">
+<span>Filtri</span>
+<span class="filter-toggle__badge" hidden="" id="filter-toggle-badge">0</span>
+<svg aria-hidden="true" class="filter-toggle__chev" height="11" viewbox="0 0 12 12" width="11"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
+</button>
+</div>
+<div class="filter-panel" id="filter-panel">
+<label>
+<span>Comune</span>
+<select id="filt-commune"><option value="">Tutti i comuni</option><option value="Andilly">Andilly</option><option value="Annecy">Annecy</option><option value="Arenthon">Arenthon</option><option value="Bellevaux">Bellevaux</option><option value="Chamonix-Mont-Blanc">Chamonix-Mont-Blanc</option><option value="Cruseilles">Cruseilles</option><option value="Doussard">Doussard</option><option value="Fillière">Fillière</option><option value="La Balme-de-Sillingy">La Balme-de-Sillingy</option><option value="Les Contamines-Montjoie">Les Contamines-Montjoie</option><option value="Manigod">Manigod</option><option value="Megève">Megève</option><option value="Monnetier-Mornex">Monnetier-Mornex</option><option value="Morillon">Morillon</option><option value="Morzine">Morzine</option><option value="Neydens">Neydens</option><option value="Passy">Passy</option><option value="Reignier-Ésery">Reignier-Ésery</option><option value="Saint-Gervais-les-Bains">Saint-Gervais-les-Bains</option><option value="Saint-Gingolph">Saint-Gingolph</option><option value="Saint-Jorioz">Saint-Jorioz</option><option value="Saint-Paul-en-Chablais">Saint-Paul-en-Chablais</option><option value="Sallanches">Sallanches</option><option value="Samoëns">Samoëns</option><option value="Sciez">Sciez</option><option value="Sillingy">Sillingy</option><option value="Talloires-Montmin">Talloires-Montmin</option><option value="Thonon-les-Bains">Thonon-les-Bains</option><option value="Ville-la-Grand">Ville-la-Grand</option><option value="Viry">Viry</option><option value="Vétraz-Monthoux">Vétraz-Monthoux</option><option value="Yvoire">Yvoire</option></select>
+</label>
+<label>
+<span>Accesso</span>
+<div class="access-group" id="filt-access">
+<button class="active" data-v="all">Tutti</button>
+<button data-v="free">Gratuito</button>
+<button data-v="paid">A pagamento</button>
+</div>
+</label>
+<label>
+<span>Ordinamento</span>
+<select id="filt-sort"><option value="commune">Per comune</option><option value="alpha">A → Z</option></select>
+</label>
+</div>
+</div>
+</div>
 <main>
-  <div class="wrap">
-
+<div class="wrap">
 <div class="commune-section" data-commune="Cruseilles">
 <div class="commune-head"><h3>Cruseilles</h3><span class="commune-count">1 luogo</span></div><div class="transport-block transport-empty">
 <div class="transport-label">Come arrivare</div>
@@ -296,7 +288,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Cruseilles</span></div><a class="title" href="https://loisirs74.fr/it/parc-des-dronieres">Parc des Dronières</a>
-
 <p class="card-desc">Complesso di svaghi ad accesso libero con lago, sentieri forestali, parco faunistico con daini, aree pic-nic e molteplici attività sportive e ricreative per tutti.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parc%20des%20Droni%C3%A8res%2C%20Cruseilles%2C%20Haute-Savoie" rel="noopener" target="_blank">Itinerario</a>
@@ -316,7 +307,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </a>
 <div class="card-body">
 <div class="card-commune"><span>La Balme-de-Sillingy</span></div><a class="title" href="https://loisirs74.fr/it/domaine-du-tornet">Domaine du Tornet</a>
-
 <p class="card-desc">Sept hectares de lac, pumptrack, aire de jeux 2025, espace fitness, ponton et collection nationale de cerisiers à fleurs d'Asie.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Domaine%20du%20Tornet%2C%20La%20Balme-de-Sillingy%2C%20Haute-Savoie" rel="noopener" target="_blank">Itinerario</a>
@@ -337,7 +327,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Les Contamines-Montjoie</span></div><a class="title" href="https://loisirs74.fr/it/parc-de-loisirs-du-pontet">Parco di Divertimenti del Pontet</a>
-
 <p class="card-desc">Il più grande parco di divertimenti del Paese del Mont-Blanc: 30 ettari di natura ai piedi della Riserva Naturale dei Contamines, con laghi di montagna, spiaggia di balneazione gratuita e oltre 20 attività per tutta la famiglia.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parco%20di%20Divertimenti%20del%20Pontet%2C%20Les%20Contamines-Montjoie%2C%20Haute-Savoie" rel="noopener" target="_blank">Itinerario</a>
@@ -357,7 +346,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Morillon</span></div><a class="title" href="https://loisirs74.fr/it/base-de-loisirs-du-lac-bleu">Base di loisirs del Lago Blu</a>
-
 <p class="card-desc">Complesso di loisirs familiare intorno a un piccolo lago di montagna di 2,5 ettari, a 500 m dal centro di Morillon, con spiaggia di sabbia, balneazione sorvegliata in estate e molteplici attività all'aperto.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20di%20loisirs%20del%20Lago%20Blu%2C%20Morillon%2C%20Haute-Savoie" rel="noopener" target="_blank">Itinerario</a>
@@ -377,7 +365,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Morzine</span></div><a class="title" href="https://loisirs74.fr/it/parc-des-dereches">Parc des Dérêches</a>
-
 <p class="card-desc">Parco naturale di oltre 5 km lungo la Dranse, nel cuore di Morzine, con percorso salute, sentieri ombreggiati e infrastrutture sportive per tutta la famiglia.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parc%20des%20D%C3%A9r%C3%AAches%2C%20Morzine%2C%20Haute-Savoie" rel="noopener" target="_blank">Itinerario</a>
@@ -397,7 +384,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Passy</span></div><a class="title" href="https://loisirs74.fr/it/base-de-loisirs-du-lac-des-iles">Base di svago del Lago delle Isole</a>
-
 <p class="card-desc">Il lago più grande attrezzato del Paese del Monte Bianco: spiaggia di sabbia, nuoto sorvegliato in estate, attività nautiche e terrestri in un'oasi di verde di fronte al massiccio.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20di%20svago%20del%20Lago%20delle%20Isole%2C%20Passy%2C%20Haute-Savoie" rel="noopener" target="_blank">Itinerario</a>
@@ -417,7 +403,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Saint-Paul-en-Chablais</span></div><a class="title" href="https://loisirs74.fr/it/base-de-loisirs-de-la-beunaz">Base di svaghi della Beunaz</a>
-
 <p class="card-desc">Base di svaghi attrezzata intorno a un lago naturale di montagna temperato a 900 m di altitudine, creata nel 1951 da André Caza, che propone bagni, percorso avventura, attività acquatiche e sistemazioni insolite.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20di%20svaghi%20della%20Beunaz%2C%20Saint-Paul-en-Chablais%2C%20Haute-Savoie" rel="noopener" target="_blank">Itinerario</a>
@@ -438,7 +423,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Sallanches</span></div><a class="title" href="https://loisirs74.fr/it/base-de-loisirs-des-ilettes">Base di svago delle Ilettes</a>
-
 <p class="card-desc">Complesso di svago di fronte al massiccio del Monte Bianco con tre laghi attrezzati per la pesca, il nuoto sorvegliato in estate, il windsurf e le attività all'aperto.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20di%20svago%20delle%20Ilettes%2C%20Sallanches%2C%20Haute-Savoie" rel="noopener" target="_blank">Itinerario</a>
@@ -459,7 +443,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Samoëns</span></div><a class="title" href="https://loisirs74.fr/it/base-de-loisirs-du-lac-aux-dames">Base di svago del Lago aux Dames</a>
-
 <p class="card-desc">Base di svago di 10 ettari costruita attorno a due laghi, appartata dal centro del villaggio di Samoëns, con nuoto sorvegliato in estate, aree giochi, campi sportivi e accesso libero.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20di%20svago%20del%20Lago%20aux%20Dames%2C%20Samo%C3%ABns%2C%20Haute-Savoie" rel="noopener" target="_blank">Itinerario</a>
@@ -479,7 +462,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Sciez</span></div><a class="title" href="https://loisirs74.fr/it/domaine-de-guidou">Domaine de Guidou</a>
-
 <p class="card-desc">Sito naturale protetto di 85 ettari classificato Natura 2000, che riunisce una mosaico di ambienti diversificati con osservatorio ornitologico e dune fossili uniche in Europa.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Domaine%20de%20Guidou%2C%20Sciez%2C%20Haute-Savoie" rel="noopener" target="_blank">Itinerario</a>
@@ -499,7 +481,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Yvoire</span></div><a class="title" href="https://loisirs74.fr/it/domaine-de-rovoree-la-chataigniere">Domaine de Rovorée-La Châtaignière</a>
-
 <p class="card-desc">Spazio naturale sensibile di 24 ettari sulle rive del lago Lemano: foresta antica, castagni centenari, rive lacustri e biodiversità straordinaria.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Domaine%20de%20Rovor%C3%A9e-La%20Ch%C3%A2taigni%C3%A8re%2C%20Yvoire%2C%20Haute-Savoie" rel="noopener" target="_blank">Itinerario</a>
@@ -507,49 +488,607 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </div>
 </article></div>
 </div>
-
 <div class="empty-state" id="empty-state" style="display:none">
-      <b>Nessun risultato</b>
+<b>Nessun risultato</b>
       Nessun luogo corrisponde a questi filtri.
     </div>
-
-  </div>
+<div class="commune-section" data-commune="Andilly">
+<div class="commune-head"><h3>Andilly</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/grand-parc-d-andilly">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Andilly</span></div><a class="title" href="https://loisirs74.fr/it/grand-parc-d-andilly">Grand Parc d'Andilly</a>
+<p class="card-desc">8e parc à thème de France avec 4 univers : été Liberté, Médiévales, Hameau du Père Noël et Grand Parc de Noël. Adulte 'Malin' 15 € (J-5), 'Liberté' 18 €.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Grand%20Parc%20d%27Andilly%2C%20Andilly%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.grandparc-andilly.com" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Annecy">
+<div class="commune-head"><h3>Annecy</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/base-nautique-marquisats-annecy">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/it/base-nautique-marquisats-annecy">Base nautique des Marquisats</a>
+<p class="card-desc">SRVA (Société des Régates à Voile d'Annecy) + CLUB SPORTS NAUTIQUES - école voile + aviron + paddle au pied de la Vieille Ville. Plage des M.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20nautique%20des%20Marquisats%2C%20Annecy%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.lac-annecy.com/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Arenthon">
+<div class="commune-head"><h3>Arenthon</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/wakepark-tna-cable-park-arenthon">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Arenthon</span></div><a class="title" href="https://loisirs74.fr/it/wakepark-tna-cable-park-arenthon">TNA Cable Park</a>
+<p class="card-desc">SEUL VRAI CABLE-PARK / TÉLÉSKI-NAUTIQUE DE HAUTE-SAVOIE - lac d'Arenthon. Wakeboard tracté par câble (vs bateau) = sessions plus longues, ea.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=TNA%20Cable%20Park%2C%20Arenthon%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.haute-savoie-tourisme.org/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Bellevaux">
+<div class="commune-head"><h3>Bellevaux</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/acroparc-de-bellavallis-bellevaux">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Bellevaux</span></div><a class="title" href="https://loisirs74.fr/it/acroparc-de-bellavallis-bellevaux">Acroparc de Bellavallis</a>
+<p class="card-desc">Parc accrobranche à Bellevaux (74) : 8 parcours, 70 ateliers, tyroliennes dès 3 ans. Île enfants 10 €, parcours 6-16 ans 17 €, adulte 23 €. Mai-octobre.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Acroparc%20de%20Bellavallis%2C%20Bellevaux%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.gr-aventure.com/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Chamonix-Mont-Blanc">
+<div class="commune-head"><h3>Chamonix-Mont-Blanc</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/alpine-coaster-les-planards-chamonix">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/it/alpine-coaster-les-planards-chamonix">Alpine Coaster des Planards</a>
+<p class="card-desc">Luge sur rail de 1 300 m (sauts, virages, spirales à 540°) ouverte presque toute l'année, cœur du parc de loisirs des Planards (trampolines, tyrolienne, je</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Alpine%20Coaster%20des%20Planards%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.planards.fr" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Doussard">
+<div class="commune-head"><h3>Doussard</h3><span class="commune-count">2 luoghi</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/base-nautique-doussard-doussard">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Doussard</span></div><a class="title" href="https://loisirs74.fr/it/base-nautique-doussard-doussard">Base nautique de Doussard</a>
+<p class="card-desc">PORT SUD DU LAC D'ANNECY - voile + wakeboard + paddle. Skiwake74 + autres opérateurs. Rive sud lac, accès Voie verte Tier 2 Doussard.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20nautique%20de%20Doussard%2C%20Doussard%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.doussard.fr/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/k2-parapente-doussard">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-gratuit">Gratis</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Doussard</span></div><a class="title" href="https://loisirs74.fr/it/k2-parapente-doussard">K2 Parapente</a>
+<p class="card-desc">École de parapente biplace avec base fixe à Doussard, décollage au Col de la Forclaz au-dessus du lac d'Annecy ; location de vélos également.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=K2%20Parapente%2C%20Doussard%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.k2parapente.com" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Fillière">
+<div class="commune-head"><h3>Fillière</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/base-de-loisirs-du-vuaz-filliere">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-gratuit">Gratis</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Fillière</span></div><a class="title" href="https://loisirs74.fr/it/base-de-loisirs-du-vuaz-filliere">Base de loisirs du Vuaz</a>
+<p class="card-desc">Aire de loisirs gratuite et libre toute l'année à Aviernoz (Fillière), au pied du Parmelan : jeux enfants, pique-nique, barbecue. Animaux acceptés.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20de%20loisirs%20du%20Vuaz%2C%20Filli%C3%A8re%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.commune-filliere.fr/aviernoz/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Manigod">
+<div class="commune-head"><h3>Manigod</h3><span class="commune-count">2 luoghi</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/accrobranche-foret-aventures-manigod">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Manigod</span></div><a class="title" href="https://loisirs74.fr/it/accrobranche-foret-aventures-manigod">Forêt d'Aventures de Manigod</a>
+<p class="card-desc">PARC LOCAL DU MASSIF DES ARAVIS - col de la Croix Fry 1 477 m. Substitut master list #074 (Indian Forest Manigod inexistant) Tier 2 Manigod.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=For%C3%AAt%20d%27Aventures%20de%20Manigod%2C%20Manigod%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.lac-annecy.com/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/devalkart-de-manigod">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Manigod</span></div><a class="title" href="https://loisirs74.fr/it/devalkart-de-manigod">Dévalkart de Manigod</a>
+<p class="card-desc">Descente de 700 m en dévalkart/trottinette sur piste préparée avec remontée par téléski, au Blanchot à Manigod (Val Sports).</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=D%C3%A9valkart%20de%20Manigod%2C%20Manigod%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.haute-savoie-tourisme.org/loisirs/activites-sportives/ete/182441-devalkart" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Megève">
+<div class="commune-head"><h3>Megève</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/cote-2000-aventure">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Megève</span></div><a class="title" href="https://loisirs74.fr/it/cote-2000-aventure">Côte 2000 Aventure</a>
+<p class="card-desc">Parco avventura tra gli alberi a Megève con 70 stazioni (tirolesi, surf negli alberi). Percorsi adulti e bambini dai 5 anni. Prenotazione: 06 76 29 71 04.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=C%C3%B4te%202000%20Aventure%2C%20Meg%C3%A8ve%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.cote2000aventure.com/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Monnetier-Mornex">
+<div class="commune-head"><h3>Monnetier-Mornex</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/filenvol-monnetier-mornex">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Monnetier-Mornex</span></div><a class="title" href="https://loisirs74.fr/it/filenvol-monnetier-mornex">Filenvol</a>
+<p class="card-desc">Parcabout de filets de catamaran suspendus 3-15 m au pied du Salève. Sans harnais, dès la naissance. Ouvert 365 j/an. Adulte 25 €, séniors 16 €.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Filenvol%2C%20Monnetier-Mornex%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.filenvol.com/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Morzine">
+<div class="commune-head"><h3>Morzine</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/cascade-aventure">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-gratuit">Gratis</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Morzine</span></div><a class="title" href="https://loisirs74.fr/it/cascade-aventure">Cascade Aventure</a>
+<p class="card-desc">Parco di attività in piena natura a Morzine: arrampicata sugli alberi, zipline, canyoning e via ferrata sopra la cascata di Nyon. Aperto d'estate.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20Aventure%2C%20Morzine%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://cascadeaventure.wixsite.com/cascade-aventure" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Neydens">
+<div class="commune-head"><h3>Neydens</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/vitam-neydens">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Neydens</span></div><a class="title" href="https://loisirs74.fr/it/vitam-neydens">Vitam Neydens</a>
+<p class="card-desc">Centre de loisirs UCPA à 15 min de Genève : 25 m, 9 toboggans, balnéo, spa, escalade 14 m, plaine de jeux. Aquatique adulte journée 29 €, 4 h 25 €.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Vitam%20Neydens%2C%20Neydens%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.vitam.fr/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Passy">
+<div class="commune-head"><h3>Passy</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/passy-accro-lac">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Passy</span></div><a class="title" href="https://loisirs74.fr/it/passy-accro-lac">Passy Accro Lac</a>
+<p class="card-desc">Parco multattività con vista sul Monte Bianco: 10 percorsi di arrampicata sugli alberi, 1,2 km di tirolesi, airbag, catapulta umana, escape game all'aperto. A partire da 6 €.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Passy%20Accro%20Lac%2C%20Passy%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.passyaccrolac.com/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Reignier-Ésery">
+<div class="commune-head"><h3>Reignier-Ésery</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/acro-aventures-reignier">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Reignier-Ésery</span></div><a class="title" href="https://loisirs74.fr/it/acro-aventures-reignier">Acro'Aventures Reignier</a>
+<p class="card-desc">Parco accrobranche e Acro'Filet nella foresta delle Rocailles a Reignier-Ésery. A 10 km da Annemasse e 20 km da Ginevra. Percorsi da 1 m, tariffe da 16 €.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Acro%27Aventures%20Reignier%2C%20Reignier-%C3%89sery%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://acro-aventures.com/reignier/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Saint-Gervais-les-Bains">
+<div class="commune-head"><h3>Saint-Gervais-les-Bains</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/parc-aventure-mont-blanc-saint-gervais">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Saint-Gervais-les-Bains</span></div><a class="title" href="https://loisirs74.fr/it/parc-aventure-mont-blanc-saint-gervais">Mont-Blanc Parc Aventure</a>
+<p class="card-desc">7 PARCOURS ACCROBRANCHE de différents niveaux + TYROLIENNES JUSQU'À 400 M + VIA FERRATA dans le Parc Thermal de Saint-Gervais. Le plus impor.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mont-Blanc%20Parc%20Aventure%2C%20Saint-Gervais-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.montblancparcaventure.com/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Saint-Gingolph">
+<div class="commune-head"><h3>Saint-Gingolph</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/leman-forest-saint-gingolph">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-gratuit">Gratis</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Saint-Gingolph</span></div><a class="title" href="https://loisirs74.fr/it/leman-forest-saint-gingolph">Léman Forest</a>
+<p class="card-desc">Parc accrobranche franco-suisse à Saint-Gingolph : 10 parcours, 140 ateliers, tyrolienne des contrebandiers et laser game. Dès 2 ans, à 20 min d'Évian.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=L%C3%A9man%20Forest%2C%20Saint-Gingolph%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.leman-forest.com/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Saint-Jorioz">
+<div class="commune-head"><h3>Saint-Jorioz</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/wakepark-ponton-embarcadere-saint-jorioz">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Saint-Jorioz</span></div><a class="title" href="https://loisirs74.fr/it/wakepark-ponton-embarcadere-saint-jorioz">Ponton de l'Embarcadère Wakepark</a>
+<p class="card-desc">SPOT WAKEBOARD TRACTÉ PRINCIPAL DU LAC D'ANNECY - ski nautique, wakeboard, wakesurf, bouée tractée. Eau plate matin, vagues bateau après-mid.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Ponton%20de%20l%27Embarcad%C3%A8re%20Wakepark%2C%20Saint-Jorioz%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.lac-annecy.com/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Saint-Paul-en-Chablais">
+<div class="commune-head"><h3>Saint-Paul-en-Chablais</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/indiana-ventures-saint-paul-en-chablais">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Saint-Paul-en-Chablais</span></div><a class="title" href="https://loisirs74.fr/it/indiana-ventures-saint-paul-en-chablais">Indiana'Ventures Saint-Paul-en-Chablais</a>
+<p class="card-desc">Parco avventura sugli alberi presso la Plage de la Beunaz (Saint-Paul-en-Chablais). 7 percorsi da 2 anni. Adulto 23 €, bambino 11 €. Aperto luglio-agosto. Prenotazione online.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Indiana%27Ventures%20Saint-Paul-en-Chablais%2C%20Saint-Paul-en-Chablais%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://indianaventures.com/en/plage-de-la-beunaz/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Samoëns">
+<div class="commune-head"><h3>Samoëns</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/disc-golf-indiana-ventures-samoens">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-gratuit">Gratis</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Samoëns</span></div><a class="title" href="https://loisirs74.fr/it/disc-golf-indiana-ventures-samoens">Disc Golf Indiana'Ventures</a>
+<p class="card-desc">Parcours de disc-golf de 9 paniers à la base de loisirs du Lac aux Dames (et en forêt des Dérêches à Morzine), équipes de 1 à 5, ~1 h, frisbees fournis.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Disc%20Golf%20Indiana%27Ventures%2C%20Samo%C3%ABns%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.samoens.com/fiches-uniques/disc-golf/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Sciez">
+<div class="commune-head"><h3>Sciez</h3><span class="commune-count">2 luoghi</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/base-nautique-sciez-sciez">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Sciez</span></div><a class="title" href="https://loisirs74.fr/it/base-nautique-sciez-sciez">Centre nautique Voile Léman Sciez</a>
+<p class="card-desc">BASE VOILE LÉMAN multi-disciplines : KITE + DÉRIVEUR + CATAMARAN. Sciez-Plage rive sud Léman, vents thermiques optimaux Tier 2 Sciez.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Centre%20nautique%20Voile%20L%C3%A9man%20Sciez%2C%20Sciez%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.alpesduleman.com/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/parcours-aventure-de-sciez">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Sciez</span></div><a class="title" href="https://loisirs74.fr/it/parcours-aventure-de-sciez">Parcours Aventure de Sciez</a>
+<p class="card-desc">Parco avventura negli antichi querceti del Domaine de Coudrée. Più di 40 percorsi, 2 circuiti, tariffe da 13 €. Etichetta Famiglia Plus.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parcours%20Aventure%20de%20Sciez%2C%20Sciez%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.parcoursaventure-sciez.com/home/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Sillingy">
+<div class="commune-head"><h3>Sillingy</h3><span class="commune-count">2 luoghi</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/ereel-annecy-sillingy">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Sillingy</span></div><a class="title" href="https://loisirs74.fr/it/ereel-annecy-sillingy">E.réel Annecy</a>
+<p class="card-desc">Centre de réalité virtuelle de 300 m² au Grand Épagny (Sillingy) : 80+ expériences VR, dès 8 ans accompagnés. À partir de 14 € par session. Ligne 7 Sibra.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=E.r%C3%A9el%20Annecy%2C%20Sillingy%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://ereel.fr/espace-vr/annecy/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/la-foret-enchantee-sillingy">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-gratuit">Gratis</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Sillingy</span></div><a class="title" href="https://loisirs74.fr/it/la-foret-enchantee-sillingy">La Forêt Enchantée</a>
+<p class="card-desc">Parc de jeux couvert de 1 200 m² pour les 0–12 ans à Sillingy : toboggan géant, piscine à balles, mur d'escalade, mini-karting, trampoline et laser.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=La%20For%C3%AAt%20Enchant%C3%A9e%2C%20Sillingy%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.laforetenchantee74.fr" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Talloires-Montmin">
+<div class="commune-head"><h3>Talloires-Montmin</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/acro-aventures-talloires">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Talloires-Montmin</span></div><a class="title" href="https://loisirs74.fr/it/acro-aventures-talloires">Acro'Aventures Talloires</a>
+<p class="card-desc">Parco avventura multi-attività sulle alture del lago d'Annecy: percorsi acrobranca, Acro'Filet, caccia al tesoro, Foresta dei sensi. Tariffe da 17 €.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Acro%27Aventures%20Talloires%2C%20Talloires-Montmin%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://acro-aventures.com/en/talloires-2/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Thonon-les-Bains">
+<div class="commune-head"><h3>Thonon-les-Bains</h3><span class="commune-count">2 luoghi</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/leman-kid-thonon-les-bains">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/it/leman-kid-thonon-les-bains">Léman Kid</a>
+<p class="card-desc">Parc de jeux indoor 0-12 ans à Thonon-les-Bains, 3 zones d'âge, mini karting. 1-3 ans 7 €, 3-12 ans 10 €, -1 an gratuit. Fermé 23-24 mai (Pentecôte).</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=L%C3%A9man%20Kid%2C%20Thonon-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://lemankid.com/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/voile-cercle-thonon-thonon">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/it/voile-cercle-thonon-thonon">Cercle de la Voile de Thonon</a>
+<p class="card-desc">CLUB VOILE HISTORIQUE DU LÉMAN FRANÇAIS - Port de Rives Thonon. École de voile Optimist, dériveur, catamaran. Régates club Tier 3 Thonon-les-Bains.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cercle%20de%20la%20Voile%20de%20Thonon%2C%20Thonon-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.thononlesbains.com/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Ville-la-Grand">
+<div class="commune-head"><h3>Ville-la-Grand</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/c5-kids-party-ville-la-grand">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Ville-la-Grand</span></div><a class="title" href="https://loisirs74.fr/it/c5-kids-party-ville-la-grand">C5 Kids Party</a>
+<p class="card-desc">Parc de jeux indoor pour enfants 0-12 ans à Ville-la-Grand près d'Annemasse : 1 200 m², karting, luge indoor. 4-12 ans 13 €, 1-3 ans 8 €, -1 an gratuit.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=C5%20Kids%20Party%2C%20Ville-la-Grand%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://c5kidsparty.com/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Viry">
+<div class="commune-head"><h3>Viry</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/tropicaland-viry">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Viry</span></div><a class="title" href="https://loisirs74.fr/it/tropicaland-viry">Tropicaland</a>
+<p class="card-desc">Parc des dinosaures à Viry : 35 sculptures grandeur nature, jardin botanique et mini-ferme sur 1,5 ha. Adulte 10 €, enfant 3-11 ans 7 €, -3 ans gratuit.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Tropicaland%2C%20Viry%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.tropicaland.com/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="commune-section" data-commune="Vétraz-Monthoux">
+<div class="commune-head"><h3>Vétraz-Monthoux</h3><span class="commune-count">1 luogo</span></div>
+<div class="carousel">
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/it/ile-de-tortuga-vetraz-monthoux">
+<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+<span class="card-tag is-payant">A pagamento</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Vétraz-Monthoux</span></div><a class="title" href="https://loisirs74.fr/it/ile-de-tortuga-vetraz-monthoux">Île de Tortuga Vétraz-Monthoux</a>
+<p class="card-desc">Plus grand parc indoor du Genevois pour enfants 0-12 ans. Entrée 14,90 € (&gt;95 cm), 9,90 € (-95 cm), -12 mois gratuit, 1 adulte gratuit/enfant payant.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=%C3%8Ele%20de%20Tortuga%20V%C3%A9traz-Monthoux%2C%20V%C3%A9traz-Monthoux%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://vetraz.parctortuga.fr/" rel="noopener" target="_blank">Sito ufficiale</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
 </main>
-
-<div id="cat-map" aria-label="Map"></div>
-
-
+<div aria-label="Map" id="cat-map"></div>
 <section class="block see-also-orphans"><div class="wrap"><h3 style="font-size:1rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-mute,#6a727d);margin-bottom:.85rem;">Altre attività</h3><ul style="display:grid;grid-template-columns:repeat(auto-fill,minmax(18rem,1fr));gap:.5rem;list-style:none;padding-left:0;">
-    <li><a href="https://loisirs74.fr/it/base-de-loisirs-orange-montisel-saint-sixt">Base De Loisirs Orange Montisel Saint Sixt</a></li>
-    <li><a href="https://loisirs74.fr/it/parc-de-peche-domaine-du-moulin-authier">Parc De Peche Domaine Du Moulin Authier</a></li>
+<li><a href="https://loisirs74.fr/it/base-de-loisirs-orange-montisel-saint-sixt">Base De Loisirs Orange Montisel Saint Sixt</a></li>
+<li><a href="https://loisirs74.fr/it/parc-de-peche-domaine-du-moulin-authier">Parc De Peche Domaine Du Moulin Authier</a></li>
 </ul></div></section>
 <footer class="site">
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-col">
-        <h4>Loisirs 74</h4>
-        <p>Guida indipendente ai luoghi del tempo libero in Alta Savoia. Ogni pagina: una fonte ufficiale, un indirizzo, una mappa.</p>
-      </div>
-      <div class="foot-col">
-        <h4>Categorie</h4>
-        <ul><li><a href="https://loisirs74.fr/it/laghi/">Laghi &amp; spiagge</a></li><li><a href="https://loisirs74.fr/it/spiagge/">Spiagge</a></li><li><a href="https://loisirs74.fr/it/cascate/">Cascate</a></li><li><a href="https://loisirs74.fr/it/punti-panoramici/">Punti panoramici</a></li><li><a href="https://loisirs74.fr/it/funivie/">Funivie</a></li><li><a href="https://loisirs74.fr/it/musei/">Musei</a></li><li><a href="https://loisirs74.fr/it/castelli/">Castelli &amp; forti</a></li><li><a href="https://loisirs74.fr/it/vie-verdi/">Vie verdi</a></li><li><a href="https://loisirs74.fr/it/sentieri/">Sentieri</a></li><li><a href="https://loisirs74.fr/it/attrazioni/">Attrazioni &amp; svago</a></li><li><a href="https://loisirs74.fr/it/altro/">Altro</a></li><li><a href="https://loisirs74.fr/it/que-faire/">Cosa fare?</a></li></ul>
-      </div>
-      <div class="foot-col">
-        <h4>Lingua</h4>
-        <ul><li><a href="https://loisirs74.fr/bases-de-loisirs/" hreflang="fr">Français</a></li><li><a href="https://loisirs74.fr/en/leisure-parks/" hreflang="en">English</a></li><li><a href="https://loisirs74.fr/de/freizeitparks/" hreflang="de">Deutsch</a></li><li><a href="https://loisirs74.fr/es/areas-de-ocio/" hreflang="es">Español</a></li></ul>
-      </div>
-      <div class="foot-col">
-        <h4>Note legali</h4>
-        <ul><li><a href="https://loisirs74.fr/mentions-legales">Note legali</a></li><li><a href="https://loisirs74.fr/confidentialite">Privacy</a></li><li><a href="https://loisirs74.fr/cgv">Condizioni</a></li><li><a href="https://loisirs74.fr/signaler">Segnala un errore</a></li><li><a href="https://loisirs74.fr/devenir-partenaire">Diventa partner</a></li></ul>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 bleu canard éditions · Edmaster &amp; Claudius</span>
-    </div>
-  </div>
+<div class="wrap">
+<div class="foot-grid">
+<div class="foot-col">
+<h4>Loisirs 74</h4>
+<p>Guida indipendente ai luoghi del tempo libero in Alta Savoia. Ogni pagina: una fonte ufficiale, un indirizzo, una mappa.</p>
+</div>
+<div class="foot-col">
+<h4>Categorie</h4>
+<ul><li><a href="https://loisirs74.fr/it/laghi/">Laghi &amp; spiagge</a></li><li><a href="https://loisirs74.fr/it/spiagge/">Spiagge</a></li><li><a href="https://loisirs74.fr/it/cascate/">Cascate</a></li><li><a href="https://loisirs74.fr/it/punti-panoramici/">Punti panoramici</a></li><li><a href="https://loisirs74.fr/it/funivie/">Funivie</a></li><li><a href="https://loisirs74.fr/it/musei/">Musei</a></li><li><a href="https://loisirs74.fr/it/castelli/">Castelli &amp; forti</a></li><li><a href="https://loisirs74.fr/it/vie-verdi/">Vie verdi</a></li><li><a href="https://loisirs74.fr/it/sentieri/">Sentieri</a></li><li><a href="https://loisirs74.fr/it/attrazioni/">Attrazioni &amp; svago</a></li><li><a href="https://loisirs74.fr/it/altro/">Altro</a></li><li><a href="https://loisirs74.fr/it/que-faire/">Cosa fare?</a></li></ul>
+</div>
+<div class="foot-col">
+<h4>Lingua</h4>
+<ul><li><a href="https://loisirs74.fr/bases-de-loisirs/" hreflang="fr">Français</a></li><li><a href="https://loisirs74.fr/en/leisure-parks/" hreflang="en">English</a></li><li><a href="https://loisirs74.fr/de/freizeitparks/" hreflang="de">Deutsch</a></li><li><a href="https://loisirs74.fr/es/areas-de-ocio/" hreflang="es">Español</a></li></ul>
+</div>
+<div class="foot-col">
+<h4>Note legali</h4>
+<ul><li><a href="https://loisirs74.fr/mentions-legales">Note legali</a></li><li><a href="https://loisirs74.fr/confidentialite">Privacy</a></li><li><a href="https://loisirs74.fr/cgv">Condizioni</a></li><li><a href="https://loisirs74.fr/signaler">Segnala un errore</a></li><li><a href="https://loisirs74.fr/devenir-partenaire">Diventa partner</a></li></ul>
+</div>
+</div>
+<div class="foot-bottom">
+<span>© 2026 bleu canard éditions · Edmaster &amp; Claudius</span>
+</div>
+</div>
 </footer>
-
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 // Cursor halo
 (function(){
@@ -677,8 +1216,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
   applyFilters();
 })();
 </script>
-
-
 <script>
 (function(){
   const btn=document.querySelector(".filter-toggle");
