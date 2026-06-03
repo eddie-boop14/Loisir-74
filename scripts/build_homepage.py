@@ -72,12 +72,29 @@ CAT_TO_SECTION = {
     "divers": "divers",
 }
 
-# Per-slug override (user direction): the three jardins live in `divers` per
-# Phase B but the user wants them shown on the homepage under "Bases de loisirs".
+# Per-slug override: venues whose lieux.json category is `divers` per the
+# "uncertain → divers" rule but which are clearly OUTDOOR and should sit under
+# the ☀ band on the homepage, not under ☂ rain. Routes 14 venues out of
+# #divers; the rainy #divers shrinks to abbayes + thermes + bureau-des-guides.
 HOMEPAGE_SECTION_OVERRIDE = {
+    # jardins (botanical gardens)
     "jardin-cimes-passy": "domaine",
     "jardin-des-cinq-sens": "domaine",
     "jardin-jaysinia-samoens": "domaine",
+    # parcs animaliers (outdoor wildlife parks)
+    "les-aigles-du-leman": "domaine",
+    "parc-de-merlet": "domaine",
+    # croisières (lake boat tours — outdoor lake experience)
+    "croisiere-bateaux-annecy-annecy": "lac",
+    "croisiere-cgn-evian": "lac",
+    "croisiere-cgn-thonon": "lac",
+    "croisiere-cgn-yvoire": "lac",
+    # karting (mostly open-air circuits)
+    "karting-mk-circuit-scientrier": "domaine",
+    "karting-mont-blanc-passy": "domaine",
+    "karting-onlykart-roche-sur-foron": "domaine",
+    "karting-rumilly-rumilly": "domaine",
+    "karting-team-bouvier-pringy": "domaine",
 }
 
 
