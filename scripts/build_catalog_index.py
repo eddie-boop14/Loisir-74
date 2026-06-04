@@ -27,10 +27,20 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def is_real(hero):
+    """A hero is 'real' only when:
+    - it's an external URL (Wikimedia/Commons etc.), OR
+    - it's a local /<slug>-hero.jpg AND the file actually exists on disk.
+    Generic placeholders (/generique-*.jpg) and broken local refs both → False.
+    """
     if not hero:
         return False
+    if hero.startswith(("http://", "https://")):
+        return True
     name = hero.lstrip("/")
-    return not name.startswith("generique-")
+    if name.startswith("generique-"):
+        return False
+    # Local file path — check existence
+    return os.path.exists(os.path.join(ROOT, name))
 
 
 def main():
