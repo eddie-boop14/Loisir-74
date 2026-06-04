@@ -132,9 +132,9 @@ def per_fiche(slug: str) -> dict:
 
 
 def synth_locale_card_html(slug: str, lang: str) -> str:
-    """Card for a locale hub. Same shape as the existing locale hub cards
-    (placeholder SVG instead of <img>, locale chrome labels). Use FR name
-    if no locale name available."""
+    """Card for a locale hub. Same shape as the FR card (<img> when
+    hero_image present, placeholder SVG fallback) + locale chrome labels.
+    Use FR name if no locale name available."""
     lieu = BY_SLUG.get(slug, {})
     fiche = per_fiche(slug)
     name = (lieu.get("i18n", {}).get(lang, {}).get("name")
@@ -143,7 +143,6 @@ def synth_locale_card_html(slug: str, lang: str) -> str:
             or slug.replace("-", " ").title())
     commune = (lieu.get("i18n", {}).get("fr", {}).get("commune")
                or fiche.get("commune") or "")
-    # Use locale meta_description if present, else FR
     desc = (fiche.get("i18n", {}).get(lang, {}).get("meta_description")
             or fiche.get("i18n", {}).get("fr", {}).get("meta_description") or "")
     if len(desc) > 200:
@@ -160,10 +159,27 @@ def synth_locale_card_html(slug: str, lang: str) -> str:
     actions = (f'<a href="{map_url}" rel="noopener" target="_blank">{LABELS[lang]["route"]}</a>')
     if site:
         actions += f'\n<a href="{site}" rel="noopener" target="_blank">{LABELS[lang]["site"]}</a>'
+
+    # Photo slot: real <img> when hero_image present, placeholder otherwise
+    hero = fiche.get("hero_image")
+    if hero:
+        if not hero.startswith(("http://", "https://", "/")):
+            hero = "/" + hero
+        alt_text = (fiche.get("i18n", {}).get(lang, {}).get("hero_alt")
+                    or fiche.get("i18n", {}).get("fr", {}).get("hero_alt")
+                    or name).replace('"', '&quot;')
+        photo_inner = (f'<img alt="{alt_text}" loading="lazy" '
+                       f'referrerpolicy="no-referrer" src="{hero}"/>')
+    else:
+        photo_inner = ('<div class="placeholder"><svg fill="none" stroke="currentColor" '
+                       'stroke-linecap="round" stroke-linejoin="round" stroke-width="2" '
+                       'viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z">'
+                       '</path><circle cx="12" cy="10" r="3"></circle></svg></div>')
+
     return (
         f'<article class="card">\n'
         f'<a class="card-photo" href="https://loisirs74.fr/{lang}/{slug}">\n'
-        f'<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>\n'
+        f'{photo_inner}\n'
         f'<span class="card-tag {tag_class}">{tag_text}</span>\n'
         f'</a>\n'
         f'<div class="card-body">\n'

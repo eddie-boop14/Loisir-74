@@ -539,7 +539,7 @@ leave that field unchanged rather than fabricate.`;
   function mount(root) {
     root.innerHTML = `
       <div class="help">
-        <strong>Étape 5 — Enrichir.</strong> Charge une fiche existante, optionnellement glisse une image hero,
+        <strong>Étape 5 — Enrichir.</strong> Choisis une fiche du catalogue (ou glisse un JSON local), optionnellement glisse une image hero,
         clic <em>Enrichir</em>. L'IA vérifie via web search, traduit les locales manquantes, étoffe les FAQ/activités/body,
         propose des partenaires. Tu revois chaque champ (accepter/refuser), puis télécharges le ZIP à transmettre au repo.
       </div>
@@ -547,12 +547,31 @@ leave that field unchanged rather than fabricate.`;
       <div class="card">
         <div class="card-head">
           <h3>1. Charger la fiche existante</h3>
+          <span class="field-help" id="enricher-catalog-status">Chargement du catalogue…</span>
         </div>
-        <div id="enricher-drop-json" style="border:2px dashed var(--line);border-radius:10px;padding:1.25rem;text-align:center;cursor:pointer">
-          <p style="margin:0;color:var(--ink-mute)">Glisse un fichier <code>Json/&lt;slug&gt;.json</code> ici, ou
-            <label style="color:var(--accent);cursor:pointer;text-decoration:underline">parcourir<input type="file" id="enricher-file-json" accept="application/json,.json" style="display:none"></label>.</p>
+        <div class="field-row cols2" style="margin-bottom:.5rem">
+          <div class="field">
+            <label>Recherche dans le catalogue</label>
+            <input type="text" id="enricher-catalog-q" placeholder="slug, nom, commune…">
+          </div>
+          <div class="field">
+            <label>Catégorie</label>
+            <select id="enricher-catalog-category">
+              <option value="">Toutes</option>
+            </select>
+          </div>
         </div>
-        <p id="enricher-loaded" class="field-help" style="margin-top:.5rem">Aucune fiche chargée</p>
+        <div style="max-height:280px;overflow-y:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface-2)" id="enricher-catalog-list"></div>
+
+        <details style="margin-top:.85rem">
+          <summary style="cursor:pointer;font-size:.85rem;color:var(--ink-mute)">Ou : glisser un JSON local</summary>
+          <div id="enricher-drop-json" style="border:2px dashed var(--line);border-radius:10px;padding:1rem;text-align:center;cursor:pointer;margin-top:.5rem">
+            <p style="margin:0;color:var(--ink-mute);font-size:.8rem">Glisse un fichier <code>Json/&lt;slug&gt;.json</code> ici, ou
+              <label style="color:var(--accent);cursor:pointer;text-decoration:underline">parcourir<input type="file" id="enricher-file-json" accept="application/json,.json" style="display:none"></label>.</p>
+          </div>
+        </details>
+
+        <p id="enricher-loaded" class="field-help" style="margin-top:.65rem">Aucune fiche chargée</p>
       </div>
 
       <div class="card">
@@ -596,6 +615,147 @@ leave that field unchanged rather than fabricate.`;
 
     root.querySelector('#enricher-enrich-btn').addEventListener('click', runEnrich);
     root.querySelector('#enricher-zip-btn').addEventListener('click', exportZip);
+
+    // Catalog preload
+    initCatalog(root);
+  }
+
+  // -----------------------------------------------------------------------
+  // CATALOG PRELOAD (fetch catalog-index.json + searchable list)
+  // -----------------------------------------------------------------------
+
+  let catalog = [];
+  let catalogFilter = { q: '', category: '' };
+
+  function initCatalog(root) {
+    const status = root.querySelector('#enricher-catalog-status');
+    fetch('/catalog-index.json')
+      .then(r => r.json())
+      .then(data => {
+        catalog = data;
+        status.textContent = `${catalog.length} fiches`;
+        const cats = Array.from(new Set(catalog.map(c => c.category))).sort();
+        const sel = root.querySelector('#enricher-catalog-category');
+        for (const c of cats) {
+          const opt = document.createElement('option');
+          opt.value = c; opt.textContent = c;
+          sel.appendChild(opt);
+        }
+        renderCatalogList(root);
+      })
+      .catch(err => {
+        status.textContent = `erreur catalog-index.json : ${err.message}`;
+        status.style.color = 'var(--bad)';
+      });
+
+    root.querySelector('#enricher-catalog-q').addEventListener('input', (e) => {
+      catalogFilter.q = e.target.value.trim().toLowerCase();
+      renderCatalogList(root);
+    });
+    root.querySelector('#enricher-catalog-category').addEventListener('change', (e) => {
+      catalogFilter.category = e.target.value;
+      renderCatalogList(root);
+    });
+  }
+
+  function renderCatalogList(root) {
+    const wrap = root.querySelector('#enricher-catalog-list');
+    wrap.innerHTML = '';
+    let list = catalog;
+    if (catalogFilter.category) list = list.filter(f => f.category === catalogFilter.category);
+    if (catalogFilter.q) list = list.filter(f =>
+      f.slug.includes(catalogFilter.q) ||
+      f.name.toLowerCase().includes(catalogFilter.q) ||
+      f.commune.toLowerCase().includes(catalogFilter.q));
+    if (!list.length) {
+      wrap.innerHTML = '<p class="field-help" style="padding:.85rem">Aucun résultat.</p>';
+      return;
+    }
+    for (const f of list.slice(0, 200)) {
+      const row = document.createElement('button');
+      row.type = 'button';
+      row.style.display = 'grid';
+      row.style.gridTemplateColumns = '36px 1fr auto';
+      row.style.gap = '.55rem';
+      row.style.alignItems = 'center';
+      row.style.width = '100%';
+      row.style.padding = '.5rem .65rem';
+      row.style.background = 'transparent';
+      row.style.border = '0';
+      row.style.borderBottom = '1px solid var(--line)';
+      row.style.cursor = 'pointer';
+      row.style.textAlign = 'left';
+      row.onmouseover = () => row.style.background = 'var(--surface)';
+      row.onmouseout = () => row.style.background = 'transparent';
+
+      const thumb = document.createElement('div');
+      thumb.style.width = '36px';
+      thumb.style.height = '36px';
+      thumb.style.borderRadius = '5px';
+      thumb.style.overflow = 'hidden';
+      thumb.style.background = 'var(--bg)';
+      thumb.style.border = '1px solid var(--line)';
+      if (f.hero) {
+        const img = document.createElement('img');
+        img.src = f.hero;
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+        img.onerror = () => { thumb.innerHTML = ''; };
+        thumb.appendChild(img);
+      }
+      row.appendChild(thumb);
+
+      const info = document.createElement('div');
+      info.style.minWidth = '0';
+      info.innerHTML = `
+        <div style="font-weight:600;font-size:.85rem">${escapeHtml(f.name)}</div>
+        <div style="font-size:.7rem;color:var(--ink-mute);font-family:var(--mono)">${escapeHtml(f.slug)} · ${escapeHtml(f.commune)} · ${escapeHtml(f.category)}</div>`;
+      row.appendChild(info);
+
+      const pill = document.createElement('span');
+      pill.className = 'status ' + (f.real ? 'status-done' : 'status-todo');
+      pill.style.fontSize = '.55rem';
+      pill.textContent = f.real ? 'photo' : 'générique';
+      row.appendChild(pill);
+
+      row.addEventListener('click', () => loadFromCatalog(f.slug));
+      wrap.appendChild(row);
+    }
+    if (list.length > 200) {
+      const more = document.createElement('p');
+      more.className = 'field-help';
+      more.style.padding = '.5rem .85rem';
+      more.textContent = `… +${list.length - 200} fiches. Affine la recherche.`;
+      wrap.appendChild(more);
+    }
+  }
+
+  function loadFromCatalog(slug) {
+    const url = `/Json/${slug}.json`;
+    fetch(url)
+      .then(r => {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.text();
+      })
+      .then(txt => {
+        const parsed = JSON.parse(txt);
+        if (!parsed.slug) throw new Error('JSON sans champ "slug"');
+        original = parsed;
+        enriched = null;
+        changes = [];
+        rejected = new Set();
+        imageBlob = null;
+        document.getElementById('enricher-loaded').textContent = `Chargé du catalogue : ${parsed.slug} (${parsed.commune || '?'})`;
+        document.getElementById('enricher-enrich-btn').disabled = false;
+        document.getElementById('enricher-diff').innerHTML = '';
+        document.getElementById('enricher-zip-btn').disabled = true;
+        document.getElementById('enricher-image-loaded').textContent = 'Aucune image chargée';
+        setStatus(`Fiche chargée : ${parsed.slug}. Optionnellement glisse une image. Puis clic Enrichir.`);
+      })
+      .catch(err => {
+        setStatus(`Erreur chargement /Json/${slug}.json : ${err.message}`, 'err');
+      });
   }
 
   function wireDropZone(zone, input, onFile) {
