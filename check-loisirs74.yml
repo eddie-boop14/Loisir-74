@@ -1,0 +1,33 @@
+name: Check loisirs74 (Google Maps)
+
+# ▶️  Run it: GitHub app/site → your repo → Actions tab → "Check loisirs74" → Run workflow
+on:
+  workflow_dispatch:        # the manual "play" button
+  schedule:
+    - cron: "0 6 1 * *"     # bonus: auto-run 06:00 on the 1st of every month
+
+permissions:
+  contents: write           # lets it commit report.csv + updated fiches back
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run the check
+        env:
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+        run: python check_loisirs74.py
+
+      - name: Commit results
+        run: |
+          git config user.name "loisirs74-bot"
+          git config user.email "bot@loisirs74.fr"
+          git add -A
+          git commit -m "chore: google check $(date +%F)" || echo "nothing to commit"
+          git push
