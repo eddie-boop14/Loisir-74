@@ -539,19 +539,19 @@ leave that field unchanged rather than fabricate.`;
   function mount(root) {
     root.innerHTML = `
       <div class="help">
-        <strong>Étape 5 — Enrichir.</strong> Choisis une fiche du catalogue (ou glisse un JSON local), optionnellement glisse une image hero,
+        <strong>Étape 5 — Enrichir.</strong> Choisis une fiche du catalogue, optionnellement glisse une image hero,
         clic <em>Enrichir</em>. L'IA vérifie via web search, traduit les locales manquantes, étoffe les FAQ/activités/body,
         propose des partenaires. Tu revois chaque champ (accepter/refuser), puis télécharges le ZIP à transmettre au repo.
       </div>
 
       <div class="card">
         <div class="card-head">
-          <h3>1. Charger la fiche existante</h3>
+          <h3>1. Choisir une fiche du catalogue</h3>
           <span class="field-help" id="enricher-catalog-status">Chargement du catalogue…</span>
         </div>
         <div class="field-row cols2" style="margin-bottom:.5rem">
           <div class="field">
-            <label>Recherche dans le catalogue</label>
+            <label>Recherche</label>
             <input type="text" id="enricher-catalog-q" placeholder="slug, nom, commune…">
           </div>
           <div class="field">
@@ -561,17 +561,8 @@ leave that field unchanged rather than fabricate.`;
             </select>
           </div>
         </div>
-        <div style="max-height:280px;overflow-y:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface-2)" id="enricher-catalog-list"></div>
-
-        <details style="margin-top:.85rem">
-          <summary style="cursor:pointer;font-size:.85rem;color:var(--ink-mute)">Ou : glisser un JSON local</summary>
-          <div id="enricher-drop-json" style="border:2px dashed var(--line);border-radius:10px;padding:1rem;text-align:center;cursor:pointer;margin-top:.5rem">
-            <p style="margin:0;color:var(--ink-mute);font-size:.8rem">Glisse un fichier <code>Json/&lt;slug&gt;.json</code> ici, ou
-              <label style="color:var(--accent);cursor:pointer;text-decoration:underline">parcourir<input type="file" id="enricher-file-json" accept="application/json,.json" style="display:none"></label>.</p>
-          </div>
-        </details>
-
-        <p id="enricher-loaded" class="field-help" style="margin-top:.65rem">Aucune fiche chargée</p>
+        <div style="max-height:380px;overflow-y:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface-2)" id="enricher-catalog-list"></div>
+        <p id="enricher-loaded" class="field-help" style="margin-top:.65rem">Aucune fiche sélectionnée</p>
       </div>
 
       <div class="card">
@@ -608,15 +599,13 @@ leave that field unchanged rather than fabricate.`;
       </div>
     `;
 
-    // Drop zone wiring — JSON
-    wireDropZone(root.querySelector('#enricher-drop-json'), root.querySelector('#enricher-file-json'), (f) => loadJSON(f));
-    // Drop zone wiring — image
+    // Image drop zone wiring (JSON drop zone removed — catalog list is the only input)
     wireDropZone(root.querySelector('#enricher-drop-image'), root.querySelector('#enricher-file-image'), (f) => loadImage(f));
 
     root.querySelector('#enricher-enrich-btn').addEventListener('click', runEnrich);
     root.querySelector('#enricher-zip-btn').addEventListener('click', exportZip);
 
-    // Catalog preload
+    // Catalog preload — primary input
     initCatalog(root);
   }
 
