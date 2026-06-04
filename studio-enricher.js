@@ -219,11 +219,38 @@ leave that field unchanged rather than fabricate.`;
       text = text.replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/, '').trim();
     }
 
+    // If the AI added a prose preamble before the JSON ("Based on my
+    // research, …"), grab the first balanced { … } block.
     let parsed;
     try {
       parsed = JSON.parse(text);
-    } catch (err) {
-      throw new Error('JSON enrichi invalide : ' + err.message + '\nRéponse brute (300 premiers chars):\n' + text.slice(0, 300));
+    } catch (_) {
+      const start = text.indexOf('{');
+      if (start < 0) throw new Error('Réponse sans objet JSON.');
+      // Walk to the matching closing brace, respecting string quotes
+      let depth = 0;
+      let inStr = false;
+      let esc = false;
+      let end = -1;
+      for (let i = start; i < text.length; i++) {
+        const c = text[i];
+        if (esc) { esc = false; continue; }
+        if (c === '\\' && inStr) { esc = true; continue; }
+        if (c === '"') { inStr = !inStr; continue; }
+        if (inStr) continue;
+        if (c === '{') depth++;
+        else if (c === '}') {
+          depth--;
+          if (depth === 0) { end = i; break; }
+        }
+      }
+      if (end < 0) throw new Error("Bloc JSON non équilibré dans la réponse.");
+      try {
+        parsed = JSON.parse(text.slice(start, end + 1));
+      } catch (err) {
+        throw new Error('JSON enrichi invalide : ' + err.message
+          + '\nExtrait (300 chars):\n' + text.slice(start, start + 300));
+      }
     }
 
     if (!parsed.slug || parsed.slug !== jsonObj.slug) {
