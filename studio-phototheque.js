@@ -22,7 +22,11 @@
 
   let catalog = [];           // Loaded from CATALOG_URL
   let activeSlug = null;
-  let filter = { q: '', genericOnly: true, category: '' };
+  // Photothèque only ever shows fiches on generic placeholders — venues with
+  // a real photo are skipped (no need to "pick" a random Wikimedia/Openverse
+  // result when a real one already exists). Use the Editor (Tab 4) to replace
+  // an existing real hero.
+  let filter = { q: '', category: '' };
 
   // ---------------------------------------------------------------------
   // PHOTO SEARCH BACKENDS
@@ -97,8 +101,9 @@
   // ---------------------------------------------------------------------
 
   function fiches() {
-    let list = catalog;
-    if (filter.genericOnly) list = list.filter(f => !f.real);
+    // Hard rule: only fiches still on generic placeholders. Venues with a
+    // real hero don't need a "pick" — use the Editor tab to replace one.
+    let list = catalog.filter(f => !f.real);
     if (filter.category) list = list.filter(f => f.category === filter.category);
     if (filter.q) {
       const q = filter.q.toLowerCase();
@@ -412,15 +417,15 @@
   function mount(root) {
     root.innerHTML = `
       <div class="help">
-        <strong>Étape 6 — Photothèque.</strong> Choisis une fiche du catalogue, regarde les résultats Wikimedia Commons + Openverse côte-à-côte, ou glisse ta propre photo. Clic sur une vignette pour la sélectionner, puis télécharge le ZIP (image + patch JSON) à transmettre pour intégration.
+        <strong>Étape 6 — Photothèque.</strong> Liste des fiches encore sur photo générique. Pour chacune : recherche parallèle Wikimedia Commons + Openverse, ou glisse ta propre photo. Clic vignette → télécharge le ZIP (image + patch JSON) à transmettre pour intégration. Les fiches qui ont déjà une vraie photo n'apparaissent pas ici — passe par l'Éditeur (Tab 4) pour remplacer une existante.
       </div>
 
       <div class="card">
         <div class="card-head">
-          <h3>Filtres</h3>
+          <h3>Fiches à enrichir</h3>
           <span class="field-help" id="phototheque-count">…</span>
         </div>
-        <div class="field-row cols2" style="margin-bottom:.5rem">
+        <div class="field-row cols2" style="margin-bottom:0">
           <div class="field">
             <label>Recherche</label>
             <input type="text" id="phototheque-q" placeholder="slug, nom, commune…">
@@ -431,12 +436,6 @@
               <option value="">Toutes</option>
             </select>
           </div>
-        </div>
-        <div class="field">
-          <label style="display:flex;align-items:center;gap:.5rem;font-weight:600">
-            <input type="checkbox" id="phototheque-generic-only" checked style="width:auto">
-            <span>Seulement fiches sur générique (priorité d'enrichissement)</span>
-          </label>
         </div>
       </div>
 
@@ -473,10 +472,6 @@
     });
     root.querySelector('#phototheque-category').addEventListener('change', (e) => {
       filter.category = e.target.value;
-      renderList();
-    });
-    root.querySelector('#phototheque-generic-only').addEventListener('change', (e) => {
-      filter.genericOnly = e.target.checked;
       renderList();
     });
   }
