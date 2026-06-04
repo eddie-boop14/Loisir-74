@@ -546,22 +546,15 @@ leave that field unchanged rather than fabricate.`;
 
       <div class="card">
         <div class="card-head">
-          <h3>1. Choisir une fiche du catalogue</h3>
-          <span class="field-help" id="enricher-catalog-status">Chargement du catalogue…</span>
+          <h3>1. Sélectionner la fiche</h3>
         </div>
-        <div class="field-row cols2" style="margin-bottom:.5rem">
-          <div class="field">
-            <label>Recherche</label>
-            <input type="text" id="enricher-catalog-q" placeholder="slug, nom, commune…">
-          </div>
-          <div class="field">
-            <label>Catégorie</label>
-            <select id="enricher-catalog-category">
-              <option value="">Toutes</option>
-            </select>
-          </div>
+        <div class="field">
+          <label for="enricher-venue-select">Fiche</label>
+          <select id="enricher-venue-select" size="1">
+            <option value="">— Chargement du catalogue —</option>
+          </select>
+          <p class="field-help">Toutes les fiches du catalogue préchargées, groupées par catégorie. Ouvre, scrolle ou tape pour filtrer, choisis.</p>
         </div>
-        <div style="max-height:380px;overflow-y:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface-2)" id="enricher-catalog-list"></div>
         <p id="enricher-loaded" class="field-help" style="margin-top:.65rem">Aucune fiche sélectionnée</p>
       </div>
 
@@ -617,107 +610,34 @@ leave that field unchanged rather than fabricate.`;
   let catalogFilter = { q: '', category: '' };
 
   function initCatalog(root) {
-    const status = root.querySelector('#enricher-catalog-status');
+    const sel = root.querySelector('#enricher-venue-select');
     fetch('/catalog-index.json')
       .then(r => r.json())
       .then(data => {
         catalog = data;
-        status.textContent = `${catalog.length} fiches`;
-        const cats = Array.from(new Set(catalog.map(c => c.category))).sort();
-        const sel = root.querySelector('#enricher-catalog-category');
-        for (const c of cats) {
-          const opt = document.createElement('option');
-          opt.value = c; opt.textContent = c;
-          sel.appendChild(opt);
-        }
-        renderCatalogList(root);
+        sel.innerHTML = '<option value="">— Sélectionne une fiche —</option>';
+        const byCat = {};
+        data.forEach(f => { (byCat[f.category] = byCat[f.category] || []).push(f); });
+        Object.keys(byCat).sort().forEach(cat => {
+          const group = document.createElement('optgroup');
+          group.label = `${cat} (${byCat[cat].length})`;
+          byCat[cat].sort((a, b) => a.name.localeCompare(b.name)).forEach(f => {
+            const opt = document.createElement('option');
+            opt.value = f.slug;
+            opt.textContent = `${f.name} — ${f.commune}${f.real ? '' : ' · générique'}`;
+            group.appendChild(opt);
+          });
+          sel.appendChild(group);
+        });
       })
       .catch(err => {
-        status.textContent = `erreur catalog-index.json : ${err.message}`;
-        status.style.color = 'var(--bad)';
+        sel.innerHTML = '<option value="">Erreur: ' + err.message + '</option>';
       });
 
-    root.querySelector('#enricher-catalog-q').addEventListener('input', (e) => {
-      catalogFilter.q = e.target.value.trim().toLowerCase();
-      renderCatalogList(root);
+    sel.addEventListener('change', (e) => {
+      const slug = e.target.value;
+      if (slug) loadFromCatalog(slug);
     });
-    root.querySelector('#enricher-catalog-category').addEventListener('change', (e) => {
-      catalogFilter.category = e.target.value;
-      renderCatalogList(root);
-    });
-  }
-
-  function renderCatalogList(root) {
-    const wrap = root.querySelector('#enricher-catalog-list');
-    wrap.innerHTML = '';
-    let list = catalog;
-    if (catalogFilter.category) list = list.filter(f => f.category === catalogFilter.category);
-    if (catalogFilter.q) list = list.filter(f =>
-      f.slug.includes(catalogFilter.q) ||
-      f.name.toLowerCase().includes(catalogFilter.q) ||
-      f.commune.toLowerCase().includes(catalogFilter.q));
-    if (!list.length) {
-      wrap.innerHTML = '<p class="field-help" style="padding:.85rem">Aucun résultat.</p>';
-      return;
-    }
-    for (const f of list.slice(0, 200)) {
-      const row = document.createElement('button');
-      row.type = 'button';
-      row.style.display = 'grid';
-      row.style.gridTemplateColumns = '36px 1fr auto';
-      row.style.gap = '.55rem';
-      row.style.alignItems = 'center';
-      row.style.width = '100%';
-      row.style.padding = '.5rem .65rem';
-      row.style.background = 'transparent';
-      row.style.border = '0';
-      row.style.borderBottom = '1px solid var(--line)';
-      row.style.cursor = 'pointer';
-      row.style.textAlign = 'left';
-      row.onmouseover = () => row.style.background = 'var(--surface)';
-      row.onmouseout = () => row.style.background = 'transparent';
-
-      const thumb = document.createElement('div');
-      thumb.style.width = '36px';
-      thumb.style.height = '36px';
-      thumb.style.borderRadius = '5px';
-      thumb.style.overflow = 'hidden';
-      thumb.style.background = 'var(--bg)';
-      thumb.style.border = '1px solid var(--line)';
-      if (f.hero) {
-        const img = document.createElement('img');
-        img.src = f.hero;
-        img.style.width = '100%';
-        img.style.height = '100%';
-        img.style.objectFit = 'cover';
-        img.onerror = () => { thumb.innerHTML = ''; };
-        thumb.appendChild(img);
-      }
-      row.appendChild(thumb);
-
-      const info = document.createElement('div');
-      info.style.minWidth = '0';
-      info.innerHTML = `
-        <div style="font-weight:600;font-size:.85rem">${escapeHtml(f.name)}</div>
-        <div style="font-size:.7rem;color:var(--ink-mute);font-family:var(--mono)">${escapeHtml(f.slug)} · ${escapeHtml(f.commune)} · ${escapeHtml(f.category)}</div>`;
-      row.appendChild(info);
-
-      const pill = document.createElement('span');
-      pill.className = 'status ' + (f.real ? 'status-done' : 'status-todo');
-      pill.style.fontSize = '.55rem';
-      pill.textContent = f.real ? 'photo' : 'générique';
-      row.appendChild(pill);
-
-      row.addEventListener('click', () => loadFromCatalog(f.slug));
-      wrap.appendChild(row);
-    }
-    if (list.length > 200) {
-      const more = document.createElement('p');
-      more.className = 'field-help';
-      more.style.padding = '.5rem .85rem';
-      more.textContent = `… +${list.length - 200} fiches. Affine la recherche.`;
-      wrap.appendChild(more);
-    }
   }
 
   function loadFromCatalog(slug) {

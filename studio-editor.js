@@ -599,23 +599,17 @@
 
       <div class="card" id="editor-loader">
         <div class="card-head">
-          <h3>1. Choisir une fiche du catalogue</h3>
+          <h3>1. Sélectionner la fiche</h3>
           <div class="card-actions">
             <button class="btn btn-primary" id="editor-save-btn">⬇ Télécharger JSON modifié</button>
           </div>
         </div>
-        <div class="field-row cols2" style="margin-bottom:.5rem">
-          <div class="field">
-            <label>Recherche</label>
-            <input type="text" id="editor-catalog-q" placeholder="slug, nom, commune…">
-          </div>
-          <div class="field">
-            <label>Catégorie</label>
-            <select id="editor-catalog-category"><option value="">Toutes</option></select>
-          </div>
-        </div>
-        <div style="max-height:380px;overflow-y:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface-2)" id="editor-catalog-list">
-          <p class="field-help" style="padding:.85rem" id="editor-catalog-loading">Chargement du catalogue…</p>
+        <div class="field">
+          <label for="editor-venue-select">Fiche</label>
+          <select id="editor-venue-select" size="1">
+            <option value="">— Charge en cours…</option>
+          </select>
+          <p class="field-help">Toutes les fiches du catalogue préchargées. Ouvre la liste, scrolle ou tape pour filtrer (focus puis touche), choisis.</p>
         </div>
         <p id="editor-status" class="field-help" style="margin-top:.65rem">Aucune fiche chargée</p>
       </div>
@@ -647,77 +641,31 @@
       </style>
     `;
 
-    // Catalog list (replaces drop-zone)
-    let editorCatalog = [];
-    let editorFilter = { q: '', category: '' };
-
+    // Selector — preloaded with every fiche in the catalog.
+    const sel = root.querySelector('#editor-venue-select');
     fetch('/catalog-index.json').then(r => r.json()).then(data => {
-      editorCatalog = data;
-      const cats = Array.from(new Set(data.map(c => c.category))).sort();
-      const sel = root.querySelector('#editor-catalog-category');
-      for (const c of cats) {
-        const opt = document.createElement('option');
-        opt.value = c; opt.textContent = c;
-        sel.appendChild(opt);
-      }
-      renderEditorList();
+      sel.innerHTML = '<option value="">— Sélectionne une fiche —</option>';
+      // Group by category so the dropdown is browsable
+      const byCat = {};
+      data.forEach(f => { (byCat[f.category] = byCat[f.category] || []).push(f); });
+      Object.keys(byCat).sort().forEach(cat => {
+        const group = document.createElement('optgroup');
+        group.label = `${cat} (${byCat[cat].length})`;
+        byCat[cat].sort((a, b) => a.name.localeCompare(b.name)).forEach(f => {
+          const opt = document.createElement('option');
+          opt.value = f.slug;
+          opt.textContent = `${f.name} — ${f.commune}${f.real ? '' : ' · générique'}`;
+          group.appendChild(opt);
+        });
+        sel.appendChild(group);
+      });
     }).catch(err => {
-      const el = root.querySelector('#editor-catalog-loading');
-      if (el) { el.textContent = 'Erreur: ' + err.message; el.style.color = 'var(--bad)'; }
+      sel.innerHTML = '<option value="">Erreur: ' + err.message + '</option>';
     });
 
-    function renderEditorList() {
-      const wrap = root.querySelector('#editor-catalog-list');
-      wrap.innerHTML = '';
-      let list = editorCatalog;
-      if (editorFilter.category) list = list.filter(f => f.category === editorFilter.category);
-      if (editorFilter.q) {
-        const q = editorFilter.q.toLowerCase();
-        list = list.filter(f => f.slug.includes(q) || f.name.toLowerCase().includes(q) || f.commune.toLowerCase().includes(q));
-      }
-      if (!list.length) {
-        wrap.innerHTML = '<p class="field-help" style="padding:.85rem">Aucun résultat.</p>';
-        return;
-      }
-      for (const f of list.slice(0, 200)) {
-        const row = document.createElement('button');
-        row.type = 'button';
-        row.style.cssText = 'display:grid;grid-template-columns:36px 1fr auto;gap:.55rem;align-items:center;width:100%;padding:.5rem .65rem;background:transparent;border:0;border-bottom:1px solid var(--line);cursor:pointer;text-align:left';
-        row.onmouseover = () => row.style.background = 'var(--surface)';
-        row.onmouseout = () => row.style.background = 'transparent';
-        const thumb = document.createElement('div');
-        thumb.style.cssText = 'width:36px;height:36px;border-radius:5px;overflow:hidden;background:var(--bg);border:1px solid var(--line)';
-        if (f.hero) {
-          const img = document.createElement('img');
-          img.src = f.hero;
-          img.style.cssText = 'width:100%;height:100%;object-fit:cover';
-          img.onerror = () => { thumb.innerHTML = ''; };
-          thumb.appendChild(img);
-        }
-        row.appendChild(thumb);
-        const info = document.createElement('div');
-        info.style.minWidth = '0';
-        info.innerHTML = `<div style="font-weight:600;font-size:.85rem">${escapeHtml(f.name)}</div>
-          <div style="font-size:.7rem;color:var(--ink-mute);font-family:var(--mono)">${escapeHtml(f.slug)} · ${escapeHtml(f.commune)} · ${escapeHtml(f.category)}</div>`;
-        row.appendChild(info);
-        const pill = document.createElement('span');
-        pill.className = 'status ' + (f.real ? 'status-done' : 'status-todo');
-        pill.style.fontSize = '.55rem';
-        pill.textContent = f.real ? 'photo' : 'générique';
-        row.appendChild(pill);
-        row.addEventListener('click', () => loadFromCatalog(f.slug));
-        wrap.appendChild(row);
-      }
-      if (list.length > 200) {
-        const more = document.createElement('p');
-        more.className = 'field-help';
-        more.style.padding = '.5rem .85rem';
-        more.textContent = `… +${list.length - 200} fiches. Affine la recherche.`;
-        wrap.appendChild(more);
-      }
-    }
-
-    function loadFromCatalog(slug) {
+    sel.addEventListener('change', (e) => {
+      const slug = e.target.value;
+      if (!slug) return;
       fetch('/Json/' + slug + '.json').then(r => {
         if (!r.ok) throw new Error('HTTP ' + r.status);
         return r.text();
@@ -729,14 +677,11 @@
         renderForm();
         updateHeader();
         updatePreview();
-        document.getElementById('editor-status').textContent = `Fiche chargée du catalogue : ${parsed.slug}`;
+        document.getElementById('editor-status').textContent = `Fiche chargée : ${parsed.slug}`;
       }).catch(err => {
         document.getElementById('editor-status').textContent = 'Erreur : ' + err.message;
       });
-    }
-
-    root.querySelector('#editor-catalog-q').addEventListener('input', (e) => { editorFilter.q = e.target.value.trim(); renderEditorList(); });
-    root.querySelector('#editor-catalog-category').addEventListener('change', (e) => { editorFilter.category = e.target.value; renderEditorList(); });
+    });
 
     root.querySelector('#editor-save-btn').addEventListener('click', saveJSON);
     root.querySelector('#editor-preview-refresh').addEventListener('click', updatePreview);
