@@ -229,7 +229,17 @@ header.h .sub{color:var(--ink-mute);font-size:.85rem;margin-top:.25rem}
     <span>3 · Build</span>
     <span class="count" id="count-build" hidden>0</span>
   </button>
+  <button class="tab-btn" data-tab="editor" role="tab">
+    <span>4 · Éditeur</span>
+  </button>
 </nav>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!-- TAB 4: EDITOR (modify existing fiches)                   -->
+<!-- ════════════════════════════════════════════════════════ -->
+<section class="tab-panel" id="tab-editor" role="tabpanel">
+  <div id="editor-root"></div>
+</section>
 
 <!-- ════════════════════════════════════════════════════════ -->
 <!-- TAB 1: RESEARCH                                          -->
@@ -3896,6 +3906,20 @@ document.getElementById('build-btn').addEventListener('click', async () => {
 
 // Initial state setup
 refreshTabState();
+</script>
+
+<script src="studio-editor.js"></script>
+<script>
+// Boot the Editor tab on first switch (lazy init avoids cost when unused)
+let editorMounted = false;
+const origSwitchTab = switchTab;
+switchTab = function(name) {
+  origSwitchTab(name);
+  if (name === 'editor' && !editorMounted && window.StudioEditor) {
+    window.StudioEditor.mount(document.getElementById('editor-root'));
+    editorMounted = true;
+  }
+};
 </script>
 
 </body>
