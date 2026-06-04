@@ -95,6 +95,12 @@ HOMEPAGE_SECTION_OVERRIDE = {
     "karting-onlykart-roche-sur-foron": "domaine",
     "karting-rumilly-rumilly": "domaine",
     "karting-team-bouvier-pringy": "domaine",
+    # jardins (v2 enriched batch) — outdoor on homepage
+    "jardin-alpin-de-bellevaux": "domaine",
+    "jardin-alpin-des-montets-vallorcine": "domaine",
+    "jardin-les-jardins-secrets-vaulx": "domaine",
+    "jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy": "domaine",
+    "jardin-pre-curieux-evian": "domaine",
 }
 
 
