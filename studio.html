@@ -232,6 +232,9 @@ header.h .sub{color:var(--ink-mute);font-size:.85rem;margin-top:.25rem}
   <button class="tab-btn" data-tab="editor" role="tab">
     <span>4 · Éditeur</span>
   </button>
+  <button class="tab-btn" data-tab="enricher" role="tab">
+    <span>5 · Enrichir</span>
+  </button>
 </nav>
 
 <!-- ════════════════════════════════════════════════════════ -->
@@ -239,6 +242,13 @@ header.h .sub{color:var(--ink-mute);font-size:.85rem;margin-top:.25rem}
 <!-- ════════════════════════════════════════════════════════ -->
 <section class="tab-panel" id="tab-editor" role="tabpanel">
   <div id="editor-root"></div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!-- TAB 5: ENRICHER (AI-assisted enrichment of existing)     -->
+<!-- ════════════════════════════════════════════════════════ -->
+<section class="tab-panel" id="tab-enricher" role="tabpanel">
+  <div id="enricher-root"></div>
 </section>
 
 <!-- ════════════════════════════════════════════════════════ -->
@@ -3909,15 +3919,21 @@ refreshTabState();
 </script>
 
 <script src="studio-editor.js"></script>
+<script src="studio-enricher.js"></script>
 <script>
-// Boot the Editor tab on first switch (lazy init avoids cost when unused)
+// Boot tabs 4 + 5 on first switch (lazy init avoids cost when unused)
 let editorMounted = false;
+let enricherMounted = false;
 const origSwitchTab = switchTab;
 switchTab = function(name) {
   origSwitchTab(name);
   if (name === 'editor' && !editorMounted && window.StudioEditor) {
     window.StudioEditor.mount(document.getElementById('editor-root'));
     editorMounted = true;
+  }
+  if (name === 'enricher' && !enricherMounted && window.StudioEnricher) {
+    window.StudioEnricher.mount(document.getElementById('enricher-root'));
+    enricherMounted = true;
   }
 };
 </script>
