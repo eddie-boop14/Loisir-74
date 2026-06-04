@@ -235,6 +235,9 @@ header.h .sub{color:var(--ink-mute);font-size:.85rem;margin-top:.25rem}
   <button class="tab-btn" data-tab="enricher" role="tab">
     <span>5 · Enrichir</span>
   </button>
+  <button class="tab-btn" data-tab="phototheque" role="tab">
+    <span>6 · Photothèque</span>
+  </button>
 </nav>
 
 <!-- ════════════════════════════════════════════════════════ -->
@@ -249,6 +252,13 @@ header.h .sub{color:var(--ink-mute);font-size:.85rem;margin-top:.25rem}
 <!-- ════════════════════════════════════════════════════════ -->
 <section class="tab-panel" id="tab-enricher" role="tabpanel">
   <div id="enricher-root"></div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!-- TAB 6: PHOTOTHÈQUE (catalog browser + photo finder)      -->
+<!-- ════════════════════════════════════════════════════════ -->
+<section class="tab-panel" id="tab-phototheque" role="tabpanel">
+  <div id="phototheque-root"></div>
 </section>
 
 <!-- ════════════════════════════════════════════════════════ -->
@@ -3920,10 +3930,12 @@ refreshTabState();
 
 <script src="studio-editor.js"></script>
 <script src="studio-enricher.js"></script>
+<script src="studio-phototheque.js"></script>
 <script>
-// Boot tabs 4 + 5 on first switch (lazy init avoids cost when unused)
+// Boot tabs 4 + 5 + 6 on first switch (lazy init avoids cost when unused)
 let editorMounted = false;
 let enricherMounted = false;
+let photothequeMounted = false;
 const origSwitchTab = switchTab;
 switchTab = function(name) {
   origSwitchTab(name);
@@ -3934,6 +3946,10 @@ switchTab = function(name) {
   if (name === 'enricher' && !enricherMounted && window.StudioEnricher) {
     window.StudioEnricher.mount(document.getElementById('enricher-root'));
     enricherMounted = true;
+  }
+  if (name === 'phototheque' && !photothequeMounted && window.StudioPhototheque) {
+    window.StudioPhototheque.mount(document.getElementById('phototheque-root'));
+    photothequeMounted = true;
   }
 };
 </script>
