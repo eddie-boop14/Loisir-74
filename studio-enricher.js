@@ -164,12 +164,17 @@ leave that field unchanged rather than fabricate.`;
   // API CALL
   // -----------------------------------------------------------------------
 
-  async function callAPI(jsonObj) {
+  async function callAPI(jsonObj, hints) {
     const apiKey = localStorage.getItem(KEY_STORAGE) || '';
     if (!apiKey) throw new Error("Configure la clé API dans l'onglet 1 d'abord.");
 
     const modelEl = document.getElementById('api-model');
     const model = modelEl ? modelEl.value : 'claude-sonnet-4-5';
+
+    let userMsg = 'Voici le JSON existant à enrichir. Retourne le JSON enrichi complet (pas de fences markdown, pas de commentaire).\n\n```json\n' + JSON.stringify(jsonObj, null, 2) + '\n```';
+    if (hints && hints.trim()) {
+      userMsg += '\n\n## Indices fournis par l\'utilisateur (à prioriser)\n\n' + hints.trim();
+    }
 
     const body = {
       model,
@@ -178,12 +183,7 @@ leave that field unchanged rather than fabricate.`;
       tools: [
         { type: 'web_search_20250305', name: 'web_search' },
       ],
-      messages: [
-        {
-          role: 'user',
-          content: 'Voici le JSON existant à enrichir. Retourne le JSON enrichi complet (pas de fences markdown, pas de commentaire).\n\n```json\n' + JSON.stringify(jsonObj, null, 2) + '\n```',
-        },
-      ],
+      messages: [{ role: 'user', content: userMsg }],
     };
 
     setStatus('Appel API en cours… (peut prendre 1-3 minutes)');
@@ -516,9 +516,10 @@ leave that field unchanged rather than fabricate.`;
     if (!original) return alert("Charge d'abord une fiche.");
     const btn = document.getElementById('enricher-enrich-btn');
     btn.disabled = true;
+    const hints = document.getElementById('enricher-hints')?.value || '';
     const t0 = Date.now();
     try {
-      enriched = await callAPI(original);
+      enriched = await callAPI(original, hints);
       changes = computeChanges(original, enriched);
       rejected = new Set();
       renderDiff();
@@ -533,27 +534,130 @@ leave that field unchanged rather than fabricate.`;
   }
 
   // -----------------------------------------------------------------------
+  // BATCH MODE — autonomous loop across many fiches
+  // -----------------------------------------------------------------------
+
+  let batchAbort = false;
+  let batchResults = [];  // [{slug, original, enriched, accepted, error}]
+
+  async function runBatch() {
+    const limitEl = document.getElementById('batch-limit');
+    const limit = Math.max(1, Math.min(parseInt(limitEl?.value || '10', 10), 50));
+    const onlyGeneric = document.getElementById('batch-only-generic')?.checked !== false;
+    const startBtn = document.getElementById('batch-start-btn');
+    const stopBtn = document.getElementById('batch-stop-btn');
+    const progress = document.getElementById('batch-progress');
+    const log = document.getElementById('batch-log');
+
+    // Build queue from catalog
+    let queue = catalog.filter(f => onlyGeneric ? !f.real : true).slice(0, limit);
+    if (!queue.length) return alert('Rien à traiter avec ces filtres.');
+
+    batchAbort = false;
+    batchResults = [];
+    startBtn.disabled = true;
+    stopBtn.disabled = false;
+    log.innerHTML = '';
+
+    for (let i = 0; i < queue.length; i++) {
+      if (batchAbort) break;
+      const f = queue[i];
+      progress.textContent = `Fiche ${i + 1}/${queue.length} : ${f.slug}…`;
+      const row = document.createElement('div');
+      row.style.cssText = 'padding:.35rem .65rem;border-bottom:1px solid var(--line);font-size:.78rem;display:flex;justify-content:space-between;gap:.5rem;align-items:center';
+      row.innerHTML = `<span style="font-family:var(--mono)">${f.slug}</span><span style="color:var(--ink-mute)">en cours…</span>`;
+      log.appendChild(row);
+      log.scrollTop = log.scrollHeight;
+
+      try {
+        const r = await fetch('/Json/' + f.slug + '.json');
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        const orig = JSON.parse(await r.text());
+        const enr = await callAPI(orig, '');
+        const ch = computeChanges(orig, enr);
+        batchResults.push({ slug: f.slug, original: orig, enriched: enr, changes: ch });
+        row.children[1].innerHTML = `<span class="status status-done">${ch.length} champs</span>`;
+      } catch (err) {
+        batchResults.push({ slug: f.slug, error: err.message });
+        row.children[1].innerHTML = `<span class="status status-error">${err.message.slice(0, 40)}</span>`;
+      }
+    }
+
+    progress.textContent = `Terminé : ${batchResults.length}/${queue.length} traitées.`;
+    startBtn.disabled = false;
+    stopBtn.disabled = true;
+    document.getElementById('batch-zip-btn').disabled = !batchResults.some(r => !r.error);
+  }
+
+  function stopBatch() {
+    batchAbort = true;
+    document.getElementById('batch-progress').textContent += ' (arrêté)';
+  }
+
+  async function exportBatchZip() {
+    if (typeof JSZip === 'undefined') return alert('JSZip non chargé.');
+    if (!batchResults.length) return alert('Rien à exporter.');
+    const zip = new JSZip();
+    const date = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+    let okCount = 0;
+    for (const r of batchResults) {
+      if (r.error) continue;
+      // For batch, accept ALL changes (user hasn't reviewed individually)
+      zip.file(`json/${r.slug}.json`, JSON.stringify(r.enriched, null, 2) + '\n');
+      okCount++;
+    }
+    const manifest = [
+      `# Batch enrichment — ${date}`, '',
+      `${okCount} fiches enrichies, ${batchResults.length - okCount} en erreur.`, '',
+      '## Fiches enrichies', '',
+      ...batchResults.filter(r => !r.error).map(r => `- ${r.slug} (${r.changes.length} champs)`),
+      '', '## Erreurs',
+      ...batchResults.filter(r => r.error).map(r => `- ${r.slug} : ${r.error}`),
+      '', '## Intégration',
+      '1. Place tous les json/*.json dans Json/ du repo.',
+      '2. Lance scripts/build_lieu_page.py + localize_lieu.py pour chacun.',
+      '3. Rebuild hubs + homepage + commit.', '',
+    ].join('\n');
+    zip.file('README.txt', manifest);
+
+    const blob = await zip.generateAsync({ type: 'blob' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `batch-enriched-${date}.zip`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  // -----------------------------------------------------------------------
   // MOUNT
   // -----------------------------------------------------------------------
 
   function mount(root) {
     root.innerHTML = `
       <div class="help">
-        <strong>Étape 5 — Enrichir.</strong> Choisis une fiche du catalogue, optionnellement glisse une image hero,
-        clic <em>Enrichir</em>. L'IA vérifie via web search, traduit les locales manquantes, étoffe les FAQ/activités/body,
-        propose des partenaires. Tu revois chaque champ (accepter/refuser), puis télécharges le ZIP à transmettre au repo.
+        <strong>Étape 5 — AI Enricher.</strong> Deux modes :
+        <strong>(A) ciblé</strong> — choisis 1 fiche, optionnellement ajoute des indices (URLs, notes), enrichis, revois le diff, télécharge le ZIP.
+        <strong>(B) batch</strong> — laisse l'IA tourner sur les fiches du catalogue sans intervention. Chaque fiche enrichie va dans un ZIP global.
       </div>
 
       <div class="card">
         <div class="card-head">
-          <h3>1. Sélectionner la fiche</h3>
+          <h3>A · Mode ciblé — 1 fiche</h3>
         </div>
         <div class="field">
           <label for="enricher-venue-select">Fiche</label>
           <select id="enricher-venue-select" size="1">
             <option value="">— Chargement du catalogue —</option>
           </select>
-          <p class="field-help">Toutes les fiches du catalogue préchargées, groupées par catégorie. Ouvre, scrolle ou tape pour filtrer, choisis.</p>
+          <p class="field-help">Toutes les fiches du catalogue préchargées, groupées par catégorie.</p>
+        </div>
+        <div class="field">
+          <label for="enricher-hints">Indices / URLs / notes pour l'IA <span style="color:var(--ink-mute);font-weight:400">(optionnel)</span></label>
+          <textarea id="enricher-hints" rows="3" placeholder="Ex: site officiel à utiliser https://… · horaires 2026 vérifiés sur place: lun-ven 10h-18h · nouveau directeur Pierre Dupont depuis avril 2026 · etc."></textarea>
+          <p class="field-help">Tout ce que tu sais et que l'IA doit utiliser. URL d'un site qu'elle n'a pas trouvé, fait à corriger, contexte. Sera passé tel quel dans le prompt.</p>
         </div>
         <p id="enricher-loaded" class="field-help" style="margin-top:.65rem">Aucune fiche sélectionnée</p>
       </div>
@@ -590,6 +694,33 @@ leave that field unchanged rather than fabricate.`;
         </div>
         <div id="enricher-diff"></div>
       </div>
+
+      <div class="card" style="margin-top:1.5rem;border:2px solid color-mix(in srgb,var(--accent) 25%,var(--line))">
+        <div class="card-head">
+          <h3>B · Mode batch — tout enrichir sans intervention</h3>
+        </div>
+        <p class="field-help" style="margin-bottom:.75rem">L'IA boucle sur N fiches du catalogue. Chaque fiche est appelée en série (1-3 min/fiche). Au bout : un ZIP contenant tous les JSON enrichis. <strong>Toutes les modifs sont acceptées</strong> en mode batch (pas de review par fiche). Surveille le journal et stoppe si nécessaire.</p>
+        <div class="field-row cols2" style="margin-bottom:.5rem">
+          <div class="field">
+            <label for="batch-limit">Nombre max de fiches</label>
+            <input type="number" id="batch-limit" min="1" max="50" value="10">
+            <p class="field-help">Plafond 50 pour éviter facture surprise (≈ 1-3 min × 50 ≈ 1-2,5h).</p>
+          </div>
+          <div class="field">
+            <label style="display:flex;align-items:center;gap:.5rem;font-weight:600;margin-top:1.5rem">
+              <input type="checkbox" id="batch-only-generic" checked style="width:auto">
+              <span>Seulement fiches sans vraie photo (239 cibles)</span>
+            </label>
+          </div>
+        </div>
+        <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap">
+          <button class="btn btn-primary" id="batch-start-btn">▶ Lancer batch</button>
+          <button class="btn" id="batch-stop-btn" disabled>■ Stop</button>
+          <button class="btn" id="batch-zip-btn" disabled>⬇ ZIP du batch</button>
+          <span id="batch-progress" class="field-help">En attente.</span>
+        </div>
+        <div id="batch-log" style="margin-top:.85rem;max-height:300px;overflow-y:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface-2)"></div>
+      </div>
     `;
 
     // Image drop zone wiring (JSON drop zone removed — catalog list is the only input)
@@ -597,6 +728,11 @@ leave that field unchanged rather than fabricate.`;
 
     root.querySelector('#enricher-enrich-btn').addEventListener('click', runEnrich);
     root.querySelector('#enricher-zip-btn').addEventListener('click', exportZip);
+
+    // Batch mode wiring
+    root.querySelector('#batch-start-btn').addEventListener('click', runBatch);
+    root.querySelector('#batch-stop-btn').addEventListener('click', stopBatch);
+    root.querySelector('#batch-zip-btn').addEventListener('click', exportBatchZip);
 
     // Catalog preload — primary input
     initCatalog(root);
