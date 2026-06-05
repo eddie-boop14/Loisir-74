@@ -120,34 +120,59 @@ def site_check(url):
 
 # ----------------------------------------------------------------------------- core
 def triangulate(cat, g, reg, site):
-    """Combine the 3 sources into a status + confidence + reason for the email queue."""
+    """Triangulate the 3 sources into status + confidence + reason.
+
+    Google is the SOLE status oracle. Registry can only CONFIRM what
+    Google found — it cannot close anything by itself. Natural categories
+    (cascades, lakes, viewpoints, ...) ignore the registry entirely.
+    Registry NO_MATCH is meaningless without SIRET context and is never
+    a flag.
+    """
     is_natural = (cat or "").lower() in NATURAL_CATS
     g_status   = (g or {}).get("status")
-    reg_state  = (reg or {}).get("state")
+    reg_state  = (reg or {}).get("state") if not is_natural else None
     reachable  = (site or {}).get("reachable")
 
-    # hard closed signals
-    if g_status=="CLOSED_PERMANENTLY":
-        return "CLOSED","high","Google marks permanently closed"
-    if reg_state=="FERME":
-        return "CLOSED","high",f"Registry marks fermé (date {reg.get('closure_date')})"
+    # No Google match at all → can't verify (registry can't fill this gap)
+    if g is None or g_status in (None, "ERROR"):
+        return "UNVERIFIED", "low", "No Google match — check the stored name"
 
-    # no google match at all
-    if g is None:
-        return "UNVERIFIED","low","No Google match — check the stored name"
+    # Google is the status oracle. Only Google can close a venue.
+    if g_status == "CLOSED_PERMANENTLY":
+        # Registry agreement raises confidence on the closure
+        if reg_state == "FERME":
+            closure = reg.get("closure_date") or "unknown date"
+            return "CLOSED", "high", f"Google + registry agree (fermé {closure})"
+        return "CLOSED", "medium", "Google marks permanently closed (registry didn't confirm)"
 
-    # disagreements / soft signals -> email candidates
-    reasons=[]
-    if reg_state=="NO_MATCH" and not is_natural:
-        reasons.append("not found in business registry (commercial venue)")
-    if reachable is False:
-        reasons.append("official site not responding")
-    if g_status=="CLOSED_TEMPORARILY":
+    # Everything else is operational. Registry / site signals only adjust
+    # confidence or add review flags — never close.
+    reasons = []
+    confidence = "high"
+
+    if g_status == "CLOSED_TEMPORARILY":
         reasons.append("Google marks temporarily closed")
-    if reasons:
-        return "OPERATIONAL","medium","; ".join(reasons)
+        confidence = "medium"
 
-    return "OPERATIONAL","high",""
+    # Registry as a noise-aware confirmer:
+    # - ACTIF: silent agreement, keeps high confidence
+    # - FERME while Google operational: stale SIRET noise — flag for review
+    # - NO_MATCH: meaningless without SIRET context; DROPPED entirely
+    # - None/ERROR/UNKNOWN: no signal
+    # Natural categories never consult the registry.
+    if not is_natural and reg_state == "FERME":
+        closure = reg.get("closure_date") or "unknown date"
+        reasons.append(
+            f"Registry shows fermé ({closure}) but Google says operational — "
+            "likely stale SIRET match, verify")
+        confidence = "medium"
+
+    if reachable is False:
+        reasons.append("Official site not responding")
+        if confidence == "high":
+            confidence = "medium"
+
+    return "OPERATIONAL", confidence, "; ".join(reasons)
 
 def priority(fr):
     s,c=fr["status"],fr["confidence"]
