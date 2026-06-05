@@ -160,7 +160,9 @@ def synth_locale_card_html(slug: str, lang: str) -> str:
     if site:
         actions += f'\n<a href="{site}" rel="noopener" target="_blank">{LABELS[lang]["site"]}</a>'
 
-    # Photo slot: real <img> when hero_image present, placeholder otherwise
+    # Photo slot: real <img> when hero_image present, placeholder otherwise.
+    # Mark with data-generique="true" when src points at /generique-*.jpg so
+    # the CSS overlay surfaces the badge; otherwise the attribute is absent.
     hero = fiche.get("hero_image")
     if hero:
         if not hero.startswith(("http://", "https://", "/")):
@@ -168,7 +170,15 @@ def synth_locale_card_html(slug: str, lang: str) -> str:
         alt_text = (fiche.get("i18n", {}).get(lang, {}).get("hero_alt")
                     or fiche.get("i18n", {}).get("fr", {}).get("hero_alt")
                     or name).replace('"', '&quot;')
-        photo_inner = (f'<img alt="{alt_text}" loading="lazy" '
+        is_generic = hero.lstrip("/").startswith("generique-")
+        if is_generic:
+            import re as _re
+            cm = _re.match(r"generique-([a-z0-9-]+?)(?:-[a-z0-9-]+)?\.\w+$", hero.lstrip("/"))
+            gen_cat = cm.group(1) if cm else "attraction"
+            gen_attr = f' data-generique="true" data-generique-cat="{gen_cat}"'
+        else:
+            gen_attr = ""
+        photo_inner = (f'<img alt="{alt_text}"{gen_attr} loading="lazy" '
                        f'referrerpolicy="no-referrer" src="{hero}"/>')
     else:
         photo_inner = ('<div class="placeholder"><svg fill="none" stroke="currentColor" '
@@ -219,10 +229,19 @@ def synth_fr_card_html(slug: str) -> str:
     actions = f'<a href="{map_url}" rel="noopener" target="_blank">Itinéraire</a>'
     if site:
         actions += f'\n<a href="{site}" rel="noopener" target="_blank">Site officiel</a>'
+    # Mark with data-generique only when src is /generique-*.jpg
+    is_generic = hero.lstrip("/").startswith("generique-") if hero else False
+    if is_generic:
+        import re as _re
+        cm = _re.match(r"generique-([a-z0-9-]+?)(?:-[a-z0-9-]+)?\.\w+$", hero.lstrip("/"))
+        gen_cat = cm.group(1) if cm else "attraction"
+        gen_attr = f' data-generique="true" data-generique-cat="{gen_cat}"'
+    else:
+        gen_attr = ""
     return (
         f'<article class="card">\n'
         f'<a class="card-photo" href="https://loisirs74.fr/{slug}">\n'
-        f'<img alt="{alt}" loading="lazy" src="{hero}"/>\n'
+        f'<img alt="{alt}"{gen_attr} loading="lazy" src="{hero}"/>\n'
         f'<span class="card-tag {tag_class}">{tag_text}</span>\n'
         f'</a>\n'
         f'<div class="card-body">\n'
