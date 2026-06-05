@@ -1,0 +1,58 @@
+name: Sweep loisirs74 (3 sources)
+
+# ▶️  Run it: GitHub app/site → your repo → Actions tab → "Sweep loisirs74" → Run workflow
+#
+# Triangulates each fiche against:
+#   - Google Places (New) — needs secret GOOGLE_MAPS_API_KEY
+#   - French business registry (recherche-entreprises.api.gouv.fr — no key needed)
+#   - Direct fetch of each fiche's official_site_url
+#
+# Outputs:
+#   - "freshness" block updated inside each Json/<slug>.json  (committed)
+#   - report.csv + email_queue.csv  (uploaded as workflow artifacts, NOT committed —
+#     they're gitignored locally; download from the run's Summary page)
+
+on:
+  workflow_dispatch:        # the manual "play" button
+  schedule:
+    - cron: "0 7 1 * *"     # 07:00 UTC on the 1st of every month
+                            # (1h offset from check-loisirs74.yml to avoid concurrent commit races)
+
+permissions:
+  contents: write           # lets it commit the updated fiches back
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60     # 325 fiches × (Google + registry + site fetch) ≈ 15-25 min
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run the sweep
+        env:
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+        run: python sweep_loisirs74.py
+
+      - name: Upload report artifacts
+        if: always()        # upload even if the script errored partway
+        uses: actions/upload-artifact@v4
+        with:
+          name: sweep-reports-${{ github.run_id }}
+          path: |
+            report.csv
+            email_queue.csv
+          if-no-files-found: warn
+          retention-days: 90
+
+      - name: Commit fiche updates
+        run: |
+          git config user.name "loisirs74-bot"
+          git config user.email "bot@loisirs74.fr"
+          # report.csv + email_queue.csv are gitignored so this only stages fiche changes
+          git add Json/
+          git commit -m "chore: sweep $(date +%F)" || echo "nothing to commit"
+          git push
