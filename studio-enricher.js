@@ -565,60 +565,218 @@ leave that field unchanged rather than fabricate.`;
   // -----------------------------------------------------------------------
 
   let batchAbort = false;
-  let batchResults = [];  // [{slug, original, enriched, accepted, error}]
+  let batchResults = [];  // [{slug, original, enriched, changes, error, errorStage, errorDetail}]
+  let batchQueue = [];    // [slug, slug, …] — slugs the user has selected to enrich
+  const batchRows = new Map(); // slug → DOM row reference
+
+  // --- queue building --------------------------------------------------
+
+  function addToQueue(slug) {
+    if (!slug || batchQueue.includes(slug)) return;
+    batchQueue.push(slug);
+    renderQueue();
+  }
+
+  function removeFromQueue(slug) {
+    batchQueue = batchQueue.filter(s => s !== slug);
+    renderQueue();
+  }
+
+  function clearQueue() {
+    batchQueue = [];
+    renderQueue();
+  }
+
+  function fillQueueGeneric() {
+    batchQueue = catalog.filter(f => !f.real).map(f => f.slug);
+    renderQueue();
+  }
+
+  function renderQueue() {
+    const list = document.getElementById('batch-queue-list');
+    const count = document.getElementById('batch-queue-count');
+    if (!list || !count) return;
+    count.textContent = `${batchQueue.length} fiche${batchQueue.length === 1 ? '' : 's'}`;
+    list.innerHTML = '';
+    if (!batchQueue.length) {
+      list.innerHTML = '<p class="field-help" style="padding:.5rem .65rem;margin:0">File vide. Ajoute des fiches depuis la liste déroulante ou clique « Toutes sans vraie photo ».</p>';
+      document.getElementById('batch-start-btn').disabled = true;
+      return;
+    }
+    document.getElementById('batch-start-btn').disabled = false;
+    const byCat = {};
+    for (const slug of batchQueue) {
+      const f = catalog.find(c => c.slug === slug);
+      if (!f) continue;
+      (byCat[f.category] = byCat[f.category] || []).push(f);
+    }
+    for (const cat of Object.keys(byCat).sort()) {
+      const head = document.createElement('div');
+      head.style.cssText = 'font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-mute);padding:.35rem .65rem;background:var(--surface)';
+      head.textContent = `${cat} (${byCat[cat].length})`;
+      list.appendChild(head);
+      for (const f of byCat[cat]) {
+        const row = document.createElement('div');
+        row.style.cssText = 'display:flex;justify-content:space-between;align-items:center;gap:.5rem;padding:.3rem .65rem;border-top:1px solid var(--line);font-size:.78rem';
+        row.innerHTML = `<span><span style="font-family:var(--mono)">${escapeHtml(f.slug)}</span> <span style="color:var(--ink-mute)">— ${escapeHtml(f.name)}${f.real ? '' : ' · générique'}</span></span>`;
+        const x = document.createElement('button');
+        x.className = 'btn';
+        x.style.cssText = 'padding:.2rem .55rem;font-size:.75rem';
+        x.textContent = '×';
+        x.title = 'Retirer de la file';
+        x.addEventListener('click', () => removeFromQueue(f.slug));
+        row.appendChild(x);
+        list.appendChild(row);
+      }
+    }
+  }
+
+  // --- per-fiche processing -------------------------------------------
+
+  function makeStatusRow(slug, name) {
+    const row = document.createElement('div');
+    row.dataset.slug = slug;
+    row.style.cssText = 'padding:.4rem .65rem;border-bottom:1px solid var(--line);font-size:.78rem;display:grid;grid-template-columns:1fr auto auto auto;gap:.5rem;align-items:center';
+    row.innerHTML = `
+      <span><span style="font-family:var(--mono)">${escapeHtml(slug)}</span> <span style="color:var(--ink-mute)">— ${escapeHtml(name || '')}</span></span>
+      <span class="stage" style="color:var(--ink-mute);font-size:.72rem;min-width:7rem;text-align:right">en file</span>
+      <span class="timer" style="color:var(--ink-mute);font-family:var(--mono);font-size:.7rem;min-width:3.5rem;text-align:right"></span>
+      <span class="result"></span>`;
+    return row;
+  }
+
+  function setStage(row, stage, ok) {
+    const el = row.querySelector('.stage');
+    if (!el) return;
+    el.textContent = stage;
+    el.style.color = ok === 'err' ? 'var(--bad, #c00)' : ok === 'ok' ? 'var(--good, #0a5a3a)' : 'var(--ink-mute)';
+  }
+
+  function setResult(row, html) {
+    const el = row.querySelector('.result');
+    if (el) el.innerHTML = html;
+  }
+
+  function tickTimer(row, t0) {
+    const el = row.querySelector('.timer');
+    if (!el) return null;
+    function update() { el.textContent = ((Date.now() - t0) / 1000).toFixed(0) + 's'; }
+    update();
+    return setInterval(update, 500);
+  }
+
+  async function processOne(slug, row) {
+    const t0 = Date.now();
+    const timer = tickTimer(row, t0);
+    let stage = 'fetch JSON';
+    setStage(row, '📥 ' + stage);
+    try {
+      const r = await fetch('/Json/' + slug + '.json');
+      if (!r.ok) throw new Error('HTTP ' + r.status + ' on /Json/' + slug + '.json');
+      const txt = await r.text();
+      let orig;
+      try { orig = JSON.parse(txt); }
+      catch (e) { stage = 'parse local JSON'; throw e; }
+
+      stage = 'appel API';
+      setStage(row, '🤖 ' + stage);
+      console.group(`[enricher] ${slug}`);
+      console.log('Original:', orig);
+      const enr = await callAPI(orig, '');
+      console.log('Enriched:', enr);
+
+      stage = 'diff';
+      setStage(row, '📝 ' + stage);
+      const ch = computeChanges(orig, enr);
+      console.log(`${ch.length} field changes`);
+      console.groupEnd();
+
+      if (timer) clearInterval(timer);
+      const dt = ((Date.now() - t0) / 1000).toFixed(0);
+      row.querySelector('.timer').textContent = dt + 's';
+      setStage(row, '✅ terminé', 'ok');
+      setResult(row, `<strong>${ch.length}</strong> <span style="color:var(--ink-mute)">champs</span>`);
+      // record success
+      const existing = batchResults.find(b => b.slug === slug);
+      if (existing) Object.assign(existing, { original: orig, enriched: enr, changes: ch, error: null });
+      else batchResults.push({ slug, original: orig, enriched: enr, changes: ch });
+    } catch (err) {
+      if (timer) clearInterval(timer);
+      const dt = ((Date.now() - t0) / 1000).toFixed(0);
+      row.querySelector('.timer').textContent = dt + 's';
+      console.error(`[enricher] ${slug} failed at "${stage}":`, err);
+      try { console.groupEnd(); } catch (_) {}
+      const msg = String(err && err.message || err);
+      setStage(row, '❌ ' + stage, 'err');
+      // Full error text — collapsible
+      const errId = 'err-' + slug.replace(/[^a-z0-9-]/g, '');
+      setResult(row,
+        `<details style="font-size:.72rem"><summary style="cursor:pointer;color:var(--bad,#c00)">voir l'erreur</summary>` +
+        `<pre style="white-space:pre-wrap;word-break:break-word;background:var(--surface-2);padding:.45rem;border-radius:4px;margin:.3rem 0 0 0;max-height:12rem;overflow:auto">${escapeHtml(msg)}</pre>` +
+        `</details>` +
+        ` <button class="btn" style="padding:.2rem .55rem;font-size:.72rem;margin-left:.3rem" data-retry-slug="${escapeHtml(slug)}">🔄 réessayer</button>`);
+      const existing = batchResults.find(b => b.slug === slug);
+      const rec = { slug, error: msg, errorStage: stage };
+      if (existing) Object.assign(existing, rec, { original: null, enriched: null, changes: null });
+      else batchResults.push(rec);
+      // wire retry button (we re-process this slug in-place)
+      const retryBtn = row.querySelector(`[data-retry-slug="${slug}"]`);
+      if (retryBtn) retryBtn.addEventListener('click', () => {
+        retryBtn.disabled = true;
+        setResult(row, '');
+        processOne(slug, row);
+      });
+    }
+  }
 
   async function runBatch() {
-    const limitEl = document.getElementById('batch-limit');
-    const limit = Math.max(1, Math.min(parseInt(limitEl?.value || '10', 10), 50));
-    const onlyGeneric = document.getElementById('batch-only-generic')?.checked !== false;
+    if (!batchQueue.length) return alert('La file est vide. Ajoute des fiches d\'abord.');
     const startBtn = document.getElementById('batch-start-btn');
     const stopBtn = document.getElementById('batch-stop-btn');
     const progress = document.getElementById('batch-progress');
     const log = document.getElementById('batch-log');
 
-    // Build queue from catalog
-    let queue = catalog.filter(f => onlyGeneric ? !f.real : true).slice(0, limit);
-    if (!queue.length) return alert('Rien à traiter avec ces filtres.');
-
     batchAbort = false;
     batchResults = [];
+    batchRows.clear();
     startBtn.disabled = true;
     stopBtn.disabled = false;
     log.innerHTML = '';
 
-    for (let i = 0; i < queue.length; i++) {
-      if (batchAbort) break;
-      const f = queue[i];
-      progress.textContent = `Fiche ${i + 1}/${queue.length} : ${f.slug}…`;
-      const row = document.createElement('div');
-      row.style.cssText = 'padding:.35rem .65rem;border-bottom:1px solid var(--line);font-size:.78rem;display:flex;justify-content:space-between;gap:.5rem;align-items:center';
-      row.innerHTML = `<span style="font-family:var(--mono)">${f.slug}</span><span style="color:var(--ink-mute)">en cours…</span>`;
+    // Pre-populate rows so the user sees the entire run plan upfront
+    for (const slug of batchQueue) {
+      const f = catalog.find(c => c.slug === slug);
+      const row = makeStatusRow(slug, f ? f.name : '');
       log.appendChild(row);
-      log.scrollTop = log.scrollHeight;
-
-      try {
-        const r = await fetch('/Json/' + f.slug + '.json');
-        if (!r.ok) throw new Error('HTTP ' + r.status);
-        const orig = JSON.parse(await r.text());
-        const enr = await callAPI(orig, '');
-        const ch = computeChanges(orig, enr);
-        batchResults.push({ slug: f.slug, original: orig, enriched: enr, changes: ch });
-        row.children[1].innerHTML = `<span class="status status-done">${ch.length} champs</span>`;
-      } catch (err) {
-        batchResults.push({ slug: f.slug, error: err.message });
-        row.children[1].innerHTML = `<span class="status status-error">${err.message.slice(0, 40)}</span>`;
-      }
+      batchRows.set(slug, row);
     }
 
-    progress.textContent = `Terminé : ${batchResults.length}/${queue.length} traitées.`;
+    for (let i = 0; i < batchQueue.length; i++) {
+      if (batchAbort) {
+        for (const slug of batchQueue.slice(i)) {
+          const row = batchRows.get(slug);
+          if (row) setStage(row, '⏸ annulé');
+        }
+        break;
+      }
+      const slug = batchQueue[i];
+      progress.textContent = `Fiche ${i + 1}/${batchQueue.length} : ${slug}…`;
+      const row = batchRows.get(slug);
+      row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      await processOne(slug, row);
+    }
+
+    const okN = batchResults.filter(r => !r.error).length;
+    const errN = batchResults.filter(r => r.error).length;
+    progress.textContent = `Terminé : ${okN} succès · ${errN} erreur${errN > 1 ? 's' : ''} sur ${batchQueue.length} fiche${batchQueue.length > 1 ? 's' : ''}.`;
     startBtn.disabled = false;
     stopBtn.disabled = true;
-    document.getElementById('batch-zip-btn').disabled = !batchResults.some(r => !r.error);
+    document.getElementById('batch-zip-btn').disabled = okN === 0;
   }
 
   function stopBatch() {
     batchAbort = true;
-    document.getElementById('batch-progress').textContent += ' (arrêté)';
+    document.getElementById('batch-progress').textContent += ' (arrêt demandé — termine la fiche en cours…)';
   }
 
   async function exportBatchZip() {
@@ -724,29 +882,45 @@ leave that field unchanged rather than fabricate.`;
 
       <div class="card" style="margin-top:1.5rem;border:2px solid color-mix(in srgb,var(--accent) 25%,var(--line))">
         <div class="card-head">
-          <h3>B · Mode batch — tout enrichir sans intervention</h3>
+          <h3>B · Mode batch — file personnalisée</h3>
         </div>
-        <p class="field-help" style="margin-bottom:.75rem">L'IA boucle sur N fiches du catalogue. Chaque fiche est appelée en série (1-3 min/fiche). Au bout : un ZIP contenant tous les JSON enrichis. <strong>Toutes les modifs sont acceptées</strong> en mode batch (pas de review par fiche). Surveille le journal et stoppe si nécessaire.</p>
-        <div class="field-row cols2" style="margin-bottom:.5rem">
-          <div class="field">
-            <label for="batch-limit">Nombre max de fiches</label>
-            <input type="number" id="batch-limit" min="1" max="50" value="10">
-            <p class="field-help">Plafond 50 pour éviter facture surprise (≈ 1-3 min × 50 ≈ 1-2,5h).</p>
+        <p class="field-help" style="margin-bottom:.75rem">Choisis les fiches que tu veux enrichir (une par une depuis la liste, ou raccourci « toutes sans vraie photo »). Le batch tourne en série (1-3 min/fiche). Chaque ligne du journal affiche l'étape en cours, le timer et l'erreur complète si ça casse. <strong>Toutes les modifs sont acceptées</strong> en mode batch (pas de review par fiche).</p>
+
+        <div class="field">
+          <label for="batch-picker">Ajouter une fiche à la file</label>
+          <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap">
+            <select id="batch-picker" style="flex:1;min-width:18rem">
+              <option value="">— Chargement du catalogue —</option>
+            </select>
+            <button class="btn" id="batch-add-btn" disabled>+ Ajouter</button>
+            <button class="btn" id="batch-fill-generic-btn" title="Remplit la file avec toutes les fiches sans vraie photo">⚡ Toutes sans vraie photo</button>
+            <button class="btn" id="batch-clear-btn">🗑 Vider la file</button>
           </div>
-          <div class="field">
-            <label style="display:flex;align-items:center;gap:.5rem;font-weight:600;margin-top:1.5rem">
-              <input type="checkbox" id="batch-only-generic" checked style="width:auto">
-              <span>Seulement fiches sans vraie photo (239 cibles)</span>
-            </label>
+          <p class="field-help">Sélectionne, clique « + Ajouter ». Recommence pour empiler. Les fiches en double sont ignorées.</p>
+        </div>
+
+        <div class="field">
+          <label style="display:flex;justify-content:space-between;align-items:center">
+            <span>File du batch</span>
+            <span id="batch-queue-count" style="color:var(--ink-mute);font-weight:400">0 fiche</span>
+          </label>
+          <div id="batch-queue-list" style="border:1px solid var(--line);border-radius:6px;background:var(--surface-2);max-height:240px;overflow-y:auto">
+            <p class="field-help" style="padding:.5rem .65rem;margin:0">File vide. Ajoute des fiches depuis la liste déroulante ou clique « Toutes sans vraie photo ».</p>
           </div>
         </div>
-        <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap">
-          <button class="btn btn-primary" id="batch-start-btn">▶ Lancer batch</button>
+
+        <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin-top:.5rem">
+          <button class="btn btn-primary" id="batch-start-btn" disabled>▶ Lancer le batch</button>
           <button class="btn" id="batch-stop-btn" disabled>■ Stop</button>
           <button class="btn" id="batch-zip-btn" disabled>⬇ ZIP du batch</button>
           <span id="batch-progress" class="field-help">En attente.</span>
         </div>
-        <div id="batch-log" style="margin-top:.85rem;max-height:300px;overflow-y:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface-2)"></div>
+
+        <div class="field" style="margin-top:.85rem">
+          <label>Journal d'exécution</label>
+          <div id="batch-log" style="max-height:320px;overflow-y:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface-2)"></div>
+          <p class="field-help">Chaque étape s'affiche en temps réel (📥 fetch · 🤖 API · 📝 diff · ✅ terminé · ❌ erreur). Clique « voir l'erreur » pour le message complet, « réessayer » pour relancer cette fiche seule. La console du navigateur (F12) reçoit aussi le JSON original + enrichi pour debug.</p>
+        </div>
       </div>
     `;
 
@@ -760,6 +934,15 @@ leave that field unchanged rather than fabricate.`;
     root.querySelector('#batch-start-btn').addEventListener('click', runBatch);
     root.querySelector('#batch-stop-btn').addEventListener('click', stopBatch);
     root.querySelector('#batch-zip-btn').addEventListener('click', exportBatchZip);
+    root.querySelector('#batch-add-btn').addEventListener('click', () => {
+      const sel = root.querySelector('#batch-picker');
+      if (sel && sel.value) addToQueue(sel.value);
+    });
+    root.querySelector('#batch-fill-generic-btn').addEventListener('click', fillQueueGeneric);
+    root.querySelector('#batch-clear-btn').addEventListener('click', clearQueue);
+    root.querySelector('#batch-picker').addEventListener('change', (e) => {
+      root.querySelector('#batch-add-btn').disabled = !e.target.value;
+    });
 
     // Catalog preload — primary input
     initCatalog(root);
@@ -774,27 +957,34 @@ leave that field unchanged rather than fabricate.`;
 
   function initCatalog(root) {
     const sel = root.querySelector('#enricher-venue-select');
+    const batchSel = root.querySelector('#batch-picker');
     fetch('/catalog-index.json')
       .then(r => r.json())
       .then(data => {
         catalog = data;
-        sel.innerHTML = '<option value="">— Sélectionne une fiche —</option>';
-        const byCat = {};
-        data.forEach(f => { (byCat[f.category] = byCat[f.category] || []).push(f); });
-        Object.keys(byCat).sort().forEach(cat => {
-          const group = document.createElement('optgroup');
-          group.label = `${cat} (${byCat[cat].length})`;
-          byCat[cat].sort((a, b) => a.name.localeCompare(b.name)).forEach(f => {
-            const opt = document.createElement('option');
-            opt.value = f.slug;
-            opt.textContent = `${f.name} — ${f.commune}${f.real ? '' : ' · générique'}`;
-            group.appendChild(opt);
+        const fillSelect = (target, placeholder) => {
+          target.innerHTML = `<option value="">${placeholder}</option>`;
+          const byCat = {};
+          data.forEach(f => { (byCat[f.category] = byCat[f.category] || []).push(f); });
+          Object.keys(byCat).sort().forEach(cat => {
+            const group = document.createElement('optgroup');
+            group.label = `${cat} (${byCat[cat].length})`;
+            byCat[cat].sort((a, b) => a.name.localeCompare(b.name)).forEach(f => {
+              const opt = document.createElement('option');
+              opt.value = f.slug;
+              opt.textContent = `${f.name} — ${f.commune}${f.real ? '' : ' · générique'}`;
+              group.appendChild(opt);
+            });
+            target.appendChild(group);
           });
-          sel.appendChild(group);
-        });
+        };
+        fillSelect(sel, '— Sélectionne une fiche —');
+        if (batchSel) fillSelect(batchSel, '— Choisis et ajoute à la file —');
+        renderQueue();
       })
       .catch(err => {
         sel.innerHTML = '<option value="">Erreur: ' + err.message + '</option>';
+        if (batchSel) batchSel.innerHTML = '<option value="">Erreur: ' + err.message + '</option>';
       });
 
     sel.addEventListener('change', (e) => {
