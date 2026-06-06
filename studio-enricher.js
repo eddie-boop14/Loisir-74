@@ -40,7 +40,7 @@ ENRICHMENT GOALS (apply all that are relevant):
    - official_site_url still resolves and matches the venue
    If any are outdated, UPDATE them. If correct, keep as-is.
 
-2. TRANSLATE: if any non-FR locale (i18n.{en,de,it,es}) is missing or contains
+2. TRANSLATE: if any non-FR locale (i18n.{en,de,it,es,nl}) is missing or contains
    French text (i.e. it's an untranslated FR-mirror), produce a real
    translation. Keep the same i18n field structure. Match the formal voice
    used in the rest of the catalog.
@@ -81,9 +81,10 @@ OUTPUT FORMAT:
 Return ONLY a JSON object — no markdown fences, no commentary before or after.
 The JSON must have the same top-level keys as the input, plus any added
 fields. Validate that:
-- All 5 locales (fr/en/de/it/es) are present in i18n
+- All 6 locales (fr/en/de/it/es/nl) are present in i18n
 - Each locale has the same sub-keys as i18n.fr
-- All non-FR locales contain text in that language (not FR)
+- All non-FR locales contain text in that language (not FR). NL is Dutch
+  (Nederlands), not Norwegian or any other language.
 - No internal scaffolding leaks (no "Substitut", "Cross-link", "master list",
   "déjà publié", "Tier 1/2/3", "venue #", "à compléter", "TODO", "FIXME").
 
