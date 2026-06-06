@@ -685,11 +685,17 @@ leave that field unchanged rather than fabricate.`;
     // Pull cached state from any previous attempt
     const cache = batchStageCache.get(slug) || {};
     batchStageCache.set(slug, cache);
+    // Track attempt number — incremented every time processOne enters for this
+    // slug. Visible to the user so they can tell retries actually fire and what
+    // each one did.
+    cache.attempt = (cache.attempt || 0) + 1;
+    const attempt = cache.attempt;
+    const attemptPrefix = attempt > 1 ? `[#${attempt}] ` : '';
     let stage = 'fetch JSON';
     try {
       // STAGE 1 — fetch local JSON (cheap; skip if we already have it)
       if (!cache.orig) {
-        setStage(row, '📥 ' + stage);
+        setStage(row, attemptPrefix + '📥 ' + stage);
         const r = await fetch('/Json/' + slug + '.json', { signal });
         if (!r.ok) throw new Error('HTTP ' + r.status + ' on /Json/' + slug + '.json');
         const txt = await r.text();
@@ -701,20 +707,25 @@ leave that field unchanged rather than fabricate.`;
       // STAGE 2 — API call (expensive; SKIP if we have a cached raw response)
       if (!cache.apiData) {
         stage = 'appel API';
-        setStage(row, '🤖 ' + stage);
-        console.group(`[enricher] ${slug}`);
+        // If this isn't attempt #1 and there's no cached apiData, the previous
+        // attempt's API response was poisoned and we deliberately purged it.
+        // Label so the user sees the difference between "first call" and
+        // "fresh call after a parse failure".
+        const apiLabel = attempt > 1 ? '🤖 nouvel appel API' : '🤖 ' + stage;
+        setStage(row, attemptPrefix + apiLabel);
+        console.group(`[enricher] ${slug} (attempt ${attempt})`);
         console.log('Original:', orig);
         cache.apiData = await callAPI(orig, '', signal);
       } else {
         // We already paid for this API call on a prior attempt; resume from parse
-        console.group(`[enricher] ${slug} (resuming from cached API response)`);
-        setStage(row, '⏩ reprise parse');
+        console.group(`[enricher] ${slug} (attempt ${attempt}, resuming from cached API response)`);
+        setStage(row, attemptPrefix + '⏩ reprise du parse (cache)');
       }
 
       // STAGE 3 — parse the API response into enriched JSON
       if (!cache.enriched) {
         stage = 'parse API response';
-        setStage(row, '📝 ' + stage);
+        setStage(row, attemptPrefix + '📝 ' + stage);
         cache.enriched = parseEnriched(cache.apiData, orig);
         console.log('Enriched:', cache.enriched);
       }
@@ -730,7 +741,7 @@ leave that field unchanged rather than fabricate.`;
       if (timer) clearInterval(timer);
       const dt = ((Date.now() - t0) / 1000).toFixed(0);
       row.querySelector('.timer').textContent = dt + 's';
-      setStage(row, '✅ terminé', 'ok');
+      setStage(row, attemptPrefix + '✅ terminé', 'ok');
       setResult(row, `<strong>${ch.length}</strong> <span style="color:var(--ink-mute)">champs</span>`);
       // record success
       const existing = batchResults.find(b => b.slug === slug);
@@ -746,7 +757,7 @@ leave that field unchanged rather than fabricate.`;
       console.error(`[enricher] ${slug} ${aborted ? 'aborted' : 'failed'} at "${stage}":`, err);
       try { console.groupEnd(); } catch (_) {}
       const msg = String(err && err.message || err);
-      setStage(row, aborted ? '⏸ annulé' : ('❌ ' + stage), aborted ? undefined : 'err');
+      setStage(row, attemptPrefix + (aborted ? '⏸ annulé' : ('❌ ' + stage)), aborted ? undefined : 'err');
       if (!aborted) {
         // If the parse stage failed on a cached API response, the cache is
         // poisoned — replaying it would just throw the same error. Invalidate
@@ -807,7 +818,13 @@ leave that field unchanged rather than fabricate.`;
     batchAbortController = new AbortController();
     batchResults = [];
     batchRows.clear();
-    batchStageCache.clear();  // fresh batch — drop any cached stage state from a prior run
+    // NOTE: do NOT clear batchStageCache here. If the previous run failed at
+    // parse for some slugs, their cache.apiData was already invalidated in the
+    // catch block (poisoned-cache cleanup). Successful slugs were dropped from
+    // the cache on completion. So the only entries left are cache.orig (fresh
+    // local JSON, harmless to keep) — reusing them just skips a tiny re-fetch.
+    // Relaunching the batch thus naturally picks up where each fiche broke,
+    // matching what the per-row retry button does.
     startBtn.disabled = true;
     stopBtn.disabled = false;
     log.innerHTML = '';
