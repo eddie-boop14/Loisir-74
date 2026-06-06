@@ -206,7 +206,14 @@ leave that field unchanged rather than fabricate.`;
     }
 
     const data = await res.json();
-    // Extract text from the response (could be content[].text array)
+    return data;  // raw API response — parseEnriched takes it from here
+  }
+
+  // Extract & validate the enriched JSON from a raw API response object.
+  // Pulled out of callAPI so the batch retry can resume from this stage
+  // without paying for another API call when the API returned fine but
+  // the response wouldn't parse.
+  function parseEnriched(data, jsonObj) {
     let text = '';
     if (Array.isArray(data.content)) {
       for (const block of data.content) {
@@ -548,7 +555,7 @@ leave that field unchanged rather than fabricate.`;
     const hints = document.getElementById('enricher-hints')?.value || '';
     const t0 = Date.now();
     try {
-      enriched = await callAPI(original, hints);
+      enriched = parseEnriched(await callAPI(original, hints), original);
       changes = computeChanges(original, enriched);
       rejected = new Set();
       renderDiff();
@@ -667,26 +674,53 @@ leave that field unchanged rather than fabricate.`;
     return setInterval(update, 500);
   }
 
+  // Per-fiche stage cache. Keeps `orig` (local JSON) and `apiData` (raw
+  // API response) across retries so we don't pay for an API call again
+  // when the failure was downstream (parse / diff). Cleared at batch start.
+  const batchStageCache = new Map();  // slug → {orig?, apiData?, enriched?}
+
   async function processOne(slug, row, signal) {
     const t0 = Date.now();
     const timer = tickTimer(row, t0);
+    // Pull cached state from any previous attempt
+    const cache = batchStageCache.get(slug) || {};
+    batchStageCache.set(slug, cache);
     let stage = 'fetch JSON';
-    setStage(row, '📥 ' + stage);
     try {
-      const r = await fetch('/Json/' + slug + '.json', { signal });
-      if (!r.ok) throw new Error('HTTP ' + r.status + ' on /Json/' + slug + '.json');
-      const txt = await r.text();
-      let orig;
-      try { orig = JSON.parse(txt); }
-      catch (e) { stage = 'parse local JSON'; throw e; }
+      // STAGE 1 — fetch local JSON (cheap; skip if we already have it)
+      if (!cache.orig) {
+        setStage(row, '📥 ' + stage);
+        const r = await fetch('/Json/' + slug + '.json', { signal });
+        if (!r.ok) throw new Error('HTTP ' + r.status + ' on /Json/' + slug + '.json');
+        const txt = await r.text();
+        try { cache.orig = JSON.parse(txt); }
+        catch (e) { stage = 'parse local JSON'; throw e; }
+      }
+      const orig = cache.orig;
 
-      stage = 'appel API';
-      setStage(row, '🤖 ' + stage);
-      console.group(`[enricher] ${slug}`);
-      console.log('Original:', orig);
-      const enr = await callAPI(orig, '', signal);
-      console.log('Enriched:', enr);
+      // STAGE 2 — API call (expensive; SKIP if we have a cached raw response)
+      if (!cache.apiData) {
+        stage = 'appel API';
+        setStage(row, '🤖 ' + stage);
+        console.group(`[enricher] ${slug}`);
+        console.log('Original:', orig);
+        cache.apiData = await callAPI(orig, '', signal);
+      } else {
+        // We already paid for this API call on a prior attempt; resume from parse
+        console.group(`[enricher] ${slug} (resuming from cached API response)`);
+        setStage(row, '⏩ reprise parse');
+      }
 
+      // STAGE 3 — parse the API response into enriched JSON
+      if (!cache.enriched) {
+        stage = 'parse API response';
+        setStage(row, '📝 ' + stage);
+        cache.enriched = parseEnriched(cache.apiData, orig);
+        console.log('Enriched:', cache.enriched);
+      }
+      const enr = cache.enriched;
+
+      // STAGE 4 — diff
       stage = 'diff';
       setStage(row, '📝 ' + stage);
       const ch = computeChanges(orig, enr);
@@ -702,6 +736,8 @@ leave that field unchanged rather than fabricate.`;
       const existing = batchResults.find(b => b.slug === slug);
       if (existing) Object.assign(existing, { original: orig, enriched: enr, changes: ch, error: null });
       else batchResults.push({ slug, original: orig, enriched: enr, changes: ch });
+      // Done — drop the cache so memory doesn't grow with the batch
+      batchStageCache.delete(slug);
     } catch (err) {
       if (timer) clearInterval(timer);
       const dt = ((Date.now() - t0) / 1000).toFixed(0);
@@ -712,17 +748,28 @@ leave that field unchanged rather than fabricate.`;
       const msg = String(err && err.message || err);
       setStage(row, aborted ? '⏸ annulé' : ('❌ ' + stage), aborted ? undefined : 'err');
       if (!aborted) {
+        // Use stage cache to decide retry label: if we already paid for the
+        // API call (apiData cached), the retry will resume from parse — no
+        // re-billing. Otherwise it has to re-call the API.
+        const retryLabel = cache.apiData
+          ? '🔄 réessayer (depuis le cache)'
+          : '🔄 réessayer';
+        const retryHint = cache.apiData
+          ? '<span style="color:var(--ink-mute);font-size:.68rem;margin-left:.3rem">réponse API en cache — pas de nouvel appel</span>'
+          : '';
         setResult(row,
           `<details style="font-size:.72rem"><summary style="cursor:pointer;color:var(--bad,#c00)">voir l'erreur</summary>` +
           `<pre style="white-space:pre-wrap;word-break:break-word;background:var(--surface-2);padding:.45rem;border-radius:4px;margin:.3rem 0 0 0;max-height:12rem;overflow:auto">${escapeHtml(msg)}</pre>` +
           `</details>` +
-          ` <button class="btn" style="padding:.2rem .55rem;font-size:.72rem;margin-left:.3rem" data-retry-slug="${escapeHtml(slug)}">🔄 réessayer</button>`);
+          ` <button class="btn" style="padding:.2rem .55rem;font-size:.72rem;margin-left:.3rem" data-retry-slug="${escapeHtml(slug)}">${retryLabel}</button>` +
+          retryHint);
       }
       const existing = batchResults.find(b => b.slug === slug);
       const rec = { slug, error: msg, errorStage: stage, aborted };
       if (existing) Object.assign(existing, rec, { original: null, enriched: null, changes: null });
       else batchResults.push(rec);
-      // wire retry button (we re-process this slug in-place, fresh AbortController)
+      // wire retry button (re-runs processOne, which checks batchStageCache
+      // and resumes from whatever stage hasn't been completed yet).
       const retryBtn = row.querySelector(`[data-retry-slug="${slug}"]`);
       if (retryBtn) retryBtn.addEventListener('click', () => {
         retryBtn.disabled = true;
@@ -747,6 +794,7 @@ leave that field unchanged rather than fabricate.`;
     batchAbortController = new AbortController();
     batchResults = [];
     batchRows.clear();
+    batchStageCache.clear();  // fresh batch — drop any cached stage state from a prior run
     startBtn.disabled = true;
     stopBtn.disabled = false;
     log.innerHTML = '';
