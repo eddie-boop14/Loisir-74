@@ -4,18 +4,38 @@
   "commune": "Annecy",
   "postal_code": "74000",
   "department": "Haute-Savoie",
-  "latitude": 45.8992,
-  "longitude": 6.1294,
+  "latitude": 45.9015943,
+  "longitude": 6.1222768,
   "hero_image": "/generique-atelier-poterie-mains.jpg",
   "hero_credit": null,
   "official_site_url": "https://chez-el.com",
-  "price_from": null,
+  "price_from": 15,
   "price_currency": "EUR",
-  "price_tiers": [],
+  "price_tiers": [
+    {
+      "label": "Atelier libre autonomie",
+      "price": 15,
+      "unit": "par heure"
+    },
+    {
+      "label": "Cours au trimestre",
+      "price": 590,
+      "unit": "10 séances"
+    },
+    {
+      "label": "Cuisson céramique",
+      "price": 2,
+      "unit": "par 100g"
+    }
+  ],
   "sources": [
     {
       "label": "Chez El — site officiel",
       "url": "https://chez-el.com"
+    },
+    {
+      "label": "Sources du Lac d'Annecy",
+      "url": "https://www.sources-lac-annecy.com"
     }
   ],
   "verify_flags": [
@@ -28,179 +48,730 @@
     "type": "SportsActivityLocation",
     "is_free": false,
     "public_access": true,
-    "amenities": []
+    "amenities": [
+      "wheelchair_accessible",
+      "wifi",
+      "coffee_shop",
+      "kids_friendly"
+    ]
   },
-  "sparse_data": true,
+  "sparse_data": false,
   "research_log": [
     "Créé 3 juin 2026 — type d'activité nouveau (extension liste activités). Données structurelles vérifiées; image/GPS/tarifs/traductions à compléter."
   ],
-  "partners": [],
+  "partners": [
+    {
+      "tier": "recommended",
+      "name": "El Pueblo",
+      "type": "bar-restaurant",
+      "description": "Bar à tapas et cocktails dans une ambiance méditerranéenne conviviale, à 25 mètres de l'atelier.",
+      "url": "https://elpueblo-annecy.fr"
+    },
+    {
+      "tier": "recommended",
+      "name": "Pharmacie Centrale",
+      "type": "commerce",
+      "description": "Pharmacie de centre-ville au 30 rue Sommeiller, à proximité immédiate de Chez El.",
+      "url": "https://pharmacie-centrale-annecy.fr"
+    }
+  ],
   "gallery_photos": [],
   "i18n": {
     "fr": {
       "name": "Chez El",
       "name_alternates": [],
       "meta_title": "Chez El — Atelier céramique / poterie en Haute-Savoie | Loisirs 74",
-      "meta_description": "Atelier de céramique au centre d'Annecy : initiations au tournage, cours enfants et adultes, accès autonome.",
+      "meta_description": "Studio de céramique unique au cœur d'Annecy : cours de tournage, modelage, peinture sur céramique et coffee shop. Initiations, stages et accès libre.",
       "hero": {
         "badge": "Atelier céramique / poterie",
-        "lead": "Atelier de céramique au centre d'Annecy : initiations au tournage, cours enfants et adultes, accès autonome."
+        "lead": "Studio de céramique de 200 m² au centre d'Annecy mêlant atelier de poterie, cours de tournage, modelage, peinture sur céramique et coffee shop convivial."
       },
       "hero_alt": "Chez El, atelier céramique / poterie en Haute-Savoie",
       "facts": {
         "type": "Atelier céramique / poterie",
-        "access": null,
-        "tarif": null,
-        "commune": null,
-        "duration": null,
-        "best_season": null
+        "access": "8 rue Sommeiller, Annecy",
+        "tarif": "À partir de 15 €/h",
+        "commune": "Annecy",
+        "duration": "Variable",
+        "best_season": "Toute l'année"
       },
       "body": {
-        "what_is": "Chez El est un atelier de céramique à Annecy proposant initiations au tournage, cours pour enfants et adultes et accès autonome — activité créative couverte."
+        "what_is": "<p><strong>Chez El</strong> est bien plus qu'un simple atelier de céramique : c'est un espace de création hybride de 200 m² niché en plein cœur d'Annecy, où la céramique rencontre la convivialité. Fondé par Élodie Loyer après sa reconversion professionnelle et l'obtention d'un CAP Tournage en céramique, ce lieu unique conjugue <strong>studio de céramique, ateliers créatifs et coffee shop</strong> dans une ambiance rétro-pop minimaliste engagée.</p><p>Au <strong>rez-de-chaussée</strong>, le coffee shop vous accueille tous les jours (sauf le mardi) pour des pauses gourmandes : cafés de spécialité, cookies maison, brunchs créatifs le week-end de 8h30 à 14h, et même une formule combinant brunch et peinture sur céramique. À <strong>l'étage</strong>, le studio céramique et floral propose un éventail d'activités pour tous les publics — débutants, initiés ou professionnels : initiations au tournage (2h30), stages de modelage, cours trimestriels (10 séances à 590 €), ateliers pour enfants le mercredi, et accès libre en autonomie (15 €/heure) pour ceux qui ont déjà une base. Contrairement aux ateliers classiques de Haute-Savoie, Chez El encourage la pratique autonome et offre un cadre professionnel complet avec tours de potier, matériel, terres, engobes, émaux et cuissons sur place (2 € par 100 g).</p><p>L'atelier se distingue par son <strong>accessibilité PMR</strong>, son atmosphère LGBTQ+ friendly, ses toilettes non genrées, et sa volonté de créer un espace safe et inclusif. Tout au long de l'année, Chez El vit au rythme des saisons avec des événements, conférences et pop-up qui animent le lieu. Situé à deux pas de la vieille ville, du lac d'Annecy et de la gare SNCF, c'est l'adresse idéale pour une parenthèse créative couverte, quelle que soit la météo.</p>"
       },
-      "activities": [],
-      "practical_info": [],
+      "activities": [
+        {
+          "title": "Initiation au tournage",
+          "body": "Séance de 2h30 pour découvrir le tournage en petit groupe (4 à 6 personnes). Accompagnement personnalisé, matériel fourni, récupération des pièces après cuisson.",
+          "tag": "débutant"
+        },
+        {
+          "title": "Peinture sur céramique",
+          "body": "Peignez votre propre pièce (tasse, bol, assiette) dans un cadre convivial. Large choix de formes et de couleurs, idéal pour tous les âges.",
+          "tag": "famille"
+        },
+        {
+          "title": "Cours au trimestre",
+          "body": "10 séances de 2h30 pour approfondir tournage, modelage et décor. Groupes de 4 à 6 personnes, formule adaptée aux débutants et confirmés.",
+          "tag": "régulier"
+        },
+        {
+          "title": "Accès libre en autonomie",
+          "body": "Réservé aux personnes ayant suivi un stage de 2 jours minimum. Accès à l'atelier, tours, outils, terre et émaux. Tarif horaire, cuissons en supplément.",
+          "tag": "autonome"
+        },
+        {
+          "title": "Brunch créatif le week-end",
+          "body": "Samedi et dimanche de 8h30 à 14h : brunch maison à la carte, produits frais et de saison. Possibilité de coupler avec une séance de peinture sur céramique.",
+          "tag": "gourmand"
+        },
+        {
+          "title": "Coffee shop & pause créative",
+          "body": "Café de spécialité, cookies, pâtisseries et petite restauration végétarienne. Ouvert tous les jours sauf le mardi, sans besoin de pratiquer la céramique.",
+          "tag": "détente"
+        }
+      ],
+      "practical_info": [
+        {
+          "title": "Matériel",
+          "body": "Tout est fourni : tours, outils, terre, engobes, émaux. Apportez simplement un torchon et un tablier (ou achetez-le sur place)."
+        },
+        {
+          "title": "Réservation",
+          "body": "Réservation conseillée via le site chez-el.com pour tous les cours et l'accès libre. Le coffee shop fonctionne sans réservation (sauf peinture céramique)."
+        },
+        {
+          "title": "Cuissons",
+          "body": "Les pièces sont cuites sur place par l'équipe. Tarif : 2 € par 100 g (comprenant les 2 cuissons). Récupération ultérieure au studio."
+        }
+      ],
       "how_to_get_there": {
-        "car": null,
-        "public_transport": null,
-        "bike": null
+        "car": "Parking public à proximité (gare SNCF, centre-ville). L'atelier est situé en zone piétonne rue Sommeiller.",
+        "public_transport": "À 5 min à pied de la gare SNCF d'Annecy. Lignes de bus Sibra desservant le centre-ville.",
+        "bike": "Pistes cyclables jusqu'au centre d'Annecy, arceaux à vélos dans la rue."
       },
-      "when_to_visit": null,
+      "when_to_visit": "Ouvert toute l'année. Le coffee shop est accessible du lundi au dimanche (fermé le mardi). Les cours et ateliers libres sont programmés sur réservation. Le brunch a lieu uniquement le week-end de 8h30 à 14h.",
       "events": [],
-      "faq": [],
-      "schema_amenities": []
+      "faq": [
+        {
+          "question": "Faut-il avoir déjà fait de la céramique pour participer ?",
+          "answer": "Non, les initiations et cours au trimestre sont ouverts aux débutants complets. Seul l'accès libre en autonomie nécessite un niveau suffisant (stage de 2 jours minimum ou équivalent)."
+        },
+        {
+          "question": "Combien de temps faut-il attendre pour récupérer ses créations ?",
+          "answer": "Comptez environ 3 à 4 semaines entre la réalisation et la récupération, le temps de séchage et des deux cuissons (biscuit puis émail)."
+        },
+        {
+          "question": "L'atelier est-il adapté aux enfants ?",
+          "answer": "Oui, Chez El propose des ateliers pour enfants le mercredi, et la peinture sur céramique est accessible dès le plus jeune âge avec accompagnement parental."
+        },
+        {
+          "question": "Peut-on venir juste pour le coffee shop, sans faire de céramique ?",
+          "answer": "Absolument. Le coffee shop est ouvert à tous, tous les jours sauf le mardi, pour une pause café, un brunch ou une pâtisserie, sans obligation de participer à un atelier."
+        },
+        {
+          "question": "Quel est le meilleur moment pour venir ?",
+          "answer": "Les brunchs du week-end (samedi-dimanche 8h30-14h) sont très prisés. En semaine, l'ambiance est plus calme. Réservez en ligne pour garantir votre place aux cours et ateliers."
+        },
+        {
+          "question": "L'atelier est-il accessible en fauteuil roulant ?",
+          "answer": "Oui, Chez El dispose d'un accès PMR, de toilettes accessibles et d'un espace pensé pour l'inclusion. N'hésitez pas à contacter l'équipe pour toute question spécifique."
+        },
+        {
+          "question": "Peut-on privatiser l'atelier pour un événement ?",
+          "answer": "Oui, Chez El propose des privatisations pour anniversaires, team-buildings ou événements privés. Contactez l'équipe via le site pour un devis personnalisé."
+        },
+        {
+          "question": "Y a-t-il un parking à proximité ?",
+          "answer": "L'atelier est en zone piétonne rue Sommeiller. Plusieurs parkings publics sont à 5-10 min à pied (gare SNCF, parkings du centre-ville). Privilégiez les transports en commun ou le vélo."
+        }
+      ],
+      "schema_amenities": [
+        "Accès PMR",
+        "Wi-Fi",
+        "Toilettes accessibles",
+        "Café sur place",
+        "Convient aux enfants"
+      ]
     },
     "en": {
       "name": "Chez El",
       "name_alternates": [],
-      "meta_title": "Chez El — Atelier céramique / poterie en Haute-Savoie | Loisirs 74",
-      "meta_description": "Atelier de céramique au centre d'Annecy : initiations au tournage, cours enfants et adultes, accès autonome.",
+      "meta_title": "Chez El — Ceramic & Pottery Workshop in Haute-Savoie | Loisirs 74",
+      "meta_description": "Unique ceramic studio in the heart of Annecy: wheel throwing classes, hand-building, ceramic painting, and a cozy coffee shop. Workshops, courses, and open access.",
       "hero": {
-        "badge": "Atelier céramique / poterie",
-        "lead": "Atelier de céramique au centre d'Annecy : initiations au tournage, cours enfants et adultes, accès autonome."
+        "badge": "Ceramic & Pottery Workshop",
+        "lead": "A 200 m² ceramic studio in the heart of Annecy combining pottery workshop, wheel throwing classes, hand-building, ceramic painting, and a friendly coffee shop."
       },
-      "hero_alt": "Chez El, atelier céramique / poterie en Haute-Savoie",
+      "hero_alt": "Chez El, ceramic and pottery workshop in Haute-Savoie",
       "facts": {
-        "type": "Atelier céramique / poterie",
-        "access": null,
-        "tarif": null,
-        "commune": null,
-        "duration": null,
-        "best_season": null
+        "type": "Ceramic & Pottery Workshop",
+        "access": "8 rue Sommeiller, Annecy",
+        "tarif": "From €15/hour",
+        "commune": "Annecy",
+        "duration": "Variable",
+        "best_season": "Year-round"
       },
       "body": {
-        "what_is": "Chez El est un atelier de céramique à Annecy proposant initiations au tournage, cours pour enfants et adultes et accès autonome — activité créative couverte."
+        "what_is": "<p><strong>Chez El</strong> is much more than a pottery studio: it's a 200 m² hybrid creative space in the heart of Annecy, where ceramics meets conviviality. Founded by Élodie Loyer after a career change and a pottery diploma, this unique venue combines <strong>ceramic studio, creative workshops, and coffee shop</strong> in a retro-pop minimalist atmosphere.</p><p>On the <strong>ground floor</strong>, the coffee shop welcomes you daily (except Tuesdays) for tasty breaks: specialty coffees, homemade cookies, creative brunches on weekends from 8:30 am to 2 pm, and even a formula combining brunch and ceramic painting. <strong>Upstairs</strong>, the ceramic and floral studio offers a range of activities for all audiences—beginners, experienced, or professionals: wheel-throwing introductions (2.5 hours), hand-building workshops, quarterly courses (10 sessions for €590), Wednesday workshops for children, and open studio access (€15/hour) for those with prior experience. Unlike traditional Haute-Savoie workshops, Chez El encourages autonomous practice and offers a complete professional setup with pottery wheels, tools, clay, slips, glazes, and on-site firings (€2 per 100g).</p><p>The studio stands out for its <strong>wheelchair accessibility</strong>, LGBTQ+ friendly atmosphere, gender-neutral toilets, and commitment to creating a safe and inclusive space. Throughout the year, Chez El comes alive with seasonal events, conferences, and pop-ups. Located steps from the old town, Lake Annecy, and the train station, it's the perfect spot for a creative indoor break, whatever the weather.</p>"
       },
-      "activities": [],
-      "practical_info": [],
+      "activities": [
+        {
+          "title": "Wheel Throwing Introduction",
+          "body": "2.5-hour session to discover wheel throwing in small groups (4-6 people). Personalized guidance, all materials provided, pieces ready for pickup after firing.",
+          "tag": "beginner"
+        },
+        {
+          "title": "Ceramic Painting",
+          "body": "Paint your own piece (mug, bowl, plate) in a friendly setting. Wide choice of shapes and colors, suitable for all ages.",
+          "tag": "family"
+        },
+        {
+          "title": "Quarterly Courses",
+          "body": "10 sessions of 2.5 hours to deepen wheel throwing, hand-building, and decorating skills. Groups of 4-6, suitable for beginners and advanced learners.",
+          "tag": "regular"
+        },
+        {
+          "title": "Open Studio Access",
+          "body": "Reserved for those who have completed a 2-day workshop or equivalent. Access to studio, wheels, tools, clay, and glazes. Hourly rate, firings extra.",
+          "tag": "autonomous"
+        },
+        {
+          "title": "Weekend Creative Brunch",
+          "body": "Saturday and Sunday from 8:30 am to 2 pm: homemade à la carte brunch with fresh seasonal produce. Option to combine with ceramic painting session.",
+          "tag": "tasty"
+        },
+        {
+          "title": "Coffee Shop & Creative Break",
+          "body": "Specialty coffee, cookies, pastries, and vegetarian light meals. Open daily except Tuesday, no pottery required.",
+          "tag": "relax"
+        }
+      ],
+      "practical_info": [
+        {
+          "title": "Equipment",
+          "body": "Everything provided: wheels, tools, clay, slips, glazes. Simply bring a towel and apron (or buy one on-site)."
+        },
+        {
+          "title": "Booking",
+          "body": "Online booking recommended via chez-el.com for all courses and open access. The coffee shop operates without reservation (except ceramic painting)."
+        },
+        {
+          "title": "Firings",
+          "body": "Pieces are fired on-site by the team. Rate: €2 per 100g (including both firings). Pickup later at the studio."
+        }
+      ],
       "how_to_get_there": {
-        "car": null,
-        "public_transport": null,
-        "bike": null
+        "car": "Public parking nearby (train station, town center). The studio is located on pedestrian rue Sommeiller.",
+        "public_transport": "5-minute walk from Annecy train station. Sibra bus lines serve the city center.",
+        "bike": "Cycling paths to central Annecy, bike racks on the street."
       },
-      "when_to_visit": null,
+      "when_to_visit": "Open year-round. The coffee shop is accessible Monday to Sunday (closed Tuesday). Classes and open studio are by reservation. Brunch available weekends only from 8:30 am to 2 pm.",
       "events": [],
-      "faq": [],
-      "schema_amenities": []
+      "faq": [
+        {
+          "question": "Do I need prior pottery experience to participate?",
+          "answer": "No, introductory sessions and quarterly courses are open to complete beginners. Only open studio access requires sufficient skills (minimum 2-day workshop or equivalent)."
+        },
+        {
+          "question": "How long does it take to get my creations back?",
+          "answer": "Allow about 3-4 weeks between creation and pickup, for drying and two firings (bisque then glaze)."
+        },
+        {
+          "question": "Is the workshop suitable for children?",
+          "answer": "Yes, Chez El offers children's workshops on Wednesdays, and ceramic painting is accessible from a young age with parental supervision."
+        },
+        {
+          "question": "Can I visit just for the coffee shop, without doing pottery?",
+          "answer": "Absolutely. The coffee shop is open to everyone, daily except Tuesday, for coffee, brunch, or pastries, with no obligation to participate in a workshop."
+        },
+        {
+          "question": "What's the best time to visit?",
+          "answer": "Weekend brunches (Saturday-Sunday 8:30 am-2 pm) are very popular. Weekdays are quieter. Book online to guarantee your spot for courses and workshops."
+        },
+        {
+          "question": "Is the studio wheelchair accessible?",
+          "answer": "Yes, Chez El has wheelchair access, accessible toilets, and a space designed for inclusion. Contact the team for any specific questions."
+        },
+        {
+          "question": "Can the studio be privatized for an event?",
+          "answer": "Yes, Chez El offers privatization for birthdays, team-buildings, or private events. Contact the team via the website for a personalized quote."
+        },
+        {
+          "question": "Is there parking nearby?",
+          "answer": "The studio is in the pedestrian zone on rue Sommeiller. Several public parking lots are 5-10 minutes away (train station, city center). Public transport or bike recommended."
+        }
+      ],
+      "schema_amenities": [
+        "Wheelchair accessible",
+        "Wi-Fi",
+        "Accessible toilets",
+        "Coffee shop on-site",
+        "Kid-friendly"
+      ]
     },
     "de": {
       "name": "Chez El",
       "name_alternates": [],
-      "meta_title": "Chez El — Atelier céramique / poterie en Haute-Savoie | Loisirs 74",
-      "meta_description": "Atelier de céramique au centre d'Annecy : initiations au tournage, cours enfants et adultes, accès autonome.",
+      "meta_title": "Chez El — Keramik- / Töpferwerkstatt in Haute-Savoie | Loisirs 74",
+      "meta_description": "Einzigartiges Keramikstudio im Herzen von Annecy: Töpferkurse, Aufbautechnik, Keramikmalerei und gemütliches Café. Workshops, Kurse und offener Zugang.",
       "hero": {
-        "badge": "Atelier céramique / poterie",
-        "lead": "Atelier de céramique au centre d'Annecy : initiations au tournage, cours enfants et adultes, accès autonome."
+        "badge": "Keramik- / Töpferwerkstatt",
+        "lead": "Ein 200 m² großes Keramikstudio im Herzen von Annecy, das Töpferwerkstatt, Drehkurse, Aufbautechnik, Keramikmalerei und ein freundliches Café vereint."
       },
-      "hero_alt": "Chez El, atelier céramique / poterie en Haute-Savoie",
+      "hero_alt": "Chez El, Keramik- und Töpferwerkstatt in Haute-Savoie",
       "facts": {
-        "type": "Atelier céramique / poterie",
-        "access": null,
-        "tarif": null,
-        "commune": null,
-        "duration": null,
-        "best_season": null
+        "type": "Keramik- / Töpferwerkstatt",
+        "access": "8 rue Sommeiller, Annecy",
+        "tarif": "Ab 15 €/Stunde",
+        "commune": "Annecy",
+        "duration": "Variabel",
+        "best_season": "Ganzjährig"
       },
       "body": {
-        "what_is": "Chez El est un atelier de céramique à Annecy proposant initiations au tournage, cours pour enfants et adultes et accès autonome — activité créative couverte."
+        "what_is": "<p><strong>Chez El</strong> ist weit mehr als ein Töpferstudio: Es ist ein 200 m² großer hybrider Kreativraum im Herzen von Annecy, wo Keramik auf Geselligkeit trifft. Gegründet von Élodie Loyer nach einem Berufswechsel und einem Töpferdiplom, vereint dieser einzigartige Ort <strong>Keramikstudio, kreative Workshops und Café</strong> in einer retro-pop-minimalistischen Atmosphäre.</p><p>Im <strong>Erdgeschoss</strong> empfängt Sie das Café täglich (außer dienstags) für leckere Pausen: Spezialitätenkaffees, hausgemachte Kekse, kreative Brunchs am Wochenende von 8:30 bis 14 Uhr und sogar eine Kombination aus Brunch und Keramikmalerei. Im <strong>Obergeschoss</strong> bietet das Keramik- und Blumenstudio eine Reihe von Aktivitäten für alle Zielgruppen – Anfänger, Fortgeschrittene oder Profis: Einführungen ins Töpfern (2,5 Stunden), Aufbau-Workshops, Quartalskurse (10 Sitzungen für 590 €), Mittwoch-Workshops für Kinder und offener Studiozugang (15 €/Stunde) für Personen mit Vorkenntnissen. Anders als traditionelle Werkstätten in Haute-Savoie fördert Chez El die autonome Praxis und bietet eine komplette professionelle Ausstattung mit Töpferscheiben, Werkzeugen, Ton, Engoben, Glasuren und Brennöfen vor Ort (2 € pro 100 g).</p><p>Das Studio zeichnet sich durch seine <strong>Barrierefreiheit</strong>, LGBTQ+-freundliche Atmosphäre, geschlechtsneutrale Toiletten und sein Engagement für einen sicheren und inklusiven Raum aus. Das ganze Jahr über erwacht Chez El mit saisonalen Veranstaltungen, Konferenzen und Pop-ups zum Leben. Nur wenige Schritte von der Altstadt, dem Annecy-See und dem Bahnhof entfernt ist es der perfekte Ort für eine kreative Pause drinnen, bei jedem Wetter.</p>"
       },
-      "activities": [],
-      "practical_info": [],
+      "activities": [
+        {
+          "title": "Einführung ins Töpfern",
+          "body": "2,5-stündige Sitzung, um das Drehen in kleinen Gruppen (4-6 Personen) zu entdecken. Persönliche Betreuung, alle Materialien vorhanden, Abholung der Stücke nach dem Brennen.",
+          "tag": "Anfänger"
+        },
+        {
+          "title": "Keramikmalerei",
+          "body": "Bemalen Sie Ihr eigenes Stück (Tasse, Schale, Teller) in freundlicher Atmosphäre. Große Auswahl an Formen und Farben, für alle Altersgruppen geeignet.",
+          "tag": "Familie"
+        },
+        {
+          "title": "Quartalskurse",
+          "body": "10 Sitzungen à 2,5 Stunden zur Vertiefung von Drehen, Aufbautechnik und Dekorieren. Gruppen von 4-6 Personen, für Anfänger und Fortgeschrittene geeignet.",
+          "tag": "regelmäßig"
+        },
+        {
+          "title": "Offener Studiozugang",
+          "body": "Reserviert für Personen, die einen 2-tägigen Workshop oder gleichwertig absolviert haben. Zugang zu Studio, Scheiben, Werkzeugen, Ton und Glasuren. Stundentarif, Brennen extra.",
+          "tag": "autonom"
+        },
+        {
+          "title": "Kreativer Wochenend-Brunch",
+          "body": "Samstag und Sonntag von 8:30 bis 14 Uhr: hausgemachter Brunch à la carte mit frischen Saisonprodukten. Option zur Kombination mit Keramikmalerei.",
+          "tag": "lecker"
+        },
+        {
+          "title": "Café & kreative Pause",
+          "body": "Spezialitätenkaffee, Kekse, Gebäck und vegetarische Snacks. Täglich außer dienstags geöffnet, keine Töpferei erforderlich.",
+          "tag": "Entspannung"
+        }
+      ],
+      "practical_info": [
+        {
+          "title": "Ausrüstung",
+          "body": "Alles wird bereitgestellt: Scheiben, Werkzeuge, Ton, Engoben, Glasuren. Bringen Sie einfach ein Handtuch und eine Schürze mit (oder kaufen Sie vor Ort)."
+        },
+        {
+          "title": "Buchung",
+          "body": "Online-Buchung über chez-el.com für alle Kurse und offenen Zugang empfohlen. Das Café funktioniert ohne Reservierung (außer Keramikmalerei)."
+        },
+        {
+          "title": "Brennen",
+          "body": "Die Stücke werden vor Ort vom Team gebrannt. Preis: 2 € pro 100 g (beide Brände inbegriffen). Spätere Abholung im Studio."
+        }
+      ],
       "how_to_get_there": {
-        "car": null,
-        "public_transport": null,
-        "bike": null
+        "car": "Öffentliche Parkplätze in der Nähe (Bahnhof, Stadtzentrum). Das Studio befindet sich in der Fußgängerzone rue Sommeiller.",
+        "public_transport": "5 Gehminuten vom Bahnhof Annecy. Sibra-Buslinien bedienen das Stadtzentrum.",
+        "bike": "Radwege bis ins Zentrum von Annecy, Fahrradständer auf der Straße."
       },
-      "when_to_visit": null,
+      "when_to_visit": "Ganzjährig geöffnet. Das Café ist montags bis sonntags zugänglich (dienstags geschlossen). Kurse und offenes Studio nach Reservierung. Brunch nur am Wochenende von 8:30 bis 14 Uhr.",
       "events": [],
-      "faq": [],
-      "schema_amenities": []
+      "faq": [
+        {
+          "question": "Brauche ich Töpfererfahrung, um teilzunehmen?",
+          "answer": "Nein, Einführungen und Quartalskurse sind für absolute Anfänger offen. Nur der offene Studiozugang erfordert ausreichende Kenntnisse (mindestens 2-tägiger Workshop oder gleichwertig)."
+        },
+        {
+          "question": "Wie lange dauert es, bis ich meine Kreationen zurückbekomme?",
+          "answer": "Rechnen Sie mit etwa 3-4 Wochen zwischen Herstellung und Abholung, für Trocknung und zwei Brände (Schrühbrand und Glasurbrand)."
+        },
+        {
+          "question": "Ist die Werkstatt für Kinder geeignet?",
+          "answer": "Ja, Chez El bietet mittwochs Kinderworkshops an, und Keramikmalerei ist ab jungem Alter mit elterlicher Aufsicht zugänglich."
+        },
+        {
+          "question": "Kann ich nur für das Café kommen, ohne zu töpfern?",
+          "answer": "Auf jeden Fall. Das Café ist für alle geöffnet, täglich außer dienstags, für Kaffee, Brunch oder Gebäck, ohne Verpflichtung zur Teilnahme an einem Workshop."
+        },
+        {
+          "question": "Wann ist die beste Zeit für einen Besuch?",
+          "answer": "Wochenend-Brunchs (Samstag-Sonntag 8:30-14 Uhr) sind sehr beliebt. Unter der Woche ist es ruhiger. Buchen Sie online, um Ihren Platz für Kurse und Workshops zu garantieren."
+        },
+        {
+          "question": "Ist das Studio rollstuhlgerecht?",
+          "answer": "Ja, Chez El verfügt über Rollstuhlzugang, barrierefreie Toiletten und einen inklusiven Raum. Kontaktieren Sie das Team für spezifische Fragen."
+        },
+        {
+          "question": "Kann das Studio für eine Veranstaltung privatisiert werden?",
+          "answer": "Ja, Chez El bietet Privatisierung für Geburtstage, Teambuildings oder private Veranstaltungen. Kontaktieren Sie das Team über die Website für ein individuelles Angebot."
+        },
+        {
+          "question": "Gibt es Parkplätze in der Nähe?",
+          "answer": "Das Studio befindet sich in der Fußgängerzone rue Sommeiller. Mehrere öffentliche Parkplätze sind 5-10 Minuten entfernt (Bahnhof, Stadtzentrum). Öffentliche Verkehrsmittel oder Fahrrad empfohlen."
+        }
+      ],
+      "schema_amenities": [
+        "Rollstuhlgerecht",
+        "WLAN",
+        "Barrierefreie Toiletten",
+        "Café vor Ort",
+        "Kinderfreundlich"
+      ]
     },
     "it": {
       "name": "Chez El",
       "name_alternates": [],
-      "meta_title": "Chez El — Atelier céramique / poterie en Haute-Savoie | Loisirs 74",
-      "meta_description": "Atelier de céramique au centre d'Annecy : initiations au tournage, cours enfants et adultes, accès autonome.",
+      "meta_title": "Chez El — Laboratorio di ceramica / ceramica in Haute-Savoie | Loisirs 74",
+      "meta_description": "Studio di ceramica unico nel cuore di Annecy: corsi al tornio, modellazione, pittura su ceramica e accogliente caffetteria. Workshop, corsi e accesso libero.",
       "hero": {
-        "badge": "Atelier céramique / poterie",
-        "lead": "Atelier de céramique au centre d'Annecy : initiations au tournage, cours enfants et adultes, accès autonome."
+        "badge": "Laboratorio di ceramica / ceramica",
+        "lead": "Uno studio di ceramica di 200 m² nel cuore di Annecy che unisce laboratorio di ceramica, corsi al tornio, modellazione, pittura su ceramica e caffetteria conviviale."
       },
-      "hero_alt": "Chez El, atelier céramique / poterie en Haute-Savoie",
+      "hero_alt": "Chez El, laboratorio di ceramica e ceramica in Haute-Savoie",
       "facts": {
-        "type": "Atelier céramique / poterie",
-        "access": null,
-        "tarif": null,
-        "commune": null,
-        "duration": null,
-        "best_season": null
+        "type": "Laboratorio di ceramica / ceramica",
+        "access": "8 rue Sommeiller, Annecy",
+        "tarif": "A partire da 15 €/ora",
+        "commune": "Annecy",
+        "duration": "Variabile",
+        "best_season": "Tutto l'anno"
       },
       "body": {
-        "what_is": "Chez El est un atelier de céramique à Annecy proposant initiations au tournage, cours pour enfants et adultes et accès autonome — activité créative couverte."
+        "what_is": "<p><strong>Chez El</strong> è molto più di un semplice laboratorio di ceramica: è uno spazio creativo ibrido di 200 m² nel cuore di Annecy, dove la ceramica incontra la convivialità. Fondato da Élodie Loyer dopo un cambio di carriera e un diploma in ceramica, questo luogo unico combina <strong>studio di ceramica, workshop creativi e caffetteria</strong> in un'atmosfera retro-pop minimalista.</p><p>Al <strong>piano terra</strong>, la caffetteria vi accoglie ogni giorno (tranne il martedì) per pause golose: caffè di specialità, biscotti fatti in casa, brunch creativi nel fine settimana dalle 8:30 alle 14:00 e persino una formula che combina brunch e pittura su ceramica. Al <strong>piano superiore</strong>, lo studio di ceramica e floreale offre una gamma di attività per tutti i pubblici—principianti, esperti o professionisti: introduzioni al tornio (2,5 ore), workshop di modellazione, corsi trimestrali (10 sessioni a 590 €), workshop del mercoledì per bambini e accesso libero allo studio (15 €/ora) per chi ha esperienza pregressa. A differenza dei laboratori tradizionali dell'Alta Savoia, Chez El incoraggia la pratica autonoma e offre un allestimento professionale completo con torni da ceramista, strumenti, argilla, ingobbi, smalti e cotture in loco (2 € per 100 g).</p><p>Lo studio si distingue per la sua <strong>accessibilità in sedia a rotelle</strong>, atmosfera LGBTQ+ friendly, servizi igienici gender-neutral e impegno a creare uno spazio sicuro e inclusivo. Durante tutto l'anno, Chez El si anima con eventi stagionali, conferenze e pop-up. Situato a pochi passi dal centro storico, dal Lago di Annecy e dalla stazione ferroviaria, è il luogo perfetto per una pausa creativa al coperto, con qualsiasi tempo.</p>"
       },
-      "activities": [],
-      "practical_info": [],
+      "activities": [
+        {
+          "title": "Introduzione al tornio",
+          "body": "Sessione di 2,5 ore per scoprire il tornio in piccoli gruppi (4-6 persone). Guida personalizzata, tutti i materiali forniti, ritiro dei pezzi dopo la cottura.",
+          "tag": "principiante"
+        },
+        {
+          "title": "Pittura su ceramica",
+          "body": "Dipingi il tuo pezzo (tazza, ciotola, piatto) in un ambiente amichevole. Ampia scelta di forme e colori, adatto a tutte le età.",
+          "tag": "famiglia"
+        },
+        {
+          "title": "Corsi trimestrali",
+          "body": "10 sessioni di 2,5 ore per approfondire tornio, modellazione e decorazione. Gruppi di 4-6 persone, adatti a principianti e avanzati.",
+          "tag": "regolare"
+        },
+        {
+          "title": "Accesso libero allo studio",
+          "body": "Riservato a chi ha completato un workshop di 2 giorni o equivalente. Accesso a studio, torni, strumenti, argilla e smalti. Tariffa oraria, cotture extra.",
+          "tag": "autonomo"
+        },
+        {
+          "title": "Brunch creativo nel weekend",
+          "body": "Sabato e domenica dalle 8:30 alle 14:00: brunch fatto in casa à la carte con prodotti freschi di stagione. Opzione per combinare con sessione di pittura su ceramica.",
+          "tag": "goloso"
+        },
+        {
+          "title": "Caffetteria e pausa creativa",
+          "body": "Caffè di specialità, biscotti, pasticceria e pasti leggeri vegetariani. Aperto tutti i giorni tranne il martedì, nessuna ceramica richiesta.",
+          "tag": "relax"
+        }
+      ],
+      "practical_info": [
+        {
+          "title": "Attrezzatura",
+          "body": "Tutto fornito: torni, strumenti, argilla, ingobbi, smalti. Portate semplicemente un asciugamano e un grembiule (o acquistatelo in loco)."
+        },
+        {
+          "title": "Prenotazione",
+          "body": "Prenotazione online consigliata tramite chez-el.com per tutti i corsi e l'accesso libero. La caffetteria funziona senza prenotazione (tranne pittura su ceramica)."
+        },
+        {
+          "title": "Cotture",
+          "body": "I pezzi vengono cotti in loco dal team. Tariffa: 2 € per 100 g (comprese entrambe le cotture). Ritiro successivo in studio."
+        }
+      ],
       "how_to_get_there": {
-        "car": null,
-        "public_transport": null,
-        "bike": null
+        "car": "Parcheggio pubblico nelle vicinanze (stazione ferroviaria, centro città). Lo studio si trova nella zona pedonale di rue Sommeiller.",
+        "public_transport": "A 5 minuti a piedi dalla stazione ferroviaria di Annecy. Le linee di autobus Sibra servono il centro città.",
+        "bike": "Piste ciclabili fino al centro di Annecy, rastrelliere per bici in strada."
       },
-      "when_to_visit": null,
+      "when_to_visit": "Aperto tutto l'anno. La caffetteria è accessibile dal lunedì alla domenica (chiusa il martedì). Corsi e studio aperto su prenotazione. Brunch disponibile solo nei weekend dalle 8:30 alle 14:00.",
       "events": [],
-      "faq": [],
-      "schema_amenities": []
+      "faq": [
+        {
+          "question": "Ho bisogno di esperienza pregressa in ceramica per partecipare?",
+          "answer": "No, le introduzioni e i corsi trimestrali sono aperti ai principianti assoluti. Solo l'accesso libero allo studio richiede competenze sufficienti (minimo workshop di 2 giorni o equivalente)."
+        },
+        {
+          "question": "Quanto tempo ci vuole per recuperare le mie creazioni?",
+          "answer": "Consentite circa 3-4 settimane tra creazione e ritiro, per asciugatura e due cotture (biscotto e smalto)."
+        },
+        {
+          "question": "Il laboratorio è adatto ai bambini?",
+          "answer": "Sì, Chez El offre workshop per bambini il mercoledì e la pittura su ceramica è accessibile fin da piccoli con supervisione dei genitori."
+        },
+        {
+          "question": "Posso venire solo per la caffetteria, senza fare ceramica?",
+          "answer": "Assolutamente. La caffetteria è aperta a tutti, tutti i giorni tranne il martedì, per caffè, brunch o pasticceria, senza obbligo di partecipare a un workshop."
+        },
+        {
+          "question": "Qual è il momento migliore per visitare?",
+          "answer": "I brunch del weekend (sabato-domenica 8:30-14:00) sono molto popolari. Durante la settimana è più tranquillo. Prenotate online per garantire il vostro posto per corsi e workshop."
+        },
+        {
+          "question": "Lo studio è accessibile in sedia a rotelle?",
+          "answer": "Sì, Chez El dispone di accesso per sedie a rotelle, servizi igienici accessibili e uno spazio progettato per l'inclusione. Contattate il team per domande specifiche."
+        },
+        {
+          "question": "Lo studio può essere privatizzato per un evento?",
+          "answer": "Sì, Chez El offre privatizzazione per compleanni, team-building o eventi privati. Contattate il team tramite il sito per un preventivo personalizzato."
+        },
+        {
+          "question": "C'è un parcheggio nelle vicinanze?",
+          "answer": "Lo studio si trova nella zona pedonale di rue Sommeiller. Diversi parcheggi pubblici sono a 5-10 minuti (stazione ferroviaria, centro città). Trasporti pubblici o bicicletta consigliati."
+        }
+      ],
+      "schema_amenities": [
+        "Accessibile in sedia a rotelle",
+        "Wi-Fi",
+        "Servizi igienici accessibili",
+        "Caffetteria in loco",
+        "Adatto ai bambini"
+      ]
     },
     "es": {
       "name": "Chez El",
       "name_alternates": [],
-      "meta_title": "Chez El — Atelier céramique / poterie en Haute-Savoie | Loisirs 74",
-      "meta_description": "Atelier de céramique au centre d'Annecy : initiations au tournage, cours enfants et adultes, accès autonome.",
+      "meta_title": "Chez El — Taller de cerámica / alfarería en Haute-Savoie | Loisirs 74",
+      "meta_description": "Estudio de cerámica único en el corazón de Annecy: cursos de torno, modelado, pintura sobre cerámica y acogedora cafetería. Talleres, cursos y acceso libre.",
       "hero": {
-        "badge": "Atelier céramique / poterie",
-        "lead": "Atelier de céramique au centre d'Annecy : initiations au tournage, cours enfants et adultes, accès autonome."
+        "badge": "Taller de cerámica / alfarería",
+        "lead": "Un estudio de cerámica de 200 m² en el corazón de Annecy que combina taller de alfarería, cursos de torno, modelado, pintura sobre cerámica y cafetería amigable."
       },
-      "hero_alt": "Chez El, atelier céramique / poterie en Haute-Savoie",
+      "hero_alt": "Chez El, taller de cerámica y alfarería en Haute-Savoie",
       "facts": {
-        "type": "Atelier céramique / poterie",
-        "access": null,
-        "tarif": null,
-        "commune": null,
-        "duration": null,
-        "best_season": null
+        "type": "Taller de cerámica / alfarería",
+        "access": "8 rue Sommeiller, Annecy",
+        "tarif": "Desde 15 €/hora",
+        "commune": "Annecy",
+        "duration": "Variable",
+        "best_season": "Todo el año"
       },
       "body": {
-        "what_is": "Chez El est un atelier de céramique à Annecy proposant initiations au tournage, cours pour enfants et adultes et accès autonome — activité créative couverte."
+        "what_is": "<p><strong>Chez El</strong> es mucho más que un taller de cerámica: es un espacio creativo híbrido de 200 m² en el corazón de Annecy, donde la cerámica se encuentra con la convivencia. Fundado por Élodie Loyer tras un cambio de carrera y un diploma en cerámica, este lugar único combina <strong>estudio de cerámica, talleres creativos y cafetería</strong> en una atmósfera retro-pop minimalista.</p><p>En la <strong>planta baja</strong>, la cafetería le da la bienvenida todos los días (excepto los martes) para pausas sabrosas: cafés especiales, galletas caseras, brunchs creativos los fines de semana de 8:30 a 14:00 e incluso una fórmula que combina brunch y pintura sobre cerámica. En el <strong>piso superior</strong>, el estudio de cerámica y floral ofrece una variedad de actividades para todos los públicos—principiantes, experimentados o profesionales: introducciones al torno (2,5 horas), talleres de modelado, cursos trimestrales (10 sesiones por 590 €), talleres de los miércoles para niños y acceso libre al estudio (15 €/hora) para quienes tienen experiencia previa. A diferencia de los talleres tradicionales de Haute-Savoie, Chez El fomenta la práctica autónoma y ofrece una configuración profesional completa con tornos de alfarero, herramientas, arcilla, engobes, esmaltes y cocciones in situ (2 € por 100 g).</p><p>El estudio se destaca por su <strong>accesibilidad en silla de ruedas</strong>, atmósfera LGBTQ+ friendly, baños de género neutro y compromiso de crear un espacio seguro e inclusivo. Durante todo el año, Chez El cobra vida con eventos de temporada, conferencias y pop-ups. Ubicado a pasos del casco antiguo, del lago de Annecy y de la estación de tren, es el lugar perfecto para un descanso creativo bajo techo, con cualquier clima.</p>"
       },
-      "activities": [],
-      "practical_info": [],
+      "activities": [
+        {
+          "title": "Introducción al torno",
+          "body": "Sesión de 2,5 horas para descubrir el torno en grupos pequeños (4-6 personas). Orientación personalizada, todos los materiales incluidos, recogida de piezas después de la cocción.",
+          "tag": "principiante"
+        },
+        {
+          "title": "Pintura sobre cerámica",
+          "body": "Pinta tu propia pieza (taza, cuenco, plato) en un ambiente amigable. Amplia variedad de formas y colores, adecuado para todas las edades.",
+          "tag": "familia"
+        },
+        {
+          "title": "Cursos trimestrales",
+          "body": "10 sesiones de 2,5 horas para profundizar en torno, modelado y decoración. Grupos de 4-6 personas, adecuado para principiantes y avanzados.",
+          "tag": "regular"
+        },
+        {
+          "title": "Acceso libre al estudio",
+          "body": "Reservado para quienes hayan completado un taller de 2 días o equivalente. Acceso a estudio, tornos, herramientas, arcilla y esmaltes. Tarifa por hora, cocciones extra.",
+          "tag": "autónomo"
+        },
+        {
+          "title": "Brunch creativo de fin de semana",
+          "body": "Sábado y domingo de 8:30 a 14:00: brunch casero a la carta con productos frescos de temporada. Opción de combinar con sesión de pintura sobre cerámica.",
+          "tag": "sabroso"
+        },
+        {
+          "title": "Cafetería y pausa creativa",
+          "body": "Café de especialidad, galletas, pastelería y comidas ligeras vegetarianas. Abierto todos los días excepto martes, no se requiere cerámica.",
+          "tag": "relax"
+        }
+      ],
+      "practical_info": [
+        {
+          "title": "Equipo",
+          "body": "Todo incluido: tornos, herramientas, arcilla, engobes, esmaltes. Simplemente traiga una toalla y un delantal (o cómprelo en el lugar)."
+        },
+        {
+          "title": "Reserva",
+          "body": "Reserva en línea recomendada a través de chez-el.com para todos los cursos y acceso libre. La cafetería funciona sin reserva (excepto pintura sobre cerámica)."
+        },
+        {
+          "title": "Cocciones",
+          "body": "Las piezas se cuecen en el lugar por el equipo. Tarifa: 2 € por 100 g (incluidas ambas cocciones). Recogida posterior en el estudio."
+        }
+      ],
       "how_to_get_there": {
-        "car": null,
-        "public_transport": null,
-        "bike": null
+        "car": "Estacionamiento público cercano (estación de tren, centro de la ciudad). El estudio está ubicado en la zona peatonal de rue Sommeiller.",
+        "public_transport": "A 5 minutos a pie de la estación de tren de Annecy. Las líneas de autobús Sibra sirven al centro de la ciudad.",
+        "bike": "Carriles para bicicletas hasta el centro de Annecy, soportes para bicicletas en la calle."
       },
-      "when_to_visit": null,
+      "when_to_visit": "Abierto todo el año. La cafetería es accesible de lunes a domingo (cerrado los martes). Clases y estudio abierto con reserva. Brunch disponible solo los fines de semana de 8:30 a 14:00.",
       "events": [],
-      "faq": [],
-      "schema_amenities": []
+      "faq": [
+        {
+          "question": "¿Necesito experiencia previa en cerámica para participar?",
+          "answer": "No, las introducciones y cursos trimestrales están abiertos a principiantes absolutos. Solo el acceso libre al estudio requiere habilidades suficientes (mínimo taller de 2 días o equivalente)."
+        },
+        {
+          "question": "¿Cuánto tiempo tarda en recuperar mis creaciones?",
+          "answer": "Permita aproximadamente 3-4 semanas entre creación y recogida, para secado y dos cocciones (bizcocho y esmalte)."
+        },
+        {
+          "question": "¿El taller es adecuado para niños?",
+          "answer": "Sí, Chez El ofrece talleres para niños los miércoles, y la pintura sobre cerámica es accesible desde pequeños con supervisión de los padres."
+        },
+        {
+          "question": "¿Puedo visitar solo para la cafetería, sin hacer cerámica?",
+          "answer": "Absolutamente. La cafetería está abierta a todos, todos los días excepto martes, para café, brunch o pastelería, sin obligación de participar en un taller."
+        },
+        {
+          "question": "¿Cuál es el mejor momento para visitar?",
+          "answer": "Los brunchs de fin de semana (sábado-domingo 8:30-14:00) son muy populares. Entre semana es más tranquilo. Reserve en línea para garantizar su lugar en cursos y talleres."
+        },
+        {
+          "question": "¿El estudio es accesible en silla de ruedas?",
+          "answer": "Sí, Chez El tiene acceso para sillas de ruedas, baños accesibles y un espacio diseñado para la inclusión. Contacte al equipo para preguntas específicas."
+        },
+        {
+          "question": "¿Se puede privatizar el estudio para un evento?",
+          "answer": "Sí, Chez El ofrece privatización para cumpleaños, team-buildings o eventos privados. Contacte al equipo a través del sitio web para un presupuesto personalizado."
+        },
+        {
+          "question": "¿Hay estacionamiento cerca?",
+          "answer": "El estudio está en la zona peatonal de rue Sommeiller. Varios estacionamientos públicos están a 5-10 minutos (estación de tren, centro de la ciudad). Transporte público o bicicleta recomendado."
+        }
+      ],
+      "schema_amenities": [
+        "Accesible en silla de ruedas",
+        "Wi-Fi",
+        "Baños accesibles",
+        "Cafetería en el lugar",
+        "Apto para niños"
+      ]
+    },
+    "nl": {
+      "name": "Chez El",
+      "name_alternates": [],
+      "meta_title": "Chez El — Keramiek- / aardewerkatelier in Haute-Savoie | Loisirs 74",
+      "meta_description": "Uniek keramiekstudio in het hart van Annecy: draaicursussen, handopbouw, keramiekschilderen en gezellig café. Workshops, cursussen en open toegang.",
+      "hero": {
+        "badge": "Keramiek- / aardewerkatelier",
+        "lead": "Een 200 m² keramiekstudio in het hart van Annecy die pottenbakkersatelier, draaicursussen, handopbouw, keramiekschilderen en een vriendelijk café combineert."
+      },
+      "hero_alt": "Chez El, keramiek- en aardewerkatelier in Haute-Savoie",
+      "facts": {
+        "type": "Keramiek- / aardewerkatelier",
+        "access": "8 rue Sommeiller, Annecy",
+        "tarif": "Vanaf €15/uur",
+        "commune": "Annecy",
+        "duration": "Variabel",
+        "best_season": "Het hele jaar"
+      },
+      "body": {
+        "what_is": "<p><strong>Chez El</strong> is veel meer dan een pottenbakkersatelier: het is een 200 m² hybride creatieve ruimte in het hart van Annecy, waar keramiek gezelligheid ontmoet. Opgericht door Élodie Loyer na een carrièreswitch en een keramiekdiploma, combineert deze unieke plek <strong>keramiekstudio, creatieve workshops en café</strong> in een retro-pop minimalistische sfeer.</p><p>Op de <strong>begane grond</strong> verwelkomt het café u dagelijks (behalve op dinsdag) voor lekkere pauzes: specialiteitenkoffie, zelfgemaakte koekjes, creatieve brunches in het weekend van 8:30 tot 14:00 uur en zelfs een formule die brunch en keramiekschilderen combineert. <strong>Boven</strong> biedt de keramiek- en bloemenstudio een scala aan activiteiten voor alle doelgroepen—beginners, ervaren of professionals: introducties in draaien (2,5 uur), handopbouwworkshops, kwartaalcursussen (10 sessies voor €590), woensdagworkshops voor kinderen en open studio-toegang (€15/uur) voor mensen met eerdere ervaring. In tegenstelling tot traditionele Haute-Savoie-ateliers moedigt Chez El autonome praktijk aan en biedt een complete professionele opzet met pottenbakkerswielen, gereedschap, klei, engobes, glazuren en ter plaatse bakken (€2 per 100 g).</p><p>De studio onderscheidt zich door zijn <strong>rolstoeltoegankelijkheid</strong>, LGBTQ+ vriendelijke sfeer, genderneutrale toiletten en de toewijding om een veilige en inclusieve ruimte te creëren. Het hele jaar door komt Chez El tot leven met seizoensgebonden evenementen, conferenties en pop-ups. Gelegen op steenworp afstand van de oude stad, het meer van Annecy en het treinstation, is het de perfecte plek voor een creatieve pauze binnenshuis, bij elk weer.</p>"
+      },
+      "activities": [
+        {
+          "title": "Introductie draaien",
+          "body": "2,5 uur durende sessie om draaien te ontdekken in kleine groepen (4-6 personen). Persoonlijke begeleiding, alle materialen aanwezig, ophalen van stukken na het bakken.",
+          "tag": "beginner"
+        },
+        {
+          "title": "Keramiekschilderen",
+          "body": "Schilder je eigen stuk (mok, kom, bord) in een vriendelijke omgeving. Ruime keuze aan vormen en kleuren, geschikt voor alle leeftijden.",
+          "tag": "gezin"
+        },
+        {
+          "title": "Kwartaalcursussen",
+          "body": "10 sessies van 2,5 uur om draaien, handopbouw en decoreren te verdiepen. Groepen van 4-6 personen, geschikt voor beginners en gevorderden.",
+          "tag": "regelmatig"
+        },
+        {
+          "title": "Open studio-toegang",
+          "body": "Gereserveerd voor mensen die een 2-daagse workshop of equivalent hebben voltooid. Toegang tot studio, wielen, gereedschap, klei en glazuren. Uurtarief, bakken extra.",
+          "tag": "autonoom"
+        },
+        {
+          "title": "Creatieve weekendbrunch",
+          "body": "Zaterdag en zondag van 8:30 tot 14:00 uur: zelfgemaakte brunch à la carte met verse seizoensproducten. Optie om te combineren met keramiekschildersessie.",
+          "tag": "lekker"
+        },
+        {
+          "title": "Café & creatieve pauze",
+          "body": "Specialiteitenkoffie, koekjes, gebak en vegetarische lichte maaltijden. Dagelijks geopend behalve dinsdag, geen keramiek vereist.",
+          "tag": "ontspanning"
+        }
+      ],
+      "practical_info": [
+        {
+          "title": "Uitrusting",
+          "body": "Alles aanwezig: wielen, gereedschap, klei, engobes, glazuren. Neem gewoon een handdoek en een schort mee (of koop ter plaatse)."
+        },
+        {
+          "title": "Reservering",
+          "body": "Online reservering aanbevolen via chez-el.com voor alle cursussen en open toegang. Het café werkt zonder reservering (behalve keramiekschilderen)."
+        },
+        {
+          "title": "Bakken",
+          "body": "Stukken worden ter plaatse gebakken door het team. Tarief: €2 per 100 g (beide baksels inbegrepen). Later ophalen in de studio."
+        }
+      ],
+      "how_to_get_there": {
+        "car": "Openbare parkeerplaatsen in de buurt (treinstation, stadscentrum). De studio bevindt zich in de voetgangerszone rue Sommeiller.",
+        "public_transport": "5 minuten lopen van het treinstation van Annecy. Sibra buslijnen bedienen het stadscentrum.",
+        "bike": "Fietspaden naar het centrum van Annecy, fietsenrekken op straat."
+      },
+      "when_to_visit": "Het hele jaar geopend. Het café is toegankelijk van maandag tot zondag (dinsdag gesloten). Lessen en open studio op reservering. Brunch alleen in het weekend van 8:30 tot 14:00 uur.",
+      "events": [],
+      "faq": [
+        {
+          "question": "Heb ik eerdere keramiekervaring nodig om deel te nemen?",
+          "answer": "Nee, introducties en kwartaalcursussen staan open voor absolute beginners. Alleen open studio-toegang vereist voldoende vaardigheden (minimaal 2-daagse workshop of equivalent)."
+        },
+        {
+          "question": "Hoe lang duurt het voordat ik mijn creaties terugkrijg?",
+          "answer": "Reken op ongeveer 3-4 weken tussen creatie en ophalen, voor drogen en twee baksels (biscuit en glazuur)."
+        },
+        {
+          "question": "Is het atelier geschikt voor kinderen?",
+          "answer": "Ja, Chez El biedt woensdagworkshops voor kinderen aan, en keramiekschilderen is vanaf jonge leeftijd toegankelijk met ouderlijk toezicht."
+        },
+        {
+          "question": "Kan ik alleen voor het café komen, zonder keramiek te maken?",
+          "answer": "Absoluut. Het café is voor iedereen open, dagelijks behalve dinsdag, voor koffie, brunch of gebak, zonder verplichting om deel te nemen aan een workshop."
+        },
+        {
+          "question": "Wat is de beste tijd om te bezoeken?",
+          "answer": "Weekendbrunches (zaterdag-zondag 8:30-14:00 uur) zijn erg populair. Doordeweeks is het rustiger. Boek online om uw plek voor cursussen en workshops te garanderen."
+        },
+        {
+          "question": "Is de studio rolstoeltoegankelijk?",
+          "answer": "Ja, Chez El heeft rolstoeltoegang, toegankelijke toiletten en een ruimte ontworpen voor inclusie. Neem contact op met het team voor specifieke vragen."
+        },
+        {
+          "question": "Kan de studio worden geprivatiseerd voor een evenement?",
+          "answer": "Ja, Chez El biedt privatisering aan voor verjaardagen, teambuildings of privé-evenementen. Neem contact op met het team via de website voor een gepersonaliseerde offerte."
+        },
+        {
+          "question": "Is er parkeren in de buurt?",
+          "answer": "De studio bevindt zich in de voetgangerszone rue Sommeiller. Verschillende openbare parkeerplaatsen zijn 5-10 minuten verwijderd (treinstation, stadscentrum). Openbaar vervoer of fiets aanbevolen."
+        }
+      ],
+      "schema_amenities": [
+        "Rolstoeltoegankelijk",
+        "Wi-Fi",
+        "Toegankelijke toiletten",
+        "Café ter plaatse",
+        "Kindvriendelijk"
+      ]
     }
   },
   "featured_businesses": [],
@@ -215,13 +786,13 @@
     "rating": 4.9,
     "rating_count": 368,
     "hours": [
-      "lundi: 10:00 – 19:00",
+      "lundi: 10:00 – 19:00",
       "mardi: Fermé",
-      "mercredi: 10:00 – 13:00, 14:00 – 19:00",
-      "jeudi: 10:00 – 13:00, 14:00 – 19:00",
-      "vendredi: 10:00 – 19:00",
-      "samedi: 10:00 – 19:00",
-      "dimanche: 10:00 – 17:00"
+      "mercredi: 10:00 – 13:00, 14:00 – 19:00",
+      "jeudi: 10:00 – 13:00, 14:00 – 19:00",
+      "vendredi: 10:00 – 19:00",
+      "samedi: 10:00 – 19:00",
+      "dimanche: 10:00 – 17:00"
     ],
     "google_lat": 45.9015943,
     "google_lng": 6.1222768,
@@ -247,13 +818,13 @@
     },
     "hours": {
       "value": [
-        "lundi: 10:00 – 19:00",
+        "lundi: 10:00 – 19:00",
         "mardi: Fermé",
-        "mercredi: 10:00 – 13:00, 14:00 – 19:00",
-        "jeudi: 10:00 – 13:00, 14:00 – 19:00",
-        "vendredi: 10:00 – 19:00",
-        "samedi: 10:00 – 19:00",
-        "dimanche: 10:00 – 17:00"
+        "mercredi: 10:00 – 13:00, 14:00 – 19:00",
+        "jeudi: 10:00 – 13:00, 14:00 – 19:00",
+        "vendredi: 10:00 – 19:00",
+        "samedi: 10:00 – 19:00",
+        "dimanche: 10:00 – 17:00"
       ],
       "source": "google",
       "verified": "2026-06-05"

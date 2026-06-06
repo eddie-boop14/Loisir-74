@@ -4,15 +4,30 @@
   "commune": "Magland",
   "postal_code": "74300",
   "department": "Haute-Savoie",
-  "latitude": 46.0119,
-  "longitude": 6.6383,
+  "latitude": 46.042281,
+  "longitude": 6.617004,
   "hero_image": "/generique-domaine.jpg",
   "hero_credit": null,
   "official_site_url": null,
-  "price_from": null,
+  "price_from": 54,
   "price_currency": "EUR",
-  "price_tiers": [],
-  "sources": [],
+  "price_tiers": [
+    {
+      "label": "Adulte",
+      "amount": 54,
+      "currency": "EUR"
+    },
+    {
+      "label": "Enfant (-13 ans)",
+      "amount": 49,
+      "currency": "EUR"
+    }
+  ],
+  "sources": [
+    "https://fr.wikipedia.org/wiki/Grotte_de_Balme",
+    "https://www.guidesmontagnes.com/acitivities/speleologie-demi-journee-2",
+    "https://www.sports-nature.net/en/Activite/266"
+  ],
   "verify_flags": [
     "GPS non vérifié",
     "tarifs non vérifiés",
@@ -30,14 +45,29 @@
   "research_log": [
     "Créé 3 juin 2026 — cavité d'initiation spéléo. Pas de site propre (encadrement par divers opérateurs). Image/GPS à confirmer."
   ],
-  "partners": [],
+  "partners": [
+    {
+      "tier": "recommended",
+      "name": "Café de Balme",
+      "type": "restaurant",
+      "description": "Restaurant ouvert pour le déjeuner, proposant une cuisine française de qualité, situé sur la route des Grottes de Balme.",
+      "url": "http://www.cafedebalme.com/"
+    },
+    {
+      "tier": "recommended",
+      "name": "Le Relais du Mont Blanc",
+      "type": "hotel-restaurant",
+      "description": "Hôtel-restaurant familial à Magland proposant 16 chambres et une cuisine du terroir, à 5 km de la grotte.",
+      "url": "https://www.lerelaisdumontblanc.fr/"
+    }
+  ],
   "gallery_photos": [],
   "i18n": {
     "fr": {
       "name": "Grotte de Balme (spéléologie)",
       "name_alternates": [],
       "meta_title": "Grotte de Balme (spéléologie) — Spéléologie en Haute-Savoie | Loisirs 74",
-      "meta_description": "Grande grotte d'initiation à la spéléologie (plus de 5 km de galeries) près de Magland, encadrée par des guides.",
+      "meta_description": "Explorez plus de 5 km de galeries souterraines dans la Grotte de Balme près de Magland : parcours d'initiation encadré, stalactites, rappels et découverte toute l'année.",
       "hero": {
         "badge": "Spéléologie",
         "lead": "Grande grotte d'initiation à la spéléologie (plus de 5 km de galeries) près de Magland."
@@ -46,244 +76,535 @@
       "facts": {
         "type": "Spéléologie",
         "access": "Sur réservation — encadré",
-        "tarif": null,
-        "commune": null,
+        "tarif": "À partir de 49 €",
+        "commune": "Magland",
         "duration": "Demi-journée",
         "best_season": "Toute l'année"
       },
       "body": {
-        "what_is": "La Grotte de Balme, à Magland, compte plus de 5 km de galeries et constitue l'un des sites d'initiation à la spéléologie de la vallée de l'Arve. On y accède après une courte marche d'approche, puis on progresse dans le réseau avec un encadrement diplômé : ramping, désescalades, salles concrétionnées. L'activité se pratique toute l'année car la température souterraine reste stable ; éclairage, casque et combinaison sont fournis par l'encadrant."
+        "what_is": "<p>La <strong>Grotte de Balme</strong>, à Magland, déploie plus de 5 kilomètres de galeries et constitue l'un des sites d'initiation à la spéléologie les plus prisés de la vallée de l'Arve. Visible depuis le fond de la vallée, l'entrée principale s'ouvre à 725 mètres d'altitude dans une imposante paroi de calcaire urgonien.</p><p>On y accède après une courte marche d'approche de 5 à 15 minutes depuis le parking de la route de Flaine. <strong>Le parcours souterrain alterne grandes galeries horizontales, passages aquatiques, concrétions spectaculaires et petites descentes en rappel</strong> (selon le circuit choisi). Les guides diplômés adaptent l'itinéraire au niveau du groupe : parcours famille dès 6 ans, découverte sportive à partir de 12 ans, ou traversée technique avec sortie par la grotte des Comitards.</p><p>Température constante de 10 à 12°C toute l'année, aucune crue possible : <strong>la Grotte de Balme se pratique quelle que soit la météo extérieure</strong>. Le matériel (combinaison, casque à éclairage LED, baudrier si rappel) est fourni par l'encadrant. Cette cavité historique a fasciné Horace-Bénédict de Saussure en 1764 et Goethe en 1779 ; des fouilles archéologiques y ont révélé des traces d'occupation du Néolithique à l'époque romaine.</p><p>Différents opérateurs — Bureau des Guides de Samoëns, Spéléo Canyon 74, guides indépendants — proposent des sorties d'1h30 à 3h30 sous terre. Un lieu idéal pour découvrir le monde souterrain des Alpes sans difficulté technique excessive.</p>"
       },
       "activities": [
         {
           "title": "Exploration encadrée",
-          "body": "Progression dans le réseau avec un moniteur : ramping, désescalades, salles concrétionnées."
+          "body": "Progression dans le réseau avec un moniteur diplômé : ramping, désescalades, salles concrétionnées, passages aquatiques."
+        },
+        {
+          "title": "Descentes en rappel",
+          "body": "Selon le parcours choisi, initiation à la descente en rappel sur 12 à 60 mètres (facultatif sur certains circuits)."
+        },
+        {
+          "title": "Galeries spectaculaires",
+          "body": "Stalactites, stalagmites, gours (bassins en cascade), rivière souterraine et signatures historiques du XVIIIe siècle."
         },
         {
           "title": "Toute l'année",
-          "body": "La température souterraine stable permet l'activité quelle que soit la météo extérieure."
+          "body": "Température souterraine stable (10–12°C) permettant l'activité quelle que soit la météo extérieure, sans risque de crue."
+        },
+        {
+          "title": "Parcours modulables",
+          "body": "Circuits famille (dès 6 ans), découverte sportive (12 ans), traversée technique avec plusieurs sorties possibles."
+        },
+        {
+          "title": "Patrimoine historique",
+          "body": "Grotte visitée par de Saussure (1764) et Goethe (1779), vestiges archéologiques du Néolithique à l'époque romaine."
         }
       ],
       "practical_info": [],
       "how_to_get_there": {
-        "car": null,
-        "public_transport": null,
+        "car": "Depuis Cluses ou Sallanches, D1205 puis D6 direction Flaine. Parking avant le pont, route de Flaine à Magland. L'entrée de la grotte se situe à 5–15 min de marche.",
+        "public_transport": "Gare SNCF de Magland à 2 km ; se renseigner auprès de l'opérateur pour un point de rendez-vous précis.",
         "bike": null
       },
-      "when_to_visit": "Praticable toute l'année grâce à la température souterraine stable. Sur réservation, avec encadrement diplômé.",
+      "when_to_visit": "Praticable toute l'année grâce à la température souterraine stable et à l'absence de risque de crue. Sur réservation, avec encadrement diplômé. Saison principale de mai à octobre.",
       "events": [],
       "faq": [
         {
           "q": "Est-ce claustrophobe ?",
-          "a": "Certains passages sont étroits ; signalez toute appréhension au guide, qui adapte le parcours."
+          "a": "Certains passages sont étroits ; signalez toute appréhension au guide, qui adapte le parcours ou propose des variantes plus aérées."
         },
         {
           "q": "À partir de quel âge ?",
-          "a": "Des parcours existent pour les enfants accompagnés ; confirmez l'âge minimal auprès de l'encadrant."
+          "a": "Parcours famille dès 6 ans avec parents ; découverte sportive à partir de 12 ans. Confirmez l'âge minimal auprès de votre opérateur."
+        },
+        {
+          "q": "Faut-il être sportif ?",
+          "a": "Une condition physique de base suffit pour les parcours découverte. Les circuits techniques demandent plus d'aisance et d'endurance."
+        },
+        {
+          "q": "Que faut-il prévoir ?",
+          "a": "Vêtements longs chauds (dessous de la combinaison), chaussures montantes ou bottes, vêtements de rechange. Le matériel technique est fourni."
+        },
+        {
+          "q": "Peut-on se mouiller ?",
+          "a": "Oui, certains parcours traversent des zones aquatiques (jusqu'aux genoux). Prévoyez des chaussures adaptées et des affaires sèches pour après."
+        },
+        {
+          "q": "Combien de temps dure la sortie ?",
+          "a": "Comptez 2h30 à 3h30 au total : équipement, marche d'approche (10–15 min), exploration souterraine (1h30–2h30) et retour."
+        },
+        {
+          "q": "Y a-t-il un parking ?",
+          "a": "Oui, parking gratuit avant le pont sur la route de Flaine à Magland. L'entrée de la grotte est accessible à pied en 5 à 15 minutes."
+        },
+        {
+          "q": "Peut-on visiter seul ?",
+          "a": "Non, l'activité spéléologie nécessite un encadrement diplômé pour des raisons de sécurité et d'orientation dans le réseau souterrain."
         }
       ],
       "schema_amenities": []
     },
     "en": {
-      "name": "Grotte de Balme (spéléologie)",
+      "name": "Balme Cave (caving)",
       "name_alternates": [],
-      "meta_title": "Grotte de Balme (spéléologie) — Spéléologie en Haute-Savoie | Loisirs 74",
-      "meta_description": "Grande grotte d'initiation à la spéléologie (plus de 5 km de galeries) près de Magland, encadrée par des guides.",
+      "meta_title": "Balme Cave (caving) — Caving in Haute-Savoie | Loisirs 74",
+      "meta_description": "Explore over 5 km of underground galleries in Balme Cave near Magland: guided beginner routes, stalactites, abseils and year-round discovery.",
       "hero": {
         "badge": "Caving",
         "lead": "A large beginner caving cave (over 5 km of galleries) near Magland."
       },
-      "hero_alt": "Grotte de Balme (spéléologie), spéléologie en Haute-Savoie",
+      "hero_alt": "Balme Cave (caving), caving in Haute-Savoie",
       "facts": {
         "type": "Caving",
         "access": "By booking — guided",
-        "tarif": null,
-        "commune": null,
+        "tarif": "From €49",
+        "commune": "Magland",
         "duration": "Half day",
         "best_season": "Year-round"
       },
       "body": {
-        "what_is": "The Grotte de Balme at Magland has over 5 km of galleries and is one of the Arve valley's introductory caving sites. Reached after a short approach walk, the network is explored with a qualified guide: crawling, down-climbs and concretion chambers. It runs year-round as the underground temperature stays stable; lighting, helmet and oversuit are provided by the guide."
+        "what_is": "<p><strong>Balme Cave</strong>, in Magland, unfolds over 5 kilometers of galleries and is one of the most popular caving initiation sites in the Arve valley. Visible from the valley floor, the main entrance opens at 725 meters altitude in an imposing Urgonian limestone cliff.</p><p>It is reached after a short 5 to 15-minute approach walk from the Flaine road car park. <strong>The underground route alternates large horizontal galleries, aquatic passages, spectacular concretions and small abseils</strong> (depending on the chosen circuit). Qualified guides adapt the route to the group's level: family course from 6 years, sporty discovery from 12 years, or technical crossing with exit via the Comitards cave.</p><p>Constant temperature of 10 to 12°C all year round, no flood risk: <strong>Balme Cave can be practiced whatever the outside weather</strong>. Equipment (oversuit, LED-lit helmet, harness if abseiling) is provided by the guide. This historic cave fascinated Horace-Bénédict de Saussure in 1764 and Goethe in 1779; archaeological excavations have revealed traces of occupation from the Neolithic to Roman times.</p><p>Various operators — Samoëns Guides Bureau, Spéléo Canyon 74, independent guides — offer outings from 1h30 to 3h30 underground. An ideal place to discover the underground world of the Alps without excessive technical difficulty.</p>"
       },
       "activities": [
         {
           "title": "Guided exploration",
-          "body": "Moving through the network with an instructor: crawling, down-climbs, concretion chambers."
+          "body": "Moving through the network with a qualified instructor: crawling, down-climbs, concretion chambers, aquatic passages."
+        },
+        {
+          "title": "Abseiling descents",
+          "body": "Depending on the chosen route, introduction to abseiling from 12 to 60 meters (optional on some circuits)."
+        },
+        {
+          "title": "Spectacular galleries",
+          "body": "Stalactites, stalagmites, gours (cascading pools), underground river and historic 18th-century signatures."
         },
         {
           "title": "Year-round",
-          "body": "Stable underground temperature allows the activity in any outside weather."
+          "body": "Stable underground temperature (10–12°C) allowing the activity whatever the outside weather, without flood risk."
+        },
+        {
+          "title": "Modular routes",
+          "body": "Family circuits (from 6 years), sporty discovery (12 years), technical crossing with several possible exits."
+        },
+        {
+          "title": "Historical heritage",
+          "body": "Cave visited by de Saussure (1764) and Goethe (1779), archaeological remains from Neolithic to Roman times."
         }
       ],
       "practical_info": [],
       "how_to_get_there": {
-        "car": null,
-        "public_transport": null,
+        "car": "From Cluses or Sallanches, D1205 then D6 direction Flaine. Car park before the bridge, route de Flaine in Magland. The cave entrance is 5–15 min walk.",
+        "public_transport": "Magland SNCF station 2 km away; check with your operator for precise meeting point.",
         "bike": null
       },
-      "when_to_visit": "Year-round thanks to stable underground temperature. By booking, with a qualified guide.",
+      "when_to_visit": "Year-round thanks to stable underground temperature and no flood risk. By booking, with qualified guide. Main season May to October.",
       "events": [],
       "faq": [
         {
           "q": "Is it claustrophobic?",
-          "a": "Some passages are narrow; tell the guide of any concern and the route is adapted."
+          "a": "Some passages are narrow; tell the guide of any concern and the route is adapted or more open alternatives offered."
         },
         {
           "q": "Minimum age?",
-          "a": "Routes exist for accompanied children; confirm the minimum age with the guide."
+          "a": "Family routes from 6 years with parents; sporty discovery from 12 years. Confirm minimum age with your operator."
+        },
+        {
+          "q": "Do you need to be fit?",
+          "a": "Basic fitness is enough for discovery routes. Technical circuits require more agility and stamina."
+        },
+        {
+          "q": "What should I bring?",
+          "a": "Long warm clothes (under the oversuit), hiking boots or wellies, spare dry clothes. Technical equipment is provided."
+        },
+        {
+          "q": "Will I get wet?",
+          "a": "Yes, some routes cross aquatic zones (up to knees). Bring suitable footwear and dry clothes for afterwards."
+        },
+        {
+          "q": "How long is the outing?",
+          "a": "Allow 2h30 to 3h30 total: equipment, approach walk (10–15 min), underground exploration (1h30–2h30) and return."
+        },
+        {
+          "q": "Is there parking?",
+          "a": "Yes, free car park before the bridge on route de Flaine in Magland. Cave entrance is a 5 to 15-minute walk."
+        },
+        {
+          "q": "Can I visit alone?",
+          "a": "No, caving requires a qualified guide for safety and orientation in the underground network."
         }
       ],
       "schema_amenities": []
     },
     "de": {
-      "name": "Grotte de Balme (spéléologie)",
+      "name": "Grotte de Balme (Höhlenforschung)",
       "name_alternates": [],
-      "meta_title": "Grotte de Balme (spéléologie) — Spéléologie en Haute-Savoie | Loisirs 74",
-      "meta_description": "Grande grotte d'initiation à la spéléologie (plus de 5 km de galeries) près de Magland, encadrée par des guides.",
+      "meta_title": "Grotte de Balme (Höhlenforschung) — Höhlenforschung in Haute-Savoie | Loisirs 74",
+      "meta_description": "Erkunden Sie über 5 km unterirdische Gänge in der Grotte de Balme bei Magland: geführte Anfängerrouten, Stalaktiten, Abseilstellen und ganzjährige Entdeckungen.",
       "hero": {
         "badge": "Höhlenforschung",
         "lead": "Große Einsteiger-Höhle (über 5 km Gänge) bei Magland."
       },
-      "hero_alt": "Grotte de Balme (spéléologie), spéléologie en Haute-Savoie",
+      "hero_alt": "Grotte de Balme (Höhlenforschung), Höhlenforschung in Haute-Savoie",
       "facts": {
         "type": "Höhlenforschung",
         "access": "Nach Reservierung — geführt",
-        "tarif": null,
-        "commune": null,
+        "tarif": "Ab 49 €",
+        "commune": "Magland",
         "duration": "Halber Tag",
         "best_season": "Ganzjährig"
       },
       "body": {
-        "what_is": "Die Grotte de Balme bei Magland hat über 5 km Gänge und ist einer der Einsteiger-Höhlenorte im Arve-Tal. Nach kurzem Zustieg wird das Netz mit diplomiertem Guide erkundet: Kriechen, Abklettern, Tropfsteinhallen. Ganzjährig möglich, da die Temperatur konstant bleibt; Licht, Helm und Overall werden gestellt."
+        "what_is": "<p>Die <strong>Grotte de Balme</strong> bei Magland erstreckt sich über 5 Kilometer Gänge und ist einer der beliebtesten Höhleneinsteiger-Orte im Arve-Tal. Der Haupteingang, vom Talboden aus sichtbar, öffnet sich auf 725 Metern Höhe in einer imposanten Urgon-Kalksteinwand.</p><p>Man erreicht ihn nach einem kurzen 5- bis 15-minütigen Zustieg vom Parkplatz an der Flaine-Straße. <strong>Die unterirdische Route wechselt zwischen großen horizontalen Galerien, Wasserpassagen, spektakulären Konkretionen und kleinen Abseilstellen</strong> (je nach gewählter Route). Diplomierte Guides passen die Strecke dem Gruppenniveau an: Familienparcours ab 6 Jahren, sportliche Entdeckung ab 12 Jahren oder technische Durchquerung mit Ausgang über die Comitards-Höhle.</p><p>Konstante Temperatur von 10 bis 12°C das ganze Jahr, kein Hochwasserrisiko: <strong>Die Grotte de Balme ist bei jedem Außenwetter begehbar</strong>. Ausrüstung (Overall, LED-Helm, Gurt bei Abseilstellen) wird vom Guide gestellt. Diese historische Höhle faszinierte Horace-Bénédict de Saussure 1764 und Goethe 1779; archäologische Ausgrabungen zeigten Spuren von Besiedlung vom Neolithikum bis zur Römerzeit.</p><p>Verschiedene Anbieter — Bureau des Guides de Samoëns, Spéléo Canyon 74, unabhängige Guides — bieten Touren von 1h30 bis 3h30 unter der Erde. Ein idealer Ort, die unterirdische Welt der Alpen ohne übermäßige technische Schwierigkeit zu entdecken.</p>"
       },
       "activities": [
         {
           "title": "Geführte Erkundung",
-          "body": "Fortbewegung im Netz mit Guide: Kriechen, Abklettern, Tropfsteinhallen."
+          "body": "Fortbewegung im Netz mit diplomiertem Guide: Kriechen, Abklettern, Tropfsteinhallen, Wasserpassagen."
+        },
+        {
+          "title": "Abseilabstiege",
+          "body": "Je nach Route, Einführung ins Abseilen von 12 bis 60 Metern (fakultativ bei manchen Strecken)."
+        },
+        {
+          "title": "Spektakuläre Galerien",
+          "body": "Stalaktiten, Stalagmiten, Gours (kaskadierende Becken), unterirdischer Fluss und historische Signaturen aus dem 18. Jh."
         },
         {
           "title": "Ganzjährig",
-          "body": "Konstante Temperatur erlaubt die Aktivität bei jedem Außenwetter."
+          "body": "Stabile Temperatur (10–12°C) erlaubt die Aktivität bei jedem Außenwetter, ohne Hochwasserrisiko."
+        },
+        {
+          "title": "Modulare Routen",
+          "body": "Familienstrecken (ab 6 Jahren), sportliche Entdeckung (12 Jahre), technische Durchquerung mit mehreren Ausgängen."
+        },
+        {
+          "title": "Historisches Erbe",
+          "body": "Höhle von de Saussure (1764) und Goethe (1779) besucht, archäologische Funde vom Neolithikum bis zur Römerzeit."
         }
       ],
       "practical_info": [],
       "how_to_get_there": {
-        "car": null,
-        "public_transport": null,
+        "car": "Von Cluses oder Sallanches, D1205 dann D6 Richtung Flaine. Parkplatz vor der Brücke, route de Flaine in Magland. Höhleneingang 5–15 Min. zu Fuß.",
+        "public_transport": "SNCF-Bahnhof Magland 2 km entfernt; beim Anbieter nach genauem Treffpunkt fragen.",
         "bike": null
       },
-      "when_to_visit": "Ganzjährig dank konstanter Temperatur. Nach Reservierung, mit diplomiertem Guide.",
+      "when_to_visit": "Ganzjährig dank stabiler Temperatur und ohne Hochwasserrisiko. Nach Reservierung, mit diplomiertem Guide. Hauptsaison Mai bis Oktober.",
       "events": [],
       "faq": [
         {
           "q": "Ist es klaustrophobisch?",
-          "a": "Manche Passagen sind eng; teilen Sie Bedenken dem Guide mit, der die Route anpasst."
+          "a": "Manche Passagen sind eng; teilen Sie Bedenken dem Guide mit, der die Route anpasst oder offenere Varianten anbietet."
         },
         {
           "q": "Ab welchem Alter?",
-          "a": "Es gibt Strecken für begleitete Kinder; Mindestalter beim Guide erfragen."
+          "a": "Familienstrecken ab 6 Jahren mit Eltern; sportliche Entdeckung ab 12 Jahren. Mindestalter beim Anbieter erfragen."
+        },
+        {
+          "q": "Muss man sportlich sein?",
+          "a": "Grundkondition reicht für Entdeckungsstrecken. Technische Routen erfordern mehr Geschicklichkeit und Ausdauer."
+        },
+        {
+          "q": "Was sollte man mitbringen?",
+          "a": "Lange warme Kleidung (unter dem Overall), Wanderschuhe oder Stiefel, Wechselkleidung. Technische Ausrüstung wird gestellt."
+        },
+        {
+          "q": "Wird man nass?",
+          "a": "Ja, manche Strecken durchqueren Wasserzonen (bis zu den Knien). Geeignetes Schuhwerk und trockene Wechselkleidung mitbringen."
+        },
+        {
+          "q": "Wie lange dauert die Tour?",
+          "a": "Rechnen Sie 2h30 bis 3h30 insgesamt: Ausrüstung, Zustieg (10–15 Min.), unterirdische Erkundung (1h30–2h30) und Rückkehr."
+        },
+        {
+          "q": "Gibt es einen Parkplatz?",
+          "a": "Ja, kostenloser Parkplatz vor der Brücke an der route de Flaine in Magland. Höhleneingang 5 bis 15 Min. zu Fuß."
+        },
+        {
+          "q": "Kann man allein besuchen?",
+          "a": "Nein, Höhlenforschung erfordert einen diplomierten Guide aus Sicherheits- und Orientierungsgründen im unterirdischen Netz."
         }
       ],
       "schema_amenities": []
     },
     "it": {
-      "name": "Grotte de Balme (spéléologie)",
+      "name": "Grotte de Balme (speleologia)",
       "name_alternates": [],
-      "meta_title": "Grotte de Balme (spéléologie) — Spéléologie en Haute-Savoie | Loisirs 74",
-      "meta_description": "Grande grotte d'initiation à la spéléologie (plus de 5 km de galeries) près de Magland, encadrée par des guides.",
+      "meta_title": "Grotte de Balme (speleologia) — Speleologia in Haute-Savoie | Loisirs 74",
+      "meta_description": "Esplorate oltre 5 km di gallerie sotterranee nella Grotte de Balme vicino a Magland: percorsi guidati per principianti, stalattiti, calate in corda doppia e scoperta tutto l'anno.",
       "hero": {
         "badge": "Speleologia",
         "lead": "Grande grotta d'iniziazione (oltre 5 km di gallerie) vicino a Magland."
       },
-      "hero_alt": "Grotte de Balme (spéléologie), spéléologie en Haute-Savoie",
+      "hero_alt": "Grotte de Balme (speleologia), speleologia in Haute-Savoie",
       "facts": {
         "type": "Speleologia",
         "access": "Su prenotazione — guidato",
-        "tarif": null,
-        "commune": null,
+        "tarif": "Da 49 €",
+        "commune": "Magland",
         "duration": "Mezza giornata",
         "best_season": "Tutto l'anno"
       },
       "body": {
-        "what_is": "La Grotte de Balme, a Magland, conta oltre 5 km di gallerie ed è uno dei siti d'iniziazione alla speleologia della valle dell'Arve. Vi si accede dopo una breve camminata, poi si procede con guida qualificata: strisciate, disarrampicate, sale concrezionate. Praticabile tutto l'anno per la temperatura stabile; luce, casco e tuta forniti dalla guida."
+        "what_is": "<p>La <strong>Grotte de Balme</strong>, a Magland, si estende per oltre 5 chilometri di gallerie ed è uno dei siti d'iniziazione alla speleologia più apprezzati della valle dell'Arve. Visibile dal fondovalle, l'ingresso principale si apre a 725 metri d'altitudine in un'imponente parete di calcare urgoniano.</p><p>Vi si accede dopo una breve camminata d'avvicinamento di 5–15 minuti dal parcheggio della strada di Flaine. <strong>Il percorso sotterraneo alterna grandi gallerie orizzontali, passaggi acquatici, concrezioni spettacolari e piccole calate in corda doppia</strong> (a seconda del circuito scelto). Guide qualificate adattano l'itinerario al livello del gruppo: percorso famiglia dai 6 anni, scoperta sportiva dai 12 anni, o traversata tecnica con uscita dalla grotta dei Comitards.</p><p>Temperatura costante di 10–12°C tutto l'anno, nessun rischio di piena: <strong>la Grotte de Balme si pratica qualunque sia il tempo esterno</strong>. L'attrezzatura (tuta, casco con illuminazione LED, imbragatura se calata) è fornita dalla guida. Questa grotta storica ha affascinato Horace-Bénédict de Saussure nel 1764 e Goethe nel 1779; scavi archeologici vi hanno rivelato tracce d'occupazione dal Neolitico all'epoca romana.</p><p>Vari operatori — Bureau des Guides de Samoëns, Spéléo Canyon 74, guide indipendenti — propongono uscite da 1h30 a 3h30 sotto terra. Un luogo ideale per scoprire il mondo sotterraneo delle Alpi senza eccessiva difficoltà tecnica.</p>"
       },
       "activities": [
         {
           "title": "Esplorazione guidata",
-          "body": "Progressione nel reticolo con istruttore: strisciate, disarrampicate, sale concrezionate."
+          "body": "Progressione nel reticolo con istruttore qualificato: strisciate, disarrampicate, sale concrezionate, passaggi acquatici."
+        },
+        {
+          "title": "Calate in corda doppia",
+          "body": "A seconda del percorso, iniziazione alla corda doppia da 12 a 60 metri (facoltativa su alcuni circuiti)."
+        },
+        {
+          "title": "Gallerie spettacolari",
+          "body": "Stalattiti, stalagmiti, gours (vasche a cascata), fiume sotterraneo e firme storiche del XVIII secolo."
         },
         {
           "title": "Tutto l'anno",
-          "body": "La temperatura stabile permette l'attività con qualsiasi meteo esterno."
+          "body": "Temperatura stabile (10–12°C) permette l'attività con qualsiasi meteo esterno, senza rischio di piena."
+        },
+        {
+          "title": "Percorsi modulari",
+          "body": "Circuiti famiglia (dai 6 anni), scoperta sportiva (12 anni), traversata tecnica con diverse uscite possibili."
+        },
+        {
+          "title": "Patrimonio storico",
+          "body": "Grotta visitata da de Saussure (1764) e Goethe (1779), resti archeologici dal Neolitico all'epoca romana."
         }
       ],
       "practical_info": [],
       "how_to_get_there": {
-        "car": null,
-        "public_transport": null,
+        "car": "Da Cluses o Sallanches, D1205 poi D6 direzione Flaine. Parcheggio prima del ponte, route de Flaine a Magland. Ingresso grotta a 5–15 min a piedi.",
+        "public_transport": "Stazione SNCF di Magland a 2 km; informarsi presso l'operatore per il punto d'incontro preciso.",
         "bike": null
       },
-      "when_to_visit": "Tutto l'anno grazie alla temperatura stabile. Su prenotazione, con guida qualificata.",
+      "when_to_visit": "Tutto l'anno grazie alla temperatura stabile e assenza di rischio piena. Su prenotazione, con guida qualificata. Stagione principale da maggio a ottobre.",
       "events": [],
       "faq": [
         {
           "q": "È claustrofobico?",
-          "a": "Alcuni passaggi sono stretti; segnalate timori alla guida, che adatta il percorso."
+          "a": "Alcuni passaggi sono stretti; segnalate timori alla guida, che adatta il percorso o propone varianti più aeree."
         },
         {
           "q": "Da che età?",
-          "a": "Esistono percorsi per bambini accompagnati; confermare l'età minima con la guida."
+          "a": "Percorsi famiglia dai 6 anni con genitori; scoperta sportiva dai 12 anni. Confermare l'età minima con l'operatore."
+        },
+        {
+          "q": "Bisogna essere sportivi?",
+          "a": "Condizione fisica di base basta per percorsi scoperta. Circuiti tecnici richiedono più agilità e resistenza."
+        },
+        {
+          "q": "Cosa portare?",
+          "a": "Vestiti lunghi caldi (sotto la tuta), scarpe da trekking o stivali, ricambio asciutto. Attrezzatura tecnica fornita."
+        },
+        {
+          "q": "Ci si bagna?",
+          "a": "Sì, alcuni percorsi attraversano zone acquatiche (fino alle ginocchia). Portare calzature adatte e vestiti asciutti per dopo."
+        },
+        {
+          "q": "Quanto dura l'uscita?",
+          "a": "Contare 2h30–3h30 totali: equipaggiamento, avvicinamento (10–15 min), esplorazione sotterranea (1h30–2h30) e ritorno."
+        },
+        {
+          "q": "C'è parcheggio?",
+          "a": "Sì, parcheggio gratuito prima del ponte sulla route de Flaine a Magland. Ingresso grotta a 5–15 min a piedi."
+        },
+        {
+          "q": "Si può visitare da soli?",
+          "a": "No, la speleologia richiede una guida qualificata per ragioni di sicurezza e orientamento nella rete sotterranea."
         }
       ],
       "schema_amenities": []
     },
     "es": {
-      "name": "Grotte de Balme (spéléologie)",
+      "name": "Grotte de Balme (espeleología)",
       "name_alternates": [],
-      "meta_title": "Grotte de Balme (spéléologie) — Spéléologie en Haute-Savoie | Loisirs 74",
-      "meta_description": "Grande grotte d'initiation à la spéléologie (plus de 5 km de galeries) près de Magland, encadrée par des guides.",
+      "meta_title": "Grotte de Balme (espeleología) — Espeleología en Haute-Savoie | Loisirs 74",
+      "meta_description": "Explore más de 5 km de galerías subterráneas en la Grotte de Balme cerca de Magland: rutas guiadas de iniciación, estalactitas, rápeles y descubrimiento todo el año.",
       "hero": {
         "badge": "Espeleología",
         "lead": "Gran cueva de iniciación (más de 5 km de galerías) cerca de Magland."
       },
-      "hero_alt": "Grotte de Balme (spéléologie), spéléologie en Haute-Savoie",
+      "hero_alt": "Grotte de Balme (espeleología), espeleología en Haute-Savoie",
       "facts": {
         "type": "Espeleología",
         "access": "Con reserva — guiado",
-        "tarif": null,
-        "commune": null,
+        "tarif": "Desde 49 €",
+        "commune": "Magland",
         "duration": "Medio día",
         "best_season": "Todo el año"
       },
       "body": {
-        "what_is": "La Grotte de Balme, en Magland, tiene más de 5 km de galerías y es uno de los sitios de iniciación a la espeleología del valle del Arve. Se accede tras una corta marcha y se avanza con guía titulado: reptar, destrepes y salas con concreciones. Practicable todo el año por la temperatura estable; luz, casco y mono los aporta el guía."
+        "what_is": "<p>La <strong>Grotte de Balme</strong>, en Magland, despliega más de 5 kilómetros de galerías y constituye uno de los sitios de iniciación a la espeleología más apreciados del valle del Arve. Visible desde el fondo del valle, la entrada principal se abre a 725 metros de altitud en una imponente pared de caliza urgoniana.</p><p>Se accede tras una corta marcha de aproximación de 5 a 15 minutos desde el aparcamiento de la carretera de Flaine. <strong>El recorrido subterráneo alterna grandes galerías horizontales, pasajes acuáticos, concreciones espectaculares y pequeños rápeles</strong> (según el circuito elegido). Guías titulados adaptan el itinerario al nivel del grupo: recorrido familia desde 6 años, descubrimiento deportivo desde 12 años, o travesía técnica con salida por la cueva de los Comitards.</p><p>Temperatura constante de 10 a 12°C todo el año, sin riesgo de crecida: <strong>la Grotte de Balme se practica sea cual sea el tiempo exterior</strong>. El equipo (mono, casco con iluminación LED, arnés si rápel) lo proporciona el guía. Esta cueva histórica fascinó a Horace-Bénédict de Saussure en 1764 y a Goethe en 1779; excavaciones arqueológicas han revelado trazas de ocupación del Neolítico a la época romana.</p><p>Varios operadores — Bureau des Guides de Samoëns, Spéléo Canyon 74, guías independientes — proponen salidas de 1h30 a 3h30 bajo tierra. Un lugar ideal para descubrir el mundo subterráneo de los Alpes sin excesiva dificultad técnica.</p>"
       },
       "activities": [
         {
           "title": "Exploración guiada",
-          "body": "Avance por la red con monitor: reptar, destrepes, salas con concreciones."
+          "body": "Avance por la red con monitor titulado: reptar, destrepes, salas con concreciones, pasos acuáticos."
+        },
+        {
+          "title": "Descensos en rápel",
+          "body": "Según la ruta, iniciación al rápel de 12 a 60 metros (opcional en algunos circuitos)."
+        },
+        {
+          "title": "Galerías espectaculares",
+          "body": "Estalactitas, estalagmitas, gours (piletas en cascada), río subterráneo y firmas históricas del siglo XVIII."
         },
         {
           "title": "Todo el año",
-          "body": "La temperatura estable permite la actividad con cualquier tiempo exterior."
+          "body": "Temperatura estable (10–12°C) permite la actividad con cualquier tiempo exterior, sin riesgo de crecida."
+        },
+        {
+          "title": "Rutas modulares",
+          "body": "Circuitos familia (desde 6 años), descubrimiento deportivo (12 años), travesía técnica con varias salidas posibles."
+        },
+        {
+          "title": "Patrimonio histórico",
+          "body": "Cueva visitada por de Saussure (1764) y Goethe (1779), restos arqueológicos del Neolítico a la época romana."
         }
       ],
       "practical_info": [],
       "how_to_get_there": {
-        "car": null,
-        "public_transport": null,
+        "car": "Desde Cluses o Sallanches, D1205 luego D6 dirección Flaine. Aparcamiento antes del puente, route de Flaine en Magland. Entrada cueva a 5–15 min a pie.",
+        "public_transport": "Estación SNCF de Magland a 2 km; consultar con el operador el punto de encuentro preciso.",
         "bike": null
       },
-      "when_to_visit": "Todo el año gracias a la temperatura estable. Con reserva y guía titulado.",
+      "when_to_visit": "Todo el año gracias a la temperatura estable y ausencia de riesgo de crecida. Con reserva y guía titulado. Temporada principal de mayo a octubre.",
       "events": [],
       "faq": [
         {
           "q": "¿Es claustrofóbico?",
-          "a": "Algunos pasos son estrechos; comunique cualquier inquietud al guía, que adapta el recorrido."
+          "a": "Algunos pasos son estrechos; comunique inquietudes al guía, que adapta el recorrido u ofrece variantes más abiertas."
         },
         {
           "q": "¿Edad mínima?",
-          "a": "Hay recorridos para niños acompañados; confirme la edad mínima con el guía."
+          "a": "Recorridos familia desde 6 años con padres; descubrimiento deportivo desde 12 años. Confirme edad mínima con el operador."
+        },
+        {
+          "q": "¿Hay que ser deportista?",
+          "a": "Condición física básica basta para recorridos descubrimiento. Circuitos técnicos requieren más agilidad y resistencia."
+        },
+        {
+          "q": "¿Qué llevar?",
+          "a": "Ropa larga de abrigo (bajo el mono), botas de senderismo o botas de agua, ropa de recambio seca. Equipo técnico proporcionado."
+        },
+        {
+          "q": "¿Se moja uno?",
+          "a": "Sí, algunos recorridos atraviesan zonas acuáticas (hasta las rodillas). Llevar calzado adecuado y ropa seca para después."
+        },
+        {
+          "q": "¿Cuánto dura la salida?",
+          "a": "Contar 2h30 a 3h30 totales: equipamiento, aproximación (10–15 min), exploración subterránea (1h30–2h30) y regreso."
+        },
+        {
+          "q": "¿Hay aparcamiento?",
+          "a": "Sí, aparcamiento gratuito antes del puente en la route de Flaine en Magland. Entrada cueva a 5–15 min a pie."
+        },
+        {
+          "q": "¿Se puede visitar solo?",
+          "a": "No, la espeleología requiere un guía titulado por razones de seguridad y orientación en la red subterránea."
+        }
+      ],
+      "schema_amenities": []
+    },
+    "nl": {
+      "name": "Grotte de Balme (speleologie)",
+      "name_alternates": [],
+      "meta_title": "Grotte de Balme (speleologie) — Speleologie in Haute-Savoie | Loisirs 74",
+      "meta_description": "Verken meer dan 5 km ondergrondse gangen in de Grotte de Balme bij Magland: begeleide beginroutes, stalactieten, abseilen en het hele jaar ontdekking.",
+      "hero": {
+        "badge": "Speleologie",
+        "lead": "Grote beginnersgrot (meer dan 5 km gangen) bij Magland."
+      },
+      "hero_alt": "Grotte de Balme (speleologie), speleologie in Haute-Savoie",
+      "facts": {
+        "type": "Speleologie",
+        "access": "Op reservering — begeleid",
+        "tarif": "Vanaf €49",
+        "commune": "Magland",
+        "duration": "Halve dag",
+        "best_season": "Het hele jaar"
+      },
+      "body": {
+        "what_is": "<p>De <strong>Grotte de Balme</strong>, in Magland, ontvouwt zich over meer dan 5 kilometer gangen en is een van de populairste speleologie-initiatieplekken in de Arve-vallei. Zichtbaar vanaf de valleibodem opent de hoofdingang zich op 725 meter hoogte in een imposante Urgonische kalksteenwand.</p><p>Je bereikt hem na een korte naderwandeling van 5 tot 15 minuten vanaf de parkeerplaats aan de Flaine-weg. <strong>De ondergrondse route wisselt grote horizontale galerijen, waterpassages, spectaculaire concreties en kleine abseilpartijen af</strong> (afhankelijk van het gekozen circuit). Gediplomeerde gidsen passen de route aan het groepsniveau aan: familieparcours vanaf 6 jaar, sportieve ontdekking vanaf 12 jaar, of technische doorkruising met uitgang via de Comitards-grot.</p><p>Constante temperatuur van 10 tot 12°C het hele jaar, geen overstromingsrisico: <strong>de Grotte de Balme kan worden beoefend ongeacht het buitenweer</strong>. Uitrusting (overall, LED-helm, gordel bij abseilen) wordt door de gids verstrekt. Deze historische grot fascineerde Horace-Bénédict de Saussure in 1764 en Goethe in 1779; archeologische opgravingen hebben sporen van bewoning van het Neolithicum tot de Romeinse tijd onthuld.</p><p>Verschillende operators — Bureau des Guides de Samoëns, Spéléo Canyon 74, onafhankelijke gidsen — bieden tochten van 1u30 tot 3u30 ondergronds. Een ideale plek om de ondergrondse wereld van de Alpen te ontdekken zonder buitensporige technische moeilijkheid.</p>"
+      },
+      "activities": [
+        {
+          "title": "Begeleide verkenning",
+          "body": "Voortbeweging in het netwerk met gekwalificeerde instructeur: kruipen, afklimmen, concretiezalen, waterpassages."
+        },
+        {
+          "title": "Abseilafdalingen",
+          "body": "Afhankelijk van de route, introductie tot abseilen van 12 tot 60 meter (optioneel bij sommige circuits)."
+        },
+        {
+          "title": "Spectaculaire galerijen",
+          "body": "Stalactieten, stalagmieten, gours (watervalbekkens), ondergrondse rivier en historische 18e-eeuwse handtekeningen."
+        },
+        {
+          "title": "Het hele jaar",
+          "body": "Stabiele temperatuur (10–12°C) maakt de activiteit mogelijk ongeacht het buitenweer, zonder overstromingsrisico."
+        },
+        {
+          "title": "Modulaire routes",
+          "body": "Familiecircuits (vanaf 6 jaar), sportieve ontdekking (12 jaar), technische doorkruising met meerdere mogelijke uitgangen."
+        },
+        {
+          "title": "Historisch erfgoed",
+          "body": "Grot bezocht door de Saussure (1764) en Goethe (1779), archeologische resten van Neolithicum tot Romeinse tijd."
+        }
+      ],
+      "practical_info": [],
+      "how_to_get_there": {
+        "car": "Vanuit Cluses of Sallanches, D1205 dan D6 richting Flaine. Parkeerplaats voor de brug, route de Flaine in Magland. Grotingang op 5–15 min lopen.",
+        "public_transport": "SNCF-station Magland op 2 km; raadpleeg uw operator voor het precieze ontmoetingspunt.",
+        "bike": null
+      },
+      "when_to_visit": "Het hele jaar dankzij stabiele temperatuur en geen overstromingsrisico. Op reservering, met gediplomeerde gids. Hoofdseizoen mei tot oktober.",
+      "events": [],
+      "faq": [
+        {
+          "q": "Is het claustrofobisch?",
+          "a": "Sommige passages zijn smal; meld zorgen aan de gids, die de route aanpast of meer open alternatieven biedt."
+        },
+        {
+          "q": "Minimumleeftijd?",
+          "a": "Familieroutes vanaf 6 jaar met ouders; sportieve ontdekking vanaf 12 jaar. Bevestig minimumleeftijd bij uw operator."
+        },
+        {
+          "q": "Moet je sportief zijn?",
+          "a": "Basisfitness is genoeg voor ontdekkingsroutes. Technische circuits vereisen meer beweeglijkheid en uithoudingsvermogen."
+        },
+        {
+          "q": "Wat moet je meebrengen?",
+          "a": "Lange warme kleding (onder de overall), wandelschoenen of laarzen, droge wisselkleding. Technische uitrusting wordt verstrekt."
+        },
+        {
+          "q": "Word je nat?",
+          "a": "Ja, sommige routes doorkruisen waterzones (tot aan de knieën). Neem geschikt schoeisel en droge kleren mee voor nadien."
+        },
+        {
+          "q": "Hoe lang duurt de tocht?",
+          "a": "Reken op 2u30 tot 3u30 totaal: uitrusting, naderingstocht (10–15 min), ondergrondse verkenning (1u30–2u30) en terugkeer."
+        },
+        {
+          "q": "Is er parkeerplaats?",
+          "a": "Ja, gratis parkeerplaats voor de brug aan de route de Flaine in Magland. Grotingang op 5 tot 15 min lopen."
+        },
+        {
+          "q": "Kun je alleen bezoeken?",
+          "a": "Nee, speleologie vereist een gediplomeerde gids om veiligheids- en oriëntatieredenen in het ondergrondse netwerk."
         }
       ],
       "schema_amenities": []
