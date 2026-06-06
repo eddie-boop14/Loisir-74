@@ -81,15 +81,19 @@ FACT_ORDER = [
 
 
 CAT_TO_FR_HUB = {
-    "attraction": ("attractions", "Attractions"),
+    # `attraction` retired in the 2026-06 hub overhaul (split across
+    # sport-jeux / sensations-plein-air / baignade-nautisme / parcs-jardins /
+    # sorties-detente — no 1:1 mapping from old category). Breadcrumb falls
+    # back to commune-name span for these.
     "cascade": ("cascades", "Cascades"),
     "chateau": ("chateaux", "Châteaux"),
-    "divers": ("divers", "Divers"),
+    # `divers` retired in the 2026-06 hub overhaul → no breadcrumb hub link
     "domaine": ("bases-de-loisirs", "Bases de loisirs"),
-    "lac": ("lacs", "Lacs"),
+    # `lac` + `plage` merged into /lacs-plages/ in the 2026-06 hub overhaul
+    "lac": ("lacs-plages", "Lacs & plages"),
     "musee": ("musees", "Musées"),
     "parc": ("bases-de-loisirs", "Bases de loisirs"),
-    "plage": ("plages", "Plages"),
+    "plage": ("lacs-plages", "Lacs & plages"),
     "point-de-vue": ("points-de-vue", "Points de vue"),
     "sentier": ("sentiers", "Sentiers"),
     "telecabine": ("telecabines", "Télécabines"),
