@@ -81,14 +81,29 @@ def build_data_index():
                 pf = {}
         i18n = L.get("i18n", {})
         pf_i18n = pf.get("i18n", {})
+        # Pull FR strings first so we can detect FR-mirrored locale fields.
+        fr_pi = pf_i18n.get("fr", {})
+        fr_name = (i18n.get("fr") or {}).get("name") or fr_pi.get("name") or slug
+        fr_desc = fr_pi.get("meta_description") or ""
+        fr_alt = fr_pi.get("hero_alt") or fr_name
         names, communes, descs, alts = {}, {}, {}, {}
         for lang in ("fr", "de", "en", "es", "it"):
             li = i18n.get(lang, {})
             pi = pf_i18n.get(lang, {})
             names[lang] = li.get("name") or pi.get("name") or slug
             communes[lang] = li.get("commune") or pi.get("commune") or pf.get("commune") or ""
-            descs[lang] = pi.get("meta_description") or ""
-            alts[lang] = pi.get("hero_alt") or names[lang]
+            loc_desc = pi.get("meta_description") or ""
+            loc_alt = pi.get("hero_alt") or names[lang]
+            # On locale pages, suppress strings that just mirror the FR text
+            # (un-translated venues). Real translations come through; FR
+            # placeholder text doesn't pollute en/de/it/es cards.
+            if lang != "fr":
+                if loc_desc == fr_desc:
+                    loc_desc = ""
+                if loc_alt == fr_alt:
+                    loc_alt = names[lang]
+            descs[lang] = loc_desc
+            alts[lang] = loc_alt
         idx[slug] = {
             "category": cat,
             "names": names,
