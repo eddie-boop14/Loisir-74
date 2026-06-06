@@ -5,21 +5,21 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
 <meta content="#f6f1e7" name="theme-color"/>
-<title>Aussichtspunkte — Loisirs 74</title>
+<title>Aussichtspunkte und Pässe im Haute-Savoie: Blick auf den Mont-Blanc — Loisirs 74</title>
 <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
 <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
 <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="/site.webmanifest" rel="manifest"/>
-<meta content="Aussichtspunkte in Haute-Savoie · 26 Orte" name="description"/>
+<meta content="Die schönsten Aussichtspunkte, Pässe und Gipfel im Haute-Savoie: Mont Veyrier, Le Salève, Semnoz, Aiguille du Midi. Panoramen über den Lac d'Annecy und Mont-Blanc." name="description"/>
 <link href="https://loisirs74.fr/de/aussichtspunkte/" rel="canonical"/>
 <link href="https://loisirs74.fr/points-de-vue/" hreflang="fr" rel="alternate"/>
 <link href="https://loisirs74.fr/en/viewpoints/" hreflang="en" rel="alternate"/>
 <link href="https://loisirs74.fr/de/aussichtspunkte/" hreflang="de" rel="alternate"/>
 <link href="https://loisirs74.fr/it/punti-panoramici/" hreflang="it" rel="alternate"/>
 <link href="https://loisirs74.fr/es/miradores/" hreflang="es" rel="alternate"/>
+<link href="https://loisirs74.fr/nl/uitzichtpunten/" hreflang="nl" rel="alternate"/>
 <link href="https://loisirs74.fr/points-de-vue/" hreflang="x-default" rel="alternate"/>
-<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,50;1,9..144,300..500,50&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -49,6 +49,11 @@ a{color:inherit;text-decoration:none}
   --lake-light:#6a92a3;
   --alpenglow:#e07a3f;
   --alpenglow-soft:#f4b88a;
+  --accent:#c0863a;
+  --accent-soft:#e6c489;
+  --hub-hero-img:url("/generique-point-de-vue.jpg");
+  --hub-hero-tint1:rgba(46,34,16,.5);
+  --hub-hero-tint2:rgba(120,86,40,.38);
 
   --max:1280px;
   --pad:clamp(1.25rem,3.5vw,2rem);
@@ -60,7 +65,7 @@ a{color:inherit;text-decoration:none}
 
 html,body{background:var(--paper);color:var(--ink)}
 body{font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-::selection{background:var(--alpenglow);color:var(--snow)}
+::selection{background:var(--accent);color:var(--snow)}
 .wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad);position:relative}
 
 .cursor-glow{position:fixed;width:600px;height:600px;pointer-events:none;z-index:2;border-radius:50%;background:radial-gradient(circle, rgba(224,122,63,.10) 0%, rgba(224,122,63,0) 60%);transform:translate(-50%,-50%);mix-blend-mode:multiply;will-change:transform}
@@ -78,59 +83,51 @@ header.site{position:sticky;top:0;left:0;right:0;z-index:60;padding:.85rem var(-
 .lang-picker summary{cursor:pointer;font-size:.75rem;letter-spacing:.08em;color:var(--ink-3);padding:.4rem .85rem;border:1px solid var(--line-2);border-radius:999px;display:inline-flex;align-items:center;gap:.5rem;list-style:none;transition:all .25s var(--ease)}
 .lang-picker summary::-webkit-details-marker{display:none}
 .lang-picker summary b{color:var(--ink);font-weight:500}
-.lang-picker summary::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--alpenglow);animation:breathe 2.4s ease-in-out infinite}
+.lang-picker summary::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);animation:breathe 2.4s ease-in-out infinite}
 .lang-picker:hover summary{border-color:var(--ink-2);color:var(--ink)}
 @keyframes breathe{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.85)}}
 .lang-picker[open] > .lang-menu{display:flex}
 .lang-menu{display:none;position:absolute;top:calc(100% + .5rem);right:0;flex-direction:column;background:var(--snow);border:1px solid var(--line);border-radius:8px;padding:.4rem;min-width:10rem;z-index:60;box-shadow:0 18px 40px -18px rgba(28,24,20,.25)}
 .lang-menu a{padding:.5rem .75rem;font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink-3);border-radius:5px;transition:all .2s var(--ease)}
 .lang-menu a:hover{background:var(--paper-2);color:var(--ink)}
-.lang-menu a[aria-current="true"]{color:var(--alpenglow);font-weight:500}
+.lang-menu a[aria-current="true"]{color:var(--accent);font-weight:500}
 
 .crumb{padding:1.5rem var(--pad) 0;max-width:var(--max);margin-inline:auto;font-size:.78rem;color:var(--ink-3);letter-spacing:.04em;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
 .crumb a{color:var(--ink-3);transition:color .2s var(--ease)}
-.crumb a:hover{color:var(--alpenglow)}
+.crumb a:hover{color:var(--accent)}
 .crumb b{color:var(--ink);font-weight:500}
 .crumb .sep{color:var(--ink-4)}
 
-.hub-hero{padding:1rem 0 1.25rem;position:relative;overflow:hidden}
-.hub-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(800px 300px at 85% 0%, rgba(224,122,63,.10), transparent 70%),radial-gradient(600px 250px at 5% 30%, rgba(46,74,58,.06), transparent 70%)}
-.hub-hero h1{font-family:var(--serif);font-size:clamp(1.7rem,1.35rem + 1.8vw,3.25rem);line-height:1.05;letter-spacing:-.025em;font-weight:400;font-variation-settings:"SOFT" 50;color:var(--ink);max-width:18ch;opacity:0;animation:rise .8s var(--ease-out) .15s forwards}
-.hub-hero h1 em{font-style:italic;font-weight:300;color:var(--alpenglow)}
-.hub-hero .meta{margin-top:.45rem;font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink-3);display:flex;gap:.6rem;flex-wrap:wrap;align-items:baseline;opacity:0;animation:rise .8s var(--ease-out) .3s forwards}
-.hub-hero .meta b{font-family:var(--sans);font-style:normal;color:var(--ink);font-weight:600;font-size:.85rem;letter-spacing:.04em}
-.hub-hero .meta .dot{color:var(--ink-4);font-style:normal}
+.hub-hero{position:relative;padding:clamp(3rem,9vw,5.5rem) 0 clamp(1.5rem,3vw,2.25rem);overflow:hidden;isolation:isolate}
+.hub-hero::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--hub-hero-img) center 55%/cover no-repeat;transform:scale(1.03)}
+.hub-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--hub-hero-tint1) 0%,var(--hub-hero-tint2) 46%,var(--paper) 100%)}
+.hub-hero h1{font-family:var(--serif);font-size:clamp(1.9rem,1.4rem + 2vw,3.5rem);line-height:1.04;letter-spacing:-.025em;font-weight:400;font-variation-settings:"SOFT" 50;color:var(--snow);max-width:20ch;text-shadow:0 2px 28px rgba(15,30,38,.5);opacity:0;animation:rise .8s var(--ease-out) .15s forwards}
+.hub-hero h1 em{font-style:italic;font-weight:300;color:var(--accent-soft)}
+.hub-hero .meta{margin-top:.6rem;font-family:var(--serif);font-style:italic;font-size:1rem;color:rgba(253,250,243,.92);display:flex;gap:.6rem;flex-wrap:wrap;align-items:baseline;text-shadow:0 1px 14px rgba(15,30,38,.45);opacity:0;animation:rise .8s var(--ease-out) .3s forwards}
+.hub-hero .meta b{font-family:var(--sans);font-style:normal;color:var(--snow);font-weight:600;font-size:.85rem;letter-spacing:.04em}
+.hub-hero .meta .dot{color:rgba(253,250,243,.6);font-style:normal}
 @keyframes rise{to{opacity:1;transform:translateY(0)}}
 .hub-hero h1, .hub-hero .meta { transform:translateY(20px) }
-
-#cat-map{height:220px;width:100%;border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;z-index:1;background:var(--paper-2)}
-.leaflet-popup-content-wrapper{border-radius:8px;background:var(--snow);box-shadow:0 18px 40px -18px rgba(28,24,20,.3);border:1px solid var(--line)}
-.leaflet-popup-tip{background:var(--snow);border:1px solid var(--line)}
-.leaflet-popup-content{margin:.7rem .9rem;font-family:var(--sans);font-size:.88rem;line-height:1.45;color:var(--ink-2)}
-.leaflet-popup-content a{color:var(--ink);font-family:var(--serif);font-size:1.05rem;font-weight:500;letter-spacing:-.005em}
-.leaflet-popup-content a:hover{color:var(--alpenglow)}
-.leaflet-popup-content .commune-pop{display:block;color:var(--ink-3);font-size:.72rem;margin-top:.2rem;letter-spacing:.06em}
-.leaflet-control-attribution{background:rgba(253,250,243,.85)!important;font-family:var(--sans);font-size:.65rem}
 
 .filter-bar{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);z-index:30;padding:.55rem 0;box-shadow:0 8px 20px -16px rgba(0,0,0,.3)}
 .filter-bar__head{display:flex;align-items:center;gap:1rem}
 .filter-toggle{margin-left:auto;display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .9rem;border:1px solid var(--line-2);background:var(--snow);color:var(--ink);font-family:var(--sans);font-size:.8rem;font-weight:600;letter-spacing:.04em;border-radius:6px;cursor:pointer;transition:all .2s var(--ease)}
-.filter-toggle:hover{border-color:var(--alpenglow)}
+.filter-toggle:hover{border-color:var(--accent)}
 .filter-toggle__chev{transition:transform .2s var(--ease)}
 .filter-toggle[aria-expanded="true"] .filter-toggle__chev{transform:rotate(180deg)}
-.filter-toggle__badge{display:inline-flex;min-width:1.1rem;justify-content:center;padding:0 .35rem;border-radius:9px;background:var(--alpenglow);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:0}
+.filter-toggle__badge{display:inline-flex;min-width:1.1rem;justify-content:center;padding:0 .35rem;border-radius:9px;background:var(--accent);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:0}
 .filter-toggle__badge[hidden]{display:none}
 .filter-panel{display:none;flex-wrap:wrap;gap:1.25rem;align-items:flex-end;padding-top:.75rem}
 .filter-panel.is-open{display:flex}
 .filter-panel label{display:flex;flex-direction:column;gap:.35rem;font-size:.65rem;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.14em}
 .filter-panel select{padding:.55rem .8rem;border:1px solid var(--line-2);background:var(--snow);color:var(--ink);font-size:.88rem;font-weight:500;font-family:var(--sans);min-width:10rem;border-radius:6px;transition:border-color .2s var(--ease);cursor:pointer}
-.filter-panel select:hover, .filter-panel select:focus{border-color:var(--alpenglow);outline:none}
+.filter-panel select:hover, .filter-panel select:focus{border-color:var(--accent);outline:none}
 .access-group{display:flex;border:1px solid var(--line-2);border-radius:6px;overflow:hidden;background:var(--snow)}
 .access-group button{padding:.55rem 1rem;border:0;background:transparent;color:var(--ink-3);font-size:.78rem;font-weight:600;cursor:pointer;font-family:var(--sans);letter-spacing:.04em;border-right:1px solid var(--line-2);transition:all .2s var(--ease)}
 .access-group button:last-child{border-right:0}
 .access-group button:hover{color:var(--ink);background:var(--paper-2)}
 .access-group button.active{background:var(--ink);color:var(--snow)}
-.access-group button.active[data-v="paid"]{background:var(--alpenglow)}
+.access-group button.active[data-v="paid"]{background:var(--accent)}
 .access-group button.active[data-v="free"]{background:var(--pine)}
 .filter-bar .count-live{font-family:var(--serif);font-style:italic;font-size:.9rem;color:var(--ink-3)}
 .filter-bar .count-live b{font-style:normal;color:var(--ink);font-weight:500}
@@ -141,11 +138,11 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .commune-section.hidden{display:none}
 .commune-head{margin-bottom:1.25rem;display:flex;align-items:baseline;gap:.85rem;flex-wrap:wrap}
 .commune-head h3{font-family:var(--serif);font-size:clamp(1.5rem,1.2rem + .8vw,2rem);line-height:1.05;letter-spacing:-.02em;font-weight:400;font-variation-settings:"SOFT" 50;color:var(--ink)}
-.commune-head h3 em{font-style:italic;color:var(--alpenglow);font-weight:300}
+.commune-head h3 em{font-style:italic;color:var(--accent);font-weight:300}
 .commune-count{font-family:var(--sans)!important;font-size:.7rem;font-weight:500;color:var(--ink-3);letter-spacing:.14em;text-transform:uppercase}
 
 .transport-block{background:var(--snow);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.1rem;font-size:.85rem;line-height:1.45;display:flex;flex-direction:column;gap:.3rem;margin-bottom:1.5rem;max-width:36rem}
-.transport-block .transport-label{font-size:.65rem;font-weight:600;color:var(--alpenglow);text-transform:uppercase;letter-spacing:.18em;margin-bottom:.25rem;font-family:var(--sans)}
+.transport-block .transport-label{font-size:.65rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.18em;margin-bottom:.25rem;font-family:var(--sans)}
 .transport-row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:baseline}
 .transport-row .t-k{font-family:var(--sans);font-weight:600;color:var(--ink-3);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;min-width:5.5rem}
 .transport-row .t-v{color:var(--ink-2);font-size:.9rem;font-family:var(--serif);font-style:italic}
@@ -161,24 +158,24 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .card-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease-out), filter .3s var(--ease);filter:saturate(.95)}
 .card:hover .card-photo img{transform:scale(1.06);filter:saturate(1.05)}
 .card-tag{position:absolute;top:14px;right:14px;background:rgba(253,250,243,.95);color:var(--ink);padding:.3rem .7rem;border-radius:999px;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:var(--sans);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:2}
-.card-tag.is-payant{background:var(--alpenglow);color:var(--snow)}
+.card-tag.is-payant{background:var(--accent);color:var(--snow)}
 .card-tag.is-gratuit{background:var(--pine);color:var(--snow)}
 .card-body{padding:1.25rem 1.35rem 1.35rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .card-commune{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:.15rem;order:-1}
 .card-commune svg{display:none}
 .card-body a.title{font-family:var(--serif);font-weight:500;font-size:1.35rem;color:var(--ink);line-height:1.15;letter-spacing:-.01em;transition:color .2s var(--ease)}
-.card-body a.title:hover{color:var(--alpenglow)}
+.card-body a.title:hover{color:var(--accent)}
 .card-desc{font-family:var(--sans);font-size:.88rem;color:var(--ink-2);line-height:1.5;margin:.1rem 0 .85rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .card-actions{display:flex;gap:1.25rem;margin-top:auto;padding-top:.8rem;border-top:1px dashed var(--line);font-size:.72rem}
 .card-actions a{font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);transition:color .2s var(--ease), transform .3s var(--ease-out);display:inline-flex;align-items:center;gap:.3rem;font-family:var(--sans)}
-.card-actions a:hover{color:var(--alpenglow);transform:translateX(2px)}
+.card-actions a:hover{color:var(--accent);transform:translateX(2px)}
 .card-actions a svg{display:none}
 .card-actions a::after{content:" \2197";font-size:.9rem;letter-spacing:0}
 
 .card-photo:has(> img[data-generique="true"])::after{content:"Générique";position:absolute;bottom:.55rem;right:.55rem;background:rgba(20,18,16,.78);color:#f0dfc0;font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px;pointer-events:none;z-index:2;font-family:var(--sans);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
 
 .empty-state{padding:4rem 0;text-align:center;font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--ink-3)}
-.empty-state b{display:block;font-family:var(--sans);font-style:normal;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--alpenglow);font-weight:600;margin-bottom:.75rem}
+.empty-state b{display:block;font-family:var(--sans);font-style:normal;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.75rem}
 
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease-out), transform .8s var(--ease-out)}
 .reveal.in{opacity:1;transform:translateY(0)}
@@ -190,25 +187,551 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 .foot-col h4{font-family:var(--sans);font-size:.7rem;font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:.18em;margin-bottom:1rem}
 .foot-col ul{display:flex;flex-direction:column;gap:.55rem}
 .foot-col ul a{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--ink-2);transition:color .2s var(--ease)}
-.foot-col ul a:hover{color:var(--alpenglow)}
+.foot-col ul a:hover{color:var(--accent)}
 .foot-col p{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--ink-3);max-width:24rem;line-height:1.55}
 .foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-top:2rem;border-top:1px solid var(--line);color:var(--ink-3);font-size:.75rem;letter-spacing:.06em;position:relative;z-index:1}
 
-:where(a,button,summary,input,textarea,select):focus-visible{outline:2px solid var(--alpenglow);outline-offset:3px}
+:where(a,button,summary,input,textarea,select):focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}.kicker,.hub-hero h1,.hub-hero .meta{opacity:1;transform:none;animation:none}.reveal{opacity:1;transform:none}.cursor-glow{display:none}}
 @media (min-width:680px){.filter-toggle{display:none}.filter-bar .wrap{display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-end}.filter-panel{display:contents;padding-top:0}.filter-bar__head{order:99;margin-left:auto;align-items:baseline;padding-bottom:.2rem}}
+
+.hub-catcher{margin-top:.7rem;max-width:42ch;font-family:var(--serif);font-style:italic;font-size:clamp(1rem,.95rem + .4vw,1.25rem);line-height:1.4;color:rgba(253,250,243,.94);text-shadow:0 1px 14px rgba(15,30,38,.5);transform:translateY(20px);opacity:0;animation:rise .8s var(--ease-out) .42s forwards}
+.hub-intro{border-bottom:1px solid var(--line)}
+.hub-intro .wrap{padding:1.4rem 0 1.5rem}
+.hub-intro .lead{font-family:var(--serif);font-size:clamp(1rem,.97rem + .3vw,1.12rem);line-height:1.55;color:var(--ink-2);max-width:66ch;margin:0}
+.hub-intro .lead b{font-weight:600;color:var(--ink)}
+.seo-more{margin-top:.55rem}
+.seo-more>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.45rem;font:600 .7rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);padding:.25rem 0}
+.seo-more>summary::-webkit-details-marker{display:none}
+.seo-more>summary::after{content:"+";font-size:1.05rem;line-height:1}
+.seo-more[open]>summary::after{content:"\2013"}
+.seo-more .more-body{max-width:66ch}
+.seo-more .more-body p{font-family:var(--serif);font-size:1rem;line-height:1.62;color:var(--ink-2);margin-top:.85rem}
+.seo-more .more-body b{font-weight:600;color:var(--ink)}
+.hub-faq{border-top:1px solid var(--line)}
+.hub-faq .wrap{padding:clamp(2rem,4vw,3rem) 0}
+.hub-faq h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,1.1rem + 1vw,2rem);letter-spacing:-.02em;color:var(--ink);margin-bottom:1rem;font-variation-settings:"SOFT" 50}
+.faq-item{border-top:1px solid var(--line)}
+.faq-item>summary{cursor:pointer;list-style:none;padding:.95rem 0;font-family:var(--serif);font-size:1.08rem;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-item>summary::-webkit-details-marker{display:none}
+.faq-item>summary::after{content:"+";color:var(--accent);font-size:1.25rem;line-height:1;flex-shrink:0}
+.faq-item[open]>summary::after{content:"\2013"}
+.faq-item .faq-a{padding:0 0 1.05rem;font-family:var(--sans);font-size:.95rem;line-height:1.62;color:var(--ink-2);max-width:70ch}
+/* template refinement: demote transport, drop static counts */
+.commune-section{display:flex;flex-direction:column}
+.commune-head{order:1}
+.commune-section .carousel{order:2}
+.commune-section .transport-block,.commune-section .transport-block.transport-empty{order:3;margin:1.1rem 0 0;padding:.7rem 0 0;background:transparent;border:0;border-top:1px dashed var(--line);border-radius:0;max-width:none;opacity:.8}
+.transport-block .transport-label{color:var(--ink-3)}
+.transport-row .t-v{font-size:.82rem}
+.transport-block p{font-size:.8rem;color:var(--ink-3)}
+.commune-count{display:none}
 </style>
 <meta content="https://loisirs74.fr/og-image.jpg" property="og:image"/>
 <meta content="https://loisirs74.fr/og-image.jpg" name="twitter:image"/>
+<link href="/content/points-de-vue.md" rel="alternate" title="Markdown version" type="text/markdown"/>
+<meta content="https://loisirs74.fr/content/points-de-vue.md" name="ai:content-url"/>
+<meta content="https://loisirs74.fr/.well-known/ai-info.json" name="ai:policy-url"/>
+<meta content="hub-category-listing" name="ai:page-type"/>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://loisirs74.fr/points-de-vue/#itemlist",
+  "name": "Points de vue",
+  "description": "Liste de 14 points de vue en Haute-Savoie",
+  "numberOfItems": 28,
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "inLanguage": "fr",
+  "isPartOf": {
+    "@type": "CollectionPage",
+    "@id": "https://loisirs74.fr/points-de-vue/"
+  },
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Aire de décollage parapente de Plaine-Joux",
+        "url": "https://loisirs74.fr/aire-de-decollage-parapente-plaine-joux",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Passy",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.94944,
+          "longitude": 6.73972
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Aire_de_d%C3%A9collage_de_parapentes_%40_Passy_Plaine-Joux_%2851062114852%29.jpg"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Belvédère du Mont Baron",
+        "url": "https://loisirs74.fr/belvedere-du-mont-baron",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Veyrier-du-Lac",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.8992,
+          "longitude": 6.1868
+        },
+        "image": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=1600&q=80"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Col de la Forclaz",
+        "url": "https://loisirs74.fr/col-de-la-forclaz",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Talloires-Montmin",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.8083,
+          "longitude": 6.24472
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Plateforme_de_d%C3%A9collage_de_deltaplane_%40_Col_de_la_Forclaz.jpg"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Col des Aravis",
+        "url": "https://loisirs74.fr/col-des-aravis",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "La Clusaz",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.8722,
+          "longitude": 6.4648
+        },
+        "image": "/col-des-aravis-hero.jpg"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Col des Glières",
+        "url": "https://loisirs74.fr/col-des-glieres",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Fillière",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.0514,
+          "longitude": 6.3297
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/95/Plateau_des_Gli%C3%A8res_%40_Montagne_des_Auges.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Le Salève (Col des Pitons)",
+        "url": "https://loisirs74.fr/col-des-pitons-saleve",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Collonges-sous-Salève",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.1432,
+          "longitude": 6.1514
+        },
+        "image": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=1600&q=80"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Le Semnoz",
+        "url": "https://loisirs74.fr/le-semnoz",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Viuz-la-Chiésaz",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.7887,
+          "longitude": 6.0838
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Cr%C3%AAt_de_Chatillon_%40_Semnoz_%2835471373476%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Mont Baron",
+        "url": "https://loisirs74.fr/mont-baron",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Veyrier-du-Lac",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.902,
+          "longitude": 6.174
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Mont_Baron_%40_Veyrier-du-Lac_%2851213738648%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Mont Joly",
+        "url": "https://loisirs74.fr/mont-joly",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Saint-Gervais-les-Bains",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.825959,
+          "longitude": 6.692936
+        },
+        "image": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=1600&q=80"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Mont Salève",
+        "url": "https://loisirs74.fr/mont-saleve",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Monnetier-Mornex",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.1185,
+          "longitude": 6.1833
+        },
+        "image": "/mont-saleve-hero.jpg"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Mont Veyrier",
+        "url": "https://loisirs74.fr/mont-veyrier",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Annecy",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.9181,
+          "longitude": 6.1805
+        },
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Plateau des Glières",
+        "url": "https://loisirs74.fr/plateau-des-glieres",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Fillière",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.9583,
+          "longitude": 6.3667
+        },
+        "image": "/plateau-des-glieres-hero.jpg"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Pont de la Caille",
+        "url": "https://loisirs74.fr/pont-de-la-caille",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cruseilles",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.0133,
+          "longitude": 6.1115
+        },
+        "image": "/pont-de-la-caille-hero.jpg"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Tête du Parmelan",
+        "url": "https://loisirs74.fr/tete-du-parmelan",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dingy-Saint-Clair",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.9622,
+          "longitude": 6.2547
+        },
+        "image": "/tete-du-parmelan-hero.jpg"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Télécabine Panoramic Mont-Blanc",
+        "url": "https://loisirs74.fr/telecabine-panoramic-mont-blanc",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chamonix-Mont-Blanc",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.9166,
+          "longitude": 6.8702
+        }
+      },
+      "position": 15
+    },
+    {
+      "@type": "ListItem",
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Téléphérique de l'Aiguille du Midi",
+        "url": "https://loisirs74.fr/telepherique-aiguille-du-midi",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chamonix-Mont-Blanc",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.9166,
+          "longitude": 6.8702
+        }
+      },
+      "position": 16
+    },
+    {
+      "@type": "ListItem",
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Téléphérique du Salève",
+        "url": "https://loisirs74.fr/telepherique-du-saleve",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Étrembières",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.1628,
+          "longitude": 6.1892
+        }
+      },
+      "position": 17
+    },
+    {
+      "@type": "ListItem",
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Train du Montenvers - Mer de Glace",
+        "url": "https://loisirs74.fr/train-du-montenvers-mer-de-glace",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chamonix-Mont-Blanc",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.9241,
+          "longitude": 6.8716
+        }
+      },
+      "position": 18
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "item": {
+        "@type": "TouristAttraction",
+        "@id": "https://loisirs74.fr/col-de-la-colombiere",
+        "name": "Col de la Colombière",
+        "url": "https://loisirs74.fr/col-de-la-colombiere"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "item": {
+        "@type": "TouristAttraction",
+        "@id": "https://loisirs74.fr/col-de-la-croix-fry",
+        "name": "Col de la Croix-Fry",
+        "url": "https://loisirs74.fr/col-de-la-croix-fry"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "item": {
+        "@type": "TouristAttraction",
+        "@id": "https://loisirs74.fr/plateau-de-loex",
+        "name": "Plateau de Loëx",
+        "url": "https://loisirs74.fr/plateau-de-loex"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "item": {
+        "@type": "TouristAttraction",
+        "@id": "https://loisirs74.fr/plateau-de-solaison",
+        "name": "Plateau de Solaison",
+        "url": "https://loisirs74.fr/plateau-de-solaison"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "item": {
+        "@type": "TouristAttraction",
+        "@id": "https://loisirs74.fr/pointe-de-miribel",
+        "name": "Pointe de Miribel",
+        "url": "https://loisirs74.fr/pointe-de-miribel"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "item": {
+        "@type": "TouristAttraction",
+        "@id": "https://loisirs74.fr/reserve-naturelle-bout-du-lac",
+        "name": "Réserve Naturelle du Bout du Lac",
+        "url": "https://loisirs74.fr/reserve-naturelle-bout-du-lac"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "item": {
+        "@type": "TouristAttraction",
+        "@id": "https://loisirs74.fr/reserve-naturelle-delta-de-la-dranse",
+        "name": "Réserve Naturelle du Delta de la Dranse",
+        "url": "https://loisirs74.fr/reserve-naturelle-delta-de-la-dranse"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "item": {
+        "@type": "TouristAttraction",
+        "@id": "https://loisirs74.fr/sentier-des-roselieres",
+        "name": "Sentier des Roselières",
+        "url": "https://loisirs74.fr/sentier-des-roselieres"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "item": {
+        "@type": "TouristAttraction",
+        "@id": "https://loisirs74.fr/voie-verte-du-chablais",
+        "name": "Voie Verte du Chablais",
+        "url": "https://loisirs74.fr/voie-verte-du-chablais"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 28,
+      "item": {
+        "@type": "TouristAttraction",
+        "@id": "https://loisirs74.fr/marais-de-poisy",
+        "name": "Marais de Poisy",
+        "url": "https://loisirs74.fr/marais-de-poisy"
+      }
+    }
+  ]
+}</script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "url": "https://loisirs74.fr/de/aussichtspunkte/",
-  "name": "Aussichtspunkte",
-  "inLanguage": "de",
+  "url": "https://loisirs74.fr/points-de-vue/",
+  "name": "Points de vue",
+  "inLanguage": "fr",
   "isPartOf": {
     "@type": "WebSite",
-    "url": "https://loisirs74.fr/de/",
+    "url": "https://loisirs74.fr/",
     "name": "Loisirs 74"
   },
   "numberOfItems": 14
@@ -228,546 +751,618 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <span><b>loisirs74</b> <i>· Haute-Savoie</i></span>
 </a>
 <details class="lang-picker">
-<summary><b>DE</b> · 5 Sprachen</summary>
+<summary><b>FR</b> · 5 langues</summary>
 <div class="lang-menu">
-<a href="https://loisirs74.fr/points-de-vue/" hreflang="fr">Français</a><a href="https://loisirs74.fr/en/viewpoints/" hreflang="en">English</a><a aria-current="true" href="https://loisirs74.fr/de/aussichtspunkte/" hreflang="de">Deutsch</a><a href="https://loisirs74.fr/it/punti-panoramici/" hreflang="it">Italiano</a><a href="https://loisirs74.fr/es/miradores/" hreflang="es">Español</a>
+<a href="https://loisirs74.fr/points-de-vue/" hreflang="fr">Français</a><a href="https://loisirs74.fr/en/viewpoints/" hreflang="en">English</a><a aria-current="true" href="https://loisirs74.fr/de/aussichtspunkte/" hreflang="de">Deutsch</a><a href="https://loisirs74.fr/it/punti-panoramici/" hreflang="it">Italiano</a><a href="https://loisirs74.fr/es/miradores/" hreflang="es">Español</a><a href="https://loisirs74.fr/nl/uitzichtpunten/" hreflang="nl">Nederlands</a>
 </div>
 </details>
 </header>
 <nav aria-label="breadcrumb" class="crumb">
-<a href="https://loisirs74.fr/de/">Startseite</a>
+<a href="https://loisirs74.fr/">Accueil</a>
 <span class="sep">/</span>
-<b>Aussichtspunkte</b>
+<b>Points de vue</b>
 </nav>
 <section class="hub-hero">
 <div class="wrap">
-<h1>Aussichtspunkte</h1>
-<p class="meta"><b>26 Orte</b><span class="dot">·</span><span>22 Gemeinden</span></p>
+<h1>Aussichtspunkte &amp; Pässe</h1>
+<p class="hub-catcher">Aussichtspunkte, Pässe und Gipfel — wo sich das Haute-Savoie von oben betrachtet, vom Lac d'Annecy bis zum Mont-Blanc.</p>
+</div>
+</section>
+<section class="hub-intro" aria-label="Einführung">
+<div class="wrap">
+<p class="lead">Vom mit dem Auto erreichbaren Aussichtspunkt bis zum Gipfel, den man sich verdienen muss, bietet das Haute-Savoie Panoramen über den Lac d'Annecy, den Léman und das Mont-Blanc-Massiv. Manche erreicht man zu Fuß, andere mit der Seilbahn.</p>
+<details class="seo-more">
+<summary>Lire la suite</summary>
+<div class="more-body">
+<p>Über Annecy überragen der <b>Mont Veyrier</b> und der <b>Semnoz</b> den See; an der Genfer Grenze erreicht man <b>Le Salève</b> per Seilbahn. Noch höher öffnet die <b>Aiguille du Midi</b> das Hochgebirge gegenüber dem Mont-Blanc.</p>
+<p>Bei Pässen und Hochebenen bieten das <b>Plateau de Solaison</b>, der Pont de la Caille sowie die großen Pässe der Aravis und der Colombière weite Ausblicke, oft mit Auto oder Fahrrad erreichbar.</p>
+<p>Manche Aussichtspunkte erreicht man zu Fuß, andere mit Seilbahn oder Auto. Jeder Eintrag nennt die Art des Zugangs und die Gemeinde.</p>
+<p>In der Höhe sollten Sie Wetter und die saisonale Öffnung der Pässe prüfen, die im Winter unter dem Schnee geschlossen sind.</p>
+</div>
+</details>
 </div>
 </section>
 <div class="filter-bar">
 <div class="wrap">
 <div class="filter-bar__head">
-<div class="count-live"><b id="count-n">0</b> <span id="count-label">Orte angezeigt</span></div>
+<div class="count-live"><b id="count-n">0</b> <span id="count-label">lieux affichés</span></div>
 <button aria-controls="filter-panel" aria-expanded="false" class="filter-toggle" type="button">
-<span>Filter</span>
+<span>Filtres</span>
 <span class="filter-toggle__badge" hidden="" id="filter-toggle-badge">0</span>
 <svg aria-hidden="true" class="filter-toggle__chev" height="11" viewbox="0 0 12 12" width="11"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
 </button>
 </div>
 <div class="filter-panel" id="filter-panel">
 <label>
-<span>Ort</span>
-<select id="filt-commune"><option value="">Alle Gemeinden</option><option value="Annecy">Annecy</option><option value="Brizon">Brizon</option><option value="Chamonix-Mont-Blanc">Chamonix-Mont-Blanc</option><option value="Collonges-sous-Salève">Collonges-sous-Salève</option><option value="Cruseilles">Cruseilles</option><option value="Dingy-Saint-Clair">Dingy-Saint-Clair</option><option value="Doussard">Doussard</option><option value="Fillière">Fillière</option><option value="La Clusaz">La Clusaz</option><option value="Le Reposoir">Le Reposoir</option><option value="Manigod">Manigod</option><option value="Monnetier-Mornex">Monnetier-Mornex</option><option value="Passy">Passy</option><option value="Poisy">Poisy</option><option value="Publier">Publier</option><option value="Saint-Gervais-les-Bains">Saint-Gervais-les-Bains</option><option value="Talloires-Montmin">Talloires-Montmin</option><option value="Taninges">Taninges</option><option value="Veyrier-du-Lac">Veyrier-du-Lac</option><option value="Villard">Villard</option><option value="Viuz-la-Chiésaz">Viuz-la-Chiésaz</option><option value="Étrembières">Étrembières</option></select>
+<span>Commune</span>
+<select id="filt-commune"><option value="">Toutes les communes</option><option value="Abondance">Abondance</option><option value="Annecy">Annecy</option><option value="Brizon">Brizon</option><option value="Chamonix-Mont-Blanc">Chamonix-Mont-Blanc</option><option value="Collonges-sous-Salève">Collonges-sous-Salève</option><option value="Cruseilles">Cruseilles</option><option value="Dingy-Saint-Clair">Dingy-Saint-Clair</option><option value="Doussard">Doussard</option><option value="Fillière">Fillière</option><option value="La Clusaz">La Clusaz</option><option value="Le Reposoir">Le Reposoir</option><option value="Manigod">Manigod</option><option value="Monnetier-Mornex">Monnetier-Mornex</option><option value="Passy">Passy</option><option value="Poisy">Poisy</option><option value="Publier">Publier</option><option value="Saint-Gervais-les-Bains">Saint-Gervais-les-Bains</option><option value="Saint-Jorioz">Saint-Jorioz</option><option value="Talloires-Montmin">Talloires-Montmin</option><option value="Taninges">Taninges</option><option value="Veyrier-du-Lac">Veyrier-du-Lac</option><option value="Villard">Villard</option><option value="Viuz-la-Chiésaz">Viuz-la-Chiésaz</option><option value="Étrembières">Étrembières</option></select>
 </label>
 <label>
-<span>Zugang</span>
+<span>Accès</span>
 <div class="access-group" id="filt-access">
-<button class="active" data-v="all">Alle</button>
-<button data-v="free">Kostenlos</button>
-<button data-v="paid">Kostenpflichtig</button>
+<button class="active" data-v="all">Tous</button>
+<button data-v="free">Gratuit</button>
+<button data-v="paid">Payant</button>
 </div>
 </label>
 <label>
-<span>Sortierung</span>
-<select id="filt-sort"><option value="commune">Nach Ort</option><option value="alpha">A → Z</option></select>
+<span>Tri</span>
+<select id="filt-sort"><option value="commune">Par commune</option><option value="alpha">A → Z</option></select>
 </label>
 </div>
 </div>
 </div>
 <main>
 <div class="wrap">
-<div class="commune-section" data-commune="Annecy">
-<div class="commune-head"><h3>Annecy</h3><span class="commune-count">1 Ort</span></div><div class="transport-block">
-<div class="transport-label">Anreise</div>
-<div class="transport-row"><span class="t-k">Bahnhof</span><span class="t-v">Annecy</span></div><div class="transport-row"><span class="t-k">Buslinien</span><span class="t-v">Sibra (réseau urbain) · LIHSA Y4 Albertville · LIHSA Y3 Genève</span></div>
+<div class="commune-section" data-commune="Abondance">
+<div class="commune-head"><h3>Abondance</h3><span class="commune-count">1 lieu</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/mont-veyrier">
-<img alt="mont veyrier" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg"/>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<a class="card-photo" href="https://loisirs74.fr/voie-verte-du-chablais">
+<img alt="Chemin des bords de Dranse d'Abondance à Châtel, Haute-Savoie" loading="lazy" src="/voie-verte-du-chablais-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/de/mont-veyrier">Mont Veyrier</a>
-<p class="card-desc">Emblematischer Berg von Annecy auf 1.</p>
+<div class="card-commune"><span>Abondance</span></div><a class="title" href="https://loisirs74.fr/voie-verte-du-chablais">Voie Verte du Chablais</a>
+<p class="card-desc">Chemin de 20 km le long de la Dranse d'Abondance à Châtel. Accessible poussettes et vélos, gratuit, de mai à novembre. Vallée d'Abondance, Haute-Savoie.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mont%20Veyrier%2C%20Annecy%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.2801,6.7237" rel="noopener" target="_blank">Google Maps</a>
+</div>
+</div>
+</article></div>
+</div>
+<div class="commune-section" data-commune="Annecy">
+<div class="commune-head"><h3>Annecy</h3><span class="commune-count">1 lieu</span></div><div class="transport-block">
+<div class="transport-label">Comment y venir</div>
+<div class="transport-row"><span class="t-k">Gare SNCF</span><span class="t-v">Annecy</span></div><div class="transport-row"><span class="t-k">Lignes de bus</span><span class="t-v">Sibra (réseau urbain) · LIHSA Y4 Albertville · LIHSA Y3 Genève</span></div>
+</div>
+<div class="carousel"><article class="card">
+<a class="card-photo" href="https://loisirs74.fr/mont-veyrier">
+<img alt="Vue panoramique depuis le sommet du Mont Veyrier sur le lac d'Annecy et le massif des Bauges, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/mont-veyrier">Mont Veyrier</a>
+<p class="card-desc">Montagne emblématique d'Annecy culminant à 1 291 mètres, offrant un panorama exceptionnel sur le lac d'Annecy, les Bauges, les Aravis et le Mont-Blanc depuis le Sentier des Crêtes.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9181,6.1805" rel="noopener" target="_blank">Google Maps</a>
+</div>
+</div>
+</article></div>
+</div>
+<div class="commune-section" data-commune="Brizon">
+<div class="commune-head"><h3>Brizon</h3><span class="commune-count">1 lieu</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
+</div>
+<div class="carousel"><article class="card">
+<a class="card-photo" href="https://loisirs74.fr/plateau-de-solaison">
+<img alt="Plateau de Solaison à Brizon, Haute-Savoie" loading="lazy" src="/plateau-de-solaison-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Brizon</span></div><a class="title" href="https://loisirs74.fr/plateau-de-solaison">Plateau de Solaison</a>
+<p class="card-desc">Alpage à 1500 m entre la Pointe d'Andey et les Rochers de Leschaux. Accès libre toute l'année, domaine nordique en hiver. Brizon, Haute-Savoie.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.0333,6.428" rel="noopener" target="_blank">Google Maps</a>
+</div>
+</div>
+</article></div>
+</div>
+<div class="commune-section" data-commune="Chamonix-Mont-Blanc">
+<div class="commune-head"><h3>Chamonix-Mont-Blanc</h3><span class="commune-count">3 lieux</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
+</div>
+<div class="carousel"><article class="card">
+<a class="card-photo" href="https://loisirs74.fr/telecabine-panoramic-mont-blanc">
+<img alt="Télécabine Panoramic Mont-Blanc traversant le glacier du Géant entre l'Aiguille du Midi et la pointe Helbronner" data-generique="true" data-generique-cat="point-de-vue" loading="lazy" src="/generique-point-de-vue.jpg"/>
+<span class="card-tag is-payant">Payant</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/telecabine-panoramic-mont-blanc">Télécabine Panoramic Mont-Blanc</a>
+<p class="card-desc">Télécabine du sommet de l'Aiguille du Midi (3 777 m) à la pointe Helbronner (3 466 m) au-dessus du glacier du Géant. Saison été 4 juil – 27 sept 2026.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9166,6.8702" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://aiguilledumidi.montblancnaturalresort.com/fr/secteur/panoramic-mont-blanc" rel="noopener" target="_blank">Site officiel</a>
+</div>
+</div>
+</article>
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/telepherique-aiguille-du-midi">
+<img alt="Téléphérique de l'Aiguille du Midi montant vers le sommet 3 842 m face au massif du Mont-Blanc depuis Chamonix" data-generique="true" data-generique-cat="point-de-vue" loading="lazy" src="/generique-point-de-vue.jpg"/>
+<span class="card-tag is-payant">Payant</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/telepherique-aiguille-du-midi">Téléphérique de l'Aiguille du Midi</a>
+<p class="card-desc">Téléphérique panoramique de Chamonix au sommet à 3 842 m. Tarifs adulte AR 60,20 € – 83 €, ouverture 7h10–18h, Pas dans le Vide et terrasse sommet inclus.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9166,6.8702" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://aiguilledumidi.montblancnaturalresort.com/fr" rel="noopener" target="_blank">Site officiel</a>
+</div>
+</div>
+</article>
+<article class="card">
+<a class="card-photo" href="https://loisirs74.fr/train-du-montenvers-mer-de-glace">
+<img alt="Train rouge à crémaillère du Montenvers en gare de Chamonix face au massif du Mont-Blanc, accès à la Mer de Glace" data-generique="true" data-generique-cat="point-de-vue" loading="lazy" src="/generique-point-de-vue.jpg"/>
+<span class="card-tag is-payant">Payant</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/train-du-montenvers-mer-de-glace">Train du Montenvers - Mer de Glace</a>
+<p class="card-desc">Train à crémaillère de Chamonix à la Mer de Glace (1 913 m). Tarifs AR adulte 31,50 €, pack Voyage 49,70 €. Grotte de glace et Glaciorium inclus.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9241,6.8716" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://www.montenverstrain.com/fr/" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Collonges-sous-Salève">
-<div class="commune-head"><h3>Collonges-sous-Salève</h3><span class="commune-count">1 Ort</span></div><div class="transport-block">
-<div class="transport-label">Anreise</div>
-<div class="transport-row"><span class="t-k">Bahnhof</span><span class="t-v">Saint-Julien (10 km)</span></div><div class="transport-row"><span class="t-k">Buslinien</span><span class="t-v">LIHSA</span></div>
+<div class="commune-head"><h3>Collonges-sous-Salève</h3><span class="commune-count">1 lieu</span></div><div class="transport-block">
+<div class="transport-label">Comment y venir</div>
+<div class="transport-row"><span class="t-k">Gare SNCF</span><span class="t-v">Saint-Julien (10 km)</span></div><div class="transport-row"><span class="t-k">Lignes de bus</span><span class="t-v">LIHSA</span></div>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/col-des-pitons-saleve">
-<img alt="col des pitons saleve" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/6/68/La_Tour_des_Pitons%2C_point_culminant_du_Sal%C3%A8ve_%281379m%29.JPG"/><span style="position:absolute;top:0.5rem;right:0.5rem;background:rgba(155,140,240,0.92);color:#fff;padding:0.15rem 0.5rem;border-radius:3px;font-size:0.62rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;z-index:2;backdrop-filter:blur(4px);">Générique</span>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<a class="card-photo" href="https://loisirs74.fr/col-des-pitons-saleve">
+<img alt="Col des Pitons sur le massif du Salève, Haute-Savoie, avec vue sur le bassin genevois et le lac Léman" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/6/68/La_Tour_des_Pitons%2C_point_culminant_du_Sal%C3%A8ve_%281379m%29.JPG"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Collonges-sous-Salève</span></div><a class="title" href="https://loisirs74.fr/de/col-des-pitons-saleve">Le Salève (Col des Pitons)</a>
+<div class="card-commune"><span>Collonges-sous-Salève</span></div><a class="title" href="https://loisirs74.fr/col-des-pitons-saleve">Le Salève (Col des Pitons)</a>
 <p class="card-desc">Point routier le plus élevé du massif du Salève (1 335 m), au pied du Grand Piton.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Le%20Sal%C3%A8ve%20(Col%20des%20Pitons)%2C%20Collonges-sous-Sal%C3%A8ve%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.1432,6.1514" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Cruseilles">
-<div class="commune-head"><h3>Cruseilles</h3><span class="commune-count">1 Ort</span></div><div class="transport-block transport-empty">
-<div class="transport-label">Anreise</div>
-<p>Eingeschränkter ÖPNV. Auto empfohlen.</p>
+<div class="commune-head"><h3>Cruseilles</h3><span class="commune-count">1 lieu</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/pont-de-la-caille">
-<img alt="Pont de la Caille in Cruseilles, Haute-Savoie" loading="lazy" src="/pont-de-la-caille-hero.jpg"/>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<a class="card-photo" href="https://loisirs74.fr/pont-de-la-caille">
+<img alt="Pont de la Caille à Cruseilles, Haute-Savoie" loading="lazy" src="/pont-de-la-caille-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Cruseilles</span></div><a class="title" href="https://loisirs74.fr/de/pont-de-la-caille">Pont de la Caille</a>
-<p class="card-desc">Zwei Brücken nebeneinander über den Usses-Schluchten: die Pont Charles-Albert, Hängebrücke, eingeweiht 1839, heute nur für Fußgänger und seit 1966 als Historisches Denkmal eingetragen; und die Pont Caquot, Betonbogen von 1928, auf dem die RD1201 verläuft.</p>
+<div class="card-commune"><span>Cruseilles</span></div><a class="title" href="https://loisirs74.fr/pont-de-la-caille">Pont de la Caille</a>
+<p class="card-desc">Deux ponts côte à côte au-dessus des gorges des Usses : le pont Charles-Albert, suspendu, inauguré en 1839, aujourd'hui piéton et inscrit aux Monuments Historiques depuis 1966 ; et le pont Caquot, arche de béton de 1928, qui porte la RD1201.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Pont%20de%20la%20Caille%2C%20Cruseilles%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.0133,6.1115" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Dingy-Saint-Clair">
-<div class="commune-head"><h3>Dingy-Saint-Clair</h3><span class="commune-count">1 Ort</span></div><div class="transport-block transport-empty">
-<div class="transport-label">Anreise</div>
-<p>Eingeschränkter ÖPNV. Auto empfohlen.</p>
+<div class="commune-head"><h3>Dingy-Saint-Clair</h3><span class="commune-count">1 lieu</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/tete-du-parmelan">
-<img alt="Ausblick vom Tête du Parmelan mit dem Gipfelkreuz und der Refuge Camille Dunant über Annecy, Bornes-Massiv, Haute-Savoie" loading="lazy" src="/tete-du-parmelan-hero.jpg"/>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<a class="card-photo" href="https://loisirs74.fr/tete-du-parmelan">
+<img alt="Vue depuis la Tête du Parmelan avec sa croix sommitale et le refuge Camille Dunant surplombant Annecy, massif des Bornes, Haute-Savoie" loading="lazy" src="/tete-du-parmelan-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Dingy-Saint-Clair</span></div><a class="title" href="https://loisirs74.fr/de/tete-du-parmelan">Tête du Parmelan</a>
-<p class="card-desc">Der emblematische Gipfel des Parmelan-Plateaus, ein riesiges Kalksteinplateau auf 1.</p>
+<div class="card-commune"><span>Dingy-Saint-Clair</span></div><a class="title" href="https://loisirs74.fr/tete-du-parmelan">Tête du Parmelan</a>
+<p class="card-desc">Le sommet emblématique du plateau du Parmelan, vaste balcon calcaire à 1 832 m offrant une vue panoramique sur le bassin annécien, les Aravis et le massif du Mont-Blanc.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=T%C3%AAte%20du%20Parmelan%2C%20Dingy-Saint-Clair%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9622,6.2547" rel="noopener" target="_blank">Google Maps</a>
+</div>
+</div>
+</article></div>
+</div>
+<div class="commune-section" data-commune="Doussard">
+<div class="commune-head"><h3>Doussard</h3><span class="commune-count">1 lieu</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
+</div>
+<div class="carousel"><article class="card">
+<a class="card-photo" href="https://loisirs74.fr/reserve-naturelle-bout-du-lac">
+<img alt="Réserve Naturelle du Bout du Lac à Doussard, Haute-Savoie" loading="lazy" src="/reserve-naturelle-bout-du-lac-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Doussard</span></div><a class="title" href="https://loisirs74.fr/reserve-naturelle-bout-du-lac">Réserve Naturelle du Bout du Lac</a>
+<p class="card-desc">Dernière grande zone humide du lac d'Annecy. 84 ha, castors, tour de Beauvivier, sentier pédagogique accessible. Accès libre à Doussard, Haute-Savoie.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.7858,6.2122" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Fillière">
-<div class="commune-head"><h3>Fillière</h3><span class="commune-count">2 Orte</span></div><div class="transport-block transport-empty">
-<div class="transport-label">Anreise</div>
-<p>Eingeschränkter ÖPNV. Auto empfohlen.</p>
+<div class="commune-head"><h3>Fillière</h3><span class="commune-count">2 lieux</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/col-des-glieres">
-<img alt="col des glieres" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Plateau_des_Gli%C3%A8res_%40_Montagne_des_Auges.jpg"/>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<a class="card-photo" href="https://loisirs74.fr/col-des-glieres">
+<img alt="Plateau des Glières en été avec vue sur les alpages et le Monument National de la Résistance, Fillière, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Plateau_des_Gli%C3%A8res_%40_Montagne_des_Auges.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Fillière</span></div><a class="title" href="https://loisirs74.fr/de/col-des-glieres">Col des Glières</a>
-<p class="card-desc">Hochgebirgspass und -plateau (1.</p>
+<div class="card-commune"><span>Fillière</span></div><a class="title" href="https://loisirs74.fr/col-des-glieres">Col des Glières</a>
+<p class="card-desc">Col et plateau d'altitude (1 425 m) au centre du massif des Bornes, haut lieu de la Résistance française, accessible par deux routes de montagne et offrant un vaste espace d'alpages.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Col%20des%20Gli%C3%A8res%2C%20Filli%C3%A8re%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.0514,6.3297" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article>
 <article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/plateau-des-glieres">
-<img alt="Plateau des Glières mit dem Nationalen Widerstandsdenkmal von Émile Gilioli unter dem Berghimmel, Fillière, Haute-Savoie" loading="lazy" src="/plateau-des-glieres-hero.jpg"/>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<a class="card-photo" href="https://loisirs74.fr/plateau-des-glieres">
+<img alt="Plateau des Glières avec le Monument national à la Résistance d'Émile Gilioli sous le ciel de montagne, Fillière, Haute-Savoie" loading="lazy" src="/plateau-des-glieres-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Fillière</span></div><a class="title" href="https://loisirs74.fr/de/plateau-des-glieres">Plateau des Glières</a>
-<p class="card-desc">Kalksteinplateau des Bornes-Massivs auf 1.</p>
+<div class="card-commune"><span>Fillière</span></div><a class="title" href="https://loisirs74.fr/plateau-des-glieres">Plateau des Glières</a>
+<p class="card-desc">Plateau calcaire du massif des Bornes à 1 450 m d'altitude, haut lieu de mémoire de la Résistance française et site naturel classé Natura 2000.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plateau%20des%20Gli%C3%A8res%2C%20Filli%C3%A8re%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9583,6.3667" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="La Clusaz">
-<div class="commune-head"><h3>La Clusaz</h3><span class="commune-count">1 Ort</span></div><div class="transport-block">
-<div class="transport-label">Anreise</div>
-<div class="transport-row"><span class="t-k">Bahnhof</span><span class="t-v">Annecy (32 km)</span></div><div class="transport-row"><span class="t-k">Buslinien</span><span class="t-v">LIHSA Y62</span></div>
+<div class="commune-head"><h3>La Clusaz</h3><span class="commune-count">1 lieu</span></div><div class="transport-block">
+<div class="transport-label">Comment y venir</div>
+<div class="transport-row"><span class="t-k">Gare SNCF</span><span class="t-v">Annecy (32 km)</span></div><div class="transport-row"><span class="t-k">Lignes de bus</span><span class="t-v">LIHSA Y62</span></div>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/col-des-aravis">
-<img alt="Col des Aravis zwischen La Clusaz und La Giettaz, Haute-Savoie" loading="lazy" src="/col-des-aravis-hero.jpg"/>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<a class="card-photo" href="https://loisirs74.fr/col-des-aravis">
+<img alt="Col des Aravis entre La Clusaz et La Giettaz, Haute-Savoie" loading="lazy" src="/col-des-aravis-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>La Clusaz</span></div><a class="title" href="https://loisirs74.fr/de/col-des-aravis">Col des Aravis</a>
-<p class="card-desc">Der Col des Aravis verbindet La Clusaz in Haute-Savoie mit La Giettaz in Savoie auf 1 486 m.</p>
+<div class="card-commune"><span>La Clusaz</span></div><a class="title" href="https://loisirs74.fr/col-des-aravis">Col des Aravis</a>
+<p class="card-desc">Le col des Aravis relie La Clusaz, en Haute-Savoie, à La Giettaz, en Savoie, à 1 486 m d'altitude.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Col%20des%20Aravis%2C%20La%20Clusaz%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.8722,6.4648" rel="noopener" target="_blank">Google Maps</a>
+</div>
+</div>
+</article></div>
+</div>
+<div class="commune-section" data-commune="Le Reposoir">
+<div class="commune-head"><h3>Le Reposoir</h3><span class="commune-count">1 lieu</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
+</div>
+<div class="carousel"><article class="card">
+<a class="card-photo" href="https://loisirs74.fr/col-de-la-colombiere">
+<img alt="Col de la Colombière à 1613 m entre Le Reposoir et Le Grand-Bornand, Haute-Savoie" loading="lazy" src="/col-de-la-colombiere-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Le Reposoir</span></div><a class="title" href="https://loisirs74.fr/col-de-la-colombiere">Col de la Colombière</a>
+<p class="card-desc">Col à 1613 m entre Aravis et Bargy, route ouverte de juin à octobre. Classique du Tour de France. Le Reposoir, Le Grand-Bornand, Haute-Savoie.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9922,6.4756" rel="noopener" target="_blank">Google Maps</a>
+</div>
+</div>
+</article></div>
+</div>
+<div class="commune-section" data-commune="Manigod">
+<div class="commune-head"><h3>Manigod</h3><span class="commune-count">1 lieu</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
+</div>
+<div class="carousel"><article class="card">
+<a class="card-photo" href="https://loisirs74.fr/col-de-la-croix-fry">
+<img alt="Col de la Croix-Fry entre Manigod et La Clusaz, Haute-Savoie" loading="lazy" src="/col-de-la-croix-fry-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Manigod</span></div><a class="title" href="https://loisirs74.fr/col-de-la-croix-fry">Col de la Croix-Fry</a>
+<p class="card-desc">Col à 1467 m sur la D16 entre Manigod et La Clusaz. Station familiale, plateau de Beauregard, étape du Tour de France. Accès libre en été.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.8767,6.4047" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Monnetier-Mornex">
-<div class="commune-head"><h3>Monnetier-Mornex</h3><span class="commune-count">1 Ort</span></div><div class="transport-block transport-empty">
-<div class="transport-label">Anreise</div>
-<p>Eingeschränkter ÖPNV. Auto empfohlen.</p>
+<div class="commune-head"><h3>Monnetier-Mornex</h3><span class="commune-count">1 lieu</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/mont-saleve">
-<img alt="Mont Salève vom Genfer Vorland, Haute-Savoie" loading="lazy" src="/mont-saleve-hero.jpg"/>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<a class="card-photo" href="https://loisirs74.fr/mont-saleve">
+<img alt="Mont Salève vu depuis le piémont genevois, Haute-Savoie" loading="lazy" src="/mont-saleve-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Monnetier-Mornex</span></div><a class="title" href="https://loisirs74.fr/de/mont-saleve">Mont Salève</a>
-<p class="card-desc">Der Balkon von Genf erreicht am Grand Piton 1379 m.</p>
+<div class="card-commune"><span>Monnetier-Mornex</span></div><a class="title" href="https://loisirs74.fr/mont-saleve">Mont Salève</a>
+<p class="card-desc">Le Balcon de Genève culmine à 1379 m au Grand Piton.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mont%20Sal%C3%A8ve%2C%20Monnetier-Mornex%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.1185,6.1833" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Passy">
-<div class="commune-head"><h3>Passy</h3><span class="commune-count">1 Ort</span></div><div class="transport-block">
-<div class="transport-label">Anreise</div>
-<div class="transport-row"><span class="t-k">Bahnhof</span><span class="t-v">Passy-Plaine-Joux halt</span></div><div class="transport-row"><span class="t-k">Buslinien</span><span class="t-v">SAT Mont-Blanc</span></div>
+<div class="commune-head"><h3>Passy</h3><span class="commune-count">1 lieu</span></div><div class="transport-block">
+<div class="transport-label">Comment y venir</div>
+<div class="transport-row"><span class="t-k">Gare SNCF</span><span class="t-v">Passy-Plaine-Joux halt</span></div><div class="transport-row"><span class="t-k">Lignes de bus</span><span class="t-v">SAT Mont-Blanc</span></div>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/aire-de-decollage-parapente-plaine-joux">
-<img alt="aire de decollage parapente plaine joux" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Aire_de_d%C3%A9collage_de_parapentes_%40_Passy_Plaine-Joux_%2851062114852%29.jpg"/>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<a class="card-photo" href="https://loisirs74.fr/aire-de-decollage-parapente-plaine-joux">
+<img alt="Parapentes multicolores au décollage de Plaine-Joux face au Mont-Blanc, Passy, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Aire_de_d%C3%A9collage_de_parapentes_%40_Passy_Plaine-Joux_%2851062114852%29.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Passy</span></div><a class="title" href="https://loisirs74.fr/de/aire-de-decollage-parapente-plaine-joux">Aire de décollage parapente de Plaine-Joux</a>
-<p class="card-desc">Startplatz für Gleitschirm- und Drachenflug mit Blick auf das Mont-Blanc-Massiv, zählt zu den schönsten Freiflugelzonen der Welt und ist mit dem Auto in 1.</p>
+<div class="card-commune"><span>Passy</span></div><a class="title" href="https://loisirs74.fr/aire-de-decollage-parapente-plaine-joux">Aire de décollage parapente de Plaine-Joux</a>
+<p class="card-desc">Site de décollage parapente et deltaplane face au massif du Mont-Blanc, classé parmi les plus beaux spots de vol libre au monde, accessible en voiture à 1 360 m d'altitude.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Aire%20de%20d%C3%A9collage%20parapente%20de%20Plaine-Joux%2C%20Passy%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.94944,6.73972" rel="noopener" target="_blank">Google Maps</a>
+</div>
+</div>
+</article></div>
+</div>
+<div class="commune-section" data-commune="Poisy">
+<div class="commune-head"><h3>Poisy</h3><span class="commune-count">1 lieu</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
+</div>
+<div class="carousel"><article class="card">
+<a class="card-photo" href="https://loisirs74.fr/marais-de-poisy">
+<img alt="Marais de Poisy, zone humide classée ENS, Haute-Savoie" loading="lazy" src="/marais-de-poisy-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Poisy</span></div><a class="title" href="https://loisirs74.fr/marais-de-poisy">Marais de Poisy</a>
+<p class="card-desc">Zone humide de 12 ha classée ENS, sentier de 1,5 km accessible poussettes et fauteuils, panneaux faune et flore. Accès libre à Poisy, Haute-Savoie.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9389,6.0786" rel="noopener" target="_blank">Google Maps</a>
+</div>
+</div>
+</article></div>
+</div>
+<div class="commune-section" data-commune="Publier">
+<div class="commune-head"><h3>Publier</h3><span class="commune-count">1 lieu</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
+</div>
+<div class="carousel"><article class="card">
+<a class="card-photo" href="https://loisirs74.fr/reserve-naturelle-delta-de-la-dranse">
+<img alt="Réserve Naturelle du Delta de la Dranse au bord du Léman, Haute-Savoie" loading="lazy" src="/reserve-naturelle-delta-de-la-dranse-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Publier</span></div><a class="title" href="https://loisirs74.fr/reserve-naturelle-delta-de-la-dranse">Réserve Naturelle du Delta de la Dranse</a>
+<p class="card-desc">53 ha au bord du Léman à cheval sur Publier et Thonon. Delta, castor, 23 orchidées, forêt alluviale. Accès libre toute l'année en Haute-Savoie.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.3892,6.5214" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Saint-Gervais-les-Bains">
-<div class="commune-head"><h3>Saint-Gervais-les-Bains</h3><span class="commune-count">1 Ort</span></div><div class="transport-block">
-<div class="transport-label">Anreise</div>
-<div class="transport-row"><span class="t-k">Bahnhof</span><span class="t-v">Saint-Gervais-Le-Fayet</span></div><div class="transport-row"><span class="t-k">Buslinien</span><span class="t-v">SAT Mont-Blanc · Tramway du Mont-Blanc</span></div>
+<div class="commune-head"><h3>Saint-Gervais-les-Bains</h3><span class="commune-count">1 lieu</span></div><div class="transport-block">
+<div class="transport-label">Comment y venir</div>
+<div class="transport-row"><span class="t-k">Gare SNCF</span><span class="t-v">Saint-Gervais-Le-Fayet</span></div><div class="transport-row"><span class="t-k">Lignes de bus</span><span class="t-v">SAT Mont-Blanc · Tramway du Mont-Blanc</span></div>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/mont-joly">
-<img alt="mont joly" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/5/54/Meg%C3%A8ve%2C_depuis_la_cha%C3%AEne_du_Mont-Joly.jpg"/><span style="position:absolute;top:0.5rem;right:0.5rem;background:rgba(155,140,240,0.92);color:#fff;padding:0.15rem 0.5rem;border-radius:3px;font-size:0.62rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;z-index:2;backdrop-filter:blur(4px);">Générique</span>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<a class="card-photo" href="https://loisirs74.fr/mont-joly">
+<img alt="Sommet du Mont Joly à 2 525 m avec vue panoramique sur le massif du Mont-Blanc, Saint-Gervais-les-Bains, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/5/54/Meg%C3%A8ve%2C_depuis_la_cha%C3%AEne_du_Mont-Joly.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Saint-Gervais-les-Bains</span></div><a class="title" href="https://loisirs74.fr/de/mont-joly">Mont Joly</a>
-<p class="card-desc">Emblematischer Gipfel auf 2.</p>
+<div class="card-commune"><span>Saint-Gervais-les-Bains</span></div><a class="title" href="https://loisirs74.fr/mont-joly">Mont Joly</a>
+<p class="card-desc">Sommet emblématique à 2 525 m d'altitude offrant un panorama à 360° sur le massif du Mont-Blanc, le Beaufortain, les Aravis, les Fiz et les Bauges.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mont%20Joly%2C%20Saint-Gervais-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.825959,6.692936" rel="noopener" target="_blank">Google Maps</a>
+</div>
+</div>
+</article></div>
+</div>
+<div class="commune-section" data-commune="Saint-Jorioz">
+<div class="commune-head"><h3>Saint-Jorioz</h3><span class="commune-count">1 lieu</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
+</div>
+<div class="carousel"><article class="card">
+<a class="card-photo" href="https://loisirs74.fr/sentier-des-roselieres">
+<img alt="Sentier des Roselières au bord du lac d'Annecy, Saint-Jorioz, Haute-Savoie" loading="lazy" src="/sentier-des-roselieres-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Saint-Jorioz</span></div><a class="title" href="https://loisirs74.fr/sentier-des-roselieres">Sentier des Roselières</a>
+<p class="card-desc">Sentier découverte le long du lac d'Annecy, zone Natura 2000, accessible poussettes et fauteuils. Accès libre toute l'année à Saint-Jorioz, Haute-Savoie.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.8328,6.1631" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Talloires-Montmin">
-<div class="commune-head"><h3>Talloires-Montmin</h3><span class="commune-count">1 Ort</span></div><div class="transport-block">
-<div class="transport-label">Anreise</div>
-<div class="transport-row"><span class="t-k">Bahnhof</span><span class="t-v">Annecy (15 km)</span></div><div class="transport-row"><span class="t-k">Buslinien</span><span class="t-v">Sibra ligne 60</span></div>
+<div class="commune-head"><h3>Talloires-Montmin</h3><span class="commune-count">1 lieu</span></div><div class="transport-block">
+<div class="transport-label">Comment y venir</div>
+<div class="transport-row"><span class="t-k">Gare SNCF</span><span class="t-v">Annecy (15 km)</span></div><div class="transport-row"><span class="t-k">Lignes de bus</span><span class="t-v">Sibra ligne 60</span></div>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/col-de-la-forclaz">
-<img alt="col de la forclaz" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Plateforme_de_d%C3%A9collage_de_deltaplane_%40_Col_de_la_Forclaz.jpg"/>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<a class="card-photo" href="https://loisirs74.fr/col-de-la-forclaz">
+<img alt="Vue panoramique depuis le Col de la Forclaz sur le lac d'Annecy et le massif des Bauges, Talloires-Montmin, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Plateforme_de_d%C3%A9collage_de_deltaplane_%40_Col_de_la_Forclaz.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Talloires-Montmin</span></div><a class="title" href="https://loisirs74.fr/de/col-de-la-forclaz">Col de la Forclaz</a>
-<p class="card-desc">Alpiner Gebirgspass auf 1.</p>
+<div class="card-commune"><span>Talloires-Montmin</span></div><a class="title" href="https://loisirs74.fr/col-de-la-forclaz">Col de la Forclaz</a>
+<p class="card-desc">Col routier alpin à 1 147 m d'altitude offrant l'une des vues les plus spectaculaires sur le lac d'Annecy, encadré par les massifs des Bauges et des Aravis.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Col%20de%20la%20Forclaz%2C%20Talloires-Montmin%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.8083,6.24472" rel="noopener" target="_blank">Google Maps</a>
+</div>
+</div>
+</article></div>
+</div>
+<div class="commune-section" data-commune="Taninges">
+<div class="commune-head"><h3>Taninges</h3><span class="commune-count">1 lieu</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
+</div>
+<div class="carousel"><article class="card">
+<a class="card-photo" href="https://loisirs74.fr/plateau-de-loex">
+<img alt="Plateau de Loëx à Taninges, Haute-Savoie" loading="lazy" src="/plateau-de-loex-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Taninges</span></div><a class="title" href="https://loisirs74.fr/plateau-de-loex">Plateau de Loëx</a>
+<p class="card-desc">Plateau calcaire à 1 350 m, Natura 2000 sur 1 233 ha, tourbières, chapelle de Jacquicourt, boucle 5 km. Accès libre à Taninges, Haute-Savoie.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.1184,6.6535" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Veyrier-du-Lac">
-<div class="commune-head"><h3>Veyrier-du-Lac</h3><span class="commune-count">2 Orte</span></div><div class="transport-block">
-<div class="transport-label">Anreise</div>
-<div class="transport-row"><span class="t-k">Bahnhof</span><span class="t-v">Annecy (5 km)</span></div><div class="transport-row"><span class="t-k">Buslinien</span><span class="t-v">Sibra ligne 60</span></div>
+<div class="commune-head"><h3>Veyrier-du-Lac</h3><span class="commune-count">2 lieux</span></div><div class="transport-block">
+<div class="transport-label">Comment y venir</div>
+<div class="transport-row"><span class="t-k">Gare SNCF</span><span class="t-v">Annecy (5 km)</span></div><div class="transport-row"><span class="t-k">Lignes de bus</span><span class="t-v">Sibra ligne 60</span></div>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/belvedere-du-mont-baron">
-<img alt="belvedere du mont baron" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg"/><span style="position:absolute;top:0.5rem;right:0.5rem;background:rgba(155,140,240,0.92);color:#fff;padding:0.15rem 0.5rem;border-radius:3px;font-size:0.62rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;z-index:2;backdrop-filter:blur(4px);">Générique</span>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<a class="card-photo" href="https://loisirs74.fr/belvedere-du-mont-baron">
+<img alt="Belvédère du Mont Baron avec vue panoramique sur le lac d'Annecy et les massifs des Bauges, Veyrier-du-Lac, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Veyrier-du-Lac</span></div><a class="title" href="https://loisirs74.fr/de/belvedere-du-mont-baron">Belvédère du Mont Baron</a>
-<p class="card-desc">Betonierte Panoramaplattform auf 1.</p>
+<div class="card-commune"><span>Veyrier-du-Lac</span></div><a class="title" href="https://loisirs74.fr/belvedere-du-mont-baron">Belvédère du Mont Baron</a>
+<p class="card-desc">Plateforme panoramique bétonnée à 1 254 m d'altitude, unique vestige de l'ancien téléphérique du Mont Veyrier, offrant une vue plongeante sur le lac d'Annecy et un panorama à 180° du Salève aux Bauges.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Belv%C3%A9d%C3%A8re%20du%20Mont%20Baron%2C%20Veyrier-du-Lac%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.8992,6.1868" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article>
 <article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/mont-baron">
-<img alt="mont baron" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Mont_Baron_%40_Veyrier-du-Lac_%2851213738648%29.jpg"/>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<a class="card-photo" href="https://loisirs74.fr/mont-baron">
+<img alt="Vue panoramique depuis le sommet du Mont Baron sur le lac d'Annecy et le massif des Bauges, Veyrier-du-Lac, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Mont_Baron_%40_Veyrier-du-Lac_%2851213738648%29.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Veyrier-du-Lac</span></div><a class="title" href="https://loisirs74.fr/de/mont-baron">Mont Baron</a>
-<p class="card-desc">Felsbalkon auf 1299 Metern Höhe über dem Annecy-See, verbunden mit dem Mont Veyrier durch einen spektakulären Kammweg mit herrlichem Blick auf den See, die Bauges und den Mont Blanc.</p>
+<div class="card-commune"><span>Veyrier-du-Lac</span></div><a class="title" href="https://loisirs74.fr/mont-baron">Mont Baron</a>
+<p class="card-desc">Balcon rocheux à 1299 mètres d'altitude au-dessus du lac d'Annecy, relié au Mont Veyrier par un sentier de crête offrant une vue magistrale sur le lac, les Bauges et le Mont Blanc.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mont%20Baron%2C%20Veyrier-du-Lac%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.902,6.174" rel="noopener" target="_blank">Google Maps</a>
+</div>
+</div>
+</article></div>
+</div>
+<div class="commune-section" data-commune="Villard">
+<div class="commune-head"><h3>Villard</h3><span class="commune-count">1 lieu</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
+</div>
+<div class="carousel"><article class="card">
+<a class="card-photo" href="https://loisirs74.fr/pointe-de-miribel">
+<img alt="Pointe de Miribel à Villard, Haute-Savoie" loading="lazy" src="/pointe-de-miribel-hero.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Villard</span></div><a class="title" href="https://loisirs74.fr/pointe-de-miribel">Pointe de Miribel</a>
+<p class="card-desc">Sommet de 1581 m du Chablais, accès facile depuis Ajon, chemin de croix de 1804, table d'orientation, vue Mont-Blanc et Léman. Villard, Haute-Savoie.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.2158,6.4562" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Viuz-la-Chiésaz">
-<div class="commune-head"><h3>Viuz-la-Chiésaz</h3><span class="commune-count">1 Ort</span></div><div class="transport-block transport-empty">
-<div class="transport-label">Anreise</div>
-<p>Eingeschränkter ÖPNV. Auto empfohlen.</p>
+<div class="commune-head"><h3>Viuz-la-Chiésaz</h3><span class="commune-count">1 lieu</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/le-semnoz">
-<img alt="le semnoz" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/2/26/Cr%C3%AAt_de_Chatillon_%40_Semnoz_%2835471373476%29.jpg"/>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<a class="card-photo" href="https://loisirs74.fr/le-semnoz">
+<img alt="Le Semnoz au-dessus d'Annecy, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/2/26/Cr%C3%AAt_de_Chatillon_%40_Semnoz_%2835471373476%29.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Viuz-la-Chiésaz</span></div><a class="title" href="https://loisirs74.fr/de/le-semnoz">Le Semnoz</a>
-<p class="card-desc">Nördlichster Berg des Bauges-Massivs, 15 km lang, Gipfel Crêt de Châtillon auf 1699 m.</p>
+<div class="card-commune"><span>Viuz-la-Chiésaz</span></div><a class="title" href="https://loisirs74.fr/le-semnoz">Le Semnoz</a>
+<p class="card-desc">Dernière montagne du massif des Bauges, longue de 15 km et culminant au Crêt de Châtillon à 1699 m.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Le%20Semnoz%2C%20Viuz-la-Chi%C3%A9saz%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.7887,6.0838" rel="noopener" target="_blank">Google Maps</a>
+</div>
+</div>
+</article></div>
+</div>
+<div class="commune-section" data-commune="Étrembières">
+<div class="commune-head"><h3>Étrembières</h3><span class="commune-count">1 lieu</span></div><div class="transport-block transport-empty">
+<div class="transport-label">Comment y venir</div>
+<p>Accès limité en transport public. Voiture recommandée.</p>
+</div>
+<div class="carousel"><article class="card">
+<a class="card-photo" href="https://loisirs74.fr/telepherique-du-saleve">
+<img alt="Cabine du Téléphérique du Salève en ascension face à Genève, le Léman et le massif du Mont-Blanc" data-generique="true" data-generique-cat="point-de-vue" loading="lazy" src="/generique-point-de-vue.jpg"/>
+<span class="card-tag is-payant">Payant</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Étrembières</span></div><a class="title" href="https://loisirs74.fr/telepherique-du-saleve">Téléphérique du Salève</a>
+<p class="card-desc">Téléphérique d'Étrembières (432 m) au sommet du Salève (1 097 m) face à Genève. AR adulte 18 €, ouvert 9h–22h45 Jeu-Sam. Expo gratuite.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.1628,6.1892" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://www.telepherique-du-saleve.com" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="empty-state" id="empty-state" style="display:none">
-<b>Keine Ergebnisse</b>
-      Kein Ort entspricht diesen Filtern.
+<b>Aucun résultat</b>
+      Aucun lieu ne correspond à ces filtres.
     </div>
-<div class="commune-section" data-commune="Chamonix-Mont-Blanc">
-<div class="commune-head"><h3>Chamonix-Mont-Blanc</h3><span class="commune-count">3 Orte</span></div>
-<div class="carousel">
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/telecabine-panoramic-mont-blanc">
-<img alt="Télécabine Panoramic Mont-Blanc traversant le glacier du Géant entre l'Aiguille du Midi et la pointe Helbronner" data-generique="true" data-generique-cat="point" loading="lazy" referrerpolicy="no-referrer" src="/generique-point-de-vue.jpg"/>
-<span class="card-tag is-payant">Kostenpflichtig</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/de/telecabine-panoramic-mont-blanc">Télécabine Panoramic Mont-Blanc</a>
-<p class="card-desc">Télécabine du sommet de l'Aiguille du Midi (3 777 m) à la pointe Helbronner (3 466 m) au-dessus du glacier du Géant. Saison été 4 juil – 27 sept 2026.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=T%C3%A9l%C3%A9cabine%20Panoramic%20Mont-Blanc%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
-<a href="https://aiguilledumidi.montblancnaturalresort.com/fr/secteur/panoramic-mont-blanc" rel="noopener" target="_blank">Offizielle Website</a>
-</div>
-</div>
-</article>
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/telepherique-aiguille-du-midi">
-<img alt="Téléphérique de l'Aiguille du Midi montant vers le sommet 3 842 m face au massif du Mont-Blanc depuis Chamonix" data-generique="true" data-generique-cat="point" loading="lazy" referrerpolicy="no-referrer" src="/generique-point-de-vue.jpg"/>
-<span class="card-tag is-payant">Kostenpflichtig</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/de/telepherique-aiguille-du-midi">Téléphérique de l'Aiguille du Midi</a>
-<p class="card-desc">Téléphérique panoramique de Chamonix au sommet à 3 842 m. Tarifs adulte AR 60,20 € – 83 €, ouverture 7h10–18h, Pas dans le Vide et terrasse sommet inclus.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=T%C3%A9l%C3%A9ph%C3%A9rique%20de%20l%27Aiguille%20du%20Midi%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
-<a href="https://aiguilledumidi.montblancnaturalresort.com/fr" rel="noopener" target="_blank">Offizielle Website</a>
-</div>
-</div>
-</article>
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/train-du-montenvers-mer-de-glace">
-<img alt="Train rouge à crémaillère du Montenvers en gare de Chamonix face au massif du Mont-Blanc, accès à la Mer de Glace" data-generique="true" data-generique-cat="point" loading="lazy" referrerpolicy="no-referrer" src="/generique-point-de-vue.jpg"/>
-<span class="card-tag is-payant">Kostenpflichtig</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/de/train-du-montenvers-mer-de-glace">Train du Montenvers - Mer de Glace</a>
-<p class="card-desc">Train à crémaillère de Chamonix à la Mer de Glace (1 913 m). Tarifs AR adulte 31,50 €, pack Voyage 49,70 €. Grotte de glace et Glaciorium inclus.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Train%20du%20Montenvers%20-%20Mer%20de%20Glace%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
-<a href="https://www.montenverstrain.com/fr/" rel="noopener" target="_blank">Offizielle Website</a>
-</div>
-</div>
-</article>
-</div>
-</div>
-<div class="commune-section" data-commune="Étrembières">
-<div class="commune-head"><h3>Étrembières</h3><span class="commune-count">1 Ort</span></div>
-<div class="carousel">
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/telepherique-du-saleve">
-<img alt="Cabine du Téléphérique du Salève en ascension face à Genève, le Léman et le massif du Mont-Blanc" data-generique="true" data-generique-cat="point" loading="lazy" referrerpolicy="no-referrer" src="/generique-point-de-vue.jpg"/>
-<span class="card-tag is-payant">Kostenpflichtig</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Étrembières</span></div><a class="title" href="https://loisirs74.fr/de/telepherique-du-saleve">Téléphérique du Salève</a>
-<p class="card-desc">Téléphérique d'Étrembières (432 m) au sommet du Salève (1 097 m) face à Genève. AR adulte 18 €, ouvert 9h–22h45 Jeu-Sam. Expo gratuite.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=T%C3%A9l%C3%A9ph%C3%A9rique%20du%20Sal%C3%A8ve%2C%20%C3%89trembi%C3%A8res%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
-<a href="https://www.telepherique-du-saleve.com" rel="noopener" target="_blank">Offizielle Website</a>
-</div>
-</div>
-</article>
-</div>
-</div>
-<div class="commune-section" data-commune="Brizon">
-<div class="commune-head"><h3>Brizon</h3><span class="commune-count">1 Ort</span></div>
-<div class="carousel">
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/plateau-de-solaison">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-gratuit">Kostenlos</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Brizon</span></div><a class="title" href="https://loisirs74.fr/de/plateau-de-solaison">Plateau de Solaison</a>
-<p class="card-desc">Plateau d'alpage au-dessus de Bonneville, départ de randonnées familiales, vue Mont-Blanc et Aravis.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plateau%20de%20Solaison%2C%20Brizon%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
-</div>
-</div>
-</article>
-</div>
-</div>
-<div class="commune-section" data-commune="Doussard">
-<div class="commune-head"><h3>Doussard</h3><span class="commune-count">1 Ort</span></div>
-<div class="carousel">
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/reserve-naturelle-bout-du-lac">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-gratuit">Kostenlos</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Doussard</span></div><a class="title" href="https://loisirs74.fr/de/reserve-naturelle-bout-du-lac">Réserve Naturelle du Bout du Lac</a>
-<p class="card-desc">Zone humide à l'extrémité sud du lac d'Annecy : roselières, oiseaux d'eau, sentier sur pilotis, accès libre.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=R%C3%A9serve%20Naturelle%20du%20Bout%20du%20Lac%2C%20Doussard%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
-<a href="https://www.cen-haute-savoie.org/" rel="noopener" target="_blank">Offizielle Website</a>
-</div>
-</div>
-</article>
-</div>
-</div>
-<div class="commune-section" data-commune="Le Reposoir">
-<div class="commune-head"><h3>Le Reposoir</h3><span class="commune-count">1 Ort</span></div>
-<div class="carousel">
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/col-de-la-colombiere">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-gratuit">Kostenlos</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Le Reposoir</span></div><a class="title" href="https://loisirs74.fr/de/col-de-la-colombiere">Col de la Colombière</a>
-<p class="card-desc">Col mythique du Tour de France entre Le Reposoir et Le Grand-Bornand. Route D4 ouverte mai-novembre, panorama Aravis-Bargy.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Col%20de%20la%20Colombi%C3%A8re%2C%20Le%20Reposoir%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
-</div>
-</div>
-</article>
-</div>
-</div>
-<div class="commune-section" data-commune="Manigod">
-<div class="commune-head"><h3>Manigod</h3><span class="commune-count">1 Ort</span></div>
-<div class="carousel">
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/col-de-la-croix-fry">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-gratuit">Kostenlos</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Manigod</span></div><a class="title" href="https://loisirs74.fr/de/col-de-la-croix-fry">Col de la Croix-Fry</a>
-<p class="card-desc">Col entre la vallée de Thônes et La Clusaz, mini-station de ski l'hiver, départ de randos l'été.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Col%20de%20la%20Croix-Fry%2C%20Manigod%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
-</div>
-</div>
-</article>
-</div>
-</div>
-<div class="commune-section" data-commune="Poisy">
-<div class="commune-head"><h3>Poisy</h3><span class="commune-count">1 Ort</span></div>
-<div class="carousel">
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/marais-de-poisy">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-gratuit">Kostenlos</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Poisy</span></div><a class="title" href="https://loisirs74.fr/de/marais-de-poisy">Marais de Poisy</a>
-<p class="card-desc">Zone humide protégée à 10 min d'Annecy. Sentier d'interprétation libre à travers roselières et prairies humides.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Marais%20de%20Poisy%2C%20Poisy%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
-</div>
-</div>
-</article>
-</div>
-</div>
-<div class="commune-section" data-commune="Publier">
-<div class="commune-head"><h3>Publier</h3><span class="commune-count">1 Ort</span></div>
-<div class="carousel">
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/reserve-naturelle-delta-de-la-dranse">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-gratuit">Kostenlos</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Publier</span></div><a class="title" href="https://loisirs74.fr/de/reserve-naturelle-delta-de-la-dranse">Réserve Naturelle du Delta de la Dranse</a>
-<p class="card-desc">Delta sauvage de la Dranse sur le Léman entre Publier et Thonon : sentiers, observatoires, oiseaux migrateurs.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=R%C3%A9serve%20Naturelle%20du%20Delta%20de%20la%20Dranse%2C%20Publier%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
-<a href="https://www.cen-haute-savoie.org/" rel="noopener" target="_blank">Offizielle Website</a>
-</div>
-</div>
-</article>
-</div>
-</div>
-<div class="commune-section" data-commune="Taninges">
-<div class="commune-head"><h3>Taninges</h3><span class="commune-count">1 Ort</span></div>
-<div class="carousel">
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/plateau-de-loex">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-gratuit">Kostenlos</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Taninges</span></div><a class="title" href="https://loisirs74.fr/de/plateau-de-loex">Plateau de Loëx</a>
-<p class="card-desc">Plateau d'alpage entre Taninges et Mieussy, paysages ouverts, randos faciles, vue sur le Mont-Blanc.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plateau%20de%20Lo%C3%ABx%2C%20Taninges%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
-</div>
-</div>
-</article>
-</div>
-</div>
-<div class="commune-section" data-commune="Villard">
-<div class="commune-head"><h3>Villard</h3><span class="commune-count">1 Ort</span></div>
-<div class="carousel">
-<article class="card">
-<a class="card-photo" href="https://loisirs74.fr/de/pointe-de-miribel">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-gratuit">Kostenlos</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Villard</span></div><a class="title" href="https://loisirs74.fr/de/pointe-de-miribel">Pointe de Miribel</a>
-<p class="card-desc">Sommet du Haut-Chablais surplombant le Léman, randonnée familiale depuis Villard, panorama exceptionnel.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Pointe%20de%20Miribel%2C%20Villard%2C%20Haute-Savoie" rel="noopener" target="_blank">Route</a>
-</div>
-</div>
-</article>
-</div>
-</div>
 </div>
 </main>
-<div aria-label="Map" id="cat-map"></div>
+<section class="hub-faq" aria-label="Häufig gestellte Fragen">
+<div class="wrap">
+<h2>Häufig gestellte Fragen</h2>
+<details class="faq-item"><summary>Was sind die schönsten Aussichtspunkte über den Lac d'Annecy?</summary><div class="faq-a">Der Mont Veyrier, der Semnoz und der Col de la Forclaz bieten die berühmtesten Panoramen über den Lac d'Annecy.</div></details>
+<details class="faq-item"><summary>Wie erreicht man die Aussichtspunkte?</summary><div class="faq-a">Manche sind mit Auto oder Fahrrad erreichbar, andere erreicht man zu Fuß oder mit einer Bergbahn (Seilbahn, Gondel).</div></details>
+<details class="faq-item"><summary>Wann sind die Pässe im Haute-Savoie geöffnet?</summary><div class="faq-a">Die hohen Pässe (Aravis, Colombière) sind in der Regel von Spätfrühling bis Herbst offen; im Winter können sie wegen Schnee schließen.</div></details>
+<details class="faq-item"><summary>Wo sieht man den Mont-Blanc aus der Nähe?</summary><div class="faq-a">Die Aiguille du Midi in Chamonix und der Brévent bieten die spektakulärsten Blicke auf das Massiv.</div></details>
+<details class="faq-item"><summary>Welcher Aussichtspunkt ist mit dem Auto erreichbar?</summary><div class="faq-a">Der Semnoz, der Col de la Forclaz und das Plateau de Solaison sind mit dem Auto erreichbar, mit Parkplatz und sofortiger Aussicht.</div></details>
+</div>
+</section>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was sind die schönsten Aussichtspunkte über den Lac d'Annecy?", "acceptedAnswer": {"@type": "Answer", "text": "Der Mont Veyrier, der Semnoz und der Col de la Forclaz bieten die berühmtesten Panoramen über den Lac d'Annecy."}}, {"@type": "Question", "name": "Wie erreicht man die Aussichtspunkte?", "acceptedAnswer": {"@type": "Answer", "text": "Manche sind mit Auto oder Fahrrad erreichbar, andere erreicht man zu Fuß oder mit einer Bergbahn (Seilbahn, Gondel)."}}, {"@type": "Question", "name": "Wann sind die Pässe im Haute-Savoie geöffnet?", "acceptedAnswer": {"@type": "Answer", "text": "Die hohen Pässe (Aravis, Colombière) sind in der Regel von Spätfrühling bis Herbst offen; im Winter können sie wegen Schnee schließen."}}, {"@type": "Question", "name": "Wo sieht man den Mont-Blanc aus der Nähe?", "acceptedAnswer": {"@type": "Answer", "text": "Die Aiguille du Midi in Chamonix und der Brévent bieten die spektakulärsten Blicke auf das Massiv."}}, {"@type": "Question", "name": "Welcher Aussichtspunkt ist mit dem Auto erreichbar?", "acceptedAnswer": {"@type": "Answer", "text": "Der Semnoz, der Col de la Forclaz und das Plateau de Solaison sind mit dem Auto erreichbar, mit Parkplatz und sofortiger Aussicht."}}]}
+</script>
 <footer class="site">
 <div class="wrap">
 <div class="foot-grid">
 <div class="foot-col">
 <h4>Loisirs 74</h4>
-<p>Unabhängiger Führer für Freizeitorte in Haute-Savoie. Jede Seite: eine offizielle Quelle, eine Adresse, eine Karte.</p>
+<p>Guide indépendant des lieux de loisirs en Haute-Savoie. Chaque page : une source officielle, une adresse, une carte.</p>
 </div>
 <div class="foot-col">
-<h4>Kategorien</h4>
-<ul><li><a href="https://loisirs74.fr/de/seen/">Seen &amp; Strände</a></li><li><a href="https://loisirs74.fr/de/straende/">Strände</a></li><li><a href="https://loisirs74.fr/de/wasserfaelle/">Wasserfälle</a></li><li><a href="https://loisirs74.fr/de/freizeitparks/">Freizeitparks</a></li><li><a href="https://loisirs74.fr/de/seilbahnen/">Seilbahnen</a></li><li><a href="https://loisirs74.fr/de/museen/">Museen</a></li><li><a href="https://loisirs74.fr/de/schloesser/">Schlösser &amp; Burgen</a></li><li><a href="https://loisirs74.fr/de/radwege/">Radwege</a></li><li><a href="https://loisirs74.fr/de/wanderwege/">Wanderwege</a></li><li><a href="https://loisirs74.fr/de/attraktionen/">Attraktionen &amp; Freizeit</a></li><li><a href="https://loisirs74.fr/de/sonstiges/">Sonstiges</a></li><li><a href="https://loisirs74.fr/de/que-faire/">Was tun?</a></li></ul>
+<h4>Catégories</h4>
+<ul><li><a href="https://loisirs74.fr/lacs-plages/">Lacs &amp; plages</a></li><li><a href="https://loisirs74.fr/lacs-plages/">Plages</a></li><li><a href="https://loisirs74.fr/cascades/">Cascades</a></li><li><a href="https://loisirs74.fr/bases-de-loisirs/">Bases de loisirs</a></li><li><a href="https://loisirs74.fr/telecabines/">Télécabines</a></li><li><a href="https://loisirs74.fr/musees/">Musées</a></li><li><a href="https://loisirs74.fr/chateaux/">Châteaux &amp; forts</a></li><li><a href="https://loisirs74.fr/voies-vertes/">Voies vertes</a></li><li><a href="https://loisirs74.fr/sentiers/">Sentiers</a></li><li><a href="https://loisirs74.fr/">Attractions &amp; loisirs</a></li><li><a href="https://loisirs74.fr/">Divers</a></li><li><a href="https://loisirs74.fr/que-faire/">Que faire ?</a></li></ul>
 </div>
 <div class="foot-col">
-<h4>Sprache</h4>
-<ul><li><a href="https://loisirs74.fr/points-de-vue/" hreflang="fr">Français</a></li><li><a href="https://loisirs74.fr/en/viewpoints/" hreflang="en">English</a></li><li><a href="https://loisirs74.fr/de/aussichtspunkte/" hreflang="de">Deutsch</a></li><li><a href="https://loisirs74.fr/it/punti-panoramici/" hreflang="it">Italiano</a></li><li><a href="https://loisirs74.fr/es/miradores/" hreflang="es">Español</a></li></ul>
+<h4>Langue</h4>
+<ul><li><a href="https://loisirs74.fr/points-de-vue/" hreflang="fr">Français</a></li><li><a href="https://loisirs74.fr/en/viewpoints/" hreflang="en">English</a></li><li><a href="https://loisirs74.fr/de/aussichtspunkte/" hreflang="de">Deutsch</a></li><li><a href="https://loisirs74.fr/it/punti-panoramici/" hreflang="it">Italiano</a></li><li><a href="https://loisirs74.fr/es/miradores/" hreflang="es">Español</a></li><li><a href="https://loisirs74.fr/nl/uitzichtpunten/" hreflang="nl">Nederlands</a></li></ul>
 </div>
 <div class="foot-col">
-<h4>Rechtliches</h4>
-<ul><li><a href="https://loisirs74.fr/mentions-legales">Impressum</a></li><li><a href="https://loisirs74.fr/confidentialite">Datenschutz</a></li><li><a href="https://loisirs74.fr/cgv">AGB</a></li><li><a href="https://loisirs74.fr/signaler">Fehler melden</a></li><li><a href="https://loisirs74.fr/devenir-partenaire">Partner werden</a></li></ul>
+<h4>Mentions</h4>
+<ul><li><a href="https://loisirs74.fr/mentions-legales">Mentions légales</a></li><li><a href="https://loisirs74.fr/confidentialite">Confidentialité</a></li><li><a href="https://loisirs74.fr/cgv">CGV</a></li><li><a href="https://loisirs74.fr/signaler">Signaler une info</a></li><li><a href="https://loisirs74.fr/devenir-partenaire">Devenir partenaire</a></li></ul>
 </div>
 </div>
 <div class="foot-bottom">
@@ -775,7 +1370,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </div>
 </div>
 </footer>
-<script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 // Cursor halo
 (function(){
@@ -803,103 +1397,37 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
   els.forEach(el => io.observe(el));
 })();
 
-// MAP + FILTERS
+// FILTERS (commune + access + sort)
 (function(){
-  const PINS = [{"slug": "mont-veyrier", "name": "Mont Veyrier", "commune": "Annecy", "lat": 45.9181, "lng": 6.1805, "url": "https://loisirs74.fr/de/mont-veyrier", "paid": false}, {"slug": "mont-saleve", "name": "Mont Salève", "commune": "Monnetier-Mornex", "lat": 46.1185, "lng": 6.1833, "url": "https://loisirs74.fr/de/mont-saleve", "paid": false}, {"slug": "plateau-des-glieres", "name": "Plateau des Glières", "commune": "Fillière", "lat": 45.9583, "lng": 6.3667, "url": "https://loisirs74.fr/de/plateau-des-glieres", "paid": false}, {"slug": "aire-de-decollage-parapente-plaine-joux", "name": "Aire de décollage parapente de Plaine-Joux", "commune": "Passy", "lat": 45.94944, "lng": 6.73972, "url": "https://loisirs74.fr/de/aire-de-decollage-parapente-plaine-joux", "paid": false}, {"slug": "col-de-la-forclaz", "name": "Col de la Forclaz", "commune": "Talloires-Montmin", "lat": 45.8083, "lng": 6.24472, "url": "https://loisirs74.fr/de/col-de-la-forclaz", "paid": false}, {"slug": "col-des-glieres", "name": "Col des Glières", "commune": "Fillière", "lat": 46.0514, "lng": 6.3297, "url": "https://loisirs74.fr/de/col-des-glieres", "paid": false}, {"slug": "le-semnoz", "name": "Le Semnoz", "commune": "Viuz-la-Chiésaz", "lat": 45.7887, "lng": 6.0838, "url": "https://loisirs74.fr/de/le-semnoz", "paid": false}, {"slug": "mont-joly", "name": "Mont Joly", "commune": "Saint-Gervais-les-Bains", "lat": 45.825959, "lng": 6.692936, "url": "https://loisirs74.fr/de/mont-joly", "paid": false}, {"slug": "col-des-aravis", "name": "Col des Aravis", "commune": "La Clusaz", "lat": 45.8722, "lng": 6.4648, "url": "https://loisirs74.fr/de/col-des-aravis", "paid": false}, {"slug": "col-des-pitons-saleve", "name": "Le Salève (Col des Pitons)", "commune": "Collonges-sous-Salève", "lat": 46.1432, "lng": 6.1514, "url": "https://loisirs74.fr/de/col-des-pitons-saleve", "paid": false}, {"slug": "pont-de-la-caille", "name": "Pont de la Caille", "commune": "Cruseilles", "lat": 46.0133, "lng": 6.1115, "url": "https://loisirs74.fr/de/pont-de-la-caille", "paid": false}, {"slug": "tete-du-parmelan", "name": "Tête du Parmelan", "commune": "Dingy-Saint-Clair", "lat": 45.9622, "lng": 6.2547, "url": "https://loisirs74.fr/de/tete-du-parmelan", "paid": false}, {"slug": "belvedere-du-mont-baron", "name": "Belvédère du Mont Baron", "commune": "Veyrier-du-Lac", "lat": 45.8992, "lng": 6.1868, "url": "https://loisirs74.fr/de/belvedere-du-mont-baron", "paid": false}, {"slug": "mont-baron", "name": "Mont Baron", "commune": "Veyrier-du-Lac", "lat": 45.902, "lng": 6.174, "url": "https://loisirs74.fr/de/mont-baron", "paid": false}];
-  const SHOWN_SG = "Ort angezeigt";
-  const SHOWN_PL = "Orte angezeigt";
-  if (typeof L === 'undefined' || PINS.length === 0) return;
-  const map = L.map('cat-map', { scrollWheelZoom: false });
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
-  }).addTo(map);
-
-  function makeIcon(paid){
-    const color = paid ? '#e07a3f' : '#2e4a3a';
-    const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="36" viewBox="0 0 28 36"><path d="M14 0C6.3 0 0 6.3 0 14c0 10.5 14 22 14 22s14-11.5 14-22C28 6.3 21.7 0 14 0z" fill="'+color+'"/><circle cx="14" cy="14" r="5" fill="#fdfaf3"/></svg>';
-    return L.divIcon({ className:'l74-pin', html: svg, iconSize:[28,36], iconAnchor:[14,36], popupAnchor:[0,-32] });
-  }
-
-  const layers = {};
-  const markers = [];
-  for (const p of PINS) {
-    const m = L.marker([p.lat, p.lng], {icon: makeIcon(!!p.paid)}).addTo(map);
-    m.bindPopup('<a href="'+p.url+'">'+p.name+'</a><span class="commune-pop">'+p.commune+'</span>');
-    layers[p.slug] = m;
-    markers.push(m);
-  }
-  const group = L.featureGroup(markers);
-  map.fitBounds(group.getBounds().pad(0.15));
-
-  // FILTERS
-  const communeSel = document.getElementById('filt-commune');
-  const accessGroup = document.getElementById('filt-access');
-  const sortSel = document.getElementById('filt-sort');
-  const countN = document.getElementById('count-n');
-  const countLabel = document.getElementById('count-label');
-  const emptyState = document.getElementById('empty-state');
-
-  let curCommune = '';
-  let curAccess = 'all';
-  let curSort = 'commune';
-
-  function pinPaid(slug){ const p = PINS.find(x => x.slug === slug); return p ? !!p.paid : false; }
-
+  const SG="lieu affiché",PL="lieux affichés";
+  const communeSel=document.getElementById('filt-commune');
+  const accessGroup=document.getElementById('filt-access');
+  const sortSel=document.getElementById('filt-sort');
+  const countN=document.getElementById('count-n');
+  const countLabel=document.getElementById('count-label');
+  const emptyState=document.getElementById('empty-state');
+  let curCommune='',curAccess='all',curSort='commune';
   function applyFilters(){
-    const sections = document.querySelectorAll('.commune-section');
-    let visibleMarkers = [];
-    let total = 0;
-    sections.forEach(sec => {
-      const commune = sec.dataset.commune;
-      const communeMatch = !curCommune || commune === curCommune;
-      let visibleCards = 0;
-      sec.querySelectorAll('.card').forEach(card => {
-        const titleLink = card.querySelector('a.title');
-        const href = titleLink ? titleLink.getAttribute('href') : '';
-        const slug = href.split('/').pop();
-        const isPaid = pinPaid(slug);
-        const accessMatch = curAccess === 'all' || (curAccess === 'free' && !isPaid) || (curAccess === 'paid' && isPaid);
-        const show = communeMatch && accessMatch;
-        card.classList.toggle('hidden', !show);
-        if (show){ visibleCards++; total++; if (layers[slug]) visibleMarkers.push(layers[slug]); }
+    let total=0;
+    document.querySelectorAll('.commune-section').forEach(sec=>{
+      const communeMatch=!curCommune||sec.dataset.commune===curCommune;
+      let vis=0;
+      sec.querySelectorAll('.card').forEach(card=>{
+        const isPaid=!!card.querySelector('.card-tag.is-payant');
+        const am=curAccess==='all'||(curAccess==='free'&&!isPaid)||(curAccess==='paid'&&isPaid);
+        const show=communeMatch&&am; card.classList.toggle('hidden',!show); if(show){vis++;total++;}
       });
-      sec.classList.toggle('hidden', visibleCards === 0);
+      sec.classList.toggle('hidden',vis===0);
     });
-    if (countN) countN.textContent = total;
-    if (countLabel) countLabel.textContent = total === 1 ? SHOWN_SG : SHOWN_PL;
-    if (emptyState) emptyState.style.display = total === 0 ? 'block' : 'none';
-    if (visibleMarkers.length){ const fg = L.featureGroup(visibleMarkers); map.fitBounds(fg.getBounds().pad(0.15)); }
+    if(countN)countN.textContent=total;
+    if(countLabel)countLabel.textContent=total===1?SG:PL;
+    if(emptyState)emptyState.style.display=total===0?'block':'none';
   }
-
-  function applySort(){
-    const sections = Array.from(document.querySelectorAll('.commune-section'));
-    if (curSort === 'alpha'){
-      sections.forEach(sec => {
-        const carousel = sec.querySelector('.carousel');
-        const cards = Array.from(carousel.querySelectorAll('.card'));
-        cards.sort((a, b) => {
-          const na = a.querySelector('a.title')?.textContent || '';
-          const nb = b.querySelector('a.title')?.textContent || '';
-          return na.localeCompare(nb);
-        });
-        cards.forEach(c => carousel.appendChild(c));
-      });
-    }
-  }
-
-  if (communeSel) communeSel.addEventListener('change', e => { curCommune = e.target.value; applyFilters(); });
-  if (accessGroup) accessGroup.addEventListener('click', e => {
-    if (e.target.tagName === 'BUTTON'){
-      accessGroup.querySelectorAll('button').forEach(b => b.classList.remove('active'));
-      e.target.classList.add('active');
-      curAccess = e.target.dataset.v;
-      applyFilters();
-    }
-  });
-  if (sortSel) sortSel.addEventListener('change', e => { curSort = e.target.value; applySort(); });
-
-  // Init count
+  function applySort(){ if(curSort!=='alpha')return;
+    document.querySelectorAll('.commune-section .carousel').forEach(c=>{Array.from(c.querySelectorAll('.card')).sort((a,b)=>(a.querySelector('a.title')?.textContent||'').localeCompare(b.querySelector('a.title')?.textContent||'')).forEach(x=>c.appendChild(x));}); }
+  if(communeSel)communeSel.addEventListener('change',e=>{curCommune=e.target.value;applyFilters();});
+  if(accessGroup)accessGroup.addEventListener('click',e=>{if(e.target.tagName==='BUTTON'){accessGroup.querySelectorAll('button').forEach(b=>b.classList.remove('active'));e.target.classList.add('active');curAccess=e.target.dataset.v;applyFilters();}});
+  if(sortSel)sortSel.addEventListener('change',e=>{curSort=e.target.value;applySort();});
   applyFilters();
 })();
 </script>

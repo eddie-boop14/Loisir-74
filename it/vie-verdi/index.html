@@ -5,21 +5,21 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
 <meta content="#f6f1e7" name="theme-color"/>
-<title>Vie verdi — Loisirs 74</title>
+<title>Piste ciclabili e vie verdi della Haute-Savoie — in bici con la famiglia — Loisirs 74</title>
 <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
 <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
 <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="/site.webmanifest" rel="manifest"/>
-<meta content="Vie verdi e ciclovie in Haute-Savoie: 5 itinerari ciclabili, pianeggianti e accessibili, su sedi proprie." name="description"/>
+<meta content="Vie verdi e itinerari ciclabili della Haute-Savoie: pista del Lac d'Annecy, ViaRhôna, valle dell'Arve, Chablais. Percorsi pianeggianti e sicuri, in bici con la famiglia." name="description"/>
 <link href="https://loisirs74.fr/it/vie-verdi/" rel="canonical"/>
 <link href="https://loisirs74.fr/voies-vertes/" hreflang="fr" rel="alternate"/>
 <link href="https://loisirs74.fr/en/greenways/" hreflang="en" rel="alternate"/>
 <link href="https://loisirs74.fr/de/radwege/" hreflang="de" rel="alternate"/>
 <link href="https://loisirs74.fr/it/vie-verdi/" hreflang="it" rel="alternate"/>
 <link href="https://loisirs74.fr/es/vias-verdes/" hreflang="es" rel="alternate"/>
+<link href="https://loisirs74.fr/nl/fietsroutes/" hreflang="nl" rel="alternate"/>
 <link href="https://loisirs74.fr/voies-vertes/" hreflang="x-default" rel="alternate"/>
-<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,50;1,9..144,300..500,50&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -49,6 +49,11 @@ a{color:inherit;text-decoration:none}
   --lake-light:#6a92a3;
   --alpenglow:#e07a3f;
   --alpenglow-soft:#f4b88a;
+  --accent:#2e8b78;
+  --accent-soft:#8fcdbd;
+  --hub-hero-img:url("/generique-voie-verte-cyclistes-lac.jpg");
+  --hub-hero-tint1:rgba(14,40,34,.55);
+  --hub-hero-tint2:rgba(34,95,80,.40);
 
   --max:1280px;
   --pad:clamp(1.25rem,3.5vw,2rem);
@@ -60,7 +65,7 @@ a{color:inherit;text-decoration:none}
 
 html,body{background:var(--paper);color:var(--ink)}
 body{font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-::selection{background:var(--alpenglow);color:var(--snow)}
+::selection{background:var(--accent);color:var(--snow)}
 .wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad);position:relative}
 
 .cursor-glow{position:fixed;width:600px;height:600px;pointer-events:none;z-index:2;border-radius:50%;background:radial-gradient(circle, rgba(224,122,63,.10) 0%, rgba(224,122,63,0) 60%);transform:translate(-50%,-50%);mix-blend-mode:multiply;will-change:transform}
@@ -78,59 +83,51 @@ header.site{position:sticky;top:0;left:0;right:0;z-index:60;padding:.85rem var(-
 .lang-picker summary{cursor:pointer;font-size:.75rem;letter-spacing:.08em;color:var(--ink-3);padding:.4rem .85rem;border:1px solid var(--line-2);border-radius:999px;display:inline-flex;align-items:center;gap:.5rem;list-style:none;transition:all .25s var(--ease)}
 .lang-picker summary::-webkit-details-marker{display:none}
 .lang-picker summary b{color:var(--ink);font-weight:500}
-.lang-picker summary::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--alpenglow);animation:breathe 2.4s ease-in-out infinite}
+.lang-picker summary::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);animation:breathe 2.4s ease-in-out infinite}
 .lang-picker:hover summary{border-color:var(--ink-2);color:var(--ink)}
 @keyframes breathe{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.85)}}
 .lang-picker[open] > .lang-menu{display:flex}
 .lang-menu{display:none;position:absolute;top:calc(100% + .5rem);right:0;flex-direction:column;background:var(--snow);border:1px solid var(--line);border-radius:8px;padding:.4rem;min-width:10rem;z-index:60;box-shadow:0 18px 40px -18px rgba(28,24,20,.25)}
 .lang-menu a{padding:.5rem .75rem;font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink-3);border-radius:5px;transition:all .2s var(--ease)}
 .lang-menu a:hover{background:var(--paper-2);color:var(--ink)}
-.lang-menu a[aria-current="true"]{color:var(--alpenglow);font-weight:500}
+.lang-menu a[aria-current="true"]{color:var(--accent);font-weight:500}
 
 .crumb{padding:1.5rem var(--pad) 0;max-width:var(--max);margin-inline:auto;font-size:.78rem;color:var(--ink-3);letter-spacing:.04em;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
 .crumb a{color:var(--ink-3);transition:color .2s var(--ease)}
-.crumb a:hover{color:var(--alpenglow)}
+.crumb a:hover{color:var(--accent)}
 .crumb b{color:var(--ink);font-weight:500}
 .crumb .sep{color:var(--ink-4)}
 
-.hub-hero{padding:1rem 0 1.25rem;position:relative;overflow:hidden}
-.hub-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(800px 300px at 85% 0%, rgba(224,122,63,.10), transparent 70%),radial-gradient(600px 250px at 5% 30%, rgba(46,74,58,.06), transparent 70%)}
-.hub-hero h1{font-family:var(--serif);font-size:clamp(1.7rem,1.35rem + 1.8vw,3.25rem);line-height:1.05;letter-spacing:-.025em;font-weight:400;font-variation-settings:"SOFT" 50;color:var(--ink);max-width:18ch;opacity:0;animation:rise .8s var(--ease-out) .15s forwards}
-.hub-hero h1 em{font-style:italic;font-weight:300;color:var(--alpenglow)}
-.hub-hero .meta{margin-top:.45rem;font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink-3);display:flex;gap:.6rem;flex-wrap:wrap;align-items:baseline;opacity:0;animation:rise .8s var(--ease-out) .3s forwards}
-.hub-hero .meta b{font-family:var(--sans);font-style:normal;color:var(--ink);font-weight:600;font-size:.85rem;letter-spacing:.04em}
-.hub-hero .meta .dot{color:var(--ink-4);font-style:normal}
+.hub-hero{position:relative;padding:clamp(3rem,9vw,5.5rem) 0 clamp(1.5rem,3vw,2.25rem);overflow:hidden;isolation:isolate}
+.hub-hero::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--hub-hero-img) center 55%/cover no-repeat;transform:scale(1.03)}
+.hub-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--hub-hero-tint1) 0%,var(--hub-hero-tint2) 46%,var(--paper) 100%)}
+.hub-hero h1{font-family:var(--serif);font-size:clamp(1.9rem,1.4rem + 2vw,3.5rem);line-height:1.04;letter-spacing:-.025em;font-weight:400;font-variation-settings:"SOFT" 50;color:var(--snow);max-width:20ch;text-shadow:0 2px 28px rgba(15,30,38,.5);opacity:0;animation:rise .8s var(--ease-out) .15s forwards}
+.hub-hero h1 em{font-style:italic;font-weight:300;color:var(--accent-soft)}
+.hub-hero .meta{margin-top:.6rem;font-family:var(--serif);font-style:italic;font-size:1rem;color:rgba(253,250,243,.92);display:flex;gap:.6rem;flex-wrap:wrap;align-items:baseline;text-shadow:0 1px 14px rgba(15,30,38,.45);opacity:0;animation:rise .8s var(--ease-out) .3s forwards}
+.hub-hero .meta b{font-family:var(--sans);font-style:normal;color:var(--snow);font-weight:600;font-size:.85rem;letter-spacing:.04em}
+.hub-hero .meta .dot{color:rgba(253,250,243,.6);font-style:normal}
 @keyframes rise{to{opacity:1;transform:translateY(0)}}
 .hub-hero h1, .hub-hero .meta { transform:translateY(20px) }
-
-#cat-map{height:220px;width:100%;border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;z-index:1;background:var(--paper-2)}
-.leaflet-popup-content-wrapper{border-radius:8px;background:var(--snow);box-shadow:0 18px 40px -18px rgba(28,24,20,.3);border:1px solid var(--line)}
-.leaflet-popup-tip{background:var(--snow);border:1px solid var(--line)}
-.leaflet-popup-content{margin:.7rem .9rem;font-family:var(--sans);font-size:.88rem;line-height:1.45;color:var(--ink-2)}
-.leaflet-popup-content a{color:var(--ink);font-family:var(--serif);font-size:1.05rem;font-weight:500;letter-spacing:-.005em}
-.leaflet-popup-content a:hover{color:var(--alpenglow)}
-.leaflet-popup-content .commune-pop{display:block;color:var(--ink-3);font-size:.72rem;margin-top:.2rem;letter-spacing:.06em}
-.leaflet-control-attribution{background:rgba(253,250,243,.85)!important;font-family:var(--sans);font-size:.65rem}
 
 .filter-bar{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);z-index:30;padding:.55rem 0;box-shadow:0 8px 20px -16px rgba(0,0,0,.3)}
 .filter-bar__head{display:flex;align-items:center;gap:1rem}
 .filter-toggle{margin-left:auto;display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .9rem;border:1px solid var(--line-2);background:var(--snow);color:var(--ink);font-family:var(--sans);font-size:.8rem;font-weight:600;letter-spacing:.04em;border-radius:6px;cursor:pointer;transition:all .2s var(--ease)}
-.filter-toggle:hover{border-color:var(--alpenglow)}
+.filter-toggle:hover{border-color:var(--accent)}
 .filter-toggle__chev{transition:transform .2s var(--ease)}
 .filter-toggle[aria-expanded="true"] .filter-toggle__chev{transform:rotate(180deg)}
-.filter-toggle__badge{display:inline-flex;min-width:1.1rem;justify-content:center;padding:0 .35rem;border-radius:9px;background:var(--alpenglow);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:0}
+.filter-toggle__badge{display:inline-flex;min-width:1.1rem;justify-content:center;padding:0 .35rem;border-radius:9px;background:var(--accent);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:0}
 .filter-toggle__badge[hidden]{display:none}
 .filter-panel{display:none;flex-wrap:wrap;gap:1.25rem;align-items:flex-end;padding-top:.75rem}
 .filter-panel.is-open{display:flex}
 .filter-panel label{display:flex;flex-direction:column;gap:.35rem;font-size:.65rem;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.14em}
 .filter-panel select{padding:.55rem .8rem;border:1px solid var(--line-2);background:var(--snow);color:var(--ink);font-size:.88rem;font-weight:500;font-family:var(--sans);min-width:10rem;border-radius:6px;transition:border-color .2s var(--ease);cursor:pointer}
-.filter-panel select:hover, .filter-panel select:focus{border-color:var(--alpenglow);outline:none}
+.filter-panel select:hover, .filter-panel select:focus{border-color:var(--accent);outline:none}
 .access-group{display:flex;border:1px solid var(--line-2);border-radius:6px;overflow:hidden;background:var(--snow)}
 .access-group button{padding:.55rem 1rem;border:0;background:transparent;color:var(--ink-3);font-size:.78rem;font-weight:600;cursor:pointer;font-family:var(--sans);letter-spacing:.04em;border-right:1px solid var(--line-2);transition:all .2s var(--ease)}
 .access-group button:last-child{border-right:0}
 .access-group button:hover{color:var(--ink);background:var(--paper-2)}
 .access-group button.active{background:var(--ink);color:var(--snow)}
-.access-group button.active[data-v="paid"]{background:var(--alpenglow)}
+.access-group button.active[data-v="paid"]{background:var(--accent)}
 .access-group button.active[data-v="free"]{background:var(--pine)}
 .filter-bar .count-live{font-family:var(--serif);font-style:italic;font-size:.9rem;color:var(--ink-3)}
 .filter-bar .count-live b{font-style:normal;color:var(--ink);font-weight:500}
@@ -141,11 +138,11 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .commune-section.hidden{display:none}
 .commune-head{margin-bottom:1.25rem;display:flex;align-items:baseline;gap:.85rem;flex-wrap:wrap}
 .commune-head h3{font-family:var(--serif);font-size:clamp(1.5rem,1.2rem + .8vw,2rem);line-height:1.05;letter-spacing:-.02em;font-weight:400;font-variation-settings:"SOFT" 50;color:var(--ink)}
-.commune-head h3 em{font-style:italic;color:var(--alpenglow);font-weight:300}
+.commune-head h3 em{font-style:italic;color:var(--accent);font-weight:300}
 .commune-count{font-family:var(--sans)!important;font-size:.7rem;font-weight:500;color:var(--ink-3);letter-spacing:.14em;text-transform:uppercase}
 
 .transport-block{background:var(--snow);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.1rem;font-size:.85rem;line-height:1.45;display:flex;flex-direction:column;gap:.3rem;margin-bottom:1.5rem;max-width:36rem}
-.transport-block .transport-label{font-size:.65rem;font-weight:600;color:var(--alpenglow);text-transform:uppercase;letter-spacing:.18em;margin-bottom:.25rem;font-family:var(--sans)}
+.transport-block .transport-label{font-size:.65rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.18em;margin-bottom:.25rem;font-family:var(--sans)}
 .transport-row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:baseline}
 .transport-row .t-k{font-family:var(--sans);font-weight:600;color:var(--ink-3);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;min-width:5.5rem}
 .transport-row .t-v{color:var(--ink-2);font-size:.9rem;font-family:var(--serif);font-style:italic}
@@ -161,24 +158,24 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .card-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease-out), filter .3s var(--ease);filter:saturate(.95)}
 .card:hover .card-photo img{transform:scale(1.06);filter:saturate(1.05)}
 .card-tag{position:absolute;top:14px;right:14px;background:rgba(253,250,243,.95);color:var(--ink);padding:.3rem .7rem;border-radius:999px;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:var(--sans);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:2}
-.card-tag.is-payant{background:var(--alpenglow);color:var(--snow)}
+.card-tag.is-payant{background:var(--accent);color:var(--snow)}
 .card-tag.is-gratuit{background:var(--pine);color:var(--snow)}
 .card-body{padding:1.25rem 1.35rem 1.35rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .card-commune{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:.15rem;order:-1}
 .card-commune svg{display:none}
 .card-body a.title{font-family:var(--serif);font-weight:500;font-size:1.35rem;color:var(--ink);line-height:1.15;letter-spacing:-.01em;transition:color .2s var(--ease)}
-.card-body a.title:hover{color:var(--alpenglow)}
+.card-body a.title:hover{color:var(--accent)}
 .card-desc{font-family:var(--sans);font-size:.88rem;color:var(--ink-2);line-height:1.5;margin:.1rem 0 .85rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .card-actions{display:flex;gap:1.25rem;margin-top:auto;padding-top:.8rem;border-top:1px dashed var(--line);font-size:.72rem}
 .card-actions a{font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);transition:color .2s var(--ease), transform .3s var(--ease-out);display:inline-flex;align-items:center;gap:.3rem;font-family:var(--sans)}
-.card-actions a:hover{color:var(--alpenglow);transform:translateX(2px)}
+.card-actions a:hover{color:var(--accent);transform:translateX(2px)}
 .card-actions a svg{display:none}
 .card-actions a::after{content:" \2197";font-size:.9rem;letter-spacing:0}
 
 .card-photo:has(> img[data-generique="true"])::after{content:"Générique";position:absolute;bottom:.55rem;right:.55rem;background:rgba(20,18,16,.78);color:#f0dfc0;font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px;pointer-events:none;z-index:2;font-family:var(--sans);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
 
 .empty-state{padding:4rem 0;text-align:center;font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--ink-3)}
-.empty-state b{display:block;font-family:var(--sans);font-style:normal;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--alpenglow);font-weight:600;margin-bottom:.75rem}
+.empty-state b{display:block;font-family:var(--sans);font-style:normal;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.75rem}
 
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease-out), transform .8s var(--ease-out)}
 .reveal.in{opacity:1;transform:translateY(0)}
@@ -190,41 +187,175 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 .foot-col h4{font-family:var(--sans);font-size:.7rem;font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:.18em;margin-bottom:1rem}
 .foot-col ul{display:flex;flex-direction:column;gap:.55rem}
 .foot-col ul a{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--ink-2);transition:color .2s var(--ease)}
-.foot-col ul a:hover{color:var(--alpenglow)}
+.foot-col ul a:hover{color:var(--accent)}
 .foot-col p{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--ink-3);max-width:24rem;line-height:1.55}
 .foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-top:2rem;border-top:1px solid var(--line);color:var(--ink-3);font-size:.75rem;letter-spacing:.06em;position:relative;z-index:1}
 
-:where(a,button,summary,input,textarea,select):focus-visible{outline:2px solid var(--alpenglow);outline-offset:3px}
+:where(a,button,summary,input,textarea,select):focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}.kicker,.hub-hero h1,.hub-hero .meta{opacity:1;transform:none;animation:none}.reveal{opacity:1;transform:none}.cursor-glow{display:none}}
 @media (min-width:680px){.filter-toggle{display:none}.filter-bar .wrap{display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-end}.filter-panel{display:contents;padding-top:0}.filter-bar__head{order:99;margin-left:auto;align-items:baseline;padding-bottom:.2rem}}
+
+.hub-catcher{margin-top:.7rem;max-width:42ch;font-family:var(--serif);font-style:italic;font-size:clamp(1rem,.95rem + .4vw,1.25rem);line-height:1.4;color:rgba(253,250,243,.94);text-shadow:0 1px 14px rgba(15,30,38,.5);transform:translateY(20px);opacity:0;animation:rise .8s var(--ease-out) .42s forwards}
+.hub-intro{border-bottom:1px solid var(--line)}
+.hub-intro .wrap{padding:1.4rem 0 1.5rem}
+.hub-intro .lead{font-family:var(--serif);font-size:clamp(1rem,.97rem + .3vw,1.12rem);line-height:1.55;color:var(--ink-2);max-width:66ch;margin:0}
+.hub-intro .lead b{font-weight:600;color:var(--ink)}
+.seo-more{margin-top:.55rem}
+.seo-more>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.45rem;font:600 .7rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);padding:.25rem 0}
+.seo-more>summary::-webkit-details-marker{display:none}
+.seo-more>summary::after{content:"+";font-size:1.05rem;line-height:1}
+.seo-more[open]>summary::after{content:"\2013"}
+.seo-more .more-body{max-width:66ch}
+.seo-more .more-body p{font-family:var(--serif);font-size:1rem;line-height:1.62;color:var(--ink-2);margin-top:.85rem}
+.seo-more .more-body b{font-weight:600;color:var(--ink)}
+.hub-faq{border-top:1px solid var(--line)}
+.hub-faq .wrap{padding:clamp(2rem,4vw,3rem) 0}
+.hub-faq h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,1.1rem + 1vw,2rem);letter-spacing:-.02em;color:var(--ink);margin-bottom:1rem;font-variation-settings:"SOFT" 50}
+.faq-item{border-top:1px solid var(--line)}
+.faq-item>summary{cursor:pointer;list-style:none;padding:.95rem 0;font-family:var(--serif);font-size:1.08rem;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-item>summary::-webkit-details-marker{display:none}
+.faq-item>summary::after{content:"+";color:var(--accent);font-size:1.25rem;line-height:1;flex-shrink:0}
+.faq-item[open]>summary::after{content:"\2013"}
+.faq-item .faq-a{padding:0 0 1.05rem;font-family:var(--sans);font-size:.95rem;line-height:1.62;color:var(--ink-2);max-width:70ch}
+/* template refinement: demote transport, drop static counts */
+.commune-section{display:flex;flex-direction:column}
+.commune-head{order:1}
+.commune-section .carousel{order:2}
+.commune-section .transport-block,.commune-section .transport-block.transport-empty{order:3;margin:1.1rem 0 0;padding:.7rem 0 0;background:transparent;border:0;border-top:1px dashed var(--line);border-radius:0;max-width:none;opacity:.8}
+.transport-block .transport-label{color:var(--ink-3)}
+.transport-row .t-v{font-size:.82rem}
+.transport-block p{font-size:.8rem;color:var(--ink-3)}
+.commune-count{display:none}
 </style>
 <meta content="https://loisirs74.fr/og-image.jpg" property="og:image"/>
 <meta content="https://loisirs74.fr/og-image.jpg" name="twitter:image"/>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "@id": "https://loisirs74.fr/it/vie-verdi/#itemlist",
-  "name": "Vie verdi",
-  "description": "Vie verdi e ciclovie in Haute-Savoie: 5 itinerari ciclabili, pianeggianti e accessibili, su sedi proprie.",
+  "@id": "https://loisirs74.fr/voies-vertes/#itemlist",
+  "name": "Voies vertes",
+  "description": "Voies vertes et véloroutes en Haute-Savoie : 5 itinéraires cyclables, plats, accessibles PMR, sur sites propres.",
   "numberOfItems": 5,
   "itemListOrder": "https://schema.org/ItemListOrderAscending",
-  "inLanguage": "it",
-  "isPartOf": {"@type":"CollectionPage","@id":"https://loisirs74.fr/it/vie-verdi/"},
+  "inLanguage": "fr",
+  "isPartOf": {
+    "@type": "CollectionPage",
+    "@id": "https://loisirs74.fr/voies-vertes/"
+  },
   "itemListElement": [
-    {"@type":"ListItem","position":1,"item":{"@type":"TouristAttraction","name":"Voie verte du Lac d'Annecy","url":"https://loisirs74.fr/it/voie-verte-lac-annecy-annecy","address":{"@type":"PostalAddress","addressLocality":"Annecy","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":45.8992,"longitude":6.1294}}},
-    {"@type":"ListItem","position":2,"item":{"@type":"TouristAttraction","name":"Promenade du bord d'Arve Cluses-Thyez","url":"https://loisirs74.fr/it/voie-verte-arve-cluses-thyez","address":{"@type":"PostalAddress","addressLocality":"Cluses","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":46.0617,"longitude":6.5811}}},
-    {"@type":"ListItem","position":3,"item":{"@type":"TouristAttraction","name":"Véloroute Vallée de l'Arve","url":"https://loisirs74.fr/it/veloroute-vallee-arve-cluses-sallanches","address":{"@type":"PostalAddress","addressLocality":"Cluses","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":46.0617,"longitude":6.5811}}},
-    {"@type":"ListItem","position":4,"item":{"@type":"TouristAttraction","name":"ViaRhôna Haute-Savoie","url":"https://loisirs74.fr/it/viarhona-haute-savoie-saint-gingolph-seyssel","address":{"@type":"PostalAddress","addressLocality":"Saint-Gingolph","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":46.3917,"longitude":6.8056}}},
-    {"@type":"ListItem","position":5,"item":{"@type":"TouristAttraction","name":"ViaRhôna EV17 Bas-Chablais","url":"https://loisirs74.fr/it/viarhona-ev17-bas-chablais-thonon","address":{"@type":"PostalAddress","addressLocality":"Thonon-les-Bains","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":46.3711,"longitude":6.4789}}}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Voie verte du Lac d'Annecy",
+        "url": "https://loisirs74.fr/voie-verte-lac-annecy-annecy",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Annecy",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.8992,
+          "longitude": 6.1294
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Promenade du bord d'Arve Cluses-Thyez",
+        "url": "https://loisirs74.fr/voie-verte-arve-cluses-thyez",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cluses",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.0617,
+          "longitude": 6.5811
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Véloroute Vallée de l'Arve",
+        "url": "https://loisirs74.fr/veloroute-vallee-arve-cluses-sallanches",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cluses",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.0617,
+          "longitude": 6.5811
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "ViaRhôna Haute-Savoie",
+        "url": "https://loisirs74.fr/viarhona-haute-savoie-saint-gingolph-seyssel",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Saint-Gingolph",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.3917,
+          "longitude": 6.8056
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "ViaRhôna EV17 Bas-Chablais",
+        "url": "https://loisirs74.fr/viarhona-ev17-bas-chablais-thonon",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Thonon-les-Bains",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.3711,
+          "longitude": 6.4789
+        }
+      }
+    }
   ]
 }</script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "url": "https://loisirs74.fr/it/vie-verdi/",
-  "name": "Vie verdi",
-  "inLanguage": "it",
-  "isPartOf": {"@type": "WebSite","url": "https://loisirs74.fr/it/","name": "Loisirs 74"},
+  "url": "https://loisirs74.fr/voies-vertes/",
+  "name": "Voies vertes",
+  "inLanguage": "fr",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://loisirs74.fr/",
+    "name": "Loisirs 74"
+  },
   "numberOfItems": 5
 }</script>
 </head>
@@ -242,44 +373,58 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <span><b>loisirs74</b> <i>· Haute-Savoie</i></span>
 </a>
 <details class="lang-picker">
-<summary><b>IT</b> · 5 lingue</summary>
+<summary><b>FR</b> · 5 langues</summary>
 <div class="lang-menu">
-<a href="https://loisirs74.fr/voies-vertes/" hreflang="fr">Français</a><a href="https://loisirs74.fr/en/greenways/" hreflang="en">English</a><a href="https://loisirs74.fr/de/radwege/" hreflang="de">Deutsch</a><a aria-current="true" href="https://loisirs74.fr/it/vie-verdi/" hreflang="it">Italiano</a><a href="https://loisirs74.fr/es/vias-verdes/" hreflang="es">Español</a>
+<a href="https://loisirs74.fr/voies-vertes/" hreflang="fr">Français</a><a href="https://loisirs74.fr/en/greenways/" hreflang="en">English</a><a href="https://loisirs74.fr/de/radwege/" hreflang="de">Deutsch</a><a aria-current="true" href="https://loisirs74.fr/it/vie-verdi/" hreflang="it">Italiano</a><a href="https://loisirs74.fr/es/vias-verdes/" hreflang="es">Español</a><a href="https://loisirs74.fr/nl/fietsroutes/" hreflang="nl">Nederlands</a>
 </div>
 </details>
 </header>
 <nav aria-label="breadcrumb" class="crumb">
-<a href="https://loisirs74.fr/it/">Home</a>
+<a href="https://loisirs74.fr/">Accueil</a>
 <span class="sep">/</span>
-<b>Vie verdi</b>
+<b>Voies vertes</b>
 </nav>
 <section class="hub-hero">
 <div class="wrap">
-<h1>Vie verdi</h1>
-<p class="meta"><b>5 luoghi</b><span class="dot">·</span><span>5 comuni</span></p>
+<h1>Piste ciclabili &amp; bici</h1>
+<p class="hub-catcher">Piste ciclabili e vie verdi — pedalare in famiglia, in piano e lontano dalle auto.</p>
+</div>
+</section>
+<section class="hub-intro" aria-label="Introduzione">
+<div class="wrap">
+<p class="lead">Su ex linee ferroviarie o lungo i fiumi e il lago, le vie verdi offrono chilometri pianeggianti e sicuri — in bici, a piedi o sui pattini, lontano dal traffico.</p>
+<details class="seo-more">
+<summary>Lire la suite</summary>
+<div class="more-body">
+<p>La <b>pista ciclabile del Lac d'Annecy</b>, una delle più frequentate di Francia, collega Annecy a Doussard lungo la sponda ovest — completamente piana e asfaltata.</p>
+<p>Altrove, la <b>ViaRhôna</b>, l'itinerario ciclabile della <b>valle dell'Arve</b> e la <b>via verde dello Chablais</b> prolungano la rete verso il Rodano, Chamonix e il Léman.</p>
+<p>Questi itinerari sono gratuiti e adatti a famiglie, e-bike e passeggini. Ogni scheda indica la lunghezza e il comune di partenza.</p>
+<p>Il noleggio bici è disponibile ad Annecy e nelle principali località di partenza; utile da considerare in alta stagione.</p>
+</div>
+</details>
 </div>
 </section>
 <div class="filter-bar">
 <div class="wrap">
 <div class="filter-bar__head">
-<div class="count-live"><b id="count-n">0</b> <span id="count-label">luoghi mostrati</span></div>
+<div class="count-live"><b id="count-n">0</b> <span id="count-label">lieux affichés</span></div>
 <button aria-controls="filter-panel" aria-expanded="false" class="filter-toggle" type="button">
-<span>Filtri</span>
+<span>Filtres</span>
 <span class="filter-toggle__badge" hidden="" id="filter-toggle-badge">0</span>
 <svg aria-hidden="true" class="filter-toggle__chev" height="11" viewbox="0 0 12 12" width="11"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
 </button>
 </div>
 <div class="filter-panel" id="filter-panel">
 <label>
-<span>Comune</span>
-<select id="filt-commune"><option value="">Tutti i comuni</option><option value="Abondance">Abondance</option><option value="Annecy">Annecy</option><option value="Cluses">Cluses</option><option value="Saint-Gingolph">Saint-Gingolph</option><option value="Thonon-les-Bains">Thonon-les-Bains</option></select>
+<span>Commune</span>
+<select id="filt-commune"><option value="">Toutes les communes</option><option value="Abondance">Abondance</option><option value="Annecy">Annecy</option><option value="Cluses">Cluses</option><option value="Saint-Gingolph">Saint-Gingolph</option><option value="Thonon-les-Bains">Thonon-les-Bains</option></select>
 </label>
 <label>
-<span>Accesso</span>
+<span>Accès</span>
 <div class="access-group" id="filt-access">
-<button class="active" data-v="all">Tutti</button>
-<button data-v="free">Gratuito</button>
-<button data-v="paid">A pagamento</button>
+<button class="active" data-v="all">Tous</button>
+<button data-v="free">Gratuit</button>
+<button data-v="paid">Payant</button>
 </div>
 </label>
 <label>
@@ -292,89 +437,89 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <main>
 <div class="wrap">
 <div class="commune-section" data-commune="Annecy">
-<div class="commune-head"><h3>Annecy</h3><span class="commune-count">1 luogo</span></div>
+<div class="commune-head"><h3>Annecy</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/it/voie-verte-lac-annecy-annecy">
-<img alt="Via verde del Lago di Annecy in sede propria sull'ex linea ferroviaria della riva ovest con ciclisti e pedoni, Haute-Savoie" data-generique="true" data-generique-cat="voie-verte" loading="lazy" src="/generique-voie-verte-foret.jpg"/>
-<span class="card-tag is-gratuit">Gratuito</span>
+<a class="card-photo" href="https://loisirs74.fr/voie-verte-lac-annecy-annecy">
+<img alt="Voie verte du Lac d'Annecy en site propre sur l'ancienne voie ferrée rive ouest avec cyclistes et piétons Haute-Savoie" data-generique="true" data-generique-cat="voie-verte" loading="lazy" src="/generique-voie-verte-foret.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/it/voie-verte-lac-annecy-annecy">Voie verte du Lac d'Annecy</a>
-<p class="card-desc">33 km in sede propria sulla riva ovest da Annecy a Marlens, su un'ex linea ferroviaria. Pianeggiante, asfaltata, accessibile ai disabili. 1,5 milioni di passaggi all'anno. Giro completo del lago in bicicletta in 38–42 km.</p>
+<div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/voie-verte-lac-annecy-annecy">Voie verte du Lac d'Annecy</a>
+<p class="card-desc">33 km en site propre rive ouest Annecy-Marlens, ancienne voie ferrée. Plate, enrobée, PMR. 1,5 M passages/an. Tour du lac complet en 38-42 km à vélo.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Voie%20verte%20du%20Lac%20d%27Annecy%2C%20Annecy%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
-<a href="https://www.sila.fr/notre-territoire/tour-du-lac-a-velo-et-a-pied/" rel="noopener" target="_blank">Sito ufficiale</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.8992,6.1294" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://www.sila.fr/notre-territoire/tour-du-lac-a-velo-et-a-pied/" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Cluses">
-<div class="commune-head"><h3>Cluses</h3><span class="commune-count">2 luoghi</span></div>
+<div class="commune-head"><h3>Cluses</h3><span class="commune-count">2 lieux</span></div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/it/voie-verte-arve-cluses-thyez">
-<img alt="Via verde locale per famiglie lungo l'Arve tra Cluses e Thyez, Haute-Savoie — 2 × 2,5 km andata · anello 5 km, molto facile" data-generique="true" data-generique-cat="voie-verte" loading="lazy" src="/generique-voie-verte-cyclistes-riviere.jpg"/>
-<span class="card-tag is-gratuit">Gratuito</span>
+<a class="card-photo" href="https://loisirs74.fr/voie-verte-arve-cluses-thyez">
+<img alt="Voie verte locale famille Promenade du bord d'Arve Cluses-Thyez à Cluses Haute-Savoie - 2 × 2,5 km aller · boucle 5 km très facile" data-generique="true" data-generique-cat="voie-verte" loading="lazy" src="/generique-voie-verte-cyclistes-riviere.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Cluses</span></div><a class="title" href="https://loisirs74.fr/it/voie-verte-arve-cluses-thyez">Promenade du bord d'Arve Cluses-Thyez</a>
-<p class="card-desc">Anello familiare di 5 km lungo l'Arve tra Cluses e Thyez con base ricreativa al termine — via verde pianeggiante accessibile ai disabili. Tier 3 Loisirs 74.</p>
+<div class="card-commune"><span>Cluses</span></div><a class="title" href="https://loisirs74.fr/voie-verte-arve-cluses-thyez">Promenade du bord d'Arve Cluses-Thyez</a>
+<p class="card-desc">Boucle familiale 5 km le long de l'Arve entre Cluses et Thyez avec base de loisirs au bout - voie verte plate accessible PMR Tier 3 Loisirs 74.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Promenade%20du%20bord%20d%27Arve%20Cluses-Thyez%2C%20Cluses%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.0617,6.5811" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article>
 <article class="card">
-<a class="card-photo" href="https://loisirs74.fr/it/veloroute-vallee-arve-cluses-sallanches">
-<img alt="Ciclovia Valle dell'Arve V61 Lemano–Monte Bianco, via verde in sede propria che attraversa la valle industriale di fronte al massiccio del Monte Bianco, Haute-Savoie" data-generique="true" data-generique-cat="voie-verte" loading="lazy" src="/generique-voie-verte.jpg"/>
-<span class="card-tag is-gratuit">Gratuito</span>
+<a class="card-photo" href="https://loisirs74.fr/veloroute-vallee-arve-cluses-sallanches">
+<img alt="Véloroute Vallée de l'Arve V61 Léman au Mont-Blanc voie verte en site propre traversant la vallée industrielle face au massif du Mont-Blanc Haute-Savoie" data-generique="true" data-generique-cat="voie-verte" loading="lazy" src="/generique-voie-verte.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Cluses</span></div><a class="title" href="https://loisirs74.fr/it/veloroute-vallee-arve-cluses-sallanches">Véloroute Vallée de l'Arve</a>
-<p class="card-desc">40 km di via verde da Bonneville a Sallanches via Cluses sulla V61 Lemano–Monte Bianco. Passerella sull'Arve aperta a dicembre 2019, asfalto liscio, pianeggiante.</p>
+<div class="card-commune"><span>Cluses</span></div><a class="title" href="https://loisirs74.fr/veloroute-vallee-arve-cluses-sallanches">Véloroute Vallée de l'Arve</a>
+<p class="card-desc">40 km de voie verte de Bonneville à Sallanches via Cluses sur la V61 Léman-Mont-Blanc. Passerelle Arve ouverte décembre 2019, enrobé lisse, plate.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Véloroute%20Vallée%20de%20l%27Arve%2C%20Cluses%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.0617,6.5811" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Saint-Gingolph">
-<div class="commune-head"><h3>Saint-Gingolph</h3><span class="commune-count">1 luogo</span></div>
+<div class="commune-head"><h3>Saint-Gingolph</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/it/viarhona-haute-savoie-saint-gingolph-seyssel">
-<img alt="ViaRhôna EV17 EuroVelo, via verde che attraversa l'Haute-Savoie da Saint-Gingolph sul Lemano verso Seyssel sul Rodano" data-generique="true" data-generique-cat="voie-verte" loading="lazy" src="/generique-voie-verte-cyclistes-lac.jpg"/>
-<span class="card-tag is-gratuit">Gratuito</span>
+<a class="card-photo" href="https://loisirs74.fr/viarhona-haute-savoie-saint-gingolph-seyssel">
+<img alt="ViaRhôna EV17 EuroVelo voie verte traversant la Haute-Savoie de Saint-Gingolph au Léman vers Seyssel sur le Rhône" data-generique="true" data-generique-cat="voie-verte" loading="lazy" src="/generique-voie-verte-cyclistes-lac.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Saint-Gingolph</span></div><a class="title" href="https://loisirs74.fr/it/viarhona-haute-savoie-saint-gingolph-seyssel">ViaRhôna Haute-Savoie</a>
-<p class="card-desc">145 km da Saint-Gingolph (Lemano) a Seyssel (Rodano) passando per Évian, Thonon, Cluses e Sallanches. EuroVelo 17, vie verdi e strade condivise.</p>
+<div class="card-commune"><span>Saint-Gingolph</span></div><a class="title" href="https://loisirs74.fr/viarhona-haute-savoie-saint-gingolph-seyssel">ViaRhôna Haute-Savoie</a>
+<p class="card-desc">145 km de Saint-Gingolph (Léman) à Seyssel (Rhône) par Évian, Thonon, Cluses, Sallanches. EuroVelo 17, voies vertes + routes partagées.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=ViaRhôna%20Haute-Savoie%2C%20Saint-Gingolph%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
-<a href="https://www.viarhona.com/" rel="noopener" target="_blank">Sito ufficiale</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.3917,6.8056" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://www.viarhona.com/" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Thonon-les-Bains">
-<div class="commune-head"><h3>Thonon-les-Bains</h3><span class="commune-count">0 luoghi</span></div>
+<div class="commune-head"><h3>Thonon-les-Bains</h3><span class="commune-count">0 lieux</span></div>
 <div class="carousel"></div>
 </div>
 <div class="empty-state" id="empty-state" style="display:none">
-<b>Nessun risultato</b>
-      Nessun luogo corrisponde a questi filtri.
+<b>Aucun résultat</b>
+      Aucun lieu ne correspond à ces filtres.
     </div>
 <div class="commune-section" data-commune="Abondance">
-<div class="commune-head"><h3>Abondance</h3><span class="commune-count">1 luogo</span></div>
+<div class="commune-head"><h3>Abondance</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
-<a class="card-photo" href="https://loisirs74.fr/it/voie-verte-du-chablais">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-gratuit">Gratis</span>
+<a class="card-photo" href="https://loisirs74.fr/voie-verte-du-chablais">
+<img alt="Voie Verte du Chablais à Abondance en Haute-Savoie" loading="lazy" src="None"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Abondance</span></div><a class="title" href="https://loisirs74.fr/it/voie-verte-du-chablais">Voie Verte du Chablais</a>
+<div class="card-commune"><span>Abondance</span></div><a class="title" href="https://loisirs74.fr/voie-verte-du-chablais">Voie Verte du Chablais</a>
 <p class="card-desc">Voie verte aménagée dans la vallée d'Abondance entre Abondance et Châtel, en site propre, asphalte lisse.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Voie%20Verte%20du%20Chablais%2C%20Abondance%2C%20Haute-Savoie" rel="noopener" target="_blank">Indicazioni</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.2801,6.7237" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article>
@@ -382,25 +527,37 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </div>
 </div>
 </main>
-<div aria-label="Map" id="cat-map"></div>
+<section class="hub-faq" aria-label="Domande frequenti">
+<div class="wrap">
+<h2>Domande frequenti</h2>
+<details class="faq-item"><summary>Qual è la più bella via verde della Haute-Savoie?</summary><div class="faq-a">La pista del Lac d'Annecy, piana e asfaltata lungo la sponda, è la più celebre e la più adatta alle famiglie.</div></details>
+<details class="faq-item"><summary>Le vie verdi sono adatte ai bambini?</summary><div class="faq-a">Sì: piane, asfaltate e separate dal traffico, sono adatte a bambini, passeggini ed e-bike.</div></details>
+<details class="faq-item"><summary>Si possono noleggiare le bici?</summary><div class="faq-a">Punti di noleggio sono presenti ad Annecy e nelle principali località di partenza; informarsi sul posto o tramite il sito ufficiale dell'itinerario.</div></details>
+<details class="faq-item"><summary>Le vie verdi sono gratuite?</summary><div class="faq-a">Sì, l'accesso alle vie verdi e agli itinerari ciclabili è completamente libero e gratuito.</div></details>
+<details class="faq-item"><summary>Quanto è lunga la pista del Lac d'Annecy?</summary><div class="faq-a">Circa 33 km da Annecy a Doussard lungo la sponda ovest, prolungati da altri tratti intorno al lago.</div></details>
+</div>
+</section>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qual è la più bella via verde della Haute-Savoie?", "acceptedAnswer": {"@type": "Answer", "text": "La pista del Lac d'Annecy, piana e asfaltata lungo la sponda, è la più celebre e la più adatta alle famiglie."}}, {"@type": "Question", "name": "Le vie verdi sono adatte ai bambini?", "acceptedAnswer": {"@type": "Answer", "text": "Sì: piane, asfaltate e separate dal traffico, sono adatte a bambini, passeggini ed e-bike."}}, {"@type": "Question", "name": "Si possono noleggiare le bici?", "acceptedAnswer": {"@type": "Answer", "text": "Punti di noleggio sono presenti ad Annecy e nelle principali località di partenza; informarsi sul posto o tramite il sito ufficiale dell'itinerario."}}, {"@type": "Question", "name": "Le vie verdi sono gratuite?", "acceptedAnswer": {"@type": "Answer", "text": "Sì, l'accesso alle vie verdi e agli itinerari ciclabili è completamente libero e gratuito."}}, {"@type": "Question", "name": "Quanto è lunga la pista del Lac d'Annecy?", "acceptedAnswer": {"@type": "Answer", "text": "Circa 33 km da Annecy a Doussard lungo la sponda ovest, prolungati da altri tratti intorno al lago."}}]}
+</script>
 <footer class="site">
 <div class="wrap">
 <div class="foot-grid">
 <div class="foot-col">
 <h4>Loisirs 74</h4>
-<p>Guida indipendente ai luoghi del tempo libero in Alta Savoia. Ogni pagina: una fonte ufficiale, un indirizzo, una mappa.</p>
+<p>Guide indépendant des lieux de loisirs en Haute-Savoie. Chaque page : une source officielle, une adresse, une carte.</p>
 </div>
 <div class="foot-col">
-<h4>Categorie</h4>
-<ul><li><a href="https://loisirs74.fr/it/laghi/">Laghi &amp; spiagge</a></li><li><a href="https://loisirs74.fr/it/spiagge/">Spiagge</a></li><li><a href="https://loisirs74.fr/it/cascate/">Cascate</a></li><li><a href="https://loisirs74.fr/it/aree-recreative/">Aree ricreative</a></li><li><a href="https://loisirs74.fr/it/punti-panoramici/">Punti panoramici</a></li><li><a href="https://loisirs74.fr/it/funivie/">Funivie</a></li><li><a href="https://loisirs74.fr/it/musei/">Musei</a></li><li><a href="https://loisirs74.fr/it/castelli/">Castelli &amp; forti</a></li><li><a href="https://loisirs74.fr/it/sentieri/">Sentieri</a></li><li><a href="https://loisirs74.fr/it/attrazioni/">Attrazioni &amp; svago</a></li><li><a href="https://loisirs74.fr/it/altro/">Altro</a></li><li><a href="https://loisirs74.fr/it/que-faire/">Cosa fare?</a></li></ul>
+<h4>Catégories</h4>
+<ul><li><a href="https://loisirs74.fr/lacs-plages/">Lacs &amp; plages</a></li><li><a href="https://loisirs74.fr/lacs-plages/">Plages</a></li><li><a href="https://loisirs74.fr/cascades/">Cascades</a></li><li><a href="https://loisirs74.fr/bases-de-loisirs/">Bases de loisirs</a></li><li><a href="https://loisirs74.fr/points-de-vue/">Points de vue</a></li><li><a href="https://loisirs74.fr/telecabines/">Télécabines</a></li><li><a href="https://loisirs74.fr/musees/">Musées</a></li><li><a href="https://loisirs74.fr/chateaux/">Châteaux &amp; forts</a></li><li><a href="https://loisirs74.fr/sentiers/">Sentiers</a></li><li><a href="https://loisirs74.fr/">Attractions &amp; loisirs</a></li><li><a href="https://loisirs74.fr/">Divers</a></li><li><a href="https://loisirs74.fr/que-faire/">Que faire ?</a></li></ul>
 </div>
 <div class="foot-col">
-<h4>Lingua</h4>
-<ul><li><a href="https://loisirs74.fr/voies-vertes/" hreflang="fr">Français</a></li><li><a href="https://loisirs74.fr/en/greenways/" hreflang="en">English</a></li><li><a href="https://loisirs74.fr/de/radwege/" hreflang="de">Deutsch</a></li><li><a href="https://loisirs74.fr/it/vie-verdi/" hreflang="it">Italiano</a></li><li><a href="https://loisirs74.fr/es/vias-verdes/" hreflang="es">Español</a></li></ul>
+<h4>Langue</h4>
+<ul><li><a href="https://loisirs74.fr/voies-vertes/" hreflang="fr">Français</a></li><li><a href="https://loisirs74.fr/en/greenways/" hreflang="en">English</a></li><li><a href="https://loisirs74.fr/de/radwege/" hreflang="de">Deutsch</a></li><li><a href="https://loisirs74.fr/it/vie-verdi/" hreflang="it">Italiano</a></li><li><a href="https://loisirs74.fr/es/vias-verdes/" hreflang="es">Español</a></li><li><a href="https://loisirs74.fr/nl/fietsroutes/" hreflang="nl">Nederlands</a></li></ul>
 </div>
 <div class="foot-col">
-<h4>Note legali</h4>
-<ul><li><a href="https://loisirs74.fr/mentions-legales">Note legali</a></li><li><a href="https://loisirs74.fr/confidentialite">Privacy</a></li><li><a href="https://loisirs74.fr/cgv">Condizioni</a></li><li><a href="https://loisirs74.fr/signaler">Segnala un errore</a></li><li><a href="https://loisirs74.fr/devenir-partenaire">Diventa partner</a></li></ul>
+<h4>Mentions</h4>
+<ul><li><a href="https://loisirs74.fr/mentions-legales">Mentions légales</a></li><li><a href="https://loisirs74.fr/confidentialite">Confidentialité</a></li><li><a href="https://loisirs74.fr/cgv">CGV</a></li><li><a href="https://loisirs74.fr/signaler">Signaler une info</a></li><li><a href="https://loisirs74.fr/devenir-partenaire">Devenir partenaire</a></li></ul>
 </div>
 </div>
 <div class="foot-bottom">
@@ -408,7 +565,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </div>
 </div>
 </footer>
-<script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 // Cursor halo
 (function(){
@@ -436,103 +592,37 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
   els.forEach(el => io.observe(el));
 })();
 
-// MAP + FILTERS
+// FILTERS (commune + access + sort)
 (function(){
-  const PINS = [{"slug": "voie-verte-lac-annecy-annecy", "name": "Voie verte du Lac d'Annecy", "commune": "Annecy", "lat": 45.8992, "lng": 6.1294, "url": "https://loisirs74.fr/it/voie-verte-lac-annecy-annecy", "paid": false}, {"slug": "voie-verte-arve-cluses-thyez", "name": "Promenade du bord d'Arve Cluses-Thyez", "commune": "Cluses", "lat": 46.0617, "lng": 6.5811, "url": "https://loisirs74.fr/it/voie-verte-arve-cluses-thyez", "paid": false}, {"slug": "veloroute-vallee-arve-cluses-sallanches", "name": "Véloroute Vallée de l'Arve", "commune": "Cluses", "lat": 46.0617, "lng": 6.5811, "url": "https://loisirs74.fr/it/veloroute-vallee-arve-cluses-sallanches", "paid": false}, {"slug": "viarhona-haute-savoie-saint-gingolph-seyssel", "name": "ViaRhôna Haute-Savoie", "commune": "Saint-Gingolph", "lat": 46.3917, "lng": 6.8056, "url": "https://loisirs74.fr/it/viarhona-haute-savoie-saint-gingolph-seyssel", "paid": false}, {"slug": "viarhona-ev17-bas-chablais-thonon", "name": "ViaRhôna EV17 Bas-Chablais", "commune": "Thonon-les-Bains", "lat": 46.3711, "lng": 6.4789, "url": "https://loisirs74.fr/it/viarhona-ev17-bas-chablais-thonon", "paid": false}];
-  const SHOWN_SG = "luogo mostrato";
-  const SHOWN_PL = "luoghi mostrati";
-  if (typeof L === 'undefined' || PINS.length === 0) return;
-  const map = L.map('cat-map', { scrollWheelZoom: false });
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
-  }).addTo(map);
-
-  function makeIcon(paid){
-    const color = paid ? '#e07a3f' : '#2e4a3a';
-    const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="36" viewBox="0 0 28 36"><path d="M14 0C6.3 0 0 6.3 0 14c0 10.5 14 22 14 22s14-11.5 14-22C28 6.3 21.7 0 14 0z" fill="'+color+'"/><circle cx="14" cy="14" r="5" fill="#fdfaf3"/></svg>';
-    return L.divIcon({ className:'l74-pin', html: svg, iconSize:[28,36], iconAnchor:[14,36], popupAnchor:[0,-32] });
-  }
-
-  const layers = {};
-  const markers = [];
-  for (const p of PINS) {
-    const m = L.marker([p.lat, p.lng], {icon: makeIcon(!!p.paid)}).addTo(map);
-    m.bindPopup('<a href="'+p.url+'">'+p.name+'</a><span class="commune-pop">'+p.commune+'</span>');
-    layers[p.slug] = m;
-    markers.push(m);
-  }
-  const group = L.featureGroup(markers);
-  map.fitBounds(group.getBounds().pad(0.15));
-
-  // FILTERS
-  const communeSel = document.getElementById('filt-commune');
-  const accessGroup = document.getElementById('filt-access');
-  const sortSel = document.getElementById('filt-sort');
-  const countN = document.getElementById('count-n');
-  const countLabel = document.getElementById('count-label');
-  const emptyState = document.getElementById('empty-state');
-
-  let curCommune = '';
-  let curAccess = 'all';
-  let curSort = 'commune';
-
-  function pinPaid(slug){ const p = PINS.find(x => x.slug === slug); return p ? !!p.paid : false; }
-
+  const SG="lieu affiché",PL="lieux affichés";
+  const communeSel=document.getElementById('filt-commune');
+  const accessGroup=document.getElementById('filt-access');
+  const sortSel=document.getElementById('filt-sort');
+  const countN=document.getElementById('count-n');
+  const countLabel=document.getElementById('count-label');
+  const emptyState=document.getElementById('empty-state');
+  let curCommune='',curAccess='all',curSort='commune';
   function applyFilters(){
-    const sections = document.querySelectorAll('.commune-section');
-    let visibleMarkers = [];
-    let total = 0;
-    sections.forEach(sec => {
-      const commune = sec.dataset.commune;
-      const communeMatch = !curCommune || commune === curCommune;
-      let visibleCards = 0;
-      sec.querySelectorAll('.card').forEach(card => {
-        const titleLink = card.querySelector('a.title');
-        const href = titleLink ? titleLink.getAttribute('href') : '';
-        const slug = href.split('/').pop();
-        const isPaid = pinPaid(slug);
-        const accessMatch = curAccess === 'all' || (curAccess === 'free' && !isPaid) || (curAccess === 'paid' && isPaid);
-        const show = communeMatch && accessMatch;
-        card.classList.toggle('hidden', !show);
-        if (show){ visibleCards++; total++; if (layers[slug]) visibleMarkers.push(layers[slug]); }
+    let total=0;
+    document.querySelectorAll('.commune-section').forEach(sec=>{
+      const communeMatch=!curCommune||sec.dataset.commune===curCommune;
+      let vis=0;
+      sec.querySelectorAll('.card').forEach(card=>{
+        const isPaid=!!card.querySelector('.card-tag.is-payant');
+        const am=curAccess==='all'||(curAccess==='free'&&!isPaid)||(curAccess==='paid'&&isPaid);
+        const show=communeMatch&&am; card.classList.toggle('hidden',!show); if(show){vis++;total++;}
       });
-      sec.classList.toggle('hidden', visibleCards === 0);
+      sec.classList.toggle('hidden',vis===0);
     });
-    if (countN) countN.textContent = total;
-    if (countLabel) countLabel.textContent = total === 1 ? SHOWN_SG : SHOWN_PL;
-    if (emptyState) emptyState.style.display = total === 0 ? 'block' : 'none';
-    if (visibleMarkers.length){ const fg = L.featureGroup(visibleMarkers); map.fitBounds(fg.getBounds().pad(0.15)); }
+    if(countN)countN.textContent=total;
+    if(countLabel)countLabel.textContent=total===1?SG:PL;
+    if(emptyState)emptyState.style.display=total===0?'block':'none';
   }
-
-  function applySort(){
-    const sections = Array.from(document.querySelectorAll('.commune-section'));
-    if (curSort === 'alpha'){
-      sections.forEach(sec => {
-        const carousel = sec.querySelector('.carousel');
-        const cards = Array.from(carousel.querySelectorAll('.card'));
-        cards.sort((a, b) => {
-          const na = a.querySelector('a.title')?.textContent || '';
-          const nb = b.querySelector('a.title')?.textContent || '';
-          return na.localeCompare(nb);
-        });
-        cards.forEach(c => carousel.appendChild(c));
-      });
-    }
-  }
-
-  if (communeSel) communeSel.addEventListener('change', e => { curCommune = e.target.value; applyFilters(); });
-  if (accessGroup) accessGroup.addEventListener('click', e => {
-    if (e.target.tagName === 'BUTTON'){
-      accessGroup.querySelectorAll('button').forEach(b => b.classList.remove('active'));
-      e.target.classList.add('active');
-      curAccess = e.target.dataset.v;
-      applyFilters();
-    }
-  });
-  if (sortSel) sortSel.addEventListener('change', e => { curSort = e.target.value; applySort(); });
-
-  // Init count
+  function applySort(){ if(curSort!=='alpha')return;
+    document.querySelectorAll('.commune-section .carousel').forEach(c=>{Array.from(c.querySelectorAll('.card')).sort((a,b)=>(a.querySelector('a.title')?.textContent||'').localeCompare(b.querySelector('a.title')?.textContent||'')).forEach(x=>c.appendChild(x));}); }
+  if(communeSel)communeSel.addEventListener('change',e=>{curCommune=e.target.value;applyFilters();});
+  if(accessGroup)accessGroup.addEventListener('click',e=>{if(e.target.tagName==='BUTTON'){accessGroup.querySelectorAll('button').forEach(b=>b.classList.remove('active'));e.target.classList.add('active');curAccess=e.target.dataset.v;applyFilters();}});
+  if(sortSel)sortSel.addEventListener('change',e=>{curSort=e.target.value;applySort();});
   applyFilters();
 })();
 </script>

@@ -5,21 +5,21 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
 <meta content="#f6f1e7" name="theme-color"/>
-<title>Cable cars — Loisirs 74</title>
+<title>Cable cars and panoramic trains of Haute-Savoie — up without walking — Loisirs 74</title>
 <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
 <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
 <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="/site.webmanifest" rel="manifest"/>
-<meta content="Cable cars in Haute-Savoie · 12 places" name="description"/>
+<meta content="Mechanical lifts and panoramic trains of Haute-Savoie: Brévent and Grands Montets cable cars, Tramway du Mont-Blanc. Summer and winter timetables, access." name="description"/>
 <link href="https://loisirs74.fr/en/cable-cars/" rel="canonical"/>
 <link href="https://loisirs74.fr/telecabines/" hreflang="fr" rel="alternate"/>
 <link href="https://loisirs74.fr/en/cable-cars/" hreflang="en" rel="alternate"/>
 <link href="https://loisirs74.fr/de/seilbahnen/" hreflang="de" rel="alternate"/>
 <link href="https://loisirs74.fr/it/funivie/" hreflang="it" rel="alternate"/>
 <link href="https://loisirs74.fr/es/telefericos/" hreflang="es" rel="alternate"/>
+<link href="https://loisirs74.fr/nl/kabelbanen/" hreflang="nl" rel="alternate"/>
 <link href="https://loisirs74.fr/telecabines/" hreflang="x-default" rel="alternate"/>
-<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,50;1,9..144,300..500,50&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -49,6 +49,11 @@ a{color:inherit;text-decoration:none}
   --lake-light:#6a92a3;
   --alpenglow:#e07a3f;
   --alpenglow-soft:#f4b88a;
+  --accent:#5a7a8c;
+  --accent-soft:#aabfc9;
+  --hub-hero-img:url("/generique-telecabine.jpg");
+  --hub-hero-tint1:rgba(22,32,40,.55);
+  --hub-hero-tint2:rgba(55,80,96,.40);
 
   --max:1280px;
   --pad:clamp(1.25rem,3.5vw,2rem);
@@ -60,7 +65,7 @@ a{color:inherit;text-decoration:none}
 
 html,body{background:var(--paper);color:var(--ink)}
 body{font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-::selection{background:var(--alpenglow);color:var(--snow)}
+::selection{background:var(--accent);color:var(--snow)}
 .wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad);position:relative}
 
 .cursor-glow{position:fixed;width:600px;height:600px;pointer-events:none;z-index:2;border-radius:50%;background:radial-gradient(circle, rgba(224,122,63,.10) 0%, rgba(224,122,63,0) 60%);transform:translate(-50%,-50%);mix-blend-mode:multiply;will-change:transform}
@@ -78,59 +83,51 @@ header.site{position:sticky;top:0;left:0;right:0;z-index:60;padding:.85rem var(-
 .lang-picker summary{cursor:pointer;font-size:.75rem;letter-spacing:.08em;color:var(--ink-3);padding:.4rem .85rem;border:1px solid var(--line-2);border-radius:999px;display:inline-flex;align-items:center;gap:.5rem;list-style:none;transition:all .25s var(--ease)}
 .lang-picker summary::-webkit-details-marker{display:none}
 .lang-picker summary b{color:var(--ink);font-weight:500}
-.lang-picker summary::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--alpenglow);animation:breathe 2.4s ease-in-out infinite}
+.lang-picker summary::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);animation:breathe 2.4s ease-in-out infinite}
 .lang-picker:hover summary{border-color:var(--ink-2);color:var(--ink)}
 @keyframes breathe{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.85)}}
 .lang-picker[open] > .lang-menu{display:flex}
 .lang-menu{display:none;position:absolute;top:calc(100% + .5rem);right:0;flex-direction:column;background:var(--snow);border:1px solid var(--line);border-radius:8px;padding:.4rem;min-width:10rem;z-index:60;box-shadow:0 18px 40px -18px rgba(28,24,20,.25)}
 .lang-menu a{padding:.5rem .75rem;font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink-3);border-radius:5px;transition:all .2s var(--ease)}
 .lang-menu a:hover{background:var(--paper-2);color:var(--ink)}
-.lang-menu a[aria-current="true"]{color:var(--alpenglow);font-weight:500}
+.lang-menu a[aria-current="true"]{color:var(--accent);font-weight:500}
 
 .crumb{padding:1.5rem var(--pad) 0;max-width:var(--max);margin-inline:auto;font-size:.78rem;color:var(--ink-3);letter-spacing:.04em;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
 .crumb a{color:var(--ink-3);transition:color .2s var(--ease)}
-.crumb a:hover{color:var(--alpenglow)}
+.crumb a:hover{color:var(--accent)}
 .crumb b{color:var(--ink);font-weight:500}
 .crumb .sep{color:var(--ink-4)}
 
-.hub-hero{padding:1rem 0 1.25rem;position:relative;overflow:hidden}
-.hub-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(800px 300px at 85% 0%, rgba(224,122,63,.10), transparent 70%),radial-gradient(600px 250px at 5% 30%, rgba(46,74,58,.06), transparent 70%)}
-.hub-hero h1{font-family:var(--serif);font-size:clamp(1.7rem,1.35rem + 1.8vw,3.25rem);line-height:1.05;letter-spacing:-.025em;font-weight:400;font-variation-settings:"SOFT" 50;color:var(--ink);max-width:18ch;opacity:0;animation:rise .8s var(--ease-out) .15s forwards}
-.hub-hero h1 em{font-style:italic;font-weight:300;color:var(--alpenglow)}
-.hub-hero .meta{margin-top:.45rem;font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink-3);display:flex;gap:.6rem;flex-wrap:wrap;align-items:baseline;opacity:0;animation:rise .8s var(--ease-out) .3s forwards}
-.hub-hero .meta b{font-family:var(--sans);font-style:normal;color:var(--ink);font-weight:600;font-size:.85rem;letter-spacing:.04em}
-.hub-hero .meta .dot{color:var(--ink-4);font-style:normal}
+.hub-hero{position:relative;padding:clamp(3rem,9vw,5.5rem) 0 clamp(1.5rem,3vw,2.25rem);overflow:hidden;isolation:isolate}
+.hub-hero::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--hub-hero-img) center 55%/cover no-repeat;transform:scale(1.03)}
+.hub-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--hub-hero-tint1) 0%,var(--hub-hero-tint2) 46%,var(--paper) 100%)}
+.hub-hero h1{font-family:var(--serif);font-size:clamp(1.9rem,1.4rem + 2vw,3.5rem);line-height:1.04;letter-spacing:-.025em;font-weight:400;font-variation-settings:"SOFT" 50;color:var(--snow);max-width:20ch;text-shadow:0 2px 28px rgba(15,30,38,.5);opacity:0;animation:rise .8s var(--ease-out) .15s forwards}
+.hub-hero h1 em{font-style:italic;font-weight:300;color:var(--accent-soft)}
+.hub-hero .meta{margin-top:.6rem;font-family:var(--serif);font-style:italic;font-size:1rem;color:rgba(253,250,243,.92);display:flex;gap:.6rem;flex-wrap:wrap;align-items:baseline;text-shadow:0 1px 14px rgba(15,30,38,.45);opacity:0;animation:rise .8s var(--ease-out) .3s forwards}
+.hub-hero .meta b{font-family:var(--sans);font-style:normal;color:var(--snow);font-weight:600;font-size:.85rem;letter-spacing:.04em}
+.hub-hero .meta .dot{color:rgba(253,250,243,.6);font-style:normal}
 @keyframes rise{to{opacity:1;transform:translateY(0)}}
 .hub-hero h1, .hub-hero .meta { transform:translateY(20px) }
-
-#cat-map{height:220px;width:100%;border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;z-index:1;background:var(--paper-2)}
-.leaflet-popup-content-wrapper{border-radius:8px;background:var(--snow);box-shadow:0 18px 40px -18px rgba(28,24,20,.3);border:1px solid var(--line)}
-.leaflet-popup-tip{background:var(--snow);border:1px solid var(--line)}
-.leaflet-popup-content{margin:.7rem .9rem;font-family:var(--sans);font-size:.88rem;line-height:1.45;color:var(--ink-2)}
-.leaflet-popup-content a{color:var(--ink);font-family:var(--serif);font-size:1.05rem;font-weight:500;letter-spacing:-.005em}
-.leaflet-popup-content a:hover{color:var(--alpenglow)}
-.leaflet-popup-content .commune-pop{display:block;color:var(--ink-3);font-size:.72rem;margin-top:.2rem;letter-spacing:.06em}
-.leaflet-control-attribution{background:rgba(253,250,243,.85)!important;font-family:var(--sans);font-size:.65rem}
 
 .filter-bar{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);z-index:30;padding:.55rem 0;box-shadow:0 8px 20px -16px rgba(0,0,0,.3)}
 .filter-bar__head{display:flex;align-items:center;gap:1rem}
 .filter-toggle{margin-left:auto;display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .9rem;border:1px solid var(--line-2);background:var(--snow);color:var(--ink);font-family:var(--sans);font-size:.8rem;font-weight:600;letter-spacing:.04em;border-radius:6px;cursor:pointer;transition:all .2s var(--ease)}
-.filter-toggle:hover{border-color:var(--alpenglow)}
+.filter-toggle:hover{border-color:var(--accent)}
 .filter-toggle__chev{transition:transform .2s var(--ease)}
 .filter-toggle[aria-expanded="true"] .filter-toggle__chev{transform:rotate(180deg)}
-.filter-toggle__badge{display:inline-flex;min-width:1.1rem;justify-content:center;padding:0 .35rem;border-radius:9px;background:var(--alpenglow);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:0}
+.filter-toggle__badge{display:inline-flex;min-width:1.1rem;justify-content:center;padding:0 .35rem;border-radius:9px;background:var(--accent);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:0}
 .filter-toggle__badge[hidden]{display:none}
 .filter-panel{display:none;flex-wrap:wrap;gap:1.25rem;align-items:flex-end;padding-top:.75rem}
 .filter-panel.is-open{display:flex}
 .filter-panel label{display:flex;flex-direction:column;gap:.35rem;font-size:.65rem;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.14em}
 .filter-panel select{padding:.55rem .8rem;border:1px solid var(--line-2);background:var(--snow);color:var(--ink);font-size:.88rem;font-weight:500;font-family:var(--sans);min-width:10rem;border-radius:6px;transition:border-color .2s var(--ease);cursor:pointer}
-.filter-panel select:hover, .filter-panel select:focus{border-color:var(--alpenglow);outline:none}
+.filter-panel select:hover, .filter-panel select:focus{border-color:var(--accent);outline:none}
 .access-group{display:flex;border:1px solid var(--line-2);border-radius:6px;overflow:hidden;background:var(--snow)}
 .access-group button{padding:.55rem 1rem;border:0;background:transparent;color:var(--ink-3);font-size:.78rem;font-weight:600;cursor:pointer;font-family:var(--sans);letter-spacing:.04em;border-right:1px solid var(--line-2);transition:all .2s var(--ease)}
 .access-group button:last-child{border-right:0}
 .access-group button:hover{color:var(--ink);background:var(--paper-2)}
 .access-group button.active{background:var(--ink);color:var(--snow)}
-.access-group button.active[data-v="paid"]{background:var(--alpenglow)}
+.access-group button.active[data-v="paid"]{background:var(--accent)}
 .access-group button.active[data-v="free"]{background:var(--pine)}
 .filter-bar .count-live{font-family:var(--serif);font-style:italic;font-size:.9rem;color:var(--ink-3)}
 .filter-bar .count-live b{font-style:normal;color:var(--ink);font-weight:500}
@@ -141,11 +138,11 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .commune-section.hidden{display:none}
 .commune-head{margin-bottom:1.25rem;display:flex;align-items:baseline;gap:.85rem;flex-wrap:wrap}
 .commune-head h3{font-family:var(--serif);font-size:clamp(1.5rem,1.2rem + .8vw,2rem);line-height:1.05;letter-spacing:-.02em;font-weight:400;font-variation-settings:"SOFT" 50;color:var(--ink)}
-.commune-head h3 em{font-style:italic;color:var(--alpenglow);font-weight:300}
+.commune-head h3 em{font-style:italic;color:var(--accent);font-weight:300}
 .commune-count{font-family:var(--sans)!important;font-size:.7rem;font-weight:500;color:var(--ink-3);letter-spacing:.14em;text-transform:uppercase}
 
 .transport-block{background:var(--snow);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.1rem;font-size:.85rem;line-height:1.45;display:flex;flex-direction:column;gap:.3rem;margin-bottom:1.5rem;max-width:36rem}
-.transport-block .transport-label{font-size:.65rem;font-weight:600;color:var(--alpenglow);text-transform:uppercase;letter-spacing:.18em;margin-bottom:.25rem;font-family:var(--sans)}
+.transport-block .transport-label{font-size:.65rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.18em;margin-bottom:.25rem;font-family:var(--sans)}
 .transport-row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:baseline}
 .transport-row .t-k{font-family:var(--sans);font-weight:600;color:var(--ink-3);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;min-width:5.5rem}
 .transport-row .t-v{color:var(--ink-2);font-size:.9rem;font-family:var(--serif);font-style:italic}
@@ -161,24 +158,24 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .card-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease-out), filter .3s var(--ease);filter:saturate(.95)}
 .card:hover .card-photo img{transform:scale(1.06);filter:saturate(1.05)}
 .card-tag{position:absolute;top:14px;right:14px;background:rgba(253,250,243,.95);color:var(--ink);padding:.3rem .7rem;border-radius:999px;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:var(--sans);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:2}
-.card-tag.is-payant{background:var(--alpenglow);color:var(--snow)}
+.card-tag.is-payant{background:var(--accent);color:var(--snow)}
 .card-tag.is-gratuit{background:var(--pine);color:var(--snow)}
 .card-body{padding:1.25rem 1.35rem 1.35rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .card-commune{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:.15rem;order:-1}
 .card-commune svg{display:none}
 .card-body a.title{font-family:var(--serif);font-weight:500;font-size:1.35rem;color:var(--ink);line-height:1.15;letter-spacing:-.01em;transition:color .2s var(--ease)}
-.card-body a.title:hover{color:var(--alpenglow)}
+.card-body a.title:hover{color:var(--accent)}
 .card-desc{font-family:var(--sans);font-size:.88rem;color:var(--ink-2);line-height:1.5;margin:.1rem 0 .85rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .card-actions{display:flex;gap:1.25rem;margin-top:auto;padding-top:.8rem;border-top:1px dashed var(--line);font-size:.72rem}
 .card-actions a{font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);transition:color .2s var(--ease), transform .3s var(--ease-out);display:inline-flex;align-items:center;gap:.3rem;font-family:var(--sans)}
-.card-actions a:hover{color:var(--alpenglow);transform:translateX(2px)}
+.card-actions a:hover{color:var(--accent);transform:translateX(2px)}
 .card-actions a svg{display:none}
 .card-actions a::after{content:" \2197";font-size:.9rem;letter-spacing:0}
 
 .card-photo:has(> img[data-generique="true"])::after{content:"Générique";position:absolute;bottom:.55rem;right:.55rem;background:rgba(20,18,16,.78);color:#f0dfc0;font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px;pointer-events:none;z-index:2;font-family:var(--sans);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
 
 .empty-state{padding:4rem 0;text-align:center;font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--ink-3)}
-.empty-state b{display:block;font-family:var(--sans);font-style:normal;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--alpenglow);font-weight:600;margin-bottom:.75rem}
+.empty-state b{display:block;font-family:var(--sans);font-style:normal;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.75rem}
 
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease-out), transform .8s var(--ease-out)}
 .reveal.in{opacity:1;transform:translateY(0)}
@@ -190,13 +187,45 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 .foot-col h4{font-family:var(--sans);font-size:.7rem;font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:.18em;margin-bottom:1rem}
 .foot-col ul{display:flex;flex-direction:column;gap:.55rem}
 .foot-col ul a{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--ink-2);transition:color .2s var(--ease)}
-.foot-col ul a:hover{color:var(--alpenglow)}
+.foot-col ul a:hover{color:var(--accent)}
 .foot-col p{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--ink-3);max-width:24rem;line-height:1.55}
 .foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-top:2rem;border-top:1px solid var(--line);color:var(--ink-3);font-size:.75rem;letter-spacing:.06em;position:relative;z-index:1}
 
-:where(a,button,summary,input,textarea,select):focus-visible{outline:2px solid var(--alpenglow);outline-offset:3px}
+:where(a,button,summary,input,textarea,select):focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}.kicker,.hub-hero h1,.hub-hero .meta{opacity:1;transform:none;animation:none}.reveal{opacity:1;transform:none}.cursor-glow{display:none}}
 @media (min-width:680px){.filter-toggle{display:none}.filter-bar .wrap{display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-end}.filter-panel{display:contents;padding-top:0}.filter-bar__head{order:99;margin-left:auto;align-items:baseline;padding-bottom:.2rem}}
+
+.hub-catcher{margin-top:.7rem;max-width:42ch;font-family:var(--serif);font-style:italic;font-size:clamp(1rem,.95rem + .4vw,1.25rem);line-height:1.4;color:rgba(253,250,243,.94);text-shadow:0 1px 14px rgba(15,30,38,.5);transform:translateY(20px);opacity:0;animation:rise .8s var(--ease-out) .42s forwards}
+.hub-intro{border-bottom:1px solid var(--line)}
+.hub-intro .wrap{padding:1.4rem 0 1.5rem}
+.hub-intro .lead{font-family:var(--serif);font-size:clamp(1rem,.97rem + .3vw,1.12rem);line-height:1.55;color:var(--ink-2);max-width:66ch;margin:0}
+.hub-intro .lead b{font-weight:600;color:var(--ink)}
+.seo-more{margin-top:.55rem}
+.seo-more>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.45rem;font:600 .7rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);padding:.25rem 0}
+.seo-more>summary::-webkit-details-marker{display:none}
+.seo-more>summary::after{content:"+";font-size:1.05rem;line-height:1}
+.seo-more[open]>summary::after{content:"\2013"}
+.seo-more .more-body{max-width:66ch}
+.seo-more .more-body p{font-family:var(--serif);font-size:1rem;line-height:1.62;color:var(--ink-2);margin-top:.85rem}
+.seo-more .more-body b{font-weight:600;color:var(--ink)}
+.hub-faq{border-top:1px solid var(--line)}
+.hub-faq .wrap{padding:clamp(2rem,4vw,3rem) 0}
+.hub-faq h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,1.1rem + 1vw,2rem);letter-spacing:-.02em;color:var(--ink);margin-bottom:1rem;font-variation-settings:"SOFT" 50}
+.faq-item{border-top:1px solid var(--line)}
+.faq-item>summary{cursor:pointer;list-style:none;padding:.95rem 0;font-family:var(--serif);font-size:1.08rem;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-item>summary::-webkit-details-marker{display:none}
+.faq-item>summary::after{content:"+";color:var(--accent);font-size:1.25rem;line-height:1;flex-shrink:0}
+.faq-item[open]>summary::after{content:"\2013"}
+.faq-item .faq-a{padding:0 0 1.05rem;font-family:var(--sans);font-size:.95rem;line-height:1.62;color:var(--ink-2);max-width:70ch}
+/* template refinement: demote transport, drop static counts */
+.commune-section{display:flex;flex-direction:column}
+.commune-head{order:1}
+.commune-section .carousel{order:2}
+.commune-section .transport-block,.commune-section .transport-block.transport-empty{order:3;margin:1.1rem 0 0;padding:.7rem 0 0;background:transparent;border:0;border-top:1px dashed var(--line);border-radius:0;max-width:none;opacity:.8}
+.transport-block .transport-label{color:var(--ink-3)}
+.transport-row .t-v{font-size:.82rem}
+.transport-block p{font-size:.8rem;color:var(--ink-3)}
+.commune-count{display:none}
 </style>
 <meta content="https://loisirs74.fr/og-image.jpg" property="og:image"/>
 <meta content="https://loisirs74.fr/og-image.jpg" name="twitter:image"/>
@@ -207,15 +236,15 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "@id": "https://loisirs74.fr/en/cable-cars/#itemlist",
+  "@id": "https://loisirs74.fr/telecabines/#itemlist",
   "name": "Téléphériques & télécabines",
   "description": "Liste de 8 téléphériques & télécabines en Haute-Savoie",
   "numberOfItems": 8,
   "itemListOrder": "https://schema.org/ItemListOrderAscending",
-  "inLanguage": "en",
+  "inLanguage": "fr",
   "isPartOf": {
     "@type": "CollectionPage",
-    "@id": "https://loisirs74.fr/en/cable-cars/"
+    "@id": "https://loisirs74.fr/telecabines/"
   },
   "itemListElement": [
     {
@@ -223,8 +252,8 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
       "position": 1,
       "item": {
         "@type": "TouristAttraction",
-        "name": "Mont Blanc Tramway",
-        "url": "https://loisirs74.fr/en/tramway-du-mont-blanc",
+        "name": "Tramway du Mont-Blanc",
+        "url": "https://loisirs74.fr/tramway-du-mont-blanc",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Saint-Gervais-les-Bains",
@@ -244,8 +273,8 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
       "position": 2,
       "item": {
         "@type": "TouristAttraction",
-        "name": "Super-Châtel Gondola",
-        "url": "https://loisirs74.fr/en/telecabine-super-chatel",
+        "name": "Télécabine de Super-Châtel",
+        "url": "https://loisirs74.fr/telecabine-super-chatel",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Châtel",
@@ -260,8 +289,8 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
       "position": 3,
       "item": {
         "@type": "TouristAttraction",
-        "name": "Chavannes Gondola",
-        "url": "https://loisirs74.fr/en/telecabine-des-chavannes-les-gets",
+        "name": "Télécabine des Chavannes",
+        "url": "https://loisirs74.fr/telecabine-des-chavannes-les-gets",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Les Gets",
@@ -281,8 +310,8 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
       "position": 4,
       "item": {
         "@type": "TouristAttraction",
-        "name": "Jaillet Gondola",
-        "url": "https://loisirs74.fr/en/telecabine-du-jaillet",
+        "name": "Télécabine du Jaillet",
+        "url": "https://loisirs74.fr/telecabine-du-jaillet",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Megève",
@@ -302,8 +331,8 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
       "position": 5,
       "item": {
         "@type": "TouristAttraction",
-        "name": "Mont-Chéry Gondola",
-        "url": "https://loisirs74.fr/en/telecabine-du-mont-chery-les-gets",
+        "name": "Télécabine du Mont-Chéry",
+        "url": "https://loisirs74.fr/telecabine-du-mont-chery-les-gets",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Les Gets",
@@ -323,8 +352,8 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
       "position": 6,
       "item": {
         "@type": "TouristAttraction",
-        "name": "Pléney Gondola",
-        "url": "https://loisirs74.fr/en/telecabine-pleney-morzine",
+        "name": "Télécabine du Pléney",
+        "url": "https://loisirs74.fr/telecabine-pleney-morzine",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Morzine",
@@ -339,8 +368,8 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
       "position": 7,
       "item": {
         "@type": "TouristAttraction",
-        "name": "Grands Montets Cable Car",
-        "url": "https://loisirs74.fr/en/telepherique-des-grands-montets",
+        "name": "Téléphérique des Grands Montets",
+        "url": "https://loisirs74.fr/telepherique-des-grands-montets",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Chamonix-Mont-Blanc",
@@ -360,8 +389,8 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
       "position": 8,
       "item": {
         "@type": "TouristAttraction",
-        "name": "Brévent Cable Car",
-        "url": "https://loisirs74.fr/en/telepherique-du-brevent",
+        "name": "Téléphérique du Brévent",
+        "url": "https://loisirs74.fr/telepherique-du-brevent",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Chamonix-Mont-Blanc",
@@ -381,12 +410,12 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "url": "https://loisirs74.fr/en/cable-cars/",
-  "name": "Cable cars",
-  "inLanguage": "en",
+  "url": "https://loisirs74.fr/telecabines/",
+  "name": "Télécabines",
+  "inLanguage": "fr",
   "isPartOf": {
     "@type": "WebSite",
-    "url": "https://loisirs74.fr/en/",
+    "url": "https://loisirs74.fr/",
     "name": "Loisirs 74"
   },
   "numberOfItems": 8
@@ -406,49 +435,63 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <span><b>loisirs74</b> <i>· Haute-Savoie</i></span>
 </a>
 <details class="lang-picker">
-<summary><b>EN</b> · 5 languages</summary>
+<summary><b>FR</b> · 5 langues</summary>
 <div class="lang-menu">
-<a href="https://loisirs74.fr/telecabines/" hreflang="fr">Français</a><a aria-current="true" href="https://loisirs74.fr/en/cable-cars/" hreflang="en">English</a><a href="https://loisirs74.fr/de/seilbahnen/" hreflang="de">Deutsch</a><a href="https://loisirs74.fr/it/funivie/" hreflang="it">Italiano</a><a href="https://loisirs74.fr/es/telefericos/" hreflang="es">Español</a>
+<a href="https://loisirs74.fr/telecabines/" hreflang="fr">Français</a><a aria-current="true" href="https://loisirs74.fr/en/cable-cars/" hreflang="en">English</a><a href="https://loisirs74.fr/de/seilbahnen/" hreflang="de">Deutsch</a><a href="https://loisirs74.fr/it/funivie/" hreflang="it">Italiano</a><a href="https://loisirs74.fr/es/telefericos/" hreflang="es">Español</a><a href="https://loisirs74.fr/nl/kabelbanen/" hreflang="nl">Nederlands</a>
 </div>
 </details>
 </header>
 <nav aria-label="breadcrumb" class="crumb">
-<a href="https://loisirs74.fr/en/">Home</a>
+<a href="https://loisirs74.fr/">Accueil</a>
 <span class="sep">/</span>
-<b>Cable cars</b>
+<b>Télécabines</b>
 </nav>
 <section class="hub-hero">
 <div class="wrap">
-<h1>Cable cars</h1>
-<p class="meta"><b>12 places</b><span class="dot">·</span><span>7 communes</span></p>
+<h1>Cable cars &amp; trains</h1>
+<p class="hub-catcher">Up without walking — lifts and panoramic trains to the summits and the great views.</p>
+</div>
+</section>
+<section class="hub-intro" aria-label="Introduction">
+<div class="wrap">
+<p class="lead">No need to climb for hours to reach the heights: gondolas, cable cars and mountain trains haul you up in minutes to panoramas, high-altitude trails and pistes.</p>
+<details class="seo-more">
+<summary>Lire la suite</summary>
+<div class="more-body">
+<p>On the Chamonix side, the <b>Brévent cable car</b> and the <b>Grands Montets</b> one open up views facing Mont-Blanc; the legendary <b>Tramway du Mont-Blanc</b> climbs from Saint-Gervais.</p>
+<p>In the Chablais and the Portes du Soleil, the gondolas of <b>Super-Châtel</b>, the <b>Pléney</b> or <b>Mont-Chéry</b> serve hiking and mountain biking in summer, the pistes in winter.</p>
+<p>Timetables and fares vary sharply by season: some lifts close between two seasons. Each listing links to the resort's official site.</p>
+<p>Many offer pedestrian uphill-only tickets, to enjoy the panorama without skiing or hiking.</p>
+</div>
+</details>
 </div>
 </section>
 <div class="filter-bar">
 <div class="wrap">
 <div class="filter-bar__head">
-<div class="count-live"><b id="count-n">0</b> <span id="count-label">places shown</span></div>
+<div class="count-live"><b id="count-n">0</b> <span id="count-label">lieux affichés</span></div>
 <button aria-controls="filter-panel" aria-expanded="false" class="filter-toggle" type="button">
-<span>Filters</span>
+<span>Filtres</span>
 <span class="filter-toggle__badge" hidden="" id="filter-toggle-badge">0</span>
 <svg aria-hidden="true" class="filter-toggle__chev" height="11" viewbox="0 0 12 12" width="11"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
 </button>
 </div>
 <div class="filter-panel" id="filter-panel">
 <label>
-<span>Town</span>
-<select id="filt-commune"><option value="">All communes</option><option value="Chamonix-Mont-Blanc">Chamonix-Mont-Blanc</option><option value="Châtel">Châtel</option><option value="Les Gets">Les Gets</option><option value="Megève">Megève</option><option value="Morzine">Morzine</option><option value="Saint-Gervais-les-Bains">Saint-Gervais-les-Bains</option><option value="Étrembières">Étrembières</option></select>
+<span>Commune</span>
+<select id="filt-commune"><option value="">Toutes les communes</option><option value="Chamonix-Mont-Blanc">Chamonix-Mont-Blanc</option><option value="Châtel">Châtel</option><option value="Les Gets">Les Gets</option><option value="Megève">Megève</option><option value="Morzine">Morzine</option><option value="Saint-Gervais-les-Bains">Saint-Gervais-les-Bains</option><option value="Étrembières">Étrembières</option></select>
 </label>
 <label>
-<span>Access</span>
+<span>Accès</span>
 <div class="access-group" id="filt-access">
-<button class="active" data-v="all">All</button>
-<button data-v="free">Free</button>
-<button data-v="paid">Paid</button>
+<button class="active" data-v="all">Tous</button>
+<button data-v="free">Gratuit</button>
+<button data-v="paid">Payant</button>
 </div>
 </label>
 <label>
-<span>Sort</span>
-<select id="filt-sort"><option value="commune">By town</option><option value="alpha">A → Z</option></select>
+<span>Tri</span>
+<select id="filt-sort"><option value="commune">Par commune</option><option value="alpha">A → Z</option></select>
 </label>
 </div>
 </div>
@@ -456,218 +499,218 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <main>
 <div class="wrap">
 <div class="commune-section" data-commune="Chamonix-Mont-Blanc">
-<div class="commune-head"><h3>Chamonix-Mont-Blanc</h3><span class="commune-count">2 places</span></div><div class="transport-block">
-<div class="transport-label">How to get there</div>
-<div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Chamonix-Mont-Blanc</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">Chamonix Bus · Mont-Blanc Express</span></div>
+<div class="commune-head"><h3>Chamonix-Mont-Blanc</h3><span class="commune-count">2 lieux</span></div><div class="transport-block">
+<div class="transport-label">Comment y venir</div>
+<div class="transport-row"><span class="t-k">Gare SNCF</span><span class="t-v">Chamonix-Mont-Blanc</span></div><div class="transport-row"><span class="t-k">Lignes de bus</span><span class="t-v">Chamonix Bus · Mont-Blanc Express</span></div>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/telepherique-du-brevent">
-<img alt="View from the Brévent summit at 2,525 m over the Mont Blanc massif and Bossons glacier, Chamonix-Mont-Blanc" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Brevent_cable_car.jpg"/>
-<span class="card-tag is-payant">Paid</span>
+<a class="card-photo" href="https://loisirs74.fr/telepherique-des-grands-montets">
+<img alt="Vue sur le glacier d'Argentière et les Aiguilles Rouges depuis les Grands Montets, Chamonix-Mont-Blanc, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Hike_to_Glacier_d%27Argenti%C3%A8re_-_panoramio_%2861%29.jpg"/>
+<span class="card-tag is-payant">Payant</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/en/telepherique-du-brevent">Brévent Cable Car</a>
-<p class="card-desc">The Brévent offers the most direct view of the Mont Blanc massif from Chamonix.</p>
+<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/telepherique-des-grands-montets">Téléphérique des Grands Montets</a>
+<p class="card-desc">Le mythique domaine des Grands Montets (3 275 m) au-dessus d'Argentière est en cours de reconstruction après l'incendie de 2018.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Br%C3%A9vent%20Cable%20Car%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://domaineschamonix.montblancnaturalresort.com/en/area/brevent" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9727,6.9277" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://domaineschamonix.montblancnaturalresort.com/en/area/grands-montets" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article>
 <article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/telepherique-des-grands-montets">
-<img alt="View over the Argentière glacier and the Aiguilles Rouges from the Grands Montets, Chamonix-Mont-Blanc, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Hike_to_Glacier_d%27Argenti%C3%A8re_-_panoramio_%2861%29.jpg"/>
-<span class="card-tag is-payant">Paid</span>
+<a class="card-photo" href="https://loisirs74.fr/telepherique-du-brevent">
+<img alt="Téléphérique du Brévent" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Brevent_cable_car.jpg"/>
+<span class="card-tag is-payant">Payant</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/en/telepherique-des-grands-montets">Grands Montets Cable Car</a>
-<p class="card-desc">The legendary Grands Montets ski area (3,275 m) above Argentière is being completely rebuilt after the 2018 fire.</p>
+<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/telepherique-du-brevent">Téléphérique du Brévent</a>
+<p class="card-desc">Le Brévent offre la vue la plus frontale sur le massif du Mont Blanc depuis Chamonix.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Grands%20Montets%20Cable%20Car%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://domaineschamonix.montblancnaturalresort.com/en/area/grands-montets" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.927,6.853" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://domaineschamonix.montblancnaturalresort.com/en/area/brevent" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Châtel">
-<div class="commune-head"><h3>Châtel</h3><span class="commune-count">1 place</span></div><div class="transport-block">
-<div class="transport-label">How to get there</div>
-<div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Thonon (40 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">SAT Châtel</span></div>
+<div class="commune-head"><h3>Châtel</h3><span class="commune-count">1 lieu</span></div><div class="transport-block">
+<div class="transport-label">Comment y venir</div>
+<div class="transport-row"><span class="t-k">Gare SNCF</span><span class="t-v">Thonon (40 km)</span></div><div class="transport-row"><span class="t-k">Lignes de bus</span><span class="t-v">SAT Châtel</span></div>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/telecabine-super-chatel">
-<img alt="Super-Châtel gondola cabin above summer alpine meadows with the Dents du Midi range in the background" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg"/>
-<span class="card-tag is-payant">Paid</span>
+<a class="card-photo" href="https://loisirs74.fr/telecabine-super-chatel">
+<img alt="Télécabine de Super-Châtel" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg"/>
+<span class="card-tag is-payant">Payant</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Châtel</span></div><a class="title" href="https://loisirs74.fr/en/telecabine-super-chatel">Super-Châtel Gondola</a>
-<p class="card-desc">The Super-Châtel Gondola climbs from Châtel village to 1,650 m, opening access to the alpine lake, panoramic views over the Dents du Midi and the summer hiking network.</p>
+<div class="card-commune"><span>Châtel</span></div><a class="title" href="https://loisirs74.fr/telecabine-super-chatel">Télécabine de Super-Châtel</a>
+<p class="card-desc">La télécabine de Super-Châtel monte au cœur du village jusqu'à 1 650 m d'altitude, porte d'entrée vers le lac d'alpage, les panoramas sur les Dents du Midi et les sentiers du domaine.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Super-Ch%C3%A2tel%20Gondola%2C%20Ch%C3%A2tel%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://www.skipass-chatel.com" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.2667,6.8417" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://www.skipass-chatel.com" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Les Gets">
-<div class="commune-head"><h3>Les Gets</h3><span class="commune-count">2 places</span></div><div class="transport-block">
-<div class="transport-label">How to get there</div>
-<div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Cluses (28 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">SAT</span></div>
+<div class="commune-head"><h3>Les Gets</h3><span class="commune-count">2 lieux</span></div><div class="transport-block">
+<div class="transport-label">Comment y venir</div>
+<div class="transport-row"><span class="t-k">Gare SNCF</span><span class="t-v">Cluses (28 km)</span></div><div class="transport-row"><span class="t-k">Lignes de bus</span><span class="t-v">SAT</span></div>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/telecabine-des-chavannes-les-gets">
-<img alt="Chavannes gondola cabins in summer with Les Gets Bike Park trails and alpine meadows, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg"/>
-<span class="card-tag is-payant">Paid</span>
+<a class="card-photo" href="https://loisirs74.fr/telecabine-des-chavannes-les-gets">
+<img alt="Télécabine des Chavannes" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg"/>
+<span class="card-tag is-payant">Payant</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Les Gets</span></div><a class="title" href="https://loisirs74.fr/en/telecabine-des-chavannes-les-gets">Chavannes Gondola</a>
-<p class="card-desc">The main gondola of the Les Gets Bike Park: 5-minute ride from the village to the Chavannes plateau (1,482 m), gateway to the Portes du Soleil ski and MTB network.</p>
+<div class="card-commune"><span>Les Gets</span></div><a class="title" href="https://loisirs74.fr/telecabine-des-chavannes-les-gets">Télécabine des Chavannes</a>
+<p class="card-desc">Télécabine 6 places du Bike Park des Gets : accès au plateau des Chavannes (1 482 m) en 5 minutes, départ front de neige du village.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Chavannes%20Gondola%2C%20Les%20Gets%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://www.lesgets.com/" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.1577,6.6685" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://www.lesgets.com/" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article>
 <article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/telecabine-du-mont-chery-les-gets">
-<img alt="Mont-Chéry gondola cabins with panoramic view over the Mont Blanc massif from the summit, Les Gets, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg"/>
-<span class="card-tag is-payant">Paid</span>
+<a class="card-photo" href="https://loisirs74.fr/telecabine-du-mont-chery-les-gets">
+<img alt="Télécabine du Mont-Chéry" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg"/>
+<span class="card-tag is-payant">Payant</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Les Gets</span></div><a class="title" href="https://loisirs74.fr/en/telecabine-du-mont-chery-les-gets">Mont-Chéry Gondola</a>
-<p class="card-desc">The quieter north-facing side of Les Gets: 5-minute gondola to the Mont-Chéry summit (1,535 m), 360° views of Mont Blanc and Lac Léman, hiking and MTB with a wilder feel.</p>
+<div class="card-commune"><span>Les Gets</span></div><a class="title" href="https://loisirs74.fr/telecabine-du-mont-chery-les-gets">Télécabine du Mont-Chéry</a>
+<p class="card-desc">Télécabine du versant nord des Gets : accès au sommet du Mont-Chéry (1 535 m) en 5 minutes, vue 360° sur le Mont Blanc et les Aravis, randonnée et VTT dans un cadre plus sauvage.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mont-Ch%C3%A9ry%20Gondola%2C%20Les%20Gets%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://www.lesgets.com/" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.1535,6.666" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://www.lesgets.com/" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Megève">
-<div class="commune-head"><h3>Megève</h3><span class="commune-count">1 place</span></div><div class="transport-block">
-<div class="transport-label">How to get there</div>
-<div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Sallanches (10 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">SAT Mont-Blanc</span></div>
+<div class="commune-head"><h3>Megève</h3><span class="commune-count">1 lieu</span></div><div class="transport-block">
+<div class="transport-label">Comment y venir</div>
+<div class="transport-row"><span class="t-k">Gare SNCF</span><span class="t-v">Sallanches (10 km)</span></div><div class="transport-row"><span class="t-k">Lignes de bus</span><span class="t-v">SAT Mont-Blanc</span></div>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/telecabine-du-jaillet">
-<img alt="Jaillet gondola above the village of Megève with panoramic view of the Mont Blanc massif and Aravis chain, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg"/>
-<span class="card-tag is-payant">Paid</span>
+<a class="card-photo" href="https://loisirs74.fr/telecabine-du-jaillet">
+<img alt="Télécabine du Jaillet" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg"/>
+<span class="card-tag is-payant">Payant</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Megève</span></div><a class="title" href="https://loisirs74.fr/en/telecabine-du-jaillet">Jaillet Gondola</a>
-<p class="card-desc">At 1,585 m facing Mont Blanc, the Jaillet summit offers a free panoramic playground, family trails and mountain bike routes — reached from Megève village in minutes.</p>
+<div class="card-commune"><span>Megève</span></div><a class="title" href="https://loisirs74.fr/telecabine-du-jaillet">Télécabine du Jaillet</a>
+<p class="card-desc">À 1 585 m face au Mont-Blanc, le sommet du Jaillet offre une aire de jeux gratuite, des sentiers familiaux et l'accès aux pistes VTT — à quelques minutes de Megève en télécabine.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Jaillet%20Gondola%2C%20Meg%C3%A8ve%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://www.lesportesdumontblanc.fr/ete/fr/" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.861,6.603" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://www.lesportesdumontblanc.fr/ete/fr/" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Morzine">
-<div class="commune-head"><h3>Morzine</h3><span class="commune-count">1 place</span></div><div class="transport-block">
-<div class="transport-label">How to get there</div>
-<div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Cluses (35 km)</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">SAT Vallée d'Aulps</span></div>
+<div class="commune-head"><h3>Morzine</h3><span class="commune-count">1 lieu</span></div><div class="transport-block">
+<div class="transport-label">Comment y venir</div>
+<div class="transport-row"><span class="t-k">Gare SNCF</span><span class="t-v">Cluses (35 km)</span></div><div class="transport-row"><span class="t-k">Lignes de bus</span><span class="t-v">SAT Vallée d'Aulps</span></div>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/telecabine-pleney-morzine">
-<img alt="Pléney gondola cabin above the rooftops of Morzine with the Mont Blanc massif in the background" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg"/>
-<span class="card-tag is-payant">Paid</span>
+<a class="card-photo" href="https://loisirs74.fr/telecabine-pleney-morzine">
+<img alt="Télécabine du Pléney" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg"/>
+<span class="card-tag is-payant">Payant</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Morzine</span></div><a class="title" href="https://loisirs74.fr/en/telecabine-pleney-morzine">Pléney Gondola</a>
-<p class="card-desc">The Pléney Gondola rises from Morzine village to a panoramic summit overlooking the Chablais, Lake Geneva and Mont Blanc — gateway to the bikepark and hiking trails.</p>
+<div class="card-commune"><span>Morzine</span></div><a class="title" href="https://loisirs74.fr/telecabine-pleney-morzine">Télécabine du Pléney</a>
+<p class="card-desc">La télécabine du Pléney s'élève du cœur du village de Morzine vers un panorama sur le Chablais, le Léman et le Mont Blanc, et sert de porte d'entrée au bikepark et aux sentiers d'altitude.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Pl%C3%A9ney%20Gondola%2C%20Morzine%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://www.ski-morzine.com/en/summer/" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.1797,6.7081" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://www.ski-morzine.com/en/summer/" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Saint-Gervais-les-Bains">
-<div class="commune-head"><h3>Saint-Gervais-les-Bains</h3><span class="commune-count">1 place</span></div><div class="transport-block">
-<div class="transport-label">How to get there</div>
-<div class="transport-row"><span class="t-k">Train station</span><span class="t-v">Saint-Gervais-Le-Fayet</span></div><div class="transport-row"><span class="t-k">Bus lines</span><span class="t-v">SAT Mont-Blanc · Tramway du Mont-Blanc</span></div>
+<div class="commune-head"><h3>Saint-Gervais-les-Bains</h3><span class="commune-count">1 lieu</span></div><div class="transport-block">
+<div class="transport-label">Comment y venir</div>
+<div class="transport-row"><span class="t-k">Gare SNCF</span><span class="t-v">Saint-Gervais-Le-Fayet</span></div><div class="transport-row"><span class="t-k">Lignes de bus</span><span class="t-v">SAT Mont-Blanc · Tramway du Mont-Blanc</span></div>
 </div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/tramway-du-mont-blanc">
-<img alt="Mont Blanc Tramway crossing alpine meadows with the Mont Blanc massif and Bionnassay glacier in the background, Haute-Savoie, France" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Tramway_Mont-Blanc.jpg"/>
-<span class="card-tag is-payant">Paid</span>
+<a class="card-photo" href="https://loisirs74.fr/tramway-du-mont-blanc">
+<img alt="Tramway du Mont-Blanc" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Tramway_Mont-Blanc.jpg"/>
+<span class="card-tag is-payant">Payant</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Saint-Gervais-les-Bains</span></div><a class="title" href="https://loisirs74.fr/en/tramway-du-mont-blanc">Mont Blanc Tramway</a>
-<p class="card-desc">France's highest rack railway climbs from Saint-Gervais to the Nid d'Aigle (2,412 m) in summer, threading through forests, alpine pastures and a breathtaking Mont Blanc panorama.</p>
+<div class="card-commune"><span>Saint-Gervais-les-Bains</span></div><a class="title" href="https://loisirs74.fr/tramway-du-mont-blanc">Tramway du Mont-Blanc</a>
+<p class="card-desc">Le plus haut train à crémaillère de France grimpe de Saint-Gervais jusqu'au Nid d'Aigle (2 412 m) en été, offrant alpages, glaciers et vue sur le massif du Mont-Blanc.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mont%20Blanc%20Tramway%2C%20Saint-Gervais-les-Bains%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://tramwaydumontblanc.montblancnaturalresort.com/" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9063,6.702" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://tramwaydumontblanc.montblancnaturalresort.com/" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="empty-state" id="empty-state" style="display:none">
-<b>No results</b>
-      No place matches these filters.
+<b>Aucun résultat</b>
+      Aucun lieu ne correspond à ces filtres.
     </div>
 <div class="commune-section" data-commune="Chamonix-Mont-Blanc">
-<div class="commune-head"><h3>Chamonix-Mont-Blanc</h3><span class="commune-count">3 places</span></div>
+<div class="commune-head"><h3>Chamonix-Mont-Blanc</h3><span class="commune-count">3 lieux</span></div>
 <div class="carousel">
 <article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/telecabine-panoramic-mont-blanc">
-<img alt="Télécabine Panoramic Mont-Blanc traversant le glacier du Géant entre l'Aiguille du Midi et la pointe Helbronner" data-generique="true" data-generique-cat="point" loading="lazy" referrerpolicy="no-referrer" src="/generique-point-de-vue.jpg"/>
-<span class="card-tag is-payant">Paid</span>
+<a class="card-photo" href="https://loisirs74.fr/telecabine-panoramic-mont-blanc">
+<img alt="Télécabine Panoramic Mont-Blanc traversant le glacier du Géant entre l'Aiguille du Midi et la pointe Helbronner" data-generique="true" data-generique-cat="point" loading="lazy" src="/generique-point-de-vue.jpg"/>
+<span class="card-tag is-payant">Payant</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/en/telecabine-panoramic-mont-blanc">Télécabine Panoramic Mont-Blanc</a>
+<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/telecabine-panoramic-mont-blanc">Télécabine Panoramic Mont-Blanc</a>
 <p class="card-desc">Télécabine du sommet de l'Aiguille du Midi (3 777 m) à la pointe Helbronner (3 466 m) au-dessus du glacier du Géant. Saison été 4 juil – 27 sept 2026.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=T%C3%A9l%C3%A9cabine%20Panoramic%20Mont-Blanc%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://aiguilledumidi.montblancnaturalresort.com/fr/secteur/panoramic-mont-blanc" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9166,6.8702" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://aiguilledumidi.montblancnaturalresort.com/fr/secteur/panoramic-mont-blanc" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article>
 <article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/telepherique-aiguille-du-midi">
-<img alt="Téléphérique de l'Aiguille du Midi montant vers le sommet 3 842 m face au massif du Mont-Blanc depuis Chamonix" data-generique="true" data-generique-cat="point" loading="lazy" referrerpolicy="no-referrer" src="/generique-point-de-vue.jpg"/>
-<span class="card-tag is-payant">Paid</span>
+<a class="card-photo" href="https://loisirs74.fr/telepherique-aiguille-du-midi">
+<img alt="Téléphérique de l'Aiguille du Midi montant vers le sommet 3 842 m face au massif du Mont-Blanc depuis Chamonix" data-generique="true" data-generique-cat="point" loading="lazy" src="/generique-point-de-vue.jpg"/>
+<span class="card-tag is-payant">Payant</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/en/telepherique-aiguille-du-midi">Téléphérique de l'Aiguille du Midi</a>
+<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/telepherique-aiguille-du-midi">Téléphérique de l'Aiguille du Midi</a>
 <p class="card-desc">Téléphérique panoramique de Chamonix au sommet à 3 842 m. Tarifs adulte AR 60,20 € – 83 €, ouverture 7h10–18h, Pas dans le Vide et terrasse sommet inclus.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=T%C3%A9l%C3%A9ph%C3%A9rique%20de%20l%27Aiguille%20du%20Midi%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://aiguilledumidi.montblancnaturalresort.com/fr" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9166,6.8702" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://aiguilledumidi.montblancnaturalresort.com/fr" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article>
 <article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/train-du-montenvers-mer-de-glace">
-<img alt="Train rouge à crémaillère du Montenvers en gare de Chamonix face au massif du Mont-Blanc, accès à la Mer de Glace" data-generique="true" data-generique-cat="point" loading="lazy" referrerpolicy="no-referrer" src="/generique-point-de-vue.jpg"/>
-<span class="card-tag is-payant">Paid</span>
+<a class="card-photo" href="https://loisirs74.fr/train-du-montenvers-mer-de-glace">
+<img alt="Train rouge à crémaillère du Montenvers en gare de Chamonix face au massif du Mont-Blanc, accès à la Mer de Glace" data-generique="true" data-generique-cat="point" loading="lazy" src="/generique-point-de-vue.jpg"/>
+<span class="card-tag is-payant">Payant</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/en/train-du-montenvers-mer-de-glace">Train du Montenvers - Mer de Glace</a>
+<div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/train-du-montenvers-mer-de-glace">Train du Montenvers - Mer de Glace</a>
 <p class="card-desc">Train à crémaillère de Chamonix à la Mer de Glace (1 913 m). Tarifs AR adulte 31,50 €, pack Voyage 49,70 €. Grotte de glace et Glaciorium inclus.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Train%20du%20Montenvers%20-%20Mer%20de%20Glace%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://www.montenverstrain.com/fr/" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9241,6.8716" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://www.montenverstrain.com/fr/" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article>
 </div>
 </div>
 <div class="commune-section" data-commune="Étrembières">
-<div class="commune-head"><h3>Étrembières</h3><span class="commune-count">1 place</span></div>
+<div class="commune-head"><h3>Étrembières</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/telepherique-du-saleve">
-<img alt="Cabine du Téléphérique du Salève en ascension face à Genève, le Léman et le massif du Mont-Blanc" data-generique="true" data-generique-cat="point" loading="lazy" referrerpolicy="no-referrer" src="/generique-point-de-vue.jpg"/>
-<span class="card-tag is-payant">Paid</span>
+<a class="card-photo" href="https://loisirs74.fr/telepherique-du-saleve">
+<img alt="Cabine du Téléphérique du Salève en ascension face à Genève, le Léman et le massif du Mont-Blanc" data-generique="true" data-generique-cat="point" loading="lazy" src="/generique-point-de-vue.jpg"/>
+<span class="card-tag is-payant">Payant</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Étrembières</span></div><a class="title" href="https://loisirs74.fr/en/telepherique-du-saleve">Téléphérique du Salève</a>
+<div class="card-commune"><span>Étrembières</span></div><a class="title" href="https://loisirs74.fr/telepherique-du-saleve">Téléphérique du Salève</a>
 <p class="card-desc">Téléphérique d'Étrembières (432 m) au sommet du Salève (1 097 m) face à Genève. AR adulte 18 €, ouvert 9h–22h45 Jeu-Sam. Expo gratuite.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=T%C3%A9l%C3%A9ph%C3%A9rique%20du%20Sal%C3%A8ve%2C%20%C3%89trembi%C3%A8res%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://www.telepherique-du-saleve.com" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.1628,6.1892" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://www.telepherique-du-saleve.com" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article>
@@ -675,25 +718,37 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </div>
 </div>
 </main>
-<div aria-label="Map" id="cat-map"></div>
+<section class="hub-faq" aria-label="Frequently asked questions">
+<div class="wrap">
+<h2>Frequently asked questions</h2>
+<details class="faq-item"><summary>Do the cable cars run in summer?</summary><div class="faq-a">Several lifts open in summer for hiking and mountain biking, but not all. Check the opening dates on the resort's official site.</div></details>
+<details class="faq-item"><summary>Which cable car to see Mont-Blanc?</summary><div class="faq-a">The Brévent cable car and the one at the Aiguille du Midi in Chamonix offer the closest views of Mont-Blanc.</div></details>
+<details class="faq-item"><summary>How much does a cable car ride cost?</summary><div class="faq-a">Fares vary by resort and season. Check the official site shown on each listing for up-to-date prices.</div></details>
+<details class="faq-item"><summary>What is the Tramway du Mont-Blanc?</summary><div class="faq-a">A historic rack railway that climbs from Saint-Gervais and Le Fayet up to the Nid d'Aigle, at the foot of Mont-Blanc.</div></details>
+<details class="faq-item"><summary>Can you take the cable car without skiing?</summary><div class="faq-a">Yes, most sell pedestrian uphill-only tickets, to enjoy the panorama and the high-altitude trails.</div></details>
+</div>
+</section>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do the cable cars run in summer?", "acceptedAnswer": {"@type": "Answer", "text": "Several lifts open in summer for hiking and mountain biking, but not all. Check the opening dates on the resort's official site."}}, {"@type": "Question", "name": "Which cable car to see Mont-Blanc?", "acceptedAnswer": {"@type": "Answer", "text": "The Brévent cable car and the one at the Aiguille du Midi in Chamonix offer the closest views of Mont-Blanc."}}, {"@type": "Question", "name": "How much does a cable car ride cost?", "acceptedAnswer": {"@type": "Answer", "text": "Fares vary by resort and season. Check the official site shown on each listing for up-to-date prices."}}, {"@type": "Question", "name": "What is the Tramway du Mont-Blanc?", "acceptedAnswer": {"@type": "Answer", "text": "A historic rack railway that climbs from Saint-Gervais and Le Fayet up to the Nid d'Aigle, at the foot of Mont-Blanc."}}, {"@type": "Question", "name": "Can you take the cable car without skiing?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, most sell pedestrian uphill-only tickets, to enjoy the panorama and the high-altitude trails."}}]}
+</script>
 <footer class="site">
 <div class="wrap">
 <div class="foot-grid">
 <div class="foot-col">
 <h4>Loisirs 74</h4>
-<p>Independent guide to leisure venues in Haute-Savoie. Each page: an official source, an address, a map.</p>
+<p>Guide indépendant des lieux de loisirs en Haute-Savoie. Chaque page : une source officielle, une adresse, une carte.</p>
 </div>
 <div class="foot-col">
-<h4>Categories</h4>
-<ul><li><a href="https://loisirs74.fr/en/lakes/">Lakes &amp; beaches</a></li><li><a href="https://loisirs74.fr/en/beaches/">Beaches</a></li><li><a href="https://loisirs74.fr/en/waterfalls/">Waterfalls</a></li><li><a href="https://loisirs74.fr/en/leisure-parks/">Leisure parks</a></li><li><a href="https://loisirs74.fr/en/viewpoints/">Viewpoints</a></li><li><a href="https://loisirs74.fr/en/museums/">Museums</a></li><li><a href="https://loisirs74.fr/en/castles/">Castles &amp; forts</a></li><li><a href="https://loisirs74.fr/en/greenways/">Greenways</a></li><li><a href="https://loisirs74.fr/en/trails/">Trails</a></li><li><a href="https://loisirs74.fr/en/attractions/">Attractions &amp; activities</a></li><li><a href="https://loisirs74.fr/en/other/">Other</a></li><li><a href="https://loisirs74.fr/en/que-faire/">What to do?</a></li></ul>
+<h4>Catégories</h4>
+<ul><li><a href="https://loisirs74.fr/lacs-plages/">Lacs &amp; plages</a></li><li><a href="https://loisirs74.fr/lacs-plages/">Plages</a></li><li><a href="https://loisirs74.fr/cascades/">Cascades</a></li><li><a href="https://loisirs74.fr/bases-de-loisirs/">Bases de loisirs</a></li><li><a href="https://loisirs74.fr/points-de-vue/">Points de vue</a></li><li><a href="https://loisirs74.fr/musees/">Musées</a></li><li><a href="https://loisirs74.fr/chateaux/">Châteaux &amp; forts</a></li><li><a href="https://loisirs74.fr/voies-vertes/">Voies vertes</a></li><li><a href="https://loisirs74.fr/sentiers/">Sentiers</a></li><li><a href="https://loisirs74.fr/">Attractions &amp; loisirs</a></li><li><a href="https://loisirs74.fr/">Divers</a></li><li><a href="https://loisirs74.fr/que-faire/">Que faire ?</a></li></ul>
 </div>
 <div class="foot-col">
-<h4>Language</h4>
-<ul><li><a href="https://loisirs74.fr/telecabines/" hreflang="fr">Français</a></li><li><a href="https://loisirs74.fr/en/cable-cars/" hreflang="en">English</a></li><li><a href="https://loisirs74.fr/de/seilbahnen/" hreflang="de">Deutsch</a></li><li><a href="https://loisirs74.fr/it/funivie/" hreflang="it">Italiano</a></li><li><a href="https://loisirs74.fr/es/telefericos/" hreflang="es">Español</a></li></ul>
+<h4>Langue</h4>
+<ul><li><a href="https://loisirs74.fr/telecabines/" hreflang="fr">Français</a></li><li><a href="https://loisirs74.fr/en/cable-cars/" hreflang="en">English</a></li><li><a href="https://loisirs74.fr/de/seilbahnen/" hreflang="de">Deutsch</a></li><li><a href="https://loisirs74.fr/it/funivie/" hreflang="it">Italiano</a></li><li><a href="https://loisirs74.fr/es/telefericos/" hreflang="es">Español</a></li><li><a href="https://loisirs74.fr/nl/kabelbanen/" hreflang="nl">Nederlands</a></li></ul>
 </div>
 <div class="foot-col">
-<h4>Legal</h4>
-<ul><li><a href="https://loisirs74.fr/mentions-legales">Legal notice</a></li><li><a href="https://loisirs74.fr/confidentialite">Privacy</a></li><li><a href="https://loisirs74.fr/cgv">Terms</a></li><li><a href="https://loisirs74.fr/signaler">Report an issue</a></li><li><a href="https://loisirs74.fr/devenir-partenaire">Become a partner</a></li></ul>
+<h4>Mentions</h4>
+<ul><li><a href="https://loisirs74.fr/mentions-legales">Mentions légales</a></li><li><a href="https://loisirs74.fr/confidentialite">Confidentialité</a></li><li><a href="https://loisirs74.fr/cgv">CGV</a></li><li><a href="https://loisirs74.fr/signaler">Signaler une info</a></li><li><a href="https://loisirs74.fr/devenir-partenaire">Devenir partenaire</a></li></ul>
 </div>
 </div>
 <div class="foot-bottom">
@@ -701,7 +756,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </div>
 </div>
 </footer>
-<script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 // Cursor halo
 (function(){
@@ -729,103 +783,37 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
   els.forEach(el => io.observe(el));
 })();
 
-// MAP + FILTERS
+// FILTERS (commune + access + sort)
 (function(){
-  const PINS = [{"slug": "telepherique-du-brevent", "name": "Brévent Cable Car", "commune": "Chamonix-Mont-Blanc", "lat": 45.927, "lng": 6.853, "url": "https://loisirs74.fr/en/telepherique-du-brevent", "paid": true}, {"slug": "tramway-du-mont-blanc", "name": "Mont Blanc Tramway", "commune": "Saint-Gervais-les-Bains", "lat": 45.9063, "lng": 6.702, "url": "https://loisirs74.fr/en/tramway-du-mont-blanc", "paid": true}, {"slug": "telepherique-des-grands-montets", "name": "Grands Montets Cable Car", "commune": "Chamonix-Mont-Blanc", "lat": 45.9727, "lng": 6.9277, "url": "https://loisirs74.fr/en/telepherique-des-grands-montets", "paid": true}, {"slug": "telecabine-du-jaillet", "name": "Jaillet Gondola", "commune": "Megève", "lat": 45.861, "lng": 6.603, "url": "https://loisirs74.fr/en/telecabine-du-jaillet", "paid": true}, {"slug": "telecabine-des-chavannes-les-gets", "name": "Chavannes Gondola", "commune": "Les Gets", "lat": 46.1577, "lng": 6.6685, "url": "https://loisirs74.fr/en/telecabine-des-chavannes-les-gets", "paid": true}, {"slug": "telecabine-du-mont-chery-les-gets", "name": "Mont-Chéry Gondola", "commune": "Les Gets", "lat": 46.1535, "lng": 6.666, "url": "https://loisirs74.fr/en/telecabine-du-mont-chery-les-gets", "paid": true}];
-  const SHOWN_SG = "place shown";
-  const SHOWN_PL = "places shown";
-  if (typeof L === 'undefined' || PINS.length === 0) return;
-  const map = L.map('cat-map', { scrollWheelZoom: false });
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
-  }).addTo(map);
-
-  function makeIcon(paid){
-    const color = paid ? '#e07a3f' : '#2e4a3a';
-    const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="36" viewBox="0 0 28 36"><path d="M14 0C6.3 0 0 6.3 0 14c0 10.5 14 22 14 22s14-11.5 14-22C28 6.3 21.7 0 14 0z" fill="'+color+'"/><circle cx="14" cy="14" r="5" fill="#fdfaf3"/></svg>';
-    return L.divIcon({ className:'l74-pin', html: svg, iconSize:[28,36], iconAnchor:[14,36], popupAnchor:[0,-32] });
-  }
-
-  const layers = {};
-  const markers = [];
-  for (const p of PINS) {
-    const m = L.marker([p.lat, p.lng], {icon: makeIcon(!!p.paid)}).addTo(map);
-    m.bindPopup('<a href="'+p.url+'">'+p.name+'</a><span class="commune-pop">'+p.commune+'</span>');
-    layers[p.slug] = m;
-    markers.push(m);
-  }
-  const group = L.featureGroup(markers);
-  map.fitBounds(group.getBounds().pad(0.15));
-
-  // FILTERS
-  const communeSel = document.getElementById('filt-commune');
-  const accessGroup = document.getElementById('filt-access');
-  const sortSel = document.getElementById('filt-sort');
-  const countN = document.getElementById('count-n');
-  const countLabel = document.getElementById('count-label');
-  const emptyState = document.getElementById('empty-state');
-
-  let curCommune = '';
-  let curAccess = 'all';
-  let curSort = 'commune';
-
-  function pinPaid(slug){ const p = PINS.find(x => x.slug === slug); return p ? !!p.paid : false; }
-
+  const SG="lieu affiché",PL="lieux affichés";
+  const communeSel=document.getElementById('filt-commune');
+  const accessGroup=document.getElementById('filt-access');
+  const sortSel=document.getElementById('filt-sort');
+  const countN=document.getElementById('count-n');
+  const countLabel=document.getElementById('count-label');
+  const emptyState=document.getElementById('empty-state');
+  let curCommune='',curAccess='all',curSort='commune';
   function applyFilters(){
-    const sections = document.querySelectorAll('.commune-section');
-    let visibleMarkers = [];
-    let total = 0;
-    sections.forEach(sec => {
-      const commune = sec.dataset.commune;
-      const communeMatch = !curCommune || commune === curCommune;
-      let visibleCards = 0;
-      sec.querySelectorAll('.card').forEach(card => {
-        const titleLink = card.querySelector('a.title');
-        const href = titleLink ? titleLink.getAttribute('href') : '';
-        const slug = href.split('/').pop();
-        const isPaid = pinPaid(slug);
-        const accessMatch = curAccess === 'all' || (curAccess === 'free' && !isPaid) || (curAccess === 'paid' && isPaid);
-        const show = communeMatch && accessMatch;
-        card.classList.toggle('hidden', !show);
-        if (show){ visibleCards++; total++; if (layers[slug]) visibleMarkers.push(layers[slug]); }
+    let total=0;
+    document.querySelectorAll('.commune-section').forEach(sec=>{
+      const communeMatch=!curCommune||sec.dataset.commune===curCommune;
+      let vis=0;
+      sec.querySelectorAll('.card').forEach(card=>{
+        const isPaid=!!card.querySelector('.card-tag.is-payant');
+        const am=curAccess==='all'||(curAccess==='free'&&!isPaid)||(curAccess==='paid'&&isPaid);
+        const show=communeMatch&&am; card.classList.toggle('hidden',!show); if(show){vis++;total++;}
       });
-      sec.classList.toggle('hidden', visibleCards === 0);
+      sec.classList.toggle('hidden',vis===0);
     });
-    if (countN) countN.textContent = total;
-    if (countLabel) countLabel.textContent = total === 1 ? SHOWN_SG : SHOWN_PL;
-    if (emptyState) emptyState.style.display = total === 0 ? 'block' : 'none';
-    if (visibleMarkers.length){ const fg = L.featureGroup(visibleMarkers); map.fitBounds(fg.getBounds().pad(0.15)); }
+    if(countN)countN.textContent=total;
+    if(countLabel)countLabel.textContent=total===1?SG:PL;
+    if(emptyState)emptyState.style.display=total===0?'block':'none';
   }
-
-  function applySort(){
-    const sections = Array.from(document.querySelectorAll('.commune-section'));
-    if (curSort === 'alpha'){
-      sections.forEach(sec => {
-        const carousel = sec.querySelector('.carousel');
-        const cards = Array.from(carousel.querySelectorAll('.card'));
-        cards.sort((a, b) => {
-          const na = a.querySelector('a.title')?.textContent || '';
-          const nb = b.querySelector('a.title')?.textContent || '';
-          return na.localeCompare(nb);
-        });
-        cards.forEach(c => carousel.appendChild(c));
-      });
-    }
-  }
-
-  if (communeSel) communeSel.addEventListener('change', e => { curCommune = e.target.value; applyFilters(); });
-  if (accessGroup) accessGroup.addEventListener('click', e => {
-    if (e.target.tagName === 'BUTTON'){
-      accessGroup.querySelectorAll('button').forEach(b => b.classList.remove('active'));
-      e.target.classList.add('active');
-      curAccess = e.target.dataset.v;
-      applyFilters();
-    }
-  });
-  if (sortSel) sortSel.addEventListener('change', e => { curSort = e.target.value; applySort(); });
-
-  // Init count
+  function applySort(){ if(curSort!=='alpha')return;
+    document.querySelectorAll('.commune-section .carousel').forEach(c=>{Array.from(c.querySelectorAll('.card')).sort((a,b)=>(a.querySelector('a.title')?.textContent||'').localeCompare(b.querySelector('a.title')?.textContent||'')).forEach(x=>c.appendChild(x));}); }
+  if(communeSel)communeSel.addEventListener('change',e=>{curCommune=e.target.value;applyFilters();});
+  if(accessGroup)accessGroup.addEventListener('click',e=>{if(e.target.tagName==='BUTTON'){accessGroup.querySelectorAll('button').forEach(b=>b.classList.remove('active'));e.target.classList.add('active');curAccess=e.target.dataset.v;applyFilters();}});
+  if(sortSel)sortSel.addEventListener('change',e=>{curSort=e.target.value;applySort();});
   applyFilters();
 })();
 </script>

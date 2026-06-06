@@ -195,19 +195,40 @@ section.cat h2 .count{font:600 .7rem var(--sans);letter-spacing:.16em;text-trans
 .see-all svg{width:14px;height:14px}
 .see-all:hover{gap:.7rem}
 
+.glance{position:relative;z-index:2;padding:clamp(2.5rem,5vw,4rem) 0 clamp(.5rem,1.5vw,1.25rem)}
+.glance-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:1.75rem;flex-wrap:wrap}
+.glance-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,1.1rem + 1.1vw,2.1rem);line-height:1.05;letter-spacing:-.02em;color:var(--ink);font-variation-settings:"SOFT" 50;transition:var(--turn)}
+.glance-head p{font-family:var(--serif);font-style:italic;color:var(--ink-3);font-size:1.02rem;transition:var(--turn)}
+.glance-group + .glance-group{margin-top:1.4rem}
+.glance-label{font:600 .65rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.8rem;transition:var(--turn)}
+.glance-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(10.5rem,1fr));gap:.6rem}
+.glance-tile{display:flex;align-items:baseline;justify-content:space-between;gap:.6rem;padding:.8rem .95rem;border:1px solid var(--line);border-radius:9px;
+  background:color-mix(in srgb,var(--card) 45%,transparent);color:var(--ink);
+  transition:var(--turn),transform .3s var(--ease-out),border-color .3s var(--ease)}
+.glance-tile:hover{border-color:var(--accent);transform:translateY(-2px)}
+.glance-tile .gt-name{font-family:var(--serif);font-size:1.05rem;font-weight:500;line-height:1.1;letter-spacing:-.01em}
+.glance-tile .gt-count{font:600 .7rem var(--sans);letter-spacing:.03em;color:var(--ink-3);white-space:nowrap;transition:var(--turn)}
+.glance-tile:hover .gt-count{color:var(--accent)}
+
+.band{position:relative;z-index:2;padding:clamp(2.25rem,4.5vw,3.25rem) 0 0}
+.band .wrap{border-top:1px solid var(--line);padding-top:clamp(1.75rem,3.5vw,2.5rem)}
+.band-title{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,1.2rem + 1.3vw,2.5rem);line-height:1.04;letter-spacing:-.02em;color:var(--ink);font-variation-settings:"SOFT" 50;transition:var(--turn)}
+.band-sub{font-family:var(--serif);font-style:italic;font-size:clamp(1.02rem,1rem + .3vw,1.25rem);color:var(--ink-3);margin-top:.5rem;max-width:46ch;line-height:1.4;transition:var(--turn)}
+.band + section.cat{padding-top:clamp(1.75rem,3vw,2.5rem);border-top:0}
+
 .crossover{position:relative;z-index:2;text-align:center;padding:clamp(2.5rem,6vw,5rem) 0;border-top:1px solid var(--line);transition:var(--turn)}
 .crossover p{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,1rem + 1.4vw,2.2rem);
   color:var(--ink-2);max-width:18ch;margin-inline:auto;line-height:1.25;transition:var(--turn)}
 .crossover small{display:block;margin-top:1rem;font:600 .68rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);transition:var(--turn)}
 
-.carousel{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:2rem 1.6rem}
+.carousel{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1.4rem 1.2rem}
 @media(max-width:680px){.carousel{display:flex;gap:1rem;overflow-x:auto;padding-bottom:.5rem;scrollbar-width:none}
-  .carousel::-webkit-scrollbar{display:none}.carousel>.card{flex:0 0 78vw;max-width:19rem}}
+  .carousel::-webkit-scrollbar{display:none}.carousel>.card{flex:0 0 70vw;max-width:17rem}}
 .card{background:var(--card);border:1px solid var(--card-line);border-radius:10px;overflow:hidden;
   display:flex;flex-direction:column;position:relative;color:var(--card-ink);min-width:0;
   transition:transform .5s var(--ease-out),box-shadow .5s var(--ease),background-color 1.1s var(--ease),border-color 1.1s var(--ease)}
 .card:hover{transform:translateY(-6px);box-shadow:0 30px 55px -25px rgba(0,0,0,.4)}
-.card-photo{display:block;width:100%;aspect-ratio:4/3;position:relative;overflow:hidden;
+.card-photo{display:block;width:100%;aspect-ratio:16/10;position:relative;overflow:hidden;
   background:linear-gradient(135deg,#2c3a52,#1f2836 60%,#161d29)}
 .card-photo::after{content:"";position:absolute;inset:0;pointer-events:none;
   background:radial-gradient(120% 90% at 75% 110%,rgba(243,166,75,.22),rgba(224,113,47,.06) 35%,rgba(31,40,54,0) 70%)}
@@ -219,14 +240,14 @@ section.cat h2 .count{font:600 .7rem var(--sans);letter-spacing:.16em;text-trans
   letter-spacing:.06em;text-transform:uppercase;z-index:2;backdrop-filter:blur(8px);background:var(--accent);color:#fff}
 .card-tag.is-payant{background:var(--accent);color:#fff}
 .card-tag.is-gratuit{background:#2e4a3a;color:#fff}
-.card-body{padding:1.2rem 1.3rem 1.3rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
-.card-commune{font-size:.76rem;letter-spacing:.04em;color:var(--card-ink3);display:flex;align-items:center;gap:.3rem}
+.card-body{padding:.95rem 1.05rem 1.05rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.card-commune{font-size:.74rem;letter-spacing:.04em;color:var(--card-ink3);display:flex;align-items:center;gap:.3rem}
 .card-commune svg{width:11px;height:11px;flex-shrink:0;opacity:.7}
-.card-body a.title{font-family:var(--serif);font-weight:500;font-size:1.32rem;color:var(--card-ink);line-height:1.15;letter-spacing:-.01em;transition:color .2s}
+.card-body a.title{font-family:var(--serif);font-weight:500;font-size:1.16rem;color:var(--card-ink);line-height:1.15;letter-spacing:-.01em;transition:color .2s}
 .card-body a.title:hover{color:var(--accent)}
-.card-desc{font:400 .86rem/1.5 var(--sans);color:var(--card-ink2);margin:.1rem 0 .8rem;
-  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.card-actions{display:flex;gap:1.1rem;margin-top:auto;padding-top:.8rem;border-top:1px dashed var(--card-line);font-size:.76rem;color:var(--card-ink3);flex-wrap:wrap}
+.card-desc{font:400 .82rem/1.45 var(--sans);color:var(--card-ink2);margin:.05rem 0 .6rem;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card-actions{display:flex;gap:1.1rem;margin-top:auto;padding-top:.7rem;border-top:1px dashed var(--card-line);font-size:.74rem;color:var(--card-ink3);flex-wrap:wrap}
 .card-actions a{font-weight:500;color:var(--card-ink2);transition:color .2s,transform .3s var(--ease-out);display:inline-flex;align-items:center;gap:.3rem}
 .card-actions a:hover{color:var(--accent);transform:translateX(2px)}
 .card-actions a svg{width:13px;height:13px}
@@ -277,11 +298,6 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
   </a>
   <div class="nav-right">
     <button class="near-me" id="nearMe">◎ Près de moi</button>
-    <div class="weather-toggle" role="group" aria-label="weather">
-      <button id="bAuto" class="on">Auto</button>
-      <button id="bSun">☀ Beau</button>
-      <button id="bRain">☂ Pluie</button>
-    </div>
     <details class="lang-picker">
       <summary><b>FR</b></summary>
       <div class="lang-menu"><a href="https://loisirs74.fr/" hreflang="fr" aria-current="true">Français</a><a href="https://loisirs74.fr/en/" hreflang="en">English</a><a href="https://loisirs74.fr/de/" hreflang="de">Deutsch</a><a href="https://loisirs74.fr/it/" hreflang="it">Italiano</a><a href="https://loisirs74.fr/es/" hreflang="es">Español</a></div>
@@ -292,24 +308,59 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
 <main>
 <section class="hero">
   <div class="wrap hero-content">
-    <div class="kicker" id="kicker">Le guide de la Haute-Savoie</div>
+    <div class="kicker" id="kicker">Le guide indépendant · 300 lieux et plus</div>
     <h1>Où aller en<br><em>Haute-Savoie</em></h1>
-    <p class="lede">Tous les lieux de loisirs du département, vérifiés un par un. <b>Beau temps comme mauvais temps</b> — la page suit la météo, comme vous.</p>
-    <div class="weather-now" id="weatherNow">
-      <span class="dot"></span><b id="wnLabel">Grand beau</b>
-      <span id="wnText">lacs, cascades, points de vue — dehors, tout est ouvert.</span>
+    <p class="lede">Lacs, cascades, châteaux, musées, parcs, points de vue — <b>tout le département, vérifié un par un</b>, source officielle à l'appui. Une adresse, une carte, et ce qu'il faut savoir avant d'y aller.</p>
+</div>
+</section>
+
+<section class="glance" id="glance" aria-label="Le guide en un coup d'œil">
+  <div class="wrap">
+    <div class="glance-head">
+      <h2>Le guide en un coup d'œil</h2>
+      <p>Tout le site, quinze familles de lieux.</p>
+    </div>
+    <div class="glance-group">
+      <div class="glance-label">Nature &amp; grand air</div>
+      <div class="glance-grid">
+        <a class="glance-tile" href="https://loisirs74.fr/lacs-plages/"><span class="gt-name">Lacs &amp; plages</span><span class="gt-count">31 lieux</span></a>
+        <a class="glance-tile" href="https://loisirs74.fr/bases-de-loisirs/"><span class="gt-name">Bases de loisirs & domaines</span><span class="gt-count">14 lieux</span></a>
+        <a class="glance-tile" href="https://loisirs74.fr/cascades/"><span class="gt-name">Cascades & gorges</span><span class="gt-count">16 lieux</span></a>
+        <a class="glance-tile" href="https://loisirs74.fr/points-de-vue/"><span class="gt-name">Points de vue & cols</span><span class="gt-count">28 lieux</span></a>
+        <a class="glance-tile" href="https://loisirs74.fr/sentiers/"><span class="gt-name">Sentiers & randonnées</span><span class="gt-count">15 lieux</span></a>
+        <a class="glance-tile" href="https://loisirs74.fr/voies-vertes/"><span class="gt-name">Voies vertes & vélo</span><span class="gt-count">5 lieux</span></a>
+        <a class="glance-tile" href="https://loisirs74.fr/telecabines/"><span class="gt-name">Télécabines & trains</span><span class="gt-count">12 lieux</span></a>
+      </div>
+    </div>
+    <div class="glance-group">
+      <div class="glance-label">Patrimoine &amp; culture</div>
+      <div class="glance-grid">
+        <a class="glance-tile" href="https://loisirs74.fr/chateaux/"><span class="gt-name">Châteaux, forts & abbayes</span><span class="gt-count">21 lieux</span></a>
+        <a class="glance-tile" href="https://loisirs74.fr/musees/"><span class="gt-name">Musées</span><span class="gt-count">25 lieux</span></a>
+      </div>
+    </div>
+    <div class="glance-group">
+      <div class="glance-label">Sport, jeux &amp; sensations</div>
+      <div class="glance-grid">
+        <a class="glance-tile" href="https://loisirs74.fr/baignade-nautisme/"><span class="gt-name">Baignade & nautisme</span><span class="gt-count">24 lieux</span></a>
+        <a class="glance-tile" href="https://loisirs74.fr/sensations-plein-air/"><span class="gt-name">Sensations & plein air</span><span class="gt-count">43 lieux</span></a>
+        <a class="glance-tile" href="https://loisirs74.fr/sport-jeux/"><span class="gt-name">Sport & jeux</span><span class="gt-count">54 lieux</span></a>
+        <a class="glance-tile" href="https://loisirs74.fr/parcs-jardins/"><span class="gt-name">Parcs, jardins & familles</span><span class="gt-count">25 lieux</span></a>
+        <a class="glance-tile" href="https://loisirs74.fr/sorties-detente/"><span class="gt-name">Sorties & détente</span><span class="gt-count">19 lieux</span></a>
+      </div>
     </div>
   </div>
 </section>
+
+<div class="band"><div class="wrap"><h2 class="band-title">Nature &amp; grand air</h2><p class="band-sub">Lacs, plages et bases de loisirs, cascades, panoramas et sentiers — le département à ciel ouvert.</p></div></div>
 
 <section class="cat" id="lac">
   <div class="wrap">
     <div class="cat-head">
       <div class="cat-head-left">
-        <span class="weather-band">☀ Quand il fait beau</span>
-        <h2>Lacs &amp; plages</h2>
+        <h2>Lacs &amp; plages <span class="count">31 lieux</span></h2>
       </div>
-      <a href="https://loisirs74.fr/lacs/" class="see-all">Voir tout
+      <a href="https://loisirs74.fr/lacs-plages/" class="see-all">Voir tout
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
@@ -403,12 +454,97 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
   </div>
 </section>
 
+<section class="cat" id="bases">
+  <div class="wrap">
+    <div class="cat-head">
+      <div class="cat-head-left">
+        <h2>Bases de loisirs & domaines <span class="count">14 lieux</span></h2>
+      </div>
+      <a href="https://loisirs74.fr/bases-de-loisirs/" class="see-all">Voir tout
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="carousel">
+      <article class="card">
+        <a href="https://loisirs74.fr/domaine-du-tornet" class="card-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Lac_de_la_Balme-de-Sillingy_%2851056207507%29.jpg" alt="Domaine du Tornet à La Balme-de-Sillingy" loading="lazy" referrerpolicy="no-referrer">
+          <span class="card-tag">Gratuit</span>
+        </a>
+        <div class="card-body">
+          <div class="card-commune"><span>La Balme-de-Sillingy</span></div>
+          <a href="https://loisirs74.fr/domaine-du-tornet" class="title">Domaine du Tornet</a>
+          <p class="card-desc">Sept hectares de lac, pumptrack, aire de jeux 2025, espace fitness, ponton et collection nationale de cerisiers à fleurs d'Asie.</p>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Domaine%20du%20Tornet%2C%20La%20Balme-de-Sillingy%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
+            <a href="https://www.labalmedesillingy.fr/-Le-Domaine-du-Tornet-" target="_blank" rel="noopener">Site officiel ↗</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <a href="https://loisirs74.fr/base-de-loisirs-des-ilettes" class="card-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Sallanches-69%C2%A9studio_k.jpg" alt="Base de loisirs des Ilettes avec ses trois lacs et pelouses verdoyantes, Sallanches, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
+          <span class="card-tag">Gratuit</span>
+        </a>
+        <div class="card-body">
+          <div class="card-commune"><span>Sallanches</span></div>
+          <a href="https://loisirs74.fr/base-de-loisirs-des-ilettes" class="title">Base de loisirs des Ilettes</a>
+          <p class="card-desc">Complexe de loisirs face au massif du Mont-Blanc avec trois lacs aménagés pour la pêche, la baignade surveillée en été, la planche à voile et les activités de plein air.</p>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20de%20loisirs%20des%20Ilettes%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <a href="https://loisirs74.fr/base-de-loisirs-du-lac-des-iles" class="card-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Les_ARAVIS_depuis_le_LAC_DE_PASSY_-_panoramio.jpg" alt="Plage du Lac des Îles avec vue sur le Mont-Blanc, Passy, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
+          <span class="card-tag">Gratuit</span>
+        </a>
+        <div class="card-body">
+          <div class="card-commune"><span>Passy</span></div>
+          <a href="https://loisirs74.fr/base-de-loisirs-du-lac-des-iles" class="title">Base de loisirs du Lac des Îles</a>
+          <p class="card-desc">Le plus grand lac aménagé du Pays du Mont-Blanc : plage de sable, baignade surveillée en été, activités nautiques et terrestres dans un écrin de verdure face au massif.</p>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20de%20loisirs%20du%20Lac%20des%20%C3%8Eles%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <a href="https://loisirs74.fr/domaine-de-guidou" class="card-photo">
+          <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
+          <span class="card-tag">Gratuit</span>
+        </a>
+        <div class="card-body">
+          <div class="card-commune"><span>Sciez</span></div>
+          <a href="https://loisirs74.fr/domaine-de-guidou" class="title">Domaine de Guidou</a>
+          <p class="card-desc">Site naturel protégé de 85 hectares classé Natura 2000, rassemblant une mosaïque de milieux diversifiés avec observatoire ornithologique et dunes fossiles uniques en Europe.</p>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Domaine%20de%20Guidou%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <a href="https://loisirs74.fr/parc-des-dereches" class="card-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Horse_riding_in_the_valley_of_the_Edigan_River.jpg" alt="Sentiers du Parc des Dérêches le long de la Dranse, Morzine, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
+          <span class="card-tag">Gratuit</span>
+        </a>
+        <div class="card-body">
+          <div class="card-commune"><span>Morzine</span></div>
+          <a href="https://loisirs74.fr/parc-des-dereches" class="title">Parc des Dérêches</a>
+          <p class="card-desc">Parc naturel de plus de 5 km le long de la Dranse, au cœur de Morzine, avec parcours santé, sentiers ombragés et infrastructures sportives pour toute la famille.</p>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parc%20des%20D%C3%A9r%C3%AAches%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="cat" id="cascade">
   <div class="wrap">
     <div class="cat-head">
       <div class="cat-head-left">
-        <span class="weather-band">☀ Quand il fait beau</span>
-        <h2>Cascades</h2>
+        <h2>Cascades & gorges <span class="count">16 lieux</span></h2>
       </div>
       <a href="https://loisirs74.fr/cascades/" class="see-all">Voir tout
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -503,12 +639,11 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
   </div>
 </section>
 
-<section class="cat" id="point-de-vue">
+<section class="cat" id="pdv">
   <div class="wrap">
     <div class="cat-head">
       <div class="cat-head-left">
-        <span class="weather-band">☀ Quand il fait beau</span>
-        <h2>Points de vue</h2>
+        <h2>Points de vue & cols <span class="count">28 lieux</span></h2>
       </div>
       <a href="https://loisirs74.fr/points-de-vue/" class="see-all">Voir tout
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -607,8 +742,7 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
   <div class="wrap">
     <div class="cat-head">
       <div class="cat-head-left">
-        <span class="weather-band">☀ Quand il fait beau</span>
-        <h2>Sentiers</h2>
+        <h2>Sentiers & randonnées <span class="count">15 lieux</span></h2>
       </div>
       <a href="https://loisirs74.fr/sentiers/" class="see-all">Voir tout
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -706,12 +840,11 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
   </div>
 </section>
 
-<section class="cat" id="voie-verte">
+<section class="cat" id="vv">
   <div class="wrap">
     <div class="cat-head">
       <div class="cat-head-left">
-        <span class="weather-band">☀ Quand il fait beau</span>
-        <h2>Voies vertes</h2>
+        <h2>Voies vertes & vélo <span class="count">5 lieux</span></h2>
       </div>
       <a href="https://loisirs74.fr/voies-vertes/" class="see-all">Voir tout
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -776,31 +909,15 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
           </div>
         </div>
       </article>
-      <article class="card">
-        <a href="https://loisirs74.fr/viarhona-ev17-bas-chablais-thonon" class="card-photo">
-          <img src="/generique-voie-verte-famille-kids.jpg" alt="ViaRhôna EV17 Bas-Chablais" loading="lazy" data-generique="true" data-generique-cat="voie-verte">
-          <span class="card-tag">Gratuit</span>
-        </a>
-        <div class="card-body">
-          <div class="card-commune"><span>Thonon-les-Bains</span></div>
-          <a href="https://loisirs74.fr/viarhona-ev17-bas-chablais-thonon" class="title">ViaRhôna EV17 Bas-Chablais</a>
-          <p class="card-desc">Étape Bas-Chablais de la ViaRhôna EV17 — 26 km bord du Léman de Thonon à Chens-sur-Léman par Sciez, Excenevex (plage de sable), Yvoire (village médiéval).</p>
-          <div class="card-actions">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=ViaRh%C3%B4na%20EV17%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
-            <a href="https://www.viarhona.com/" target="_blank" rel="noopener">Site officiel ↗</a>
-          </div>
-        </div>
-      </article>
     </div>
   </div>
 </section>
 
-<section class="cat" id="telecabine">
+<section class="cat" id="telecab">
   <div class="wrap">
     <div class="cat-head">
       <div class="cat-head-left">
-        <span class="weather-band">☀ Quand il fait beau</span>
-        <h2>Télécabines</h2>
+        <h2>Télécabines & trains <span class="count">12 lieux</span></h2>
       </div>
       <a href="https://loisirs74.fr/telecabines/" class="see-all">Voir tout
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -901,174 +1018,13 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
   </div>
 </section>
 
-<section class="cat" id="domaine">
-  <div class="wrap">
-    <div class="cat-head">
-      <div class="cat-head-left">
-        <span class="weather-band">☀ Quand il fait beau</span>
-        <h2>Bases de loisirs</h2>
-      </div>
-      <a href="https://loisirs74.fr/bases-de-loisirs/" class="see-all">Voir tout
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-    </div>
-    <div class="carousel">
-      <article class="card">
-        <a href="https://loisirs74.fr/domaine-du-tornet" class="card-photo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Lac_de_la_Balme-de-Sillingy_%2851056207507%29.jpg" alt="Domaine du Tornet à La Balme-de-Sillingy" loading="lazy" referrerpolicy="no-referrer">
-          <span class="card-tag">Gratuit</span>
-        </a>
-        <div class="card-body">
-          <div class="card-commune"><span>La Balme-de-Sillingy</span></div>
-          <a href="https://loisirs74.fr/domaine-du-tornet" class="title">Domaine du Tornet</a>
-          <p class="card-desc">Sept hectares de lac, pumptrack, aire de jeux 2025, espace fitness, ponton et collection nationale de cerisiers à fleurs d'Asie.</p>
-          <div class="card-actions">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Domaine%20du%20Tornet%2C%20La%20Balme-de-Sillingy%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
-            <a href="https://www.labalmedesillingy.fr/-Le-Domaine-du-Tornet-" target="_blank" rel="noopener">Site officiel ↗</a>
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <a href="https://loisirs74.fr/base-de-loisirs-des-ilettes" class="card-photo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Sallanches-69%C2%A9studio_k.jpg" alt="Base de loisirs des Ilettes avec ses trois lacs et pelouses verdoyantes, Sallanches, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
-          <span class="card-tag">Gratuit</span>
-        </a>
-        <div class="card-body">
-          <div class="card-commune"><span>Sallanches</span></div>
-          <a href="https://loisirs74.fr/base-de-loisirs-des-ilettes" class="title">Base de loisirs des Ilettes</a>
-          <p class="card-desc">Complexe de loisirs face au massif du Mont-Blanc avec trois lacs aménagés pour la pêche, la baignade surveillée en été, la planche à voile et les activités de plein air.</p>
-          <div class="card-actions">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20de%20loisirs%20des%20Ilettes%2C%20Sallanches%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <a href="https://loisirs74.fr/base-de-loisirs-du-lac-des-iles" class="card-photo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Les_ARAVIS_depuis_le_LAC_DE_PASSY_-_panoramio.jpg" alt="Plage du Lac des Îles avec vue sur le Mont-Blanc, Passy, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
-          <span class="card-tag">Gratuit</span>
-        </a>
-        <div class="card-body">
-          <div class="card-commune"><span>Passy</span></div>
-          <a href="https://loisirs74.fr/base-de-loisirs-du-lac-des-iles" class="title">Base de loisirs du Lac des Îles</a>
-          <p class="card-desc">Le plus grand lac aménagé du Pays du Mont-Blanc : plage de sable, baignade surveillée en été, activités nautiques et terrestres dans un écrin de verdure face au massif.</p>
-          <div class="card-actions">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Base%20de%20loisirs%20du%20Lac%20des%20%C3%8Eles%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <a href="https://loisirs74.fr/domaine-de-guidou" class="card-photo">
-          <img src="/generique-domaine.jpg" alt="Image générique — Base de loisirs" loading="lazy" data-generique="true" data-generique-cat="domaine">
-          <span class="card-tag">Gratuit</span>
-        </a>
-        <div class="card-body">
-          <div class="card-commune"><span>Sciez</span></div>
-          <a href="https://loisirs74.fr/domaine-de-guidou" class="title">Domaine de Guidou</a>
-          <p class="card-desc">Site naturel protégé de 85 hectares classé Natura 2000, rassemblant une mosaïque de milieux diversifiés avec observatoire ornithologique et dunes fossiles uniques en Europe.</p>
-          <div class="card-actions">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Domaine%20de%20Guidou%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <a href="https://loisirs74.fr/parc-des-dereches" class="card-photo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Horse_riding_in_the_valley_of_the_Edigan_River.jpg" alt="Sentiers du Parc des Dérêches le long de la Dranse, Morzine, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
-          <span class="card-tag">Gratuit</span>
-        </a>
-        <div class="card-body">
-          <div class="card-commune"><span>Morzine</span></div>
-          <a href="https://loisirs74.fr/parc-des-dereches" class="title">Parc des Dérêches</a>
-          <p class="card-desc">Parc naturel de plus de 5 km le long de la Dranse, au cœur de Morzine, avec parcours santé, sentiers ombragés et infrastructures sportives pour toute la famille.</p>
-          <div class="card-actions">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parc%20des%20D%C3%A9r%C3%AAches%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <a href="https://loisirs74.fr/passy-accro-lac" class="card-photo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg" alt="Parcours accrobranche en forêt à Passy Accro Lac" loading="lazy" referrerpolicy="no-referrer">
-          <span class="card-tag">Payant</span>
-        </a>
-        <div class="card-body">
-          <div class="card-commune"><span>Passy</span></div>
-          <a href="https://loisirs74.fr/passy-accro-lac" class="title">Passy Accro Lac</a>
-          <p class="card-desc">Parc aventure multi-activités au bord du lac de Passy : 10 parcours d'accrobranche avec ligne de vie continue, tyroliennes, airbag, catapulte humaine et escape games outdoor.</p>
-          <div class="card-actions">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Passy%20Accro%20Lac%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
-            <a href="https://www.passyaccrolac.com/" target="_blank" rel="noopener">Site officiel ↗</a>
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <a href="https://loisirs74.fr/parcours-aventure-de-sciez" class="card-photo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg" alt="Parcours aventure dans les chênes centenaires du Domaine de Coudrée à Sciez" loading="lazy" referrerpolicy="no-referrer">
-          <span class="card-tag">Payant</span>
-        </a>
-        <div class="card-body">
-          <div class="card-commune"><span>Sciez</span></div>
-          <a href="https://loisirs74.fr/parcours-aventure-de-sciez" class="title">Parcours Aventure de Sciez</a>
-          <p class="card-desc">Parc d'accrobranche au cœur d'une forêt de chênes centenaires du Domaine de Coudrée, entre Thonon-les-Bains et Douvaine, avec plus de 40 ateliers dans les arbres.</p>
-          <div class="card-actions">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parcours%20Aventure%20de%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
-            <a href="https://www.parcoursaventure-sciez.com/home/" target="_blank" rel="noopener">Site officiel ↗</a>
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <a href="https://loisirs74.fr/cascade-aventure" class="card-photo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Cascade_de_Nyon_%282%29.jpg" alt="Cascade Aventure, parc d'accrobranche près de la cascade de Nyon à Morzine" loading="lazy" referrerpolicy="no-referrer">
-          <span class="card-tag">Payant</span>
-        </a>
-        <div class="card-body">
-          <div class="card-commune"><span>Morzine</span></div>
-          <a href="https://loisirs74.fr/cascade-aventure" class="title">Cascade Aventure</a>
-          <p class="card-desc">Parc d'aventure en forêt au cœur des montagnes, accessible à tous dès 3 ans, avec tyroliennes géantes survolant la cascade de Nyon, parcours dans les arbres et canyoning encadré.</p>
-          <div class="card-actions">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20Aventure%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
-            <a href="https://cascadeaventure.wixsite.com/cascade-aventure" target="_blank" rel="noopener">Site officiel ↗</a>
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <a href="https://loisirs74.fr/cote-2000-aventure" class="card-photo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Seilpark_Gantrisch_-_03.jpg" alt="Parcours accrobranche dans les arbres à Côte 2000 Aventure, Megève" loading="lazy" referrerpolicy="no-referrer">
-          <span class="card-tag">Payant</span>
-        </a>
-        <div class="card-body">
-          <div class="card-commune"><span>Megève</span></div>
-          <a href="https://loisirs74.fr/cote-2000-aventure" class="title">Côte 2000 Aventure</a>
-          <p class="card-desc">Parc d'accrobranche au pied des Aiguilles Croches avec 70 ateliers répartis sur 3 niveaux de difficulté, dont une tyrolienne de 90 mètres.</p>
-          <div class="card-actions">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=C%C3%B4te%202000%20Aventure%2C%20Meg%C3%A8ve%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
-            <a href="https://www.cote2000aventure.com/" target="_blank" rel="noopener">Site officiel ↗</a>
-          </div>
-        </div>
-      </article>
-      <article class="card">
-        <a href="https://loisirs74.fr/les-aigles-du-leman" class="card-photo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Female_falcon_handler_with_eagle_%2825513995343%29.jpg" alt="Spectacle de rapaces en vol libre aux Aigles du Léman" loading="lazy" referrerpolicy="no-referrer">
-          <span class="card-tag">Payant</span>
-        </a>
-        <div class="card-body">
-          <div class="card-commune"><span>Sciez</span></div>
-          <a href="https://loisirs74.fr/les-aigles-du-leman" class="title">Les Aigles du Léman</a>
-          <p class="card-desc">Parc animalier spécialisé dans la présentation et la conservation des rapaces avec la plus grande volière du monde, spectacles de vols libres quotidiens et programme de réintroduction du pygargue à queue blanche.</p>
-          <div class="card-actions">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Les%20Aigles%20du%20L%C3%A9man%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
-            <a href="https://www.lesaiglesduleman.com/" target="_blank" rel="noopener">Site officiel ↗</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+<div class="band"><div class="wrap"><h2 class="band-title">Patrimoine &amp; culture</h2><p class="band-sub">Châteaux, forts, abbayes et musées — mille ans d’histoire savoyarde à pousser la porte.</p></div></div>
 
 <section class="cat" id="chateau">
   <div class="wrap">
     <div class="cat-head">
       <div class="cat-head-left">
-        <span class="weather-band">☀☂ Beau temps ou pluie</span>
-        <h2>Châteaux &amp; forts</h2>
+        <h2>Châteaux, forts & abbayes <span class="count">21 lieux</span></h2>
       </div>
       <a href="https://loisirs74.fr/chateaux/" class="see-all">Voir tout
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -1168,19 +1124,11 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
   </div>
 </section>
 
-<div class="crossover" id="crossover">
-  <div class="wrap">
-    <p id="crossText">…et puis le ciel se couvre.</p>
-    <small id="crossSmall">continuez à descendre, on passe à l’intérieur</small>
-  </div>
-</div>
-
 <section class="cat" id="musee">
   <div class="wrap">
     <div class="cat-head">
       <div class="cat-head-left">
-        <span class="weather-band">☂ Quand il pleut</span>
-        <h2>Musées</h2>
+        <h2>Musées <span class="count">25 lieux</span></h2>
       </div>
       <a href="https://loisirs74.fr/musees/" class="see-all">Voir tout
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -1280,14 +1228,15 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
   </div>
 </section>
 
-<section class="cat" id="attraction">
+<div class="band"><div class="wrap"><h2 class="band-title">Sport, jeux &amp; sensations</h2><p class="band-sub">Baignade, sensations fortes, jeux, parcs et sorties — de quoi remplir la journée, quel que soit le ciel.</p></div></div>
+
+<section class="cat" id="eau">
   <div class="wrap">
     <div class="cat-head">
       <div class="cat-head-left">
-        <span class="weather-band">☂ Quand il pleut</span>
-        <h2>Attractions &amp; loisirs</h2>
+        <h2>Baignade & nautisme <span class="count">24 lieux</span></h2>
       </div>
-      <a href="https://loisirs74.fr/attractions/" class="see-all">Voir tout
+      <a href="https://loisirs74.fr/baignade-nautisme/" class="see-all">Voir tout
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
@@ -1307,6 +1256,96 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
           </div>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="cat" id="sensations">
+  <div class="wrap">
+    <div class="cat-head">
+      <div class="cat-head-left">
+        <h2>Sensations & plein air <span class="count">43 lieux</span></h2>
+      </div>
+      <a href="https://loisirs74.fr/sensations-plein-air/" class="see-all">Voir tout
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="carousel">
+      <article class="card">
+        <a href="https://loisirs74.fr/passy-accro-lac" class="card-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg" alt="Parcours accrobranche en forêt à Passy Accro Lac" loading="lazy" referrerpolicy="no-referrer">
+          <span class="card-tag">Payant</span>
+        </a>
+        <div class="card-body">
+          <div class="card-commune"><span>Passy</span></div>
+          <a href="https://loisirs74.fr/passy-accro-lac" class="title">Passy Accro Lac</a>
+          <p class="card-desc">Parc aventure multi-activités au bord du lac de Passy : 10 parcours d'accrobranche avec ligne de vie continue, tyroliennes, airbag, catapulte humaine et escape games outdoor.</p>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Passy%20Accro%20Lac%2C%20Passy%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
+            <a href="https://www.passyaccrolac.com/" target="_blank" rel="noopener">Site officiel ↗</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <a href="https://loisirs74.fr/parcours-aventure-de-sciez" class="card-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg" alt="Parcours aventure dans les chênes centenaires du Domaine de Coudrée à Sciez" loading="lazy" referrerpolicy="no-referrer">
+          <span class="card-tag">Payant</span>
+        </a>
+        <div class="card-body">
+          <div class="card-commune"><span>Sciez</span></div>
+          <a href="https://loisirs74.fr/parcours-aventure-de-sciez" class="title">Parcours Aventure de Sciez</a>
+          <p class="card-desc">Parc d'accrobranche au cœur d'une forêt de chênes centenaires du Domaine de Coudrée, entre Thonon-les-Bains et Douvaine, avec plus de 40 ateliers dans les arbres.</p>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parcours%20Aventure%20de%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
+            <a href="https://www.parcoursaventure-sciez.com/home/" target="_blank" rel="noopener">Site officiel ↗</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <a href="https://loisirs74.fr/cascade-aventure" class="card-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Cascade_de_Nyon_%282%29.jpg" alt="Cascade Aventure, parc d'accrobranche près de la cascade de Nyon à Morzine" loading="lazy" referrerpolicy="no-referrer">
+          <span class="card-tag">Payant</span>
+        </a>
+        <div class="card-body">
+          <div class="card-commune"><span>Morzine</span></div>
+          <a href="https://loisirs74.fr/cascade-aventure" class="title">Cascade Aventure</a>
+          <p class="card-desc">Parc d'aventure en forêt au cœur des montagnes, accessible à tous dès 3 ans, avec tyroliennes géantes survolant la cascade de Nyon, parcours dans les arbres et canyoning encadré.</p>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cascade%20Aventure%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
+            <a href="https://cascadeaventure.wixsite.com/cascade-aventure" target="_blank" rel="noopener">Site officiel ↗</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <a href="https://loisirs74.fr/cote-2000-aventure" class="card-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Seilpark_Gantrisch_-_03.jpg" alt="Parcours accrobranche dans les arbres à Côte 2000 Aventure, Megève" loading="lazy" referrerpolicy="no-referrer">
+          <span class="card-tag">Payant</span>
+        </a>
+        <div class="card-body">
+          <div class="card-commune"><span>Megève</span></div>
+          <a href="https://loisirs74.fr/cote-2000-aventure" class="title">Côte 2000 Aventure</a>
+          <p class="card-desc">Parc d'accrobranche au pied des Aiguilles Croches avec 70 ateliers répartis sur 3 niveaux de difficulté, dont une tyrolienne de 90 mètres.</p>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=C%C3%B4te%202000%20Aventure%2C%20Meg%C3%A8ve%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
+            <a href="https://www.cote2000aventure.com/" target="_blank" rel="noopener">Site officiel ↗</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cat" id="sport">
+  <div class="wrap">
+    <div class="cat-head">
+      <div class="cat-head-left">
+        <h2>Sport & jeux <span class="count">54 lieux</span></h2>
+      </div>
+      <a href="https://loisirs74.fr/sport-jeux/" class="see-all">Voir tout
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="carousel">
       <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/bowling-le-bowl-annecy">
 <img data-generique="true" data-generique-cat="bowling" alt="Bowling 16 pistes + restaurant + nightclub Le Bowl Bowling Annecy à Annecy Haute-Savoie 74" loading="lazy" src="/generique-bowling-strike.jpg"/>
@@ -1330,19 +1369,6 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
 <p class="card-desc">PATINOIRE COUVERTE 58×28 M - équipement public ville Annecy. Séances publiques + soirée disco vendredi + cours patinage artistique et hockey.</p>
 <div class="card-actions">
 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Patinoire%20Jean%20R%C3%A9gis%2C%20Annecy%2C%20Haute-Savoie" rel="noopener" target="_blank">Itinéraire</a>
-</div>
-</div>
-</article>
-      <article class="card">
-<a class="card-photo" href="https://loisirs74.fr/casino-imperial-palace-annecy">
-<img alt="Casino jeux + hôtel 5* + restaurant Casino Impérial Palace Annecy à Annecy Haute-Savoie 74" loading="lazy" src="/casino-imperial-palace-annecy-hero.jpg"/>
-<span class="card-tag is-payant">Payant</span>
-</a>
-<div class="card-body">
-<div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/casino-imperial-palace-annecy">Casino Impérial Palace Annecy</a>
-<p class="card-desc">CASINO PRESTIGE D'ANNECY - 32 av. d'Albigny au bord du lac, machines à sous + tables (roulette, black-jack, poker) + hôtel 5* + restaurant g.</p>
-<div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Casino%20Imp%C3%A9rial%20Palace%20Annecy%2C%20Annecy%2C%20Haute-Savoie" rel="noopener" target="_blank">Itinéraire</a>
 </div>
 </div>
 </article>
@@ -1378,62 +1404,149 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
   </div>
 </section>
 
-<section class="cat" id="divers">
+<section class="cat" id="parcs">
   <div class="wrap">
     <div class="cat-head">
       <div class="cat-head-left">
-        <span class="weather-band">☂ Quand il pleut</span>
-        <h2>Divers</h2>
+        <h2>Parcs, jardins & familles <span class="count">25 lieux</span></h2>
       </div>
-      <a href="https://loisirs74.fr/divers/" class="see-all">Voir tout
+      <a href="https://loisirs74.fr/parcs-jardins/" class="see-all">Voir tout
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
     <div class="carousel">
       <article class="card">
-        <a href="https://loisirs74.fr/thermes-evian" class="card-photo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Anciens_thermes_Evian_5.jpg" alt="Espace wellness des Thermes d'Évian avec vue sur le lac Léman" loading="lazy" referrerpolicy="no-referrer">
+        <a href="https://loisirs74.fr/parc-de-merlet" class="card-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Panorama_depuis_le_parc_de_Merlet.jpg" alt="Parc animalier en semi-liberté à 1 500 m d'altitude, face au Mont-Blanc : bouquetins, chamois et marmottes sur 21 hectares." loading="lazy" referrerpolicy="no-referrer">
           <span class="card-tag">Payant</span>
         </a>
         <div class="card-body">
-          <div class="card-commune"><span>Évian-les-Bains</span></div>
-          <a href="https://loisirs74.fr/thermes-evian" class="title">Thermes d'Évian</a>
-          <p class="card-desc">Centre thermal historique au bord du lac Léman proposant cures médicalisées, soins wellness à l'eau minérale naturelle evian®, espace fitness et accès bien-être.</p>
+          <div class="card-commune"><span>Les Houches</span></div>
+          <a href="https://loisirs74.fr/parc-de-merlet" class="title">Parc de Merlet</a>
+          <p class="card-desc">Parc animalier en semi-liberté à 1 500 m d'altitude, face au Mont-Blanc : bouquetins, chamois et marmottes sur 21 hectares.</p>
           <div class="card-actions">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Thermes%20d%27%C3%89vian%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
-            <a href="https://lesthermesevian.com/" target="_blank" rel="noopener">Site officiel ↗</a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parc%20de%20Merlet%2C%20Les%20Houches%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
+            <a href="https://www.parcdemerlet.com/" target="_blank" rel="noopener">Site officiel ↗</a>
           </div>
         </div>
       </article>
       <article class="card">
-        <a href="https://loisirs74.fr/abbaye-d-aulps" class="card-photo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Aulps_abbey_01.jpg" alt="Vestiges de l'abbatiale de l'Abbaye d'Aulps" loading="lazy" referrerpolicy="no-referrer">
+        <a href="https://loisirs74.fr/les-aigles-du-leman" class="card-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Female_falcon_handler_with_eagle_%2825513995343%29.jpg" alt="Spectacle de rapaces en vol libre aux Aigles du Léman" loading="lazy" referrerpolicy="no-referrer">
           <span class="card-tag">Payant</span>
         </a>
         <div class="card-body">
-          <div class="card-commune"><span>Saint-Jean-d'Aulps</span></div>
-          <a href="https://loisirs74.fr/abbaye-d-aulps" class="title">Abbaye d'Aulps</a>
-          <p class="card-desc">Abbaye cistercienne fondée vers 1094, classée Monument Historique, avec centre d'interprétation unique en France consacré à la vie monastique médiévale et visite 3D immersive.</p>
+          <div class="card-commune"><span>Sciez</span></div>
+          <a href="https://loisirs74.fr/les-aigles-du-leman" class="title">Les Aigles du Léman</a>
+          <p class="card-desc">Parc animalier spécialisé dans la présentation et la conservation des rapaces avec la plus grande volière du monde, spectacles de vols libres quotidiens et programme de réintroduction du pygargue à queue blanche.</p>
           <div class="card-actions">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Abbaye%20d%27Aulps%2C%20Saint-Jean-d%27Aulps%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
-            <a href="https://www.abbayedaulps.fr" target="_blank" rel="noopener">Site officiel ↗</a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Les%20Aigles%20du%20L%C3%A9man%2C%20Sciez%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
+            <a href="https://www.lesaiglesduleman.com/" target="_blank" rel="noopener">Site officiel ↗</a>
           </div>
         </div>
       </article>
       <article class="card">
-        <a href="https://loisirs74.fr/abbaye-de-sixt" class="card-photo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Sixt_abbey_02.jpg" alt="Abbaye de Sixt et son église abbatiale du XIIIᵉ siècle" loading="lazy" referrerpolicy="no-referrer">
+        <a href="https://loisirs74.fr/grand-parc-d-andilly" class="card-photo">
+          <img src="/generique-attraction.jpg" alt="Grand parc à thème en pleine nature : cité médiévale, hameau du Père Noël, spectacles et reconstitutions grandeur nature." loading="lazy">
+          <span class="card-tag">Payant</span>
+        </a>
+        <div class="card-body">
+          <div class="card-commune"><span>Andilly</span></div>
+          <a href="https://loisirs74.fr/grand-parc-d-andilly" class="title">Grand Parc d'Andilly</a>
+          <p class="card-desc">Grand parc à thème en pleine nature : cité médiévale, hameau du Père Noël, spectacles et reconstitutions grandeur nature.</p>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Grand%20Parc%20d%27Andilly%2C%20Andilly%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
+            <a href="https://www.grandparc-andilly.com/" target="_blank" rel="noopener">Site officiel ↗</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <a href="https://loisirs74.fr/jardin-des-cinq-sens" class="card-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Yvoire_Jardin_Cinq_Sens.jpg" alt="Jardin Remarquable au cœur d'Yvoire : labyrinthe végétal de plus de 1 500 variétés réparties en cinq jardins sensoriels." loading="lazy" referrerpolicy="no-referrer">
+          <span class="card-tag">Payant</span>
+        </a>
+        <div class="card-body">
+          <div class="card-commune"><span>Yvoire</span></div>
+          <a href="https://loisirs74.fr/jardin-des-cinq-sens" class="title">Jardin des Cinq Sens</a>
+          <p class="card-desc">Jardin Remarquable au cœur d'Yvoire : labyrinthe végétal de plus de 1 500 variétés réparties en cinq jardins sensoriels.</p>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Jardin%20des%20Cinq%20Sens%2C%20Yvoire%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
+            <a href="https://jardin5sens.net/" target="_blank" rel="noopener">Site officiel ↗</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <a href="https://loisirs74.fr/criq-parc" class="card-photo">
+          <img src="/criq-parc-hero.jpg" alt="Parc de jeux dans les arbres pour les 3 à 12 ans, sur les rives du lac d'Annecy à Saint-Jorioz." loading="lazy">
+          <span class="card-tag">Payant</span>
+        </a>
+        <div class="card-body">
+          <div class="card-commune"><span>Saint-Jorioz</span></div>
+          <a href="https://loisirs74.fr/criq-parc" class="title">Criq'Parc</a>
+          <p class="card-desc">Parc de jeux dans les arbres pour les 3 à 12 ans, sur les rives du lac d'Annecy à Saint-Jorioz.</p>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Criq%27Parc%2C%20Saint-Jorioz%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
+            <a href="https://parc.annecy-lacrique.com/" target="_blank" rel="noopener">Site officiel ↗</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <a href="https://loisirs74.fr/parc-animalier-grande-jeanne-annecy" class="card-photo">
+          <img src="/generique-famille-foret.jpg" alt="Parc animalier municipal gratuit sur la route du Semnoz : daims, cerfs élaphes et mouflons de Corse, ouvert toute l'année." loading="lazy">
           <span class="card-tag">Gratuit</span>
         </a>
         <div class="card-body">
-          <div class="card-commune"><span>Sixt-Fer-à-Cheval</span></div>
-          <a href="https://loisirs74.fr/abbaye-de-sixt" class="title">Abbaye de Sixt</a>
-          <p class="card-desc">Ancienne abbaye de chanoines réguliers fondée en 1144, inscrite Monument Historique.</p>
+          <div class="card-commune"><span>Annecy</span></div>
+          <a href="https://loisirs74.fr/parc-animalier-grande-jeanne-annecy" class="title">Parc animalier de la Grande Jeanne</a>
+          <p class="card-desc">Parc animalier municipal gratuit sur la route du Semnoz : daims, cerfs élaphes et mouflons de Corse, ouvert toute l'année.</p>
           <div class="card-actions">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Abbaye%20de%20Sixt%2C%20Sixt-Fer-%C3%A0-Cheval%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Parc%20animalier%20de%20la%20Grande%20Jeanne%2C%20Annecy%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
           </div>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="cat" id="sorties">
+  <div class="wrap">
+    <div class="cat-head">
+      <div class="cat-head-left">
+        <h2>Sorties & détente <span class="count">19 lieux</span></h2>
+      </div>
+      <a href="https://loisirs74.fr/sorties-detente/" class="see-all">Voir tout
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="carousel">
+      <article class="card">
+        <a href="https://loisirs74.fr/viarhona-ev17-bas-chablais-thonon" class="card-photo">
+          <img src="/generique-voie-verte-famille-kids.jpg" alt="ViaRhôna EV17 Bas-Chablais" loading="lazy" data-generique="true" data-generique-cat="voie-verte">
+          <span class="card-tag">Gratuit</span>
+        </a>
+        <div class="card-body">
+          <div class="card-commune"><span>Thonon-les-Bains</span></div>
+          <a href="https://loisirs74.fr/viarhona-ev17-bas-chablais-thonon" class="title">ViaRhôna EV17 Bas-Chablais</a>
+          <p class="card-desc">Étape Bas-Chablais de la ViaRhôna EV17 — 26 km bord du Léman de Thonon à Chens-sur-Léman par Sciez, Excenevex (plage de sable), Yvoire (village médiéval).</p>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=ViaRh%C3%B4na%20EV17%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener">Itinéraire ↗</a>
+            <a href="https://www.viarhona.com/" target="_blank" rel="noopener">Site officiel ↗</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+<a class="card-photo" href="https://loisirs74.fr/casino-imperial-palace-annecy">
+<img alt="Casino jeux + hôtel 5* + restaurant Casino Impérial Palace Annecy à Annecy Haute-Savoie 74" loading="lazy" src="/casino-imperial-palace-annecy-hero.jpg"/>
+<span class="card-tag is-payant">Payant</span>
+</a>
+<div class="card-body">
+<div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/casino-imperial-palace-annecy">Casino Impérial Palace Annecy</a>
+<p class="card-desc">CASINO PRESTIGE D'ANNECY - 32 av. d'Albigny au bord du lac, machines à sous + tables (roulette, black-jack, poker) + hôtel 5* + restaurant g.</p>
+<div class="card-actions">
+<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Casino%20Imp%C3%A9rial%20Palace%20Annecy%2C%20Annecy%2C%20Haute-Savoie" rel="noopener" target="_blank">Itinéraire</a>
+</div>
+</div>
+</article>
     </div>
   </div>
 </section>
@@ -1473,7 +1586,6 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
     </div>
     <div class="foot-bottom">
       <span>© 2026 bleu canard éditions · Edmaster &amp; Claudius</span>
-      <span id="footState">Météo : grand beau</span>
     </div>
   </div>
 </footer>
@@ -1482,7 +1594,7 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
 {"@context":"https://schema.org","@type":"WebSite","url":"https://loisirs74.fr/","name":"Loisirs 74","description":"Guide indépendant des lieux de loisirs en Haute-Savoie","inLanguage":"fr","publisher":{"@type":"Organization","name":"bleu canard éditions"}}
 </script>
 
-<script type="application/json" id="l74-data">{"abbaye-d-aulps": {"categories": ["divers"], "lat": 46.2419, "lng": 6.6498}, "abbaye-de-sixt": {"categories": ["divers"], "lat": 46.0539, "lng": 6.773}, "aire-de-decollage-parapente-plaine-joux": {"categories": ["point-de-vue"], "lat": 45.94944, "lng": 6.73972}, "aquariaz": {"categories": ["attraction"], "lat": 46.191, "lng": 6.7742, "subcategories": ["divers"]}, "base-de-loisirs-des-ilettes": {"categories": ["domaine"], "lat": 45.9505, "lng": 6.6305}, "base-de-loisirs-du-lac-des-iles": {"categories": ["domaine"], "lat": 45.920038, "lng": 6.658268}, "bowling-le-bowl-annecy": {"categories": ["attraction"], "lat": 45.8983, "lng": 6.1167, "subcategories": ["bowling"]}, "cascade-aventure": {"categories": ["domaine"], "lat": 46.1858, "lng": 6.7089, "subcategories": ["divers"]}, "cascade-de-chedde": {"categories": ["cascade"], "lat": 45.9287, "lng": 6.6933}, "cascade-de-doran": {"categories": ["cascade"], "lat": 45.9696, "lng": 6.5975}, "cascade-de-l-arpenaz": {"categories": ["cascade"], "lat": 45.976999, "lng": 6.642309}, "cascade-des-fours": {"categories": ["cascade"], "lat": 45.938288, "lng": 6.559696}, "cascade-du-dard": {"categories": ["cascade"], "lat": 45.9197, "lng": 6.8847}, "casino-imperial-palace-annecy": {"categories": ["attraction"], "lat": 45.9056, "lng": 6.1467, "subcategories": ["casino"]}, "chateau-clermont-genevois": {"categories": ["chateau"], "lat": 46.018, "lng": 5.944}, "chateau-de-menthon-saint-bernard": {"categories": ["chateau"], "lat": 45.8647, "lng": 6.2097}, "chateau-de-thorens": {"categories": ["chateau"], "lat": 45.9825, "lng": 6.2478}, "chateau-des-rubins-observatoire-des-alpes": {"categories": ["musee"], "lat": 45.9476, "lng": 6.6341}, "chateau-et-donjon-des-seigneurs-de-faverges": {"categories": ["chateau"], "lat": 45.7469, "lng": 6.2947}, "chateau-montrottier-lovagny": {"categories": ["chateau"], "lat": 45.873, "lng": 6.0727}, "chateau-ripaille-thonon": {"categories": ["chateau"], "lat": 46.378, "lng": 6.489}, "cirque-du-fer-a-cheval": {"categories": ["cascade"], "lat": 46.0633, "lng": 6.7978}, "col-de-la-forclaz": {"categories": ["point-de-vue"], "lat": 45.8083, "lng": 6.24472}, "col-des-glieres": {"categories": ["point-de-vue"], "lat": 46.0514, "lng": 6.3297}, "cote-2000-aventure": {"categories": ["domaine"], "lat": 45.8533, "lng": 6.6198, "subcategories": ["divers"]}, "domaine-de-guidou": {"categories": ["domaine"], "lat": 46.333, "lng": 6.381}, "domaine-du-tornet": {"categories": ["domaine"], "lat": 45.970952, "lng": 6.032109}, "ecomusee-paysalp-viuz-en-sallaz": {"categories": ["musee"], "lat": 46.144, "lng": 6.40972}, "escalade-atome-annecy": {"categories": ["attraction"], "lat": 45.9053, "lng": 6.1343}, "escalade-climb-up-annecy": {"categories": ["attraction"], "lat": 45.9053, "lng": 6.1343}, "fonderie-paccard-sevrier": {"categories": ["musee"], "lat": 45.844078, "lng": 6.150756}, "grp-tour-lac-annecy-annecy": {"categories": ["sentier"], "lat": 45.8992, "lng": 6.1294}, "les-aigles-du-leman": {"categories": ["divers"], "lat": 46.333, "lng": 6.375, "subcategories": ["divers"]}, "mont-saleve": {"categories": ["point-de-vue"], "lat": 46.1185, "lng": 6.1833}, "mont-veyrier": {"categories": ["point-de-vue"], "lat": 45.9181, "lng": 6.1805}, "musee-chateau-annecy": {"categories": ["musee"], "lat": 45.8975, "lng": 6.1261}, "musee-du-chablais-thonon-les-bains": {"categories": ["musee"], "lat": 46.37365, "lng": 6.47832}, "palais-lumiere": {"categories": ["musee"], "lat": 46.3997, "lng": 6.5909}, "parc-des-dereches": {"categories": ["domaine"], "lat": 46.1792, "lng": 6.7089}, "parcours-aventure-de-sciez": {"categories": ["domaine"], "lat": 46.3312, "lng": 6.3705, "subcategories": ["divers"]}, "passy-accro-lac": {"categories": ["domaine"], "lat": 45.9254, "lng": 6.6973, "subcategories": ["accrobranche"]}, "patinoire-jean-regis-annecy": {"categories": ["attraction"], "lat": 45.8975, "lng": 6.1322, "subcategories": ["patinoire"]}, "plage-albigny": {"categories": ["lac"], "lat": 45.9067, "lng": 6.1489}, "plage-de-la-pinede": {"categories": ["lac"], "lat": 46.3736, "lng": 6.4776}, "plage-de-saint-disdille": {"categories": ["lac"], "lat": 46.401, "lng": 6.5026}, "plage-de-saint-jorioz": {"categories": ["lac"], "lat": 45.8335, "lng": 6.1565}, "plage-de-sciez-sur-leman": {"categories": ["lac"], "lat": 46.33251, "lng": 6.38413}, "plage-des-marquisats": {"categories": ["lac"], "lat": 45.893443, "lng": 6.136465}, "plateau-des-glieres": {"categories": ["point-de-vue"], "lat": 45.9583, "lng": 6.3667}, "sentier-balcon-leman-saleve": {"categories": ["sentier"], "lat": 46.0333, "lng": 6.1167}, "sentier-bout-du-lac-doussard": {"categories": ["sentier"], "lat": 45.7833, "lng": 6.2167}, "sentier-desert-de-plate-passy": {"categories": ["sentier"], "lat": 45.9333, "lng": 6.7}, "sentier-maison-saleve-pomier-presilly": {"categories": ["sentier"], "lat": 46.1167, "lng": 6.15}, "telecabine-des-chavannes-les-gets": {"categories": ["telecabine"], "lat": 46.1577, "lng": 6.6685}, "telecabine-du-jaillet": {"categories": ["telecabine"], "lat": 45.861, "lng": 6.603}, "telecabine-pleney-morzine": {"categories": ["telecabine"]}, "telepherique-des-grands-montets": {"categories": ["telecabine"], "lat": 45.9727, "lng": 6.9277}, "telepherique-du-brevent": {"categories": ["telecabine"], "lat": 45.927, "lng": 6.853}, "thermes-evian": {"categories": ["divers"], "lat": 46.4008, "lng": 6.5889}, "tour-du-mont-blanc-les-houches": {"categories": ["sentier"], "lat": 45.8908, "lng": 6.7956}, "tramway-du-mont-blanc": {"categories": ["telecabine"], "lat": 45.9063, "lng": 6.702}, "veloroute-vallee-arve-cluses-sallanches": {"categories": ["voie-verte"], "lat": 46.0617, "lng": 6.5811}, "viarhona-haute-savoie-saint-gingolph-seyssel": {"categories": ["voie-verte"], "lat": 46.3917, "lng": 6.8056}, "voie-verte-arve-cluses-thyez": {"categories": ["voie-verte"], "lat": 46.0617, "lng": 6.5811}, "voie-verte-lac-annecy-annecy": {"categories": ["voie-verte"], "lat": 45.8992, "lng": 6.1294}}</script>
+<script type="application/json" id="l74-data">{"abbaye-d-aulps": {"categories": ["divers"], "lat": 46.2419, "lng": 6.6498}, "abbaye-de-sixt": {"categories": ["divers"], "lat": 46.0539, "lng": 6.773}, "aire-de-decollage-parapente-plaine-joux": {"categories": ["point-de-vue"], "lat": 45.94944, "lng": 6.73972}, "aquariaz": {"categories": ["attraction"], "lat": 46.191, "lng": 6.7742, "subcategories": ["divers"]}, "base-de-loisirs-des-ilettes": {"categories": ["domaine"], "lat": 45.9505, "lng": 6.6305}, "base-de-loisirs-du-lac-des-iles": {"categories": ["domaine"], "lat": 45.920038, "lng": 6.658268}, "bowling-le-bowl-annecy": {"categories": ["attraction"], "lat": 45.8983, "lng": 6.1167, "subcategories": ["bowling"]}, "cascade-aventure": {"categories": ["domaine"], "lat": 46.1858, "lng": 6.7089, "subcategories": ["divers"]}, "cascade-de-chedde": {"categories": ["cascade"], "lat": 45.9287, "lng": 6.6933}, "cascade-de-doran": {"categories": ["cascade"], "lat": 45.9696, "lng": 6.5975}, "cascade-de-l-arpenaz": {"categories": ["cascade"], "lat": 45.976999, "lng": 6.642309}, "cascade-des-fours": {"categories": ["cascade"], "lat": 45.938288, "lng": 6.559696}, "cascade-du-dard": {"categories": ["cascade"], "lat": 45.9197, "lng": 6.8847}, "casino-imperial-palace-annecy": {"categories": ["divers"], "lat": 45.9056, "lng": 6.1467, "subcategories": ["casino"]}, "chateau-clermont-genevois": {"categories": ["chateau"], "lat": 46.018, "lng": 5.944}, "chateau-de-menthon-saint-bernard": {"categories": ["chateau"], "lat": 45.8647, "lng": 6.2097}, "chateau-de-thorens": {"categories": ["chateau"], "lat": 45.9825, "lng": 6.2478}, "chateau-des-rubins-observatoire-des-alpes": {"categories": ["musee"], "lat": 45.9476, "lng": 6.6341}, "chateau-et-donjon-des-seigneurs-de-faverges": {"categories": ["chateau"], "lat": 45.7469, "lng": 6.2947}, "chateau-montrottier-lovagny": {"categories": ["chateau"], "lat": 45.873, "lng": 6.0727}, "chateau-ripaille-thonon": {"categories": ["chateau"], "lat": 46.378, "lng": 6.489}, "cirque-du-fer-a-cheval": {"categories": ["cascade"], "lat": 46.0633, "lng": 6.7978}, "col-de-la-forclaz": {"categories": ["point-de-vue"], "lat": 45.8083, "lng": 6.24472}, "col-des-glieres": {"categories": ["point-de-vue"], "lat": 46.0514, "lng": 6.3297}, "cote-2000-aventure": {"categories": ["domaine"], "lat": 45.8533, "lng": 6.6198, "subcategories": ["divers"]}, "domaine-de-guidou": {"categories": ["domaine"], "lat": 46.333, "lng": 6.381}, "domaine-du-tornet": {"categories": ["domaine"], "lat": 45.970952, "lng": 6.032109}, "ecomusee-paysalp-viuz-en-sallaz": {"categories": ["musee"], "lat": 46.144, "lng": 6.40972}, "escalade-atome-annecy": {"categories": ["attraction"], "lat": 45.9053, "lng": 6.1343}, "escalade-climb-up-annecy": {"categories": ["attraction"], "lat": 45.9053, "lng": 6.1343}, "fonderie-paccard-sevrier": {"categories": ["musee"], "lat": 45.844078, "lng": 6.150756}, "grp-tour-lac-annecy-annecy": {"categories": ["sentier"], "lat": 45.8992, "lng": 6.1294}, "les-aigles-du-leman": {"categories": ["divers"], "lat": 46.333, "lng": 6.375, "subcategories": ["divers"]}, "mont-saleve": {"categories": ["point-de-vue"], "lat": 46.1185, "lng": 6.1833}, "mont-veyrier": {"categories": ["point-de-vue"], "lat": 45.9181, "lng": 6.1805}, "musee-chateau-annecy": {"categories": ["musee"], "lat": 45.8975, "lng": 6.1261}, "musee-du-chablais-thonon-les-bains": {"categories": ["musee"], "lat": 46.37365, "lng": 6.47832}, "palais-lumiere": {"categories": ["musee"], "lat": 46.3997, "lng": 6.5909}, "parc-des-dereches": {"categories": ["domaine"], "lat": 46.1792, "lng": 6.7089}, "parcours-aventure-de-sciez": {"categories": ["domaine"], "lat": 46.3312, "lng": 6.3705, "subcategories": ["divers"]}, "passy-accro-lac": {"categories": ["domaine"], "lat": 45.9254, "lng": 6.6973, "subcategories": ["accrobranche"]}, "patinoire-jean-regis-annecy": {"categories": ["attraction"], "lat": 45.8975, "lng": 6.1322, "subcategories": ["patinoire"]}, "plage-albigny": {"categories": ["lac"], "lat": 45.9067, "lng": 6.1489}, "plage-de-la-pinede": {"categories": ["lac"], "lat": 46.3736, "lng": 6.4776}, "plage-de-saint-disdille": {"categories": ["lac"], "lat": 46.401, "lng": 6.5026}, "plage-de-saint-jorioz": {"categories": ["lac"], "lat": 45.8335, "lng": 6.1565}, "plage-de-sciez-sur-leman": {"categories": ["lac"], "lat": 46.33251, "lng": 6.38413}, "plage-des-marquisats": {"categories": ["lac"], "lat": 45.893443, "lng": 6.136465}, "plateau-des-glieres": {"categories": ["point-de-vue"], "lat": 45.9583, "lng": 6.3667}, "sentier-balcon-leman-saleve": {"categories": ["sentier"], "lat": 46.0333, "lng": 6.1167}, "sentier-bout-du-lac-doussard": {"categories": ["sentier"], "lat": 45.7833, "lng": 6.2167}, "sentier-desert-de-plate-passy": {"categories": ["sentier"], "lat": 45.9333, "lng": 6.7}, "sentier-maison-saleve-pomier-presilly": {"categories": ["sentier"], "lat": 46.1167, "lng": 6.15}, "telecabine-des-chavannes-les-gets": {"categories": ["telecabine"], "lat": 46.1577, "lng": 6.6685}, "telecabine-du-jaillet": {"categories": ["telecabine"], "lat": 45.861, "lng": 6.603}, "telecabine-pleney-morzine": {"categories": ["telecabine"]}, "telepherique-des-grands-montets": {"categories": ["telecabine"], "lat": 45.9727, "lng": 6.9277}, "telepherique-du-brevent": {"categories": ["telecabine"], "lat": 45.927, "lng": 6.853}, "thermes-evian": {"categories": ["divers"], "lat": 46.4008, "lng": 6.5889}, "tour-du-mont-blanc-les-houches": {"categories": ["sentier"], "lat": 45.8908, "lng": 6.7956}, "tramway-du-mont-blanc": {"categories": ["telecabine"], "lat": 45.9063, "lng": 6.702}, "veloroute-vallee-arve-cluses-sallanches": {"categories": ["voie-verte"], "lat": 46.0617, "lng": 6.5811}, "viarhona-haute-savoie-saint-gingolph-seyssel": {"categories": ["voie-verte"], "lat": 46.3917, "lng": 6.8056}, "voie-verte-arve-cluses-thyez": {"categories": ["voie-verte"], "lat": 46.0617, "lng": 6.5811}, "voie-verte-lac-annecy-annecy": {"categories": ["voie-verte"], "lat": 45.8992, "lng": 6.1294}}</script>
 <script src="/scripts/l74sort.js"></script>
 <script>
 var root=document.documentElement;
@@ -1499,28 +1611,15 @@ function setScene(w){
   document.getElementById('clouds').style.opacity=Math.max(0,(w-.2)*1.6);
   document.getElementById('rainveil').style.opacity=Math.max(0,(w-.55)*2);
   document.getElementById('lamp').style.opacity=Math.max(0,(w-.6)*2.2);
-  var wn=document.getElementById('wnLabel'),wt=document.getElementById('wnText'),fs=document.getElementById('footState'),bt=document.getElementById('brandTag'),cx=document.getElementById('crossText'),cs=document.getElementById('crossSmall');
-  if(w<.35){wn.textContent=STR.wn_label_clear;wt.textContent=STR.wn_text_clear;fs.textContent=STR.footstate_clear;bt.textContent=STR.brand_tag_clear;}
-  else if(w<.6){wn.textContent=STR.wn_label_var;wt.textContent=STR.wn_text_var;fs.textContent=STR.footstate_var;bt.textContent=STR.brand_tag_var;}
-  else{wn.textContent=STR.wn_label_rain;wt.textContent=STR.wn_text_rain;fs.textContent=STR.footstate_rain;bt.textContent=STR.brand_tag_rain;}
 }
-var crossEl=document.getElementById('crossover');
 function autoFromScroll(){
-  if(mode!=='auto'||!crossEl)return;
-  var rect=crossEl.getBoundingClientRect();
-  var center=innerHeight*.5;
-  var crossMid=rect.top+rect.height/2;
-  var t=(center-crossMid)/(innerHeight*1.2);
-  var w=Math.min(1,Math.max(0,.5+t));
+  if(mode!=='auto')return;
+  var d=document.documentElement,max=d.scrollHeight-innerHeight;
+  var w=max>0?Math.min(1,(scrollY/max)/0.82):0;
   setScene(w);
 }
 var navEl=document.getElementById('siteHeader');
 addEventListener('scroll',function(){navEl.classList.toggle('scrolled',scrollY>20);autoFromScroll();},{passive:true});
-var bAuto=document.getElementById('bAuto'),bSun=document.getElementById('bSun'),bRain=document.getElementById('bRain');
-function setBtn(on){[bAuto,bSun,bRain].forEach(function(b){b.classList.remove('on')});on.classList.add('on');}
-bAuto.onclick=function(){mode='auto';setBtn(bAuto);autoFromScroll();};
-bSun.onclick=function(){mode='sun';setBtn(bSun);setScene(0);};
-bRain.onclick=function(){mode='rain';setBtn(bRain);setScene(1);};
 (function(){var els=document.querySelectorAll('section.cat .card');
   els.forEach(function(e){e.style.opacity=0;e.style.transform='translateY(24px)';e.style.transition='opacity .8s var(--ease-out),transform .8s var(--ease-out)'});
   var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='none';io.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -6% 0px'});
@@ -1583,6 +1682,7 @@ nearBtn.onclick=function(){
 };
 renderBadges();
 setScene(0);
+autoFromScroll();
 </script>
 </body>
 </html>

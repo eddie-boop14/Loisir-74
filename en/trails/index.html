@@ -5,21 +5,21 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
 <meta content="#f6f1e7" name="theme-color"/>
-<title>Hiking trails — Loisirs 74</title>
+<title>Hiking in Haute-Savoie: the finest walks, from lake to summit — Loisirs 74</title>
 <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
 <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
 <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="/site.webmanifest" rel="manifest"/>
-<meta content="Hiking trails and GR long-distance routes in Haute-Savoie: 15 walks, from family outings to grand treks (Tour du Mont Blanc, GR5, GR96)." name="description"/>
+<meta content="Trails and hikes of Haute-Savoie: tour of Lac d'Annecy, Léman balcony, Désert de Platé, Tour du Mont-Blanc. From the easy family path to the great Alpine tour." name="description"/>
 <link href="https://loisirs74.fr/en/trails/" rel="canonical"/>
 <link href="https://loisirs74.fr/sentiers/" hreflang="fr" rel="alternate"/>
 <link href="https://loisirs74.fr/en/trails/" hreflang="en" rel="alternate"/>
 <link href="https://loisirs74.fr/de/wanderwege/" hreflang="de" rel="alternate"/>
 <link href="https://loisirs74.fr/it/sentieri/" hreflang="it" rel="alternate"/>
 <link href="https://loisirs74.fr/es/senderos/" hreflang="es" rel="alternate"/>
+<link href="https://loisirs74.fr/nl/wandelpaden/" hreflang="nl" rel="alternate"/>
 <link href="https://loisirs74.fr/sentiers/" hreflang="x-default" rel="alternate"/>
-<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,50;1,9..144,300..500,50&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -49,6 +49,11 @@ a{color:inherit;text-decoration:none}
   --lake-light:#6a92a3;
   --alpenglow:#e07a3f;
   --alpenglow-soft:#f4b88a;
+  --accent:#3c6e4a;
+  --accent-soft:#93b8a0;
+  --hub-hero-img:url("/generique-sentier-foret-alpine.jpg");
+  --hub-hero-tint1:rgba(18,34,22,.55);
+  --hub-hero-tint2:rgba(40,80,52,.40);
 
   --max:1280px;
   --pad:clamp(1.25rem,3.5vw,2rem);
@@ -60,7 +65,7 @@ a{color:inherit;text-decoration:none}
 
 html,body{background:var(--paper);color:var(--ink)}
 body{font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-::selection{background:var(--alpenglow);color:var(--snow)}
+::selection{background:var(--accent);color:var(--snow)}
 .wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad);position:relative}
 
 .cursor-glow{position:fixed;width:600px;height:600px;pointer-events:none;z-index:2;border-radius:50%;background:radial-gradient(circle, rgba(224,122,63,.10) 0%, rgba(224,122,63,0) 60%);transform:translate(-50%,-50%);mix-blend-mode:multiply;will-change:transform}
@@ -78,59 +83,51 @@ header.site{position:sticky;top:0;left:0;right:0;z-index:60;padding:.85rem var(-
 .lang-picker summary{cursor:pointer;font-size:.75rem;letter-spacing:.08em;color:var(--ink-3);padding:.4rem .85rem;border:1px solid var(--line-2);border-radius:999px;display:inline-flex;align-items:center;gap:.5rem;list-style:none;transition:all .25s var(--ease)}
 .lang-picker summary::-webkit-details-marker{display:none}
 .lang-picker summary b{color:var(--ink);font-weight:500}
-.lang-picker summary::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--alpenglow);animation:breathe 2.4s ease-in-out infinite}
+.lang-picker summary::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);animation:breathe 2.4s ease-in-out infinite}
 .lang-picker:hover summary{border-color:var(--ink-2);color:var(--ink)}
 @keyframes breathe{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.85)}}
 .lang-picker[open] > .lang-menu{display:flex}
 .lang-menu{display:none;position:absolute;top:calc(100% + .5rem);right:0;flex-direction:column;background:var(--snow);border:1px solid var(--line);border-radius:8px;padding:.4rem;min-width:10rem;z-index:60;box-shadow:0 18px 40px -18px rgba(28,24,20,.25)}
 .lang-menu a{padding:.5rem .75rem;font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink-3);border-radius:5px;transition:all .2s var(--ease)}
 .lang-menu a:hover{background:var(--paper-2);color:var(--ink)}
-.lang-menu a[aria-current="true"]{color:var(--alpenglow);font-weight:500}
+.lang-menu a[aria-current="true"]{color:var(--accent);font-weight:500}
 
 .crumb{padding:1.5rem var(--pad) 0;max-width:var(--max);margin-inline:auto;font-size:.78rem;color:var(--ink-3);letter-spacing:.04em;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
 .crumb a{color:var(--ink-3);transition:color .2s var(--ease)}
-.crumb a:hover{color:var(--alpenglow)}
+.crumb a:hover{color:var(--accent)}
 .crumb b{color:var(--ink);font-weight:500}
 .crumb .sep{color:var(--ink-4)}
 
-.hub-hero{padding:1rem 0 1.25rem;position:relative;overflow:hidden}
-.hub-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(800px 300px at 85% 0%, rgba(224,122,63,.10), transparent 70%),radial-gradient(600px 250px at 5% 30%, rgba(46,74,58,.06), transparent 70%)}
-.hub-hero h1{font-family:var(--serif);font-size:clamp(1.7rem,1.35rem + 1.8vw,3.25rem);line-height:1.05;letter-spacing:-.025em;font-weight:400;font-variation-settings:"SOFT" 50;color:var(--ink);max-width:18ch;opacity:0;animation:rise .8s var(--ease-out) .15s forwards}
-.hub-hero h1 em{font-style:italic;font-weight:300;color:var(--alpenglow)}
-.hub-hero .meta{margin-top:.45rem;font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink-3);display:flex;gap:.6rem;flex-wrap:wrap;align-items:baseline;opacity:0;animation:rise .8s var(--ease-out) .3s forwards}
-.hub-hero .meta b{font-family:var(--sans);font-style:normal;color:var(--ink);font-weight:600;font-size:.85rem;letter-spacing:.04em}
-.hub-hero .meta .dot{color:var(--ink-4);font-style:normal}
+.hub-hero{position:relative;padding:clamp(3rem,9vw,5.5rem) 0 clamp(1.5rem,3vw,2.25rem);overflow:hidden;isolation:isolate}
+.hub-hero::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--hub-hero-img) center 55%/cover no-repeat;transform:scale(1.03)}
+.hub-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--hub-hero-tint1) 0%,var(--hub-hero-tint2) 46%,var(--paper) 100%)}
+.hub-hero h1{font-family:var(--serif);font-size:clamp(1.9rem,1.4rem + 2vw,3.5rem);line-height:1.04;letter-spacing:-.025em;font-weight:400;font-variation-settings:"SOFT" 50;color:var(--snow);max-width:20ch;text-shadow:0 2px 28px rgba(15,30,38,.5);opacity:0;animation:rise .8s var(--ease-out) .15s forwards}
+.hub-hero h1 em{font-style:italic;font-weight:300;color:var(--accent-soft)}
+.hub-hero .meta{margin-top:.6rem;font-family:var(--serif);font-style:italic;font-size:1rem;color:rgba(253,250,243,.92);display:flex;gap:.6rem;flex-wrap:wrap;align-items:baseline;text-shadow:0 1px 14px rgba(15,30,38,.45);opacity:0;animation:rise .8s var(--ease-out) .3s forwards}
+.hub-hero .meta b{font-family:var(--sans);font-style:normal;color:var(--snow);font-weight:600;font-size:.85rem;letter-spacing:.04em}
+.hub-hero .meta .dot{color:rgba(253,250,243,.6);font-style:normal}
 @keyframes rise{to{opacity:1;transform:translateY(0)}}
 .hub-hero h1, .hub-hero .meta { transform:translateY(20px) }
-
-#cat-map{height:220px;width:100%;border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;z-index:1;background:var(--paper-2)}
-.leaflet-popup-content-wrapper{border-radius:8px;background:var(--snow);box-shadow:0 18px 40px -18px rgba(28,24,20,.3);border:1px solid var(--line)}
-.leaflet-popup-tip{background:var(--snow);border:1px solid var(--line)}
-.leaflet-popup-content{margin:.7rem .9rem;font-family:var(--sans);font-size:.88rem;line-height:1.45;color:var(--ink-2)}
-.leaflet-popup-content a{color:var(--ink);font-family:var(--serif);font-size:1.05rem;font-weight:500;letter-spacing:-.005em}
-.leaflet-popup-content a:hover{color:var(--alpenglow)}
-.leaflet-popup-content .commune-pop{display:block;color:var(--ink-3);font-size:.72rem;margin-top:.2rem;letter-spacing:.06em}
-.leaflet-control-attribution{background:rgba(253,250,243,.85)!important;font-family:var(--sans);font-size:.65rem}
 
 .filter-bar{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);z-index:30;padding:.55rem 0;box-shadow:0 8px 20px -16px rgba(0,0,0,.3)}
 .filter-bar__head{display:flex;align-items:center;gap:1rem}
 .filter-toggle{margin-left:auto;display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .9rem;border:1px solid var(--line-2);background:var(--snow);color:var(--ink);font-family:var(--sans);font-size:.8rem;font-weight:600;letter-spacing:.04em;border-radius:6px;cursor:pointer;transition:all .2s var(--ease)}
-.filter-toggle:hover{border-color:var(--alpenglow)}
+.filter-toggle:hover{border-color:var(--accent)}
 .filter-toggle__chev{transition:transform .2s var(--ease)}
 .filter-toggle[aria-expanded="true"] .filter-toggle__chev{transform:rotate(180deg)}
-.filter-toggle__badge{display:inline-flex;min-width:1.1rem;justify-content:center;padding:0 .35rem;border-radius:9px;background:var(--alpenglow);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:0}
+.filter-toggle__badge{display:inline-flex;min-width:1.1rem;justify-content:center;padding:0 .35rem;border-radius:9px;background:var(--accent);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:0}
 .filter-toggle__badge[hidden]{display:none}
 .filter-panel{display:none;flex-wrap:wrap;gap:1.25rem;align-items:flex-end;padding-top:.75rem}
 .filter-panel.is-open{display:flex}
 .filter-panel label{display:flex;flex-direction:column;gap:.35rem;font-size:.65rem;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.14em}
 .filter-panel select{padding:.55rem .8rem;border:1px solid var(--line-2);background:var(--snow);color:var(--ink);font-size:.88rem;font-weight:500;font-family:var(--sans);min-width:10rem;border-radius:6px;transition:border-color .2s var(--ease);cursor:pointer}
-.filter-panel select:hover, .filter-panel select:focus{border-color:var(--alpenglow);outline:none}
+.filter-panel select:hover, .filter-panel select:focus{border-color:var(--accent);outline:none}
 .access-group{display:flex;border:1px solid var(--line-2);border-radius:6px;overflow:hidden;background:var(--snow)}
 .access-group button{padding:.55rem 1rem;border:0;background:transparent;color:var(--ink-3);font-size:.78rem;font-weight:600;cursor:pointer;font-family:var(--sans);letter-spacing:.04em;border-right:1px solid var(--line-2);transition:all .2s var(--ease)}
 .access-group button:last-child{border-right:0}
 .access-group button:hover{color:var(--ink);background:var(--paper-2)}
 .access-group button.active{background:var(--ink);color:var(--snow)}
-.access-group button.active[data-v="paid"]{background:var(--alpenglow)}
+.access-group button.active[data-v="paid"]{background:var(--accent)}
 .access-group button.active[data-v="free"]{background:var(--pine)}
 .filter-bar .count-live{font-family:var(--serif);font-style:italic;font-size:.9rem;color:var(--ink-3)}
 .filter-bar .count-live b{font-style:normal;color:var(--ink);font-weight:500}
@@ -141,11 +138,11 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .commune-section.hidden{display:none}
 .commune-head{margin-bottom:1.25rem;display:flex;align-items:baseline;gap:.85rem;flex-wrap:wrap}
 .commune-head h3{font-family:var(--serif);font-size:clamp(1.5rem,1.2rem + .8vw,2rem);line-height:1.05;letter-spacing:-.02em;font-weight:400;font-variation-settings:"SOFT" 50;color:var(--ink)}
-.commune-head h3 em{font-style:italic;color:var(--alpenglow);font-weight:300}
+.commune-head h3 em{font-style:italic;color:var(--accent);font-weight:300}
 .commune-count{font-family:var(--sans)!important;font-size:.7rem;font-weight:500;color:var(--ink-3);letter-spacing:.14em;text-transform:uppercase}
 
 .transport-block{background:var(--snow);border:1px solid var(--line);border-radius:8px;padding:.85rem 1.1rem;font-size:.85rem;line-height:1.45;display:flex;flex-direction:column;gap:.3rem;margin-bottom:1.5rem;max-width:36rem}
-.transport-block .transport-label{font-size:.65rem;font-weight:600;color:var(--alpenglow);text-transform:uppercase;letter-spacing:.18em;margin-bottom:.25rem;font-family:var(--sans)}
+.transport-block .transport-label{font-size:.65rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.18em;margin-bottom:.25rem;font-family:var(--sans)}
 .transport-row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:baseline}
 .transport-row .t-k{font-family:var(--sans);font-weight:600;color:var(--ink-3);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;min-width:5.5rem}
 .transport-row .t-v{color:var(--ink-2);font-size:.9rem;font-family:var(--serif);font-style:italic}
@@ -161,24 +158,24 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .card-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease-out), filter .3s var(--ease);filter:saturate(.95)}
 .card:hover .card-photo img{transform:scale(1.06);filter:saturate(1.05)}
 .card-tag{position:absolute;top:14px;right:14px;background:rgba(253,250,243,.95);color:var(--ink);padding:.3rem .7rem;border-radius:999px;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:var(--sans);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:2}
-.card-tag.is-payant{background:var(--alpenglow);color:var(--snow)}
+.card-tag.is-payant{background:var(--accent);color:var(--snow)}
 .card-tag.is-gratuit{background:var(--pine);color:var(--snow)}
 .card-body{padding:1.25rem 1.35rem 1.35rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .card-commune{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:.15rem;order:-1}
 .card-commune svg{display:none}
 .card-body a.title{font-family:var(--serif);font-weight:500;font-size:1.35rem;color:var(--ink);line-height:1.15;letter-spacing:-.01em;transition:color .2s var(--ease)}
-.card-body a.title:hover{color:var(--alpenglow)}
+.card-body a.title:hover{color:var(--accent)}
 .card-desc{font-family:var(--sans);font-size:.88rem;color:var(--ink-2);line-height:1.5;margin:.1rem 0 .85rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .card-actions{display:flex;gap:1.25rem;margin-top:auto;padding-top:.8rem;border-top:1px dashed var(--line);font-size:.72rem}
 .card-actions a{font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);transition:color .2s var(--ease), transform .3s var(--ease-out);display:inline-flex;align-items:center;gap:.3rem;font-family:var(--sans)}
-.card-actions a:hover{color:var(--alpenglow);transform:translateX(2px)}
+.card-actions a:hover{color:var(--accent);transform:translateX(2px)}
 .card-actions a svg{display:none}
 .card-actions a::after{content:" \2197";font-size:.9rem;letter-spacing:0}
 
 .card-photo:has(> img[data-generique="true"])::after{content:"Générique";position:absolute;bottom:.55rem;right:.55rem;background:rgba(20,18,16,.78);color:#f0dfc0;font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px;pointer-events:none;z-index:2;font-family:var(--sans);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
 
 .empty-state{padding:4rem 0;text-align:center;font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--ink-3)}
-.empty-state b{display:block;font-family:var(--sans);font-style:normal;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--alpenglow);font-weight:600;margin-bottom:.75rem}
+.empty-state b{display:block;font-family:var(--sans);font-style:normal;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.75rem}
 
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease-out), transform .8s var(--ease-out)}
 .reveal.in{opacity:1;transform:translateY(0)}
@@ -190,51 +187,375 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 .foot-col h4{font-family:var(--sans);font-size:.7rem;font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:.18em;margin-bottom:1rem}
 .foot-col ul{display:flex;flex-direction:column;gap:.55rem}
 .foot-col ul a{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--ink-2);transition:color .2s var(--ease)}
-.foot-col ul a:hover{color:var(--alpenglow)}
+.foot-col ul a:hover{color:var(--accent)}
 .foot-col p{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--ink-3);max-width:24rem;line-height:1.55}
 .foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-top:2rem;border-top:1px solid var(--line);color:var(--ink-3);font-size:.75rem;letter-spacing:.06em;position:relative;z-index:1}
 
-:where(a,button,summary,input,textarea,select):focus-visible{outline:2px solid var(--alpenglow);outline-offset:3px}
+:where(a,button,summary,input,textarea,select):focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}.kicker,.hub-hero h1,.hub-hero .meta{opacity:1;transform:none;animation:none}.reveal{opacity:1;transform:none}.cursor-glow{display:none}}
 @media (min-width:680px){.filter-toggle{display:none}.filter-bar .wrap{display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-end}.filter-panel{display:contents;padding-top:0}.filter-bar__head{order:99;margin-left:auto;align-items:baseline;padding-bottom:.2rem}}
+
+.hub-catcher{margin-top:.7rem;max-width:42ch;font-family:var(--serif);font-style:italic;font-size:clamp(1rem,.95rem + .4vw,1.25rem);line-height:1.4;color:rgba(253,250,243,.94);text-shadow:0 1px 14px rgba(15,30,38,.5);transform:translateY(20px);opacity:0;animation:rise .8s var(--ease-out) .42s forwards}
+.hub-intro{border-bottom:1px solid var(--line)}
+.hub-intro .wrap{padding:1.4rem 0 1.5rem}
+.hub-intro .lead{font-family:var(--serif);font-size:clamp(1rem,.97rem + .3vw,1.12rem);line-height:1.55;color:var(--ink-2);max-width:66ch;margin:0}
+.hub-intro .lead b{font-weight:600;color:var(--ink)}
+.seo-more{margin-top:.55rem}
+.seo-more>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.45rem;font:600 .7rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);padding:.25rem 0}
+.seo-more>summary::-webkit-details-marker{display:none}
+.seo-more>summary::after{content:"+";font-size:1.05rem;line-height:1}
+.seo-more[open]>summary::after{content:"\2013"}
+.seo-more .more-body{max-width:66ch}
+.seo-more .more-body p{font-family:var(--serif);font-size:1rem;line-height:1.62;color:var(--ink-2);margin-top:.85rem}
+.seo-more .more-body b{font-weight:600;color:var(--ink)}
+.hub-faq{border-top:1px solid var(--line)}
+.hub-faq .wrap{padding:clamp(2rem,4vw,3rem) 0}
+.hub-faq h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,1.1rem + 1vw,2rem);letter-spacing:-.02em;color:var(--ink);margin-bottom:1rem;font-variation-settings:"SOFT" 50}
+.faq-item{border-top:1px solid var(--line)}
+.faq-item>summary{cursor:pointer;list-style:none;padding:.95rem 0;font-family:var(--serif);font-size:1.08rem;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-item>summary::-webkit-details-marker{display:none}
+.faq-item>summary::after{content:"+";color:var(--accent);font-size:1.25rem;line-height:1;flex-shrink:0}
+.faq-item[open]>summary::after{content:"\2013"}
+.faq-item .faq-a{padding:0 0 1.05rem;font-family:var(--sans);font-size:.95rem;line-height:1.62;color:var(--ink-2);max-width:70ch}
+/* template refinement: demote transport, drop static counts */
+.commune-section{display:flex;flex-direction:column}
+.commune-head{order:1}
+.commune-section .carousel{order:2}
+.commune-section .transport-block,.commune-section .transport-block.transport-empty{order:3;margin:1.1rem 0 0;padding:.7rem 0 0;background:transparent;border:0;border-top:1px dashed var(--line);border-radius:0;max-width:none;opacity:.8}
+.transport-block .transport-label{color:var(--ink-3)}
+.transport-row .t-v{font-size:.82rem}
+.transport-block p{font-size:.8rem;color:var(--ink-3)}
+.commune-count{display:none}
 </style>
 <meta content="https://loisirs74.fr/og-image.jpg" property="og:image"/>
 <meta content="https://loisirs74.fr/og-image.jpg" name="twitter:image"/>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "@id": "https://loisirs74.fr/en/trails/#itemlist",
-  "name": "Hiking trails",
-  "description": "Hiking trails and GR long-distance routes in Haute-Savoie: 15 walks, from family outings to grand treks (Tour du Mont Blanc, GR5, GR96).",
+  "@id": "https://loisirs74.fr/sentiers/#itemlist",
+  "name": "Sentiers de randonnée",
+  "description": "Sentiers de randonnée et GR en Haute-Savoie : 15 itinéraires pédestres, du familial au grand trek (Tour du Mont-Blanc, GR5, GR96).",
   "numberOfItems": 15,
   "itemListOrder": "https://schema.org/ItemListOrderAscending",
-  "inLanguage": "en",
-  "isPartOf": {"@type":"CollectionPage","@id":"https://loisirs74.fr/en/trails/"},
+  "inLanguage": "fr",
+  "isPartOf": {
+    "@type": "CollectionPage",
+    "@id": "https://loisirs74.fr/sentiers/"
+  },
   "itemListElement": [
-    {"@type":"ListItem","position":1,"item":{"@type":"TouristAttraction","name":"GR® de Pays Tour du Lac d'Annecy","url":"https://loisirs74.fr/en/grp-tour-lac-annecy-annecy","address":{"@type":"PostalAddress","addressLocality":"Annecy","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":45.8992,"longitude":6.1294}}},
-    {"@type":"ListItem","position":2,"item":{"@type":"TouristAttraction","name":"Sentier du Balcon du Léman","url":"https://loisirs74.fr/en/sentier-balcon-leman-saleve","address":{"@type":"PostalAddress","addressLocality":"Cruseilles","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":46.0333,"longitude":6.1167}}},
-    {"@type":"ListItem","position":3,"item":{"@type":"TouristAttraction","name":"Sentier pédagogique du Bout du Lac d'Annecy","url":"https://loisirs74.fr/en/sentier-bout-du-lac-doussard","address":{"@type":"PostalAddress","addressLocality":"Doussard","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":45.7833,"longitude":6.2167}}},
-    {"@type":"ListItem","position":4,"item":{"@type":"TouristAttraction","name":"Tour du Mont-Blanc","url":"https://loisirs74.fr/en/tour-du-mont-blanc-les-houches","address":{"@type":"PostalAddress","addressLocality":"Les Houches","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":45.8908,"longitude":6.7956}}},
-    {"@type":"ListItem","position":5,"item":{"@type":"TouristAttraction","name":"Sentier du Désert de Platé","url":"https://loisirs74.fr/en/sentier-desert-de-plate-passy","address":{"@type":"PostalAddress","addressLocality":"Passy","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":45.9333,"longitude":6.7}}},
-    {"@type":"ListItem","position":6,"item":{"@type":"TouristAttraction","name":"Sentiers de la Maison du Salève","url":"https://loisirs74.fr/en/sentier-maison-saleve-pomier-presilly","address":{"@type":"PostalAddress","addressLocality":"Présilly","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":46.1167,"longitude":6.15}}},
-    {"@type":"ListItem","position":7,"item":{"@type":"TouristAttraction","name":"GR® 5 Grande Traversée des Alpes","url":"https://loisirs74.fr/en/gr5-grande-traversee-alpes-saint-gingolph","address":{"@type":"PostalAddress","addressLocality":"Saint-Gingolph","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":46.3917,"longitude":6.8056}}},
-    {"@type":"ListItem","position":8,"item":{"@type":"TouristAttraction","name":"GR® de Pays Littoral du Léman","url":"https://loisirs74.fr/en/grp-littoral-leman-saint-gingolph","address":{"@type":"PostalAddress","addressLocality":"Saint-Gingolph","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":46.3917,"longitude":6.8056}}},
-    {"@type":"ListItem","position":9,"item":{"@type":"TouristAttraction","name":"Sentier des Roselières","url":"https://loisirs74.fr/en/sentier-roselieres-saint-jorioz","address":{"@type":"PostalAddress","addressLocality":"Saint-Jorioz","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":45.8167,"longitude":6.1667}}},
-    {"@type":"ListItem","position":10,"item":{"@type":"TouristAttraction","name":"GR® 96 Bornes-Aravis","url":"https://loisirs74.fr/en/gr96-bornes-aravis-haute-savoie","address":{"@type":"PostalAddress","addressLocality":"Saint-Pierre-en-Faucigny","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":46.0667,"longitude":6.4}}},
-    {"@type":"ListItem","position":11,"item":{"@type":"TouristAttraction","name":"GR® de Pays Tour du Pays du Mont-Blanc","url":"https://loisirs74.fr/en/grp-tour-pays-mont-blanc-sallanches","address":{"@type":"PostalAddress","addressLocality":"Sallanches","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":45.9389,"longitude":6.6306}}},
-    {"@type":"ListItem","position":12,"item":{"@type":"TouristAttraction","name":"Sentier des Cascades de Sixt","url":"https://loisirs74.fr/en/sentier-cascades-sixt-fer-a-cheval","address":{"@type":"PostalAddress","addressLocality":"Sixt-Fer-à-Cheval","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":46.05,"longitude":6.7833}}},
-    {"@type":"ListItem","position":13,"item":{"@type":"TouristAttraction","name":"Sentier de la Tournette depuis Montmin","url":"https://loisirs74.fr/en/sentier-tournette-montmin","address":{"@type":"PostalAddress","addressLocality":"Talloires-Montmin","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":45.8392,"longitude":6.2433}}},
-    {"@type":"ListItem","position":14,"item":{"@type":"TouristAttraction","name":"Sentier de découverte du Plateau des Glières","url":"https://loisirs74.fr/en/sentier-decouverte-plateau-glieres-thorens-glieres","address":{"@type":"PostalAddress","addressLocality":"Thorens-Glières","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":45.9667,"longitude":6.3}}},
-    {"@type":"ListItem","position":15,"item":{"@type":"TouristAttraction","name":"Sentier des Espagnols / Pas du Roc","url":"https://loisirs74.fr/en/sentier-espagnols-pas-du-roc-glieres","address":{"@type":"PostalAddress","addressLocality":"Thorens-Glières","addressRegion":"Haute-Savoie","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":45.9833,"longitude":6.3}}}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "GR® de Pays Tour du Lac d'Annecy",
+        "url": "https://loisirs74.fr/grp-tour-lac-annecy-annecy",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Annecy",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.8992,
+          "longitude": 6.1294
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Sentier du Balcon du Léman",
+        "url": "https://loisirs74.fr/sentier-balcon-leman-saleve",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cruseilles",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.0333,
+          "longitude": 6.1167
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Sentier pédagogique du Bout du Lac d'Annecy",
+        "url": "https://loisirs74.fr/sentier-bout-du-lac-doussard",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Doussard",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.7833,
+          "longitude": 6.2167
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Tour du Mont-Blanc",
+        "url": "https://loisirs74.fr/tour-du-mont-blanc-les-houches",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Les Houches",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.8908,
+          "longitude": 6.7956
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Sentier du Désert de Platé",
+        "url": "https://loisirs74.fr/sentier-desert-de-plate-passy",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Passy",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.9333,
+          "longitude": 6.7
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Sentiers de la Maison du Salève",
+        "url": "https://loisirs74.fr/sentier-maison-saleve-pomier-presilly",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Présilly",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.1167,
+          "longitude": 6.15
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "GR® 5 Grande Traversée des Alpes",
+        "url": "https://loisirs74.fr/gr5-grande-traversee-alpes-saint-gingolph",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Saint-Gingolph",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.3917,
+          "longitude": 6.8056
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "GR® de Pays Littoral du Léman",
+        "url": "https://loisirs74.fr/grp-littoral-leman-saint-gingolph",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Saint-Gingolph",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.3917,
+          "longitude": 6.8056
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Sentier des Roselières",
+        "url": "https://loisirs74.fr/sentier-roselieres-saint-jorioz",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Saint-Jorioz",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.8167,
+          "longitude": 6.1667
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "GR® 96 Bornes-Aravis",
+        "url": "https://loisirs74.fr/gr96-bornes-aravis-haute-savoie",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Saint-Pierre-en-Faucigny",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.0667,
+          "longitude": 6.4
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "GR® de Pays Tour du Pays du Mont-Blanc",
+        "url": "https://loisirs74.fr/grp-tour-pays-mont-blanc-sallanches",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sallanches",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.9389,
+          "longitude": 6.6306
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Sentier des Cascades de Sixt",
+        "url": "https://loisirs74.fr/sentier-cascades-sixt-fer-a-cheval",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sixt-Fer-à-Cheval",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.05,
+          "longitude": 6.7833
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Sentier de la Tournette depuis Montmin",
+        "url": "https://loisirs74.fr/sentier-tournette-montmin",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Talloires-Montmin",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.8392,
+          "longitude": 6.2433
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Sentier de découverte du Plateau des Glières",
+        "url": "https://loisirs74.fr/sentier-decouverte-plateau-glieres-thorens-glieres",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Thorens-Glières",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.9667,
+          "longitude": 6.3
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "TouristAttraction",
+        "name": "Sentier des Espagnols / Pas du Roc",
+        "url": "https://loisirs74.fr/sentier-espagnols-pas-du-roc-glieres",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Thorens-Glières",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.9833,
+          "longitude": 6.3
+        }
+      }
+    }
   ]
 }</script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "url": "https://loisirs74.fr/en/trails/",
-  "name": "Hiking trails",
-  "inLanguage": "en",
-  "isPartOf": {"@type": "WebSite","url": "https://loisirs74.fr/en/","name": "Loisirs 74"},
+  "url": "https://loisirs74.fr/sentiers/",
+  "name": "Sentiers de randonnée",
+  "inLanguage": "fr",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://loisirs74.fr/",
+    "name": "Loisirs 74"
+  },
   "numberOfItems": 15
 }</script>
 </head>
@@ -252,29 +573,43 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <span><b>loisirs74</b> <i>· Haute-Savoie</i></span>
 </a>
 <details class="lang-picker">
-<summary><b>EN</b> · 5 languages</summary>
+<summary><b>FR</b> · 5 langues</summary>
 <div class="lang-menu">
-<a href="https://loisirs74.fr/sentiers/" hreflang="fr">Français</a><a aria-current="true" href="https://loisirs74.fr/en/trails/" hreflang="en">English</a><a href="https://loisirs74.fr/de/wanderwege/" hreflang="de">Deutsch</a><a href="https://loisirs74.fr/it/sentieri/" hreflang="it">Italiano</a><a href="https://loisirs74.fr/es/senderos/" hreflang="es">Español</a>
+<a href="https://loisirs74.fr/sentiers/" hreflang="fr">Français</a><a aria-current="true" href="https://loisirs74.fr/en/trails/" hreflang="en">English</a><a href="https://loisirs74.fr/de/wanderwege/" hreflang="de">Deutsch</a><a href="https://loisirs74.fr/it/sentieri/" hreflang="it">Italiano</a><a href="https://loisirs74.fr/es/senderos/" hreflang="es">Español</a><a href="https://loisirs74.fr/nl/wandelpaden/" hreflang="nl">Nederlands</a>
 </div>
 </details>
 </header>
 <nav aria-label="breadcrumb" class="crumb">
-<a href="https://loisirs74.fr/en/">Home</a>
+<a href="https://loisirs74.fr/">Accueil</a>
 <span class="sep">/</span>
-<b>Hiking trails</b>
+<b>Sentiers de randonnée</b>
 </nav>
 <section class="hub-hero">
 <div class="wrap">
-<h1>Hiking trails</h1>
-<p class="meta"><b>15 places</b><span class="dot">·</span><span>13 communes</span></p>
+<h1>Trails &amp; hikes</h1>
+<p class="hub-catcher">The finest walks in the department — from the family nature trail to the great Alpine tour.</p>
+</div>
+</section>
+<section class="hub-intro" aria-label="Introduction">
+<div class="wrap">
+<p class="lead">Whether you are after an easy loop by the lake or a great Alpine traverse, Haute-Savoie is made for walking — from the one-hour nature trail to multi-day GR® routes.</p>
+<details class="seo-more">
+<summary>Lire la suite</summary>
+<div class="more-body">
+<p>By the water: the <b>tour of Lac d'Annecy</b>, the <b>Léman balcony trail</b> or the <b>Bout du Lac</b> reserve, flat and family-friendly.</p>
+<p>At altitude, the classics: the <b>Désert de Platé</b>, the trails of the Maison du Salève, and the great loop of the <b>Tour du Mont-Blanc</b> for seasoned walkers.</p>
+<p>Access to the trails is free; only some car parks or access lifts may charge. Each listing shows the starting point and the commune.</p>
+<p>Bring proper footwear, water and check the weather: in the mountains conditions change fast, and snow can close high-altitude trails until June.</p>
+</div>
+</details>
 </div>
 </section>
 <div class="filter-bar">
 <div class="wrap">
 <div class="filter-bar__head">
-<div class="count-live"><b id="count-n">0</b> <span id="count-label">places shown</span></div>
+<div class="count-live"><b id="count-n">0</b> <span id="count-label">lieux affichés</span></div>
 <button aria-controls="filter-panel" aria-expanded="false" class="filter-toggle" type="button">
-<span>Filters</span>
+<span>Filtres</span>
 <span class="filter-toggle__badge" hidden="" id="filter-toggle-badge">0</span>
 <svg aria-hidden="true" class="filter-toggle__chev" height="11" viewbox="0 0 12 12" width="11"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
 </button>
@@ -282,14 +617,14 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <div class="filter-panel" id="filter-panel">
 <label>
 <span>Commune</span>
-<select id="filt-commune"><option value="">All communes</option><option value="Annecy">Annecy</option><option value="Cruseilles">Cruseilles</option><option value="Doussard">Doussard</option><option value="Les Houches">Les Houches</option><option value="Passy">Passy</option><option value="Présilly">Présilly</option><option value="Saint-Gingolph">Saint-Gingolph</option><option value="Saint-Jorioz">Saint-Jorioz</option><option value="Saint-Pierre-en-Faucigny">Saint-Pierre-en-Faucigny</option><option value="Sallanches">Sallanches</option><option value="Sixt-Fer-à-Cheval">Sixt-Fer-à-Cheval</option><option value="Talloires-Montmin">Talloires-Montmin</option><option value="Thorens-Glières">Thorens-Glières</option></select>
+<select id="filt-commune"><option value="">Toutes les communes</option><option value="Annecy">Annecy</option><option value="Cruseilles">Cruseilles</option><option value="Doussard">Doussard</option><option value="Les Houches">Les Houches</option><option value="Passy">Passy</option><option value="Présilly">Présilly</option><option value="Saint-Gingolph">Saint-Gingolph</option><option value="Saint-Jorioz">Saint-Jorioz</option><option value="Saint-Pierre-en-Faucigny">Saint-Pierre-en-Faucigny</option><option value="Sallanches">Sallanches</option><option value="Sixt-Fer-à-Cheval">Sixt-Fer-à-Cheval</option><option value="Talloires-Montmin">Talloires-Montmin</option><option value="Thorens-Glières">Thorens-Glières</option></select>
 </label>
 <label>
-<span>Access</span>
+<span>Accès</span>
 <div class="access-group" id="filt-access">
-<button class="active" data-v="all">All</button>
-<button data-v="free">Free</button>
-<button data-v="paid">Paid</button>
+<button class="active" data-v="all">Tous</button>
+<button data-v="free">Gratuit</button>
+<button data-v="paid">Payant</button>
 </div>
 </label>
 <label>
@@ -302,251 +637,251 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <main>
 <div class="wrap">
 <div class="commune-section" data-commune="Annecy">
-<div class="commune-head"><h3>Annecy</h3><span class="commune-count">1 place</span></div>
+<div class="commune-head"><h3>Annecy</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/grp-tour-lac-annecy-annecy">
-<img alt="GR® de Pays Tour du Lac d'Annecy trail with a hiker on the heights above the lake, with views of La Tournette summit and the Bauges massif, Haute-Savoie" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-foret.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<a class="card-photo" href="https://loisirs74.fr/grp-tour-lac-annecy-annecy">
+<img alt="Sentier GR® de Pays Tour du Lac d'Annecy randonneur sur les hauteurs du lac avec vue sur le sommet de la Tournette et le massif des Bauges Haute-Savoie" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-foret.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/en/grp-tour-lac-annecy-annecy">GR® de Pays Tour du Lac d'Annecy</a>
-<p class="card-desc">FFR walking loop of 80 km around Lake Annecy via Semnoz, Roc des Bœufs and La Tournette. 5,140 m of ascent, 5–7 days. Walking counterpart to the lakeside greenway.</p>
+<div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/grp-tour-lac-annecy-annecy">GR® de Pays Tour du Lac d'Annecy</a>
+<p class="card-desc">Boucle pédestre FFR 80 km autour du lac d'Annecy par Semnoz, Roc des Bœufs et Tournette. 5 140 m D+, 5-7 jours. Pendant pédestre de la voie verte.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=GR®%20de%20Pays%20Tour%20du%20Lac%20d%27Annecy%2C%20Annecy%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://www.ffrandonnee.fr/s-informer/actualites/le-gr-de-pays-tour-du-lac-d-annecy-en-haute-savoie" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.8992,6.1294" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://www.ffrandonnee.fr/s-informer/actualites/le-gr-de-pays-tour-du-lac-d-annecy-en-haute-savoie" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Cruseilles">
-<div class="commune-head"><h3>Cruseilles</h3><span class="commune-count">1 place</span></div>
+<div class="commune-head"><h3>Cruseilles</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/sentier-balcon-leman-saleve">
-<img alt="Waymarked GR ridge trail Sentier du Balcon du Léman near Cruseilles, Haute-Savoie — ~15 km from La Croisette to Cruseilles, moderate to hard" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-fog.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<a class="card-photo" href="https://loisirs74.fr/sentier-balcon-leman-saleve">
+<img alt="Sentier de crête balisé GR Sentier du Balcon du Léman à Cruseilles Haute-Savoie - ~15 km Croisette-Cruseilles modérée à difficile" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-fog.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Cruseilles</span></div><a class="title" href="https://loisirs74.fr/en/sentier-balcon-leman-saleve">Sentier du Balcon du Léman</a>
-<p class="card-desc">Ridge trail along the southern Salève between La Croisette and Cruseilles — 15 km with red-and-white waymarking and panoramic views over Lake Geneva, the Jura and Mont Blanc. Tier 2 Loisirs 74.</p>
+<div class="card-commune"><span>Cruseilles</span></div><a class="title" href="https://loisirs74.fr/sentier-balcon-leman-saleve">Sentier du Balcon du Léman</a>
+<p class="card-desc">Sentier de crête sur le Salève sud entre La Croisette et Cruseilles - 15 km balisage rouge-blanc, panorama Léman/Jura/Mont-Blanc Tier 2 Loisirs 74.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sentier%20du%20Balcon%20du%20Léman%2C%20Cruseilles%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.0333,6.1167" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Doussard">
-<div class="commune-head"><h3>Doussard</h3><span class="commune-count">1 place</span></div>
+<div class="commune-head"><h3>Doussard</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/sentier-bout-du-lac-doussard">
-<img alt="Interpretive trail (wheelchair-accessible since 2010) at Bout du Lac d'Annecy, Doussard, Haute-Savoie — 1.6 km accessible loop · 7 km full loop, very easy" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-automne-rouge.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<a class="card-photo" href="https://loisirs74.fr/sentier-bout-du-lac-doussard">
+<img alt="Sentier d'interprétation - PMR depuis 2010 Sentier pédagogique du Bout du Lac d'Annecy à Doussard Haute-Savoie - 1,6 km boucle PMR · 7 km boucle complète très facile" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-automne-rouge.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Doussard</span></div><a class="title" href="https://loisirs74.fr/en/sentier-bout-du-lac-doussard">Sentier pédagogique du Bout du Lac d'Annecy</a>
-<p class="card-desc">Interpretive trail through the Bout du Lac d'Annecy national nature reserve in Doussard — 1.6 km wheelchair-accessible since 2010, plus a 7 km full loop. Tier 2 Loisirs 74.</p>
+<div class="card-commune"><span>Doussard</span></div><a class="title" href="https://loisirs74.fr/sentier-bout-du-lac-doussard">Sentier pédagogique du Bout du Lac d'Annecy</a>
+<p class="card-desc">Sentier pédagogique de la Réserve naturelle nationale du Bout du Lac d'Annecy à Doussard - 1,6 km PMR depuis 2010 + boucle 7 km Tier 2 Loisirs 74.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sentier%20pédagogique%20du%20Bout%20du%20Lac%20d%27Annecy%2C%20Doussard%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://www.reserves-naturelles.org/bout-du-lac-d-annecy" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.7833,6.2167" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://www.reserves-naturelles.org/bout-du-lac-d-annecy" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Les Houches">
-<div class="commune-head"><h3>Les Houches</h3><span class="commune-count">1 place</span></div>
+<div class="commune-head"><h3>Les Houches</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/tour-du-mont-blanc-les-houches">
-<img alt="Tour du Mont-Blanc TMB trail facing the Mont Blanc massif and the Aiguille Verte, with hikers and red-and-white GR® waymarking, Haute-Savoie" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-foret.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<a class="card-photo" href="https://loisirs74.fr/tour-du-mont-blanc-les-houches">
+<img alt="Sentier du Tour du Mont-Blanc TMB face au massif du Mont-Blanc et à l'Aiguille Verte avec randonneurs et balisage GR® blanc-rouge Haute-Savoie" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-foret.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Les Houches</span></div><a class="title" href="https://loisirs74.fr/en/tour-du-mont-blanc-les-houches">Tour du Mont-Blanc</a>
-<p class="card-desc">170 km in 11 anti-clockwise stages (215 km with GR® variants) across France, Italy and Switzerland. 10,000 m of ascent. Start in Les Houches. Season: mid-June to mid-September.</p>
+<div class="card-commune"><span>Les Houches</span></div><a class="title" href="https://loisirs74.fr/tour-du-mont-blanc-les-houches">Tour du Mont-Blanc</a>
+<p class="card-desc">170 km en 11 étapes anti-horaire (215 km variantes GR®) à travers France-Italie-Suisse. 10 000 m D+. Départ Les Houches. Saison mi-juin à mi-septembre.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Tour%20du%20Mont-Blanc%2C%20Les%20Houches%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://www.ffrandonnee.fr/randonner/sentiers/gr-tmb-le-tour-du-mont-blanc" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.8908,6.7956" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://www.ffrandonnee.fr/randonner/sentiers/gr-tmb-le-tour-du-mont-blanc" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Passy">
-<div class="commune-head"><h3>Passy</h3><span class="commune-count">1 place</span></div>
+<div class="commune-head"><h3>Passy</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/sentier-desert-de-plate-passy">
-<img alt="Alpine hiking trail Sentier du Désert de Platé at Passy, Haute-Savoie — 6.5 km out-and-back · 870 m ascent, hard" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-detail-pomme-pin.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<a class="card-photo" href="https://loisirs74.fr/sentier-desert-de-plate-passy">
+<img alt="Sentier de randonnée alpin Sentier du Désert de Platé à Passy Haute-Savoie - 6,5 km aller-retour · 870 m D+ difficile" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-detail-pomme-pin.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Passy</span></div><a class="title" href="https://loisirs74.fr/en/sentier-desert-de-plate-passy">Sentier du Désert de Platé</a>
-<p class="card-desc">Climb from Praz-Coutant to the Platé refuge and on to the Portette pass — 6.5 km out-and-back / 870 m of ascent — across the LARGEST LIMESTONE PAVEMENT IN EUROPE, a 1,980-hectare site listed since 1998.</p>
+<div class="card-commune"><span>Passy</span></div><a class="title" href="https://loisirs74.fr/sentier-desert-de-plate-passy">Sentier du Désert de Platé</a>
+<p class="card-desc">Montée du Praz-Coutant au refuge de Platé puis col de la Portette - 6,5 km AR / 870 m D+ - PLUS GRAND LAPIAZ D'EUROPE 1 980 ha site classé 1998.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sentier%20du%20Désert%20de%20Platé%2C%20Passy%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9333,6.7" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Présilly">
-<div class="commune-head"><h3>Présilly</h3><span class="commune-count">1 place</span></div>
+<div class="commune-head"><h3>Présilly</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/sentier-maison-saleve-pomier-presilly">
-<img alt="Network of interpretive trails Sentiers de la Maison du Salève at Présilly, Haute-Savoie — network · 2–8 km circuits, easy to moderate" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-melezes-automne.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<a class="card-photo" href="https://loisirs74.fr/sentier-maison-saleve-pomier-presilly">
+<img alt="Réseau de sentiers d'interprétation Sentiers de la Maison du Salève à Présilly Haute-Savoie - Réseau · circuits 2-8 km facile à modérée" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-melezes-automne.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Présilly</span></div><a class="title" href="https://loisirs74.fr/en/sentier-maison-saleve-pomier-presilly">Sentiers de la Maison du Salève</a>
-<p class="card-desc">Network of interpretive trails around the Maison du Salève at Pomier-Présilly — 'Petites Croix', 'Convers', 'Orjobet' and Chartreuse de Pomier circuits.</p>
+<div class="card-commune"><span>Présilly</span></div><a class="title" href="https://loisirs74.fr/sentier-maison-saleve-pomier-presilly">Sentiers de la Maison du Salève</a>
+<p class="card-desc">Réseau de sentiers d'interprétation autour de la Maison du Salève à Pomier-Présilly - circuits 'Petites Croix', 'Convers', 'Orjobet', Chartreuse de Pomier.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sentiers%20de%20la%20Maison%20du%20Salève%2C%20Présilly%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.1167,6.15" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Saint-Gingolph">
-<div class="commune-head"><h3>Saint-Gingolph</h3><span class="commune-count">1 place</span></div>
+<div class="commune-head"><h3>Saint-Gingolph</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/grp-littoral-leman-saint-gingolph">
-<img alt="GR® de Pays (GRP) walking trail Littoral du Léman at Saint-Gingolph, Haute-Savoie — ~50 km · 4 stages, moderate" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-sommet-panorama.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<a class="card-photo" href="https://loisirs74.fr/grp-littoral-leman-saint-gingolph">
+<img alt="GR® de Pays (GRP) pédestre GR® de Pays Littoral du Léman à Saint-Gingolph Haute-Savoie - ~50 km · 4 étapes modérée" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-sommet-panorama.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Saint-Gingolph</span></div><a class="title" href="https://loisirs74.fr/en/grp-littoral-leman-saint-gingolph">GR® de Pays Littoral du Léman</a>
-<p class="card-desc">GR® de Pays walking trail along the Lake Geneva shore — Saint-Gingolph → Meillerie → Évian → Champanges in 4 stages, with balcony viewpoints over the lake.</p>
+<div class="card-commune"><span>Saint-Gingolph</span></div><a class="title" href="https://loisirs74.fr/grp-littoral-leman-saint-gingolph">GR® de Pays Littoral du Léman</a>
+<p class="card-desc">GR® de Pays pédestre du littoral du Léman - Saint-Gingolph → Meillerie → Évian → Champanges en 4 étapes, balcons panoramiques sur le lac.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=GR®%20de%20Pays%20Littoral%20du%20Léman%2C%20Saint-Gingolph%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.3917,6.8056" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Saint-Jorioz">
-<div class="commune-head"><h3>Saint-Jorioz</h3><span class="commune-count">1 place</span></div>
+<div class="commune-head"><h3>Saint-Jorioz</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/sentier-roselieres-saint-jorioz">
-<img alt="Interpretive trail (wheelchair/pushchair-accessible) Sentier des Roselières at Saint-Jorioz, Haute-Savoie — 4.2 km out-and-back, very easy" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-arete-alpine.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<a class="card-photo" href="https://loisirs74.fr/sentier-roselieres-saint-jorioz">
+<img alt="Sentier d'interprétation - PMR/poussette Sentier des Roselières à Saint-Jorioz Haute-Savoie - 4,2 km aller-retour très facile" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-arete-alpine.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Saint-Jorioz</span></div><a class="title" href="https://loisirs74.fr/en/sentier-roselieres-saint-jorioz">Sentier des Roselières</a>
-<p class="card-desc">Natura 2000 interpretive trail through the reedbeds of Lake Annecy at Saint-Jorioz — 4.2 km out-and-back, accessible by wheelchair and pushchair.</p>
+<div class="card-commune"><span>Saint-Jorioz</span></div><a class="title" href="https://loisirs74.fr/sentier-roselieres-saint-jorioz">Sentier des Roselières</a>
+<p class="card-desc">Sentier d'interprétation Natura 2000 dans les roselières du lac d'Annecy à Saint-Jorioz - 4,2 km aller-retour accessible PMR/poussette.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sentier%20des%20Roselières%2C%20Saint-Jorioz%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.8167,6.1667" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Saint-Pierre-en-Faucigny">
-<div class="commune-head"><h3>Saint-Pierre-en-Faucigny</h3><span class="commune-count">1 place</span></div>
+<div class="commune-head"><h3>Saint-Pierre-en-Faucigny</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/gr96-bornes-aravis-haute-savoie">
-<img alt="Long-distance hiking trail (GR®) GR® 96 Bornes-Aravis at Saint-Pierre-en-Faucigny, Haute-Savoie — 207 km total · ~80 km in Haute-Savoie, moderate to hard" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-arete-alpine.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<a class="card-photo" href="https://loisirs74.fr/gr96-bornes-aravis-haute-savoie">
+<img alt="Sentier de Grande Randonnée (GR®) GR® 96 Bornes-Aravis à Saint-Pierre-en-Faucigny Haute-Savoie - 207 km totaux · ~80 km en 74 modérée à difficile" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-arete-alpine.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Saint-Pierre-en-Faucigny</span></div><a class="title" href="https://loisirs74.fr/en/gr96-bornes-aravis-haute-savoie">GR® 96 Bornes-Aravis</a>
-<p class="card-desc">GR® 96 from Aix-les-Bains to Samoëns — 207 km in total, with 80 km in Haute-Savoie crossing the Bornes, Aravis, Arve valley and Giffre. Replaces master list #216.</p>
+<div class="card-commune"><span>Saint-Pierre-en-Faucigny</span></div><a class="title" href="https://loisirs74.fr/gr96-bornes-aravis-haute-savoie">GR® 96 Bornes-Aravis</a>
+<p class="card-desc">GR® 96 Aix-les-Bains → Samoëns - 207 km totaux dont 80 km en Haute-Savoie traversant Bornes, Aravis, vallée Arve, Giffre. Substitution du master list #216.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=GR®%2096%20Bornes-Aravis%2C%20Saint-Pierre-en-Faucigny%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://fr.wikipedia.org/wiki/Sentier_de_grande_randonn%C3%A9e_96" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.0667,6.4" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://fr.wikipedia.org/wiki/Sentier_de_grande_randonn%C3%A9e_96" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Sallanches">
-<div class="commune-head"><h3>Sallanches</h3><span class="commune-count">1 place</span></div>
+<div class="commune-head"><h3>Sallanches</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/grp-tour-pays-mont-blanc-sallanches">
-<img alt="GR® de Pays (GRP) walking loop Tour du Pays du Mont-Blanc at Sallanches, Haute-Savoie — ~165 km · Pays du Mont-Blanc loop, moderate to hard" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-foret-alpine.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<a class="card-photo" href="https://loisirs74.fr/grp-tour-pays-mont-blanc-sallanches">
+<img alt="GR® de Pays (GRP) pédestre - boucle GR® de Pays Tour du Pays du Mont-Blanc à Sallanches Haute-Savoie - ~165 km · boucle Pays du Mont-Blanc modérée à difficile" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-foret-alpine.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Sallanches</span></div><a class="title" href="https://loisirs74.fr/en/grp-tour-pays-mont-blanc-sallanches">GR® de Pays Tour du Pays du Mont-Blanc</a>
-<p class="card-desc">GRP walking loop around the French side of the Mont Blanc massif — a French alternative to the international Tour du Mont Blanc, entirely in Haute-Savoie.</p>
+<div class="card-commune"><span>Sallanches</span></div><a class="title" href="https://loisirs74.fr/grp-tour-pays-mont-blanc-sallanches">GR® de Pays Tour du Pays du Mont-Blanc</a>
+<p class="card-desc">Boucle pédestre GRP autour du massif du Mont-Blanc côté français - alternative française au Tour du Mont-Blanc international 100% Haute-Savoie.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=GR®%20de%20Pays%20Tour%20du%20Pays%20du%20Mont-Blanc%2C%20Sallanches%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://www.ffrandonnee.fr/" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9389,6.6306" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://www.ffrandonnee.fr/" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Sixt-Fer-à-Cheval">
-<div class="commune-head"><h3>Sixt-Fer-à-Cheval</h3><span class="commune-count">1 place</span></div>
+<div class="commune-head"><h3>Sixt-Fer-à-Cheval</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/sentier-cascades-sixt-fer-a-cheval">
-<img alt="Nature-reserve hiking trail Sentier des Cascades de Sixt at Sixt-Fer-à-Cheval, Haute-Savoie — 6 km loop · 200 m ascent, moderate" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-automne-orange.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<a class="card-photo" href="https://loisirs74.fr/sentier-cascades-sixt-fer-a-cheval">
+<img alt="Sentier de randonnée - Réserve naturelle Sentier des Cascades de Sixt à Sixt-Fer-à-Cheval Haute-Savoie - Boucle 6 km · 200 m D+ modérée" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-automne-orange.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Sixt-Fer-à-Cheval</span></div><a class="title" href="https://loisirs74.fr/en/sentier-cascades-sixt-fer-a-cheval">Sentier des Cascades de Sixt</a>
-<p class="card-desc">Discovery trail to the waterfalls at the head of the Cirque du Fer-à-Cheval — Sixt-Passy nature reserve, Bout du Monde — 6 km loop.</p>
+<div class="card-commune"><span>Sixt-Fer-à-Cheval</span></div><a class="title" href="https://loisirs74.fr/sentier-cascades-sixt-fer-a-cheval">Sentier des Cascades de Sixt</a>
+<p class="card-desc">Sentier de découverte des cascades du fond du Cirque du Fer-à-Cheval - Réserve naturelle de Sixt-Passy, Bout du Monde à 6 km en boucle.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sentier%20des%20Cascades%20de%20Sixt%2C%20Sixt-Fer-à-Cheval%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://www.rnnsixtpassy.fr/" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=46.05,6.7833" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://www.rnnsixtpassy.fr/" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Talloires-Montmin">
-<div class="commune-head"><h3>Talloires-Montmin</h3><span class="commune-count">1 place</span></div>
+<div class="commune-head"><h3>Talloires-Montmin</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/sentier-tournette-montmin">
-<img alt="Classic alpine ascent Sentier de la Tournette from Montmin at Talloires-Montmin, Haute-Savoie — 12 km out-and-back · 1,200 m ascent, hard (cabled sections)" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-sommet-panorama.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<a class="card-photo" href="https://loisirs74.fr/sentier-tournette-montmin">
+<img alt="Sentier alpin - ascension classique Sentier de la Tournette depuis Montmin à Talloires-Montmin Haute-Savoie - Aller-retour 12 km · 1 200 m D+ difficile (passages câblés)" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-sommet-panorama.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Talloires-Montmin</span></div><a class="title" href="https://loisirs74.fr/en/sentier-tournette-montmin">Sentier de la Tournette depuis Montmin</a>
-<p class="card-desc">Classic ascent of La Tournette summit (2,351 m) from the Chalet de l'Aulp at Montmin — 12 km out-and-back / 1,200 m ascent with cabled sections.</p>
+<div class="card-commune"><span>Talloires-Montmin</span></div><a class="title" href="https://loisirs74.fr/sentier-tournette-montmin">Sentier de la Tournette depuis Montmin</a>
+<p class="card-desc">Ascension classique du sommet de la Tournette 2 351 m depuis le Chalet de l'Aulp à Montmin - 12 km AR / 1 200 m D+ avec passages câblés.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sentier%20de%20la%20Tournette%20depuis%20Montmin%2C%20Talloires-Montmin%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.8392,6.2433" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="commune-section" data-commune="Thorens-Glières">
-<div class="commune-head"><h3>Thorens-Glières</h3><span class="commune-count">2 places</span></div>
+<div class="commune-head"><h3>Thorens-Glières</h3><span class="commune-count">2 lieux</span></div>
 <div class="carousel"><article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/sentier-decouverte-plateau-glieres-thorens-glieres">
-<img alt="Historical interpretive trail Sentier de découverte du Plateau des Glières at Thorens-Glières, Haute-Savoie — 4 km loop · 11 interpretation panels, very easy" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-hiver-neige.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<a class="card-photo" href="https://loisirs74.fr/sentier-decouverte-plateau-glieres-thorens-glieres">
+<img alt="Sentier d'interprétation historique Sentier de découverte du Plateau des Glières à Thorens-Glières Haute-Savoie - Boucle 4 km · 11 panneaux d'interprétation très facile" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier-hiver-neige.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Thorens-Glières</span></div><a class="title" href="https://loisirs74.fr/en/sentier-decouverte-plateau-glieres-thorens-glieres">Sentier de découverte du Plateau des Glières</a>
-<p class="card-desc">Historical interpretive trail on the Plateau des Glières, a key site of the French Resistance — 11 panels plus the 1973 Gilioli national monument.</p>
+<div class="card-commune"><span>Thorens-Glières</span></div><a class="title" href="https://loisirs74.fr/sentier-decouverte-plateau-glieres-thorens-glieres">Sentier de découverte du Plateau des Glières</a>
+<p class="card-desc">Sentier d'interprétation historique sur le Plateau des Glières, haut lieu de la Résistance française - 11 panneaux + monument national Gilioli 1973.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sentier%20de%20découverte%20du%20Plateau%20des%20Glières%2C%20Thorens-Glières%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://hautesavoie.fr/" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9667,6.3" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://hautesavoie.fr/" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article>
 <article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/sentier-espagnols-pas-du-roc-glieres">
-<img alt="Historical trail — Plateau des Glières Sentier des Espagnols / Pas du Roc at Thorens-Glières, Haute-Savoie — 8 km loop · 600 m ascent, moderate" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<a class="card-photo" href="https://loisirs74.fr/sentier-espagnols-pas-du-roc-glieres">
+<img alt="Sentier historique - Plateau des Glières Sentier des Espagnols / Pas du Roc à Thorens-Glières Haute-Savoie - Boucle 8 km · 600 m D+ modérée" data-generique="true" data-generique-cat="sentier" loading="lazy" src="/generique-sentier.jpg"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Thorens-Glières</span></div><a class="title" href="https://loisirs74.fr/en/sentier-espagnols-pas-du-roc-glieres">Sentier des Espagnols / Pas du Roc</a>
-<p class="card-desc">Historical trail on the Plateau des Glières via the Pas du Roc — cliffside steps cut by Spanish Republican refugees in 1830.</p>
+<div class="card-commune"><span>Thorens-Glières</span></div><a class="title" href="https://loisirs74.fr/sentier-espagnols-pas-du-roc-glieres">Sentier des Espagnols / Pas du Roc</a>
+<p class="card-desc">Sentier historique sur le Plateau des Glières par le Pas du Roc - marches en falaise creusées par des Républicains espagnols réfugiés en 1830.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sentier%20des%20Espagnols%20/%20Pas%20du%20Roc%2C%20Thorens-Glières%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
-<a href="https://hautesavoie.fr/" rel="noopener" target="_blank">Official site</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.9833,6.3" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://hautesavoie.fr/" rel="noopener" target="_blank">Site officiel</a>
 </div>
 </div>
 </article></div>
 </div>
 <div class="empty-state" id="empty-state" style="display:none">
-<b>No results</b>
-      No place matches these filters.
+<b>Aucun résultat</b>
+      Aucun lieu ne correspond à ces filtres.
     </div>
 <div class="commune-section" data-commune="Saint-Jorioz">
-<div class="commune-head"><h3>Saint-Jorioz</h3><span class="commune-count">1 place</span></div>
+<div class="commune-head"><h3>Saint-Jorioz</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
-<a class="card-photo" href="https://loisirs74.fr/en/sentier-des-roselieres">
-<div class="placeholder"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-<span class="card-tag is-gratuit">Free</span>
+<a class="card-photo" href="https://loisirs74.fr/sentier-des-roselieres">
+<img alt="Sentier des Roselières à Saint-Jorioz en Haute-Savoie" loading="lazy" src="None"/>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
-<div class="card-commune"><span>Saint-Jorioz</span></div><a class="title" href="https://loisirs74.fr/en/sentier-des-roselieres">Sentier des Roselières</a>
+<div class="card-commune"><span>Saint-Jorioz</span></div><a class="title" href="https://loisirs74.fr/sentier-des-roselieres">Sentier des Roselières</a>
 <p class="card-desc">Boardwalk à travers les roselières du Bout-du-Lac, depuis Saint-Jorioz. Balade familiale, ~30 min aller-retour.</p>
 <div class="card-actions">
-<a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sentier%20des%20Roseli%C3%A8res%2C%20Saint-Jorioz%2C%20Haute-Savoie" rel="noopener" target="_blank">Directions</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=45.8328,6.1631" rel="noopener" target="_blank">Google Maps</a>
 </div>
 </div>
 </article>
@@ -554,25 +889,37 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </div>
 </div>
 </main>
-<div aria-label="Map" id="cat-map"></div>
+<section class="hub-faq" aria-label="Frequently asked questions">
+<div class="wrap">
+<h2>Frequently asked questions</h2>
+<details class="faq-item"><summary>Which hikes suit families in Haute-Savoie?</summary><div class="faq-a">The flat loops by Lac d'Annecy (tour of the lake, Bout du Lac) and the nature trails suit families with children.</div></details>
+<details class="faq-item"><summary>Do you need a guide to hike?</summary><div class="faq-a">Not for waymarked, easy routes. For the high mountains or technical outings, hiring a leader or a guide is recommended.</div></details>
+<details class="faq-item"><summary>Are the trails free?</summary><div class="faq-a">Yes, access to hiking trails is free. Only some access car parks or lifts may charge.</div></details>
+<details class="faq-item"><summary>When can you hike in Haute-Savoie?</summary><div class="faq-a">From May to October at mid-altitude; high-altitude trails are mainly walkable from June to September, snow-free.</div></details>
+<details class="faq-item"><summary>What is the best-known hike?</summary><div class="faq-a">The Tour du Mont-Blanc, which crosses Haute-Savoie, is one of the most famous treks in the world; the tour of Lac d'Annecy is the most popular easy loop.</div></details>
+</div>
+</section>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which hikes suit families in Haute-Savoie?", "acceptedAnswer": {"@type": "Answer", "text": "The flat loops by Lac d'Annecy (tour of the lake, Bout du Lac) and the nature trails suit families with children."}}, {"@type": "Question", "name": "Do you need a guide to hike?", "acceptedAnswer": {"@type": "Answer", "text": "Not for waymarked, easy routes. For the high mountains or technical outings, hiring a leader or a guide is recommended."}}, {"@type": "Question", "name": "Are the trails free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, access to hiking trails is free. Only some access car parks or lifts may charge."}}, {"@type": "Question", "name": "When can you hike in Haute-Savoie?", "acceptedAnswer": {"@type": "Answer", "text": "From May to October at mid-altitude; high-altitude trails are mainly walkable from June to September, snow-free."}}, {"@type": "Question", "name": "What is the best-known hike?", "acceptedAnswer": {"@type": "Answer", "text": "The Tour du Mont-Blanc, which crosses Haute-Savoie, is one of the most famous treks in the world; the tour of Lac d'Annecy is the most popular easy loop."}}]}
+</script>
 <footer class="site">
 <div class="wrap">
 <div class="foot-grid">
 <div class="foot-col">
 <h4>Loisirs 74</h4>
-<p>Independent guide to leisure venues in Haute-Savoie. Each page: an official source, an address, a map.</p>
+<p>Guide indépendant des lieux de loisirs en Haute-Savoie. Chaque page : une source officielle, une adresse, une carte.</p>
 </div>
 <div class="foot-col">
-<h4>Categories</h4>
-<ul><li><a href="https://loisirs74.fr/en/lakes/">Lakes &amp; beaches</a></li><li><a href="https://loisirs74.fr/en/beaches/">Beaches</a></li><li><a href="https://loisirs74.fr/en/waterfalls/">Waterfalls</a></li><li><a href="https://loisirs74.fr/en/leisure-parks/">Leisure parks</a></li><li><a href="https://loisirs74.fr/en/viewpoints/">Viewpoints</a></li><li><a href="https://loisirs74.fr/en/cable-cars/">Cable cars</a></li><li><a href="https://loisirs74.fr/en/museums/">Museums</a></li><li><a href="https://loisirs74.fr/en/castles/">Castles &amp; forts</a></li><li><a href="https://loisirs74.fr/en/greenways/">Greenways</a></li><li><a href="https://loisirs74.fr/en/attractions/">Attractions &amp; activities</a></li><li><a href="https://loisirs74.fr/en/other/">Other</a></li><li><a href="https://loisirs74.fr/en/que-faire/">What to do?</a></li></ul>
+<h4>Catégories</h4>
+<ul><li><a href="https://loisirs74.fr/lacs-plages/">Lacs &amp; plages</a></li><li><a href="https://loisirs74.fr/lacs-plages/">Plages</a></li><li><a href="https://loisirs74.fr/cascades/">Cascades</a></li><li><a href="https://loisirs74.fr/bases-de-loisirs/">Bases de loisirs</a></li><li><a href="https://loisirs74.fr/points-de-vue/">Points de vue</a></li><li><a href="https://loisirs74.fr/telecabines/">Télécabines</a></li><li><a href="https://loisirs74.fr/musees/">Musées</a></li><li><a href="https://loisirs74.fr/chateaux/">Châteaux &amp; forts</a></li><li><a href="https://loisirs74.fr/voies-vertes/">Voies vertes</a></li><li><a href="https://loisirs74.fr/">Attractions &amp; loisirs</a></li><li><a href="https://loisirs74.fr/">Divers</a></li><li><a href="https://loisirs74.fr/que-faire/">Que faire ?</a></li></ul>
 </div>
 <div class="foot-col">
-<h4>Language</h4>
-<ul><li><a href="https://loisirs74.fr/sentiers/" hreflang="fr">Français</a></li><li><a href="https://loisirs74.fr/en/trails/" hreflang="en">English</a></li><li><a href="https://loisirs74.fr/de/wanderwege/" hreflang="de">Deutsch</a></li><li><a href="https://loisirs74.fr/it/sentieri/" hreflang="it">Italiano</a></li><li><a href="https://loisirs74.fr/es/senderos/" hreflang="es">Español</a></li></ul>
+<h4>Langue</h4>
+<ul><li><a href="https://loisirs74.fr/sentiers/" hreflang="fr">Français</a></li><li><a href="https://loisirs74.fr/en/trails/" hreflang="en">English</a></li><li><a href="https://loisirs74.fr/de/wanderwege/" hreflang="de">Deutsch</a></li><li><a href="https://loisirs74.fr/it/sentieri/" hreflang="it">Italiano</a></li><li><a href="https://loisirs74.fr/es/senderos/" hreflang="es">Español</a></li><li><a href="https://loisirs74.fr/nl/wandelpaden/" hreflang="nl">Nederlands</a></li></ul>
 </div>
 <div class="foot-col">
-<h4>Legal</h4>
-<ul><li><a href="https://loisirs74.fr/mentions-legales">Legal notice</a></li><li><a href="https://loisirs74.fr/confidentialite">Privacy</a></li><li><a href="https://loisirs74.fr/cgv">Terms</a></li><li><a href="https://loisirs74.fr/signaler">Report an issue</a></li><li><a href="https://loisirs74.fr/devenir-partenaire">Become a partner</a></li></ul>
+<h4>Mentions</h4>
+<ul><li><a href="https://loisirs74.fr/mentions-legales">Mentions légales</a></li><li><a href="https://loisirs74.fr/confidentialite">Confidentialité</a></li><li><a href="https://loisirs74.fr/cgv">CGV</a></li><li><a href="https://loisirs74.fr/signaler">Signaler une info</a></li><li><a href="https://loisirs74.fr/devenir-partenaire">Devenir partenaire</a></li></ul>
 </div>
 </div>
 <div class="foot-bottom">
@@ -580,7 +927,6 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </div>
 </div>
 </footer>
-<script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 // Cursor halo
 (function(){
@@ -608,103 +954,37 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
   els.forEach(el => io.observe(el));
 })();
 
-// MAP + FILTERS
+// FILTERS (commune + access + sort)
 (function(){
-  const PINS = [{"slug": "grp-tour-lac-annecy-annecy", "name": "GR® de Pays Tour du Lac d'Annecy", "commune": "Annecy", "lat": 45.8992, "lng": 6.1294, "url": "https://loisirs74.fr/en/grp-tour-lac-annecy-annecy", "paid": false}, {"slug": "sentier-balcon-leman-saleve", "name": "Sentier du Balcon du Léman", "commune": "Cruseilles", "lat": 46.0333, "lng": 6.1167, "url": "https://loisirs74.fr/en/sentier-balcon-leman-saleve", "paid": false}, {"slug": "sentier-bout-du-lac-doussard", "name": "Sentier pédagogique du Bout du Lac d'Annecy", "commune": "Doussard", "lat": 45.7833, "lng": 6.2167, "url": "https://loisirs74.fr/en/sentier-bout-du-lac-doussard", "paid": false}, {"slug": "tour-du-mont-blanc-les-houches", "name": "Tour du Mont-Blanc", "commune": "Les Houches", "lat": 45.8908, "lng": 6.7956, "url": "https://loisirs74.fr/en/tour-du-mont-blanc-les-houches", "paid": false}, {"slug": "sentier-desert-de-plate-passy", "name": "Sentier du Désert de Platé", "commune": "Passy", "lat": 45.9333, "lng": 6.7, "url": "https://loisirs74.fr/en/sentier-desert-de-plate-passy", "paid": false}, {"slug": "sentier-maison-saleve-pomier-presilly", "name": "Sentiers de la Maison du Salève", "commune": "Présilly", "lat": 46.1167, "lng": 6.15, "url": "https://loisirs74.fr/en/sentier-maison-saleve-pomier-presilly", "paid": false}, {"slug": "gr5-grande-traversee-alpes-saint-gingolph", "name": "GR® 5 Grande Traversée des Alpes", "commune": "Saint-Gingolph", "lat": 46.3917, "lng": 6.8056, "url": "https://loisirs74.fr/en/gr5-grande-traversee-alpes-saint-gingolph", "paid": false}, {"slug": "grp-littoral-leman-saint-gingolph", "name": "GR® de Pays Littoral du Léman", "commune": "Saint-Gingolph", "lat": 46.3917, "lng": 6.8056, "url": "https://loisirs74.fr/en/grp-littoral-leman-saint-gingolph", "paid": false}, {"slug": "sentier-roselieres-saint-jorioz", "name": "Sentier des Roselières", "commune": "Saint-Jorioz", "lat": 45.8167, "lng": 6.1667, "url": "https://loisirs74.fr/en/sentier-roselieres-saint-jorioz", "paid": false}, {"slug": "gr96-bornes-aravis-haute-savoie", "name": "GR® 96 Bornes-Aravis", "commune": "Saint-Pierre-en-Faucigny", "lat": 46.0667, "lng": 6.4, "url": "https://loisirs74.fr/en/gr96-bornes-aravis-haute-savoie", "paid": false}, {"slug": "grp-tour-pays-mont-blanc-sallanches", "name": "GR® de Pays Tour du Pays du Mont-Blanc", "commune": "Sallanches", "lat": 45.9389, "lng": 6.6306, "url": "https://loisirs74.fr/en/grp-tour-pays-mont-blanc-sallanches", "paid": false}, {"slug": "sentier-cascades-sixt-fer-a-cheval", "name": "Sentier des Cascades de Sixt", "commune": "Sixt-Fer-à-Cheval", "lat": 46.05, "lng": 6.7833, "url": "https://loisirs74.fr/en/sentier-cascades-sixt-fer-a-cheval", "paid": false}, {"slug": "sentier-tournette-montmin", "name": "Sentier de la Tournette depuis Montmin", "commune": "Talloires-Montmin", "lat": 45.8392, "lng": 6.2433, "url": "https://loisirs74.fr/en/sentier-tournette-montmin", "paid": false}, {"slug": "sentier-decouverte-plateau-glieres-thorens-glieres", "name": "Sentier de découverte du Plateau des Glières", "commune": "Thorens-Glières", "lat": 45.9667, "lng": 6.3, "url": "https://loisirs74.fr/en/sentier-decouverte-plateau-glieres-thorens-glieres", "paid": false}, {"slug": "sentier-espagnols-pas-du-roc-glieres", "name": "Sentier des Espagnols / Pas du Roc", "commune": "Thorens-Glières", "lat": 45.9833, "lng": 6.3, "url": "https://loisirs74.fr/en/sentier-espagnols-pas-du-roc-glieres", "paid": false}];
-  const SHOWN_SG = "place shown";
-  const SHOWN_PL = "places shown";
-  if (typeof L === 'undefined' || PINS.length === 0) return;
-  const map = L.map('cat-map', { scrollWheelZoom: false });
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
-  }).addTo(map);
-
-  function makeIcon(paid){
-    const color = paid ? '#e07a3f' : '#2e4a3a';
-    const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="36" viewBox="0 0 28 36"><path d="M14 0C6.3 0 0 6.3 0 14c0 10.5 14 22 14 22s14-11.5 14-22C28 6.3 21.7 0 14 0z" fill="'+color+'"/><circle cx="14" cy="14" r="5" fill="#fdfaf3"/></svg>';
-    return L.divIcon({ className:'l74-pin', html: svg, iconSize:[28,36], iconAnchor:[14,36], popupAnchor:[0,-32] });
-  }
-
-  const layers = {};
-  const markers = [];
-  for (const p of PINS) {
-    const m = L.marker([p.lat, p.lng], {icon: makeIcon(!!p.paid)}).addTo(map);
-    m.bindPopup('<a href="'+p.url+'">'+p.name+'</a><span class="commune-pop">'+p.commune+'</span>');
-    layers[p.slug] = m;
-    markers.push(m);
-  }
-  const group = L.featureGroup(markers);
-  map.fitBounds(group.getBounds().pad(0.15));
-
-  // FILTERS
-  const communeSel = document.getElementById('filt-commune');
-  const accessGroup = document.getElementById('filt-access');
-  const sortSel = document.getElementById('filt-sort');
-  const countN = document.getElementById('count-n');
-  const countLabel = document.getElementById('count-label');
-  const emptyState = document.getElementById('empty-state');
-
-  let curCommune = '';
-  let curAccess = 'all';
-  let curSort = 'commune';
-
-  function pinPaid(slug){ const p = PINS.find(x => x.slug === slug); return p ? !!p.paid : false; }
-
+  const SG="lieu affiché",PL="lieux affichés";
+  const communeSel=document.getElementById('filt-commune');
+  const accessGroup=document.getElementById('filt-access');
+  const sortSel=document.getElementById('filt-sort');
+  const countN=document.getElementById('count-n');
+  const countLabel=document.getElementById('count-label');
+  const emptyState=document.getElementById('empty-state');
+  let curCommune='',curAccess='all',curSort='commune';
   function applyFilters(){
-    const sections = document.querySelectorAll('.commune-section');
-    let visibleMarkers = [];
-    let total = 0;
-    sections.forEach(sec => {
-      const commune = sec.dataset.commune;
-      const communeMatch = !curCommune || commune === curCommune;
-      let visibleCards = 0;
-      sec.querySelectorAll('.card').forEach(card => {
-        const titleLink = card.querySelector('a.title');
-        const href = titleLink ? titleLink.getAttribute('href') : '';
-        const slug = href.split('/').pop();
-        const isPaid = pinPaid(slug);
-        const accessMatch = curAccess === 'all' || (curAccess === 'free' && !isPaid) || (curAccess === 'paid' && isPaid);
-        const show = communeMatch && accessMatch;
-        card.classList.toggle('hidden', !show);
-        if (show){ visibleCards++; total++; if (layers[slug]) visibleMarkers.push(layers[slug]); }
+    let total=0;
+    document.querySelectorAll('.commune-section').forEach(sec=>{
+      const communeMatch=!curCommune||sec.dataset.commune===curCommune;
+      let vis=0;
+      sec.querySelectorAll('.card').forEach(card=>{
+        const isPaid=!!card.querySelector('.card-tag.is-payant');
+        const am=curAccess==='all'||(curAccess==='free'&&!isPaid)||(curAccess==='paid'&&isPaid);
+        const show=communeMatch&&am; card.classList.toggle('hidden',!show); if(show){vis++;total++;}
       });
-      sec.classList.toggle('hidden', visibleCards === 0);
+      sec.classList.toggle('hidden',vis===0);
     });
-    if (countN) countN.textContent = total;
-    if (countLabel) countLabel.textContent = total === 1 ? SHOWN_SG : SHOWN_PL;
-    if (emptyState) emptyState.style.display = total === 0 ? 'block' : 'none';
-    if (visibleMarkers.length){ const fg = L.featureGroup(visibleMarkers); map.fitBounds(fg.getBounds().pad(0.15)); }
+    if(countN)countN.textContent=total;
+    if(countLabel)countLabel.textContent=total===1?SG:PL;
+    if(emptyState)emptyState.style.display=total===0?'block':'none';
   }
-
-  function applySort(){
-    const sections = Array.from(document.querySelectorAll('.commune-section'));
-    if (curSort === 'alpha'){
-      sections.forEach(sec => {
-        const carousel = sec.querySelector('.carousel');
-        const cards = Array.from(carousel.querySelectorAll('.card'));
-        cards.sort((a, b) => {
-          const na = a.querySelector('a.title')?.textContent || '';
-          const nb = b.querySelector('a.title')?.textContent || '';
-          return na.localeCompare(nb);
-        });
-        cards.forEach(c => carousel.appendChild(c));
-      });
-    }
-  }
-
-  if (communeSel) communeSel.addEventListener('change', e => { curCommune = e.target.value; applyFilters(); });
-  if (accessGroup) accessGroup.addEventListener('click', e => {
-    if (e.target.tagName === 'BUTTON'){
-      accessGroup.querySelectorAll('button').forEach(b => b.classList.remove('active'));
-      e.target.classList.add('active');
-      curAccess = e.target.dataset.v;
-      applyFilters();
-    }
-  });
-  if (sortSel) sortSel.addEventListener('change', e => { curSort = e.target.value; applySort(); });
-
-  // Init count
+  function applySort(){ if(curSort!=='alpha')return;
+    document.querySelectorAll('.commune-section .carousel').forEach(c=>{Array.from(c.querySelectorAll('.card')).sort((a,b)=>(a.querySelector('a.title')?.textContent||'').localeCompare(b.querySelector('a.title')?.textContent||'')).forEach(x=>c.appendChild(x));}); }
+  if(communeSel)communeSel.addEventListener('change',e=>{curCommune=e.target.value;applyFilters();});
+  if(accessGroup)accessGroup.addEventListener('click',e=>{if(e.target.tagName==='BUTTON'){accessGroup.querySelectorAll('button').forEach(b=>b.classList.remove('active'));e.target.classList.add('active');curAccess=e.target.dataset.v;applyFilters();}});
+  if(sortSel)sortSel.addEventListener('change',e=>{curSort=e.target.value;applySort();});
   applyFilters();
 })();
 </script>
