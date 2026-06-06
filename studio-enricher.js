@@ -748,15 +748,24 @@ leave that field unchanged rather than fabricate.`;
       const msg = String(err && err.message || err);
       setStage(row, aborted ? '⏸ annulé' : ('❌ ' + stage), aborted ? undefined : 'err');
       if (!aborted) {
-        // Use stage cache to decide retry label: if we already paid for the
-        // API call (apiData cached), the retry will resume from parse — no
-        // re-billing. Otherwise it has to re-call the API.
+        // If the parse stage failed on a cached API response, the cache is
+        // poisoned — replaying it would just throw the same error. Invalidate
+        // so the retry triggers a fresh API call (which actually has a
+        // chance of succeeding).
+        const cachePoisoned = stage === 'parse API response' && cache.apiData;
+        if (cachePoisoned) {
+          delete cache.apiData;
+          delete cache.enriched;
+        }
+        // Now decide the retry label based on what's left in the cache.
         const retryLabel = cache.apiData
           ? '🔄 réessayer (depuis le cache)'
-          : '🔄 réessayer';
+          : (cachePoisoned ? '♻️ réessayer (nouvel appel API)' : '🔄 réessayer');
         const retryHint = cache.apiData
           ? '<span style="color:var(--ink-mute);font-size:.68rem;margin-left:.3rem">réponse API en cache — pas de nouvel appel</span>'
-          : '';
+          : (cachePoisoned
+              ? '<span style="color:var(--warn,#a05a00);font-size:.68rem;margin-left:.3rem">réponse en cache invalide — purgée; le prochain essai relance l\'API</span>'
+              : '');
         setResult(row,
           `<details style="font-size:.72rem"><summary style="cursor:pointer;color:var(--bad,#c00)">voir l'erreur</summary>` +
           `<pre style="white-space:pre-wrap;word-break:break-word;background:var(--surface-2);padding:.45rem;border-radius:4px;margin:.3rem 0 0 0;max-height:12rem;overflow:auto">${escapeHtml(msg)}</pre>` +
@@ -773,7 +782,11 @@ leave that field unchanged rather than fabricate.`;
       const retryBtn = row.querySelector(`[data-retry-slug="${slug}"]`);
       if (retryBtn) retryBtn.addEventListener('click', () => {
         retryBtn.disabled = true;
-        setResult(row, '');
+        // Brief visible signal that something IS happening (in case the
+        // retry ultimately fails the same way — at least the user sees
+        // we tried).
+        setStage(row, '⏳ relance…');
+        setResult(row, '<span style="color:var(--ink-mute);font-size:.72rem">relance en cours…</span>');
         processOne(slug, row, new AbortController().signal);
       });
     }
