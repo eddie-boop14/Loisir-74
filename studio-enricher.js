@@ -165,7 +165,7 @@ leave that field unchanged rather than fabricate.`;
   // API CALL
   // -----------------------------------------------------------------------
 
-  async function callAPI(jsonObj, hints) {
+  async function callAPI(jsonObj, hints, signal) {
     const apiKey = localStorage.getItem(KEY_STORAGE) || '';
     if (!apiKey) throw new Error("Configure la clé API dans l'onglet 1 d'abord.");
 
@@ -197,6 +197,7 @@ leave that field unchanged rather than fabricate.`;
         'anthropic-dangerous-direct-browser-access': 'true',
       },
       body: JSON.stringify(body),
+      signal,  // AbortController signal — lets batch Stop button cancel in-flight requests
     });
 
     if (!res.ok) {
@@ -666,13 +667,13 @@ leave that field unchanged rather than fabricate.`;
     return setInterval(update, 500);
   }
 
-  async function processOne(slug, row) {
+  async function processOne(slug, row, signal) {
     const t0 = Date.now();
     const timer = tickTimer(row, t0);
     let stage = 'fetch JSON';
     setStage(row, '📥 ' + stage);
     try {
-      const r = await fetch('/Json/' + slug + '.json');
+      const r = await fetch('/Json/' + slug + '.json', { signal });
       if (!r.ok) throw new Error('HTTP ' + r.status + ' on /Json/' + slug + '.json');
       const txt = await r.text();
       let orig;
@@ -683,7 +684,7 @@ leave that field unchanged rather than fabricate.`;
       setStage(row, '🤖 ' + stage);
       console.group(`[enricher] ${slug}`);
       console.log('Original:', orig);
-      const enr = await callAPI(orig, '');
+      const enr = await callAPI(orig, '', signal);
       console.log('Enriched:', enr);
 
       stage = 'diff';
@@ -705,30 +706,35 @@ leave that field unchanged rather than fabricate.`;
       if (timer) clearInterval(timer);
       const dt = ((Date.now() - t0) / 1000).toFixed(0);
       row.querySelector('.timer').textContent = dt + 's';
-      console.error(`[enricher] ${slug} failed at "${stage}":`, err);
+      const aborted = err && (err.name === 'AbortError' || /aborted/i.test(String(err.message || '')));
+      console.error(`[enricher] ${slug} ${aborted ? 'aborted' : 'failed'} at "${stage}":`, err);
       try { console.groupEnd(); } catch (_) {}
       const msg = String(err && err.message || err);
-      setStage(row, '❌ ' + stage, 'err');
-      // Full error text — collapsible
-      const errId = 'err-' + slug.replace(/[^a-z0-9-]/g, '');
-      setResult(row,
-        `<details style="font-size:.72rem"><summary style="cursor:pointer;color:var(--bad,#c00)">voir l'erreur</summary>` +
-        `<pre style="white-space:pre-wrap;word-break:break-word;background:var(--surface-2);padding:.45rem;border-radius:4px;margin:.3rem 0 0 0;max-height:12rem;overflow:auto">${escapeHtml(msg)}</pre>` +
-        `</details>` +
-        ` <button class="btn" style="padding:.2rem .55rem;font-size:.72rem;margin-left:.3rem" data-retry-slug="${escapeHtml(slug)}">🔄 réessayer</button>`);
+      setStage(row, aborted ? '⏸ annulé' : ('❌ ' + stage), aborted ? undefined : 'err');
+      if (!aborted) {
+        setResult(row,
+          `<details style="font-size:.72rem"><summary style="cursor:pointer;color:var(--bad,#c00)">voir l'erreur</summary>` +
+          `<pre style="white-space:pre-wrap;word-break:break-word;background:var(--surface-2);padding:.45rem;border-radius:4px;margin:.3rem 0 0 0;max-height:12rem;overflow:auto">${escapeHtml(msg)}</pre>` +
+          `</details>` +
+          ` <button class="btn" style="padding:.2rem .55rem;font-size:.72rem;margin-left:.3rem" data-retry-slug="${escapeHtml(slug)}">🔄 réessayer</button>`);
+      }
       const existing = batchResults.find(b => b.slug === slug);
-      const rec = { slug, error: msg, errorStage: stage };
+      const rec = { slug, error: msg, errorStage: stage, aborted };
       if (existing) Object.assign(existing, rec, { original: null, enriched: null, changes: null });
       else batchResults.push(rec);
-      // wire retry button (we re-process this slug in-place)
+      // wire retry button (we re-process this slug in-place, fresh AbortController)
       const retryBtn = row.querySelector(`[data-retry-slug="${slug}"]`);
       if (retryBtn) retryBtn.addEventListener('click', () => {
         retryBtn.disabled = true;
         setResult(row, '');
-        processOne(slug, row);
+        processOne(slug, row, new AbortController().signal);
       });
     }
   }
+
+  // AbortController for the active batch — lets the Stop button cancel
+  // every in-flight API call at once.
+  let batchAbortController = null;
 
   async function runBatch() {
     if (!batchQueue.length) return alert('La file est vide. Ajoute des fiches d\'abord.');
@@ -738,6 +744,7 @@ leave that field unchanged rather than fabricate.`;
     const log = document.getElementById('batch-log');
 
     batchAbort = false;
+    batchAbortController = new AbortController();
     batchResults = [];
     batchRows.clear();
     startBtn.disabled = true;
@@ -752,32 +759,47 @@ leave that field unchanged rather than fabricate.`;
       batchRows.set(slug, row);
     }
 
-    for (let i = 0; i < batchQueue.length; i++) {
-      if (batchAbort) {
-        for (const slug of batchQueue.slice(i)) {
-          const row = batchRows.get(slug);
-          if (row) setStage(row, '⏸ annulé');
-        }
-        break;
-      }
-      const slug = batchQueue[i];
-      progress.textContent = `Fiche ${i + 1}/${batchQueue.length} : ${slug}…`;
+    // Fire ALL API calls in parallel. Anthropic handles concurrent requests
+    // independently. Each row updates its own stage / timer; Promise.allSettled
+    // means one fiche failing doesn't block the others.
+    let completed = 0;
+    const t0 = Date.now();
+    progress.textContent = `${batchQueue.length} appels en parallèle… 0/${batchQueue.length} terminés`;
+    const slugList = batchQueue.slice();
+    const signal = batchAbortController.signal;
+    const promises = slugList.map(async (slug) => {
       const row = batchRows.get(slug);
-      row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      await processOne(slug, row);
-    }
+      try {
+        await processOne(slug, row, signal);
+      } finally {
+        completed++;
+        const elapsed = ((Date.now() - t0) / 1000).toFixed(0);
+        progress.textContent = `${batchQueue.length} appels en parallèle… ${completed}/${batchQueue.length} terminés · ${elapsed}s écoulés`;
+      }
+    });
+    await Promise.allSettled(promises);
 
     const okN = batchResults.filter(r => !r.error).length;
-    const errN = batchResults.filter(r => r.error).length;
-    progress.textContent = `Terminé : ${okN} succès · ${errN} erreur${errN > 1 ? 's' : ''} sur ${batchQueue.length} fiche${batchQueue.length > 1 ? 's' : ''}.`;
+    const errN = batchResults.filter(r => r.error && !r.aborted).length;
+    const abortedN = batchResults.filter(r => r.aborted).length;
+    const totalSec = ((Date.now() - t0) / 1000).toFixed(0);
+    progress.textContent =
+      `Terminé en ${totalSec}s : ${okN} succès`
+      + (errN ? ` · ${errN} erreur${errN > 1 ? 's' : ''}` : '')
+      + (abortedN ? ` · ${abortedN} annulé${abortedN > 1 ? 's' : ''}` : '')
+      + ` sur ${batchQueue.length} fiche${batchQueue.length > 1 ? 's' : ''}.`;
     startBtn.disabled = false;
     stopBtn.disabled = true;
+    batchAbortController = null;
     document.getElementById('batch-zip-btn').disabled = okN === 0;
   }
 
   function stopBatch() {
     batchAbort = true;
-    document.getElementById('batch-progress').textContent += ' (arrêt demandé — termine la fiche en cours…)';
+    if (batchAbortController) {
+      batchAbortController.abort();
+      document.getElementById('batch-progress').textContent += ' (arrêt demandé)';
+    }
   }
 
   async function exportBatchZip() {
@@ -885,7 +907,7 @@ leave that field unchanged rather than fabricate.`;
         <div class="card-head">
           <h3>B · Mode batch — file personnalisée</h3>
         </div>
-        <p class="field-help" style="margin-bottom:.75rem">Choisis les fiches que tu veux enrichir (une par une depuis la liste, ou raccourci « toutes sans vraie photo »). Le batch tourne en série (1-3 min/fiche). Chaque ligne du journal affiche l'étape en cours, le timer et l'erreur complète si ça casse. <strong>Toutes les modifs sont acceptées</strong> en mode batch (pas de review par fiche).</p>
+        <p class="field-help" style="margin-bottom:.75rem">Choisis les fiches que tu veux enrichir (une par une depuis la liste, ou raccourci « toutes sans vraie photo »). <strong>Le batch envoie tous les appels API en parallèle</strong> — le total prend ≈ le temps d'<em>une seule</em> fiche (1-3 min), pas N fois. Chaque ligne du journal affiche l'étape en cours, le timer et l'erreur complète si ça casse. <strong>Toutes les modifs sont acceptées</strong> en mode batch (pas de review par fiche). Stop annule tous les appels en cours d'un coup.</p>
 
         <div class="field">
           <label for="batch-picker">Ajouter une fiche à la file</label>
