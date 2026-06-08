@@ -1,11 +1,11 @@
 ---
 slug: parc-des-dereches
-name: "Parc des Dérêches"
+name: Parc des Dérêches
 category: domaine
-category_label: "Base de loisirs"
-commune: "Morzine"
-postal_code: "74110"
-department: "Haute-Savoie"
+category_label: Domaine
+commune: Morzine
+postal_code: 74110
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,21 +13,21 @@ latitude: 46.1792
 longitude: 6.7089
 canonical_url: https://loisirs74.fr/parc-des-dereches
 language: fr
-photo_url: https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80
-photo_type: generic_stock
-photo_author: "David Marcu"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/7/70/Horse_riding_in_the_valley_of_the_Edigan_River.jpg
+photo_type: real
+photo_author: Alpine meadow
+photo_license: Wikimedia Commons
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Parc des Dérêches
 
-> Parc naturel de plus de 5 km le long de la Dranse, au cœur de Morzine, avec parcours santé, sentiers ombragés et infrastructures sportives pour toute la famille.
+> Parc naturel de 5 km le long de la Dranse à Morzine. Parcours santé 20 ateliers, sentiers ombragés, skate park, tennis, centre équestre. Accès libre.
 
 ## En bref
 
-- **Catégorie**: Base de loisirs
+- **Catégorie**: Domaine
 - **Commune**: Morzine, Haute-Savoie (74110)
 - **GPS**: 46.1792, 6.7089
 - **Type**: Parc naturel municipal
@@ -39,7 +39,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Parc des Dérêches est un parc naturel municipal de plus de 5 km de sentiers le long de la Dranse, en plein centre de Morzine. Créé pour offrir aux habitants et visiteurs un espace de verdure protégé, sans voitures ni habitations, le parc propose une boucle principale de 4,5 km accessible à tous, ainsi que des boucles secondaires permettant de varier les distances. Les sentiers larges et ombragés sous les arbres centenaires sont adaptés aux poussettes et vélos.Le parc intègre un parcours santé de 20 ateliers didactiques répartis le long de la Dranse, un skate park refait en 2015, des courts de tennis et padel (Tennis Club Morzine), un centre équestre, un pumptrack, des aires de jeux pour enfants, et des infrastructures payantes adjacentes (Espace Aquatique, patinoires, Palais des Sports et des Congrès). Le site est traversé par plusieurs ponts permettant de composer des boucles courtes ou longues selon l'envie.Le Parc des Dérêches accueille aussi un parcours d'orientation permanent avec 20 balises (cartes disponibles à l'Office de Tourisme et au Palais des Sports), praticable à pied, à vélo ou à cheval toute l'année. Des aires de pique-nique et bancs sont répartis le long des sentiers, faisant du parc un lieu de détente et de sport pour tous âges et tous niveaux.
+Le Parc des Dérêches est un parc naturel municipal de plus de 5 km de sentiers le long de la Dranse, en plein centre de Morzine. Créé pour offrir aux habitants et visiteurs un espace de verdure protégé, sans voitures ni habitations, le parc propose une boucle principale de 4,5 km accessible à tous, ainsi que des boucles secondaires permettant de varier les distances. Les sentiers larges et ombragés sous les arbres centenaires sont adaptés aux poussettes et vélos.
+
+Le parc intègre un parcours santé de 20 ateliers didactiques répartis le long de la Dranse, un skate park refait en 2015, des courts de tennis et padel (Tennis Club Morzine), un centre équestre, un pumptrack, des aires de jeux pour enfants, et des infrastructures payantes adjacentes (Espace Aquatique, patinoires, Palais des Sports et des Congrès). Le site est traversé par plusieurs ponts permettant de composer des boucles courtes ou longues selon l'envie.
+
+Le Parc des Dérêches accueille aussi un parcours d'orientation permanent avec 20 balises (cartes disponibles à l'Office de Tourisme et au Palais des Sports), praticable à pied, à vélo ou à cheval toute l'année. Des aires de pique-nique et bancs sont répartis le long des sentiers, faisant du parc un lieu de détente et de sport pour tous âges et tous niveaux.
 
 ## Activités sur place
 
@@ -71,6 +75,7 @@ Espace Aquatique (piscines, sauna, hammam) et patinoires (intérieure et extéri
 - **Animaux**: Acceptés tenus en laisse
 - **Accessibilité**: Sentiers larges adaptés aux poussettes et fauteuils roulants. Parcours santé peut présenter des difficultés selon ateliers.
 - **Durée d'accès**: Sur place (au centre de Morzine)
+- **Restauration**: Aucune restauration à l'intérieur du parc. Bars, restaurants et boulangeries à 5 min à pied dans le centre de Morzine. Aires de pique-nique avec bancs réparties le long des sentiers.
 - **Contact**: Palais des Sports et des Congrès : 04 50 79 08 43 — Mairie de Morzine-Avoriaz : 04 50 79 04 33
 
 ## Comment y aller
@@ -87,10 +92,6 @@ Voie cyclable depuis Les Gets (Portes du Soleil à vélo). Le parc est traversab
 ## Quand y aller
 
 Le Parc des Dérêches est ouvert toute l'année et offre des ambiances très différentes selon les saisons. L'été (juin–septembre), les sentiers ombragés sous les arbres centenaires apportent une fraîcheur bienvenue ; c'est la période idéale pour les promenades en famille, le jogging matinal et le parcours santé. Le parc est très fréquenté en juillet-août. L'automne (octobre–novembre) est plus calme, avec des couleurs dorées le long de la Dranse. L'hiver (décembre–avril), les sentiers restent praticables (déneigés), et les infrastructures adjacentes (patinoire extérieure, Espace Aquatique) sont très actives. Le printemps (avril–mai) voit le retour de la verdure et des promeneurs après la saison de ski.
-
-## Événements
-
-Le parc accueille occasionnellement des événements sportifs communaux (courses à pied, animations famille) organisés par la Mairie de Morzine. Consulter le calendrier de l'Office de Tourisme pour les dates.
 
 ## Questions fréquentes
 

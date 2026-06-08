@@ -1,11 +1,11 @@
 ---
 slug: cascade-aventure
-name: "Cascade Aventure"
+name: Cascade Aventure
 category: attraction
-category_label: "Attraction"
-commune: "Morzine"
-postal_code: "74110"
-department: "Haute-Savoie"
+category_label: Attraction
+commune: Morzine
+postal_code: 74110
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,16 +15,15 @@ canonical_url: https://loisirs74.fr/cascade-aventure
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/5/5a/Cascade_de_Nyon_%282%29.jpg
 photo_type: real
-photo_author: "Krzysztof Golik"
-photo_license: "CC BY-SA 4.0"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+photo_author: Forest park
+photo_license: Wikimedia Commons
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Cascade Aventure
 
-> Parc d'aventure en forêt au cœur des montagnes, accessible à tous dès 3 ans, avec tyroliennes géantes survolant la cascade de Nyon, parcours dans les arbres et canyoning encadré.
+> Vivez l'aventure verticale au-dessus de la cascade de Nyon : accrobranche, tyroliennes géantes, canyoning et tyro-ferrata exclusive dans un parc familial à 1000 m d'altitude.
 
 ## En bref
 
@@ -33,6 +32,7 @@ source: loisirs74.fr
 - **GPS**: 46.1858, 6.7089
 - **Type**: Parc d'aventure et activités sportives
 - **Accès**: Payant
+- **Tarif**: Tarifs disponibles sur demande (06 83 19 21 18)
 - **Parking**: Parking cascade de Nyon (gratuit)
 - **Chiens**: Non admis sur les parcours
 - **Meilleure saison**: Juillet – août (ouverture été uniquement)
@@ -40,7 +40,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Cascade Aventure est un parc d'activités sportives de plein air en montagne, installé sur le site de la cascade de Nyon à Morzine (1 000 m d'altitude), en Haute-Savoie. Destiné à tous les âges et tous les niveaux, le parc propose des parcours dans les arbres, du canyoning dans le torrent, et une activité exclusive dans la région : la tyro-ferrata, qui permet de survoler le canyon par la voie des airs.Le site offre 5 parcours acrobatiques équipés de ligne de vie continue pour une sécurité maximale, dont le Parcours des Fées adapté aux plus jeunes (dès 3 ans) et un grand circuit de 6 tyroliennes consécutives dont deux de 100 et 130 mètres de long suspendues à 40 mètres au-dessus de la cascade. Les activités sont encadrées par des guides diplômés et se déroulent dans un environnement naturel préservé, au cœur de la forêt avec le bruit de l'eau en arrière-plan.
+Cascade Aventure est un parc d'activités sportives de plein air en montagne, installé sur le site spectaculaire de la cascade de Nyon à Morzine (1 000 m d'altitude), en Haute-Savoie. Destiné à tous les âges et tous les niveaux, le parc propose des parcours dans les arbres, du canyoning dans le torrent, et une activité exclusive dans la région : la tyro-ferrata, qui permet de survoler le canyon par la voie des airs en combinant escalade, via ferrata et tyroliennes.
+
+Le site offre 5 parcours acrobatiques équipés de ligne de vie continue pour une sécurité maximale, dont le Parcours des Fées adapté aux plus jeunes (dès 3 ans) et un grand circuit de 6 tyroliennes consécutives dont deux de 100 et 130 mètres de long suspendues à 40 mètres au-dessus de la cascade. Les activités sont encadrées par des guides diplômés et se déroulent dans un environnement naturel préservé, au cœur de la forêt avec le bruit de l'eau en arrière-plan. Ce qui distingue Cascade Aventure des autres parcs d'accrobranche de Haute-Savoie, c'est son cadre exceptionnel au-dessus d'un canyon actif, ses tyroliennes vertigineuses survolant la cascade, et la possibilité de combiner plusieurs activités verticales en une seule visite. L'altitude modérée et l'ombrage naturel offrent des conditions idéales même lors des journées chaudes d'été, tandis que la proximité du village de Morzine facilite l'accès et la logistique familiale.
 
 ## Activités sur place
 
@@ -59,6 +61,9 @@ Activité unique dans la région : visiter et admirer le canyon de Nyon par la v
 ### Parcours des Fées
 Parcours thématique à 1 mètre du sol où les enfants suivent les fées dans leurs cabanes pour découvrir la nature en toute liberté et sécurité, sous la responsabilité des parents.
 
+### Packs combinés
+Possibilité de combiner plusieurs activités en une journée : parcours arbres + tyroliennes, ou formule découverte incluant canyoning. Tarifs dégressifs sur demande.
+
 ## Infos pratiques
 
 - **Adresse**: Cascade de Nyon, 563 chemin sous le rocher, 74110 Morzine
@@ -70,6 +75,7 @@ Parcours thématique à 1 mètre du sol où les enfants suivent les fées dans l
 - **Parking**: Parking gratuit à proximité de la cascade de Nyon
 - **Accessibilité**: Parcours adaptés selon taille et âge : Parcours des Fées dès 3 ans (1 m du sol), grand parcours dès 1,20 m (accompagnement adulte obligatoire pour les moins de 12 ans), canyoning dès 8 ans accompagné d'un adulte.
 - **Animaux**: Non admis sur les parcours pour des raisons de sécurité
+- **Groupes / EVG**: Formules dédiées pour groupes, enterrements de vie de jeune fille/garçon, anniversaires, sorties scolaires et team building. Tarifs dégressifs et créneaux privatisés sur demande au 06 83 19 21 18.
 
 ## Comment y aller
 
@@ -111,6 +117,14 @@ R : Oui. Cascade Aventure propose une sortie canyoning encadrée par un guide di
 **Q : Y a-t-il un parking à Cascade Aventure ?**
 
 R : Oui. Le parking de la cascade de Nyon à proximité de Cascade Aventure est gratuit. Accès par la route du Vieux Moulin (563 chemin sous le rocher).
+
+**Q : Quelle est la meilleure période pour visiter Cascade Aventure ?**
+
+R : La meilleure période est de mi-juillet à mi-août, lorsque le parc est ouvert en continu tous les jours et que les conditions sont optimales. Le cadre ombragé en forêt offre un confort idéal même lors des journées chaudes.
+
+**Q : Faut-il apporter son propre équipement à Cascade Aventure ?**
+
+R : Non, tout l'équipement de sécurité est fourni par Cascade Aventure : baudriers, casques, ligne de vie continue pour les parcours arbres. Pour le canyoning, combinaison, casque et équipement technique sont également fournis. Prévoir simplement des chaussures fermées.
 
 ---
 

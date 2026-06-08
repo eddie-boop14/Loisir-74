@@ -1,11 +1,11 @@
 ---
 slug: lac-blanc
-name: "Lac Blanc"
+name: Lac Blanc
 category: lac
-category_label: "Lac & plage"
-commune: "Chamonix-Mont-Blanc"
-postal_code: "74400"
-department: "Haute-Savoie"
+category_label: Lac
+commune: Chamonix-Mont-Blanc
+postal_code: 74400
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,22 +13,22 @@ latitude: 45.9772
 longitude: 6.8969
 canonical_url: https://loisirs74.fr/lac-blanc
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b4/Lac_Blanc.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b4/Lac_Blanc.JPG
 photo_type: real
-photo_author: "Mrvoyage"
-photo_license: "Public domain"
+photo_author: Ermakae
+photo_license: CC0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Lac Blanc
 
-> Lac glaciaire emblématique à 2 352 m d'altitude dans la réserve naturelle des Aiguilles Rouges, offrant un panorama exceptionnel face au massif du Mont-Blanc, à l'Aiguille Verte et aux Grandes Jorasses.
+> Lac d'altitude à 2 352 m dans la réserve des Aiguilles Rouges, face au massif du Mont-Blanc. Accès par la Flégère ou le col des Montets, Chamonix.
 
 ## En bref
 
-- **Catégorie**: Lac & plage
+- **Catégorie**: Lac
 - **Commune**: Chamonix-Mont-Blanc, Haute-Savoie (74400)
 - **GPS**: 45.9772, 6.8969
 - **Type**: Lac glaciaire d'altitude
@@ -40,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Lac Blanc est un lac glaciaire situé à 2 352 mètres d'altitude dans le massif des Aiguilles Rouges, sur la commune de Chamonix-Mont-Blanc. Le lac est composé de deux plans d'eau reliés par un petit cours d'eau et s'inscrit dans la réserve naturelle nationale des Aiguilles Rouges, espace protégé créé pour préserver la faune et la flore alpines. Depuis ses rives, le lac offre un panorama exceptionnel sur le massif du Mont-Blanc, l'Aiguille Verte, les Grandes Jorasses, la Mer de Glace et le glacier d'Argentière.Plusieurs itinéraires de randonnée permettent d'accéder au lac. L'accès le plus courant et le plus familial part de la télécabine de la Flégère (1 877 m), depuis Les Praz de Chamonix, puis environ 2 heures de marche jusqu'au lac. Les randonneurs expérimentés peuvent emprunter l'itinéraire depuis le col des Montets ou Tré-le-Champ (environ 3 heures de marche), avec passages techniques et échelles métalliques. Le lac se situe sur le tracé du Tour du Mont-Blanc (TMB), étape classique des randonneurs au long cours.Un refuge d'altitude, le Refuge du Lac Blanc, est installé à proximité immédiate du lac, permettant restauration et hébergement. Le refuge actuel a été reconstruit après qu'une avalanche a emporté la première construction en 1986. En contrebas, les lacs des Chéserys offrent un panorama complémentaire et constituent une étape prisée à la descente. Le bivouac est autorisé uniquement aux lacs des Chéserys (entre 19h et 9h), pas au Lac Blanc lui-même. La baignade est interdite dans le Lac Blanc et les lacs des Chéserys depuis un arrêté préfectoral du 22 mai 2025.
+Le Lac Blanc est un lac glaciaire situé à 2 352 mètres d'altitude dans le massif des Aiguilles Rouges, sur la commune de Chamonix-Mont-Blanc. Le lac est composé de deux plans d'eau reliés par un petit cours d'eau et s'inscrit dans la réserve naturelle nationale des Aiguilles Rouges, espace protégé créé pour préserver la faune et la flore alpines. Depuis ses rives, le lac offre un panorama exceptionnel sur le massif du Mont-Blanc, l'Aiguille Verte, les Grandes Jorasses, la Mer de Glace et le glacier d'Argentière.
+
+Plusieurs itinéraires de randonnée permettent d'accéder au lac. L'accès le plus courant et le plus familial part de la télécabine de la Flégère (1 877 m), depuis Les Praz de Chamonix, puis environ 2 heures de marche jusqu'au lac. Les randonneurs expérimentés peuvent emprunter l'itinéraire depuis le col des Montets ou Tré-le-Champ (environ 3 heures de marche), avec passages techniques et échelles métalliques. Le lac se situe sur le tracé du Tour du Mont-Blanc (TMB), étape classique des randonneurs au long cours.
+
+Un refuge d'altitude, le Refuge du Lac Blanc, est installé à proximité immédiate du lac, permettant restauration et hébergement. Le refuge actuel a été reconstruit après qu'une avalanche a emporté la première construction en 1986. En contrebas, les lacs des Chéserys offrent un panorama complémentaire et constituent une étape prisée à la descente. Le bivouac est autorisé uniquement aux lacs des Chéserys (entre 19h et 9h), pas au Lac Blanc lui-même. La baignade est interdite dans le Lac Blanc et les lacs des Chéserys depuis un arrêté préfectoral du 22 mai 2025.
 
 ## Activités sur place
 

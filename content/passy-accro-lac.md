@@ -1,11 +1,11 @@
 ---
 slug: passy-accro-lac
-name: "Passy Accro Lac"
+name: Passy Accro Lac
 category: attraction
-category_label: "Attraction"
-commune: "Passy"
-postal_code: "74190"
-department: "Haute-Savoie"
+category_label: Attraction
+commune: Passy
+postal_code: 74190
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,17 +13,17 @@ latitude: 45.9254
 longitude: 6.6973
 canonical_url: https://loisirs74.fr/passy-accro-lac
 language: fr
-photo_url: https://images.unsplash.com/photo-1551632811-561732d1e306?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Holly Mandarich"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg
+photo_type: real
+photo_author: Forest park
+photo_license: Wikimedia Commons
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Passy Accro Lac
 
-> Parc aventure multi-activités au bord du lac de Passy : 10 parcours d'accrobranche avec ligne de vie continue, tyroliennes, airbag, catapulte humaine et escape games outdoor.
+> Parc multi-activités face au Mont-Blanc : 10 parcours accrobranche, 1,2 km de tyroliennes, airbag, catapulte humaine, escape games en plein air. À partir de 6 €.
 
 ## En bref
 
@@ -32,6 +32,7 @@ source: loisirs74.fr
 - **GPS**: 45.9254, 6.6973
 - **Type**: Parc aventure · Accrobranche
 - **Accès**: Payant
+- **Tarif**: À partir de 6 € (parcours Pitchounes)
 - **Parking**: Gratuit (parking de la plage du lac de Passy)
 - **Chiens**: Acceptés en laisse uniquement sur les chemins hauts du lac
 - **Meilleure saison**: Juin à septembre (fermé avril-mai, ouverture partielle printemps/automne)
@@ -39,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Passy Accro Lac (également connu sous le nom Passy Aventure) est un parc multi-activités situé sur la base de loisirs du lac de Passy, à 7 km de Sallanches et 25 km de Chamonix, dans un cadre naturel face au massif du Mont-Blanc. Le parc propose 10 parcours d'accrobranche avec système de lignes de vie continue pour une sécurité maximale, adaptés à tous les âges dès 2 ans pour les parcours d'initiation sans baudrier.Le site se distingue par ses installations variées : plus de 1,2 km de tyroliennes réparties sur l'ensemble des parcours (dont une tyrolienne de 40 m dédiée aux 3-6 ans), un airbag pour des sauts en chute libre de 3 à 7 mètres sur un matelas géant, une catapulte humaine unique en Haute-Savoie propulsant les participants à plus de 12 mètres, et deux escape games en plein air autour du lac pour des aventures mêlant énigmes, observation et travail d'équipe. Le parc accueille familles, groupes scolaires, anniversaires et entreprises dans un environnement boisé en bordure de lac.Passy Accro Lac compte plus de 140 jeux et ateliers répartis sur les 10 parcours, du parcours Pitchounes (10 jeux) pour les tout-petits au parcours Everest (96 jeux) culminant à 14 mètres de hauteur pour les plus intrépides. L'ensemble des installations est encadré par des moniteurs qualifiés et le site bénéficie d'une position privilégiée au sein de la base de loisirs des Îles, permettant de combiner l'accrobranche avec baignade surveillée (en été), aires de pique-nique et promenades autour du lac.
+Passy Accro Lac (également connu sous le nom Passy Aventure) est un parc multi-activités situé sur la base de loisirs du lac de Passy, à 7 km de Sallanches et 25 km de Chamonix, dans un cadre naturel face au massif du Mont-Blanc. Le parc propose 10 parcours d'accrobranche avec système de lignes de vie continue pour une sécurité maximale, adaptés à tous les âges dès 2 ans pour les parcours d'initiation sans baudrier.
+
+Le site se distingue par ses installations variées : plus de 1,2 km de tyroliennes réparties sur l'ensemble des parcours (dont une tyrolienne de 40 m dédiée aux 3-6 ans), un airbag pour des sauts en chute libre de 3 à 7 mètres sur un matelas géant, une catapulte humaine unique en Haute-Savoie propulsant les participants à plus de 12 mètres, et deux escape games en plein air autour du lac pour des aventures mêlant énigmes, observation et travail d'équipe. Le parc accueille familles, groupes scolaires, anniversaires et entreprises dans un environnement boisé en bordure de lac.
+
+Passy Accro Lac compte plus de 140 jeux et ateliers répartis sur les 10 parcours, du parcours Pitchounes (10 jeux) pour les tout-petits au parcours Everest (96 jeux) culminant à 14 mètres de hauteur pour les plus intrépides. L'ensemble des installations est encadré par des moniteurs qualifiés et le site bénéficie d'une position privilégiée au sein de la base de loisirs des Îles, permettant de combiner l'accrobranche avec baignade surveillée (en été), aires de pique-nique et promenades autour du lac.
 
 ## Activités sur place
 
@@ -95,10 +100,6 @@ Voie verte du Lac de Passy accessible depuis le centre de Passy et depuis Sallan
 ## Quand y aller
 
 La haute saison s'étend de fin juin à fin août, avec ouverture quotidienne de 10h à 19h et affluence maximale en juillet-août : privilégier les matinées ou réserver en ligne pour éviter l'attente. Le parc ouvre également les weekends de juin (11h–18h) et les mercredis, samedis et dimanches après-midi au printemps et en automne, périodes moins fréquentées idéales pour profiter du site dans le calme. Le parc est fermé en avril et mai 2026 (travaux ou maintenance). Les petites vacances scolaires (Toussaint, février) voient une ouverture tous les après-midi. La météo estivale permet de combiner accrobranche et baignade au lac ; prévoir vêtements confortables (pantalon, baskets) et protection solaire.
-
-## Événements
-
-Formules anniversaires personnalisées toute l'année sur réservation. Accueil de groupes scolaires et centres de loisirs avec animations pédagogiques encadrées. Team building et événements entreprise sur mesure. Stages trappeurs multi-activités pour enfants durant les vacances scolaires (accrobranche, randonnée avec chiens, nuit en tipi). Fête des sèchieux fin septembre à Passy (tradition locale des vergers).
 
 ## Questions fréquentes
 

@@ -1,11 +1,11 @@
 ---
 slug: cascade-du-dard
-name: "Cascade du Dard"
+name: Cascade du Dard
 category: cascade
-category_label: "Cascade"
-commune: "Chamonix-Mont-Blanc"
-postal_code: "74400"
-department: "Haute-Savoie"
+category_label: Cascade
+commune: Chamonix-Mont-Blanc
+postal_code: 74400
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,16 +15,16 @@ canonical_url: https://loisirs74.fr/cascade-du-dard
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/7/79/Cascade_du_Dard_01.jpg
 photo_type: real
-photo_author: "Rémih"
-photo_license: "CC BY-SA 4.0"
+photo_author: Rémih
+photo_license: CC BY-SA 4.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Cascade du Dard
 
-> Cascade de 20 mètres de hauteur située à 1 233 m d'altitude, sur le torrent du Dard descendant du glacier des Pélerins. Vue panoramique sur les Aiguilles Rouges et le Mont-Blanc.
+> Cascade de 20 m à 1 233 m d'altitude, près de l'entrée du tunnel du Mont-Blanc. Accès libre, 45 min à pied du centre de Chamonix, vue sur les Aiguilles Rouges.
 
 ## En bref
 
@@ -37,10 +37,15 @@ source: loisirs74.fr
 - **Chiens**: Acceptés en laisse
 - **Meilleure saison**: Avril – novembre (sous réserve conditions neige)
 - **Durée**: 45 min à pied depuis centre-ville Chamonix (parking du Grépon), ou 10 min depuis parking route du tunnel
+- **Altitude**: 1 233 m
 
 ## Présentation
 
-La Cascade du Dard est une chute d'eau de 20 mètres de hauteur située à 1 233 m d'altitude sur la commune de Chamonix-Mont-Blanc, en Haute-Savoie. Elle se trouve sur le cours du Dard, un torrent descendant du glacier des Pélerins dans le massif du Mont-Blanc et se jetant dans l'Arve, à proximité de l'entrée nord du tunnel du Mont-Blanc.Accessible après une courte randonnée en forêt depuis le centre de Chamonix (environ 45 minutes) ou une marche de 10 minutes depuis le parking situé sur la route d'accès au tunnel, la cascade offre un spectacle naturel impressionnant au milieu de la verdure. Elle est la dernière d'une série de chutes où l'eau tumultueuse et scintillante constitue une véritable merveille de la nature. Un chalet-buvette adjacent (Chalet du Dard) permet de profiter d'une pause restauration face à la cascade, avec une vue dégagée sur la chaîne des Aiguilles Rouges, le glacier des Bossons et le Mont-Blanc.Le torrent du Dard naît de la fonte du glacier des Pélerins à environ 2 300 mètres d'altitude. Ce glacier, très sensible aux variations climatiques, accumule l'eau de fonte dans des cavités sous-glaciaires. En 2009, le pont en aval de la cascade a été emporté par la rupture d'une de ces poches d'eau — un phénomène de crue glaciaire dont le plus célèbre dans les Alpes reste celui qui détruisit les thermes de Saint-Gervais en 1892. Aujourd'hui, l'étude et la compréhension de ces phénomènes permettent un meilleur contrôle de ce risque.
+La Cascade du Dard est une chute d'eau de 20 mètres de hauteur située à 1 233 m d'altitude sur la commune de Chamonix-Mont-Blanc, en Haute-Savoie. Elle se trouve sur le cours du Dard, un torrent descendant du glacier des Pélerins dans le massif du Mont-Blanc et se jetant dans l'Arve, à proximité de l'entrée nord du tunnel du Mont-Blanc.
+
+Accessible après une courte randonnée en forêt depuis le centre de Chamonix (environ 45 minutes) ou une marche de 10 minutes depuis le parking situé sur la route d'accès au tunnel, la cascade offre un spectacle naturel impressionnant au milieu de la verdure. Elle est la dernière d'une série de chutes où l'eau tumultueuse et scintillante constitue une véritable merveille de la nature. Un chalet-buvette adjacent (Chalet du Dard) permet de profiter d'une pause restauration face à la cascade, avec une vue dégagée sur la chaîne des Aiguilles Rouges, le glacier des Bossons et le Mont-Blanc.
+
+Le torrent du Dard naît de la fonte du glacier des Pélerins à environ 2 300 mètres d'altitude. Ce glacier, très sensible aux variations climatiques, accumule l'eau de fonte dans des cavités sous-glaciaires. En 2009, le pont en aval de la cascade a été emporté par la rupture d'une de ces poches d'eau — un phénomène de crue glaciaire dont le plus célèbre dans les Alpes reste celui qui détruisit les thermes de Saint-Gervais en 1892. Aujourd'hui, l'étude et la compréhension de ces phénomènes permettent un meilleur contrôle de ce risque.
 
 ## Activités sur place
 

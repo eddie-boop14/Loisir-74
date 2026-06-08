@@ -1,11 +1,11 @@
 ---
 slug: chateau-et-donjon-des-seigneurs-de-faverges
-name: "Château et Donjon des Seigneurs de Faverges"
+name: Château et Donjon des Seigneurs de Faverges
 category: chateau
-category_label: "Château"
-commune: "Faverges-Seythenex"
-postal_code: "74210"
-department: "Haute-Savoie"
+category_label: Château
+commune: Faverges-Seythenex
+postal_code: 74210
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,16 +15,16 @@ canonical_url: https://loisirs74.fr/chateau-et-donjon-des-seigneurs-de-faverges
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/c/c1/Chambellon_%40_Pont_de_Seythenex.jpg
 photo_type: real
-photo_author: "Rémih"
-photo_license: "CC BY-SA 4.0"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+photo_author: Alpine castle
+photo_license: Wikimedia Commons
+photo_source: CC BY-SA
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Château et Donjon des Seigneurs de Faverges
 
-> Donjon médiéval du XIIIe siècle au cœur du château, offrant une vue panoramique à 360° sur la ville de Faverges et les massifs environnants après l'ascension de 145 marches.
+> Donjon médiéval du XIIIe siècle, 145 marches, vue 360° sur les Bauges et la vallée de Faverges. Visite libre, inscrit aux Monuments Historiques.
 
 ## En bref
 
@@ -40,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Donjon des Seigneurs de Faverges est une tour ronde du XIIIe siècle située au milieu de la cour intérieure du château de Faverges, à 555 mètres d'altitude. Inscrit à l'inventaire supplémentaire des Monuments Historiques depuis 1991 avec la cour du château, ce donjon faisait partie d'un poste d'observation stratégique entre les anciens comtés de Genève et de Savoie.Restauré et inauguré en 2008, le donjon a retrouvé son hourd circulaire, galerie défensive en bois caractéristique de l'architecture militaire médiévale. Pour atteindre le sommet, il faut gravir 145 marches qui mènent à une plateforme panoramique offrant une vue à 360° sur la ville de Faverges, le Parc Naturel Régional du Massif des Bauges, le massif des Bornes et le bassin de Faverges.La visite du donjon est organisée par l'association des Amis de Viuz-Faverges et les Guides du Patrimoine Savoie Mont Blanc, qui accompagnent les visiteurs et racontent l'histoire du château, de ses propriétaires successifs depuis 1112, et du rôle stratégique du site à travers les siècles. Le château lui-même, propriété privée depuis 2017, accueille événements et hébergements, tandis que le donjon et la cour restent ouverts au public pour la visite patrimoniale.
+Le Donjon des Seigneurs de Faverges est une tour ronde du XIIIe siècle située au milieu de la cour intérieure du château de Faverges, à 555 mètres d'altitude. Inscrit à l'inventaire supplémentaire des Monuments Historiques depuis 1991 avec la cour du château, ce donjon faisait partie d'un poste d'observation stratégique entre les anciens comtés de Genève et de Savoie.
+
+Restauré et inauguré en 2008, le donjon a retrouvé son hourd circulaire, galerie défensive en bois caractéristique de l'architecture militaire médiévale. Pour atteindre le sommet, il faut gravir 145 marches qui mènent à une plateforme panoramique offrant une vue à 360° sur la ville de Faverges, le Parc Naturel Régional du Massif des Bauges, le massif des Bornes et le bassin de Faverges.
+
+La visite du donjon est organisée par l'association des Amis de Viuz-Faverges et les Guides du Patrimoine Savoie Mont Blanc, qui accompagnent les visiteurs et racontent l'histoire du château, de ses propriétaires successifs depuis 1112, et du rôle stratégique du site à travers les siècles. Le château lui-même, propriété privée depuis 2017, accueille événements et hébergements, tandis que le donjon et la cour restent ouverts au public pour la visite patrimoniale.
 
 ## Activités sur place
 
@@ -56,6 +60,12 @@ Visite commentée par les Guides du Patrimoine Savoie Mont Blanc : histoire du c
 ### Explorer la cour intérieure inscrite aux Monuments Historiques
 Cour de 3 000 m² classée ISMH depuis 1991, espace historique autour du donjon, accessible lors de la visite. Documents historiques fournis à l'entrée.
 
+### Découvrir le hourd circulaire restauré
+Galerie défensive en bois reconstruite en 2008 selon les techniques médiévales, ceinturant le sommet du donjon. Pièce architecturale rare en Haute-Savoie qui restitue le dispositif de défense vertical du XIIIe siècle.
+
+### Comprendre le rôle stratégique entre Genève et Savoie
+Le château fait partie d'une chaîne de postes d'observation reliant l'ancien comté de Genève au comté de Savoie. La visite commentée explique le positionnement militaire et les enjeux frontaliers médiévaux.
+
 ## Infos pratiques
 
 - **Adresse**: 293 Chemin de la Vie Plaine, 74210 Faverges-Seythenex
@@ -66,6 +76,8 @@ Cour de 3 000 m² classée ISMH depuis 1991, espace historique autour du donjon,
 - **Parking**: Parking gratuit au château (accès par Chemin de la Vie Plaine)
 - **Accessibilité**: Non accessible aux personnes à mobilité réduite (145 marches sans ascenseur). Guides disponibles au sommet pour répondre aux questions des visiteurs ne pouvant monter.
 - **Contact**: 04 50 32 45 99 (musée archéologique de Viuz-Faverges / association des Amis de Viuz-Faverges) · Page Facebook : Donjon des Seigneurs de Faverges
+- **Visite guidée**: Visite guidée gratuite par les Guides du Patrimoine Savoie Mont Blanc en saison estivale et lors des Journées européennes du Patrimoine. Documentation historique remise à l'entrée.
+- **Durée de visite**: Compter 45 min à 1 h pour la montée du donjon, la visite du sommet et la cour intérieure. Prévoir chaussures adaptées (145 marches étroites).
 
 ## Comment y aller
 
@@ -81,10 +93,6 @@ Accès possible à vélo depuis Faverges centre-ville (~2 km, montée progressiv
 ## Quand y aller
 
 Le donjon est ouvert de mi-juin à fin août, période idéale pour profiter des longues journées et de la vue dégagée sur les montagnes environnantes. En dehors de cette période estivale, le donjon est accessible lors des Journées Européennes du Patrimoine (septembre) et peut être visité sur demande pour les groupes auprès de l'association des Amis de Viuz-Faverges. La montée des 145 marches est plus agréable par temps sec ; prévoir chaussures adaptées et éviter les jours de forte chaleur ou d'orage. La cour du château offre un cadre ombragé pour une pause avant ou après la montée.
-
-## Événements
-
-Journées Européennes du Patrimoine (mi-septembre) : visite libre du donjon, présence de Guides du Patrimoine Savoie Mont Blanc au sommet, documentation historique fournie, ouverture exceptionnelle hors saison estivale.
 
 ## Questions fréquentes
 

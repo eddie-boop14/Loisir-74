@@ -1,11 +1,11 @@
 ---
 slug: chateau-des-rubins-observatoire-des-alpes
-name: "Château des Rubins – Observatoire des Alpes"
+name: Château des Rubins – Observatoire des Alpes
 category: musee
-category_label: "Musée"
-commune: "Sallanches"
-postal_code: "74700"
-department: "Haute-Savoie"
+category_label: Musée
+commune: Sallanches
+postal_code: 74700
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,16 +15,16 @@ canonical_url: https://loisirs74.fr/chateau-des-rubins-observatoire-des-alpes
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/9/94/Ch%C3%A2teau_des_Rubins_%40_Sallanches_%2851008901708%29.jpg
 photo_type: real
-photo_author: "Guilhem Vellut from Annecy, France"
-photo_license: "CC BY 2.0"
+photo_author: Guilhem Vellut from Annecy, France
+photo_license: CC BY 2.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Château des Rubins – Observatoire des Alpes
 
-> Musée de la montagne dans un château médiéval du XIVe siècle. 50 modules interactifs répartis sur 500 m² et 4 étages consacrés à la géologie, la faune, la flore et l'histoire de l'homme en montagne.
+> Musée interactif de la montagne dans un château du XIVe siècle à Sallanches. 500 m² de scénographie immersive sur 4 étages. Tarif adulte 7,50 €.
 
 ## En bref
 
@@ -33,13 +33,18 @@ source: loisirs74.fr
 - **GPS**: 45.9476, 6.6341
 - **Type**: Musée de la montagne
 - **Accès**: Payant
+- **Tarif**: À partir de 7,50 € (adulte)
 - **Parking**: Gratuit (parking Lévaud à 100 m)
 - **Meilleure saison**: Toute l'année
 - **Durée**: 1 h 30 – 2 h
 
 ## Présentation
 
-Le Château des Rubins – Observatoire des Alpes est un musée municipal consacré à la montagne, installé dans un château médiéval du XIVe siècle à Sallanches. Rénové et rouvert en juillet 2021 après deux ans de travaux, il propose une scénographie moderne et interactive unique en Europe.Le parcours muséographique couvre plus de 500 m² répartis sur 4 étages et autant de thématiques : la géologie et la glaciologie, la faune et la flore, l'histoire de l'homme dans les montagnes, les évolutions du climat. Une cinquantaine de modules interactifs permettent une visite immersive dans une ambiance lumineuse et sonore, avec des contenus diffusés en trois langues (français, anglais, italien).Construit au XIVe siècle, le château a traversé les siècles en échappant à la Révolution et au grand incendie de Sallanches de 1840. Racheté par la Ville en 1978, il a d'abord abrité le Centre de la Nature Montagnarde (association d'éducation à l'environnement) de 1985 à 2019, avant de devenir l'Observatoire des Alpes, un musée ouvert toute l'année proposant visites libres, animations courtes (Rubinoscopes), ateliers familiaux (Au labo du château) et causeries mensuelles avec des spécialistes.
+Le Château des Rubins – Observatoire des Alpes est un musée municipal consacré à la montagne, installé dans un château médiéval du XIVe siècle à Sallanches. Rénové et rouvert en juillet 2021 après deux ans de travaux, il propose une scénographie moderne et interactive unique en Europe.
+
+Le parcours muséographique couvre plus de 500 m² répartis sur 4 étages et autant de thématiques : la géologie et la glaciologie, la faune et la flore, l'histoire de l'homme dans les montagnes, les évolutions du climat. Une cinquantaine de modules interactifs permettent une visite immersive dans une ambiance lumineuse et sonore, avec des contenus diffusés en trois langues (français, anglais, italien).
+
+Construit au XIVe siècle, le château a traversé les siècles en échappant à la Révolution et au grand incendie de Sallanches de 1840. Racheté par la Ville en 1978, il a d'abord abrité le Centre de la Nature Montagnarde (association d'éducation à l'environnement) de 1985 à 2019, avant de devenir l'Observatoire des Alpes, un musée ouvert toute l'année proposant visites libres, animations courtes (Rubinoscopes), ateliers familiaux (Au labo du château) et causeries mensuelles avec des spécialistes.
 
 ## Activités sur place
 
@@ -71,6 +76,10 @@ Bâtiment du XIVe siècle avec fenêtres à meneaux Renaissance, tour carrée à
 - **Accessibilité**: Château entièrement accessible PMR via ascenseur depuis parking (accès côté parking, sur demande). Deux salles non accessibles en fauteuil roulant. Ambiances sombres et sonores pouvant gêner certaines personnes hypersensibles.
 - **Contact**: Tél. 04 50 90 83 03 · rubins@sallanches.fr
 - **Durée**: Visite libre : environ 2 h. Visite en groupe : 1 h 30.
+- **Boutique**: Oui — librairie, cartes postales, jeux pédagogiques et produits locaux de Sallanches (biscuits, savons, bières artisanales).
+- **Restauration sur place**: Pas de restauration sur place. Cafés et restaurants à proximité dans le centre de Sallanches (200 m).
+- **Visite guidée**: Visites guidées gratuites (incluses dans le billet) les mardis des vacances d'été à 15 h. Animations Rubinoscopes (15 min) toute l'année.
+- **Animations scolaires / familles**: Ateliers 'Au labo du château' (1 h 30 – 2 h) les mercredis et dimanches, sur réservation. Espaces dédiés aux enfants dès 4-5 ans dans la scénographie.
 
 ## Comment y aller
 
@@ -86,10 +95,6 @@ Accès vélo possible via piste cyclable voie verte Sallanches-Combloux (V61). P
 ## Quand y aller
 
 Le Château des Rubins est ouvert toute l'année avec des horaires variables selon les périodes scolaires (plus de jours d'ouverture pendant les vacances). La visite intérieure se prête à toutes les saisons, idéale en cas de mauvais temps. Les animations 'Au labo du château' et 'Rencards de l'observatoire' sont programmées tout au long de l'année, principalement les mercredis et dimanches. En été, profitez des visites guidées offertes avec le billet d'entrée tous les mardis des vacances d'été à 15 h. La boutique suit les mêmes horaires que le château.
-
-## Événements
-
-Programme saisonnier d'événements thématiques : journées artisanales (vannerie, sculpture sur bois), ateliers encres naturelles, causeries mensuelles 'Rencards de l'observatoire' avec spécialistes le dimanche matin (accueil café/croissant). Participation aux Journées européennes du patrimoine en septembre. Programme détaillé sur le site officiel et réseaux sociaux du château.
 
 ## Questions fréquentes
 

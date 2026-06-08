@@ -1,11 +1,11 @@
 ---
 slug: tete-du-parmelan
-name: "Tête du Parmelan"
+name: Tête du Parmelan
 category: point-de-vue
-category_label: "Point de vue"
-commune: "Dingy-Saint-Clair"
-postal_code: "74230"
-department: "Haute-Savoie"
+category_label: Point de vue
+commune: Dingy-Saint-Clair
+postal_code: 74230
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,14 +15,16 @@ canonical_url: https://loisirs74.fr/tete-du-parmelan
 language: fr
 photo_url: /tete-du-parmelan-hero.jpg
 photo_type: real
-photo_source: own
-last_updated: 2026-05-18
+photo_author: Guilhem Vellut from Annecy, France
+photo_license: CC BY 2.0
+photo_source: Wikimedia Commons
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Tête du Parmelan
 
-> Le sommet emblématique du plateau du Parmelan, vaste balcon calcaire à 1 832 m offrant une vue panoramique sur le bassin annécien, les Aravis et le massif du Mont-Blanc.
+> Point culminant emblématique du Parmelan à 1 832 m, vue panoramique sur Annecy, son lac et le Mont-Blanc. Accès libre par sentiers balisés depuis Villaz ou Dingy-Saint-Clair.
 
 ## En bref
 
@@ -38,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Tête du Parmelan est le sommet emblématique du Parmelan, vaste plateau calcaire des Bornes culminant à 1 832 m d'altitude. Bien que le point culminant absolu de la montagne atteigne 1 856 m (falaise sud-est), la Tête du Parmelan constitue le sommet identitaire visible depuis Annecy, marqué par une croix et le refuge Camille Dunant géré par le CAF d'Annecy.Le plateau du Parmelan est un anticlinal karstique spectaculaire, composé de calcaire urgonien formant un vaste lapiaz criblé de failles, gouffres et grottes. L'ascension jusqu'à la Tête du Parmelan emprunte soit le Grand Montoir (passage aérien équipé de câbles et chaînes, plus court mais escarpé), soit le Petit Montoir (plus long mais moins raide). Le plateau offre une vue panoramique à 360° sur le Genevois, le lac d'Annecy, les Bauges, les Aravis et le massif du Mont-Blanc.Randonnée classique des Annéciens, la Tête du Parmelan est accessible par plusieurs départs : parking du Bois Brûlé (route forestière de Villaz, 1 170 m), chalet de l'Anglettaz (Aviernoz, 1 450 m, accès le plus court avec 382 m de dénivelé), ou parking de La Blonnière (Dingy-Saint-Clair, 1 029 m). Le refuge Camille Dunant, perché au sommet, propose restauration et hébergement de mi-mai à mi-septembre.
+La Tête du Parmelan est le sommet emblématique du Parmelan, vaste plateau calcaire des Bornes culminant à 1 832 m d'altitude. Bien que le point culminant absolu de la montagne atteigne 1 856 m (falaise sud-est), la Tête du Parmelan constitue le sommet identitaire visible depuis Annecy, marqué par une croix et le refuge Camille Dunant géré par le CAF d'Annecy.
+
+Le plateau du Parmelan est un anticlinal karstique spectaculaire, composé de calcaire urgonien formant un vaste lapiaz criblé de failles, gouffres et grottes. L'ascension jusqu'à la Tête du Parmelan emprunte soit le Grand Montoir (passage aérien équipé de câbles et chaînes, plus court mais escarpé), soit le Petit Montoir (plus long mais moins raide). Le plateau offre une vue panoramique à 360° sur le Genevois, le lac d'Annecy, les Bauges, les Aravis et le massif du Mont-Blanc.
+
+Randonnée classique des Annéciens, la Tête du Parmelan est accessible par plusieurs départs : parking du Bois Brûlé (route forestière de Villaz, 1 170 m), chalet de l'Anglettaz (Aviernoz, 1 450 m, accès le plus court avec 382 m de dénivelé), ou parking de La Blonnière (Dingy-Saint-Clair, 1 029 m). Le refuge Camille Dunant, perché au sommet, propose restauration et hébergement de mi-mai à mi-septembre.
 
 ## Activités sur place
 

@@ -1,11 +1,11 @@
 ---
 slug: les-aigles-du-leman
-name: "Les Aigles du Léman"
+name: Les Aigles du Léman
 category: attraction
-category_label: "Attraction"
-commune: "Sciez"
-postal_code: "74140"
-department: "Haute-Savoie"
+category_label: Attraction
+commune: Sciez
+postal_code: 74140
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,13 +13,17 @@ latitude: 46.333
 longitude: 6.375
 canonical_url: https://loisirs74.fr/les-aigles-du-leman
 language: fr
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/8/80/Female_falcon_handler_with_eagle_%2825513995343%29.jpg
+photo_type: real
+photo_author: Forest park
+photo_license: Wikimedia Commons
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Les Aigles du Léman
 
-> Parc animalier spécialisé dans la présentation et la conservation des rapaces avec la plus grande volière du monde, spectacles de vols libres quotidiens et programme de réintroduction du pygargue à queue blanche.
+> Parc animalier dédié aux rapaces à Sciez, 8 hectares avec 350 oiseaux de 80 espèces, spectacles de vols libres quotidiens. Adulte 15 €, horaires et billetterie en ligne.
 
 ## En bref
 
@@ -28,6 +32,7 @@ source: loisirs74.fr
 - **GPS**: 46.333, 6.375
 - **Type**: Parc animalier spécialisé rapaces
 - **Accès**: Payant
+- **Tarif**: À partir de 15 € (adulte)
 - **Parking**: Gratuit (Domaine du Guidou, D1005)
 - **Chiens**: Interdits (sécurité des visiteurs et des oiseaux)
 - **Meilleure saison**: Avril – août (parc d'été)
@@ -35,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Les Aigles du Léman est un parc animalier de 8 hectares situé dans le Domaine du Guidou à Sciez, au bord du lac Léman, entièrement dédié à la connaissance et à la protection des rapaces. Le parc abrite près de 350 oiseaux appartenant à plus de 80 espèces différentes — aigles, pygargues, condors, buses, chouettes, hiboux — répartis dans plus d'une centaine de volières conçues pour leur bien-être et leur reproduction.L'attraction majeure du parc est La Terre des Aigles, la plus grande volière de rapaces du monde avec une superficie de 18 000 m², où une soixantaine d'oiseaux évoluent en totale liberté autour des visiteurs dans une expérience immersive unique. Le parc propose également quatre spectacles quotidiens différents dans son Eagle Stadium de 1 000 places assises (dont 400 couvertes), permettant d'observer les rapaces en plein vol à quelques mètres au-dessus de la tête du public.Depuis sa création, Les Aigles du Léman mène un important programme de conservation et de réintroduction du pygargue à queue blanche dans la région lémanique, visible dans la maison des aigles dédiée au projet. Le parc dispose également d'un parc d'hiver situé à 1 500 m d'altitude à la Pointe de Nyon (Morzine), ouvert de décembre à mars pendant la saison de ski.
+Les Aigles du Léman est un parc animalier de 8 hectares situé dans le Domaine du Guidou à Sciez, au bord du lac Léman, entièrement dédié à la connaissance et à la protection des rapaces. Le parc abrite près de 350 oiseaux appartenant à plus de 80 espèces différentes — aigles, pygargues, condors, buses, chouettes, hiboux — répartis dans plus d'une centaine de volières conçues pour leur bien-être et leur reproduction.
+
+L'attraction majeure du parc est La Terre des Aigles, la plus grande volière de rapaces du monde avec une superficie de 18 000 m², où une soixantaine d'oiseaux évoluent en totale liberté autour des visiteurs dans une expérience immersive unique. Le parc propose également quatre spectacles quotidiens différents dans son Eagle Stadium de 1 000 places assises (dont 400 couvertes), permettant d'observer les rapaces en plein vol à quelques mètres au-dessus de la tête du public.
+
+Depuis sa création, Les Aigles du Léman mène un important programme de conservation et de réintroduction du pygargue à queue blanche dans la région lémanique, visible dans la maison des aigles dédiée au projet. Le parc dispose également d'un parc d'hiver situé à 1 500 m d'altitude à la Pointe de Nyon (Morzine), ouvert de décembre à mars pendant la saison de ski.
 
 ## Activités sur place
 
@@ -68,6 +77,7 @@ Aires de pique-nique ombragées au bord de la rivière. Le bar-restaurant La Fau
 - **Accessibilité**: Accès adapté aux personnes à mobilité réduite. Tarif réduit PMR 10 €. Zones ombragées et couvertes disponibles aux aires de spectacles.
 - **Restauration**: Bar-restaurant La Fauconnerie (self-service, boissons, snacks, glaces). Snack Balbu'bar (dans la volière La Lagune, sandwichs, glaces, gâteaux). Aires de pique-nique ombragées au bord de la rivière.
 - **Contact**: Tél. +33 (0)4 50 72 72 26 · info@lesaiglesduleman.com
+- **Boutique**: Boutique souvenirs à l'entrée du parc : peluches rapaces, livres, posters, jeux pour enfants et produits dérivés autour des oiseaux de proie.
 
 ## Comment y aller
 
@@ -83,10 +93,6 @@ Accès possible via la D1005 (voie partagée). Itinéraire vélo depuis Thonon-l
 ## Quand y aller
 
 Le parc d'été est ouvert d'avril à fin août, avec une montée en puissance progressive : avril et mai en horaires réduits (week-ends et jours fériés uniquement en mai), puis pleine saison de début juin à fin août avec horaires élargis et tous les spectacles. Les meilleurs mois pour la visite sont juin, juillet et août, lorsque les 4 spectacles quotidiens sont proposés et que le parc fonctionne à capacité maximale. Les animations pédagogiques sur les bébés rapaces (La Maison des Petites Plumes) sont particulièrement intéressantes au printemps, période de reproduction. Le parc dispose également d'un parc d'hiver à Morzine (Pointe de Nyon, 1 500 m) ouvert de décembre à mars, accessible par le téléphérique de Nyon.
-
-## Événements
-
-Spectacles de rapaces tous les jours en saison (4 spectacles différents). Animations pédagogiques quotidiennes : La Maison des Petites Plumes (13h30) sur les naissances de la saison, et Le Lapinodrome (17h00) pour les enfants. Spectacles externes proposés hors du parc : spectacles itinérants à Megève (sommet de Rochebrune en été) et Morzine (Pointe de Nyon en hiver).
 
 ## Questions fréquentes
 

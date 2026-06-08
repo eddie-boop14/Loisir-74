@@ -1,11 +1,11 @@
 ---
 slug: base-de-loisirs-du-lac-aux-dames
-name: "Base de loisirs du Lac aux Dames"
+name: Base de loisirs du Lac aux Dames
 category: domaine
-category_label: "Base de loisirs"
-commune: "Samoëns"
-postal_code: "74340"
-department: "Haute-Savoie"
+category_label: Domaine
+commune: Samoëns
+postal_code: 74340
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,20 +15,20 @@ canonical_url: https://loisirs74.fr/base-de-loisirs-du-lac-aux-dames
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/9/98/Lac_aux_Dames_%C3%A0_Samo%C3%ABns_en_%C3%A9t%C3%A9_%28juillet_2023%29_1.JPG
 photo_type: real
-photo_author: "Florian Pépellin"
-photo_license: "CC BY-SA 4.0"
+photo_author: Florian Pépellin
+photo_license: CC BY-SA 4.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Base de loisirs du Lac aux Dames
 
-> Base de loisirs de 10 hectares construite autour de deux lacs, à l'écart du centre du village de Samoëns, avec baignade surveillée l'été, aires de jeux, terrains de sport et accès libre.
+> Base de loisirs de 10 hectares autour de deux lacs à Samoëns. Baignade surveillée l'été, aires de jeux, terrains de sport, pêche, paddle. Accès libre.
 
 ## En bref
 
-- **Catégorie**: Base de loisirs
+- **Catégorie**: Domaine
 - **Commune**: Samoëns, Haute-Savoie (74340)
 - **GPS**: 46.0842, 6.7258
 - **Type**: Base de loisirs
@@ -40,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Base de loisirs du Lac aux Dames est un parc de loisirs de 10 hectares situé à Samoëns, construit autour de deux lacs contigus. À l'écart du centre du village, elle offre un environnement calme et sécurisé, loin de la circulation automobile, idéal pour les familles et les groupes d'amis. La base est ouverte toute l'année et accessible gratuitement.Le site propose une grande variété d'activités : baignade surveillée dans le lac de début juillet à début septembre (12h–18h), aire de jeux pour enfants, terrains de sport (football, basket, beach-volley, pétanque), pêche, promenade autour des lacs, stand-up paddle, sentier de découverte. Des équipements payants sont également disponibles : piscine en plein air avec toboggans et trois bassins, courts de tennis et padel, parcours aventure, parapente.La base de loisirs intègre l'Espace Le Bois aux Dames, un centre culturel et sportif avec salle de spectacle (426 places assises, 1 100 debout), qui accueille concerts, pièces de théâtre et événements sportifs. Deux bars-restaurants et des aires de pique-nique avec sanitaires complètent l'offre. Point de départ de randonnées familiales vers les berges du Giffre et le sentier inter-lacs vers Morillon.
+La Base de loisirs du Lac aux Dames est un parc de loisirs de 10 hectares situé à Samoëns, construit autour de deux lacs contigus. À l'écart du centre du village, elle offre un environnement calme et sécurisé, loin de la circulation automobile, idéal pour les familles et les groupes d'amis. La base est ouverte toute l'année et accessible gratuitement.
+
+Le site propose une grande variété d'activités : baignade surveillée dans le lac de début juillet à début septembre (12h–18h), aire de jeux pour enfants, terrains de sport (football, basket, beach-volley, pétanque), pêche, promenade autour des lacs, stand-up paddle, sentier de découverte. Des équipements payants sont également disponibles : piscine en plein air avec toboggans et trois bassins, courts de tennis et padel, parcours aventure, parapente.
+
+La base de loisirs intègre l'Espace Le Bois aux Dames, un centre culturel et sportif avec salle de spectacle (426 places assises, 1 100 debout), qui accueille concerts, pièces de théâtre et événements sportifs. Deux bars-restaurants et des aires de pique-nique avec sanitaires complètent l'offre. Point de départ de randonnées familiales vers les berges du Giffre et le sentier inter-lacs vers Morillon.
 
 ## Activités sur place
 
@@ -95,10 +99,6 @@ Accès possible via la Voie Verte du Giffre (sentier familial longeant la riviè
 ## Quand y aller
 
 La base de loisirs est accessible toute l'année. L'été (mai à septembre) est la haute saison : baignade surveillée en juillet–août, piscine ouverte, toutes les activités disponibles, terrasses animées. Le printemps et l'automne sont plus calmes, idéals pour la promenade, la pêche et les activités terrestres. L'hiver, le site est régulièrement enneigé et les lacs gelés : la base devient alors un lieu de départ pour balades en raquettes et ski de fond le long du Giffre. Les aires de jeux et terrains de sport restent accessibles hors neige. L'Espace Le Bois aux Dames accueille des événements culturels toute l'année.
-
-## Événements
-
-Tout au long de l'année, l'Espace Le Bois aux Dames accueille concerts, spectacles et événements sportifs. En été, festivals et événements en plein air sur la base : Les Pépites (concerts live), fêtes du 15 août avec concerts, parade aux lampions et spectacles son et lumière. Programmation détaillée sur le site de la mairie de Samoëns et de l'Office de Tourisme.
 
 ## Questions fréquentes
 

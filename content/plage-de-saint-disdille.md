@@ -1,11 +1,11 @@
 ---
 slug: plage-de-saint-disdille
-name: "Plage de Saint-Disdille"
+name: Plage de Saint-Disdille
 category: lac
-category_label: "Lac & plage"
-commune: "Thonon-les-Bains"
-postal_code: "74200"
-department: "Haute-Savoie"
+category_label: Lac
+commune: Thonon-les-Bains
+postal_code: 74200
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,21 +13,21 @@ latitude: 46.401
 longitude: 6.5026
 canonical_url: https://loisirs74.fr/plage-de-saint-disdille
 language: fr
-photo_url: https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Joshua Earle"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/6/67/Plage_thonon.jpg
+photo_type: real
+photo_author: "Lac d'Annecy"
+photo_license: Wikimedia Commons
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Plage de Saint-Disdille
 
-> Plage en herbe et galets au bord du lac Léman, labellisée Pavillon Bleu depuis 2010, à la lisière du parc de la Châtaigneraie et de la forêt de Ripaille.
+> Plage gratuite labellisée Pavillon Bleu sur le lac Léman, baignade surveillée l'été, adjacent au parc de la Châtaigneraie à Thonon-les-Bains, Haute-Savoie.
 
 ## En bref
 
-- **Catégorie**: Lac & plage
+- **Catégorie**: Lac
 - **Commune**: Thonon-les-Bains, Haute-Savoie (74200)
 - **GPS**: 46.401, 6.5026
 - **Type**: Plage publique lac Léman
@@ -39,7 +39,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-La plage de Saint-Disdille, aussi appelée plage de la Châtaigneraie, est une plage publique gratuite située à l'est de Thonon-les-Bains, dans le quartier de Corzent, sur les rives françaises du lac Léman. Labellisée Pavillon Bleu depuis 2010 pour la qualité de ses eaux et de ses aménagements environnementaux, elle s'étend au pied du vaste parc arboré de la Châtaigneraie (4,6 hectares) et aux abords de la forêt domaniale de Ripaille.La plage se compose d'une zone en herbe ombragée par des châtaigniers centenaires, appréciée pour les pique-niques et la détente, et d'un accès au lac avec un fond en galets et graviers. La baignade est surveillée du 1er juillet au 31 août, de 10h30 à 19h, avec poste de secours et maîtres-nageurs sauveteurs sur place. L'été, plusieurs milliers de promeneurs et baigneurs fréquentent quotidiennement ce site très familial.
+La plage de Saint-Disdille, aussi appelée plage de la Châtaigneraie, est une plage publique gratuite située à l'est de Thonon-les-Bains, dans le quartier de Corzent, sur les rives françaises du lac Léman. Labellisée Pavillon Bleu depuis 2010 pour la qualité de ses eaux et de ses aménagements environnementaux, elle s'étend au pied du vaste parc arboré de la Châtaigneraie (4,6 hectares) et aux abords de la forêt domaniale de Ripaille.
+
+La plage se compose d'une zone en herbe ombragée par des châtaigniers centenaires, appréciée pour les pique-niques et la détente, et d'un accès au lac avec un fond en galets et graviers. La baignade est surveillée du 1er juillet au 31 août, de 10h30 à 19h, avec poste de secours et maîtres-nageurs sauveteurs sur place. L'été, plusieurs milliers de promeneurs et baigneurs fréquentent quotidiennement ce site très familial.
 
 ## Activités sur place
 
@@ -88,10 +90,6 @@ Piste cyclable ViaRhôna (V61) reliant Thonon à Évian passe à proximité. Voi
 ## Quand y aller
 
 La plage est accessible toute l'année, mais la période idéale s'étend de mai à septembre pour profiter des températures agréables et des activités nautiques. Juillet et août offrent la baignade surveillée et une eau à 22–24 °C, mais c'est aussi la période la plus fréquentée : privilégier les matinées et les soirées pour éviter l'affluence. En juin et septembre, l'eau est plus fraîche mais la plage est nettement plus calme. Hors saison, le site reste un lieu de promenade apprécié, avec de belles lumières sur le Léman et les Alpes en arrière-plan.
-
-## Événements
-
-Soirées « électro » occasionnelles organisées par l'Oxxy Beach en été (se renseigner directement auprès de l'établissement). La plage est un lieu prisé des Thononais pour les barbecues en famille ou entre amis en soirée tout au long de la belle saison.
 
 ## Questions fréquentes
 

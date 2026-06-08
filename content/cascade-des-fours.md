@@ -1,11 +1,11 @@
 ---
 slug: cascade-des-fours
-name: "Cascade des Fours"
+name: Cascade des Fours
 category: cascade
-category_label: "Cascade"
-commune: "Sallanches"
-postal_code: "74700"
-department: "Haute-Savoie"
+category_label: Cascade
+commune: Sallanches
+postal_code: 74700
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,16 +15,16 @@ canonical_url: https://loisirs74.fr/cascade-des-fours
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/6/68/Cascade_des_Fours_%40_Lanch%C3%A9ron.jpg
 photo_type: real
-photo_author: "Rémih"
-photo_license: "CC BY-SA 4.0"
+photo_author: Rémih
+photo_license: CC BY-SA 4.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Cascade des Fours
 
-> Cascade de haute montagne prenant sa source dans la Gouille des Fours (2 030 m), au pied de la Pierre Fendue dans le massif des Aravis, accessible par sentier escarpé depuis Lintre.
+> Cascade de montagne alimentée par la Gouille des Fours, au pied de la Pierre Fendue dans le massif des Aravis. Accès libre, randonnée exigeante, Sallanches.
 
 ## En bref
 
@@ -40,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Cascade des Fours est une cascade de haute montagne située dans la Combe des Fours, sur le territoire de la commune de Sallanches, dans le massif des Aravis en Haute-Savoie. Elle prend sa source dans la Gouille des Fours, un lac d'altitude à 2 030 m, situé au pied de la Pierre Fendue, un bloc rocheux fendu tombé au milieu des alpages. Cette cascade alimente le torrent des Fours, affluent de la Sallanche, qui a donné son nom à la ville de Sallanches.L'accès à la cascade se fait par un sentier de randonnée au départ du parking de Lintre-Phiterne, via le Pont de la Flée et les alpages de la Combe des Fours. Le sentier longe le torrent des Fours sur sa partie supérieure et devient très escarpé à l'approche de la cascade. Bien équipé de câbles et de mains courantes, ce tronçon demeure exigeant et nécessite vigilance et pied sûr. La cascade est visible depuis les alpages environnants et marque l'entrée de la vallée suspendue menant à la Gouille des Fours.La Combe des Fours offre un panorama exceptionnel sur le Mont-Blanc, les Aravis et le massif des Fiz. Le secteur abrite également d'autres curiosités naturelles telles que la Pierre Fendue et le Col de Portette (2 128 m). Le nom « Fours » proviendrait soit de la présence ancienne de fours à chaux ou à minerais, soit d'un lieu ensoleillé et chaud selon les sources toponymiques locales. La région est fréquentée par les randonneurs de juin à octobre et pratiquée en cascade de glace l'hiver.
+La Cascade des Fours est une cascade de haute montagne située dans la Combe des Fours, sur le territoire de la commune de Sallanches, dans le massif des Aravis en Haute-Savoie. Elle prend sa source dans la Gouille des Fours, un lac d'altitude à 2 030 m, situé au pied de la Pierre Fendue, un bloc rocheux fendu tombé au milieu des alpages. Cette cascade alimente le torrent des Fours, affluent de la Sallanche, qui a donné son nom à la ville de Sallanches.
+
+L'accès à la cascade se fait par un sentier de randonnée au départ du parking de Lintre-Phiterne, via le Pont de la Flée et les alpages de la Combe des Fours. Le sentier longe le torrent des Fours sur sa partie supérieure et devient très escarpé à l'approche de la cascade. Bien équipé de câbles et de mains courantes, ce tronçon demeure exigeant et nécessite vigilance et pied sûr. La cascade est visible depuis les alpages environnants et marque l'entrée de la vallée suspendue menant à la Gouille des Fours.
+
+La Combe des Fours offre un panorama exceptionnel sur le Mont-Blanc, les Aravis et le massif des Fiz. Le secteur abrite également d'autres curiosités naturelles telles que la Pierre Fendue et le Col de Portette (2 128 m). Le nom « Fours » proviendrait soit de la présence ancienne de fours à chaux ou à minerais, soit d'un lieu ensoleillé et chaud selon les sources toponymiques locales. La région est fréquentée par les randonneurs de juin à octobre et pratiquée en cascade de glace l'hiver.
 
 ## Activités sur place
 
@@ -58,6 +62,9 @@ La Combe des Fours abrite une biodiversité alpine riche : marmottes, bouquetins
 
 ### Cascade de glace en hiver (expert)
 La cascade se transforme en site d'escalade sur glace en hiver. Pratique réservée aux grimpeurs expérimentés et encadrés. Accès hivernal difficile en raison de l'enneigement.
+
+### Photo et pause panorama au pied de la chute
+Le belvédère naturel sous la chute offre un cadre exceptionnel pour la photographie de paysage. Meilleure lumière en milieu de matinée et fin d'après-midi ; protéger le matériel des embruns au printemps.
 
 ## Infos pratiques
 

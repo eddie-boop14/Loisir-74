@@ -1,34 +1,33 @@
 ---
 slug: telecabine-pleney-morzine
-name: "Télécabine du Pléney"
+name: Télécabine du Pléney
 category: telecabine
-category_label: "Téléphérique / Télécabine"
-commune: "Morzine"
-postal_code: "74110"
-department: "Haute-Savoie"
+category_label: Télécabine
+commune: Morzine
+postal_code: 74110
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
 canonical_url: https://loisirs74.fr/telecabine-pleney-morzine
 language: fr
-photo_url: https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Maël BALLAND"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg
+photo_type: real
+last_updated: 9 mai 2026
 source: loisirs74.fr
 ---
 
 # Télécabine du Pléney
 
-> La télécabine du Pléney s'élève du cœur du village de Morzine vers un panorama sur le Chablais, le Léman et le Mont Blanc, et sert de porte d'entrée au bikepark et aux sentiers d'altitude.
+> Télécabine du Pléney au cœur de Morzine : vue panoramique sur le Chablais et le Mont Blanc, bikepark VTT, luge d'été. Tarifs et horaires officiels 2026.
 
 ## En bref
 
-- **Catégorie**: Téléphérique / Télécabine
+- **Catégorie**: Télécabine
 - **Commune**: Morzine, Haute-Savoie (74110)
 - **Type**: Télécabine de montagne
 - **Accès**: Payant
+- **Tarif**: À partir de 8,40 € (adulte AR piéton)
 - **Parking**: Parkings du village de Morzine
 - **Chiens**: Non renseigné — vérifier auprès de l'exploitant
 - **Meilleure saison**: Juillet – août (été) · Décembre – avril (hiver)
@@ -36,7 +35,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-La télécabine du Pléney part du centre du village de Morzine (1 000 m) pour rejoindre le sommet du Pléney, ouvrant sur un panorama étendu sur le Chablais, le lac Léman et le massif du Mont Blanc. Située route du Téléphérique, à deux pas des commerces du bourg, elle est l'installation la plus centrale de Morzine.En été (juillet – août), la télécabine dessert le bikepark de Morzine, l'une des destinations VTT de descente les plus réputées des Alpes, ainsi qu'une piste de luge d'été et plusieurs itinéraires de randonnée balisés. En hiver, elle constitue le principal accès depuis le village au domaine skiable Morzine – Les Gets et aux Portes du Soleil.
+La télécabine du Pléney part du centre du village de Morzine (1 000 m) pour rejoindre le sommet du Pléney, à environ 1 500 m d'altitude, ouvrant sur un panorama étendu sur le Chablais, le lac Léman et le massif du Mont Blanc. Située route du Téléphérique, à deux pas des commerces du bourg, elle est l'installation la plus centrale de Morzine et la principale porte d'entrée nord du domaine des Portes du Soleil.
+
+En été (5 juillet – 31 août 2026), la télécabine dessert le bikepark de Morzine, l'une des destinations VTT de descente les plus réputées des Alpes, ainsi qu'une piste de luge d'été et plusieurs itinéraires de randonnée balisés. Des soirées nocturnes jusqu'à 19h00 sont proposées les mardis et jeudis du 8 juillet au 28 août. En hiver, elle constitue le principal accès depuis le village au domaine skiable Morzine – Les Gets et aux Portes du Soleil.
 
 ## Activités sur place
 
@@ -55,10 +56,15 @@ Vue dégagée sur le lac Léman et les sommets du Chablais depuis le plateau du 
 ### Soirées nocturnes (juillet – août)
 Les mardis et jeudis du 8 juillet au 28 août, la télécabine est ouverte jusqu'à 19h00 pour des randonnées ou repas en altitude.
 
+### Vol parapente biplace au départ du Pléney
+Le sommet du Pléney est un site de décollage parapente utilisé par les écoles locales. Vols biplaces face au Chablais et au Mont Blanc en saison (réservation conseillée).
+
 ## Infos pratiques
 
 - **Adresse**: Route du Téléphérique, 74110 Morzine
+- **Coordonnées**: 
 - **Altitude départ**: environ 1 000 m
+- **Altitude arrivée**: environ 1 500 m (plateau du Pléney)
 - **Horaires**: Du 5 juillet au 31 août 2026 : tous les jours 9h00–17h30. Nocturnes jusqu'à 19h00 les mardis et jeudis du 8 juillet au 28 août inclus. Sous réserve de conditions météo favorables. Vérifié sur le site officiel le 28 avril 2026.
 - **Tarifs**: Piéton adulte AR : 8,40 €. Enfant 5–15 ans AR : 7,40 €. Jeune/senior (16–19 ans et 65+) AR : 7,90 €. Groupe dès 4 pers. AR : 7,40 €. VTT 1 montée adulte : 8,90 €. Gratuit moins de 5 ans. Vérifié le 28 avril 2026.
 - **Réservation**: Billetterie sur ski-morzine.com ou en caisse sur place.

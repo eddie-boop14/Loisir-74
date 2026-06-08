@@ -1,11 +1,11 @@
 ---
 slug: base-de-loisirs-de-la-beunaz
-name: "Base de loisirs de la Beunaz"
+name: Base de loisirs de la Beunaz
 category: domaine
-category_label: "Base de loisirs"
-commune: "Saint-Paul-en-Chablais"
-postal_code: "74500"
-department: "Haute-Savoie"
+category_label: Domaine
+commune: Saint-Paul-en-Chablais
+postal_code: 74500
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,31 +15,36 @@ canonical_url: https://loisirs74.fr/base-de-loisirs-de-la-beunaz
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/2/21/La_plage_de_La_Beunaz.jpg
 photo_type: real
-photo_author: "Saint-Paul-en-Chablais"
-photo_license: "CC BY-SA 4.0"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+photo_author: Alpine meadow
+photo_license: Wikimedia Commons
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Base de loisirs de la Beunaz
 
-> Base de loisirs aménagée autour d'un lac naturel de montagne tempéré à 900 m d'altitude, créée en 1951 par André Caza, proposant baignade, parcours aventure, activités nautiques et hébergements insolites.
+> Base de loisirs autour d'un lac naturel tempéré à 900 m d'altitude. Baignade surveillée, parcours aventure, activités nautiques. Pass journée 18 €, entrée 3,80 €.
 
 ## En bref
 
-- **Catégorie**: Base de loisirs
+- **Catégorie**: Domaine
 - **Commune**: Saint-Paul-en-Chablais, Haute-Savoie (74500)
 - **GPS**: 46.3397, 6.6383
 - **Type**: Base de loisirs multi-activités
 - **Accès**: Payant
+- **Tarif**: À partir de 3,80 € (entrée baignade) · Pass'Beun 18 €
 - **Parking**: Gratuit sur site
 - **Meilleure saison**: Juin – septembre (ouvert tous les jours en juillet-août)
 - **Durée**: Demi-journée à journée complète
+- **Altitude**: 900 m
 
 ## Présentation
 
-La Base de loisirs de la Beunaz est un espace récréatif aménagé autour d'un lac naturel tempéré de montagne, situé à 900 mètres d'altitude dans le pays de Gavot, sur la commune de Saint-Paul-en-Chablais. Le lac de la Beunaz (qui se prononce « La Beune ») est un lac naturel d'origine glaciaire, caractérisé par une eau tempérée avoisinant les 16 °C, ce qui en fait un lieu de baignade prisé dans le Chablais.Créée en 1951 par André Caza, ancien champion d'Europe de plongeon, la base de loisirs conserve aujourd'hui l'esprit pionnier de son fondateur avec l'emblématique « étoile orange » qui signale le site. Exploitée depuis 1995 par Indiana'Ventures, elle propose un ensemble d'activités aquatiques, terrestres et aériennes sur un site naturel préservé avec roselières et vue sur la Dent d'Oche.Le site comprend une baignade surveillée avec piscine alimentée par l'eau du lac, des plongeoirs de différentes hauteurs, la célèbre Télébeune (tyrolienne aquatique inaugurée en 1959), un parcours accrobranche Indiana Parc, des activités nautiques (canoë, pédalo, stand-up paddle), des structures gonflables, trampolines, terrains de sport, ainsi qu'un restaurant et des hébergements insolites (cabanes dans les arbres, tipis, yourtes) pour prolonger l'expérience.
+La Base de loisirs de la Beunaz est un espace récréatif aménagé autour d'un lac naturel tempéré de montagne, situé à 900 mètres d'altitude dans le pays de Gavot, sur la commune de Saint-Paul-en-Chablais. Le lac de la Beunaz (qui se prononce « La Beune ») est un lac naturel d'origine glaciaire, caractérisé par une eau tempérée avoisinant les 16 °C, ce qui en fait un lieu de baignade prisé dans le Chablais.
+
+Créée en 1951 par André Caza, ancien champion d'Europe de plongeon, la base de loisirs conserve aujourd'hui l'esprit pionnier de son fondateur avec l'emblématique « étoile orange » qui signale le site. Exploitée depuis 1995 par Indiana'Ventures, elle propose un ensemble d'activités aquatiques, terrestres et aériennes sur un site naturel préservé avec roselières et vue sur la Dent d'Oche.
+
+Le site comprend une baignade surveillée avec piscine alimentée par l'eau du lac, des plongeoirs de différentes hauteurs, la célèbre Télébeune (tyrolienne aquatique inaugurée en 1959), un parcours accrobranche Indiana Parc, des activités nautiques (canoë, pédalo, stand-up paddle), des structures gonflables, trampolines, terrains de sport, ainsi qu'un restaurant et des hébergements insolites (cabanes dans les arbres, tipis, yourtes) pour prolonger l'expérience.
 
 ## Activités sur place
 
@@ -91,10 +96,6 @@ Ligne de bus ÉVA'D 124 (transports en commun d'Évian-les-Bains) dessert la com
 ## Quand y aller
 
 La base de loisirs est ouverte tous les jours en juillet et août, période la plus animée avec toutes les activités en fonctionnement et surveillance permanente de la baignade. En juin, l'ouverture se limite aux week-ends et jours fériés. L'eau du lac, naturellement tempérée, est la plus agréable de fin juin à fin août. En dehors de la haute saison, la base propose une ouverture en après-midi à partir de 13h30 pour la baignade non surveillée et le parcours aventure. Le restaurant « À la Belle Étoile » reste accessible toute l'année du jeudi au dimanche (hors juillet-août où il est ouvert tous les jours), permettant de profiter du cadre du lac même hors saison estivale. L'automne et le printemps offrent un cadre plus calme pour les randonneurs souhaitant découvrir le site sans la foule estivale.
-
-## Événements
-
-Animations et soirées à thèmes organisées tout au long de l'été sur la base de loisirs. Cours de natation dispensés par les maîtres-nageurs. Séances d'aquagym deux fois par semaine en haute saison. Vérifier le programme sur le site Indiana'Ventures.
 
 ## Questions fréquentes
 

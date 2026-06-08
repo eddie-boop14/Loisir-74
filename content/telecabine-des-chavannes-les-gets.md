@@ -1,11 +1,11 @@
 ---
 slug: telecabine-des-chavannes-les-gets
-name: "Télécabine des Chavannes"
+name: Télécabine des Chavannes
 category: telecabine
-category_label: "Téléphérique / Télécabine"
-commune: "Les Gets"
-postal_code: "74260"
-department: "Haute-Savoie"
+category_label: Télécabine
+commune: Les Gets
+postal_code: 74260
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,25 +13,24 @@ latitude: 46.1577
 longitude: 6.6685
 canonical_url: https://loisirs74.fr/telecabine-des-chavannes-les-gets
 language: fr
-photo_url: https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Maël BALLAND"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg
+photo_type: real
+last_updated: 28 avril 2026
 source: loisirs74.fr
 ---
 
 # Télécabine des Chavannes
 
-> Télécabine 6 places du Bike Park des Gets : accès au plateau des Chavannes (1 482 m) en 5 minutes, départ front de neige du village. Domaine VTT et randonnée, liaison Portes du Soleil.
+> Télécabine 6 places reliant Les Gets (1 170 m) au plateau des Chavannes (1 482 m). Bike Park, VTT, randonnée. Tarifs et horaires officiels SOLEGETS.
 
 ## En bref
 
-- **Catégorie**: Téléphérique / Télécabine
+- **Catégorie**: Télécabine
 - **Commune**: Les Gets, Haute-Savoie (74260)
 - **GPS**: 46.1577, 6.6685
 - **Type**: Télécabine 6 places
 - **Accès**: Payant
+- **Tarif**: À partir de 7,20 € (montée simple adulte)
 - **Parking**: Parking des Chavannes (payant)
 - **Chiens**: Acceptés en laisse
 - **Meilleure saison**: Juillet – août (Bike Park), décembre – avril (ski)
@@ -39,7 +38,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-La télécabine des Chavannes est une remontée mécanique 6 places exploitée par SOLEGETS à Les Gets (74260). Elle relie le front de neige du village (1 170 m) au plateau des Chavannes (1 482 m) en un trajet de 5 minutes sur 1 545 m, avec un dénivelé de 312 m et un débit de 1 200 personnes par heure. Inaugurée en 2010, elle constitue la porte d'entrée principale du Bike Park des Gets en été.En été, la télécabine dessert un réseau de pistes VTT de descente et d'enduro, ainsi que des sentiers de randonnée balisés vers les alpages. En hiver, elle s'intègre au domaine skiable Les Gets – Morzine, partie des Portes du Soleil. Depuis le plateau, le télésiège Chavannes Express prolonge l'accès vers les secteurs de haute altitude et la liaison Portes du Soleil.
+La télécabine des Chavannes est une remontée mécanique 6 places exploitée par SOLEGETS à Les Gets (74260). Elle relie le front de neige du village (1 170 m) au plateau des Chavannes (1 482 m) en un trajet de 5 minutes sur 1 545 m, avec un dénivelé de 312 m et un débit de 1 200 personnes par heure. Inaugurée en 2010, elle constitue la porte d'entrée principale du Bike Park des Gets en été.
+
+En été, la télécabine dessert un réseau de pistes VTT de descente et d'enduro, ainsi que des sentiers de randonnée balisés vers les alpages. En hiver, elle s'intègre au domaine skiable Les Gets – Morzine, partie des Portes du Soleil. Depuis le plateau, le télésiège Chavannes Express prolonge l'accès vers les secteurs de haute altitude et la liaison Portes du Soleil. Embarquement avec VTT autorisé en été ; parkings gratuits au front de neige.
 
 ## Activités sur place
 
@@ -57,6 +58,9 @@ Plusieurs restaurants ouverts en saison : Le Chasse Montagne, La DZ, Le Vaffieu.
 
 ### Yoga et balades famille
 En pleine saison, activités bien-être et circuits ludiques familiaux organisés sur le plateau, accessibles depuis la gare amont.
+
+### Vol parapente biplace au départ des Chavannes
+Plusieurs écoles proposent des baptêmes parapente avec décollage depuis le plateau des Chavannes en saison (réservation conseillée).
 
 ## Infos pratiques
 
@@ -83,10 +87,6 @@ Bus Lihsa ligne 60 (Cluses – Les Gets) dessert le village. En hiver, navettes 
 ## Quand y aller
 
 Le Bike Park fonctionne de fin mai à début septembre, avec la pleine saison de juillet à fin août. La Coupe du Monde UCI MTB se tient fin août (foule, accès restreint VTT côté Mont-Chéry). Pour la randonnée, juillet-août offre alpages fleuris. En hiver, le domaine ouvre mi-décembre et la fréquentation est maximale pendant les vacances scolaires françaises.
-
-## Événements
-
-Coupe du Monde UCI Mountain Bike (DH + Enduro) — fin août annuellement. Événements VTT CRANKWORX secteur Portes du Soleil.
 
 ## Questions fréquentes
 

@@ -1,11 +1,11 @@
 ---
 slug: palais-lumiere
-name: "Palais Lumière"
+name: Palais Lumière
 category: musee
-category_label: "Musée"
-commune: "Évian-les-Bains"
-postal_code: "74500"
-department: "Haute-Savoie"
+category_label: Musée
+commune: Évian-les-Bains
+postal_code: 74500
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,18 +13,18 @@ latitude: 46.3997
 longitude: 6.5909
 canonical_url: https://loisirs74.fr/palais-lumiere
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b0/PalaisLumi%C3%A8re-DSCN1105.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b0/PalaisLumi%C3%A8re-DSCN1105.jpg
 photo_type: real
-photo_author: "Pintopc"
-photo_license: "CC BY-SA 3.0"
+photo_author: Camster
+photo_license: CC BY-SA 3.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Palais Lumière
 
-> Ancien établissement thermal de 1902 reconverti en centre d'expositions d'excellence, face au lac Léman. Expositions temporaires de peinture, sculpture et photographie.
+> Ancien établissement thermal (1902) transformé en espace d'expositions. Plein tarif 9 €, réduit 7 €, gratuit -16 ans. Expositions peinture, sculpture, photo.
 
 ## En bref
 
@@ -33,6 +33,7 @@ source: loisirs74.fr
 - **GPS**: 46.3997, 6.5909
 - **Type**: Centre d'expositions et musée
 - **Accès**: Payant
+- **Tarif**: À partir de 9 € (plein tarif), 7 € (réduit), gratuit -16 ans
 - **Parking**: Parking du Port à proximité (payant)
 - **Chiens**: Non autorisés (sauf chiens d'assistance)
 - **Meilleure saison**: Toute l'année (selon programmation)
@@ -40,7 +41,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Palais Lumière est un ancien établissement thermal construit en 1902 par l'architecte Ernest Brunnarius, situé quai Charles-Albert Besson, face au lac Léman. Monument historique inscrit en 1986, le bâtiment a été racheté en 1996 par la Ville d'Évian puis entièrement rénové par les architectes Michel Spitz et François Châtillon pour rouvrir en 2006 en centre culturel et de congrès.L'édifice de 4 200 m² abrite aujourd'hui 700 m² de salles d'exposition sur deux niveaux, hautement équipées pour accueillir des expositions d'envergure internationale (peinture, sculpture, photographie), une médiathèque Charles-Ferdinand Ramuz de 700 m², et un espace de congrès de 2 200 m² avec auditorium de 382 places. Le bâtiment a retrouvé son dôme central de 8,5 m de diamètre culminant à 35 m de haut, ses deux campaniles en pierre ornés de grès flammés, et ses peintures murales de Jean Benderly dans le vestibule.Le Palais Lumière est devenu en quelques années l'un des principaux pôles culturels du bassin lémanique, avec une programmation d'expositions temporaires de renommée internationale : Marc Chagall, Raoul Dufy, Rodin, Charlie Chaplin, Félix Ziem. Le bâtiment a reçu en 2026 le label S3A garantissant un accueil et une accessibilité pour les personnes en situation de handicap intellectuel.
+Le Palais Lumière est un ancien établissement thermal construit en 1902 par l'architecte Ernest Brunnarius, situé quai Charles-Albert Besson, face au lac Léman. Monument historique inscrit en 1986, le bâtiment a été racheté en 1996 par la Ville d'Évian puis entièrement rénové par les architectes Michel Spitz et François Châtillon pour rouvrir en 2006 en centre culturel et de congrès.
+
+L'édifice de 4 200 m² abrite aujourd'hui 700 m² de salles d'exposition sur deux niveaux, hautement équipées pour accueillir des expositions d'envergure internationale (peinture, sculpture, photographie), une médiathèque Charles-Ferdinand Ramuz de 700 m², et un espace de congrès de 2 200 m² avec auditorium de 382 places. Le bâtiment a retrouvé son dôme central de 8,5 m de diamètre culminant à 35 m de haut, ses deux campaniles en pierre ornés de grès flammés, et ses peintures murales de Jean Benderly dans le vestibule.
+
+Le Palais Lumière est devenu en quelques années l'un des principaux pôles culturels du bassin lémanique, avec une programmation d'expositions temporaires de renommée internationale : Marc Chagall, Raoul Dufy, Rodin, Charlie Chaplin, Félix Ziem. Le bâtiment a reçu en 2026 le label S3A garantissant un accueil et une accessibilité pour les personnes en situation de handicap intellectuel.
 
 ## Activités sur place
 
@@ -72,6 +77,8 @@ Médiathèque intégrée au Palais Lumière (700 m² sur trois niveaux), 36 000 
 - **Parking**: Parking du Port à proximité immédiate (payant). Places PMR adaptées à proximité du bâtiment.
 - **Accessibilité**: Ascenseur (80 x 130 cm). Toilettes PMR avec barres d'appui. Fauteuils roulants disponibles à l'accueil sur demande. Boucle magnétique à l'accueil. Label S3A 2026 (accessibilité handicap intellectuel). Visites adaptées sur demande les mercredis et jeudis matin.
 - **Animaux**: Chiens d'assistance acceptés. Autres animaux non autorisés.
+- **Coordonnées**: 46,3997° N · 6,5909° E (face au lac Léman)
+- **Durée de visite**: 1 h à 2 h selon le rythme. Visites commentées d'environ 1 h (publiques tous les jours à 14h30). Parcours familles 6-12 ans d'environ 40 min.
 
 ## Comment y aller
 
@@ -87,10 +94,6 @@ Piste cyclable ViaRhôna (EuroVelo 17) à proximité. Aménagements cyclables le
 ## Quand y aller
 
 Le Palais Lumière est ouvert toute l'année selon la programmation des expositions temporaires (généralement 2 à 3 grandes expositions par an). Les périodes d'affluence se situent lors des vernissages et les week-ends en juillet-août. Visiter en semaine hors vacances scolaires garantit plus de tranquillité. Les visites commentées pour familles le mercredi après-midi et dimanche matin sont très demandées. L'hiver, profiter du chauffage et de la lumière naturelle des verrières restaurées. L'été, prolonger la visite par une balade au bord du lac.
-
-## Événements
-
-Expositions temporaires thématiques (2 à 3 par an) : peinture, sculpture, photographie. Visites commentées publiques tous les jours à 14h30. Parcours familles les mercredis à 16h et dimanches à 11h. Ateliers pédagogiques pour enfants et adolescents (5 € par atelier). Conférences et événements culturels ponctuels organisés par le service culturel de la Ville d'Évian et la Maison des Arts du Léman.
 
 ## Questions fréquentes
 

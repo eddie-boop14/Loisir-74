@@ -1,11 +1,11 @@
 ---
 slug: mont-veyrier
-name: "Mont Veyrier"
+name: Mont Veyrier
 category: point-de-vue
-category_label: "Point de vue"
-commune: "Annecy"
-postal_code: "74940"
-department: "Haute-Savoie"
+category_label: Point de vue
+commune: Annecy
+postal_code: 74940
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,18 +13,18 @@ latitude: 45.9181
 longitude: 6.1805
 canonical_url: https://loisirs74.fr/mont-veyrier
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg
 photo_type: real
-photo_author: "Myrabella"
-photo_license: "CC BY-SA 3.0"
+photo_author: Guilhem Vellut from Annecy, France
+photo_license: CC BY 2.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Mont Veyrier
 
-> Montagne emblématique d'Annecy culminant à 1 291 mètres, offrant un panorama exceptionnel sur le lac d'Annecy, les Bauges, les Aravis et le Mont-Blanc depuis le Sentier des Crêtes.
+> Sommet emblématique à 1 291 m dominant le lac d'Annecy avec vue 360° sur les Bauges, les Aravis et le Mont-Blanc. Sentier des Crêtes, accès libre toute l'année, départ Petit Port.
 
 ## En bref
 
@@ -37,10 +37,15 @@ source: loisirs74.fr
 - **Chiens**: Acceptés en laisse
 - **Meilleure saison**: Avril – octobre (éviter gel et neige)
 - **Durée**: 4 h–6 h (aller-retour)
+- **Altitude**: 1 291 m (sommet)
 
 ## Présentation
 
-Le Mont Veyrier est une montagne située sur la rive est du lac d'Annecy, culminant à 1 291 mètres d'altitude. Il domine les communes d'Annecy (anciennement Annecy-le-Vieux), Villaz et Veyrier-du-Lac, et fait partie du massif des Bornes. Avec son voisin le Mont Baron (1 299 m), il constitue l'un des sommets les plus emblématiques et les plus fréquentés du bassin annécien.Le Mont Veyrier offre un panorama exceptionnel sur le lac d'Annecy, le massif des Bauges, le Semnoz, les Bornes, les Aravis et, par temps clair, le Mont-Blanc. Le sommet est accessible par de nombreux sentiers balisés qui serpentent à travers une forêt ombragée de hêtres et de résineux. Le célèbre Sentier des Crêtes relie le Mont Veyrier au Mont Baron en longeant les falaises calcaires, offrant une vue plongeante sur le lac tout au long du parcours.Un ancien téléphérique, construit en 1934 par le banquier Laydernier, reliait Veyrier-du-Lac au sommet du Mont Baron jusqu'en 1984. L'ancienne gare d'arrivée a été démantelée en 2001, laissant aujourd'hui une plateforme bétonnée qui sert de belvédère très prisé. Deux tables d'orientation permettent d'identifier les sommets environnants. Un circuit botanique est également présent sur le sentier du Pré Longé.
+Le Mont Veyrier est une montagne située sur la rive est du lac d'Annecy, culminant à 1 291 mètres d'altitude. Il domine les communes d'Annecy (anciennement Annecy-le-Vieux), Villaz et Veyrier-du-Lac, et fait partie du massif des Bornes. Avec son voisin le Mont Baron (1 299 m), il constitue l'un des sommets les plus emblématiques et les plus fréquentés du bassin annécien, accessible directement depuis le centre-ville d'Annecy en moins de 30 minutes.
+
+Le Mont Veyrier offre un panorama exceptionnel à 360 degrés sur le lac d'Annecy, le massif des Bauges, le Semnoz, les Bornes, les Aravis et, par temps clair, le Mont-Blanc. C'est l'un des rares sommets de Haute-Savoie offrant une telle diversité de paysages depuis un point de vue aussi accessible. Le sommet est accessible par de nombreux sentiers balisés qui serpentent à travers une forêt ombragée de hêtres et de résineux. Le célèbre Sentier des Crêtes relie le Mont Veyrier au Mont Baron en longeant les falaises calcaires, offrant une vue plongeante sur le lac tout au long du parcours avec plus de 800 mètres de dénivelé vertical.
+
+Un ancien téléphérique, construit en 1934 par le banquier Laydernier, reliait Veyrier-du-Lac au sommet du Mont Baron jusqu'en 1984, transportant jusqu'à 69 000 passagers par an dans ses meilleures années. L'ancienne gare d'arrivée a été démantelée en 2001, laissant aujourd'hui une plateforme bétonnée qui sert de belvédère très prisé. Deux tables d'orientation permettent d'identifier les sommets environnants. Un circuit botanique au Pré Longé permet de découvrir la flore locale, avec une végétation contrastée entre le versant sud ensoleillé face au lac et le versant nord plus frais et humide donnant sur le défilé de Dingy-Saint-Clair.
 
 ## Activités sur place
 
@@ -90,10 +95,6 @@ Depuis Annecy centre, suivre la piste cyclable le long du lac (Voie Verte du Lac
 
 Le Mont Veyrier est accessible toute l'année, mais les meilleures conditions se trouvent d'avril à octobre. En été (juillet-août), l'ascension est très fréquentée, notamment le week-end : privilégier un départ tôt le matin (avant 8 h) ou en fin de journée pour éviter la foule et la chaleur. La montée en forêt reste ombragée, mais le Sentier des Crêtes est exposé au soleil. En automne (septembre-octobre), la fréquentation diminue, les couleurs de la forêt sont magnifiques et la vue sur le lac est souvent dégagée par temps clair. En hiver et au printemps (novembre à mars), le sentier peut être enneigé et verglacé, rendant les passages aériens dangereux sans crampons. Plusieurs accidents surviennent chaque année sur la crête en conditions hivernales. Par temps de pluie, les sentiers deviennent très glissants (sol argileux dans les sections basses). Le coucher de soleil depuis le belvédère du Mont Baron est particulièrement somptueux : nombreux randonneurs bivouaquent sur la plateforme de l'ancien téléphérique.
 
-## Événements
-
-Chaque premier samedi d'août, la Fête du Lac d'Annecy propose un feu d'artifice géant visible depuis le sommet du Mont Veyrier. De nombreux randonneurs montent en fin d'après-midi pour assister au spectacle depuis les points de vue dégagés du Sentier des Crêtes.
-
 ## Questions fréquentes
 
 **Q : L'accès au Mont Veyrier est-il payant ?**
@@ -119,6 +120,14 @@ R : Le Mont Veyrier est accessible aux randonneurs débutants en bonne condition
 **Q : Quelle est la meilleure saison pour randonner au Mont Veyrier ?**
 
 R : Les meilleures périodes pour le Mont Veyrier sont le printemps (avril-juin) et l'automne (septembre-octobre). La fréquentation est plus calme qu'en été, les températures sont agréables et la vue sur le lac souvent dégagée. Éviter l'hiver (novembre-mars) sans équipement adapté : la crête peut être verglacée.
+
+**Q : Que faire en cas de mauvais temps au Mont Veyrier ?**
+
+R : En cas de pluie ou de brouillard, il est fortement déconseillé d'emprunter le Sentier des Crêtes. Les passages rocheux deviennent très glissants et la visibilité nulle rend la progression dangereuse. Privilégier une autre randonnée ou reporter votre sortie.
+
+**Q : Peut-on voir le Mont-Blanc depuis le Mont Veyrier ?**
+
+R : Oui, par temps clair, le Mont-Blanc est visible depuis le sommet du Mont Baron. Les tables d'orientation au sommet permettent d'identifier facilement les différents sommets des Alpes, incluant le massif du Mont-Blanc à l'est.
 
 ---
 

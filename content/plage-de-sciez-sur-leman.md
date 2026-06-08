@@ -1,11 +1,11 @@
 ---
 slug: plage-de-sciez-sur-leman
-name: "Plage de Sciez-sur-Léman"
+name: Plage de Sciez-sur-Léman
 category: lac
-category_label: "Lac & plage"
-commune: "Sciez"
-postal_code: "74140"
-department: "Haute-Savoie"
+category_label: Lac
+commune: Sciez
+postal_code: 74140
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,21 +13,22 @@ latitude: 46.33251
 longitude: 6.38413
 canonical_url: https://loisirs74.fr/plage-de-sciez-sur-leman
 language: fr
-photo_url: https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Joshua Earle"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/a/a1/Sciez-regate.jpg
+photo_type: real
+photo_author: Alpine lake
+photo_license: Wikimedia Commons
+photo_source: CC BY-SA
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Plage de Sciez-sur-Léman
 
-> Plage engazonnée et arborée au bord du lac Léman, avec baignade surveillée en été, espace dédié aux chiens, jeux pour enfants et équipements PMR.
+> Plage engazonnée du Léman avec baignade surveillée l'été, espace chiens, jeux, pétanque et ping-pong. Accès libre toute l'année à Sciez, Haute-Savoie.
 
 ## En bref
 
-- **Catégorie**: Lac & plage
+- **Catégorie**: Lac
 - **Commune**: Sciez, Haute-Savoie (74140)
 - **GPS**: 46.33251, 6.38413
 - **Type**: Plage lacustre (Léman)
@@ -39,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Plage de Sciez-sur-Léman est une plage municipale engazonnée et arborée du lac Léman, située à Sciez dans le Bas-Chablais, à 375 m d'altitude. Elle jouxte le port de plaisance de Sciez (450 places, labellisé Pavillon Bleu depuis 2009) et s'étend sur les rives sud du Léman, entre Thonon-les-Bains et Yvoire.La plage combine une zone engazonnée ombragée et une zone de baignade sablonneuse surveillée en juillet et août par des maîtres-nageurs. Un tiralo (fauteuil de baignade amphibie) est disponible auprès de la surveillance pour faciliter l'accès aux personnes à mobilité réduite. La plage dispose d'un espace de baignade dédié aux chiens (côté droit face au lac), une des rares plages du Léman à l'autoriser.Le site est bordé de restaurants, brasseries et écoles nautiques (voile, plongée, location de bateaux). Un kiosque et des sanitaires automatiques sont installés. Des saunas en hiver complètent l'offre de loisirs au bord de l'eau toute l'année.
+La Plage de Sciez-sur-Léman est une plage municipale engazonnée et arborée du lac Léman, située à Sciez dans le Bas-Chablais, à 375 m d'altitude. Elle jouxte le port de plaisance de Sciez (450 places, labellisé Pavillon Bleu depuis 2009) et s'étend sur les rives sud du Léman, entre Thonon-les-Bains et Yvoire.
+
+La plage combine une zone engazonnée ombragée et une zone de baignade sablonneuse surveillée en juillet et août par des maîtres-nageurs. Un tiralo (fauteuil de baignade amphibie) est disponible auprès de la surveillance pour faciliter l'accès aux personnes à mobilité réduite. La plage dispose d'un espace de baignade dédié aux chiens (côté droit face au lac), une des rares plages du Léman à l'autoriser.
+
+Le site est bordé de restaurants, brasseries et écoles nautiques (voile, plongée, location de bateaux). Un kiosque et des sanitaires automatiques sont installés. Des saunas en hiver complètent l'offre de loisirs au bord de l'eau toute l'année.
 
 ## Activités sur place
 
@@ -65,6 +70,8 @@ Nombreux restaurants et brasseries autour de la plage et du port. Terrasses avec
 
 - **Adresse**: 650 route du Port, 74140 Sciez
 - **Coordonnées**: 46,3325° N — 6,3841° E
+- **Altitude**: 375 m (niveau du lac Léman)
+- **Surveillance MNS**: Maîtres-nageurs sauveteurs en juillet–août uniquement. Tiralo PMR disponible auprès de la surveillance pendant cette période. Hors saison : baignade libre non surveillée.
 - **Ouverture**: Toute l'année. Surveillance de baignade en juillet et août uniquement.
 - **Tarif**: Gratuit
 - **Parking**: Gratuit. Parking voitures et remorques à proximité du port.
@@ -86,10 +93,6 @@ ViaRhôna (EuroVelo 17) passe à proximité. Piste cyclable le long du lac depui
 ## Quand y aller
 
 La plage est accessible toute l'année. La haute saison touristique s'étend de juin à septembre, avec une baignade surveillée uniquement en juillet et août. Le site est très fréquenté les week-ends d'été et lors des événements nautiques (fête du Nautisme en juin). En hiver, les saunas installés au bord de l'eau permettent de profiter du site même par temps froid. Le printemps (avril-mai) et l'automne (septembre-octobre) offrent une ambiance plus calme, avec une vue dégagée sur le Léman et les Alpes.
-
-## Événements
-
-Fête du Nautisme en juin. Marché hebdomadaire de Sciez le samedi matin (centre du village). Événements estivaux organisés par la commune et les associations nautiques (régates, animations au port). Saunas d'hiver au bord de l'eau de novembre à mars.
 
 ## Questions fréquentes
 

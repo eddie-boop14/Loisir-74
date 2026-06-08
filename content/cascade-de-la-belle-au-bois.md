@@ -1,11 +1,11 @@
 ---
 slug: cascade-de-la-belle-au-bois
-name: "Cascade de la Belle au Bois"
+name: Cascade de la Belle au Bois
 category: cascade
-category_label: "Cascade"
-commune: "Megève"
-postal_code: "74120"
-department: "Haute-Savoie"
+category_label: Cascade
+commune: Megève
+postal_code: 74120
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,17 +13,18 @@ latitude: 45.8565
 longitude: 6.6215
 canonical_url: https://loisirs74.fr/cascade-de-la-belle-au-bois
 language: fr
-photo_url: https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Jonathan Forage"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: /cascade-de-la-belle-au-bois-hero.jpg
+photo_type: real
+photo_author: "Cascade d'Arpenaz"
+photo_license: Wikimedia Commons
+photo_source: CC BY-SA
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Cascade de la Belle au Bois
 
-> Cascade de 30 mètres creusant des vasques turquoise, nichée en forêt à 30 minutes de marche depuis le centre de Megève. Sentier technique, accès interdit en hiver.
+> Cascade de 30 m dans une forêt proche du centre de Megève. Accès en 30 min à pied, passerelle aménagée. Ouverture estivale uniquement. Gratuit.
 
 ## En bref
 
@@ -39,7 +40,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Cascade de la Belle au Bois est une cascade naturelle de 30 mètres de haut, alimentée par le ruisseau du Planay, située sur les hauteurs sud-est de Megève à environ 1 136 m d'altitude. Elle se jette dans une succession de vasques turquoise creusées dans la roche, au cœur d'une forêt dense de pins et de hêtres. Le site est également utilisé pour la pratique du canyoning en été.L'accès se fait par le chemin du Maz, en partie goudronné puis forestier. La dernière section du sentier est technique : descente en sous-bois avec barreaux métalliques fixés sur rochers humides et glissants pour atteindre le pied de la cascade. Une passerelle aménagée permet un point de vue en hauteur plus accessible. Le site est fermé de novembre à mars pour raisons de sécurité (sentier gelé).
+La Cascade de la Belle au Bois est une cascade naturelle de 30 mètres de haut, alimentée par le ruisseau du Planay, située sur les hauteurs sud-est de Megève à environ 1 136 m d'altitude. Elle se jette dans une succession de vasques turquoise creusées dans la roche, au cœur d'une forêt dense de pins et de hêtres. Le site est également utilisé pour la pratique du canyoning en été.
+
+L'accès se fait par le chemin du Maz, en partie goudronné puis forestier. La dernière section du sentier est technique : descente en sous-bois avec barreaux métalliques fixés sur rochers humides et glissants pour atteindre le pied de la cascade. Une passerelle aménagée permet un point de vue en hauteur plus accessible. Le site est fermé de novembre à mars pour raisons de sécurité (sentier gelé).
 
 ## Activités sur place
 

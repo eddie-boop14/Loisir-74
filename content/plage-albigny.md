@@ -2,10 +2,10 @@
 slug: plage-albigny
 name: "Plage d'Albigny"
 category: lac
-category_label: "Lac & plage"
-commune: "Annecy"
-postal_code: "74940"
-department: "Haute-Savoie"
+category_label: Lac
+commune: Annecy
+postal_code: 74940
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,22 +13,22 @@ latitude: 45.9067
 longitude: 6.1489
 canonical_url: https://loisirs74.fr/plage-albigny
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/3/3c/Plage_d%27Albigny_%C3%A0_Annecy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/3/3c/Plage_d%27Albigny_%C3%A0_Annecy.jpg
 photo_type: real
-photo_author: "Inconnu"
-photo_license: "CC BY-SA 3.0"
+photo_author: Guilhem Vellut from Annecy, France
+photo_license: CC BY 2.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Plage d'Albigny
 
-> La plus grande plage publique du lac d'Annecy, avec 400 mètres de rives engazonnées face aux montagnes. Surveillée l'été, très fréquentée, équipements complets.
+> La plus grande plage gratuite du lac d'Annecy : 400 m d'herbe et sable, surveillance estivale, douches et toilettes gratuites. Quartier Albigny, Annecy.
 
 ## En bref
 
-- **Catégorie**: Lac & plage
+- **Catégorie**: Lac
 - **Commune**: Annecy, Haute-Savoie (74940)
 - **GPS**: 45.9067, 6.1489
 - **Type**: Plage publique lacustre
@@ -40,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Plage d'Albigny est la plus grande plage publique gratuite du lac d'Annecy. Située dans le quartier d'Albigny (ancienne commune d'Annecy-le-Vieux), elle s'étend sur plus de 400 mètres de rives engazonnées et sablonneuses face aux montagnes. C'est le seul espace de baignade de ce secteur et l'une des deux seules plages gratuites de la ville avec celle des Marquisats.Plage herbeuse bordée d'arbres et de haies fleuries, elle offre un cadre spacieux et ensoleillé toute la journée. Le fond du lac est sablonneux avec une pente douce facilitant l'accès à l'eau pour les jeunes enfants. Trois blocs sanitaires, douches extérieures gratuites, mise à l'eau PMR avec fauteuils flottants gratuits. Surveillance assurée par des maîtres-nageurs en juillet-août de 11h à 19h.Très fréquentée en été — son principal défaut. Places difficiles à trouver dès midi en haute saison. L'eau est transparente le matin, se voile en après-midi avec l'affluence. Située entre le parc de l'Impérial Palace à l'ouest et le port de plaisance du Petit Port à l'est, accessible à pied depuis le Pâquier (30 min de marche rapide), en vélo (piste cyclable longeant la plage), ou en bus (lignes Sibra, arrêts à proximité).
+La Plage d'Albigny est la plus grande plage publique gratuite du lac d'Annecy. Située dans le quartier d'Albigny (ancienne commune d'Annecy-le-Vieux), elle s'étend sur plus de 400 mètres de rives engazonnées et sablonneuses face aux montagnes. C'est le seul espace de baignade de ce secteur et l'une des deux seules plages gratuites de la ville avec celle des Marquisats.
+
+Plage herbeuse bordée d'arbres et de haies fleuries, elle offre un cadre spacieux et ensoleillé toute la journée. Le fond du lac est sablonneux avec une pente douce facilitant l'accès à l'eau pour les jeunes enfants. Trois blocs sanitaires, douches extérieures gratuites, mise à l'eau PMR avec fauteuils flottants gratuits. Surveillance assurée par des maîtres-nageurs en juillet-août de 11h à 19h.
+
+Très fréquentée en été — son principal défaut. Places difficiles à trouver dès midi en haute saison. L'eau est transparente le matin, se voile en après-midi avec l'affluence. Située entre le parc de l'Impérial Palace à l'ouest et le port de plaisance du Petit Port à l'est, accessible à pied depuis le Pâquier (30 min de marche rapide), en vélo (piste cyclable longeant la plage), ou en bus (lignes Sibra, arrêts à proximité).
 
 ## Activités sur place
 
@@ -65,6 +69,8 @@ Podium en bord de plage avec animations en fin de journée et soirée durant l'�
 ## Infos pratiques
 
 - **Adresse**: 6 avenue du Petit Port, quartier Albigny, 74940 Annecy
+- **Coordonnées**: 45,9100° N — 6,1400° E
+- **Surveillance MNS**: Maîtres-nageurs sauveteurs en juillet–août, tous les jours de 11h à 19h. Hors saison : baignade non surveillée.
 - **Ouverture**: Toute l'année, accès libre jour et nuit. Surveillance assurée en juillet-août de 11h à 19h.
 - **Tarif**: Gratuit
 - **Parking**: Payant à proximité (Parking Albigny avenue d'Albigny, Parking Petit Port). Très remplis en été — préférer vélo ou bus.
@@ -87,10 +93,6 @@ Piste cyclable Voie Verte du Lac d'Annecy longe la plage directement. Depuis Ann
 ## Quand y aller
 
 La meilleure période pour la baignade est de juin à septembre, avec une eau entre 20 et 24 °C. Juillet-août : affluence maximale, arriver avant 11h pour trouver une place sur la pelouse. Surveillance active 11h–19h. Mai et septembre : fréquentation raisonnable, eau encore fraîche mais agréable aux beaux jours. Hors saison (octobre–avril) : la plage devient une promenade prisée des joggeurs et promeneurs, avec vue dégagée sur les montagnes. Éviter les week-ends ensoleillés en juillet-août si vous recherchez le calme.
-
-## Événements
-
-Animations estivales organisées sur le podium en bord de plage en fin de journée et soirée (programme variable selon les années). Consultez l'agenda de l'Office de Tourisme du Lac d'Annecy pour les dates.
 
 ## Questions fréquentes
 

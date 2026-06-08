@@ -1,11 +1,11 @@
 ---
 slug: tramway-du-mont-blanc
-name: "Tramway du Mont-Blanc"
+name: Tramway du Mont-Blanc
 category: telecabine
-category_label: "Téléphérique / Télécabine"
-commune: "Saint-Gervais-les-Bains"
-postal_code: "74170"
-department: "Haute-Savoie"
+category_label: Télécabine
+commune: Saint-Gervais-les-Bains
+postal_code: 74170
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,26 +13,24 @@ latitude: 45.9063
 longitude: 6.702
 canonical_url: https://loisirs74.fr/tramway-du-mont-blanc
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/2/28/Saint-Gervais-les-Bains_Tramway_du_Mont-Blanc_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/e/e3/Tramway_Mont-Blanc.jpg
 photo_type: real
-photo_author: "Zairon"
-photo_license: "CC BY-SA 4.0"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 28 avril 2026
 source: loisirs74.fr
 ---
 
 # Tramway du Mont-Blanc
 
-> Le plus haut train à crémaillère de France grimpe de Saint-Gervais jusqu'au Nid d'Aigle (2 412 m) en été, offrant alpages, glaciers et vue sur le massif du Mont-Blanc.
+> Plus haut chemin de fer à crémaillère de France. De Saint-Gervais (792 m) au Nid d'Aigle (2 412 m) en été. Tarifs officiels et horaires vérifiés 2026.
 
 ## En bref
 
-- **Catégorie**: Téléphérique / Télécabine
+- **Catégorie**: Télécabine
 - **Commune**: Saint-Gervais-les-Bains, Haute-Savoie (74170)
 - **GPS**: 45.9063, 6.702
 - **Type**: Train à crémaillère panoramique
 - **Accès**: Payant
+- **Tarif**: À partir de 34 € (adulte A/R jusqu'à Bellevue)
 - **Parking**: Gratuit au Fayet et à Saint-Gervais
 - **Chiens**: Acceptés
 - **Meilleure saison**: Juin – septembre (été) · Décembre – avril (hiver)
@@ -40,7 +38,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Tramway du Mont-Blanc (TMB) est le chemin de fer à crémaillère le plus haut de France. Inaugurée en 1913 par la Compagnie du Tramway du Mont-Blanc, la ligne part du Fayet (580 m) et de Saint-Gervais (792 m) pour rejoindre le Nid d'Aigle (2 412 m) en été, en 1 h 15. Elle parcourt 12,4 km au fil d'un parcours que jalonnent forêts de conifères, alpages et torrents d'altitude.En hiver, le TMB dessert le Plateau de Bellevue (1 800 m) et le domaine skiable Les Houches–Saint-Gervais. En été, quatre nouvelles automotrices (Anne, Marie, Jeanne, Marguerite) conduisent randonneurs et alpinistes au pied du glacier de Bionnassay et du refuge du Nid d'Aigle, point de départ classique de l'ascension du Mont-Blanc par la Voie Royale. 75 % des alpinistes montant au Mont-Blanc empruntent le TMB.
+Le Tramway du Mont-Blanc (TMB) est le chemin de fer à crémaillère le plus haut de France. Inaugurée en 1913 par la Compagnie du Tramway du Mont-Blanc, la ligne part du Fayet (580 m) et de Saint-Gervais (792 m) pour rejoindre le Nid d'Aigle (2 412 m) en été, en 1 h 15. Elle parcourt 12,4 km au fil d'un parcours que jalonnent forêts de conifères, alpages et torrents d'altitude.
+
+En hiver, le TMB dessert le Plateau de Bellevue (1 800 m) et le domaine skiable Les Houches–Saint-Gervais. En été, quatre nouvelles automotrices (Anne, Marie, Jeanne, Marguerite) conduisent randonneurs et alpinistes au pied du glacier de Bionnassay et du refuge du Nid d'Aigle, point de départ classique de l'ascension du Mont-Blanc par la Voie Royale. 75 % des alpinistes montant au Mont-Blanc empruntent le TMB.
 
 ## Activités sur place
 

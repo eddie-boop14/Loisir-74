@@ -1,11 +1,11 @@
 ---
 slug: cascade-du-rouget
-name: "Cascade du Rouget"
+name: Cascade du Rouget
 category: cascade
-category_label: "Cascade"
-commune: "Sixt-Fer-à-Cheval"
-postal_code: "74740"
-department: "Haute-Savoie"
+category_label: Cascade
+commune: Sixt-Fer-à-Cheval
+postal_code: 74740
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,16 +15,16 @@ canonical_url: https://loisirs74.fr/cascade-du-rouget
 language: fr
 photo_url: /cascade-du-rouget-hero.jpg
 photo_type: real
-photo_author: "Florian Pépellin"
-photo_license: "CC BY-SA 4.0"
+photo_author: Florian Pépellin
+photo_license: CC BY-SA 4.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Cascade du Rouget
 
-> Cascade spectaculaire de 80 à 90 mètres de hauteur formée de trois sauts successifs dans la Vallée du Giffre, surnommée la 'Reine des Alpes' pour sa puissance et sa beauté.
+> Cascade de 80 m surnommée 'Reine des Alpes', accessible toute l'année depuis Sixt-Fer-à-Cheval. Accès gratuit, parking, randonnées GR5, Vallée du Giffre.
 
 ## En bref
 
@@ -37,10 +37,13 @@ source: loisirs74.fr
 - **Chiens**: Acceptés tenus en laisse
 - **Meilleure saison**: Mai – juin (fonte des neiges, débit maximal) · Juillet – octobre (accès facile)
 - **Durée**: 5–10 min depuis parking (été) · 1h A/R (hiver, route fermée)
+- **Altitude**: 960 m
 
 ## Présentation
 
-La Cascade du Rouget est une cascade naturelle de la Vallée du Giffre qui s'écoule toute l'année depuis le torrent de Sales en amont pour rejoindre le Giffre des Fonds en aval. Située sur la commune de Sixt-Fer-à-Cheval à environ 960 mètres d'altitude, elle constitue l'une des cascades les plus impressionnantes de Haute-Savoie avec ses 80 à 90 mètres de hauteur répartis sur trois sauts successifs. Elle est accessible directement par la route en été, ce qui en fait un site touristique très fréquenté, et marque l'entrée de la réserve naturelle du cirque du Fer-à-Cheval.Surnommée la 'Reine des Alpes', la Cascade du Rouget se distingue par son débit régulier et spectaculaire, particulièrement impressionnant lors de la fonte des neiges au printemps. La chute amont, qui mesure une centaine de mètres avec un ressaut à mi-hauteur, rebondit sur une dalle de pierre créant des projections d'eau qui rendent les abords glissants par fort débit — des accidents se sont déjà produits dans ces conditions. Le site a été classé à l'inventaire des sites naturels dès 1914 et figure parmi les cascades les plus photographiées de la région. Une légende locale attribue à son eau des vertus de virilité et de fécondité, au point que les anciens offraient encore récemment un flacon de cette eau aux jeunes mariés.
+La Cascade du Rouget est une cascade naturelle de la Vallée du Giffre qui s'écoule toute l'année depuis le torrent de Sales en amont pour rejoindre le Giffre des Fonds en aval. Située sur la commune de Sixt-Fer-à-Cheval à environ 960 mètres d'altitude, elle constitue l'une des cascades les plus impressionnantes de Haute-Savoie avec ses 80 à 90 mètres de hauteur répartis sur trois sauts successifs. Elle est accessible directement par la route en été, ce qui en fait un site touristique très fréquenté, et marque l'entrée de la réserve naturelle du cirque du Fer-à-Cheval.
+
+Surnommée la 'Reine des Alpes', la Cascade du Rouget se distingue par son débit régulier et spectaculaire, particulièrement impressionnant lors de la fonte des neiges au printemps. La chute amont, qui mesure une centaine de mètres avec un ressaut à mi-hauteur, rebondit sur une dalle de pierre créant des projections d'eau qui rendent les abords glissants par fort débit — des accidents se sont déjà produits dans ces conditions. Le site a été classé à l'inventaire des sites naturels dès 1914 et figure parmi les cascades les plus photographiées de la région. Une légende locale attribue à son eau des vertus de virilité et de fécondité, au point que les anciens offraient encore récemment un flacon de cette eau aux jeunes mariés.
 
 ## Activités sur place
 

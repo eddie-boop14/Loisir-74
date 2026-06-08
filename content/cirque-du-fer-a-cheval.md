@@ -1,11 +1,11 @@
 ---
 slug: cirque-du-fer-a-cheval
-name: "Cirque du Fer-à-Cheval"
+name: Cirque du Fer-à-Cheval
 category: cascade
-category_label: "Cascade"
-commune: "Sixt-Fer-à-Cheval"
-postal_code: "74740"
-department: "Haute-Savoie"
+category_label: Cascade
+commune: Sixt-Fer-à-Cheval
+postal_code: 74740
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,16 +15,16 @@ canonical_url: https://loisirs74.fr/cirque-du-fer-a-cheval
 language: fr
 photo_url: /cirque-du-fer-a-cheval-hero.jpg
 photo_type: real
-photo_author: "0x010C"
-photo_license: "CC BY-SA 4.0"
+photo_author: Zairon
+photo_license: CC BY-SA 4.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Cirque du Fer-à-Cheval
 
-> Amphithéâtre calcaire de 4 à 5 km, plus grand cirque montagneux des Alpes avec des parois de 500 à 700 m de hauteur et plus de trente cascades jaillissant au printemps.
+> Plus grand cirque alpin avec falaises de 500-700 m et 30+ cascades au printemps. Sentiers balisés, parking payant, accès libre à Sixt-Fer-à-Cheval.
 
 ## En bref
 
@@ -40,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Cirque du Fer-à-Cheval est un cirque naturel glaciaire situé sur la commune de Sixt-Fer-à-Cheval, dans la vallée du Giffre, au cœur de la Réserve Naturelle Nationale de Sixt-Passy. Il forme un hémicycle calcaire de 4 à 5 kilomètres de développement avec des parois verticales de 500 à 700 mètres de hauteur, couronnées par des sommets approchant 3 000 mètres d'altitude (Pic de Tenneverge 2 989 m, Cheval Blanc 2 831 m, Grenier de Commune 2 775 m). Il s'agit du plus grand cirque montagneux alpin.Son nom vient de la forme en fer à cheval de ses falaises, qui ferment la partie orientale de la vallée du Giffre. Au printemps, plus de trente cascades alimentées par la fonte des neiges jaillissent de ses falaises pour former de courts torrents, affluents du Giffre. Les plus connues sont la Pleureuse, la Sauffaz, la Méridienne, la Fontaine de l'Or (Pierrette), et la Lyre. Classé Grand Site de France, le cirque accueille environ 500 000 visiteurs par an et fait partie de la plus grande réserve naturelle de Haute-Savoie (9 200 hectares sur 11 200).Les roches du cirque sont des calcaires formés au Jurassique, très fissurés. La forte pluviométrie accentue l'érosion : un éboulement majeur a eu lieu en 1602 (enseveli plusieurs hameaux, rappelé par une chapelle commémorative), puis en 2003 (300 000 m³) et en septembre 2025 (35 000 m³ au lieu-dit Pas Noir), entraînant la fermeture temporaire du secteur Fond de la Combe par arrêté municipal.
+Le Cirque du Fer-à-Cheval est un cirque naturel glaciaire situé sur la commune de Sixt-Fer-à-Cheval, dans la vallée du Giffre, au cœur de la Réserve Naturelle Nationale de Sixt-Passy. Il forme un hémicycle calcaire de 4 à 5 kilomètres de développement avec des parois verticales de 500 à 700 mètres de hauteur, couronnées par des sommets approchant 3 000 mètres d'altitude (Pic de Tenneverge 2 989 m, Cheval Blanc 2 831 m, Grenier de Commune 2 775 m). Il s'agit du plus grand cirque montagneux alpin.
+
+Son nom vient de la forme en fer à cheval de ses falaises, qui ferment la partie orientale de la vallée du Giffre. Au printemps, plus de trente cascades alimentées par la fonte des neiges jaillissent de ses falaises pour former de courts torrents, affluents du Giffre. Les plus connues sont la Pleureuse, la Sauffaz, la Méridienne, la Fontaine de l'Or (Pierrette), et la Lyre. Classé Grand Site de France, le cirque accueille environ 500 000 visiteurs par an et fait partie de la plus grande réserve naturelle de Haute-Savoie (9 200 hectares sur 11 200).
+
+Les roches du cirque sont des calcaires formés au Jurassique, très fissurés. La forte pluviométrie accentue l'érosion : un éboulement majeur a eu lieu en 1602 (enseveli plusieurs hameaux, rappelé par une chapelle commémorative), puis en 2003 (300 000 m³) et en septembre 2025 (35 000 m³ au lieu-dit Pas Noir), entraînant la fermeture temporaire du secteur Fond de la Combe par arrêté municipal.
 
 ## Activités sur place
 

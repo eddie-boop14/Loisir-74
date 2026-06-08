@@ -1,11 +1,11 @@
 ---
 slug: lac-de-passy
-name: "Lac de Passy"
+name: Lac de Passy
 category: lac
-category_label: "Lac & plage"
-commune: "Passy"
-postal_code: "74190"
-department: "Haute-Savoie"
+category_label: Lac
+commune: Passy
+postal_code: 74190
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,22 +13,22 @@ latitude: 45.9267
 longitude: 6.695
 canonical_url: https://loisirs74.fr/lac-de-passy
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b2/Lac_vert_de_passy_%281%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b2/Lac_vert_de_passy_%281%29.JPG
 photo_type: real
-photo_author: "Mangatome"
-photo_license: "CC BY-SA 3.0"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+photo_author: Alpine lake
+photo_license: Wikimedia Commons
+photo_source: CC BY-SA
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Lac de Passy
 
-> Plus grand lac aménagé du pays du Mont-Blanc, situé à 547 m d'altitude avec plage de sable, zone de baignade surveillée en été et vue panoramique sur le massif du Mont-Blanc.
+> Lac artificiel de 50 ha avec plage surveillée, baignade, pédalos, paddle, karting et vue sur le Mont-Blanc. Accès libre toute l'année à Passy.
 
 ## En bref
 
-- **Catégorie**: Lac & plage
+- **Catégorie**: Lac
 - **Commune**: Passy, Haute-Savoie (74190)
 - **GPS**: 45.9267, 6.695
 - **Type**: Lac artificiel · Plan d'eau de loisirs
@@ -40,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Lac de Passy, également appelé Base de loisirs des Îles, est un lac artificiel de plus d'un kilomètre de long couvrant environ 50 hectares, situé à 547 mètres d'altitude dans la vallée de l'Arve. Créé dans les années 1970 suite à l'excavation des matériaux nécessaires à la construction de l'autoroute A40 (autoroute blanche), il est aujourd'hui le plus grand lac aménagé du pays du Mont-Blanc.Ce site remarquable offre une plage de sable aménagée avec zone de baignade surveillée en juillet et août, des criques herbeuses, des pontons en bois, et de nombreuses activités nautiques et terrestres : stand-up paddle, pédalos, bateaux électriques, pêche (parcours de 2e catégorie avec pêche de nuit autorisée), mini-golf, karting, parcours de santé, sentier VTT, et parcours d'orientation. Un sentier de 2 km fait le tour du lac en 30 minutes environ, accessible en poussette, avec des aires de jeux pour enfants.Le lac offre un panorama exceptionnel sur le massif du Mont-Blanc et la chaîne des Fiz. Accessible toute l'année, il propose un cadre de détente en été comme en hiver (promenades le long du lac enneigé). Un camping 3 étoiles et un snack-restaurant sont présents sur place. Le site accueille également des cours d'aquabike en période estivale.
+Le Lac de Passy, également appelé Base de loisirs des Îles, est un lac artificiel de plus d'un kilomètre de long couvrant environ 50 hectares, situé à 547 mètres d'altitude dans la vallée de l'Arve. Créé dans les années 1970 suite à l'excavation des matériaux nécessaires à la construction de l'autoroute A40 (autoroute blanche), il est aujourd'hui le plus grand lac aménagé du pays du Mont-Blanc.
+
+Ce site remarquable offre une plage de sable aménagée avec zone de baignade surveillée en juillet et août, des criques herbeuses, des pontons en bois, et de nombreuses activités nautiques et terrestres : stand-up paddle, pédalos, bateaux électriques, pêche (parcours de 2e catégorie avec pêche de nuit autorisée), mini-golf, karting, parcours de santé, sentier VTT, et parcours d'orientation. Un sentier de 2 km fait le tour du lac en 30 minutes environ, accessible en poussette, avec des aires de jeux pour enfants.
+
+Le lac offre un panorama exceptionnel sur le massif du Mont-Blanc et la chaîne des Fiz. Accessible toute l'année, il propose un cadre de détente en été comme en hiver (promenades le long du lac enneigé). Un camping 3 étoiles et un snack-restaurant sont présents sur place. Le site accueille également des cours d'aquabike en période estivale.
 
 ## Activités sur place
 

@@ -1,11 +1,11 @@
 ---
 slug: parcours-aventure-de-sciez
-name: "Parcours Aventure de Sciez"
+name: Parcours Aventure de Sciez
 category: attraction
-category_label: "Attraction"
-commune: "Sciez"
-postal_code: "74140"
-department: "Haute-Savoie"
+category_label: Attraction
+commune: Sciez
+postal_code: 74140
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,17 +13,17 @@ latitude: 46.3312
 longitude: 6.3705
 canonical_url: https://loisirs74.fr/parcours-aventure-de-sciez
 language: fr
-photo_url: https://images.unsplash.com/photo-1551632811-561732d1e306?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Holly Mandarich"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg
+photo_type: real
+photo_author: Forest park
+photo_license: Wikimedia Commons
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Parcours Aventure de Sciez
 
-> Parc d'accrobranche au cœur d'une forêt de chênes centenaires du Domaine de Coudrée, entre Thonon-les-Bains et Douvaine, avec plus de 40 ateliers dans les arbres.
+> Parc accrobranche dans les chênes centenaires du Domaine de Coudrée. Plus de 40 ateliers, 2 parcours, tarifs dès 13 €. Label Famille Plus.
 
 ## En bref
 
@@ -32,6 +32,7 @@ source: loisirs74.fr
 - **GPS**: 46.3312, 6.3705
 - **Type**: Parc accrobranche
 - **Accès**: Payant
+- **Tarif**: À partir de 13 € (parcours découverte)
 - **Parking**: Gratuit sur place
 - **Chiens**: Non autorisés
 - **Meilleure saison**: Avril – novembre
@@ -39,21 +40,35 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Parcours Aventure de Sciez est un parc d'accrobranche situé au cœur du Domaine de Coudrée, entre Thonon-les-Bains et Douvaine, à deux pas du lac Léman. Le parc est installé dans une forêt de chênes centenaires et propose plus de 40 ateliers acrobatiques dans les arbres : tyroliennes, ponts de cordes, passerelles, échelles, balançoires, liane de Tarzan et autres obstacles à franchir en toute sécurité.Deux parcours sont proposés : un parcours découverte pour les enfants à partir de 5 ans et mesurant au minimum 1,10 m, d'une durée d'environ 1 heure, et un grand parcours pour les adultes et enfants à partir de 1,40 m, offrant environ 3h30 d'aventure. Les moins de 18 ans doivent obligatoirement être accompagnés d'un adulte sur les parcours. Le parc est labellisé Famille Plus en partenariat avec l'office de tourisme de Sciez et respecte les normes AFNOR de construction et d'exploitation (établissement n° ET001435).
+Le Parcours Aventure de Sciez est un parc d'accrobranche situé au cœur du Domaine de Coudrée, entre Thonon-les-Bains et Douvaine, à deux pas du lac Léman. Le parc est installé dans une forêt de chênes centenaires et propose plus de 40 ateliers acrobatiques dans les arbres : tyroliennes, ponts de cordes, passerelles, échelles, balançoires, liane de Tarzan et autres obstacles à franchir en toute sécurité.
+
+Deux parcours sont proposés : un parcours découverte pour les enfants à partir de 5 ans et mesurant au minimum 1,10 m, d'une durée d'environ 1 heure, et un grand parcours pour les adultes et enfants à partir de 1,40 m, offrant environ 3h30 d'aventure. Les moins de 18 ans doivent obligatoirement être accompagnés d'un adulte sur les parcours. Le parc est labellisé Famille Plus en partenariat avec l'office de tourisme de Sciez et respecte les normes AFNOR de construction et d'exploitation (établissement n° ET001435).
 
 ## Activités sur place
 
-### Grand parcours (à partir de 1,40 m)
-Évoluez d'arbre en arbre pendant 3h30 sur plus de 40 ateliers : tyroliennes, ponts de singe, poutres, échelles, balançoires et liane de Tarzan. Pour adultes et enfants à partir de 1,40 m.
+### Grand parcours adulte (40+ ateliers)
+À partir de 1,40 m, environ 3 h 30 d'aventure entre 2 et 15 m du sol. Plus de 40 ateliers : tyroliennes, ponts de cordes, passerelles, échelles, liane de Tarzan.
 
-### Parcours découverte (à partir de 1,10 m)
-Parcours adapté aux enfants dès 5 ans et mesurant au minimum 1,10 m. Environ 1 heure d'activité pour découvrir les sensations de l'accrobranche en toute sécurité.
+### Parcours découverte enfant
+À partir de 5 ans et 1,10 m, environ 1 heure dans les arbres à faible hauteur. Idéal pour la première initiation à l'accrobranche en famille.
 
-### Tyroliennes et ateliers sensations
-Testez les différentes tyroliennes du parc, la liane de Tarzan, la balançoire géante et la balancelle pour des sensations garanties au-dessus de la forêt.
+### Tyroliennes longues et ateliers sensations
+Plusieurs tyroliennes spectaculaires entre les chênes centenaires, sauts de Tarzan et balançoires géantes pour les amateurs de sensations.
 
-### Aire de pique-nique
-Profitez de l'aire de pique-nique sur place pour vous restaurer et vous reposer entre deux parcours. Tables disponibles gratuitement.
+### Ligne de vie continue Smart Belay
+Système de sécurité moderne avec mousquetons connectés empêchant tout décrochage accidentel. Briefing sécurité obligatoire avant départ.
+
+### Aire de pique-nique ombragée
+Vaste aire de pique-nique gratuite dans la forêt de chênes du Domaine de Coudrée. Tables et bancs en bois, idéal pour une pause familiale.
+
+### Anniversaires enfants
+Formules anniversaire dès 6 ans, parcours adapté + goûter d'anniversaire. À réserver à l'avance, à partir de 8 enfants. Forfait clé en main.
+
+### Groupes, CE et team building
+Formules dédiées aux entreprises, comités d'entreprise, associations et écoles. Tarifs dégressifs dès 10 personnes, possibilité de privatisation partielle.
+
+### Label Famille Plus et normes AFNOR
+Parc labellisé Famille Plus en partenariat avec l'OT de Sciez. Conforme aux normes AFNOR EN 15567 (établissement ET001435), assurance RC professionnelle.
 
 ## Infos pratiques
 
@@ -66,6 +81,7 @@ Profitez de l'aire de pique-nique sur place pour vous restaurer et vous reposer 
 - **Accessibilité**: Non adapté aux personnes à mobilité réduite. Taille minimum requise : 1,10 m pour le parcours découverte, 1,40 m pour le grand parcours.
 - **Contact**: Tél. : +33 4 50 72 51 86 · Mobile : +33 6 70 63 34 73 · Email : info@parcoursaventure-sciez.com
 - **Équipement**: Matériel de sécurité fourni (baudrier, mousquetons, ligne de vie continue). Prévoir des chaussures fermées.
+- **Groupes / EVG**: Formules dédiées groupes, anniversaires, enterrements de vie de jeune fille/garçon et sorties scolaires. Tarifs dégressifs à partir de 10 personnes. Devis sur demande.
 
 ## Comment y aller
 
@@ -107,6 +123,14 @@ R : Oui. Le Parcours Aventure de Sciez dispose d'un parking gratuit sur place au
 **Q : Peut-on pique-niquer sur place au Parcours Aventure de Sciez ?**
 
 R : Oui. Le Parcours Aventure de Sciez met à disposition une aire de pique-nique avec des tables gratuites pour se restaurer et se reposer entre deux parcours.
+
+**Q : Quel équipement faut-il prévoir ?**
+
+R : Le parc fournit baudrier, longe avec absorbeur, casque et mousquetons Smart Belay. Apporter : vêtements souples, manches longues, pantalon long (frottement baudrier), chaussures fermées et baskets, élastique pour cheveux longs.
+
+**Q : Quel encadrement pour les groupes ?**
+
+R : Les enfants de moins de 16 ans doivent être accompagnés d'un adulte présent sur le parcours ou au pied des arbres. Pour les groupes constitués, un moniteur diplômé peut être disponible sur demande à la réservation.
 
 ---
 

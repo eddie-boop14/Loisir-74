@@ -1,11 +1,11 @@
 ---
 slug: pont-de-la-caille
-name: "Pont de la Caille"
+name: Pont de la Caille
 category: point-de-vue
-category_label: "Point de vue"
-commune: "Cruseilles"
-postal_code: "74350"
-department: "Haute-Savoie"
+category_label: Point de vue
+commune: Cruseilles
+postal_code: 74350
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,16 +13,13 @@ latitude: 46.0133
 longitude: 6.1115
 canonical_url: https://loisirs74.fr/pont-de-la-caille
 language: fr
-photo_url: /pont-de-la-caille-hero.jpg
-photo_type: real
-photo_source: own
-last_updated: 2026-05-18
+last_updated: 23 avril 2026
 source: loisirs74.fr
 ---
 
 # Pont de la Caille
 
-> Deux ponts côte à côte au-dessus des gorges des Usses : le pont Charles-Albert, suspendu, inauguré en 1839, aujourd'hui piéton et inscrit aux Monuments Historiques depuis 1966 ; et le pont Caquot, arche de béton de 1928, qui porte la RD1201. Propriété du Conseil Départemental de Haute-Savoie.
+> Pont suspendu de 1839, 180 m de long, 147 m au-dessus des Usses. Monument Historique, parcours d'interprétation, accès libre. Cruseilles, Haute-Savoie.
 
 ## En bref
 
@@ -37,7 +34,49 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Pont de la Caille — officiellement pont Charles-Albert — est un pont suspendu en câble d'acier inauguré le 11 juillet 1839, à cheval sur les communes de Cruseilles et d'Allonzier-la-Caille. Long de 180 m, il franchit les gorges des Usses à 147 m de hauteur. Inscrit au titre des Monuments Historiques depuis le 6 mai 1966, il appartient au Conseil Départemental de la Haute-Savoie et figure parmi les 25 sites touristiques emblématiques de la Région Auvergne-Rhône-Alpes. À côté se dresse le pont Caquot, ou pont Neuf, construit entre 1924 et 1928 sous la direction de l'ingénieur Albert Caquot. Son arche de béton non armé fut l'une des plus grandes voûtes au monde à l'époque. C'est lui qui supporte aujourd'hui la circulation automobile sur la RD1201. Le pont Charles-Albert, déchargé du trafic depuis 1929, est réservé aux piétons et aux cyclistes. Un site, deux ponts, une même histoire.
+Le Pont de la Caille — officiellement pont Charles-Albert — est un pont suspendu en câble d'acier inauguré le 11 juillet 1839, à cheval sur les communes de Cruseilles et d'Allonzier-la-Caille. Long de 180 m, il franchit les gorges des Usses à 147 m de hauteur. Inscrit au titre des Monuments Historiques depuis le 6 mai 1966, il appartient au Conseil Départemental de la Haute-Savoie et figure parmi les 25 sites touristiques emblématiques de la Région Auvergne-Rhône-Alpes.
+
+À côté se dresse le pont Caquot, ou pont Neuf, construit entre 1924 et 1928 sous la direction de l'ingénieur Albert Caquot. Son arche de béton non armé fut l'une des plus grandes voûtes au monde à l'époque. C'est lui qui supporte aujourd'hui la circulation automobile sur la RD1201. Le pont Charles-Albert, déchargé du trafic depuis 1929, est réservé aux piétons et aux cyclistes. Un site, deux ponts, une même histoire.
+
+## Activités sur place
+
+### Traverser le pont Charles-Albert à pied
+Tablier entièrement piéton depuis 1929. Planches de bois, vue plongeante sur les Usses à 147 m en contrebas.
+
+### Parcours d'interprétation
+Quatre panneaux bilingues français-anglais retracent l'histoire du site, des trois ponts et des anciens thermes.
+
+### Passerelles panoramiques
+Passerelles métalliques aménagées au-dessus du vide de chaque côté du pont, pour observer les gorges.
+
+### Aire de pique-nique
+Tables, bancs et bains de soleil côté Cruseilles, dans une zone arborée aménagée.
+
+### Panorama sur les Aravis
+Depuis le pont, vue d'un côté sur les gorges des Usses, de l'autre sur la chaîne des Aravis.
+
+### Randonnée vers le Crêt de la Dame
+Boucle au départ du site ou d'Allonzier-la-Caille, balisage jaune sur fond vert. Vue sur le lac d'Annecy au sommet.
+
+### Descendre vers les bains de la Caille
+Sentier jusqu'aux vestiges des anciens thermes au fond des gorges. Source sulfureuse. Lieu désaffecté, état dégradé.
+
+### Visite guidée du patrimoine
+Visites organisées par les guides du Patrimoine Savoie Mont Blanc, sur demande via l'OT Fier et Usses.
+
+## Infos pratiques
+
+- **Adresse**: 140 place du Pont de la Caille, 74350 Cruseilles
+- **Coordonnées**: 46.0133° N, 6.1115° E
+- **Ouverture**: Accès libre toute l'année, tous les jours
+- **Tarif**: Gratuit
+- **Parking**: Gratuit, de chaque côté du pont (côté Cruseilles plus grand)
+- **Animaux**: Acceptés
+- **Accessibilité**: Tablier du pont plat, accessible. Passerelles déconseillées en cas de vertige.
+- **Statut**: Monument Historique inscrit (6 mai 1966), propriété du Conseil Départemental 74
+- **Dimensions**: 180 m de long, 147 m au-dessus des Usses
+- **Contact**: Alter'Alpa Tourisme (OT Fier et Usses) : 04 50 08 16 16
+
 
 ## Questions fréquentes
 

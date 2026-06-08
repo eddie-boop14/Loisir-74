@@ -1,11 +1,11 @@
 ---
 slug: plage-de-la-pinede
-name: "Plage de la Pinède"
+name: Plage de la Pinède
 category: lac
-category_label: "Lac & plage"
-commune: "Thonon-les-Bains"
-postal_code: "74200"
-department: "Haute-Savoie"
+category_label: Lac
+commune: Thonon-les-Bains
+postal_code: 74200
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,21 +13,22 @@ latitude: 46.3736
 longitude: 6.4776
 canonical_url: https://loisirs74.fr/plage-de-la-pinede
 language: fr
-photo_url: https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Joshua Earle"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/e/e2/Thonon-les-Bains._Promenade_du_L%C3%A9man._2015-06-21.jpg
+photo_type: real
+photo_author: Alpine lake
+photo_license: Wikimedia Commons
+photo_source: CC BY-SA
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Plage de la Pinède
 
-> Succession de petites plages naturelles en galets reliées par des sentiers aménagés, bordant le domaine historique du Château de Ripaille sur les rives sauvages du Léman.
+> Succession de plages naturelles en galets sur 3 km au bord du lac Léman, bordant le domaine du Château de Ripaille. Accès libre, berges classées.
 
 ## En bref
 
-- **Catégorie**: Lac & plage
+- **Catégorie**: Lac
 - **Commune**: Thonon-les-Bains, Haute-Savoie (74200)
 - **GPS**: 46.3736, 6.4776
 - **Type**: Plages naturelles en galets
@@ -39,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Plage de la Pinède désigne une succession de petites plages naturelles en galets s'étendant sur environ 3 kilomètres le long du lac Léman, entre la Plage Municipale de Thonon-les-Bains et le Parc de la Châtaigneraie. Ces berges sauvages bordent directement le domaine du Château de Ripaille, ancienne résidence des ducs de Savoie.Le site est protégé : les berges ont été classées pour préserver leur caractère naturel et leur lien historique avec la Maison de Savoie. La baignade est libre et non surveillée. Les plages sont reliées entre elles par des sentiers aménagés qui longent les rives. L'une des plages, signalée par des panneaux, est réservée à la pratique du naturisme.Accessible toute l'année, la Pinède offre une atmosphère paisible loin de l'agitation des plages aménagées. En saison estivale, des dispositions sont prises pour assurer la propreté et la tranquillité des lieux. Le site est aussi très apprécié pour les promenades en toutes saisons, avec vue sur le Léman et les Alpes.
+La Plage de la Pinède désigne une succession de petites plages naturelles en galets s'étendant sur environ 3 kilomètres le long du lac Léman, entre la Plage Municipale de Thonon-les-Bains et le Parc de la Châtaigneraie. Ces berges sauvages bordent directement le domaine du Château de Ripaille, ancienne résidence des ducs de Savoie.
+
+Le site est protégé : les berges ont été classées pour préserver leur caractère naturel et leur lien historique avec la Maison de Savoie. La baignade est libre et non surveillée. Les plages sont reliées entre elles par des sentiers aménagés qui longent les rives. L'une des plages, signalée par des panneaux, est réservée à la pratique du naturisme.
+
+Accessible toute l'année, la Pinède offre une atmosphère paisible loin de l'agitation des plages aménagées. En saison estivale, des dispositions sont prises pour assurer la propreté et la tranquillité des lieux. Le site est aussi très apprécié pour les promenades en toutes saisons, avec vue sur le Léman et les Alpes.
 
 ## Activités sur place
 
@@ -54,6 +59,12 @@ La Pinède borde directement le domaine historique du Château de Ripaille. Poss
 
 ### Pratiquer le naturisme (plage dédiée)
 Une portion de plage signalée par des panneaux est officiellement réservée à la pratique du naturisme. Secteur isolé et respectueux de la tranquillité du site.
+
+### Pique-niquer face au Léman
+Petits espaces ombragés entre la pinède et les galets, parfaits pour un déjeuner tranquille avec vue sur le lac et la côte suisse. Pas de tables : prévoir nappe et tout son matériel ; ramener ses déchets.
+
+### Pêcher au bord du lac
+Pêche en eau libre dans le Léman (perche, brochet, féra, omble chevalier). Carte de pêche AAPPMA obligatoire. Berges accessibles depuis les sentiers de la Pinède.
 
 ## Infos pratiques
 

@@ -1,11 +1,11 @@
 ---
 slug: cascade-du-chinaillon
-name: "Cascade du Chinaillon"
+name: Cascade du Chinaillon
 category: cascade
-category_label: "Cascade"
-commune: "Le Grand-Bornand"
-postal_code: "74450"
-department: "Haute-Savoie"
+category_label: Cascade
+commune: Le Grand-Bornand
+postal_code: 74450
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,17 +13,18 @@ latitude: 45.962517
 longitude: 6.439147
 canonical_url: https://loisirs74.fr/cascade-du-chinaillon
 language: fr
-photo_url: https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Jonathan Forage"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/4/4f/Le_Chinaillon_%40_Pont_des_Romains_%40_Le_Grand-Bornand_%2851027594708%29.jpg
+photo_type: real
+photo_author: Cascade du Rouget
+photo_license: Wikimedia Commons
+photo_source: CC BY-SA
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Cascade du Chinaillon
 
-> Cascade de 30 mètres dévalant une gorge étroite sur le Nant du Chinaillon, accessible en 20 minutes de marche depuis la station. Légende du premier couple de Bornandins.
+> Cascade de 30 mètres sur le Nant du Chinaillon, accessible en 20 min de marche depuis le Chinaillon. Légende locale, gorges sculptées, balade facile toute l'année.
 
 ## En bref
 
@@ -39,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Cascade du Chinaillon, aussi appelée Cascade Mystérieuse, est une chute d'eau naturelle située dans le massif des Aravis, à environ 1 164 mètres d'altitude au-dessus de la station du Grand-Bornand Chinaillon. Alimentée par le Nant du Chinaillon, affluent du Borne, elle se déverse sur une trentaine de mètres dans une gorge étroite sculptée par l'eau. Le site est accessible en une vingtaine de minutes de marche depuis la route principale du Chinaillon, sur un sentier balisé traversant prés et forêt de hêtres.Le nom « mystérieux » de la cascade trouve son origine dans une légende locale : c'est au pied de cette chute d'eau que se seraient rencontrés les premiers habitants du Grand-Bornand, donnant naissance aux « Bornandins ». Cette histoire transmise de génération en génération ajoute une touche de poésie et d'énigme à ce site naturel déjà impressionnant. Au printemps, lorsque la fonte des neiges gonfle le débit du torrent, le spectacle est particulièrement saisissant. En automne, les couleurs flamboyantes de la hêtraie environnante ajoutent un charme différent à la balade.Le sentier mène d'abord à la première partie de la cascade, la plus spectaculaire, puis descend de façon raide vers le torrent du Chinaillon où l'on découvre une gorge sauvage. Le terrain peut être boueux et glissant — de bonnes chaussures de randonnée sont indispensables. Cette promenade facile et rafraîchissante, idéale en famille, permet aussi de découvrir le vieux Chinaillon avec ses chalets d'alpage typiques et ses panoramas sur la chaîne des Aravis.
+La Cascade du Chinaillon, aussi appelée Cascade Mystérieuse, est une chute d'eau naturelle située dans le massif des Aravis, à environ 1 164 mètres d'altitude au-dessus de la station du Grand-Bornand Chinaillon. Alimentée par le Nant du Chinaillon, affluent du Borne, elle se déverse sur une trentaine de mètres dans une gorge étroite sculptée par l'eau. Le site est accessible en une vingtaine de minutes de marche depuis la route principale du Chinaillon, sur un sentier balisé traversant prés et forêt de hêtres.
+
+Le nom « mystérieux » de la cascade trouve son origine dans une légende locale : c'est au pied de cette chute d'eau que se seraient rencontrés les premiers habitants du Grand-Bornand, donnant naissance aux « Bornandins ». Cette histoire transmise de génération en génération ajoute une touche de poésie et d'énigme à ce site naturel déjà impressionnant. Au printemps, lorsque la fonte des neiges gonfle le débit du torrent, le spectacle est particulièrement saisissant. En automne, les couleurs flamboyantes de la hêtraie environnante ajoutent un charme différent à la balade.
+
+Le sentier mène d'abord à la première partie de la cascade, la plus spectaculaire, puis descend de façon raide vers le torrent du Chinaillon où l'on découvre une gorge sauvage. Le terrain peut être boueux et glissant — de bonnes chaussures de randonnée sont indispensables. Cette promenade facile et rafraîchissante, idéale en famille, permet aussi de découvrir le vieux Chinaillon avec ses chalets d'alpage typiques et ses panoramas sur la chaîne des Aravis.
 
 ## Activités sur place
 

@@ -1,11 +1,11 @@
 ---
 slug: cascade-de-la-diomaz
-name: "Cascade de la Diomaz"
+name: Cascade de la Diomaz
 category: cascade
-category_label: "Cascade"
-commune: "Bellevaux"
-postal_code: "74470"
-department: "Haute-Savoie"
+category_label: Cascade
+commune: Bellevaux
+postal_code: 74470
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,16 +13,16 @@ canonical_url: https://loisirs74.fr/cascade-de-la-diomaz
 language: fr
 photo_url: /cascade-de-la-diomaz-hero.jpg
 photo_type: real
-photo_author: "Claude PIARD"
-photo_license: "CC BY-SA 4.0"
+photo_author: Claude PIARD
+photo_license: CC BY-SA 4.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Cascade de la Diomaz
 
-> Plusieurs chutes d'eau creusant des marmites naturelles dans la roche, atteintes en 30 minutes de marche depuis le lac de Vallon.
+> Cascade avec marmites naturelles et croix des Chartreux, 30 min à pied depuis le lac de Vallon. Accès libre toute l'année à Bellevaux, Haute-Savoie.
 
 ## En bref
 
@@ -37,7 +37,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-La cascade de la Diomaz est une cascade naturelle du Chablais, à environ 1 223 m d'altitude, située sur le ruisseau de la Diomaz, un affluent du Brevon. Elle se trouve en limite communale de Mégevette et Bellevaux, et s'atteint en 30 minutes de marche depuis les parkings du lac de Vallon.La cascade est constituée de plusieurs chutes d'eau qui s'écoulent dans des marmites dites « marmites des Chartreux », creusées naturellement dans la roche. Au pied de la cascade, une croix des Chartreux est gravée dans la pierre, marquant l'ancienne limite du territoire des moines chartreux. Le sentier longe le ruisseau de la Diomaz à travers la forêt, avec plusieurs traversées du cours d'eau sur des passerelles ou à gué.
+La cascade de la Diomaz est une cascade naturelle du Chablais, à environ 1 223 m d'altitude, située sur le ruisseau de la Diomaz, un affluent du Brevon. Elle se trouve en limite communale de Mégevette et Bellevaux, et s'atteint en 30 minutes de marche depuis les parkings du lac de Vallon.
+
+La cascade est constituée de plusieurs chutes d'eau qui s'écoulent dans des marmites dites « marmites des Chartreux », creusées naturellement dans la roche. Au pied de la cascade, une croix des Chartreux est gravée dans la pierre, marquant l'ancienne limite du territoire des moines chartreux. Le sentier longe le ruisseau de la Diomaz à travers la forêt, avec plusieurs traversées du cours d'eau sur des passerelles ou à gué. Période de visibilité optimale : printemps (fonte) et été ; accès à éviter en hiver (gel).
 
 ## Activités sur place
 
@@ -56,9 +58,13 @@ La cascade et ses marmites offrent de belles opportunités photographiques, surt
 ### Prolonger par le lac de Vallon
 Combiner la visite de la cascade avec un tour du lac de Vallon (environ 5 km au total) et un arrêt à la chapelle Saint-Bruno. Belle vue sur le Roc d'Enfer depuis les berges du lac.
 
+### Boucle longue par les chemins forestiers
+Variante d'environ 2 h reliant la cascade au lac de Vallon par les chemins forestiers en lisière de bois. Permet d'enrichir la sortie avec une vue sur les sommets du Brévon.
+
 ## Infos pratiques
 
 - **Adresse**: Site du lac de Vallon, La Chévrerie, 74470 Bellevaux
+- **Coordonnées**: 
 - **Altitude**: ~1 223 m
 - **Ouverture**: Toute l'année, tous les jours
 - **Tarif**: Gratuit

@@ -1,11 +1,11 @@
 ---
 slug: grotte-et-cascade-de-seythenex
-name: "Grotte et Cascade de Seythenex"
+name: Grotte et Cascade de Seythenex
 category: cascade
-category_label: "Cascade"
-commune: "Faverges-Seythenex"
-postal_code: "74210"
-department: "Haute-Savoie"
+category_label: Cascade
+commune: Faverges-Seythenex
+postal_code: 74210
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,17 +13,18 @@ latitude: 45.732217
 longitude: 6.299157
 canonical_url: https://loisirs74.fr/grotte-et-cascade-de-seythenex
 language: fr
-photo_url: https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Jonathan Forage"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/7/7f/Grotte_et_cascade_de_Seythenex_10.jpg
+photo_type: real
+photo_author: Rémih
+photo_license: CC BY-SA 4.0
+photo_source: Wikimedia Commons
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Grotte et Cascade de Seythenex
 
-> La seule galerie souterraine ouverte au public en Haute-Savoie. Visite guidée de 40 minutes à 10° sous terre et cascade spectaculaire de 40 mètres de haut.
+> Seule grotte ouverte au public en Haute-Savoie. Visite guidée souterraine 40 min, cascade de 40 m et tyroliennes. Tarif adulte 10 €. Ouvert avril–septembre.
 
 ## En bref
 
@@ -32,6 +33,7 @@ source: loisirs74.fr
 - **GPS**: 45.732217, 6.299157
 - **Type**: Grotte et cascade naturelles
 - **Accès**: Payant
+- **Tarif**: À partir de 10 € (adulte)
 - **Parking**: Gratuit (sur place)
 - **Chiens**: Acceptés en laisse
 - **Meilleure saison**: Avril – septembre
@@ -39,7 +41,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Grotte et Cascade de Seythenex est un site naturel classé Géosite par le Parc Naturel Régional du Massif des Bauges, situé à Faverges-Seythenex en Haute-Savoie. C'est la seule galerie souterraine ouverte au public dans le département, avec 250 mètres de galeries et boyaux accessibles en visite guidée. Le site comprend également une cascade spectaculaire de 40 mètres de haut formée par les eaux du torrent Saint-Ruph.La grotte est ouverte au public depuis 1906, ce qui en fait la première attraction touristique du village. Elle représente l'ancien cours souterrain du torrent et collecte les eaux qui s'infiltrent dans le réseau karstique des montagnes des Bauges. Les galeries présentent un profil circulaire caractéristique de conduits forcés, illustrant le concept géologique de « trou de serrure ». La visite guidée dure environ 40 minutes à une température constante de 10°C, permettant de découvrir les effets spectaculaires de l'érosion sur le calcaire.En surface, un circuit aménagé de chemins et passerelles permet d'accéder au sommet de la cascade et d'admirer sa chute de 40 mètres. Le site propose également deux tyroliennes de 150 mètres de long qui survolent la cascade à 40 mètres de hauteur, ainsi qu'un snack-restaurant avec terrasse panoramique, une aire de pique-nique, une aire de jeux pour enfants et une boutique de produits locaux et souvenirs.
+La Grotte et Cascade de Seythenex est un site naturel classé Géosite par le Parc Naturel Régional du Massif des Bauges, situé à Faverges-Seythenex en Haute-Savoie. C'est la seule galerie souterraine ouverte au public dans le département, avec 250 mètres de galeries et boyaux accessibles en visite guidée. Le site comprend également une cascade spectaculaire de 40 mètres de haut formée par les eaux du torrent Saint-Ruph.
+
+La grotte est ouverte au public depuis 1906, ce qui en fait la première attraction touristique du village. Elle représente l'ancien cours souterrain du torrent et collecte les eaux qui s'infiltrent dans le réseau karstique des montagnes des Bauges. Les galeries présentent un profil circulaire caractéristique de conduits forcés, illustrant le concept géologique de « trou de serrure ». La visite guidée dure environ 40 minutes à une température constante de 10°C, permettant de découvrir les effets spectaculaires de l'érosion sur le calcaire.
+
+En surface, un circuit aménagé de chemins et passerelles permet d'accéder au sommet de la cascade et d'admirer sa chute de 40 mètres. Le site propose également deux tyroliennes de 150 mètres de long qui survolent la cascade à 40 mètres de hauteur, ainsi qu'un snack-restaurant avec terrasse panoramique, une aire de pique-nique, une aire de jeux pour enfants et une boutique de produits locaux et souvenirs.
 
 ## Activités sur place
 
@@ -71,6 +77,7 @@ Aire de pique-nique aménagée et aire de jeux pour enfants. Tables et bancs dis
 - **Animaux**: Acceptés tenus en laisse
 - **Accessibilité**: Parcours souterrain non adapté aux personnes à mobilité réduite (escaliers, passerelles, boyaux). Circuit extérieur cascade partiellement accessible. Prestations adaptées pour déficiences auditives et mentales.
 - **Durée de visite**: Visite guidée de la grotte : 40 min. Circuit cascade : 20–30 min. Prévoir 1h30 à 2h pour l'ensemble du site (grotte + cascade + exposition).
+- **Équipement recommandé**: Chaussures fermées antidérapantes obligatoires (sol humide dans la grotte), veste légère (température interne 6 °C en moyenne), lampe non nécessaire (éclairage prévu).
 - **Contact**: Tél. : +33 (0)4 50 44 55 97 · Email : mabbouxchristophe@gmail.com · Site : grotte-cascade-seythenex.com
 
 ## Comment y aller

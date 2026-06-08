@@ -1,11 +1,11 @@
 ---
 slug: base-de-loisirs-du-lac-bleu
-name: "Base de loisirs du Lac Bleu"
+name: Base de loisirs du Lac Bleu
 category: domaine
-category_label: "Base de loisirs"
-commune: "Morillon"
-postal_code: "74440"
-department: "Haute-Savoie"
+category_label: Domaine
+commune: Morillon
+postal_code: 74440
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,20 +15,19 @@ canonical_url: https://loisirs74.fr/base-de-loisirs-du-lac-bleu
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/5/5c/Morillon_-_vue_sur_le_lac_bleu_et_le_criou.jpg
 photo_type: real
-photo_author: "No machine-readable author provided. Abr~commonswiki assumed (based on copyright claims)."
-photo_license: "CC BY-SA 2.5"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+photo_author: Alpine meadow
+photo_license: Wikimedia Commons
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Base de loisirs du Lac Bleu
 
-> Complexe de loisirs familial autour d'un petit lac de montagne de 2,5 hectares, à 500 m du centre de Morillon, avec plage de sable, baignade surveillée en été et multiples activités de plein air.
+> Base de loisirs avec lac de montagne, plage surveillée, jeux pour enfants, accrobranche, pumptrack, aires de pique-nique. Accès libre toute l'année à Morillon.
 
 ## En bref
 
-- **Catégorie**: Base de loisirs
+- **Catégorie**: Domaine
 - **Commune**: Morillon, Haute-Savoie (74440)
 - **GPS**: 46.0833, 6.6833
 - **Type**: Base de loisirs
@@ -40,7 +39,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Base de loisirs du Lac Bleu est un complexe récréatif public situé à 670 m d'altitude à Morillon, dans la vallée du Giffre. Le site est organisé autour d'un petit lac de montagne de 2,5 hectares, entouré de pelouses ombragées, d'une plage de sable et de grands espaces verts aménagés pour les familles. L'accès au parc est libre et gratuit toute l'année.Le lac dispose d'une zone de baignade surveillée en été (juillet-août, 13h–19h), avec des espaces peu profonds délimités pour les jeunes enfants. Autour du lac, plusieurs prestataires de loisirs proposent des activités payantes : parcours accrobranche, centre équestre, Big Air Bag, structures gonflables aquatiques (Le Splash), pumptrack, trampolines, kayak, paddle et terrain de beach-volley. Une aire de jeux pour enfants (toboggans, balançoires, parcours en bois) est accessible gratuitement.Le site organise régulièrement des animations estivales : spectacles pour enfants, concerts en plein air, concours de pêche à la truite. Bar-restaurant La Covagne en bordure du lac. Toilettes publiques, bancs et tables de pique-nique. Espace de lavage pour VTT. Situé dans le domaine du Grand Massif, le Lac Bleu est un point d'arrivée pour les parapentistes. Morillon fait partie de l'office de tourisme intercommunal Haut-Giffre Tourisme.
+La Base de loisirs du Lac Bleu est un complexe récréatif public situé à 670 m d'altitude à Morillon, dans la vallée du Giffre. Le site est organisé autour d'un petit lac de montagne de 2,5 hectares, entouré de pelouses ombragées, d'une plage de sable et de grands espaces verts aménagés pour les familles. L'accès au parc est libre et gratuit toute l'année.
+
+Le lac dispose d'une zone de baignade surveillée en été (juillet-août, 13h–19h), avec des espaces peu profonds délimités pour les jeunes enfants. Autour du lac, plusieurs prestataires de loisirs proposent des activités payantes : parcours accrobranche, centre équestre, Big Air Bag, structures gonflables aquatiques (Le Splash), pumptrack, trampolines, kayak, paddle et terrain de beach-volley. Une aire de jeux pour enfants (toboggans, balançoires, parcours en bois) est accessible gratuitement.
+
+Le site organise régulièrement des animations estivales : spectacles pour enfants, concerts en plein air, concours de pêche à la truite. Bar-restaurant La Covagne en bordure du lac. Toilettes publiques, bancs et tables de pique-nique. Espace de lavage pour VTT. Situé dans le domaine du Grand Massif, le Lac Bleu est un point d'arrivée pour les parapentistes. Morillon fait partie de l'office de tourisme intercommunal Haut-Giffre Tourisme.
 
 ## Activités sur place
 
@@ -89,10 +92,6 @@ Accessible via piste cyclable le long du Giffre depuis Samoëns (2 km) ou depuis
 ## Quand y aller
 
 Le Lac Bleu est accessible toute l'année. La haute saison s'étend de juin à septembre, avec baignade surveillée en juillet-août (13h–19h) et animations estivales (concerts, spectacles pour enfants). En mai-juin et septembre, le site est plus calme, idéal pour les pique-niques et balades autour du lac. Les activités payantes (accrobranche, équitation, structures gonflables) fonctionnent principalement en saison estivale. En automne et au printemps, le cadre reste agréable pour les promenades en famille. L'hiver, l'accès dépend de l'enneigement ; le lac peut être gelé et les activités réduites. Le site est un point d'arrivée pour les parapentistes tout au long de l'année. Éviter les week-ends de juillet-août si vous recherchez la tranquillité (forte affluence).
-
-## Événements
-
-Animations estivales récurrentes : spectacles pour enfants, concerts en plein air, concours de pêche à la truite. Programme disponible à l'Office de Tourisme Haut-Giffre.
 
 ## Questions fréquentes
 

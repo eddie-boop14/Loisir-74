@@ -1,11 +1,11 @@
 ---
 slug: base-de-loisirs-du-lac-des-iles
-name: "Base de loisirs du Lac des Îles"
+name: Base de loisirs du Lac des Îles
 category: domaine
-category_label: "Base de loisirs"
-commune: "Passy"
-postal_code: "74190"
-department: "Haute-Savoie"
+category_label: Domaine
+commune: Passy
+postal_code: 74190
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,21 +13,21 @@ latitude: 45.920038
 longitude: 6.658268
 canonical_url: https://loisirs74.fr/base-de-loisirs-du-lac-des-iles
 language: fr
-photo_url: https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80
-photo_type: generic_stock
-photo_author: "David Marcu"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/b/bd/Les_ARAVIS_depuis_le_LAC_DE_PASSY_-_panoramio.jpg
+photo_type: real
+photo_author: Alpine meadow
+photo_license: Wikimedia Commons
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Base de loisirs du Lac des Îles
 
-> Le plus grand lac aménagé du Pays du Mont-Blanc : plage de sable, baignade surveillée en été, activités nautiques et terrestres dans un écrin de verdure face au massif.
+> Base de loisirs face au Mont-Blanc : plage surveillée, baignade, paddle, pédalos, parcours santé, mini-golf, karting. Accès libre toute l'année à Passy.
 
 ## En bref
 
-- **Catégorie**: Base de loisirs
+- **Catégorie**: Domaine
 - **Commune**: Passy, Haute-Savoie (74190)
 - **GPS**: 45.920038, 6.658268
 - **Type**: Base de loisirs
@@ -39,7 +39,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Base de loisirs du Lac des Îles, aussi appelée Lac de Passy, est un lac artificiel de 50 hectares créé dans les années 1970 lors de l'excavation des matériaux nécessaires à la construction de l'autoroute A40. Long de plus d'un kilomètre, il offre une vue frontale sur le massif du Mont-Blanc et la chaîne des Fiz, à environ 550 m d'altitude dans la vallée de l'Arve.Le site comprend une plage de sable fin aménagée avec baignade surveillée en juillet-août (zones délimitées 1,20 m), des criques herbeuses, un sentier de promenade de 2,5 km faisant le tour du lac, un parcours de santé en sous-bois (15 ateliers sur 800 m), des aires de pique-nique et plusieurs prestataires d'activités : mini-golf, karting, accrobranche, petits bateaux électriques, pédalos, stand-up paddle, planche à voile. La pêche est autorisée sur les pontons aménagés.Accessible toute l'année, la base de loisirs est un lieu prisé dès les beaux jours pour la baignade, les activités nautiques et les balades en famille. En hiver, le site devient un espace de promenade calme avec vue spectaculaire sur les sommets enneigés. Le lac est géré par la commune de Passy dans une démarche de tourisme durable et de préservation de l'environnement.
+La Base de loisirs du Lac des Îles, aussi appelée Lac de Passy, est un lac artificiel de 50 hectares créé dans les années 1970 lors de l'excavation des matériaux nécessaires à la construction de l'autoroute A40. Long de plus d'un kilomètre, il offre une vue frontale sur le massif du Mont-Blanc et la chaîne des Fiz, à environ 550 m d'altitude dans la vallée de l'Arve.
+
+Le site comprend une plage de sable fin aménagée avec baignade surveillée en juillet-août (zones délimitées < 1,20 m et > 1,20 m), des criques herbeuses, un sentier de promenade de 2,5 km faisant le tour du lac, un parcours de santé en sous-bois (15 ateliers sur 800 m), des aires de pique-nique et plusieurs prestataires d'activités : mini-golf, karting, accrobranche, petits bateaux électriques, pédalos, stand-up paddle, planche à voile. La pêche est autorisée sur les pontons aménagés.
+
+Accessible toute l'année, la base de loisirs est un lieu prisé dès les beaux jours pour la baignade, les activités nautiques et les balades en famille. En hiver, le site devient un espace de promenade calme avec vue spectaculaire sur les sommets enneigés. Le lac est géré par la commune de Passy dans une démarche de tourisme durable et de préservation de l'environnement.
 
 ## Activités sur place
 
@@ -71,6 +75,7 @@ Plusieurs aires de pique-nique aménagées autour du lac avec tables, bancs, pou
 - **Parking**: Plusieurs parkings autour du lac : parking des Granges (nord), parking de la plage (est). Gratuit sauf juillet-août (3 € journée).
 - **Animaux**: Chiens interdits sur plage, criques et chemins riverains. Tolérés en laisse sur sentiers hauts et rive sud entre pontons de pêche et aire de jeux. Sacs à déjections fournis.
 - **Accessibilité**: Sentier tour du lac adapté poussettes et PMR. Plage accessible. WC publics sur site.
+- **Durée d'accès**: 10 min en voiture depuis Sallanches, 30 min depuis Chamonix. Accessible toute l'année.
 - **Contact**: Office de Tourisme de Passy : 04 50 58 80 52
 
 ## Comment y aller
@@ -88,10 +93,6 @@ Voie verte des bords de l'Arve accessible depuis l'Office de Tourisme de Passy j
 
 Le lac est accessible toute l'année. La haute saison s'étend de juin à août : la plage est surveillée en juillet-août (12 h – 18 h), les prestataires d'activités sont ouverts tous les jours, le parking devient payant. Mai-juin et septembre sont des périodes plus calmes, idéales pour les balades et les activités nautiques sans foule. En automne et hiver, le site devient un lieu de promenade prisé pour son cadre apaisant et sa vue spectaculaire sur le Mont-Blanc enneigé. Le parcours santé et le sentier tour du lac restent praticables toute l'année sauf épisodes neigeux importants.
 
-## Événements
-
-Chaque été, la base de loisirs accueille plusieurs événements : courses aquatiques (aquathlon), animations sportives municipales, cours d'aquabike dispensés par une éducatrice sportive au bord du lac. Consulter l'agenda de l'Office de Tourisme de Passy pour les dates.
-
 ## Questions fréquentes
 
 **Q : L'accès à la Base de loisirs du Lac des Îles est-il payant ?**
@@ -100,7 +101,7 @@ R : Non. L'accès à la Base de loisirs du Lac des Îles est gratuit toute l'ann
 
 **Q : La baignade est-elle surveillée au Lac des Îles ?**
 
-R : Oui. La baignade à la Base de loisirs du Lac des Îles est surveillée en juillet et août uniquement, de 12 h à 18 h, sur la plage de sable avec deux zones délimitées ( 1,20 m). La qualité de l'eau est contrôlée régulièrement.
+R : Oui. La baignade à la Base de loisirs du Lac des Îles est surveillée en juillet et août uniquement, de 12 h à 18 h, sur la plage de sable avec deux zones délimitées (< 1,20 m et > 1,20 m). La qualité de l'eau est contrôlée régulièrement.
 
 **Q : Les chiens sont-ils acceptés à la Base de loisirs du Lac des Îles ?**
 

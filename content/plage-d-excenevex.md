@@ -2,10 +2,10 @@
 slug: plage-d-excenevex
 name: "Plage d'Excenevex"
 category: lac
-category_label: "Lac & plage"
-commune: "Excenevex"
-postal_code: "74140"
-department: "Haute-Savoie"
+category_label: Lac
+commune: Excenevex
+postal_code: 74140
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,21 +13,22 @@ latitude: 46.3528
 longitude: 6.3489
 canonical_url: https://loisirs74.fr/plage-d-excenevex
 language: fr
-photo_url: https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Joshua Earle"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/c/cd/Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG
+photo_type: real
+photo_author: Alpine lake
+photo_license: Wikimedia Commons
+photo_source: CC BY-SA
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Plage d'Excenevex
 
-> Seule plage naturelle de sable fin de la rive française du lac Léman, avec pente douce sur plusieurs dizaines de mètres et eaux peu profondes atteignant 25°C en été.
+> Unique plage naturelle de sable fin du lac Léman côté français. Pente douce, eaux 25°C en été, baignade surveillée. Parking 6 € en saison, plage gratuite.
 
 ## En bref
 
-- **Catégorie**: Lac & plage
+- **Catégorie**: Lac
 - **Commune**: Excenevex, Haute-Savoie (74140)
 - **GPS**: 46.3528, 6.3489
 - **Type**: Plage de sable naturel (lac Léman)
@@ -39,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Plage d'Excenevex est l'unique plage naturelle de sable fin de la rive française du lac Léman. Située dans la baie de Coudrée, à une dizaine de kilomètres de Thonon-les-Bains et 25 km de Genève, elle constitue une exception géologique remarquable : son sable provient de dépôts sous-lacustres formés après la dernière période glaciaire (il y a 12 à 15 000 ans), remaniés par les vents violents et les courants du Rhône. Les dunes lacustres ainsi créées sont uniques en Europe.La plage se distingue par sa pente très douce qui s'étend sur plusieurs dizaines de mètres, permettant de marcher jusqu'à une centaine de mètres avec de l'eau à hauteur de taille. Les températures estivales de l'eau avoisinent les 25°C de juin à septembre, ce qui en fait un lieu de baignade privilégié pour les familles. Le cadre offre une vue panoramique sur la Dent d'Oche et la côte suisse, avec la pinède en arrière-plan. La plage est classée Pavillon Bleu depuis 2018, label garantissant la qualité des eaux et la gestion environnementale du site.L'accès à la plage est libre et gratuit toute l'année pour les piétons. Seul le parking est payant durant la haute saison (week-ends de mai, tous les jours de juin à août) au tarif de 6 € la journée, avec gratuité à partir de 17h. La baignade est surveillée par des maîtres-nageurs du 1er juillet au 30 août, tous les jours de 11h15 à 17h45. La commune réalise des analyses hebdomadaires de la qualité de l'eau sous contrôle de l'ARS.
+La Plage d'Excenevex est l'unique plage naturelle de sable fin de la rive française du lac Léman. Située dans la baie de Coudrée, à une dizaine de kilomètres de Thonon-les-Bains et 25 km de Genève, elle constitue une exception géologique remarquable : son sable provient de dépôts sous-lacustres formés après la dernière période glaciaire (il y a 12 à 15 000 ans), remaniés par les vents violents et les courants du Rhône. Les dunes lacustres ainsi créées sont uniques en Europe.
+
+La plage se distingue par sa pente très douce qui s'étend sur plusieurs dizaines de mètres, permettant de marcher jusqu'à une centaine de mètres avec de l'eau à hauteur de taille. Les températures estivales de l'eau avoisinent les 25°C de juin à septembre, ce qui en fait un lieu de baignade privilégié pour les familles. Le cadre offre une vue panoramique sur la Dent d'Oche et la côte suisse, avec la pinède en arrière-plan. La plage est classée Pavillon Bleu depuis 2018, label garantissant la qualité des eaux et la gestion environnementale du site.
+
+L'accès à la plage est libre et gratuit toute l'année pour les piétons. Seul le parking est payant durant la haute saison (week-ends de mai, tous les jours de juin à août) au tarif de 6 € la journée, avec gratuité à partir de 17h. La baignade est surveillée par des maîtres-nageurs du 1er juillet au 30 août, tous les jours de 11h15 à 17h45. La commune réalise des analyses hebdomadaires de la qualité de l'eau sous contrôle de l'ARS.
 
 ## Activités sur place
 
@@ -64,6 +69,8 @@ Marché des artisans créateurs, tournois de beach-volley, Fête du sable avec s
 ## Infos pratiques
 
 - **Adresse**: Avenue de la Plage, 74140 Excenevex
+- **Coordonnées**: 46,3528° N — 6,3489° E
+- **Pavillon Bleu**: Labellisée Pavillon Bleu depuis 2018 (qualité d'eau et gestion environnementale).
 - **Ouverture**: Plage accessible toute l'année 24h/24. Services et animations de juin à septembre.
 - **Tarif**: Accès plage gratuit. Parking payant en saison : 6 € journée (véhicule), 2 € deux-roues, 30 € abonnement 7 jours. Gratuit dès 17h.
 - **Baignade surveillée**: Du 1er juillet au 30 août, tous les jours de 11h15 à 17h45. Postes de secours actifs sur cette période.
@@ -86,10 +93,6 @@ Accès direct par la Voie Verte d'Excenevex, piste cyclable longeant le lac depu
 ## Quand y aller
 
 La plage est accessible toute l'année, mais la saison idéale pour la baignade s'étend de juin à septembre, avec des eaux atteignant 22 à 25°C en juillet–août. La baignade surveillée fonctionne du 1er juillet au 30 août. Le printemps et l'automne offrent une ambiance plus tranquille, propice aux promenades sur le sable et à l'observation de la flore des dunes. L'hiver, la plage devient un site d'observation ornithologique prisé, les eaux calmes du petit cours d'eau Vion accueillant une faune lacustre variée. Les animations estivales (concerts, fête du sable, marché des artisans) battent leur plein en juillet et août. Éviter les week-ends de forte chaleur en haute saison pour profiter d'une fréquentation plus agréable.
-
-## Événements
-
-Animations estivales de juin à septembre : marché musical estival tous les mercredis de juin à septembre, tournois de beach-volley, Fête du sable avec sculptures géantes réalisées par des artistes professionnels, concerts gratuits en début et fin de saison, XNV Beach Festival (musique électronique pieds dans le sable). Point d'accueil de l'Office de tourisme Destination Léman ouvert tous les jours de juillet–août au centre du village.
 
 ## Questions fréquentes
 

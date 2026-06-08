@@ -2,10 +2,10 @@
 slug: acro-aventures-reignier
 name: "Acro'Aventures Reignier"
 category: attraction
-category_label: "Attraction"
-commune: "Reignier-Ésery"
-postal_code: "74930"
-department: "Haute-Savoie"
+category_label: Attraction
+commune: Reignier-Ésery
+postal_code: 74930
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,17 +13,17 @@ latitude: 46.122775
 longitude: 6.286102
 canonical_url: https://loisirs74.fr/acro-aventures-reignier
 language: fr
-photo_url: https://images.unsplash.com/photo-1551632811-561732d1e306?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Holly Mandarich"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg
+photo_type: real
+photo_author: Forest park
+photo_license: Wikimedia Commons
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Acro'Aventures Reignier
 
-> Parc aventure dans les arbres avec parcours accrobranche dès 1 m et Acro'Filet suspendu, situé dans la forêt des Rocailles à 20 km de Genève.
+> Parc accrobranche familial dans la forêt des Rocailles à Reignier-Ésery. Acro'Filet suspendu, parcours dès 1 m. 10 km d'Annemasse, 20 km de Genève. Dès 16 €.
 
 ## En bref
 
@@ -32,6 +32,7 @@ source: loisirs74.fr
 - **GPS**: 46.122775, 6.286102
 - **Type**: Parc accrobranche
 - **Accès**: Payant
+- **Tarif**: À partir de 16 € (parcours enfant)
 - **Parking**: Gratuit sur place
 - **Chiens**: Non autorisés
 - **Meilleure saison**: Avril à novembre (ouverture variable selon saison)
@@ -39,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Acro'Aventures Reignier est un parc aventure situé dans la forêt des Rocailles à Reignier-Ésery, à 10 km d'Annemasse, à 20 km de Genève et à 20 km de La Roche-sur-Foron. Ouvert en 2016, il propose des parcours acrobatiques en hauteur dans les arbres et un Acro'Filet, une structure de jeux suspendue dans des filets de 12 mètres de hauteur.Le parc offre quatre types de parcours adaptés à toutes les tailles et tous les âges : le Grand Parcours (dès 1m35, environ 2h30) avec liane de Tarzan et tyroliennes aller-retour de 200 m ; le Parcours Junior (dès 1m20, environ 2h) avec 5 boucles dont un parcours tyrolienne ; le Parcours Enfant (dès 1 m, environ 1h) avec 4 boucles ; et l'Acro'Filet (tout âge, 1 à 2h) avec ballons géants, piscine à balles, trampolines et toboggan. Les parcours sont équipés d'un système de ligne de vie continue développé par Koala Equipment, conçu par Altus.Le site propose également une course d'orientation (dès 7 ans, recherche de 20 balises dans la forêt) et une course au trésor (dès 3 ans). Acro'Aventures Reignier accueille les familles, groupes scolaires, comités d'entreprise, anniversaires, EVJF et EVG. Une tenue de sport et des chaussures fermées couvrant talon et orteils sont obligatoires. Réservation obligatoire en ligne sur le site officiel.
+Acro'Aventures Reignier est un parc aventure situé dans la forêt des Rocailles à Reignier-Ésery, à 10 km d'Annemasse, à 20 km de Genève et à 20 km de La Roche-sur-Foron. Ouvert en 2016, il propose des parcours acrobatiques en hauteur dans les arbres et un Acro'Filet, une structure de jeux suspendue dans des filets de 12 mètres de hauteur. Le site bénéficie d'un cadre forestier naturel préservé, idéal pour les familles et les groupes qui cherchent une activité de plein air sécurisée et ludique dans le genevois français.
+
+Le parc offre quatre types de parcours adaptés à toutes les tailles et tous les âges : le Grand Parcours (dès 1m35, environ 2h30) avec liane de Tarzan et tyroliennes aller-retour de 200 m ; le Parcours Junior (dès 1m20, environ 2h) avec 5 boucles dont un parcours tyrolienne ; le Parcours Enfant (dès 1 m, environ 1h) avec 4 boucles ; et l'Acro'Filet (tout âge, 1 à 2h) avec ballons géants, piscine à balles, trampolines et toboggan. Tous les parcours sont équipés d'un système de ligne de vie continue développé par Koala Equipment et conçu par Altus, garantissant un maximum de sécurité tout en permettant une progression autonome une fois le briefing réalisé.
+
+Le site propose également une course d'orientation (dès 7 ans, recherche de 20 balises dans la forêt) et une course au trésor (dès 3 ans) pour les plus jeunes. Acro'Aventures Reignier accueille les familles, groupes scolaires, comités d'entreprise, anniversaires, EVJF et EVG avec des formules adaptées. Une tenue de sport et des chaussures fermées couvrant talon et orteils sont obligatoires pour des raisons de sécurité. La réservation est obligatoire en ligne sur le site officiel, avec possibilité de réserver jusqu'à la dernière minute. Le parc se distingue par son excellent rapport qualité-prix et son encadrement professionnel sur place.
 
 ## Activités sur place
 
@@ -93,10 +98,6 @@ Gare SNCF de Reignier sur la ligne Aix-les-Bains – Annemasse, puis 3 km en tax
 
 Le parc est ouvert toute l'année avec des horaires variables selon la saison. La haute saison (avril à août) offre les plus larges plages horaires avec ouvertures en soirée jusqu'à 19h30 les week-ends. L'hiver, le parc fonctionne les mercredis et week-ends avec ouverture quotidienne pendant les vacances scolaires. Le printemps et l'automne sont des périodes idéales pour profiter de la forêt avec moins d'affluence. Prévoir 1 à 2h30 selon le parcours choisi. Éviter les jours de forte pluie ou de vent violent. Réservation obligatoire en ligne, possible jusqu'à la dernière minute.
 
-## Événements
-
-Courses au trésor thématiques durant la saison : Pâques, été classique, Halloween et Noël. Formules anniversaires enfants toute l'année sur réservation. Événements nocturnes et Acro'Athlon selon calendrier (consulter le site officiel).
-
 ## Questions fréquentes
 
 **Q : Comment réserver Acro'Aventures Reignier ?**
@@ -122,6 +123,14 @@ R : Oui, le parking d'Acro'Aventures Reignier est gratuit et se trouve directeme
 **Q : Quelle tenue prévoir pour Acro'Aventures Reignier ?**
 
 R : Pour Acro'Aventures Reignier, prévoir une tenue de sport et des chaussures fermées couvrant obligatoirement talon et orteils. Les crocs, tongs et sandalettes sont interdits. Attacher cheveux longs et lunettes, retirer foulards et bijoux. Le matériel (harnais, poulie) est fourni.
+
+**Q : Peut-on venir en groupe à Acro'Aventures Reignier ?**
+
+R : Oui, Acro'Aventures Reignier accueille les groupes (scolaires, entreprises, anniversaires, EVJF/EVG) avec tarif réduit dès 8 personnes. Formules anniversaires enfants avec gâteau et animations disponibles sur réservation.
+
+**Q : Y a-t-il un âge maximum pour faire l'accrobranche à Reignier ?**
+
+R : Non, il n'y a pas d'âge maximum. Les parcours sont adaptés selon la taille et la condition physique. Le Grand Parcours demande une bonne forme physique, tandis que l'Acro'Filet convient à tous les âges sans harnais.
 
 ---
 

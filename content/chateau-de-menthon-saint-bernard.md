@@ -1,11 +1,11 @@
 ---
 slug: chateau-de-menthon-saint-bernard
-name: "Château de Menthon-Saint-Bernard"
+name: Château de Menthon-Saint-Bernard
 category: chateau
-category_label: "Château"
-commune: "Menthon-Saint-Bernard"
-postal_code: "74290"
-department: "Haute-Savoie"
+category_label: Château
+commune: Menthon-Saint-Bernard
+postal_code: 74290
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,16 +15,16 @@ canonical_url: https://loisirs74.fr/chateau-de-menthon-saint-bernard
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/6/6b/Ch%C3%A2teau_de_Menthon-Saint-Bernard_%28novembre_2024%29.JPG
 photo_type: real
-photo_author: "Florian Pépellin"
-photo_license: "CC BY-SA 4.0"
+photo_author: Rémih
+photo_license: CC BY-SA 3.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Château de Menthon-Saint-Bernard
 
-> Château médiéval habité sans interruption par la famille de Menthon depuis près de 1 000 ans, perché sur un éperon rocheux face au lac d'Annecy.
+> Château médiéval habité par la même famille depuis le XIᵉ siècle, surplombant le lac d'Annecy. Visite guidée 12 €, jardins et terrasses, ouvert avril-nov.
 
 ## En bref
 
@@ -33,13 +33,18 @@ source: loisirs74.fr
 - **GPS**: 45.8647, 6.2097
 - **Type**: Château historique
 - **Accès**: Payant
+- **Tarif**: À partir de 12 € (visite guidée adulte)
 - **Parking**: Gratuit (au château)
 - **Meilleure saison**: Avril – novembre (fermé déc–mars sauf Noël)
 - **Durée**: 1 h–2 h (visite + jardins)
 
 ## Présentation
 
-Le Château de Menthon-Saint-Bernard est une forteresse médiévale transformée en résidence seigneuriale, dominant le lac d'Annecy depuis un éperon rocheux à 200 mètres au-dessus de l'eau. Construit à partir du XIIᵉ siècle, il se compose aujourd'hui de 105 pièces réparties dans un ensemble architectural mêlant éléments médiévaux (trois tours carrées d'origine), transformations Renaissance et embellissements romantiques du XIXᵉ siècle sous l'impulsion de René de Menthon, arrière-grand-père des propriétaires actuels.Ce qui distingue le château de Menthon, c'est sa continuité familiale exceptionnelle : il est habité par la même famille depuis sa fondation au XIᵉ siècle, soit 23 générations. C'est le lieu de naissance de saint Bernard de Menthon (1008), fondateur de l'hospice du Grand-Saint-Bernard et patron des alpinistes. Le château conserve son mobilier d'époque, sa bibliothèque de plus de 12 000 ouvrages anciens (dont une Encyclopédie de Diderot et d'Alembert), une cuisine avec passe-plat de 15 mètres creusé dans la roche, et une chapelle dédiée à saint Bernard.Une légende locale veut que Walt Disney se soit inspiré de ses tourelles et de son allure romantique pour dessiner le château de La Belle au bois dormant — bien que cette affirmation ne soit pas documentée. Le château est classé monument historique et s'inscrit depuis 2018 dans une démarche de préservation environnementale : potager en permaculture, vignes en biodynamie replantées à flanc de colline, et cycle de conférences sur ces thèmes.
+Le Château de Menthon-Saint-Bernard est une forteresse médiévale transformée en résidence seigneuriale, dominant le lac d'Annecy depuis un éperon rocheux à 200 mètres au-dessus de l'eau. Construit à partir du XIIᵉ siècle, il se compose aujourd'hui de 105 pièces réparties dans un ensemble architectural mêlant éléments médiévaux (trois tours carrées d'origine), transformations Renaissance et embellissements romantiques du XIXᵉ siècle sous l'impulsion de René de Menthon, arrière-grand-père des propriétaires actuels.
+
+Ce qui distingue le château de Menthon, c'est sa continuité familiale exceptionnelle : il est habité par la même famille depuis sa fondation au XIᵉ siècle, soit 23 générations. C'est le lieu de naissance de saint Bernard de Menthon (1008), fondateur de l'hospice du Grand-Saint-Bernard et patron des alpinistes. Le château conserve son mobilier d'époque, sa bibliothèque de plus de 12 000 ouvrages anciens (dont une Encyclopédie de Diderot et d'Alembert), une cuisine avec passe-plat de 15 mètres creusé dans la roche, et une chapelle dédiée à saint Bernard.
+
+Une légende locale veut que Walt Disney se soit inspiré de ses tourelles et de son allure romantique pour dessiner le château de La Belle au bois dormant — bien que cette affirmation ne soit pas documentée. Le château est classé monument historique et s'inscrit depuis 2018 dans une démarche de préservation environnementale : potager en permaculture, vignes en biodynamie replantées à flanc de colline, et cycle de conférences sur ces thèmes.
 
 ## Activités sur place
 
@@ -72,6 +77,7 @@ Boutique proposant livres illustrés sur l'histoire du château (traduits en ang
 - **Accessibilité**: Intérieur du château non accessible PMR en raison de nombreux escaliers et marches. Jardins et terrasses partiellement accessibles. Pas de toilettes adaptées PMR sur le site.
 - **Animaux**: Non admis
 - **Altitude**: 593 m (château) — vue depuis 200 m au-dessus du lac
+- **Durée de visite**: Compter 1 h à 1 h 30 pour la visite guidée du château et 30 min supplémentaires pour les jardins et terrasses. Visites théâtralisées en été : 1 h 15.
 
 ## Comment y aller
 
@@ -87,10 +93,6 @@ Voie verte du lac d'Annecy passe au bord du lac à Menthon-Saint-Bernard (enviro
 ## Quand y aller
 
 Le château est ouvert d'avril à début novembre, avec une période haute en juillet-août (tous les jours, visites théâtralisées les week-ends). Le printemps (avril-juin) et l'automne (septembre-octobre) offrent une fréquentation moindre et un cadre bucolique, avec les jardins en fleurs au printemps et les couleurs d'automne en octobre. Les vacances scolaires (Pâques, Toussaint) bénéficient d'ouvertures exceptionnelles tous les jours. En été, la vue sur le lac depuis les terrasses est sublime en fin de journée (dernière entrée 18h30). Le château est fermé de mi-novembre à fin mars, sauf pour l'événement « Château du Père Noël » en décembre.
-
-## Événements
-
-Événements récurrents : visites théâtralisées (week-ends et jours fériés en juillet-août), visites nocturnes à la chandelle (mercredis soirs en juillet-août sur certaines dates), « Les Médiévales » (reconstitutions médiévales), « Le Toujours Festival », « Le Château du Père Noël » (décembre). Consulter l'agenda en ligne sur www.chateau-de-menthon.com/agenda/ pour les dates exactes.
 
 ## Questions fréquentes
 

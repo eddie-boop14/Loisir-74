@@ -1,11 +1,11 @@
 ---
 slug: mont-baron
-name: "Mont Baron"
+name: Mont Baron
 category: point-de-vue
-category_label: "Point de vue"
-commune: "Veyrier-du-Lac"
-postal_code: "74290"
-department: "Haute-Savoie"
+category_label: Point de vue
+commune: Veyrier-du-Lac
+postal_code: 74290
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,18 +13,18 @@ latitude: 45.902
 longitude: 6.174
 canonical_url: https://loisirs74.fr/mont-baron
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b9/Mont_Baron_%40_Veyrier-du-Lac_%2851213738648%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b9/Mont_Baron_%40_Veyrier-du-Lac_%2851213738648%29.jpg
 photo_type: real
-photo_author: "Guilhem Vellut from Annecy, France"
-photo_license: "CC BY 2.0"
+photo_author: Guilhem Vellut from Annecy, France
+photo_license: CC BY 2.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Mont Baron
 
-> Balcon rocheux à 1299 mètres d'altitude au-dessus du lac d'Annecy, relié au Mont Veyrier par un sentier de crête offrant une vue magistrale sur le lac, les Bauges et le Mont Blanc.
+> Belvédère incontournable à 1299 m au-dessus du lac d'Annecy : sentiers panoramiques, vue Mont Blanc, plateforme de l'ancien téléphérique. Accès libre toute l'année.
 
 ## En bref
 
@@ -40,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Mont Baron est un sommet du massif des Bornes culminant à 1 299 mètres d'altitude, situé en surplomb de la rive est du lac d'Annecy. Relié au Mont Veyrier (1 291 m) par un sentier de crête spectaculaire, le Mont Baron constitue l'un des belvédères les plus accessibles et les plus fréquentés de la région annécienne.Depuis juillet 2024, l'accès en voiture au Col des Contrebandiers et au Pré Vernet est interdit par arrêté municipal. Les randonneurs partent désormais du petit port d'Annecy-le-Vieux (447 m), ce qui rallonge la marche d'environ 600 mètres de dénivelé supplémentaire. Le sentier traverse d'abord la forêt de hêtres et d'épicéas avant de déboucher sur la crête panoramique. À mi-hauteur subsiste la plateforme en béton de l'ancien téléphérique de Veyrier-du-Lac (1 254 m), équipée d'une table d'orientation — la gare aérienne fut démontée en 2001 après un accident tragique survenu en 1998.Le sommet proprement dit se trouve à dix minutes de marche au nord de cette plateforme, sur une crête calcaire exposée mais sécurisée par des câbles et barrières aux passages aériens. De là, la vue embrasse 180° : le lac d'Annecy en contrebas, le Semnoz au sud-ouest, les sommets du massif des Bauges (Tournette, Dents de Lanfon, Arcalod) au sud-est, la chaîne des Aravis et le Mont Blanc à l'est (visible par le Col des Aravis), et le Jura au nord. La crête se poursuit vers le Mont Veyrier pour ceux qui souhaitent prolonger la randonnée.
+Le Mont Baron est un sommet du massif des Bornes culminant à 1 299 mètres d'altitude, situé en surplomb de la rive est du lac d'Annecy. Relié au Mont Veyrier (1 291 m) par un sentier de crête spectaculaire, le Mont Baron constitue l'un des belvédères les plus accessibles et les plus fréquentés de la région annécienne.
+
+Depuis juillet 2024, l'accès en voiture au Col des Contrebandiers et au Pré Vernet est interdit par arrêté municipal. Les randonneurs partent désormais du petit port d'Annecy-le-Vieux (447 m), ce qui rallonge la marche d'environ 600 mètres de dénivelé supplémentaire. Le sentier traverse d'abord la forêt de hêtres et d'épicéas avant de déboucher sur la crête panoramique. À mi-hauteur subsiste la plateforme en béton de l'ancien téléphérique de Veyrier-du-Lac (1 254 m), équipée d'une table d'orientation — la gare aérienne fut démontée en 2001 après un accident tragique survenu en 1998.
+
+Le sommet proprement dit se trouve à dix minutes de marche au nord de cette plateforme, sur une crête calcaire exposée mais sécurisée par des câbles et barrières aux passages aériens. De là, la vue embrasse 180° : le lac d'Annecy en contrebas, le Semnoz au sud-ouest, les sommets du massif des Bauges (Tournette, Dents de Lanfon, Arcalod) au sud-est, la chaîne des Aravis et le Mont Blanc à l'est (visible par le Col des Aravis), et le Jura au nord. La crête se poursuit vers le Mont Veyrier pour ceux qui souhaitent prolonger la randonnée.
 
 ## Activités sur place
 
@@ -73,6 +77,7 @@ Le Mont Baron est très fréquenté en été — préférer printemps (avril-mai
 - **Animaux**: Acceptés tenus en laisse
 - **Accessibilité**: Non adapté poussette, fauteuil, mobilité réduite (sentier rocheux, passages aériens câblés, terrain accidenté)
 - **Durée d'accès**: 2 h–3 h 30 aller-retour depuis le parking du Petit Port (selon rythme et variante choisie)
+- **Contact**: 
 
 ## Comment y aller
 

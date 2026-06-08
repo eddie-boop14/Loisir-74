@@ -1,11 +1,11 @@
 ---
 slug: lac-des-confins
-name: "Lac des Confins"
+name: Lac des Confins
 category: lac
-category_label: "Lac & plage"
-commune: "La Clusaz"
-postal_code: "74220"
-department: "Haute-Savoie"
+category_label: Lac
+commune: La Clusaz
+postal_code: 74220
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,18 +15,20 @@ canonical_url: https://loisirs74.fr/lac-des-confins
 language: fr
 photo_url: /lac-des-confins-hero.jpg
 photo_type: real
-photo_source: own
-last_updated: 2026-05-18
+photo_author: Guilhem Vellut from Annecy, France
+photo_license: CC BY 2.0
+photo_source: Wikimedia Commons
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Lac des Confins
 
-> Petit lac glaciaire de 3 hectares niché au pied de la chaîne des Aravis, point de départ de randonnées en été et domaine nordique de 65 km l'hiver.
+> Petit lac d'altitude à 1 358 m au pied de la chaîne des Aravis, accessible en voiture. Boucle facile de 2,7 km, point de départ de randonnées, ski de fond l'hiver.
 
 ## En bref
 
-- **Catégorie**: Lac & plage
+- **Catégorie**: Lac
 - **Commune**: La Clusaz, Haute-Savoie (74220)
 - **GPS**: 45.91583, 6.47611
 - **Type**: Lac glaciaire de montagne
@@ -35,10 +37,15 @@ source: loisirs74.fr
 - **Chiens**: Acceptés en laisse
 - **Meilleure saison**: Mai – octobre (randonnées) · Décembre – mars (ski de fond)
 - **Durée**: 45 min (boucle du lac) · 2 h–demi-journée (randonnées depuis le lac)
+- **Altitude**: 1 358 m
 
 ## Présentation
 
-Le Lac des Confins est un lac glaciaire d'altitude situé à 1 358 mètres sur la commune de La Clusaz, au pied de la chaîne des Aravis. Formé il y a plus de 10 000 ans lors de la dernière glaciation, ce plan d'eau de 3 hectares atteint une profondeur de 6 mètres. Accessible par la route depuis le village de La Clusaz (5 km), il se trouve dans un plateau d'alpage ouvert entre la montagne du Danay et les combes des Aravis.Le lac est le point de départ d'une boucle pédestre facile de 2,7 km (45 minutes à 1 heure) qui fait le tour du plan d'eau dans un cadre bucolique : alpages verdoyants, anciens chalets traditionnels, vue dégagée sur le massif des Aravis. La baignade y est interdite. Le secteur des Confins sert également de base de départ pour des randonnées vers la Tête du Danay, le Col des Confins, ou les combes de Bellachat et Tardevant. En hiver, le plateau se transforme en espace nordique avec 65 km de pistes de ski de fond damées quotidiennement, l'un des plus ensoleillés de Haute-Savoie.Chaque fin de saison de ski, le lac accueille le Défi-Foly, une compétition ludique où les participants dévalent une pente enneigée et tentent de glisser le plus loin possible sur le lac, souvent déguisés. Le hameau des Confins réunit quelques fermes, une petite chapelle et plusieurs chalets-restaurants. L'ensemble compose un site naturel préservé, classé dans la réserve naturelle de la chaîne des Aravis.
+Le Lac des Confins est un lac glaciaire d'altitude situé à 1 358 mètres sur la commune de La Clusaz, au pied de la chaîne des Aravis. Formé il y a plus de 10 000 ans lors de la dernière glaciation, ce plan d'eau de 3 hectares atteint une profondeur de 6 mètres. Accessible par la route depuis le village de La Clusaz (5 km), il se trouve dans un plateau d'alpage ouvert entre la montagne du Danay et les combes des Aravis.
+
+Le lac est le point de départ d'une boucle pédestre facile de 2,7 km (45 minutes à 1 heure) qui fait le tour du plan d'eau dans un cadre bucolique : alpages verdoyants, anciens chalets traditionnels, vue dégagée sur le massif des Aravis. La baignade y est interdite. Le secteur des Confins sert également de base de départ pour des randonnées vers la Tête du Danay, le Col des Confins, ou les combes de Bellachat et Tardevant. En hiver, le plateau se transforme en espace nordique avec 65 km de pistes de ski de fond damées quotidiennement, l'un des plus ensoleillés de Haute-Savoie.
+
+Chaque fin de saison de ski, le lac accueille le Défi-Foly, une compétition ludique où les participants dévalent une pente enneigée et tentent de glisser le plus loin possible sur le lac, souvent déguisés. Le hameau des Confins réunit quelques fermes, une petite chapelle et plusieurs chalets-restaurants. L'ensemble compose un site naturel préservé, classé dans la réserve naturelle de la chaîne des Aravis.
 
 ## Activités sur place
 
@@ -88,10 +95,6 @@ Accès possible en vélo ou VTT depuis La Clusaz (5 km de montée, 300 m de dén
 ## Quand y aller
 
 Le Lac des Confins se visite toute l'année avec deux visages distincts. De mai à octobre, c'est la saison de la randonnée : le lac est libre de glace, les alpages verdoyants, les fleurs alpines présentes (gentianes, edelweiss) et les journées longues. Juillet-août sont les mois les plus fréquentés ; préférez juin ou septembre pour plus de calme. Le sentier du tour du lac peut être ombragé par endroits mais reste exposé au soleil sur une grande partie (prévoir chapeau). L'automne (septembre-octobre) offre des couleurs dorées et une fréquentation réduite, mais les premières neiges peuvent arriver dès fin octobre. En hiver (décembre-mars), le lac gèle, les alpages sont enneigés et le secteur devient un domaine nordique très fréquenté par les skieurs de fond. Le Défi-Foly (compétition sur le lac gelé) a lieu fin mars ou début avril. Le printemps (avril-début mai) est une période de transition : neige résiduelle, sentiers boueux, mais le lac commence à dégeler et la montagne se réveille.
-
-## Événements
-
-Fin mars ou début avril (date variable selon l'enneigement) : Défi-Foly, compétition ludique de glisse sur le lac gelé où les participants dévalent une pente enneigée et tentent de glisser le plus loin possible sur le lac. Déguisements, ambiance festive, clôture de la saison d'hiver. En hiver (décembre à mars) : fonctionnement de l'Espace nordique des Confins avec animations et compétitions de ski de fond (se renseigner à l'Office de Tourisme).
 
 ## Questions fréquentes
 

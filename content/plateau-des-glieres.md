@@ -1,119 +1,126 @@
 ---
 slug: plateau-des-glieres
-name: "Plateau des Glières"
-category: point-de-vue
-category_label: "Point de vue"
-commune: "Fillière"
-postal_code: "74570"
-department: "Haute-Savoie"
+name: Plateau des Glières
+category: parc
+category_label: Parc
+commune: Thorens-Glières
+postal_code: 74570
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9583
-longitude: 6.3667
+latitude: 45.965
+longitude: 6.3339
 canonical_url: https://loisirs74.fr/plateau-des-glieres
 language: fr
-photo_url: /plateau-des-glieres-hero.jpg
-photo_type: real
-photo_source: own
-last_updated: 2026-05-18
+last_updated: 23 avril 2026
 source: loisirs74.fr
 ---
 
 # Plateau des Glières
 
-> Plateau calcaire du massif des Bornes à 1 450 m d'altitude, haut lieu de mémoire de la Résistance française et site naturel classé Natura 2000.
+> Plateau à 1 440 m, haut lieu de la Résistance, Monument national de Gilioli (1973, MH 2020), ski de fond l'hiver, alpages l'été. Fillière, Haute-Savoie.
 
 ## En bref
 
-- **Catégorie**: Point de vue
-- **Commune**: Fillière, Haute-Savoie (74570)
-- **GPS**: 45.9583, 6.3667
-- **Type**: Plateau calcaire et site de mémoire
+- **Catégorie**: Parc
+- **Commune**: Thorens-Glières, Haute-Savoie (74570)
+- **GPS**: 45.965, 6.3339
+- **Type**: Plateau d'altitude, lieu de mémoire
 - **Accès**: Libre · Gratuit
-- **Parking**: Gratuit (plusieurs parkings sur le plateau)
+- **Parking**: Gratuit, face au Monument
 - **Chiens**: Acceptés en laisse
-- **Meilleure saison**: Toute l'année · Ski de fond décembre – mars · Randonnée juin – septembre
-- **Durée**: 2 h – journée complète selon activités
+- **Meilleure saison**: Mai – octobre (été) · décembre – mars (ski de fond)
+- **Altitude**: 1 440 m (accès) · 1 400-1 800 m (plateau)
 
 ## Présentation
 
-Le Plateau des Glières est un plateau calcaire situé dans le massif des Bornes, à une altitude moyenne de 1 450 m, s'étendant sur les communes de Glières-Val-de-Borne et Fillière. Accessible depuis Thorens-Glières par une route sinueuse de 15 km, le plateau alterne alpages, tourbières, forêts de conifères et crêtes rocheuses. Il est encadré par la montagne des Auges (1 822 m) à l'est et la montagne des Frêtes (1 910 m) au nord-ouest.Le site est un haut lieu de mémoire de la Résistance française. De janvier à mars 1944, 465 maquisards s'y regroupent sous le commandement du lieutenant Tom Morel puis du capitaine Maurice Anjot pour réceptionner des parachutages d'armes destinés aux maquis de Haute-Savoie. Le 26 mars 1944, ils font face à l'assaut conjoint de la Wehrmacht et de la Milice française : 129 maquisards et 20 habitants y perdent la vie. Le Monument national à la Résistance, œuvre d'Émile Gilioli inaugurée le 2 septembre 1973 par André Malraux, domine le plateau. Inscrit au titre des monuments historiques le 27 mai 2020, il symbolise l'espérance et l'engagement des combattants.Classé Natura 2000 et Espace Naturel Sensible, le plateau abrite une biodiversité remarquable : lynx, loup, plus de 100 espèces d'oiseaux. En hiver, le domaine nordique des Glières propose 29 km de pistes de ski de fond, 17 km d'itinéraires raquettes, des cours de ski nordique et des activités en chiens de traîneau. En été, les visiteurs y pratiquent randonnée pédestre, VTT, escalade, spéléologie, et découvrent l'histoire du maquis via un sentier balisé d'une heure avec 12 panneaux interprétatifs.
+Le Plateau des Glières est un plateau calcaire du massif des Bornes, situé à environ 1 440 m d'altitude, entre la Montagne des Auges (1 800 m) et les Frêtes. Il s'étend sur les communes de Thorens-Glières (aujourd'hui rattachée à Fillière depuis la fusion de 2017) et de Glières-Val-de-Borne. C'est un site Natura 2000 et un Espace Naturel Sensible, propriété en partie du Département de la Haute-Savoie.
+
+Le plateau est d'abord un haut lieu de la Résistance. Du 31 janvier au 26 mars 1944, 465 maquisards y sont regroupés sous les commandements successifs du lieutenant Tom Morel puis du capitaine Maurice Anjot, pour réceptionner des parachutages d'armes alliés. Le 26 mars, ils affrontent l'attaque conjointe des forces de Vichy et de la Wehrmacht. 129 maquisards et 20 habitants y perdent la vie. Inauguré le 2 septembre 1973 par André Malraux, le Monument national à la Résistance d'Émile Gilioli, classé Monument Historique le 27 mai 2020 et labellisé Patrimoine du XXe siècle depuis 2003, domine le site. Autour : un sentier historique du maquis, l'Accueil Mémoire du Maquis (gestion Département), un domaine nordique l'hiver, et des alpages actifs l'été.
 
 ## Activités sur place
 
 ### Visiter le Monument national à la Résistance
-Œuvre monumentale d'Émile Gilioli (1973) haute de 15,20 m, symbole d'espérance. Accès libre. Visite de l'intérieur avec œuvres méditatives. Exposition photo sur l'esplanade.
+Sculpture monumentale d'Émile Gilioli, 15,20 m de haut × 21 m de long, inaugurée par André Malraux en 1973. Esplanade accessible toute l'année, intérieur ouvert selon calendrier saisonnier.
 
-### Parcourir le sentier historique du maquis
-Boucle d'une heure entre le bâtiment Mémoire du Maquis et le Monument, avec 12 tables de lecture et 2 tables d'orientation. Livrets gratuits adulte et enfant. Accès libre.
+### Parcours historique du maquis des Glières
+Boucle d'environ 1 h entre l'Accueil Mémoire du Maquis et le Monument. 12 tables de lecture + 2 tables d'orientation. Livrets adulte et enfant gratuits. Accès libre.
 
-### Skier sur le domaine nordique
-29 km de pistes de ski de fond (alternatif et skating) de tous niveaux (vert à noir), 1er site nordique de Haute-Savoie en fréquentation. École de ski, location. Décembre à mars.
+### Accueil Mémoire du Maquis
+Espace d'information géré par le Département. Visites guidées, projections, animations jeune public. Réservation pour les groupes. Accès libre à l'espace, tarifs payants pour certaines visites guidées.
 
-### Randonner en raquettes ou à pied
-17 km d'itinéraires balisés pour piétons et raquettes, à travers alpages et forêts. Panorama sur les Aravis, le massif des Bornes, la montagne des Auges. Circuits balisés été et hiver.
+### Ski de fond
+Domaine nordique des Glières, un des grands domaines de ski de fond de Haute-Savoie. Pistes classiques et skating, location sur place, école de ski.
 
-### Découvrir la faune et la flore alpine
-Site classé Natura 2000 : tourbières, zones humides, lapiaz. Observation d'oiseaux (plus de 100 espèces), traces de lynx et de loup. Géologie alpine visible (plis, failles).
+### Raquettes à neige
+Plusieurs itinéraires balisés raquettes et piétons. La route traversante est fermée aux véhicules l'hiver et devient piste damée.
 
-### Se restaurer dans un chalet d'alpage
-Plusieurs restaurants d'altitude proposent spécialités savoyardes : fondue, tartiflette, reblochon AOC. Ambiance refuge de montagne. Terrasses panoramiques l'été.
+### Randonnée d'alpage
+Plusieurs sentiers balisés autour du plateau et vers les sommets voisins (Roc des Tours, Pointe d'Andey). Alpage actif, troupeaux de vaches laitières.
+
+### Montée vélo au col des Glières
+L'accès au plateau depuis Thorens-Glières (15 km) ou depuis Glières-Val-de-Borne (6 km) est un classique du cyclisme local.
+
+### Chiens de traîneaux
+Baptêmes et balades en traîneau proposés par des mushers professionnels sur le plateau pendant la saison de ski de fond.
+
+### Produits d'alpage
+Fromages fabriqués directement dans les fermes d'alpage du plateau. Vente sur place selon les chalets ouverts.
 
 ## Infos pratiques
 
-- **Adresse**: RD 55, Plateau des Glières, 74570 Fillière (accès via Thorens-Glières)
-- **Coordonnées**: 45,9583° N — 6,3667° E
-- **Altitude**: 1 450 m (altitude moyenne du plateau)
-- **Ouverture**: Plateau accessible toute l'année. Bâtiment Mémoire du Maquis ouvert du 5 avril au 30 septembre.
-- **Tarif**: Accès au plateau, au Monument et au sentier historique : gratuit. Visites guidées Mémoire du Maquis : adulte 3 €, réduit 2 €, gratuit moins de 8 ans et 1er dimanche du mois.
-- **Parking**: Gratuit (plusieurs parkings sur le plateau, dont parking principal au col des Glières à proximité du Monument)
-- **Animaux**: Chiens acceptés tenus en laisse
-- **Accessibilité**: Sentier principal et Monument accessibles en fauteuil roulant avec aide. Bâtiment Mémoire du Maquis adapté PMR (zone de circulation dégagée, comptoir adapté).
-- **Durée de visite**: Sentier historique : 1 h. Visite complète (monument + sentier + exposition) : 2 h. Journée complète pour activités sportives (ski, raquettes, randonnée).
-- **Contact**: Mémoire du Maquis : hautesavoie.fr/glieres · Site officiel du domaine : plateaudesglieres.fr
+- **Adresse**: Route des Glières, Plateau des Glières, 74570 Thorens-Glières (Fillière)
+- **Coordonnées**: 45.9650° N, 6.3339° E (secteur Monument)
+- **Altitude**: 1 440 m (accès), plateau 1 400-1 800 m
+- **Ouverture**: Plateau et esplanade du Monument accessibles toute l'année. Accueil Mémoire du Maquis selon calendrier saisonnier (Département).
+- **Tarif**: Gratuit (esplanade, parcours historique, monument). Certaines visites guidées payantes.
+- **Parking**: Grand parking gratuit face au Monument, accessible toute l'année côté Thorens-Glières
+- **Animaux**: Acceptés en laisse (site classé, présence de troupeaux l'été)
+- **Accessibilité**: Esplanade et abords du Monument accessibles. Sentier du maquis en partie praticable en poussette
+- **Statut**: Monument Gilioli inscrit Monuments Historiques (27 mai 2020), label Patrimoine du XXe siècle (10 mars 2003). Plateau classé Natura 2000 et Espace Naturel Sensible.
+- **WC publics**: Oui, à l'Accueil Mémoire du Maquis et au centre nordique
+- **Hiver**: Équipements spéciaux obligatoires (chaînes ou pneus neige). Traversée du plateau en voiture interdite.
+- **Contacts**: Syndicat Mixte des Glières : 04 50 33 51 53 · Département / Mémoire du Maquis : 04 50 33 21 31
 
-## Comment y aller
-
-### En voiture
-Depuis Annecy (30 km, 50 min) : prendre la direction d'Argonay et Évires, bifurquer vers Fillière au niveau de Groisy. Traverser Thorens-Glières, puis emprunter la RD 55 (route sinueuse de 15 km en forêt, plusieurs épingles) jusqu'au col des Glières. Parking gratuit. Depuis La Roche-sur-Foron (29 km) : via Fillière puis Thorens-Glières. Le plateau peut aussi être traversé en voiture : piste non goudronnée de quelques kilomètres au centre, puis route goudronnée rejoignant la D12 au nord-est (descente vers Bonneville ou vers Le Grand-Bornand/Saint-Jean-de-Sixt).
-
-### À vélo
-Montée en vélo depuis Thorens-Glières : 15 km de route de montagne, dénivelé positif ~900 m, parcours exigeant. Le Tour de France y est passé deux fois. Pistes non goudronnées à travers le plateau praticables en VTT.
-
-## Quand y aller
-
-Le Plateau des Glières se visite toute l'année. L'hiver (décembre à mars) est la haute saison du domaine nordique : 29 km de pistes de ski de fond, raquettes, chiens de traîneau, pistes de luge. Les réserves de neige permettent une ouverture tôt en saison et une fermeture tardive. Les nuits nordiques (jeudis soir, 10 km éclairés 18h–20h30, 5 € par personne) attirent les fondeurs confirmés. Le printemps (avril–mai) est une période de transition : le sentier historique rouvre début avril avec le bâtiment Mémoire du Maquis, mais la neige persiste souvent jusqu'en mai sur les hauteurs. L'été (juin–septembre) offre les meilleures conditions pour la randonnée pédestre, le VTT, l'observation de la faune et la découverte du patrimoine historique. Les alpages sont en fleurs, les restaurants d'altitude ouverts, les panoramas dégagés. L'automne (octobre–novembre) est plus calme : le bâtiment Mémoire du Maquis ferme fin septembre, mais le plateau reste accessible. Les couleurs automnales des forêts de conifères et la lumière rasante sont appréciées des photographes. Le plateau est fréquenté toute l'année par les locaux pour le sport d'endurance (trail, cyclisme), et reste un lieu de recueillement et de mémoire en toutes saisons.
-
-## Événements
-
-Nuits nordiques tous les jeudis soirs en hiver (ski de fond nocturne sous les étoiles, 10 km éclairés 18h–20h30). Championnat de France des clubs de ski nordique en mars. Commémorations annuelles de la bataille des Glières fin mars (26 mars). Visites guidées, projections documentaires, ateliers pédagogiques et expositions temporaires organisés par le Département de la Haute-Savoie tout au long de la saison d'ouverture du bâtiment Mémoire du Maquis (avril–septembre).
 
 ## Questions fréquentes
 
 **Q : L'accès au Plateau des Glières est-il payant ?**
 
-R : Non. L'accès au Plateau des Glières, au Monument national à la Résistance et au sentier historique est libre et gratuit toute l'année. Seules les visites guidées proposées par le bâtiment Mémoire du Maquis sont payantes (adulte 3 €, réduit 2 €, gratuit moins de 8 ans et le 1er dimanche du mois).
+R : Non. L'accès au Plateau des Glières est libre et gratuit toute l'année. L'esplanade du Monument national à la Résistance et le parcours historique sont en accès libre. Certaines visites guidées proposées par le Département peuvent être payantes.
 
-**Q : Comment se rendre au Plateau des Glières depuis Annecy ?**
+**Q : Peut-on venir avec son chien au Plateau des Glières ?**
 
-R : Depuis Annecy, rejoindre Argonay puis Évires, bifurquer vers Fillière/Groisy, traverser Thorens-Glières et emprunter la RD 55 (route sinueuse de 15 km en forêt) jusqu'au col des Glières. Compter 50 min de trajet et 30 km. Parking gratuit à l'arrivée.
+R : Oui. Les chiens sont acceptés au Plateau des Glières, tenus en laisse. L'été, la laisse est particulièrement importante à cause des troupeaux en alpage. Les pistes de ski de fond sont interdites aux chiens en hiver.
 
-**Q : Quelle est la meilleure saison pour visiter le Plateau des Glières ?**
+**Q : Y a-t-il un parking au Plateau des Glières ?**
 
-R : Le Plateau des Glières se visite toute l'année. L'hiver (décembre–mars) pour le ski de fond et les raquettes ; l'été (juin–septembre) pour la randonnée, le VTT, la découverte du patrimoine historique et l'observation de la faune alpine dans le cadre du site Natura 2000.
+R : Oui, un grand parking gratuit est aménagé au Plateau des Glières face au Monument national à la Résistance côté Thorens-Glières, accessible toute l'année. Un second accès par Glières-Val-de-Borne dispose aussi d'un parking (route plus étroite).
 
-**Q : Les chiens sont-ils acceptés sur le Plateau des Glières ?**
+**Q : Peut-on traverser le Plateau des Glières en voiture toute l'année ?**
 
-R : Oui. Les chiens sont acceptés sur le Plateau des Glières tenus en laisse, en raison de la présence de troupeaux sur les alpages et de la faune sauvage protégée (lynx, loup, nombreux oiseaux nicheurs).
+R : Non. En hiver, la route qui traverse le Plateau des Glières entre Thorens-Glières et Glières-Val-de-Borne est fermée aux véhicules : elle devient piste de ski de fond. L'accès en voiture reste possible jusqu'aux parkings de chaque côté.
 
-**Q : Le Monument national à la Résistance du Plateau des Glières est-il accessible en fauteuil roulant ?**
+**Q : Quelle est l'altitude du Plateau des Glières ?**
 
-R : Oui. Le sentier principal et le Monument national à la Résistance du Plateau des Glières sont accessibles en fauteuil roulant avec aide. Le bâtiment Mémoire du Maquis est adapté PMR (zone de circulation dégagée, mobilier adapté, prestations pour déficiences auditives et visuelles).
+R : Le Plateau des Glières culmine autour de 1 440 m d'altitude au niveau d'accès, avec un plateau qui s'étale entre 1 400 et 1 800 m. Les falaises urgoniennes qui l'entourent montent plus haut.
 
-**Q : Combien de temps prévoir pour visiter le Plateau des Glières ?**
+**Q : Le Monument national à la Résistance du Plateau des Glières est-il classé ?**
 
-R : Le sentier historique du Plateau des Glières se parcourt en 1 heure. Une visite complète (monument, sentier, exposition, bâtiment Mémoire du Maquis) prend environ 2 heures. Pour les activités sportives (ski de fond, raquettes, randonnée en montagne), prévoir une demi-journée à une journée complète.
+R : Oui. Le Monument national à la Résistance d'Émile Gilioli, situé sur le Plateau des Glières, est inscrit au titre des Monuments Historiques depuis le 27 mai 2020 et porte le label Patrimoine du XXe siècle depuis le 10 mars 2003.
+
+**Q : Peut-on faire du ski de fond au Plateau des Glières ?**
+
+R : Oui. Le Plateau des Glières est un des grands domaines nordiques de Haute-Savoie, avec pistes classiques et skating, location, école de ski, et itinéraires raquettes. La saison dépend de l'enneigement, généralement de décembre à mars.
+
+**Q : Le Plateau des Glières est-il accessible aux personnes à mobilité réduite ?**
+
+R : L'esplanade du Monument national à la Résistance du Plateau des Glières et ses abords immédiats sont accessibles. Une partie du parcours historique est praticable en poussette. Les sentiers d'alpage plus éloignés demandent de meilleures conditions de marche.
+
+**Q : Y a-t-il des toilettes publiques au Plateau des Glières ?**
+
+R : Oui. Des WC publics sont disponibles à l'Accueil Mémoire du Maquis et au centre nordique du Plateau des Glières, selon les horaires d'ouverture.
 
 ---
 

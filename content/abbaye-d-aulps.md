@@ -2,10 +2,10 @@
 slug: abbaye-d-aulps
 name: "Abbaye d'Aulps"
 category: chateau
-category_label: "Château"
+category_label: Château
 commune: "Saint-Jean-d'Aulps"
-postal_code: "74430"
-department: "Haute-Savoie"
+postal_code: 74430
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,16 +15,16 @@ canonical_url: https://loisirs74.fr/abbaye-d-aulps
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/1/11/Aulps_abbey_01.jpg
 photo_type: real
-photo_author: "Krzysztof Golik"
-photo_license: "CC BY-SA 4.0"
+photo_author: Krzysztof Golik
+photo_license: CC BY-SA 4.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Abbaye d'Aulps
 
-> Abbaye cistercienne fondée vers 1094, classée Monument Historique, avec centre d'interprétation unique en France consacré à la vie monastique médiévale et visite 3D immersive.
+> Abbaye cistercienne du XIe siècle avec centre d'interprétation et visite 3D. Tarifs : 7 € adulte, 3,50 € enfant. Ouvert toute l'année à Saint-Jean-d'Aulps.
 
 ## En bref
 
@@ -33,14 +33,20 @@ source: loisirs74.fr
 - **GPS**: 46.2419, 6.6498
 - **Type**: Abbaye cistercienne · Ruines et musée
 - **Accès**: Payant
+- **Tarif**: À partir de 7 € (adulte)
 - **Parking**: Gratuit sur place
 - **Chiens**: Non admis
 - **Meilleure saison**: Toute l'année · Été pour les jardins
 - **Durée**: 1 h 30 – 2 h 30
+- **Altitude**: 807 m
 
 ## Présentation
 
-L'Abbaye d'Aulps (ou Abbaye Sainte-Marie d'Aulps) est une ancienne abbaye cistercienne située à 807 m d'altitude dans la vallée du Haut-Chablais. Fondée vers 1094 par des moines de l'abbaye de Molesme en Bourgogne, elle s'affilie à l'ordre cistercien en 1136 et devient l'un des monastères les plus puissants de la Savoie médiévale. Partiellement détruite en 1823 après avoir accueilli 700 ans de vie monastique, ses vestiges majestueux de l'abbatiale sont classés Monument Historique depuis 1902.Le domaine abrite aujourd'hui le Domaine de Découverte de la Vallée d'Aulps, un centre d'interprétation unique en France installé dans l'ancienne ferme monastique restaurée en 2007. La scénographie, entièrement rénovée en novembre 2020, raconte la vie quotidienne des moines cisterciens au Moyen Âge, leurs fonctions au sein de la communauté, les rapports entre l'abbaye et la Savoie, et l'histoire surprenante de sa destruction.Le circuit de visite comprend les vestiges de l'abbatiale, les anciens celliers, la porterie, un jardin des simples, un potager médiéval et un cloître végétalisé. Une application de réalité augmentée permet de découvrir l'abbaye reconstituée en 3D telle qu'elle était entre les XVIe et XVIIIe siècles, avec casque de réalité virtuelle ou tablette numérique.
+L'Abbaye d'Aulps (ou Abbaye Sainte-Marie d'Aulps) est une ancienne abbaye cistercienne située à 807 m d'altitude dans la vallée du Haut-Chablais. Fondée vers 1094 par des moines de l'abbaye de Molesme en Bourgogne, elle s'affilie à l'ordre cistercien en 1136 et devient l'un des monastères les plus puissants de la Savoie médiévale. Partiellement détruite en 1823 après avoir accueilli 700 ans de vie monastique, ses vestiges majestueux de l'abbatiale sont classés Monument Historique depuis 1902.
+
+Le domaine abrite aujourd'hui le Domaine de Découverte de la Vallée d'Aulps, un centre d'interprétation unique en France installé dans l'ancienne ferme monastique restaurée en 2007. La scénographie, entièrement rénovée en novembre 2020, raconte la vie quotidienne des moines cisterciens au Moyen Âge, leurs fonctions au sein de la communauté, les rapports entre l'abbaye et la Savoie, et l'histoire surprenante de sa destruction.
+
+Le circuit de visite comprend les vestiges de l'abbatiale, les anciens celliers, la porterie, un jardin des simples, un potager médiéval et un cloître végétalisé. Une application de réalité augmentée permet de découvrir l'abbaye reconstituée en 3D telle qu'elle était entre les XVIe et XVIIIe siècles, avec casque de réalité virtuelle ou tablette numérique.
 
 ## Activités sur place
 
@@ -86,10 +92,6 @@ Liaison autocar depuis Thonon-les-Bains ou Cluses (Cie SAT, tél. 04 50 71 85 55
 ## Quand y aller
 
 L'abbaye est ouverte toute l'année avec des horaires variables selon les saisons. L'été (mi-juin à mi-septembre) offre les meilleurs horaires (10h–19h tous les jours) et permet de profiter pleinement des jardins médiévaux en floraison. Le printemps et l'automne sont idéaux pour découvrir le site dans une atmosphère plus calme, bien que fermé le samedi. L'hiver (janvier à mars) limite l'ouverture aux jours de semaine l'après-midi. Les Flamb'Aulps (visites nocturnes aux flambeaux) et les événements culturels (Festival du Conte, concerts) rythment le calendrier estival.
-
-## Événements
-
-Festival du Conte en été, Flamb'Aulps (visites nocturnes aux flambeaux les jeudis de juillet-août), Fête du miel et des abeilles, Mardivaleries, Marché monastique, L'Abbaye sous les étoiles (observation astronomique), concerts, expositions d'art contemporain et résidences artistiques tout au long de l'année.
 
 ## Questions fréquentes
 

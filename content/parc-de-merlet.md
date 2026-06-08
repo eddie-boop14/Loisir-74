@@ -1,11 +1,11 @@
 ---
 slug: parc-de-merlet
-name: "Parc de Merlet"
+name: Parc de Merlet
 category: attraction
-category_label: "Attraction"
-commune: "Les Houches"
-postal_code: "74310"
-department: "Haute-Savoie"
+category_label: Attraction
+commune: Les Houches
+postal_code: 74310
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,18 +13,18 @@ latitude: 45.907456
 longitude: 6.818153
 canonical_url: https://loisirs74.fr/parc-de-merlet
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/f/f0/Panorama_depuis_le_parc_de_Merlet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/f/f0/Panorama_depuis_le_parc_de_Merlet.jpg
 photo_type: real
-photo_author: "Antimuonium"
-photo_license: "CC BY-SA 4.0"
+photo_author: Florian Pépellin
+photo_license: CC BY-SA 4.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Parc de Merlet
 
-> Parc animalier de montagne à 1 500 m d'altitude où 80 animaux de 8 espèces alpines évoluent en semi-liberté sur 21 hectares, face au massif du Mont-Blanc.
+> Parc animalier à 1 500 m d'altitude face au Mont-Blanc. Bouquetins, chamois, marmottes en semi-liberté sur 21 hectares. Adulte 9 €, enfant 6 €. Réservation obligatoire.
 
 ## En bref
 
@@ -33,6 +33,7 @@ source: loisirs74.fr
 - **GPS**: 45.907456, 6.818153
 - **Type**: Parc animalier de montagne
 - **Accès**: Payant
+- **Tarif**: À partir de 9 € (adulte)
 - **Parking**: Gratuit (P1 à P4, 150 places échelonnées)
 - **Chiens**: Interdits (niche disponible à l'entrée)
 - **Meilleure saison**: Mai – septembre
@@ -40,7 +41,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Parc de Merlet est un parc animalier spécialisé dans la faune alpine, situé à 1 500 mètres d'altitude sur un ancien alpage au-dessus des Houches, dans la vallée de Chamonix. Sur 21 hectares de prairies, rochers et forêts de pins, le parc abrite 80 à 100 animaux de 8 espèces de grands mammifères de montagne : bouquetins, chamois, mouflons, daims, cerfs sika, marmottes, chevreuils et lamas. Les animaux circulent en semi-liberté, sans clôtures, et peuvent être approchés facilement tout en restant sur les sentiers balisés.Le site occupe l'emplacement d'un hameau de montagne habité à l'année jusqu'aux années 1900, avant de devenir un alpage saisonnier. Le parc a été créé en 1967-1968 par Philippe Cachat, un Chamoniard passionné de montagne et pilote d'avion, avec Bambi, un chamois apprivoisé devenu mascotte. Aujourd'hui géré par la famille Cachat (6 employés en saison), le parc combine observation de la faune alpine, panorama exceptionnel sur le massif du Mont-Blanc et découverte du patrimoine montagnard à travers ses anciens chalets d'alpage. Un altiport (l'altiport Philippe-Cachat) occupe le centre du parc.Le parc propose deux circuits balisés : un parcours facile (1 h environ) adapté aux poussettes tout-terrain, et un parcours « en forme » pour explorer tous les recoins. Nouveauté 2026 : un parcours sensoriel immersif de 5 minutes, « Les ambiances secrètes de Merlet ». Des animations gratuites sont proposées en juillet-août (Bois et Cornes, La Montagne et ses secrets, Les prédateurs), ainsi que des salles d'exposition et projections vidéo. Le parc est engagé dans une démarche écoresponsable : production locale d'électricité (panneaux photovoltaïques et pico-centrale hydraulique), tri sélectif et zéro déchet.
+Le Parc de Merlet est un parc animalier spécialisé dans la faune alpine, situé à 1 500 mètres d'altitude sur un ancien alpage au-dessus des Houches, dans la vallée de Chamonix. Sur 21 hectares de prairies, rochers et forêts de pins, le parc abrite 80 à 100 animaux de 8 espèces de grands mammifères de montagne : bouquetins, chamois, mouflons, daims, cerfs sika, marmottes, chevreuils et lamas. Les animaux circulent en semi-liberté, sans clôtures, et peuvent être approchés facilement tout en restant sur les sentiers balisés.
+
+Le site occupe l'emplacement d'un hameau de montagne habité à l'année jusqu'aux années 1900, avant de devenir un alpage saisonnier. Le parc a été créé en 1967-1968 par Philippe Cachat, un Chamoniard passionné de montagne et pilote d'avion, avec Bambi, un chamois apprivoisé devenu mascotte. Aujourd'hui géré par la famille Cachat (6 employés en saison), le parc combine observation de la faune alpine, panorama exceptionnel sur le massif du Mont-Blanc et découverte du patrimoine montagnard à travers ses anciens chalets d'alpage. Un altiport (l'altiport Philippe-Cachat) occupe le centre du parc.
+
+Le parc propose deux circuits balisés : un parcours facile (1 h environ) adapté aux poussettes tout-terrain, et un parcours « en forme » pour explorer tous les recoins. Nouveauté 2026 : un parcours sensoriel immersif de 5 minutes, « Les ambiances secrètes de Merlet ». Des animations gratuites sont proposées en juillet-août (Bois et Cornes, La Montagne et ses secrets, Les prédateurs), ainsi que des salles d'exposition et projections vidéo. Le parc est engagé dans une démarche écoresponsable : production locale d'électricité (panneaux photovoltaïques et pico-centrale hydraulique), tri sélectif et zéro déchet.
 
 ## Activités sur place
 
@@ -96,10 +101,6 @@ Depuis Les Houches centre ou le Balcon Sud, plusieurs itinéraires cyclables/VTT
 ## Quand y aller
 
 Le parc est ouvert de mai à septembre, période où les animaux sont les plus actifs et les sentiers les plus accessibles. Le meilleur moment pour observer les animaux : tôt le matin (dès l'ouverture) ou en fin d'après-midi, lorsqu'ils sortent de l'ombre où ils se réfugient durant les heures chaudes. En juillet-août, animations gratuites l'après-midi et navette depuis la gare des Houches. Affluence forte en août : réserver à l'avance et arriver tôt pour profiter du parking proche. Printemps (mai-juin) : idéal pour voir les jeunes animaux de l'année gambader. Automne (septembre) : calme, couleurs d'automne, lumière dorée sur le Mont-Blanc. Le parc sera exceptionnellement fermé toute l'année 2027 pour la réhabilitation des prairies et la préservation de l'écosystème.
-
-## Événements
-
-Animations gratuites en juillet-août : « Bois et Cornes », « La Montagne et ses secrets », « Les prédateurs » (30 min, l'après-midi, horaires affichés à l'entrée selon météo et affluence). Projections vidéo et expositions permanentes dans les salles couvertes. Randonnées hivernales en raquettes (janvier–mars, sur réservation, groupes de 8 personnes max avec accompagnateur en moyenne montagne, mardis et jeudis 13h–17h, 38 €/adulte, 25 €/enfant).
 
 ## Questions fréquentes
 

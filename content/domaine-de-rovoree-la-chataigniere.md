@@ -1,11 +1,11 @@
 ---
 slug: domaine-de-rovoree-la-chataigniere
-name: "Domaine de Rovorée-La Châtaignière"
+name: Domaine de Rovorée-La Châtaignière
 category: domaine
-category_label: "Base de loisirs"
-commune: "Yvoire"
-postal_code: "74140"
-department: "Haute-Savoie"
+category_label: Domaine
+commune: Yvoire
+postal_code: 74140
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,21 +13,21 @@ latitude: 46.3703
 longitude: 6.3356
 canonical_url: https://loisirs74.fr/domaine-de-rovoree-la-chataigniere
 language: fr
-photo_url: https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80
-photo_type: generic_stock
-photo_author: "David Marcu"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/f/f8/Embarcad%C3%A8re_du_Domaine_de_La_Ch%C3%A2taigni%C3%A8re.jpg
+photo_type: real
+photo_author: Alpine meadow
+photo_license: Wikimedia Commons
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Domaine de Rovorée-La Châtaignière
 
-> Espace naturel sensible de 24 hectares au bord du lac Léman : forêt ancienne, châtaigniers séculaires, rives lacustres et biodiversité remarquable. L'un des rares sites publics accessibles sur la rive française du Léman.
+> Espace naturel de 24 ha au bord du Léman : forêt ancienne, châtaigniers séculaires, rives lacustres, vestiges médiévaux. Accès libre toute l'année.
 
 ## En bref
 
-- **Catégorie**: Base de loisirs
+- **Catégorie**: Domaine
 - **Commune**: Yvoire, Haute-Savoie (74140)
 - **GPS**: 46.3703, 6.3356
 - **Type**: Espace naturel sensible
@@ -39,7 +39,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Domaine de Rovorée-La Châtaignière est un espace naturel sensible départemental de 24 hectares situé au bord du lac Léman, entre Yvoire et Excenevex. Propriété du Département de la Haute-Savoie et du Conservatoire du Littoral, il est l'un des plus grands sites naturels accessibles au public sur la rive française du Léman. Le domaine comprend une forêt ancienne avec ses châtaigniers séculaires, des prairies, des rives lacustres bordant le lac sur 1,2 km, des grottes à tufs et des vestiges de la place forte médiévale de Rovorée.Le site se distingue par une biodiversité exceptionnelle : on y dénombre 350 espèces floristiques, 87 espèces d'oiseaux, 29 espèces de papillons et 13 espèces de chauves-souris, dont la pipistrelle pygmée (colonie unique en Haute-Savoie). Le domaine n'est pas un parc urbain aménagé mais un espace naturel préservé, façonné au fil des siècles par les pratiques humaines. Le manoir de Rovorée et la demeure de La Châtaignière, deux maisons de maître du XIXe siècle, accueillent aujourd'hui des expositions temporaires et des résidences d'artistes.
+Le Domaine de Rovorée-La Châtaignière est un espace naturel sensible départemental de 24 hectares situé au bord du lac Léman, entre Yvoire et Excenevex. Propriété du Département de la Haute-Savoie et du Conservatoire du Littoral, il est l'un des plus grands sites naturels accessibles au public sur la rive française du Léman. Le domaine comprend une forêt ancienne avec ses châtaigniers séculaires, des prairies, des rives lacustres bordant le lac sur 1,2 km, des grottes à tufs et des vestiges de la place forte médiévale de Rovorée.
+
+Le site se distingue par une biodiversité exceptionnelle : on y dénombre 350 espèces floristiques, 87 espèces d'oiseaux, 29 espèces de papillons et 13 espèces de chauves-souris, dont la pipistrelle pygmée (colonie unique en Haute-Savoie). Le domaine n'est pas un parc urbain aménagé mais un espace naturel préservé, façonné au fil des siècles par les pratiques humaines. Le manoir de Rovorée et la demeure de La Châtaignière, deux maisons de maître du XIXe siècle, accueillent aujourd'hui des expositions temporaires et des résidences d'artistes.
 
 ## Activités sur place
 
@@ -71,6 +73,7 @@ Le manoir de Rovorée et La Châtaignière accueillent expositions temporaires, 
 - **Animaux**: Acceptés en laisse
 - **Accessibilité**: Sentiers en partie accessibles PMR. Accès voiture possible jusqu'au domaine de La Châtaignière.
 - **Durée de visite**: 1 h 30 à 2 h (promenade complète)
+- **Commodités**: Pas de restauration sur site. Snack/boulangerie à Yvoire (1,5 km) et Excenevex (3 km). Toilettes publiques à proximité du parking. Bancs et tables ombragés sur le parcours.
 - **Contact**: Mairie d'Yvoire : 04 50 72 80 36
 
 ## Comment y aller
@@ -87,10 +90,6 @@ Accessible via la voie verte du Léman depuis Yvoire (1,5 km, 5 min) ou Exceneve
 ## Quand y aller
 
 Le domaine est accessible toute l'année. Le printemps (avril–mai) offre la floraison abondante des prairies et le chant des oiseaux migrateurs. L'été (juin–septembre) est idéal pour les promenades en famille avec visites guidées gratuites et accès aux rives du lac. L'automne (octobre–novembre) révèle les couleurs des châtaigniers et la lumière dorée sur le Léman. L'hiver est plus calme, propice à l'observation naturaliste et aux promenades solitaires. Les sentiers peuvent être boueux après la pluie ; prévoir de bonnes chaussures en toutes saisons.
-
-## Événements
-
-Animations gratuites de découverte de la nature d'avril à octobre : sorties ornithologiques, ateliers botaniques, expositions artistiques au manoir, résidences d'artistes. Programmation annuelle sur le site de l'Espace Enchanté (association hébergée à La Châtaignière). Visites guidées gratuites proposées chaque jour à partir du samedi 6 juillet (juillet–août), rendez-vous à 15h devant le manoir.
 
 ## Questions fréquentes
 

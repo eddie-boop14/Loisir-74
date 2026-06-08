@@ -1,11 +1,11 @@
 ---
 slug: cascade-de-nyon
-name: "Cascade de Nyon"
+name: Cascade de Nyon
 category: cascade
-category_label: "Cascade"
-commune: "Morzine"
-postal_code: "74110"
-department: "Haute-Savoie"
+category_label: Cascade
+commune: Morzine
+postal_code: 74110
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,16 +15,16 @@ canonical_url: https://loisirs74.fr/cascade-de-nyon
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/9/9b/Cascade_de_Nyon_%2812%29.jpg
 photo_type: real
-photo_author: "Krzysztof Golik"
-photo_license: "CC BY-SA 4.0"
+photo_author: Krzysztof Golik
+photo_license: CC BY-SA 4.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Cascade de Nyon
 
-> Cascade naturelle de 10 mètres au fond d'une gorge sur la Dranse de la Manche, atteinte en 15 minutes de marche depuis le parking du téléphérique de Nyon.
+> Cascade de 10 m dans une gorge proche de Morzine, accessible en 15 min à pied depuis le téléphérique. Site de canyoning d'initiation. Accès libre toute l'année.
 
 ## En bref
 
@@ -40,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Cascade de Nyon est une chute d'eau naturelle de 10 mètres située au fond d'une gorge profonde, à environ 1 130 m d'altitude, dans la vallée de la Manche au sud de Morzine. La cascade est alimentée par un torrent descendant du mont Nyon (2 020 m), principalement par la fonte des neiges au printemps. Le site est particulièrement réputé comme canyon d'initiation pour le canyoning, avec un parcours de 400 mètres accessible aux débutants encadrés.L'accès se fait par un sentier de randonnée balisé (Chemin du Renard) qui longe la Dranse de la Manche depuis le centre de Morzine, ou par un accès court de 5 à 15 minutes depuis le parking du téléphérique de Nyon. Une plateforme d'observation permet de contempler la cascade depuis le haut, et un pont enjambe le torrent au sommet de la chute. Le site offre également un restaurant typique (Restaurant la Cascade de Nyon) à proximité immédiate.En hiver, la cascade peut geler partiellement ou totalement, offrant alors un décor féérique apprécié des randonneurs en raquettes et des amateurs d'escalade de glace. L'eau, issue de la fonte nivale, reste très froide même en été (caractéristique mentionnée dans les fiches canyoning). Le cadre naturel de la gorge et la puissance de la chute après de fortes pluies rendent ce site particulièrement impressionnant.
+La Cascade de Nyon est une chute d'eau naturelle de 10 mètres située au fond d'une gorge profonde, à environ 1 130 m d'altitude, dans la vallée de la Manche au sud de Morzine. La cascade est alimentée par un torrent descendant du mont Nyon (2 020 m), principalement par la fonte des neiges au printemps. Le site est particulièrement réputé comme canyon d'initiation pour le canyoning, avec un parcours de 400 mètres accessible aux débutants encadrés.
+
+L'accès se fait par un sentier de randonnée balisé (Chemin du Renard) qui longe la Dranse de la Manche depuis le centre de Morzine, ou par un accès court de 5 à 15 minutes depuis le parking du téléphérique de Nyon. Une plateforme d'observation permet de contempler la cascade depuis le haut, et un pont enjambe le torrent au sommet de la chute. Le site offre également un restaurant typique (Restaurant la Cascade de Nyon) à proximité immédiate.
+
+En hiver, la cascade peut geler partiellement ou totalement, offrant alors un décor féérique apprécié des randonneurs en raquettes et des amateurs d'escalade de glace. L'eau, issue de la fonte nivale, reste très froide même en été (caractéristique mentionnée dans les fiches canyoning). Le cadre naturel de la gorge et la puissance de la chute après de fortes pluies rendent ce site particulièrement impressionnant.
 
 ## Activités sur place
 

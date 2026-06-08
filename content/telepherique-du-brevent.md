@@ -1,11 +1,11 @@
 ---
 slug: telepherique-du-brevent
-name: "Téléphérique du Brévent"
+name: Téléphérique du Brévent
 category: telecabine
-category_label: "Téléphérique / Télécabine"
-commune: "Chamonix-Mont-Blanc"
-postal_code: "74400"
-department: "Haute-Savoie"
+category_label: Télécabine
+commune: Chamonix-Mont-Blanc
+postal_code: 74400
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,26 +13,24 @@ latitude: 45.927
 longitude: 6.853
 canonical_url: https://loisirs74.fr/telepherique-du-brevent
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/3/3a/T%C3%A9l%C3%A9ph%C3%A9rique_du_Br%C3%A9vent_arriv%C3%A9e.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/2/2a/Brevent_cable_car.jpg
 photo_type: real
-photo_author: "Yann"
-photo_license: "CC BY-SA 3.0"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 9 mai 2026
 source: loisirs74.fr
 ---
 
 # Téléphérique du Brévent
 
-> Le Brévent offre la vue la plus frontale sur le massif du Mont Blanc depuis Chamonix. Deux tronçons — télécabine Planpraz puis téléphérique — vous hissent à 2 525 m face aux glaciers.
+> Le Brévent (2 525 m) face au Mont Blanc depuis Chamonix. AR adulte 41,20 €, horaires été, réservation directe chez l'exploitant Compagnie du Mont-Blanc.
 
 ## En bref
 
-- **Catégorie**: Téléphérique / Télécabine
+- **Catégorie**: Télécabine
 - **Commune**: Chamonix-Mont-Blanc, Haute-Savoie (74400)
 - **GPS**: 45.927, 6.853
 - **Type**: Téléphérique panoramique
 - **Accès**: Payant
+- **Tarif**: À partir de 41,20 € (adulte AR)
 - **Parking**: Parking Les Pélerins (payant, entrée de Chamonix)
 - **Chiens**: PMR : 50 % de réduction sur justificatif
 - **Meilleure saison**: Juillet – mi-septembre (été) · Décembre – avril (ski)
@@ -40,7 +38,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le téléphérique du Brévent dessert le domaine skiable éponyme de Chamonix situé à 2 525 m d'altitude, exposé plein sud face au massif du Mont Blanc. L'accès s'effectue en deux temps depuis le centre de Chamonix : une télécabine remonte à Planpraz (2 000 m) puis le téléphérique monte au sommet du Brévent. En été (13 juin – 20 septembre 2026 hors fermeture partielle), le site est ouvert aux randonneurs et visiteurs au titre de la sightseeing estivale avec des itinéraires vers Planpraz, le Grand Balcon Sud et la liaison Brévent–Flégère.Orienté plein sud et bordant la réserve naturelle des Aiguilles Rouges, le Brévent est le balcon naturel le plus réputé de la vallée pour observer le Mont Blanc et ses aiguilles. Le panorama embrasse la totalité du versant nord du massif, du Mont Blanc aux Grandes Jorasses. En hiver, le domaine skiable propose pistes alpines, freestyle et liaison avec Flégère. Des zones de décollage parapente sont accessibles depuis Planpraz.
+Le téléphérique du Brévent dessert le domaine skiable éponyme de Chamonix situé à 2 525 m d'altitude, exposé plein sud face au massif du Mont Blanc. L'accès s'effectue en deux temps depuis le centre de Chamonix : une télécabine remonte à Planpraz (2 000 m) puis le téléphérique monte au sommet du Brévent. En été (13 juin – 20 septembre 2026 hors fermeture partielle), le site est ouvert aux randonneurs et visiteurs au titre de la sightseeing estivale avec des itinéraires vers Planpraz, le Grand Balcon Sud et la liaison Brévent–Flégère.
+
+Orienté plein sud et bordant la réserve naturelle des Aiguilles Rouges, le Brévent est le balcon naturel le plus réputé de la vallée pour observer le Mont Blanc et ses aiguilles. Le panorama embrasse la totalité du versant nord du massif, du Mont Blanc aux Grandes Jorasses. En hiver, le domaine skiable propose pistes alpines, freestyle et liaison avec Flégère. Des zones de décollage parapente sont accessibles depuis Planpraz.
 
 ## Activités sur place
 

@@ -1,34 +1,33 @@
 ---
 slug: telecabine-super-chatel
-name: "Télécabine de Super-Châtel"
+name: Télécabine de Super-Châtel
 category: telecabine
-category_label: "Téléphérique / Télécabine"
-commune: "Châtel"
-postal_code: "74390"
-department: "Haute-Savoie"
+category_label: Télécabine
+commune: Châtel
+postal_code: 74390
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
 canonical_url: https://loisirs74.fr/telecabine-super-chatel
 language: fr
-photo_url: https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Maël BALLAND"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg
+photo_type: real
+last_updated: 9 mai 2026
 source: loisirs74.fr
 ---
 
 # Télécabine de Super-Châtel
 
-> La télécabine de Super-Châtel monte au cœur du village jusqu'à 1 650 m d'altitude, porte d'entrée vers le lac d'alpage, les panoramas sur les Dents du Midi et les sentiers du domaine.
+> Télécabine de Super-Châtel : accès au lac d'altitude, randonnées et panorama à 1 650 m. Tarifs, horaires et réservation directe sur le site officiel.
 
 ## En bref
 
-- **Catégorie**: Téléphérique / Télécabine
+- **Catégorie**: Télécabine
 - **Commune**: Châtel, Haute-Savoie (74390)
 - **Type**: Télécabine de montagne
 - **Accès**: Payant
+- **Tarif**: À partir de 8,90 € (adulte AR été 2025)
 - **Parking**: Parking de Sous le Crêt au pied de la télécabine
 - **Chiens**: Non renseigné — vérifier auprès de l'exploitant
 - **Meilleure saison**: Juillet – août (été) · Décembre – avril (hiver)
@@ -36,7 +35,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-La télécabine de Super-Châtel part du centre du village de Châtel (1 200 m) et monte à 1 650 m d'altitude. Depuis l'arrivée, un panorama sur les Dents du Midi et les massifs du Chablais s'ouvre sur une large plateforme qui donne accès au réseau de sentiers du domaine de Super-Châtel ainsi qu'aux installations estivales du secteur.En juillet et août, le lac de Super-Châtel (2 ha, 6 m de profondeur) est accessible depuis l'arrivée de la télécabine, accessible à pied en 50 minutes depuis le village ou directement par télécabine. Un restaurant d'altitude, des activités pour enfants et le départ du télésiège du Morclan (accès au panorama à 1 970 m) complètent l'offre. En hiver, la télécabine est le point d'entrée principal du domaine skiable de Châtel.
+La télécabine de Super-Châtel part du centre du village de Châtel (1 200 m) et monte à 1 650 m d'altitude en quelques minutes, dans le secteur nord du domaine des Portes du Soleil. Depuis l'arrivée, un panorama sur les Dents du Midi et les massifs du Chablais s'ouvre sur une large plateforme qui donne accès au réseau de sentiers du domaine de Super-Châtel ainsi qu'aux installations estivales du secteur. La gare aval se trouve au pied du village avec parking gratuit.
+
+En juillet et août, le lac d'alpage de Super-Châtel (2 ha, 6 m de profondeur) est accessible depuis l'arrivée de la télécabine — également atteignable à pied en 50 minutes depuis le village. Un restaurant d'altitude, des activités pour enfants et le départ du télésiège du Morclan (accès au panorama à 1 970 m) complètent l'offre. La télécabine est ouverte du 26 juin au 31 août 2026 en été ; en hiver, elle est le point d'entrée principal du domaine skiable de Châtel.
 
 ## Activités sur place
 
@@ -55,9 +56,13 @@ Des pistes VTT sont accessibles depuis Super-Châtel en été dans le cadre du r
 ### Télésiège du Morclan (2e tronçon)
 Depuis l'arrivée de la télécabine, le télésiège du Morclan monte à 1 970 m pour un panorama exceptionnel sur le massif des Alpes franco-suisses.
 
+### Restauration d'altitude
+Hôtel-restaurant L'Escale à l'arrivée de la télécabine (1 650 m), cuisine bistronomique avec terrasse panoramique. Plusieurs autres établissements ouverts en saison.
+
 ## Infos pratiques
 
 - **Adresse**: 67 Chemin de Sous le Crêt, 74390 Châtel
+- **Coordonnées**: 
 - **Altitude arrivée**: 1 650 m
 - **Horaires**: Du 26 juin au 31 août 2026 : tous les jours (horaires à confirmer par l'exploitant). En 2025 : 9h00–17h15, dernière montée à 16h45. Vérifié sur le site officiel le 28 avril 2026 — sous réserve de modifications.
 - **Tarifs**: Adulte AR : 8,90–9,80 €. Adulte aller simple : 5,60–6,20 €. Enfant 5–15 ans AR : 6,60–7,30 €. Gratuit moins de 5 ans. Multi Pass Portes du Soleil : accès gratuit piéton. Vérifié le 28 avril 2026 (tarifs 2026 à confirmer).

@@ -2,10 +2,10 @@
 slug: cascade-de-l-arpenaz
 name: "Cascade de l'Arpenaz"
 category: cascade
-category_label: "Cascade"
-commune: "Sallanches"
-postal_code: "74700"
-department: "Haute-Savoie"
+category_label: Cascade
+commune: Sallanches
+postal_code: 74700
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,16 +15,16 @@ canonical_url: https://loisirs74.fr/cascade-de-l-arpenaz
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/7/74/Cascade_de_l%27Arpenaz.jpg
 photo_type: real
-photo_author: "Aiguilledumidi"
-photo_license: "CC BY-SA 4.0"
+photo_author: Zairon
+photo_license: CC BY-SA 4.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Cascade de l'Arpenaz
 
-> Chute d'eau de 270 mètres dominant le hameau de Luzier, classée 3e cascade de France et 1ère des Alpes françaises. Site naturel protégé depuis 1991.
+> Cascade de 270 m dominant Sallanches, 3e de France et 1ère des Alpes. Site classé depuis 1991, plissement rocheux en S, baignade l'été. Accès libre.
 
 ## En bref
 
@@ -40,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Cascade de l'Arpenaz est une chute d'eau du massif du Faucigny située sur la commune de Sallanches, à quelques kilomètres au nord du centre-ville. Avec un saut principal de 270 mètres suivi de deux chutes secondaires à sa base, elle est classée au 3e rang des cascades françaises par sa hauteur et au 1er rang des Alpes françaises.La cascade est alimentée par le torrent de l'Arpenaz, aussi appelé Nant d'Arpenaz ou La Laiteuse, qui descend du massif de Platé depuis une altitude de 1 850 m et parcourt 4 km avant de se jeter dans l'Arve. Le nom « Arpenaz » provient du préfixe celtique « Ar » (eau vive) et du suffixe « pen » (tête rocheuse).Le site présente un intérêt géologique remarquable avec son célèbre plissement rocheux en « S », caractéristique des séries calcaires jurassiques des nappes subalpines. Classé site naturel depuis 1991, il offre un aménagement complet : parking gratuit, aires de pique-nique, et point de départ de sentiers de randonnée pédestre et VTT.
+La Cascade de l'Arpenaz est une chute d'eau du massif du Faucigny située sur la commune de Sallanches, à quelques kilomètres au nord du centre-ville. Avec un saut principal de 270 mètres suivi de deux chutes secondaires à sa base, elle est classée au 3e rang des cascades françaises par sa hauteur et au 1er rang des Alpes françaises.
+
+La cascade est alimentée par le torrent de l'Arpenaz, aussi appelé Nant d'Arpenaz ou La Laiteuse, qui descend du massif de Platé depuis une altitude de 1 850 m et parcourt 4 km avant de se jeter dans l'Arve. Le nom « Arpenaz » provient du préfixe celtique « Ar » (eau vive) et du suffixe « pen » (tête rocheuse).
+
+Le site présente un intérêt géologique remarquable avec son célèbre plissement rocheux en « S », caractéristique des séries calcaires jurassiques des nappes subalpines. Classé site naturel depuis 1991, il offre un aménagement complet : parking gratuit, aires de pique-nique, et point de départ de sentiers de randonnée pédestre et VTT.
 
 ## Activités sur place
 

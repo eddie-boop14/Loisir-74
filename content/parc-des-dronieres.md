@@ -1,11 +1,11 @@
 ---
 slug: parc-des-dronieres
-name: "Parc des Dronières"
+name: Parc des Dronières
 category: domaine
-category_label: "Base de loisirs"
-commune: "Cruseilles"
-postal_code: "74350"
-department: "Haute-Savoie"
+category_label: Domaine
+commune: Cruseilles
+postal_code: 74350
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,22 +13,22 @@ latitude: 46.04015
 longitude: 6.122339
 canonical_url: https://loisirs74.fr/parc-des-dronieres
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/a/a9/Parc_de_Loisirs_des_Droni%C3%A8res_%40_Cruseilles_%2850969087497%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/a/a9/Parc_de_Loisirs_des_Droni%C3%A8res_%40_Cruseilles_%2850969087497%29.jpg
 photo_type: real
-photo_author: "Guilhem Vellut from Annecy, France"
-photo_license: "CC BY 2.0"
+photo_author: Guilhem Vellut from Annecy, France
+photo_license: CC BY 2.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Parc des Dronières
 
-> Complexe de loisirs en accès libre avec lac, sentiers forestiers, parc animalier à daims, aires de pique-nique et multiples activités sportives et de détente pour tous.
+> Complexe de loisirs gratuit avec lac, parc animalier à daims, sentiers ombragés, aire de jeux, piscine d'été, accrobranche et parcours santé à Cruseilles, Haute-Savoie.
 
 ## En bref
 
-- **Catégorie**: Base de loisirs
+- **Catégorie**: Domaine
 - **Commune**: Cruseilles, Haute-Savoie (74350)
 - **GPS**: 46.04015, 6.122339
 - **Type**: Complexe de loisirs public
@@ -40,7 +40,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Parc des Dronières est un vaste complexe public de loisirs et de nature situé à Cruseilles, à 20 km d'Annecy et Saint-Julien-en-Genevois, dans un cadre forestier de 3 hectares au pied du Salève. Le site offre un accès libre et gratuit toute l'année, et regroupe un lac, un parc animalier, des sentiers de promenade ombragés, des aires de jeux pour enfants, un parcours de santé de 2,5 km, une piste de bi-cross, et des infrastructures de barbecue et pique-nique.Le parc accueille également des équipements gérés par des opérateurs : le Centre Nautique de l'Espace Bernard Pellarin (piscine en plein air chauffée ouverte de mai à fin août), un parcours aventure en accrobranche (Tactiq Aventure), des courts de tennis et un lac de pêche (permis requis). L'enclos animalier permet d'observer gratuitement des daims, cerfs, biches et mouflons, faisant du parc une destination familiale prisée du Genevois.
+Le Parc des Dronières est un vaste complexe public de loisirs et de nature situé à Cruseilles, à 20 km d'Annecy et Saint-Julien-en-Genevois, dans un cadre forestier de 3 hectares au pied du Salève. Le site offre un accès libre et gratuit toute l'année, et regroupe un lac, un parc animalier, des sentiers de promenade ombragés, des aires de jeux pour enfants, un parcours de santé de 2,5 km, une piste de bi-cross, et des infrastructures de barbecue et pique-nique.
+
+Le parc accueille également des équipements gérés par des opérateurs : le Centre Nautique de l'Espace Bernard Pellarin (piscine en plein air chauffée ouverte de mai à fin août), un parcours aventure en accrobranche (Tactiq Aventure), des courts de tennis et un lac de pêche (permis requis). L'enclos animalier permet d'observer gratuitement des daims, cerfs, biches et mouflons, faisant du parc une destination familiale prisée du Genevois.
 
 ## Activités sur place
 
@@ -78,6 +80,7 @@ Lac des Dronières ouvert à la pêche toute l'année (permis spécifique néces
 - **Parking**: Gratuit. Plusieurs parkings sur le site à proximité du lac, du parc animalier, du centre nautique et des tennis. Places PMR disponibles.
 - **Animaux**: Acceptés tenus en laisse
 - **Accessibilité**: Sentiers accessibles en fauteuil roulant et poussettes (circuit 4 km). Parking PMR.
+- **Durée d'accès**: À 20 km d'Annecy (30 min) et de Saint-Julien-en-Genevois. Stationnement gratuit immédiat à l'entrée du parc.
 - **Contact**: Mairie de Cruseilles : 04 50 32 10 33 · mairie@cruseilles.fr · Centre nautique : 04 50 44 12 68
 
 ## Comment y aller

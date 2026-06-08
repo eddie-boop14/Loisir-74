@@ -1,11 +1,11 @@
 ---
 slug: lac-des-dronieres
-name: "Lac des Dronières"
+name: Lac des Dronières
 category: lac
-category_label: "Lac & plage"
-commune: "Cruseilles"
-postal_code: "74350"
-department: "Haute-Savoie"
+category_label: Lac
+commune: Cruseilles
+postal_code: 74350
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,18 +15,17 @@ canonical_url: https://loisirs74.fr/lac-des-dronieres
 language: fr
 photo_url: /lac-des-dronieres-hero.jpg
 photo_type: real
-photo_source: own
-last_updated: 2026-05-18
+last_updated: 23 avril 2026
 source: loisirs74.fr
 ---
 
 # Lac des Dronières
 
-> Un plan d'eau à 790 m d'altitude au cœur du Parc des Dronières, à 400 m du centre de Cruseilles. Tour du lac de 2 km, parc animalier, pêche, accrobranche, piscine attenante. Baignade interdite dans le lac.
+> Lac, tour du lac 2 km, parc animalier, accrobranche, pêche, piscine d'été. Accès libre toute l'année à Cruseilles, Haute-Savoie. Baignade interdite dans le lac.
 
 ## En bref
 
-- **Catégorie**: Lac & plage
+- **Catégorie**: Lac
 - **Commune**: Cruseilles, Haute-Savoie (74350)
 - **GPS**: 46.0403, 6.1218
 - **Type**: Lac de loisirs public
@@ -37,7 +36,54 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Lac des Dronières est un plan d'eau situé à 790 m d'altitude au sein du Parc des Dronières, à 400 m du centre-bourg de Cruseilles, entre Annecy et Genève. Le site appartient au domaine public et son accès est libre, gratuit, toute l'année. Autour du lac s'organise un véritable pôle de loisirs communal et intercommunal : un tour du lac piétonnier de 2 km, un parc animalier en enclos, un parcours de santé, un parcours aventure dans les arbres, des terrains de tennis, un centre nautique distinct (Espace Bernard Pellarin, géré par la CCPC), et depuis 2025 une nouvelle aire de loisirs en bord de lac avec pétanque, multisports, basket 3×3 et aires de jeux. La baignade n'est pas autorisée dans le lac ; elle se pratique à la piscine attenante.
+Le Lac des Dronières est un plan d'eau situé à 790 m d'altitude au sein du Parc des Dronières, à 400 m du centre-bourg de Cruseilles, entre Annecy et Genève. Le site appartient au domaine public et son accès est libre, gratuit, toute l'année.
+
+Autour du lac s'organise un véritable pôle de loisirs communal et intercommunal : un tour du lac piétonnier de 2 km, un parc animalier en enclos, un parcours de santé, un parcours aventure dans les arbres, des terrains de tennis, un centre nautique distinct (Espace Bernard Pellarin, géré par la CCPC), et depuis 2025 une nouvelle aire de loisirs en bord de lac avec pétanque, multisports, basket 3×3 et aires de jeux. La baignade n'est pas autorisée dans le lac ; elle se pratique à la piscine attenante. Le site est accessible depuis Cruseilles par la D27, parking gratuit à l'entrée. Aire de pique-nique ombragée, jeux pour enfants et sentier de tour du lac (~1 km) - une base de loisirs de proximité prisée des familles de l'avant-pays genevois en été.
+
+## Activités sur place
+
+### Faire le tour du lac
+Boucle de 2 km, environ 30 minutes à pied, au départ du parking des tennis. Cheminement stabilisé, adapté aux poussettes.
+
+### Pêcher au lac
+Lac classé en eau close, géré par l'association Les Eaux Closes. Permis spécifique obligatoire (13 €/jour, 80 €/an en 2025). Carte fédérale FNPF non valable ici.
+
+### Voir le parc animalier
+Enclos en libre accès avec daims, biches, cerfs et mouflons. Nourrissage des animaux interdit.
+
+### Parcours de santé
+2,5 km en forêt communale attenante, en libre accès, avec agrès.
+
+### Accrobranche TactiQ
+Parcours aventure dans les arbres : plus de 70 activités, tyroliennes, ponts de singe, toboggans. Opérateur privé, horaires et tarifs sur place.
+
+### Baignade à la piscine
+Centre nautique Espace Bernard Pellarin géré par la CCPC, distinct du lac. Bassin 84 m, pataugeoire, solarium, parcours gonflable. Saison 2026 : 18 mai – 30 août. Tarif adulte 6,50 €.
+
+### Parcours d'orientation permanent
+Cartes téléchargeables sur le site de la commune. Adapté initiation enfants.
+
+### Pique-nique
+Tables en libre accès, certaines abritées. Barbecues au sol interdits ; barbecues tolérés hors zones boisées et hors parcours aventure.
+
+### Nouvelle aire de loisirs
+Deux terrains de pétanque supplémentaires, terrain multisports, terrain de basket 3×3, prairie événementielle, deux aires de jeux. Chantier lancé juillet 2025.
+
+## Infos pratiques
+
+- **Adresse**: Route des Dronières, 74350 Cruseilles
+- **Coordonnées**: 46.0403° N, 6.1218° E
+- **Altitude**: 790 m
+- **Ouverture**: Parc en accès libre toute l'année, tous les jours
+- **Tarif**: Gratuit (sauf pêche : permis Les Eaux Closes ; accrobranche et piscine : payants)
+- **Parking**: Gratuit : parking des tennis et parking de la piscine
+- **Baignade dans le lac**: Interdite
+- **Piscine**: Centre nautique Espace Bernard Pellarin, payant, saison mi-mai à fin août
+- **Animaux**: Acceptés sur le parc et le tour du lac
+- **Accessibilité**: Tour du lac accessible aux poussettes ; piscine équipée PMR
+- **WC publics**: Oui, sur le site
+- **Restauration**: Snack Le Santo Cruseilles au centre nautique, en saison
+
 
 ## Questions fréquentes
 

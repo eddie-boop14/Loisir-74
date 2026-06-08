@@ -1,11 +1,11 @@
 ---
 slug: parc-de-loisirs-du-pontet
-name: "Parc de Loisirs du Pontet"
+name: Parc de Loisirs du Pontet
 category: domaine
-category_label: "Base de loisirs"
-commune: "Les Contamines-Montjoie"
-postal_code: "74170"
-department: "Haute-Savoie"
+category_label: Domaine
+commune: Les Contamines-Montjoie
+postal_code: 74170
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,22 +13,22 @@ latitude: 45.82
 longitude: 6.72
 canonical_url: https://loisirs74.fr/parc-de-loisirs-du-pontet
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/5/53/Lac_de_p%C3%AAche_%40_Parc_de_loisirs_du_Pontet_%40_Val_Montjoie_%2850921651901%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/5/53/Lac_de_p%C3%AAche_%40_Parc_de_loisirs_du_Pontet_%40_Val_Montjoie_%2850921651901%29.jpg
 photo_type: real
-photo_author: "Guilhem Vellut from Annecy, France"
-photo_license: "CC BY 2.0"
+photo_author: Guilhem Vellut from Annecy, France
+photo_license: CC BY 2.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Parc de Loisirs du Pontet
 
-> Le plus grand parc de loisirs du Pays du Mont-Blanc : 30 hectares de nature au pied de la Réserve Naturelle des Contamines, avec lacs de montagne, plage de baignade gratuite et plus de 20 activités pour toute la famille.
+> Plus grand parc de loisirs du Pays du Mont-Blanc : 30 hectares, 2 lacs, baignade gratuite, 20+ activités sportives et de détente. Accès libre toute la saison aux Contamines-Montjoie.
 
 ## En bref
 
-- **Catégorie**: Base de loisirs
+- **Catégorie**: Domaine
 - **Commune**: Les Contamines-Montjoie, Haute-Savoie (74170)
 - **GPS**: 45.82, 6.72
 - **Type**: Base de loisirs multi-activités
@@ -40,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Parc de Loisirs du Pontet est le plus grand complexe de loisirs du Pays du Mont-Blanc, situé aux Contamines-Montjoie dans le Val Montjoie, au pied de la plus grande réserve naturelle de France métropolitaine. Le parc s'étend sur 30 hectares et comprend un lac de montagne naturel et un lac de baignade aménagé avec plage surveillée en saison.Créé en 1952 comme attraction estivale de la station, le parc propose aujourd'hui plus de 20 activités : location de barques et pédalos, centre équestre, parcours aventure en forêt, minigolf 18 trous, practice de golf, tir à l'arc, terrains de football, basket et volley, trampolines, structures gonflables, parc du chien polaire, randonnées avec ânes. Le site accueille également un camping-caravaning, un gîte d'étape pour randonneurs et plusieurs prestataires indépendants.L'accès au parc lui-même est gratuit toute la saison. Chaque activité proposée par les prestataires est facturée individuellement. Le cadre naturel exceptionnel — prairies fleuries, forêts de sapins et sommets de la chaîne du Mont-Blanc en toile de fond — fait du Pontet un lieu de détente et de loisirs prisé des familles en été.
+Le Parc de Loisirs du Pontet est le plus grand complexe de loisirs du Pays du Mont-Blanc, situé aux Contamines-Montjoie dans le Val Montjoie, au pied de la plus grande réserve naturelle de France métropolitaine. Le parc s'étend sur 30 hectares et comprend un lac de montagne naturel et un lac de baignade aménagé avec plage surveillée en saison.
+
+Créé en 1952 comme attraction estivale de la station, le parc propose aujourd'hui plus de 20 activités : location de barques et pédalos, centre équestre, parcours aventure en forêt, minigolf 18 trous, practice de golf, tir à l'arc, terrains de football, basket et volley, trampolines, structures gonflables, parc du chien polaire, randonnées avec ânes. Le site accueille également un camping-caravaning, un gîte d'étape pour randonneurs et plusieurs prestataires indépendants.
+
+L'accès au parc lui-même est gratuit toute la saison. Chaque activité proposée par les prestataires est facturée individuellement. Le cadre naturel exceptionnel — prairies fleuries, forêts de sapins et sommets de la chaîne du Mont-Blanc en toile de fond — fait du Pontet un lieu de détente et de loisirs prisé des familles en été.
 
 ## Activités sur place
 
@@ -96,10 +100,6 @@ Accessible en vélo depuis Saint-Gervais via la D902 (15 km, dénivelé +350 m).
 ## Quand y aller
 
 Le parc est ouvert d'avril à octobre, mais la meilleure période pour profiter pleinement des activités est de juin à septembre, quand la baignade est ouverte et tous les prestataires sont en activité. En juillet-août, affluence forte le week-end — privilégier les matinées ou en semaine. En juin et septembre, climat plus calme, idéal pour profiter de la nature sans foule. Le parc ferme en hiver lorsque la station se consacre au ski alpin.
-
-## Événements
-
-Animations ponctuelles en saison estivale organisées par l'Office de Tourisme des Contamines-Montjoie : soirées musicales, tournois sportifs, fête du lac. Programme disponible à l'Office de Tourisme.
 
 ## Questions fréquentes
 

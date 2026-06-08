@@ -1,11 +1,11 @@
 ---
 slug: chateau-de-thorens
-name: "Château de Thorens"
+name: Château de Thorens
 category: chateau
-category_label: "Château"
-commune: "Fillière"
-postal_code: "74570"
-department: "Haute-Savoie"
+category_label: Château
+commune: Fillière
+postal_code: 74570
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,16 +15,16 @@ canonical_url: https://loisirs74.fr/chateau-de-thorens
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/1/13/Filli%C3%A8re%C2%B0Thorens-Gli%C3%A8res_-_74570_-_2019.06.04_-_Ch%C3%A2teau_de_Thorens_%28vue_de_face%29_%C2%A9_Anthony_Levrot.jpg
 photo_type: real
-photo_author: "Anthony Levrot"
-photo_license: "CC BY-SA 4.0"
+photo_author: Anthony Levrot
+photo_license: CC BY-SA 4.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Château de Thorens
 
-> Château familial de la famille de Sales depuis plus de 500 ans, devenu hôtel 4 étoiles et lieu de réception. Fermé aux visites publiques, accessible uniquement pour hébergement et événements.
+> Château historique habité par la famille de Sales depuis 1559. Hôtel 4 étoiles, lieu de réception et séminaires. Collections Saint François de Sales et Cavour. Fermé aux visites publiques.
 
 ## En bref
 
@@ -33,13 +33,18 @@ source: loisirs74.fr
 - **GPS**: 45.9825, 6.2478
 - **Type**: Château-hôtel 4 étoiles
 - **Accès**: Payant · Sur réservation
+- **Tarif**: Tarifs sur demande (hébergement et événements)
 - **Parking**: Gratuit sur place
 - **Meilleure saison**: Toute l'année
 - **Durée**: Séjour à la nuitée ou événement
 
 ## Présentation
 
-Le Château de Thorens est un château historique situé à Fillière (anciennement Thorens-Glières), dans le département de la Haute-Savoie. Bâti en 1060 sur l'ordre du comte Gérold de Genève, ce château fort médiéval est habité par la famille de Sales depuis 1559. Aujourd'hui, il fonctionne comme un hôtel 4 étoiles et lieu de réception, géré par la famille de Roussy de Sales.Le château conserve des éléments architecturaux du Moyen Âge (donjon, tours du XIIe et XIIIe siècles), de l'époque baroque et du XIXe siècle. Il fut la demeure de Saint François de Sales (1567–1622), prince-évêque de Genève, et la villégiature du comte Camille Benso de Cavour (1810–1861), Premier ministre piémontais et artisan de l'unité italienne. Le château conserve de nombreux souvenirs, œuvres d'art et objets ayant appartenu à ces deux figures historiques majeures.Depuis 2020, le Château de Thorens ne propose plus de visites guidées publiques. Il accueille uniquement des clients pour des séjours hôteliers, des mariages, séminaires et événements privés. Le site est inscrit aux Monuments Historiques depuis 1990.
+Le Château de Thorens est un château historique situé à Fillière (anciennement Thorens-Glières), dans le département de la Haute-Savoie. Bâti en 1060 sur l'ordre du comte Gérold de Genève, ce château fort médiéval est habité par la famille de Sales depuis 1559. Aujourd'hui, il fonctionne comme un hôtel 4 étoiles et lieu de réception, géré par la famille de Roussy de Sales.
+
+Le château conserve des éléments architecturaux du Moyen Âge (donjon, tours du XIIe et XIIIe siècles), de l'époque baroque et du XIXe siècle. Il fut la demeure de Saint François de Sales (1567–1622), prince-évêque de Genève, et la villégiature du comte Camille Benso de Cavour (1810–1861), Premier ministre piémontais et artisan de l'unité italienne. Le château conserve de nombreux souvenirs, œuvres d'art et objets ayant appartenu à ces deux figures historiques majeures.
+
+Depuis 2020, le Château de Thorens ne propose plus de visites guidées publiques. Il accueille uniquement des clients pour des séjours hôteliers, des mariages, séminaires et événements privés. Le site est inscrit aux Monuments Historiques depuis 1990.
 
 ## Activités sur place
 
@@ -88,10 +93,6 @@ Voie verte du lac d'Annecy accessible à Annecy, puis routes départementales D1
 ## Quand y aller
 
 Le Château de Thorens fonctionne comme hôtel 4 étoiles toute l'année. Il n'est pas ouvert aux visites touristiques libres — l'accès est réservé aux clients de l'hôtel, aux participants d'événements privés (mariages, séminaires), et aux convives du restaurant (sur réservation). Le cadre est particulièrement prisé au printemps et en été pour les mariages en extérieur. L'hiver offre une ambiance intimiste avec cheminées et salons historiques. Pour découvrir le château, il est nécessaire de réserver un séjour ou un événement.
-
-## Événements
-
-Le château accueille des mariages, réceptions privées, séminaires d'entreprise et événements familiaux sur réservation toute l'année. Aucun événement public régulier. Contact direct avec l'établissement pour devis personnalisés.
 
 ## Questions fréquentes
 

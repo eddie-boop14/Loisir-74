@@ -1,11 +1,11 @@
 ---
 slug: mont-saleve
-name: "Mont Salève"
+name: Mont Salève
 category: point-de-vue
-category_label: "Point de vue"
-commune: "Monnetier-Mornex"
-postal_code: "74560"
-department: "Haute-Savoie"
+category_label: Point de vue
+commune: Monnetier-Mornex
+postal_code: 74560
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,14 +15,13 @@ canonical_url: https://loisirs74.fr/mont-saleve
 language: fr
 photo_url: /mont-saleve-hero.jpg
 photo_type: real
-photo_source: own
-last_updated: 2026-05-18
+last_updated: 23 avril 2026
 source: loisirs74.fr
 ---
 
 # Mont Salève
 
-> Le Balcon de Genève culmine à 1379 m au Grand Piton. 250 km de sentiers balisés relient les villages du piémont au sommet, site Natura 2000 depuis 2003. Accès libre à pied, payant et saisonnier par le téléphérique.
+> Sommet à 1379 m, 250 km de sentiers balisés, site Natura 2000, téléphérique depuis Étrembières. Accès libre au massif, Haute-Savoie.
 
 ## En bref
 
@@ -37,7 +36,49 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Mont Salève — surnommé le « Balcon de Genève » — est un massif préalpin de Haute-Savoie qui culmine à 1379 m au Grand Piton. Il s'étend entre Étrembières au nord et le Pont de la Caille au sud, et son territoire se partage entre une vingtaine de communes regroupées dans le Syndicat Mixte du Salève depuis 1994. Monnetier-Mornex en occupe le cœur et la gare haute du téléphérique. Le massif est classé Natura 2000 depuis 2003 pour ses 17 habitats naturels (hêtraies, pelouses sèches, tourbières, falaises, grottes) et protégé depuis 2008 par une directive paysagère qui interdit de nouvelles constructions hors de la Croisette. Deux accès principaux : à pied depuis les villages du piémont, par un des 250 km de sentiers balisés par le Syndicat Mixte ; ou par le téléphérique, installé depuis 1932 entre Étrembières et le plateau sommital, rénové et rouvert en 2023.
+Le Mont Salève — surnommé le « Balcon de Genève » — est un massif préalpin de Haute-Savoie qui culmine à 1379 m au Grand Piton. Il s'étend entre Étrembières au nord et le Pont de la Caille au sud, et son territoire se partage entre une vingtaine de communes regroupées dans le Syndicat Mixte du Salève depuis 1994. Monnetier-Mornex en occupe le cœur et la gare haute du téléphérique.
+
+Le massif est classé Natura 2000 depuis 2003 pour ses 17 habitats naturels (hêtraies, pelouses sèches, tourbières, falaises, grottes) et protégé depuis 2008 par une directive paysagère qui interdit de nouvelles constructions hors de la Croisette. Deux accès principaux : à pied depuis les villages du piémont, par un des 250 km de sentiers balisés par le Syndicat Mixte ; ou par le téléphérique, installé depuis 1932 entre Étrembières et le plateau sommital, rénové et rouvert en 2023.
+
+## Activités sur place
+
+### Randonner sur les 250 km de sentiers balisés
+Une vingtaine d'itinéraires entretenus par le Syndicat Mixte du Salève. Chaque village du piémont est relié au sommet par au moins un sentier balisé.
+
+### Monter par le téléphérique du Salève
+Depuis Étrembières (432 m) jusqu'au plateau sommital (1097 m) en moins de 5 minutes. Gare haute classée Monument Historique depuis 2018. Exploitation payante, fermeture quinquennale pour maintenance.
+
+### Monter par le Pas de l'Échelle
+Sentier historique direct depuis la gare inférieure du téléphérique jusqu'au sommet, 5 km, environ 2h10. Démarre par 119 marches taillées dans la roche, suit le tracé de l'ancien chemin de fer à crémaillère (1892–1935).
+
+### Grimper sur les falaises de la Grande Varappe
+Le site historique de l'escalade française — c'est ici, à la fin du XIXe siècle, que le mot « varappe » est né. Mur d'école équipé de 20 m de haut à la gare haute pour les débutants.
+
+### Décoller en parapente
+Aire d'envol au sommet, face au Léman et au Mont-Blanc, accessible aux personnes à mobilité réduite. Vols biplaces avec écoles françaises ou suisses du piémont.
+
+### Pratiquer le VTT
+VTT rando familial sur les sentiers peu pentus du Petit Salève et du plateau des Bornes. Descente pour les free-riders depuis le sommet via le téléphérique (avec prudence, certaines sections sont interdites aux VTT par arrêté municipal).
+
+### Luge et raquettes à la Croisette
+En hiver, la route départementale entre la Grotte du Diable et la Croisette ferme à la circulation : ski de fond, raquettes, luge en famille, pistes tracées par une association bénévole d'Archamps depuis plus de 30 ans.
+
+### Visiter la Maison du Salève
+Centre de documentation et d'exposition installé dans une ancienne ferme des chartreux de Pomier (1733), à Présilly. Expositions, ateliers familles, point de départ de randonnées balisées.
+
+## Infos pratiques
+
+- **Adresse (gare haute téléphérique)**: Route des Trois Lacs, 74560 Monnetier-Mornex
+- **Coordonnées (Grand Piton 1379 m)**: 46.1185° N, 6.1833° E
+- **Ouverture du massif**: Accès libre toute l'année
+- **Tarif d'accès au massif**: Gratuit à pied ou en voiture (routes ouvertes selon saison)
+- **Tarif téléphérique**: Payant. Tarifs saisonniers sur telepherique-du-saleve.com
+- **Parking gare inférieure téléphérique**: Payant, à Étrembières (accès A40 sortie Annemasse)
+- **Animaux**: Chiens acceptés, tenus en laisse. Supplément au téléphérique.
+- **Accessibilité**: Téléphérique et aire de parapente sommitale accessibles PMR depuis 2023. Sentiers du massif : variables, la plupart non adaptés.
+- **Restauration au sommet**: Restaurant Vertiges (gare haute), restaurant de l'Observatoire (20 min à pied)
+- **WC publics**: Oui, à la gare haute du téléphérique et à la Croisette
+
 
 ## Questions fréquentes
 

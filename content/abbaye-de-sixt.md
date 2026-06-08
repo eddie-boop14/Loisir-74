@@ -1,11 +1,11 @@
 ---
 slug: abbaye-de-sixt
-name: "Abbaye de Sixt"
+name: Abbaye de Sixt
 category: chateau
-category_label: "Château"
-commune: "Sixt-Fer-à-Cheval"
-postal_code: "74740"
-department: "Haute-Savoie"
+category_label: Château
+commune: Sixt-Fer-à-Cheval
+postal_code: 74740
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,16 +15,16 @@ canonical_url: https://loisirs74.fr/abbaye-de-sixt
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/4/47/Sixt_abbey_02.jpg
 photo_type: real
-photo_author: "Krzysztof Golik"
-photo_license: "CC BY-SA 4.0"
+photo_author: Laurent Vriez
+photo_license: CC BY-SA 4.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 8 juin 2026
 source: loisirs74.fr
 ---
 
 # Abbaye de Sixt
 
-> Ancienne abbaye de chanoines réguliers fondée en 1144, inscrite Monument Historique. Accueille chaque été une exposition culturelle gratuite dans le logis abbatial restauré.
+> Abbaye du XIIᵉ siècle inscrite Monument Historique. Exposition estivale gratuite, église du XIIIᵉ siècle et logis abbatial restauré. Visite libre à Sixt-Fer-à-Cheval.
 
 ## En bref
 
@@ -40,7 +40,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-L'Abbaye de Sixt est une ancienne abbaye de chanoines réguliers de l'ordre de Saint-Augustin, fondée en 1144 dans la haute vallée du Giffre. Dépendance de la prestigieuse abbaye Saint-Maurice d'Agaune en Valais, elle a contribué pendant des siècles à la présence humaine permanente dans ce secteur de haute montagne isolé, développant l'agropastoralisme et structurant la vie de la vallée.L'ensemble abbatial comprend une église abbatiale du XIIIᵉ siècle, devenue église paroissiale dédiée à Sainte-Madeleine, un logis abbatial au sud édifié entre le XIIᵉ et le XVIIIᵉ siècle, un presbytère et un grenier à l'est. Fermée en 1792 après l'invasion française de la Savoie, l'abbaye a été vendue comme bien national, puis transformée en hôtel à la fin du XIXᵉ siècle. Le logis abbatial a été acquis par le Département de la Haute-Savoie en 2000.Inscrite au titre des Monuments Historiques en 1997, l'abbaye a fait l'objet de recherches archéologiques majeures dans les années 2010 et d'une restauration européenne (projet ALCOTRA PHENIX). Chaque été, le logis abbatial ouvre ses portes pour une exposition thématique gratuite. L'église se visite librement toute l'année.
+L'Abbaye de Sixt est une ancienne abbaye de chanoines réguliers de l'ordre de Saint-Augustin, fondée en 1144 dans la haute vallée du Giffre. Dépendance de la prestigieuse abbaye Saint-Maurice d'Agaune en Valais, elle a contribué pendant des siècles à la présence humaine permanente dans ce secteur de haute montagne isolé, développant l'agropastoralisme et structurant la vie de la vallée.
+
+L'ensemble abbatial comprend une église abbatiale du XIIIᵉ siècle, devenue église paroissiale dédiée à Sainte-Madeleine, un logis abbatial au sud édifié entre le XIIᵉ et le XVIIIᵉ siècle, un presbytère et un grenier à l'est. Fermée en 1792 après l'invasion française de la Savoie, l'abbaye a été vendue comme bien national, puis transformée en hôtel à la fin du XIXᵉ siècle. Le logis abbatial a été acquis par le Département de la Haute-Savoie en 2000.
+
+Inscrite au titre des Monuments Historiques en 1997, l'abbaye a fait l'objet de recherches archéologiques majeures dans les années 2010 et d'une restauration européenne (projet ALCOTRA PHENIX). Chaque été, le logis abbatial ouvre ses portes pour une exposition thématique gratuite. L'église se visite librement toute l'année.
 
 ## Activités sur place
 
@@ -89,10 +93,6 @@ Voie Verte du Haut-Giffre accessible depuis Samoëns, puis route partagée D907 
 ## Quand y aller
 
 L'exposition du logis abbatial est ouverte de mi-juin à mi-septembre, période idéale pour visiter l'ensemble du site. L'église se visite librement toute l'année, en dehors des offices religieux. L'été permet de combiner la visite de l'abbaye avec une randonnée au Cirque du Fer-à-Cheval ou dans la réserve naturelle. L'hiver, le village de Sixt prend un caractère plus paisible et authentique, propice à la découverte du patrimoine hors saison touristique.
-
-## Événements
-
-L'abbaye accueille occasionnellement des concerts de musique sacrée et des conférences sur le patrimoine régional dans le cadre des Journées du Patrimoine (septembre) ou de manifestations culturelles départementales. Se renseigner auprès de l'Office de Tourisme du Haut-Giffre.
 
 ## Questions fréquentes
 

@@ -1,11 +1,11 @@
 ---
 slug: plage-des-marquisats
-name: "Plage des Marquisats"
+name: Plage des Marquisats
 category: lac
-category_label: "Lac & plage"
-commune: "Annecy"
-postal_code: "74000"
-department: "Haute-Savoie"
+category_label: Lac
+commune: Annecy
+postal_code: 74000
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,21 +13,21 @@ latitude: 45.893443
 longitude: 6.136465
 canonical_url: https://loisirs74.fr/plage-des-marquisats
 language: fr
-photo_url: https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Joshua Earle"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b2/Annecy-8.jpg
+photo_type: real
+photo_author: "Lac d'Annecy"
+photo_license: Wikimedia Commons
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Plage des Marquisats
 
-> Plage engazonnée de 200 mètres de long sur la rive ouest du lac d'Annecy, surveillée en été, avec équipements PMR et à 10 minutes à pied de la vieille ville.
+> Plage engazonnée gratuite au bord du lac d'Annecy, ombragée, surveillée en été. 10 min à pied du centre-ville, accessible en bus, adaptée PMR. Douches, snack.
 
 ## En bref
 
-- **Catégorie**: Lac & plage
+- **Catégorie**: Lac
 - **Commune**: Annecy, Haute-Savoie (74000)
 - **GPS**: 45.893443, 6.136465
 - **Type**: Plage engazonnée au bord du lac
@@ -39,7 +39,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Plage des Marquisats est une plage engazonnée gratuite située sur la rive ouest du lac d'Annecy, à 500 mètres du centre-ville d'Annecy. Longue d'environ 200 mètres sur une vingtaine de mètres de large, elle est bordée par un banc de sable en bord de lac qui facilite l'accès à l'eau. Le fond du lac est couvert de cailloux et la profondeur augmente rapidement après quelques mètres de la rive.Avec la plage d'Albigny, la Plage des Marquisats est l'une des deux seules plages entièrement gratuites de la commune d'Annecy. Elle bénéficie d'une localisation privilégiée proche du centre nautique, des tennis, de la salle de concert du Brise Glace et du site des Marquisats qui abrite notamment l'école supérieure d'art et design (ESAAA). Du côté nord se trouve la base nautique d'Annecy où évoluent canoës, kayaks, voiliers et plongeurs — la zone de mise à l'eau n'est pas autorisée à la baignade.La plage est ombragée grâce à de nombreux arbres, ce qui en fait un lieu particulièrement apprécié l'été par les familles avec jeunes enfants. Elle est surveillée par des maîtres-nageurs sauveteurs du début des vacances scolaires d'été au 31 août, de 11h à 19h. Hors saison, la plage reste accessible pour la promenade, le pique-nique, le sport ou simplement profiter de la vue sur le lac et les montagnes environnantes.
+La Plage des Marquisats est une plage engazonnée gratuite située sur la rive ouest du lac d'Annecy, à 500 mètres du centre-ville d'Annecy. Longue d'environ 200 mètres sur une vingtaine de mètres de large, elle est bordée par un banc de sable en bord de lac qui facilite l'accès à l'eau. Le fond du lac est couvert de cailloux et la profondeur augmente rapidement après quelques mètres de la rive.
+
+Avec la plage d'Albigny, la Plage des Marquisats est l'une des deux seules plages entièrement gratuites de la commune d'Annecy. Elle bénéficie d'une localisation privilégiée proche du centre nautique, des tennis, de la salle de concert du Brise Glace et du site des Marquisats qui abrite notamment l'école supérieure d'art et design (ESAAA). Du côté nord se trouve la base nautique d'Annecy où évoluent canoës, kayaks, voiliers et plongeurs — la zone de mise à l'eau n'est pas autorisée à la baignade.
+
+La plage est ombragée grâce à de nombreux arbres, ce qui en fait un lieu particulièrement apprécié l'été par les familles avec jeunes enfants. Elle est surveillée par des maîtres-nageurs sauveteurs du début des vacances scolaires d'été au 31 août, de 11h à 19h. Hors saison, la plage reste accessible pour la promenade, le pique-nique, le sport ou simplement profiter de la vue sur le lac et les montagnes environnantes.
 
 ## Activités sur place
 
@@ -65,6 +69,7 @@ Vue sur le Mont-Veyrier et les Dents de Lanfon. Côté sud de la plage : bande a
 
 - **Adresse**: Rue des Marquisats, 74000 Annecy
 - **Coordonnées**: 45,8934° N — 6,1365° E
+- **Label / Distinction**: Plage inclusive (label Tourisme et Handicap). Présence d'ambassadeurs de l'inclusion en juillet–août.
 - **Ouverture**: Toute l'année · Surveillance estivale du début des vacances scolaires au 31 août, 11h–19h
 - **Tarif**: Gratuit
 - **Parking**: Gratuit : parkings des Marquisats, Colmyr, Tillier (saturés en haute saison). Alternative : parking souterrain Hôtel de Ville (payant, 5–10 min à pied)

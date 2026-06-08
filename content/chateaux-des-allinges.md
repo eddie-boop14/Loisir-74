@@ -1,11 +1,11 @@
 ---
 slug: chateaux-des-allinges
-name: "Châteaux des Allinges"
+name: Châteaux des Allinges
 category: chateau
-category_label: "Château"
-commune: "Allinges"
-postal_code: "74200"
-department: "Haute-Savoie"
+category_label: Château
+commune: Allinges
+postal_code: 74200
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -15,16 +15,16 @@ canonical_url: https://loisirs74.fr/chateaux-des-allinges
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/f/fa/Allinges_Chateau_Clocher.jpg
 photo_type: real
-photo_author: "MetallYZA"
-photo_license: "CC BY-SA 3.0"
+photo_author: Guilhem Vellut from Annecy, France
+photo_license: CC BY 2.0
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Châteaux des Allinges
 
-> Deux forteresses médiévales rivales face à face au sommet d'une colline dominant Thonon et le Léman, avec chapelle romane classée et fresques du XIe siècle.
+> Deux châteaux médiévaux face à face au sommet d'une colline, résidence de saint François de Sales. Vue panoramique sur le Léman. Accès libre toute l'année à Allinges.
 
 ## En bref
 
@@ -37,10 +37,15 @@ source: loisirs74.fr
 - **Chiens**: Acceptés en laisse
 - **Meilleure saison**: Avril – octobre
 - **Durée**: 1 h 30 – 2 h 30 sur place
+- **Altitude**: 717 m (belvédère)
 
 ## Présentation
 
-Les Châteaux des Allinges sont deux forteresses médiévales en ruines — Château-Neuf et Château-Vieux — situées face à face au sommet d'une colline de 712 mètres d'altitude, à 4 km au sud-ouest de Thonon-les-Bains. Édifiés au Xe siècle et séparés de seulement 150 mètres, ils appartenaient respectivement à la Maison de Savoie et aux sires de Faucigny et se sont affrontés pendant près de trois siècles jusqu'au traité de Paris de 1355.Le site comprend les vestiges des deux enceintes castrales, une chapelle romane du XIe siècle classée Monument Historique qui abrite la plus ancienne fresque de Savoie, et un belvédère à 717 mètres offrant un panorama exceptionnel sur le lac Léman, le Jura et les Préalpes. Château-Neuf servit de résidence à saint François de Sales de 1594 à 1598 lors de sa mission d'évangélisation du Chablais après la reconquête savoyarde face aux protestants bernois. Le site reste un lieu de pèlerinage salésien.Démantela en 1703 sur ordre du duc de Savoie Victor-Amédée II face à la menace française, Château-Neuf conserve néanmoins sa chapelle restaurée en 1836 par l'évêque d'Annecy. Château-Vieux, abandonné dès le XIVe siècle, présente des vestiges plus anciens dont un imposant donjon quadrangulaire de 25 mètres de haut. Le domaine est inscrit au titre des Monuments Historiques depuis 2010 et fait partie du Géoparc mondial UNESCO du Chablais.
+Les Châteaux des Allinges sont deux forteresses médiévales en ruines — Château-Neuf et Château-Vieux — situées face à face au sommet d'une colline de 712 mètres d'altitude, à 4 km au sud-ouest de Thonon-les-Bains. Édifiés au Xe siècle et séparés de seulement 150 mètres, ils appartenaient respectivement à la Maison de Savoie et aux sires de Faucigny et se sont affrontés pendant près de trois siècles jusqu'au traité de Paris de 1355.
+
+Le site comprend les vestiges des deux enceintes castrales, une chapelle romane du XIe siècle classée Monument Historique qui abrite la plus ancienne fresque de Savoie, et un belvédère à 717 mètres offrant un panorama exceptionnel sur le lac Léman, le Jura et les Préalpes. Château-Neuf servit de résidence à saint François de Sales de 1594 à 1598 lors de sa mission d'évangélisation du Chablais après la reconquête savoyarde face aux protestants bernois. Le site reste un lieu de pèlerinage salésien.
+
+Démantela en 1703 sur ordre du duc de Savoie Victor-Amédée II face à la menace française, Château-Neuf conserve néanmoins sa chapelle restaurée en 1836 par l'évêque d'Annecy. Château-Vieux, abandonné dès le XIVe siècle, présente des vestiges plus anciens dont un imposant donjon quadrangulaire de 25 mètres de haut. Le domaine est inscrit au titre des Monuments Historiques depuis 2010 et fait partie du Géoparc mondial UNESCO du Chablais.
 
 ## Activités sur place
 
@@ -86,10 +91,6 @@ Accès possible à vélo jusqu'au parking via la D12 depuis Thonon ou Allinges. 
 ## Quand y aller
 
 Le site est accessible toute l'année, mais la meilleure période s'étend d'avril à octobre pour profiter pleinement du panorama et de conditions météo favorables. En été (juillet-août), le site bénéficie d'une lumière idéale en fin de journée pour admirer le Léman et les Alpes. Possibilité de forte chaleur sans ombre sur le plateau. Hiver et printemps offrent une fréquentation plus calme et des vues dégagées par temps clair, mais attention au verglas en hiver sur les sentiers et les ruines. Le site organise des manifestations culturelles régulières : reconstitutions médiévales, expositions photos, spectacles vivants — consulter l'agenda de la commune d'Allinges ou l'OT Chablais.
-
-## Événements
-
-Le site accueille tout au long de l'année des manifestations culturelles : reconstitutions historiques médiévales, spectacles vivants, expositions temporaires (art, photographie, patrimoine). Journées Européennes du Patrimoine en septembre avec animations et visites guidées gratuites. Le site fait partie de la route géologique du Chablais inaugurée lors des Journées du Patrimoine.
 
 ## Questions fréquentes
 

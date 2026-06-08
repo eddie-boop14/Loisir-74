@@ -1,11 +1,11 @@
 ---
 slug: mont-joly
-name: "Mont Joly"
+name: Mont Joly
 category: point-de-vue
-category_label: "Point de vue"
-commune: "Saint-Gervais-les-Bains"
-postal_code: "74170"
-department: "Haute-Savoie"
+category_label: Point de vue
+commune: Saint-Gervais-les-Bains
+postal_code: 74170
+department: Haute-Savoie
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
@@ -13,17 +13,18 @@ latitude: 45.825959
 longitude: 6.692936
 canonical_url: https://loisirs74.fr/mont-joly
 language: fr
-photo_url: https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Hendrik Cornelissen"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/5/54/Meg%C3%A8ve%2C_depuis_la_cha%C3%AEne_du_Mont-Joly.jpg
+photo_type: real
+photo_author: DimiTalen
+photo_license: CC0
+photo_source: Wikimedia Commons
+last_updated: 14 mai 2026
 source: loisirs74.fr
 ---
 
 # Mont Joly
 
-> Sommet emblématique à 2 525 m d'altitude offrant un panorama à 360° sur le massif du Mont-Blanc, le Beaufortain, les Aravis, les Fiz et les Bauges.
+> Sommet emblématique à 2 525 m face au Mont-Blanc. Randonnée sportive accessible de juin à octobre depuis Saint-Gervais, Megève ou Les Contamines. Panorama à 360° au sommet.
 
 ## En bref
 
@@ -36,10 +37,15 @@ source: loisirs74.fr
 - **Chiens**: Acceptés en laisse
 - **Meilleure saison**: Juin – octobre
 - **Durée**: 5 h à 8 h aller-retour selon itinéraire
+- **Altitude**: 2 525 m
 
 ## Présentation
 
-Le Mont Joly est un sommet de 2 525 m d'altitude situé dans le massif du Beaufortain, à la limite entre Saint-Gervais-les-Bains, Megève et Les Contamines-Montjoie, en Haute-Savoie. Véritable belvédère naturel face au massif du Mont-Blanc, il offre un panorama exceptionnel à 360° depuis son sommet, où se trouve une table d'orientation.Le Mont Joly est accessible par plusieurs itinéraires de randonnée, dont les principaux départs se situent à Saint-Nicolas-de-Véroce (Plateau de la Croix), au Bettex via Les Communailles, au hameau du Planay depuis Megève, ou au Baptieu depuis Les Contamines-Montjoie. La montée, sportive et soutenue, traverse alpages et forêts avant d'atteindre les crêtes minérales du sommet.Le sommet est marqué par des installations techniques (relais radio pour le secours en montagne, antennes météorologiques) et une boîte à livre d'or. Les randonneurs peuvent rejoindre le sommet par deux variantes principales : l'Épaule du Mont Joly (voie la plus fréquentée) ou la Panse (itinéraire moins emprunté). L'ascension passe par plusieurs points remarquables : le refuge du Mont Joly (2 002 m), le Mont Géroux (2 288 m), et l'arrivée du télésiège de l'Épaule (fermé l'été).
+Le Mont Joly est un sommet de 2 525 m d'altitude situé dans le massif du Beaufortain, à la limite entre Saint-Gervais-les-Bains, Megève et Les Contamines-Montjoie, en Haute-Savoie. Véritable belvédère naturel face au massif du Mont-Blanc, il offre un panorama exceptionnel à 360° depuis son sommet, où se trouve une table d'orientation. Avec ses pentes vertes qui descendent jusqu'aux villages environnants, le Mont Joly est considéré comme l'un des premiers belvédères de la chaîne du Mont-Blanc.
+
+Le Mont Joly est accessible par plusieurs itinéraires de randonnée, dont les principaux départs se situent à Saint-Nicolas-de-Véroce (Plateau de la Croix), au Bettex via Les Communailles, au hameau du Planay depuis Megève, ou au Baptieu depuis Les Contamines-Montjoie. La montée, sportive et soutenue, traverse alpages et forêts avant d'atteindre les crêtes minérales du sommet. Les randonneurs chemine parmi les troupeaux d'estive (vaches Tarines et Abondances, chèvres et moutons) dont le lait sert à la fabrication du Beaufort. La portion finale, particulièrement engagée à partir du refuge du Mont Joly, devient plus technique avec des passages raides et rocailleux peu balisés, exigeant une grande vigilance.
+
+Le sommet est marqué par des installations techniques (relais radio pour le secours en montagne, antennes météorologiques) et une boîte à livre d'or. Les randonneurs peuvent rejoindre le sommet par deux variantes principales : l'Épaule du Mont Joly (voie la plus fréquentée) ou la Panse (itinéraire moins emprunté). L'ascension passe par plusieurs points remarquables : le refuge du Mont Joly (2 002 m), le Mont Géroux (2 288 m), et l'arrivée du télésiège de l'Épaule (fermé l'été). Par temps clair, la visibilité s'étend jusqu'aux massifs les plus éloignés, offrant une lecture unique du relief alpin. Le Mont Joly est également le point culminant de la Diagonale du Mont-Joly, épreuve de vertical kilometer de 4 km et 1 000 m de dénivelé, organisée en version été et hiver.
 
 ## Activités sur place
 
@@ -51,6 +57,9 @@ Vue imprenable sur le massif du Mont-Blanc, le Beaufortain, les Aravis, la chaî
 
 ### Observation de la faune alpine
 Possibilité d'observer marmottes, chamois, aigles royaux et vautours fauves dans les alpages et sur les crêtes. Zone de pastoralisme actif avec vaches, chèvres et moutons en estive.
+
+### Pause gourmande au refuge
+Le Chalet-Refuge du Mont Joly (2 002 m) propose restauration traditionnelle savoyarde et nuitée sur réservation (juin à septembre). Terrasses panoramiques face au Mont-Blanc et au Charvin.
 
 ### Traversée vers les Aiguilles Croches
 Pour randonneurs confirmés : prolonger par la crête vers les Aiguilles Croches et le col de Véry. Ambiance haute montagne avec passages aériens.
@@ -66,7 +75,7 @@ En hiver et au printemps, le Mont Joly est accessible en ski de randonnée ou en
 - **Adresse**: Plusieurs départs possibles : Plateau de la Croix (Saint-Nicolas-de-Véroce), Le Bettex (Les Communailles), hameau du Planay (Megève), hameau du Baptieu (Les Contamines-Montjoie)
 - **Coordonnées**: 45,825959° N — 6,692936° E
 - **Altitude**: 2 525 m
-- **Ouverture**: Praticable de mai à novembre selon enneigement. En hiver : ski de randonnée ou raquettes uniquement. Le sommet est inaccessible en cas de neige instable.
+- **Ouverture**: Praticable de juin à octobre selon enneigement. En hiver : ski de randonnée ou raquettes uniquement. Le sommet est inaccessible en cas de neige instable.
 - **Tarif**: Gratuit
 - **Parking**: Parking gratuit au Plateau de la Croix, au Bettex, au Planay ou au Baptieu selon itinéraire choisi. Arrivée limitée en haute saison.
 - **Animaux**: Chiens acceptés tenus en laisse (alpages avec troupeaux en estive)
@@ -114,6 +123,14 @@ R : Oui, les chiens sont acceptés sur les sentiers du Mont Joly mais doivent ê
 **Q : Quelle est la meilleure saison pour monter au Mont Joly ?**
 
 R : La meilleure période pour le Mont Joly s'étend de juin à octobre. Juillet et août offrent les conditions les plus stables. Septembre et début octobre sont idéaux pour la tranquillité et la lumière. Fin mai et début juin : névés persistants. En hiver : ski de randonnée ou raquettes uniquement.
+
+**Q : Le Mont Joly est-il accessible aux débutants ?**
+
+R : Le Mont Joly est une randonnée sportive et engagée, réservée aux marcheurs confirmés et habitués à la montagne. La portion finale, après le refuge, est particulièrement technique avec des pierriers et passages raides peu balisés. Les débutants peuvent randonner jusqu'au refuge du Mont Joly (2 002 m) pour profiter du panorama sans poursuivre jusqu'au sommet.
+
+**Q : Peut-on se restaurer pendant l'ascension ?**
+
+R : Oui, le Chalet-Refuge du Mont Joly à 2 002 m propose restauration traditionnelle savoyarde de mi-juin à fin septembre. Terrasses panoramiques, spécialités savoyardes, plat du jour. Ouvert tous les jours en saison estivale. Réservation conseillée : 04 50 93 10 10.
 
 ---
 
