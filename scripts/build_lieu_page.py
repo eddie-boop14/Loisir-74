@@ -376,6 +376,40 @@ def sources_block(sources):
     )
 
 
+def data_credits_block(data_sources):
+    """Per-fiche attribution line for content lifted from licensed third-party feeds
+    (DataTourisme et al.). Required by Licence Ouverte 2.0 / Etalab."""
+    if not data_sources:
+        return ""
+    captions = []
+    for ds in data_sources:
+        creator = ds.get("creator") or ""
+        creator_url = ds.get("creator_url") or ""
+        platform = ds.get("platform") or ""
+        publisher = ds.get("publisher") or ""
+        license_name = ds.get("license") or ""
+        license_url = ds.get("license_url") or ""
+        creator_html = (
+            f'<a href="{attr(creator_url)}" target="_blank" rel="noopener">{esc(creator)}</a>'
+            if creator_url else esc(creator)
+        )
+        license_html = (
+            f'<a href="{attr(license_url)}" target="_blank" rel="noopener">{esc(license_name)}</a>'
+            if license_url else esc(license_name)
+        )
+        via_parts = [p for p in (platform, publisher) if p]
+        via = " · ".join(esc(p) for p in via_parts)
+        captions.append(
+            f'Données partielles : {creator_html} via {via} · {license_html}'
+        )
+    return (
+        '<aside class="data-credits reveal"><div class="wrap">'
+        '<p class="data-credits-line">'
+        + " — ".join(captions)
+        + "</p></div></aside>"
+    )
+
+
 PARTNER_TYPE_ICON = {
     "restaurant": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2V2M5 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>',
     "commerce":   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>',
@@ -912,6 +946,7 @@ def build_page(d):
     out.append(gallery_block(fr["name"], d.get("gallery_photos")))
     out.append(faq_block(fr.get("faq", [])))
     out.append(sources_block(d.get("sources", [])))
+    out.append(data_credits_block(d.get("data_sources", [])))
     out.append(build_footer_block(
         d.get("date_published_human", ""),
         d.get("date_modified_human", "")
