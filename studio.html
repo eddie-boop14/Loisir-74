@@ -238,6 +238,9 @@ header.h .sub{color:var(--ink-mute);font-size:.85rem;margin-top:.25rem}
   <button class="tab-btn" data-tab="phototheque" role="tab">
     <span>6 · Photothèque</span>
   </button>
+  <button class="tab-btn" data-tab="dt-importer" role="tab">
+    <span>7 · Importer DT</span>
+  </button>
 </nav>
 
 <!-- ════════════════════════════════════════════════════════ -->
@@ -259,6 +262,13 @@ header.h .sub{color:var(--ink-mute);font-size:.85rem;margin-top:.25rem}
 <!-- ════════════════════════════════════════════════════════ -->
 <section class="tab-panel" id="tab-phototheque" role="tabpanel">
   <div id="phototheque-root"></div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!-- TAB 7: IMPORTER DT (DataTourisme candidate picker)       -->
+<!-- ════════════════════════════════════════════════════════ -->
+<section class="tab-panel" id="tab-dt-importer" role="tabpanel">
+  <div id="dt-importer-root"></div>
 </section>
 
 <!-- ════════════════════════════════════════════════════════ -->
@@ -3931,11 +3941,13 @@ refreshTabState();
 <script src="studio-editor.js"></script>
 <script src="studio-enricher.js"></script>
 <script src="studio-phototheque.js"></script>
+<script src="studio-dt-importer.js"></script>
 <script>
-// Boot tabs 4 + 5 + 6 on first switch (lazy init avoids cost when unused)
+// Boot tabs 4 + 5 + 6 + 7 on first switch (lazy init avoids cost when unused)
 let editorMounted = false;
 let enricherMounted = false;
 let photothequeMounted = false;
+let dtImporterMounted = false;
 const origSwitchTab = switchTab;
 switchTab = function(name) {
   origSwitchTab(name);
@@ -3950,6 +3962,10 @@ switchTab = function(name) {
   if (name === 'phototheque' && !photothequeMounted && window.StudioPhototheque) {
     window.StudioPhototheque.mount(document.getElementById('phototheque-root'));
     photothequeMounted = true;
+  }
+  if (name === 'dt-importer' && !dtImporterMounted && window.StudioDtImporter) {
+    window.StudioDtImporter.mount(document.getElementById('dt-importer-root'));
+    dtImporterMounted = true;
   }
 };
 </script>
