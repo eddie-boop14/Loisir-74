@@ -98,6 +98,122 @@
 <aside class="data-credits reveal"><div class="wrap"><p class="data-credits-line">Données partielles : <a href="https://www.chamonix.com/" target="_blank" rel="noopener">Office de Tourisme de la Vallée de Chamonix-Mont-Blanc</a> via DataTourisme · Apidae Tourisme · <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence" target="_blank" rel="noopener">Licence Ouverte 2.0 (Etalab)</a></p></div></aside>
 <div class="wrap"><p class="meta"><span>Publié le 23 mai 2026</span><span class="sep">·</span><span>Mis à jour le 23 mai 2026</span></p></div></main>
 <div class="action-bar" id="actionBar"><div class="wrap"><a class="primary" href="https://musee-alpin-chamonix.fr/en/museums-network/musee-montagnard" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v3a3 3 0 0 0 0 6v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3a3 3 0 0 0 0-6V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><line x1="13" y1="5" x2="13" y2="7"/><line x1="13" y1="11" x2="13" y2="13"/><line x1="13" y1="17" x2="13" y2="19"/></svg><span>Réserver</span></a><a href="https://www.google.com/maps/dir/?api=1&destination=Mus%C3%A9e%20Montagnard%20des%20Houches%2C%20Les%20Houches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://musee-alpin-chamonix.fr/en/museums-network/musee-montagnard" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg><span>Site officiel</span></a></div></div>
+<section class="block related" id="related">
+  <style>
+.related{padding:clamp(2rem,4vw,3.5rem) 0;border-top:1px solid var(--line);margin-bottom:5rem}
+.related .wrap{max-width:64rem;margin-inline:auto;padding-inline:clamp(1rem,3vw,2rem)}
+.related .kicker{font-size:.8125rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.related h2{font-size:clamp(1.3rem,1.1rem + .8vw,1.85rem);line-height:1.15;letter-spacing:-.015em;font-weight:800;margin:0 0 .4rem;color:var(--ink)}
+.related .lead{color:var(--ink-soft);max-width:42rem;margin-bottom:1.5rem;font-size:1rem;line-height:1.55}
+.related .carousel{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem}
+@media(max-width:680px){.related .carousel{display:flex;gap:.85rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}.related .carousel::-webkit-scrollbar{display:none}.related .carousel > .card{flex:0 0 75vw;max-width:18rem;scroll-snap-align:start}}
+.related .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s;text-decoration:none;color:inherit}
+.related .card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 30%,var(--line));box-shadow:0 8px 24px -12px rgba(11,13,16,.18)}
+.related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
+.related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.related .card:hover .card-photo img{transform:scale(1.03)}
+.related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
+.related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
+.related .card-body a.title:hover{color:var(--accent)}
+.related .card-commune{font-size:.78rem;color:var(--ink-mute);display:flex;align-items:center;gap:.3rem}
+.related .card-commune svg{width:11px !important;height:11px !important;flex-shrink:0}
+.related .card-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45;margin:.15rem 0 .65rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.related .card-actions{display:flex;gap:.4rem;margin-top:auto}
+.related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
+.related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.related .card-actions a svg{width:13px !important;height:13px !important}
+</style>
+  <div class="wrap">
+    <p class="kicker">À proximité</p>
+    <h2>À proximité</h2>
+    <p class="lead">D'autres lieux à explorer dans le coin et dans la même catégorie</p>
+    <div class="carousel"><article class="card">
+    <a href="https://loisirs74.fr/tour-du-mont-blanc-les-houches" class="card-photo">
+      <img src="/generique-sentier-foret.jpg" alt="Sentier du Tour du Mont-Blanc TMB face au massif du Mont-Blanc et à l&#x27;Aiguille Verte avec randonneurs et balisage GR® blanc-rouge Haute-Savoie" loading="lazy">
+      <span class="card-tag">Gratuit</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/tour-du-mont-blanc-les-houches" class="title">Tour du Mont-Blanc</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Les Houches</span></div>
+      <p class="card-desc">170 km en 11 étapes anti-horaire (215 km variantes GR®) à travers France-Italie-Suisse. 10 000 m D+. Départ Les Houches. Saison mi-juin à mi-septembre.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Tour%20du%20Mont-Blanc%2C%20Les%20Houches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.ffrandonnee.fr/randonner/sentiers/gr-tmb-le-tour-du-mont-blanc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/parc-de-merlet" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Panorama_depuis_le_parc_de_Merlet.jpg" alt="Vue panoramique sur le massif du Mont-Blanc depuis le Parc de Merlet avec bouquetins et chamois en semi-liberté, Les Houches, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">Payant</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/parc-de-merlet" class="title">Parc de Merlet</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Les Houches</span></div>
+      <p class="card-desc">Parc animalier à 1 500 m d'altitude face au Mont-Blanc. Bouquetins, chamois, marmottes en semi-liberté sur 21 hectares. Adulte 9 €, enfant 6 €. Réservation obligatoire.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Parc%20de%20Merlet%2C%20Les%20Houches%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.parcdemerlet.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/gorges-de-la-diosaz" class="card-photo">
+      <img src="/gorges-de-la-diosaz-hero.jpg" alt="Gorges de la Diosaz à Servoz en Haute-Savoie" loading="lazy">
+      <span class="card-tag">Payant</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/gorges-de-la-diosaz" class="title">Gorges de la Diosaz</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Servoz</span></div>
+      <p class="card-desc">Gorges spectaculaires aménagées de passerelles, près de Chamonix. Parcours de 2 km au-dessus du torrent de la Diosaz, ouverture saisonnière.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Gorges%20de%20la%20Diosaz%2C%20Servoz%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.gorgesdeladiosaz.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/maison-du-lieutenant-servoz" class="card-photo">
+      <img src="/generique-musee-classique.jpg" alt="Façade en pierre et bois de la Maison du Lieutenant, plus ancienne maison de la vallée de Chamonix, dans le hameau du Mont à Servoz" loading="lazy">
+      <span class="card-tag">Gratuit</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/maison-du-lieutenant-servoz" class="title">Maison du Lieutenant</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Servoz</span></div>
+      <p class="card-desc">Centre d'interprétation gratuit dans la plus ancienne maison de la vallée de Chamonix : agriculture de montagne, ethnobotanique, maquette 3D animée.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Maison%20du%20Lieutenant%2C%20Servoz%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.servoz.fr/la-maison-du-lieutenant/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/espace-tairraz-musee-des-cristaux-chamonix" class="card-photo">
+      <img src="/generique-musee.jpg" alt="Vitrines de cristaux et minéraux du Mont-Blanc à l&#x27;Espace Tairraz dans le centre de Chamonix" loading="lazy">
+      <span class="card-tag">Payant</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/espace-tairraz-musee-des-cristaux-chamonix" class="title">Espace Tairraz</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Chamonix-Mont-Blanc</span></div>
+      <p class="card-desc">Musée des Cristaux rénové et Espace Alpinisme au cœur de Chamonix : 1 900 pièces minéralogiques du Mont-Blanc. Adulte 8 €, gratuit -18 ans.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Espace%20Tairraz%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://musee-alpin-chamonix.fr/en/museums-network/crystal-museum" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/maison-de-la-memoire-janny-couttet-chamonix" class="card-photo">
+      <img src="/generique-musee.jpg" alt="Façade en granit de l&#x27;ancienne Maison des Sœurs abritant la Maison de la Mémoire et du Patrimoine Janny Couttet rue des Moulins à Chamonix" loading="lazy">
+      <span class="card-tag">Payant</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/maison-de-la-memoire-janny-couttet-chamonix" class="title">Maison de la Mémoire Janny Couttet</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Chamonix-Mont-Blanc</span></div>
+      <p class="card-desc">Centre du patrimoine chamoniard rue des Moulins : archives, exposition centenaire JO 1924. Adulte 5 €, gratuit -18 ans. FERMÉ jusqu'au 30 juin 2026.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Maison%20de%20la%20M%C3%A9moire%20Janny%20Couttet%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://musee-alpin-chamonix.fr/en/museums-network/maison-de-la-memoire-et-du-patrimoine" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article></div>
+  </div>
+</section>
 <footer class="site"><div class="wrap"><div class="foot-grid"><div class="foot-col"><a class="brand" href="https://loisirs74.fr/" style="margin-bottom:.85rem"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a><p>Guide indépendant des lieux de loisirs en Haute-Savoie. 100% gratuit. 100% vérifié.</p></div><div class="foot-col"><h4>Explorer</h4><ul><li><a href="https://loisirs74.fr/">Accueil</a></li></ul></div><div class="foot-col"><h4>Contribuer</h4><ul><li><a href="mailto:photos@loisirs74.fr">Envoyer des photos</a></li><li><a href="https://loisirs74.fr/signaler">Signaler une info</a></li><li><a href="https://loisirs74.fr/devenir-partenaire">Devenir partenaire</a></li></ul></div><div class="foot-col"><h4>Mentions</h4><ul><li><a href="https://loisirs74.fr/mentions-legales">Mentions légales</a></li><li><a href="https://loisirs74.fr/confidentialite">Confidentialité</a></li><li><a href="https://loisirs74.fr/cgv">CGV</a></li></ul></div></div><div class="foot-bottom"><span class="credit">© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Tous droits réservés</span><span>Sans pub. Sans tracking. Sans avis Google.</span></div></div></footer>
 <script>(()=>{const t=document.querySelectorAll('.reveal, .hammer');if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches){t.forEach(e=>e.classList.add('in'));return}document.querySelectorAll('[data-stagger]').forEach(p=>{[...p.children].forEach((c,i)=>c.style.setProperty('--i',i))});const o=new IntersectionObserver((es,b)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');b.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -8% 0px'});t.forEach(e=>o.observe(e))})();(()=>{const b=document.getElementById('actionBar');if(!b)return;const h=document.querySelector('.hero');if(!h){b.classList.add('in');return}const o=new IntersectionObserver(([e])=>{b.classList.toggle('in',!e.isIntersecting)},{threshold:0});o.observe(h)})();document.addEventListener('click',e=>{document.querySelectorAll('details.lang-picker[open]').forEach(d=>{if(!d.contains(e.target))d.removeAttribute('open')})});</script>
 </body></html>

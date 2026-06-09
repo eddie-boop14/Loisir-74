@@ -98,6 +98,122 @@
 <aside class="data-credits reveal"><div class="wrap"><p class="data-credits-line">Données partielles : <a href="https://leman-mountains-explore.com/" target="_blank" rel="noopener">Office de Tourisme Leman  Mountains Explore</a> via DataTourisme · Apidae Tourisme · <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence" target="_blank" rel="noopener">Licence Ouverte 2.0 (Etalab)</a></p></div></aside>
 <div class="wrap"><p class="meta"><span>Publié le 24 mai 2026</span><span class="sep">·</span><span>Mis à jour le 24 mai 2026</span></p></div></main>
 <div class="action-bar" id="actionBar"><div class="wrap"><a href="https://www.google.com/maps/dir/?api=1&destination=Plage%20Municipale%20d%27Amphion%2C%20Publier%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.publier.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg><span>Site officiel</span></a></div></div>
+<section class="block related" id="related">
+  <style>
+.related{padding:clamp(2rem,4vw,3.5rem) 0;border-top:1px solid var(--line);margin-bottom:5rem}
+.related .wrap{max-width:64rem;margin-inline:auto;padding-inline:clamp(1rem,3vw,2rem)}
+.related .kicker{font-size:.8125rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.related h2{font-size:clamp(1.3rem,1.1rem + .8vw,1.85rem);line-height:1.15;letter-spacing:-.015em;font-weight:800;margin:0 0 .4rem;color:var(--ink)}
+.related .lead{color:var(--ink-soft);max-width:42rem;margin-bottom:1.5rem;font-size:1rem;line-height:1.55}
+.related .carousel{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem}
+@media(max-width:680px){.related .carousel{display:flex;gap:.85rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}.related .carousel::-webkit-scrollbar{display:none}.related .carousel > .card{flex:0 0 75vw;max-width:18rem;scroll-snap-align:start}}
+.related .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s;text-decoration:none;color:inherit}
+.related .card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 30%,var(--line));box-shadow:0 8px 24px -12px rgba(11,13,16,.18)}
+.related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
+.related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.related .card:hover .card-photo img{transform:scale(1.03)}
+.related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
+.related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
+.related .card-body a.title:hover{color:var(--accent)}
+.related .card-commune{font-size:.78rem;color:var(--ink-mute);display:flex;align-items:center;gap:.3rem}
+.related .card-commune svg{width:11px !important;height:11px !important;flex-shrink:0}
+.related .card-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45;margin:.15rem 0 .65rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.related .card-actions{display:flex;gap:.4rem;margin-top:auto}
+.related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
+.related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.related .card-actions a svg{width:13px !important;height:13px !important}
+</style>
+  <div class="wrap">
+    <p class="kicker">À proximité</p>
+    <h2>À proximité</h2>
+    <p class="lead">D'autres lieux à explorer dans le coin et dans la même catégorie</p>
+    <div class="carousel"><article class="card">
+    <a href="https://loisirs74.fr/centre-nautique-cite-de-l-eau-publier" class="card-photo">
+      <img src="/generique-aquatique-piscine-couverte.jpg" alt="La Cité de l&#x27;Eau — Amphion-Publier, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Payant</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/centre-nautique-cite-de-l-eau-publier" class="title">La Cité de l'Eau</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Publier</span></div>
+      <p class="card-desc">Centre nautique à Amphion-Publier (5 km d'Évian) : bassin sportif, bassin ludique à vague, toboggan, plongeoirs, jacuzzis et pataugeoire. Dès 4 €.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=La%20Cit%C3%A9%20de%20l%27Eau%2C%20Publier%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://centre-nautique.ville-publier.fr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/tir-a-l-arc-abyss-publier" class="card-photo">
+      <img src="/generique-lancer-de-hache.jpg" alt="Abyss Formation (tir à l&#x27;arc / sarbacane), tir à l&#x27;arc / sarbacane en Haute-Savoie" loading="lazy">
+      <span class="card-tag">Payant</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/tir-a-l-arc-abyss-publier" class="title">Abyss Formation (tir à l'arc / sarbacane)</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Publier</span></div>
+      <p class="card-desc">Stand mobile de tir à l'arc et sarbacane à Publier : initiation encadrée, accessible aux familles, pour développer précision et concentration en plein air.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Abyss%20Formation%20%28tir%20%C3%A0%20l%27arc%20%2F%20sarbacane%29%2C%20Publier%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="http://abyss-formation.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/reserve-naturelle-delta-de-la-dranse" class="card-photo">
+      <img src="/reserve-naturelle-delta-de-la-dranse-hero.jpg" alt="Réserve Naturelle du Delta de la Dranse à Publier en Haute-Savoie" loading="lazy">
+      <span class="card-tag">Gratuit</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/reserve-naturelle-delta-de-la-dranse" class="title">Réserve Naturelle du Delta de la Dranse</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Publier</span></div>
+      <p class="card-desc">Delta sauvage de la Dranse sur le Léman entre Publier et Thonon : sentiers, observatoires, oiseaux migrateurs.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=R%C3%A9serve%20Naturelle%20du%20Delta%20de%20la%20Dranse%2C%20Publier%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.cen-haute-savoie.org/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/plage-d-evian-centre-nautique" class="card-photo">
+      <img src="/generique-lac.jpg" alt="Plage 3,5 ha + bassin olympique 50 m + toboggan 160 m Plage du Centre Nautique d&#x27;Évian à Évian-les-Bains Lac Léman Haute-Savoie 74" loading="lazy">
+      <span class="card-tag">Payant</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/plage-d-evian-centre-nautique" class="title">Plage du Centre Nautique d'Évian</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Évian-les-Bains</span></div>
+      <p class="card-desc">PAVILLON BLEU DEPUIS 2020 (palmarès Teragir 2026 confirmé). 3,5 ha PELOUSES + BASSIN OLYMPIQUE 50 M + TOBOGGAN 160 M + accès direct Léman av.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Plage%20du%20Centre%20Nautique%20d%27%C3%89vian%2C%20%C3%89vian-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.evianresort.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/plage-municipale-thonon" class="card-photo">
+      <img src="/generique-lac.jpg" alt="Plage 3 ha + bassin olympique 50 m + Pavillon Bleu Plage Municipale de Thonon-les-Bains à Thonon-les-Bains Lac Léman Haute-Savoie 74" loading="lazy">
+      <span class="card-tag">Payant</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/plage-municipale-thonon" class="title">Plage Municipale de Thonon-les-Bains</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Thonon-les-Bains</span></div>
+      <p class="card-desc">PLAGE 3 HECTARES + BASSIN OLYMPIQUE 50 M + plongeoirs 1,50/3/5/10 m + TOBOGGAN NAUTIQUE 100 M + baignade Léman 3 000 m². PAVILLON BLEU 2026.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Plage%20Municipale%20de%20Thonon-les-Bains%2C%20Thonon-les-Bains%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.ville-thonon.fr/decouvrir-la-ville/sport/plage-municipale/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/plage-de-margencel-sechex" class="card-photo">
+      <img src="/generique-lac.jpg" alt="Plage nature gazonnée - embouchure du Redon Plage de Margencel - Port de Séchex à Margencel Lac Léman Haute-Savoie 74" loading="lazy">
+      <span class="card-tag">Gratuit</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/plage-de-margencel-sechex" class="title">Plage de Margencel - Port de Séchex</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Margencel</span></div>
+      <p class="card-desc">PLAGE NATURE GAZONNÉE à l'EMBOUCHURE DU REDON près du Port de Séchex sur le Léman. Vieux chênes d'ombrage, caractère sauvage et calme - moin.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Plage%20de%20Margencel%20-%20Port%20de%20S%C3%A9chex%2C%20Margencel%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a><a href="https://www.mairie-margencel.fr/plage-du-redon" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Site officiel</span></a>
+      </div>
+    </div>
+  </article></div>
+  </div>
+</section>
 <footer class="site"><div class="wrap"><div class="foot-grid"><div class="foot-col"><a class="brand" href="https://loisirs74.fr/" style="margin-bottom:.85rem"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a><p>Guide indépendant des lieux de loisirs en Haute-Savoie. 100% gratuit. 100% vérifié.</p></div><div class="foot-col"><h4>Explorer</h4><ul><li><a href="https://loisirs74.fr/">Accueil</a></li></ul></div><div class="foot-col"><h4>Contribuer</h4><ul><li><a href="mailto:photos@loisirs74.fr">Envoyer des photos</a></li><li><a href="https://loisirs74.fr/signaler">Signaler une info</a></li><li><a href="https://loisirs74.fr/devenir-partenaire">Devenir partenaire</a></li></ul></div><div class="foot-col"><h4>Mentions</h4><ul><li><a href="https://loisirs74.fr/mentions-legales">Mentions légales</a></li><li><a href="https://loisirs74.fr/confidentialite">Confidentialité</a></li><li><a href="https://loisirs74.fr/cgv">CGV</a></li></ul></div></div><div class="foot-bottom"><span class="credit">© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Tous droits réservés</span><span>Sans pub. Sans tracking. Sans avis Google.</span></div></div></footer>
 <script>(()=>{const t=document.querySelectorAll('.reveal, .hammer');if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches){t.forEach(e=>e.classList.add('in'));return}document.querySelectorAll('[data-stagger]').forEach(p=>{[...p.children].forEach((c,i)=>c.style.setProperty('--i',i))});const o=new IntersectionObserver((es,b)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');b.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -8% 0px'});t.forEach(e=>o.observe(e))})();(()=>{const b=document.getElementById('actionBar');if(!b)return;const h=document.querySelector('.hero');if(!h){b.classList.add('in');return}const o=new IntersectionObserver(([e])=>{b.classList.toggle('in',!e.isIntersecting)},{threshold:0});o.observe(h)})();document.addEventListener('click',e=>{document.querySelectorAll('details.lang-picker[open]').forEach(d=>{if(!d.contains(e.target))d.removeAttribute('open')})});</script>
 </body></html>
