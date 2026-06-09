@@ -83,6 +83,11 @@
       "date": "2026-06-09",
       "by": "claude-datatourisme-flow261672",
       "note": "Cross-referenced with DataTourisme record 5109719 (last_updated 2026-05-12) from Office de Tourisme des Monts du Genevois."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 1 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -111,6 +116,24 @@
           "description": "Fromagerie coopérative, route des Dronières à Cruseilles."
         }
       }
+    },
+    {
+      "tier": "recommended",
+      "name": "L'Arborescence",
+      "type": "hebergement",
+      "url": "https://www.arborescence-restaurant.fr/",
+      "cta_text": "Voir le site →",
+      "description": "L'Arborescence est un hôtel de charme situé à mi-chemin entre Annecy & Genève, à Cruseilles, au bord du lac des Dronières.",
+      "i18n": {
+        "fr": {
+          "description": "L'Arborescence est un hôtel de charme situé à mi-chemin entre Annecy & Genève, à Cruseilles, au bord du lac des Dronières."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "7273734",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 2.8
     }
   ],
   "i18n": {
@@ -1075,7 +1098,26 @@
       ]
     }
   },
-  "featured_businesses": [],
+  "featured_businesses": [
+    {
+      "tier": "featured",
+      "name": "Chalet du Tornet",
+      "type": "restaurant",
+      "logo": "/chalet-du-tornet-logo.png",
+      "description": "Restaurant chalet au bord du lac, terrasse face à l'eau, bar du matin au dernier verre. Cuisine savoyarde et traditionnelle, charcuterie Maison Baud, glaces artisanales. Au cœur du Domaine du Tornet.",
+      "address": "161 Route de Paris, 74330 La Balme-de-Sillingy",
+      "phone": "04 38 80 22 51",
+      "phone_tel": "+33438802251",
+      "email": "chaletdutornet74@gmail.com",
+      "hours": "Ouvert de février à début novembre · Bar 9h-17h (jeudi-samedi jusqu'à 23h) · Cuisine midi tous les jours, soirs jeudi-samedi",
+      "url": "https://chaletdutornet.com",
+      "cta_text": "Voir le site →",
+      "proximity_km": 7.7,
+      "source": "featured_extension",
+      "source_slug": "domaine-du-tornet",
+      "seeded_at": "2026-06-09"
+    }
+  ],
   "price_tiers": [],
   "official_site_url": null,
   "google_check": {
@@ -1150,6 +1192,23 @@
       "last_updated": "2026-05-12",
       "fields_used": [
         "attribution_only"
+      ]
+    },
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme des Monts du Genevois",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "7273734"
+      ],
+      "last_updated": "2026-03-06",
+      "fields_used": [
+        "partners_proximity"
       ]
     }
   ]

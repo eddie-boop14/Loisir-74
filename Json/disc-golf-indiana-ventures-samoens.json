@@ -49,6 +49,11 @@
     {
       "date": "2026-06-07",
       "note": "Enrichissement complet multi-langues FR/EN/DE/IT/ES/NL (body, activités, FAQ, infos pratiques, partenaires)."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -63,6 +68,60 @@
       "tier": "recommended",
       "type": "info",
       "url": "https://www.haute-savoie-tourisme.org/"
+    },
+    {
+      "tier": "recommended",
+      "name": "La Table de Fifine",
+      "type": "restaurant",
+      "url": "http://www.latabledefifine.com/",
+      "cta_text": "Voir le site →",
+      "description": "Chez Fifine, nous proposons une cuisine gourmande & moderne, des vins de qualité, un service attentionné, le tout dans un magnifique chalet septimontain.",
+      "i18n": {
+        "fr": {
+          "description": "Chez Fifine, nous proposons une cuisine gourmande & moderne, des vins de qualité, un service attentionné, le tout dans un magnifique chalet septimontain."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "214752",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.1
+    },
+    {
+      "tier": "recommended",
+      "name": "MGM Hôtels & Résidences – Hôtel Les Suites d’Alexane ****",
+      "type": "hebergement",
+      "url": "https://www.mgm-hotels-residences.com/fr/hotel/les-suites-dalexane",
+      "cta_text": "Voir le site →",
+      "description": "L’hôtel Alexane offre 33 suites privilégiant confort, élégance et authenticité.",
+      "i18n": {
+        "fr": {
+          "description": "L’hôtel Alexane offre 33 suites privilégiant confort, élégance et authenticité."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "4979818",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.5
+    },
+    {
+      "tier": "recommended",
+      "name": "Location de VTT électrique -  Jaime Sport",
+      "type": "commerce",
+      "url": "http://www.jaimesport.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Découvrez les joies du VTT grâce à l’assistance électrique.",
+      "i18n": {
+        "fr": {
+          "description": "Découvrez les joies du VTT grâce à l’assistance électrique."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "4620330",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.3
     }
   ],
   "gallery_photos": [],
@@ -1062,5 +1121,26 @@
     "google_lng": 6.70862,
     "gps_drift_m": 1135,
     "note": "manually re-verified open; Google CLOSED status was a false positive"
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme de Samoëns",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "214752",
+        "4620330",
+        "4979818"
+      ],
+      "last_updated": "2026-05-13",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

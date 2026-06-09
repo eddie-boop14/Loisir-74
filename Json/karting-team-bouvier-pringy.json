@@ -51,37 +51,67 @@
     ]
   },
   "sparse_data": false,
-  "research_log": [],
+  "research_log": [
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
+    }
+  ],
   "partners": [
     {
-      "tier": "invite",
-      "invite_type": "restaurant",
+      "tier": "recommended",
+      "name": "Auberge La Ferme de Ferrières",
+      "type": "restaurant",
+      "url": "http://aubergelafermedeferrieres.com/",
+      "cta_text": "Voir le site →",
+      "description": "Dans un petit village à la campagne, venez savourer une cuisine familiale élaborée au rythme des saisons avec des produits de la ferme et de la région.\nVous admirerez un magnifique panorama sur les Al.",
       "i18n": {
         "fr": {
-          "title": "Un restaurant à Pringy ?",
-          "desc": "Vous accueillez les visiteurs du Karting Team Bouvier ? Apparaissez ici."
+          "description": "Dans un petit village à la campagne, venez savourer une cuisine familiale élaborée au rythme des saisons avec des produits de la ferme et de la région.\nVous admirerez un magnifique panorama sur les Al."
         }
-      }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "117464",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 2.7
     },
     {
-      "tier": "invite",
-      "invite_type": "commerce",
+      "tier": "recommended",
+      "name": "Auberge La Ferme de Ferrières",
+      "type": "hebergement",
+      "url": "http://www.aubergelafermedeferrieres.com/",
+      "cta_text": "Voir le site →",
+      "description": "Le calme, le confort, une ambiance campagnarde, une cuisine traditionnelle et un panorama magnifique sont les ingrédients pour de bonnes vacances.",
       "i18n": {
         "fr": {
-          "title": "Un commerce à Pringy ?",
-          "desc": "Partagez horaires et spécialités avec les visiteurs du Karting Team Bouvier."
+          "description": "Le calme, le confort, une ambiance campagnarde, une cuisine traditionnelle et un panorama magnifique sont les ingrédients pour de bonnes vacances."
         }
-      }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "5295304",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 2.8
     },
     {
-      "tier": "invite",
-      "invite_type": "hebergement",
+      "tier": "recommended",
+      "name": "Annecy Rando Nature",
+      "type": "commerce",
+      "url": "https://www.annecyrandonature.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Annecy Rando Nature propose des sorties en montagne sur différents thèmes et de durées variées : Randonnée, Trail, Marche nordique, Plantes comestibles, Bivouac, Trek, Orientation, …",
       "i18n": {
         "fr": {
-          "title": "Un hébergement proche ?",
-          "desc": "Gîte, chambre d'hôtes, camping, location à Pringy."
+          "description": "Annecy Rando Nature propose des sorties en montagne sur différents thèmes et de durées variées : Randonnée, Trail, Marche nordique, Plantes comestibles, Bivouac, Trek, Orientation, …"
         }
-      }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "5864942",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 2.9
     }
   ],
   "gallery_photos": [],
@@ -1025,5 +1055,26 @@
     "gps_drift_m": 9722,
     "needs_price_review": false,
     "recomputed": "2026-06-05 (registry demoted to confirmer-only)"
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "117464",
+        "5295304",
+        "5864942"
+      ],
+      "last_updated": "2026-01-30",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

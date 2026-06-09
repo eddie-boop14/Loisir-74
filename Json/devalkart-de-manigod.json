@@ -55,6 +55,11 @@
     {
       "date": "2026-06-01",
       "note": "Créé à partir de recherche sourcée officielle (loisirs74 — campagne Tier-1 passe 2, indoor+outdoor). Structure vérifiée ; corps i18n, photos, GPS et grille tarifaire à compléter."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -69,6 +74,60 @@
       "tier": "recommended",
       "type": "info",
       "url": "https://www.haute-savoie-tourisme.org/"
+    },
+    {
+      "tier": "recommended",
+      "name": "Auberge de l'Aulp de Marlens",
+      "type": "restaurant",
+      "url": "https://gaecleventdescimes.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Au pied du Mont-Charvin, au coeur de l'alpage où nous produisons Reblochon et Chevrotin, vous dégusterez midi et soir notre restauration montagnarde à la ferme.",
+      "i18n": {
+        "fr": {
+          "description": "Au pied du Mont-Charvin, au coeur de l'alpage où nous produisons Reblochon et Chevrotin, vous dégusterez midi et soir notre restauration montagnarde à la ferme."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "4891598",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 1.8
+    },
+    {
+      "tier": "recommended",
+      "name": "Hôtel la Vieille Ferme",
+      "type": "hebergement",
+      "url": "http://www.la-vieille-ferme-manigod.com/",
+      "cta_text": "Voir le site →",
+      "description": "L'hôtel-restaurant La Vieille Ferme vous accueille dans un cadre typique avec 6 chambres tout confort pour tous vos séjours.",
+      "i18n": {
+        "fr": {
+          "description": "L'hôtel-restaurant La Vieille Ferme vous accueille dans un cadre typique avec 6 chambres tout confort pour tous vos séjours."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "89842",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 5.1
+    },
+    {
+      "tier": "recommended",
+      "name": "Les chevaux de la Diamanterie",
+      "type": "commerce",
+      "url": "https://leschevauxdeladiamanterie.com/",
+      "cta_text": "Voir le site →",
+      "description": "Vous séjournez au bout du lac d'Annecy et vous rechercher une balade ou randonnée à cheval ?\r\nContactez Sandrine qui propose toute l'année de nombreuses activités équestres.",
+      "i18n": {
+        "fr": {
+          "description": "Vous séjournez au bout du lac d'Annecy et vous rechercher une balade ou randonnée à cheval ?\r\nContactez Sandrine qui propose toute l'année de nombreuses activités équestres."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "6391250",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 3.9
     }
   ],
   "gallery_photos": [],
@@ -1076,5 +1135,26 @@
     "google_lat": 45.877292,
     "google_lng": 6.404472999999999,
     "gps_drift_m": 1540
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme de Thônes Cœur des Vallées",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "4891598",
+        "6391250",
+        "89842"
+      ],
+      "last_updated": "2026-01-14",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

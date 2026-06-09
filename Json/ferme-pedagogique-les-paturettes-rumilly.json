@@ -36,12 +36,22 @@
     "type": "TouristAttraction",
     "is_free": false,
     "public_access": true,
-    "amenities": ["parking", "family_friendly", "outdoor", "animals_on_site"]
+    "amenities": [
+      "parking",
+      "family_friendly",
+      "outdoor",
+      "animals_on_site"
+    ]
   },
   "sparse_data": false,
   "research_log": [
     "Créé 3 juin 2026 — type d'activité nouveau (extension liste activités).",
-    "2026-06-06 — Enrichissement multi-langues à partir des sites officiel, rumilly-tourisme.com, haute-savoie-tourisme.org. Adresse, animaux, période d'ouverture et activités vérifiés."
+    "2026-06-06 — Enrichissement multi-langues à partir des sites officiel, rumilly-tourisme.com, haute-savoie-tourisme.org. Adresse, animaux, période d'ouverture et activités vérifiés.",
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
+    }
   ],
   "partners": [
     {
@@ -50,13 +60,69 @@
       "type": "info",
       "description": "Office de tourisme local couvrant Rumilly et la vallée du Fier — billetterie, idées de balades et événements.",
       "url": "https://www.rumilly-tourisme.com"
+    },
+    {
+      "tier": "recommended",
+      "name": "Le Marilyn",
+      "type": "restaurant",
+      "url": "http://www.lemarilyn.com/",
+      "cta_text": "Voir le site →",
+      "description": "Restaurant familial, cuisine savoyarde, pizzas, plats cuisinés, salades. \r\nEspace bar et animations toute l'année.",
+      "i18n": {
+        "fr": {
+          "description": "Restaurant familial, cuisine savoyarde, pizzas, plats cuisinés, salades. \r\nEspace bar et animations toute l'année."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "290706",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.4
+    },
+    {
+      "tier": "recommended",
+      "name": "Hôtel restaurant Blanc",
+      "type": "hebergement",
+      "url": "http://www.blanc-hotel-restaurant.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Hôtel situé entre les deux lacs d'Annecy et Aix-les-Bains. Chambres personnalisées. Espace bien-être avec Hammam, Jacuzzi et Sauna. Parc, terrasse, piscine. Ouvert à l'année. Accueil Vélo.",
+      "i18n": {
+        "fr": {
+          "description": "Hôtel situé entre les deux lacs d'Annecy et Aix-les-Bains. Chambres personnalisées. Espace bien-être avec Hammam, Jacuzzi et Sauna. Parc, terrasse, piscine. Ouvert à l'année. Accueil Vélo."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "132983",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 9.4
+    },
+    {
+      "tier": "recommended",
+      "name": "L'atelier de Philomène",
+      "type": "commerce",
+      "url": "https://atelier-philomene.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Cours de cuisine Bistronomique\nCollectif les Jeudis\nFormule DUO Cuisine/ Nuitée/ Brunch \nCours Privés à partir de 2 pers\nCours Parents Enfants \nRéalisation de Menus complets élaborés dans le respect d.",
+      "i18n": {
+        "fr": {
+          "description": "Cours de cuisine Bistronomique\nCollectif les Jeudis\nFormule DUO Cuisine/ Nuitée/ Brunch \nCours Privés à partir de 2 pers\nCours Parents Enfants \nRéalisation de Menus complets élaborés dans le respect d."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "5732919",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 5.0
     }
   ],
   "gallery_photos": [],
   "i18n": {
     "fr": {
       "name": "Les Paturettes",
-      "name_alternates": ["Les Paturettes — Ferme pédagogique"],
+      "name_alternates": [
+        "Les Paturettes — Ferme pédagogique"
+      ],
       "meta_title": "Les Paturettes — Ferme pédagogique près de Rumilly | Loisirs 74",
       "meta_description": "Ferme pédagogique à Vallières-sur-Fier (5 min de Rumilly) : visites guidées, animaux de la ferme, stages enfants pendant les vacances et anniversaires nature.",
       "hero": {
@@ -196,11 +262,18 @@
           "a": "Chaussures fermées adaptées à la terre, vêtements qui peuvent se salir, casquette ou bonnet selon la saison, et de l'eau."
         }
       ],
-      "schema_amenities": ["parking", "family_friendly", "outdoor", "animals_on_site"]
+      "schema_amenities": [
+        "parking",
+        "family_friendly",
+        "outdoor",
+        "animals_on_site"
+      ]
     },
     "en": {
       "name": "Les Paturettes",
-      "name_alternates": ["Les Paturettes — Educational Farm"],
+      "name_alternates": [
+        "Les Paturettes — Educational Farm"
+      ],
       "meta_title": "Les Paturettes — Educational farm near Rumilly | Loisirs 74",
       "meta_description": "Educational farm in Vallières-sur-Fier (5 min from Rumilly): guided visits, farm animals, holiday workshops for children and nature birthdays.",
       "hero": {
@@ -220,26 +293,88 @@
         "what_is": "<p><strong>Les Paturettes</strong> is a <strong>family-run educational farm</strong> located in Vallières-sur-Fier, just <strong>5 minutes from Rumilly</strong>, in the countryside of the Pays de l'Albanais. The site welcomes families for a calm, friendly encounter with farm animals in a peaceful natural setting.</p><p>The farm is home to <strong>ponies and a donkey, sheep, cows, hens of various breeds, geese, ducks, a pig, rabbits and birds</strong>. Children can observe, feed and pet the animals under the supervision of farm hosts who explain daily life and respect for living things. Several options are available: <strong>guided educational visits</strong>, <strong>immersion workshops during school holidays</strong> and <strong>farm birthday parties</strong> with bespoke activities.</p><p>The farm is open <strong>from 1 April to 1 November</strong>, every day by <strong>online booking</strong>. An ideal outing for families, schools and toddlers. Allow <strong>1 to 2 hours</strong> depending on the option. Free parking on site, easy access by car.</p>"
       },
       "activities": [
-        {"title": "Guided educational visit", "description": "Tour of the farm animals with a host: ponies, donkey, sheep, cows, poultry, pig, rabbits and birds. Ideal for families with young children.", "tag": "family"},
-        {"title": "School-holiday workshops", "description": "Immersion sessions during school holidays: children help care for the animals (feeding, brushing, observing) and discover real farm life.", "tag": "workshops"},
-        {"title": "Birthday parties on the farm", "description": "Celebrate a birthday with the animals: tour, nature activities and snacks. Several packages available, booking required.", "tag": "birthday"},
-        {"title": "Pony and donkey encounters", "description": "Quality time with the farm's equines: brushing, short led walks depending on age and season. Gentle, no-pressure approach.", "tag": "equines"},
-        {"title": "Poultry yard discovery", "description": "Heritage-breed hens, geese, ducks and rabbits: egg gathering, chick observation in spring, talks on local breeds.", "tag": "poultry"},
-        {"title": "School & group bookings", "description": "Pre-booked sessions for nursery and primary classes, day-care centres and groups: programme adapted to age and learning objectives.", "tag": "schools"}
+        {
+          "title": "Guided educational visit",
+          "description": "Tour of the farm animals with a host: ponies, donkey, sheep, cows, poultry, pig, rabbits and birds. Ideal for families with young children.",
+          "tag": "family"
+        },
+        {
+          "title": "School-holiday workshops",
+          "description": "Immersion sessions during school holidays: children help care for the animals (feeding, brushing, observing) and discover real farm life.",
+          "tag": "workshops"
+        },
+        {
+          "title": "Birthday parties on the farm",
+          "description": "Celebrate a birthday with the animals: tour, nature activities and snacks. Several packages available, booking required.",
+          "tag": "birthday"
+        },
+        {
+          "title": "Pony and donkey encounters",
+          "description": "Quality time with the farm's equines: brushing, short led walks depending on age and season. Gentle, no-pressure approach.",
+          "tag": "equines"
+        },
+        {
+          "title": "Poultry yard discovery",
+          "description": "Heritage-breed hens, geese, ducks and rabbits: egg gathering, chick observation in spring, talks on local breeds.",
+          "tag": "poultry"
+        },
+        {
+          "title": "School & group bookings",
+          "description": "Pre-booked sessions for nursery and primary classes, day-care centres and groups: programme adapted to age and learning objectives.",
+          "tag": "schools"
+        }
       ],
       "practical_info": [
-        {"k": "Address", "v": "137 Impasse de la Ponnaix, 74150 Vallières-sur-Fier (5 min from Rumilly)"},
-        {"k": "Coordinates", "v": "45.9049, 5.9323"},
-        {"k": "Official site", "v": "https://www.lespaturettes.com"},
-        {"k": "Season", "v": "Open from 1 April to 1 November", "verified": "2026-06-06"},
-        {"k": "Hours", "v": "Every day by online booking (limited slots)", "verified": "2026-06-06"},
-        {"k": "Rates", "v": "Booking only — please contact the farm"},
-        {"k": "Booking", "v": "Required, online via lespaturettes.com"},
-        {"k": "Duration", "v": "1 to 2 hours (longer for workshops)"},
-        {"k": "Parking", "v": "Free on site"},
-        {"k": "Animals", "v": "Dogs not allowed on site"},
-        {"k": "Accessibility", "v": "Flat paths and natural terrain; ask the farm for stroller / reduced-mobility access"},
-        {"k": "Audience", "v": "Families, school groups, day camps; from nursery age"}
+        {
+          "k": "Address",
+          "v": "137 Impasse de la Ponnaix, 74150 Vallières-sur-Fier (5 min from Rumilly)"
+        },
+        {
+          "k": "Coordinates",
+          "v": "45.9049, 5.9323"
+        },
+        {
+          "k": "Official site",
+          "v": "https://www.lespaturettes.com"
+        },
+        {
+          "k": "Season",
+          "v": "Open from 1 April to 1 November",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Hours",
+          "v": "Every day by online booking (limited slots)",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Rates",
+          "v": "Booking only — please contact the farm"
+        },
+        {
+          "k": "Booking",
+          "v": "Required, online via lespaturettes.com"
+        },
+        {
+          "k": "Duration",
+          "v": "1 to 2 hours (longer for workshops)"
+        },
+        {
+          "k": "Parking",
+          "v": "Free on site"
+        },
+        {
+          "k": "Animals",
+          "v": "Dogs not allowed on site"
+        },
+        {
+          "k": "Accessibility",
+          "v": "Flat paths and natural terrain; ask the farm for stroller / reduced-mobility access"
+        },
+        {
+          "k": "Audience",
+          "v": "Families, school groups, day camps; from nursery age"
+        }
       ],
       "how_to_get_there": {
         "car": "From Rumilly, take the D910 then the D31 towards Vallières-sur-Fier. 5–10 minutes. Free parking on site.",
@@ -249,19 +384,47 @@
       "when_to_visit": "From mid-April to late October in fair weather. Spring is the best time to see young animals.",
       "events": "Workshops during every school-holiday period (zone A); birthdays on request all season.",
       "faq": [
-        {"q": "Do I need to book?", "a": "Yes, online booking is required for all visits, workshops and birthdays. Slots are limited to keep the farm calm for the animals."},
-        {"q": "What age is it for?", "a": "From nursery age. The farm suits children aged 3 to 12 best, but welcomes the whole family."},
-        {"q": "Can I bring my dog?", "a": "No, dogs are not allowed on site to protect the farm animals."},
-        {"q": "Is the farm open year-round?", "a": "No, the season runs from 1 April to 1 November. The farm is closed to visitors outside that period."},
-        {"q": "When is the best time to visit?", "a": "Spring and summer: young animals are visible, temperatures are pleasant, and the poultry yard is very active."},
-        {"q": "Is there parking?", "a": "Yes, free parking on site. The farm is at the end of a small lane with little street parking."},
-        {"q": "What should we bring?", "a": "Closed shoes for the dirt, clothes that can get dirty, a hat or cap for the weather, and water."}
+        {
+          "q": "Do I need to book?",
+          "a": "Yes, online booking is required for all visits, workshops and birthdays. Slots are limited to keep the farm calm for the animals."
+        },
+        {
+          "q": "What age is it for?",
+          "a": "From nursery age. The farm suits children aged 3 to 12 best, but welcomes the whole family."
+        },
+        {
+          "q": "Can I bring my dog?",
+          "a": "No, dogs are not allowed on site to protect the farm animals."
+        },
+        {
+          "q": "Is the farm open year-round?",
+          "a": "No, the season runs from 1 April to 1 November. The farm is closed to visitors outside that period."
+        },
+        {
+          "q": "When is the best time to visit?",
+          "a": "Spring and summer: young animals are visible, temperatures are pleasant, and the poultry yard is very active."
+        },
+        {
+          "q": "Is there parking?",
+          "a": "Yes, free parking on site. The farm is at the end of a small lane with little street parking."
+        },
+        {
+          "q": "What should we bring?",
+          "a": "Closed shoes for the dirt, clothes that can get dirty, a hat or cap for the weather, and water."
+        }
       ],
-      "schema_amenities": ["parking", "family_friendly", "outdoor", "animals_on_site"]
+      "schema_amenities": [
+        "parking",
+        "family_friendly",
+        "outdoor",
+        "animals_on_site"
+      ]
     },
     "de": {
       "name": "Les Paturettes",
-      "name_alternates": ["Les Paturettes — Lehrbauernhof"],
+      "name_alternates": [
+        "Les Paturettes — Lehrbauernhof"
+      ],
       "meta_title": "Les Paturettes — Lehrbauernhof bei Rumilly | Loisirs 74",
       "meta_description": "Lehrbauernhof in Vallières-sur-Fier (5 Min. von Rumilly): geführte Besuche, Hoftiere, Ferienworkshops für Kinder und Geburtstage.",
       "hero": {
@@ -281,26 +444,88 @@
         "what_is": "<p><strong>Les Paturettes</strong> ist ein <strong>familiengeführter Lehrbauernhof</strong> in Vallières-sur-Fier, nur <strong>5 Minuten von Rumilly</strong> entfernt, im ländlichen Pays de l'Albanais. Familien erleben hier in ruhiger Natur eine wohlwollende Begegnung mit den Hoftieren.</p><p>Der Hof beherbergt <strong>Ponys und einen Esel, Schafe, Kühe, Hühner verschiedener Rassen, Gänse, Enten, ein Schwein, Kaninchen und Vögel</strong>. Kinder beobachten, füttern und streicheln die Tiere unter Anleitung der Hofbetreiber, die den Alltag eines Bauernhofs und den Respekt vor dem Lebendigen erklären. Angebote: <strong>geführte Besuche</strong>, <strong>Immersionsworkshops in den Schulferien</strong> und <strong>Kindergeburtstage auf dem Hof</strong>.</p><p>Geöffnet <strong>vom 1. April bis 1. November</strong>, täglich nach <strong>Online-Reservierung</strong>. Ideal für Familien, Schulen und Kleinkinder. Dauer: <strong>1 bis 2 Stunden</strong>. Kostenloser Parkplatz vor Ort."
       },
       "activities": [
-        {"title": "Geführte Hofbesuche", "description": "Rundgang mit Betreuung: Ponys, Esel, Schafe, Kühe, Geflügel, Schwein, Kaninchen und Vögel. Ideal für Familien mit kleinen Kindern.", "tag": "Familie"},
-        {"title": "Ferienworkshops", "description": "Immersionssitzungen in den Schulferien: Kinder helfen bei der Tierpflege (füttern, bürsten, beobachten) und entdecken das Hofleben.", "tag": "Workshops"},
-        {"title": "Kindergeburtstage", "description": "Geburtstag mit den Tieren feiern: Rundgang, Naturaktivitäten, Imbiss. Mehrere Pakete, Reservierung erforderlich.", "tag": "Geburtstag"},
-        {"title": "Begegnung mit Ponys und Esel", "description": "Qualitätszeit mit den Equiden: Bürsten, kurze geführte Spaziergänge je nach Alter und Saison. Ruhige Annäherung.", "tag": "Equiden"},
-        {"title": "Geflügelhof entdecken", "description": "Alte Hühnerrassen, Gänse, Enten und Kaninchen: Eier sammeln, Küken im Frühjahr beobachten, Gespräche über lokale Rassen.", "tag": "Geflügel"},
-        {"title": "Schul- & Gruppenbuchungen", "description": "Vorgebuchte Sitzungen für Kindergärten, Grundschulen und Gruppen: an Alter und Lernziele angepasstes Programm.", "tag": "Schulen"}
+        {
+          "title": "Geführte Hofbesuche",
+          "description": "Rundgang mit Betreuung: Ponys, Esel, Schafe, Kühe, Geflügel, Schwein, Kaninchen und Vögel. Ideal für Familien mit kleinen Kindern.",
+          "tag": "Familie"
+        },
+        {
+          "title": "Ferienworkshops",
+          "description": "Immersionssitzungen in den Schulferien: Kinder helfen bei der Tierpflege (füttern, bürsten, beobachten) und entdecken das Hofleben.",
+          "tag": "Workshops"
+        },
+        {
+          "title": "Kindergeburtstage",
+          "description": "Geburtstag mit den Tieren feiern: Rundgang, Naturaktivitäten, Imbiss. Mehrere Pakete, Reservierung erforderlich.",
+          "tag": "Geburtstag"
+        },
+        {
+          "title": "Begegnung mit Ponys und Esel",
+          "description": "Qualitätszeit mit den Equiden: Bürsten, kurze geführte Spaziergänge je nach Alter und Saison. Ruhige Annäherung.",
+          "tag": "Equiden"
+        },
+        {
+          "title": "Geflügelhof entdecken",
+          "description": "Alte Hühnerrassen, Gänse, Enten und Kaninchen: Eier sammeln, Küken im Frühjahr beobachten, Gespräche über lokale Rassen.",
+          "tag": "Geflügel"
+        },
+        {
+          "title": "Schul- & Gruppenbuchungen",
+          "description": "Vorgebuchte Sitzungen für Kindergärten, Grundschulen und Gruppen: an Alter und Lernziele angepasstes Programm.",
+          "tag": "Schulen"
+        }
       ],
       "practical_info": [
-        {"k": "Adresse", "v": "137 Impasse de la Ponnaix, 74150 Vallières-sur-Fier (5 Min. von Rumilly)"},
-        {"k": "Koordinaten", "v": "45.9049, 5.9323"},
-        {"k": "Offizielle Website", "v": "https://www.lespaturettes.com"},
-        {"k": "Saison", "v": "Geöffnet vom 1. April bis 1. November", "verified": "2026-06-06"},
-        {"k": "Öffnungszeiten", "v": "Täglich nach Online-Reservierung (begrenzte Plätze)", "verified": "2026-06-06"},
-        {"k": "Preise", "v": "Nur auf Reservierung — bitte den Hof kontaktieren"},
-        {"k": "Reservierung", "v": "Erforderlich, online über lespaturettes.com"},
-        {"k": "Dauer", "v": "1 bis 2 Stunden (länger bei Workshops)"},
-        {"k": "Parkplatz", "v": "Kostenlos vor Ort"},
-        {"k": "Tiere", "v": "Hunde sind auf dem Hof nicht erlaubt"},
-        {"k": "Barrierefreiheit", "v": "Ebenerdige Wege und Naturboden; Kinderwagen / Rollstuhl beim Hof erfragen"},
-        {"k": "Publikum", "v": "Familien, Schulgruppen, Ferienlager; ab Kindergartenalter"}
+        {
+          "k": "Adresse",
+          "v": "137 Impasse de la Ponnaix, 74150 Vallières-sur-Fier (5 Min. von Rumilly)"
+        },
+        {
+          "k": "Koordinaten",
+          "v": "45.9049, 5.9323"
+        },
+        {
+          "k": "Offizielle Website",
+          "v": "https://www.lespaturettes.com"
+        },
+        {
+          "k": "Saison",
+          "v": "Geöffnet vom 1. April bis 1. November",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Öffnungszeiten",
+          "v": "Täglich nach Online-Reservierung (begrenzte Plätze)",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Preise",
+          "v": "Nur auf Reservierung — bitte den Hof kontaktieren"
+        },
+        {
+          "k": "Reservierung",
+          "v": "Erforderlich, online über lespaturettes.com"
+        },
+        {
+          "k": "Dauer",
+          "v": "1 bis 2 Stunden (länger bei Workshops)"
+        },
+        {
+          "k": "Parkplatz",
+          "v": "Kostenlos vor Ort"
+        },
+        {
+          "k": "Tiere",
+          "v": "Hunde sind auf dem Hof nicht erlaubt"
+        },
+        {
+          "k": "Barrierefreiheit",
+          "v": "Ebenerdige Wege und Naturboden; Kinderwagen / Rollstuhl beim Hof erfragen"
+        },
+        {
+          "k": "Publikum",
+          "v": "Familien, Schulgruppen, Ferienlager; ab Kindergartenalter"
+        }
       ],
       "how_to_get_there": {
         "car": "Von Rumilly über die D910 und D31 nach Vallières-sur-Fier. 5–10 Minuten. Kostenloser Parkplatz vor Ort.",
@@ -310,19 +535,47 @@
       "when_to_visit": "Von Mitte April bis Ende Oktober bei gutem Wetter. Der Frühling zeigt die Jungtiere am besten.",
       "events": "Workshops in jeder Schulferienzeit (Zone A); Geburtstage auf Anfrage in der ganzen Saison.",
       "faq": [
-        {"q": "Muss ich reservieren?", "a": "Ja, Online-Reservierung ist für alle Besuche, Workshops und Geburtstage erforderlich. Die Plätze sind begrenzt, um die Tiere zu schonen."},
-        {"q": "Für welches Alter?", "a": "Ab Kindergartenalter. Besonders geeignet für Kinder von 3 bis 12 Jahren, willkommen ist aber die ganze Familie."},
-        {"q": "Darf ich meinen Hund mitbringen?", "a": "Nein, Hunde sind nicht erlaubt, um die Hoftiere zu schützen."},
-        {"q": "Ist der Hof ganzjährig geöffnet?", "a": "Nein, die Saison läuft vom 1. April bis zum 1. November. Außerhalb dieser Zeit ist der Hof geschlossen."},
-        {"q": "Wann ist die beste Zeit?", "a": "Frühling und Sommer: Jungtiere sind sichtbar, das Wetter ist angenehm und der Hof sehr lebendig."},
-        {"q": "Gibt es einen Parkplatz?", "a": "Ja, kostenlos vor Ort. Der Hof liegt am Ende einer kleinen Sackgasse mit wenig Straßenparkplatz."},
-        {"q": "Was soll man mitbringen?", "a": "Geschlossene Schuhe, Kleidung, die schmutzig werden darf, Kopfbedeckung je nach Wetter und Wasser."}
+        {
+          "q": "Muss ich reservieren?",
+          "a": "Ja, Online-Reservierung ist für alle Besuche, Workshops und Geburtstage erforderlich. Die Plätze sind begrenzt, um die Tiere zu schonen."
+        },
+        {
+          "q": "Für welches Alter?",
+          "a": "Ab Kindergartenalter. Besonders geeignet für Kinder von 3 bis 12 Jahren, willkommen ist aber die ganze Familie."
+        },
+        {
+          "q": "Darf ich meinen Hund mitbringen?",
+          "a": "Nein, Hunde sind nicht erlaubt, um die Hoftiere zu schützen."
+        },
+        {
+          "q": "Ist der Hof ganzjährig geöffnet?",
+          "a": "Nein, die Saison läuft vom 1. April bis zum 1. November. Außerhalb dieser Zeit ist der Hof geschlossen."
+        },
+        {
+          "q": "Wann ist die beste Zeit?",
+          "a": "Frühling und Sommer: Jungtiere sind sichtbar, das Wetter ist angenehm und der Hof sehr lebendig."
+        },
+        {
+          "q": "Gibt es einen Parkplatz?",
+          "a": "Ja, kostenlos vor Ort. Der Hof liegt am Ende einer kleinen Sackgasse mit wenig Straßenparkplatz."
+        },
+        {
+          "q": "Was soll man mitbringen?",
+          "a": "Geschlossene Schuhe, Kleidung, die schmutzig werden darf, Kopfbedeckung je nach Wetter und Wasser."
+        }
       ],
-      "schema_amenities": ["parking", "family_friendly", "outdoor", "animals_on_site"]
+      "schema_amenities": [
+        "parking",
+        "family_friendly",
+        "outdoor",
+        "animals_on_site"
+      ]
     },
     "it": {
       "name": "Les Paturettes",
-      "name_alternates": ["Les Paturettes — Fattoria didattica"],
+      "name_alternates": [
+        "Les Paturettes — Fattoria didattica"
+      ],
       "meta_title": "Les Paturettes — Fattoria didattica vicino a Rumilly | Loisirs 74",
       "meta_description": "Fattoria didattica a Vallières-sur-Fier (5 min da Rumilly): visite guidate, animali, stage per bambini durante le vacanze e compleanni nella natura.",
       "hero": {
@@ -342,26 +595,88 @@
         "what_is": "<p><strong>Les Paturettes</strong> è una <strong>fattoria didattica a conduzione familiare</strong> a Vallières-sur-Fier, a soli <strong>5 minuti da Rumilly</strong>, nella campagna del Pays de l'Albanais. Un luogo per famiglie, dove incontrare gli animali della fattoria in un ambiente naturale tranquillo.</p><p>La fattoria ospita <strong>pony e un asino, pecore, mucche, galline di varie razze, oche, anatre, un maiale, conigli e uccelli</strong>. I bambini osservano, nutrono e accarezzano gli animali con le animatrici, che spiegano la vita quotidiana di una fattoria. Proposte: <strong>visite guidate</strong>, <strong>stage immersivi durante le vacanze scolastiche</strong> e <strong>compleanni in fattoria</strong>.</p><p>Aperta <strong>dal 1° aprile al 1° novembre</strong>, tutti i giorni su <strong>prenotazione online</strong>. Ideale per famiglie, scuole e bambini piccoli. Durata: <strong>1-2 ore</strong>. Parcheggio gratuito in loco.</p>"
       },
       "activities": [
-        {"title": "Visita guidata didattica", "description": "Tour degli animali con un'animatrice: pony, asino, pecore, mucche, pollame, maiale, conigli e uccelli. Ideale per famiglie con bambini piccoli.", "tag": "famiglia"},
-        {"title": "Stage durante le vacanze", "description": "Sessioni immersive nelle vacanze scolastiche: i bambini partecipano alla cura degli animali e scoprono la vita di una vera fattoria.", "tag": "stage"},
-        {"title": "Compleanni in fattoria", "description": "Festeggiare il compleanno con gli animali: visita, attività naturali e merenda. Diverse formule, prenotazione obbligatoria.", "tag": "compleanno"},
-        {"title": "Incontro con pony e asino", "description": "Momenti privilegiati con gli equini: spazzolatura, brevi passeggiate condotte secondo l'età e la stagione.", "tag": "equini"},
-        {"title": "Cortile e pollame", "description": "Galline di razze rustiche, oche, anatre e conigli: raccolta delle uova, osservazione dei pulcini in primavera.", "tag": "cortile"},
-        {"title": "Scuole e gruppi", "description": "Sessioni prenotate per classi materne ed elementari, centri estivi e gruppi: programma adattato all'età e agli obiettivi.", "tag": "scuole"}
+        {
+          "title": "Visita guidata didattica",
+          "description": "Tour degli animali con un'animatrice: pony, asino, pecore, mucche, pollame, maiale, conigli e uccelli. Ideale per famiglie con bambini piccoli.",
+          "tag": "famiglia"
+        },
+        {
+          "title": "Stage durante le vacanze",
+          "description": "Sessioni immersive nelle vacanze scolastiche: i bambini partecipano alla cura degli animali e scoprono la vita di una vera fattoria.",
+          "tag": "stage"
+        },
+        {
+          "title": "Compleanni in fattoria",
+          "description": "Festeggiare il compleanno con gli animali: visita, attività naturali e merenda. Diverse formule, prenotazione obbligatoria.",
+          "tag": "compleanno"
+        },
+        {
+          "title": "Incontro con pony e asino",
+          "description": "Momenti privilegiati con gli equini: spazzolatura, brevi passeggiate condotte secondo l'età e la stagione.",
+          "tag": "equini"
+        },
+        {
+          "title": "Cortile e pollame",
+          "description": "Galline di razze rustiche, oche, anatre e conigli: raccolta delle uova, osservazione dei pulcini in primavera.",
+          "tag": "cortile"
+        },
+        {
+          "title": "Scuole e gruppi",
+          "description": "Sessioni prenotate per classi materne ed elementari, centri estivi e gruppi: programma adattato all'età e agli obiettivi.",
+          "tag": "scuole"
+        }
       ],
       "practical_info": [
-        {"k": "Indirizzo", "v": "137 Impasse de la Ponnaix, 74150 Vallières-sur-Fier (5 min da Rumilly)"},
-        {"k": "Coordinate", "v": "45.9049, 5.9323"},
-        {"k": "Sito ufficiale", "v": "https://www.lespaturettes.com"},
-        {"k": "Stagione", "v": "Aperta dal 1° aprile al 1° novembre", "verified": "2026-06-06"},
-        {"k": "Orari", "v": "Ogni giorno su prenotazione online (posti limitati)", "verified": "2026-06-06"},
-        {"k": "Tariffe", "v": "Solo su prenotazione — contattare la fattoria"},
-        {"k": "Prenotazione", "v": "Obbligatoria, online su lespaturettes.com"},
-        {"k": "Durata", "v": "1-2 ore (più lunga per gli stage)"},
-        {"k": "Parcheggio", "v": "Gratuito in loco"},
-        {"k": "Animali", "v": "Cani non ammessi"},
-        {"k": "Accessibilità", "v": "Sentieri pianeggianti e terreno naturale; chiedere alla fattoria per passeggini / disabilità"},
-        {"k": "Pubblico", "v": "Famiglie, gruppi scolastici, centri estivi; dalla scuola materna"}
+        {
+          "k": "Indirizzo",
+          "v": "137 Impasse de la Ponnaix, 74150 Vallières-sur-Fier (5 min da Rumilly)"
+        },
+        {
+          "k": "Coordinate",
+          "v": "45.9049, 5.9323"
+        },
+        {
+          "k": "Sito ufficiale",
+          "v": "https://www.lespaturettes.com"
+        },
+        {
+          "k": "Stagione",
+          "v": "Aperta dal 1° aprile al 1° novembre",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Orari",
+          "v": "Ogni giorno su prenotazione online (posti limitati)",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Tariffe",
+          "v": "Solo su prenotazione — contattare la fattoria"
+        },
+        {
+          "k": "Prenotazione",
+          "v": "Obbligatoria, online su lespaturettes.com"
+        },
+        {
+          "k": "Durata",
+          "v": "1-2 ore (più lunga per gli stage)"
+        },
+        {
+          "k": "Parcheggio",
+          "v": "Gratuito in loco"
+        },
+        {
+          "k": "Animali",
+          "v": "Cani non ammessi"
+        },
+        {
+          "k": "Accessibilità",
+          "v": "Sentieri pianeggianti e terreno naturale; chiedere alla fattoria per passeggini / disabilità"
+        },
+        {
+          "k": "Pubblico",
+          "v": "Famiglie, gruppi scolastici, centri estivi; dalla scuola materna"
+        }
       ],
       "how_to_get_there": {
         "car": "Da Rumilly, D910 poi D31 verso Vallières-sur-Fier. 5-10 minuti. Parcheggio gratuito in loco.",
@@ -371,19 +686,47 @@
       "when_to_visit": "Da metà aprile a fine ottobre con tempo favorevole. La primavera è il momento migliore per i cuccioli.",
       "events": "Stage in ogni periodo di vacanze scolastiche (zona A); compleanni su richiesta tutta la stagione.",
       "faq": [
-        {"q": "È necessaria la prenotazione?", "a": "Sì, prenotazione online obbligatoria per visite, stage e compleanni. I posti sono limitati per il benessere degli animali."},
-        {"q": "Per quale età?", "a": "Dalla scuola materna. Ideale per bambini dai 3 ai 12 anni, ma accoglie tutta la famiglia."},
-        {"q": "Posso portare il cane?", "a": "No, i cani non sono ammessi per non disturbare gli animali della fattoria."},
-        {"q": "La fattoria è aperta tutto l'anno?", "a": "No, la stagione va dal 1° aprile al 1° novembre."},
-        {"q": "Qual è il momento migliore?", "a": "Primavera ed estate: cuccioli visibili, clima piacevole, cortile molto attivo."},
-        {"q": "C'è un parcheggio?", "a": "Sì, gratuito in loco. La fattoria è in fondo a un vicolo, poco parcheggio in strada."},
-        {"q": "Cosa portare?", "a": "Scarpe chiuse, abiti che si possono sporcare, cappellino e acqua."}
+        {
+          "q": "È necessaria la prenotazione?",
+          "a": "Sì, prenotazione online obbligatoria per visite, stage e compleanni. I posti sono limitati per il benessere degli animali."
+        },
+        {
+          "q": "Per quale età?",
+          "a": "Dalla scuola materna. Ideale per bambini dai 3 ai 12 anni, ma accoglie tutta la famiglia."
+        },
+        {
+          "q": "Posso portare il cane?",
+          "a": "No, i cani non sono ammessi per non disturbare gli animali della fattoria."
+        },
+        {
+          "q": "La fattoria è aperta tutto l'anno?",
+          "a": "No, la stagione va dal 1° aprile al 1° novembre."
+        },
+        {
+          "q": "Qual è il momento migliore?",
+          "a": "Primavera ed estate: cuccioli visibili, clima piacevole, cortile molto attivo."
+        },
+        {
+          "q": "C'è un parcheggio?",
+          "a": "Sì, gratuito in loco. La fattoria è in fondo a un vicolo, poco parcheggio in strada."
+        },
+        {
+          "q": "Cosa portare?",
+          "a": "Scarpe chiuse, abiti che si possono sporcare, cappellino e acqua."
+        }
       ],
-      "schema_amenities": ["parking", "family_friendly", "outdoor", "animals_on_site"]
+      "schema_amenities": [
+        "parking",
+        "family_friendly",
+        "outdoor",
+        "animals_on_site"
+      ]
     },
     "es": {
       "name": "Les Paturettes",
-      "name_alternates": ["Les Paturettes — Granja-escuela"],
+      "name_alternates": [
+        "Les Paturettes — Granja-escuela"
+      ],
       "meta_title": "Les Paturettes — Granja-escuela cerca de Rumilly | Loisirs 74",
       "meta_description": "Granja-escuela en Vallières-sur-Fier (5 min de Rumilly): visitas guiadas, animales, talleres infantiles en vacaciones y cumpleaños en la naturaleza.",
       "hero": {
@@ -403,26 +746,88 @@
         "what_is": "<p><strong>Les Paturettes</strong> es una <strong>granja-escuela familiar</strong> en Vallières-sur-Fier, a sólo <strong>5 minutos de Rumilly</strong>, en el campo del Pays de l'Albanais. Un lugar tranquilo donde las familias se encuentran con los animales de la granja en un entorno natural sereno.</p><p>La granja alberga <strong>ponis y un burro, ovejas, vacas, gallinas de varias razas, ocas, patos, un cerdo, conejos y aves</strong>. Los niños observan, alimentan y acarician a los animales acompañados por los animadores, que explican la vida diaria de la granja. Ofrecemos: <strong>visitas guiadas</strong>, <strong>talleres de inmersión durante las vacaciones escolares</strong> y <strong>cumpleaños en la granja</strong>.</p><p>Abierto <strong>del 1 de abril al 1 de noviembre</strong>, todos los días con <strong>reserva en línea</strong>. Ideal para familias, escuelas y niños pequeños. Duración: <strong>1 a 2 horas</strong>. Aparcamiento gratuito en el sitio.</p>"
       },
       "activities": [
-        {"title": "Visita guiada didáctica", "description": "Recorrido por los animales con animador: ponis, burro, ovejas, vacas, aves, cerdo, conejos y pájaros. Ideal para familias con niños pequeños.", "tag": "familia"},
-        {"title": "Talleres en vacaciones", "description": "Sesiones de inmersión durante las vacaciones escolares: los niños participan en el cuidado de los animales y descubren la vida real de una granja.", "tag": "talleres"},
-        {"title": "Cumpleaños en la granja", "description": "Celebrar el cumpleaños con los animales: visita, actividades en la naturaleza y merienda. Varias fórmulas, reserva obligatoria.", "tag": "cumpleaños"},
-        {"title": "Encuentro con ponis y burro", "description": "Momentos especiales con los équidos: cepillado, paseos cortos guiados según edad y temporada.", "tag": "équidos"},
-        {"title": "Descubrir el corral", "description": "Gallinas de razas rústicas, ocas, patos y conejos: recogida de huevos, observación de pollitos en primavera.", "tag": "corral"},
-        {"title": "Escuelas y grupos", "description": "Sesiones reservadas para clases de infantil y primaria, centros de día y grupos: programa adaptado a la edad y los objetivos.", "tag": "escuelas"}
+        {
+          "title": "Visita guiada didáctica",
+          "description": "Recorrido por los animales con animador: ponis, burro, ovejas, vacas, aves, cerdo, conejos y pájaros. Ideal para familias con niños pequeños.",
+          "tag": "familia"
+        },
+        {
+          "title": "Talleres en vacaciones",
+          "description": "Sesiones de inmersión durante las vacaciones escolares: los niños participan en el cuidado de los animales y descubren la vida real de una granja.",
+          "tag": "talleres"
+        },
+        {
+          "title": "Cumpleaños en la granja",
+          "description": "Celebrar el cumpleaños con los animales: visita, actividades en la naturaleza y merienda. Varias fórmulas, reserva obligatoria.",
+          "tag": "cumpleaños"
+        },
+        {
+          "title": "Encuentro con ponis y burro",
+          "description": "Momentos especiales con los équidos: cepillado, paseos cortos guiados según edad y temporada.",
+          "tag": "équidos"
+        },
+        {
+          "title": "Descubrir el corral",
+          "description": "Gallinas de razas rústicas, ocas, patos y conejos: recogida de huevos, observación de pollitos en primavera.",
+          "tag": "corral"
+        },
+        {
+          "title": "Escuelas y grupos",
+          "description": "Sesiones reservadas para clases de infantil y primaria, centros de día y grupos: programa adaptado a la edad y los objetivos.",
+          "tag": "escuelas"
+        }
       ],
       "practical_info": [
-        {"k": "Dirección", "v": "137 Impasse de la Ponnaix, 74150 Vallières-sur-Fier (5 min de Rumilly)"},
-        {"k": "Coordenadas", "v": "45.9049, 5.9323"},
-        {"k": "Sitio oficial", "v": "https://www.lespaturettes.com"},
-        {"k": "Temporada", "v": "Abierto del 1 de abril al 1 de noviembre", "verified": "2026-06-06"},
-        {"k": "Horarios", "v": "Todos los días con reserva en línea (plazas limitadas)", "verified": "2026-06-06"},
-        {"k": "Tarifas", "v": "Sólo con reserva — contactar con la granja"},
-        {"k": "Reserva", "v": "Obligatoria, en línea en lespaturettes.com"},
-        {"k": "Duración", "v": "1 a 2 horas (más larga para los talleres)"},
-        {"k": "Aparcamiento", "v": "Gratuito en el sitio"},
-        {"k": "Animales", "v": "Perros no admitidos"},
-        {"k": "Accesibilidad", "v": "Caminos planos y terreno natural; consultar para cochecitos / PMR"},
-        {"k": "Público", "v": "Familias, grupos escolares, centros de día; desde infantil"}
+        {
+          "k": "Dirección",
+          "v": "137 Impasse de la Ponnaix, 74150 Vallières-sur-Fier (5 min de Rumilly)"
+        },
+        {
+          "k": "Coordenadas",
+          "v": "45.9049, 5.9323"
+        },
+        {
+          "k": "Sitio oficial",
+          "v": "https://www.lespaturettes.com"
+        },
+        {
+          "k": "Temporada",
+          "v": "Abierto del 1 de abril al 1 de noviembre",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Horarios",
+          "v": "Todos los días con reserva en línea (plazas limitadas)",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Tarifas",
+          "v": "Sólo con reserva — contactar con la granja"
+        },
+        {
+          "k": "Reserva",
+          "v": "Obligatoria, en línea en lespaturettes.com"
+        },
+        {
+          "k": "Duración",
+          "v": "1 a 2 horas (más larga para los talleres)"
+        },
+        {
+          "k": "Aparcamiento",
+          "v": "Gratuito en el sitio"
+        },
+        {
+          "k": "Animales",
+          "v": "Perros no admitidos"
+        },
+        {
+          "k": "Accesibilidad",
+          "v": "Caminos planos y terreno natural; consultar para cochecitos / PMR"
+        },
+        {
+          "k": "Público",
+          "v": "Familias, grupos escolares, centros de día; desde infantil"
+        }
       ],
       "how_to_get_there": {
         "car": "Desde Rumilly, D910 y D31 hacia Vallières-sur-Fier. 5-10 minutos. Aparcamiento gratuito en el sitio.",
@@ -432,19 +837,47 @@
       "when_to_visit": "De mediados de abril a finales de octubre con buen tiempo. La primavera es el mejor momento para ver crías.",
       "events": "Talleres en cada periodo de vacaciones escolares (zona A); cumpleaños bajo petición toda la temporada.",
       "faq": [
-        {"q": "¿Hay que reservar?", "a": "Sí, reserva en línea obligatoria para visitas, talleres y cumpleaños. Las plazas son limitadas para preservar la tranquilidad de los animales."},
-        {"q": "¿A partir de qué edad?", "a": "Desde infantil. Ideal para niños de 3 a 12 años, pero abierta a toda la familia."},
-        {"q": "¿Puedo llevar mi perro?", "a": "No, los perros no están permitidos para no molestar a los animales."},
-        {"q": "¿La granja está abierta todo el año?", "a": "No, la temporada va del 1 de abril al 1 de noviembre."},
-        {"q": "¿Cuál es la mejor época?", "a": "Primavera y verano: crías visibles, temperatura agradable y corral muy activo."},
-        {"q": "¿Hay aparcamiento?", "a": "Sí, gratuito en el sitio. La granja está al final de un callejón con poco aparcamiento en la calle."},
-        {"q": "¿Qué hay que llevar?", "a": "Calzado cerrado, ropa que pueda mancharse, gorra o gorro según la temporada y agua."}
+        {
+          "q": "¿Hay que reservar?",
+          "a": "Sí, reserva en línea obligatoria para visitas, talleres y cumpleaños. Las plazas son limitadas para preservar la tranquilidad de los animales."
+        },
+        {
+          "q": "¿A partir de qué edad?",
+          "a": "Desde infantil. Ideal para niños de 3 a 12 años, pero abierta a toda la familia."
+        },
+        {
+          "q": "¿Puedo llevar mi perro?",
+          "a": "No, los perros no están permitidos para no molestar a los animales."
+        },
+        {
+          "q": "¿La granja está abierta todo el año?",
+          "a": "No, la temporada va del 1 de abril al 1 de noviembre."
+        },
+        {
+          "q": "¿Cuál es la mejor época?",
+          "a": "Primavera y verano: crías visibles, temperatura agradable y corral muy activo."
+        },
+        {
+          "q": "¿Hay aparcamiento?",
+          "a": "Sí, gratuito en el sitio. La granja está al final de un callejón con poco aparcamiento en la calle."
+        },
+        {
+          "q": "¿Qué hay que llevar?",
+          "a": "Calzado cerrado, ropa que pueda mancharse, gorra o gorro según la temporada y agua."
+        }
       ],
-      "schema_amenities": ["parking", "family_friendly", "outdoor", "animals_on_site"]
+      "schema_amenities": [
+        "parking",
+        "family_friendly",
+        "outdoor",
+        "animals_on_site"
+      ]
     },
     "nl": {
       "name": "Les Paturettes",
-      "name_alternates": ["Les Paturettes — Educatieve boerderij"],
+      "name_alternates": [
+        "Les Paturettes — Educatieve boerderij"
+      ],
       "meta_title": "Les Paturettes — Educatieve boerderij bij Rumilly | Loisirs 74",
       "meta_description": "Educatieve boerderij in Vallières-sur-Fier (5 min van Rumilly): rondleidingen, boerderijdieren, vakantiestages voor kinderen en natuurverjaardagen.",
       "hero": {
@@ -464,26 +897,88 @@
         "what_is": "<p><strong>Les Paturettes</strong> is een <strong>educatieve familieboerderij</strong> in Vallières-sur-Fier, op slechts <strong>5 minuten van Rumilly</strong>, in het landelijke Pays de l'Albanais. Een rustige natuurplek waar gezinnen de boerderijdieren ontmoeten.</p><p>De boerderij heeft <strong>pony's en een ezel, schapen, koeien, hennen van diverse rassen, ganzen, eenden, een varken, konijnen en vogels</strong>. Kinderen observeren, voeren en aaien de dieren onder begeleiding. Aanbod: <strong>begeleide bezoeken</strong>, <strong>onderdompelingsstages tijdens de schoolvakanties</strong> en <strong>verjaardagsfeestjes op de boerderij</strong>.</p><p>Open <strong>van 1 april tot 1 november</strong>, dagelijks na <strong>online reservering</strong>. Ideaal voor gezinnen, scholen en kleuters. Duur: <strong>1 tot 2 uur</strong>. Gratis parkeren ter plaatse.</p>"
       },
       "activities": [
-        {"title": "Begeleid educatief bezoek", "description": "Rondleiding langs de dieren: pony's, ezel, schapen, koeien, pluimvee, varken, konijnen en vogels. Ideaal voor gezinnen met jonge kinderen.", "tag": "gezin"},
-        {"title": "Vakantiestages", "description": "Onderdompelingsessies tijdens schoolvakanties: kinderen helpen bij de verzorging en ontdekken het echte boerderijleven.", "tag": "stages"},
-        {"title": "Verjaardagen op de boerderij", "description": "Verjaardag vieren met de dieren: rondleiding, natuuractiviteiten en tussendoortje. Meerdere formules, reservering verplicht.", "tag": "verjaardag"},
-        {"title": "Pony's en ezel", "description": "Kwaliteitsmomenten met de paardachtigen: borstelen, korte begeleide wandelingen naargelang leeftijd en seizoen.", "tag": "paardachtigen"},
-        {"title": "Pluimvee en kleinvee", "description": "Hennen van oude rassen, ganzen, eenden en konijnen: eieren rapen, kuikens kijken in het voorjaar.", "tag": "pluimvee"},
-        {"title": "Scholen en groepen", "description": "Vooraf geboekte sessies voor kleuter- en basisschoolklassen, dagopvang en groepen: programma op leeftijd afgestemd.", "tag": "scholen"}
+        {
+          "title": "Begeleid educatief bezoek",
+          "description": "Rondleiding langs de dieren: pony's, ezel, schapen, koeien, pluimvee, varken, konijnen en vogels. Ideaal voor gezinnen met jonge kinderen.",
+          "tag": "gezin"
+        },
+        {
+          "title": "Vakantiestages",
+          "description": "Onderdompelingsessies tijdens schoolvakanties: kinderen helpen bij de verzorging en ontdekken het echte boerderijleven.",
+          "tag": "stages"
+        },
+        {
+          "title": "Verjaardagen op de boerderij",
+          "description": "Verjaardag vieren met de dieren: rondleiding, natuuractiviteiten en tussendoortje. Meerdere formules, reservering verplicht.",
+          "tag": "verjaardag"
+        },
+        {
+          "title": "Pony's en ezel",
+          "description": "Kwaliteitsmomenten met de paardachtigen: borstelen, korte begeleide wandelingen naargelang leeftijd en seizoen.",
+          "tag": "paardachtigen"
+        },
+        {
+          "title": "Pluimvee en kleinvee",
+          "description": "Hennen van oude rassen, ganzen, eenden en konijnen: eieren rapen, kuikens kijken in het voorjaar.",
+          "tag": "pluimvee"
+        },
+        {
+          "title": "Scholen en groepen",
+          "description": "Vooraf geboekte sessies voor kleuter- en basisschoolklassen, dagopvang en groepen: programma op leeftijd afgestemd.",
+          "tag": "scholen"
+        }
       ],
       "practical_info": [
-        {"k": "Adres", "v": "137 Impasse de la Ponnaix, 74150 Vallières-sur-Fier (5 min van Rumilly)"},
-        {"k": "Coördinaten", "v": "45.9049, 5.9323"},
-        {"k": "Officiële website", "v": "https://www.lespaturettes.com"},
-        {"k": "Seizoen", "v": "Open van 1 april tot 1 november", "verified": "2026-06-06"},
-        {"k": "Openingstijden", "v": "Dagelijks na online reservering (beperkte plekken)", "verified": "2026-06-06"},
-        {"k": "Tarieven", "v": "Alleen op reservering — neem contact op"},
-        {"k": "Reservering", "v": "Verplicht, online via lespaturettes.com"},
-        {"k": "Duur", "v": "1 tot 2 uur (langer voor stages)"},
-        {"k": "Parkeren", "v": "Gratis ter plaatse"},
-        {"k": "Dieren", "v": "Honden niet toegestaan"},
-        {"k": "Toegankelijkheid", "v": "Vlakke paden en natuurlijke ondergrond; informeer voor kinderwagen / mindervaliden"},
-        {"k": "Publiek", "v": "Gezinnen, schoolgroepen, dagopvang; vanaf kleuter"}
+        {
+          "k": "Adres",
+          "v": "137 Impasse de la Ponnaix, 74150 Vallières-sur-Fier (5 min van Rumilly)"
+        },
+        {
+          "k": "Coördinaten",
+          "v": "45.9049, 5.9323"
+        },
+        {
+          "k": "Officiële website",
+          "v": "https://www.lespaturettes.com"
+        },
+        {
+          "k": "Seizoen",
+          "v": "Open van 1 april tot 1 november",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Openingstijden",
+          "v": "Dagelijks na online reservering (beperkte plekken)",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Tarieven",
+          "v": "Alleen op reservering — neem contact op"
+        },
+        {
+          "k": "Reservering",
+          "v": "Verplicht, online via lespaturettes.com"
+        },
+        {
+          "k": "Duur",
+          "v": "1 tot 2 uur (langer voor stages)"
+        },
+        {
+          "k": "Parkeren",
+          "v": "Gratis ter plaatse"
+        },
+        {
+          "k": "Dieren",
+          "v": "Honden niet toegestaan"
+        },
+        {
+          "k": "Toegankelijkheid",
+          "v": "Vlakke paden en natuurlijke ondergrond; informeer voor kinderwagen / mindervaliden"
+        },
+        {
+          "k": "Publiek",
+          "v": "Gezinnen, schoolgroepen, dagopvang; vanaf kleuter"
+        }
       ],
       "how_to_get_there": {
         "car": "Vanuit Rumilly via de D910 en D31 naar Vallières-sur-Fier. 5-10 minuten. Gratis parkeren ter plaatse.",
@@ -493,15 +988,41 @@
       "when_to_visit": "Van half april tot eind oktober bij mooi weer. De lente is de beste tijd voor jonge dieren.",
       "events": "Stages in elke schoolvakantie (zone A); verjaardagen op aanvraag het hele seizoen.",
       "faq": [
-        {"q": "Moet ik reserveren?", "a": "Ja, online reservering is verplicht voor alle bezoeken, stages en verjaardagen. Plaatsen zijn beperkt voor de rust van de dieren."},
-        {"q": "Vanaf welke leeftijd?", "a": "Vanaf kleuter. Ideaal voor kinderen van 3 tot 12 jaar, maar het hele gezin is welkom."},
-        {"q": "Mag ik mijn hond meenemen?", "a": "Nee, honden zijn niet toegestaan om de boerderijdieren niet te storen."},
-        {"q": "Is de boerderij het hele jaar open?", "a": "Nee, het seizoen loopt van 1 april tot 1 november."},
-        {"q": "Wat is de beste tijd?", "a": "Lente en zomer: jonge dieren zichtbaar, aangenaam weer, levendig erf."},
-        {"q": "Is er parkeergelegenheid?", "a": "Ja, gratis ter plaatse. De boerderij ligt aan het einde van een doodlopend straatje."},
-        {"q": "Wat moet ik meebrengen?", "a": "Dichte schoenen, kleding die vuil mag worden, hoofddeksel en water."}
+        {
+          "q": "Moet ik reserveren?",
+          "a": "Ja, online reservering is verplicht voor alle bezoeken, stages en verjaardagen. Plaatsen zijn beperkt voor de rust van de dieren."
+        },
+        {
+          "q": "Vanaf welke leeftijd?",
+          "a": "Vanaf kleuter. Ideaal voor kinderen van 3 tot 12 jaar, maar het hele gezin is welkom."
+        },
+        {
+          "q": "Mag ik mijn hond meenemen?",
+          "a": "Nee, honden zijn niet toegestaan om de boerderijdieren niet te storen."
+        },
+        {
+          "q": "Is de boerderij het hele jaar open?",
+          "a": "Nee, het seizoen loopt van 1 april tot 1 november."
+        },
+        {
+          "q": "Wat is de beste tijd?",
+          "a": "Lente en zomer: jonge dieren zichtbaar, aangenaam weer, levendig erf."
+        },
+        {
+          "q": "Is er parkeergelegenheid?",
+          "a": "Ja, gratis ter plaatse. De boerderij ligt aan het einde van een doodlopend straatje."
+        },
+        {
+          "q": "Wat moet ik meebrengen?",
+          "a": "Dichte schoenen, kleding die vuil mag worden, hoofddeksel en water."
+        }
       ],
-      "schema_amenities": ["parking", "family_friendly", "outdoor", "animals_on_site"]
+      "schema_amenities": [
+        "parking",
+        "family_friendly",
+        "outdoor",
+        "animals_on_site"
+      ]
     }
   },
   "featured_businesses": [],
@@ -567,5 +1088,26 @@
     "gps_drift_m": 4732,
     "needs_price_review": false,
     "recomputed": "2026-06-05 (registry demoted to confirmer-only)"
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme Rumilly - Albanais",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "132983",
+        "290706",
+        "5732919"
+      ],
+      "last_updated": "2026-04-27",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

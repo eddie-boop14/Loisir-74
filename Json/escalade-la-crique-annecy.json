@@ -54,6 +54,11 @@
     {
       "date": "2026-06-07",
       "note": "Enrichissement complet multi-langues FR/EN/DE/IT/ES/NL (body, activités, FAQ, infos pratiques, partenaires)."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -68,6 +73,60 @@
       "tier": "recommended",
       "type": "info",
       "url": "https://www.haute-savoie-tourisme.org/"
+    },
+    {
+      "tier": "recommended",
+      "name": "Les Parasols",
+      "type": "restaurant",
+      "url": "https://lesparasols-restaurant.com/",
+      "cta_text": "Voir le site →",
+      "description": "Le restaurant \"Les Parasols\" vous régale du petit-déjeuner au dîner. Repas, snacking, pause boissons, planches apéritives. Il offre une vue incroyable sur le château de Duingt, la baie de Talloires.",
+      "i18n": {
+        "fr": {
+          "description": "Le restaurant \"Les Parasols\" vous régale du petit-déjeuner au dîner. Repas, snacking, pause boissons, planches apéritives. Il offre une vue incroyable sur le château de Duingt, la baie de Talloires."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "210481",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.8
+    },
+    {
+      "tier": "recommended",
+      "name": "Hôtel Le Petit Létraz",
+      "type": "hebergement",
+      "url": "https://lepetitletraz.com/",
+      "cta_text": "Voir le site →",
+      "description": "Hôtel 4 étoiles situé les pieds dans l'eau et dans un environnement naturel époustouflant. Seulement 14 chambres cocons et un loft en rooftop.",
+      "i18n": {
+        "fr": {
+          "description": "Hôtel 4 étoiles situé les pieds dans l'eau et dans un environnement naturel époustouflant. Seulement 14 chambres cocons et un loft en rooftop."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "120296",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.8
+    },
+    {
+      "tier": "recommended",
+      "name": "PureSpa PureForm",
+      "type": "commerce",
+      "url": "https://www.pureform.fr/purespa-1367",
+      "cta_text": "Voir le site →",
+      "description": "PureSpa vous propose une large palette de soins : visage et corps ou de beauté avec la marque locale \"Douceur du lac\" & \"Thalgo SPA\".",
+      "i18n": {
+        "fr": {
+          "description": "PureSpa vous propose une large palette de soins : visage et corps ou de beauté avec la marque locale \"Douceur du lac\" & \"Thalgo SPA\"."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "5791865",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.3
     }
   ],
   "gallery_photos": [],
@@ -1064,7 +1123,25 @@
       ]
     }
   },
-  "featured_businesses": [],
+  "featured_businesses": [
+    {
+      "tier": "featured",
+      "name": "Chez Nous à la Plage",
+      "type": "restaurant",
+      "logo": "/chez-nous-a-la-plage-logo.jpg",
+      "description": "Restaurant les pieds dans l'eau sur la plage de Saint-Jorioz. Carte estivale, terrasse face au lac.",
+      "address": "Plage de Saint-Jorioz, 74410 Saint-Jorioz",
+      "phone": "+33 4 50 64 97 23",
+      "hours": "Ouvert mi-février au 1er novembre · Fermé le lundi",
+      "url": "https://www.cheznousalaplage.com",
+      "price_range": "12,90 € – 19,90 €",
+      "cta_text": "Voir le site →",
+      "proximity_km": 2.0,
+      "source": "featured_extension",
+      "source_slug": "plage-de-saint-jorioz",
+      "seeded_at": "2026-06-09"
+    }
+  ],
   "google_check": {
     "checked": "2026-06-04",
     "query": "Criq'Bloc — La Crique Saint-Jorioz Haute-Savoie France",
@@ -1087,5 +1164,26 @@
     "google_lat": 45.8433632,
     "google_lng": 6.167979300000001,
     "gps_drift_m": 1637
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "120296",
+        "210481",
+        "5791865"
+      ],
+      "last_updated": "2026-05-16",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

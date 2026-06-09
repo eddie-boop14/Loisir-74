@@ -59,6 +59,11 @@
       "date": "2026-06-09",
       "by": "claude-datatourisme-flow261672",
       "note": "Cross-referenced with DataTourisme record 157632 (last_updated 2024-05-27) from Office de Tourisme du Lac d'Annecy."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 2 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -68,6 +73,42 @@
       "type": "restaurant",
       "description": "Restaurant à Sévrier, idéal pour prolonger la journée à la plage avec un repas au bord du lac d'Annecy.",
       "url": "https://www.le-poisson-rouge.fr/"
+    },
+    {
+      "tier": "recommended",
+      "name": "Black Bass Hôtel",
+      "type": "hebergement",
+      "url": "https://www.blackbasshotel-annecy.com/",
+      "cta_text": "Voir le site →",
+      "description": "Niché sur les rives du lac, le Black Bass incarne une adresse d’exception où élégance et nature se rencontrent.",
+      "i18n": {
+        "fr": {
+          "description": "Niché sur les rives du lac, le Black Bass incarne une adresse d’exception où élégance et nature se rencontrent."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "5299128",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 1.4
+    },
+    {
+      "tier": "recommended",
+      "name": "Cercle de voile de Sevrier",
+      "type": "commerce",
+      "url": "https://www.cvsevrier.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Situé au port de Sevrier, le Cercle de Voile propose la pratique de la voile pour tous les goûts et toutes les aptitudes. Tous les publics sont accueillis : enfants, jeunes, adultes, seniors.",
+      "i18n": {
+        "fr": {
+          "description": "Situé au port de Sevrier, le Cercle de Voile propose la pratique de la voile pour tous les goûts et toutes les aptitudes. Tous les publics sont accueillis : enfants, jeunes, adultes, seniors."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "464826",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.4
     }
   ],
   "gallery_photos": [],
@@ -1054,7 +1095,25 @@
     }
   },
   "lac": "Lac d'Annecy",
-  "featured_businesses": [],
+  "featured_businesses": [
+    {
+      "tier": "featured",
+      "name": "Chez Nous à la Plage",
+      "type": "restaurant",
+      "logo": "/chez-nous-a-la-plage-logo.jpg",
+      "description": "Restaurant les pieds dans l'eau sur la plage de Saint-Jorioz. Carte estivale, terrasse face au lac.",
+      "address": "Plage de Saint-Jorioz, 74410 Saint-Jorioz",
+      "phone": "+33 4 50 64 97 23",
+      "hours": "Ouvert mi-février au 1er novembre · Fermé le lundi",
+      "url": "https://www.cheznousalaplage.com",
+      "price_range": "12,90 € – 19,90 €",
+      "cta_text": "Voir le site →",
+      "proximity_km": 3.4,
+      "source": "featured_extension",
+      "source_slug": "plage-de-saint-jorioz",
+      "seeded_at": "2026-06-09"
+    }
+  ],
   "price_tiers": [],
   "google_check": {
     "checked": "2026-06-04",
@@ -1137,6 +1196,24 @@
       "last_updated": "2024-05-27",
       "fields_used": [
         "attribution_only"
+      ]
+    },
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "464826",
+        "5299128"
+      ],
+      "last_updated": "2026-04-03",
+      "fields_used": [
+        "partners_proximity"
       ]
     }
   ]

@@ -40,6 +40,11 @@
     {
       "date": "2026-06-06",
       "note": "Enrichissement multi-langues : aire de jeux couverte 1 200 m², adresse Prés Rollier, activités et horaires saison/vacances vérifiés. Tarifs détaillés non publiés en ligne (contact direct)."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -49,6 +54,60 @@
       "type": "info",
       "description": "Office de tourisme du Pays de Fier & Usses (Sillingy, Lovagny, etc.) — idées de sorties et événements à proximité d'Annecy.",
       "url": "https://tourisme.fier-et-usses.com"
+    },
+    {
+      "tier": "recommended",
+      "name": "L'Auberge de la Caille",
+      "type": "restaurant",
+      "url": "http://domainedelacaille.com/",
+      "cta_text": "Voir le site →",
+      "description": "Le restaurant du Domaine de la Caille accueille les gourmands dans son auberge à une quinzaine de kilomètres d’Annecy en Haute-Savoie.",
+      "i18n": {
+        "fr": {
+          "description": "Le restaurant du Domaine de la Caille accueille les gourmands dans son auberge à une quinzaine de kilomètres d’Annecy en Haute-Savoie."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "148166",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 1.4
+    },
+    {
+      "tier": "recommended",
+      "name": "Hôtel Les Rochers",
+      "type": "hebergement",
+      "url": "https://www.hotellesrochers.fr/",
+      "cta_text": "Voir le site →",
+      "description": "L'hôtel \"Les Rochers\", au coeur du village, vous propose 20 chambres avec douche ou bain, WC, TV. Chambres de 1 à 4 personnes, en demi-pension ou en soirée étape.",
+      "i18n": {
+        "fr": {
+          "description": "L'hôtel \"Les Rochers\", au coeur du village, vous propose 20 chambres avec douche ou bain, WC, TV. Chambres de 1 à 4 personnes, en demi-pension ou en soirée étape."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "135880",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 2.3
+    },
+    {
+      "tier": "recommended",
+      "name": "La Compagnie des Ballons : montgolfières",
+      "type": "commerce",
+      "url": "http://www.compagniedesballons.com/",
+      "cta_text": "Voir le site →",
+      "description": "Découvrez d'en haut le lac d'Annecy et le massif des Aravis en toute tranquillité et en toute sécurité grâce aux montgolfières de la Compagnie des Ballons.",
+      "i18n": {
+        "fr": {
+          "description": "Découvrez d'en haut le lac d'Annecy et le massif des Aravis en toute tranquillité et en toute sécurité grâce aux montgolfières de la Compagnie des Ballons."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "474407",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.4
     }
   ],
   "gallery_photos": [],
@@ -1038,7 +1097,47 @@
       ]
     }
   },
-  "featured_businesses": [],
+  "featured_businesses": [
+    {
+      "tier": "featured",
+      "name": "Chalet du Tornet",
+      "type": "restaurant",
+      "logo": "/chalet-du-tornet-logo.png",
+      "description": "Restaurant chalet au bord du lac, terrasse face à l'eau, bar du matin au dernier verre. Cuisine savoyarde et traditionnelle, charcuterie Maison Baud, glaces artisanales. Au cœur du Domaine du Tornet.",
+      "address": "161 Route de Paris, 74330 La Balme-de-Sillingy",
+      "phone": "04 38 80 22 51",
+      "phone_tel": "+33438802251",
+      "email": "chaletdutornet74@gmail.com",
+      "hours": "Ouvert de février à début novembre · Bar 9h-17h (jeudi-samedi jusqu'à 23h) · Cuisine midi tous les jours, soirs jeudi-samedi",
+      "url": "https://chaletdutornet.com",
+      "cta_text": "Voir le site →",
+      "proximity_km": 1.9,
+      "source": "featured_extension",
+      "source_slug": "domaine-du-tornet",
+      "seeded_at": "2026-06-09"
+    }
+  ],
   "google_check": null,
-  "freshness": null
+  "freshness": null,
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "135880",
+        "148166",
+        "474407"
+      ],
+      "last_updated": "2026-05-28",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

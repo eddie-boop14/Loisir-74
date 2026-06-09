@@ -55,6 +55,11 @@
     {
       "date": "2026-06-01",
       "note": "Créé à partir de recherche sourcée officielle (loisirs74 — campagne Tier-1 indoor 74). Données structurelles vérifiées ; corps i18n complet, photos, GPS et grille tarifaire à compléter."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -64,6 +69,60 @@
       "type": "info",
       "description": "Infos pratiques sur Annecy et les activités famille du bassin annécien.",
       "url": "https://www.lac-annecy.com"
+    },
+    {
+      "tier": "recommended",
+      "name": "Bistrot Green",
+      "type": "restaurant",
+      "url": "http://bistrotgreen.com/",
+      "cta_text": "Voir le site →",
+      "description": "Situé sur la place d'Annecy le Vieux avec parking et jardin privatif ombragé, Bistrot Green vous propose du mardi au samedi soir une cuisine saine et colorée à dominante végétale et particulièrement a.",
+      "i18n": {
+        "fr": {
+          "description": "Situé sur la place d'Annecy le Vieux avec parking et jardin privatif ombragé, Bistrot Green vous propose du mardi au samedi soir une cuisine saine et colorée à dominante végétale et particulièrement a."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "7716814",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 3.3
+    },
+    {
+      "tier": "recommended",
+      "name": "The Originals City Hôtel Annecy Aéroport",
+      "type": "hebergement",
+      "url": "https://www.hotel-annecy-aeroport.com/",
+      "cta_text": "Voir le site →",
+      "description": "Petit air chalet pour cet hôtel 2 étoiles de Metz-Tessy, aux portes du massif des Aravis, à 7 km d’Annecy et de son lac.",
+      "i18n": {
+        "fr": {
+          "description": "Petit air chalet pour cet hôtel 2 étoiles de Metz-Tessy, aux portes du massif des Aravis, à 7 km d’Annecy et de son lac."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "108701",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 2.5
+    },
+    {
+      "tier": "recommended",
+      "name": "Annecy Rando Nature",
+      "type": "commerce",
+      "url": "https://www.annecyrandonature.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Annecy Rando Nature propose des sorties en montagne sur différents thèmes et de durées variées : Randonnée, Trail, Marche nordique, Plantes comestibles, Bivouac, Trek, Orientation, …",
+      "i18n": {
+        "fr": {
+          "description": "Annecy Rando Nature propose des sorties en montagne sur différents thèmes et de durées variées : Randonnée, Trail, Marche nordique, Plantes comestibles, Bivouac, Trek, Orientation, …"
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "5864942",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.5
     }
   ],
   "gallery_photos": [],
@@ -1023,7 +1082,26 @@
       ]
     }
   },
-  "featured_businesses": [],
+  "featured_businesses": [
+    {
+      "tier": "featured",
+      "name": "Chalet du Tornet",
+      "type": "restaurant",
+      "logo": "/chalet-du-tornet-logo.png",
+      "description": "Restaurant chalet au bord du lac, terrasse face à l'eau, bar du matin au dernier verre. Cuisine savoyarde et traditionnelle, charcuterie Maison Baud, glaces artisanales. Au cœur du Domaine du Tornet.",
+      "address": "161 Route de Paris, 74330 La Balme-de-Sillingy",
+      "phone": "04 38 80 22 51",
+      "phone_tel": "+33438802251",
+      "email": "chaletdutornet74@gmail.com",
+      "hours": "Ouvert de février à début novembre · Bar 9h-17h (jeudi-samedi jusqu'à 23h) · Cuisine midi tous les jours, soirs jeudi-samedi",
+      "url": "https://chaletdutornet.com",
+      "cta_text": "Voir le site →",
+      "proximity_km": 8.3,
+      "source": "featured_extension",
+      "source_slug": "domaine-du-tornet",
+      "seeded_at": "2026-06-09"
+    }
+  ],
   "google_check": {
     "checked": "2026-06-04",
     "query": "Full Land Annecy Haute-Savoie France",
@@ -1038,5 +1116,26 @@
     "google_lat": 45.942137,
     "google_lng": 6.132864,
     "gps_drift_m": 0
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "108701",
+        "5864942",
+        "7716814"
+      ],
+      "last_updated": "2026-05-11",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

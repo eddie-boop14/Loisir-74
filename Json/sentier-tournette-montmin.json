@@ -46,7 +46,13 @@
     ]
   },
   "sparse_data": false,
-  "research_log": [],
+  "research_log": [
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 2 partner cards from DataTourisme proximity (within 10.0 km)."
+    }
+  ],
   "partners": [
     {
       "tier": "recommended",
@@ -73,24 +79,40 @@
       }
     },
     {
-      "tier": "invite",
-      "invite_type": "commerce",
+      "tier": "recommended",
+      "name": "Hôtel Les Grillons",
+      "type": "hebergement",
+      "url": "http://www.hotel-grillons.com/",
+      "cta_text": "Voir le site →",
+      "description": "Maison de Famille au charme authentique, subtil mélange de raffinement et de simplicité depuis trois générations.",
       "i18n": {
         "fr": {
-          "title": "Un commerce à Montmin ?",
-          "desc": "Partagez horaires et spécialités avec les randonneurs de la Tournette."
+          "description": "Maison de Famille au charme authentique, subtil mélange de raffinement et de simplicité depuis trois générations."
         }
-      }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "98239",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 2.1
     },
     {
-      "tier": "invite",
-      "invite_type": "hebergement",
+      "tier": "recommended",
+      "name": "Syndicat Local FBI",
+      "type": "commerce",
+      "url": "https://parapentefbiannecy.com/",
+      "cta_text": "Voir le site →",
+      "description": "Annecy vue du ciel !\r\nDepuis le Col de la Forclaz découvrez un panorama unique sur le lac d’Annecy grâce au parapente.\r\nBienvenue à Annecy, un joyau des Alpes françaises, où le parapente biplace offre.",
       "i18n": {
         "fr": {
-          "title": "Un hébergement proche ?",
-          "desc": "Gîte, chambre d'hôtes, camping, location près du sentier de la Tournette."
+          "description": "Annecy vue du ciel !\r\nDepuis le Col de la Forclaz découvrez un panorama unique sur le lac d’Annecy grâce au parapente.\r\nBienvenue à Annecy, un joyau des Alpes françaises, où le parapente biplace offre."
         }
-      }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "7255060",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.7
     }
   ],
   "gallery_photos": [],
@@ -979,7 +1001,25 @@
       ]
     }
   },
-  "featured_businesses": [],
+  "featured_businesses": [
+    {
+      "tier": "featured",
+      "name": "Chez Nous à la Plage",
+      "type": "restaurant",
+      "logo": "/chez-nous-a-la-plage-logo.jpg",
+      "description": "Restaurant les pieds dans l'eau sur la plage de Saint-Jorioz. Carte estivale, terrasse face au lac.",
+      "address": "Plage de Saint-Jorioz, 74410 Saint-Jorioz",
+      "phone": "+33 4 50 64 97 23",
+      "hours": "Ouvert mi-février au 1er novembre · Fermé le lundi",
+      "url": "https://www.cheznousalaplage.com",
+      "price_range": "12,90 € – 19,90 €",
+      "cta_text": "Voir le site →",
+      "proximity_km": 6.8,
+      "source": "featured_extension",
+      "source_slug": "plage-de-saint-jorioz",
+      "seeded_at": "2026-06-09"
+    }
+  ],
   "price_tiers": [],
   "google_check": {
     "checked": "2026-06-04",
@@ -1019,5 +1059,25 @@
     "gps_drift_m": 2813,
     "needs_price_review": false,
     "recomputed": "2026-06-05 (registry demoted to confirmer-only)"
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "7255060",
+        "98239"
+      ],
+      "last_updated": "2026-03-27",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

@@ -47,7 +47,13 @@
     ]
   },
   "sparse_data": false,
-  "research_log": [],
+  "research_log": [
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 2 partner cards from DataTourisme proximity (within 10.0 km)."
+    }
+  ],
   "partners": [
     {
       "tier": "recommended",
@@ -61,6 +67,42 @@
           "description": "Hôtel-restaurant familial dans le parc des Bauges, route de Montagny à Saint-Jorioz."
         }
       }
+    },
+    {
+      "tier": "recommended",
+      "name": "Les Tilleuls",
+      "type": "restaurant",
+      "url": "https://www.lestilleuls.com/",
+      "cta_text": "Voir le site →",
+      "description": "Cuisine traditionnelle et savoyarde. Spécialiste des poissons sauvages du lac d'Annecy (pêche journalière). Véranda sur le jardin, grande terrasse.",
+      "i18n": {
+        "fr": {
+          "description": "Cuisine traditionnelle et savoyarde. Spécialiste des poissons sauvages du lac d'Annecy (pêche journalière). Véranda sur le jardin, grande terrasse."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "178109",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 1.9
+    },
+    {
+      "tier": "recommended",
+      "name": "Annecy Marche Nordique",
+      "type": "commerce",
+      "url": "http://www.annecy-marche-nordique.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Vous souhaitez vous oxygéner, tonifier vos muscles, retrouver votre souffle et affiner votre silhouette : adopter la marche nordique, sur les chemins du bien-être.",
+      "i18n": {
+        "fr": {
+          "description": "Vous souhaitez vous oxygéner, tonifier vos muscles, retrouver votre souffle et affiner votre silhouette : adopter la marche nordique, sur les chemins du bien-être."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "463383",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 1.8
     }
   ],
   "gallery_photos": [],
@@ -948,7 +990,25 @@
       ]
     }
   },
-  "featured_businesses": [],
+  "featured_businesses": [
+    {
+      "tier": "featured",
+      "name": "Chez Nous à la Plage",
+      "type": "restaurant",
+      "logo": "/chez-nous-a-la-plage-logo.jpg",
+      "description": "Restaurant les pieds dans l'eau sur la plage de Saint-Jorioz. Carte estivale, terrasse face au lac.",
+      "address": "Plage de Saint-Jorioz, 74410 Saint-Jorioz",
+      "phone": "+33 4 50 64 97 23",
+      "hours": "Ouvert mi-février au 1er novembre · Fermé le lundi",
+      "url": "https://www.cheznousalaplage.com",
+      "price_range": "12,90 € – 19,90 €",
+      "cta_text": "Voir le site →",
+      "proximity_km": 2.0,
+      "source": "featured_extension",
+      "source_slug": "plage-de-saint-jorioz",
+      "seeded_at": "2026-06-09"
+    }
+  ],
   "price_tiers": [],
   "google_check": {
     "checked": "2026-06-04",
@@ -988,5 +1048,25 @@
     "gps_drift_m": 2586,
     "needs_price_review": false,
     "recomputed": "2026-06-05 (registry demoted to confirmer-only)"
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "178109",
+        "463383"
+      ],
+      "last_updated": "2026-03-31",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

@@ -101,7 +101,26 @@
       "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
       "datatourisme_id": "153601",
       "last_updated": "2026-05-20",
-      "fields_used": ["price_cross_validation_2026"]
+      "fields_used": [
+        "price_cross_validation_2026"
+      ]
+    },
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme des Monts du Genevois",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "144289"
+      ],
+      "last_updated": "2026-02-27",
+      "fields_used": [
+        "partners_proximity"
+      ]
     }
   ],
   "verify_flags": [
@@ -130,7 +149,15 @@
   },
   "sparse_data": false,
   "research_log": [
-    {"date": "2026-06-08", "note": "Cross-validation tarifs 2026 avec flux DataTourisme #153601 (OT Monts du Genevois via Apidae Tourisme, lastUpdate 2026-05-20) — 7 tiers du flux confirmés alignés sur notre grille de 13. Ajout du bloc NL (traduction native depuis FR ; NL du flux DataTourisme volontairement non utilisée — DeepL machine, qualité moindre)."}
+    {
+      "date": "2026-06-08",
+      "note": "Cross-validation tarifs 2026 avec flux DataTourisme #153601 (OT Monts du Genevois via Apidae Tourisme, lastUpdate 2026-05-20) — 7 tiers du flux confirmés alignés sur notre grille de 13. Ajout du bloc NL (traduction native depuis FR ; NL du flux DataTourisme volontairement non utilisée — DeepL machine, qualité moindre)."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 1 partner cards from DataTourisme proximity (within 10.0 km)."
+    }
   ],
   "partners": [
     {
@@ -158,6 +185,24 @@
           "description": "Boutique souvenirs sur place, à la gare d'arrivée du téléphérique."
         }
       }
+    },
+    {
+      "tier": "recommended",
+      "name": "The Originals Annemasse Sud Porte de Genève Hôtel",
+      "type": "hebergement",
+      "url": "http://www.portedegeneve.com/",
+      "cta_text": "Voir le site →",
+      "description": "Une ambiance de chalet savoyard que l’on retrouve dans les 47 chambres et le restaurant. L’authenticité et la convivialité donnent à cet hôtel un caractère réellement attachant",
+      "i18n": {
+        "fr": {
+          "description": "Une ambiance de chalet savoyard que l’on retrouve dans les 47 chambres et le restaurant. L’authenticité et la convivialité donnent à cet hôtel un caractère réellement attachant"
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "144289",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 2.7
     }
   ],
   "gallery_photos": [],

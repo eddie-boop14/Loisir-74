@@ -43,9 +43,69 @@
       "date": "2026-06-09",
       "by": "claude-datatourisme-flow261672",
       "note": "Cross-referenced with DataTourisme record 157317 (last_updated 2026-06-02) from Office de Tourisme du Lac d'Annecy."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
-  "partners": [],
+  "partners": [
+    {
+      "tier": "recommended",
+      "name": "L'Artisan",
+      "type": "restaurant",
+      "url": "https://restaurantlartisan.fr/",
+      "cta_text": "Voir le site →",
+      "description": "L'Artisan est un restaurant semi gastronomique situé tout proche du lac aux Marquisats à Annecy. Un comptoir pour manger directement face à la cuisine.",
+      "i18n": {
+        "fr": {
+          "description": "L'Artisan est un restaurant semi gastronomique situé tout proche du lac aux Marquisats à Annecy. Un comptoir pour manger directement face à la cuisine."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "7255278",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.3
+    },
+    {
+      "tier": "recommended",
+      "name": "Le Pélican",
+      "type": "hebergement",
+      "url": "https://www.hotel-lepelican.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Idéalement situé à l’entrée de la vielle ville d’Annecy, l’hôtel 4* Le Pélican est la promesse d’un séjour de rêve, dans un bâtiment entièrement rénové et classé au patrimoine historique avec une vue .",
+      "i18n": {
+        "fr": {
+          "description": "Idéalement situé à l’entrée de la vielle ville d’Annecy, l’hôtel 4* Le Pélican est la promesse d’un séjour de rêve, dans un bâtiment entièrement rénové et classé au patrimoine historique avec une vue ."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "5834364",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.4
+    },
+    {
+      "tier": "recommended",
+      "name": "Société des Régates à Voile d'Annecy",
+      "type": "commerce",
+      "url": "https://www.srva.info/",
+      "cta_text": "Voir le site →",
+      "description": "Située à 2 pas de la vieille ville sur le site des Marquisats, la SRV Annecy, affiliée à la Fédération Française de Voile, propose des cours encadrés par des moniteurs diplômés et de la location de ba.",
+      "i18n": {
+        "fr": {
+          "description": "Située à 2 pas de la vieille ville sur le site des Marquisats, la SRV Annecy, affiliée à la Fédération Française de Voile, propose des cours encadrés par des moniteurs diplômés et de la location de ba."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "476526",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.2
+    }
+  ],
   "gallery_photos": [],
   "i18n": {
     "fr": {
@@ -948,7 +1008,25 @@
     }
   },
   "lac": "Lac d'Annecy",
-  "featured_businesses": [],
+  "featured_businesses": [
+    {
+      "tier": "featured",
+      "name": "Chez Nous à la Plage",
+      "type": "restaurant",
+      "logo": "/chez-nous-a-la-plage-logo.jpg",
+      "description": "Restaurant les pieds dans l'eau sur la plage de Saint-Jorioz. Carte estivale, terrasse face au lac.",
+      "address": "Plage de Saint-Jorioz, 74410 Saint-Jorioz",
+      "phone": "+33 4 50 64 97 23",
+      "hours": "Ouvert mi-février au 1er novembre · Fermé le lundi",
+      "url": "https://www.cheznousalaplage.com",
+      "price_range": "12,90 € – 19,90 €",
+      "cta_text": "Voir le site →",
+      "proximity_km": 6.8,
+      "source": "featured_extension",
+      "source_slug": "plage-de-saint-jorioz",
+      "seeded_at": "2026-06-09"
+    }
+  ],
   "price_tiers": [],
   "official_site_url": null,
   "google_check": {
@@ -1011,6 +1089,25 @@
       "last_updated": "2026-06-02",
       "fields_used": [
         "attribution_only"
+      ]
+    },
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "476526",
+        "5834364",
+        "7255278"
+      ],
+      "last_updated": "2026-03-30",
+      "fields_used": [
+        "partners_proximity"
       ]
     }
   ]

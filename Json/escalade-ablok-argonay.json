@@ -50,6 +50,11 @@
     {
       "date": "2026-06-07",
       "note": "Enrichissement complet multi-langues FR/EN/DE/IT/ES/NL (body, activités, FAQ, infos pratiques, partenaires)."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -64,6 +69,60 @@
       "tier": "recommended",
       "type": "info",
       "url": "https://www.haute-savoie-tourisme.org/"
+    },
+    {
+      "tier": "recommended",
+      "name": "Bistrot Green",
+      "type": "restaurant",
+      "url": "http://bistrotgreen.com/",
+      "cta_text": "Voir le site →",
+      "description": "Situé sur la place d'Annecy le Vieux avec parking et jardin privatif ombragé, Bistrot Green vous propose du mardi au samedi soir une cuisine saine et colorée à dominante végétale et particulièrement a.",
+      "i18n": {
+        "fr": {
+          "description": "Situé sur la place d'Annecy le Vieux avec parking et jardin privatif ombragé, Bistrot Green vous propose du mardi au samedi soir une cuisine saine et colorée à dominante végétale et particulièrement a."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "7716814",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 2.9
+    },
+    {
+      "tier": "recommended",
+      "name": "Clos des Sens",
+      "type": "hebergement",
+      "url": "https://www.closdessens.com/",
+      "cta_text": "Voir le site →",
+      "description": "Surplombant la ville et le lac d'Annecy, hôtel confidentiel avec ses 11 chambres aux allures de cocon chaleureux. Toutes sont équipées de baignoire au pied du lit, cheminée et terrasse.",
+      "i18n": {
+        "fr": {
+          "description": "Surplombant la ville et le lac d'Annecy, hôtel confidentiel avec ses 11 chambres aux allures de cocon chaleureux. Toutes sont équipées de baignoire au pied du lit, cheminée et terrasse."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "116370",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 3.0
+    },
+    {
+      "tier": "recommended",
+      "name": "M. Morell Nicolas",
+      "type": "commerce",
+      "url": "http://sites.google.com/site/skippersdescimes/",
+      "cta_text": "Voir le site →",
+      "description": "Alpinisme, ski de randonnée, cascade de glace, escalade, dans les Alpes où à l'autre bout du monde.",
+      "i18n": {
+        "fr": {
+          "description": "Alpinisme, ski de randonnée, cascade de glace, escalade, dans les Alpes où à l'autre bout du monde."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "476130",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.2
     }
   ],
   "gallery_photos": [],
@@ -1048,7 +1107,26 @@
       ]
     }
   },
-  "featured_businesses": [],
+  "featured_businesses": [
+    {
+      "tier": "featured",
+      "name": "Chalet du Tornet",
+      "type": "restaurant",
+      "logo": "/chalet-du-tornet-logo.png",
+      "description": "Restaurant chalet au bord du lac, terrasse face à l'eau, bar du matin au dernier verre. Cuisine savoyarde et traditionnelle, charcuterie Maison Baud, glaces artisanales. Au cœur du Domaine du Tornet.",
+      "address": "161 Route de Paris, 74330 La Balme-de-Sillingy",
+      "phone": "04 38 80 22 51",
+      "phone_tel": "+33438802251",
+      "email": "chaletdutornet74@gmail.com",
+      "hours": "Ouvert de février à début novembre · Bar 9h-17h (jeudi-samedi jusqu'à 23h) · Cuisine midi tous les jours, soirs jeudi-samedi",
+      "url": "https://chaletdutornet.com",
+      "cta_text": "Voir le site →",
+      "proximity_km": 9.3,
+      "source": "featured_extension",
+      "source_slug": "domaine-du-tornet",
+      "seeded_at": "2026-06-09"
+    }
+  ],
   "google_check": {
     "checked": "2026-06-04",
     "query": "Ablok Annecy Argonay Haute-Savoie France",
@@ -1071,5 +1149,26 @@
     "google_lat": 45.9419987,
     "google_lng": 6.132869899999999,
     "gps_drift_m": 1462
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "116370",
+        "476130",
+        "7716814"
+      ],
+      "last_updated": "2026-05-11",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

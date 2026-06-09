@@ -55,6 +55,11 @@
       "date": "2026-06-09",
       "by": "claude-datatourisme-flow261672",
       "note": "Cross-referenced with DataTourisme record 600076 (last_updated 2026-01-15) from Office de Tourisme du Lac d'Annecy."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -69,6 +74,60 @@
       "tier": "recommended",
       "type": "info",
       "url": "https://www.haute-savoie-tourisme.org/"
+    },
+    {
+      "tier": "recommended",
+      "name": "La Cour 24",
+      "type": "restaurant",
+      "url": "https://www.lacour24.com/",
+      "cta_text": "Voir le site →",
+      "description": "Découvrez les meilleures spécialités savoyardes de La Cour 24 dans un cadre authentique et chaleureux.",
+      "i18n": {
+        "fr": {
+          "description": "Découvrez les meilleures spécialités savoyardes de La Cour 24 dans un cadre authentique et chaleureux."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "7255345",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.2
+    },
+    {
+      "tier": "recommended",
+      "name": "Le Pélican",
+      "type": "hebergement",
+      "url": "https://www.hotel-lepelican.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Idéalement situé à l’entrée de la vielle ville d’Annecy, l’hôtel 4* Le Pélican est la promesse d’un séjour de rêve, dans un bâtiment entièrement rénové et classé au patrimoine historique avec une vue .",
+      "i18n": {
+        "fr": {
+          "description": "Idéalement situé à l’entrée de la vielle ville d’Annecy, l’hôtel 4* Le Pélican est la promesse d’un séjour de rêve, dans un bâtiment entièrement rénové et classé au patrimoine historique avec une vue ."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "5834364",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.5
+    },
+    {
+      "tier": "recommended",
+      "name": "Mobilboard - Segway, vélo et trottinettes électriques",
+      "type": "commerce",
+      "url": "https://www.mobilboard.com/annecy",
+      "cta_text": "Voir le site →",
+      "description": "Mobilboard Annecy est un prestataire de location de vélo et de vélo électrique.",
+      "i18n": {
+        "fr": {
+          "description": "Mobilboard Annecy est un prestataire de location de vélo et de vélo électrique."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "482485",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.2
     }
   ],
   "gallery_photos": [],
@@ -1052,7 +1111,25 @@
       ]
     }
   },
-  "featured_businesses": [],
+  "featured_businesses": [
+    {
+      "tier": "featured",
+      "name": "Chez Nous à la Plage",
+      "type": "restaurant",
+      "logo": "/chez-nous-a-la-plage-logo.jpg",
+      "description": "Restaurant les pieds dans l'eau sur la plage de Saint-Jorioz. Carte estivale, terrasse face au lac.",
+      "address": "Plage de Saint-Jorioz, 74410 Saint-Jorioz",
+      "phone": "+33 4 50 64 97 23",
+      "hours": "Ouvert mi-février au 1er novembre · Fermé le lundi",
+      "url": "https://www.cheznousalaplage.com",
+      "price_range": "12,90 € – 19,90 €",
+      "cta_text": "Voir le site →",
+      "proximity_km": 7.6,
+      "source": "featured_extension",
+      "source_slug": "plage-de-saint-jorioz",
+      "seeded_at": "2026-06-09"
+    }
+  ],
   "data_sources": [
     {
       "platform": "DataTourisme",
@@ -1067,6 +1144,25 @@
       "last_updated": "2026-01-15",
       "fields_used": [
         "attribution_only"
+      ]
+    },
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "482485",
+        "5834364",
+        "7255345"
+      ],
+      "last_updated": "2026-05-16",
+      "fields_used": [
+        "partners_proximity"
       ]
     }
   ]

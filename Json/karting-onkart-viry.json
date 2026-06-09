@@ -51,6 +51,11 @@
     {
       "date": "2026-06-07",
       "note": "Enrichissement complet multi-langues FR/EN/DE/IT/ES/NL (body, activités, FAQ, infos pratiques, partenaires)."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 2 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -65,6 +70,52 @@
       "tier": "recommended",
       "type": "info",
       "url": "https://www.haute-savoie-tourisme.org/"
+    },
+    {
+      "tier": "recommended",
+      "name": "La Fromagerie",
+      "type": "restaurant",
+      "url": "http://www.rebloch.com/",
+      "cta_text": "Voir le site →",
+      "description": "Une ancienne fromagerie qui a été transformée en deux parties: une partie boutique pour la découverte et vente de fromage, charcuterie, et une partie restaurant pour déguster les mets régionaux.\r\nles .",
+      "i18n": {
+        "fr": {
+          "description": "Une ancienne fromagerie qui a été transformée en deux parties: une partie boutique pour la découverte et vente de fromage, charcuterie, et une partie restaurant pour déguster les mets régionaux.\r\nles ."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "75786",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 3.7
+    },
+    {
+      "tier": "invite",
+      "invite_type": "hebergement",
+      "i18n": {
+        "fr": {
+          "title": "Un hébergement proche ?",
+          "desc": "Gîte, chambre d'hôtes, camping, location à Viry."
+        }
+      }
+    },
+    {
+      "tier": "recommended",
+      "name": "Pony park",
+      "type": "commerce",
+      "url": "http://www.les-ecuries-de-la-salamandre.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Pony Park vous ouvre ses portes pour des moments de découverte et de magie en famille autour des poneys de l'écurie.",
+      "i18n": {
+        "fr": {
+          "description": "Pony Park vous ouvre ses portes pour des moments de découverte et de magie en famille autour des poneys de l'écurie."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "4699884",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 3.2
     }
   ],
   "gallery_photos": [],
@@ -1072,5 +1123,25 @@
     "google_lat": 46.129511199999996,
     "google_lng": 6.029452,
     "gps_drift_m": 0
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme des Monts du Genevois",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "4699884",
+        "75786"
+      ],
+      "last_updated": "2024-10-29",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

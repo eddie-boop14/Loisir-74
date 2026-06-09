@@ -52,6 +52,11 @@
     {
       "date": "2026-06-07",
       "note": "Enrichissement complet multi-langues FR/EN/DE/IT/ES/NL (body, activités, FAQ, infos pratiques, partenaires)."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -66,6 +71,60 @@
       "tier": "recommended",
       "type": "info",
       "url": "https://www.haute-savoie-tourisme.org/"
+    },
+    {
+      "tier": "recommended",
+      "name": "Léon",
+      "type": "restaurant",
+      "url": "https://brasserie.restaurantleon.fr/fr/epagny",
+      "cta_text": "Voir le site →",
+      "description": "Bienvenue chez Léon ! Nous vous accueillions dans notre brasserie conviviale et chaleureuse autour de nos spécialités moules-frites, fish & chips, nos burgers, nos viandes et nos plats végétariens.",
+      "i18n": {
+        "fr": {
+          "description": "Bienvenue chez Léon ! Nous vous accueillions dans notre brasserie conviviale et chaleureuse autour de nos spécialités moules-frites, fish & chips, nos burgers, nos viandes et nos plats végétariens."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "7255152",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 1.0
+    },
+    {
+      "tier": "recommended",
+      "name": "The Originals City Hôtel Annecy Aéroport",
+      "type": "hebergement",
+      "url": "https://www.hotel-annecy-aeroport.com/",
+      "cta_text": "Voir le site →",
+      "description": "Petit air chalet pour cet hôtel 2 étoiles de Metz-Tessy, aux portes du massif des Aravis, à 7 km d’Annecy et de son lac.",
+      "i18n": {
+        "fr": {
+          "description": "Petit air chalet pour cet hôtel 2 étoiles de Metz-Tessy, aux portes du massif des Aravis, à 7 km d’Annecy et de son lac."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "108701",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 2.1
+    },
+    {
+      "tier": "recommended",
+      "name": "Maison Synèse",
+      "type": "commerce",
+      "url": "https://www.maison-synese.com/",
+      "cta_text": "Voir le site →",
+      "description": "Maison dédiée à la longévité et à la prévention santé.\r\nUn accompagnement individuel et global est assuré par nos professionnels de la santé et de la forme complété pour vous aider à retrouver ou cons.",
+      "i18n": {
+        "fr": {
+          "description": "Maison dédiée à la longévité et à la prévention santé.\r\nUn accompagnement individuel et global est assuré par nos professionnels de la santé et de la forme complété pour vous aider à retrouver ou cons."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "6812538",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.9
     }
   ],
   "gallery_photos": [],
@@ -1050,7 +1109,26 @@
       ]
     }
   },
-  "featured_businesses": [],
+  "featured_businesses": [
+    {
+      "tier": "featured",
+      "name": "Chalet du Tornet",
+      "type": "restaurant",
+      "logo": "/chalet-du-tornet-logo.png",
+      "description": "Restaurant chalet au bord du lac, terrasse face à l'eau, bar du matin au dernier verre. Cuisine savoyarde et traditionnelle, charcuterie Maison Baud, glaces artisanales. Au cœur du Domaine du Tornet.",
+      "address": "161 Route de Paris, 74330 La Balme-de-Sillingy",
+      "phone": "04 38 80 22 51",
+      "phone_tel": "+33438802251",
+      "email": "chaletdutornet74@gmail.com",
+      "hours": "Ouvert de février à début novembre · Bar 9h-17h (jeudi-samedi jusqu'à 23h) · Cuisine midi tous les jours, soirs jeudi-samedi",
+      "url": "https://chaletdutornet.com",
+      "cta_text": "Voir le site →",
+      "proximity_km": 6.3,
+      "source": "featured_extension",
+      "source_slug": "domaine-du-tornet",
+      "seeded_at": "2026-06-09"
+    }
+  ],
   "google_check": {
     "checked": "2026-06-04",
     "query": "Art Of Pinball Poisy Haute-Savoie France",
@@ -1073,5 +1151,26 @@
     "google_lat": 45.9348181,
     "google_lng": 6.0680716,
     "gps_drift_m": 932
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "108701",
+        "6812538",
+        "7255152"
+      ],
+      "last_updated": "2026-03-19",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

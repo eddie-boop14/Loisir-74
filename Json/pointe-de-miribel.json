@@ -20,6 +20,42 @@
       "type": "restaurant",
       "description": "Ferme-auberge d'alpage située à la croisée des sentiers de randonnée. Cuisine française traditionnelle avec produits locaux, terrasse panoramique. Ouvert été et certains week-ends d'automne.",
       "url": null
+    },
+    {
+      "tier": "recommended",
+      "name": "Hôtel Le Christania",
+      "type": "hebergement",
+      "url": "http://www.hotel-christania.com/",
+      "cta_text": "Voir le site →",
+      "description": "Niché au coeur de la station d’Hirmentaz vous trouverez tout le confort d’un établissement 3 étoiles dans un cadre chaleureux où règne une ambiance familiale.",
+      "i18n": {
+        "fr": {
+          "description": "Niché au coeur de la station d’Hirmentaz vous trouverez tout le confort d’un établissement 3 étoiles dans un cadre chaleureux où règne une ambiance familiale."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "128186",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 5.1
+    },
+    {
+      "tier": "recommended",
+      "name": "Vincent Glauzy - Guide de haute montagne",
+      "type": "commerce",
+      "url": "https://vincent-glauzy.com/",
+      "cta_text": "Voir le site →",
+      "description": "Ski de randonnée, descente de la Vallée Blanche, Escalade, Alpinisme.",
+      "i18n": {
+        "fr": {
+          "description": "Ski de randonnée, descente de la Vallée Blanche, Escalade, Alpinisme."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "5415257",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 3.6
     }
   ],
   "featured_businesses": [],
@@ -31,7 +67,13 @@
   "verify_flags": [
     "CREATED 2026-06-04 from lieux.json orphan: needed per-fiche JSON for hub/sitemap rendering."
   ],
-  "research_log": [],
+  "research_log": [
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 2 partner cards from DataTourisme proximity (within 10.0 km)."
+    }
+  ],
   "sparse_data": false,
   "date_published_human": "05 juin 2026",
   "date_modified_human": "05 juin 2026",
@@ -682,5 +724,25 @@
     "gps_drift_m": 1449,
     "needs_price_review": false,
     "recomputed": "2026-06-05 (registry demoted to confirmer-only)"
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme des Alpes du Léman",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "128186",
+        "5415257"
+      ],
+      "last_updated": "2025-10-16",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

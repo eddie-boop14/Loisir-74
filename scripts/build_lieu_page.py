@@ -56,6 +56,10 @@ def extract_static_blocks():
 
 
 CSS, JS = extract_static_blocks()
+CSS += (
+    ".partner.static .partner-logo{display:block;max-height:64px;max-width:140px;"
+    "margin-bottom:.55rem;object-fit:contain;border-radius:8px;background:#fff;padding:.3rem}"
+)
 
 
 # Map JSON fact keys → French labels for the facts grid
@@ -453,6 +457,7 @@ def _filled_partner_card(p):
         phone_tel = p.get("phone_tel") or (re.sub(r"[^\d+]", "", phone) if phone else "")
         email = p.get("email", "")
         hours = p.get("hours", "")
+        logo = p.get("logo", "")
         extras = []
         if address:
             extras.append(f'<div class="partner-row"><span class="label">Adresse</span><span>{esc(address)}</span></div>')
@@ -468,9 +473,14 @@ def _filled_partner_card(p):
             f'<a class="cta" href="{attr(url)}" target="_blank" rel="noopener">{esc(cta)} {SVG_EXT}</a>'
             if url and url != "#" else ""
         )
+        logo_html = (
+            f'<img class="partner-logo" src="{attr(logo)}" alt="Logo {attr(name)}" loading="lazy">'
+            if logo else ""
+        )
         return (
             f'<article class="partner static tier-featured">'
             f'<span class="badge">{badge_icon} {esc(badge_text)}</span>'
+            f'{logo_html}'
             f'<h4>{esc(name)}</h4>'
             f'<p class="desc">{esc(desc)}</p>'
             f'{extras_html}'

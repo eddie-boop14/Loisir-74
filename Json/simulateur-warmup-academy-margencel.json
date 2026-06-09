@@ -46,6 +46,11 @@
     {
       "date": "2026-06-07",
       "note": "Enrichissement complet multi-langues FR/EN/DE/IT/ES/NL (body, activités, FAQ, infos pratiques, partenaires)."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -60,6 +65,60 @@
       "tier": "recommended",
       "type": "info",
       "url": "https://www.haute-savoie-tourisme.org/"
+    },
+    {
+      "tier": "recommended",
+      "name": "La ferme des Alpes, le Denieu",
+      "type": "restaurant",
+      "url": "http://www.fermedesalpes.com/",
+      "cta_text": "Voir le site →",
+      "description": "L'équipe du restaurant vous propose toute la cuisine des Alpes dans un cadre typiquement savoyard.",
+      "i18n": {
+        "fr": {
+          "description": "L'équipe du restaurant vous propose toute la cuisine des Alpes dans un cadre typiquement savoyard."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "90504",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.3
+    },
+    {
+      "tier": "recommended",
+      "name": "L'Auberge d'Anthy",
+      "type": "hebergement",
+      "url": "https://reservation.elloha.com/?IdPublication=af2ef8d5-a467-4e81-9b0a-4d0986727e1e&culture=fr-FR&idoi=f5d7fac4-51ee-416b-bebc-0d889f2f5aa0&searchFirstAvailableDates=1",
+      "cta_text": "Voir le site →",
+      "description": "Offrez-vous une escapade réussie entre Léman et montagnes dans notre établissement qui propose 12 chambres alliant cadre authentique et confort.",
+      "i18n": {
+        "fr": {
+          "description": "Offrez-vous une escapade réussie entre Léman et montagnes dans notre établissement qui propose 12 chambres alliant cadre authentique et confort."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "109659",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 2.3
+    },
+    {
+      "tier": "recommended",
+      "name": "Catamaran",
+      "type": "commerce",
+      "url": "http://www.voileasciez.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Le Léman est un vaste terrain de jeu et de découverte.",
+      "i18n": {
+        "fr": {
+          "description": "Le Léman est un vaste terrain de jeu et de découverte."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "620613",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 1.2
     }
   ],
   "gallery_photos": [],
@@ -1074,5 +1133,26 @@
     "google_lat": 46.344402099999996,
     "google_lng": 6.421187199999999,
     "gps_drift_m": 1163
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme intercommunal Destination Léman",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "109659",
+        "620613",
+        "90504"
+      ],
+      "last_updated": "2026-05-13",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

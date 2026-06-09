@@ -12,11 +12,31 @@
   "price_from": 5.0,
   "price_currency": "EUR",
   "price_tiers": [
-    {"label": "Adulte", "price": "6.50", "unit": "EUR"},
-    {"label": "Enfant 5-16 ans", "price": "5.00", "unit": "EUR"},
-    {"label": "Carte 6 entrées", "price": "30.00", "unit": "EUR"},
-    {"label": "Location patins", "price": "4-5", "unit": "EUR"},
-    {"label": "Location casque", "price": "2.00", "unit": "EUR"}
+    {
+      "label": "Adulte",
+      "price": "6.50",
+      "unit": "EUR"
+    },
+    {
+      "label": "Enfant 5-16 ans",
+      "price": "5.00",
+      "unit": "EUR"
+    },
+    {
+      "label": "Carte 6 entrées",
+      "price": "30.00",
+      "unit": "EUR"
+    },
+    {
+      "label": "Location patins",
+      "price": "4-5",
+      "unit": "EUR"
+    },
+    {
+      "label": "Location casque",
+      "price": "2.00",
+      "unit": "EUR"
+    }
   ],
   "sources": [
     "https://www.laclusaz.com/en/details/skating-rink/",
@@ -32,15 +52,91 @@
     "type": "SportsActivityLocation",
     "is_free": false,
     "public_access": true,
-    "amenities": ["indoor", "skate_rental", "family_friendly", "parking"]
+    "amenities": [
+      "indoor",
+      "skate_rental",
+      "family_friendly",
+      "parking"
+    ]
   },
   "sparse_data": false,
   "research_log": [
-    {"date": "2026-06-01", "note": "Créé à partir de recherche sourcée officielle."},
-    {"date": "2026-06-06", "note": "Enrichissement multi-langues : adresse précise, tarifs et horaires saison 2025-2026 vérifiés."}
+    {
+      "date": "2026-06-01",
+      "note": "Créé à partir de recherche sourcée officielle."
+    },
+    {
+      "date": "2026-06-06",
+      "note": "Enrichissement multi-langues : adresse précise, tarifs et horaires saison 2025-2026 vérifiés."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
+    }
   ],
   "partners": [
-    {"tier": "recommended", "name": "Office de Tourisme de La Clusaz", "type": "info", "description": "Office de tourisme officiel de La Clusaz : pass loisirs, événements, location et hébergement.", "url": "https://www.laclusaz.com"}
+    {
+      "tier": "recommended",
+      "name": "Office de Tourisme de La Clusaz",
+      "type": "info",
+      "description": "Office de tourisme officiel de La Clusaz : pass loisirs, événements, location et hébergement.",
+      "url": "https://www.laclusaz.com"
+    },
+    {
+      "tier": "recommended",
+      "name": "Chez Papaz",
+      "type": "restaurant",
+      "url": "https://www.facebook.com/chezpapaz/",
+      "cta_text": "Voir le site →",
+      "description": "Le restaurant est situé face au Champ Giguet, départ des cours des ski et jardin des Neiges.",
+      "i18n": {
+        "fr": {
+          "description": "Le restaurant est situé face au Champ Giguet, départ des cours des ski et jardin des Neiges."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "81948",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.1
+    },
+    {
+      "tier": "recommended",
+      "name": "Au Cœur du Village Hôtel - Restaurants - Spa",
+      "type": "hebergement",
+      "url": "http://www.hotel-aucoeurduvillage.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Combinaison parfaite de prestations d’exception et de services haut de gamme, l’hôtel Au Cœur du Village Relais et Châteaux*****, en plein centre du village vous surprendra par son décor contemporain .",
+      "i18n": {
+        "fr": {
+          "description": "Combinaison parfaite de prestations d’exception et de services haut de gamme, l’hôtel Au Cœur du Village Relais et Châteaux*****, en plein centre du village vous surprendra par son décor contemporain ."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "175213",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.2
+    },
+    {
+      "tier": "recommended",
+      "name": "Evolution 2 events La Clusaz",
+      "type": "commerce",
+      "url": "https://evolution2.com/la-clusaz",
+      "cta_text": "Voir le site →",
+      "description": "La Clusaz est la destination idéale pour vos projets d'entreprise en séminaire !",
+      "i18n": {
+        "fr": {
+          "description": "La Clusaz est la destination idéale pour vos projets d'entreprise en séminaire !"
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "4865530",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.1
+    }
   ],
   "gallery_photos": [],
   "i18n": {
@@ -66,27 +162,95 @@
         "what_is": "<p>La <strong>Patinoire de La Clusaz</strong> est un équipement <strong>couvert de 1 000 m²</strong> implanté place du Pré de Foire, au cœur du village. Gérée par la commune, elle accueille le public chaque hiver pour des <strong>séances de patinage libre</strong>, des <strong>nocturnes</strong> et même des soirées <strong>Eisstock</strong> (le curling autrichien) le lundi soir.</p><p>L'équipement propose la <strong>location de patins</strong> (4 à 5 €) et de <strong>casques</strong> (2 €), un espace musique et une ambiance familiale. La piste est <strong>couverte mais ouverte sur les côtés</strong>, ce qui préserve la qualité de la glace tout en gardant les sensations alpines. Idéal pour terminer une journée ski en douceur ou pour une activité <strong>famille</strong> hors piste.</p><p>La <strong>saison 2025-2026</strong> court du <strong>20 décembre 2025 au 30 avril 2026</strong>. <strong>Tarifs 2026</strong> : <strong>6,50 € adulte, 5 € enfant</strong> (5-16 ans), <strong>carte 6 entrées à 30 €</strong> (ou 55 € avec location). <strong>Horaires</strong> en pleine saison : vendredi et dimanche 10h-12h / 14h-19h ; mercredi et samedi 14h-19h ; lundi et jeudi 20h-22h et 10h-12h / 14h-19h ; mardi 10h-12h / 14h-18h. En intersaison (du 31 mars au 30 avril) : mardi-samedi et jours fériés 14h-18h ; dimanche 10h-12h / 14h-18h. <strong>Tournois Eisstock le lundi 20h-22h</strong> — réservation conseillée.</p>"
       },
       "activities": [
-        {"title": "Séances publiques de patinage", "description": "Sessions libres sur la piste 1 000 m², dans une ambiance musicale. Plusieurs créneaux par jour selon la période.", "tag": "patinage"},
-        {"title": "Nocturnes du lundi et jeudi", "description": "Séances tardives 20h-22h lundi et jeudi : musique, lumières et ambiance après-ski.", "tag": "nocturne"},
-        {"title": "Eisstock (curling autrichien)", "description": "Tournois Eisstock le lundi soir 20h-22h, sport tyrolien qui se pratique avec des palets. Initiation possible — réservation conseillée.", "tag": "Eisstock"},
-        {"title": "Location patins et casques", "description": "Patins 4-5 € (toutes tailles) et casques 2 €. Pratique sans matériel personnel.", "tag": "location"},
-        {"title": "Carte 6 entrées", "description": "Bon plan habitués : 6 entrées pour 30 € (55 € avec 6 locations de patins).", "tag": "30 €"},
-        {"title": "Espace musique", "description": "Programmation musicale en continu pendant les séances ; ambiance qui change selon les créneaux.", "tag": "musique"},
-        {"title": "Sortie famille après-ski", "description": "Activité idéale pour finir une journée ski ou changer d'air — la piste accueille tous les niveaux.", "tag": "famille"}
+        {
+          "title": "Séances publiques de patinage",
+          "description": "Sessions libres sur la piste 1 000 m², dans une ambiance musicale. Plusieurs créneaux par jour selon la période.",
+          "tag": "patinage"
+        },
+        {
+          "title": "Nocturnes du lundi et jeudi",
+          "description": "Séances tardives 20h-22h lundi et jeudi : musique, lumières et ambiance après-ski.",
+          "tag": "nocturne"
+        },
+        {
+          "title": "Eisstock (curling autrichien)",
+          "description": "Tournois Eisstock le lundi soir 20h-22h, sport tyrolien qui se pratique avec des palets. Initiation possible — réservation conseillée.",
+          "tag": "Eisstock"
+        },
+        {
+          "title": "Location patins et casques",
+          "description": "Patins 4-5 € (toutes tailles) et casques 2 €. Pratique sans matériel personnel.",
+          "tag": "location"
+        },
+        {
+          "title": "Carte 6 entrées",
+          "description": "Bon plan habitués : 6 entrées pour 30 € (55 € avec 6 locations de patins).",
+          "tag": "30 €"
+        },
+        {
+          "title": "Espace musique",
+          "description": "Programmation musicale en continu pendant les séances ; ambiance qui change selon les créneaux.",
+          "tag": "musique"
+        },
+        {
+          "title": "Sortie famille après-ski",
+          "description": "Activité idéale pour finir une journée ski ou changer d'air — la piste accueille tous les niveaux.",
+          "tag": "famille"
+        }
       ],
       "practical_info": [
-        {"k": "Adresse", "v": "94 place du Pré de Foire, 74220 La Clusaz"},
-        {"k": "Coordonnées", "v": "45.9039, 6.4244"},
-        {"k": "Site officiel", "v": "https://www.laclusaz.org/fr/associations-et-loisirs/patinoire/patinoire.htm"},
-        {"k": "Saison", "v": "20 décembre 2025 → 30 avril 2026", "verified": "2026-06-06"},
-        {"k": "Horaires pleine saison", "v": "Ven & dim 10h-12h / 14h-19h · mer & sam 14h-19h · lun & jeu 20h-22h + 10h-12h / 14h-19h · mar 10h-12h / 14h-18h", "verified": "2026-06-06"},
-        {"k": "Horaires intersaison", "v": "31 mars → 30 avril : mar-sam et jours fériés 14h-18h ; dim 10h-12h / 14h-18h", "verified": "2026-06-06"},
-        {"k": "Tarifs", "v": "Adulte 6,50 € · enfant 5-16 ans 5 € · carte 6 entrées 30 € (55 € avec location) · location patins 4-5 € · casque 2 €", "verified": "2026-06-06"},
-        {"k": "Réservation", "v": "Non requise pour les séances publiques ; conseillée pour les tournois Eisstock"},
-        {"k": "Durée", "v": "1 à 2 h en moyenne"},
-        {"k": "Parking", "v": "Parking du Pré de Foire à proximité immédiate"},
-        {"k": "Accessibilité", "v": "Bâtiment accessible (accueil, vestiaires) ; patinage non adapté à la mobilité réduite"},
-        {"k": "Animaux", "v": "Non admis à l'intérieur"}
+        {
+          "k": "Adresse",
+          "v": "94 place du Pré de Foire, 74220 La Clusaz"
+        },
+        {
+          "k": "Coordonnées",
+          "v": "45.9039, 6.4244"
+        },
+        {
+          "k": "Site officiel",
+          "v": "https://www.laclusaz.org/fr/associations-et-loisirs/patinoire/patinoire.htm"
+        },
+        {
+          "k": "Saison",
+          "v": "20 décembre 2025 → 30 avril 2026",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Horaires pleine saison",
+          "v": "Ven & dim 10h-12h / 14h-19h · mer & sam 14h-19h · lun & jeu 20h-22h + 10h-12h / 14h-19h · mar 10h-12h / 14h-18h",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Horaires intersaison",
+          "v": "31 mars → 30 avril : mar-sam et jours fériés 14h-18h ; dim 10h-12h / 14h-18h",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Tarifs",
+          "v": "Adulte 6,50 € · enfant 5-16 ans 5 € · carte 6 entrées 30 € (55 € avec location) · location patins 4-5 € · casque 2 €",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Réservation",
+          "v": "Non requise pour les séances publiques ; conseillée pour les tournois Eisstock"
+        },
+        {
+          "k": "Durée",
+          "v": "1 à 2 h en moyenne"
+        },
+        {
+          "k": "Parking",
+          "v": "Parking du Pré de Foire à proximité immédiate"
+        },
+        {
+          "k": "Accessibilité",
+          "v": "Bâtiment accessible (accueil, vestiaires) ; patinage non adapté à la mobilité réduite"
+        },
+        {
+          "k": "Animaux",
+          "v": "Non admis à l'intérieur"
+        }
       ],
       "how_to_get_there": {
         "car": "Depuis Annecy : D909 / D909a via Thônes et Saint-Jean-de-Sixt, 32 km, env. 45 min. Parkings du village (Pré de Foire) à proximité immédiate.",
@@ -96,15 +260,41 @@
       "when_to_visit": "De fin décembre à fin avril. Idéale en fin de journée ou par mauvais temps. Soirées Eisstock le lundi pour découvrir un sport tyrolien.",
       "events": "Tournois Eisstock le lundi 20h-22h. Animations spéciales pendant les vacances scolaires (musique, soirées).",
       "faq": [
-        {"q": "Faut-il réserver ?", "a": "Non, l'accès aux séances publiques se fait sans réservation. Pour participer aux tournois Eisstock du lundi, la réservation est conseillée."},
-        {"q": "Peut-on louer des patins ?", "a": "Oui, location 4-5 € (toutes tailles) et casques 2 €."},
-        {"q": "Qu'est-ce qu'Eisstock ?", "a": "Eisstock est un sport sur glace originaire d'Autriche, proche du curling. Pratiqué tous les lundis 20h-22h sur la piste, initiation possible."},
-        {"q": "Quels sont les tarifs ?", "a": "Adulte 6,50 €, enfant (5-16 ans) 5 €. Carte 6 entrées à 30 € ou 55 € avec location. Location patins 4-5 €, casque 2 €."},
-        {"q": "Quels sont les horaires ?", "a": "En pleine saison : ven & dim 10h-12h et 14h-19h, mer & sam 14h-19h, lun & jeu 20h-22h. Détails sur le site officiel."},
-        {"q": "Où se garer ?", "a": "Plusieurs parkings du village à proximité immédiate de la patinoire (place du Pré de Foire)."},
-        {"q": "La patinoire est-elle ouverte tout l'hiver ?", "a": "Oui, du 20 décembre 2025 au 30 avril 2026, soit pendant toute la saison ski et l'intersaison."}
+        {
+          "q": "Faut-il réserver ?",
+          "a": "Non, l'accès aux séances publiques se fait sans réservation. Pour participer aux tournois Eisstock du lundi, la réservation est conseillée."
+        },
+        {
+          "q": "Peut-on louer des patins ?",
+          "a": "Oui, location 4-5 € (toutes tailles) et casques 2 €."
+        },
+        {
+          "q": "Qu'est-ce qu'Eisstock ?",
+          "a": "Eisstock est un sport sur glace originaire d'Autriche, proche du curling. Pratiqué tous les lundis 20h-22h sur la piste, initiation possible."
+        },
+        {
+          "q": "Quels sont les tarifs ?",
+          "a": "Adulte 6,50 €, enfant (5-16 ans) 5 €. Carte 6 entrées à 30 € ou 55 € avec location. Location patins 4-5 €, casque 2 €."
+        },
+        {
+          "q": "Quels sont les horaires ?",
+          "a": "En pleine saison : ven & dim 10h-12h et 14h-19h, mer & sam 14h-19h, lun & jeu 20h-22h. Détails sur le site officiel."
+        },
+        {
+          "q": "Où se garer ?",
+          "a": "Plusieurs parkings du village à proximité immédiate de la patinoire (place du Pré de Foire)."
+        },
+        {
+          "q": "La patinoire est-elle ouverte tout l'hiver ?",
+          "a": "Oui, du 20 décembre 2025 au 30 avril 2026, soit pendant toute la saison ski et l'intersaison."
+        }
       ],
-      "schema_amenities": ["indoor", "skate_rental", "family_friendly", "parking"]
+      "schema_amenities": [
+        "indoor",
+        "skate_rental",
+        "family_friendly",
+        "parking"
+      ]
     },
     "en": {
       "name": "Patinoire de La Clusaz",
@@ -128,27 +318,95 @@
         "what_is": "<p>The <strong>La Clusaz ice rink</strong> is a <strong>covered 1,000 m²</strong> facility on the Place du Pré de Foire, in the heart of the village. Run by the town hall, it welcomes the public every winter for <strong>public skating</strong>, <strong>night sessions</strong> and Monday-night <strong>Eisstock</strong> (Austrian-style curling) tournaments.</p><p>The venue offers <strong>skate rental</strong> (€4-5) and <strong>helmet rental</strong> (€2), background music and a family vibe. The rink is <strong>covered but open on the sides</strong>, preserving ice quality while keeping the alpine atmosphere. Ideal to round off a ski day or for a <strong>family</strong> outing off the slopes.</p><p>The <strong>2025-2026 season</strong> runs from <strong>20 December 2025 to 30 April 2026</strong>. <strong>2026 prices</strong>: <strong>€6.50 adult, €5 child</strong> (5-16), <strong>6-entry card €30</strong> (€55 with rentals). Peak-season <strong>hours</strong>: Fri & Sun 10-12 / 2-7 pm; Wed & Sat 2-7 pm; Mon & Thu 8-10 pm and 10-12 / 2-7 pm; Tue 10-12 / 2-6 pm. Shoulder season (31 Mar to 30 Apr): Tue-Sat & public holidays 2-6 pm; Sun 10-12 / 2-6 pm. <strong>Monday Eisstock tournaments 8-10 pm</strong> — booking recommended.</p>"
       },
       "activities": [
-        {"title": "Public skating sessions", "description": "Free skating on the 1,000 m² rink with background music. Several slots per day depending on the period.", "tag": "skating"},
-        {"title": "Monday & Thursday night sessions", "description": "Late sessions 8-10 pm Mondays and Thursdays: music, lights and après-ski vibe.", "tag": "night"},
-        {"title": "Eisstock (Austrian curling)", "description": "Eisstock tournaments Monday evenings 8-10 pm — a Tyrolean sport with weighted stones. Beginners welcome, booking recommended.", "tag": "Eisstock"},
-        {"title": "Skate and helmet rental", "description": "Skates €4-5 (all sizes), helmets €2. Convenient without your own gear.", "tag": "rental"},
-        {"title": "6-entry card", "description": "Regulars deal: 6 entries for €30 (€55 with 6 skate rentals).", "tag": "€30"},
-        {"title": "Music programme", "description": "Continuous music during sessions; varying styles depending on the slot.", "tag": "music"},
-        {"title": "Family après-ski", "description": "Perfect outing after a ski day or for a change of pace — all levels welcome.", "tag": "family"}
+        {
+          "title": "Public skating sessions",
+          "description": "Free skating on the 1,000 m² rink with background music. Several slots per day depending on the period.",
+          "tag": "skating"
+        },
+        {
+          "title": "Monday & Thursday night sessions",
+          "description": "Late sessions 8-10 pm Mondays and Thursdays: music, lights and après-ski vibe.",
+          "tag": "night"
+        },
+        {
+          "title": "Eisstock (Austrian curling)",
+          "description": "Eisstock tournaments Monday evenings 8-10 pm — a Tyrolean sport with weighted stones. Beginners welcome, booking recommended.",
+          "tag": "Eisstock"
+        },
+        {
+          "title": "Skate and helmet rental",
+          "description": "Skates €4-5 (all sizes), helmets €2. Convenient without your own gear.",
+          "tag": "rental"
+        },
+        {
+          "title": "6-entry card",
+          "description": "Regulars deal: 6 entries for €30 (€55 with 6 skate rentals).",
+          "tag": "€30"
+        },
+        {
+          "title": "Music programme",
+          "description": "Continuous music during sessions; varying styles depending on the slot.",
+          "tag": "music"
+        },
+        {
+          "title": "Family après-ski",
+          "description": "Perfect outing after a ski day or for a change of pace — all levels welcome.",
+          "tag": "family"
+        }
       ],
       "practical_info": [
-        {"k": "Address", "v": "94 place du Pré de Foire, 74220 La Clusaz"},
-        {"k": "Coordinates", "v": "45.9039, 6.4244"},
-        {"k": "Official site", "v": "https://www.laclusaz.org/fr/associations-et-loisirs/patinoire/patinoire.htm"},
-        {"k": "Season", "v": "20 December 2025 → 30 April 2026", "verified": "2026-06-06"},
-        {"k": "Peak-season hours", "v": "Fri & Sun 10-12 / 2-7 pm · Wed & Sat 2-7 pm · Mon & Thu 8-10 pm + 10-12 / 2-7 pm · Tue 10-12 / 2-6 pm", "verified": "2026-06-06"},
-        {"k": "Shoulder-season hours", "v": "31 Mar → 30 Apr: Tue-Sat & public holidays 2-6 pm; Sun 10-12 / 2-6 pm", "verified": "2026-06-06"},
-        {"k": "Rates", "v": "Adult €6.50 · child 5-16 €5 · 6-entry card €30 (€55 with rentals) · skates €4-5 · helmet €2", "verified": "2026-06-06"},
-        {"k": "Booking", "v": "Not required for public sessions; recommended for Eisstock tournaments"},
-        {"k": "Duration", "v": "1 to 2 h on average"},
-        {"k": "Parking", "v": "Pré de Foire car park nearby"},
-        {"k": "Accessibility", "v": "Building accessible (reception, locker rooms); skating itself not suited to reduced mobility"},
-        {"k": "Animals", "v": "Not allowed inside"}
+        {
+          "k": "Address",
+          "v": "94 place du Pré de Foire, 74220 La Clusaz"
+        },
+        {
+          "k": "Coordinates",
+          "v": "45.9039, 6.4244"
+        },
+        {
+          "k": "Official site",
+          "v": "https://www.laclusaz.org/fr/associations-et-loisirs/patinoire/patinoire.htm"
+        },
+        {
+          "k": "Season",
+          "v": "20 December 2025 → 30 April 2026",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Peak-season hours",
+          "v": "Fri & Sun 10-12 / 2-7 pm · Wed & Sat 2-7 pm · Mon & Thu 8-10 pm + 10-12 / 2-7 pm · Tue 10-12 / 2-6 pm",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Shoulder-season hours",
+          "v": "31 Mar → 30 Apr: Tue-Sat & public holidays 2-6 pm; Sun 10-12 / 2-6 pm",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Rates",
+          "v": "Adult €6.50 · child 5-16 €5 · 6-entry card €30 (€55 with rentals) · skates €4-5 · helmet €2",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Booking",
+          "v": "Not required for public sessions; recommended for Eisstock tournaments"
+        },
+        {
+          "k": "Duration",
+          "v": "1 to 2 h on average"
+        },
+        {
+          "k": "Parking",
+          "v": "Pré de Foire car park nearby"
+        },
+        {
+          "k": "Accessibility",
+          "v": "Building accessible (reception, locker rooms); skating itself not suited to reduced mobility"
+        },
+        {
+          "k": "Animals",
+          "v": "Not allowed inside"
+        }
       ],
       "how_to_get_there": {
         "car": "From Annecy: D909 / D909a via Thônes and Saint-Jean-de-Sixt, 32 km, about 45 min. Village car parks (Pré de Foire) nearby.",
@@ -158,15 +416,41 @@
       "when_to_visit": "Late December to end April. Great at the end of the day or in bad weather. Monday Eisstock evenings to discover a Tyrolean sport.",
       "events": "Monday Eisstock tournaments 8-10 pm. Special activities during school holidays (music, themed nights).",
       "faq": [
-        {"q": "Do I need to book?", "a": "No, public sessions are walk-in. Eisstock Monday tournaments are by booking (recommended)."},
-        {"q": "Can I rent skates?", "a": "Yes, €4-5 (all sizes) and helmets €2."},
-        {"q": "What is Eisstock?", "a": "Eisstock is an Austrian-style ice sport similar to curling. Played every Monday 8-10 pm; beginners welcome."},
-        {"q": "What are the rates?", "a": "Adult €6.50, child (5-16) €5. 6-entry card €30 (€55 with rentals). Skates €4-5, helmet €2."},
-        {"q": "What are the hours?", "a": "Peak season: Fri & Sun 10-12 / 2-7 pm, Wed & Sat 2-7 pm, Mon & Thu 8-10 pm. Details on the official website."},
-        {"q": "Where do I park?", "a": "Several village car parks around the rink (Place du Pré de Foire)."},
-        {"q": "Is the rink open all winter?", "a": "Yes, 20 December 2025 to 30 April 2026 — through the ski season and shoulder season."}
+        {
+          "q": "Do I need to book?",
+          "a": "No, public sessions are walk-in. Eisstock Monday tournaments are by booking (recommended)."
+        },
+        {
+          "q": "Can I rent skates?",
+          "a": "Yes, €4-5 (all sizes) and helmets €2."
+        },
+        {
+          "q": "What is Eisstock?",
+          "a": "Eisstock is an Austrian-style ice sport similar to curling. Played every Monday 8-10 pm; beginners welcome."
+        },
+        {
+          "q": "What are the rates?",
+          "a": "Adult €6.50, child (5-16) €5. 6-entry card €30 (€55 with rentals). Skates €4-5, helmet €2."
+        },
+        {
+          "q": "What are the hours?",
+          "a": "Peak season: Fri & Sun 10-12 / 2-7 pm, Wed & Sat 2-7 pm, Mon & Thu 8-10 pm. Details on the official website."
+        },
+        {
+          "q": "Where do I park?",
+          "a": "Several village car parks around the rink (Place du Pré de Foire)."
+        },
+        {
+          "q": "Is the rink open all winter?",
+          "a": "Yes, 20 December 2025 to 30 April 2026 — through the ski season and shoulder season."
+        }
       ],
-      "schema_amenities": ["indoor", "skate_rental", "family_friendly", "parking"]
+      "schema_amenities": [
+        "indoor",
+        "skate_rental",
+        "family_friendly",
+        "parking"
+      ]
     },
     "de": {
       "name": "Patinoire de La Clusaz",
@@ -190,27 +474,95 @@
         "what_is": "<p>Die <strong>Eisbahn La Clusaz</strong> ist eine <strong>überdachte 1 000 m² Anlage</strong> an der Place du Pré de Foire, im Dorfzentrum. Von der Gemeinde betrieben, öffnet sie jeden Winter für <strong>Publikumssessions</strong>, <strong>Nachtskaten</strong> und Montags-<strong>Eisstock</strong>-Turniere (österreichisches Curling).</p><p>Die Anlage bietet <strong>Schlittschuhverleih</strong> (4-5 €) und <strong>Helmverleih</strong> (2 €), Musik und Familienatmosphäre. Die Bahn ist <strong>überdacht, aber seitlich offen</strong>, was die Eisqualität schützt und das alpine Gefühl bewahrt. Ideal zum Ausklang eines Skitags oder als <strong>Familienausflug</strong>.</p><p>Die <strong>Saison 2025-2026</strong> läuft vom <strong>20. Dezember 2025 bis zum 30. April 2026</strong>. <strong>Preise 2026</strong>: <strong>6,50 € Erwachsene, 5 € Kinder</strong> (5-16), <strong>6er-Karte 30 €</strong> (55 € mit Verleih). Hauptsaison-<strong>Öffnungszeiten</strong>: Fr & So 10-12 / 14-19 Uhr; Mi & Sa 14-19 Uhr; Mo & Do 20-22 Uhr und 10-12 / 14-19 Uhr; Di 10-12 / 14-18 Uhr. Zwischensaison (31. März bis 30. April): Di-Sa und Feiertage 14-18 Uhr; So 10-12 / 14-18 Uhr. <strong>Eisstock-Turniere montags 20-22 Uhr</strong> — Reservierung empfohlen.</p>"
       },
       "activities": [
-        {"title": "Publikumssessions", "description": "Freies Laufen auf der 1 000 m² Bahn mit Musik. Mehrere Zeitfenster pro Tag je nach Periode.", "tag": "Eislaufen"},
-        {"title": "Montag- und Donnerstag-Nachtsessions", "description": "Sessions 20-22 Uhr Mo und Do: Musik, Licht und Après-Ski-Stimmung.", "tag": "Nacht"},
-        {"title": "Eisstock (österreichisches Curling)", "description": "Eisstock-Turniere montags 20-22 Uhr — Tiroler Sport mit Stöcken. Anfänger willkommen, Reservierung empfohlen.", "tag": "Eisstock"},
-        {"title": "Schlittschuh- und Helmverleih", "description": "Schlittschuhe 4-5 € (alle Größen), Helme 2 €. Praktisch ohne eigenes Material.", "tag": "Verleih"},
-        {"title": "6er-Karte", "description": "Stammkunden-Tipp: 6 Eintritte für 30 € (55 € mit 6 Verleihen).", "tag": "30 €"},
-        {"title": "Musikprogramm", "description": "Durchgehende Musik während der Sessions; wechselnde Stile je nach Slot.", "tag": "Musik"},
-        {"title": "Familien-Après-Ski", "description": "Perfekter Ausklang eines Skitages oder Tapetenwechsel — alle Niveaus willkommen.", "tag": "Familie"}
+        {
+          "title": "Publikumssessions",
+          "description": "Freies Laufen auf der 1 000 m² Bahn mit Musik. Mehrere Zeitfenster pro Tag je nach Periode.",
+          "tag": "Eislaufen"
+        },
+        {
+          "title": "Montag- und Donnerstag-Nachtsessions",
+          "description": "Sessions 20-22 Uhr Mo und Do: Musik, Licht und Après-Ski-Stimmung.",
+          "tag": "Nacht"
+        },
+        {
+          "title": "Eisstock (österreichisches Curling)",
+          "description": "Eisstock-Turniere montags 20-22 Uhr — Tiroler Sport mit Stöcken. Anfänger willkommen, Reservierung empfohlen.",
+          "tag": "Eisstock"
+        },
+        {
+          "title": "Schlittschuh- und Helmverleih",
+          "description": "Schlittschuhe 4-5 € (alle Größen), Helme 2 €. Praktisch ohne eigenes Material.",
+          "tag": "Verleih"
+        },
+        {
+          "title": "6er-Karte",
+          "description": "Stammkunden-Tipp: 6 Eintritte für 30 € (55 € mit 6 Verleihen).",
+          "tag": "30 €"
+        },
+        {
+          "title": "Musikprogramm",
+          "description": "Durchgehende Musik während der Sessions; wechselnde Stile je nach Slot.",
+          "tag": "Musik"
+        },
+        {
+          "title": "Familien-Après-Ski",
+          "description": "Perfekter Ausklang eines Skitages oder Tapetenwechsel — alle Niveaus willkommen.",
+          "tag": "Familie"
+        }
       ],
       "practical_info": [
-        {"k": "Adresse", "v": "94 place du Pré de Foire, 74220 La Clusaz"},
-        {"k": "Koordinaten", "v": "45.9039, 6.4244"},
-        {"k": "Offizielle Website", "v": "https://www.laclusaz.org/fr/associations-et-loisirs/patinoire/patinoire.htm"},
-        {"k": "Saison", "v": "20. Dezember 2025 → 30. April 2026", "verified": "2026-06-06"},
-        {"k": "Hauptsaison-Öffnungszeiten", "v": "Fr & So 10-12 / 14-19 · Mi & Sa 14-19 · Mo & Do 20-22 + 10-12 / 14-19 · Di 10-12 / 14-18", "verified": "2026-06-06"},
-        {"k": "Zwischensaison-Öffnungszeiten", "v": "31. März → 30. April: Di-Sa und Feiertage 14-18; So 10-12 / 14-18", "verified": "2026-06-06"},
-        {"k": "Preise", "v": "Erw. 6,50 € · Kind 5-16 5 € · 6er-Karte 30 € (55 € mit Verleih) · Schlittschuhe 4-5 € · Helm 2 €", "verified": "2026-06-06"},
-        {"k": "Reservierung", "v": "Keine für Publikumssessions; empfohlen für Eisstock-Turniere"},
-        {"k": "Dauer", "v": "Im Schnitt 1 bis 2 h"},
-        {"k": "Parkplatz", "v": "Parkplatz Pré de Foire in der Nähe"},
-        {"k": "Barrierefreiheit", "v": "Gebäude barrierefrei (Empfang, Umkleide); Eislaufen selbst nicht behindertengerecht"},
-        {"k": "Tiere", "v": "Im Halleninnern nicht erlaubt"}
+        {
+          "k": "Adresse",
+          "v": "94 place du Pré de Foire, 74220 La Clusaz"
+        },
+        {
+          "k": "Koordinaten",
+          "v": "45.9039, 6.4244"
+        },
+        {
+          "k": "Offizielle Website",
+          "v": "https://www.laclusaz.org/fr/associations-et-loisirs/patinoire/patinoire.htm"
+        },
+        {
+          "k": "Saison",
+          "v": "20. Dezember 2025 → 30. April 2026",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Hauptsaison-Öffnungszeiten",
+          "v": "Fr & So 10-12 / 14-19 · Mi & Sa 14-19 · Mo & Do 20-22 + 10-12 / 14-19 · Di 10-12 / 14-18",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Zwischensaison-Öffnungszeiten",
+          "v": "31. März → 30. April: Di-Sa und Feiertage 14-18; So 10-12 / 14-18",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Preise",
+          "v": "Erw. 6,50 € · Kind 5-16 5 € · 6er-Karte 30 € (55 € mit Verleih) · Schlittschuhe 4-5 € · Helm 2 €",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Reservierung",
+          "v": "Keine für Publikumssessions; empfohlen für Eisstock-Turniere"
+        },
+        {
+          "k": "Dauer",
+          "v": "Im Schnitt 1 bis 2 h"
+        },
+        {
+          "k": "Parkplatz",
+          "v": "Parkplatz Pré de Foire in der Nähe"
+        },
+        {
+          "k": "Barrierefreiheit",
+          "v": "Gebäude barrierefrei (Empfang, Umkleide); Eislaufen selbst nicht behindertengerecht"
+        },
+        {
+          "k": "Tiere",
+          "v": "Im Halleninnern nicht erlaubt"
+        }
       ],
       "how_to_get_there": {
         "car": "Von Annecy: D909 / D909a über Thônes und Saint-Jean-de-Sixt, 32 km, ca. 45 Min. Parkplätze im Dorf (Pré de Foire) in der Nähe.",
@@ -220,15 +572,41 @@
       "when_to_visit": "Ende Dezember bis Ende April. Ideal am Tagesende oder bei schlechtem Wetter. Eisstock-Abende montags zum Entdecken eines Tiroler Sports.",
       "events": "Eisstock-Turniere montags 20-22 Uhr. Spezialaktionen in den Schulferien (Musik, Themenabende).",
       "faq": [
-        {"q": "Muss ich reservieren?", "a": "Nein, Publikumssessions ohne Reservierung. Für Eisstock-Turniere am Montag empfehlenswert."},
-        {"q": "Kann ich Schlittschuhe leihen?", "a": "Ja, 4-5 € (alle Größen) und Helme 2 €."},
-        {"q": "Was ist Eisstock?", "a": "Eisstock ist ein österreichischer Eissport, ähnlich dem Curling. Montags 20-22 Uhr; Anfänger willkommen."},
-        {"q": "Wie hoch sind die Preise?", "a": "Erwachsene 6,50 €, Kind (5-16) 5 €. 6er-Karte 30 € oder 55 € mit Verleih. Schlittschuhe 4-5 €, Helm 2 €."},
-        {"q": "Wie sind die Öffnungszeiten?", "a": "Hauptsaison: Fr & So 10-12 und 14-19 Uhr, Mi & Sa 14-19 Uhr, Mo & Do 20-22 Uhr. Details auf der offiziellen Website."},
-        {"q": "Wo parken?", "a": "Mehrere Dorfparkplätze in der Nähe der Eisbahn (Place du Pré de Foire)."},
-        {"q": "Ist die Bahn den ganzen Winter geöffnet?", "a": "Ja, vom 20. Dezember 2025 bis zum 30. April 2026 — die gesamte Skisaison und Zwischensaison."}
+        {
+          "q": "Muss ich reservieren?",
+          "a": "Nein, Publikumssessions ohne Reservierung. Für Eisstock-Turniere am Montag empfehlenswert."
+        },
+        {
+          "q": "Kann ich Schlittschuhe leihen?",
+          "a": "Ja, 4-5 € (alle Größen) und Helme 2 €."
+        },
+        {
+          "q": "Was ist Eisstock?",
+          "a": "Eisstock ist ein österreichischer Eissport, ähnlich dem Curling. Montags 20-22 Uhr; Anfänger willkommen."
+        },
+        {
+          "q": "Wie hoch sind die Preise?",
+          "a": "Erwachsene 6,50 €, Kind (5-16) 5 €. 6er-Karte 30 € oder 55 € mit Verleih. Schlittschuhe 4-5 €, Helm 2 €."
+        },
+        {
+          "q": "Wie sind die Öffnungszeiten?",
+          "a": "Hauptsaison: Fr & So 10-12 und 14-19 Uhr, Mi & Sa 14-19 Uhr, Mo & Do 20-22 Uhr. Details auf der offiziellen Website."
+        },
+        {
+          "q": "Wo parken?",
+          "a": "Mehrere Dorfparkplätze in der Nähe der Eisbahn (Place du Pré de Foire)."
+        },
+        {
+          "q": "Ist die Bahn den ganzen Winter geöffnet?",
+          "a": "Ja, vom 20. Dezember 2025 bis zum 30. April 2026 — die gesamte Skisaison und Zwischensaison."
+        }
       ],
-      "schema_amenities": ["indoor", "skate_rental", "family_friendly", "parking"]
+      "schema_amenities": [
+        "indoor",
+        "skate_rental",
+        "family_friendly",
+        "parking"
+      ]
     },
     "it": {
       "name": "Patinoire de La Clusaz",
@@ -252,27 +630,95 @@
         "what_is": "<p>La <strong>pista di pattinaggio di La Clusaz</strong> è una <strong>pista coperta di 1 000 m²</strong> sulla Place du Pré de Foire, nel cuore del villaggio. Gestita dal comune, accoglie il pubblico ogni inverno per <strong>sessioni di pattinaggio libero</strong>, <strong>notturne</strong> e tornei <strong>Eisstock</strong> (curling austriaco) il lunedì sera.</p><p>Offre <strong>noleggio pattini</strong> (4-5 €) e <strong>caschi</strong> (2 €), musica e atmosfera familiare. La pista è <strong>coperta ma aperta sui lati</strong>, preservando la qualità del ghiaccio e l'atmosfera alpina. Ideale per concludere una giornata sugli sci o come <strong>uscita in famiglia</strong>.</p><p>La <strong>stagione 2025-2026</strong> va dal <strong>20 dicembre 2025 al 30 aprile 2026</strong>. <strong>Tariffe 2026</strong>: <strong>6,50 € adulti, 5 € bambini</strong> (5-16), <strong>carta 6 ingressi 30 €</strong> (55 € con noleggio). <strong>Orari</strong> alta stagione: ven & dom 10-12 / 14-19; mer & sab 14-19; lun & gio 20-22 e 10-12 / 14-19; mar 10-12 / 14-18. Intersaison (31 marzo - 30 aprile): mar-sab e festivi 14-18; dom 10-12 / 14-18. <strong>Tornei Eisstock lunedì 20-22</strong> — prenotazione consigliata.</p>"
       },
       "activities": [
-        {"title": "Sessioni pubbliche", "description": "Pattinaggio libero sulla pista 1 000 m² con musica. Più fasce orarie al giorno.", "tag": "pattinaggio"},
-        {"title": "Notturne lunedì e giovedì", "description": "Sessioni 20-22 lun e gio: musica, luci e atmosfera après-ski.", "tag": "notturna"},
-        {"title": "Eisstock (curling austriaco)", "description": "Tornei Eisstock lunedì 20-22 — sport tirolese con piastre. Principianti benvenuti, prenotazione consigliata.", "tag": "Eisstock"},
-        {"title": "Noleggio pattini e caschi", "description": "Pattini 4-5 € (tutte le taglie), caschi 2 €.", "tag": "noleggio"},
-        {"title": "Carta 6 ingressi", "description": "Per i clienti abituali: 6 ingressi a 30 € (55 € con 6 noleggi).", "tag": "30 €"},
-        {"title": "Programma musicale", "description": "Musica continua durante le sessioni; stili che cambiano secondo la fascia.", "tag": "musica"},
-        {"title": "Après-ski in famiglia", "description": "Uscita perfetta dopo una giornata di sci o come cambio di ritmo — tutti i livelli.", "tag": "famiglia"}
+        {
+          "title": "Sessioni pubbliche",
+          "description": "Pattinaggio libero sulla pista 1 000 m² con musica. Più fasce orarie al giorno.",
+          "tag": "pattinaggio"
+        },
+        {
+          "title": "Notturne lunedì e giovedì",
+          "description": "Sessioni 20-22 lun e gio: musica, luci e atmosfera après-ski.",
+          "tag": "notturna"
+        },
+        {
+          "title": "Eisstock (curling austriaco)",
+          "description": "Tornei Eisstock lunedì 20-22 — sport tirolese con piastre. Principianti benvenuti, prenotazione consigliata.",
+          "tag": "Eisstock"
+        },
+        {
+          "title": "Noleggio pattini e caschi",
+          "description": "Pattini 4-5 € (tutte le taglie), caschi 2 €.",
+          "tag": "noleggio"
+        },
+        {
+          "title": "Carta 6 ingressi",
+          "description": "Per i clienti abituali: 6 ingressi a 30 € (55 € con 6 noleggi).",
+          "tag": "30 €"
+        },
+        {
+          "title": "Programma musicale",
+          "description": "Musica continua durante le sessioni; stili che cambiano secondo la fascia.",
+          "tag": "musica"
+        },
+        {
+          "title": "Après-ski in famiglia",
+          "description": "Uscita perfetta dopo una giornata di sci o come cambio di ritmo — tutti i livelli.",
+          "tag": "famiglia"
+        }
       ],
       "practical_info": [
-        {"k": "Indirizzo", "v": "94 place du Pré de Foire, 74220 La Clusaz"},
-        {"k": "Coordinate", "v": "45.9039, 6.4244"},
-        {"k": "Sito ufficiale", "v": "https://www.laclusaz.org/fr/associations-et-loisirs/patinoire/patinoire.htm"},
-        {"k": "Stagione", "v": "20 dicembre 2025 → 30 aprile 2026", "verified": "2026-06-06"},
-        {"k": "Orari alta stagione", "v": "Ven & dom 10-12 / 14-19 · mer & sab 14-19 · lun & gio 20-22 + 10-12 / 14-19 · mar 10-12 / 14-18", "verified": "2026-06-06"},
-        {"k": "Orari intersaison", "v": "31 marzo → 30 aprile: mar-sab e festivi 14-18; dom 10-12 / 14-18", "verified": "2026-06-06"},
-        {"k": "Tariffe", "v": "Adulti 6,50 € · bambini 5-16 5 € · carta 6 ingressi 30 € (55 € con noleggio) · pattini 4-5 € · casco 2 €", "verified": "2026-06-06"},
-        {"k": "Prenotazione", "v": "Non necessaria per le sessioni pubbliche; consigliata per Eisstock"},
-        {"k": "Durata", "v": "1 - 2 h in media"},
-        {"k": "Parcheggio", "v": "Parcheggio del Pré de Foire vicino"},
-        {"k": "Accessibilità", "v": "Edificio accessibile (accoglienza, spogliatoi); il pattinaggio non è adatto a PMR"},
-        {"k": "Animali", "v": "Non ammessi all'interno"}
+        {
+          "k": "Indirizzo",
+          "v": "94 place du Pré de Foire, 74220 La Clusaz"
+        },
+        {
+          "k": "Coordinate",
+          "v": "45.9039, 6.4244"
+        },
+        {
+          "k": "Sito ufficiale",
+          "v": "https://www.laclusaz.org/fr/associations-et-loisirs/patinoire/patinoire.htm"
+        },
+        {
+          "k": "Stagione",
+          "v": "20 dicembre 2025 → 30 aprile 2026",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Orari alta stagione",
+          "v": "Ven & dom 10-12 / 14-19 · mer & sab 14-19 · lun & gio 20-22 + 10-12 / 14-19 · mar 10-12 / 14-18",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Orari intersaison",
+          "v": "31 marzo → 30 aprile: mar-sab e festivi 14-18; dom 10-12 / 14-18",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Tariffe",
+          "v": "Adulti 6,50 € · bambini 5-16 5 € · carta 6 ingressi 30 € (55 € con noleggio) · pattini 4-5 € · casco 2 €",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Prenotazione",
+          "v": "Non necessaria per le sessioni pubbliche; consigliata per Eisstock"
+        },
+        {
+          "k": "Durata",
+          "v": "1 - 2 h in media"
+        },
+        {
+          "k": "Parcheggio",
+          "v": "Parcheggio del Pré de Foire vicino"
+        },
+        {
+          "k": "Accessibilità",
+          "v": "Edificio accessibile (accoglienza, spogliatoi); il pattinaggio non è adatto a PMR"
+        },
+        {
+          "k": "Animali",
+          "v": "Non ammessi all'interno"
+        }
       ],
       "how_to_get_there": {
         "car": "Da Annecy: D909 / D909a via Thônes e Saint-Jean-de-Sixt, 32 km, circa 45 min. Parcheggi del villaggio (Pré de Foire) vicini.",
@@ -282,15 +728,41 @@
       "when_to_visit": "Da fine dicembre a fine aprile. Ideale a fine giornata o con maltempo. Serate Eisstock il lunedì per scoprire uno sport tirolese.",
       "events": "Tornei Eisstock lunedì 20-22. Animazioni speciali nelle vacanze scolastiche (musica, serate a tema).",
       "faq": [
-        {"q": "Devo prenotare?", "a": "No, sessioni pubbliche senza prenotazione. Per Eisstock il lunedì consigliata."},
-        {"q": "Posso noleggiare i pattini?", "a": "Sì, 4-5 € (tutte le taglie) e caschi 2 €."},
-        {"q": "Cos'è Eisstock?", "a": "Sport austriaco sul ghiaccio simile al curling. Tutti i lunedì 20-22; principianti benvenuti."},
-        {"q": "Quali sono le tariffe?", "a": "Adulti 6,50 €, bambini (5-16) 5 €. Carta 6 ingressi 30 € o 55 € con noleggio. Pattini 4-5 €, casco 2 €."},
-        {"q": "Quali sono gli orari?", "a": "Alta stagione: ven & dom 10-12 e 14-19, mer & sab 14-19, lun & gio 20-22. Dettagli sul sito ufficiale."},
-        {"q": "Dove parcheggiare?", "a": "Più parcheggi del villaggio vicino alla pista (Place du Pré de Foire)."},
-        {"q": "È aperta tutto l'inverno?", "a": "Sì, dal 20 dicembre 2025 al 30 aprile 2026 — tutta la stagione sciistica e intersaison."}
+        {
+          "q": "Devo prenotare?",
+          "a": "No, sessioni pubbliche senza prenotazione. Per Eisstock il lunedì consigliata."
+        },
+        {
+          "q": "Posso noleggiare i pattini?",
+          "a": "Sì, 4-5 € (tutte le taglie) e caschi 2 €."
+        },
+        {
+          "q": "Cos'è Eisstock?",
+          "a": "Sport austriaco sul ghiaccio simile al curling. Tutti i lunedì 20-22; principianti benvenuti."
+        },
+        {
+          "q": "Quali sono le tariffe?",
+          "a": "Adulti 6,50 €, bambini (5-16) 5 €. Carta 6 ingressi 30 € o 55 € con noleggio. Pattini 4-5 €, casco 2 €."
+        },
+        {
+          "q": "Quali sono gli orari?",
+          "a": "Alta stagione: ven & dom 10-12 e 14-19, mer & sab 14-19, lun & gio 20-22. Dettagli sul sito ufficiale."
+        },
+        {
+          "q": "Dove parcheggiare?",
+          "a": "Più parcheggi del villaggio vicino alla pista (Place du Pré de Foire)."
+        },
+        {
+          "q": "È aperta tutto l'inverno?",
+          "a": "Sì, dal 20 dicembre 2025 al 30 aprile 2026 — tutta la stagione sciistica e intersaison."
+        }
       ],
-      "schema_amenities": ["indoor", "skate_rental", "family_friendly", "parking"]
+      "schema_amenities": [
+        "indoor",
+        "skate_rental",
+        "family_friendly",
+        "parking"
+      ]
     },
     "es": {
       "name": "Patinoire de La Clusaz",
@@ -314,27 +786,95 @@
         "what_is": "<p>La <strong>pista de hielo de La Clusaz</strong> es una <strong>instalación cubierta de 1 000 m²</strong> en la Place du Pré de Foire, en el corazón del pueblo. Gestionada por el ayuntamiento, recibe al público cada invierno para <strong>sesiones de patinaje libre</strong>, <strong>nocturnas</strong> y torneos <strong>Eisstock</strong> (curling austriaco) los lunes por la noche.</p><p>Ofrece <strong>alquiler de patines</strong> (4-5 €) y <strong>cascos</strong> (2 €), música y ambiente familiar. La pista está <strong>cubierta pero abierta por los lados</strong>, lo que preserva la calidad del hielo manteniendo el ambiente alpino. Ideal para terminar una jornada de esquí o como <strong>salida familiar</strong>.</p><p>La <strong>temporada 2025-2026</strong> va del <strong>20 de diciembre de 2025 al 30 de abril de 2026</strong>. <strong>Tarifas 2026</strong>: <strong>6,50 € adultos, 5 € niños</strong> (5-16), <strong>bono 6 entradas 30 €</strong> (55 € con alquiler). <strong>Horarios</strong> alta temporada: vie & dom 10-12 / 14-19; mié & sáb 14-19; lun & jue 20-22 y 10-12 / 14-19; mar 10-12 / 14-18. Intertemporada (31 mar - 30 abr): mar-sáb y festivos 14-18; dom 10-12 / 14-18. <strong>Torneos Eisstock lunes 20-22</strong> — reserva recomendada.</p>"
       },
       "activities": [
-        {"title": "Sesiones públicas", "description": "Patinaje libre en la pista 1 000 m² con música. Varias franjas al día.", "tag": "patinaje"},
-        {"title": "Nocturnas lunes y jueves", "description": "Sesiones 20-22 lun y jue: música, luces y ambiente après-ski.", "tag": "nocturna"},
-        {"title": "Eisstock (curling austriaco)", "description": "Torneos Eisstock los lunes 20-22 — deporte tirolés con piedras. Principiantes bienvenidos, reserva recomendada.", "tag": "Eisstock"},
-        {"title": "Alquiler de patines y cascos", "description": "Patines 4-5 € (todas las tallas), cascos 2 €.", "tag": "alquiler"},
-        {"title": "Bono 6 entradas", "description": "Para habituales: 6 entradas a 30 € (55 € con alquiler).", "tag": "30 €"},
-        {"title": "Programa musical", "description": "Música continua durante las sesiones; estilos que cambian según la franja.", "tag": "música"},
-        {"title": "Après-ski familiar", "description": "Salida perfecta tras una jornada de esquí — todos los niveles.", "tag": "familia"}
+        {
+          "title": "Sesiones públicas",
+          "description": "Patinaje libre en la pista 1 000 m² con música. Varias franjas al día.",
+          "tag": "patinaje"
+        },
+        {
+          "title": "Nocturnas lunes y jueves",
+          "description": "Sesiones 20-22 lun y jue: música, luces y ambiente après-ski.",
+          "tag": "nocturna"
+        },
+        {
+          "title": "Eisstock (curling austriaco)",
+          "description": "Torneos Eisstock los lunes 20-22 — deporte tirolés con piedras. Principiantes bienvenidos, reserva recomendada.",
+          "tag": "Eisstock"
+        },
+        {
+          "title": "Alquiler de patines y cascos",
+          "description": "Patines 4-5 € (todas las tallas), cascos 2 €.",
+          "tag": "alquiler"
+        },
+        {
+          "title": "Bono 6 entradas",
+          "description": "Para habituales: 6 entradas a 30 € (55 € con alquiler).",
+          "tag": "30 €"
+        },
+        {
+          "title": "Programa musical",
+          "description": "Música continua durante las sesiones; estilos que cambian según la franja.",
+          "tag": "música"
+        },
+        {
+          "title": "Après-ski familiar",
+          "description": "Salida perfecta tras una jornada de esquí — todos los niveles.",
+          "tag": "familia"
+        }
       ],
       "practical_info": [
-        {"k": "Dirección", "v": "94 place du Pré de Foire, 74220 La Clusaz"},
-        {"k": "Coordenadas", "v": "45.9039, 6.4244"},
-        {"k": "Sitio oficial", "v": "https://www.laclusaz.org/fr/associations-et-loisirs/patinoire/patinoire.htm"},
-        {"k": "Temporada", "v": "20 diciembre 2025 → 30 abril 2026", "verified": "2026-06-06"},
-        {"k": "Horarios alta temporada", "v": "Vie & dom 10-12 / 14-19 · mié & sáb 14-19 · lun & jue 20-22 + 10-12 / 14-19 · mar 10-12 / 14-18", "verified": "2026-06-06"},
-        {"k": "Horarios intertemporada", "v": "31 mar → 30 abr: mar-sáb y festivos 14-18; dom 10-12 / 14-18", "verified": "2026-06-06"},
-        {"k": "Tarifas", "v": "Adultos 6,50 € · niños 5-16 5 € · bono 6 entradas 30 € (55 € con alquiler) · patines 4-5 € · casco 2 €", "verified": "2026-06-06"},
-        {"k": "Reserva", "v": "No necesaria para sesiones públicas; recomendada para Eisstock"},
-        {"k": "Duración", "v": "1 a 2 h en promedio"},
-        {"k": "Aparcamiento", "v": "Aparcamiento del Pré de Foire cerca"},
-        {"k": "Accesibilidad", "v": "Edificio accesible (recepción, vestuarios); el patinaje no es apto para PMR"},
-        {"k": "Animales", "v": "No admitidos en el interior"}
+        {
+          "k": "Dirección",
+          "v": "94 place du Pré de Foire, 74220 La Clusaz"
+        },
+        {
+          "k": "Coordenadas",
+          "v": "45.9039, 6.4244"
+        },
+        {
+          "k": "Sitio oficial",
+          "v": "https://www.laclusaz.org/fr/associations-et-loisirs/patinoire/patinoire.htm"
+        },
+        {
+          "k": "Temporada",
+          "v": "20 diciembre 2025 → 30 abril 2026",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Horarios alta temporada",
+          "v": "Vie & dom 10-12 / 14-19 · mié & sáb 14-19 · lun & jue 20-22 + 10-12 / 14-19 · mar 10-12 / 14-18",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Horarios intertemporada",
+          "v": "31 mar → 30 abr: mar-sáb y festivos 14-18; dom 10-12 / 14-18",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Tarifas",
+          "v": "Adultos 6,50 € · niños 5-16 5 € · bono 6 entradas 30 € (55 € con alquiler) · patines 4-5 € · casco 2 €",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Reserva",
+          "v": "No necesaria para sesiones públicas; recomendada para Eisstock"
+        },
+        {
+          "k": "Duración",
+          "v": "1 a 2 h en promedio"
+        },
+        {
+          "k": "Aparcamiento",
+          "v": "Aparcamiento del Pré de Foire cerca"
+        },
+        {
+          "k": "Accesibilidad",
+          "v": "Edificio accesible (recepción, vestuarios); el patinaje no es apto para PMR"
+        },
+        {
+          "k": "Animales",
+          "v": "No admitidos en el interior"
+        }
       ],
       "how_to_get_there": {
         "car": "Desde Annecy: D909 / D909a por Thônes y Saint-Jean-de-Sixt, 32 km, unos 45 min. Aparcamientos del pueblo (Pré de Foire) cerca.",
@@ -344,15 +884,41 @@
       "when_to_visit": "De fines de diciembre a fines de abril. Ideal al final del día o con mal tiempo. Veladas Eisstock los lunes para descubrir un deporte tirolés.",
       "events": "Torneos Eisstock los lunes 20-22. Animaciones especiales en vacaciones escolares (música, veladas temáticas).",
       "faq": [
-        {"q": "¿Hay que reservar?", "a": "No, sesiones públicas sin reserva. Para Eisstock del lunes, recomendada."},
-        {"q": "¿Puedo alquilar patines?", "a": "Sí, 4-5 € (todas las tallas) y cascos 2 €."},
-        {"q": "¿Qué es Eisstock?", "a": "Deporte austriaco sobre hielo similar al curling. Los lunes 20-22; principiantes bienvenidos."},
-        {"q": "¿Cuáles son las tarifas?", "a": "Adultos 6,50 €, niños (5-16) 5 €. Bono 6 entradas 30 € o 55 € con alquiler. Patines 4-5 €, casco 2 €."},
-        {"q": "¿Cuáles son los horarios?", "a": "Alta temporada: vie & dom 10-12 y 14-19, mié & sáb 14-19, lun & jue 20-22. Detalles en la web oficial."},
-        {"q": "¿Dónde aparcar?", "a": "Varios aparcamientos del pueblo cerca de la pista (Place du Pré de Foire)."},
-        {"q": "¿Abre todo el invierno?", "a": "Sí, del 20 de diciembre de 2025 al 30 de abril de 2026 — toda la temporada de esquí e intertemporada."}
+        {
+          "q": "¿Hay que reservar?",
+          "a": "No, sesiones públicas sin reserva. Para Eisstock del lunes, recomendada."
+        },
+        {
+          "q": "¿Puedo alquilar patines?",
+          "a": "Sí, 4-5 € (todas las tallas) y cascos 2 €."
+        },
+        {
+          "q": "¿Qué es Eisstock?",
+          "a": "Deporte austriaco sobre hielo similar al curling. Los lunes 20-22; principiantes bienvenidos."
+        },
+        {
+          "q": "¿Cuáles son las tarifas?",
+          "a": "Adultos 6,50 €, niños (5-16) 5 €. Bono 6 entradas 30 € o 55 € con alquiler. Patines 4-5 €, casco 2 €."
+        },
+        {
+          "q": "¿Cuáles son los horarios?",
+          "a": "Alta temporada: vie & dom 10-12 y 14-19, mié & sáb 14-19, lun & jue 20-22. Detalles en la web oficial."
+        },
+        {
+          "q": "¿Dónde aparcar?",
+          "a": "Varios aparcamientos del pueblo cerca de la pista (Place du Pré de Foire)."
+        },
+        {
+          "q": "¿Abre todo el invierno?",
+          "a": "Sí, del 20 de diciembre de 2025 al 30 de abril de 2026 — toda la temporada de esquí e intertemporada."
+        }
       ],
-      "schema_amenities": ["indoor", "skate_rental", "family_friendly", "parking"]
+      "schema_amenities": [
+        "indoor",
+        "skate_rental",
+        "family_friendly",
+        "parking"
+      ]
     },
     "nl": {
       "name": "Patinoire de La Clusaz",
@@ -376,27 +942,95 @@
         "what_is": "<p>De <strong>ijsbaan van La Clusaz</strong> is een <strong>overdekte 1 000 m² baan</strong> op de Place du Pré de Foire, in het hart van het dorp. Geëxploiteerd door de gemeente, ontvangt zij elke winter het publiek voor <strong>publiekssessies</strong>, <strong>avondsessies</strong> en maandagavond-<strong>Eisstock</strong>-toernooien (Oostenrijks curling).</p><p>Met <strong>schaatsverhuur</strong> (€4-5) en <strong>helmverhuur</strong> (€2), muziek en gezinssfeer. De baan is <strong>overdekt maar zijdelings open</strong>, wat de ijskwaliteit beschermt en de alpensfeer behoudt. Ideaal om een skidag af te sluiten of als <strong>gezinsuitstap</strong>.</p><p>Het <strong>seizoen 2025-2026</strong> loopt van <strong>20 december 2025 tot 30 april 2026</strong>. <strong>Tarieven 2026</strong>: <strong>€6,50 volwassenen, €5 kind</strong> (5-16), <strong>6-rittenkaart €30</strong> (€55 met verhuur). <strong>Openingstijden</strong> hoogseizoen: vr & zo 10-12 / 14-19; wo & za 14-19; ma & do 20-22 en 10-12 / 14-19; di 10-12 / 14-18. Tussenseizoen (31 mrt - 30 apr): di-za en feestdagen 14-18; zo 10-12 / 14-18. <strong>Eisstock-toernooien maandag 20-22</strong> — reservering aanbevolen.</p>"
       },
       "activities": [
-        {"title": "Publiekssessies", "description": "Vrij schaatsen op de 1 000 m² baan met muziek. Meerdere tijdvakken per dag.", "tag": "schaatsen"},
-        {"title": "Avondsessies ma en do", "description": "Sessies 20-22 ma en do: muziek, licht en après-skisfeer.", "tag": "avond"},
-        {"title": "Eisstock (Oostenrijks curling)", "description": "Eisstock-toernooien maandag 20-22 — Tiroolse sport met stenen. Beginners welkom, reservering aanbevolen.", "tag": "Eisstock"},
-        {"title": "Schaats- en helmverhuur", "description": "Schaatsen €4-5 (alle maten), helmen €2.", "tag": "verhuur"},
-        {"title": "6-rittenkaart", "description": "Voor stamgasten: 6 ritten voor €30 (€55 met 6 verhuren).", "tag": "€30"},
-        {"title": "Muziekprogramma", "description": "Doorlopende muziek tijdens sessies; stijlen wisselen per tijdvak.", "tag": "muziek"},
-        {"title": "Gezins-après-ski", "description": "Perfecte uitstap na een skidag — alle niveaus welkom.", "tag": "gezin"}
+        {
+          "title": "Publiekssessies",
+          "description": "Vrij schaatsen op de 1 000 m² baan met muziek. Meerdere tijdvakken per dag.",
+          "tag": "schaatsen"
+        },
+        {
+          "title": "Avondsessies ma en do",
+          "description": "Sessies 20-22 ma en do: muziek, licht en après-skisfeer.",
+          "tag": "avond"
+        },
+        {
+          "title": "Eisstock (Oostenrijks curling)",
+          "description": "Eisstock-toernooien maandag 20-22 — Tiroolse sport met stenen. Beginners welkom, reservering aanbevolen.",
+          "tag": "Eisstock"
+        },
+        {
+          "title": "Schaats- en helmverhuur",
+          "description": "Schaatsen €4-5 (alle maten), helmen €2.",
+          "tag": "verhuur"
+        },
+        {
+          "title": "6-rittenkaart",
+          "description": "Voor stamgasten: 6 ritten voor €30 (€55 met 6 verhuren).",
+          "tag": "€30"
+        },
+        {
+          "title": "Muziekprogramma",
+          "description": "Doorlopende muziek tijdens sessies; stijlen wisselen per tijdvak.",
+          "tag": "muziek"
+        },
+        {
+          "title": "Gezins-après-ski",
+          "description": "Perfecte uitstap na een skidag — alle niveaus welkom.",
+          "tag": "gezin"
+        }
       ],
       "practical_info": [
-        {"k": "Adres", "v": "94 place du Pré de Foire, 74220 La Clusaz"},
-        {"k": "Coördinaten", "v": "45.9039, 6.4244"},
-        {"k": "Officiële website", "v": "https://www.laclusaz.org/fr/associations-et-loisirs/patinoire/patinoire.htm"},
-        {"k": "Seizoen", "v": "20 december 2025 → 30 april 2026", "verified": "2026-06-06"},
-        {"k": "Openingstijden hoogseizoen", "v": "Vr & zo 10-12 / 14-19 · wo & za 14-19 · ma & do 20-22 + 10-12 / 14-19 · di 10-12 / 14-18", "verified": "2026-06-06"},
-        {"k": "Openingstijden tussenseizoen", "v": "31 mrt → 30 apr: di-za en feestdagen 14-18; zo 10-12 / 14-18", "verified": "2026-06-06"},
-        {"k": "Tarieven", "v": "Volw. €6,50 · kind 5-16 €5 · 6-rittenkaart €30 (€55 met verhuur) · schaatsen €4-5 · helm €2", "verified": "2026-06-06"},
-        {"k": "Reservering", "v": "Niet nodig voor publiekssessies; aanbevolen voor Eisstock"},
-        {"k": "Duur", "v": "Gemiddeld 1 tot 2 u"},
-        {"k": "Parkeren", "v": "Parkeerplaats Pré de Foire dichtbij"},
-        {"k": "Toegankelijkheid", "v": "Gebouw toegankelijk (receptie, kleedkamer); schaatsen zelf niet geschikt voor mindervaliden"},
-        {"k": "Dieren", "v": "Niet binnen toegestaan"}
+        {
+          "k": "Adres",
+          "v": "94 place du Pré de Foire, 74220 La Clusaz"
+        },
+        {
+          "k": "Coördinaten",
+          "v": "45.9039, 6.4244"
+        },
+        {
+          "k": "Officiële website",
+          "v": "https://www.laclusaz.org/fr/associations-et-loisirs/patinoire/patinoire.htm"
+        },
+        {
+          "k": "Seizoen",
+          "v": "20 december 2025 → 30 april 2026",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Openingstijden hoogseizoen",
+          "v": "Vr & zo 10-12 / 14-19 · wo & za 14-19 · ma & do 20-22 + 10-12 / 14-19 · di 10-12 / 14-18",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Openingstijden tussenseizoen",
+          "v": "31 mrt → 30 apr: di-za en feestdagen 14-18; zo 10-12 / 14-18",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Tarieven",
+          "v": "Volw. €6,50 · kind 5-16 €5 · 6-rittenkaart €30 (€55 met verhuur) · schaatsen €4-5 · helm €2",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Reservering",
+          "v": "Niet nodig voor publiekssessies; aanbevolen voor Eisstock"
+        },
+        {
+          "k": "Duur",
+          "v": "Gemiddeld 1 tot 2 u"
+        },
+        {
+          "k": "Parkeren",
+          "v": "Parkeerplaats Pré de Foire dichtbij"
+        },
+        {
+          "k": "Toegankelijkheid",
+          "v": "Gebouw toegankelijk (receptie, kleedkamer); schaatsen zelf niet geschikt voor mindervaliden"
+        },
+        {
+          "k": "Dieren",
+          "v": "Niet binnen toegestaan"
+        }
       ],
       "how_to_get_there": {
         "car": "Vanuit Annecy: D909 / D909a via Thônes en Saint-Jean-de-Sixt, 32 km, ca. 45 min. Dorpsparkings (Pré de Foire) dichtbij.",
@@ -406,18 +1040,65 @@
       "when_to_visit": "Van eind december tot eind april. Ideaal aan het einde van de dag of bij slecht weer. Eisstock-avonden op maandag.",
       "events": "Eisstock-toernooien maandag 20-22. Speciale animaties tijdens schoolvakanties (muziek, thema-avonden).",
       "faq": [
-        {"q": "Moet ik reserveren?", "a": "Nee, publiekssessies zonder reservering. Voor Eisstock op maandag aanbevolen."},
-        {"q": "Kan ik schaatsen huren?", "a": "Ja, €4-5 (alle maten) en helmen €2."},
-        {"q": "Wat is Eisstock?", "a": "Een Oostenrijkse ijssport zoals curling. Elke maandag 20-22; beginners welkom."},
-        {"q": "Wat zijn de tarieven?", "a": "Volwassenen €6,50, kind (5-16) €5. 6-rittenkaart €30 of €55 met verhuur. Schaatsen €4-5, helm €2."},
-        {"q": "Wat zijn de openingstijden?", "a": "Hoogseizoen: vr & zo 10-12 en 14-19, wo & za 14-19, ma & do 20-22. Details op de officiële website."},
-        {"q": "Waar parkeren?", "a": "Meerdere dorpsparkings nabij de baan (Place du Pré de Foire)."},
-        {"q": "Is de baan de hele winter open?", "a": "Ja, van 20 december 2025 tot 30 april 2026 — het hele skiseizoen en tussenseizoen."}
+        {
+          "q": "Moet ik reserveren?",
+          "a": "Nee, publiekssessies zonder reservering. Voor Eisstock op maandag aanbevolen."
+        },
+        {
+          "q": "Kan ik schaatsen huren?",
+          "a": "Ja, €4-5 (alle maten) en helmen €2."
+        },
+        {
+          "q": "Wat is Eisstock?",
+          "a": "Een Oostenrijkse ijssport zoals curling. Elke maandag 20-22; beginners welkom."
+        },
+        {
+          "q": "Wat zijn de tarieven?",
+          "a": "Volwassenen €6,50, kind (5-16) €5. 6-rittenkaart €30 of €55 met verhuur. Schaatsen €4-5, helm €2."
+        },
+        {
+          "q": "Wat zijn de openingstijden?",
+          "a": "Hoogseizoen: vr & zo 10-12 en 14-19, wo & za 14-19, ma & do 20-22. Details op de officiële website."
+        },
+        {
+          "q": "Waar parkeren?",
+          "a": "Meerdere dorpsparkings nabij de baan (Place du Pré de Foire)."
+        },
+        {
+          "q": "Is de baan de hele winter open?",
+          "a": "Ja, van 20 december 2025 tot 30 april 2026 — het hele skiseizoen en tussenseizoen."
+        }
       ],
-      "schema_amenities": ["indoor", "skate_rental", "family_friendly", "parking"]
+      "schema_amenities": [
+        "indoor",
+        "skate_rental",
+        "family_friendly",
+        "parking"
+      ]
     }
   },
   "featured_businesses": [],
   "google_check": null,
-  "freshness": null
+  "freshness": null,
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme de La Clusaz",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "175213",
+        "4865530",
+        "81948"
+      ],
+      "last_updated": "2026-03-23",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

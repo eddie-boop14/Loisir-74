@@ -110,6 +110,11 @@
       "date": "2026-06-09",
       "by": "claude-datatourisme-flow261672",
       "note": "Cross-referenced with DataTourisme record 675395 (last_updated 2024-08-09) from Office de Tourisme des Gets."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 1 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -162,14 +167,22 @@
       }
     },
     {
-      "tier": "invite",
-      "invite_type": "hebergement",
+      "tier": "recommended",
+      "name": "L'Alpina",
+      "type": "hebergement",
+      "url": "https://hotel.hotelalpina.fr/fr/index.aspx",
+      "cta_text": "Voir le site →",
+      "description": "Hôtel 3 étoiles idéalement situé à deux pas du centre village",
       "i18n": {
         "fr": {
-          "title": "Un hébergement proche ?",
-          "desc": "Gîte, chambre d'hôtes, camping, location aux Gets."
+          "description": "Hôtel 3 étoiles idéalement situé à deux pas du centre village"
         }
-      }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "210021",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.2
     }
   ],
   "gallery_photos": [],
@@ -1086,6 +1099,23 @@
       "last_updated": "2024-08-09",
       "fields_used": [
         "attribution_only"
+      ]
+    },
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme des Gets",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "210021"
+      ],
+      "last_updated": "2026-04-10",
+      "fields_used": [
+        "partners_proximity"
       ]
     }
   ],

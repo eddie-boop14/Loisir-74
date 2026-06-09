@@ -41,9 +41,69 @@
     "Recherche 3 : site officiel La Clusaz tourisme — trouvé laclusaz.com (OT)",
     "Fetch haute-savoie-tourisme.org : boucle familiale, sentiers, non accessible en poussette",
     "Fetch Wikipedia EN : altitude 1 358 m, GPS 45.91583°N 6.47611°E, Aravis, Défi-Foly",
-    "Fetch laclusaz.com : confirme station La Clusaz, domaine nordique, accès depuis le village"
+    "Fetch laclusaz.com : confirme station La Clusaz, domaine nordique, accès depuis le village",
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
+    }
   ],
-  "partners": [],
+  "partners": [
+    {
+      "tier": "recommended",
+      "name": "Le Chalet du Lac",
+      "type": "restaurant",
+      "url": "http://www.lechaletdulac-laclusaz.com/",
+      "cta_text": "Voir le site →",
+      "description": "Au bord du lac des Confins le chalet du lac vous propose une cuisine traditionnelle savoyarde, élaborée à base de produits du terroir.",
+      "i18n": {
+        "fr": {
+          "description": "Au bord du lac des Confins le chalet du lac vous propose une cuisine traditionnelle savoyarde, élaborée à base de produits du terroir."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "418646",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.2
+    },
+    {
+      "tier": "recommended",
+      "name": "Christiania",
+      "type": "hebergement",
+      "url": "https://www.hotel-christiania.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Ouvert toute l’année, l’hôtel n’est pas seulement un lieu pour les vacanciers, mais un réel acteur local qui participe à la vie du village.",
+      "i18n": {
+        "fr": {
+          "description": "Ouvert toute l’année, l’hôtel n’est pas seulement un lieu pour les vacanciers, mais un réel acteur local qui participe à la vie du village."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "175288",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 4.1
+    },
+    {
+      "tier": "recommended",
+      "name": "Les Galopins",
+      "type": "commerce",
+      "url": "https://www.lesgalopins.info/",
+      "cta_text": "Voir le site →",
+      "description": "Bienvenue dans notre joyeuse tribu ! Ici, les sourires sont aussi contagieux que les câlins de nos ânes, lamas et poneys.",
+      "i18n": {
+        "fr": {
+          "description": "Bienvenue dans notre joyeuse tribu ! Ici, les sourires sont aussi contagieux que les câlins de nos ânes, lamas et poneys."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "6962300",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.6
+    }
+  ],
   "gallery_photos": [],
   "i18n": {
     "fr": {
@@ -975,5 +1035,26 @@
     "price_candidates": [],
     "gps_drift_m": 31,
     "needs_price_review": false
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme de La Clusaz",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "175288",
+        "418646",
+        "6962300"
+      ],
+      "last_updated": "2026-04-30",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

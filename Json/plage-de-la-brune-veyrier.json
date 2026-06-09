@@ -59,9 +59,69 @@
       "date": "2026-06-09",
       "by": "claude-datatourisme-flow261672",
       "note": "Cross-referenced with DataTourisme record 161412 (last_updated 2024-05-27) from Office de Tourisme du Lac d'Annecy."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
-  "partners": [],
+  "partners": [
+    {
+      "tier": "recommended",
+      "name": "Bleu 1801",
+      "type": "restaurant",
+      "url": "https://www.bleu-1801.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Situé au bord du lac d’Annecy dans un cadre idyllique où les camaïeux de bleu se confondent, toute l’équipe de Bleu 1801 vous accueille pour un moment hors du temps.",
+      "i18n": {
+        "fr": {
+          "description": "Situé au bord du lac d’Annecy dans un cadre idyllique où les camaïeux de bleu se confondent, toute l’équipe de Bleu 1801 vous accueille pour un moment hors du temps."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "5603950",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.2
+    },
+    {
+      "tier": "recommended",
+      "name": "Le Bel Abri - Petit Port",
+      "type": "hebergement",
+      "url": "http://www.le-bel-abri.com/",
+      "cta_text": "Voir le site →",
+      "description": "Le Bel Abri s'est niché sur les berges du lac d'Annecy.",
+      "i18n": {
+        "fr": {
+          "description": "Le Bel Abri s'est niché sur les berges du lac d'Annecy."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "119614",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 1.0
+    },
+    {
+      "tier": "recommended",
+      "name": "Veyrier Club Nautique",
+      "type": "commerce",
+      "url": "http://www.veyrierclubnautique.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Basé dans le cadre privilégié de la plage du Plant à Veyrier du Lac, la base nautique Veyrier Club Nautique propose aux adultes et enfants, des leçons ou des stages, de voile, de planche à voile ou St.",
+      "i18n": {
+        "fr": {
+          "description": "Basé dans le cadre privilégié de la plage du Plant à Veyrier du Lac, la base nautique Veyrier Club Nautique propose aux adultes et enfants, des leçons ou des stages, de voile, de planche à voile ou St."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "609193",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 1.2
+    }
+  ],
   "gallery_photos": [],
   "booking_url": "https://www.veyrier-du-lac.fr/plages/",
   "booking_verified_date": "2026-05-24",
@@ -1052,7 +1112,25 @@
     }
   },
   "lac": "Lac d'Annecy",
-  "featured_businesses": [],
+  "featured_businesses": [
+    {
+      "tier": "featured",
+      "name": "Chez Nous à la Plage",
+      "type": "restaurant",
+      "logo": "/chez-nous-a-la-plage-logo.jpg",
+      "description": "Restaurant les pieds dans l'eau sur la plage de Saint-Jorioz. Carte estivale, terrasse face au lac.",
+      "address": "Plage de Saint-Jorioz, 74410 Saint-Jorioz",
+      "phone": "+33 4 50 64 97 23",
+      "hours": "Ouvert mi-février au 1er novembre · Fermé le lundi",
+      "url": "https://www.cheznousalaplage.com",
+      "price_range": "12,90 € – 19,90 €",
+      "cta_text": "Voir le site →",
+      "proximity_km": 7.2,
+      "source": "featured_extension",
+      "source_slug": "plage-de-saint-jorioz",
+      "seeded_at": "2026-06-09"
+    }
+  ],
   "price_tiers": [],
   "google_check": {
     "checked": "2026-06-04",
@@ -1106,6 +1184,25 @@
       "last_updated": "2024-05-27",
       "fields_used": [
         "attribution_only"
+      ]
+    },
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "119614",
+        "5603950",
+        "609193"
+      ],
+      "last_updated": "2026-03-10",
+      "fields_used": [
+        "partners_proximity"
       ]
     }
   ]

@@ -95,18 +95,14 @@
     ]
   },
   "sparse_data": false,
-  "research_log": [],
-  "partners": [
+  "research_log": [
     {
-      "tier": "invite",
-      "invite_type": "restaurant",
-      "i18n": {
-        "fr": {
-          "title": "Un restaurant à Annecy ?",
-          "desc": "Vous accueillez les visiteurs du Musée-Château d'Annecy ? Apparaissez ici."
-        }
-      }
-    },
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 1 partner cards from DataTourisme proximity (within 10.0 km)."
+    }
+  ],
+  "partners": [
     {
       "tier": "recommended",
       "type": "commerce",
@@ -154,6 +150,24 @@
           "description": "Hôtel 3 étoiles indépendant au bord du lac, rue des Marquisats à Annecy. Espace bien-être avec hammam. À 10 min à pied."
         }
       }
+    },
+    {
+      "tier": "recommended",
+      "name": "Le Fréti",
+      "type": "restaurant",
+      "url": "https://www.lefreti.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Créé en 1974, le Freti est un restaurant de spécialités fromagères.\r\nFondues, raclettes, plats fromagers, dégustation de fromages affinés.\r\nUn voyage gastronomique au cœur du fromage.",
+      "i18n": {
+        "fr": {
+          "description": "Créé en 1974, le Freti est un restaurant de spécialités fromagères.\r\nFondues, raclettes, plats fromagers, dégustation de fromages affinés.\r\nUn voyage gastronomique au cœur du fromage."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "7138911",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.1
     }
   ],
   "gallery_photos": [],
@@ -1227,5 +1241,24 @@
     "price_candidates": [],
     "gps_drift_m": 20,
     "needs_price_review": false
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "7138911"
+      ],
+      "last_updated": "2026-02-05",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

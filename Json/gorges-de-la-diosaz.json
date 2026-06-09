@@ -57,6 +57,11 @@
     {
       "date": "2026-06-07",
       "note": "Enrichissement complet multi-langues FR/EN/DE/IT/ES/NL (body, activités, FAQ, infos pratiques, partenaires)."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -73,6 +78,60 @@
       "type": "info",
       "description": "Site officiel de la commune de Servoz, gestionnaire historique du site des gorges.",
       "url": "https://www.servoz.fr"
+    },
+    {
+      "tier": "recommended",
+      "name": "Restaurant La Sauvageonne",
+      "type": "restaurant",
+      "url": "http://restaurant-sauvageonne.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Restaurant & Bar à vins. Le repère des épicuriens.\r\nSalle de restaurant chaleureuse et terrasse fleurie avec vue : repas de groupes, possibilité traiteur.",
+      "i18n": {
+        "fr": {
+          "description": "Restaurant & Bar à vins. Le repère des épicuriens.\r\nSalle de restaurant chaleureuse et terrasse fleurie avec vue : repas de groupes, possibilité traiteur."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "172400",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.5
+    },
+    {
+      "tier": "recommended",
+      "name": "Fontaine du Mont-Blanc Hotel & Spa",
+      "type": "hebergement",
+      "url": "http://www.hotel-lafontaine-chamonix.com/",
+      "cta_text": "Voir le site →",
+      "description": "Hôtel Spa dans la vallée de Chamonix vue sur la chaine du Mont-Blanc, piscine couverte, chauffée, sauna, hammam.\n\nNouveauté: une nouvelle catégorie d'une seule chambre double avec un lit queen size su.",
+      "i18n": {
+        "fr": {
+          "description": "Hôtel Spa dans la vallée de Chamonix vue sur la chaine du Mont-Blanc, piscine couverte, chauffée, sauna, hammam.\n\nNouveauté: une nouvelle catégorie d'une seule chambre double avec un lit queen size su."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "172492",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 1.7
+    },
+    {
+      "tier": "recommended",
+      "name": "Fly Mont-Blanc - Parapente",
+      "type": "commerce",
+      "url": "https://www.flymontblanc.com/",
+      "cta_text": "Voir le site →",
+      "description": "Fly Mont Blanc, société spécialisée dans les activités aériennes vous propose des baptêmes de l'air en parapente.",
+      "i18n": {
+        "fr": {
+          "description": "Fly Mont Blanc, société spécialisée dans les activités aériennes vous propose des baptêmes de l'air en parapente."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "5240403",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.2
     }
   ],
   "gallery_photos": [],
@@ -1034,5 +1093,26 @@
       ]
     }
   },
-  "featured_businesses": []
+  "featured_businesses": [],
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme de la Vallée de Chamonix-Mont-Blanc",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "172400",
+        "172492",
+        "5240403"
+      ],
+      "last_updated": "2026-05-27",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

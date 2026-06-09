@@ -59,6 +59,11 @@
     {
       "date": "2026-06-07",
       "note": "Enrichissement complet multi-langues FR/EN/DE/IT/ES/NL (body, activités, FAQ, infos pratiques, partenaires)."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -72,6 +77,60 @@
       "name": "Office de Tourisme du Grand Annecy",
       "tier": "recommended",
       "type": "info"
+    },
+    {
+      "tier": "recommended",
+      "name": "Chez Mamie Lise",
+      "type": "restaurant",
+      "url": "https://www.mamie-lise.com/restaurant-annecy/",
+      "cta_text": "Voir le site →",
+      "description": "Aux portes de la Vieille Ville d’Annecy, le restaurant Chez Mamie Lise dévoile la riche tradition culinaire de la Haute-Savoie.",
+      "i18n": {
+        "fr": {
+          "description": "Aux portes de la Vieille Ville d’Annecy, le restaurant Chez Mamie Lise dévoile la riche tradition culinaire de la Haute-Savoie."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "7714804",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.2
+    },
+    {
+      "tier": "recommended",
+      "name": "Le Pélican",
+      "type": "hebergement",
+      "url": "https://www.hotel-lepelican.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Idéalement situé à l’entrée de la vielle ville d’Annecy, l’hôtel 4* Le Pélican est la promesse d’un séjour de rêve, dans un bâtiment entièrement rénové et classé au patrimoine historique avec une vue .",
+      "i18n": {
+        "fr": {
+          "description": "Idéalement situé à l’entrée de la vielle ville d’Annecy, l’hôtel 4* Le Pélican est la promesse d’un séjour de rêve, dans un bâtiment entièrement rénové et classé au patrimoine historique avec une vue ."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "5834364",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.5
+    },
+    {
+      "tier": "recommended",
+      "name": "Mobilboard - Segway, vélo et trottinettes électriques",
+      "type": "commerce",
+      "url": "https://www.mobilboard.com/annecy",
+      "cta_text": "Voir le site →",
+      "description": "Mobilboard Annecy est un prestataire de location de vélo et de vélo électrique.",
+      "i18n": {
+        "fr": {
+          "description": "Mobilboard Annecy est un prestataire de location de vélo et de vélo électrique."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "482485",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.2
     }
   ],
   "gallery_photos": [],
@@ -1028,5 +1087,26 @@
     "google_lat": 45.8984526,
     "google_lng": 6.1235553,
     "gps_drift_m": 0
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "482485",
+        "5834364",
+        "7714804"
+      ],
+      "last_updated": "2026-05-16",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

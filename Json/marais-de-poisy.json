@@ -27,9 +27,64 @@
       "type": "restaurant",
       "description": "Restaurant moderne au Parc du Calvi avec terrasse verdoyante, proposant une cuisine de saison fraîche et inventive.",
       "url": "https://www.espace55.com/"
+    },
+    {
+      "tier": "recommended",
+      "name": "The Originals City Hôtel Annecy Aéroport",
+      "type": "hebergement",
+      "url": "https://www.hotel-annecy-aeroport.com/",
+      "cta_text": "Voir le site →",
+      "description": "Petit air chalet pour cet hôtel 2 étoiles de Metz-Tessy, aux portes du massif des Aravis, à 7 km d’Annecy et de son lac.",
+      "i18n": {
+        "fr": {
+          "description": "Petit air chalet pour cet hôtel 2 étoiles de Metz-Tessy, aux portes du massif des Aravis, à 7 km d’Annecy et de son lac."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "108701",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 2.3
+    },
+    {
+      "tier": "recommended",
+      "name": "Maison Synèse",
+      "type": "commerce",
+      "url": "https://www.maison-synese.com/",
+      "cta_text": "Voir le site →",
+      "description": "Maison dédiée à la longévité et à la prévention santé.\r\nUn accompagnement individuel et global est assuré par nos professionnels de la santé et de la forme complété pour vous aider à retrouver ou cons.",
+      "i18n": {
+        "fr": {
+          "description": "Maison dédiée à la longévité et à la prévention santé.\r\nUn accompagnement individuel et global est assuré par nos professionnels de la santé et de la forme complété pour vous aider à retrouver ou cons."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "6812538",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.7
     }
   ],
-  "featured_businesses": [],
+  "featured_businesses": [
+    {
+      "tier": "featured",
+      "name": "Chalet du Tornet",
+      "type": "restaurant",
+      "logo": "/chalet-du-tornet-logo.png",
+      "description": "Restaurant chalet au bord du lac, terrasse face à l'eau, bar du matin au dernier verre. Cuisine savoyarde et traditionnelle, charcuterie Maison Baud, glaces artisanales. Au cœur du Domaine du Tornet.",
+      "address": "161 Route de Paris, 74330 La Balme-de-Sillingy",
+      "phone": "04 38 80 22 51",
+      "phone_tel": "+33438802251",
+      "email": "chaletdutornet74@gmail.com",
+      "hours": "Ouvert de février à début novembre · Bar 9h-17h (jeudi-samedi jusqu'à 23h) · Cuisine midi tous les jours, soirs jeudi-samedi",
+      "url": "https://chaletdutornet.com",
+      "cta_text": "Voir le site →",
+      "proximity_km": 5.1,
+      "source": "featured_extension",
+      "source_slug": "domaine-du-tornet",
+      "seeded_at": "2026-06-09"
+    }
+  ],
   "sources": [
     "https://en.lac-annecy.com/course-thematic-walk/marais-de-poisy-poisy/",
     "https://www.poisy.fr/Decouvrir-Poisy-par-ses-sentiers",
@@ -39,7 +94,13 @@
   "verify_flags": [
     "CREATED 2026-06-04 from lieux.json orphan: needed per-fiche JSON for hub/sitemap rendering."
   ],
-  "research_log": [],
+  "research_log": [
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 2 partner cards from DataTourisme proximity (within 10.0 km)."
+    }
+  ],
   "sparse_data": false,
   "date_published_human": "05 juin 2026",
   "date_modified_human": "06 juin 2026",
@@ -792,5 +853,25 @@
     "price_candidates": [],
     "gps_drift_m": 1727,
     "needs_price_review": false
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "108701",
+        "6812538"
+      ],
+      "last_updated": "2026-03-19",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

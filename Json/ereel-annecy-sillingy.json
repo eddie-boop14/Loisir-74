@@ -48,8 +48,69 @@
     ]
   },
   "sparse_data": false,
-  "research_log": [],
-  "partners": [],
+  "research_log": [
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
+    }
+  ],
+  "partners": [
+    {
+      "tier": "recommended",
+      "name": "La Jungle",
+      "type": "restaurant",
+      "url": "https://la-jungle.fr/",
+      "cta_text": "Voir le site →",
+      "description": "En mode tribu, chill, business, carrément barré, tout le monde est bienvenu à La Jungle ! Vous passerez la porte et plongerez dans l’univers lounge et branché de la jungle urbaine made in Haute-Savoie.",
+      "i18n": {
+        "fr": {
+          "description": "En mode tribu, chill, business, carrément barré, tout le monde est bienvenu à La Jungle ! Vous passerez la porte et plongerez dans l’univers lounge et branché de la jungle urbaine made in Haute-Savoie."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "4808493",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.1
+    },
+    {
+      "tier": "recommended",
+      "name": "Auberge La Ferme de Ferrières",
+      "type": "hebergement",
+      "url": "http://www.aubergelafermedeferrieres.com/",
+      "cta_text": "Voir le site →",
+      "description": "Le calme, le confort, une ambiance campagnarde, une cuisine traditionnelle et un panorama magnifique sont les ingrédients pour de bonnes vacances.",
+      "i18n": {
+        "fr": {
+          "description": "Le calme, le confort, une ambiance campagnarde, une cuisine traditionnelle et un panorama magnifique sont les ingrédients pour de bonnes vacances."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "5295304",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 2.5
+    },
+    {
+      "tier": "recommended",
+      "name": "Maison Synèse",
+      "type": "commerce",
+      "url": "https://www.maison-synese.com/",
+      "cta_text": "Voir le site →",
+      "description": "Maison dédiée à la longévité et à la prévention santé.\r\nUn accompagnement individuel et global est assuré par nos professionnels de la santé et de la forme complété pour vous aider à retrouver ou cons.",
+      "i18n": {
+        "fr": {
+          "description": "Maison dédiée à la longévité et à la prévention santé.\r\nUn accompagnement individuel et global est assuré par nos professionnels de la santé et de la forme complété pour vous aider à retrouver ou cons."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "6812538",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 1.3
+    }
+  ],
   "gallery_photos": [],
   "i18n": {
     "fr": {
@@ -1085,7 +1146,26 @@
       ]
     }
   },
-  "featured_businesses": [],
+  "featured_businesses": [
+    {
+      "tier": "featured",
+      "name": "Chalet du Tornet",
+      "type": "restaurant",
+      "logo": "/chalet-du-tornet-logo.png",
+      "description": "Restaurant chalet au bord du lac, terrasse face à l'eau, bar du matin au dernier verre. Cuisine savoyarde et traditionnelle, charcuterie Maison Baud, glaces artisanales. Au cœur du Domaine du Tornet.",
+      "address": "161 Route de Paris, 74330 La Balme-de-Sillingy",
+      "phone": "04 38 80 22 51",
+      "phone_tel": "+33438802251",
+      "email": "chaletdutornet74@gmail.com",
+      "hours": "Ouvert de février à début novembre · Bar 9h-17h (jeudi-samedi jusqu'à 23h) · Cuisine midi tous les jours, soirs jeudi-samedi",
+      "url": "https://chaletdutornet.com",
+      "cta_text": "Voir le site →",
+      "proximity_km": 4.5,
+      "source": "featured_extension",
+      "source_slug": "domaine-du-tornet",
+      "seeded_at": "2026-06-09"
+    }
+  ],
   "google_check": {
     "checked": "2026-06-04",
     "query": "E.réel Annecy Sillingy Haute-Savoie France",
@@ -1152,5 +1232,26 @@
     "gps_drift_m": 3,
     "needs_price_review": false,
     "recomputed": "2026-06-05 (registry demoted to confirmer-only)"
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "4808493",
+        "5295304",
+        "6812538"
+      ],
+      "last_updated": "2026-03-19",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

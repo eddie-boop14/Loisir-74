@@ -51,6 +51,11 @@
     {
       "date": "2026-06-07",
       "note": "Enrichissement complet multi-langues FR/EN/DE/IT/ES/NL (body, activités, FAQ, infos pratiques, partenaires)."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -65,6 +70,60 @@
       "tier": "recommended",
       "type": "info",
       "url": "https://www.haute-savoie-tourisme.org/"
+    },
+    {
+      "tier": "recommended",
+      "name": "E-Motion Annecy",
+      "type": "restaurant",
+      "url": "https://www.emotion-concept.fr/",
+      "cta_text": "Voir le site →",
+      "description": "E-MOTION est un lieu multifonctionnel offrant une combinaison unique d’activités et de services.",
+      "i18n": {
+        "fr": {
+          "description": "E-MOTION est un lieu multifonctionnel offrant une combinaison unique d’activités et de services."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "5603922",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.2
+    },
+    {
+      "tier": "recommended",
+      "name": "Mercure Annecy Sud",
+      "type": "hebergement",
+      "url": "https://all.accor.com/hotel/0340/index.fr.shtml",
+      "cta_text": "Voir le site →",
+      "description": "Entre lac et montagnes, le Mercure Annecy Sud est le point de départ idéal pour découvrir Annecy.",
+      "i18n": {
+        "fr": {
+          "description": "Entre lac et montagnes, le Mercure Annecy Sud est le point de départ idéal pour découvrir Annecy."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "113093",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.3
+    },
+    {
+      "tier": "recommended",
+      "name": "Galerie La Fabric",
+      "type": "commerce",
+      "url": "http://www.fondation-salomon.com/",
+      "cta_text": "Voir le site →",
+      "description": "Au cœur de la ville d'Annecy, à 10 minutes à pied de la vieille ville, découvrez ce lieu d'expositions, de rencontres, de conférences, de voyages artistiques et de sensibilisation du jeune public à l'.",
+      "i18n": {
+        "fr": {
+          "description": "Au cœur de la ville d'Annecy, à 10 minutes à pied de la vieille ville, découvrez ce lieu d'expositions, de rencontres, de conférences, de voyages artistiques et de sensibilisation du jeune public à l'."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "2882181",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.8
     }
   ],
   "gallery_photos": [],
@@ -1066,7 +1125,25 @@
       ]
     }
   },
-  "featured_businesses": [],
+  "featured_businesses": [
+    {
+      "tier": "featured",
+      "name": "Chez Nous à la Plage",
+      "type": "restaurant",
+      "logo": "/chez-nous-a-la-plage-logo.jpg",
+      "description": "Restaurant les pieds dans l'eau sur la plage de Saint-Jorioz. Carte estivale, terrasse face au lac.",
+      "address": "Plage de Saint-Jorioz, 74410 Saint-Jorioz",
+      "phone": "+33 4 50 64 97 23",
+      "hours": "Ouvert mi-février au 1er novembre · Fermé le lundi",
+      "url": "https://www.cheznousalaplage.com",
+      "price_range": "12,90 € – 19,90 €",
+      "cta_text": "Voir le site →",
+      "proximity_km": 7.5,
+      "source": "featured_extension",
+      "source_slug": "plage-de-saint-jorioz",
+      "seeded_at": "2026-06-09"
+    }
+  ],
   "google_check": {
     "checked": "2026-06-04",
     "query": "Climb Up Annecy Annecy Haute-Savoie France",
@@ -1089,5 +1166,26 @@
     "google_lat": 45.9419987,
     "google_lng": 6.132869899999999,
     "gps_drift_m": 4767
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "113093",
+        "2882181",
+        "5603922"
+      ],
+      "last_updated": "2026-03-26",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

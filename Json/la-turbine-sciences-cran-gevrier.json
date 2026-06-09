@@ -65,6 +65,11 @@
       "date": "2026-06-09",
       "by": "claude-datatourisme-flow261672",
       "note": "Cross-referenced with DataTourisme record 173610 (last_updated 2025-09-16) from Ville d'Annecy."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -74,6 +79,60 @@
       "type": "info",
       "description": "Office de tourisme du lac d'Annecy : événements, billetterie, hébergement.",
       "url": "https://www.lac-annecy.com"
+    },
+    {
+      "tier": "recommended",
+      "name": "Los Primos",
+      "type": "restaurant",
+      "url": "https://los-primos.com/",
+      "cta_text": "Voir le site →",
+      "description": "Real Mexican Street Food au cœur de la ville d’Annecy, venez tester des veritables tacos mexicains, nos délicieux big Burritos et les meilleures quesadillas, fait maison et hecho con amor.",
+      "i18n": {
+        "fr": {
+          "description": "Real Mexican Street Food au cœur de la ville d’Annecy, venez tester des veritables tacos mexicains, nos délicieux big Burritos et les meilleures quesadillas, fait maison et hecho con amor."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "5996347",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.5
+    },
+    {
+      "tier": "recommended",
+      "name": "Novotel Annecy Centre",
+      "type": "hebergement",
+      "url": "https://all.accor.com/hotel/1357/index.fr.shtml",
+      "cta_text": "Voir le site →",
+      "description": "Novotel Annecy Centre **** - The Craic situé en plein cœur d’Annecy, à 5 min à pied de la Vieille ville, du lac d'Annecy et à 50 m de la gare TGV.",
+      "i18n": {
+        "fr": {
+          "description": "Novotel Annecy Centre **** - The Craic situé en plein cœur d’Annecy, à 5 min à pied de la Vieille ville, du lac d'Annecy et à 50 m de la gare TGV."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "210711",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 1.0
+    },
+    {
+      "tier": "recommended",
+      "name": "ESAAA pratiques amateurs",
+      "type": "commerce",
+      "url": "http://www.esaaa.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Pratiques artistiques pour tous ! \r\nESAAA p.a. est l'école des pratiques amateurs de l'ESAAA.",
+      "i18n": {
+        "fr": {
+          "description": "Pratiques artistiques pour tous ! \r\nESAAA p.a. est l'école des pratiques amateurs de l'ESAAA."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "5215359",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.2
     }
   ],
   "gallery_photos": [],
@@ -1021,7 +1080,26 @@
       ]
     }
   },
-  "featured_businesses": [],
+  "featured_businesses": [
+    {
+      "tier": "featured",
+      "name": "Chalet du Tornet",
+      "type": "restaurant",
+      "logo": "/chalet-du-tornet-logo.png",
+      "description": "Restaurant chalet au bord du lac, terrasse face à l'eau, bar du matin au dernier verre. Cuisine savoyarde et traditionnelle, charcuterie Maison Baud, glaces artisanales. Au cœur du Domaine du Tornet.",
+      "address": "161 Route de Paris, 74330 La Balme-de-Sillingy",
+      "phone": "04 38 80 22 51",
+      "phone_tel": "+33438802251",
+      "email": "chaletdutornet74@gmail.com",
+      "hours": "Ouvert de février à début novembre · Bar 9h-17h (jeudi-samedi jusqu'à 23h) · Cuisine midi tous les jours, soirs jeudi-samedi",
+      "url": "https://chaletdutornet.com",
+      "cta_text": "Voir le site →",
+      "proximity_km": 9.2,
+      "source": "featured_extension",
+      "source_slug": "domaine-du-tornet",
+      "seeded_at": "2026-06-09"
+    }
+  ],
   "google_check": null,
   "freshness": null,
   "data_sources": [
@@ -1038,6 +1116,25 @@
       "last_updated": "2025-09-16",
       "fields_used": [
         "attribution_only"
+      ]
+    },
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme du Lac d'Annecy",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "210711",
+        "5215359",
+        "5996347"
+      ],
+      "last_updated": "2026-04-16",
+      "fields_used": [
+        "partners_proximity"
       ]
     }
   ]

@@ -54,6 +54,11 @@
     {
       "date": "2026-06-07",
       "note": "Enrichissement complet multi-langues FR/EN/DE/IT/ES/NL (body, activités, FAQ, infos pratiques, partenaires)."
+    },
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
     }
   ],
   "partners": [
@@ -68,6 +73,60 @@
       "tier": "recommended",
       "type": "info",
       "url": "https://www.haute-savoie-tourisme.org/"
+    },
+    {
+      "tier": "recommended",
+      "name": "La Calèche",
+      "type": "restaurant",
+      "url": "https://la-clusaz.ovh/restaurant-la-caleche.html",
+      "cta_text": "Voir le site →",
+      "description": "Au cœur de village, place de l'église, dans un cadre entièrement rénové et une ambiance familiale et décontractée...",
+      "i18n": {
+        "fr": {
+          "description": "Au cœur de village, place de l'église, dans un cadre entièrement rénové et une ambiance familiale et décontractée..."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "81941",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.1
+    },
+    {
+      "tier": "recommended",
+      "name": "Christiania",
+      "type": "hebergement",
+      "url": "https://www.hotel-christiania.fr/",
+      "cta_text": "Voir le site →",
+      "description": "Ouvert toute l’année, l’hôtel n’est pas seulement un lieu pour les vacanciers, mais un réel acteur local qui participe à la vie du village.",
+      "i18n": {
+        "fr": {
+          "description": "Ouvert toute l’année, l’hôtel n’est pas seulement un lieu pour les vacanciers, mais un réel acteur local qui participe à la vie du village."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "175288",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.1
+    },
+    {
+      "tier": "recommended",
+      "name": "Evolution 2 events La Clusaz",
+      "type": "commerce",
+      "url": "https://evolution2.com/la-clusaz",
+      "cta_text": "Voir le site →",
+      "description": "La Clusaz est la destination idéale pour vos projets d'entreprise en séminaire !",
+      "i18n": {
+        "fr": {
+          "description": "La Clusaz est la destination idéale pour vos projets d'entreprise en séminaire !"
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "4865530",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 0.1
     }
   ],
   "gallery_photos": [],
@@ -1068,5 +1127,26 @@
     "google_lat": 45.9164142,
     "google_lng": 6.381119099999999,
     "gps_drift_m": 3581
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme de La Clusaz",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "175288",
+        "4865530",
+        "81941"
+      ],
+      "last_updated": "2026-05-04",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }

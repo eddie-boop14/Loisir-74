@@ -43,7 +43,12 @@
     "Web search 3: Mont Joly altitude accès — confirmé 2525m, plusieurs itinéraires",
     "Web fetch: Haute-Savoie Tourisme page Megève — détails pratiques, contacts OT",
     "Web fetch: tourism.saintgervais.com — coordonnées GPS, description, horaires",
-    "Wikipedia FR bloqué, mais Wikipedia EN accessible avec altitude confirmée 2525m et massif Beaufortain"
+    "Wikipedia FR bloqué, mais Wikipedia EN accessible avec altitude confirmée 2525m et massif Beaufortain",
+    {
+      "date": "2026-06-09",
+      "by": "claude-seed-dt-partners",
+      "note": "Seeded 2 partner cards from DataTourisme proximity (within 10.0 km)."
+    }
   ],
   "partners": [
     {
@@ -59,6 +64,42 @@
       "type": "hébergement",
       "description": "Hôtel 5 étoiles à Saint-Nicolas-de-Véroce face au massif du Mont-Blanc. Spa avec piscine chauffée, restaurant gastronomique, point de départ idéal pour la randonnée du Mont Joly.",
       "url": ""
+    },
+    {
+      "tier": "recommended",
+      "name": "Le Christiania",
+      "type": "hebergement",
+      "url": "http://lechristiania-hotel.com/",
+      "cta_text": "Voir le site →",
+      "description": "Hiver : Hôtel-restaurant familial, au pied de la piste des Loyers.\r\nEté : Hôtel-restaurant familial avec piscine extérieure et jardin.",
+      "i18n": {
+        "fr": {
+          "description": "Hiver : Hôtel-restaurant familial, au pied de la piste des Loyers.\r\nEté : Hôtel-restaurant familial avec piscine extérieure et jardin."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "212378",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 2.9
+    },
+    {
+      "tier": "recommended",
+      "name": "Calumontagne",
+      "type": "commerce",
+      "url": "http://www.calumontagne.com/",
+      "cta_text": "Voir le site →",
+      "description": "Ludovic vous propose des cours de ski, snowboard, télémark pour tous niveaux.",
+      "i18n": {
+        "fr": {
+          "description": "Ludovic vous propose des cours de ski, snowboard, télémark pour tous niveaux."
+        }
+      },
+      "i18n_placeholder": true,
+      "source": "datatourisme",
+      "source_id": "657785",
+      "seeded_at": "2026-06-09",
+      "proximity_km": 2.6
     }
   ],
   "gallery_photos": [],
@@ -1028,5 +1069,25 @@
     "price_candidates": [],
     "gps_drift_m": 5,
     "needs_price_review": false
-  }
+  },
+  "data_sources": [
+    {
+      "platform": "DataTourisme",
+      "platform_url": "https://www.datatourisme.fr",
+      "publisher": "Apidae Tourisme",
+      "publisher_url": "https://www.apidae-tourisme.com/",
+      "creator": "Office de Tourisme des Contamines-Montjoie",
+      "creator_url": "",
+      "license": "Licence Ouverte 2.0 (Etalab)",
+      "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
+      "datatourisme_ids": [
+        "212378",
+        "657785"
+      ],
+      "last_updated": "2026-05-11",
+      "fields_used": [
+        "partners_proximity"
+      ]
+    }
+  ]
 }
