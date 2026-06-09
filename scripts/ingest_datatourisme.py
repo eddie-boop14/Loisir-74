@@ -216,9 +216,13 @@ def apply_attribution(rec, slug, today):
     )
     note = (f"Cross-referenced with DataTourisme record {rec['dt_id']} "
             f"(last_updated {rec['last_update']}) from {rec['creator_name']}.")
-    data.setdefault("research_log", []).append(
-        {"date": today, "by": "claude-datatourisme-flow261672", "note": note}
-    )
+    rl = data.get("research_log")
+    if isinstance(rl, dict):
+        rl = [rl]  # legacy single-entry shape → normalize to list
+    elif rl is None:
+        rl = []
+    rl.append({"date": today, "by": "claude-datatourisme-flow261672", "note": note})
+    data["research_log"] = rl
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return True, "attributed"
 
