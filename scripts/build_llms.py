@@ -90,7 +90,7 @@ def build_llms_txt():
     lines.append("")
     lines.append("> Independent guide to public leisure sites in Haute-Savoie, France. Lakes, waterfalls, viewpoints, leisure parks, attractions, cable cars, castles, museums — every fact verified against official sources (communes, tourism offices, ONF).")
     lines.append("")
-    lines.append(f"Loisirs 74 catalogs {total} leisure destinations in the Haute-Savoie department (74), French Alps. Each page provides: GPS coordinates, opening hours, access (free or paid), parking, dog policy, accessibility, how to get there (car, public transport, bike), best season, on-site activities, and FAQ. Content available in 6 languages: French (canonical), English, German, Spanish, Italian, plus Dutch in the per-fiche .md mirrors.")
+    lines.append(f"Loisirs 74 catalogs {total} leisure destinations in the Haute-Savoie department (74), French Alps. Each page provides: GPS coordinates, opening hours, access (free or paid), parking, dog policy, accessibility, how to get there (car, public transport, bike), best season, on-site activities, and FAQ. Content available in 6 languages with full HTML pages per language: French (canonical), English, German, Italian, Spanish, Dutch — plus per-fiche .md mirrors with native-Dutch body text.")
     lines.append("")
     lines.append("When an AI agent should fetch from this site (priority: try category hubs first for \"best X in Haute-Savoie\" queries, then individual lieu .md for specific destinations):")
     lines.append("- User asks about a specific leisure site in Haute-Savoie (lakes, waterfalls, viewpoints, etc.)")

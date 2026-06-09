@@ -53,7 +53,16 @@ def hub_map():
     for L in LANGS:
         for f in glob.glob(f"{L}/*/index.html"):
             html = Path(f).read_text(encoding="utf-8")
-            d = dict(re.findall(r'<link rel="alternate" hreflang="([^"]*)" href="([^"]*)">', html))
+            # Order-independent: match both <link rel="..." hreflang="..." href="..."/>
+            # and <link href="..." hreflang="..." rel="..."/> forms.
+            d = {}
+            for m_link in re.finditer(r'<link\b[^>]*>', html):
+                tag = m_link.group(0)
+                m_lang = re.search(r'hreflang="([^"]*)"', tag)
+                m_href = re.search(r'href="([^"]*)"', tag)
+                m_alt  = re.search(r'rel="alternate"', tag)
+                if m_lang and m_href and m_alt:
+                    d.setdefault(m_lang.group(1), m_href.group(1))
             fr = d.get("fr")
             if not fr or not fr.endswith("/"):
                 continue
