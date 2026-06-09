@@ -12,69 +12,87 @@ import sys
 from pathlib import Path
 
 ROOT = Path("/home/user/Loisir-74")
-LANGS = ["en", "de", "it", "es"]
-LI = {"en": 0, "de": 1, "it": 2, "es": 3}
+LANGS = ["en", "de", "it", "es", "nl"]
+LI = {"en": 0, "de": 1, "it": 2, "es": 3, "nl": 4}
 TEMPLATE_SLUG = "plage-de-doussard"  # has known-good locale pages to lift header/footer from
 
-OG_LOCALE = {"en": "en_US", "de": "de_DE", "it": "it_IT", "es": "es_ES"}
-INLANG = {"en": "en-US", "de": "de-DE", "it": "it-IT", "es": "es-ES"}
-HOME = {"en": "Home", "de": "Startseite", "it": "Home", "es": "Inicio"}
-SKIP = {"en": "Skip to content", "de": "Zum Inhalt springen", "it": "Vai al contenuto", "es": "Saltar al contenido"}
-GENERIC = {"en": "Generic", "de": "Generisch", "it": "Generico", "es": "Genérico"}
-PUBLISHED = {"en": "Published", "de": "Veröffentlicht", "it": "Pubblicato il", "es": "Publicado el"}
-UPDATED = {"en": "Updated", "de": "Aktualisiert", "it": "Aggiornato il", "es": "Actualizado el"}
-FREEWORD = {"en": "Free", "de": "Kostenlos", "it": "Gratis", "es": "Gratis"}
-PAIDWORD = {"en": "Paid", "de": "Kostenpflichtig", "it": "A pagamento", "es": "De pago"}
+OG_LOCALE = {"en": "en_US", "de": "de_DE", "it": "it_IT", "es": "es_ES", "nl": "nl_NL"}
+INLANG = {"en": "en-US", "de": "de-DE", "it": "it-IT", "es": "es-ES", "nl": "nl-NL"}
+HOME = {"en": "Home", "de": "Startseite", "it": "Home", "es": "Inicio", "nl": "Startpagina"}
+SKIP = {"en": "Skip to content", "de": "Zum Inhalt springen", "it": "Vai al contenuto", "es": "Saltar al contenido", "nl": "Naar inhoud springen"}
+GENERIC = {"en": "Generic", "de": "Generisch", "it": "Generico", "es": "Genérico", "nl": "Generiek"}
+PUBLISHED = {"en": "Published", "de": "Veröffentlicht", "it": "Pubblicato il", "es": "Publicado el", "nl": "Gepubliceerd op"}
+UPDATED = {"en": "Updated", "de": "Aktualisiert", "it": "Aggiornato il", "es": "Actualizado el", "nl": "Bijgewerkt op"}
+FREEWORD = {"en": "Free", "de": "Kostenlos", "it": "Gratis", "es": "Gratis", "nl": "Gratis"}
+PAIDWORD = {"en": "Paid", "de": "Kostenpflichtig", "it": "A pagamento", "es": "De pago", "nl": "Betaald"}
 
 KICKER = {
-    "Activités": ["Activities", "Aktivitäten", "Attività", "Actividades"],
-    "Pratique": ["Practical", "Praktisches", "Pratico", "Práctica"],
-    "Accès": ["Access", "Anreise", "Accesso", "Acceso"],
-    "Quand venir": ["When to visit", "Wann besuchen", "Quando visitare", "Cuándo visitar"],
-    "À proximité": ["Nearby", "In der Nähe", "Nelle vicinanze", "Cerca"],
-    "Photos": ["Photos", "Fotos", "Foto", "Fotos"],
-    "Sources": ["Sources", "Quellen", "Fonti", "Fuentes"],
-    "En un coup d&#39;œil": ["At a glance", "Auf einen Blick", "In sintesi", "De un vistazo"],
+    "Activités": ["Activities", "Aktivitäten", "Attività", "Actividades", "Activiteiten"],
+    "Pratique": ["Practical", "Praktisches", "Pratico", "Práctica", "Praktisch"],
+    "Accès": ["Access", "Anreise", "Accesso", "Acceso", "Toegang"],
+    "Quand venir": ["When to visit", "Wann besuchen", "Quando visitare", "Cuándo visitar", "Wanneer bezoeken"],
+    "À proximité": ["Nearby", "In der Nähe", "Nelle vicinanze", "Cerca", "In de buurt"],
+    "Photos": ["Photos", "Fotos", "Foto", "Fotos", "Foto's"],
+    "Sources": ["Sources", "Quellen", "Fonti", "Fuentes", "Bronnen"],
+    "En un coup d&#39;œil": ["At a glance", "Auf einen Blick", "In sintesi", "De un vistazo", "In één oogopslag"],
 }
 # Partner-card badge translations (À proximité tier:recommended).
-BADGE_PROXIMITY = {"en": "Nearby", "de": "In der Nähe", "it": "Nelle vicinanze", "es": "Cerca"}
+BADGE_PROXIMITY = {"en": "Nearby", "de": "In der Nähe", "it": "Nelle vicinanze", "es": "Cerca", "nl": "In de buurt"}
 H2 = {
-    "Ce qu&#39;on peut y faire": ["What you can do here", "Was man hier machen kann", "Cosa si può fare", "Qué se puede hacer"],
-    "Infos pratiques": ["Practical information", "Praktische Informationen", "Informazioni pratiche", "Información práctica"],
-    "Comment y aller": ["How to get there", "So kommen Sie hin", "Come arrivare", "Cómo llegar"],
-    "Quand visiter": ["When to visit", "Wann besuchen", "Quando visitare", "Cuándo visitar"],
-    "Où manger, boire, dormir": ["Where to eat, drink, stay", "Essen, Trinken, Übernachten", "Dove mangiare, bere, dormire", "Dónde comer, beber, alojarse"],
-    "Galerie": ["Gallery", "Galerie", "Galleria", "Galería"],
-    "Questions fréquentes": ["Frequently asked questions", "Häufige Fragen", "Domande frequenti", "Preguntas frecuentes"],
-    "Sources &amp; vérifications": ["Sources &amp; verification", "Quellen &amp; Prüfung", "Fonti &amp; verifiche", "Fuentes &amp; verificaciones"],
+    "Ce qu&#39;on peut y faire": ["What you can do here", "Was man hier machen kann", "Cosa si può fare", "Qué se puede hacer", "Wat je hier kunt doen"],
+    "Infos pratiques": ["Practical information", "Praktische Informationen", "Informazioni pratiche", "Información práctica", "Praktische informatie"],
+    "Comment y aller": ["How to get there", "So kommen Sie hin", "Come arrivare", "Cómo llegar", "Hoe er te komen"],
+    "Quand visiter": ["When to visit", "Wann besuchen", "Quando visitare", "Cuándo visitar", "Wanneer bezoeken"],
+    "Où manger, boire, dormir": ["Where to eat, drink, stay", "Essen, Trinken, Übernachten", "Dove mangiare, bere, dormire", "Dónde comer, beber, alojarse", "Waar eten, drinken, overnachten"],
+    "Galerie": ["Gallery", "Galerie", "Galleria", "Galería", "Galerij"],
+    "Questions fréquentes": ["Frequently asked questions", "Häufige Fragen", "Domande frequenti", "Preguntas frecuentes", "Veelgestelde vragen"],
+    "Sources &amp; vérifications": ["Sources &amp; verification", "Quellen &amp; Prüfung", "Fonti &amp; verifiche", "Fuentes &amp; verificaciones", "Bronnen &amp; verificatie"],
 }
-WHATIS = ["What is ", "Was ist ", "Cos&#39;è ", "Qué es "]
+WHATIS = ["What is ", "Was ist ", "Cos&#39;è ", "Qué es ", "Wat is "]
 LABELS = {
-    "Type": ["Type", "Typ", "Tipo", "Tipo"],
-    "Accès": ["Access", "Anreise", "Accesso", "Acceso"],
-    "Tarif": ["Price", "Preis", "Prezzo", "Precio"],
-    "Tarifs": ["Rates", "Preise", "Prezzi", "Precios"],
-    "Durée": ["Duration", "Dauer", "Durata", "Duración"],
-    "Meilleure saison": ["Best season", "Beste Saison", "Stagione migliore", "Mejor temporada"],
-    "Parking": ["Parking", "Parkplatz", "Parcheggio", "Aparcamiento"],
-    "Animaux": ["Animals", "Tiere", "Animali", "Animales"],
-    "Poussette / PMR": ["Stroller / Reduced mobility", "Kinderwagen / Behinderte", "Passeggino / Disabilità", "Cochecito / PMR"],
-    "Commune": ["Town", "Ort", "Comune", "Comuna"],
-    "Adresse": ["Address", "Adresse", "Indirizzo", "Dirección"],
-    "Coordonnées": ["Coordinates", "Koordinaten", "Coordinate", "Coordenadas"],
-    "Saison": ["Season", "Saison", "Stagione", "Temporada"],
-    "Horaires": ["Hours", "Öffnungszeiten", "Orari", "Horarios"],
-    "Réservation": ["Booking", "Reservierung", "Prenotazione", "Reserva"],
-    "Accessibilité": ["Accessibility", "Barrierefreiheit", "Accessibilità", "Accesibilidad"],
-    "Contact": ["Contact", "Kontakt", "Contatti", "Contacto"],
+    "Type": ["Type", "Typ", "Tipo", "Tipo", "Type"],
+    "Accès": ["Access", "Anreise", "Accesso", "Acceso", "Toegang"],
+    "Tarif": ["Price", "Preis", "Prezzo", "Precio", "Prijs"],
+    "Tarifs": ["Rates", "Preise", "Prezzi", "Precios", "Tarieven"],
+    "Durée": ["Duration", "Dauer", "Durata", "Duración", "Duur"],
+    "Meilleure saison": ["Best season", "Beste Saison", "Stagione migliore", "Mejor temporada", "Beste seizoen"],
+    "Parking": ["Parking", "Parkplatz", "Parcheggio", "Aparcamiento", "Parkeren"],
+    "Animaux": ["Animals", "Tiere", "Animali", "Animales", "Dieren"],
+    "Poussette / PMR": ["Stroller / Reduced mobility", "Kinderwagen / Behinderte", "Passeggino / Disabilità", "Cochecito / PMR", "Kinderwagen / mindervaliden"],
+    "Commune": ["Town", "Ort", "Comune", "Comuna", "Gemeente"],
+    "Adresse": ["Address", "Adresse", "Indirizzo", "Dirección", "Adres"],
+    "Coordonnées": ["Coordinates", "Koordinaten", "Coordinate", "Coordenadas", "Coördinaten"],
+    "Saison": ["Season", "Saison", "Stagione", "Temporada", "Seizoen"],
+    "Horaires": ["Hours", "Öffnungszeiten", "Orari", "Horarios", "Openingstijden"],
+    "Réservation": ["Booking", "Reservierung", "Prenotazione", "Reserva", "Reservering"],
+    "Accessibilité": ["Accessibility", "Barrierefreiheit", "Accessibilità", "Accesibilidad", "Toegankelijkheid"],
+    "Contact": ["Contact", "Kontakt", "Contatti", "Contacto", "Contact"],
     # stay FR: Lac, Lac / Plan d'eau, Surveillance, Surveillance MNS, Pavillon Bleu 2026
 }
+
+# Hand-translated NL chrome (bootstrap — used when /nl/<TEMPLATE_SLUG>.html doesn't exist yet)
+NL_HEADER_TEMPLATE = '''<header class="site"><div class="wrap">
+  <a class="brand" href="https://loisirs74.fr/nl/" aria-label="Loisirs 74"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a>
+  <nav><details class="lang-picker"><summary aria-label="Kies taal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>NL</summary><div class="lang-menu"><a href="https://loisirs74.fr/__SLUG__" hreflang="fr">Français</a>
+<a href="https://loisirs74.fr/en/__SLUG__" hreflang="en">English</a>
+<a href="https://loisirs74.fr/de/__SLUG__" hreflang="de">Deutsch</a>
+<a href="https://loisirs74.fr/it/__SLUG__" hreflang="it">Italiano</a>
+<a href="https://loisirs74.fr/es/__SLUG__" hreflang="es">Español</a>
+<a href="https://loisirs74.fr/nl/__SLUG__" aria-current="true" hreflang="nl">Nederlands</a></div></details></nav>
+</div></header>'''
+
+NL_FOOTER_TEMPLATE = '''<footer class="site"><div class="wrap"><div class="foot-grid"><div class="foot-col"><a class="brand" href="https://loisirs74.fr/nl/" style="margin-bottom:.85rem"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a><p>Onafhankelijke gids voor recreatieplekken in Haute-Savoie. Gratis. Geverifieerd.</p></div><div class="foot-col"><h4>Verkennen</h4><ul><li><a href="https://loisirs74.fr/nl/">Startpagina</a></li></ul></div><div class="foot-col"><h4>Bijdragen</h4><ul><li><a href="mailto:photos@loisirs74.fr">Foto\'s insturen</a></li><li><a href="https://loisirs74.fr/nl/signaler">Info melden</a></li><li><a href="https://loisirs74.fr/nl/devenir-partenaire">Partner worden</a></li></ul></div><div class="foot-col"><h4>Juridisch</h4><ul><li><a href="https://loisirs74.fr/nl/mentions-legales">Juridische kennisgeving</a></li><li><a href="https://loisirs74.fr/nl/confidentialite">Privacy</a></li><li><a href="https://loisirs74.fr/nl/cgv">Algemene voorwaarden</a></li></ul></div></div><div class="foot-bottom"><span class="credit">© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Alle rechten voorbehouden</span><span>Geen advertenties. Geen tracking. Geen Google-reviews.</span></div></div></footer>'''
 
 _hf_cache = {}
 def header_footer(lang):
     if lang in _hf_cache:
         return _hf_cache[lang]
-    src = (ROOT / lang / f"{TEMPLATE_SLUG}.html").read_text(encoding="utf-8")
+    template_path = ROOT / lang / f"{TEMPLATE_SLUG}.html"
+    if not template_path.exists() and lang == "nl":
+        # bootstrap NL chrome from hand-translated constants (slug-substituted at use site)
+        _hf_cache[lang] = (NL_HEADER_TEMPLATE, NL_FOOTER_TEMPLATE)
+        return _hf_cache[lang]
+    src = template_path.read_text(encoding="utf-8")
     header = re.search(r"<header class=\"site\">.*?</header>", src, re.DOTALL).group(0)
     footer = re.search(r"<footer class=\"site\">.*?</footer>", src, re.DOTALL).group(0)
     _hf_cache[lang] = (header, footer)
@@ -94,6 +112,7 @@ def localize(fr_html, lang, slug):
         f'<link rel="alternate" hreflang="de" href="https://loisirs74.fr/de/{slug}">',
         f'<link rel="alternate" hreflang="it" href="https://loisirs74.fr/it/{slug}">',
         f'<link rel="alternate" hreflang="es" href="https://loisirs74.fr/es/{slug}">',
+        f'<link rel="alternate" hreflang="nl" href="https://loisirs74.fr/nl/{slug}">',
         f'<link rel="alternate" hreflang="x-default" href="https://loisirs74.fr/{slug}">',
     ])
     t = re.sub(
@@ -105,7 +124,8 @@ def localize(fr_html, lang, slug):
     t = t.replace('"inLanguage": "fr-FR"', f'"inLanguage": "{INLANG[lang]}"')
     # 4. header + footer block-swap (page-independent chrome, slug-swapped)
     header, footer = header_footer(lang)
-    header = header.replace(TEMPLATE_SLUG, slug)
+    # NL bootstrap template uses __SLUG__ placeholder; other locales pre-resolved.
+    header = header.replace("__SLUG__", slug).replace(TEMPLATE_SLUG, slug)
     t = re.sub(r"<header class=\"site\">.*?</header>", lambda m: header, t, count=1, flags=re.DOTALL)
     t = re.sub(r"<footer class=\"site\">.*?</footer>", lambda m: footer, t, count=1, flags=re.DOTALL)
     # 5. skip link (outside header)
@@ -141,7 +161,7 @@ def main():
             out = localize(fr, lang, slug)
             (ROOT / lang).mkdir(exist_ok=True)
             (ROOT / lang / f"{slug}.html").write_text(out, encoding="utf-8")
-        print(f"  ✓ {slug}: en/de/it/es")
+        print(f"  ✓ {slug}: {'/'.join(LANGS)}")
 
 
 if __name__ == "__main__":

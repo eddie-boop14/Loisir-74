@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path("/home/user/Loisir-74")
 BASE = "https://loisirs74.fr/"
-LANGS = ["en", "de", "it", "es"]
+LANGS = ["en", "de", "it", "es", "nl"]
 LINK_RE = re.compile(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">')
 RUN_RE = re.compile(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">(?:\n<link rel="alternate" hreflang="[^"]*" href="[^"]*">)*')
 NOIDX_RE = re.compile(r'<meta name="robots" content="[^"]*noindex')

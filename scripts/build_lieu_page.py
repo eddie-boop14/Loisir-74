@@ -901,7 +901,12 @@ def build_header(d):
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="site"><div class="wrap">
   <a class="brand" href="{BASE_URL}/" aria-label="Loisirs 74"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a>
-  <nav><details class="lang-picker"><summary aria-label="Choisir la langue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>FR</summary><div class="lang-menu"><a href="{BASE_URL}/{slug}" aria-current="true" hreflang="fr">Français</a></div></details></nav>
+  <nav><details class="lang-picker"><summary aria-label="Choisir la langue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>FR</summary><div class="lang-menu"><a href="{BASE_URL}/{slug}" aria-current="true" hreflang="fr">Français</a>
+<a href="{BASE_URL}/en/{slug}" hreflang="en">English</a>
+<a href="{BASE_URL}/de/{slug}" hreflang="de">Deutsch</a>
+<a href="{BASE_URL}/it/{slug}" hreflang="it">Italiano</a>
+<a href="{BASE_URL}/es/{slug}" hreflang="es">Español</a>
+<a href="{BASE_URL}/nl/{slug}" hreflang="nl">Nederlands</a></div></details></nav>
 </div></header>
 <main id="main">
 <div class="wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="{BASE_URL}/">Accueil</a><span class="sep">/</span>{crumb_mid}<span class="sep">/</span><span aria-current="page">{esc(d['i18n']['fr']['name'])}</span></nav></div>"""
