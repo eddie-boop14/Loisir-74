@@ -53,6 +53,18 @@
   [headers.values]
     Cache-Control = "public, max-age=300, must-revalidate"
 
+[[headers]]
+  for = "/studio-dt-importer.js"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+
+# DataTourisme candidate dataset — short cache, refreshed when the
+# /tmp/flux/ source is re-ingested.
+[[headers]]
+  for = "/dt-candidates.json"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+
 # Catalog index — short cache, regenerated after every integration
 [[headers]]
   for = "/catalog-index.json"
