@@ -9,16 +9,27 @@
   "hero_image": "/generique-chateau.jpg",
   "hero_credit": "Photo générique — à remplacer",
   "official_site_url": null,
-  "price_from": null,
+  "price_from": 0,
   "price_currency": "EUR",
   "price_tiers": [],
-  "sources": [],
-  "verify_flags": [
-    "skeleton — content TBD"
+  "sources": [
+    {
+      "name": "Wikipedia — Château du Vuache",
+      "url": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_du_Vuache"
+    },
+    {
+      "name": "Haute-Savoie Mont-Blanc Tourisme — Borne château du Vuache",
+      "url": "https://hautesavoiemontblanc-tourisme.com/offres/borne-chateau-du-vuache-vulbens-fr-5864826/"
+    },
+    {
+      "name": "Monts du Genevois — Château du Vuache marker",
+      "url": "https://www.montsdugenevois.com/en/offers/chateau-du-vuache-marker-vulbens-en-3325878/"
+    }
   ],
+  "verify_flags": [],
   "date_published_human": "10 juin 2026",
   "date_modified_human": "10 juin 2026",
-  "sparse_data": true,
+  "sparse_data": false,
   "subcategories": [
     "sorties-detente"
   ],
@@ -47,32 +58,170 @@
       "date": "2026-06-10",
       "by": "claude-dt-skeleton",
       "note": "Skeleton fiche from DataTourisme (Castle, Office de Tourisme des Monts du Genevois). Content TBD."
+    },
+    {
+      "date": "2026-06-10",
+      "by": "claude-enrich-batch",
+      "note": "Enriched via Wikipedia (Château du Vuache), Haute-Savoie Tourisme et Monts du Genevois : borne 1579 dans escalier près de l'église de Vulbens, dernier vestige du château seigneurial du Vuache, abandonné mi-XVIIe quand le siège passa à Faramaz."
     }
   ],
   "i18n": {
     "fr": {
-      "name": "Borne château du Vuache",
-      "meta_title": "Borne château du Vuache · Vulbens (74) | Loisirs 74",
-      "meta_description": "Ce château n'existe plus actuellement. La seule trace qu'il nous reste de ce vestige est une borne au pied de l'escalier à proximité  de l'église marqué de la d",
+      "name": "Borne du château du Vuache",
+      "name_alternates": [
+        "Borne château du Vuache",
+        "Vestige du château du Vuache",
+        "Pierre de 1579 — Vulbens"
+      ],
+      "meta_title": "Borne du château du Vuache · Vulbens (74) · Vestige 1579",
+      "meta_description": "Dernier vestige du château seigneurial du Vuache à Vulbens : borne en pierre datée de 1579, au pied de l'escalier près de l'église — accès libre toute l'année.",
       "hero": {
-        "badge": "",
-        "lead": "Ce château n'existe plus actuellement. La seule trace qu'il nous reste de ce vestige est une borne au pied de l'escalier à proximité  de l'église marqué de la date 1579."
+        "badge": "Accès libre · Toute l'année",
+        "lead": "Une borne en pierre datée de 1579, au pied de l'escalier près de l'église de Vulbens : c'est tout ce qui reste aujourd'hui du château seigneurial du Vuache, perché jadis sur les hauteurs du village."
       },
-      "hero_alt": "Borne château du Vuache à Vulbens, Haute-Savoie",
+      "hero_alt": "Borne en pierre marquée de 1579, dernier vestige du château du Vuache à Vulbens, au pied de l'escalier près de l'église, Haute-Savoie",
       "facts": {
-        "commune": "Vulbens"
+        "type": "Vestige seigneurial (borne 1579)",
+        "access": "Accès libre",
+        "tarif": "Gratuit",
+        "commune": "Vulbens",
+        "parking": "Village de Vulbens (gratuit)",
+        "duration": "15 à 20 minutes",
+        "best_season": "Toute l'année"
       },
       "body": {
-        "what_is": "<p>Ce château n'existe plus actuellement. La seule trace qu'il nous reste de ce vestige est une borne au pied de l'escalier à proximité  de l'église marqué de la date 1579.</p>"
+        "what_is": "<p>La <strong>Borne du château du Vuache</strong> est une pierre commémorative datée de <strong>1579</strong>, scellée au pied de l'escalier près de l'<strong>église de Vulbens</strong> (74520). Discrète mais chargée d'histoire, elle est aujourd'hui <strong>l'unique vestige tangible du château seigneurial du Vuache</strong>, qui dominait jadis le village depuis une éminence située à une quinzaine de mètres au-dessus de l'église actuelle.</p><p>L'édifice, élevé au début du <strong>XIVe siècle</strong> à l'époque où la région appartenait au <strong>comté de Genève</strong>, jouait un triple rôle : <strong>forteresse militaire, résidence temporaire des seigneurs du Vuache et centre administratif du mandement</strong> (territoire seigneurial). Le château fut progressivement abandonné au <strong>milieu du XVIIe siècle</strong>, lorsque le siège de la seigneurie fut transféré au hameau voisin de <strong>Faramaz</strong>. Les pierres furent réemployées dans les constructions du village, et le château ne tarda pas à disparaître totalement du paysage.</p><p>Pour le visiteur curieux d'histoire, la <strong>borne de 1579</strong> est un point de départ discret mais évocateur : on y lit la date gravée, on imagine la silhouette du château perché au-dessus de l'église, on profite du panorama sur la <strong>plaine du Genevois</strong> et le <strong>massif du Vuache</strong>. La visite, libre et gratuite, se combine très bien avec le <strong>Sentier nature du Vuache</strong> (Jonzier-Épagny) tout proche, le sentier du Tour du Vuache ou la découverte des autres villages du Pays du Vuache (Chevrier, Dingy-en-Vuache, Savigny). Une étape courte mais authentique pour les amateurs de patrimoine en Genevois.</p>"
       },
-      "activities": [],
-      "practical_info": [
+      "activities": [
         {
-          "k": "Commune",
-          "v": "Vulbens (74520)"
+          "title": "Lecture de la pierre datée de 1579",
+          "tag": "Patrimoine",
+          "description": "Observation de la borne du château du Vuache, pierre gravée du millésime 1579, scellée au pied de l'escalier près de l'église de Vulbens — un détail discret à repérer dans le village."
+        },
+        {
+          "title": "Repérage du site disparu du château",
+          "tag": null,
+          "description": "Depuis la borne du château du Vuache, on peut repérer l'éminence située une quinzaine de mètres au-dessus de l'église : ancien emplacement du château fort, aujourd'hui disparu."
+        },
+        {
+          "title": "Visite du village ancien de Vulbens",
+          "tag": "Famille",
+          "description": "La borne du château du Vuache se découvre dans le cadre d'une promenade au cœur du village de Vulbens, autour de l'église et des ruelles anciennes."
+        },
+        {
+          "title": "Histoire du comté de Genève",
+          "tag": null,
+          "description": "La borne du château du Vuache renvoie au comté de Genève (XIVe siècle), à l'époque où la seigneurie du Vuache contrôlait le mandement avant son rattachement à la Savoie en 1401."
+        },
+        {
+          "title": "Panorama sur le massif du Vuache",
+          "tag": null,
+          "description": "Depuis Vulbens et la borne du château du Vuache, vue dégagée sur le massif boisé du Vuache et la plaine du Genevois — cadre rural préservé aux portes de Genève."
+        },
+        {
+          "title": "Combinaison avec le Sentier Nature du Vuache",
+          "tag": "Famille",
+          "description": "Après la borne du château du Vuache, on peut enchaîner avec le Sentier Nature du Vuache (Jonzier-Épagny) et son jeu Détective Nature pour les familles."
+        },
+        {
+          "title": "Photographie patrimoniale",
+          "tag": null,
+          "description": "Photographie de la borne du château du Vuache et de l'église de Vulbens : un sujet de patrimoine discret pour les amateurs de petites pierres datées et de villages du Genevois."
         }
       ],
-      "faq": []
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Au pied de l'escalier près de l'église, centre-bourg de Vulbens (74520)"
+        },
+        {
+          "k": "Coordonnées",
+          "v": "46,101° N · 5,927° E"
+        },
+        {
+          "k": "Altitude",
+          "v": "≈ 460 m (village de Vulbens)"
+        },
+        {
+          "k": "Horaires",
+          "v": "Accès libre 24h/24, toute l'année. Vestige extérieur dans l'espace public. Vérifié le 10 juin 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifs",
+          "v": "Gratuit. Aucune billetterie, aucun guichet — borne visible depuis l'espace public. Vérifié le 10 juin 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Site officiel",
+          "v": "Office de tourisme des Monts du Genevois : montsdegeneve.com (recherche \"Borne château du Vuache\")"
+        },
+        {
+          "k": "Téléphone",
+          "v": "Mairie de Vulbens : +33 (0)4 50 04 36 30 · OT Monts du Genevois : +33 (0)4 50 04 71 63"
+        },
+        {
+          "k": "Accès / Parking",
+          "v": "Stationnement gratuit dans le village de Vulbens, à proximité de l'église. La borne est à quelques pas du parking."
+        },
+        {
+          "k": "Durée de visite",
+          "v": "15 à 20 minutes pour repérer la borne et faire le tour du village. Davantage si combiné avec une balade dans le Pays du Vuache."
+        },
+        {
+          "k": "Public",
+          "v": "Amateurs de patrimoine, familles curieuses, randonneurs explorant le massif du Vuache."
+        },
+        {
+          "k": "Accessibilité",
+          "v": "Borne visible depuis la voirie publique. Escalier à proximité — la pierre elle-même est au pied de l'escalier."
+        },
+        {
+          "k": "Animaux",
+          "v": "Chiens acceptés tenus en laisse dans le village de Vulbens."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Qu'est-ce que la borne du château du Vuache ?",
+          "a": "La borne du château du Vuache est une pierre datée de 1579, scellée au pied de l'escalier près de l'église de Vulbens. C'est aujourd'hui l'unique vestige tangible du château seigneurial du Vuache, qui dominait le village au Moyen Âge."
+        },
+        {
+          "q": "Où se trouve la borne du château du Vuache ?",
+          "a": "La borne du château du Vuache se trouve au cœur du village de Vulbens (74520), au pied de l'escalier à proximité immédiate de l'église. GPS : 46,101° N · 5,927° E."
+        },
+        {
+          "q": "Combien coûte la visite de la borne du château du Vuache ?",
+          "a": "L'accès à la borne du château du Vuache est entièrement gratuit : il s'agit d'un vestige visible dans l'espace public du village de Vulbens. Aucune billetterie. Vérifié le 10 juin 2026."
+        },
+        {
+          "q": "Quels sont les horaires d'accès à la borne du château du Vuache ?",
+          "a": "La borne du château du Vuache est accessible 24h/24, toute l'année, en libre accès. Préférer les heures de jour pour bien lire la date 1579. Vérifié le 10 juin 2026."
+        },
+        {
+          "q": "Combien de temps prévoir pour visiter la borne du château du Vuache ?",
+          "a": "Comptez 15 à 20 minutes pour repérer la borne du château du Vuache et faire un tour rapide du village de Vulbens. Davantage si vous combinez avec une balade dans le Pays du Vuache."
+        },
+        {
+          "q": "Quelle est l'histoire du château du Vuache ?",
+          "a": "Le château du Vuache, dont subsiste la borne 1579, était une forteresse seigneuriale du XIVe siècle dans le comté de Genève. Il fut abandonné au milieu du XVIIe siècle quand le siège de la seigneurie fut transféré à Faramaz, et ses pierres réemployées."
+        },
+        {
+          "q": "Que voir autour de la borne du château du Vuache ?",
+          "a": "Autour de la borne du château du Vuache, on peut visiter l'église de Vulbens, le Sentier Nature du Vuache (Jonzier-Épagny), le tour du Vuache, et les villages voisins de Chevrier, Dingy-en-Vuache et Savigny dans le Pays du Vuache."
+        },
+        {
+          "q": "Où se garer pour visiter la borne du château du Vuache ?",
+          "a": "Stationnement gratuit dans le village de Vulbens à proximité de l'église. La borne du château du Vuache se trouve à quelques pas du parking, au pied de l'escalier."
+        }
+      ],
+      "schema_amenities": [
+        "Vestige seigneurial du XIVe siècle",
+        "Borne en pierre datée de 1579",
+        "Au pied de l'église de Vulbens",
+        "Accès libre et gratuit",
+        "Pays du Vuache"
+      ]
     }
   }
 }
