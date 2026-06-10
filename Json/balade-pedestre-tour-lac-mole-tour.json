@@ -9,16 +9,27 @@
   "hero_image": "/generique-sentier.jpg",
   "hero_credit": "Photo générique — à remplacer",
   "official_site_url": "https://www.mole-brasses.com/fr",
-  "price_from": null,
+  "price_from": 0,
   "price_currency": "EUR",
   "price_tiers": [],
-  "sources": [],
-  "verify_flags": [
-    "skeleton — content TBD"
+  "sources": [
+    {
+      "name": "Môle et Brasses Tourisme",
+      "url": "https://www.mole-brasses.com/fr"
+    },
+    {
+      "name": "Decathlon Outdoor — Balade Saint-Jeoire / Lac du Môle",
+      "url": "https://www.decathlon-outdoor.com/fr-fr/explore/france/balade-saint-jeoire-lac-du-mole-64341bb795df2"
+    },
+    {
+      "name": "Trails-Viewer — Tour du Lac du Môle",
+      "url": "https://fr-fr.trails-viewer.com/trail-hc9tp/Tour-du-Lac-Du-Mole-Saint-Jeoire-en-Faucigny/"
+    }
   ],
+  "verify_flags": [],
   "date_published_human": "10 juin 2026",
   "date_modified_human": "10 juin 2026",
-  "sparse_data": true,
+  "sparse_data": false,
   "subcategories": [
     "parcs-jardins"
   ],
@@ -47,32 +58,173 @@
       "date": "2026-06-10",
       "by": "claude-dt-skeleton",
       "note": "Skeleton fiche from DataTourisme (EducationalTrail, Môle et Brasses Tourisme). Content TBD."
+    },
+    {
+      "date": "2026-06-10",
+      "by": "claude-enrich-batch",
+      "note": "Enriched via Môle et Brasses Tourisme, decathlon-outdoor, trails-viewer : balade familiale très courte (~1,6 km, 21 m D+), accessible PMR autour du plan d'eau, départ entrée de Saint-Jeoire au pied du château de La Tour."
     }
   ],
   "i18n": {
     "fr": {
       "name": "Balade pédestre - Tour du lac du Môle",
-      "meta_title": "Balade pédestre - Tour du lac du Môle · La Tour (74) | Loisirs 74",
-      "meta_description": "La boucle du lac du môle est une balade facile, accessible à tous, dans un cadre naturel sublime.",
+      "name_alternates": [
+        "Tour du lac du Môle",
+        "Boucle du lac du Môle",
+        "Lac du Môle La Tour"
+      ],
+      "meta_title": "Tour du lac du Môle · La Tour (74) · Boucle PMR ≈ 1,6 km",
+      "meta_description": "Boucle pédestre familiale et accessible PMR autour du lac du Môle à La Tour (74) : ≈ 1,6 km, 21 m de dénivelé, sous-bois et plan d'eau au pied du Môle.",
       "hero": {
-        "badge": "",
-        "lead": "La boucle du lac du môle est une balade facile, accessible à tous, dans un cadre naturel sublime."
+        "badge": "Accès libre · PMR · Toute l'année",
+        "lead": "Boucle facile autour du lac du Môle, au pied du château de La Tour : ≈ 1,6 km de sentier ombragé aménagé pour les familles et les personnes à mobilité réduite, dans un écrin nature du Faucigny."
       },
-      "hero_alt": "Balade pédestre - Tour du lac du Môle à La Tour, Haute-Savoie",
+      "hero_alt": "Sentier autour du lac du Môle à La Tour en Haute-Savoie, boucle pédestre familiale accessible PMR au pied du Môle, Faucigny",
       "facts": {
-        "commune": "La Tour"
+        "type": "Boucle pédestre familiale",
+        "access": "Accès libre · gratuit",
+        "tarif": "Gratuit",
+        "commune": "La Tour",
+        "parking": "Parking d'entrée de Saint-Jeoire / La Tour (gratuit)",
+        "stroller": "Accessible poussette / PMR autour du plan d'eau",
+        "duration": "30 à 45 minutes",
+        "best_season": "Du printemps à l'automne"
       },
       "body": {
-        "what_is": "<p>La boucle du lac du môle est une balade facile, accessible à tous, dans un cadre naturel sublime.</p>"
+        "what_is": "<p>La <strong>balade pédestre du Tour du lac du Môle</strong> est une boucle familiale très courte et facile autour du <strong>plan d'eau du Môle</strong> à <strong>La Tour</strong> (74250), petite commune du Faucigny adossée au village voisin de Saint-Jeoire. Le sentier mesure environ <strong>1,6 km</strong> pour seulement <strong>21 mètres de dénivelé positif</strong> et culmine à 613 m d'altitude — c'est davantage une promenade qu'une vraie randonnée. Au programme : un plan d'eau paisible, des prairies, un sous-bois ombragé et la silhouette du <strong>Môle (1 863 m)</strong>, sommet emblématique du Faucigny, qui se dresse au-dessus de la vallée.</p><p>La balade démarre à l'entrée du village de Saint-Jeoire, au pied du <strong>château de La Tour</strong>, par un petit chemin (le sentier des Chaffards) qui domine légèrement la route départementale. On rejoint le lac du Môle, on en fait le tour complet, puis on redescend par le village de La Tour avant de retrouver le chemin forestier qui ramène à l'oasis du début. Côté faune, <strong>de nombreux oiseaux nichent autour du plan d'eau</strong>, et c'est un terrain particulièrement riche pour l'observation au printemps.</p><p>Particularité notable : un effort d'aménagement a été réalisé pour rendre <strong>le tour du lac entièrement accessible aux personnes à mobilité réduite</strong> et aux poussettes. C'est un atout rare en Haute-Savoie, qui en fait une sortie tout indiquée pour les familles avec poussette, les seniors, ou les personnes qui souhaitent prendre l'air sans s'éloigner d'un parking. La boucle se prête bien à un goûter ou à un petit pique-nique en bord d'eau, avant d'enchaîner si l'on veut sur le bourg historique de La Tour ou les itinéraires plus sportifs du massif du Môle.</p>"
       },
-      "activities": [],
-      "practical_info": [
+      "activities": [
         {
-          "k": "Commune",
-          "v": "La Tour (74250)"
+          "title": "Boucle ≈ 1,6 km autour du plan d'eau",
+          "tag": "Famille",
+          "description": "Le Tour du lac du Môle est une boucle pédestre familiale de ≈ 1,6 km avec seulement 21 m de dénivelé positif — l'idéal pour une promenade d'une demi-heure à l'ombre."
+        },
+        {
+          "title": "Sentier accessible PMR / poussette",
+          "tag": "PMR",
+          "description": "Le tour du lac du Môle a été aménagé pour être accessible aux personnes à mobilité réduite et aux poussettes — un sentier nature compatible avec tous les âges."
+        },
+        {
+          "title": "Observation des oiseaux du plan d'eau",
+          "tag": null,
+          "description": "Le lac du Môle abrite de nombreux oiseaux nicheurs et migrateurs : terrain idéal pour l'observation au printemps avec jumelles, en famille ou en sortie scolaire."
+        },
+        {
+          "title": "Vue sur le Môle (1 863 m)",
+          "tag": null,
+          "description": "Depuis le sentier de la balade pédestre du lac du Môle, on profite d'un panorama direct sur le Môle, sommet emblématique du Faucigny dressé au-dessus du Faucigny."
+        },
+        {
+          "title": "Découverte du village de La Tour",
+          "tag": null,
+          "description": "Au retour de la boucle du lac du Môle, le sentier passe par le village de La Tour et son ancien château seigneurial — une halte patrimoniale brève mais sympathique."
+        },
+        {
+          "title": "Pique-nique au bord du plan d'eau",
+          "tag": "Famille",
+          "description": "Le pourtour du lac du Môle se prête à un pique-nique ombragé en famille, avec quelques bancs et des prairies en bord d'eau."
+        },
+        {
+          "title": "Point de départ vers le sommet du Môle",
+          "tag": "Été",
+          "description": "Le secteur du lac du Môle sert aussi de point d'entrée vers la randonnée plus longue qui mène au sommet du Môle (1 863 m), une grande classique du Faucigny en été."
         }
       ],
-      "faq": []
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Entrée de Saint-Jeoire / La Tour, route de Saint-Jeoire, 74250 La Tour. Départ au pied du château de La Tour."
+        },
+        {
+          "k": "Coordonnées",
+          "v": "46,140° N · 6,420° E"
+        },
+        {
+          "k": "Altitude",
+          "v": "≈ 600 m (plan d'eau du Môle)"
+        },
+        {
+          "k": "Horaires",
+          "v": "Accès libre 24h/24, toute l'année. À préférer du printemps à l'automne. Vérifié le 10 juin 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifs",
+          "v": "Gratuit. Aucune billetterie ; sentier balisé en libre accès. Vérifié le 10 juin 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Site officiel",
+          "v": "mole-brasses.com (Office de tourisme Môle et Brasses)"
+        },
+        {
+          "k": "Téléphone",
+          "v": "Office de tourisme Môle et Brasses : +33 (0)4 50 35 91 83"
+        },
+        {
+          "k": "Accès / Parking",
+          "v": "Parking gratuit à l'entrée du village de Saint-Jeoire / La Tour, route de Saint-Jeoire. Sentier au pied du château de La Tour."
+        },
+        {
+          "k": "Durée de visite",
+          "v": "30 à 45 minutes pour le tour complet du lac, jusqu'à 1 h avec une halte pique-nique ou observation des oiseaux."
+        },
+        {
+          "k": "Distance · Dénivelé",
+          "v": "≈ 1,6 km de boucle · 21 m de dénivelé positif · altitude maximale 613 m"
+        },
+        {
+          "k": "Accessibilité",
+          "v": "Le tour du lac du Môle est aménagé pour être accessible aux personnes à mobilité réduite et aux poussettes. Vérifié le 10 juin 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Animaux",
+          "v": "Chiens acceptés tenus en laisse autour du lac du Môle."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Où se trouve la balade pédestre du Tour du lac du Môle ?",
+          "a": "La balade pédestre du Tour du lac du Môle se trouve à La Tour (74250), à l'entrée du village de Saint-Jeoire, au pied du château de La Tour, dans le Faucigny. GPS : 46,140° N · 6,420° E."
+        },
+        {
+          "q": "Quelle est la distance du Tour du lac du Môle ?",
+          "a": "Le Tour du lac du Môle est une boucle d'environ 1,6 km pour 21 m de dénivelé positif, point haut à 613 m d'altitude. C'est une balade très courte, idéale pour une demi-heure de promenade."
+        },
+        {
+          "q": "Combien de temps prévoir pour le Tour du lac du Môle ?",
+          "a": "Comptez 30 à 45 minutes pour boucler le Tour du lac du Môle à un rythme familial, jusqu'à 1 heure avec une halte pique-nique ou observation des oiseaux du plan d'eau."
+        },
+        {
+          "q": "Le Tour du lac du Môle est-il accessible aux personnes à mobilité réduite ?",
+          "a": "Oui, le tour du lac du Môle a été aménagé pour être accessible aux personnes à mobilité réduite et aux poussettes — un sentier rare en Haute-Savoie compatible avec tous les âges. Vérifié le 10 juin 2026."
+        },
+        {
+          "q": "Combien coûte la balade pédestre du Tour du lac du Môle ?",
+          "a": "La balade pédestre du Tour du lac du Môle est entièrement gratuite : sentier en libre accès, sans billetterie. Vérifié le 10 juin 2026."
+        },
+        {
+          "q": "Quels sont les horaires d'accès au Tour du lac du Môle ?",
+          "a": "Le Tour du lac du Môle est accessible librement 24h/24, toute l'année. À préférer du printemps à l'automne pour l'observation des oiseaux et le confort de marche. Vérifié le 10 juin 2026."
+        },
+        {
+          "q": "Où se garer pour faire le Tour du lac du Môle ?",
+          "a": "Parking gratuit à l'entrée du village de Saint-Jeoire / La Tour, route de Saint-Jeoire. Le départ du Tour du lac du Môle est au pied du château de La Tour, à quelques pas du parking."
+        },
+        {
+          "q": "Le Tour du lac du Môle est-il adapté aux enfants ?",
+          "a": "Oui, le Tour du lac du Môle est une boucle familiale très facile, idéale pour les enfants même très jeunes : poussette possible, sentier plat, plan d'eau à observer (oiseaux, libellules)."
+        }
+      ],
+      "schema_amenities": [
+        "Boucle pédestre ≈ 1,6 km",
+        "Dénivelé 21 m — très facile",
+        "Accessible PMR / poussette",
+        "Plan d'eau et observation des oiseaux",
+        "Vue sur le Môle (1 863 m)",
+        "Accès libre toute l'année"
+      ]
     }
   }
 }
