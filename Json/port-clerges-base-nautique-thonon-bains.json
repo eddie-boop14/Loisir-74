@@ -12,13 +12,24 @@
   "price_from": null,
   "price_currency": "EUR",
   "price_tiers": [],
-  "sources": [],
-  "verify_flags": [
-    "skeleton — content TBD"
+  "sources": [
+    {
+      "name": "Chablais Aviron Thonon (club résident)",
+      "url": "http://www.avironthonon.com/"
+    },
+    {
+      "name": "Ville de Thonon — annuaire base nautique des Clerges",
+      "url": "https://www.ville-thonon.fr/annuaire/base-nautique-des-clerges/"
+    },
+    {
+      "name": "Thonon Agglomération — projet base nautique des Clerges",
+      "url": "https://www.thononagglo.fr/actualite/86/32-base-nautique-des-clerges-le-projet-est-lance.htm"
+    }
   ],
+  "verify_flags": [],
   "date_published_human": "10 juin 2026",
   "date_modified_human": "10 juin 2026",
-  "sparse_data": true,
+  "sparse_data": false,
   "subcategories": [
     "baignade-nautisme"
   ],
@@ -47,32 +58,154 @@
       "date": "2026-06-10",
       "by": "claude-dt-skeleton",
       "note": "Skeleton fiche from DataTourisme (NauticalCentre, SPL DESTINATION THONON). Content TBD."
+    },
+    {
+      "date": "2026-06-10",
+      "by": "claude-enrich-batch",
+      "note": "Croisé site Chablais Aviron Thonon (club résident), annuaire ville-thonon.fr et page projet Thonon Agglomération : base nautique des années 1980, transférée à Thonon Agglomération en avril 2018, projet d'aménagement en cours estimé ~7 M€. Chemin de Montjoux, 04 50 70 23 52."
     }
   ],
   "i18n": {
     "fr": {
       "name": "Port des Clerges - Base Nautique",
-      "meta_title": "Port des Clerges - Base Nautique · Thonon-les-Bains (74) | Loisirs 74",
-      "meta_description": "Point de départ des activités d'aviron et de canoe kayak sur le Léman.",
+      "name_alternates": [
+        "Base nautique des Clerges",
+        "Port des Clerges"
+      ],
+      "meta_title": "Base nautique des Clerges · Thonon-les-Bains (74) | Loisirs 74",
+      "meta_description": "Base nautique des Clerges à Thonon-les-Bains : club d'aviron et de canoë-kayak sur le lac Léman, point de départ des sorties sur l'eau.",
       "hero": {
-        "badge": "",
-        "lead": "Point de départ des activités d'aviron et de canoe kayak sur le Léman."
+        "badge": "Toute l'année · Selon clubs",
+        "lead": "Base nautique du Port des Clerges, à Thonon-les-Bains : point de départ historique de l'aviron et du canoë-kayak sur le lac Léman. Construite dans les années 1980 au chemin de Montjoux, elle accueille les clubs résidents et les groupes scolaires toute l'année."
       },
-      "hero_alt": "Port des Clerges - Base Nautique à Thonon-les-Bains, Haute-Savoie",
+      "hero_alt": "Base nautique des Clerges à Thonon-les-Bains, embarcations d'aviron sur le Léman",
       "facts": {
-        "commune": "Thonon-les-Bains"
+        "type": "Base nautique · Aviron · Canoë-kayak",
+        "access": "Selon club / activité",
+        "commune": "Thonon-les-Bains",
+        "lac": "Lac Léman",
+        "parking": "Parking sur place",
+        "best_season": "Avril à octobre · Hiver pour clubs"
       },
       "body": {
-        "what_is": "<p>Point de départ des activités d'aviron et de canoe kayak sur le Léman.</p>"
+        "what_is": "<p>La <strong>base nautique du Port des Clerges</strong> est l'équipement nautique historique de Thonon-les-Bains pour les pratiques de pagaie et de rame sur le lac Léman. Située au chemin de Montjoux, à l'est du port central de Thonon, elle a été construite au début des années 1980 et accueille en résidence les clubs d'aviron (<strong>Chablais Aviron Thonon</strong>) et de canoë-kayak, ainsi que des groupes scolaires et associations de tout le Chablais.</p><p>Depuis avril 2018, la base est gérée par <strong>Thonon Agglomération</strong>, qui a lancé un programme de restructuration estimé à environ 7 millions d'euros (dont environ 3 M€ pour la digue) afin de pérenniser l'équipement et de développer les sports nautiques sur le lac. La base propose, via ses clubs, des initiations à l'aviron sur le Léman, de l'aviron de mer, des sorties loisirs, du canoë-kayak, et des stages saisonniers. Elle constitue un point d'embarquement privilégié pour découvrir le lac Léman au calme, à l'écart du port principal et de la promenade de la baie de Rives.</p>"
       },
-      "activities": [],
-      "practical_info": [
+      "activities": [
         {
-          "k": "Commune",
-          "v": "Thonon-les-Bains (74200)"
+          "title": "S'initier à l'aviron sur le Léman",
+          "tag": null,
+          "description": "Stages d'initiation et sorties découverte proposés par Chablais Aviron Thonon, en yolette ou en skiff selon le niveau, encadrés par les moniteurs du club."
+        },
+        {
+          "title": "Pratiquer le canoë-kayak",
+          "tag": null,
+          "description": "Sorties club et stages canoë-kayak depuis le ponton du Port des Clerges, en eau libre sur le lac Léman."
+        },
+        {
+          "title": "Découvrir l'aviron de mer",
+          "tag": null,
+          "description": "Le club propose une section « aviron de mer » dédiée aux embarcations plus stables, idéales pour la grande randonnée sur le Léman."
+        },
+        {
+          "title": "Participer à une randonnée loisirs",
+          "tag": null,
+          "description": "Sorties balades sur le lac organisées par la section loisirs de Chablais Aviron Thonon — l'occasion de découvrir les rives chablaisiennes au fil de l'eau."
+        },
+        {
+          "title": "Voir les compétitions et régates",
+          "tag": null,
+          "description": "La base accueille des entraînements de la section compétition du club et plusieurs régates régionales dans la saison."
+        },
+        {
+          "title": "Profiter de la promenade lacustre",
+          "tag": null,
+          "description": "Aux abords de la base nautique, la promenade longe le lac Léman et permet d'observer le ballet des barques, kayaks et bateaux qui sortent."
         }
       ],
-      "faq": []
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Chemin de Montjoux, 74200 Thonon-les-Bains"
+        },
+        {
+          "k": "Coordonnées",
+          "v": "46,373079° N — 6,470304° E"
+        },
+        {
+          "k": "Téléphone",
+          "v": "04 50 70 23 52 (Chablais Aviron Thonon)",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Site officiel",
+          "v": "avironthonon.com"
+        },
+        {
+          "k": "Horaires",
+          "v": "Base ouverte selon créneaux des clubs résidents. Consulter Chablais Aviron Thonon pour les sorties d'initiation.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifs",
+          "v": "Variable selon club, type d'embarcation et formule (initiation, stage, adhésion). Voir avironthonon.com pour la grille à jour.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Accès / Parking",
+          "v": "Accès depuis Thonon centre par le port et le chemin de Montjoux, parking sur place. Bus urbain BUT desserte Thonon Agglo."
+        },
+        {
+          "k": "Durée de visite",
+          "v": "1 h pour une initiation, 2 à 3 h pour une randonnée"
+        },
+        {
+          "k": "Public",
+          "v": "Débutants, sportifs, scolaires, associations"
+        },
+        {
+          "k": "Réservation",
+          "v": "Conseillée auprès du club avant la séance"
+        },
+        {
+          "k": "Équipement requis",
+          "v": "Vêtements de sport, baskets pouvant être mouillées, change. Le matériel est fourni par le club."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Que peut-on faire à la Base nautique du Port des Clerges à Thonon ?",
+          "a": "La Base nautique des Clerges, à Thonon-les-Bains, est le point de départ des activités d'aviron et de canoë-kayak sur le lac Léman, encadrées par les clubs résidents dont Chablais Aviron Thonon."
+        },
+        {
+          "q": "Comment réserver une séance à la Base nautique des Clerges ?",
+          "a": "La Base nautique des Clerges est gérée par Thonon Agglomération mais les activités sont organisées par les clubs résidents. Pour une initiation à l'aviron ou une sortie canoë-kayak, contactez Chablais Aviron Thonon au 04 50 70 23 52 ou via avironthonon.com."
+        },
+        {
+          "q": "Où se situe la Base nautique du Port des Clerges ?",
+          "a": "La Base nautique du Port des Clerges se trouve chemin de Montjoux, à 74200 Thonon-les-Bains, sur la rive sud du lac Léman, à l'est du port central de Thonon."
+        },
+        {
+          "q": "Peut-on louer un aviron ou un kayak à la Base des Clerges sans être membre ?",
+          "a": "La Base nautique des Clerges fonctionne principalement via ses clubs résidents : les pratiques régulières exigent une adhésion. Des stages d'initiation et journées découverte peuvent être proposés ponctuellement — consultez Chablais Aviron Thonon pour les formules ouvertes au public."
+        },
+        {
+          "q": "À quelle saison utiliser la Base nautique du Port des Clerges ?",
+          "a": "La Base nautique du Port des Clerges fonctionne toute l'année, mais la majorité des sorties grand public se déroulent entre avril et octobre, quand le lac Léman se prête mieux aux initiations."
+        },
+        {
+          "q": "Y a-t-il un parking à la Base nautique des Clerges ?",
+          "a": "Oui, un parking est disponible à proximité immédiate de la Base nautique des Clerges, au chemin de Montjoux. Évitez les créneaux d'événements et de régates pour trouver une place facilement."
+        }
+      ],
+      "schema_amenities": [
+        "Aviron",
+        "Canoë-kayak",
+        "Pontons",
+        "Vestiaires club",
+        "Parking",
+        "Initiations",
+        "Lac Léman"
+      ]
     }
   }
 }
