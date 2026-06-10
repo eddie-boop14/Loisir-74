@@ -9,16 +9,43 @@
   "hero_image": "/generique-musee.jpg",
   "hero_credit": "Photo générique — à remplacer",
   "official_site_url": "https://www.ecomusee-lacannecy.com/",
-  "price_from": null,
+  "price_from": 5.0,
   "price_currency": "EUR",
-  "price_tiers": [],
-  "sources": [],
-  "verify_flags": [
-    "skeleton — content TBD"
+  "price_tiers": [
+    {
+      "name": "Adulte",
+      "price": 7.0,
+      "note": "Tarif individuel"
+    },
+    {
+      "name": "Enfant",
+      "price": 5.0,
+      "note": "Tarif individuel jeune visiteur"
+    },
+    {
+      "name": "Famille (2 adultes + 2 enfants)",
+      "price": 22.0,
+      "note": "Tarif famille"
+    }
   ],
+  "sources": [
+    {
+      "name": "Écomusée du Lac d'Annecy — site officiel",
+      "url": "https://www.ecomusee-lacannecy.com/"
+    },
+    {
+      "name": "Office de Tourisme Lac d'Annecy — Écomusée",
+      "url": "https://www.lac-annecy.com/patrimoine-culturel/ecomusee-du-lac-dannecy-sevrier/"
+    },
+    {
+      "name": "MuséeMusée — Écomusée du Lac d'Annecy",
+      "url": "https://www.museemusee.com/musees/545-ecomusee-du-lac-d-annecy-sevrier.html"
+    }
+  ],
+  "verify_flags": [],
   "date_published_human": "10 juin 2026",
   "date_modified_human": "10 juin 2026",
-  "sparse_data": true,
+  "sparse_data": false,
   "subcategories": [
     "sorties-detente"
   ],
@@ -47,32 +74,172 @@
       "date": "2026-06-10",
       "by": "claude-dt-skeleton",
       "note": "Skeleton fiche from DataTourisme (CulturalSite, Office de Tourisme du Lac d'Annecy). Content TBD."
+    },
+    {
+      "date": "2026-06-10",
+      "by": "claude-enrich-batch",
+      "note": "Enriched via ecomusee-lacannecy.com, lac-annecy.com et museemusee.com : musée immersif sur la vie des Savoyards XIXe au bord du lac, parcours ludiques 2-3 ans / 3-6 ans, jeux-énigmes 6-10 ans / 10+, route de l'Église à Sevrier ; horaires saisonniers d'avril à septembre, tarifs adulte 7 € / enfant 5 € / famille 22 €."
     }
   ],
   "i18n": {
     "fr": {
-      "name": "Ecomusée du Lac d'Annecy",
-      "meta_title": "Ecomusée du Lac d'Annecy · Sevrier (74) | Loisirs 74",
-      "meta_description": "L'Ecomusée du Lac d'Annecy propose une expérience originale et immersive à la rencontre des Savoyards du 19e siècle au bord du lac d'Annecy... avec diverses act",
+      "name": "Écomusée du Lac d'Annecy",
+      "name_alternates": [
+        "Écomusée du Lac d'Annecy Sevrier",
+        "Écomusée Lac d'Annecy",
+        "Ecomusée du Lac d'Annecy"
+      ],
+      "meta_title": "Écomusée du Lac d'Annecy · Sevrier · 7 € adulte / 5 € enfant",
+      "meta_description": "Musée immersif à Sevrier sur les Savoyards du XIXe siècle au bord du lac d'Annecy : parcours ludiques, jeux-énigmes pour familles. Adulte 7 €, famille 22 €.",
       "hero": {
-        "badge": "",
-        "lead": "L'Ecomusée du Lac d'Annecy propose une expérience originale et immersive à la rencontre des Savoyards du 19e siècle au bord du lac d'Annecy... avec diverses activités, jeux-énigmes et parcours ludiques à vivre en solo, en duo, entre amis ou en famille."
+        "badge": "Famille · Saisonnier · 22 € la famille",
+        "lead": "Musée immersif à Sevrier qui plonge le visiteur dans la vie des Savoyards du XIXe siècle au bord du lac d'Annecy : parcours ludiques 2-6 ans, jeux-énigmes dès 6 ans, sorties en autonomie ou en famille."
       },
-      "hero_alt": "Ecomusée du Lac d'Annecy à Sevrier, Haute-Savoie",
+      "hero_alt": "Écomusée du Lac d'Annecy à Sevrier, musée immersif sur la vie des Savoyards du XIXe siècle au bord du lac, Haute-Savoie",
       "facts": {
-        "commune": "Sevrier"
+        "type": "Écomusée immersif · vie XIXe siècle",
+        "access": "Payant",
+        "tarif": "Adulte 7 € · Enfant 5 € · Famille 22 €",
+        "commune": "Sevrier",
+        "parking": "Parking dédié à l'écomusée (gratuit)",
+        "duration": "1 h à 1 h 30",
+        "best_season": "D'avril à septembre"
       },
       "body": {
-        "what_is": "<p>L'Ecomusée du Lac d'Annecy propose une expérience originale et immersive à la rencontre des Savoyards du 19e siècle au bord du lac d'Annecy... avec diverses activités, jeux-énigmes et parcours ludiques à vivre en solo, en duo, entre amis ou en famille.</p>"
+        "what_is": "<p>L'<strong>Écomusée du Lac d'Annecy</strong> est l'un des musées-pivots du Lac d'Annecy : installé à <strong>Sevrier</strong> (74320), commune de la rive ouest réputée pour sa fonderie Paccard, il propose depuis plusieurs décennies une <strong>expérience immersive</strong> à la rencontre des <strong>Savoyards du XIXe siècle</strong>. Le parcours explore la vie quotidienne, les métiers, les traditions et les paysages du bassin du lac d'Annecy à une époque charnière, juste avant l'arrivée du tourisme thermal et de l'industrialisation.</p><p>Le musée a entrepris une <strong>modernisation forte</strong> de son offre ces dernières années, avec un fort accent <strong>famille</strong> : <strong>parcours ludiques différenciés par tranche d'âge</strong> (2-3 ans, 3-6 ans), <strong>jeux-énigmes</strong> (6-10 ans, 10 ans et plus), et même un <strong>circuit d'énigmes en plein air</strong> à récupérer à la billetterie. L'idée est de faire vivre au visiteur les sensations du quotidien savoyard — manipuler, observer, deviner — plutôt que de simplement regarder des vitrines. Des <strong>visites thématiques et éducatives</strong> sont également proposées aux groupes et scolaires sur réservation, toute l'année.</p><p>Côté pratique : tarifs <strong>adulte 7 €</strong>, <strong>enfant 5 €</strong>, <strong>famille (2 adultes + 2 enfants) 22 €</strong>. Tarifs groupes adultes de 6,50 € à 9,50 €, groupes enfants 6,50 € (à partir de 20 personnes). Les <strong>horaires varient selon la saison</strong> : du 22 au 30 avril mar/mer/jeu 9h30-12h et 14h-17h ; du 1er mai au 6 juillet lun-ven 15h-18h ; du 7 juillet au 31 août lun-ven (variable selon le jour) 9h30-12h et 14h-18h ; en septembre mar/mer/jeu 9h30-12h et 14h-18h. Adresse : <strong>Route de l'Église, 74320 Sevrier</strong>. Téléphone : <strong>+33 (0)4 50 52 41 05</strong>. Une étape culturelle à ne pas manquer si l'on séjourne autour du lac d'Annecy, idéale en demi-journée famille ou en complément d'une journée plage à Sevrier ou Saint-Jorioz.</p>"
       },
-      "activities": [],
-      "practical_info": [
+      "activities": [
         {
-          "k": "Commune",
-          "v": "Sevrier (74320)"
+          "title": "Parcours immersif Savoyards XIXe siècle",
+          "tag": "Patrimoine",
+          "description": "L'Écomusée du Lac d'Annecy plonge le visiteur dans la vie des Savoyards du XIXe siècle au bord du lac : métiers, vie quotidienne, traditions, paysages."
+        },
+        {
+          "title": "Parcours ludique 2-3 ans",
+          "tag": "Famille",
+          "description": "L'Écomusée du Lac d'Annecy propose un parcours adapté aux tout-petits (2-3 ans) : sensations tactiles, sons, observation à hauteur d'enfant."
+        },
+        {
+          "title": "Parcours ludique 3-6 ans",
+          "tag": "Famille",
+          "description": "Pour les 3-6 ans, l'Écomusée du Lac d'Annecy propose un parcours adapté : objets à manipuler, devinettes, mise en scène de la vie savoyarde."
+        },
+        {
+          "title": "Jeu-énigme 6-10 ans",
+          "tag": "Famille",
+          "description": "L'Écomusée du Lac d'Annecy propose un jeu-énigme pour les 6-10 ans, à compléter au fil du parcours intérieur — bon plan pour une visite active."
+        },
+        {
+          "title": "Jeu-énigme 10 ans et plus",
+          "tag": null,
+          "description": "Pour les 10 ans et plus, l'Écomusée du Lac d'Annecy propose un jeu-énigme plus poussé — bonne porte d'entrée pour les ados en visite culturelle."
+        },
+        {
+          "title": "Circuit d'énigmes en extérieur",
+          "tag": null,
+          "description": "L'Écomusée du Lac d'Annecy propose un circuit d'énigmes en plein air, à récupérer à la billetterie — prolongement ludique de la visite intérieure."
+        },
+        {
+          "title": "Visites thématiques et scolaires",
+          "tag": null,
+          "description": "L'Écomusée du Lac d'Annecy accueille toute l'année les groupes sur réservation avec des visites thématiques et éducatives adaptées aux scolaires."
+        },
+        {
+          "title": "Combinaison avec la fonderie Paccard",
+          "tag": null,
+          "description": "L'Écomusée du Lac d'Annecy à Sevrier se combine très bien avec la visite de la fonderie de cloches Paccard, autre étape culturelle phare de la commune."
         }
       ],
-      "faq": []
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Écomusée du Lac d'Annecy, Route de l'Église, 74320 Sevrier"
+        },
+        {
+          "k": "Coordonnées",
+          "v": "45,864° N · 6,139° E"
+        },
+        {
+          "k": "Altitude",
+          "v": "≈ 470 m (bord du lac d'Annecy)"
+        },
+        {
+          "k": "Horaires",
+          "v": "22-30 avril : mar/mer/jeu 9h30-12h et 14h-17h. 1er mai - 6 juil : lun-ven 15h-18h. 7 juil - 31 août : lun-ven (variable) 9h30-12h et 14h-18h. Septembre : mar/mer/jeu 9h30-12h et 14h-18h. Hors saison : fermé hors visites de groupe. Vérifié sur ecomusee-lacannecy.com le 10 juin 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifs",
+          "v": "Adulte 7 €. Enfant 5 €. Famille (2 adultes + 2 enfants) 22 €. Groupes adultes 6,50 € à 9,50 €. Groupes enfants 6,50 € (≥ 20 pers.). Vérifié le 10 juin 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Site officiel",
+          "v": "ecomusee-lacannecy.com"
+        },
+        {
+          "k": "Téléphone",
+          "v": "+33 (0)4 50 52 41 05"
+        },
+        {
+          "k": "Accès / Parking",
+          "v": "Parking dédié à l'Écomusée à Sevrier (gratuit). En voiture depuis Annecy : ≈ 8 km par D1508. Lignes de bus Sibra Annecy-Sevrier."
+        },
+        {
+          "k": "Durée de visite",
+          "v": "1 h à 1 h 30 pour la visite complète + jeu-énigme intérieur. Davantage avec le circuit d'énigmes en extérieur."
+        },
+        {
+          "k": "Public",
+          "v": "Familles, scolaires, amateurs d'histoire locale, touristes du lac d'Annecy."
+        },
+        {
+          "k": "Réservation",
+          "v": "Pas de réservation pour la visite individuelle. Groupes et scolaires sur réservation toute l'année."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Qu'est-ce que l'Écomusée du Lac d'Annecy ?",
+          "a": "L'Écomusée du Lac d'Annecy à Sevrier est un musée immersif consacré à la vie des Savoyards du XIXe siècle au bord du lac. Parcours intérieurs avec jeux-énigmes et circuits d'énigmes en plein air, pour familles et scolaires."
+        },
+        {
+          "q": "Quels sont les tarifs de l'Écomusée du Lac d'Annecy ?",
+          "a": "Tarifs de l'Écomusée du Lac d'Annecy : adulte 7 €, enfant 5 €, famille (2 adultes + 2 enfants) 22 €. Tarifs groupes adultes 6,50 € à 9,50 €, groupes enfants 6,50 € (à partir de 20 personnes). Vérifié le 10 juin 2026."
+        },
+        {
+          "q": "Quels sont les horaires de l'Écomusée du Lac d'Annecy ?",
+          "a": "Les horaires de l'Écomusée du Lac d'Annecy à Sevrier varient selon la saison (avril à septembre principalement). 22-30 avril : mar-jeu 9h30-12h/14h-17h. 7 juil - 31 août : lun-ven 9h30-12h/14h-18h. Vérifier sur ecomusee-lacannecy.com. Vérifié le 10 juin 2026."
+        },
+        {
+          "q": "L'Écomusée du Lac d'Annecy est-il adapté aux enfants ?",
+          "a": "Oui, l'Écomusée du Lac d'Annecy est très orienté famille : parcours ludiques 2-3 ans et 3-6 ans, jeux-énigmes 6-10 ans et 10+, circuit d'énigmes en plein air. Tarif famille avantageux à 22 €."
+        },
+        {
+          "q": "Combien de temps prévoir pour l'Écomusée du Lac d'Annecy ?",
+          "a": "Comptez 1 h à 1 h 30 pour la visite complète de l'Écomusée du Lac d'Annecy avec jeu-énigme intérieur. Davantage avec le circuit d'énigmes en extérieur, soit une bonne demi-journée."
+        },
+        {
+          "q": "Où se trouve l'Écomusée du Lac d'Annecy ?",
+          "a": "L'Écomusée du Lac d'Annecy se trouve route de l'Église, à Sevrier (74320), à environ 8 km au sud d'Annecy, sur la rive ouest du lac. GPS : 45,864° N · 6,139° E. Téléphone : +33 (0)4 50 52 41 05."
+        },
+        {
+          "q": "L'Écomusée du Lac d'Annecy est-il ouvert toute l'année ?",
+          "a": "Non, l'Écomusée du Lac d'Annecy fonctionne principalement d'avril à septembre selon un calendrier saisonnier détaillé. Hors saison, ouverture sur réservation pour les groupes. Vérifié sur ecomusee-lacannecy.com le 10 juin 2026."
+        },
+        {
+          "q": "Faut-il réserver à l'Écomusée du Lac d'Annecy ?",
+          "a": "Pas de réservation requise pour la visite individuelle de l'Écomusée du Lac d'Annecy. Les groupes (≥ 20 personnes) et les scolaires se réservent à l'avance par téléphone au +33 (0)4 50 52 41 05."
+        }
+      ],
+      "schema_amenities": [
+        "Musée immersif XIXe siècle",
+        "Parcours ludiques 2-3 ans et 3-6 ans",
+        "Jeux-énigmes 6-10 ans et 10+",
+        "Circuit d'énigmes en extérieur",
+        "Tarif famille 22 €",
+        "Au bord du lac d'Annecy à Sevrier"
+      ]
     }
   }
 }

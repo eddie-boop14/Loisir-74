@@ -12,13 +12,24 @@
   "price_from": null,
   "price_currency": "EUR",
   "price_tiers": [],
-  "sources": [],
-  "verify_flags": [
-    "skeleton — content TBD"
+  "sources": [
+    {
+      "name": "Wikipedia — Château de la Croix",
+      "url": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_Croix"
+    },
+    {
+      "name": "Monumentum — Château de la Croix (PA00118442)",
+      "url": "https://monumentum.fr/monument-historique/pa00118442/scionzier-chateau-de-la-croix"
+    },
+    {
+      "name": "Mairie de Scionzier",
+      "url": "https://www.scionzier.fr/"
+    }
   ],
+  "verify_flags": [],
   "date_published_human": "10 juin 2026",
   "date_modified_human": "10 juin 2026",
-  "sparse_data": true,
+  "sparse_data": false,
   "subcategories": [
     "sorties-detente"
   ],
@@ -47,32 +58,171 @@
       "date": "2026-06-10",
       "by": "claude-dt-skeleton",
       "note": "Skeleton fiche from DataTourisme (Castle, Cluses Arve & montagnes Tourisme). Content TBD."
+    },
+    {
+      "date": "2026-06-10",
+      "by": "claude-enrich-batch",
+      "note": "Enriched via Wikipedia, Monumentum (PA00118442), mairie de Scionzier : maison forte XVIe siècle (cœur médiéval revendiqué XIIe) des seigneurs de La Croix puis Rochette, peintures murales XVIIe, papier peint panoramique 1840, MH classée 1994 ; propriété privée fermée au public, visible depuis la route."
     }
   ],
   "i18n": {
     "fr": {
       "name": "Château de la Croix",
-      "meta_title": "Château de la Croix · Scionzier (74) | Loisirs 74",
-      "meta_description": "Scionzier possède sur son territoire une maison forte du XIIème siècle, communément appelée château dont plusieurs parties sont classées monuments historiques. ",
+      "name_alternates": [
+        "Château de la Croix Scionzier",
+        "Maison forte de la Croix",
+        "Château Rochette de la Croix"
+      ],
+      "meta_title": "Château de la Croix · Scionzier (74) · MH 1994 · Vue extérieure",
+      "meta_description": "Maison forte XVIe siècle classée MH 1994 à Scionzier (Faucigny) : peintures murales XVIIe et papier peint panoramique 1840. Visible depuis la route, fermé au public.",
       "hero": {
-        "badge": "",
-        "lead": "Scionzier possède sur son territoire une maison forte du XIIème siècle, communément appelée château dont plusieurs parties sont classées monuments historiques. L’histoire de ce château est intimement liée à l’histoire du Faucigny."
+        "badge": "Vue extérieure · MH 1994",
+        "lead": "Maison forte XVIe siècle des seigneurs de La Croix puis Rochette à Scionzier : peintures murales du XVIIe et papier peint panoramique de 1840. Classée Monument Historique 1994, visible depuis la route."
       },
-      "hero_alt": "Château de la Croix à Scionzier, Haute-Savoie",
+      "hero_alt": "Château de la Croix à Scionzier en Haute-Savoie, maison forte du XVIe siècle classée Monument Historique 1994, visible depuis la route",
       "facts": {
-        "commune": "Scionzier"
+        "type": "Maison forte XVIe siècle · MH 1994",
+        "access": "Visible de l'extérieur (propriété privée)",
+        "tarif": "Pas de visite intérieure",
+        "commune": "Scionzier",
+        "parking": "Village de Scionzier (gratuit)",
+        "duration": "15 à 30 minutes",
+        "best_season": "Toute l'année"
       },
       "body": {
-        "what_is": "<p>Scionzier possède sur son territoire une maison forte du XIIème siècle, communément appelée château dont plusieurs parties sont classées monuments historiques. L’histoire de ce château est intimement liée à l’histoire du Faucigny.</p>"
+        "what_is": "<p>Le <strong>Château de la Croix</strong> est une <strong>maison forte historique</strong> qui domine la vallée de l'Arve depuis la commune de <strong>Scionzier</strong> (74950), à quelques kilomètres en aval de Cluses, dans le <strong>Faucigny</strong>. Si la tradition locale et certaines sources évoquent un noyau médiéval du <strong>XIIe siècle</strong>, l'édifice tel qu'il se présente aujourd'hui est essentiellement une construction du <strong>XVIe siècle</strong>, bâtie par les <strong>seigneurs de La Croix</strong>, qui s'allièrent ensuite par mariage à la famille <strong>Rochette</strong>. L'histoire du château est intimement liée à celle du Faucigny et de ses lignages nobles.</p><p>Le château conserve plusieurs éléments décoratifs remarquables : des <strong>peintures murales du XVIIe siècle</strong>, exceptionnelles dans la région, et surtout un <strong>papier peint panoramique</strong> daté de <strong>1840</strong> dans l'un des salons — pièce rare du décor intérieur classique du XIXe siècle. Plusieurs parties du château ont été <strong>inscrites Monument Historique en 1988</strong>, puis <strong>classées Monument Historique en 1994</strong> (notice POP Mérimée PA00118442), reconnaissant à la fois la valeur architecturale et la qualité des décors préservés.</p><p>Le château de la Croix est aujourd'hui une <strong>propriété privée</strong> et n'est <strong>pas ouvert à la visite publique</strong>. On ne peut le voir que depuis la route, où sa silhouette discrète apparaît parmi les arbres. Pour les amateurs de patrimoine du Faucigny, l'extérieur reste un repère lisible dans l'histoire seigneuriale locale ; la visite se combine avec celle des autres monuments de Scionzier (l'église) et de Cluses (musée de l'Horlogerie et du Décolletage), ou avec une montée vers le plateau de Solaison. Une étape patrimoniale discrète mais authentique, à intégrer dans un séjour Faucigny/vallée de l'Arve.</p>"
       },
-      "activities": [],
-      "practical_info": [
+      "activities": [
         {
-          "k": "Commune",
-          "v": "Scionzier (74950)"
+          "title": "Vue extérieure de la maison forte",
+          "tag": "Patrimoine",
+          "description": "Le Château de la Croix à Scionzier se découvre depuis la route : silhouette discrète d'une maison forte XVIe siècle, partiellement masquée par la végétation."
+        },
+        {
+          "title": "Lecture du contexte du Faucigny",
+          "tag": null,
+          "description": "Le Château de la Croix est étroitement lié à l'histoire seigneuriale du Faucigny — étape pédagogique sur le système des maisons fortes de la vallée de l'Arve."
+        },
+        {
+          "title": "Histoire des familles de la Croix et Rochette",
+          "tag": null,
+          "description": "Le Château de la Croix fut bâti par les seigneurs de La Croix, alliés ensuite par mariage à la famille Rochette — lignages nobles du Faucigny aux XVIe-XVIIIe siècles."
+        },
+        {
+          "title": "Combinaison avec la vallée de l'Arve",
+          "tag": null,
+          "description": "Le Château de la Croix à Scionzier se découvre dans le cadre d'une étape patrimoniale en vallée de l'Arve, entre Cluses et Bonneville."
+        },
+        {
+          "title": "Détour vers Cluses et son patrimoine industriel",
+          "tag": null,
+          "description": "Le Château de la Croix se combine facilement avec une visite au musée de l'Horlogerie et du Décolletage de Cluses, à 5 km — patrimoine industriel du Faucigny."
+        },
+        {
+          "title": "Photographie patrimoniale",
+          "tag": null,
+          "description": "Le Château de la Croix offre un sujet de photographie patrimoniale en bord de route : maison forte discrète dans son écrin végétal, dans la vallée de l'Arve."
+        },
+        {
+          "title": "Découverte du village de Scionzier",
+          "tag": "Famille",
+          "description": "La visite extérieure du Château de la Croix se combine avec la découverte du village de Scionzier et de son église — petite étape complète au cœur du Faucigny."
         }
       ],
-      "faq": []
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Château de la Croix, 74950 Scionzier (visible depuis la route)"
+        },
+        {
+          "k": "Coordonnées",
+          "v": "46,059° N · 6,552° E"
+        },
+        {
+          "k": "Altitude",
+          "v": "≈ 490 m (vallée de l'Arve)"
+        },
+        {
+          "k": "Horaires",
+          "v": "Vue extérieure libre, toute l'année. Pas de visite intérieure (propriété privée fermée au public). Vérifié le 10 juin 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifs",
+          "v": "Pas de billetterie : visite intérieure non ouverte. Vue extérieure depuis la route, gratuite. Vérifié le 10 juin 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Site officiel",
+          "v": "Notice patrimoniale sur monumentum.fr (PA00118442). Pas de site officiel propre."
+        },
+        {
+          "k": "Téléphone",
+          "v": "Mairie de Scionzier : +33 (0)4 50 98 09 36"
+        },
+        {
+          "k": "Accès / Parking",
+          "v": "Stationnement gratuit dans le village de Scionzier. Le château se voit depuis la route principale. Accessible depuis l'A40 sortie Cluses-Centre."
+        },
+        {
+          "k": "Durée de visite",
+          "v": "15 à 30 minutes pour observer le château depuis l'extérieur et lire son contexte historique."
+        },
+        {
+          "k": "Public",
+          "v": "Amateurs de patrimoine et d'histoire des familles seigneuriales du Faucigny, photographes."
+        },
+        {
+          "k": "Accessibilité",
+          "v": "Vue extérieure depuis la voirie. Pas d'aménagement spécifique. Propriété privée — pas d'accès direct au château."
+        },
+        {
+          "k": "Animaux",
+          "v": "Chiens acceptés tenus en laisse dans le village de Scionzier."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Peut-on visiter l'intérieur du Château de la Croix à Scionzier ?",
+          "a": "Non, le Château de la Croix à Scionzier est une propriété privée fermée au public. Il n'est visible que depuis la route. Aucune visite intérieure n'est organisée."
+        },
+        {
+          "q": "Quelle est l'histoire du Château de la Croix ?",
+          "a": "Le Château de la Croix est une maison forte essentiellement bâtie au XVIe siècle par les seigneurs de La Croix, alliés ensuite à la famille Rochette. Son histoire est liée à celle du Faucigny. Inscrit MH 1988, classé MH 1994."
+        },
+        {
+          "q": "Où se trouve le Château de la Croix ?",
+          "a": "Le Château de la Croix se situe sur la commune de Scionzier (74950), dans la vallée de l'Arve (Faucigny), à proximité de Cluses. Il est visible depuis la route principale. GPS : 46,059° N · 6,552° E."
+        },
+        {
+          "q": "Combien coûte la visite du Château de la Croix ?",
+          "a": "Le Château de la Croix à Scionzier ne se visite pas. Sa vue extérieure depuis la route est gratuite. Aucune billetterie. Vérifié le 10 juin 2026."
+        },
+        {
+          "q": "Quels sont les horaires du Château de la Croix ?",
+          "a": "Le Château de la Croix à Scionzier est visible depuis la route 24h/24, toute l'année. Pas d'horaires de visite (intérieur fermé). Vérifié le 10 juin 2026."
+        },
+        {
+          "q": "Pourquoi le Château de la Croix est-il classé Monument Historique ?",
+          "a": "Plusieurs parties du Château de la Croix à Scionzier sont classées Monument Historique (1994, PA00118442) pour leur valeur architecturale et leurs décors : peintures murales du XVIIe siècle et papier peint panoramique de 1840 dans un salon."
+        },
+        {
+          "q": "Où se garer pour voir le Château de la Croix ?",
+          "a": "Stationnement gratuit dans le village de Scionzier, à proximité de la route où le Château de la Croix est visible. Pas de parking dédié au monument."
+        },
+        {
+          "q": "Que voir d'autre autour du Château de la Croix ?",
+          "a": "Autour du Château de la Croix à Scionzier, on peut visiter Cluses et son musée de l'Horlogerie et du Décolletage (5 km), monter vers le plateau de Solaison, ou poursuivre vers Sallanches et le pays du Mont-Blanc."
+        }
+      ],
+      "schema_amenities": [
+        "Maison forte XVIe siècle",
+        "Classé MH 1994 (PA00118442)",
+        "Peintures murales XVIIe siècle",
+        "Papier peint panoramique 1840",
+        "Vue extérieure depuis la route",
+        "Propriété privée"
+      ]
     }
   }
 }

@@ -12,13 +12,24 @@
   "price_from": null,
   "price_currency": "EUR",
   "price_tiers": [],
-  "sources": [],
-  "verify_flags": [
-    "skeleton — content TBD"
+  "sources": [
+    {
+      "name": "Ville d'Évian — Centre nautique",
+      "url": "https://ville-evian.fr/loisirs/centre-nautique/"
+    },
+    {
+      "name": "Évian Tourisme — Base nautique",
+      "url": "https://www.evian-tourisme.com/en/sheets/opening-of-the-nautical-base-7366203/"
+    },
+    {
+      "name": "Haute-Savoie Mont-Blanc Tourisme — Base nautique Évian",
+      "url": "https://hautesavoiemontblanc-tourisme.com/en/offers/nautical-base-evian-les-bains-en-6252410/"
+    }
   ],
+  "verify_flags": [],
   "date_published_human": "10 juin 2026",
   "date_modified_human": "10 juin 2026",
-  "sparse_data": true,
+  "sparse_data": false,
   "subcategories": [
     "baignade-nautisme"
   ],
@@ -47,32 +58,176 @@
       "date": "2026-06-10",
       "by": "claude-dt-skeleton",
       "note": "Skeleton fiche from DataTourisme (NauticalCentre, Evian Tourisme et Congrès). Content TBD."
+    },
+    {
+      "date": "2026-06-10",
+      "by": "claude-enrich-batch",
+      "note": "Enriched via ville-evian.fr et evian-tourisme.com : base nautique d'été du Léman avec paddle, kayak, voile, plongée, aviron ; encadrement par le Club de voile d'Évian. Horaires base 13h-19h (21h le jeudi), saison estivale. Plage surveillée juin-septembre."
     }
   ],
   "i18n": {
     "fr": {
-      "name": "Base nautique",
-      "meta_title": "Base nautique · Évian-les-Bains (74) | Loisirs 74",
-      "meta_description": "La base nautique permet de découvrir le Léman en profitant d'activités en toute autonomie ou encadrées :  Paddle, kayak, plongée, voile, apnée.",
+      "name": "Base nautique d'Évian-les-Bains",
+      "name_alternates": [
+        "Centre nautique d'Évian",
+        "Base nautique d'Évian",
+        "Base nautique de la Plage d'Évian"
+      ],
+      "meta_title": "Base nautique d'Évian-les-Bains · Paddle · Kayak · Voile",
+      "meta_description": "Base nautique d'Évian-les-Bains : paddle, kayak, voile, aviron et plongée encadrés sur le Léman, plage surveillée juin-septembre. Sessions d'été 13h-19h.",
       "hero": {
-        "badge": "",
-        "lead": "La base nautique permet de découvrir le Léman en profitant d'activités en toute autonomie ou encadrées :  Paddle, kayak, plongée, voile, apnée."
+        "badge": "Saison estivale · 13h-19h",
+        "lead": "Découvrez le Léman au cœur d'Évian : paddle, kayak, voile, aviron et plongée encadrés ou en autonomie depuis la base nautique de la plage d'Évian, ouverte tout l'été."
       },
-      "hero_alt": "Base nautique à Évian-les-Bains, Haute-Savoie",
+      "hero_alt": "Base nautique d'Évian-les-Bains sur le lac Léman, paddle, kayak, voile, plongée et aviron pour découvrir le lac, Haute-Savoie",
       "facts": {
-        "commune": "Évian-les-Bains"
+        "type": "Base nautique (Léman)",
+        "access": "Payant à l'activité",
+        "tarif": "Variable selon activité — voir site officiel",
+        "commune": "Évian-les-Bains",
+        "parking": "Parkings du centre nautique / plage d'Évian",
+        "duration": "1 h à demi-journée",
+        "best_season": "Été (juin à septembre)"
       },
       "body": {
-        "what_is": "<p>La base nautique permet de découvrir le Léman en profitant d'activités en toute autonomie ou encadrées :  Paddle, kayak, plongée, voile, apnée.</p>"
+        "what_is": "<p>La <strong>base nautique d'Évian-les-Bains</strong> est l'un des principaux points d'accès aux loisirs nautiques sur la rive sud du <strong>lac Léman</strong>. Installée sur le secteur de la <strong>plage d'Évian</strong>, à l'avenue du Général Dupas, elle propose à la fois des <strong>locations en autonomie</strong> (paddle, kayak simple ou biplace, pédalo, barques d'aviron) et des <strong>sessions encadrées</strong> par les moniteurs du Club de voile d'Évian, club historique de la ville.</p><p>Côté pratique, la base est ouverte tous les jours en saison estivale de <strong>13h à 19h</strong>, avec une nocturne jusqu'à <strong>21h le jeudi</strong>. Les sessions encadrées sont programmées tout l'été : <strong>kayak et stand-up paddle le mercredi et le samedi</strong> en soirée, <strong>aviron lundi-mercredi-vendredi</strong> en après-midi, <strong>voile le mercredi après-midi</strong> de début juillet à fin août. Une <strong>zone de baignade surveillée</strong> est également ouverte sur la plage adjacente de juin à septembre (12h-18h, 11h-19h en juillet-août).</p><p>La base nautique permet aux <strong>visiteurs comme aux résidents</strong> de profiter du Léman dans un cadre unique : panorama sur la rive suisse (Lausanne, Vevey, Montreux), eaux relativement abritées au pied d'Évian, ambiance \"ville thermale\" très animée en été. C'est aussi un point de départ idéal pour la pratique de la <strong>plongée subaquatique</strong> au large d'Évian (épaves, tombants), de l'<strong>apnée</strong> en eau libre et de balades en kayak ou paddle le long du rivage. Pour les tarifs précis (variables selon l'activité, la durée, l'âge et l'encadrement), consulter le Club de voile d'Évian ou le service centre nautique de la mairie.</p>"
       },
-      "activities": [],
-      "practical_info": [
+      "activities": [
         {
-          "k": "Commune",
-          "v": "Évian-les-Bains (74500)"
+          "title": "Stand-up paddle sur le Léman",
+          "tag": "Été",
+          "description": "Location et sessions encadrées de stand-up paddle à la base nautique d'Évian — sortie libre sur le Léman ou cours collectifs le mercredi et le samedi en soirée."
+        },
+        {
+          "title": "Kayak simple ou biplace",
+          "tag": null,
+          "description": "Kayak en location à la base nautique d'Évian (1 ou 2 places) pour explorer la rive en autonomie, ou sessions guidées par les moniteurs du Club de voile."
+        },
+        {
+          "title": "Voile encadrée",
+          "tag": null,
+          "description": "Sessions de voile encadrées le mercredi après-midi du 9 juillet au 20 août, organisées par le Club de voile d'Évian au départ de la base nautique."
+        },
+        {
+          "title": "Aviron sur le Léman",
+          "tag": null,
+          "description": "Initiation et perfectionnement à l'aviron à la base nautique d'Évian, sessions encadrées les lundis, mercredis et vendredis après-midi en saison estivale."
+        },
+        {
+          "title": "Plongée subaquatique et apnée",
+          "tag": null,
+          "description": "La base nautique d'Évian sert de point de départ aux plongeurs et apnéistes pour explorer les épaves et tombants du Léman au large d'Évian."
+        },
+        {
+          "title": "Plage surveillée juin-septembre",
+          "tag": "Famille",
+          "description": "Zone de baignade surveillée par des MNS sur la plage d'Évian à proximité de la base nautique : juin-septembre 12h-18h, juillet-août 11h-19h."
+        },
+        {
+          "title": "Pédalos et barques d'aviron",
+          "tag": "Famille",
+          "description": "Location de pédalos et barques d'aviron à la base nautique d'Évian pour une promenade familiale et tranquille au large de la rive thermale."
+        },
+        {
+          "title": "Vue sur la rive suisse du Léman",
+          "tag": null,
+          "description": "Depuis la base nautique d'Évian, panorama dégagé sur Lausanne, Vevey, Montreux et les Alpes vaudoises de l'autre côté du lac Léman."
         }
       ],
-      "faq": []
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Centre nautique d'Évian, Avenue du Général Dupas, 74500 Évian-les-Bains"
+        },
+        {
+          "k": "Coordonnées",
+          "v": "46,400° N · 6,583° E"
+        },
+        {
+          "k": "Altitude",
+          "v": "≈ 372 m (niveau du Léman)"
+        },
+        {
+          "k": "Horaires",
+          "v": "Base nautique en saison estivale : tous les jours 13h-19h, jusqu'à 21h le jeudi. Sessions encadrées kayak/SUP mer/sam 17h30-19h (5/07-27/08), aviron lun/mer/ven dès 11/07 15h-17h, voile mer 14h-16h30 (9/07-20/08). Plage surveillée juin-septembre 12h-18h, juillet-août 11h-19h. Vérifié le 10 juin 2026 — programme été susceptible d'évoluer.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifs",
+          "v": "Variables selon activité, durée et encadrement. Consulter ville-evian.fr/loisirs/centre-nautique/ ou le Club de voile d'Évian. Pavillon thermal aux abords payant. Vérifié le 10 juin 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Site officiel",
+          "v": "ville-evian.fr/loisirs/centre-nautique/"
+        },
+        {
+          "k": "Téléphone",
+          "v": "Centre nautique Évian : +33 (0)4 50 75 02 69 · Mairie d'Évian : +33 (0)4 50 83 10 00"
+        },
+        {
+          "k": "Accès / Parking",
+          "v": "Parkings publics à proximité de la plage et du centre nautique d'Évian (avenue du Général Dupas). Gare SNCF d'Évian à 10 minutes à pied. Accès Léman Express depuis Genève via Annemasse."
+        },
+        {
+          "k": "Durée de visite",
+          "v": "1 h à 3 h selon l'activité ; demi-journée pour une session encadrée + baignade."
+        },
+        {
+          "k": "Public",
+          "v": "Familles, adolescents, adultes, débutants comme pratiquants confirmés. Encadrement par moniteurs diplômés."
+        },
+        {
+          "k": "Réservation",
+          "v": "Sessions encadrées sur réservation auprès du Club de voile d'Évian ou du centre nautique. Locations en autonomie sans réservation préalable selon disponibilité."
+        },
+        {
+          "k": "Équipement requis",
+          "v": "Maillot de bain, serviette, crème solaire, chaussons d'eau. Matériel nautique fourni par la base. Gilet de sauvetage inclus pour les enfants."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Quelles activités propose la base nautique d'Évian-les-Bains ?",
+          "a": "La base nautique d'Évian-les-Bains propose paddle, kayak (simple ou biplace), voile, aviron, plongée, apnée, pédalo et barques. Activités en autonomie ou en sessions encadrées par le Club de voile d'Évian, sur le Léman."
+        },
+        {
+          "q": "Quels sont les horaires de la base nautique d'Évian-les-Bains ?",
+          "a": "La base nautique d'Évian-les-Bains est ouverte en saison estivale tous les jours de 13h à 19h, avec nocturne jusqu'à 21h le jeudi. Plage surveillée juin-septembre 12h-18h (11h-19h en juillet-août). Vérifié le 10 juin 2026."
+        },
+        {
+          "q": "Quels sont les tarifs de la base nautique d'Évian-les-Bains ?",
+          "a": "Les tarifs de la base nautique d'Évian-les-Bains varient selon l'activité, la durée et l'encadrement (location libre vs session encadrée). Consulter ville-evian.fr/loisirs/centre-nautique/ ou le Club de voile d'Évian. Vérifié le 10 juin 2026."
+        },
+        {
+          "q": "Faut-il réserver à la base nautique d'Évian-les-Bains ?",
+          "a": "Les sessions encadrées (voile, aviron, kayak/SUP) de la base nautique d'Évian se font sur réservation auprès du Club de voile ou du centre nautique. Les locations en autonomie (paddle, pédalo) sont accessibles sans réservation selon disponibilité."
+        },
+        {
+          "q": "Où se trouve la base nautique d'Évian-les-Bains ?",
+          "a": "La base nautique d'Évian-les-Bains se situe avenue du Général Dupas, sur la plage d'Évian au bord du Léman, à 10 minutes à pied de la gare SNCF d'Évian. GPS : 46,400° N · 6,583° E."
+        },
+        {
+          "q": "La base nautique d'Évian-les-Bains est-elle ouverte toute l'année ?",
+          "a": "Non, la base nautique d'Évian-les-Bains fonctionne en saison estivale principalement, avec un pic d'activité de mi-juin à fin août. La plage adjacente est surveillée de juin à septembre. Vérifier le calendrier sur ville-evian.fr."
+        },
+        {
+          "q": "Quelle est la meilleure saison pour la base nautique d'Évian-les-Bains ?",
+          "a": "L'été (juillet-août) est la meilleure saison pour profiter de toutes les activités de la base nautique d'Évian-les-Bains : eaux du Léman tempérées, sessions encadrées au programme et plage surveillée."
+        },
+        {
+          "q": "Comment venir à la base nautique d'Évian-les-Bains ?",
+          "a": "La base nautique d'Évian-les-Bains est accessible depuis le centre-ville d'Évian en quelques minutes à pied, depuis la gare SNCF d'Évian (Léman Express vers Genève via Annemasse) et par les parkings du quai. Bateaux CGN au débarcadère voisin."
+        }
+      ],
+      "schema_amenities": [
+        "Base nautique sur le Léman",
+        "Paddle, kayak, voile, aviron",
+        "Plongée et apnée",
+        "Locations en autonomie + sessions encadrées",
+        "Plage surveillée juin-septembre",
+        "Cœur d'Évian-les-Bains"
+      ]
     }
   }
 }
