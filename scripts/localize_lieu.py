@@ -11,7 +11,7 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path("/home/user/Loisir-74")
+ROOT = Path(__file__).resolve().parent.parent
 LANGS = ["en", "de", "it", "es", "nl"]
 LI = {"en": 0, "de": 1, "it": 2, "es": 3, "nl": 4}
 TEMPLATE_SLUG = "plage-de-doussard"  # has known-good locale pages to lift header/footer from
