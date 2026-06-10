@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path("/home/user/Loisir-74")
 BASE = "https://loisirs74.fr/"
-LANGS = ["en", "de", "it", "es"]
+LANGS = ["en", "de", "it", "es", "nl"]
 LINK_RE = re.compile(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">')
 RUN_RE = re.compile(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">(?:\n<link rel="alternate" hreflang="[^"]*" href="[^"]*">)*')
 NOIDX_RE = re.compile(r'<meta name="robots" content="[^"]*noindex')
@@ -47,13 +47,27 @@ def link(lang, url):
     return f'<link rel="alternate" hreflang="{lang}" href="{url}">'
 
 
+def _parse_alternates(html):
+    """Extract {lang: href} from <link rel="alternate" hreflang=".." href=".."> tags,
+    tolerating any attribute order within the tag."""
+    out = {}
+    for tag in re.findall(r'<link[^>]*>', html):
+        if 'rel="alternate"' not in tag:
+            continue
+        m_lang = re.search(r'hreflang="([^"]*)"', tag)
+        m_href = re.search(r'href="([^"]*)"', tag)
+        if m_lang and m_href:
+            out[m_lang.group(1)] = m_href.group(1)
+    return out
+
+
 def hub_map():
     """FR hub url -> {lang: locale hub url}, from locale hub indexes' fr-href."""
     m = {}
     for L in LANGS:
         for f in glob.glob(f"{L}/*/index.html"):
             html = Path(f).read_text(encoding="utf-8")
-            d = dict(re.findall(r'<link rel="alternate" hreflang="([^"]*)" href="([^"]*)">', html))
+            d = _parse_alternates(html)
             fr = d.get("fr")
             if not fr or not fr.endswith("/"):
                 continue
