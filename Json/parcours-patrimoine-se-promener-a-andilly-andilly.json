@@ -9,16 +9,31 @@
   "hero_image": "/generique-sentier.jpg",
   "hero_credit": "Photo générique — à remplacer",
   "official_site_url": "https://www.andilly74.com/Francais",
-  "price_from": null,
+  "price_from": 0,
   "price_currency": "EUR",
   "price_tiers": [],
-  "sources": [],
-  "verify_flags": [
-    "skeleton — content TBD"
+  "sources": [
+    {
+      "name": "Cirkwi — fiche circuit 225308",
+      "url": "https://www.cirkwi.com/fr/circuit/225308-parcours-patrimoine-se-promener-a-andilly"
+    },
+    {
+      "name": "Office de tourisme Fier et Usses",
+      "url": "https://tourisme.fier-et-usses.com/parcours-patrimoine-se-promener-a-andilly-andilly.html"
+    },
+    {
+      "name": "Mairie d'Andilly — histoire et patrimoine",
+      "url": "http://www.andilly74.fr/la-commune/localisation-histoire-patrimoine/"
+    },
+    {
+      "name": "OT Monts du Genevois",
+      "url": "https://www.montsdugenevois.com/en/offers/parcours-patrimoine-se-promener-a-andilly-andilly-en-2969723/"
+    }
   ],
+  "verify_flags": [],
   "date_published_human": "10 juin 2026",
   "date_modified_human": "10 juin 2026",
-  "sparse_data": true,
+  "sparse_data": false,
   "subcategories": [
     "parcs-jardins"
   ],
@@ -47,32 +62,156 @@
       "date": "2026-06-10",
       "by": "claude-dt-skeleton",
       "note": "Skeleton fiche from DataTourisme (EducationalTrail, Office de Tourisme des Monts du Genevois). Content TBD."
+    },
+    {
+      "date": "2026-06-10",
+      "by": "claude-enrich-batch",
+      "note": "Croisé Cirkwi 225308, OT Fier & Usses, OT Monts du Genevois et site Mairie d'Andilly : 36 panneaux illustrés répartis sur les trois villages (Charly, Jussy, Saint-Symphorien), départ Chapelle de Charly. Patrimoine des graniteurs piémontais du Mont Sion."
     }
   ],
   "i18n": {
     "fr": {
       "name": "Parcours patrimoine : Se promener à Andilly",
-      "meta_title": "Parcours patrimoine : Se promener à Andilly · Andilly (74) | Loisirs 74",
-      "meta_description": "Découvrez la commune d'Andilly avec un parcours historique constitué de 36 panneaux illustrés répartis dans les trois villages de la commune Charly, Jussy et Sa",
+      "name_alternates": [
+        "Parcours patrimoine d'Andilly",
+        "Sentier patrimoine Charly-Jussy-Saint-Symphorien"
+      ],
+      "meta_title": "Parcours patrimoine d'Andilly · Charly, Jussy & Saint-Symphorien | Loisirs 74",
+      "meta_description": "Sentier d'interprétation libre à Andilly avec 36 panneaux illustrés dans les villages de Charly, Jussy et Saint-Symphorien, au pied du Mont Sion.",
       "hero": {
-        "badge": "",
-        "lead": "Découvrez la commune d'Andilly avec un parcours historique constitué de 36 panneaux illustrés répartis dans les trois villages de la commune Charly, Jussy et Saint Symphorien."
+        "badge": "Accès libre · Toute l'année",
+        "lead": "Découvrez Andilly et ses trois villages — Charly, Jussy et Saint-Symphorien — au fil d'un parcours patrimoine en accès libre, jalonné de 36 panneaux illustrés qui racontent l'histoire rurale du Genevois au pied du col du Mont Sion."
       },
-      "hero_alt": "Parcours patrimoine : Se promener à Andilly à Andilly, Haute-Savoie",
+      "hero_alt": "Parcours patrimoine d'Andilly avec panneaux illustrés dans les villages de Charly, Jussy et Saint-Symphorien",
       "facts": {
-        "commune": "Andilly"
+        "type": "Sentier d'interprétation · Patrimoine",
+        "access": "Libre · Gratuit",
+        "commune": "Andilly",
+        "duration": "2 à 3 h selon village(s) visité(s)",
+        "best_season": "Printemps · été · automne"
       },
       "body": {
-        "what_is": "<p>Découvrez la commune d'Andilly avec un parcours historique constitué de 36 panneaux illustrés répartis dans les trois villages de la commune Charly, Jussy et Saint Symphorien.</p>"
+        "what_is": "<p>Le <strong>Parcours patrimoine d'Andilly</strong> est un sentier d'interprétation libre qui traverse la commune d'Andilly, en Haute-Savoie, sur le versant sud du col du Mont Sion à 6 km au nord-ouest de Cruseilles. Il se compose de <strong>36 panneaux illustrés</strong> répartis dans les trois villages de la commune — Charly, Jussy et Saint-Symphorien — et s'appuie sur l'ouvrage de Dominique Bouverat « Andilly – Charly, Jussy et Saint-Symphorien – Pages d'histoire ».</p><p>Le parcours, conçu par la commune et l'association locale, raconte l'histoire rurale et religieuse du Genevois : chapelles du XVe siècle (la <strong>chapelle Saint-Jacques de Charly</strong>, dont le clocher est inscrit Monument historique depuis 1975), fontaines, fours à pain, maisons de granite, vie d'autrefois. Une variante balisée « Sur les traces des graniteurs du Mont Sion » prolonge la promenade vers le col et évoque les tailleurs de pierre piémontais et lombards venus exploiter le granite au XIXe siècle. L'itinéraire se parcourt en boucle ou village par village, à pied seul, en famille ou en groupe, et représente une halte culturelle idéale entre Cruseilles, le Salève et la frontière genevoise.</p>"
       },
-      "activities": [],
-      "practical_info": [
+      "activities": [
         {
-          "k": "Commune",
-          "v": "Andilly (74350)"
+          "title": "Lire les 36 panneaux d'interprétation",
+          "tag": null,
+          "description": "Tour du patrimoine d'Andilly au fil des 36 panneaux illustrés répartis dans Charly, Jussy et Saint-Symphorien : architecture, vie rurale, religieuse."
+        },
+        {
+          "title": "Visiter la chapelle Saint-Jacques de Charly",
+          "tag": null,
+          "description": "Chapelle du XVe siècle dont le clocher est classé Monument historique depuis 1975, point de départ habituel du parcours patrimoine."
+        },
+        {
+          "title": "Suivre la variante des graniteurs du Mont Sion",
+          "tag": null,
+          "description": "Boucle complémentaire de 10 km par Charly, Présilly et le col du Mont Sion, sur les traces des tailleurs de granite piémontais et lombards du XIXe siècle."
+        },
+        {
+          "title": "Pique-niquer dans un hameau",
+          "tag": "Famille",
+          "description": "Plusieurs bancs et fontaines dans les villages traversés permettent une pause en famille au cœur du sentier patrimoine d'Andilly."
+        },
+        {
+          "title": "Photographier les fours à pain et lavoirs",
+          "tag": null,
+          "description": "Le parcours d'Andilly met en lumière le petit patrimoine bâti : fours, fontaines, lavoirs, croix de chemin, granges typiques du Genevois."
+        },
+        {
+          "title": "Combiner avec une visite au Grand Parc d'Andilly",
+          "tag": null,
+          "description": "Le Grand Parc d'Andilly (parc d'attractions médiévales) est à proximité immédiate et permet de prolonger la journée famille après le parcours patrimoine."
+        },
+        {
+          "title": "Compléter avec une marche au Mont Sion",
+          "tag": null,
+          "description": "Le col du Mont Sion et ses chemins permettent de prolonger le parcours patrimoine par une vraie sortie nature, en lien avec les graniteurs."
         }
       ],
-      "faq": []
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Départ habituel : Chapelle de Charly, 74350 Andilly"
+        },
+        {
+          "k": "Coordonnées",
+          "v": "46,069845° N — 6,069443° E"
+        },
+        {
+          "k": "Téléphone",
+          "v": "Mairie d'Andilly — voir andilly74.fr",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Site officiel",
+          "v": "andilly74.com / andilly74.fr"
+        },
+        {
+          "k": "Horaires",
+          "v": "Accès libre toute l'année, en autonomie. Panneaux extérieurs accessibles 24 h/24.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifs",
+          "v": "Gratuit",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Accès / Parking",
+          "v": "Parking à la mairie d'Andilly et à proximité des chapelles (Charly, Jussy, Saint-Symphorien). À 6 km de Cruseilles par la D 1201."
+        },
+        {
+          "k": "Durée de visite",
+          "v": "2 à 3 h pour faire les trois villages, 45 min à 1 h par village"
+        },
+        {
+          "k": "Public",
+          "v": "Familles, amateurs de patrimoine rural, scolaires"
+        },
+        {
+          "k": "Animaux",
+          "v": "Acceptés tenus en laisse"
+        },
+        {
+          "k": "Équipement requis",
+          "v": "Chaussures de marche confortables. Plan disponible à la mairie ou en mairies de communes voisines."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Le Parcours patrimoine d'Andilly est-il gratuit ?",
+          "a": "Oui. Le Parcours patrimoine d'Andilly est un sentier d'interprétation en accès libre et gratuit toute l'année. Les 36 panneaux illustrés sont installés en extérieur et consultables sans réservation."
+        },
+        {
+          "q": "Où commence le Parcours patrimoine d'Andilly ?",
+          "a": "Le départ habituel du Parcours patrimoine se situe à la chapelle de Charly (chapelle Saint-Jacques, XVe siècle), au cœur du village de Charly à Andilly. Vous pouvez aussi le rejoindre depuis Jussy ou Saint-Symphorien."
+        },
+        {
+          "q": "Combien de temps faut-il pour faire le Parcours patrimoine d'Andilly ?",
+          "a": "Comptez 45 min à 1 h par village pour le Parcours patrimoine d'Andilly, soit 2 à 3 h pour parcourir Charly, Jussy et Saint-Symphorien d'affilée. Vous pouvez aussi le scinder en plusieurs sorties."
+        },
+        {
+          "q": "Le Parcours patrimoine d'Andilly est-il adapté aux enfants ?",
+          "a": "Oui. Le Parcours patrimoine d'Andilly se prête bien à une sortie famille : les 36 panneaux illustrés racontent l'histoire locale de façon accessible, les villages se prêtent à de petites étapes et le Grand Parc d'Andilly voisin permet de compléter la journée."
+        },
+        {
+          "q": "Que voit-on sur le Parcours patrimoine d'Andilly ?",
+          "a": "Le Parcours patrimoine met en valeur le petit patrimoine bâti (fontaines, fours, lavoirs, croix de chemin), les chapelles villageoises dont la chapelle Saint-Jacques de Charly (clocher inscrit Monument historique en 1975) et l'histoire des graniteurs du Mont Sion."
+        },
+        {
+          "q": "Peut-on prolonger le Parcours patrimoine d'Andilly ?",
+          "a": "Oui. Un parcours complémentaire « Sur les traces des graniteurs du Mont Sion » prolonge le sentier d'Andilly par une boucle d'environ 10 km vers Charly, Présilly et le col du Mont Sion, en lien avec l'histoire des tailleurs de pierre piémontais et lombards du XIXe siècle."
+        }
+      ],
+      "schema_amenities": [
+        "Sentier d'interprétation",
+        "Accès libre",
+        "Panneaux illustrés (36)",
+        "Patrimoine bâti rural",
+        "Parking au départ"
+      ]
     }
   }
 }
