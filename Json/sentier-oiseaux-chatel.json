@@ -8,17 +8,28 @@
   "longitude": 6.772299,
   "hero_image": "/generique-sentier.jpg",
   "hero_credit": "Photo générique — à remplacer",
-  "official_site_url": null,
-  "price_from": null,
+  "official_site_url": "https://www.chatel.com/",
+  "price_from": 0,
   "price_currency": "EUR",
   "price_tiers": [],
-  "sources": [],
-  "verify_flags": [
-    "skeleton — content TBD"
+  "sources": [
+    {
+      "name": "OT Châtel — randonnées et balades",
+      "url": "https://www.chatel.com/en/hiking-mountainbiking/hiking/walking-routes/"
+    },
+    {
+      "name": "Haute-Savoie Tourisme — fiche 93244",
+      "url": "https://www.haute-savoie-tourisme.org/nature/itineraires-randonnees/93244-sentier-des-oiseaux"
+    },
+    {
+      "name": "Cirkwi — fiche circuit 137316",
+      "url": "https://www.cirkwi.com/fr/circuit/137316-sentier-des-oiseaux"
+    }
   ],
+  "verify_flags": [],
   "date_published_human": "10 juin 2026",
   "date_modified_human": "10 juin 2026",
-  "sparse_data": true,
+  "sparse_data": false,
   "subcategories": [
     "parcs-jardins"
   ],
@@ -47,32 +58,160 @@
       "date": "2026-06-10",
       "by": "claude-dt-skeleton",
       "note": "Skeleton fiche from DataTourisme (EducationalTrail, Châtel Tourisme). Content TBD."
+    },
+    {
+      "date": "2026-06-10",
+      "by": "claude-enrich-batch",
+      "note": "Croisé OT Châtel, fiche HST 93244 et Cirkwi 137316. Sentier d'interprétation ornithologique sur le GR5 du col de Bassachaux au sommet des Rochassons. Col à 12 km de Châtel par la D 228 (parking au col, snack en saison). Sentier inscrit dans le Geopark du Chablais (UNESCO). Pratique 15 juin–15 septembre."
     }
   ],
   "i18n": {
     "fr": {
       "name": "Sentier des oiseaux",
-      "meta_title": "Sentier des oiseaux · Châtel (74) | Loisirs 74",
-      "meta_description": "Un parcours qui permet de découvrir les oiseaux de montagne, particulièrement ceux visibles à Châtel. Du sommet du Col de Bassachaux au sommet des Rochassons, o",
+      "name_alternates": [
+        "Sentier des oiseaux Châtel",
+        "Sentier ornithologique du col de Bassachaux"
+      ],
+      "meta_title": "Sentier des oiseaux · Col de Bassachaux · Châtel | Loisirs 74",
+      "meta_description": "Sentier d'interprétation ornithologique à Châtel : du col de Bassachaux au sommet des Rochassons sur le GR5, en Vallée d'Abondance (Géoparc UNESCO Chablais).",
       "hero": {
-        "badge": "",
-        "lead": "Un parcours qui permet de découvrir les oiseaux de montagne, particulièrement ceux visibles à Châtel. Du sommet du Col de Bassachaux au sommet des Rochassons, on apprend à les reconnaître, à découvrir leur habitat, leur nourriture, leur nidification."
+        "badge": "Accès libre · Été (15 juin → 15 sept.)",
+        "lead": "Sentier d'interprétation ornithologique sur le GR5 entre le col de Bassachaux et le sommet des Rochassons, à Châtel : panneaux pour reconnaître les oiseaux de montagne, panorama Vallée d'Abondance, Geopark mondial UNESCO du Chablais."
       },
-      "hero_alt": "Sentier des oiseaux à Châtel, Haute-Savoie",
+      "hero_alt": "Sentier des oiseaux à Châtel depuis le col de Bassachaux, en Vallée d'Abondance",
       "facts": {
-        "commune": "Châtel"
+        "type": "Sentier d'interprétation · Ornithologie",
+        "access": "Libre · Gratuit",
+        "commune": "Châtel",
+        "duration": "1 h 30 à 2 h aller-retour",
+        "best_season": "15 juin → 15 septembre"
       },
       "body": {
-        "what_is": "<p>Un parcours qui permet de découvrir les oiseaux de montagne, particulièrement ceux visibles à Châtel. Du sommet du Col de Bassachaux au sommet des Rochassons, on apprend à les reconnaître, à découvrir leur habitat, leur nourriture, leur nidification.</p>"
+        "what_is": "<p>Le <strong>Sentier des oiseaux</strong> est un itinéraire d'interprétation ornithologique tracé sur le tronçon du <strong>GR5</strong> reliant le col de Bassachaux (1778 m) au sommet des Rochassons, sur la commune de Châtel en Vallée d'Abondance. Le parcours emprunte une large route carrossable sur tout son tracé et se prête particulièrement aux familles : il s'agit d'un aller-retour, le retour se faisant par le même chemin.</p><p>Tout au long du sentier, des panneaux pédagogiques apprennent à <strong>reconnaître les oiseaux de montagne</strong> que l'on peut observer à Châtel — bec-croisé, casse-noix, chocard, lagopède, grand corbeau — ainsi que leur habitat, leur nourriture et leur nidification. Le col de Bassachaux est accessible en voiture par la D 228 depuis Châtel (12 km), avec un grand parking et un snack en saison ; il marque la fin de la Vallée d'Abondance, sous un panorama grandiose. Le site fait partie du <strong>Geopark mondial UNESCO du Chablais</strong>, dont l'histoire est liée à la formation des Alpes du Nord. Le sentier est généralement ouvert du 15 juin au 15 septembre, sous réserve de conditions climatiques favorables.</p>"
       },
-      "activities": [],
-      "practical_info": [
+      "activities": [
         {
-          "k": "Commune",
-          "v": "Châtel (74390)"
+          "title": "Observer les oiseaux de montagne",
+          "tag": "Famille",
+          "description": "Panneaux d'interprétation expliquant comment reconnaître chocards, casse-noix, bec-croisé et autres espèces visibles à Châtel."
+        },
+        {
+          "title": "Marcher sur le GR5",
+          "tag": null,
+          "description": "Tronçon emblématique du GR5 entre col de Bassachaux et Rochassons, large piste carrossable accessible à tous."
+        },
+        {
+          "title": "Pique-niquer au col de Bassachaux",
+          "tag": null,
+          "description": "Espace de pique-nique et snack en saison au col, panorama Vallée d'Abondance et Chablais."
+        },
+        {
+          "title": "Découvrir le Geopark du Chablais",
+          "tag": null,
+          "description": "Le sentier s'inscrit dans le Geopark mondial UNESCO du Chablais et permet d'aborder la géologie des Alpes du Nord."
+        },
+        {
+          "title": "Profiter du panorama Rochassons",
+          "tag": null,
+          "description": "Au sommet des Rochassons, vue ouverte sur la Vallée d'Abondance, les Cornettes de Bise et la chaîne du Chablais."
+        },
+        {
+          "title": "Prolonger sur le GR5 Portes du Soleil",
+          "tag": null,
+          "description": "Le GR5 se prolonge en direction de la Suisse (lac de Tanay) et permet une boucle plus longue pour les randonneurs aguerris."
+        },
+        {
+          "title": "Sortir au lever du jour pour l'observation",
+          "tag": null,
+          "description": "Le matin tôt offre les meilleures conditions pour observer les oiseaux : prévoyez jumelles et silence."
         }
       ],
-      "faq": []
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Départ : col de Bassachaux (1778 m), accès par la D 228 depuis Châtel 74390"
+        },
+        {
+          "k": "Coordonnées",
+          "v": "46,221712° N — 6,772299° E"
+        },
+        {
+          "k": "Altitude",
+          "v": "1778 m (col de Bassachaux)"
+        },
+        {
+          "k": "Difficulté",
+          "v": "Facile · piste carrossable large"
+        },
+        {
+          "k": "Téléphone",
+          "v": "OT Châtel — 04 50 73 22 44",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Site officiel",
+          "v": "chatel.com"
+        },
+        {
+          "k": "Horaires",
+          "v": "Sentier praticable du 15 juin au 15 septembre, sous réserve de conditions climatiques. Hors saison, accès difficile par enneigement.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifs",
+          "v": "Gratuit",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Accès / Parking",
+          "v": "Grand parking au col de Bassachaux. 12 km depuis Châtel par la D 228 (route de montagne)."
+        },
+        {
+          "k": "Durée de visite",
+          "v": "1 h 30 à 2 h aller-retour"
+        },
+        {
+          "k": "Animaux",
+          "v": "Acceptés tenus en laisse (alpages avec troupeaux possibles)"
+        },
+        {
+          "k": "Équipement requis",
+          "v": "Chaussures de marche, jumelles, coupe-vent."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Où part le Sentier des oiseaux à Châtel ?",
+          "a": "Le Sentier des oiseaux démarre au col de Bassachaux (1778 m), à 12 km de Châtel par la D 228. Le col dispose d'un grand parking et d'un snack en saison."
+        },
+        {
+          "q": "Quels oiseaux peut-on observer sur le Sentier des oiseaux de Châtel ?",
+          "a": "Le Sentier des oiseaux est conçu pour repérer les oiseaux de montagne visibles à Châtel — bec-croisé, casse-noix, chocard, grand corbeau, lagopède selon altitude — grâce à des panneaux qui expliquent leur habitat, leur nourriture et leur nidification."
+        },
+        {
+          "q": "Quelle est la difficulté du Sentier des oiseaux à Châtel ?",
+          "a": "Le Sentier des oiseaux suit le GR5 sur une large piste carrossable entre le col de Bassachaux et le sommet des Rochassons : c'est un parcours facile, accessible aux familles avec des enfants en âge de marcher."
+        },
+        {
+          "q": "Quand est ouvert le Sentier des oiseaux ?",
+          "a": "Le Sentier des oiseaux à Châtel est entretenu du 15 juin au 15 septembre tous les jours, sous réserve de conditions climatiques favorables. Hors saison, l'accès au col peut être difficile par enneigement."
+        },
+        {
+          "q": "Le Sentier des oiseaux est-il gratuit ?",
+          "a": "Oui. Le Sentier des oiseaux et le parking du col de Bassachaux sont en accès libre et gratuit toute la saison estivale."
+        },
+        {
+          "q": "Quel est le meilleur moment pour observer les oiseaux sur le Sentier des oiseaux ?",
+          "a": "Pour le Sentier des oiseaux, partez le matin tôt : c'est le créneau où les oiseaux de montagne sont les plus actifs autour du col de Bassachaux. Prévoyez des jumelles et marchez en silence."
+        }
+      ],
+      "schema_amenities": [
+        "Sentier d'interprétation ornithologique",
+        "Panneaux pédagogiques",
+        "Parking au col",
+        "Snack en saison (col de Bassachaux)",
+        "Geopark mondial UNESCO du Chablais"
+      ]
     }
   }
 }
