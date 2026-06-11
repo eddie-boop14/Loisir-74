@@ -101,10 +101,13 @@
   // ---------------------------------------------------------------------
 
   function fiches() {
-    // Hard rule: only fiches still on generic placeholders. Venues with a
-    // real hero don't need a "pick" — use the Editor tab to replace one.
-    let list = catalog.filter(f => !f.real);
-    if (filter.category) list = list.filter(f => f.category === filter.category);
+    // Default view: only fiches still on generic placeholders (the "to do"
+    // list). When the user picks a category, show ALL fiches in it — including
+    // ones that already have a real hero — so the existing photo is visible
+    // and the user can decide whether to replace it.
+    let list = filter.category
+      ? catalog.filter(f => f.category === filter.category)
+      : catalog.filter(f => !f.real);
     if (filter.q) {
       const q = filter.q.toLowerCase();
       list = list.filter(f =>
@@ -112,6 +115,8 @@
         f.name.toLowerCase().includes(q) ||
         f.commune.toLowerCase().includes(q));
     }
+    // Sort: fiches on generic first (the ones needing attention), then real-photo fiches
+    list.sort((a, b) => (a.real === b.real ? 0 : a.real ? 1 : -1));
     return list;
   }
 
@@ -417,12 +422,12 @@
   function mount(root) {
     root.innerHTML = `
       <div class="help">
-        <strong>Étape 6 — Photothèque.</strong> Liste des fiches encore sur photo générique. Pour chacune : recherche parallèle Wikimedia Commons + Openverse, ou glisse ta propre photo. Clic vignette → télécharge le ZIP (image + patch JSON) à transmettre pour intégration. Les fiches qui ont déjà une vraie photo n'apparaissent pas ici — passe par l'Éditeur (Tab 4) pour remplacer une existante.
+        <strong>Étape 6 — Photothèque.</strong> Par défaut : fiches encore sur photo générique. Pick une catégorie dans le sélecteur ci-dessous pour voir TOUTES les fiches de cette catégorie — y compris celles qui ont déjà une vraie photo (vignette visible, badge "photo réelle"). Recherche parallèle Wikimedia Commons + Openverse, ou glisse ta propre photo. Clic vignette → ZIP avec image + patch JSON.
       </div>
 
       <div class="card">
         <div class="card-head">
-          <h3>Fiches à enrichir</h3>
+          <h3>Fiches</h3>
           <span class="field-help" id="phototheque-count">…</span>
         </div>
         <div class="field-row cols2" style="margin-bottom:0">
@@ -431,9 +436,9 @@
             <input type="text" id="phototheque-q" placeholder="slug, nom, commune…">
           </div>
           <div class="field">
-            <label>Catégorie</label>
+            <label>Catégorie (pick → voir toutes, photo réelle incluse)</label>
             <select id="phototheque-category">
-              <option value="">Toutes</option>
+              <option value="">Toutes (génériques seulement)</option>
             </select>
           </div>
         </div>
