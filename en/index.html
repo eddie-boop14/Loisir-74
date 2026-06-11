@@ -230,6 +230,38 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
 .foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-top:2rem;border-top:1px solid var(--line);color:var(--ink-3);font-size:.75rem;letter-spacing:.06em;transition:var(--turn)}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.clouds svg,.rainveil,.lamp{animation:none}*{transition-duration:.001ms!important}}
+
+/* === COMPACT HERO + ANIMATED ALPINE SCENE === */
+.hero{min-height:62vh;padding:96px 0 0;justify-content:flex-end;overflow:hidden;background:linear-gradient(180deg,#f7f2e8 0%,#ece5d4 55%,#dccdb1 100%)}
+@media(max-width:680px){.hero{min-height:54vh;padding:84px 0 0}}
+@media(prefers-color-scheme:dark){.hero{background:linear-gradient(180deg,#13171c 0%,#1b212a 55%,#2a2e36 100%)}}
+.hero-content{padding-bottom:8vh;position:relative;z-index:10}
+.hero-stage{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero-sun{position:absolute;width:140px;height:140px;left:65%;top:18%;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fef3c7 0%,#fbbf24 45%,#f59e0b 70%,transparent 78%);filter:blur(.5px);animation:heroSunGlow 6s ease-in-out infinite alternate,heroSunFloat 12s ease-in-out infinite alternate}
+@media(prefers-color-scheme:dark){.hero-sun{background:radial-gradient(circle at 35% 35%,#fefce8 0%,#facc15 38%,#a16207 62%,transparent 70%);opacity:.75}}
+@keyframes heroSunGlow{0%{box-shadow:0 0 80px 20px rgba(251,191,36,.18)}100%{box-shadow:0 0 140px 40px rgba(251,191,36,.32)}}
+@keyframes heroSunFloat{0%{transform:translateY(0)}100%{transform:translateY(-14px)}}
+.hero-layer{position:absolute;left:0;right:0;background-repeat:no-repeat;background-size:100% 100%}
+.hero-layer-back{bottom:0;height:48%;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 380" preserveAspectRatio="none"><path d="M0 380 L0 200 L120 130 L260 195 L380 95 L520 165 L640 100 L780 175 L900 110 L1020 200 L1160 130 L1280 215 L1440 145 L1440 380 Z" fill="%23b5a584" opacity=".55"/></svg>');animation:heroDrift 30s ease-in-out infinite alternate}
+.hero-layer-mid{bottom:0;height:36%;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 380" preserveAspectRatio="none"><path d="M0 380 L0 260 L160 160 L320 240 L460 130 L600 220 L760 150 L900 245 L1060 165 L1200 250 L1340 175 L1440 230 L1440 380 Z" fill="%23847062" opacity=".72"/></svg>');animation:heroDrift2 24s ease-in-out infinite alternate}
+.hero-layer-front{bottom:0;height:26%;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 380" preserveAspectRatio="none"><path d="M0 380 L0 320 L140 240 L280 305 L420 220 L560 295 L720 235 L860 310 L1000 245 L1160 320 L1300 255 L1440 305 L1440 380 Z" fill="%23534538" opacity=".88"/></svg>')}
+@media(prefers-color-scheme:dark){.hero-layer-back{filter:brightness(.55)}.hero-layer-mid{filter:brightness(.5)}.hero-layer-front{filter:brightness(.45)}}
+@keyframes heroDrift{0%{transform:translateX(-8px)}100%{transform:translateX(8px)}}
+@keyframes heroDrift2{0%{transform:translateX(6px)}100%{transform:translateX(-6px)}}
+.hero-stars{position:absolute;inset:0}
+.hero-stars span{position:absolute;left:var(--x);top:var(--y);width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px 1px color-mix(in srgb,var(--accent) 60%,transparent);opacity:0;animation:heroStarTwinkle 4.5s ease-in-out infinite;animation-delay:var(--d)}
+@keyframes heroStarTwinkle{0%,100%{opacity:0;transform:scale(.6)}40%{opacity:.92;transform:scale(1)}70%{opacity:.7;transform:scale(.95)}}
+@media(prefers-reduced-motion:reduce){.hero-sun,.hero-layer-back,.hero-layer-mid,.hero-stars span{animation:none}}
+/* === COMPACT VERTICAL RHYTHM === */
+.glance{padding:clamp(1.1rem,2.4vw,1.8rem) 0 clamp(.4rem,1vw,.85rem)}
+.glance-head{margin-bottom:1.1rem}
+.glance-group + .glance-group{margin-top:.95rem}
+.glance-label{margin-bottom:.5rem}
+.band{padding:clamp(1rem,2vw,1.6rem) 0 0}
+.band .wrap{padding-top:clamp(.9rem,1.8vw,1.4rem)}
+section.cat{padding:clamp(1.5rem,2.8vw,2.4rem) 0}
+.cat-head{margin-bottom:1.25rem}
+.band + section.cat{padding-top:clamp(1rem,2vw,1.6rem)}
 </style>
 </head>
 <body>
@@ -267,14 +299,27 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
 </header>
 <main>
 <section class="hero">
-<div class="wrap hero-content">
-<div class="kicker" id="kicker">The Haute-Savoie leisure guide</div>
-<h1>Where to go in<br/><em>Haute-Savoie</em></h1>
-<p class="lede">Every leisure site in the department, fact-checked one by one. <b>Sun or rain</b> — the page follows the weather, just like you.</p>
-<div class="weather-now" id="weatherNow">
-<span class="dot"></span><b id="wnLabel">Clear skies</b>
-<span id="wnText">lakes, waterfalls, viewpoints — everything outdoors is open.</span>
+<div class="hero-stage" aria-hidden="true">
+  <div class="hero-sun"></div>
+  <div class="hero-layer hero-layer-back"></div>
+  <div class="hero-layer hero-layer-mid"></div>
+  <div class="hero-layer hero-layer-front"></div>
+  <div class="hero-stars">
+    <span style="--x:14%;--y:32%;--d:0s"></span>
+    <span style="--x:28%;--y:52%;--d:1.2s"></span>
+    <span style="--x:46%;--y:24%;--d:2.4s"></span>
+    <span style="--x:58%;--y:46%;--d:.6s"></span>
+    <span style="--x:72%;--y:28%;--d:1.8s"></span>
+    <span style="--x:84%;--y:44%;--d:3.2s"></span>
+    <span style="--x:18%;--y:62%;--d:2.1s"></span>
+    <span style="--x:64%;--y:62%;--d:.9s"></span>
+    <span style="--x:38%;--y:38%;--d:2.7s"></span>
+  </div>
 </div>
+<div class="wrap hero-content">
+<div class="kicker" id="kicker">The Haute-Savoie leisure guide · 300+ venues</div>
+<h1>Where to go and what to do in<br/><em>Haute-Savoie</em></h1>
+<p class="lede">Lakes, waterfalls, castles, museums, parks, viewpoints. <b>Every venue in the department, fact-checked one by one</b> — sunny or rainy, we tell you where to go and what to do.</p>
 </div>
 </section>
 <section class="cat" id="lac">
@@ -1326,7 +1371,7 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
 </div>
 <div class="foot-col">
 <h4>Categories</h4>
-<ul><li><a href="https://loisirs74.fr/en/lakes/">Lakes &amp; beaches</a></li><li><a href="https://loisirs74.fr/en/lakes/">Beaches</a></li><li><a href="https://loisirs74.fr/en/waterfalls/">Waterfalls</a></li><li><a href="https://loisirs74.fr/en/leisure-parks/">Leisure parks</a></li><li><a href="https://loisirs74.fr/en/viewpoints/">Viewpoints</a></li><li><a href="https://loisirs74.fr/en/cable-cars/">Cable cars</a></li><li><a href="https://loisirs74.fr/en/museums/">Museums</a></li><li><a href="https://loisirs74.fr/en/castles/">Castles &amp; forts</a></li><li><a href="https://loisirs74.fr/en/">Attractions &amp; activities</a></li></ul>
+<ul><li><a href="https://loisirs74.fr/en/lakes/">Lakes & beaches</a></li><li><a href="https://loisirs74.fr/en/waterfalls/">Waterfalls</a></li><li><a href="https://loisirs74.fr/en/trails/">Hiking trails</a></li><li><a href="https://loisirs74.fr/en/castles/">Castles & forts</a></li><li><a href="https://loisirs74.fr/en/museums/">Museums</a></li><li><a href="https://loisirs74.fr/en/swimming-watersports/">Swimming & watersports</a></li><li><a href="https://loisirs74.fr/en/outdoor-thrills/">Outdoor thrills</a></li><li><a href="https://loisirs74.fr/en/sport-games/">Sport & games</a></li><li><a href="https://loisirs74.fr/en/parks-gardens/">Parks & gardens</a></li></ul>
 </div>
 <div class="foot-col">
 <h4>Language</h4>
