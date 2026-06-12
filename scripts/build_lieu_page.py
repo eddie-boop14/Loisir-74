@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
-"""Generate a FR lieu HTML page from a batch JSON.
+"""Generate a lieu HTML page from a batch JSON, in any supported locale.
 
 Usage:
-    python3 scripts/build_lieu_page.py <batch.json> [<out_dir>]
+    python3 scripts/build_lieu_page.py <batch.json> [--lang fr|en|de|it|es|nl] [--out-dir DIR]
 
 Reads JSON shape produced by batch_activites / batch_plages
-(i18n.fr.{name, meta_title, meta_description, hero, hero_alt, facts,
+(i18n.<lang>.{name, meta_title, meta_description, hero, hero_alt, facts,
 body, activities, practical_info, how_to_get_there, when_to_visit,
 events, faq, schema_amenities}).
 
-Produces a single-file HTML page at <out_dir>/<slug>.html using the
-existing les-aigles-du-leman.html CSS+JS boilerplate verbatim.
+For non-FR builds, reads i18n.<lang> with field-level fallback to i18n.fr.
+Chrome strings (section headings, CTA labels, breadcrumb, etc.) are
+translated via the CHROME table.
+
+Produces a single-file HTML page at <out_dir>/<slug>.html.
 """
 import argparse
 import html as html_lib
@@ -84,6 +87,178 @@ FACT_ORDER = [
 ]
 
 
+SUPPORTED_LANGS = ["fr", "en", "de", "it", "es", "nl"]
+
+# Per-locale chrome strings (everything outside JSON content). Keep keys terse;
+# T(key) reaches into CHROME[key][_LANG].
+CHROME = {
+    "html_lang":       {"fr": "fr", "en": "en", "de": "de", "it": "it", "es": "es", "nl": "nl"},
+    "og_locale":       {"fr": "fr_FR", "en": "en_US", "de": "de_DE", "it": "it_IT", "es": "es_ES", "nl": "nl_NL"},
+    "in_lang":         {"fr": "fr-FR", "en": "en-US", "de": "de-DE", "it": "it-IT", "es": "es-ES", "nl": "nl-NL"},
+    "skip":            {"fr": "Aller au contenu", "en": "Skip to content", "de": "Zum Inhalt springen", "it": "Vai al contenuto", "es": "Saltar al contenido", "nl": "Naar inhoud springen"},
+    "home":            {"fr": "Accueil", "en": "Home", "de": "Startseite", "it": "Home", "es": "Inicio", "nl": "Startpagina"},
+    "lang_label":      {"fr": "FR", "en": "EN", "de": "DE", "it": "IT", "es": "ES", "nl": "NL"},
+    "lang_choose":     {"fr": "Choisir la langue", "en": "Choose a language", "de": "Sprache wählen", "it": "Scegli una lingua", "es": "Elegir idioma", "nl": "Kies een taal"},
+    "lang_native":     {"fr": "Français", "en": "English", "de": "Deutsch", "it": "Italiano", "es": "Español", "nl": "Nederlands"},
+    # Section kickers (small caps eyebrow above each h2)
+    "k_glance":        {"fr": "En un coup d&#39;œil", "en": "At a glance", "de": "Auf einen Blick", "it": "In sintesi", "es": "De un vistazo", "nl": "In een oogopslag"},
+    "k_activities":    {"fr": "Activités", "en": "Activities", "de": "Aktivitäten", "it": "Attività", "es": "Actividades", "nl": "Activiteiten"},
+    "k_practical":     {"fr": "Pratique", "en": "Practical", "de": "Praktisches", "it": "Pratico", "es": "Práctica", "nl": "Praktisch"},
+    "k_access":        {"fr": "Accès", "en": "Access", "de": "Anreise", "it": "Accesso", "es": "Acceso", "nl": "Toegang"},
+    "k_when":          {"fr": "Quand venir", "en": "When to visit", "de": "Wann besuchen", "it": "Quando visitare", "es": "Cuándo visitar", "nl": "Wanneer bezoeken"},
+    "k_partners":      {"fr": "À proximité", "en": "Nearby", "de": "In der Nähe", "it": "Nelle vicinanze", "es": "Cerca", "nl": "In de buurt"},
+    "k_photos":        {"fr": "Photos", "en": "Photos", "de": "Fotos", "it": "Foto", "es": "Fotos", "nl": "Foto's"},
+    "k_faq":           {"fr": "FAQ", "en": "FAQ", "de": "FAQ", "it": "FAQ", "es": "FAQ", "nl": "FAQ"},
+    "k_sources":       {"fr": "Sources", "en": "Sources", "de": "Quellen", "it": "Fonti", "es": "Fuentes", "nl": "Bronnen"},
+    # H2 headings
+    "h_whatis":        {"fr": "Qu&#39;est-ce que", "en": "What is", "de": "Was ist", "it": "Cos&#39;è", "es": "Qué es", "nl": "Wat is"},
+    "h_activities":    {"fr": "Ce qu&#39;on peut y faire", "en": "What you can do here", "de": "Was man hier machen kann", "it": "Cosa si può fare", "es": "Qué se puede hacer", "nl": "Wat je hier kunt doen"},
+    "h_practical":     {"fr": "Infos pratiques", "en": "Practical information", "de": "Praktische Informationen", "it": "Informazioni pratiche", "es": "Información práctica", "nl": "Praktische informatie"},
+    "h_how":           {"fr": "Comment y aller", "en": "How to get there", "de": "So kommen Sie hin", "it": "Come arrivare", "es": "Cómo llegar", "nl": "Hoe te komen"},
+    "h_when":          {"fr": "Quand visiter", "en": "When to visit", "de": "Wann besuchen", "it": "Quando visitare", "es": "Cuándo visitar", "nl": "Wanneer bezoeken"},
+    "h_partners":      {"fr": "Où manger, boire, dormir", "en": "Where to eat, drink, stay", "de": "Essen, Trinken, Übernachten", "it": "Dove mangiare, bere, dormire", "es": "Dónde comer, beber, alojarse", "nl": "Waar eten, drinken, overnachten"},
+    "h_gallery":       {"fr": "Galerie", "en": "Gallery", "de": "Galerie", "it": "Galleria", "es": "Galería", "nl": "Galerij"},
+    "h_faq":           {"fr": "Questions fréquentes", "en": "Frequently asked questions", "de": "Häufige Fragen", "it": "Domande frequenti", "es": "Preguntas frecuentes", "nl": "Veelgestelde vragen"},
+    "h_sources":       {"fr": "Sources &amp; vérifications", "en": "Sources &amp; verification", "de": "Quellen &amp; Prüfung", "it": "Fonti &amp; verifiche", "es": "Fuentes &amp; verificaciones", "nl": "Bronnen &amp; verificatie"},
+    # Hero / CTAs
+    "free_dot":        {"fr": "Gratuit · Accès libre", "en": "Free · Open access", "de": "Kostenlos · Freier Zugang", "it": "Gratis · Accesso libero", "es": "Gratis · Acceso libre", "nl": "Gratis · Vrije toegang"},
+    "paid_dot":        {"fr": "Payant · Réservation en ligne", "en": "Paid · Book online", "de": "Kostenpflichtig · Online buchen", "it": "A pagamento · Prenota online", "es": "De pago · Reservar en línea", "nl": "Betaald · Online reserveren"},
+    "paid_prefix":     {"fr": "Payant · ", "en": "Paid · ", "de": "Kostenpflichtig · ", "it": "A pagamento · ", "es": "De pago · ", "nl": "Betaald · "},
+    "free_word":       {"fr": "Gratuit", "en": "Free", "de": "Kostenlos", "it": "Gratis", "es": "Gratis", "nl": "Gratis"},
+    "book":            {"fr": "Réserver", "en": "Book", "de": "Buchen", "it": "Prenota", "es": "Reservar", "nl": "Reserveren"},
+    "map_view":        {"fr": "Voir sur la carte", "en": "View on map", "de": "Auf Karte ansehen", "it": "Vedi sulla mappa", "es": "Ver en el mapa", "nl": "Bekijk op kaart"},
+    "official_site":   {"fr": "Site officiel", "en": "Official site", "de": "Offizielle Website", "it": "Sito ufficiale", "es": "Sitio oficial", "nl": "Officiële site"},
+    "directions":      {"fr": "Itinéraire", "en": "Directions", "de": "Wegbeschreibung", "it": "Indicazioni", "es": "Cómo llegar", "nl": "Route"},
+    "maps_open":       {"fr": "Ouvrir dans Maps", "en": "Open in Maps", "de": "In Maps öffnen", "it": "Apri in Maps", "es": "Abrir en Maps", "nl": "Openen in Maps"},
+    # How-to mode labels
+    "how_car":         {"fr": "En voiture", "en": "By car", "de": "Mit dem Auto", "it": "In auto", "es": "En coche", "nl": "Met de auto"},
+    "how_transit":     {"fr": "Transports en commun", "en": "Public transport", "de": "Öffentliche Verkehrsmittel", "it": "Trasporti pubblici", "es": "Transporte público", "nl": "Openbaar vervoer"},
+    "how_bike":        {"fr": "À vélo", "en": "By bike", "de": "Mit dem Fahrrad", "it": "In bici", "es": "En bici", "nl": "Met de fiets"},
+    "events_label":    {"fr": "Événements", "en": "Events", "de": "Veranstaltungen", "it": "Eventi", "es": "Eventos", "nl": "Evenementen"},
+    # Flip-card hints
+    "tap_to_read":     {"fr": "Toucher pour lire", "en": "Tap to read", "de": "Tippen zum Lesen", "it": "Tocca per leggere", "es": "Toca para leer", "nl": "Tik om te lezen"},
+    "hover_for_site":  {"fr": "Survoler pour voir le site", "en": "Hover to view site", "de": "Bewegen für Website", "it": "Passa sopra per il sito", "es": "Pasa para ver el sitio", "nl": "Hover voor de site"},
+    "see_site":        {"fr": "Voir le site", "en": "Visit site", "de": "Website ansehen", "it": "Vedi il sito", "es": "Ver el sitio", "nl": "Bekijk site"},
+    # Partner card chrome
+    "partner_badge":   {"fr": "Partenaire", "en": "Partner", "de": "Partner", "it": "Partner", "es": "Socio", "nl": "Partner"},
+    "partner_nearby":  {"fr": "À proximité", "en": "Nearby", "de": "In der Nähe", "it": "Nelle vicinanze", "es": "Cerca", "nl": "In de buurt"},
+    "p_address":       {"fr": "Adresse", "en": "Address", "de": "Adresse", "it": "Indirizzo", "es": "Dirección", "nl": "Adres"},
+    "p_phone":         {"fr": "Téléphone", "en": "Phone", "de": "Telefon", "it": "Telefono", "es": "Teléfono", "nl": "Telefoon"},
+    "p_email":         {"fr": "Email", "en": "Email", "de": "E-Mail", "it": "Email", "es": "Email", "nl": "E-mail"},
+    "p_hours":         {"fr": "Horaires", "en": "Hours", "de": "Öffnungszeiten", "it": "Orari", "es": "Horarios", "nl": "Openingstijden"},
+    "become_partner":  {"fr": "Devenir partenaire", "en": "Become a partner", "de": "Partner werden", "it": "Diventa partner", "es": "Convertirse en socio", "nl": "Partner worden"},
+    # Default-invite teasers (fall-back partner cards when none configured)
+    "invite_resto_t":  {"fr": "Un restaurant", "en": "A restaurant", "de": "Ein Restaurant", "it": "Un ristorante", "es": "Un restaurante", "nl": "Een restaurant"},
+    "invite_resto_d":  {"fr": "Vous accueillez les visiteurs de", "en": "Hosting visitors of", "de": "Empfangen Sie Besucher von", "it": "Accogli i visitatori di", "es": "¿Recibe a los visitantes de", "nl": "Verwelkomt u bezoekers van"},
+    "invite_resto_d2": {"fr": "Apparaissez ici.", "en": "Appear here.", "de": "Zeigen Sie sich hier.", "it": "Apparite qui.", "es": "Aparezca aquí.", "nl": "Verschijn hier."},
+    "invite_com_t":    {"fr": "Une boulangerie, un commerce", "en": "A bakery, a shop", "de": "Bäckerei oder Geschäft", "it": "Una panetteria, un negozio", "es": "Una panadería, un comercio", "nl": "Een bakker, een winkel"},
+    "invite_com_d":    {"fr": "Partagez horaires et spécialités avec les visiteurs de", "en": "Share hours and specialties with visitors of", "de": "Teilen Sie Öffnungszeiten und Spezialitäten mit Besuchern von", "it": "Condividi orari e specialità con i visitatori di", "es": "Comparta horarios y especialidades con los visitantes de", "nl": "Deel openingstijden en specialiteiten met bezoekers van"},
+    "invite_hosp_t":   {"fr": "Un hébergement proche", "en": "A nearby stay", "de": "Übernachtung in der Nähe", "it": "Un alloggio vicino", "es": "Un alojamiento cercano", "nl": "Een nabijgelegen verblijf"},
+    "invite_hosp_d":   {"fr": "Gîte, chambre d&#39;hôtes, camping, location", "en": "Gîte, B&amp;B, campsite, rental", "de": "Ferienhaus, B&amp;B, Campingplatz, Vermietung", "it": "Gîte, B&amp;B, campeggio, affitto", "es": "Gîte, B&amp;B, camping, alquiler", "nl": "Gîte, B&amp;B, camping, verhuur"},
+    "in_town":         {"fr": "à", "en": "in", "de": "in", "it": "a", "es": "en", "nl": "in"},
+    "qmark":           {"fr": " ?", "en": "?", "de": "?", "it": "?", "es": "?", "nl": "?"},
+    # Gallery invite
+    "g_been_q":        {"fr": "Vous y êtes allé ?", "en": "Been there?", "de": "Schon dort gewesen?", "it": "Ci sei stato?", "es": "¿Ha estado allí?", "nl": "Bent u er geweest?"},
+    "g_invite":        {"fr": "Partagez vos photos — nous les ajoutons à cette page avec votre crédit. Tag #loisirs74 ou écrivez à", "en": "Share your photos — we&#39;ll add them to this page with credit. Tag #loisirs74 or email", "de": "Teilen Sie Ihre Fotos — wir fügen sie mit Bildnachweis hinzu. Tag #loisirs74 oder schreiben Sie an", "it": "Condividi le tue foto — le aggiungiamo con il tuo credito. Tag #loisirs74 o scrivi a", "es": "Comparta sus fotos — las añadimos con crédito. Tag #loisirs74 o escriba a", "nl": "Deel uw foto&#39;s — wij voegen ze met credit toe. Tag #loisirs74 of mail naar"},
+    # Sources caveat
+    "src_caveat":      {"fr": "Vérifications multi-sources à la date de publication. Les informations peuvent évoluer — confirmez auprès du gestionnaire officiel avant un déplacement.", "en": "Multi-source verification at publication. Information may change — confirm with the official operator before travelling.", "de": "Mehrquellen-Verifizierung zum Veröffentlichungsdatum. Informationen können sich ändern — bestätigen Sie diese vor der Anreise beim offiziellen Betreiber.", "it": "Verifica multi-fonte alla data di pubblicazione. Le informazioni possono cambiare — confermare con il gestore ufficiale prima del viaggio.", "es": "Verificación multi-fuente en la fecha de publicación. La información puede cambiar — confirme con el operador oficial antes de viajar.", "nl": "Multi-bron verificatie bij publicatie. Informatie kan veranderen — bevestig bij de officiële beheerder vóór vertrek."},
+    "data_partial":    {"fr": "Données partielles :", "en": "Partial data:", "de": "Teildaten:", "it": "Dati parziali:", "es": "Datos parciales:", "nl": "Gedeeltelijke gegevens:"},
+    "via":             {"fr": "via", "en": "via", "de": "via", "it": "via", "es": "vía", "nl": "via"},
+    # Footer dates
+    "published":       {"fr": "Publié le", "en": "Published", "de": "Veröffentlicht", "it": "Pubblicato il", "es": "Publicado el", "nl": "Gepubliceerd"},
+    "updated":         {"fr": "Mis à jour le", "en": "Updated", "de": "Aktualisiert", "it": "Aggiornato il", "es": "Actualizado el", "nl": "Bijgewerkt"},
+    # Generic photo overlay text (CSS post-process)
+    "generic":         {"fr": "Générique", "en": "Generic", "de": "Generisch", "it": "Generico", "es": "Genérico", "nl": "Algemeen"},
+    # Photo email subject prefix
+    "photos_subject":  {"fr": "Photos%20—%20", "en": "Photos%20—%20", "de": "Fotos%20—%20", "it": "Foto%20—%20", "es": "Fotos%20—%20", "nl": "Foto%27s%20—%20"},
+    # Site footer columns
+    "f_tagline":       {"fr": "Guide indépendant des lieux de loisirs en Haute-Savoie. 100% gratuit. 100% vérifié.", "en": "Independent guide to leisure spots in Haute-Savoie. 100% free. 100% verified.", "de": "Unabhängiger Freizeit-Guide für Haute-Savoie. 100% kostenlos. 100% geprüft.", "it": "Guida indipendente ai luoghi di svago in Alta Savoia. 100% gratis. 100% verificato.", "es": "Guía independiente de los lugares de ocio en Alta Saboya. 100% gratis. 100% verificado.", "nl": "Onafhankelijke gids voor vrijetijdsbestedingen in Haute-Savoie. Gratis. Geverifieerd."},
+    "f_explore":       {"fr": "Explorer", "en": "Explore", "de": "Entdecken", "it": "Esplora", "es": "Explorar", "nl": "Verkennen"},
+    "f_contribute":    {"fr": "Contribuer", "en": "Contribute", "de": "Beitragen", "it": "Contribuisci", "es": "Contribuir", "nl": "Bijdragen"},
+    "f_send_photos":   {"fr": "Envoyer des photos", "en": "Send photos", "de": "Fotos senden", "it": "Invia foto", "es": "Enviar fotos", "nl": "Foto&#39;s sturen"},
+    "f_report":        {"fr": "Signaler une info", "en": "Report info", "de": "Info melden", "it": "Segnala info", "es": "Reportar info", "nl": "Info melden"},
+    "f_become_p":      {"fr": "Devenir partenaire", "en": "Become a partner", "de": "Partner werden", "it": "Diventa partner", "es": "Hacerse socio", "nl": "Partner worden"},
+    "f_legal":         {"fr": "Mentions", "en": "Legal", "de": "Rechtliches", "it": "Note legali", "es": "Legal", "nl": "Juridisch"},
+    "f_legal_link":    {"fr": "Mentions légales", "en": "Legal notice", "de": "Impressum", "it": "Note legali", "es": "Avisos legales", "nl": "Wettelijke vermeldingen"},
+    "f_privacy":       {"fr": "Confidentialité", "en": "Privacy", "de": "Datenschutz", "it": "Privacy", "es": "Privacidad", "nl": "Privacy"},
+    "f_cgv":           {"fr": "CGV", "en": "Terms", "de": "AGB", "it": "Termini", "es": "Términos", "nl": "Algemene voorwaarden"},
+    "f_copyright":     {"fr": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Tous droits réservés", "en": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · All rights reserved", "de": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Alle Rechte vorbehalten", "it": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Tutti i diritti riservati", "es": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Todos los derechos reservados", "nl": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Alle rechten voorbehouden"},
+    "f_promise":       {"fr": "Sans pub. Sans tracking. Sans avis Google.", "en": "No ads. No tracking. No Google reviews.", "de": "Keine Werbung. Kein Tracking. Keine Google-Bewertungen.", "it": "Niente pubblicità. Niente tracking. Niente recensioni Google.", "es": "Sin anuncios. Sin tracking. Sin reseñas de Google.", "nl": "Geen advertenties. Geen tracking. Geen Google reviews."},
+}
+
+# Per-locale FACT_LABELS for the facts grid
+FACT_LABELS_I18N = {
+    "type":        {"fr": "Type", "en": "Type", "de": "Typ", "it": "Tipo", "es": "Tipo", "nl": "Type"},
+    "access":      {"fr": "Accès", "en": "Access", "de": "Anreise", "it": "Accesso", "es": "Acceso", "nl": "Toegang"},
+    "tarif":       {"fr": "Tarif", "en": "Price", "de": "Preis", "it": "Prezzo", "es": "Precio", "nl": "Prijs"},
+    "commune":     {"fr": "Commune", "en": "Town", "de": "Ort", "it": "Comune", "es": "Comuna", "nl": "Gemeente"},
+    "parking":     {"fr": "Parking", "en": "Parking", "de": "Parkplatz", "it": "Parcheggio", "es": "Aparcamiento", "nl": "Parkeren"},
+    "dogs":        {"fr": "Animaux", "en": "Animals", "de": "Tiere", "it": "Animali", "es": "Animales", "nl": "Dieren"},
+    "stroller":    {"fr": "Poussette / PMR", "en": "Stroller / Reduced mobility", "de": "Kinderwagen / Behinderte", "it": "Passeggino / Disabilità", "es": "Cochecito / PMR", "nl": "Kinderwagen / Mindervaliden"},
+    "duration":    {"fr": "Durée", "en": "Duration", "de": "Dauer", "it": "Durata", "es": "Duración", "nl": "Duur"},
+    "best_season": {"fr": "Meilleure saison", "en": "Best season", "de": "Beste Saison", "it": "Stagione migliore", "es": "Mejor temporada", "nl": "Beste seizoen"},
+    "lac":         {"fr": "Lac", "en": "Lake", "de": "See", "it": "Lago", "es": "Lago", "nl": "Meer"},
+    "surveillance":{"fr": "Surveillance", "en": "Lifeguarded", "de": "Bewacht", "it": "Sorvegliato", "es": "Vigilado", "nl": "Bewaakt"},
+    "pavillon_bleu_2026": {"fr": "Pavillon Bleu 2026", "en": "Blue Flag 2026", "de": "Blaue Flagge 2026", "it": "Bandiera Blu 2026", "es": "Bandera Azul 2026", "nl": "Blauwe Vlag 2026"},
+}
+
+# Module-level locale state set by build_page(d, lang).
+_LANG = "fr"            # current locale
+_LOC = None             # i18n.<lang> block, frozen-merged with FR fallback below
+_FR = None              # i18n.fr block (fallback source)
+_FALLBACK_FIELDS = set()  # fields where current build fell back to FR
+_AVAILABLE_LANGS = ("fr",)  # langs this fiche actually has populated in i18n (for hreflang block)
+
+
+def T(key):
+    """Chrome string lookup with FR-fallback."""
+    row = CHROME.get(key, {})
+    return row.get(_LANG) or row.get("fr") or ""
+
+
+def _set_lang(d, lang):
+    """Wire module-level state for the current build pass."""
+    global _LANG, _LOC, _FR, _FALLBACK_FIELDS, _AVAILABLE_LANGS
+    _LANG = lang if lang in SUPPORTED_LANGS else "fr"
+    i18n = d.get("i18n", {}) or {}
+    _FR = i18n.get("fr") or {}
+    _LOC = i18n.get(_LANG) or {}
+    _FALLBACK_FIELDS = set()
+    _AVAILABLE_LANGS = tuple(L for L in SUPPORTED_LANGS if L in i18n and i18n.get(L))
+
+
+def L(key, default=""):
+    """Locale-field lookup with FR fallback. Empty string / None / [] / {} count as missing."""
+    v = _LOC.get(key) if isinstance(_LOC, dict) else None
+    if v not in (None, "", [], {}):
+        return v
+    v = _FR.get(key) if isinstance(_FR, dict) else None
+    if v not in (None, "", [], {}):
+        _FALLBACK_FIELDS.add(key)
+        return v
+    return default
+
+
+def L_body(key, default=""):
+    """Locale-body lookup: i18n.<lang>.body.<key>, fall back to i18n.<lang>.<key>,
+    fall back to i18n.fr.body.<key>, then i18n.fr.<key>."""
+    for src_lang, src in ((_LANG, _LOC), ("fr", _FR)):
+        if not isinstance(src, dict):
+            continue
+        body = src.get("body") if isinstance(src.get("body"), dict) else {}
+        v = body.get(key) if body else None
+        if v not in (None, "", [], {}):
+            if src_lang != _LANG:
+                _FALLBACK_FIELDS.add(f"body.{key}")
+            return v
+        v = src.get(key)
+        if v not in (None, "", [], {}):
+            if src_lang != _LANG:
+                _FALLBACK_FIELDS.add(f"body.{key}")
+            return v
+    return default
+
+
 CAT_TO_FR_HUB = {
     # `attraction` retired in the 2026-06 hub overhaul (split across
     # sport-jeux / sensations-plein-air / baignade-nautisme / parcs-jardins /
@@ -128,61 +303,69 @@ def hammer_h1(name):
     return f'<h1 class="hammer">{" ".join(spans)}</h1>'
 
 
+def _fact_label(k):
+    """Lookup the locale-translated fact-label for key k."""
+    row = FACT_LABELS_I18N.get(k)
+    if row:
+        return row.get(_LANG) or row.get("fr") or FACT_LABELS.get(k, k)
+    return FACT_LABELS.get(k, k.replace("_", " ").capitalize())
+
+
 def facts_block(facts):
-    """Render the 'En un coup d'œil' grid."""
+    """Render the 'At a glance' grid (locale-aware)."""
     items = []
     seen = set()
     for k in FACT_ORDER:
         if k in facts and facts[k]:
             v = facts[k]
             ok_class = ""
-            # Mark positive parking/free as ok
-            if k == "parking" and re.search(r"gratuit", v, re.I):
+            # Mark positive parking/free as ok (FR sniff still valid — values are
+            # source-side strings that we render as-is per fiche)
+            if k == "parking" and re.search(r"gratuit|free|kostenlos|gratis", v, re.I):
                 ok_class = " ok"
-            elif k == "access" and re.search(r"libre|gratuit", v, re.I):
+            elif k == "access" and re.search(r"libre|gratuit|free|frei|libero|libre|vrij", v, re.I):
                 ok_class = " ok"
             items.append(
-                f'<div class="fact"><div class="k">{esc(FACT_LABELS[k])}</div>'
+                f'<div class="fact"><div class="k">{esc(_fact_label(k))}</div>'
                 f'<div class="v{ok_class}">{esc(v)}</div></div>'
             )
             seen.add(k)
-    # Catch any extra fact keys not in FACT_ORDER
     for k, v in facts.items():
         if k in seen or not v:
             continue
-        label = FACT_LABELS.get(k, k.replace("_", " ").capitalize())
         items.append(
-            f'<div class="fact"><div class="k">{esc(label)}</div>'
+            f'<div class="fact"><div class="k">{esc(_fact_label(k))}</div>'
             f'<div class="v">{esc(v)}</div></div>'
         )
     if not items:
         return ""
     return (
         '<section class="block"><div class="wrap"><div class="kicker reveal">'
-        "En un coup d&#39;œil</div>"
+        f"{T('k_glance')}</div>"
         f'<div class="facts reveal" data-stagger>{"".join(items)}</div></div></section>'
     )
 
 
 def body_block(name, body):
-    """Render the 'Qu'est-ce que <name>' section. body is dict with 'what_is' HTML."""
+    """Render the 'What is <name>' section. body is dict with 'what_is' HTML."""
     what_is = body.get("what_is", "") if isinstance(body, dict) else str(body or "")
     if not what_is.strip():
         return ""
     return (
         '<section class="block"><div class="wrap">'
-        f'<h2 class="reveal">Qu&#39;est-ce que {esc(name)}</h2>'
+        f'<h2 class="reveal">{T("h_whatis")} {esc(name)}</h2>'
         f'<div class="reveal">{what_is}</div></div></section>'
     )
 
 
-FLIP_HINT = (
-    '<span class="hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
-    'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
-    '<polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>'
-    '<path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>'
-    "</svg> Toucher pour lire</span>"
-)
+def flip_hint():
+    return (
+        '<span class="hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+        'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
+        '<polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>'
+        '<path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>'
+        f'</svg> {T("tap_to_read")}</span>'
+    )
 
 
 def activities_block(activities):
@@ -201,15 +384,15 @@ def activities_block(activities):
             f'<div class="flip-front">'
             f'<h4>{esc(title)}{tag_html}</h4>'
             f'<p class="preview">{esc(desc)}</p>'
-            f'{FLIP_HINT}'
+            f'{flip_hint()}'
             f'</div>'
             f'<div class="flip-back"><h4>{esc(title)}</h4><p>{esc(desc)}</p></div>'
             f'</div></button>'
         )
     return (
         '<section class="block"><div class="wrap">'
-        '<div class="kicker reveal">Activités</div>'
-        '<h2 class="reveal">Ce qu&#39;on peut y faire</h2>'
+        f'<div class="kicker reveal">{T("k_activities")}</div>'
+        f'<h2 class="reveal">{T("h_activities")}</h2>'
         f'<div class="activities reveal" data-stagger>{"".join(cards)}</div>'
         '</div></section>'
     )
@@ -220,12 +403,12 @@ def practical_block(practical, name, commune):
     if not practical:
         return ""
     rows = []
+    addr_terms = ("adresse", "address", "adres", "indirizzo", "dirección")
     for entry in practical:
         k = entry.get("k", "")
         v = entry.get("v", "")
-        # If the row is Adresse, append a 'voir sur la carte' link
         extra = ""
-        if k.lower().startswith("adresse"):
+        if any(k.lower().startswith(t) for t in addr_terms):
             q = url_q(f"{name}, {commune}, Haute-Savoie, France")
             extra = (
                 f' <a href="https://www.google.com/maps/search/?api=1&query={q}" '
@@ -233,7 +416,7 @@ def practical_block(practical, name, commune):
                 '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
                 'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
                 '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>'
-                '<circle cx="12" cy="10" r="3"/></svg>Voir sur la carte</a>'
+                f'<circle cx="12" cy="10" r="3"/></svg>{T("map_view")}</a>'
             )
         rows.append(
             f'<div class="info-row"><div class="k">{esc(k)}</div>'
@@ -241,8 +424,8 @@ def practical_block(practical, name, commune):
         )
     return (
         '<section class="block"><div class="wrap">'
-        '<div class="kicker reveal">Pratique</div>'
-        '<h2 class="reveal">Infos pratiques</h2>'
+        f'<div class="kicker reveal">{T("k_practical")}</div>'
+        f'<h2 class="reveal">{T("h_practical")}</h2>'
         f'<div class="info-table reveal">{"".join(rows)}</div></div></section>'
     )
 
@@ -268,15 +451,15 @@ HOW_ICONS = {
         '<path d="M6 17l4-9h4l3 9M14 8l-2-4h-2"/></svg>'
     ),
 }
-HOW_LABELS = {
-    "car": ("En voiture", "driving"),
-    "public_transport": ("Transports en commun", "transit"),
-    "bike": ("À vélo", "bicycling"),
+HOW_MODE = {
+    "car": ("how_car", "driving"),
+    "public_transport": ("how_transit", "transit"),
+    "bike": ("how_bike", "bicycling"),
 }
 
 
 def how_to_block(how, name, commune):
-    """Render the 'Comment y aller' how-cards."""
+    """Render the 'How to get there' how-cards (locale-aware)."""
     if not how:
         return ""
     q = url_q(f"{name}, {commune}, Haute-Savoie")
@@ -285,7 +468,8 @@ def how_to_block(how, name, commune):
         text = how.get(key)
         if not text:
             continue
-        label, travelmode = HOW_LABELS[key]
+        chrome_key, travelmode = HOW_MODE[key]
+        label = T(chrome_key)
         icon = HOW_ICONS[key]
         cards.append(
             f'<a class="how-card" href="https://www.google.com/maps/dir/?api=1'
@@ -294,7 +478,7 @@ def how_to_block(how, name, commune):
             f'<div class="icon">{icon}</div>'
             f'<h3>{esc(label)}</h3>'
             f'<p>{esc(text)}</p>'
-            f'<span class="open">Ouvrir dans Maps '
+            f'<span class="open">{T("maps_open")} '
             '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
             'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
             '<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>'
@@ -304,15 +488,15 @@ def how_to_block(how, name, commune):
         return ""
     return (
         '<section class="block"><div class="wrap">'
-        '<div class="kicker reveal">Accès</div>'
-        '<h2 class="reveal">Comment y aller</h2>'
+        f'<div class="kicker reveal">{T("k_access")}</div>'
+        f'<h2 class="reveal">{T("h_how")}</h2>'
         f'<div class="how reveal" data-stagger>{"".join(cards)}</div>'
         '</div></section>'
     )
 
 
 def when_to_visit_block(when, events):
-    """Render 'Quand visiter' + optional events."""
+    """Render 'When to visit' + optional events (locale-aware)."""
     if not when and not events:
         return ""
     inner = ""
@@ -321,12 +505,12 @@ def when_to_visit_block(when, events):
     if events:
         inner += (
             '<div class="reveal" style="margin-top:1.25rem">'
-            f'<strong>Événements&nbsp;:</strong> {esc(events)}</div>'
+            f'<strong>{T("events_label")}&nbsp;:</strong> {esc(events)}</div>'
         )
     return (
         '<section class="block"><div class="wrap">'
-        '<div class="kicker reveal">Quand venir</div>'
-        '<h2 class="reveal">Quand visiter</h2>'
+        f'<div class="kicker reveal">{T("k_when")}</div>'
+        f'<h2 class="reveal">{T("h_when")}</h2>'
         f"{inner}</div></section>"
     )
 
@@ -343,8 +527,8 @@ def faq_block(faq):
         )
     return (
         '<section class="block"><div class="wrap">'
-        '<div class="kicker reveal">FAQ</div>'
-        '<h2 class="reveal">Questions fréquentes</h2>'
+        f'<div class="kicker reveal">{T("k_faq")}</div>'
+        f'<h2 class="reveal">{T("h_faq")}</h2>'
         f'<div class="faq-grid reveal" data-stagger>{"".join(items)}</div>'
         '</div></section>'
     )
@@ -375,12 +559,10 @@ def sources_block(sources):
         )
     return (
         '<section class="block"><div class="wrap">'
-        '<div class="kicker reveal">Sources</div>'
-        '<h2 class="reveal">Sources &amp; vérifications</h2>'
+        f'<div class="kicker reveal">{T("k_sources")}</div>'
+        f'<h2 class="reveal">{T("h_sources")}</h2>'
         f'<div class="sources reveal"><ul>{"".join(items)}</ul>'
-        '<p class="caveat">Vérifications multi-sources à la date de publication. '
-        "Les informations peuvent évoluer — confirmez auprès du gestionnaire "
-        "officiel avant un déplacement.</p></div></div></section>"
+        f'<p class="caveat">{T("src_caveat")}</p></div></div></section>'
     )
 
 
@@ -408,7 +590,7 @@ def data_credits_block(data_sources):
         via_parts = [p for p in (platform, publisher) if p]
         via = " · ".join(esc(p) for p in via_parts)
         captions.append(
-            f'Données partielles : {creator_html} via {via} · {license_html}'
+            f'{T("data_partial")} {creator_html} {T("via")} {via} · {license_html}'
         )
     return (
         '<aside class="data-credits reveal"><div class="wrap">'
@@ -444,12 +626,15 @@ def _filled_partner_card(p):
     tier:featured → static rich card with always-visible contact info (no flip).
     """
     tier = p.get("tier", "partner")
-    badge_text = "À proximité" if tier == "recommended" else "Partenaire"
+    badge_text = T("partner_nearby") if tier == "recommended" else T("partner_badge")
     badge_icon = "" if tier == "recommended" else SVG_CHECK
     name = p.get("name", "")
-    desc = p.get("i18n", {}).get("fr", {}).get("description") or p.get("description", "")
+    p_i18n = p.get("i18n", {}) or {}
+    desc = (p_i18n.get(_LANG, {}) or {}).get("description") \
+        or (p_i18n.get("fr", {}) or {}).get("description") \
+        or p.get("description", "")
     url = p.get("url", "#")
-    cta = p.get("cta_text") or "Voir le site"
+    cta = p.get("cta_text") or T("see_site")
 
     if tier == "featured":
         address = p.get("address", "")
@@ -460,14 +645,14 @@ def _filled_partner_card(p):
         logo = p.get("logo", "")
         extras = []
         if address:
-            extras.append(f'<div class="partner-row"><span class="label">Adresse</span><span>{esc(address)}</span></div>')
+            extras.append(f'<div class="partner-row"><span class="label">{T("p_address")}</span><span>{esc(address)}</span></div>')
         if phone:
             href = f"tel:{phone_tel}" if phone_tel else f"tel:{phone.replace(' ', '')}"
-            extras.append(f'<div class="partner-row"><span class="label">Téléphone</span><a href="{attr(href)}">{esc(phone)}</a></div>')
+            extras.append(f'<div class="partner-row"><span class="label">{T("p_phone")}</span><a href="{attr(href)}">{esc(phone)}</a></div>')
         if email:
-            extras.append(f'<div class="partner-row"><span class="label">Email</span><a href="mailto:{attr(email)}">{esc(email)}</a></div>')
+            extras.append(f'<div class="partner-row"><span class="label">{T("p_email")}</span><a href="mailto:{attr(email)}">{esc(email)}</a></div>')
         if hours:
-            extras.append(f'<div class="partner-row"><span class="label">Horaires</span><span>{esc(hours)}</span></div>')
+            extras.append(f'<div class="partner-row"><span class="label">{T("p_hours")}</span><span>{esc(hours)}</span></div>')
         extras_html = f'<div class="partner-extras">{"".join(extras)}</div>' if extras else ""
         cta_html = (
             f'<a class="cta" href="{attr(url)}" target="_blank" rel="noopener">{esc(cta)} {SVG_EXT}</a>'
@@ -495,7 +680,7 @@ def _filled_partner_card(p):
         f'<span class="badge">{badge_icon} {esc(badge_text)}</span>'
         f'<h4>{esc(name)}</h4>'
         f'<p class="preview">{esc(desc)}</p>'
-        f'<span class="hint">{SVG_ROTATE} Survoler pour voir le site</span>'
+        f'<span class="hint">{SVG_ROTATE} {T("hover_for_site")}</span>'
         '</div>'
         '<div class="flip-back">'
         f'<h4>{esc(name)}</h4>'
@@ -507,36 +692,40 @@ def _filled_partner_card(p):
     )
 
 def _invite_card(p, slug):
-    """Render a tier:invite partner card."""
+    """Render a tier:invite partner card (locale-aware)."""
     invite_type = p.get("invite_type", "restaurant")
     icon = PARTNER_TYPE_ICON.get(invite_type, PARTNER_TYPE_ICON["restaurant"])
-    fr = p.get("i18n", {}).get("fr", {})
-    title = fr.get("title") or p.get("invite_title", "")
-    desc = fr.get("desc") or p.get("invite_desc", "")
+    p_i18n = p.get("i18n", {}) or {}
+    loc = p_i18n.get(_LANG) or p_i18n.get("fr") or {}
+    title = loc.get("title") or p.get("invite_title", "")
+    desc = loc.get("desc") or p.get("invite_desc", "")
+    lang_prefix = f"/{_LANG}" if _LANG != "fr" else ""
     return (
         '<article class="partner-invite">'
         f'<div class="invite-icon" aria-hidden="true">{icon}</div>'
         f'<h4>{esc(title)}</h4><p>{esc(desc)}</p>'
-        f'<a class="cta" href="https://loisirs74.fr/devenir-partenaire?lieu={attr(slug)}">'
-        f'Devenir partenaire {SVG_ARROW}</a>'
+        f'<a class="cta" href="https://loisirs74.fr{lang_prefix}/devenir-partenaire?lieu={attr(slug)}">'
+        f'{T("become_partner")} {SVG_ARROW}</a>'
         '</article>'
     )
 
 def _default_invites(d):
     """Venue-parameterized invite tiers when JSON has no partners block."""
-    name = d.get("i18n", {}).get("fr", {}).get("name", "ce lieu")
+    name = L("name", "")
     commune = d.get("commune", "")
-    here = f"à {commune}" if commune else ""
+    in_ = T("in_town")
+    here = f"{in_} {commune}" if commune else ""
+    q = T("qmark")
     return [
-        {"tier":"invite","invite_type":"restaurant","i18n":{"fr":{
-            "title": f"Un restaurant {here} ?".strip(),
-            "desc": f"Vous accueillez les visiteurs de {name} ? Apparaissez ici."}}},
-        {"tier":"invite","invite_type":"commerce","i18n":{"fr":{
-            "title": f"Une boulangerie, un commerce {here} ?".strip(),
-            "desc": f"Partagez horaires et spécialités avec les visiteurs de {name}."}}},
-        {"tier":"invite","invite_type":"hebergement","i18n":{"fr":{
-            "title": f"Un hébergement proche ?",
-            "desc": f"Gîte, chambre d'hôtes, camping, location {here}.".strip()}}},
+        {"tier":"invite","invite_type":"restaurant","i18n":{_LANG:{
+            "title": f"{T('invite_resto_t')} {here}{q}".strip(),
+            "desc":  f"{T('invite_resto_d')} {name} ? {T('invite_resto_d2')}"}}},
+        {"tier":"invite","invite_type":"commerce","i18n":{_LANG:{
+            "title": f"{T('invite_com_t')} {here}{q}".strip(),
+            "desc":  f"{T('invite_com_d')} {name}."}}},
+        {"tier":"invite","invite_type":"hebergement","i18n":{_LANG:{
+            "title": f"{T('invite_hosp_t')}{q}".strip(),
+            "desc":  f"{T('invite_hosp_d')} {here}.".strip()}}},
     ]
 
 def partners_block(d):
@@ -555,8 +744,8 @@ def partners_block(d):
             cards.append(_invite_card(p, slug))
     return (
         '<section class="block"><div class="wrap">'
-        '<div class="kicker reveal">À proximité</div>'
-        '<h2 class="reveal">Où manger, boire, dormir</h2>'
+        f'<div class="kicker reveal">{T("k_partners")}</div>'
+        f'<h2 class="reveal">{T("h_partners")}</h2>'
         f'<div class="partners reveal" data-stagger>{"".join(cards)}</div>'
         '</div></section>'
     )
@@ -587,56 +776,42 @@ def gallery_block(name, photos=None):
         tiles = placeholder * 6
     return (
         '<section class="block"><div class="wrap">'
-        '<div class="kicker reveal">Photos</div>'
-        '<h2 class="reveal">Galerie</h2>'
+        f'<div class="kicker reveal">{T("k_photos")}</div>'
+        f'<h2 class="reveal">{T("h_gallery")}</h2>'
         f'<div class="gallery reveal" data-stagger>{tiles}</div>'
         '<div class="gallery-invite reveal"><div class="icn">'
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
         'stroke-linecap="round" stroke-linejoin="round">'
         '<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>'
         '<circle cx="12" cy="13" r="4"/></svg></div>'
-        '<p><strong>Vous y êtes allé ?</strong> Partagez vos photos — nous les '
-        'ajoutons à cette page avec votre crédit. Tag #loisirs74 ou écrivez à '
-        f'<a href="mailto:photos@loisirs74.fr?subject=Photos%20—%20{url_q(name)}">'
+        f'<p><strong>{T("g_been_q")}</strong> {T("g_invite")} '
+        f'<a href="mailto:photos@loisirs74.fr?subject={T("photos_subject")}{url_q(name)}">'
         'photos@loisirs74.fr</a></p></div></div></section>'
     )
 
 
 def clean_eyebrow(badge, is_free):
-    """Pick a clean eyebrow label.
-
-    Many batch badges are truncated mid-word (e.g. "19 € croisière 1h, 22 € croisi").
-    Use the batch badge only when it's a clean signal like "Pavillon Bleu 2026"
-    or "Plage surveillée · Gratuit". Otherwise fall back to a generic label.
-    """
+    """Pick a clean eyebrow label (locale-aware)."""
     if badge:
         if "Pavillon Bleu" in badge:
             return badge
         if "Plage surveillée" in badge:
             return badge
         b = badge.strip()
-        if b.upper().startswith("GRATUIT"):
-            return "Gratuit · Accès libre"
-        # Short, complete tariff like "15 €" or "8 € la partie" — accept.
+        if b.upper().startswith("GRATUIT") or b.upper().startswith("FREE"):
+            return T("free_dot")
         if len(b) <= 28 and "€" in b and not b.rstrip().endswith(("si", "i", ",", "·")):
-            return ("Payant · " if not is_free else "") + b
-    return "Gratuit · Accès libre" if is_free else "Payant · Réservation en ligne"
+            return (T("paid_prefix") if not is_free else "") + b
+    return T("free_dot") if is_free else T("paid_dot")
 
 
 def hero_block(d):
-    """Render the hero section.
-
-    The hero image source:
-      - If hero_image looks like 'generique-*.jpg', use a local generic asset
-        and mark with data-generique.
-      - Else, use /<hero_image> (root-level relative URL).
-    """
-    fr = d["i18n"]["fr"]
-    name = fr["name"]
-    hero = fr.get("hero", {})
-    badge = hero.get("badge", "")
-    lead = hero.get("lead", "")
-    alt = fr.get("hero_alt", name)
+    """Render the hero section (locale-aware)."""
+    name = L("name", "")
+    hero = L("hero", {}) or {}
+    badge = hero.get("badge", "") if isinstance(hero, dict) else ""
+    lead = hero.get("lead", "") if isinstance(hero, dict) else ""
+    alt = L("hero_alt", name)
     is_free = d.get("schema_org", {}).get("is_free", False)
     booking_url = d.get("booking_url") or d.get("official_site_url") or "#"
     official = d.get("official_site_url") or ""
@@ -671,7 +846,7 @@ def hero_block(d):
             'stroke-linecap="round" stroke-linejoin="round">'
             '<path d="M3 7v3a3 3 0 0 0 0 6v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3a3 3 0 0 0 0-6V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/>'
             '<line x1="13" y1="5" x2="13" y2="7"/><line x1="13" y1="11" x2="13" y2="13"/>'
-            '<line x1="13" y1="17" x2="13" y2="19"/></svg>Réserver</a>'
+            f'<line x1="13" y1="17" x2="13" y2="19"/></svg>{T("book")}</a>'
         )
     cta_buttons.append(
         f'<a href="https://www.google.com/maps/search/?api=1&query={q}" class="btn btn-ghost" '
@@ -679,7 +854,7 @@ def hero_block(d):
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
         'stroke-linecap="round" stroke-linejoin="round">'
         '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>'
-        '<circle cx="12" cy="10" r="3"/></svg>Voir sur la carte</a>'
+        f'<circle cx="12" cy="10" r="3"/></svg>{T("map_view")}</a>'
     )
     if official:
         cta_buttons.append(
@@ -688,7 +863,7 @@ def hero_block(d):
             'stroke-linecap="round" stroke-linejoin="round">'
             '<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>'
             '<path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/>'
-            '</svg>Site officiel</a>'
+            f'</svg>{T("official_site")}</a>'
         )
 
     return (
@@ -708,9 +883,8 @@ def hero_block(d):
 
 
 def action_bar(d):
-    """Sticky bottom action bar (Réserver / Itinéraire / Site officiel)."""
-    fr = d["i18n"]["fr"]
-    name = fr["name"]
+    """Sticky bottom action bar (Book / Directions / Official site) — locale-aware."""
+    name = L("name", "")
     commune = d["commune"]
     is_free = d.get("schema_org", {}).get("is_free", False)
     booking_url = d.get("booking_url") or d.get("official_site_url")
@@ -725,7 +899,7 @@ def action_bar(d):
             'stroke-linecap="round" stroke-linejoin="round">'
             '<path d="M3 7v3a3 3 0 0 0 0 6v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3a3 3 0 0 0 0-6V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/>'
             '<line x1="13" y1="5" x2="13" y2="7"/><line x1="13" y1="11" x2="13" y2="13"/>'
-            '<line x1="13" y1="17" x2="13" y2="19"/></svg><span>Réserver</span></a>'
+            f'<line x1="13" y1="17" x2="13" y2="19"/></svg><span>{T("book")}</span></a>'
         )
     actions.append(
         f'<a href="https://www.google.com/maps/dir/?api=1&destination={q}" '
@@ -733,7 +907,7 @@ def action_bar(d):
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
         'stroke-linecap="round" stroke-linejoin="round">'
         '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>'
-        '<circle cx="12" cy="10" r="3"/></svg><span>Itinéraire</span></a>'
+        f'<circle cx="12" cy="10" r="3"/></svg><span>{T("directions")}</span></a>'
     )
     if official:
         actions.append(
@@ -742,7 +916,7 @@ def action_bar(d):
             'stroke-linecap="round" stroke-linejoin="round">'
             '<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>'
             '<path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/>'
-            '</svg><span>Site officiel</span></a>'
+            f'</svg><span>{T("official_site")}</span></a>'
         )
     return (
         '<div class="action-bar" id="actionBar"><div class="wrap">'
@@ -752,42 +926,45 @@ def action_bar(d):
 
 
 def build_ldjson(d):
-    """Build the WebSite + BreadcrumbList + (TouristAttraction|Place) + FAQPage graph."""
-    fr = d["i18n"]["fr"]
+    """Build the WebSite + BreadcrumbList + (TouristAttraction|Place) + FAQPage graph (locale-aware)."""
     slug = d["slug"]
-    name = fr["name"]
+    name = L("name", "")
     commune = d["commune"]
     lat = d.get("latitude")
     lon = d.get("longitude")
     postal = d.get("postal_code", "")
     sch = d.get("schema_org", {})
     is_free = sch.get("is_free", False)
-    place_type = sch.get("type") or ("TouristAttraction" if not is_free else "TouristAttraction")
-    amenities = fr.get("schema_amenities") or sch.get("amenities") or []
+    place_type = sch.get("type") or "TouristAttraction"
+    amenities = L("schema_amenities", None) or sch.get("amenities") or []
     price = d.get("price_from")
     booking_url = d.get("booking_url") or d.get("official_site_url") or ""
+    faq = L("faq", []) or []
+    in_lang = CHROME["in_lang"][_LANG]
+    lang_prefix = f"/{_LANG}" if _LANG != "fr" else ""
 
-    page_url = f"{BASE_URL}/{slug}"
+    page_url = f"{BASE_URL}{lang_prefix}/{slug}"
+    site_url = f"{BASE_URL}{lang_prefix}/"
     graph = [
         {
             "@type": "WebSite",
             "@id": f"{BASE_URL}/#website",
-            "url": f"{BASE_URL}/",
+            "url": site_url,
             "name": "Loisirs 74",
-            "inLanguage": "fr-FR",
+            "inLanguage": in_lang,
         },
         {
             "@type": "BreadcrumbList",
             "@id": f"{page_url}#breadcrumb",
             "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": "Accueil", "item": f"{BASE_URL}/"},
+                {"@type": "ListItem", "position": 1, "name": T("home"), "item": site_url},
                 (
                     {"@type": "ListItem", "position": 2,
                      "name": primary_hub(d)[1],
-                     "item": f"{BASE_URL}/{primary_hub(d)[0]}/"}
+                     "item": f"{BASE_URL}{lang_prefix}/{primary_hub(d)[0]}/"}
                     if primary_hub(d) else
                     {"@type": "ListItem", "position": 2, "name": commune,
-                     "item": f"{BASE_URL}/#{commune.lower().replace(' ', '-')}"}
+                     "item": f"{BASE_URL}{lang_prefix}/#{commune.lower().replace(' ', '-')}"}
                 ),
                 {"@type": "ListItem", "position": 3, "name": name},
             ],
@@ -797,8 +974,8 @@ def build_ldjson(d):
         "@type": place_type,
         "@id": f"{page_url}#place",
         "name": name,
-        "alternateName": fr.get("name_alternates", []),
-        "description": fr.get("meta_description", ""),
+        "alternateName": L("name_alternates", []),
+        "description": L("meta_description", ""),
         "url": page_url,
         "address": {
             "@type": "PostalAddress",
@@ -827,14 +1004,14 @@ def build_ldjson(d):
         }
     graph.append(place)
 
-    if fr.get("faq"):
+    if faq:
         graph.append({
             "@type": "FAQPage",
             "@id": f"{page_url}#faq",
             "mainEntity": [
                 {"@type": "Question", "name": q.get("q", ""),
                  "acceptedAnswer": {"@type": "Answer", "text": q.get("a", "")}}
-                for q in fr["faq"]
+                for q in faq
             ],
         })
 
@@ -842,21 +1019,37 @@ def build_ldjson(d):
 
 
 def build_head(d):
-    """Render the <head> section."""
-    fr = d["i18n"]["fr"]
+    """Render the <head> section (locale-aware)."""
     slug = d["slug"]
-    name = fr["name"]
-    title = fr.get("meta_title") or f"{name} · Loisirs 74"
-    desc = fr.get("meta_description", "")
+    name = L("name", "")
+    title = L("meta_title", "") or f"{name} · Loisirs 74"
+    desc = L("meta_description", "")
     lat = d.get("latitude") or 0
     lon = d.get("longitude") or 0
     commune = d["commune"]
-    page_url = f"{BASE_URL}/{slug}"
+    lang_prefix = f"/{_LANG}" if _LANG != "fr" else ""
+    page_url = f"{BASE_URL}{lang_prefix}/{slug}"
+    fr_url = f"{BASE_URL}/{slug}"
+    html_lang = CHROME["html_lang"][_LANG]
+    og_loc = CHROME["og_locale"][_LANG]
+
+    # Emit the full 6-lang hreflang cluster. Pages for all locales are
+    # produced for every fiche by build_all_locales (with FR-fallback content
+    # when a lang block is absent), so the cluster matches what's on disk.
+    hreflang_lines = [f'<link rel="alternate" hreflang="fr" href="{fr_url}">']
+    for lg in ("en", "de", "it", "es", "nl"):
+        hreflang_lines.append(f'<link rel="alternate" hreflang="{lg}" href="{BASE_URL}/{lg}/{slug}">')
+    hreflang_lines.append(f'<link rel="alternate" hreflang="x-default" href="{fr_url}">')
+    hreflang_block = "\n".join(hreflang_lines)
+
+    # Localize CSS "Générique" overlay
+    css = CSS.replace('content: "Générique"', f'content: "{T("generic")}"')
 
     ldjson = build_ldjson(d)
+    hero_alt = L("hero_alt", name)
 
     return f"""<!doctype html>
-<html lang="fr" data-theme="auto">
+<html lang="{html_lang}" data-theme="auto">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -872,17 +1065,16 @@ def build_head(d):
 <meta name="theme-color" content="#1c4f62">
 <meta name="description" content="{attr(desc)}">
 <link rel="canonical" href="{page_url}">
-<link rel="alternate" hreflang="fr" href="{page_url}">
-<link rel="alternate" hreflang="x-default" href="{page_url}">
+{hreflang_block}
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{attr(name)}">
 <meta property="og:description" content="{attr(desc)}">
 <meta property="og:url" content="{page_url}">
-<meta property="og:locale" content="fr_FR">
+<meta property="og:locale" content="{og_loc}">
 <meta property="og:site_name" content="Loisirs 74">
-<meta property="og:image:alt" content="{attr(fr.get('hero_alt', name))}">
+<meta property="og:image:alt" content="{attr(hero_alt)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{attr(name)}">
 <meta name="twitter:description" content="{attr(desc)}">
@@ -891,7 +1083,7 @@ def build_head(d):
 <meta name="geo.position" content="{lat};{lon}">
 <meta name="ICBM" content="{lat}, {lon}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a5a3a'/%3E%3Cpath d='M16 44 L26 28 L34 38 L44 22 L48 44 Z' fill='%23fafaf7'/%3E%3C/svg%3E">
-<style>{CSS}</style>
+<style>{css}</style>
 <script type="application/ld+json">{ldjson}</script>
 <meta property="og:image" content="{BASE_URL}/og-image.jpg">
 <meta name="twitter:image" content="{BASE_URL}/og-image.jpg">
@@ -903,62 +1095,87 @@ def build_head(d):
 
 
 def build_header(d):
-    """Sticky site header with brand + lang picker (FR-only batch → minimal lang menu)."""
+    """Sticky site header with brand + lang picker (locale-aware)."""
     slug = d["slug"]
+    lang_prefix = f"/{_LANG}" if _LANG != "fr" else ""
+    site_url = f"{BASE_URL}{lang_prefix}/"
     hub = primary_hub(d)
     if hub:
         hub_slug, hub_label = hub
-        crumb_mid = f'<a href="{BASE_URL}/{hub_slug}/">{esc(hub_label)}</a>'
+        crumb_mid = f'<a href="{BASE_URL}{lang_prefix}/{hub_slug}/">{esc(hub_label)}</a>'
     else:
         crumb_mid = f'<span>{esc(d["commune"])}</span>'
+
+    # Lang picker: full 6-lang menu. Current locale gets aria-current.
+    pick_links = []
+    for lg in ("fr", "en", "de", "it", "es", "nl"):
+        prefix = f"/{lg}" if lg != "fr" else ""
+        href = f"{BASE_URL}{prefix}/{slug}"
+        cur = ' aria-current="true"' if lg == _LANG else ''
+        pick_links.append(f'<a href="{href}"{cur} hreflang="{lg}">{CHROME["lang_native"][lg]}</a>')
+    pick_html = "\n".join(pick_links)
+    name = L("name", "")
+
     return f"""<body>
-<a class="skip" href="#main">Aller au contenu</a>
+<a class="skip" href="#main">{T("skip")}</a>
 <header class="site"><div class="wrap">
-  <a class="brand" href="{BASE_URL}/" aria-label="Loisirs 74"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a>
-  <nav><details class="lang-picker"><summary aria-label="Choisir la langue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>FR</summary><div class="lang-menu"><a href="{BASE_URL}/{slug}" aria-current="true" hreflang="fr">Français</a></div></details></nav>
+  <a class="brand" href="{site_url}" aria-label="Loisirs 74"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a>
+  <nav><details class="lang-picker"><summary aria-label="{T("lang_choose")}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>{T("lang_label")}</summary><div class="lang-menu">{pick_html}</div></details></nav>
 </div></header>
 <main id="main">
-<div class="wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="{BASE_URL}/">Accueil</a><span class="sep">/</span>{crumb_mid}<span class="sep">/</span><span aria-current="page">{esc(d['i18n']['fr']['name'])}</span></nav></div>"""
+<div class="wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="{site_url}">{T("home")}</a><span class="sep">/</span>{crumb_mid}<span class="sep">/</span><span aria-current="page">{esc(name)}</span></nav></div>"""
 
 
 def build_footer_block(date_pub, date_mod):
     return (
         '<div class="wrap"><p class="meta">'
-        f'<span>Publié le {esc(date_pub)}</span><span class="sep">·</span>'
-        f'<span>Mis à jour le {esc(date_mod)}</span></p></div>'
+        f'<span>{T("published")} {esc(date_pub)}</span><span class="sep">·</span>'
+        f'<span>{T("updated")} {esc(date_mod)}</span></p></div>'
         '</main>'
     )
 
 
-SITE_FOOTER = (
-    '<footer class="site"><div class="wrap"><div class="foot-grid">'
-    '<div class="foot-col"><a class="brand" href="https://loisirs74.fr/" style="margin-bottom:.85rem"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a><p>Guide indépendant des lieux de loisirs en Haute-Savoie. 100% gratuit. 100% vérifié.</p></div>'
-    '<div class="foot-col"><h4>Explorer</h4><ul><li><a href="https://loisirs74.fr/">Accueil</a></li></ul></div>'
-    '<div class="foot-col"><h4>Contribuer</h4><ul><li><a href="mailto:photos@loisirs74.fr">Envoyer des photos</a></li><li><a href="https://loisirs74.fr/signaler">Signaler une info</a></li><li><a href="https://loisirs74.fr/devenir-partenaire">Devenir partenaire</a></li></ul></div>'
-    '<div class="foot-col"><h4>Mentions</h4><ul><li><a href="https://loisirs74.fr/mentions-legales">Mentions légales</a></li><li><a href="https://loisirs74.fr/confidentialite">Confidentialité</a></li><li><a href="https://loisirs74.fr/cgv">CGV</a></li></ul></div>'
-    '</div><div class="foot-bottom"><span class="credit">© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Tous droits réservés</span><span>Sans pub. Sans tracking. Sans avis Google.</span></div></div></footer>'
-)
+def site_footer():
+    """Locale-aware <footer class='site'>. URLs prefixed by current locale."""
+    lp = f"/{_LANG}" if _LANG != "fr" else ""
+    return (
+        '<footer class="site"><div class="wrap"><div class="foot-grid">'
+        f'<div class="foot-col"><a class="brand" href="{BASE_URL}{lp}/" style="margin-bottom:.85rem"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a><p>{T("f_tagline")}</p></div>'
+        f'<div class="foot-col"><h4>{T("f_explore")}</h4><ul><li><a href="{BASE_URL}{lp}/">{T("home")}</a></li></ul></div>'
+        f'<div class="foot-col"><h4>{T("f_contribute")}</h4><ul><li><a href="mailto:photos@loisirs74.fr">{T("f_send_photos")}</a></li><li><a href="{BASE_URL}{lp}/signaler">{T("f_report")}</a></li><li><a href="{BASE_URL}{lp}/devenir-partenaire">{T("f_become_p")}</a></li></ul></div>'
+        f'<div class="foot-col"><h4>{T("f_legal")}</h4><ul><li><a href="{BASE_URL}{lp}/mentions-legales">{T("f_legal_link")}</a></li><li><a href="{BASE_URL}{lp}/confidentialite">{T("f_privacy")}</a></li><li><a href="{BASE_URL}{lp}/cgv">{T("f_cgv")}</a></li></ul></div>'
+        f'</div><div class="foot-bottom"><span class="credit">{T("f_copyright")}</span><span>{T("f_promise")}</span></div></div></footer>'
+    )
 
 
-def build_page(d):
-    fr = d["i18n"]["fr"]
-    body = fr.get("body") if isinstance(fr.get("body"), dict) else {}
-    def _bf(key, default):
-        v = body.get(key) if body else None
-        return v if v not in (None, "", [], {}) else fr.get(key, default)
+LAST_FALLBACK_FIELDS = set()  # populated by build_page() for callers wanting coverage info
+
+
+def build_page(d, lang="fr"):
+    """Render the full HTML for fiche `d` in `lang`. Returns html string.
+    Fallback-field info (which keys fell back to FR) is exposed via
+    module attribute LAST_FALLBACK_FIELDS after each call."""
+    global LAST_FALLBACK_FIELDS
+    _set_lang(d, lang)
+    name = L("name", "")
+
     out = []
     out.append(build_head(d))
     out.append(build_header(d))
     out.append(hero_block(d))
-    out.append(facts_block(fr.get("facts", {})))
-    out.append(body_block(fr["name"], body))
-    out.append(activities_block(_bf("activities", [])))
-    out.append(practical_block(_bf("practical_info", []), fr["name"], d["commune"]))
-    out.append(how_to_block(_bf("how_to_get_there", {}), fr["name"], d["commune"]))
-    out.append(when_to_visit_block(_bf("when_to_visit", ""), _bf("events", "")))
+    out.append(facts_block(L("facts", {}) or {}))
+    body_dict = L("body", {}) if isinstance(L("body", {}), dict) else {}
+    if not body_dict:
+        body_dict = {"what_is": L_body("what_is", "")}
+    out.append(body_block(name, body_dict))
+    out.append(activities_block(L_body("activities", []) or []))
+    out.append(practical_block(L_body("practical_info", []) or [], name, d["commune"]))
+    out.append(how_to_block(L_body("how_to_get_there", {}) or {}, name, d["commune"]))
+    out.append(when_to_visit_block(L_body("when_to_visit", "") or "",
+                                   L_body("events", "") or ""))
     out.append(partners_block(d))
-    out.append(gallery_block(fr["name"], d.get("gallery_photos")))
-    out.append(faq_block(fr.get("faq", [])))
+    out.append(gallery_block(name, d.get("gallery_photos")))
+    out.append(faq_block(L("faq", []) or []))
     out.append(sources_block(d.get("sources", [])))
     out.append(data_credits_block(d.get("data_sources", [])))
     out.append(build_footer_block(
@@ -966,27 +1183,35 @@ def build_page(d):
         d.get("date_modified_human", "")
     ))
     out.append(action_bar(d))
-    out.append(SITE_FOOTER)
+    out.append(site_footer())
     out.append(JS)
     out.append("</body></html>")
+    LAST_FALLBACK_FIELDS = set(_FALLBACK_FIELDS)
     return "\n".join(out)
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("json_path")
-    ap.add_argument("--out-dir", default=str(REPO))
+    ap.add_argument("--lang", default="fr", choices=SUPPORTED_LANGS)
+    ap.add_argument("--out-dir", default=None,
+                    help="Output dir. Defaults to REPO for fr, REPO/<lang> otherwise.")
     args = ap.parse_args()
 
     d = json.loads(Path(args.json_path).read_text(encoding="utf-8"))
-    html = build_page(d)
-    out_path = Path(args.out_dir) / f"{d['slug']}.html"
+    html = build_page(d, lang=args.lang)
+    out_dir = Path(args.out_dir) if args.out_dir else (
+        REPO if args.lang == "fr" else REPO / args.lang
+    )
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / f"{d['slug']}.html"
     out_path.write_text(html, encoding="utf-8")
     try:
         rel = out_path.relative_to(REPO)
     except ValueError:
         rel = out_path
-    print(f"  {rel}  ({len(html):,} chars)")
+    fb = f" [fallback:{','.join(sorted(LAST_FALLBACK_FIELDS))}]" if LAST_FALLBACK_FIELDS else ""
+    print(f"  {rel}  ({len(html):,} chars){fb}")
 
 
 if __name__ == "__main__":
