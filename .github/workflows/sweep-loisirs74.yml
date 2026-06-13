@@ -37,6 +37,12 @@ jobs:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
         run: python sweep_loisirs74.py
 
+      - name: Apply sweep signals to state machine (JOB 8)
+        # Reads freshness + google_check blocks; demotes high-confidence
+        # CLOSED venues to status=draft; flags ambiguous signals; writes
+        # reports/job8-sweep-demotions.md. NEVER silent.
+        run: python3 scripts/apply_sweep_signals.py
+
       - name: Upload report artifacts
         if: always()        # upload even if the script errored partway
         uses: actions/upload-artifact@v4
@@ -48,11 +54,13 @@ jobs:
           if-no-files-found: warn
           retention-days: 90
 
-      - name: Commit fiche updates
+      - name: Commit fiche updates + demotion report
         run: |
           git config user.name "loisirs74-bot"
           git config user.email "bot@loisirs74.fr"
-          # report.csv + email_queue.csv are gitignored so this only stages fiche changes
-          git add Json/
+          # report.csv + email_queue.csv are gitignored so this only stages
+          # fiche changes (freshness blocks + any draft demotions) and the
+          # JOB 8 report.
+          git add Json/ reports/job8-sweep-demotions.md
           git commit -m "chore: sweep $(date +%F)" || echo "nothing to commit"
           git push
