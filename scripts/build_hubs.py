@@ -45,9 +45,13 @@ HUB_FILTERS = {
     "sport-jeux":       lambda d: d.get("category") in ("bowling", "karting", "patinoire") or
                                   (isinstance(d.get("subcategories"), list) and
                                    any(s in ("sport","sport-jeux","jeu","arcade") for s in d.get("subcategories"))),
-    # sensations-plein-air + que-faire are curated cross-cuts: skipped here,
-    # left as-is. Orphans falling under those (none currently) would need a
-    # narrower follow-up.
+    # Curated cross-cuts: the FR hub holds the canonical curation. We
+    # preserve it verbatim (filter returns False) and let build_main_block
+    # re-emit the cards through fiche_card_html(d, lang, slug) so every
+    # locale gets locale-prefixed URLs. Without this the non-FR hubs were
+    # left frozen with FR-canonical card hrefs (audit 2026-06-13).
+    "sensations-plein-air": lambda d: False,
+    "que-faire":            lambda d: False,
 }
 
 # Chrome translations for the card grid
