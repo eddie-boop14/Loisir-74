@@ -71,6 +71,33 @@ def rebuild_catalog_index():
     print(out.stdout.strip() or "(catalog rebuilt)")
 
 
+def rebuild_hubs():
+    """Regen 13 category hubs from Json/ + patch locale homepages for full
+    hub coverage (closes the orphan gap from voies-vertes / sorties-detente
+    missing from locale homepage nav)."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "build_hubs.py")],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("build_hubs failed")
+    # only show the tail
+    lines = out.stdout.strip().split("\n")
+    print("\n".join(lines[-8:]) if lines else "(hubs rebuilt)")
+
+
+def reachability_gate():
+    """Strict reachability: 0 orphans across all 6 locales."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "check_reachability.py"), "--strict"],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    print(out.stdout.strip())
+    if out.returncode != 0:
+        raise SystemExit("reachability gate FAILED")
+
+
 # ---- 3. protected-placement gate --------------------------------------------
 
 PROT = {
@@ -238,8 +265,10 @@ def main():
 
     run("render fiche pages", render_all_fiches)
     run("rebuild catalog index", rebuild_catalog_index)
+    run("regenerate hubs + homepage nav", rebuild_hubs)
     run("placement gate vs baseline", placement_gate)
     run("card-diff gate vs snapshot", card_diff_gate)
+    run("reachability gate (strict)", reachability_gate)
     if not args.no_site:
         run("build _site/", lambda: subprocess.check_call(
             [sys.executable, str(SCRIPTS / "build_site.py")], cwd=str(ROOT)))
