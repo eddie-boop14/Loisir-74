@@ -176,9 +176,14 @@ def splice_main(html, new_main):
 
 
 def load_all_json():
+    """Load every Json/<slug>.json. JOB 6: skip draft fiches so they don't
+    appear in any hub."""
     out = {}
     for p in sorted((ROOT / "Json").glob("*.json")):
-        out[p.stem] = json.loads(p.read_text(encoding="utf-8"))
+        d = json.loads(p.read_text(encoding="utf-8"))
+        if d.get("status") == "draft":
+            continue
+        out[p.stem] = d
     return out
 
 

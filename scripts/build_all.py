@@ -87,6 +87,31 @@ def rebuild_hubs():
     print("\n".join(lines[-8:]) if lines else "(hubs rebuilt)")
 
 
+def status_gate():
+    """JOB 6 gate: every fiche must have an explicit status (draft|verified|
+    published). Print the distribution. Block if any fiche has status=None."""
+    import json as _json, glob as _glob
+    from collections import Counter as _Counter
+    dist = _Counter()
+    missing = []
+    for jp in sorted(_glob.glob(str(ROOT / "Json" / "*.json"))):
+        d = _json.loads(open(jp).read())
+        s = d.get("status")
+        if s is None:
+            missing.append(jp.split("/")[-1][:-5])
+        else:
+            dist[s] += 1
+    total = sum(dist.values()) + len(missing)
+    print(f"  total fiches: {total}")
+    for s, n in dist.most_common():
+        print(f"    {s}: {n}")
+    if missing:
+        print(f"  missing status: {len(missing)} fiches")
+        for m in missing[:5]:
+            print(f"    - {m}")
+        raise SystemExit("status gate FAILED — fiches without explicit status field")
+
+
 def hygiene_gate():
     """Strict hygiene scan: 0 Tier 1/2 findings across all rendered fields."""
     out = subprocess.run(
@@ -274,6 +299,7 @@ def main():
         run("idempotency assertion", assert_idempotent)
         return
 
+    run("status gate (state machine)", status_gate)
     run("hygiene gate (Tier 1/2 scan)", hygiene_gate)
     run("render fiche pages", render_all_fiches)
     run("rebuild catalog index", rebuild_catalog_index)

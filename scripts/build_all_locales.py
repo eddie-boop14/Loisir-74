@@ -44,8 +44,31 @@ def main():
     out_base = Path(args.out_dir)
     langs = [args.only_lang] if args.only_lang else LANGS
 
-    json_paths = sorted(glob.glob(str(REPO / "Json" / "*.json")))
-    print(f"Building {len(json_paths)} fiches × {len(langs)} locales = {len(json_paths)*len(langs)} pages")
+    # JOB 6: only published fiches get rendered. Read every JSON, partition
+    # into published vs draft; draft HTMLs are removed from each locale tree
+    # so a demotion actually deletes the live page.
+    all_paths = sorted(glob.glob(str(REPO / "Json" / "*.json")))
+    published_paths = []
+    draft_slugs = []
+    for jp in all_paths:
+        d = json.loads(Path(jp).read_text(encoding="utf-8"))
+        if d.get("status") == "draft":
+            draft_slugs.append(d["slug"])
+        else:
+            published_paths.append(jp)
+    json_paths = published_paths
+
+    # Garbage-collect any draft HTMLs that were rendered by a prior build.
+    for slug in draft_slugs:
+        for tree in (out_base,) + tuple(out_base / L for L in ("en","de","it","es","nl")):
+            p = tree / f"{slug}.html"
+            if p.exists():
+                p.unlink()
+                print(f"  removed draft HTML: {p.relative_to(out_base)}")
+
+    print(f"Building {len(json_paths)} published × {len(langs)} locales = {len(json_paths)*len(langs)} pages")
+    if draft_slugs:
+        print(f"  (skipping {len(draft_slugs)} draft fiches)")
 
     report = {
         "total_fiches": len(json_paths),

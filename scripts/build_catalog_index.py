@@ -50,6 +50,9 @@ def main():
         slug = d.get("slug")
         if not slug:
             continue
+        # JOB 6: draft fiches are not in the public catalog.
+        if d.get("status") == "draft":
+            continue
         fr = (d.get("i18n") or {}).get("fr") or {}
         name = fr.get("name") or slug
         commune = d.get("commune") or ""

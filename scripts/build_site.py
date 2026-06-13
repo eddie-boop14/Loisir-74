@@ -96,15 +96,17 @@ def is_denied(name):
 
 
 def copy_file_with_research_log_strip(src, dst):
-    """Copy a Json/<slug>.json file, removing research_log before write."""
+    """Copy a Json/<slug>.json file. JOB 2: strips research_log; JOB 6: skip
+    draft fiches entirely (caller signal via return False)."""
     d = json.loads(src.read_text(encoding="utf-8"))
+    if d.get("status") == "draft":
+        return False
     if "research_log" in d:
         d.pop("research_log", None)
-    # also strip from any nested partner entries (research_log is canonically
-    # top-level but be defensive)
     dst.parent.mkdir(parents=True, exist_ok=True)
     dst.write_text(json.dumps(d, ensure_ascii=False, indent=2) + "\n",
                    encoding="utf-8")
+    return True
 
 
 def copy_lieux_index_strip(src, dst):
@@ -125,8 +127,17 @@ def copy_lieux_index_strip(src, dst):
 
 
 def copy_md_strip_research_log(src, dst):
-    """Markdown fiche mirrors: remove any Research log section if present
-    (defence-in-depth; templates currently don't embed it but make sure)."""
+    """Markdown fiche mirrors: remove any Research log section if present.
+    JOB 6: skip if the corresponding fiche is draft."""
+    slug = src.stem
+    jp = REPO / "Json" / f"{slug}.json"
+    if jp.exists():
+        try:
+            d = json.loads(jp.read_text(encoding="utf-8"))
+            if d.get("status") == "draft":
+                return
+        except Exception:
+            pass
     text = src.read_text(encoding="utf-8")
     text = re.sub(r"## Research log.*?(?=\n## |\Z)", "", text, flags=re.DOTALL)
     dst.parent.mkdir(parents=True, exist_ok=True)
@@ -160,6 +171,39 @@ Disallow: /studio-render.js
 Disallow: /studio-templates.js
 Disallow: /dt-candidates.json
 """
+
+def filter_sitemap(path, site_root):
+    """JOB 6: drop <url> blocks whose <loc> points to a file no longer in
+    _site/ (e.g. fiche demoted to status=draft). Idempotent."""
+    txt = path.read_text(encoding="utf-8")
+    blocks = re.findall(r"<url>.*?</url>", txt, re.DOTALL)
+    kept_blocks = []
+    dropped = 0
+    for blk in blocks:
+        m = re.search(r"<loc>(https://loisirs74\.fr/[^<]*)</loc>", blk)
+        if not m:
+            kept_blocks.append(blk); continue
+        url = m.group(1)
+        p = url[len("https://loisirs74.fr/"):]
+        if not p:
+            target = site_root / "index.html"
+        elif p.endswith("/"):
+            target = site_root / (p + "index.html")
+        else:
+            target = site_root / (p + ".html")
+        if target.exists():
+            kept_blocks.append(blk)
+        else:
+            dropped += 1
+    if dropped == 0:
+        return 0
+    # Rebuild file: keep <?xml…?> and <urlset…> declaration, replace inner
+    head_m = re.search(r"(<\?xml.*?\?>\s*<urlset[^>]*>)", txt, re.DOTALL)
+    head = head_m.group(1) if head_m else '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+    new = head + "\n" + "\n".join("  " + b for b in kept_blocks) + "\n</urlset>\n"
+    path.write_text(new, encoding="utf-8")
+    return dropped
+
 
 def patch_robots_txt(path):
     """Append Disallow rules for the Studio + DT importer (idempotent)."""
@@ -263,6 +307,13 @@ def main():
     robots = SITE / "robots.txt"
     if robots.exists():
         patch_robots_txt(robots)
+
+    print("Filtering _site/sitemap.xml (drop URLs whose target no longer exists)...")
+    sm = SITE / "sitemap.xml"
+    if sm.exists():
+        dropped = filter_sitemap(sm, SITE)
+        if dropped:
+            print(f"  dropped {dropped} stale <url> entries")
 
     # Final stats
     total = sum(1 for _ in SITE.rglob("*") if _.is_file())
