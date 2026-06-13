@@ -1,57 +1,26 @@
 # JOB A — Breadcrumb audit (read-only)
 
-Scanned: **2397 HTML pages**
+Scanned: **2401 HTML pages**
 
 With breadcrumb: **2357**
-Without breadcrumb: **40**
+Without breadcrumb: **44**
 
 ## Per-locale summary
 
 | locale | pages scanned | broken hrefs | cross-locale | wrong-lang labels |
 |---|---|---|---|---|
 | fr | 406 | 0 | 0 | 0 |
-| en | 399 | 235 | 0 | 242 |
-| de | 399 | 235 | 0 | 239 |
-| it | 399 | 235 | 0 | 238 |
-| es | 399 | 235 | 0 | 238 |
-| nl | 395 | 235 | 0 | 237 |
+| en | 399 | 0 | 0 | 0 |
+| de | 399 | 0 | 0 | 0 |
+| it | 399 | 0 | 0 | 0 |
+| es | 399 | 0 | 0 | 0 |
+| nl | 399 | 0 | 0 | 0 |
 
 ## Broken hrefs (sample first 30)
 
-Total: **1175**
+Total: **0**
 
-| page | broken href | resolves to (missing) |
-|---|---|---|
-| en/abbaye-d-aulps.html | `https://loisirs74.fr/en/chateaux/` | `en/chateaux/index.html` |
-| en/abbaye-de-sixt.html | `https://loisirs74.fr/en/chateaux/` | `en/chateaux/index.html` |
-| en/acroparc-de-bellavallis-bellevaux.html | `https://loisirs74.fr/en/bases-de-loisirs/` | `en/bases-de-loisirs/index.html` |
-| en/aire-de-decollage-parapente-plaine-joux.html | `https://loisirs74.fr/en/points-de-vue/` | `en/points-de-vue/index.html` |
-| en/ancien-remparts-chateau-lullin-lullin.html | `https://loisirs74.fr/en/musees/` | `en/musees/index.html` |
-| en/au-fil-rail-jeu-piste-a-servoz-servoz.html | `https://loisirs74.fr/en/sentiers/` | `en/sentiers/index.html` |
-| en/au-fil-rail-jeu-piste-a-vallorcine-vallorcine.html | `https://loisirs74.fr/en/sentiers/` | `en/sentiers/index.html` |
-| en/balade-pedestre-tour-lac-mole-tour.html | `https://loisirs74.fr/en/sentiers/` | `en/sentiers/index.html` |
-| en/base-de-loisirs-de-la-beunaz.html | `https://loisirs74.fr/en/bases-de-loisirs/` | `en/bases-de-loisirs/index.html` |
-| en/base-de-loisirs-des-ilettes.html | `https://loisirs74.fr/en/bases-de-loisirs/` | `en/bases-de-loisirs/index.html` |
-| en/base-de-loisirs-du-lac-aux-dames.html | `https://loisirs74.fr/en/bases-de-loisirs/` | `en/bases-de-loisirs/index.html` |
-| en/base-de-loisirs-du-lac-bleu.html | `https://loisirs74.fr/en/bases-de-loisirs/` | `en/bases-de-loisirs/index.html` |
-| en/base-de-loisirs-du-lac-des-iles.html | `https://loisirs74.fr/en/bases-de-loisirs/` | `en/bases-de-loisirs/index.html` |
-| en/base-de-loisirs-du-vuaz-filliere.html | `https://loisirs74.fr/en/bases-de-loisirs/` | `en/bases-de-loisirs/index.html` |
-| en/base-de-loisirs-orange-montisel-saint-sixt.html | `https://loisirs74.fr/en/bases-de-loisirs/` | `en/bases-de-loisirs/index.html` |
-| en/base-nautique-evian-bains.html | `https://loisirs74.fr/en/bases-de-loisirs/` | `en/bases-de-loisirs/index.html` |
-| en/belvedere-du-mont-baron.html | `https://loisirs74.fr/en/points-de-vue/` | `en/points-de-vue/index.html` |
-| en/borne-chateau-vuache-vulbens.html | `https://loisirs74.fr/en/chateaux/` | `en/chateaux/index.html` |
-| en/boucle-pedestre-detective-nature-jonzier-epagny.html | `https://loisirs74.fr/en/sentiers/` | `en/sentiers/index.html` |
-| en/boucles-coteau-publier.html | `https://loisirs74.fr/en/sentiers/` | `en/sentiers/index.html` |
-| en/bourg-et-ruines-chateau-chaumont-chaumont.html | `https://loisirs74.fr/en/musees/` | `en/musees/index.html` |
-| en/c5-kids-party-ville-la-grand.html | `https://loisirs74.fr/en/bases-de-loisirs/` | `en/bases-de-loisirs/index.html` |
-| en/cascade-d-angon.html | `https://loisirs74.fr/en/cascades/` | `en/cascades/index.html` |
-| en/cascade-de-chedde.html | `https://loisirs74.fr/en/cascades/` | `en/cascades/index.html` |
-| en/cascade-de-doran.html | `https://loisirs74.fr/en/cascades/` | `en/cascades/index.html` |
-| en/cascade-de-l-arpenaz.html | `https://loisirs74.fr/en/cascades/` | `en/cascades/index.html` |
-| en/cascade-de-la-belle-au-bois.html | `https://loisirs74.fr/en/cascades/` | `en/cascades/index.html` |
-| en/cascade-de-la-diomaz.html | `https://loisirs74.fr/en/cascades/` | `en/cascades/index.html` |
-| en/cascade-de-nyon.html | `https://loisirs74.fr/en/cascades/` | `en/cascades/index.html` |
-| en/cascade-des-brochaux.html | `https://loisirs74.fr/en/cascades/` | `en/cascades/index.html` |
+**None.** ✓
 
 ## Cross-locale links (sample first 20)
 
@@ -61,40 +30,9 @@ Total: **0**
 
 ## Wrong-language labels (sample first 30)
 
-Total: **1194**
+Total: **0**
 
-| page | label (looks French) | page locale |
-|---|---|---|
-| en/abbaye-d-aulps.html | `Châteaux` | en |
-| en/abbaye-de-sixt.html | `Châteaux` | en |
-| en/acroparc-de-bellavallis-bellevaux.html | `Bases de loisirs` | en |
-| en/aire-de-decollage-parapente-plaine-joux.html | `Points de vue` | en |
-| en/ancien-remparts-chateau-lullin-lullin.html | `Musées` | en |
-| en/au-fil-rail-jeu-piste-a-servoz-servoz.html | `Sentiers` | en |
-| en/au-fil-rail-jeu-piste-a-vallorcine-vallorcine.html | `Sentiers` | en |
-| en/balade-pedestre-tour-lac-mole-tour.html | `Sentiers` | en |
-| en/base-de-loisirs-de-la-beunaz.html | `Bases de loisirs` | en |
-| en/base-de-loisirs-des-ilettes.html | `Bases de loisirs` | en |
-| en/base-de-loisirs-du-lac-aux-dames.html | `Bases de loisirs` | en |
-| en/base-de-loisirs-du-lac-bleu.html | `Bases de loisirs` | en |
-| en/base-de-loisirs-du-lac-des-iles.html | `Bases de loisirs` | en |
-| en/base-de-loisirs-du-vuaz-filliere.html | `Bases de loisirs` | en |
-| en/base-de-loisirs-orange-montisel-saint-sixt.html | `Bases de loisirs` | en |
-| en/base-nautique-doussard-doussard.html | `Doussard Watersports Centre` | en |
-| en/base-nautique-evian-bains.html | `Bases de loisirs` | en |
-| en/base-nautique-marquisats-annecy.html | `Marquisats Watersports Centre` | en |
-| en/belvedere-du-mont-baron.html | `Points de vue` | en |
-| en/borne-chateau-vuache-vulbens.html | `Châteaux` | en |
-| en/boucle-pedestre-detective-nature-jonzier-epagny.html | `Sentiers` | en |
-| en/boucles-coteau-publier.html | `Sentiers` | en |
-| en/bourg-et-ruines-chateau-chaumont-chaumont.html | `Musées` | en |
-| en/c5-kids-party-ville-la-grand.html | `Bases de loisirs` | en |
-| en/cascade-d-angon.html | `Cascades` | en |
-| en/cascade-de-chedde.html | `Cascades` | en |
-| en/cascade-de-doran.html | `Cascades` | en |
-| en/cascade-de-l-arpenaz.html | `Cascades` | en |
-| en/cascade-de-la-belle-au-bois.html | `Cascades` | en |
-| en/cascade-de-la-diomaz.html | `Cascades` | en |
+**None.** ✓
 
 ## Pattern table — distinct (lang, hub-href, hub-label) triples
 
@@ -111,29 +49,29 @@ Top 30 by frequency:
 | es | `` | `/` | 157 |
 | nl | `` | `/` | 157 |
 | fr | `https://loisirs74.fr/musees/` | `Musées` | 50 |
-| en | `https://loisirs74.fr/en/musees/` | `Musées` | 50 |
-| de | `https://loisirs74.fr/de/musees/` | `Musées` | 50 |
-| it | `https://loisirs74.fr/it/musees/` | `Musées` | 50 |
-| es | `https://loisirs74.fr/es/musees/` | `Musées` | 50 |
-| nl | `https://loisirs74.fr/nl/musees/` | `Musées` | 50 |
+| en | `https://loisirs74.fr/en/museums/` | `Museums` | 50 |
+| de | `https://loisirs74.fr/de/museen/` | `Museen` | 50 |
+| it | `https://loisirs74.fr/it/musei/` | `Musei` | 50 |
+| es | `https://loisirs74.fr/es/museos/` | `Museos` | 50 |
+| nl | `https://loisirs74.fr/nl/musea/` | `Musea` | 50 |
 | fr | `https://loisirs74.fr/sentiers/` | `Sentiers` | 40 |
-| en | `https://loisirs74.fr/en/sentiers/` | `Sentiers` | 40 |
-| de | `https://loisirs74.fr/de/sentiers/` | `Sentiers` | 40 |
-| it | `https://loisirs74.fr/it/sentiers/` | `Sentiers` | 40 |
-| es | `https://loisirs74.fr/es/sentiers/` | `Sentiers` | 40 |
-| nl | `https://loisirs74.fr/nl/sentiers/` | `Sentiers` | 40 |
+| en | `https://loisirs74.fr/en/trails/` | `Trails` | 40 |
+| de | `https://loisirs74.fr/de/wanderwege/` | `Wanderwege` | 40 |
+| it | `https://loisirs74.fr/it/sentieri/` | `Sentieri` | 40 |
+| es | `https://loisirs74.fr/es/senderos/` | `Senderos` | 40 |
+| nl | `https://loisirs74.fr/nl/wandelpaden/` | `Wandelpaden` | 40 |
 | fr | `https://loisirs74.fr/bases-de-loisirs/` | `Bases de loisirs` | 33 |
-| en | `https://loisirs74.fr/en/bases-de-loisirs/` | `Bases de loisirs` | 33 |
-| de | `https://loisirs74.fr/de/bases-de-loisirs/` | `Bases de loisirs` | 33 |
-| it | `https://loisirs74.fr/it/bases-de-loisirs/` | `Bases de loisirs` | 33 |
-| es | `https://loisirs74.fr/es/bases-de-loisirs/` | `Bases de loisirs` | 33 |
-| nl | `https://loisirs74.fr/nl/bases-de-loisirs/` | `Bases de loisirs` | 33 |
+| en | `https://loisirs74.fr/en/leisure-parks/` | `Leisure parks` | 33 |
+| de | `https://loisirs74.fr/de/freizeitparks/` | `Freizeitparks` | 33 |
+| it | `https://loisirs74.fr/it/aree-recreative/` | `Aree ricreative` | 33 |
+| es | `https://loisirs74.fr/es/areas-de-ocio/` | `Áreas de ocio` | 33 |
+| nl | `https://loisirs74.fr/nl/recreatieparken/` | `Recreatieparken` | 33 |
 | fr | `https://loisirs74.fr/lacs-plages/` | `Lacs &amp; plages` | 31 |
-| en | `https://loisirs74.fr/en/lacs-plages/` | `Lacs &amp; plages` | 31 |
-| de | `https://loisirs74.fr/de/lacs-plages/` | `Lacs &amp; plages` | 31 |
-| it | `https://loisirs74.fr/it/lacs-plages/` | `Lacs &amp; plages` | 31 |
-| es | `https://loisirs74.fr/es/lacs-plages/` | `Lacs &amp; plages` | 31 |
-| nl | `https://loisirs74.fr/nl/lacs-plages/` | `Lacs &amp; plages` | 31 |
+| en | `https://loisirs74.fr/en/lakes/` | `Lakes` | 31 |
+| de | `https://loisirs74.fr/de/seen/` | `Seen` | 31 |
+| it | `https://loisirs74.fr/it/laghi/` | `Laghi` | 31 |
+| es | `https://loisirs74.fr/es/lagos/` | `Lagos` | 31 |
+| nl | `https://loisirs74.fr/nl/meren/` | `Meren` | 31 |
 
 ## Protected fiches breadcrumb (chez-nous-a-la-plage + chalet-du-tornet)
 
@@ -141,7 +79,7 @@ Note: these are partner cards rendered inside host fiches; their own breadcrumb 
 
 ## Pages without any breadcrumb
 
-Total: **40**
+Total: **44**
 
 First 20:
 ```

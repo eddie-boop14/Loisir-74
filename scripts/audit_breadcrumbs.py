@@ -225,13 +225,18 @@ def main():
             if href_lang == "fr" and L_kind != "fr" and "/fr/" in href:
                 findings["cross_locale_hrefs"].append((rel, href, L_kind, "fr"))
 
-        # Wrong language: French label on non-FR page
+        # Wrong language: French label on non-FR page. Only check the LINKED
+        # hub label (href != ""), NOT the trailing aria-current="page" item
+        # — that's the fiche name itself, which is often a proper noun in
+        # French ("Châteaux des Allinges", "Jardins de l'Europe", etc.) and
+        # legitimately stays French in every locale.
         if L_kind in LANGS and L_kind != "fr":
             for href, label in items:
+                if not href:
+                    continue
                 if fr_signal(label):
                     findings["wrong_lang_labels"].append((rel, label, L_kind))
-                    if L_kind in LANGS:
-                        findings["by_locale"][L_kind]["wronglang"] += 1
+                    findings["by_locale"][L_kind]["wronglang"] += 1
 
         # Protected check
         stem = p.stem

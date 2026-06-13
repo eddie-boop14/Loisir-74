@@ -279,12 +279,54 @@ CAT_TO_FR_HUB = {
 }
 
 
-def primary_hub(d):
-    """Return (hub_slug, hub_label) FR pair from d.categories or d.category, or None."""
+# Per-locale hub-slug map: FR slug → {lang: localized slug}.
+# Single source of truth for breadcrumb URL + label in non-FR locales.
+# Must stay in sync with scripts/build_hubs.py hub_locale_map() output;
+# audit_breadcrumbs.py also relies on these labels.
+HUB_LOCALE_SLUGS = {
+    "cascades":        {"fr": "cascades",        "en": "waterfalls",     "de": "wasserfaelle",      "it": "cascate",         "es": "cascadas",     "nl": "watervallen"},
+    "chateaux":        {"fr": "chateaux",        "en": "castles",        "de": "schloesser",        "it": "castelli",        "es": "castillos",    "nl": "kastelen"},
+    "musees":          {"fr": "musees",          "en": "museums",        "de": "museen",            "it": "musei",           "es": "museos",       "nl": "musea"},
+    "points-de-vue":   {"fr": "points-de-vue",   "en": "viewpoints",     "de": "aussichtspunkte",   "it": "punti-panoramici","es": "miradores",    "nl": "uitzichtpunten"},
+    "sentiers":        {"fr": "sentiers",        "en": "trails",         "de": "wanderwege",        "it": "sentieri",        "es": "senderos",     "nl": "wandelpaden"},
+    "telecabines":     {"fr": "telecabines",     "en": "cable-cars",     "de": "seilbahnen",        "it": "funivie",         "es": "telefericos",  "nl": "kabelbanen"},
+    "voies-vertes":    {"fr": "voies-vertes",    "en": "greenways",      "de": "radwege",           "it": "vie-verdi",       "es": "vias-verdes",  "nl": "fietsroutes"},
+    "lacs-plages":     {"fr": "lacs-plages",     "en": "lakes",          "de": "seen",              "it": "laghi",           "es": "lagos",        "nl": "meren"},
+    "bases-de-loisirs":{"fr": "bases-de-loisirs","en": "leisure-parks",  "de": "freizeitparks",     "it": "aree-recreative", "es": "areas-de-ocio","nl": "recreatieparken"},
+}
+
+HUB_LOCALE_LABELS = {
+    "cascades":        {"fr": "Cascades",         "en": "Waterfalls",       "de": "Wasserfälle",      "it": "Cascate",          "es": "Cascadas",      "nl": "Watervallen"},
+    "chateaux":        {"fr": "Châteaux",         "en": "Castles",          "de": "Schlösser",        "it": "Castelli",         "es": "Castillos",     "nl": "Kastelen"},
+    "musees":          {"fr": "Musées",           "en": "Museums",          "de": "Museen",           "it": "Musei",            "es": "Museos",        "nl": "Musea"},
+    "points-de-vue":   {"fr": "Points de vue",    "en": "Viewpoints",       "de": "Aussichtspunkte",  "it": "Punti panoramici", "es": "Miradores",     "nl": "Uitzichtpunten"},
+    "sentiers":        {"fr": "Sentiers",         "en": "Trails",           "de": "Wanderwege",       "it": "Sentieri",         "es": "Senderos",      "nl": "Wandelpaden"},
+    "telecabines":     {"fr": "Télécabines",      "en": "Cable cars",       "de": "Seilbahnen",       "it": "Funivie",          "es": "Teleféricos",   "nl": "Kabelbanen"},
+    "voies-vertes":    {"fr": "Voies vertes",     "en": "Greenways",        "de": "Radwege",          "it": "Vie verdi",        "es": "Vías verdes",   "nl": "Fietsroutes"},
+    "lacs-plages":     {"fr": "Lacs & plages",    "en": "Lakes",            "de": "Seen",             "it": "Laghi",            "es": "Lagos",         "nl": "Meren"},
+    "bases-de-loisirs":{"fr": "Bases de loisirs", "en": "Leisure parks",    "de": "Freizeitparks",    "it": "Aree ricreative",  "es": "Áreas de ocio", "nl": "Recreatieparken"},
+}
+
+
+def primary_hub(d, lang=None):
+    """Return (hub_slug, hub_label) for the fiche's primary hub, localized to
+    `lang` (defaults to the module-level _LANG set by build_page).
+
+    The breadcrumb URL must point to the locale-rendered hub
+    (e.g. /en/castles/, /de/schloesser/), and the label must read in the
+    same language as the page chrome — otherwise Googlebot sees a
+    contradiction between visible breadcrumb and JSON-LD BreadcrumbList.
+    """
     cats = d.get("categories") or ([d.get("category")] if d.get("category") else [])
+    L = lang or _LANG
     for c in cats:
-        if c in CAT_TO_FR_HUB:
-            return CAT_TO_FR_HUB[c]
+        fr_pair = CAT_TO_FR_HUB.get(c)
+        if not fr_pair:
+            continue
+        fr_slug, fr_label = fr_pair
+        slug = HUB_LOCALE_SLUGS.get(fr_slug, {}).get(L, fr_slug)
+        label = HUB_LOCALE_LABELS.get(fr_slug, {}).get(L, fr_label)
+        return (slug, label)
     return None
 
 
@@ -959,9 +1001,9 @@ def build_ldjson(d):
                 {"@type": "ListItem", "position": 1, "name": T("home"), "item": site_url},
                 (
                     {"@type": "ListItem", "position": 2,
-                     "name": primary_hub(d)[1],
-                     "item": f"{BASE_URL}{lang_prefix}/{primary_hub(d)[0]}/"}
-                    if primary_hub(d) else
+                     "name": primary_hub(d, _LANG)[1],
+                     "item": f"{BASE_URL}{lang_prefix}/{primary_hub(d, _LANG)[0]}/"}
+                    if primary_hub(d, _LANG) else
                     {"@type": "ListItem", "position": 2, "name": commune,
                      "item": f"{BASE_URL}{lang_prefix}/#{commune.lower().replace(' ', '-')}"}
                 ),
@@ -1098,7 +1140,7 @@ def build_header(d):
     slug = d["slug"]
     lang_prefix = f"/{_LANG}" if _LANG != "fr" else ""
     site_url = f"{BASE_URL}{lang_prefix}/"
-    hub = primary_hub(d)
+    hub = primary_hub(d, _LANG)
     if hub:
         hub_slug, hub_label = hub
         crumb_mid = f'<a href="{BASE_URL}{lang_prefix}/{hub_slug}/">{esc(hub_label)}</a>'
