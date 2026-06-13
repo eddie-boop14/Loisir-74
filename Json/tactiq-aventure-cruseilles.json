@@ -109,6 +109,26 @@
       "date": "2026-06-13",
       "by": "scripts/ingest_translations.py",
       "note": "Translation ingest [nl]: 5 field(s) updated."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for de from agent_P_de_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for es from agent_P_es_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for it from agent_P_it_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for nl from agent_P_nl_secondary.json."
     }
   ],
   "i18n": {
@@ -269,7 +289,148 @@
       "hero_alt": "Tactiq Aventure tree-top adventure park in the Dronières forest at Cruseilles",
       "body": {
         "what_is": "<p><strong>Tactiq Aventure</strong> is the tree-top adventure park inside the <strong>Parc des Dronières</strong> at Cruseilles, halfway between Annecy and Geneva. Set in a fine deciduous forest at 785 m altitude, it offers three tiered courses from 90 cm in height, plus an adventure-in-the-forest game called <strong>Tactiq Game</strong>.</p><p>All three courses use a continuous lifeline system: the <strong>Discovery course</strong> (from 90 cm, €16) is for children aged 4-5 and up; the <strong>Junior course</strong> (from 1.15 m, €20) adds height and ziplines for ages 7-12; the <strong>Vertige course</strong> (from 1.40 m, €25 adult / €22 under-16) features long ziplines, freefall jumps and aerial passages for teens and adults. <strong>Tactiq Game</strong> (€10) is an escape-forest experience blending riddles and observation, a good warm-up or add-on.</p><p>The park is open from <strong>4 April to 1 November</strong>, with a seasonal calendar: daily 1.30 p.m.-6.30 p.m. in April, Wednesdays, weekends and bank holidays 1.30 p.m.-6.30 p.m. until early July, then daily 10 a.m.-7 p.m. from 4 July to 30 August. Booking strongly recommended in high season.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parcours aventure des Dronières",
+        "Accrobranche Cruseilles"
+      ],
+      "hero": {
+        "badge": "Paid - Booking advised",
+        "lead": "Tree-top adventure park in the heart of the Dronières forest at Cruseilles: three tiered courses (Discovery from 90 cm, Junior from 1.15 m, Vertige from 1.40 m), ziplines, monkey bridges and a Tarzan swing. Season runs from April to November."
+      },
+      "facts": {
+        "type": "Adventure park - Escape forest",
+        "access": "Paid",
+        "commune": "Cruseilles",
+        "parking": "Free at Parc des Dronières",
+        "duration": "2 h to 3 h depending on course",
+        "best_season": "April to November - peak July-August"
+      },
+      "activities": [
+        {
+          "title": "Try the Discovery course (from 90 cm)",
+          "tag": "Family",
+          "description": "Course dedicated to children from 4-5 years old, at low height, with continuous lifeline: ideal for a first time in the trees."
+        },
+        {
+          "title": "Have fun on the Junior course",
+          "tag": null,
+          "description": "Intermediate course from 1.15 m, with ziplines, monkey bridges and more challenging features for ages 7-12."
+        },
+        {
+          "title": "Take on the Vertige course",
+          "tag": null,
+          "description": "Adult/teen course from 1.40 m: long ziplines, freefall jumps and aerial passages for thrill-seekers."
+        },
+        {
+          "title": "Play the Tactiq Game (escape forest)",
+          "tag": null,
+          "description": "Outdoor adventure game combining riddles and observation in the Dronières forest, at €10 per person."
+        },
+        {
+          "title": "Organise a birthday",
+          "tag": null,
+          "description": "Birthday packages with course + Tactiq Game on booking, ideal for celebrating in a natural setting."
+        },
+        {
+          "title": "Enjoy Parc des Dronières",
+          "tag": null,
+          "description": "Before or after the tree-top course, enjoy Parc des Dronières free (lake, animal park, playground, shaded paths)."
+        },
+        {
+          "title": "Swim at the Bernard Pellarin Nautical Centre",
+          "tag": "Summer 2026",
+          "description": "Heated outdoor pool at the heart of Parc des Dronières, open mid-May to end of August - perfect to round off the day."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Address",
+          "v": "Parc des Dronières, route des Dronières, 74350 Cruseilles"
+        },
+        {
+          "k": "Coordinates",
+          "v": "46.040150 N - 6.122339 E"
+        },
+        {
+          "k": "Phone",
+          "v": "04 50 32 91 85",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Official website",
+          "v": "tactiqaventure.com"
+        },
+        {
+          "k": "Hours",
+          "v": "2026 season: 4 - 19 April daily 1.30 p.m.-6.30 p.m. - 1 May - 3 July Wed/weekends/bank holidays 1.30 p.m.-6.30 p.m. - 4 July - 30 August daily 10 a.m.-7 p.m. - until 1 Nov depending on calendar.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Prices",
+          "v": "Discovery €16 - Junior €20 - Vertige €25 adult / €22 under 16 - Tactiq Game €10. Group rates from 10.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Access / Parking",
+          "v": "Free car park at Parc des Dronières (several areas). From Annecy or Saint-Julien-en-Genevois (~20 km) via the D 1201."
+        },
+        {
+          "k": "Visit duration",
+          "v": "Discovery ~1 h - Junior 1 h 30 - Vertige 2 h to 3 h"
+        },
+        {
+          "k": "Audience",
+          "v": "Families, children from 90 cm tall, teens, adults, groups, school groups."
+        },
+        {
+          "k": "Booking",
+          "v": "Recommended in high season via tactiqaventure.com or 04 50 32 91 85."
+        },
+        {
+          "k": "Equipment required",
+          "v": "Sports clothing, trainers, long hair tied back. Helmets and harnesses provided."
+        }
+      ],
+      "faq": [
+        {
+          "q": "From what age can you do Tactiq Aventure in Cruseilles?",
+          "a": "Tactiq Aventure is open from 90 cm in height (Discovery course, around 4-5 years old). The Junior course starts at 1.15 m and the Vertige course at 1.40 m, which corresponds to teenagers and adults."
+        },
+        {
+          "q": "How much do Tactiq Aventure courses cost in Cruseilles?",
+          "a": "2026 prices at Tactiq Aventure: €16 for the children's Discovery course, €20 for the Junior course, €25 for the adult Vertige course (€22 for under-16s) and €10 for the Tactiq Game (escape forest)."
+        },
+        {
+          "q": "When is Tactiq Aventure open?",
+          "a": "Tactiq Aventure is open from April to November 2026 according to a seasonal calendar: 1.30 p.m.-6.30 p.m. in April, Wednesdays, weekends and bank holidays until early July, then daily 10 a.m.-7 p.m. from 4 July to 30 August. Check tactiqaventure.com for the exact schedule."
+        },
+        {
+          "q": "Do you need to book at Tactiq Aventure?",
+          "a": "Booking is strongly advised at Tactiq Aventure, especially in high season (July-August) and at weekends, on tactiqaventure.com or by phone on 04 50 32 91 85."
+        },
+        {
+          "q": "Where is Tactiq Aventure?",
+          "a": "Tactiq Aventure is set in the heart of Parc des Dronières, route des Dronières, 74350 Cruseilles, halfway between Annecy and Saint-Julien-en-Genevois (~20 km from each)."
+        },
+        {
+          "q": "Is Tactiq Aventure accessible to groups?",
+          "a": "Yes. Tactiq Aventure offers dedicated rates and packages for groups of 10 or more (school groups, birthdays, corporate events) on booking."
+        },
+        {
+          "q": "What is the Tactiq Game?",
+          "a": "The Tactiq Game is an outdoor adventure game in the style of an \"escape forest\" at the heart of the Dronières forest, blending riddles and observation. It costs €10 per person, in addition to or independently of the tree-top courses."
+        }
+      ],
+      "schema_amenities": [
+        "Discovery course (from 90 cm)",
+        "Junior course (from 1.15 m)",
+        "Vertige course (from 1.40 m)",
+        "Tactiq Game (escape forest)",
+        "Continuous lifeline",
+        "Group rates (10+)",
+        "Free car park"
+      ]
     },
     "de": {
       "name": "Tactiq Aventure",
@@ -278,7 +439,148 @@
       "hero_alt": "Kletterwald Tactiq Aventure im Wald der Dronières in Cruseilles",
       "body": {
         "what_is": "<p><strong>Tactiq Aventure</strong> ist der Kletterwald im <strong>Parc des Dronières</strong> in Cruseilles, auf halbem Weg zwischen Annecy und Genf. In einem schönen Laubwald auf 785 m Höhe gelegen, bietet er drei abgestufte Parcours ab 90 cm Körpergröße und ein Waldabenteuerspiel namens <strong>Tactiq Game</strong>.</p><p>Alle drei Parcours sind mit durchgängigem Lebenslinien-System ausgestattet: Der <strong>Parcours Découverte</strong> (ab 90 cm, 16,00 €) richtet sich an Kinder ab 4-5 Jahren; der <strong>Parcours Junior</strong> (ab 1,15 m, 20,00 €) bringt mehr Höhe und Seilrutschen für 7- bis 12-Jährige; der <strong>Parcours Vertige</strong> (ab 1,40 m, 25,00 € Erwachsene / 22,00 € unter 16) bietet lange Seilrutschen, Sprünge ins Leere und luftige Passagen für Jugendliche und Erwachsene. <strong>Tactiq Game</strong> (10,00 €) ist ein Escape Forest mit Rätseln und Beobachtungsaufgaben, perfekt als Vorspiel oder Ergänzung.</p><p>Der Park ist vom <strong>4. April bis 1. November</strong> geöffnet, nach Saisonkalender: täglich 13:30-18:30 Uhr im April, mittwochs, an Wochenenden und Feiertagen 13:30-18:30 Uhr bis Anfang Juli, dann täglich 10:00-19:00 Uhr vom 4. Juli bis 30. August. Reservierung in der Hochsaison dringend empfohlen.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parcours aventure des Dronières",
+        "Accrobranche Cruseilles"
+      ],
+      "hero": {
+        "badge": "Kostenpflichtig - Reservierung empfohlen",
+        "lead": "Kletterwald mitten im Wald der Dronières in Cruseilles: drei abgestufte Parcours (Découverte ab 90 cm, Junior ab 1,15 m, Vertige ab 1,40 m), Seilrutschen, Affenbrücken und Tarzanseil. Saison von April bis November."
+      },
+      "facts": {
+        "type": "Kletterwald - Escape Forest",
+        "access": "Kostenpflichtig",
+        "commune": "Cruseilles",
+        "parking": "Kostenlos im Parc des Dronières",
+        "duration": "2 h bis 3 h je nach Parcours",
+        "best_season": "April bis November - Hochsaison Juli-August"
+      },
+      "activities": [
+        {
+          "title": "Den Parcours Découverte ausprobieren (ab 90 cm)",
+          "tag": "Familie",
+          "description": "Parcours für Kinder ab 4-5 Jahren, geringe Höhe, durchgehende Lebenslinie: ideal für die ersten Bewegungen in den Bäumen."
+        },
+        {
+          "title": "Spaß auf dem Parcours Junior",
+          "tag": null,
+          "description": "Mittelschwerer Parcours ab 1,15 m, mit Seilrutschen, Affenbrücken und anspruchsvolleren Elementen für 7- bis 12-Jährige."
+        },
+        {
+          "title": "Den Parcours Vertige meistern",
+          "tag": null,
+          "description": "Parcours für Erwachsene/Teens ab 1,40 m: lange Seilrutschen, Sprünge ins Leere und luftige Passagen für Adrenalinfans."
+        },
+        {
+          "title": "Das Tactiq Game spielen (Escape Forest)",
+          "tag": null,
+          "description": "Outdoor-Abenteuerspiel mit Rätseln und Beobachtungsaufgaben im Wald der Dronières, 10,00 € pro Person."
+        },
+        {
+          "title": "Einen Geburtstag organisieren",
+          "tag": null,
+          "description": "Geburtstagspakete mit Parcours + Tactiq Game auf Reservierung, ideal zum Feiern in natürlicher Umgebung."
+        },
+        {
+          "title": "Den Parc des Dronières genießen",
+          "tag": null,
+          "description": "Vor oder nach dem Kletterwald den Parc des Dronières kostenlos genießen (See, Tierpark, Spielplatz, schattige Wege)."
+        },
+        {
+          "title": "Im Centre nautique Bernard Pellarin baden",
+          "tag": "Sommer 2026",
+          "description": "Beheiztes Sommerbad mitten im Parc des Dronières, geöffnet von Mitte Mai bis Ende August - perfekter Abschluss des Tages."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Parc des Dronières, route des Dronières, 74350 Cruseilles"
+        },
+        {
+          "k": "Koordinaten",
+          "v": "46,040150° N - 6,122339° E"
+        },
+        {
+          "k": "Telefon",
+          "v": "04 50 32 91 85",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Offizielle Website",
+          "v": "tactiqaventure.com"
+        },
+        {
+          "k": "Öffnungszeiten",
+          "v": "Saison 2026: 4. - 19. April täglich 13:30-18:30 Uhr - 1. Mai - 3. Juli Mi/Wochenenden/Feiertage 13:30-18:30 Uhr - 4. Juli - 30. August täglich 10:00-19:00 Uhr - bis 1. November laut Kalender.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Preise",
+          "v": "Découverte 16,00 € - Junior 20,00 € - Vertige 25,00 € Erwachsene / 22,00 € unter 16 - Tactiq Game 10,00 €. Gruppentarife ab 10 Personen.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Zugang / Parkplatz",
+          "v": "Kostenloser Parkplatz des Parc des Dronières (mehrere Bereiche). Aus Annecy oder Saint-Julien-en-Genevois (~20 km) über die D 1201."
+        },
+        {
+          "k": "Besuchsdauer",
+          "v": "Découverte ~1 h - Junior 1 h 30 - Vertige 2 h bis 3 h"
+        },
+        {
+          "k": "Publikum",
+          "v": "Familien, Kinder ab 90 cm Körpergröße, Teens, Erwachsene, Gruppen, Schulklassen."
+        },
+        {
+          "k": "Reservierung",
+          "v": "In der Hochsaison empfohlen über tactiqaventure.com oder 04 50 32 91 85."
+        },
+        {
+          "k": "Benötigte Ausrüstung",
+          "v": "Sportkleidung, Turnschuhe, lange Haare zusammengebunden. Helme und Klettergurte werden gestellt."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Ab welchem Alter kann man Tactiq Aventure in Cruseilles machen?",
+          "a": "Tactiq Aventure ist ab 90 cm Körpergröße möglich (Parcours Découverte, ungefähr 4-5 Jahre). Der Parcours Junior beginnt ab 1,15 m und der Parcours Vertige ab 1,40 m, was Jugendlichen und Erwachsenen entspricht."
+        },
+        {
+          "q": "Was kosten die Parcours von Tactiq Aventure in Cruseilles?",
+          "a": "Preise 2026 bei Tactiq Aventure: 16,00 € für den Kinder-Parcours Découverte, 20,00 € für den Parcours Junior, 25,00 € für den Parcours Vertige Erwachsene (22,00 € unter 16) und 10,00 € für das Tactiq Game (Escape Forest)."
+        },
+        {
+          "q": "Wann hat Tactiq Aventure geöffnet?",
+          "a": "Tactiq Aventure ist von April bis November 2026 nach Saisonkalender geöffnet: 13:30-18:30 Uhr im April, mittwochs, an Wochenenden und Feiertagen bis Anfang Juli, dann täglich 10:00-19:00 Uhr vom 4. Juli bis 30. August. Genaue Termine auf tactiqaventure.com."
+        },
+        {
+          "q": "Muss man bei Tactiq Aventure reservieren?",
+          "a": "Eine Reservierung ist bei Tactiq Aventure dringend empfohlen, vor allem in der Hochsaison (Juli-August) und an Wochenenden, über tactiqaventure.com oder telefonisch unter 04 50 32 91 85."
+        },
+        {
+          "q": "Wo befindet sich Tactiq Aventure?",
+          "a": "Tactiq Aventure liegt mitten im Parc des Dronières, route des Dronières, 74350 Cruseilles, auf halber Strecke zwischen Annecy und Saint-Julien-en-Genevois (~20 km von beiden)."
+        },
+        {
+          "q": "Ist Tactiq Aventure für Gruppen zugänglich?",
+          "a": "Ja. Tactiq Aventure bietet eigene Tarife und Pakete für Gruppen ab 10 Personen (Schulklassen, Geburtstage, Seminare) auf Reservierung."
+        },
+        {
+          "q": "Was ist das Tactiq Game?",
+          "a": "Das Tactiq Game ist ein Outdoor-Abenteuerspiel im Stil eines Escape Forest mitten im Wald der Dronières, mit Rätseln und Beobachtungsaufgaben. Es kostet 10,00 € pro Person, in Ergänzung oder unabhängig von den Kletterparcours."
+        }
+      ],
+      "schema_amenities": [
+        "Parcours Découverte (ab 90 cm)",
+        "Parcours Junior (ab 1,15 m)",
+        "Parcours Vertige (ab 1,40 m)",
+        "Tactiq Game (Escape Forest)",
+        "Durchgehende Lebenslinie",
+        "Gruppentarife (10+)",
+        "Kostenloser Parkplatz"
+      ]
     },
     "it": {
       "name": "Tactiq Aventure",
@@ -287,7 +589,148 @@
       "hero_alt": "Parco avventura Tactiq Aventure nel bosco delle Dronières a Cruseilles",
       "body": {
         "what_is": "<p><strong>Tactiq Aventure</strong> è il parco avventura del <strong>Parc des Dronières</strong>, a Cruseilles, a metà strada tra Annecy e Ginevra. Inserito in un bel bosco di latifoglie a 785 m di altitudine, propone tre percorsi su misura a partire da 90 cm di statura, oltre a un gioco d'avventura in foresta chiamato <strong>Tactiq Game</strong>.</p><p>I tre percorsi sono dotati di linea vita continua: il <strong>percorso Découverte</strong> (da 90 cm, 16,00 €) è dedicato ai bambini a partire dai 4-5 anni; il <strong>percorso Junior</strong> (da 1,15 m, 20,00 €) aggiunge altezza e teleferiche per i 7-12 anni; il <strong>percorso Vertige</strong> (da 1,40 m, 25,00 € adulti / 22,00 € under 16) propone lunghe teleferiche, salti nel vuoto e passaggi aerei per ragazzi e adulti. Il <strong>Tactiq Game</strong> (10,00 €) è un escape forest che mescola enigmi e osservazione, ideale come antipasto o complemento.</p><p>Il parco è aperto dal <strong>4 aprile al 1° novembre</strong>, con calendario stagionale: tutti i giorni 13:30-18:30 in aprile, mercoledì, weekend e festivi 13:30-18:30 fino a inizio luglio, poi tutti i giorni 10:00-19:00 dal 4 luglio al 30 agosto. Prenotazione caldamente consigliata in alta stagione.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parcours aventure des Dronières",
+        "Accrobranche Cruseilles"
+      ],
+      "hero": {
+        "badge": "A pagamento - Prenotazione consigliata",
+        "lead": "Parco avventura nel cuore del bosco delle Dronières a Cruseilles: tre percorsi su misura (Découverte da 90 cm, Junior da 1,15 m, Vertige da 1,40 m), teleferiche, ponti tibetani e liana di Tarzan. Stagione da aprile a novembre."
+      },
+      "facts": {
+        "type": "Parco avventura - Escape forest",
+        "access": "A pagamento",
+        "commune": "Cruseilles",
+        "parking": "Gratuito al Parc des Dronières",
+        "duration": "2 h-3 h a seconda del percorso",
+        "best_season": "Aprile-novembre - alta stagione luglio-agosto"
+      },
+      "activities": [
+        {
+          "title": "Provare il percorso Découverte (da 90 cm)",
+          "tag": "Famiglia",
+          "description": "Percorso dedicato ai bambini a partire dai 4-5 anni, a bassa quota, con linea vita continua: ideale per la prima volta sugli alberi."
+        },
+        {
+          "title": "Divertirsi sul percorso Junior",
+          "tag": null,
+          "description": "Percorso intermedio da 1,15 m, con teleferiche, ponti tibetani e prove più impegnative per i 7-12 anni."
+        },
+        {
+          "title": "Affrontare il percorso Vertige",
+          "tag": null,
+          "description": "Percorso per adulti/ragazzi da 1,40 m: lunghe teleferiche, salti nel vuoto e passaggi aerei per gli amanti del brivido."
+        },
+        {
+          "title": "Giocare al Tactiq Game (escape forest)",
+          "tag": null,
+          "description": "Gioco di avventura all'aperto che combina enigmi e osservazione nel bosco delle Dronières, a 10,00 € a persona."
+        },
+        {
+          "title": "Organizzare un compleanno",
+          "tag": null,
+          "description": "Pacchetti compleanno con percorso + Tactiq Game su prenotazione, ideali per festeggiare in un contesto naturale."
+        },
+        {
+          "title": "Approfittare del Parc des Dronières",
+          "tag": null,
+          "description": "Prima o dopo il parco avventura, godere gratuitamente del Parc des Dronières (lago, parco faunistico, area giochi, sentieri ombreggiati)."
+        },
+        {
+          "title": "Fare il bagno al Centre nautique Bernard Pellarin",
+          "tag": "Estate 2026",
+          "description": "Piscina estiva riscaldata nel cuore del Parc des Dronières, aperta da metà maggio a fine agosto - perfetta per chiudere la giornata."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Indirizzo",
+          "v": "Parc des Dronières, route des Dronières, 74350 Cruseilles"
+        },
+        {
+          "k": "Coordinate",
+          "v": "46,040150° N - 6,122339° E"
+        },
+        {
+          "k": "Telefono",
+          "v": "04 50 32 91 85",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Sito ufficiale",
+          "v": "tactiqaventure.com"
+        },
+        {
+          "k": "Orari",
+          "v": "Stagione 2026: 4 - 19 aprile tutti i giorni 13:30-18:30 - 1 maggio - 3 luglio mer/weekend/festivi 13:30-18:30 - 4 luglio - 30 agosto tutti i giorni 10:00-19:00 - fino al 1° novembre secondo calendario.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tariffe",
+          "v": "Découverte 16,00 € - Junior 20,00 € - Vertige 25,00 € adulti / 22,00 € under 16 - Tactiq Game 10,00 €. Tariffe gruppi da 10 persone.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Accesso / Parcheggio",
+          "v": "Parcheggio gratuito del Parc des Dronières (più aree). Da Annecy o Saint-Julien-en-Genevois (~20 km) tramite la D 1201."
+        },
+        {
+          "k": "Durata della visita",
+          "v": "Découverte ~1 h - Junior 1 h 30 - Vertige 2 h-3 h"
+        },
+        {
+          "k": "Pubblico",
+          "v": "Famiglie, bambini da 90 cm di statura, ragazzi, adulti, gruppi, scolaresche."
+        },
+        {
+          "k": "Prenotazione",
+          "v": "Consigliata in alta stagione tramite tactiqaventure.com o al 04 50 32 91 85."
+        },
+        {
+          "k": "Attrezzatura necessaria",
+          "v": "Abbigliamento sportivo, scarpe da ginnastica, capelli lunghi legati. Caschi e imbracature forniti."
+        }
+      ],
+      "faq": [
+        {
+          "q": "A che età si può fare Tactiq Aventure a Cruseilles?",
+          "a": "Tactiq Aventure si pratica a partire da 90 cm di statura (percorso Découverte, intorno ai 4-5 anni). Il percorso Junior parte da 1,15 m e il percorso Vertige da 1,40 m, corrispondenti ad adolescenti e adulti."
+        },
+        {
+          "q": "Quanto costano i percorsi di Tactiq Aventure a Cruseilles?",
+          "a": "Tariffe 2026 di Tactiq Aventure: 16,00 € per il percorso Découverte bambini, 20,00 € per il percorso Junior, 25,00 € per il percorso Vertige adulti (22,00 € per gli under 16) e 10,00 € per il Tactiq Game (escape forest)."
+        },
+        {
+          "q": "Quando è aperto Tactiq Aventure?",
+          "a": "Tactiq Aventure è aperto da aprile a novembre 2026 secondo un calendario stagionale: 13:30-18:30 in aprile, mercoledì, weekend e festivi fino all'inizio di luglio, poi tutti i giorni 10:00-19:00 dal 4 luglio al 30 agosto. Calendario preciso su tactiqaventure.com."
+        },
+        {
+          "q": "Bisogna prenotare a Tactiq Aventure?",
+          "a": "La prenotazione è caldamente consigliata a Tactiq Aventure, soprattutto in alta stagione (luglio-agosto) e nei weekend, tramite tactiqaventure.com o al telefono al 04 50 32 91 85."
+        },
+        {
+          "q": "Dove si trova Tactiq Aventure?",
+          "a": "Tactiq Aventure si trova nel cuore del Parc des Dronières, route des Dronières, 74350 Cruseilles, a metà strada tra Annecy e Saint-Julien-en-Genevois (~20 km da ciascuno)."
+        },
+        {
+          "q": "Tactiq Aventure è accessibile ai gruppi?",
+          "a": "Sì. Tactiq Aventure propone tariffe e pacchetti dedicati ai gruppi di 10 persone o più (scolaresche, compleanni, seminari) su prenotazione."
+        },
+        {
+          "q": "Che cos'è il Tactiq Game?",
+          "a": "Il Tactiq Game è un gioco di avventura all'aperto in stile « escape forest » nel cuore del bosco delle Dronières, che mescola enigmi e osservazione. Calcolate 10,00 € a persona, in aggiunta o indipendentemente dai percorsi avventura."
+        }
+      ],
+      "schema_amenities": [
+        "Percorso Découverte (da 90 cm)",
+        "Percorso Junior (da 1,15 m)",
+        "Percorso Vertige (da 1,40 m)",
+        "Tactiq Game (escape forest)",
+        "Linea vita continua",
+        "Tariffe gruppi (10+)",
+        "Parcheggio gratuito"
+      ]
     },
     "es": {
       "name": "Tactiq Aventure",
@@ -296,7 +739,148 @@
       "hero_alt": "Parque de aventura Tactiq Aventure en el bosque de Dronières en Cruseilles",
       "body": {
         "what_is": "<p><strong>Tactiq Aventure</strong> es el parque de aventura en los árboles del <strong>Parc des Dronières</strong>, en Cruseilles, a medio camino entre Annecy y Ginebra. Instalado en un hermoso bosque de frondosas a 785 m de altitud, ofrece tres recorridos escalonados desde 90 cm de estatura, junto a un juego de aventura en el bosque llamado <strong>Tactiq Game</strong>.</p><p>Los tres recorridos cuentan con línea de vida continua: el <strong>recorrido Découverte</strong> (desde 90 cm, 16,00 €) está dedicado a niños desde los 4-5 años; el <strong>recorrido Junior</strong> (desde 1,15 m, 20,00 €) añade altura y tirolinas para los 7-12 años; el <strong>recorrido Vertige</strong> (desde 1,40 m, 25,00 € adulto / 22,00 € menores de 16) ofrece tirolinas largas, saltos al vacío y pasajes aéreos para adolescentes y adultos. El <strong>Tactiq Game</strong> (10,00 €) es un escape forest que combina enigmas y observación, ideal como entrante o complemento.</p><p>El parque abre del <strong>4 de abril al 1 de noviembre</strong>, con un calendario estacional: todos los días de 13:30 a 18:30 en abril; miércoles, fines de semana y festivos de 13:30 a 18:30 hasta principios de julio; después, todos los días de 10:00 a 19:00 del 4 de julio al 30 de agosto. Reserva muy recomendable en temporada alta.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parcours aventure des Dronières",
+        "Accrobranche Cruseilles"
+      ],
+      "hero": {
+        "badge": "De pago - Reserva recomendada",
+        "lead": "Parque de aventura en el corazón del bosque de Dronières en Cruseilles: tres recorridos escalonados (Découverte desde 90 cm, Junior desde 1,15 m, Vertige desde 1,40 m), tirolinas, puentes de monos y liana de Tarzán. Temporada de abril a noviembre."
+      },
+      "facts": {
+        "type": "Parque de aventura - Escape forest",
+        "access": "De pago",
+        "commune": "Cruseilles",
+        "parking": "Gratuito en el Parc des Dronières",
+        "duration": "De 2 h a 3 h según el recorrido",
+        "best_season": "De abril a noviembre - temporada alta julio-agosto"
+      },
+      "activities": [
+        {
+          "title": "Probar el recorrido Découverte (desde 90 cm)",
+          "tag": "Familia",
+          "description": "Recorrido dedicado a niños desde los 4-5 años, a poca altura, con línea de vida continua: ideal para la primera vez en los árboles."
+        },
+        {
+          "title": "Divertirse en el recorrido Junior",
+          "tag": null,
+          "description": "Recorrido intermedio desde 1,15 m, con tirolinas, puentes de monos y talleres más exigentes para los 7-12 años."
+        },
+        {
+          "title": "Afrontar el recorrido Vertige",
+          "tag": null,
+          "description": "Recorrido para adultos/adolescentes desde 1,40 m: grandes tirolinas, saltos al vacío y pasajes aéreos para amantes de las sensaciones."
+        },
+        {
+          "title": "Jugar al Tactiq Game (escape forest)",
+          "tag": null,
+          "description": "Juego de aventura al aire libre que combina enigmas y observación en el bosque de Dronières, a 10,00 € por persona."
+        },
+        {
+          "title": "Organizar un cumpleaños",
+          "tag": null,
+          "description": "Fórmulas de cumpleaños con recorrido + Tactiq Game con reserva, ideales para celebrar en un entorno natural."
+        },
+        {
+          "title": "Disfrutar del Parc des Dronières",
+          "tag": null,
+          "description": "Antes o después del parque de aventura, disfrutar gratuitamente del Parc des Dronières (lago, parque de animales, zona de juegos, senderos sombreados)."
+        },
+        {
+          "title": "Bañarse en el Centre nautique Bernard Pellarin",
+          "tag": "Verano 2026",
+          "description": "Piscina de verano climatizada en el corazón del Parc des Dronières, abierta de mediados de mayo a finales de agosto: perfecta para cerrar el día."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Dirección",
+          "v": "Parc des Dronières, route des Dronières, 74350 Cruseilles"
+        },
+        {
+          "k": "Coordenadas",
+          "v": "46,040150° N - 6,122339° E"
+        },
+        {
+          "k": "Teléfono",
+          "v": "04 50 32 91 85",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Web oficial",
+          "v": "tactiqaventure.com"
+        },
+        {
+          "k": "Horarios",
+          "v": "Temporada 2026: 4 - 19 de abril todos los días 13:30-18:30 - 1 de mayo - 3 de julio mié/fines de semana/festivos 13:30-18:30 - 4 de julio - 30 de agosto todos los días 10:00-19:00 - hasta el 1 de noviembre según calendario.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifas",
+          "v": "Découverte 16,00 € - Junior 20,00 € - Vertige 25,00 € adulto / 22,00 € menores de 16 - Tactiq Game 10,00 €. Tarifas para grupos a partir de 10.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Acceso / Aparcamiento",
+          "v": "Aparcamiento gratuito del Parc des Dronières (varias zonas). Desde Annecy o Saint-Julien-en-Genevois (~20 km) por la D 1201."
+        },
+        {
+          "k": "Duración de la visita",
+          "v": "Découverte ~1 h - Junior 1 h 30 - Vertige de 2 h a 3 h"
+        },
+        {
+          "k": "Público",
+          "v": "Familias, niños desde 90 cm de estatura, adolescentes, adultos, grupos, escolares."
+        },
+        {
+          "k": "Reserva",
+          "v": "Recomendada en temporada alta a través de tactiqaventure.com o 04 50 32 91 85."
+        },
+        {
+          "k": "Equipamiento necesario",
+          "v": "Ropa deportiva, zapatillas, cabello largo recogido. Cascos y arneses proporcionados."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿A qué edad se puede hacer Tactiq Aventure en Cruseilles?",
+          "a": "Tactiq Aventure se practica desde 90 cm de estatura (recorrido Découverte, alrededor de 4-5 años). El recorrido Junior empieza a 1,15 m y el recorrido Vertige a 1,40 m, lo que corresponde a adolescentes y adultos."
+        },
+        {
+          "q": "¿Cuánto cuestan los recorridos de Tactiq Aventure en Cruseilles?",
+          "a": "Tarifas 2026 en Tactiq Aventure: 16,00 € el recorrido Découverte para niños, 20,00 € el recorrido Junior, 25,00 € el recorrido Vertige adulto (22,00 € para menores de 16) y 10,00 € el Tactiq Game (escape forest)."
+        },
+        {
+          "q": "¿Cuándo está abierto Tactiq Aventure?",
+          "a": "Tactiq Aventure abre de abril a noviembre de 2026 según un calendario estacional: 13:30-18:30 en abril, miércoles, fines de semana y festivos hasta principios de julio, después todos los días 10:00-19:00 del 4 de julio al 30 de agosto. Consulte tactiqaventure.com para el calendario preciso."
+        },
+        {
+          "q": "¿Hay que reservar en Tactiq Aventure?",
+          "a": "La reserva es muy recomendable en Tactiq Aventure, sobre todo en temporada alta (julio-agosto) y los fines de semana, en tactiqaventure.com o por teléfono al 04 50 32 91 85."
+        },
+        {
+          "q": "¿Dónde está Tactiq Aventure?",
+          "a": "Tactiq Aventure se encuentra en el corazón del Parc des Dronières, route des Dronières, 74350 Cruseilles, a medio camino entre Annecy y Saint-Julien-en-Genevois (~20 km de cada uno)."
+        },
+        {
+          "q": "¿Es accesible Tactiq Aventure a grupos?",
+          "a": "Sí. Tactiq Aventure propone tarifas y fórmulas dedicadas a grupos de 10 personas o más (escolares, cumpleaños, seminarios) con reserva."
+        },
+        {
+          "q": "¿Qué es el Tactiq Game?",
+          "a": "El Tactiq Game es un juego de aventura al aire libre estilo « escape forest » en el corazón del bosque de Dronières, que combina enigmas y observación. Calcule 10,00 € por persona, como complemento o independientemente de los recorridos de aventura."
+        }
+      ],
+      "schema_amenities": [
+        "Recorrido Découverte (desde 90 cm)",
+        "Recorrido Junior (desde 1,15 m)",
+        "Recorrido Vertige (desde 1,40 m)",
+        "Tactiq Game (escape forest)",
+        "Línea de vida continua",
+        "Tarifas para grupos (10+)",
+        "Aparcamiento gratuito"
+      ]
     },
     "nl": {
       "name": "Tactiq Aventure",
@@ -305,7 +889,148 @@
       "hero_alt": "Klimpark Tactiq Aventure in het bos van Dronières in Cruseilles",
       "body": {
         "what_is": "<p><strong>Tactiq Aventure</strong> is het klimpark in het <strong>Parc des Dronières</strong> in Cruseilles, halfweg tussen Annecy en Genève. Gelegen in een fraai loofbos op 785 m hoogte biedt het drie gelaagde parcoursen vanaf 90 cm lengte, aangevuld met een avontuurspel in het bos: het <strong>Tactiq Game</strong>.</p><p>De drie parcoursen gebruiken een doorlopend lifeline-systeem: het <strong>parcours Découverte</strong> (vanaf 90 cm, € 16,00) is bedoeld voor kinderen vanaf 4-5 jaar; het <strong>parcours Junior</strong> (vanaf 1,15 m, € 20,00) voegt hoogte en tokkelbanen toe voor 7- tot 12-jarigen; het <strong>parcours Vertige</strong> (vanaf 1,40 m, € 25,00 volwassenen / € 22,00 onder 16) biedt lange tokkelbanen, sprongen in het luchtledige en luchtige passages voor tieners en volwassenen. Het <strong>Tactiq Game</strong> (€ 10,00) is een escape forest met raadsels en observatie, perfect als opwarmer of aanvulling.</p><p>Het park is open van <strong>4 april tot 1 november</strong>, volgens seizoensagenda: dagelijks 13:30-18:30 in april; woensdag, weekend en feestdagen 13:30-18:30 tot begin juli; dan dagelijks 10:00-19:00 van 4 juli tot 30 augustus. Reservatie in het hoogseizoen sterk aanbevolen.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parcours aventure des Dronières",
+        "Accrobranche Cruseilles"
+      ],
+      "hero": {
+        "badge": "Betalend - Reservering aanbevolen",
+        "lead": "Klimpark in het hart van het bos van Dronières in Cruseilles: drie gelaagde parcoursen (Découverte vanaf 90 cm, Junior vanaf 1,15 m, Vertige vanaf 1,40 m), tokkelbanen, apenbruggen en Tarzanliaan. Seizoen van april tot november."
+      },
+      "facts": {
+        "type": "Klimpark - Escape forest",
+        "access": "Betalend",
+        "commune": "Cruseilles",
+        "parking": "Gratis bij Parc des Dronières",
+        "duration": "2 u tot 3 u afhankelijk van het parcours",
+        "best_season": "April tot november - hoogseizoen juli-augustus"
+      },
+      "activities": [
+        {
+          "title": "Het parcours Découverte proberen (vanaf 90 cm)",
+          "tag": "Gezin",
+          "description": "Parcours voor kinderen vanaf 4-5 jaar, op lage hoogte, met doorlopende lifeline: ideaal voor een eerste keer in de bomen."
+        },
+        {
+          "title": "Plezier maken op het parcours Junior",
+          "tag": null,
+          "description": "Tussenparcours vanaf 1,15 m, met tokkelbanen, apenbruggen en meer uitdagende elementen voor 7- tot 12-jarigen."
+        },
+        {
+          "title": "Het parcours Vertige aandurven",
+          "tag": null,
+          "description": "Parcours voor volwassenen/tieners vanaf 1,40 m: lange tokkelbanen, sprongen in het luchtledige en luchtige passages voor sensatiezoekers."
+        },
+        {
+          "title": "Het Tactiq Game spelen (escape forest)",
+          "tag": null,
+          "description": "Outdoor avonturenspel met raadsels en observatie in het bos van Dronières, € 10,00 per persoon."
+        },
+        {
+          "title": "Een verjaardag organiseren",
+          "tag": null,
+          "description": "Verjaardagsformules met parcours + Tactiq Game op reservering, ideaal om te vieren in een natuurlijke setting."
+        },
+        {
+          "title": "Genieten van Parc des Dronières",
+          "tag": null,
+          "description": "Vóór of na het klimpark gratis genieten van Parc des Dronières (meer, dierenpark, speelplek, schaduwrijke paden)."
+        },
+        {
+          "title": "Zwemmen in het Centre nautique Bernard Pellarin",
+          "tag": "Zomer 2026",
+          "description": "Verwarmd zomerbad in het hart van Parc des Dronières, open van half mei tot eind augustus - perfect om de dag af te sluiten."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adres",
+          "v": "Parc des Dronières, route des Dronières, 74350 Cruseilles"
+        },
+        {
+          "k": "Coördinaten",
+          "v": "46,040150° N - 6,122339° O"
+        },
+        {
+          "k": "Telefoon",
+          "v": "04 50 32 91 85",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Officiële website",
+          "v": "tactiqaventure.com"
+        },
+        {
+          "k": "Openingstijden",
+          "v": "Seizoen 2026: 4 - 19 april dagelijks 13:30-18:30 - 1 mei - 3 juli wo/weekend/feestdagen 13:30-18:30 - 4 juli - 30 augustus dagelijks 10:00-19:00 - tot 1 november volgens agenda.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarieven",
+          "v": "Découverte € 16,00 - Junior € 20,00 - Vertige € 25,00 volwassenen / € 22,00 < 16 jaar - Tactiq Game € 10,00. Groepstarieven vanaf 10 personen.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Toegang / Parking",
+          "v": "Gratis parking van Parc des Dronières (meerdere zones). Vanuit Annecy of Saint-Julien-en-Genevois (~20 km) via de D 1201."
+        },
+        {
+          "k": "Bezoekduur",
+          "v": "Découverte ~1 u - Junior 1 u 30 - Vertige 2 u tot 3 u"
+        },
+        {
+          "k": "Publiek",
+          "v": "Gezinnen, kinderen vanaf 90 cm, tieners, volwassenen, groepen, schoolgroepen."
+        },
+        {
+          "k": "Reservering",
+          "v": "Aanbevolen in het hoogseizoen via tactiqaventure.com of 04 50 32 91 85."
+        },
+        {
+          "k": "Vereiste uitrusting",
+          "v": "Sportkleding, sportschoenen, lang haar samengebonden. Helmen en harnassen worden voorzien."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Vanaf welke leeftijd kan men Tactiq Aventure in Cruseilles doen?",
+          "a": "Tactiq Aventure is mogelijk vanaf 90 cm lengte (parcours Découverte, rond 4-5 jaar). Het parcours Junior begint bij 1,15 m en het parcours Vertige bij 1,40 m, wat overeenstemt met tieners en volwassenen."
+        },
+        {
+          "q": "Wat kosten de parcoursen van Tactiq Aventure in Cruseilles?",
+          "a": "Tarieven 2026 bij Tactiq Aventure: € 16,00 voor het kinderparcours Découverte, € 20,00 voor het parcours Junior, € 25,00 voor het parcours Vertige volwassenen (€ 22,00 voor onder 16) en € 10,00 voor het Tactiq Game (escape forest)."
+        },
+        {
+          "q": "Wanneer is Tactiq Aventure open?",
+          "a": "Tactiq Aventure is open van april tot november 2026 volgens een seizoensagenda: 13:30-18:30 in april, woensdag, weekend en feestdagen tot begin juli, dan dagelijks 10:00-19:00 van 4 juli tot 30 augustus. Raadpleeg tactiqaventure.com voor de exacte agenda."
+        },
+        {
+          "q": "Moet men bij Tactiq Aventure reserveren?",
+          "a": "Reservering is sterk aanbevolen bij Tactiq Aventure, vooral in het hoogseizoen (juli-augustus) en in het weekend, via tactiqaventure.com of telefonisch op 04 50 32 91 85."
+        },
+        {
+          "q": "Waar bevindt Tactiq Aventure zich?",
+          "a": "Tactiq Aventure ligt in het hart van Parc des Dronières, route des Dronières, 74350 Cruseilles, halfweg tussen Annecy en Saint-Julien-en-Genevois (~20 km van elk)."
+        },
+        {
+          "q": "Is Tactiq Aventure toegankelijk voor groepen?",
+          "a": "Ja. Tactiq Aventure biedt eigen tarieven en formules voor groepen vanaf 10 personen (schoolgroepen, verjaardagen, seminars) op reservering."
+        },
+        {
+          "q": "Wat is het Tactiq Game?",
+          "a": "Het Tactiq Game is een outdoor avonturenspel in „escape forest\"-stijl in het hart van het bos van Dronières, met raadsels en observatie. Reken op € 10,00 per persoon, in aanvulling op of los van de klimparcoursen."
+        }
+      ],
+      "schema_amenities": [
+        "Parcours Découverte (vanaf 90 cm)",
+        "Parcours Junior (vanaf 1,15 m)",
+        "Parcours Vertige (vanaf 1,40 m)",
+        "Tactiq Game (escape forest)",
+        "Doorlopende lifeline",
+        "Groepstarieven (10+)",
+        "Gratis parking"
+      ]
     }
   },
   "status": "published"

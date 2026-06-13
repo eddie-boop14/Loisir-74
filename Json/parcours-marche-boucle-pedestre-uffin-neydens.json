@@ -88,6 +88,26 @@
       "date": "2026-06-13",
       "by": "scripts/ingest_translations.py",
       "note": "Translation ingest [nl]: 5 field(s) updated."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for de from agent_M_de_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for es from agent_M_es_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for it from agent_M_it_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for nl from agent_M_nl_secondary.json."
     }
   ],
   "i18n": {
@@ -239,7 +259,139 @@
       "hero_alt": "Uffin walking loop at Neydens, panorama over the Geneva plain and the Saleve",
       "body": {
         "what_is": "<p>The <strong>Uffin Walking Loop</strong> (Boucle d'Uffin) is a 4.4 km family stroll laid out entirely within the commune of Neydens, in the French Genevois, 15 minutes from Saint-Julien-en-Genevois and 20 minutes from Annecy. Waymarked in green and rated <strong>very easy</strong> by the Monts du Genevois Tourist Office, it suits both beginner walkers and families, with a modest climb of 67 metres and a walking time of about 1 hour 30.</p><p>The route leaves the village centre and crosses the <strong>countryside of the Neydens plateau</strong> at the foot of the Saleve, through a landscape typical of the French Genevois: hedgerows, orchards, hay meadows and woodland edges. It offers <strong>open viewpoints</strong> over the Geneva plain, the Jura range and, on clear days, the Mont Blanc massif.</p><p>Open year-round, it suits all-terrain strollers and dogs on leads — a gentle alternative to the more demanding hikes of the nearby Saleve. With the Vitam water park, the Saleve cable car and the A40 motorway nearby, it is also an easy warm-up to discover the Genevois with the family.</p>"
-      }
+      },
+      "name_alternates": [
+        "Boucle d'Uffin",
+        "Boucle d'Huffin"
+      ],
+      "hero": {
+        "badge": "Free entry · Year-round",
+        "lead": "Very easy 4.4 km country loop starting from the village centre of Neydens, in the French Genevois. Waymarked in green, 1 h 30 of walking, open views over the Geneva plain between the Jura and the Saleve."
+      },
+      "facts": {
+        "type": "Trail · Walking loop",
+        "access": "Open · Free",
+        "commune": "Neydens",
+        "duration": "1 h 30",
+        "best_season": "Spring · summer · autumn"
+      },
+      "activities": [
+        {
+          "title": "Walk the loop with the family",
+          "tag": "Family",
+          "description": "4.4 km virtually flat, with no technical difficulty — perfect for a 1 h 30 outing with young children or beginner walkers."
+        },
+        {
+          "title": "Enjoy the Jura-Saleve panorama",
+          "tag": null,
+          "description": "Open viewpoints over the Geneva plain nestled between the Jura and the Saleve; on clear days, a sweeping view of the Mont Blanc range."
+        },
+        {
+          "title": "Discover the Genevois countryside",
+          "tag": null,
+          "description": "Country lanes, woodland edges and the hedgerows typical of Neydens's farming plateau."
+        },
+        {
+          "title": "Walk with your dog",
+          "tag": null,
+          "description": "The route accepts dogs on leads, with no risky livestock over most of the trail."
+        },
+        {
+          "title": "Walk with an all-terrain stroller",
+          "tag": null,
+          "description": "Near-flat profile and wide paths suit all-terrain strollers depending on the weather."
+        },
+        {
+          "title": "Combine with a visit to Vitam or the Saleve",
+          "tag": null,
+          "description": "5 min by car from the Vitam water park (Neydens) and 10 min from the Saleve cable car — perfect to fill out a family day."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Address",
+          "v": "Start: village centre of Neydens, town hall car park, 74160 Neydens"
+        },
+        {
+          "k": "Coordinates",
+          "v": "46.121° N — 6.1046° E"
+        },
+        {
+          "k": "Distance",
+          "v": "4.4 km · loop"
+        },
+        {
+          "k": "Elevation",
+          "v": "+67 m / −68 m"
+        },
+        {
+          "k": "Visit duration",
+          "v": "1 h 30"
+        },
+        {
+          "k": "Difficulty",
+          "v": "Very easy · waymarked in green"
+        },
+        {
+          "k": "Opening hours",
+          "v": "Open access year-round, unsupervised trail.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Prices",
+          "v": "Free",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Access / Parking",
+          "v": "Free parking in Neydens village centre (town hall). 5 min by car from A40 exit 13 Saint-Julien-en-Genevois."
+        },
+        {
+          "k": "Pets",
+          "v": "Allowed on lead"
+        },
+        {
+          "k": "Required gear",
+          "v": "Walking shoes, water, sun protection in summer"
+        },
+        {
+          "k": "Audience",
+          "v": "Families, beginner walkers, all-terrain stroller"
+        }
+      ],
+      "faq": [
+        {
+          "q": "How long is the Uffin Walking Loop at Neydens?",
+          "a": "The Uffin Walking Loop is 4.4 km as a full loop, with 67 m of positive elevation. The trail, waymarked in green, takes about 1 h 30 to walk."
+        },
+        {
+          "q": "Is the Uffin Loop stroller-accessible?",
+          "a": "Yes in most conditions. The Uffin Walking Loop is very easy, virtually flat and follows wide paths: it works well with an all-terrain stroller outside muddy periods."
+        },
+        {
+          "q": "Where does the Uffin Walking Loop start?",
+          "a": "The Uffin Loop starts in the village centre of Neydens (town hall car park). The route is waymarked in green and can be walked in either direction."
+        },
+        {
+          "q": "Is the Uffin Walking Loop paid?",
+          "a": "No. The Uffin Walking Loop is freely accessible year-round, like all the rural trails of the commune of Neydens."
+        },
+        {
+          "q": "Can I walk the Uffin Loop with a dog?",
+          "a": "Yes, the Uffin Loop welcomes dogs on lead. Please respect the crops and any pastures crossed along the way."
+        },
+        {
+          "q": "What is the best time of year for the Uffin Loop?",
+          "a": "The Uffin Walking Loop is best from spring to autumn. In winter it remains passable outside snowy spells, but the Jura-Saleve panorama is most spectacular between April and October."
+        }
+      ],
+      "schema_amenities": [
+        "Waymarked trail",
+        "Free entry",
+        "Parking at start",
+        "All-terrain stroller accessible",
+        "Dogs on lead allowed"
+      ]
     },
     "de": {
       "name": "Wanderweg: Boucle d'Uffin",
@@ -248,7 +400,139 @@
       "hero_alt": "Boucle pédestre d'Uffin in Neydens, Panorama über die Genfer Ebene und den Salève",
       "body": {
         "what_is": "<p>Die <strong>Boucle pédestre d'Uffin</strong> (Uffin-Schleife) ist ein 4,4 km langer Familienspaziergang, der vollständig auf dem Gebiet der Gemeinde Neydens im französischen Genfer Becken verläuft, 15 Minuten von Saint-Julien-en-Genevois und 20 Minuten von Annecy entfernt. Grün markiert und vom Office de Tourisme des Monts du Genevois als <strong>sehr leicht</strong> eingestuft, eignet sich der Weg für Einsteiger und Familien — mit einem geringen Höhenunterschied von 67 m und einer Gehzeit von rund 1 Std. 30.</p><p>Der Weg verlässt den Ortskern und durchquert die <strong>Landschaft des Plateaus von Neydens</strong> am Fuß des Salève, eine für das französische Genfer Becken typische Kulisse: Hecken, Obstgärten, Heuwiesen und Waldränder. Er bietet <strong>weite Ausblicke</strong> auf die Genfer Ebene, das Juramassiv und bei klarem Wetter auf das Mont-Blanc-Massiv.</p><p>Ganzjährig zugänglich, eignet er sich für Geländekinderwagen und Hunde an der Leine — eine sanfte Alternative zu den anspruchsvolleren Wanderungen am nahen Salève. Mit dem Wasserpark Vitam, der Seilbahn auf den Salève und der Autobahn A40 in der Nähe ist er auch ein gutes Aufwärmen für eine Familienentdeckung des Genevois.</p>"
-      }
+      },
+      "name_alternates": [
+        "Boucle d'Uffin",
+        "Boucle d'Huffin"
+      ],
+      "hero": {
+        "badge": "Freier Zugang · Ganzjährig",
+        "lead": "Sehr leichte 4,4 km-Rundwanderung durch das Land ab dem Ortskern von Neydens, im französischen Genfer Becken. Grün markiert, 1 Std. 30 Gehzeit, weite Ausblicke über die Genfer Ebene zwischen Jura und Salève."
+      },
+      "facts": {
+        "type": "Wanderweg · Rundwanderung",
+        "access": "Frei · Kostenlos",
+        "commune": "Neydens",
+        "duration": "1 Std. 30",
+        "best_season": "Frühling · Sommer · Herbst"
+      },
+      "activities": [
+        {
+          "title": "Die Schleife mit der Familie gehen",
+          "tag": "Familie",
+          "description": "4,4 km nahezu flach, ohne technische Schwierigkeit, ideal für einen Ausflug von 1 Std. 30 mit kleinen Kindern oder Einsteigern."
+        },
+        {
+          "title": "Das Jura-Salève-Panorama genießen",
+          "tag": null,
+          "description": "Weite Ausblicke auf die Genfer Ebene zwischen Jura und Salève, bei klarem Wetter freier Blick auf das Mont-Blanc-Massiv."
+        },
+        {
+          "title": "Die Bocage-Landschaft des Genevois entdecken",
+          "tag": null,
+          "description": "Querung ländlicher Wege, Waldränder und für das Agrarplateau Neydens typischer Hecken."
+        },
+        {
+          "title": "Mit dem Hund wandern",
+          "tag": null,
+          "description": "Strecke offen für Hunde an der Leine, ohne gefährliches Vieh auf dem größten Teil des Verlaufs."
+        },
+        {
+          "title": "Mit Geländekinderwagen spazieren",
+          "tag": null,
+          "description": "Nahezu flaches Profil und breite Wege je nach Wetter geeignet für Geländekinderwagen."
+        },
+        {
+          "title": "Mit Vitam oder dem Salève verbinden",
+          "tag": null,
+          "description": "5 Auto-Min. vom Wasserpark Vitam (Neydens) und 10 Min. von der Seilbahn auf den Salève entfernt — perfekt, um einen Familientag abzurunden."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Start: Ortskern Neydens, Parkplatz des Rathauses, 74160 Neydens"
+        },
+        {
+          "k": "Koordinaten",
+          "v": "46,121° N — 6,1046° E"
+        },
+        {
+          "k": "Distanz",
+          "v": "4,4 km · Rundweg"
+        },
+        {
+          "k": "Höhenunterschied",
+          "v": "+67 m / −68 m"
+        },
+        {
+          "k": "Besuchsdauer",
+          "v": "1 Std. 30"
+        },
+        {
+          "k": "Schwierigkeit",
+          "v": "Sehr leicht · grün markiert"
+        },
+        {
+          "k": "Öffnungszeiten",
+          "v": "Ganzjährig frei zugänglich, unbewachter Weg.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Preise",
+          "v": "Kostenlos",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Anfahrt / Parken",
+          "v": "Kostenloser Parkplatz im Ortskern Neydens (Rathaus). 5 Auto-Min. von A40-Ausfahrt 13 Saint-Julien-en-Genevois."
+        },
+        {
+          "k": "Tiere",
+          "v": "An der Leine erlaubt"
+        },
+        {
+          "k": "Erforderliche Ausrüstung",
+          "v": "Wanderschuhe, Wasser, Sonnenschutz im Sommer"
+        },
+        {
+          "k": "Publikum",
+          "v": "Familien, Einsteiger, Geländekinderwagen"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Wie lang ist die Boucle pédestre d'Uffin in Neydens?",
+          "a": "Die Boucle pédestre d'Uffin ist als vollständiger Rundweg 4,4 km lang, mit 67 m positivem Höhenunterschied. Der grün markierte Weg ist in etwa 1 Std. 30 zu gehen."
+        },
+        {
+          "q": "Ist die Boucle d'Uffin mit Kinderwagen befahrbar?",
+          "a": "Ja unter den meisten Bedingungen. Die Boucle pédestre d'Uffin ist sehr leicht, nahezu flach und verläuft auf breiten Wegen: Sie eignet sich gut für Geländekinderwagen außerhalb von Schlammperioden."
+        },
+        {
+          "q": "Wo startet die Boucle pédestre d'Uffin?",
+          "a": "Der Start der Boucle d'Uffin befindet sich im Ortskern Neydens (Parkplatz des Rathauses). Die Strecke ist grün markiert und in beiden Richtungen gehbar."
+        },
+        {
+          "q": "Ist die Boucle pédestre d'Uffin kostenpflichtig?",
+          "a": "Nein. Die Boucle pédestre d'Uffin ist ganzjährig frei und kostenlos zugänglich, wie alle ländlichen Wege der Gemeinde Neydens."
+        },
+        {
+          "q": "Kann man die Boucle d'Uffin mit einem Hund gehen?",
+          "a": "Ja, die Boucle d'Uffin nimmt Hunde an der Leine an. Bitte die Kulturen und etwaige durchquerte Weiden respektieren."
+        },
+        {
+          "q": "Welche ist die beste Jahreszeit für die Boucle d'Uffin?",
+          "a": "Die Boucle pédestre d'Uffin lässt sich von Frühling bis Herbst begehen. Im Winter bleibt sie außerhalb von Schneeperioden gangbar, doch das Jura-Salève-Panorama ist zwischen April und Oktober am spektakulärsten."
+        }
+      ],
+      "schema_amenities": [
+        "Markierter Weg",
+        "Freier Zugang",
+        "Parkplatz am Start",
+        "Geländekinderwagen geeignet",
+        "Hunde an der Leine erlaubt"
+      ]
     },
     "it": {
       "name": "Percorso a piedi: anello di Uffin",
@@ -257,7 +541,139 @@
       "hero_alt": "Anello pedonale di Uffin a Neydens, panorama sulla piana ginevrina e sul Salève",
       "body": {
         "what_is": "<p>L'<strong>Anello pedonale di Uffin</strong> (o Boucle d'Huffin) è una passeggiata familiare di 4,4 km tracciata interamente sul comune di Neydens, nel Genevois francese a 15 minuti da Saint-Julien-en-Genevois e 20 minuti da Annecy. Segnata in verde e classificata «molto facile» dall'Ufficio del Turismo dei Monts du Genevois, è adatta a chi cammina poco come alle famiglie: il modesto dislivello di 67 m positivi permette di percorrerla in circa 1 ora 30, in entrambi i sensi.</p><p>Il percorso lascia il capoluogo e attraversa la <strong>campagna del plateau di Neydens</strong> ai piedi del Salève, in un paesaggio tipico del Genevois francese: siepi, frutteti, prati da fieno e margini boschivi. Offre <strong>punti panoramici aperti</strong> sulla piana ginevrina, sul massiccio del Giura e, nelle giornate limpide, sulla catena del Monte Bianco. Accessibile tutto l'anno, si presta a passeggini all-terrain e a passeggiate col cane al guinzaglio, ed è una bella alternativa dolce alle escursioni più impegnative del vicino Salève. La vicinanza del parco acquatico Vitam, della teleferica del Salève e dell'autostrada A 40 ne fa un buon riscaldamento per scoprire il Genevois in famiglia.</p>"
-      }
+      },
+      "name_alternates": [
+        "Boucle d'Uffin",
+        "Boucle d'Huffin"
+      ],
+      "hero": {
+        "badge": "Accesso libero · Tutto l'anno",
+        "lead": "Anello di campagna molto facile di 4,4 km in partenza dal capoluogo di Neydens, nel Genevois francese. Segnato in verde, 1 h 30 di cammino, panorama aperto sulla piana ginevrina tra Giura e Salève."
+      },
+      "facts": {
+        "type": "Sentiero · Anello pedonale",
+        "access": "Libero · Gratuito",
+        "commune": "Neydens",
+        "duration": "1 h 30",
+        "best_season": "Primavera · estate · autunno"
+      },
+      "activities": [
+        {
+          "title": "Fare l'anello in famiglia",
+          "tag": "Famiglia",
+          "description": "4,4 km pianeggianti o quasi, senza difficoltà tecniche, ideali per un'uscita di 1 h 30 con bambini piccoli o camminatori alle prime armi."
+        },
+        {
+          "title": "Godere del panorama Giura-Salève",
+          "tag": null,
+          "description": "Punti panoramici aperti sulla piana ginevrina racchiusa tra il Giura e il Salève, nelle giornate limpide vista sgombra sulla catena del Monte Bianco."
+        },
+        {
+          "title": "Scoprire la campagna del Genevois",
+          "tag": null,
+          "description": "Attraversamento di sentieri rurali, margini boschivi e siepi tipiche del plateau agricolo di Neydens."
+        },
+        {
+          "title": "Uscire con il proprio cane",
+          "tag": null,
+          "description": "Itinerario aperto ai cani al guinzaglio, senza bestiame a rischio sulla maggior parte del tracciato."
+        },
+        {
+          "title": "Passeggiare con un passeggino all-terrain",
+          "tag": null,
+          "description": "Profilo quasi pianeggiante e sentieri larghi adatti ai passeggini all-terrain a seconda del meteo."
+        },
+        {
+          "title": "Abbinare con una visita a Vitam o al Salève",
+          "tag": null,
+          "description": "A 5 min d'auto dal parco acquatico Vitam (Neydens) e 10 min dalla teleferica del Salève — perfetto per arricchire una giornata in famiglia."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Indirizzo",
+          "v": "Partenza: capoluogo di Neydens, parcheggio del municipio, 74160 Neydens"
+        },
+        {
+          "k": "Coordinate",
+          "v": "46,121° N — 6,1046° E"
+        },
+        {
+          "k": "Distanza",
+          "v": "4,4 km · anello"
+        },
+        {
+          "k": "Dislivello",
+          "v": "+67 m / −68 m"
+        },
+        {
+          "k": "Durata della visita",
+          "v": "1 h 30"
+        },
+        {
+          "k": "Difficoltà",
+          "v": "Molto facile · segnato in verde"
+        },
+        {
+          "k": "Orari",
+          "v": "Accesso libero tutto l'anno, sentiero non custodito.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tariffe",
+          "v": "Gratuito",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Accesso / Parcheggio",
+          "v": "Parcheggio gratuito al capoluogo di Neydens (municipio). A 5 min d'auto dall'uscita 13 dell'autostrada A40 Saint-Julien-en-Genevois."
+        },
+        {
+          "k": "Animali",
+          "v": "Ammessi al guinzaglio"
+        },
+        {
+          "k": "Attrezzatura richiesta",
+          "v": "Scarpe da trekking, acqua, protezione solare in estate"
+        },
+        {
+          "k": "Pubblico",
+          "v": "Famiglie, camminatori alle prime armi, passeggini all-terrain"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Qual è la distanza dell'Anello pedonale di Uffin a Neydens?",
+          "a": "L'Anello pedonale di Uffin misura 4,4 km come anello completo, con 67 m di dislivello positivo. Il sentiero segnato in verde si percorre in circa 1 h 30 di cammino."
+        },
+        {
+          "q": "L'Anello di Uffin è accessibile con un passeggino?",
+          "a": "Sì nella maggior parte delle condizioni. L'Anello pedonale di Uffin è molto facile, quasi pianeggiante e percorso su sentieri larghi: si fa bene con passeggino all-terrain al di fuori dei periodi fangosi."
+        },
+        {
+          "q": "Da dove parte l'Anello pedonale di Uffin?",
+          "a": "La partenza dell'Anello di Uffin è al capoluogo di Neydens (parcheggio del municipio). L'itinerario è segnato in verde e può essere percorso in entrambi i sensi."
+        },
+        {
+          "q": "L'Anello pedonale di Uffin è a pagamento?",
+          "a": "No. L'Anello pedonale di Uffin è ad accesso libero e gratuito tutto l'anno, come tutti i sentieri rurali del comune di Neydens."
+        },
+        {
+          "q": "Si può fare l'Anello di Uffin con un cane?",
+          "a": "Sì, l'Anello di Uffin accetta cani al guinzaglio. Si raccomanda di rispettare le colture e gli eventuali pascoli attraversati."
+        },
+        {
+          "q": "Qual è il periodo migliore per l'Anello di Uffin?",
+          "a": "L'Anello pedonale di Uffin si pratica dalla primavera all'autunno. In inverno rimane praticabile al di fuori dei periodi innevati, ma il panorama Giura-Salève è più spettacolare tra aprile e ottobre."
+        }
+      ],
+      "schema_amenities": [
+        "Sentiero segnato",
+        "Accesso libero",
+        "Parcheggio alla partenza",
+        "Accessibile a passeggino all-terrain",
+        "Cani al guinzaglio ammessi"
+      ]
     },
     "es": {
       "name": "Recorrido a pie: bucle de Uffin",
@@ -266,7 +682,139 @@
       "hero_alt": "Bucle pedestre de Uffin en Neydens, panorama sobre la llanura ginebrina y el Salève",
       "body": {
         "what_is": "<p>El <strong>Bucle pedestre de Uffin</strong> (o Boucle d'Huffin) es un paseo familiar de 4,4 km trazado íntegramente en el municipio de Neydens, en el Genevois francés, a 15 minutos de Saint-Julien-en-Genevois y 20 minutos de Annecy. Señalizado en verde y clasificado «muy fácil» por la Oficina de Turismo de los Monts du Genevois, se dirige tanto a caminantes principiantes como a familias: su modesto desnivel positivo de 67 m permite recorrerlo en cerca de 1 h 30, en ambos sentidos de marcha.</p><p>El recorrido deja el casco urbano y atraviesa la <strong>campiña de la meseta de Neydens</strong> al pie del Salève, en un paisaje típico del Genevois francés: setos vivos, huertas, prados de heno y linderos boscosos. Ofrece <strong>panorámicas abiertas</strong> sobre la llanura ginebrina, el macizo del Jura y, en días claros, sobre la cadena del Mont-Blanc. Accesible todo el año, es apto para cochecitos todoterreno y paseos con perro atado, y resulta una alternativa suave a las rutas más exigentes del cercano Salève. La proximidad del parque acuático Vitam, del teleférico del Salève y de la autopista A 40 lo convierten en un buen calentamiento para descubrir el Genevois en familia.</p>"
-      }
+      },
+      "name_alternates": [
+        "Boucle d'Uffin",
+        "Boucle d'Huffin"
+      ],
+      "hero": {
+        "badge": "Acceso libre · Todo el año",
+        "lead": "Bucle de campo muy fácil de 4,4 km desde el casco urbano de Neydens, en el Genevois francés. Señalizado en verde, 1 h 30 de marcha, panorama abierto sobre la llanura ginebrina entre el Jura y el Salève."
+      },
+      "facts": {
+        "type": "Sendero · Bucle pedestre",
+        "access": "Libre · Gratuito",
+        "commune": "Neydens",
+        "duration": "1 h 30",
+        "best_season": "Primavera · verano · otoño"
+      },
+      "activities": [
+        {
+          "title": "Hacer el bucle en familia",
+          "tag": "Familia",
+          "description": "4,4 km llanos o casi, sin dificultad técnica, ideales para una salida de 1 h 30 con niños pequeños o caminantes principiantes."
+        },
+        {
+          "title": "Disfrutar del panorama Jura-Salève",
+          "tag": null,
+          "description": "Miradores abiertos sobre la llanura ginebrina arropada entre el Jura y el Salève; en días claros, vista despejada de la cadena del Mont-Blanc."
+        },
+        {
+          "title": "Descubrir el bocage del Genevois",
+          "tag": null,
+          "description": "Travesía de caminos rurales, linderos boscosos y setos típicos de la meseta agrícola de Neydens."
+        },
+        {
+          "title": "Salir con el perro",
+          "tag": null,
+          "description": "Itinerario que acepta perros con correa, sin ganado peligroso en la mayor parte del trazado."
+        },
+        {
+          "title": "Pasear con un cochecito todoterreno",
+          "tag": null,
+          "description": "Perfil casi llano y caminos anchos adaptados a cochecitos todoterreno según la meteorología."
+        },
+        {
+          "title": "Combinar con una visita a Vitam o al Salève",
+          "tag": null,
+          "description": "A 5 min en coche del parque acuático Vitam (Neydens) y 10 min del teleférico del Salève — perfecto para enriquecer un día en familia."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Dirección",
+          "v": "Salida: casco urbano de Neydens, aparcamiento del ayuntamiento, 74160 Neydens"
+        },
+        {
+          "k": "Coordenadas",
+          "v": "46,121° N — 6,1046° E"
+        },
+        {
+          "k": "Distancia",
+          "v": "4,4 km · bucle"
+        },
+        {
+          "k": "Desnivel",
+          "v": "+67 m / −68 m"
+        },
+        {
+          "k": "Duración de la visita",
+          "v": "1 h 30"
+        },
+        {
+          "k": "Dificultad",
+          "v": "Muy fácil · señalizado en verde"
+        },
+        {
+          "k": "Horario",
+          "v": "Acceso libre todo el año, sendero no vigilado.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifas",
+          "v": "Gratuito",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Acceso / Aparcamiento",
+          "v": "Aparcamiento gratuito en el casco urbano de Neydens (ayuntamiento). A 5 min en coche de la salida 13 de la autopista A40 Saint-Julien-en-Genevois."
+        },
+        {
+          "k": "Animales",
+          "v": "Aceptados con correa"
+        },
+        {
+          "k": "Equipo requerido",
+          "v": "Zapatillas de marcha, agua, protección solar en verano"
+        },
+        {
+          "k": "Público",
+          "v": "Familias, caminantes principiantes, cochecito todoterreno"
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Cuál es la distancia del Bucle pedestre de Uffin en Neydens?",
+          "a": "El Bucle pedestre de Uffin mide 4,4 km en bucle completo, con 67 m de desnivel positivo. El sendero señalizado en verde se recorre en cerca de 1 h 30 de marcha."
+        },
+        {
+          "q": "¿Es accesible el Bucle de Uffin con cochecito?",
+          "a": "Sí en la mayoría de las condiciones. El Bucle pedestre de Uffin es muy fácil, casi llano y discurre por caminos anchos: se hace bien en cochecito todoterreno fuera de los periodos de barro."
+        },
+        {
+          "q": "¿Desde dónde sale el Bucle pedestre de Uffin?",
+          "a": "La salida del Bucle de Uffin se sitúa en el casco urbano de Neydens (aparcamiento del ayuntamiento). El itinerario está señalizado en verde y puede recorrerse en ambos sentidos."
+        },
+        {
+          "q": "¿Es de pago el Bucle pedestre de Uffin?",
+          "a": "No. El Bucle pedestre de Uffin es de acceso libre y gratuito todo el año, como el conjunto de los senderos rurales del municipio de Neydens."
+        },
+        {
+          "q": "¿Se puede hacer el Bucle de Uffin con un perro?",
+          "a": "Sí, el Bucle de Uffin acepta perros con correa. Conviene respetar los cultivos y los eventuales pastos atravesados."
+        },
+        {
+          "q": "¿Cuál es la mejor época para el Bucle de Uffin?",
+          "a": "El Bucle pedestre de Uffin se practica de primavera a otoño. En invierno sigue siendo practicable fuera de los periodos nevados, pero el panorama Jura-Salève es más espectacular entre abril y octubre."
+        }
+      ],
+      "schema_amenities": [
+        "Sendero señalizado",
+        "Acceso libre",
+        "Aparcamiento en la salida",
+        "Accesible a cochecito todoterreno",
+        "Perros con correa aceptados"
+      ]
     },
     "nl": {
       "name": "Wandelroute: Lus van Uffin",
@@ -275,7 +823,139 @@
       "hero_alt": "Boucle pédestre d'Uffin in Neydens, panorama op de Geneefse vlakte en de Salève",
       "body": {
         "what_is": "<p>De <strong>Boucle pédestre d'Uffin</strong> (Uffin-lus) is een gezinswandeling van 4,4 km die volledig op het grondgebied van de gemeente Neydens in het Franse Genevois loopt, op 15 minuten van Saint-Julien-en-Genevois en 20 minuten van Annecy. Groen bewegwijzerd en door het Office de Tourisme des Monts du Genevois ingedeeld als <strong>zeer gemakkelijk</strong>, is de route geschikt voor beginnende wandelaars en gezinnen, met een bescheiden hoogteverschil van 67 m en een wandeltijd van ongeveer 1 u 30.</p><p>De route verlaat het dorpscentrum en doorkruist het <strong>platteland van het plateau van Neydens</strong> aan de voet van de Salève, in een landschap dat typisch is voor het Franse Genevois: houtwallen, boomgaarden, hooilanden en bosranden. Ze biedt <strong>open uitzichten</strong> op de Geneefse vlakte, het Juragebergte en, op heldere dagen, op de Mont Blanc-keten.</p><p>Het hele jaar open, leent de route zich voor terreinkinderwagens en honden aan de lijn — een rustig alternatief voor de zwaardere tochten op de nabije Salève. Met het waterpark Vitam, de Salève-kabelbaan en de snelweg A40 in de buurt is het ook een goede warming-up om Genevois met het hele gezin te ontdekken.</p>"
-      }
+      },
+      "name_alternates": [
+        "Boucle d'Uffin",
+        "Boucle d'Huffin"
+      ],
+      "hero": {
+        "badge": "Vrije toegang · Het hele jaar",
+        "lead": "Zeer gemakkelijke landelijke lus van 4,4 km vanuit het dorpscentrum van Neydens, in het Franse Genevois. Groen bewegwijzerd, 1 u 30 wandelen, open panorama op de Geneefse vlakte tussen Jura en Salève."
+      },
+      "facts": {
+        "type": "Pad · Wandellus",
+        "access": "Vrij · Gratis",
+        "commune": "Neydens",
+        "duration": "1 u 30",
+        "best_season": "Lente · zomer · herfst"
+      },
+      "activities": [
+        {
+          "title": "De lus met het gezin doen",
+          "tag": "Gezin",
+          "description": "4,4 km nagenoeg vlak, zonder technische moeilijkheid, ideaal voor een uitstap van 1 u 30 met jonge kinderen of beginnende wandelaars."
+        },
+        {
+          "title": "Genieten van het panorama Jura-Salève",
+          "tag": null,
+          "description": "Open uitkijkpunten op de Geneefse vlakte ingesloten tussen Jura en Salève; bij helder weer vrij uitzicht op de Mont Blanc-keten."
+        },
+        {
+          "title": "Het bocagelandschap van het Genevois ontdekken",
+          "tag": null,
+          "description": "Doorkruising van landelijke paden, bosranden en houtwallen die typisch zijn voor het landbouwplateau van Neydens."
+        },
+        {
+          "title": "Uitgaan met de hond",
+          "tag": null,
+          "description": "Route geopend voor honden aan de lijn, zonder risicovol vee op het grootste deel van het traject."
+        },
+        {
+          "title": "Wandelen met een terreinkinderwagen",
+          "tag": null,
+          "description": "Nagenoeg vlak profiel en brede paden geschikt voor terreinkinderwagens afhankelijk van het weer."
+        },
+        {
+          "title": "Combineren met een bezoek aan Vitam of de Salève",
+          "tag": null,
+          "description": "Op 5 min rijden van het waterpark Vitam (Neydens) en 10 min van de Salève-kabelbaan — perfect om een gezinsdag aan te dikken."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adres",
+          "v": "Start: dorpscentrum van Neydens, parkeerplaats van het gemeentehuis, 74160 Neydens"
+        },
+        {
+          "k": "Coördinaten",
+          "v": "46,121° N — 6,1046° E"
+        },
+        {
+          "k": "Afstand",
+          "v": "4,4 km · lus"
+        },
+        {
+          "k": "Hoogteverschil",
+          "v": "+67 m / −68 m"
+        },
+        {
+          "k": "Duur van het bezoek",
+          "v": "1 u 30"
+        },
+        {
+          "k": "Moeilijkheid",
+          "v": "Zeer gemakkelijk · groen bewegwijzerd"
+        },
+        {
+          "k": "Openingstijden",
+          "v": "Het hele jaar vrij toegankelijk, onbewaakt pad.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarieven",
+          "v": "Gratis",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Toegang / Parkeren",
+          "v": "Gratis parkeerplaats in het dorpscentrum van Neydens (gemeentehuis). Op 5 min rijden van afrit 13 van de snelweg A40 Saint-Julien-en-Genevois."
+        },
+        {
+          "k": "Dieren",
+          "v": "Toegestaan aan de lijn"
+        },
+        {
+          "k": "Vereiste uitrusting",
+          "v": "Wandelschoenen, water, zonbescherming in de zomer"
+        },
+        {
+          "k": "Publiek",
+          "v": "Gezinnen, beginnende wandelaars, terreinkinderwagen"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Wat is de afstand van de Boucle pédestre d'Uffin in Neydens?",
+          "a": "De Boucle pédestre d'Uffin meet 4,4 km als volledige lus, met 67 m positief hoogteverschil. Het groen bewegwijzerde pad wordt in ongeveer 1 u 30 afgelegd."
+        },
+        {
+          "q": "Is de Boucle d'Uffin toegankelijk met een kinderwagen?",
+          "a": "Ja, in de meeste omstandigheden. De Boucle pédestre d'Uffin is zeer gemakkelijk, nagenoeg vlak en loopt over brede paden: ze gaat goed met een terreinkinderwagen buiten modderige periodes."
+        },
+        {
+          "q": "Waar vertrekt de Boucle pédestre d'Uffin?",
+          "a": "De Boucle d'Uffin vertrekt vanuit het dorpscentrum van Neydens (parkeerplaats van het gemeentehuis). De route is groen bewegwijzerd en kan in beide richtingen worden gelopen."
+        },
+        {
+          "q": "Is de Boucle pédestre d'Uffin betalend?",
+          "a": "Nee. De Boucle pédestre d'Uffin is het hele jaar vrij en gratis toegankelijk, zoals alle landelijke paden van de gemeente Neydens."
+        },
+        {
+          "q": "Kan ik de Boucle d'Uffin met een hond lopen?",
+          "a": "Ja, de Boucle d'Uffin accepteert honden aan de lijn. Respecteer de gewassen en eventuele weiden die worden doorkruist."
+        },
+        {
+          "q": "Wat is de beste periode voor de Boucle d'Uffin?",
+          "a": "De Boucle pédestre d'Uffin loop je van de lente tot de herfst. In de winter blijft ze begaanbaar buiten besneeuwde periodes, maar het panorama Jura-Salève is het spectaculairst tussen april en oktober."
+        }
+      ],
+      "schema_amenities": [
+        "Bewegwijzerd pad",
+        "Vrije toegang",
+        "Parkeerplaats bij de start",
+        "Toegankelijk voor terreinkinderwagen",
+        "Honden aan de lijn toegestaan"
+      ]
     }
   },
   "status": "published"

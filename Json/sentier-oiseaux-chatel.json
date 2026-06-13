@@ -88,6 +88,26 @@
       "date": "2026-06-13",
       "by": "scripts/ingest_translations.py",
       "note": "Translation ingest [nl]: 5 field(s) updated."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for de from agent_O_de_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for es from agent_O_es_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for it from agent_O_it_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for nl from agent_O_nl_secondary.json."
     }
   ],
   "i18n": {
@@ -245,7 +265,145 @@
       "hero_alt": "Birds trail at Chatel from the Col de Bassachaux, in the Vallee d'Abondance",
       "body": {
         "what_is": "<p>The <strong>Birds Trail</strong> is an ornithological interpretive route along the section of the <strong>GR5</strong> linking the Col de Bassachaux (1,778 m) to the Rochassons summit, in the commune of Châtel in the Vallée d'Abondance. It follows a wide driveable track throughout, ideal for families: an out-and-back walk, returning the same way.</p><p>Along the route, educational panels teach walkers how to <strong>identify the mountain birds</strong> seen around Châtel — crossbill, nutcracker, alpine chough, ptarmigan, common raven — alongside their habitats, diet and nesting habits. The Col de Bassachaux is reached by car via the D 228 from Châtel (12 km), with a large car park and a seasonal snack bar; it marks the end of the Vallée d'Abondance, beneath a sweeping panorama. The site is part of the <strong>Chablais UNESCO Global Geopark</strong>, whose history is bound up with the formation of the Northern Alps. The trail is usually open from 15 June to 15 September, weather permitting.</p>"
-      }
+      },
+      "name_alternates": [
+        "Sentier des oiseaux Châtel",
+        "Sentier ornithologique du col de Bassachaux"
+      ],
+      "hero": {
+        "badge": "Free access · Summer (15 June - 15 Sept.)",
+        "lead": "Ornithological interpretive trail on the GR5 between the Col de Bassachaux and the Rochassons summit, in Châtel: panels to identify mountain birds, panorama over the Vallée d'Abondance, Chablais UNESCO Global Geopark."
+      },
+      "facts": {
+        "type": "Interpretive trail · Ornithology",
+        "access": "Free · Free of charge",
+        "commune": "Châtel",
+        "duration": "1 hr 30 to 2 hrs round trip",
+        "best_season": "15 June - 15 September"
+      },
+      "activities": [
+        {
+          "title": "Watch the mountain birds",
+          "tag": "Family",
+          "description": "Interpretive panels explaining how to identify alpine choughs, nutcrackers, crossbills and other species seen at Châtel."
+        },
+        {
+          "title": "Walk on the GR5",
+          "tag": null,
+          "description": "An iconic section of the GR5 between the Col de Bassachaux and the Rochassons, a wide driveable track accessible to all."
+        },
+        {
+          "title": "Picnic at the Col de Bassachaux",
+          "tag": null,
+          "description": "Picnic area and seasonal snack bar at the pass, with a panorama over the Vallée d'Abondance and the Chablais."
+        },
+        {
+          "title": "Discover the Chablais Geopark",
+          "tag": null,
+          "description": "The trail lies within the Chablais UNESCO Global Geopark and offers an introduction to the geology of the Northern Alps."
+        },
+        {
+          "title": "Enjoy the Rochassons panorama",
+          "tag": null,
+          "description": "At the Rochassons summit, an open view over the Vallée d'Abondance, the Cornettes de Bise and the Chablais range."
+        },
+        {
+          "title": "Extend along the GR5 to the Portes du Soleil",
+          "tag": null,
+          "description": "The GR5 continues towards Switzerland (Lac de Tanay) and allows a longer loop for seasoned hikers."
+        },
+        {
+          "title": "Set off at dawn for birdwatching",
+          "tag": null,
+          "description": "Early morning offers the best conditions to spot the birds: bring binoculars and walk quietly."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Address",
+          "v": "Start: Col de Bassachaux (1,778 m), access via the D 228 from Châtel 74390"
+        },
+        {
+          "k": "Coordinates",
+          "v": "46.221712° N - 6.772299° E"
+        },
+        {
+          "k": "Altitude",
+          "v": "1,778 m (Col de Bassachaux)"
+        },
+        {
+          "k": "Difficulty",
+          "v": "Easy · wide driveable track"
+        },
+        {
+          "k": "Phone",
+          "v": "OT Châtel - +33 4 50 73 22 44",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Official website",
+          "v": "chatel.com"
+        },
+        {
+          "k": "Opening times",
+          "v": "Trail practicable from 15 June to 15 September, weather permitting. Out of season, access difficult due to snow.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Prices",
+          "v": "Free",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Access / Parking",
+          "v": "Large car park at the Col de Bassachaux. 12 km from Châtel via the D 228 (mountain road)."
+        },
+        {
+          "k": "Visit duration",
+          "v": "1 hr 30 to 2 hrs round trip"
+        },
+        {
+          "k": "Animals",
+          "v": "Allowed on leash (alpine pastures with livestock possible)"
+        },
+        {
+          "k": "Required equipment",
+          "v": "Walking shoes, binoculars, windbreaker."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Where does the Birds Trail in Châtel start?",
+          "a": "The Birds Trail starts at the Col de Bassachaux (1,778 m), 12 km from Châtel via the D 228. The pass has a large car park and a seasonal snack bar."
+        },
+        {
+          "q": "Which birds can be seen on the Châtel Birds Trail?",
+          "a": "The Birds Trail is designed to spot the mountain birds seen at Châtel - crossbill, nutcracker, alpine chough, common raven, ptarmigan depending on altitude - thanks to panels explaining their habitat, diet and nesting."
+        },
+        {
+          "q": "How difficult is the Birds Trail at Châtel?",
+          "a": "The Birds Trail follows the GR5 on a wide driveable track between the Col de Bassachaux and the Rochassons summit: it is an easy route, suitable for families with children old enough to walk."
+        },
+        {
+          "q": "When is the Birds Trail open?",
+          "a": "The Birds Trail at Châtel is maintained from 15 June to 15 September every day, weather permitting. Out of season, access to the pass can be difficult due to snow."
+        },
+        {
+          "q": "Is the Birds Trail free?",
+          "a": "Yes. The Birds Trail and the Col de Bassachaux car park are free of charge throughout the summer season."
+        },
+        {
+          "q": "When is the best time to watch birds on the Birds Trail?",
+          "a": "On the Birds Trail, set off early in the morning: that is when the mountain birds are most active around the Col de Bassachaux. Bring binoculars and walk quietly."
+        }
+      ],
+      "schema_amenities": [
+        "Ornithological interpretive trail",
+        "Educational panels",
+        "Car park at the pass",
+        "Seasonal snack bar (Col de Bassachaux)",
+        "Chablais UNESCO Global Geopark"
+      ]
     },
     "de": {
       "name": "Vogellehrpfad",
@@ -254,7 +412,145 @@
       "hero_alt": "Vogellehrpfad in Châtel ab dem Col de Bassachaux, im Vallée d'Abondance",
       "body": {
         "what_is": "<p>Der <strong>Vogellehrpfad</strong> ist ein ornithologischer Erkundungsweg auf dem Abschnitt des <strong>GR5</strong>, der den Col de Bassachaux (1.778 m) mit dem Gipfel der Rochassons verbindet, in der Gemeinde Châtel im Vallée d'Abondance. Er verläuft durchgehend auf einer breiten, befahrbaren Piste und eignet sich besonders gut für Familien: Hin- und Rückweg verlaufen identisch.</p><p>Entlang des Pfades helfen Lehrtafeln dabei, <strong>die Bergvögel von Châtel</strong> – Fichtenkreuzschnabel, Tannenhäher, Alpendohle, Alpenschneehuhn, Kolkrabe – zu erkennen sowie ihren Lebensraum, ihre Nahrung und ihr Brutverhalten kennenzulernen. Der Col de Bassachaux ist über die D 228 ab Châtel mit dem Auto erreichbar (12 km), mit großem Parkplatz und Imbiss in der Saison; er markiert das Ende des Vallée d'Abondance unter einem grandiosen Panorama. Der Ort gehört zum <strong>UNESCO-Global-Geopark Chablais</strong>, dessen Geschichte mit der Entstehung der Nordalpen verknüpft ist. Der Pfad ist in der Regel vom 15. Juni bis 15. September geöffnet, je nach Wetter.</p>"
-      }
+      },
+      "name_alternates": [
+        "Sentier des oiseaux Châtel",
+        "Sentier ornithologique du col de Bassachaux"
+      ],
+      "hero": {
+        "badge": "Freier Zugang · Sommer (15. Juni - 15. Sept.)",
+        "lead": "Ornithologischer Lehrpfad auf dem GR5 zwischen Col de Bassachaux und Gipfel der Rochassons in Châtel: Tafeln zum Erkennen der Bergvögel, Panorama auf das Vallée d'Abondance, UNESCO-Global-Geopark Chablais."
+      },
+      "facts": {
+        "type": "Lehrpfad · Ornithologie",
+        "access": "Frei · Kostenlos",
+        "commune": "Châtel",
+        "duration": "1 Std. 30 bis 2 Std. hin und zurück",
+        "best_season": "15. Juni - 15. September"
+      },
+      "activities": [
+        {
+          "title": "Bergvögel beobachten",
+          "tag": "Familie",
+          "description": "Lehrtafeln, die erklären, wie man Alpendohlen, Tannenhäher, Fichtenkreuzschnäbel und weitere in Châtel sichtbare Arten erkennt."
+        },
+        {
+          "title": "Auf dem GR5 wandern",
+          "tag": null,
+          "description": "Markanter Abschnitt des GR5 zwischen Col de Bassachaux und Rochassons, eine breite befahrbare Piste, für alle zugänglich."
+        },
+        {
+          "title": "Am Col de Bassachaux picknicken",
+          "tag": null,
+          "description": "Picknickplatz und Imbiss in der Saison am Pass, Panorama auf das Vallée d'Abondance und den Chablais."
+        },
+        {
+          "title": "Den Geopark Chablais entdecken",
+          "tag": null,
+          "description": "Der Pfad gehört zum UNESCO-Global-Geopark Chablais und vermittelt einen Einstieg in die Geologie der Nordalpen."
+        },
+        {
+          "title": "Das Rochassons-Panorama genießen",
+          "tag": null,
+          "description": "Am Gipfel der Rochassons offener Blick auf das Vallée d'Abondance, die Cornettes de Bise und die Chablais-Kette."
+        },
+        {
+          "title": "Auf dem GR5 zu den Portes du Soleil verlängern",
+          "tag": null,
+          "description": "Der GR5 führt weiter Richtung Schweiz (Lac de Tanay) und ermöglicht eine längere Schleife für geübte Wanderer."
+        },
+        {
+          "title": "Bei Tagesanbruch zur Beobachtung aufbrechen",
+          "tag": null,
+          "description": "Frühmorgens sind die Bedingungen zum Beobachten am besten: Fernglas mitnehmen und leise gehen."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Start: Col de Bassachaux (1.778 m), Zugang über die D 228 ab Châtel 74390"
+        },
+        {
+          "k": "Koordinaten",
+          "v": "46,221712° N - 6,772299° E"
+        },
+        {
+          "k": "Höhe",
+          "v": "1.778 m (Col de Bassachaux)"
+        },
+        {
+          "k": "Schwierigkeit",
+          "v": "Leicht · breite befahrbare Piste"
+        },
+        {
+          "k": "Telefon",
+          "v": "OT Châtel - +33 4 50 73 22 44",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Offizielle Website",
+          "v": "chatel.com"
+        },
+        {
+          "k": "Öffnungszeiten",
+          "v": "Pfad begehbar vom 15. Juni bis 15. September, wetterabhängig. Außerhalb der Saison Zugang durch Schnee erschwert.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Preise",
+          "v": "Kostenlos",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Zugang / Parkplatz",
+          "v": "Großer Parkplatz am Col de Bassachaux. 12 km von Châtel über die D 228 (Bergstraße)."
+        },
+        {
+          "k": "Besuchsdauer",
+          "v": "1 Std. 30 bis 2 Std. hin und zurück"
+        },
+        {
+          "k": "Tiere",
+          "v": "An der Leine erlaubt (Almen mit Herden möglich)"
+        },
+        {
+          "k": "Erforderliche Ausrüstung",
+          "v": "Wanderschuhe, Fernglas, Windjacke."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Wo beginnt der Vogellehrpfad in Châtel?",
+          "a": "Der Vogellehrpfad startet am Col de Bassachaux (1.778 m), 12 km von Châtel über die D 228. Der Pass verfügt über einen großen Parkplatz und einen Imbiss in der Saison."
+        },
+        {
+          "q": "Welche Vögel sieht man auf dem Vogellehrpfad in Châtel?",
+          "a": "Der Vogellehrpfad ist darauf ausgelegt, die Bergvögel von Châtel zu beobachten - Fichtenkreuzschnabel, Tannenhäher, Alpendohle, Kolkrabe, Alpenschneehuhn je nach Höhe - dank Tafeln, die Lebensraum, Nahrung und Brut erläutern."
+        },
+        {
+          "q": "Wie schwierig ist der Vogellehrpfad in Châtel?",
+          "a": "Der Vogellehrpfad folgt dem GR5 auf einer breiten befahrbaren Piste zwischen Col de Bassachaux und Rochassons-Gipfel: eine leichte Strecke, für Familien mit gehfähigen Kindern geeignet."
+        },
+        {
+          "q": "Wann ist der Vogellehrpfad geöffnet?",
+          "a": "Der Vogellehrpfad in Châtel wird vom 15. Juni bis 15. September täglich gepflegt, wetterabhängig. Außerhalb der Saison kann der Zugang zum Pass durch Schnee erschwert sein."
+        },
+        {
+          "q": "Ist der Vogellehrpfad kostenlos?",
+          "a": "Ja. Der Vogellehrpfad und der Parkplatz am Col de Bassachaux sind in der gesamten Sommersaison frei zugänglich und kostenlos."
+        },
+        {
+          "q": "Wann beobachtet man am besten Vögel auf dem Vogellehrpfad?",
+          "a": "Brechen Sie für den Vogellehrpfad früh morgens auf: Dann sind die Bergvögel rund um den Col de Bassachaux am aktivsten. Fernglas mitnehmen und leise gehen."
+        }
+      ],
+      "schema_amenities": [
+        "Ornithologischer Lehrpfad",
+        "Lehrtafeln",
+        "Parkplatz am Pass",
+        "Imbiss in der Saison (Col de Bassachaux)",
+        "UNESCO-Global-Geopark Chablais"
+      ]
     },
     "it": {
       "name": "Sentiero degli uccelli",
@@ -263,7 +559,145 @@
       "hero_alt": "Sentiero degli uccelli a Châtel dal Col de Bassachaux, in Vallée d'Abondance",
       "body": {
         "what_is": "<p>Il <strong>Sentiero degli uccelli</strong> è un itinerario d'interpretazione ornitologica tracciato sul tratto del <strong>GR5</strong> che collega il Col de Bassachaux (1.778 m) alla vetta dei Rochassons, nel comune di Châtel in Vallée d'Abondance. Il percorso si svolge su una larga pista carrozzabile per tutta la sua lunghezza e si presta particolarmente alle famiglie: si tratta di un andata e ritorno sullo stesso tracciato.</p><p>Lungo il sentiero, pannelli didattici insegnano a <strong>riconoscere gli uccelli di montagna</strong> osservabili a Châtel – crociere, nocciolaia, gracchio alpino, pernice bianca, corvo imperiale – e illustrano habitat, alimentazione e nidificazione. Il Col de Bassachaux è raggiungibile in auto per la D 228 da Châtel (12 km), con un ampio parcheggio e un punto ristoro in stagione; segna la fine della Vallée d'Abondance, sotto un panorama grandioso. Il sito fa parte del <strong>Geoparco mondiale UNESCO del Chablais</strong>, la cui storia è legata alla formazione delle Alpi settentrionali. Il sentiero è solitamente aperto dal 15 giugno al 15 settembre, condizioni meteo permettendo.</p>"
-      }
+      },
+      "name_alternates": [
+        "Sentier des oiseaux Châtel",
+        "Sentier ornithologique du col de Bassachaux"
+      ],
+      "hero": {
+        "badge": "Accesso libero · Estate (15 giugno - 15 set.)",
+        "lead": "Sentiero d'interpretazione ornitologica sul GR5 tra il Col de Bassachaux e la vetta dei Rochassons, a Châtel: pannelli per riconoscere gli uccelli di montagna, panorama sulla Vallée d'Abondance, Geoparco mondiale UNESCO del Chablais."
+      },
+      "facts": {
+        "type": "Sentiero d'interpretazione · Ornitologia",
+        "access": "Libero · Gratuito",
+        "commune": "Châtel",
+        "duration": "Da 1 h 30 a 2 h andata e ritorno",
+        "best_season": "15 giugno - 15 settembre"
+      },
+      "activities": [
+        {
+          "title": "Osservare gli uccelli di montagna",
+          "tag": "Famiglia",
+          "description": "Pannelli d'interpretazione che spiegano come riconoscere gracchi alpini, nocciolaie, crocieri e altre specie visibili a Châtel."
+        },
+        {
+          "title": "Camminare sul GR5",
+          "tag": null,
+          "description": "Tratto emblematico del GR5 tra il Col de Bassachaux e i Rochassons, ampia pista carrozzabile accessibile a tutti."
+        },
+        {
+          "title": "Pic-nic al Col de Bassachaux",
+          "tag": null,
+          "description": "Area pic-nic e punto ristoro in stagione al colle, panorama sulla Vallée d'Abondance e sul Chablais."
+        },
+        {
+          "title": "Scoprire il Geoparco del Chablais",
+          "tag": null,
+          "description": "Il sentiero rientra nel Geoparco mondiale UNESCO del Chablais e permette di affrontare la geologia delle Alpi settentrionali."
+        },
+        {
+          "title": "Godersi il panorama dei Rochassons",
+          "tag": null,
+          "description": "Dalla vetta dei Rochassons vista aperta sulla Vallée d'Abondance, sulle Cornettes de Bise e sulla catena del Chablais."
+        },
+        {
+          "title": "Prolungare sul GR5 verso le Portes du Soleil",
+          "tag": null,
+          "description": "Il GR5 prosegue in direzione della Svizzera (Lac de Tanay) e permette un giro più lungo per escursionisti esperti."
+        },
+        {
+          "title": "Partire all'alba per l'osservazione",
+          "tag": null,
+          "description": "Il mattino presto offre le migliori condizioni per osservare gli uccelli: portare binocolo e camminare in silenzio."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Indirizzo",
+          "v": "Partenza: Col de Bassachaux (1.778 m), accesso per la D 228 da Châtel 74390"
+        },
+        {
+          "k": "Coordinate",
+          "v": "46,221712° N - 6,772299° E"
+        },
+        {
+          "k": "Altitudine",
+          "v": "1.778 m (Col de Bassachaux)"
+        },
+        {
+          "k": "Difficoltà",
+          "v": "Facile · pista carrozzabile larga"
+        },
+        {
+          "k": "Telefono",
+          "v": "OT Châtel - +33 4 50 73 22 44",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Sito ufficiale",
+          "v": "chatel.com"
+        },
+        {
+          "k": "Orari",
+          "v": "Sentiero praticabile dal 15 giugno al 15 settembre, condizioni meteo permettendo. Fuori stagione, accesso difficile per la neve.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tariffe",
+          "v": "Gratuito",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Accesso / Parcheggio",
+          "v": "Ampio parcheggio al Col de Bassachaux. 12 km da Châtel per la D 228 (strada di montagna)."
+        },
+        {
+          "k": "Durata della visita",
+          "v": "Da 1 h 30 a 2 h andata e ritorno"
+        },
+        {
+          "k": "Animali",
+          "v": "Ammessi al guinzaglio (possibili alpeggi con greggi)"
+        },
+        {
+          "k": "Equipaggiamento richiesto",
+          "v": "Scarpe da trekking, binocolo, giacca a vento."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Dove parte il Sentiero degli uccelli a Châtel?",
+          "a": "Il Sentiero degli uccelli parte dal Col de Bassachaux (1.778 m), a 12 km da Châtel per la D 228. Il colle dispone di un ampio parcheggio e di un punto ristoro in stagione."
+        },
+        {
+          "q": "Quali uccelli si possono osservare sul Sentiero degli uccelli di Châtel?",
+          "a": "Il Sentiero degli uccelli è pensato per individuare gli uccelli di montagna visibili a Châtel - crociere, nocciolaia, gracchio alpino, corvo imperiale, pernice bianca secondo l'altitudine - grazie a pannelli che spiegano habitat, alimentazione e nidificazione."
+        },
+        {
+          "q": "Qual è la difficoltà del Sentiero degli uccelli a Châtel?",
+          "a": "Il Sentiero degli uccelli segue il GR5 su un'ampia pista carrozzabile tra Col de Bassachaux e vetta dei Rochassons: è un percorso facile, accessibile alle famiglie con bambini in grado di camminare."
+        },
+        {
+          "q": "Quando è aperto il Sentiero degli uccelli?",
+          "a": "Il Sentiero degli uccelli a Châtel è mantenuto dal 15 giugno al 15 settembre tutti i giorni, condizioni meteo permettendo. Fuori stagione, l'accesso al colle può essere difficile per la neve."
+        },
+        {
+          "q": "Il Sentiero degli uccelli è gratuito?",
+          "a": "Sì. Il Sentiero degli uccelli e il parcheggio del Col de Bassachaux sono ad accesso libero e gratuito per tutta la stagione estiva."
+        },
+        {
+          "q": "Qual è il momento migliore per osservare gli uccelli sul Sentiero?",
+          "a": "Per il Sentiero degli uccelli partire la mattina presto: è il momento in cui gli uccelli di montagna sono più attivi intorno al Col de Bassachaux. Portare binocolo e camminare in silenzio."
+        }
+      ],
+      "schema_amenities": [
+        "Sentiero d'interpretazione ornitologica",
+        "Pannelli didattici",
+        "Parcheggio al colle",
+        "Punto ristoro in stagione (Col de Bassachaux)",
+        "Geoparco mondiale UNESCO del Chablais"
+      ]
     },
     "es": {
       "name": "Sendero de las aves",
@@ -272,7 +706,145 @@
       "hero_alt": "Sendero de las aves en Châtel desde el Col de Bassachaux, en el Vallée d'Abondance",
       "body": {
         "what_is": "<p>El <strong>Sendero de las aves</strong> es un itinerario de interpretación ornitológica trazado en el tramo del <strong>GR5</strong> que une el Col de Bassachaux (1.778 m) con la cima de los Rochassons, en el municipio de Châtel, en el Vallée d'Abondance. El recorrido sigue una amplia pista transitable en todo su trazado y resulta especialmente apto para familias: se trata de una ida y vuelta por el mismo camino.</p><p>A lo largo del sendero, paneles pedagógicos enseñan a <strong>reconocer las aves de montaña</strong> que se observan en Châtel – piquituerto, cascanueces, chova alpina, perdiz nival, cuervo grande –, así como su hábitat, su alimentación y su nidificación. El Col de Bassachaux es accesible en coche por la D 228 desde Châtel (12 km), con un amplio aparcamiento y un puesto de comida en temporada; marca el final del Vallée d'Abondance, bajo un panorama grandioso. El lugar forma parte del <strong>Geoparque mundial UNESCO del Chablais</strong>, cuya historia está ligada a la formación de los Alpes del Norte. El sendero suele estar abierto del 15 de junio al 15 de septiembre, según las condiciones meteorológicas.</p>"
-      }
+      },
+      "name_alternates": [
+        "Sentier des oiseaux Châtel",
+        "Sentier ornithologique du col de Bassachaux"
+      ],
+      "hero": {
+        "badge": "Acceso libre · Verano (15 junio - 15 sept.)",
+        "lead": "Sendero de interpretación ornitológica en el GR5 entre el Col de Bassachaux y la cima de los Rochassons, en Châtel: paneles para reconocer las aves de montaña, panorama del Vallée d'Abondance, Geoparque mundial UNESCO del Chablais."
+      },
+      "facts": {
+        "type": "Sendero de interpretación · Ornitología",
+        "access": "Libre · Gratuito",
+        "commune": "Châtel",
+        "duration": "De 1 h 30 a 2 h ida y vuelta",
+        "best_season": "15 de junio - 15 de septiembre"
+      },
+      "activities": [
+        {
+          "title": "Observar las aves de montaña",
+          "tag": "Familia",
+          "description": "Paneles de interpretación que explican cómo reconocer chovas alpinas, cascanueces, piquituertos y otras especies visibles en Châtel."
+        },
+        {
+          "title": "Caminar por el GR5",
+          "tag": null,
+          "description": "Tramo emblemático del GR5 entre el Col de Bassachaux y los Rochassons, amplia pista transitable accesible a todos."
+        },
+        {
+          "title": "Hacer un picnic en el Col de Bassachaux",
+          "tag": null,
+          "description": "Zona de picnic y puesto de comida en temporada en el puerto, panorama del Vallée d'Abondance y el Chablais."
+        },
+        {
+          "title": "Descubrir el Geoparque del Chablais",
+          "tag": null,
+          "description": "El sendero forma parte del Geoparque mundial UNESCO del Chablais y permite abordar la geología de los Alpes del Norte."
+        },
+        {
+          "title": "Disfrutar del panorama de los Rochassons",
+          "tag": null,
+          "description": "Desde la cima de los Rochassons, vista abierta sobre el Vallée d'Abondance, las Cornettes de Bise y la cordillera del Chablais."
+        },
+        {
+          "title": "Prolongar por el GR5 hasta las Portes du Soleil",
+          "tag": null,
+          "description": "El GR5 continúa hacia Suiza (Lac de Tanay) y permite un bucle más largo para senderistas avezados."
+        },
+        {
+          "title": "Salir al amanecer para la observación",
+          "tag": null,
+          "description": "La mañana temprano ofrece las mejores condiciones para observar las aves: lleve prismáticos y camine en silencio."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Dirección",
+          "v": "Salida: Col de Bassachaux (1.778 m), acceso por la D 228 desde Châtel 74390"
+        },
+        {
+          "k": "Coordenadas",
+          "v": "46,221712° N - 6,772299° E"
+        },
+        {
+          "k": "Altitud",
+          "v": "1.778 m (Col de Bassachaux)"
+        },
+        {
+          "k": "Dificultad",
+          "v": "Fácil · pista transitable amplia"
+        },
+        {
+          "k": "Teléfono",
+          "v": "OT Châtel - +33 4 50 73 22 44",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Web oficial",
+          "v": "chatel.com"
+        },
+        {
+          "k": "Horarios",
+          "v": "Sendero practicable del 15 de junio al 15 de septiembre, según condiciones meteorológicas. Fuera de temporada, acceso difícil por la nieve.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifas",
+          "v": "Gratuito",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Acceso / Aparcamiento",
+          "v": "Gran aparcamiento en el Col de Bassachaux. 12 km desde Châtel por la D 228 (carretera de montaña)."
+        },
+        {
+          "k": "Duración de la visita",
+          "v": "De 1 h 30 a 2 h ida y vuelta"
+        },
+        {
+          "k": "Animales",
+          "v": "Admitidos con correa (posibles pastos con rebaños)"
+        },
+        {
+          "k": "Equipamiento necesario",
+          "v": "Calzado de montaña, prismáticos, cortavientos."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Dónde comienza el Sendero de las aves en Châtel?",
+          "a": "El Sendero de las aves comienza en el Col de Bassachaux (1.778 m), a 12 km de Châtel por la D 228. El puerto dispone de un gran aparcamiento y un puesto de comida en temporada."
+        },
+        {
+          "q": "¿Qué aves se pueden observar en el Sendero de las aves de Châtel?",
+          "a": "El Sendero de las aves está concebido para detectar las aves de montaña visibles en Châtel - piquituerto, cascanueces, chova alpina, cuervo grande, perdiz nival según la altitud - gracias a paneles que explican su hábitat, alimentación y nidificación."
+        },
+        {
+          "q": "¿Cuál es la dificultad del Sendero de las aves en Châtel?",
+          "a": "El Sendero de las aves sigue el GR5 por una amplia pista transitable entre el Col de Bassachaux y la cima de los Rochassons: es un recorrido fácil, accesible a familias con niños en edad de caminar."
+        },
+        {
+          "q": "¿Cuándo está abierto el Sendero de las aves?",
+          "a": "El Sendero de las aves en Châtel se mantiene del 15 de junio al 15 de septiembre todos los días, según condiciones meteorológicas. Fuera de temporada, el acceso al puerto puede ser difícil por la nieve."
+        },
+        {
+          "q": "¿El Sendero de las aves es gratuito?",
+          "a": "Sí. El Sendero de las aves y el aparcamiento del Col de Bassachaux son de acceso libre y gratuito durante toda la temporada estival."
+        },
+        {
+          "q": "¿Cuál es el mejor momento para observar las aves en el Sendero?",
+          "a": "Para el Sendero de las aves, salga temprano por la mañana: es el momento en que las aves de montaña están más activas en torno al Col de Bassachaux. Lleve prismáticos y camine en silencio."
+        }
+      ],
+      "schema_amenities": [
+        "Sendero de interpretación ornitológica",
+        "Paneles pedagógicos",
+        "Aparcamiento en el puerto",
+        "Puesto de comida en temporada (Col de Bassachaux)",
+        "Geoparque mundial UNESCO del Chablais"
+      ]
     },
     "nl": {
       "name": "Vogelpad",
@@ -281,7 +853,145 @@
       "hero_alt": "Vogelpad in Châtel vanaf de Col de Bassachaux, in de Vallée d'Abondance",
       "body": {
         "what_is": "<p>Het <strong>Vogelpad</strong> is een ornithologisch leerpad op het stuk van de <strong>GR5</strong> tussen de Col de Bassachaux (1.778 m) en de top van de Rochassons, in de gemeente Châtel in de Vallée d'Abondance. Het volgt over het volledige tracé een brede berijdbare piste en is vooral geschikt voor gezinnen: het is een heen-en-terug-wandeling langs dezelfde weg.</p><p>Onderweg helpen educatieve panelen om de <strong>bergvogels</strong> die in Châtel te zien zijn – kruisbek, notenkraker, alpenkauw, sneeuwhoen, raaf – te herkennen, met informatie over hun leefgebied, voedsel en broedgedrag. De Col de Bassachaux is per auto bereikbaar via de D 228 vanuit Châtel (12 km), met een grote parking en een snackbar in het seizoen; hij vormt het einde van de Vallée d'Abondance onder een grandioos panorama. De plek maakt deel uit van het <strong>UNESCO Global Geopark Chablais</strong>, waarvan de geschiedenis verbonden is met de vorming van de Noordelijke Alpen. Het pad is doorgaans van 15 juni tot 15 september geopend, afhankelijk van de weersomstandigheden.</p>"
-      }
+      },
+      "name_alternates": [
+        "Sentier des oiseaux Châtel",
+        "Sentier ornithologique du col de Bassachaux"
+      ],
+      "hero": {
+        "badge": "Vrije toegang · Zomer (15 juni - 15 sept.)",
+        "lead": "Ornithologisch leerpad op de GR5 tussen de Col de Bassachaux en de top van de Rochassons, in Châtel: panelen om bergvogels te herkennen, panorama over de Vallée d'Abondance, UNESCO Global Geopark Chablais."
+      },
+      "facts": {
+        "type": "Leerpad · Ornithologie",
+        "access": "Vrij · Gratis",
+        "commune": "Châtel",
+        "duration": "1 u 30 tot 2 u heen en terug",
+        "best_season": "15 juni - 15 september"
+      },
+      "activities": [
+        {
+          "title": "Bergvogels observeren",
+          "tag": "Gezin",
+          "description": "Educatieve panelen die uitleggen hoe je alpenkauwen, notenkrakers, kruisbekken en andere soorten die in Châtel te zien zijn, kunt herkennen."
+        },
+        {
+          "title": "Op de GR5 wandelen",
+          "tag": null,
+          "description": "Emblematisch stuk van de GR5 tussen de Col de Bassachaux en de Rochassons, brede berijdbare piste, voor iedereen toegankelijk."
+        },
+        {
+          "title": "Picknicken op de Col de Bassachaux",
+          "tag": null,
+          "description": "Picknickzone en seizoenssnackbar op de pas, panorama over de Vallée d'Abondance en de Chablais."
+        },
+        {
+          "title": "Het Geopark Chablais ontdekken",
+          "tag": null,
+          "description": "Het pad maakt deel uit van het UNESCO Global Geopark Chablais en biedt een kennismaking met de geologie van de Noordelijke Alpen."
+        },
+        {
+          "title": "Het panorama van de Rochassons genieten",
+          "tag": null,
+          "description": "Vanaf de top van de Rochassons open uitzicht over de Vallée d'Abondance, de Cornettes de Bise en de Chablais-keten."
+        },
+        {
+          "title": "Verlengen op de GR5 richting Portes du Soleil",
+          "tag": null,
+          "description": "De GR5 loopt verder richting Zwitserland (Lac de Tanay) en biedt een langere lus voor ervaren wandelaars."
+        },
+        {
+          "title": "Bij het ochtendgloren vertrekken voor de observatie",
+          "tag": null,
+          "description": "De vroege ochtend biedt de beste omstandigheden om vogels te zien: neem een verrekijker mee en wandel stil."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adres",
+          "v": "Vertrek: Col de Bassachaux (1.778 m), toegang via de D 228 vanuit Châtel 74390"
+        },
+        {
+          "k": "Coördinaten",
+          "v": "46,221712° N - 6,772299° E"
+        },
+        {
+          "k": "Hoogte",
+          "v": "1.778 m (Col de Bassachaux)"
+        },
+        {
+          "k": "Moeilijkheid",
+          "v": "Makkelijk · brede berijdbare piste"
+        },
+        {
+          "k": "Telefoon",
+          "v": "OT Châtel - +33 4 50 73 22 44",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Officiële website",
+          "v": "chatel.com"
+        },
+        {
+          "k": "Openingsuren",
+          "v": "Pad begaanbaar van 15 juni tot 15 september, afhankelijk van het weer. Buiten het seizoen toegang moeilijk door sneeuw.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarieven",
+          "v": "Gratis",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Toegang / Parking",
+          "v": "Grote parking op de Col de Bassachaux. 12 km vanuit Châtel via de D 228 (bergweg)."
+        },
+        {
+          "k": "Bezoekduur",
+          "v": "1 u 30 tot 2 u heen en terug"
+        },
+        {
+          "k": "Dieren",
+          "v": "Toegestaan aan de leiband (alpenweiden met kuddes mogelijk)"
+        },
+        {
+          "k": "Vereiste uitrusting",
+          "v": "Wandelschoenen, verrekijker, windjack."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Waar begint het Vogelpad in Châtel?",
+          "a": "Het Vogelpad start op de Col de Bassachaux (1.778 m), op 12 km van Châtel via de D 228. De pas beschikt over een grote parking en een seizoenssnackbar."
+        },
+        {
+          "q": "Welke vogels kun je waarnemen op het Vogelpad van Châtel?",
+          "a": "Het Vogelpad is ontworpen om de bergvogels van Châtel te spotten - kruisbek, notenkraker, alpenkauw, raaf, sneeuwhoen afhankelijk van de hoogte - dankzij panelen die hun leefgebied, voeding en broedgedrag uitleggen."
+        },
+        {
+          "q": "Hoe moeilijk is het Vogelpad in Châtel?",
+          "a": "Het Vogelpad volgt de GR5 over een brede berijdbare piste tussen de Col de Bassachaux en de top van de Rochassons: een makkelijke route, geschikt voor gezinnen met kinderen die kunnen lopen."
+        },
+        {
+          "q": "Wanneer is het Vogelpad geopend?",
+          "a": "Het Vogelpad in Châtel wordt van 15 juni tot 15 september dagelijks onderhouden, afhankelijk van het weer. Buiten het seizoen kan de toegang tot de pas door sneeuw moeilijk zijn."
+        },
+        {
+          "q": "Is het Vogelpad gratis?",
+          "a": "Ja. Het Vogelpad en de parking van de Col de Bassachaux zijn het hele zomerseizoen vrij toegankelijk en gratis."
+        },
+        {
+          "q": "Wat is het beste moment om vogels op het Vogelpad te observeren?",
+          "a": "Vertrek voor het Vogelpad vroeg in de ochtend: dan zijn de bergvogels rond de Col de Bassachaux het actiefst. Neem een verrekijker mee en wandel stil."
+        }
+      ],
+      "schema_amenities": [
+        "Ornithologisch leerpad",
+        "Educatieve panelen",
+        "Parking op de pas",
+        "Seizoenssnackbar (Col de Bassachaux)",
+        "UNESCO Global Geopark Chablais"
+      ]
     }
   },
   "status": "published"

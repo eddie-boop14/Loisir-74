@@ -88,6 +88,26 @@
       "date": "2026-06-13",
       "by": "scripts/ingest_translations.py",
       "note": "Translation ingest [nl]: 5 field(s) updated."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for de from agent_P_de_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for es from agent_P_es_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for it from agent_P_it_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for nl from agent_P_nl_secondary.json."
     }
   ],
   "i18n": {
@@ -245,7 +265,145 @@
       "hero_alt": "Follow the Fly trail in the village of Alby-sur-Chéran, cobblers' fly motifs on the ground",
       "body": {
         "what_is": "<p>\"<strong>Follow the Fly</strong>\" is a self-guided discovery trail through the village of <strong>Alby-sur-Chéran</strong>, a former medieval market town famous for its cobblers, 15 km south of Annecy. It runs to <strong>2 km</strong> and about <strong>1 hour on foot</strong>, walked solo, with family or with friends, starting from the Place du Trophée. Visitors follow the small flies drawn on the ground through 12 stops in the lanes, along the Chéran river and at the foot of the ramparts.</p><p>Why a fly? The nail the cobblers used to fix under shoe soles had a head reminiscent of fly wings, and the Chéran is famous for its fly-fishers. At each stop, walkers can answer a question whose answer hides a few paces away. When the <strong>Cobblers' Museum</strong> (Musée de la Cordonnerie) is open, children can join a hunt for \"Saint Crispin's hammer\" (patron saint of cobblers).</p><p>An <strong>audio tour</strong> in French and English, narrated by the Chéran itself, is also available on izi.TRAVEL. The trail is free year-round and makes an ideal heritage stop on a tour around Lake Annecy.</p>"
-      }
+      },
+      "name_alternates": [
+        "Circuit Suivez la mouche",
+        "Sentier Suivez la mouche Alby-sur-Chéran"
+      ],
+      "hero": {
+        "badge": "Free access - Year-round",
+        "lead": "\"Follow the Fly\" village trail at Alby-sur-Chéran: 12 stops along the lanes and the banks of the Chéran, on the trail of the cobblers of Alby. A fun 2 km walk of about 1 h, free year-round."
+      },
+      "facts": {
+        "type": "Urban trail - Heritage",
+        "access": "Free - No charge",
+        "commune": "Alby-sur-Chéran",
+        "duration": "About 1 h (2 km)",
+        "best_season": "Year-round"
+      },
+      "activities": [
+        {
+          "title": "Follow the flies on the ground",
+          "tag": "Family",
+          "description": "Look for the small flies drawn on the ground and let yourself be guided through the 12 stops of the trail in the town of Alby."
+        },
+        {
+          "title": "Answer the trail's questions",
+          "tag": null,
+          "description": "At each stop, a question whose answer hides a few metres further on: a playful format to discover the heritage."
+        },
+        {
+          "title": "Walk along the Chéran",
+          "tag": null,
+          "description": "The trail follows the Chéran river, an emblematic spot for fly-fishers, and offers a green setting right in the heart of the village."
+        },
+        {
+          "title": "Visit the Cobblers' Museum",
+          "tag": null,
+          "description": "Subject to opening hours, the Cobblers' Museum (Musée de la Cordonnerie) in Alby-sur-Chéran extends the visit and offers a children's hunt."
+        },
+        {
+          "title": "Listen to the izi.TRAVEL audio tour",
+          "tag": null,
+          "description": "Free audio tour in French and English, narrated by the Chéran, downloadable from the izi.TRAVEL app."
+        },
+        {
+          "title": "Discover the medieval arcades",
+          "tag": null,
+          "description": "Place du Trophée and the arcaded square of medieval Alby, a legacy of the old fair and the cobbler craft."
+        },
+        {
+          "title": "Round off with a coffee on a terrace",
+          "tag": null,
+          "description": "Several cafés and restaurants with terraces around Place du Trophée to round off the walk."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Address",
+          "v": "Start: Place du Trophée, 74540 Alby-sur-Chéran"
+        },
+        {
+          "k": "Coordinates",
+          "v": "45.816982 N - 6.020539 E"
+        },
+        {
+          "k": "Distance",
+          "v": "~2 km - 12 stops"
+        },
+        {
+          "k": "Difficulty",
+          "v": "Easy - urban trail"
+        },
+        {
+          "k": "Phone",
+          "v": "OT du Lac d'Annecy - 04 50 45 00 33",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Official website",
+          "v": "lac-annecy.com - mairie-alby-sur-cheran.fr"
+        },
+        {
+          "k": "Hours",
+          "v": "Free access year-round, self-guided. izi.TRAVEL audio tour downloadable 24/7.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Prices",
+          "v": "Free",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Access / Parking",
+          "v": "Public car parks near Place du Trophée. 15 km south of Annecy via the A 41, Alby-sur-Chéran exit."
+        },
+        {
+          "k": "Visit duration",
+          "v": "About 1 h"
+        },
+        {
+          "k": "Audience",
+          "v": "Families, heritage enthusiasts, tourists stopping over on a Lake Annecy tour"
+        },
+        {
+          "k": "Equipment required",
+          "v": "Smartphone for the izi.TRAVEL audio tour (optional)."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Where does the Follow the Fly trail in Alby-sur-Chéran start?",
+          "a": "The Follow the Fly trail starts from Place du Trophée, in the heart of the village of Alby-sur-Chéran. It forms a 2 km loop with 12 stops through the lanes and along the Chéran."
+        },
+        {
+          "q": "How long does the Follow the Fly trail take?",
+          "a": "Allow about 1 hour to walk the 2 km Follow the Fly trail in Alby-sur-Chéran at a leisurely pace, stopping at each stage."
+        },
+        {
+          "q": "Is the Follow the Fly trail free?",
+          "a": "Yes. The Follow the Fly trail has free access year-round. The izi.TRAVEL audio tour is also free."
+        },
+        {
+          "q": "Why is the trail called \"Follow the Fly\"?",
+          "a": "The Follow the Fly trail takes its name from the nail the cobblers of Alby-sur-Chéran fixed under shoe soles, whose head looked like fly wings, and from the many fly-fishers on the Chéran. Flies drawn on the ground mark out the route."
+        },
+        {
+          "q": "Is the Follow the Fly trail suitable for children?",
+          "a": "Yes. The Follow the Fly trail is very family-friendly: short route, riddles at each stop, and during the Cobblers' Museum opening hours, a children's hunt for Saint Crispin's hammer."
+        },
+        {
+          "q": "Is there an audio version of the Follow the Fly trail?",
+          "a": "Yes. An audio tour in French and English accompanies the Follow the Fly trail, downloadable free from the izi.TRAVEL app - the Chéran itself guides your steps through Alby's history."
+        }
+      ],
+      "schema_amenities": [
+        "Urban trail",
+        "Audio tour (izi.TRAVEL)",
+        "Ground markings (flies)",
+        "Car parks nearby",
+        "Cobblers' Museum nearby"
+      ]
     },
     "de": {
       "name": "Folgen Sie der Fliege",
@@ -254,7 +412,145 @@
       "hero_alt": "Rundweg Suivez la mouche im Dorf Alby-sur-Chéran, Fliegenmotive der Schuhmacher am Boden",
       "body": {
         "what_is": "<p>„<strong>Suivez la mouche</strong>\" (Folgen Sie der Fliege) ist ein Entdeckungsrundgang durch <strong>Alby-sur-Chéran</strong>, ein ehemaliges mittelalterliches Marktdorf, das für seine Schuhmacher berühmt war, 15 km südlich von Annecy. Er ist <strong>2 km</strong> lang und dauert etwa <strong>1 Stunde zu Fuß</strong> - allein, mit der Familie oder unter Freunden, mit Start an der Place du Trophée. Folgen Sie den kleinen, in den Boden gezeichneten Fliegen an 12 Stationen durch die Gassen, am Chéran entlang und am Fuß der Stadtmauer.</p><p>Warum eine Fliege? Der Nagel, den die Schuhmacher unter die Sohlen schlugen, hatte einen Kopf, der an Fliegenflügel erinnert - und der Chéran ist für seine Fliegenfischer bekannt. An jeder Station gibt es eine Frage, deren Antwort sich wenige Schritte weiter verbirgt. Während der Öffnungszeiten des <strong>Schuhmachermuseums</strong> (Musée de la Cordonnerie) können Kinder an einer Schnitzeljagd nach dem „Hammer des heiligen Crispin\" (Schutzpatron der Schuhmacher) teilnehmen.</p><p>Eine <strong>Audioführung</strong> auf Französisch und Englisch, erzählt vom Chéran selbst, steht zudem auf izi.TRAVEL bereit. Der Rundgang ist ganzjährig frei zugänglich und ein idealer Kulturhalt auf einer Tour rund um den See von Annecy.</p>"
-      }
+      },
+      "name_alternates": [
+        "Circuit Suivez la mouche",
+        "Sentier Suivez la mouche Alby-sur-Chéran"
+      ],
+      "hero": {
+        "badge": "Freier Zugang - ganzjährig",
+        "lead": "Dorfrundgang „Folgen Sie der Fliege\" in Alby-sur-Chéran: 12 Stationen durch die Gassen und entlang der Ufer des Chéran, auf den Spuren der Schuhmacher von Alby. Spielerischer Rundgang von 2 km, etwa 1 h, ganzjährig frei zugänglich."
+      },
+      "facts": {
+        "type": "Stadtweg - Kulturerbe",
+        "access": "Frei - Kostenlos",
+        "commune": "Alby-sur-Chéran",
+        "duration": "Etwa 1 h (2 km)",
+        "best_season": "Ganzjährig"
+      },
+      "activities": [
+        {
+          "title": "Den Fliegen am Boden folgen",
+          "tag": "Familie",
+          "description": "Suchen Sie die kleinen, auf den Boden gezeichneten Fliegen und lassen Sie sich an den 12 Stationen des Rundgangs durch das Dorf Alby führen."
+        },
+        {
+          "title": "Die Rätsel des Rundgangs beantworten",
+          "tag": null,
+          "description": "An jeder Station eine Frage, deren Antwort sich wenige Meter weiter verbirgt: eine spielerische Form, das Erbe zu entdecken."
+        },
+        {
+          "title": "Am Ufer des Chéran wandern",
+          "tag": null,
+          "description": "Der Pfad folgt dem Chéran, einem sinnbildlichen Ort der Fliegenfischer, und bietet einen grünen Rahmen mitten im Dorf."
+        },
+        {
+          "title": "Das Schuhmachermuseum besuchen",
+          "tag": null,
+          "description": "Je nach Öffnungszeiten verlängert das Musée de la Cordonnerie in Alby-sur-Chéran den Besuch und bietet eine Schnitzeljagd für Kinder."
+        },
+        {
+          "title": "Die izi.TRAVEL-Audioführung anhören",
+          "tag": null,
+          "description": "Kostenlose Audioführung auf Französisch oder Englisch, erzählt vom Chéran, zum Herunterladen über die izi.TRAVEL-App."
+        },
+        {
+          "title": "Die mittelalterlichen Arkaden entdecken",
+          "tag": null,
+          "description": "Place du Trophée und die Arkaden des mittelalterlichen Dorfkerns von Alby, Erbe des alten Jahrmarkts und des Schuhmacherhandwerks."
+        },
+        {
+          "title": "Mit einem Kaffee auf der Terrasse ausklingen lassen",
+          "tag": null,
+          "description": "Mehrere Cafés und Restaurants mit Terrasse rund um die Place du Trophée laden zum Abschluss des Rundgangs ein."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Start: Place du Trophée, 74540 Alby-sur-Chéran"
+        },
+        {
+          "k": "Koordinaten",
+          "v": "45,816982° N - 6,020539° E"
+        },
+        {
+          "k": "Distanz",
+          "v": "~2 km - 12 Stationen"
+        },
+        {
+          "k": "Schwierigkeit",
+          "v": "Leicht - Stadtweg"
+        },
+        {
+          "k": "Telefon",
+          "v": "OT du Lac d'Annecy - 04 50 45 00 33",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Offizielle Website",
+          "v": "lac-annecy.com - mairie-alby-sur-cheran.fr"
+        },
+        {
+          "k": "Öffnungszeiten",
+          "v": "Ganzjährig frei zugänglich, autonom. izi.TRAVEL-Audioführung rund um die Uhr herunterladbar.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Preise",
+          "v": "Kostenlos",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Zugang / Parkplatz",
+          "v": "Öffentliche Parkplätze nahe der Place du Trophée. 15 km südlich von Annecy über die A 41, Ausfahrt Alby-sur-Chéran."
+        },
+        {
+          "k": "Besuchsdauer",
+          "v": "Etwa 1 h"
+        },
+        {
+          "k": "Publikum",
+          "v": "Familien, Erbe-Liebhaber, Touristen auf einer Tour rund um den See von Annecy"
+        },
+        {
+          "k": "Benötigte Ausrüstung",
+          "v": "Smartphone für die izi.TRAVEL-Audioführung (optional)."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Wo beginnt der Rundgang Suivez la mouche in Alby-sur-Chéran?",
+          "a": "Der Rundgang Suivez la mouche startet an der Place du Trophée im Herzen des Dorfes Alby-sur-Chéran. Er bildet eine Schleife von 2 km mit 12 Stationen durch die Gassen und am Chéran entlang."
+        },
+        {
+          "q": "Wie lange dauert der Rundgang Suivez la mouche?",
+          "a": "Rechnen Sie etwa 1 Stunde für die 2 km des Rundgangs Suivez la mouche in Alby-sur-Chéran in gemütlichem Tempo mit Halten an jeder Station."
+        },
+        {
+          "q": "Ist der Rundgang Suivez la mouche kostenlos?",
+          "a": "Ja. Der Rundgang Suivez la mouche ist ganzjährig frei und kostenlos zugänglich. Die Audioführung auf izi.TRAVEL ist ebenfalls kostenlos."
+        },
+        {
+          "q": "Warum heißt der Rundgang „Suivez la mouche\"?",
+          "a": "Der Rundgang Suivez la mouche hat seinen Namen vom Nagel, den die Schuhmacher von Alby-sur-Chéran unter die Sohlen schlugen und dessen Kopf an Fliegenflügel erinnerte, sowie von den zahlreichen Fliegenfischern am Chéran. Auf den Boden gezeichnete Fliegen säumen den Weg."
+        },
+        {
+          "q": "Ist der Rundgang Suivez la mouche für Kinder geeignet?",
+          "a": "Ja. Der Rundgang Suivez la mouche ist sehr familienfreundlich: kurze Strecke, Rätsel an jeder Station und während der Öffnungszeiten des Schuhmachermuseums eine Schnitzeljagd für Kinder auf den Spuren des Hammers des heiligen Crispin."
+        },
+        {
+          "q": "Gibt es eine Audioversion des Rundgangs Suivez la mouche?",
+          "a": "Ja. Eine Audioführung auf Französisch und Englisch begleitet den Rundgang Suivez la mouche, kostenlos herunterladbar in der izi.TRAVEL-App - der Chéran selbst führt Sie durch die Geschichte Albys."
+        }
+      ],
+      "schema_amenities": [
+        "Stadtweg",
+        "Audioführung (izi.TRAVEL)",
+        "Bodenmarkierungen (Fliegen)",
+        "Parkplätze in der Nähe",
+        "Schuhmachermuseum in der Nähe"
+      ]
     },
     "it": {
       "name": "Segui la mosca",
@@ -263,7 +559,145 @@
       "hero_alt": "Circuito Suivez la mouche nel villaggio di Alby-sur-Chéran, mosche dei calzolai disegnate al suolo",
       "body": {
         "what_is": "<p>« <strong>Suivez la mouche</strong> » è un circuito-scoperta tracciato nel villaggio di <strong>Alby-sur-Chéran</strong>, antico borgo medievale famoso per i suoi calzolai, a 15 km a sud di Annecy. Lungo <strong>2 km</strong> e percorribile in circa <strong>1 h di cammino</strong>, si segue da soli, in famiglia o con gli amici a partire dalla Place du Trophée. Il visitatore segue le piccole mosche disegnate al suolo attraverso 12 tappe nei vicoli, lungo il Chéran e ai piedi delle mura.</p><p>Perché la mosca? Il chiodo che i calzolai fissavano sotto le suole, la cui testa ricordava le ali di una mosca, e i tanti pescatori a mosca del Chéran. A ogni tappa il visitatore può rispondere a una domanda la cui soluzione si nasconde poco lontano. Nei periodi di apertura del <strong>Musée de la Cordonnerie</strong> i bambini possono partecipare a una caccia al tesoro 'sulle tracce del martello di Crepino' (patrono dei calzolai). Una <strong>audioguida</strong> in francese e in inglese, narrata dal Chéran in persona, è disponibile sulla piattaforma izi.TRAVEL. Il percorso è libero tutto l'anno e costituisce un'ideale tappa di patrimonio in un giro intorno al Lago di Annecy.</p>"
-      }
+      },
+      "name_alternates": [
+        "Circuit Suivez la mouche",
+        "Sentier Suivez la mouche Alby-sur-Chéran"
+      ],
+      "hero": {
+        "badge": "Accesso libero - Tutto l'anno",
+        "lead": "Circuito nel villaggio « Segui la mosca » ad Alby-sur-Chéran: 12 tappe lungo i vicoli e le sponde del Chéran, sulle tracce dei calzolai di Alby. Visita ludica di 2 km, circa 1 h, libera tutto l'anno."
+      },
+      "facts": {
+        "type": "Sentiero urbano - Patrimonio",
+        "access": "Libero - Gratuito",
+        "commune": "Alby-sur-Chéran",
+        "duration": "Circa 1 h (2 km)",
+        "best_season": "Tutto l'anno"
+      },
+      "activities": [
+        {
+          "title": "Seguire le mosche al suolo",
+          "tag": "Famiglia",
+          "description": "Cercate le piccole mosche disegnate al suolo e lasciatevi guidare lungo le 12 tappe del circuito nel borgo di Alby."
+        },
+        {
+          "title": "Rispondere alle domande del circuito",
+          "tag": null,
+          "description": "A ogni tappa, una domanda la cui risposta si nasconde pochi metri più avanti: un formato ludico per scoprire il patrimonio."
+        },
+        {
+          "title": "Camminare lungo il Chéran",
+          "tag": null,
+          "description": "Il sentiero costeggia il fiume Chéran, luogo emblematico dei pescatori a mosca, e offre una cornice verdeggiante in pieno villaggio."
+        },
+        {
+          "title": "Visitare il Musée de la Cordonnerie",
+          "tag": null,
+          "description": "Secondo i suoi orari di apertura, il Musée de la Cordonnerie di Alby-sur-Chéran prolunga la visita e propone una caccia al tesoro per bambini."
+        },
+        {
+          "title": "Ascoltare l'audioguida izi.TRAVEL",
+          "tag": null,
+          "description": "Audioguida gratuita in francese o in inglese, narrata dal Chéran, scaricabile sull'app izi.TRAVEL."
+        },
+        {
+          "title": "Scoprire i portici medievali",
+          "tag": null,
+          "description": "Place du Trophée e i portici del borgo medievale di Alby, eredità dell'antica fiera e dell'artigianato calzaturiero."
+        },
+        {
+          "title": "Concludere con un caffè in terrazza",
+          "tag": null,
+          "description": "Diversi caffè e ristoranti con terrazza intorno alla Place du Trophée per chiudere la passeggiata."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Indirizzo",
+          "v": "Partenza: Place du Trophée, 74540 Alby-sur-Chéran"
+        },
+        {
+          "k": "Coordinate",
+          "v": "45,816982° N - 6,020539° E"
+        },
+        {
+          "k": "Distanza",
+          "v": "~2 km - 12 tappe"
+        },
+        {
+          "k": "Difficoltà",
+          "v": "Facile - sentiero urbano"
+        },
+        {
+          "k": "Telefono",
+          "v": "OT du Lac d'Annecy - 04 50 45 00 33",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Sito ufficiale",
+          "v": "lac-annecy.com - mairie-alby-sur-cheran.fr"
+        },
+        {
+          "k": "Orari",
+          "v": "Accesso libero tutto l'anno, in autonomia. Audioguida izi.TRAVEL scaricabile 24 h/24.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tariffe",
+          "v": "Gratuito",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Accesso / Parcheggio",
+          "v": "Parcheggi pubblici nei pressi della Place du Trophée. A 15 km a sud di Annecy tramite l'A 41 uscita Alby-sur-Chéran."
+        },
+        {
+          "k": "Durata della visita",
+          "v": "Circa 1 h"
+        },
+        {
+          "k": "Pubblico",
+          "v": "Famiglie, amanti del patrimonio, turisti in sosta sul Lago di Annecy"
+        },
+        {
+          "k": "Attrezzatura necessaria",
+          "v": "Smartphone per l'audioguida izi.TRAVEL (facoltativo)."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Dove parte il circuito Suivez la mouche ad Alby-sur-Chéran?",
+          "a": "Il circuito Suivez la mouche parte dalla Place du Trophée, nel cuore del villaggio di Alby-sur-Chéran. Forma un anello di 2 km con 12 tappe nei vicoli e lungo il Chéran."
+        },
+        {
+          "q": "Quanto tempo richiede il circuito Suivez la mouche?",
+          "a": "Calcolate circa 1 ora per percorrere i 2 km del circuito Suivez la mouche ad Alby-sur-Chéran, a passo tranquillo, sostando a ogni tappa."
+        },
+        {
+          "q": "Il circuito Suivez la mouche è gratuito?",
+          "a": "Sì. Il circuito Suivez la mouche è ad accesso libero e gratuito tutto l'anno. Anche l'audioguida su izi.TRAVEL è gratuita."
+        },
+        {
+          "q": "Perché il circuito si chiama « Suivez la mouche »?",
+          "a": "Il circuito Suivez la mouche prende il nome dal chiodo che i calzolai di Alby-sur-Chéran fissavano sotto le suole, la cui testa ricordava le ali di una mosca, e dai numerosi pescatori a mosca del Chéran. Mosche disegnate al suolo punteggiano il percorso."
+        },
+        {
+          "q": "Il circuito Suivez la mouche è adatto ai bambini?",
+          "a": "Sì. Il circuito Suivez la mouche è molto adatto alle famiglie: tracciato breve, enigmi a ogni tappa e, durante l'apertura del Musée de la Cordonnerie, una caccia al tesoro per bambini sulle tracce del martello di Crepino."
+        },
+        {
+          "q": "Esiste una versione audio del circuito Suivez la mouche?",
+          "a": "Sì. Un'audioguida in francese e in inglese accompagna il circuito Suivez la mouche, scaricabile gratuitamente sull'app izi.TRAVEL - lo stesso Chéran guida i vostri passi nella storia di Alby."
+        }
+      ],
+      "schema_amenities": [
+        "Sentiero urbano",
+        "Audioguida (izi.TRAVEL)",
+        "Segnaletica al suolo (mosche)",
+        "Parcheggi nei pressi",
+        "Musée de la Cordonnerie nei pressi"
+      ]
     },
     "es": {
       "name": "Sigue la mosca",
@@ -272,7 +706,145 @@
       "hero_alt": "Circuito Suivez la mouche en el pueblo de Alby-sur-Chéran, moscas de los zapateros dibujadas en el suelo",
       "body": {
         "what_is": "<p>« <strong>Sigue la mosca</strong> » es un circuito-descubierta trazado en el pueblo de <strong>Alby-sur-Chéran</strong>, antiguo burgo medieval famoso por sus zapateros, a 15 km al sur de Annecy. Con <strong>2 km</strong> de longitud y aproximadamente <strong>1 h de marcha</strong>, se recorre en solitario, en familia o entre amigos desde la Place du Trophée. El visitante sigue las pequeñas moscas dibujadas en el suelo y atraviesa 12 etapas por las callejuelas, a orillas del Chéran y al pie de las murallas.</p><p>¿Por qué la mosca? El clavo que los zapateros clavaban bajo las suelas, cuya cabeza recordaba a las alas de una mosca, y los muchos pescadores con mosca del río Chéran. En cada etapa el visitante puede responder a una pregunta cuya solución se esconde a pocos pasos. En los periodos de apertura del <strong>Museo de la Zapatería</strong>, los niños pueden participar en una búsqueda 'tras las huellas del martillo de san Crispín' (patrón de los zapateros). Una <strong>audioguía</strong> en francés y en inglés, narrada por el propio Chéran, está disponible en la plataforma izi.TRAVEL. El recorrido es libre todo el año y constituye una parada de patrimonio ideal en una excursión por el Lago de Annecy.</p>"
-      }
+      },
+      "name_alternates": [
+        "Circuit Suivez la mouche",
+        "Sentier Suivez la mouche Alby-sur-Chéran"
+      ],
+      "hero": {
+        "badge": "Acceso libre - Todo el año",
+        "lead": "Circuito por el pueblo « Sigue la mosca » en Alby-sur-Chéran: 12 etapas por las callejuelas y a orillas del Chéran, tras las huellas de los zapateros de Alby. Visita lúdica de 2 km, alrededor de 1 h, libre todo el año."
+      },
+      "facts": {
+        "type": "Sendero urbano - Patrimonio",
+        "access": "Libre - Gratuito",
+        "commune": "Alby-sur-Chéran",
+        "duration": "Alrededor de 1 h (2 km)",
+        "best_season": "Todo el año"
+      },
+      "activities": [
+        {
+          "title": "Seguir las moscas dibujadas en el suelo",
+          "tag": "Familia",
+          "description": "Busque las pequeñas moscas dibujadas en el suelo y déjese guiar a lo largo de las 12 etapas del circuito por el casco de Alby."
+        },
+        {
+          "title": "Responder a las preguntas del circuito",
+          "tag": null,
+          "description": "En cada etapa, una pregunta cuya respuesta se esconde unos metros más allá: un formato lúdico para descubrir el patrimonio."
+        },
+        {
+          "title": "Caminar a orillas del Chéran",
+          "tag": null,
+          "description": "El sendero bordea el río Chéran, lugar emblemático de los pescadores con mosca, y ofrece un entorno verde en pleno pueblo."
+        },
+        {
+          "title": "Visitar el Museo de la Zapatería",
+          "tag": null,
+          "description": "Según sus horarios de apertura, el Museo de la Zapatería de Alby-sur-Chéran prolonga la visita y propone una búsqueda para los niños."
+        },
+        {
+          "title": "Escuchar la audioguía izi.TRAVEL",
+          "tag": null,
+          "description": "Audioguía gratuita en francés o inglés, narrada por el Chéran, descargable en la aplicación izi.TRAVEL."
+        },
+        {
+          "title": "Descubrir los soportales medievales",
+          "tag": null,
+          "description": "Place du Trophée y soportales del casco medieval de Alby, herencia de la antigua feria y de la artesanía zapatera."
+        },
+        {
+          "title": "Concluir con un café en terraza",
+          "tag": null,
+          "description": "Varios cafés y restaurantes con terraza alrededor de la Place du Trophée para cerrar el paseo."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Dirección",
+          "v": "Salida: Place du Trophée, 74540 Alby-sur-Chéran"
+        },
+        {
+          "k": "Coordenadas",
+          "v": "45,816982° N - 6,020539° E"
+        },
+        {
+          "k": "Distancia",
+          "v": "~2 km - 12 etapas"
+        },
+        {
+          "k": "Dificultad",
+          "v": "Fácil - sendero urbano"
+        },
+        {
+          "k": "Teléfono",
+          "v": "OT du Lac d'Annecy - 04 50 45 00 33",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Web oficial",
+          "v": "lac-annecy.com - mairie-alby-sur-cheran.fr"
+        },
+        {
+          "k": "Horarios",
+          "v": "Acceso libre todo el año, en autonomía. Audioguía izi.TRAVEL descargable 24 h.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifas",
+          "v": "Gratuito",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Acceso / Aparcamiento",
+          "v": "Aparcamientos públicos cerca de la Place du Trophée. A 15 km al sur de Annecy por la A 41, salida Alby-sur-Chéran."
+        },
+        {
+          "k": "Duración de la visita",
+          "v": "Alrededor de 1 h"
+        },
+        {
+          "k": "Público",
+          "v": "Familias, amantes del patrimonio, turistas en escala alrededor del Lago de Annecy"
+        },
+        {
+          "k": "Equipamiento necesario",
+          "v": "Smartphone para la audioguía izi.TRAVEL (opcional)."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Dónde parte el circuito Suivez la mouche en Alby-sur-Chéran?",
+          "a": "El circuito Suivez la mouche parte de la Place du Trophée, en el corazón del pueblo de Alby-sur-Chéran. Forma un bucle de 2 km y 12 etapas por las callejuelas y a orillas del Chéran."
+        },
+        {
+          "q": "¿Cuánto tiempo lleva el circuito Suivez la mouche?",
+          "a": "Calcule alrededor de 1 hora para recorrer los 2 km del circuito Suivez la mouche en Alby-sur-Chéran, a paso tranquilo, parándose en cada etapa."
+        },
+        {
+          "q": "¿Es gratuito el circuito Suivez la mouche?",
+          "a": "Sí. El circuito Suivez la mouche es de acceso libre y gratuito todo el año. La audioguía en izi.TRAVEL también es gratuita."
+        },
+        {
+          "q": "¿Por qué se llama el circuito « Suivez la mouche »?",
+          "a": "El circuito Suivez la mouche debe su nombre al clavo que los zapateros de Alby-sur-Chéran clavaban bajo las suelas, cuya cabeza recordaba a alas de mosca, y a los numerosos pescadores con mosca del Chéran. Moscas dibujadas en el suelo jalonan el recorrido."
+        },
+        {
+          "q": "¿Es el circuito Suivez la mouche adecuado para niños?",
+          "a": "Sí. El circuito Suivez la mouche es muy adecuado para familias: trayecto corto, enigmas en cada etapa y, durante la apertura del Museo de la Zapatería, una búsqueda para niños tras las huellas del martillo de san Crispín."
+        },
+        {
+          "q": "¿Existe una versión audio del circuito Suivez la mouche?",
+          "a": "Sí. Una audioguía en francés y en inglés acompaña al circuito Suivez la mouche, descargable gratis en la aplicación izi.TRAVEL - el propio Chéran guía sus pasos por la historia de Alby."
+        }
+      ],
+      "schema_amenities": [
+        "Sendero urbano",
+        "Audioguía (izi.TRAVEL)",
+        "Marcas en el suelo (moscas)",
+        "Aparcamientos cerca",
+        "Museo de la Zapatería cerca"
+      ]
     },
     "nl": {
       "name": "Volg de vlieg",
@@ -281,7 +853,145 @@
       "hero_alt": "Route Suivez la mouche in het dorp Alby-sur-Chéran, vliegen van de schoenmakers op de grond",
       "body": {
         "what_is": "<p>„<strong>Suivez la mouche</strong>\" (Volg de vlieg) is een ontdekkingsroute door het dorp <strong>Alby-sur-Chéran</strong>, een oude middeleeuwse marktplaats, beroemd om zijn schoenmakers, 15 km ten zuiden van Annecy. De route is <strong>2 km</strong> lang en duurt ongeveer <strong>1 uur</strong> te voet, alleen, met het gezin of met vrienden, met start aan de Place du Trophée. Bezoekers volgen de kleine, op de grond getekende vliegen langs 12 haltes door de steegjes, langs de Chéran en aan de voet van de stadsmuur.</p><p>Waarom een vlieg? De spijker die schoenmakers onder de zolen sloegen had een kop die op vliegenvleugels leek - en de Chéran staat bekend om zijn vliegvissers. Bij elke halte beantwoordt u een vraag waarvan het antwoord enkele passen verder verborgen ligt. Tijdens de openingstijden van het <strong>Schoenmakersmuseum</strong> (Musée de la Cordonnerie) doen kinderen mee aan een speurtocht „op het spoor van de hamer van Crispinus\" (patroonheilige van de schoenmakers).</p><p>Een <strong>audiotour</strong> in het Frans en Engels, verteld door de Chéran zelf, is ook beschikbaar via izi.TRAVEL. De route is het hele jaar vrij toegankelijk en vormt een ideale culturele halte tijdens een rondrit om het Meer van Annecy.</p>"
-      }
+      },
+      "name_alternates": [
+        "Circuit Suivez la mouche",
+        "Sentier Suivez la mouche Alby-sur-Chéran"
+      ],
+      "hero": {
+        "badge": "Vrije toegang - Het hele jaar",
+        "lead": "Dorpsroute „Volg de vlieg\" in Alby-sur-Chéran: 12 haltes langs de steegjes en de oevers van de Chéran, in het spoor van de schoenmakers van Alby. Speelse wandeling van 2 km, ongeveer 1 u, het hele jaar vrij toegankelijk."
+      },
+      "facts": {
+        "type": "Stadspad - Erfgoed",
+        "access": "Vrij - Gratis",
+        "commune": "Alby-sur-Chéran",
+        "duration": "Ongeveer 1 u (2 km)",
+        "best_season": "Het hele jaar"
+      },
+      "activities": [
+        {
+          "title": "De vliegen op de grond volgen",
+          "tag": "Gezin",
+          "description": "Zoek de kleine vliegen op de grond en laat u leiden langs de 12 haltes van de route door het dorp Alby."
+        },
+        {
+          "title": "De vragen van de route beantwoorden",
+          "tag": null,
+          "description": "Bij elke halte een vraag waarvan het antwoord enkele meters verder verstopt zit: een speelse vorm om het erfgoed te ontdekken."
+        },
+        {
+          "title": "Wandelen langs de Chéran",
+          "tag": null,
+          "description": "Het pad volgt de rivier de Chéran, een typische plek voor vliegvissers, en biedt een groene omgeving midden in het dorp."
+        },
+        {
+          "title": "Het Schoenmakersmuseum bezoeken",
+          "tag": null,
+          "description": "Afhankelijk van de openingsuren verlengt het Musée de la Cordonnerie in Alby-sur-Chéran het bezoek en biedt het een speurtocht voor kinderen."
+        },
+        {
+          "title": "De izi.TRAVEL-audiotour beluisteren",
+          "tag": null,
+          "description": "Gratis audiotour in het Frans of Engels, verteld door de Chéran, te downloaden via de izi.TRAVEL-app."
+        },
+        {
+          "title": "De middeleeuwse arcades ontdekken",
+          "tag": null,
+          "description": "Place du Trophée en de arcades van het middeleeuwse dorp Alby, erfgoed van de oude jaarmarkt en de schoenmakersambacht."
+        },
+        {
+          "title": "Afsluiten met een koffie op het terras",
+          "tag": null,
+          "description": "Meerdere café's en restaurants met terras rond de Place du Trophée om de wandeling af te ronden."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adres",
+          "v": "Start: Place du Trophée, 74540 Alby-sur-Chéran"
+        },
+        {
+          "k": "Coördinaten",
+          "v": "45,816982° N - 6,020539° O"
+        },
+        {
+          "k": "Afstand",
+          "v": "~2 km - 12 haltes"
+        },
+        {
+          "k": "Moeilijkheidsgraad",
+          "v": "Makkelijk - stadspad"
+        },
+        {
+          "k": "Telefoon",
+          "v": "OT du Lac d'Annecy - 04 50 45 00 33",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Officiële website",
+          "v": "lac-annecy.com - mairie-alby-sur-cheran.fr"
+        },
+        {
+          "k": "Openingstijden",
+          "v": "Vrije toegang het hele jaar, op eigen houtje. izi.TRAVEL-audiotour 24/7 te downloaden.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarieven",
+          "v": "Gratis",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Toegang / Parking",
+          "v": "Openbare parkings bij de Place du Trophée. 15 km ten zuiden van Annecy via de A 41, afrit Alby-sur-Chéran."
+        },
+        {
+          "k": "Bezoekduur",
+          "v": "Ongeveer 1 u"
+        },
+        {
+          "k": "Publiek",
+          "v": "Gezinnen, erfgoedliefhebbers, toeristen op doortocht rond het Meer van Annecy"
+        },
+        {
+          "k": "Vereiste uitrusting",
+          "v": "Smartphone voor de izi.TRAVEL-audiotour (optioneel)."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Waar begint de route Suivez la mouche in Alby-sur-Chéran?",
+          "a": "De route Suivez la mouche start aan de Place du Trophée, in het hart van het dorp Alby-sur-Chéran. Ze vormt een lus van 2 km met 12 haltes door de steegjes en langs de Chéran."
+        },
+        {
+          "q": "Hoe lang duurt de route Suivez la mouche?",
+          "a": "Reken op ongeveer 1 uur om de 2 km van de route Suivez la mouche in Alby-sur-Chéran te lopen, in een rustig tempo met een halte bij elke etappe."
+        },
+        {
+          "q": "Is de route Suivez la mouche gratis?",
+          "a": "Ja. De route Suivez la mouche is het hele jaar vrij en gratis toegankelijk. De audiotour op izi.TRAVEL is eveneens gratis."
+        },
+        {
+          "q": "Waarom heet de route „Suivez la mouche\"?",
+          "a": "De route Suivez la mouche dankt haar naam aan de spijker die de schoenmakers van Alby-sur-Chéran onder de zolen sloegen, waarvan de kop op vliegenvleugels leek, en aan de vele vliegvissers in de Chéran. Op de grond getekende vliegen wijzen de route aan."
+        },
+        {
+          "q": "Is de route Suivez la mouche geschikt voor kinderen?",
+          "a": "Ja. De route Suivez la mouche is heel gezinsvriendelijk: kort traject, raadsels bij elke halte en, tijdens de openingstijden van het Schoenmakersmuseum, een speurtocht voor kinderen op het spoor van de hamer van Crispinus."
+        },
+        {
+          "q": "Bestaat er een audioversie van de route Suivez la mouche?",
+          "a": "Ja. Een audiotour in het Frans en Engels begeleidt de route Suivez la mouche, gratis te downloaden via de izi.TRAVEL-app - de Chéran zelf leidt uw stappen door de geschiedenis van Alby."
+        }
+      ],
+      "schema_amenities": [
+        "Stadspad",
+        "Audiotour (izi.TRAVEL)",
+        "Grondmarkering (vliegen)",
+        "Parkings in de buurt",
+        "Schoenmakersmuseum in de buurt"
+      ]
     }
   },
   "status": "published"

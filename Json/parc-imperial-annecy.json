@@ -88,6 +88,26 @@
       "date": "2026-06-13",
       "by": "scripts/ingest_translations.py",
       "note": "Translation ingest [nl]: 5 field(s) updated."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for de from agent_M_de_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for es from agent_M_es_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for it from agent_M_it_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for nl from agent_M_nl_secondary.json."
     }
   ],
   "i18n": {
@@ -249,7 +269,149 @@
       "hero_alt": "Parc de l'Imperial at Annecy, public garden on the shore of Lake Annecy",
       "body": {
         "what_is": "<p>The <strong>Parc de l'Imperial</strong>, officially Parc Charles Bosson, is a five-hectare public garden set on the northern shore of Lake Annecy, right next to the Imperial Palace, the Casino and the Imperial beach. Laid out on a former Belle Epoque lakeside estate, it extends the Pâquier along the lakefront and forms one of the largest green walking spaces in central Annecy.</p><p>Visitors enjoy a <strong>collection of roses</strong>, a perennial border, flower beds renewed each season by the city gardeners, shaded lawns and an <strong>aviary</strong> that delights families. Flat, accessible paths dotted with benches and orientation tables open onto the Tournette and the Semnoz before leading out to the Imperial beach (paid in summer), the harbour and the casino.</p><p>The site is part of Annecy's Ville d'art et d'histoire label, with interpretive panels and a direct link to the Jardins de l'Europe. It is a natural stop between the old town, the lake and the avenue d'Albigny — and just a short walk from the Pont des Amours and the canals district.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parc Charles Bosson",
+        "Impérial"
+      ],
+      "hero": {
+        "badge": "Free entry · Year-round",
+        "lead": "A 5-hectare public garden on the shore of Lake Annecy, next to the Casino Impérial Palace: flower beds, a rose collection, a perennial border and a remarkable aviary form a landscaped setting extended by the Impérial beach."
+      },
+      "facts": {
+        "type": "Public park · Garden",
+        "access": "Open · Free",
+        "commune": "Annecy",
+        "parking": "Paid Impérial / Hôtel de Ville car parks nearby",
+        "dogs": "Allowed on lead",
+        "duration": "30 min to 1 h 30",
+        "best_season": "Spring and summer (flowering) · Year-round"
+      },
+      "activities": [
+        {
+          "title": "Wander the flower-lined paths",
+          "tag": null,
+          "description": "A flat 30-minute to 1-hour walk through flower beds, the perennial border and the rose garden, ideal on summer evenings and during the May-June blooms."
+        },
+        {
+          "title": "Visit the aviary",
+          "tag": "Family",
+          "description": "An aviary housing several bird species — a popular stop for children at the heart of the park."
+        },
+        {
+          "title": "Picnic facing the lake",
+          "tag": null,
+          "description": "Shaded lawns and benches open onto Lake Annecy, just steps from the Impérial beach and the avenue d'Albigny."
+        },
+        {
+          "title": "Continue to the Impérial beach",
+          "tag": "Summer 2026",
+          "description": "The municipal beach adjoins the park: direct access on foot to the sunbathing lawns, the solarium and supervised swimming in season."
+        },
+        {
+          "title": "Join the lakeside greenway",
+          "tag": null,
+          "description": "From the park, the Lake Annecy cycle route starts just steps south (Albigny, Annecy-le-Vieux, Veyrier) and offers 42 km of traffic-free path."
+        },
+        {
+          "title": "Discover Belle Époque heritage",
+          "tag": null,
+          "description": "Façades, kiosks and the Impérial Palace recall Annecy's lakeside and spa golden age at the turn of the 20th century."
+        },
+        {
+          "title": "Walk to the Pâquier and the old town",
+          "tag": null,
+          "description": "A 10-minute lakeside walk links the park to the Pâquier, the Jardins de l'Europe, the Pont des Amours and the canals district."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Address",
+          "v": "Parc Charles Bosson, avenue d'Albigny, 74000 Annecy"
+        },
+        {
+          "k": "Coordinates",
+          "v": "45.903592° N — 6.143566° E"
+        },
+        {
+          "k": "Telephone",
+          "v": "City of Annecy — 04 50 33 89 45",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Official website",
+          "v": "annecy.fr"
+        },
+        {
+          "k": "Opening hours",
+          "v": "Free entry year-round, every day (park open 24/7).",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Prices",
+          "v": "Free",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Access / Parking",
+          "v": "Paid Impérial / Hôtel de Ville car parks 2-5 min on foot. Sibra bus stops Impérial / Hôtel de Ville. Avenue d'Albigny on foot from the Pâquier."
+        },
+        {
+          "k": "Visit duration",
+          "v": "30 min to 1 h 30 depending on your walk"
+        },
+        {
+          "k": "Pets",
+          "v": "Allowed on lead"
+        },
+        {
+          "k": "Accessibility",
+          "v": "Flat, stabilised paths, accessible to strollers and wheelchairs"
+        },
+        {
+          "k": "On-site catering",
+          "v": "Brasserie du Parc in the Impérial building · beach and kiosks in season"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is the Parc de l'Imperial in Annecy paid?",
+          "a": "No. Access to the Parc de l'Imperial (officially Parc Charles Bosson) is free year-round. Only the adjoining Impérial beach (in season) and some neighbouring leisure facilities are paid."
+        },
+        {
+          "q": "What are the opening hours of the Parc de l'Imperial in Annecy?",
+          "a": "The Parc de l'Imperial is a public garden open year-round, accessible 24/7, with no fence or closing times. Municipal services and the Brasserie du Parc keep their own hours."
+        },
+        {
+          "q": "Can you swim at the Parc de l'Imperial in Annecy?",
+          "a": "Not directly in the park, but the Impérial Annecy beach adjoins it: a municipal beach supervised in summer, with paid access in high season. The Parc de l'Imperial extends to the lawns of the beach."
+        },
+        {
+          "q": "How do I get to the Parc de l'Imperial in Annecy?",
+          "a": "The Parc de l'Imperial is on avenue d'Albigny, a 10-minute walk from the Pâquier. By public transport: Sibra bus, Impérial stop. By car: paid underground car parks Hôtel de Ville and Impérial nearby. By bike, the Lake Annecy greenway runs along the foot of the park."
+        },
+        {
+          "q": "Are dogs allowed at the Parc de l'Imperial in Annecy?",
+          "a": "Yes, dogs are allowed at the Parc de l'Imperial provided they are kept on a lead, as in all Annecy's municipal parks. Please pick up after them."
+        },
+        {
+          "q": "When is the best season to visit the Parc de l'Imperial?",
+          "a": "The Parc de l'Imperial is pleasant all year, but the rose garden and beds are in full bloom from May to September. Summer pairs the park with the Impérial beach and lake cruises, while autumn and winter offer a quieter walk."
+        },
+        {
+          "q": "How long should I plan to visit the Parc de l'Imperial?",
+          "a": "A simple stroll through the Parc de l'Imperial takes 30 to 45 minutes. Allow 1 h to 1 h 30 if you take time to see the aviary and the rose garden and enjoy a lakeside break — or longer if you extend the visit to the beach and the Pâquier."
+        }
+      ],
+      "schema_amenities": [
+        "Free entry",
+        "Benches",
+        "Aviary",
+        "Rose garden",
+        "Flower beds",
+        "Accessible paths",
+        "Open area facing the lake"
+      ]
     },
     "de": {
       "name": "Parc de l'Impérial",
@@ -258,7 +420,149 @@
       "hero_alt": "Parc de l'Impérial in Annecy, öffentlicher Garten am Ufer des Annecy-Sees",
       "body": {
         "what_is": "<p>Der <strong>Parc de l'Impérial</strong>, offiziell Parc Charles Bosson, ist ein fünf Hektar großer öffentlicher Garten am Nordufer des Annecy-Sees, unmittelbar neben dem Impérial Palace, dem Casino und dem Strand Impérial. Auf einem ehemaligen Belle-Époque-Seebadgelände angelegt, verlängert er das Pâquier am Seeufer und zählt zu den größten begrünten Spazierräumen im Zentrum von Annecy.</p><p>Besucher entdecken eine <strong>Rosensammlung</strong>, ein Staudenbeet, von den städtischen Gärtnern saisonal erneuerte Blumenbeete, schattige Rasenflächen und eine <strong>Voliere</strong>, die Familien begeistert. Ebene, barrierearme Wege mit Bänken und Orientierungstafeln öffnen sich zur Tournette und zum Semnoz und führen weiter zum Strand Impérial (im Sommer kostenpflichtig), zum Hafen und zum Casino.</p><p>Der Ort ist Teil des Labels Ville d'art et d'histoire von Annecy: Informationstafeln und eine direkte Verbindung zu den Jardins de l'Europe machen ihn zu einer natürlichen Etappe zwischen der Altstadt, dem See und der Avenue d'Albigny — nur wenige Schritte vom Pont des Amours und den Kanälen entfernt.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parc Charles Bosson",
+        "Impérial"
+      ],
+      "hero": {
+        "badge": "Freier Zugang · Ganzjährig",
+        "lead": "5 Hektar großer öffentlicher Garten am Ufer des Annecy-Sees, neben dem Casino Impérial Palace: Blumenbeete, Rosensammlung, Staudenbeet und beeindruckende Voliere bilden einen Landschaftsrahmen, der sich am Strand Impérial fortsetzt."
+      },
+      "facts": {
+        "type": "Öffentlicher Park · Garten",
+        "access": "Frei · Kostenlos",
+        "commune": "Annecy",
+        "parking": "Kostenpflichtige Parkhäuser Impérial / Hôtel de Ville in der Nähe",
+        "dogs": "An der Leine erlaubt",
+        "duration": "30 Min. bis 1 Std. 30",
+        "best_season": "Frühling und Sommer (Blütezeit) · Ganzjährig"
+      },
+      "activities": [
+        {
+          "title": "Durch die Blumenwege flanieren",
+          "tag": null,
+          "description": "Ebener Spaziergang von 30 Min. bis 1 Std. durch Blumenbeete, Staudenbeet und Rosengarten, ideal an Sommerabenden und während der Blüte von Mai bis Juni."
+        },
+        {
+          "title": "Die Voliere besuchen",
+          "tag": "Familie",
+          "description": "Voliere mit mehreren Vogelarten, ein beliebter Stopp für Kinder im Herzen des Parks."
+        },
+        {
+          "title": "Picknick am See",
+          "tag": null,
+          "description": "Schattige Rasenflächen und Bänke öffnen sich zum Annecy-See, wenige Schritte vom Strand Impérial und der Avenue d'Albigny entfernt."
+        },
+        {
+          "title": "Weiter zum Strand Impérial",
+          "tag": "Sommer 2026",
+          "description": "Der städtische Strand grenzt an den Park: direkter Zugang zu Fuß zu den Liegewiesen, dem Solarium und dem überwachten Badebereich in der Saison."
+        },
+        {
+          "title": "Auf den Radweg am See wechseln",
+          "tag": null,
+          "description": "Vom Park aus beginnt die Radroute des Annecy-Sees wenige Schritte südlich (Albigny, Annecy-le-Vieux, Veyrier) und bietet 42 km autofreie Strecke."
+        },
+        {
+          "title": "Belle-Époque-Erbe entdecken",
+          "tag": null,
+          "description": "Fassaden, Pavillons und der Impérial Palace zeugen vom goldenen See- und Kurzeitalter Annecys an der Wende zum 20. Jahrhundert."
+        },
+        {
+          "title": "Bis zum Pâquier und in die Altstadt gehen",
+          "tag": null,
+          "description": "Ein 10-minütiger Uferspaziergang verbindet den Park mit dem Pâquier, den Jardins de l'Europe, dem Pont des Amours und dem Kanalviertel."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Parc Charles Bosson, Avenue d'Albigny, 74000 Annecy"
+        },
+        {
+          "k": "Koordinaten",
+          "v": "45,903592° N — 6,143566° E"
+        },
+        {
+          "k": "Telefon",
+          "v": "Stadt Annecy — 04 50 33 89 45",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Offizielle Website",
+          "v": "annecy.fr"
+        },
+        {
+          "k": "Öffnungszeiten",
+          "v": "Freier Zugang ganzjährig, täglich (Park rund um die Uhr geöffnet).",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Preise",
+          "v": "Kostenlos",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Anfahrt / Parken",
+          "v": "Kostenpflichtige Parkhäuser Impérial / Hôtel de Ville 2-5 Min. zu Fuß. Sibra-Bushaltestellen Impérial / Hôtel de Ville. Zu Fuß über die Avenue d'Albigny vom Pâquier."
+        },
+        {
+          "k": "Besuchsdauer",
+          "v": "30 Min. bis 1 Std. 30 je nach Spaziergang"
+        },
+        {
+          "k": "Tiere",
+          "v": "An der Leine erlaubt"
+        },
+        {
+          "k": "Barrierefreiheit",
+          "v": "Ebene, befestigte Wege, für Kinderwagen und Rollstühle geeignet"
+        },
+        {
+          "k": "Gastronomie vor Ort",
+          "v": "Brasserie du Parc im Impérial-Gebäude · Strand und Kioske in der Saison"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Ist der Parc de l'Impérial in Annecy kostenpflichtig?",
+          "a": "Nein. Der Zugang zum Parc de l'Impérial (offiziell Parc Charles Bosson) ist ganzjährig frei und kostenlos. Nur der angrenzende Strand Impérial (in der Saison) und einige benachbarte Freizeiteinrichtungen sind kostenpflichtig."
+        },
+        {
+          "q": "Wie sind die Öffnungszeiten des Parc de l'Impérial in Annecy?",
+          "a": "Der Parc de l'Impérial ist ein ganzjährig geöffneter öffentlicher Garten, rund um die Uhr zugänglich, ohne Umzäunung oder Schließzeiten. Die städtischen Dienste und die Brasserie du Parc haben eigene Öffnungszeiten."
+        },
+        {
+          "q": "Kann man im Parc de l'Impérial in Annecy baden?",
+          "a": "Nicht direkt im Park, aber der Strand Impérial Annecy grenzt an: ein städtischer, im Sommer überwachter Strand mit kostenpflichtigem Zugang in der Hochsaison. Der Parc de l'Impérial reicht bis zu den Rasenflächen des Strands."
+        },
+        {
+          "q": "Wie kommt man zum Parc de l'Impérial in Annecy?",
+          "a": "Der Parc de l'Impérial liegt an der Avenue d'Albigny, 10 Min. zu Fuß vom Pâquier. Mit dem ÖPNV: Sibra-Bus, Haltestelle Impérial. Mit dem Auto: kostenpflichtige Tiefgaragen Hôtel de Ville und Impérial in der Nähe. Mit dem Fahrrad führt der Radweg des Annecy-Sees am Fuß des Parks entlang."
+        },
+        {
+          "q": "Sind Hunde im Parc de l'Impérial in Annecy erlaubt?",
+          "a": "Ja, Hunde sind im Parc de l'Impérial erlaubt, sofern sie an der Leine geführt werden, wie in allen städtischen Parks Annecys. Bitte daran denken, Hinterlassenschaften zu entfernen."
+        },
+        {
+          "q": "Wann ist die beste Jahreszeit für den Parc de l'Impérial?",
+          "a": "Der Parc de l'Impérial ist das ganze Jahr über angenehm, doch die volle Blüte des Rosengartens und der Beete erlebt man von Mai bis September. Der Sommer verbindet den Park mit dem Strand Impérial und den Bootsfahrten auf dem See, während Herbst und Winter einen ruhigeren Spaziergang ermöglichen."
+        },
+        {
+          "q": "Wie viel Zeit sollte man für den Parc de l'Impérial einplanen?",
+          "a": "Ein einfacher Spaziergang durch den Parc de l'Impérial dauert 30 bis 45 Minuten. Rechnen Sie 1 Std. bis 1 Std. 30, wenn Sie die Voliere und den Rosengarten betrachten und eine Pause am See einlegen — oder länger, wenn Sie den Besuch um den Strand und den Pâquier ergänzen."
+        }
+      ],
+      "schema_amenities": [
+        "Freier Zugang",
+        "Bänke",
+        "Voliere",
+        "Rosengarten",
+        "Blumenbeete",
+        "Barrierefreie Wege",
+        "Offene Fläche zum See"
+      ]
     },
     "it": {
       "name": "Parc de l'Impérial",
@@ -267,7 +571,149 @@
       "hero_alt": "Parc de l'Impérial ad Annecy, giardino pubblico in riva al lago di Annecy",
       "body": {
         "what_is": "<p>Il <strong>Parc de l'Impérial</strong>, ufficialmente Parc Charles Bosson, è un giardino pubblico di cinque ettari sulla riva nord del lago di Annecy, accanto all'Impérial Palace, al Casino e alla spiaggia Impérial. Allestito su un'antica tenuta balneare della Belle Époque, prolunga il Pâquier lungo il lago e costituisce uno dei più ampi spazi verdi per passeggiate nel centro di Annecy.</p><p>I visitatori vi trovano una <strong>collezione di rose</strong>, una bordura di piante perenni, aiuole rinnovate ogni stagione dai giardinieri municipali, prati ombreggiati e una <strong>voliera</strong> molto apprezzata dalle famiglie. Viali pianeggianti accessibili, panchine e tavoli di orientamento si aprono sulla Tournette e sul Semnoz e conducono alla spiaggia Impérial (a pagamento d'estate), al porto e al casinò.</p><p>Il sito è inserito nel marchio Ville d'art et d'histoire di Annecy: pannelli interpretativi e collegamento diretto con i Jardins de l'Europe ne fanno una tappa naturale tra il centro storico, il lago e l'avenue d'Albigny — a pochi passi dal Pont des Amours e dal quartiere dei canali.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parc Charles Bosson",
+        "Impérial"
+      ],
+      "hero": {
+        "badge": "Accesso libero · Tutto l'anno",
+        "lead": "Giardino pubblico di 5 ettari in riva al lago di Annecy, accanto al Casino Impérial Palace: aiuole fiorite, collezione di rose, bordura di perenni e voliera notevole compongono uno scrigno paesaggistico prolungato dalla spiaggia Impérial."
+      },
+      "facts": {
+        "type": "Parco pubblico · Giardino",
+        "access": "Libero · Gratuito",
+        "commune": "Annecy",
+        "parking": "Parcheggi a pagamento Impérial / Hôtel de Ville nelle vicinanze",
+        "dogs": "Ammessi al guinzaglio",
+        "duration": "30 min - 1 h 30",
+        "best_season": "Primavera ed estate (fioriture) · Tutto l'anno"
+      },
+      "activities": [
+        {
+          "title": "Passeggiare nei viali fioriti",
+          "tag": null,
+          "description": "Passeggiata pianeggiante di 30 min - 1 h tra aiuole, bordura di perenni e roseto, ideale nelle sere d'estate e durante le fioriture di maggio-giugno."
+        },
+        {
+          "title": "Osservare la voliera",
+          "tag": "Famiglia",
+          "description": "Voliera che ospita diverse specie di uccelli, tappa apprezzata dai bambini nel cuore del parco."
+        },
+        {
+          "title": "Pic-nic davanti al lago",
+          "tag": null,
+          "description": "Prati ombreggiati e panchine aperti sul lago di Annecy, a due passi dalla spiaggia Impérial e dall'avenue d'Albigny."
+        },
+        {
+          "title": "Proseguire fino alla spiaggia Impérial",
+          "tag": "Estate 2026",
+          "description": "La spiaggia comunale è adiacente al parco: accesso diretto a piedi ai prati per prendere il sole, al solarium e alla balneazione sorvegliata in stagione."
+        },
+        {
+          "title": "Raggiungere la pista verde del lago",
+          "tag": null,
+          "description": "Dal parco la ciclabile del lago di Annecy parte a pochi passi verso sud (Albigny, Annecy-le-Vieux, Veyrier) e offre 42 km di pista senza auto."
+        },
+        {
+          "title": "Scoprire il patrimonio Belle Époque",
+          "tag": null,
+          "description": "Facciate, chioschi e l'Impérial Palace testimoniano l'età d'oro termale e lacustre di Annecy a cavallo tra Ottocento e Novecento."
+        },
+        {
+          "title": "Camminare fino al Pâquier e al centro storico",
+          "tag": null,
+          "description": "10 min a piedi lungo le rive collegano il parco al Pâquier, ai Jardins de l'Europe, al Pont des Amours e al quartiere dei canali."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Indirizzo",
+          "v": "Parc Charles Bosson, avenue d'Albigny, 74000 Annecy"
+        },
+        {
+          "k": "Coordinate",
+          "v": "45,903592° N — 6,143566° E"
+        },
+        {
+          "k": "Telefono",
+          "v": "Città di Annecy — 04 50 33 89 45",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Sito ufficiale",
+          "v": "annecy.fr"
+        },
+        {
+          "k": "Orari",
+          "v": "Accesso libero tutto l'anno, tutti i giorni (parco aperto 24h/24).",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tariffe",
+          "v": "Gratuito",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Accesso / Parcheggio",
+          "v": "Parcheggi a pagamento Impérial / Hôtel de Ville a 2-5 min a piedi. Bus Sibra fermate Impérial / Hôtel de Ville. Avenue d'Albigny a piedi dal Pâquier."
+        },
+        {
+          "k": "Durata della visita",
+          "v": "30 min - 1 h 30 secondo la passeggiata"
+        },
+        {
+          "k": "Animali",
+          "v": "Ammessi al guinzaglio"
+        },
+        {
+          "k": "Accessibilità",
+          "v": "Viali piani e pavimentati, accessibili a passeggini e sedie a rotelle"
+        },
+        {
+          "k": "Ristorazione in loco",
+          "v": "Brasserie du Parc nell'edificio dell'Impérial · spiaggia e chioschi in stagione"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Il Parc de l'Impérial ad Annecy è a pagamento?",
+          "a": "No. L'accesso al Parc de l'Impérial (ufficialmente Parc Charles Bosson) è libero e gratuito tutto l'anno. Solo la spiaggia Impérial adiacente (in stagione) e alcuni impianti di svago vicini sono a pagamento."
+        },
+        {
+          "q": "Quali sono gli orari del Parc de l'Impérial ad Annecy?",
+          "a": "Il Parc de l'Impérial è un giardino pubblico aperto tutto l'anno, accessibile 24h/24, senza recinzione né orari di chiusura. I servizi municipali e la Brasserie du Parc seguono i propri orari."
+        },
+        {
+          "q": "Ci si può bagnare al Parc de l'Impérial ad Annecy?",
+          "a": "Non direttamente nel parco, ma la spiaggia Impérial Annecy è adiacente: è una spiaggia comunale sorvegliata in estate, con accesso a pagamento in alta stagione. Il Parc de l'Impérial si prolunga fino ai prati della spiaggia."
+        },
+        {
+          "q": "Come si raggiunge il Parc de l'Impérial ad Annecy?",
+          "a": "Il Parc de l'Impérial si trova in avenue d'Albigny a 10 min a piedi dal Pâquier. Con i mezzi: bus Sibra fermata Impérial. In auto: parcheggi sotterranei Hôtel de Ville e Impérial nelle vicinanze (a pagamento). In bici, la ciclabile del lago di Annecy passa ai piedi del parco."
+        },
+        {
+          "q": "I cani sono ammessi al Parc de l'Impérial ad Annecy?",
+          "a": "Sì, i cani sono ammessi al Parc de l'Impérial a condizione di essere tenuti al guinzaglio, come in tutti i parchi comunali di Annecy. Si prega di raccogliere le deiezioni."
+        },
+        {
+          "q": "Qual è la stagione migliore per visitare il Parc de l'Impérial?",
+          "a": "Il Parc de l'Impérial è piacevole tutto l'anno, ma la piena fioritura del roseto e delle aiuole si ammira da maggio a settembre. L'estate permette di combinare il parco con la spiaggia Impérial e le crociere sul lago, mentre l'autunno e l'inverno offrono una passeggiata più tranquilla."
+        },
+        {
+          "q": "Quanto tempo prevedere per visitare il Parc de l'Impérial?",
+          "a": "Una semplice passeggiata al Parc de l'Impérial richiede 30-45 minuti. Considerare 1 h - 1 h 30 per osservare la voliera, il roseto e godersi una pausa davanti al lago, o di più se si prosegue fino alla spiaggia e al Pâquier."
+        }
+      ],
+      "schema_amenities": [
+        "Accesso libero",
+        "Panchine",
+        "Voliera",
+        "Roseto",
+        "Aiuole fiorite",
+        "Viali accessibili",
+        "Area aperta sul lago"
+      ]
     },
     "es": {
       "name": "Parc de l'Impérial",
@@ -276,7 +722,149 @@
       "hero_alt": "Parc de l'Impérial en Annecy, jardín público a orillas del lago de Annecy",
       "body": {
         "what_is": "<p>El <strong>Parc de l'Impérial</strong>, oficialmente Parc Charles Bosson, es un jardín público de cinco hectáreas situado en la orilla norte del lago de Annecy, junto al Impérial Palace, al Casino y a la playa Impérial. Diseñado sobre una antigua finca balnearia de la Belle Époque, prolonga el Pâquier a lo largo del lago y constituye uno de los mayores espacios verdes para pasear del centro de Annecy.</p><p>Los visitantes encuentran una <strong>colección de rosales</strong>, una bordura de plantas vivaces, parterres renovados cada estación por los jardineros municipales, praderas sombreadas y una <strong>pajarera</strong> que entusiasma a las familias. Sus senderos planos y accesibles, con bancos y mesas de orientación, se abren hacia La Tournette y el Semnoz y conducen a la playa Impérial (de pago en verano), al puerto y al casino.</p><p>El lugar forma parte del sello Ville d'art et d'histoire de Annecy: paneles interpretativos y conexión directa con los Jardins de l'Europe lo convierten en una etapa natural entre el casco antiguo, el lago y la avenue d'Albigny — a pocos pasos del Pont des Amours y del barrio de los canales.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parc Charles Bosson",
+        "Impérial"
+      ],
+      "hero": {
+        "badge": "Acceso libre · Todo el año",
+        "lead": "Jardín público de 5 hectáreas a orillas del lago de Annecy, junto al Casino Impérial Palace: parterres floridos, colección de rosales, río de vivaces y notable pajarera componen un escenario paisajístico prolongado por la playa Impérial."
+      },
+      "facts": {
+        "type": "Parque público · Jardín",
+        "access": "Libre · Gratuito",
+        "commune": "Annecy",
+        "parking": "Aparcamientos de pago Impérial / Hôtel de Ville cerca",
+        "dogs": "Aceptados con correa",
+        "duration": "30 min a 1 h 30",
+        "best_season": "Primavera y verano (floración) · Todo el año"
+      },
+      "activities": [
+        {
+          "title": "Pasear por los senderos floridos",
+          "tag": null,
+          "description": "Paseo llano de 30 min a 1 h entre parterres, río de vivaces y rosaleda, ideal en noches de verano y durante las floraciones de mayo-junio."
+        },
+        {
+          "title": "Observar la pajarera",
+          "tag": "Familia",
+          "description": "Pajarera con varias especies de aves, parada apreciada por los niños en el corazón del parque."
+        },
+        {
+          "title": "Picnic frente al lago",
+          "tag": null,
+          "description": "Praderas sombreadas y bancos abiertos al lago de Annecy, a dos pasos de la playa Impérial y de la avenue d'Albigny."
+        },
+        {
+          "title": "Continuar hasta la playa Impérial",
+          "tag": "Verano 2026",
+          "description": "La playa municipal linda con el parque: acceso directo a pie a las praderas de tomar el sol, el solárium y el baño vigilado en temporada."
+        },
+        {
+          "title": "Tomar la vía verde del lago",
+          "tag": null,
+          "description": "Desde el parque, la vía verde del lago de Annecy arranca a pocos pasos hacia el sur (Albigny, Annecy-le-Vieux, Veyrier) y ofrece 42 km de carril sin coches."
+        },
+        {
+          "title": "Descubrir el patrimonio Belle Époque",
+          "tag": null,
+          "description": "Fachadas, quioscos y el Impérial Palace dan testimonio de la edad de oro termal y lacustre de Annecy a comienzos del siglo XX."
+        },
+        {
+          "title": "Caminar hasta el Pâquier y el casco antiguo",
+          "tag": null,
+          "description": "10 min a pie por la orilla unen el parque con el Pâquier, los Jardins de l'Europe, el Pont des Amours y el barrio de los canales."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Dirección",
+          "v": "Parc Charles Bosson, avenue d'Albigny, 74000 Annecy"
+        },
+        {
+          "k": "Coordenadas",
+          "v": "45,903592° N — 6,143566° E"
+        },
+        {
+          "k": "Teléfono",
+          "v": "Ciudad de Annecy — 04 50 33 89 45",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Sitio oficial",
+          "v": "annecy.fr"
+        },
+        {
+          "k": "Horario",
+          "v": "Acceso libre todo el año, todos los días (parque abierto 24h).",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifas",
+          "v": "Gratuito",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Acceso / Aparcamiento",
+          "v": "Aparcamientos de pago Impérial / Hôtel de Ville a 2-5 min a pie. Bus Sibra paradas Impérial / Hôtel de Ville. Avenue d'Albigny a pie desde el Pâquier."
+        },
+        {
+          "k": "Duración de la visita",
+          "v": "30 min a 1 h 30 según el paseo"
+        },
+        {
+          "k": "Animales",
+          "v": "Aceptados con correa"
+        },
+        {
+          "k": "Accesibilidad",
+          "v": "Senderos llanos y estabilizados, accesibles a cochecitos y sillas de ruedas"
+        },
+        {
+          "k": "Restauración in situ",
+          "v": "Brasserie du Parc en el edificio del Impérial · playa y quioscos en temporada"
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Es de pago el Parc de l'Impérial en Annecy?",
+          "a": "No. El acceso al Parc de l'Impérial (oficialmente Parc Charles Bosson) es libre y gratuito todo el año. Solo la playa Impérial colindante (en temporada) y algunas instalaciones de ocio cercanas son de pago."
+        },
+        {
+          "q": "¿Cuál es el horario del Parc de l'Impérial en Annecy?",
+          "a": "El Parc de l'Impérial es un jardín público abierto todo el año, accesible 24h, sin vallado ni horarios de cierre. Los servicios municipales y la Brasserie du Parc siguen sus propios horarios."
+        },
+        {
+          "q": "¿Se puede bañar en el Parc de l'Impérial en Annecy?",
+          "a": "No directamente en el parque, pero la playa Impérial Annecy es colindante: es una playa municipal vigilada en verano, con acceso de pago en temporada alta. El Parc de l'Impérial se prolonga hasta las praderas de la playa."
+        },
+        {
+          "q": "¿Cómo llegar al Parc de l'Impérial en Annecy?",
+          "a": "El Parc de l'Impérial está en la avenue d'Albigny a 10 min a pie del Pâquier. En transporte: bus Sibra parada Impérial. En coche: aparcamientos subterráneos Hôtel de Ville e Impérial cerca (de pago). En bicicleta, la vía verde del lago de Annecy pasa al pie del parque."
+        },
+        {
+          "q": "¿Se aceptan perros en el Parc de l'Impérial en Annecy?",
+          "a": "Sí, los perros son aceptados en el Parc de l'Impérial siempre que vayan con correa, como en todos los parques municipales de Annecy. Recordar recoger sus deposiciones."
+        },
+        {
+          "q": "¿Cuál es la mejor temporada para visitar el Parc de l'Impérial?",
+          "a": "El Parc de l'Impérial es agradable todo el año, pero la plena floración de la rosaleda y los parterres se admira de mayo a septiembre. El verano permite combinar el parque con la playa Impérial y los cruceros por el lago, mientras que otoño e invierno ofrecen un paseo más tranquilo."
+        },
+        {
+          "q": "¿Cuánto tiempo hay que prever para visitar el Parc de l'Impérial?",
+          "a": "Un simple paseo por el Parc de l'Impérial lleva 30 a 45 minutos. Contar 1 h a 1 h 30 si se toma el tiempo de observar la pajarera, la rosaleda y disfrutar de una pausa frente al lago, o más si se prolonga la visita por la playa y el Pâquier."
+        }
+      ],
+      "schema_amenities": [
+        "Acceso libre",
+        "Bancos",
+        "Pajarera",
+        "Rosaleda",
+        "Parterres floridos",
+        "Senderos accesibles",
+        "Área abierta al lago"
+      ]
     },
     "nl": {
       "name": "Parc de l'Impérial",
@@ -285,7 +873,149 @@
       "hero_alt": "Parc de l'Impérial in Annecy, openbare tuin aan het meer van Annecy",
       "body": {
         "what_is": "<p>Het <strong>Parc de l'Impérial</strong>, officieel Parc Charles Bosson, is een vijf hectare grote openbare tuin aan de noordoever van het meer van Annecy, vlak naast het Impérial Palace, het Casino en het strand Impérial. Aangelegd op een voormalig Belle Époque-badgebied, vormt het een verlengstuk van het Pâquier langs het meer en is het een van de grootste groene wandelruimten in het centrum van Annecy.</p><p>Bezoekers vinden er een <strong>rozencollectie</strong>, een vasteplantenborder, perken die elk seizoen worden vernieuwd door de stadstuiniers, beschaduwde gazons en een <strong>volière</strong> die gezinnen bekoort. Vlakke, toegankelijke paden met banken en oriëntatietafels openen zich naar de Tournette en de Semnoz en leiden naar het strand Impérial (in de zomer betalend), de haven en het casino.</p><p>De plek maakt deel uit van het label Ville d'art et d'histoire van Annecy: informatiepanelen en een directe verbinding met de Jardins de l'Europe maken het tot een natuurlijke etappe tussen de oude stad, het meer en de avenue d'Albigny — op een steenworp van de Pont des Amours en de kanalenwijk.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parc Charles Bosson",
+        "Impérial"
+      ],
+      "hero": {
+        "badge": "Vrije toegang · Het hele jaar",
+        "lead": "Openbare tuin van 5 hectare aan het meer van Annecy, naast het Casino Impérial Palace: bloemperken, rozencollectie, vasteplantenborder en opmerkelijke volière vormen een landschappelijk geheel dat verder loopt langs het strand Impérial."
+      },
+      "facts": {
+        "type": "Openbaar park · Tuin",
+        "access": "Vrij · Gratis",
+        "commune": "Annecy",
+        "parking": "Betalende parkings Impérial / Hôtel de Ville in de buurt",
+        "dogs": "Toegestaan aan de lijn",
+        "duration": "30 min tot 1 u 30",
+        "best_season": "Lente en zomer (bloei) · Het hele jaar"
+      },
+      "activities": [
+        {
+          "title": "Door de bloemenpaden slenteren",
+          "tag": null,
+          "description": "Vlakke wandeling van 30 min tot 1 u door perken, vasteplantenborder en rozentuin, ideaal op zomeravonden en tijdens de bloei van mei-juni."
+        },
+        {
+          "title": "De volière bekijken",
+          "tag": "Gezin",
+          "description": "Volière met verschillende vogelsoorten, geliefde tussenstop voor kinderen in het hart van het park."
+        },
+        {
+          "title": "Picknicken aan het meer",
+          "tag": null,
+          "description": "Beschaduwde gazons en banken die uitkijken op het meer van Annecy, op een steenworp van het strand Impérial en de avenue d'Albigny."
+        },
+        {
+          "title": "Doorlopen tot het strand Impérial",
+          "tag": "Zomer 2026",
+          "description": "Het gemeentelijke strand grenst aan het park: rechtstreekse toegang te voet tot de zonneweiden, het solarium en het bewaakte zwemgedeelte in het seizoen."
+        },
+        {
+          "title": "Aansluiten op het fietspad langs het meer",
+          "tag": null,
+          "description": "Vanaf het park begint de fietsroute van het meer van Annecy op een steenworp naar het zuiden (Albigny, Annecy-le-Vieux, Veyrier) en biedt 42 km autovrij pad."
+        },
+        {
+          "title": "Het Belle Époque-erfgoed ontdekken",
+          "tag": null,
+          "description": "Gevels, paviljoens en het Impérial Palace getuigen van de gouden kuur- en meertijd van Annecy rond 1900."
+        },
+        {
+          "title": "Wandelen naar het Pâquier en de oude stad",
+          "tag": null,
+          "description": "10 min wandelen langs de oevers verbindt het park met het Pâquier, de Jardins de l'Europe, de Pont des Amours en de kanalenwijk."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adres",
+          "v": "Parc Charles Bosson, avenue d'Albigny, 74000 Annecy"
+        },
+        {
+          "k": "Coördinaten",
+          "v": "45,903592° N — 6,143566° E"
+        },
+        {
+          "k": "Telefoon",
+          "v": "Stad Annecy — 04 50 33 89 45",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Officiële website",
+          "v": "annecy.fr"
+        },
+        {
+          "k": "Openingstijden",
+          "v": "Vrije toegang het hele jaar, dagelijks (park 24/7 open).",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarieven",
+          "v": "Gratis",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Toegang / Parkeren",
+          "v": "Betalende parkings Impérial / Hôtel de Ville op 2-5 min lopen. Sibra-bushaltes Impérial / Hôtel de Ville. Avenue d'Albigny te voet vanaf het Pâquier."
+        },
+        {
+          "k": "Duur van het bezoek",
+          "v": "30 min tot 1 u 30 afhankelijk van de wandeling"
+        },
+        {
+          "k": "Dieren",
+          "v": "Toegestaan aan de lijn"
+        },
+        {
+          "k": "Toegankelijkheid",
+          "v": "Vlakke, verharde paden, toegankelijk voor kinderwagens en rolstoelen"
+        },
+        {
+          "k": "Eten ter plaatse",
+          "v": "Brasserie du Parc in het Impérial-gebouw · strand en kiosken in het seizoen"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is het Parc de l'Impérial in Annecy betalend?",
+          "a": "Nee. De toegang tot het Parc de l'Impérial (officieel Parc Charles Bosson) is het hele jaar vrij en gratis. Alleen het aangrenzende strand Impérial (in het seizoen) en sommige nabijgelegen vrijetijdsfaciliteiten zijn betalend."
+        },
+        {
+          "q": "Wat zijn de openingstijden van het Parc de l'Impérial in Annecy?",
+          "a": "Het Parc de l'Impérial is een openbare tuin die het hele jaar geopend is, 24/7 toegankelijk, zonder omheining of sluitingstijden. De gemeentelijke diensten en de Brasserie du Parc hanteren eigen openingstijden."
+        },
+        {
+          "q": "Kan men zwemmen in het Parc de l'Impérial in Annecy?",
+          "a": "Niet rechtstreeks in het park, maar het strand Impérial Annecy grenst eraan: een gemeentelijk strand dat in de zomer wordt bewaakt, met betaalde toegang in het hoogseizoen. Het Parc de l'Impérial loopt door tot de gazons van het strand."
+        },
+        {
+          "q": "Hoe bereik ik het Parc de l'Impérial in Annecy?",
+          "a": "Het Parc de l'Impérial ligt aan de avenue d'Albigny op 10 min wandelen van het Pâquier. Met het openbaar vervoer: Sibra-bus halte Impérial. Met de auto: betalende ondergrondse parkings Hôtel de Ville en Impérial in de buurt. Met de fiets loopt de fietsroute van het meer van Annecy onder aan het park door."
+        },
+        {
+          "q": "Zijn honden toegelaten in het Parc de l'Impérial in Annecy?",
+          "a": "Ja, honden zijn toegelaten in het Parc de l'Impérial mits aan de lijn, zoals in alle gemeentelijke parken van Annecy. Vergeet niet hun uitwerpselen op te ruimen."
+        },
+        {
+          "q": "Wat is het beste seizoen om het Parc de l'Impérial te bezoeken?",
+          "a": "Het Parc de l'Impérial is het hele jaar aangenaam, maar de volle bloei van de rozentuin en de perken is van mei tot september te bewonderen. In de zomer combineer je het park met het strand Impérial en de meercruises, terwijl herfst en winter een rustigere wandeling bieden."
+        },
+        {
+          "q": "Hoeveel tijd moet ik rekenen voor een bezoek aan het Parc de l'Impérial?",
+          "a": "Een eenvoudige wandeling in het Parc de l'Impérial duurt 30 tot 45 minuten. Reken 1 u tot 1 u 30 als je tijd neemt voor de volière en de rozentuin en geniet van een pauze aan het meer, of langer als je doorloopt naar het strand en het Pâquier."
+        }
+      ],
+      "schema_amenities": [
+        "Vrije toegang",
+        "Banken",
+        "Volière",
+        "Rozentuin",
+        "Bloemperken",
+        "Toegankelijke paden",
+        "Open ruimte aan het meer"
+      ]
     }
   },
   "status": "published"

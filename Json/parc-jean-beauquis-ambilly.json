@@ -88,6 +88,26 @@
       "date": "2026-06-13",
       "by": "scripts/ingest_translations.py",
       "note": "Translation ingest [nl]: 5 field(s) updated."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for de from agent_M_de_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for es from agent_M_es_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for it from agent_M_it_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for nl from agent_M_nl_secondary.json."
     }
   ],
   "i18n": {
@@ -249,7 +269,149 @@
       "hero_alt": "Parc Jean Beauquis at Ambilly, public park with biotope pond and play areas",
       "body": {
         "what_is": "<p>The <strong>Parc Jean Beauquis</strong> is the main public park of Ambilly, in the French Genevois right on the Swiss border, laid out at the heart of the town between the town hall and rue Jean-Jaurès. Its current layout is the result of a landscape programme led by the ADP Dubois agency between 2010 and 2013, which reorganised the town hall square, restructured the paths and created a large planted biotope pond.</p><p>Its roughly 1.5 hectares feature <strong>shaded rolling lawns</strong>, a biotope pond hosting dragonflies and seasonal aquatic plants, <strong>two children's play areas</strong> (toddlers and older kids), shaded benches and paths accessible to strollers and wheelchairs.</p><p>It is a local park used daily by residents of Ambilly, Annemasse and Gaillard for lunchtime breaks, family walks and weekend outings. Just 100 m from the Swiss border and 5 km from central Geneva, it is one of the most popular green spaces in the Greater Geneva area on the Haute-Savoie side.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parc Jean Beauquis et Clos Babuty"
+      ],
+      "hero": {
+        "badge": "Free entry · Year-round",
+        "lead": "Ambilly's public park with rolling shaded lawns: a planted biotope pond, two children's play areas, paths accessible to all and benches in the shade, just steps from the town hall and the Geneva border."
+      },
+      "facts": {
+        "type": "Public park · Garden",
+        "access": "Open · Free",
+        "commune": "Ambilly",
+        "parking": "Ambilly town hall car park",
+        "dogs": "Allowed on lead",
+        "stroller": "Suitable (flat, accessible paths)",
+        "duration": "30 min to 1 h",
+        "best_season": "Year-round · Spring and summer for the biotope"
+      },
+      "activities": [
+        {
+          "title": "Watch the biotope pond",
+          "tag": null,
+          "description": "An ecological planted pond at the heart of the park, ideal for observing aquatic plants, dragonflies and amphibians from spring to autumn."
+        },
+        {
+          "title": "Let the children play",
+          "tag": "Family",
+          "description": "Two separate play areas: one for toddlers and a larger one for children up to 10-12, with swings and climbing structures."
+        },
+        {
+          "title": "Picnic in the shade",
+          "tag": null,
+          "description": "Rolling lawns and benches in the shade of tall trees, ideal for a local picnic or a reading break."
+        },
+        {
+          "title": "Loop the park with a stroller",
+          "tag": null,
+          "description": "Flat, stabilised paths throughout the park, perfectly suited to strollers, wheelchairs and small children's bikes."
+        },
+        {
+          "title": "Take a sports break",
+          "tag": null,
+          "description": "Open spaces for jogging, stretching or free play. The park extends to the Clos Babuty and Ambilly's green network."
+        },
+        {
+          "title": "Discover the town hall square",
+          "tag": null,
+          "description": "The park connects with the redesigned town hall square — a landscape programme of 2010-2013 (ADP Dubois) that structured Ambilly's civic heart."
+        },
+        {
+          "title": "Reach out to Geneva and Annemasse",
+          "tag": null,
+          "description": "100 m from the border and 5 min by bus or tram from central Geneva — an ideal green stop on a cross-border day."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Address",
+          "v": "Rue Jean Jaurès, 74100 Ambilly (opposite the town hall)"
+        },
+        {
+          "k": "Coordinates",
+          "v": "46.196884° N — 6.222290° E"
+        },
+        {
+          "k": "Telephone",
+          "v": "Ambilly Town Hall — 04 50 38 05 26",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Official website",
+          "v": "mairie-ambilly.fr"
+        },
+        {
+          "k": "Opening hours",
+          "v": "June-July-August: 7 am-10 pm · April-May-September-October: 7 am-8 pm · November to March: 7 am-7 pm",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Prices",
+          "v": "Free",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Access / Parking",
+          "v": "Ambilly town hall car park. TAC bus lines 3 and 4, Jean Jaurès stop. 100 m from the Swiss border and 10 min on foot from Annemasse station."
+        },
+        {
+          "k": "Visit duration",
+          "v": "30 min to 1 h"
+        },
+        {
+          "k": "Audience",
+          "v": "Families, parents with strollers, locals, joggers"
+        },
+        {
+          "k": "Accessibility",
+          "v": "Flat paths accessible to people with reduced mobility and strollers"
+        },
+        {
+          "k": "Pets",
+          "v": "Allowed on lead"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is the Parc Jean Beauquis in Ambilly free?",
+          "a": "Yes. The Parc Jean Beauquis is a municipal public park of Ambilly, freely accessible year-round, like all of Ambilly's municipal parks."
+        },
+        {
+          "q": "What are the opening hours of the Parc Jean Beauquis in Ambilly?",
+          "a": "The Parc Jean Beauquis opens every day on a seasonal schedule: 7 am-10 pm in June, July and August; 7 am-8 pm in April, May, September and October; 7 am-7 pm from November to March (source: Haute-Savoie Tourisme listing, verified on 10 June 2026)."
+        },
+        {
+          "q": "Are there children's play areas at the Parc Jean Beauquis?",
+          "a": "Yes, the Parc Jean Beauquis has two separate play areas — one for toddlers and one for older children — plus a biotope pond that children enjoy watching."
+        },
+        {
+          "q": "How do I get to the Parc Jean Beauquis from Annemasse or Geneva?",
+          "a": "The Parc Jean Beauquis is 10 min on foot from Annemasse station. TAC bus lines 3 and 4 serve the Jean Jaurès stop. From Geneva, allow 5-10 min by public transport: the park is 100 m from the Franco-Swiss border."
+        },
+        {
+          "q": "Is the Parc Jean Beauquis accessible to strollers and wheelchairs?",
+          "a": "Yes. The Parc Jean Beauquis was redesigned with flat, stabilised paths accessible to everyone, following a landscape programme run between 2010 and 2013, and remains fully passable for strollers and wheelchairs."
+        },
+        {
+          "q": "Are dogs allowed at the Parc Jean Beauquis?",
+          "a": "Yes, dogs are allowed at the Parc Jean Beauquis provided they are kept on a lead, as in Ambilly's other public parks."
+        },
+        {
+          "q": "What is the Parc Jean Beauquis biotope pond?",
+          "a": "The Parc Jean Beauquis biotope pond is a large ecological water feature planted with aquatic vegetation, created during the 2010-2013 renovation. It encourages biodiversity (dragonflies, wetland plants, insects) and forms the park's landscape heart."
+        }
+      ],
+      "schema_amenities": [
+        "Free entry",
+        "Children's play areas",
+        "Biotope pond",
+        "Shaded lawns",
+        "Paths accessible to people with reduced mobility",
+        "Benches",
+        "Parking nearby"
+      ]
     },
     "de": {
       "name": "Parc Jean Beauquis",
@@ -258,7 +420,149 @@
       "hero_alt": "Parc Jean Beauquis in Ambilly, öffentlicher Park mit Biotop-Teich und Spielplätzen",
       "body": {
         "what_is": "<p>Der <strong>Parc Jean Beauquis</strong> ist der wichtigste öffentliche Park von Ambilly, im französischen Genfer Becken direkt an der Schweizer Grenze, mitten im Ort zwischen Rathaus und Rue Jean-Jaurès angelegt. Seine heutige Gestalt verdankt er einem Landschaftsprogramm der Agentur ADP Dubois von 2010 bis 2013, das den Rathausplatz neu ordnete, die Wege umstrukturierte und einen großen bepflanzten Biotop-Teich anlegte.</p><p>Auf rund 1,5 Hektar finden sich <strong>schattige, sanft hügelige Rasenflächen</strong>, ein Biotop-Teich mit Libellen und saisonalen Wasserpflanzen, <strong>zwei Spielplätze</strong> (für Kleine und Größere), schattige Bänke und Wege, die für Kinderwagen und Rollstühle geeignet sind.</p><p>Es ist ein Nachbarschaftspark, der täglich von den Bewohnern von Ambilly, Annemasse und Gaillard für die Mittagspause, Familienspaziergänge und am Wochenende genutzt wird. Nur 100 m von der Schweizer Grenze und 5 km vom Genfer Stadtzentrum entfernt, gehört er zu den meistbesuchten Grünflächen des Großraums Genf auf der Seite von Haute-Savoie.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parc Jean Beauquis et Clos Babuty"
+      ],
+      "hero": {
+        "badge": "Freier Zugang · Ganzjährig",
+        "lead": "Öffentlicher Park von Ambilly mit hügeligen, schattigen Rasenflächen: bepflanzter Biotop-Teich, zwei Kinderspielplätze, barrierefreie Wege und Bänke im Schatten, wenige Schritte vom Rathaus und der Genfer Grenze entfernt."
+      },
+      "facts": {
+        "type": "Öffentlicher Park · Garten",
+        "access": "Frei · Kostenlos",
+        "commune": "Ambilly",
+        "parking": "Parkplatz des Rathauses von Ambilly",
+        "dogs": "An der Leine erlaubt",
+        "stroller": "Geeignet (ebene, barrierefreie Wege)",
+        "duration": "30 Min. bis 1 Std.",
+        "best_season": "Ganzjährig · Frühling und Sommer für das Biotop"
+      },
+      "activities": [
+        {
+          "title": "Den Biotop-Teich beobachten",
+          "tag": null,
+          "description": "Ökologisch bepflanzter Teich im Herzen des Parks, ideal zur Beobachtung von Wasserpflanzen, Libellen und Amphibien vom Frühling bis zum Herbst."
+        },
+        {
+          "title": "Die Kinder spielen lassen",
+          "tag": "Familie",
+          "description": "Zwei getrennte Spielbereiche: einer für die Kleinsten und ein größerer für Kinder bis 10-12 Jahre, mit Schaukeln und Klettergerüsten."
+        },
+        {
+          "title": "Picknick im Schatten",
+          "tag": null,
+          "description": "Hügelige Rasenflächen und Bänke im Schatten großer Bäume, ideal für ein Picknick in der Nähe oder eine Lesepause."
+        },
+        {
+          "title": "Den Park mit dem Kinderwagen umrunden",
+          "tag": null,
+          "description": "Befestigte und ebene Wege im gesamten Park, perfekt geeignet für Kinderwagen, Rollstühle und erste Kinderfahrräder."
+        },
+        {
+          "title": "Eine sportliche Pause genießen",
+          "tag": null,
+          "description": "Offene Flächen für Jogging, Stretching oder freie Bewegung. Der Park geht in den Clos Babuty und das Grünraumnetz von Ambilly über."
+        },
+        {
+          "title": "Den Rathausplatz entdecken",
+          "tag": null,
+          "description": "Der Park ist mit dem neu gestalteten Rathausplatz verbunden — ein Landschaftsprogramm 2010-2013 (ADP Dubois), das das bürgerliche Herz von Ambilly strukturiert hat."
+        },
+        {
+          "title": "Nach Genf und Annemasse ausstrahlen",
+          "tag": null,
+          "description": "100 m von der Grenze und 5 Min. mit Bus oder Tram vom Genfer Zentrum entfernt — ideale grüne Etappe an einem grenzüberschreitenden Tag."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Rue Jean Jaurès, 74100 Ambilly (gegenüber dem Rathaus)"
+        },
+        {
+          "k": "Koordinaten",
+          "v": "46,196884° N — 6,222290° E"
+        },
+        {
+          "k": "Telefon",
+          "v": "Rathaus Ambilly — 04 50 38 05 26",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Offizielle Website",
+          "v": "mairie-ambilly.fr"
+        },
+        {
+          "k": "Öffnungszeiten",
+          "v": "Juni-Juli-August: 7:00-22:00 Uhr · April-Mai-September-Oktober: 7:00-20:00 Uhr · November bis März: 7:00-19:00 Uhr",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Preise",
+          "v": "Kostenlos",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Anfahrt / Parken",
+          "v": "Parkplatz des Rathauses Ambilly. TAC-Buslinien 3 und 4, Haltestelle „Jean Jaurès“. 100 m von der Schweizer Grenze und 10 Min. zu Fuß vom Bahnhof Annemasse."
+        },
+        {
+          "k": "Besuchsdauer",
+          "v": "30 Min. bis 1 Std."
+        },
+        {
+          "k": "Publikum",
+          "v": "Familien, Eltern mit Kinderwagen, Anwohner, Joggerinnen und Jogger"
+        },
+        {
+          "k": "Barrierefreiheit",
+          "v": "Ebene Wege, zugänglich für Personen mit eingeschränkter Mobilität und Kinderwagen"
+        },
+        {
+          "k": "Tiere",
+          "v": "An der Leine erlaubt"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Ist der Parc Jean Beauquis in Ambilly kostenlos?",
+          "a": "Ja. Der Parc Jean Beauquis ist ein öffentlicher kommunaler Park von Ambilly mit ganzjährig freiem und kostenlosem Zugang, wie alle städtischen Parks von Ambilly."
+        },
+        {
+          "q": "Wie sind die Öffnungszeiten des Parc Jean Beauquis in Ambilly?",
+          "a": "Der Parc Jean Beauquis öffnet täglich nach saisonalen Zeiten: 7:00-22:00 Uhr im Juni, Juli und August; 7:00-20:00 Uhr im April, Mai, September und Oktober; 7:00-19:00 Uhr von November bis März (Quelle: Haute-Savoie Tourisme, geprüft am 10. Juni 2026)."
+        },
+        {
+          "q": "Gibt es Spielplätze für Kinder im Parc Jean Beauquis?",
+          "a": "Ja, der Parc Jean Beauquis verfügt über zwei getrennte Spielbereiche — einen für die Kleinsten und einen für ältere Kinder — sowie einen Biotop-Teich, dessen Beobachtung Kinder lieben."
+        },
+        {
+          "q": "Wie erreicht man den Parc Jean Beauquis von Annemasse oder Genf aus?",
+          "a": "Der Parc Jean Beauquis ist 10 Min. zu Fuß vom Bahnhof Annemasse entfernt. Die TAC-Buslinien 3 und 4 halten an „Jean Jaurès“. Von Genf 5-10 Min. mit ÖPNV: Der Park liegt 100 m von der franko-schweizerischen Grenze."
+        },
+        {
+          "q": "Ist der Parc Jean Beauquis für Kinderwagen und Rollstühle zugänglich?",
+          "a": "Ja. Der Parc Jean Beauquis wurde mit ebenen, befestigten und für alle zugänglichen Wegen umgestaltet, im Rahmen eines Landschaftsprogramms von 2010 bis 2013, und ist vollständig mit Kinderwagen und Rollstuhl befahrbar."
+        },
+        {
+          "q": "Sind Hunde im Parc Jean Beauquis erlaubt?",
+          "a": "Ja, Hunde sind im Parc Jean Beauquis erlaubt, sofern sie an der Leine geführt werden, wie in den anderen öffentlichen Parks von Ambilly."
+        },
+        {
+          "q": "Was ist der Biotop-Teich des Parc Jean Beauquis?",
+          "a": "Der Biotop-Teich des Parc Jean Beauquis ist ein großes ökologisches Wasserbecken mit Wasservegetation, das bei der Sanierung 2010-2013 entstand. Er fördert die Biodiversität (Libellen, Feuchtgebietspflanzen, Insekten) und bildet das landschaftliche Herz des Geländes."
+        }
+      ],
+      "schema_amenities": [
+        "Freier Zugang",
+        "Kinderspielplätze",
+        "Biotop-Teich",
+        "Schattige Rasenflächen",
+        "Barrierefreie Wege",
+        "Bänke",
+        "Parkplatz in der Nähe"
+      ]
     },
     "it": {
       "name": "Parc Jean Beauquis",
@@ -267,7 +571,149 @@
       "hero_alt": "Parc Jean Beauquis ad Ambilly, parco pubblico con stagno biotopo e aree gioco",
       "body": {
         "what_is": "<p>Il <strong>Parc Jean Beauquis</strong> è il principale parco pubblico di Ambilly, nel Genevois francese a ridosso del confine svizzero, sistemato nel cuore della città fra il municipio e la rue Jean-Jaurès. La sua fisionomia attuale è frutto di un programma paesaggistico condotto dallo studio ADP Dubois fra il 2010 e il 2013, che ha riorganizzato la piazza del municipio, ristrutturato i percorsi e creato un grande stagno biotopo piantumato.</p><p>I suoi 1,5 ettari circa offrono <strong>prati ombreggiati e ondulati</strong>, uno stagno biotopo dove si osservano libellule e piante acquatiche stagionali, <strong>due aree gioco per bambini</strong> (piccoli e grandi), panchine all'ombra e percorsi accessibili a passeggini e sedie a rotelle.</p><p>È un parco di prossimità frequentato quotidianamente dagli abitanti di Ambilly, Annemasse e Gaillard per la pausa pranzo, le passeggiate in famiglia e i fine settimana. A 100 m dal confine franco-svizzero e a 5 km dal centro di Ginevra, è uno degli spazi verdi più amati della Grande Ginevra dal lato dell'Alta Savoia.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parc Jean Beauquis et Clos Babuty"
+      ],
+      "hero": {
+        "badge": "Accesso libero · Tutto l'anno",
+        "lead": "Parco pubblico di Ambilly con prati ondulati e ombreggiati: stagno biotopo piantumato, due aree gioco per bambini, viali accessibili a tutti e panchine all'ombra, a due passi dal municipio e dal confine ginevrino."
+      },
+      "facts": {
+        "type": "Parco pubblico · Giardino",
+        "access": "Libero · Gratuito",
+        "commune": "Ambilly",
+        "parking": "Parcheggio del municipio di Ambilly",
+        "dogs": "Ammessi al guinzaglio",
+        "stroller": "Adatto (viali piani e accessibili)",
+        "duration": "30 min - 1 h",
+        "best_season": "Tutto l'anno · Primavera ed estate per il biotopo"
+      },
+      "activities": [
+        {
+          "title": "Osservare lo stagno biotopo",
+          "tag": null,
+          "description": "Stagno piantumato ecologico nel cuore del parco, ideale per l'osservazione di piante acquatiche, libellule e anfibi dalla primavera all'autunno."
+        },
+        {
+          "title": "Far giocare i bambini",
+          "tag": "Famiglia",
+          "description": "Due aree gioco distinte: una per i più piccoli e una più grande per i bambini fino a 10-12 anni, con altalene e strutture per arrampicarsi."
+        },
+        {
+          "title": "Pic-nic all'ombra",
+          "tag": null,
+          "description": "Prati ondulati e panchine all'ombra dei grandi alberi, ideali per un pic-nic di prossimità o una pausa di lettura."
+        },
+        {
+          "title": "Fare il giro con il passeggino",
+          "tag": null,
+          "description": "Viali pavimentati e piani in tutto il parco, perfettamente adatti a passeggini, sedie a rotelle e primi triciclini."
+        },
+        {
+          "title": "Concedersi una pausa sportiva",
+          "tag": null,
+          "description": "Spazi aperti per jogging, stretching o pratica libera. Il parco si prolunga verso il Clos Babuty e la rete verde di Ambilly."
+        },
+        {
+          "title": "Scoprire la piazza del municipio",
+          "tag": null,
+          "description": "Il parco è articolato con la piazza riqualificata del municipio, programma paesaggistico 2010-2013 (ADP Dubois) che ha strutturato il cuore civico di Ambilly."
+        },
+        {
+          "title": "Aprirsi a Ginevra e Annemasse",
+          "tag": null,
+          "description": "A 100 m dal confine e a 5 min in bus o tram dal centro di Ginevra, sosta verde ideale durante una giornata transfrontaliera."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Indirizzo",
+          "v": "Rue Jean Jaurès, 74100 Ambilly (di fronte al municipio)"
+        },
+        {
+          "k": "Coordinate",
+          "v": "46,196884° N — 6,222290° E"
+        },
+        {
+          "k": "Telefono",
+          "v": "Municipio di Ambilly — 04 50 38 05 26",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Sito ufficiale",
+          "v": "mairie-ambilly.fr"
+        },
+        {
+          "k": "Orari",
+          "v": "Giugno-luglio-agosto: 7:00-22:00 · aprile-maggio-settembre-ottobre: 7:00-20:00 · da novembre a marzo: 7:00-19:00",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tariffe",
+          "v": "Gratuito",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Accesso / Parcheggio",
+          "v": "Parcheggio del municipio di Ambilly. Bus TAC linee 3 e 4 fermata «Jean Jaurès». A 100 m dal confine svizzero e a 10 min a piedi dalla stazione di Annemasse."
+        },
+        {
+          "k": "Durata della visita",
+          "v": "30 min - 1 h"
+        },
+        {
+          "k": "Pubblico",
+          "v": "Famiglie, genitori con passeggini, residenti, runner"
+        },
+        {
+          "k": "Accessibilità",
+          "v": "Viali piani accessibili a persone a mobilità ridotta e passeggini"
+        },
+        {
+          "k": "Animali",
+          "v": "Ammessi al guinzaglio"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Il Parc Jean Beauquis ad Ambilly è gratuito?",
+          "a": "Sì. Il Parc Jean Beauquis è un parco pubblico comunale di Ambilly ad accesso libero e gratuito tutto l'anno, come tutti i parchi municipali di Ambilly."
+        },
+        {
+          "q": "Quali sono gli orari del Parc Jean Beauquis ad Ambilly?",
+          "a": "Il Parc Jean Beauquis apre tutti i giorni secondo orari stagionali: 7:00-22:00 in giugno, luglio e agosto; 7:00-20:00 in aprile, maggio, settembre e ottobre; 7:00-19:00 da novembre a marzo (fonte: scheda Haute-Savoie Tourisme, verificata il 10 giugno 2026)."
+        },
+        {
+          "q": "Ci sono giochi per bambini al Parc Jean Beauquis?",
+          "a": "Sì, il Parc Jean Beauquis dispone di due aree gioco distinte — una per i più piccoli e una per i più grandi — oltre a uno stagno biotopo che i bambini amano osservare."
+        },
+        {
+          "q": "Come si raggiunge il Parc Jean Beauquis da Annemasse o Ginevra?",
+          "a": "Il Parc Jean Beauquis si trova a 10 min a piedi dalla stazione di Annemasse. I bus TAC linee 3 e 4 servono la fermata «Jean Jaurès». Da Ginevra, prevedere 5-10 min con i mezzi: il parco è a 100 m dal confine franco-svizzero."
+        },
+        {
+          "q": "Il Parc Jean Beauquis è accessibile a passeggini e sedie a rotelle?",
+          "a": "Sì. Il Parc Jean Beauquis è stato risistemato con viali pavimentati piani accessibili a tutti, in seguito a un programma paesaggistico condotto tra il 2010 e il 2013, e resta interamente percorribile in passeggino e sedia a rotelle."
+        },
+        {
+          "q": "I cani sono ammessi al Parc Jean Beauquis?",
+          "a": "Sì, i cani sono ammessi al Parc Jean Beauquis a condizione di essere tenuti al guinzaglio, come negli altri parchi pubblici di Ambilly."
+        },
+        {
+          "q": "Che cos'è lo stagno biotopo del Parc Jean Beauquis?",
+          "a": "Lo stagno biotopo del Parc Jean Beauquis è un grande specchio d'acqua ecologico piantumato di vegetazione acquatica, creato durante il rinnovamento 2010-2013 del parco. Favorisce la biodiversità (libellule, piante igrofile, insetti) e costituisce il cuore paesaggistico del sito."
+        }
+      ],
+      "schema_amenities": [
+        "Accesso libero",
+        "Aree gioco per bambini",
+        "Stagno biotopo",
+        "Prati ombreggiati",
+        "Viali accessibili a persone a mobilità ridotta",
+        "Panchine",
+        "Parcheggio vicino"
+      ]
     },
     "es": {
       "name": "Parc Jean Beauquis",
@@ -276,7 +722,149 @@
       "hero_alt": "Parc Jean Beauquis en Ambilly, parque público con estanque biotopo y zonas de juegos",
       "body": {
         "what_is": "<p>El <strong>Parc Jean Beauquis</strong> es el gran parque público de Ambilly, en el Genevois francés a las puertas de la frontera suiza, dispuesto en pleno corazón de la ciudad entre el ayuntamiento y la rue Jean-Jaurès. Su fisonomía actual procede de un programa paisajístico dirigido por la agencia ADP Dubois entre 2010 y 2013, que reorganizó la plaza del ayuntamiento, reestructuró los senderos y creó un gran estanque biotopo plantado.</p><p>Sus aproximadamente 1,5 hectáreas se componen de <strong>praderas sombreadas y onduladas</strong>, un estanque biotopo donde se observan libélulas y plantas acuáticas de temporada, <strong>dos zonas de juegos infantiles</strong> (pequeños y mayores), bancos a la sombra y senderos accesibles para cochecitos y sillas de ruedas.</p><p>Es un parque de proximidad utilizado a diario por los habitantes de Ambilly, Annemasse y Gaillard para la pausa del almuerzo, los paseos en familia y el fin de semana. A 100 m de la frontera franco-suiza y a 5 km del centro de Ginebra, es uno de los espacios verdes más frecuentados de la Gran Ginebra del lado de la Alta Saboya.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parc Jean Beauquis et Clos Babuty"
+      ],
+      "hero": {
+        "badge": "Acceso libre · Todo el año",
+        "lead": "Parque público de Ambilly con praderas onduladas y sombreadas: estanque biotopo plantado, dos zonas de juegos infantiles, senderos accesibles para todos y bancos a la sombra, a dos pasos del ayuntamiento y de la frontera ginebrina."
+      },
+      "facts": {
+        "type": "Parque público · Jardín",
+        "access": "Libre · Gratuito",
+        "commune": "Ambilly",
+        "parking": "Aparcamiento del ayuntamiento de Ambilly",
+        "dogs": "Aceptados con correa",
+        "stroller": "Adaptado (senderos llanos y accesibles)",
+        "duration": "30 min a 1 h",
+        "best_season": "Todo el año · Primavera y verano para el biotopo"
+      },
+      "activities": [
+        {
+          "title": "Observar el estanque biotopo",
+          "tag": null,
+          "description": "Estanque plantado ecológico en el corazón del parque, idóneo para la observación de plantas acuáticas, libélulas y anfibios de la primavera al otoño."
+        },
+        {
+          "title": "Que los niños jueguen",
+          "tag": "Familia",
+          "description": "Dos zonas de juegos distintas: una para los más pequeños y una más grande para niños hasta 10-12 años, con columpios y estructuras de trepar."
+        },
+        {
+          "title": "Picnic a la sombra",
+          "tag": null,
+          "description": "Praderas onduladas y bancos a la sombra de grandes árboles, ideales para un picnic de proximidad o una pausa de lectura."
+        },
+        {
+          "title": "Dar la vuelta con un cochecito",
+          "tag": null,
+          "description": "Senderos estabilizados y llanos en todo el parque, perfectamente adaptados a cochecitos, sillas de ruedas y primeras bicis infantiles."
+        },
+        {
+          "title": "Disfrutar de una pausa deportiva",
+          "tag": null,
+          "description": "Espacios abiertos para correr, estirar o practicar libremente. El parque se prolonga hacia el Clos Babuty y la trama verde de Ambilly."
+        },
+        {
+          "title": "Descubrir la plaza del ayuntamiento",
+          "tag": null,
+          "description": "El parque se articula con la plaza reformada del ayuntamiento, programa paisajístico 2010-2013 (ADP Dubois) que ha estructurado el corazón cívico de Ambilly."
+        },
+        {
+          "title": "Irradiar hacia Ginebra y Annemasse",
+          "tag": null,
+          "description": "A 100 m de la frontera y 5 min en bus o tranvía del centro de Ginebra, parada verde ideal en una jornada transfronteriza."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Dirección",
+          "v": "Rue Jean Jaurès, 74100 Ambilly (frente al ayuntamiento)"
+        },
+        {
+          "k": "Coordenadas",
+          "v": "46,196884° N — 6,222290° E"
+        },
+        {
+          "k": "Teléfono",
+          "v": "Ayuntamiento de Ambilly — 04 50 38 05 26",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Sitio oficial",
+          "v": "mairie-ambilly.fr"
+        },
+        {
+          "k": "Horario",
+          "v": "Junio-julio-agosto: 7:00-22:00 · abril-mayo-septiembre-octubre: 7:00-20:00 · de noviembre a marzo: 7:00-19:00",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifas",
+          "v": "Gratuito",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Acceso / Aparcamiento",
+          "v": "Aparcamiento del ayuntamiento de Ambilly. Bus TAC líneas 3 y 4 parada «Jean Jaurès». A 100 m de la frontera suiza y 10 min a pie de la estación de Annemasse."
+        },
+        {
+          "k": "Duración de la visita",
+          "v": "30 min a 1 h"
+        },
+        {
+          "k": "Público",
+          "v": "Familias, padres con cochecitos, vecinos, corredores"
+        },
+        {
+          "k": "Accesibilidad",
+          "v": "Senderos llanos accesibles para personas con movilidad reducida y cochecitos"
+        },
+        {
+          "k": "Animales",
+          "v": "Aceptados con correa"
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Es gratis el Parc Jean Beauquis en Ambilly?",
+          "a": "Sí. El Parc Jean Beauquis es un parque público municipal de Ambilly de acceso libre y gratuito todo el año, como el conjunto de los parques municipales de Ambilly."
+        },
+        {
+          "q": "¿Cuál es el horario del Parc Jean Beauquis en Ambilly?",
+          "a": "El Parc Jean Beauquis abre todos los días según horario estacional: 7:00-22:00 en junio, julio y agosto; 7:00-20:00 en abril, mayo, septiembre y octubre; 7:00-19:00 de noviembre a marzo (fuente: ficha Haute-Savoie Tourisme, verificada el 10 de junio de 2026)."
+        },
+        {
+          "q": "¿Hay juegos infantiles en el Parc Jean Beauquis?",
+          "a": "Sí, el Parc Jean Beauquis cuenta con dos zonas de juegos distintas — una para los más pequeños y otra para los mayores — además de un estanque biotopo que los niños aprecian observar."
+        },
+        {
+          "q": "¿Cómo llegar al Parc Jean Beauquis desde Annemasse o Ginebra?",
+          "a": "El Parc Jean Beauquis está a 10 min a pie de la estación de Annemasse. Los buses TAC líneas 3 y 4 atienden la parada «Jean Jaurès». Desde Ginebra, contar 5-10 min en transporte: el parque está a 100 m de la frontera franco-suiza."
+        },
+        {
+          "q": "¿Es el Parc Jean Beauquis accesible para cochecitos y sillas de ruedas?",
+          "a": "Sí. El Parc Jean Beauquis fue reformado con senderos estabilizados y llanos accesibles para todos, tras un programa paisajístico llevado a cabo entre 2010 y 2013, y sigue siendo enteramente practicable en cochecito y silla de ruedas."
+        },
+        {
+          "q": "¿Se aceptan perros en el Parc Jean Beauquis?",
+          "a": "Sí, los perros son aceptados en el Parc Jean Beauquis siempre que vayan con correa, como en los demás parques públicos de Ambilly."
+        },
+        {
+          "q": "¿Qué es el estanque biotopo del Parc Jean Beauquis?",
+          "a": "El estanque biotopo del Parc Jean Beauquis es una gran lámina de agua ecológica plantada con vegetación acuática, creada durante la renovación 2010-2013 del parque. Favorece la biodiversidad (libélulas, plantas higrófilas, insectos) y constituye el corazón paisajístico del lugar."
+        }
+      ],
+      "schema_amenities": [
+        "Acceso libre",
+        "Zonas de juegos infantiles",
+        "Estanque biotopo",
+        "Praderas sombreadas",
+        "Senderos accesibles a personas con movilidad reducida",
+        "Bancos",
+        "Aparcamiento cercano"
+      ]
     },
     "nl": {
       "name": "Parc Jean Beauquis",
@@ -285,7 +873,149 @@
       "hero_alt": "Parc Jean Beauquis in Ambilly, openbaar park met biotoopvijver en speelterreinen",
       "body": {
         "what_is": "<p>Het <strong>Parc Jean Beauquis</strong> is het grote openbare park van Ambilly, in het Franse Genevois aan de rand van de Zwitserse grens, aangelegd in het hart van de stad tussen het gemeentehuis en de rue Jean-Jaurès. Zijn huidige aanblik is het resultaat van een landschapsprogramma dat het bureau ADP Dubois tussen 2010 en 2013 uitvoerde: het gemeentehuisplein werd heringericht, de paden geherstructureerd en een grote beplante biotoopvijver aangelegd.</p><p>Op ongeveer 1,5 hectare vindt men <strong>beschaduwde, glooiende gazons</strong>, een biotoopvijver met libellen en seizoensgebonden waterplanten, <strong>twee speelterreinen</strong> (voor kleintjes en groteren), banken in de schaduw en paden die toegankelijk zijn voor kinderwagens en rolstoelen.</p><p>Het is een buurtpark dat dagelijks gebruikt wordt door inwoners van Ambilly, Annemasse en Gaillard voor de lunchpauze, familiewandelingen en het weekend. Op 100 m van de Frans-Zwitserse grens en 5 km van het centrum van Genève is het een van de meest bezochte groene ruimten van Groot-Genève aan de kant van Haute-Savoie.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parc Jean Beauquis et Clos Babuty"
+      ],
+      "hero": {
+        "badge": "Vrije toegang · Het hele jaar",
+        "lead": "Openbaar park van Ambilly met glooiende, beschaduwde gazons: beplante biotoopvijver, twee kinderspeeltuintjes, voor iedereen toegankelijke paden en banken in de schaduw, op een steenworp van het gemeentehuis en de Geneefse grens."
+      },
+      "facts": {
+        "type": "Openbaar park · Tuin",
+        "access": "Vrij · Gratis",
+        "commune": "Ambilly",
+        "parking": "Parkeerplaats van het gemeentehuis van Ambilly",
+        "dogs": "Toegestaan aan de lijn",
+        "stroller": "Geschikt (vlakke, toegankelijke paden)",
+        "duration": "30 min tot 1 u",
+        "best_season": "Het hele jaar · Lente en zomer voor het biotoop"
+      },
+      "activities": [
+        {
+          "title": "De biotoopvijver bekijken",
+          "tag": null,
+          "description": "Ecologisch beplante vijver in het hart van het park, ideaal om waterplanten, libellen en amfibieën te observeren van lente tot herfst."
+        },
+        {
+          "title": "Kinderen laten spelen",
+          "tag": "Gezin",
+          "description": "Twee aparte speelterreinen: een voor de allerkleinsten en een groter voor kinderen tot 10-12 jaar, met schommels en klimstructuren."
+        },
+        {
+          "title": "Picknicken in de schaduw",
+          "tag": null,
+          "description": "Glooiende gazons en banken in de schaduw van grote bomen, ideaal voor een picknick in de buurt of een leespauze."
+        },
+        {
+          "title": "Een rondje doen met de kinderwagen",
+          "tag": null,
+          "description": "Verharde, vlakke paden in het hele park, perfect geschikt voor kinderwagens, rolstoelen en eerste kinderfietsjes."
+        },
+        {
+          "title": "Een sportieve pauze inlassen",
+          "tag": null,
+          "description": "Open ruimten voor joggen, stretchen of vrije beweging. Het park loopt door tot de Clos Babuty en het groenstructuurplan van Ambilly."
+        },
+        {
+          "title": "Het gemeentehuisplein ontdekken",
+          "tag": null,
+          "description": "Het park sluit aan op het heringerichte gemeentehuisplein, landschapsprogramma 2010-2013 (ADP Dubois) dat het civieke hart van Ambilly structureerde."
+        },
+        {
+          "title": "Uitstralen naar Genève en Annemasse",
+          "tag": null,
+          "description": "Op 100 m van de grens en 5 min met bus of tram van het centrum van Genève, ideale groene stop tijdens een grensoverschrijdende dag."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adres",
+          "v": "Rue Jean Jaurès, 74100 Ambilly (tegenover het gemeentehuis)"
+        },
+        {
+          "k": "Coördinaten",
+          "v": "46,196884° N — 6,222290° E"
+        },
+        {
+          "k": "Telefoon",
+          "v": "Gemeentehuis Ambilly — 04 50 38 05 26",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Officiële website",
+          "v": "mairie-ambilly.fr"
+        },
+        {
+          "k": "Openingstijden",
+          "v": "Juni-juli-augustus: 7:00-22:00 · april-mei-september-oktober: 7:00-20:00 · van november tot maart: 7:00-19:00",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarieven",
+          "v": "Gratis",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Toegang / Parkeren",
+          "v": "Parkeerplaats van het gemeentehuis van Ambilly. TAC-buslijnen 3 en 4 halte «Jean Jaurès». Op 100 m van de Zwitserse grens en 10 min wandelen van station Annemasse."
+        },
+        {
+          "k": "Duur van het bezoek",
+          "v": "30 min tot 1 u"
+        },
+        {
+          "k": "Publiek",
+          "v": "Gezinnen, ouders met kinderwagens, buurtbewoners, joggers"
+        },
+        {
+          "k": "Toegankelijkheid",
+          "v": "Vlakke paden, toegankelijk voor personen met beperkte mobiliteit en kinderwagens"
+        },
+        {
+          "k": "Dieren",
+          "v": "Toegestaan aan de lijn"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is het Parc Jean Beauquis in Ambilly gratis?",
+          "a": "Ja. Het Parc Jean Beauquis is een gemeentelijk openbaar park van Ambilly, het hele jaar vrij en gratis toegankelijk, zoals alle gemeentelijke parken van Ambilly."
+        },
+        {
+          "q": "Wat zijn de openingstijden van het Parc Jean Beauquis in Ambilly?",
+          "a": "Het Parc Jean Beauquis is dagelijks open volgens seizoensgebonden tijden: 7:00-22:00 in juni, juli en augustus; 7:00-20:00 in april, mei, september en oktober; 7:00-19:00 van november tot maart (bron: fiche Haute-Savoie Tourisme, geverifieerd op 10 juni 2026)."
+        },
+        {
+          "q": "Zijn er kinderspeeltuintjes in het Parc Jean Beauquis?",
+          "a": "Ja, het Parc Jean Beauquis heeft twee aparte speelterreinen — een voor de allerkleinsten en een voor de groteren — en een biotoopvijver die kinderen graag bekijken."
+        },
+        {
+          "q": "Hoe bereik ik het Parc Jean Beauquis vanuit Annemasse of Genève?",
+          "a": "Het Parc Jean Beauquis ligt op 10 min wandelen van station Annemasse. De TAC-buslijnen 3 en 4 stoppen aan «Jean Jaurès». Vanuit Genève reken je 5-10 min met openbaar vervoer: het park ligt op 100 m van de Frans-Zwitserse grens."
+        },
+        {
+          "q": "Is het Parc Jean Beauquis toegankelijk voor kinderwagens en rolstoelen?",
+          "a": "Ja. Het Parc Jean Beauquis werd heringericht met vlakke, verharde paden die voor iedereen toegankelijk zijn, na een landschapsprogramma uitgevoerd tussen 2010 en 2013, en blijft volledig begaanbaar met kinderwagen en rolstoel."
+        },
+        {
+          "q": "Zijn honden toegelaten in het Parc Jean Beauquis?",
+          "a": "Ja, honden zijn toegelaten in het Parc Jean Beauquis mits aan de lijn, zoals in de andere openbare parken van Ambilly."
+        },
+        {
+          "q": "Wat is de biotoopvijver van het Parc Jean Beauquis?",
+          "a": "De biotoopvijver van het Parc Jean Beauquis is een groot ecologisch waterstuk beplant met waterplanten, aangelegd bij de renovatie 2010-2013 van het park. Hij bevordert de biodiversiteit (libellen, vochtminnende planten, insecten) en vormt het landschappelijke hart van de plek."
+        }
+      ],
+      "schema_amenities": [
+        "Vrije toegang",
+        "Kinderspeeltuintjes",
+        "Biotoopvijver",
+        "Beschaduwde gazons",
+        "Paden toegankelijk voor personen met beperkte mobiliteit",
+        "Banken",
+        "Parkeerplaats in de buurt"
+      ]
     }
   },
   "status": "published"

@@ -92,6 +92,26 @@
       "date": "2026-06-13",
       "by": "scripts/ingest_translations.py",
       "note": "Translation ingest [nl]: 5 field(s) updated."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for de from agent_N_de_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for es from agent_N_es_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for it from agent_N_it_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for nl from agent_N_nl_secondary.json."
     }
   ],
   "i18n": {
@@ -245,7 +265,141 @@
       "hero_alt": "Andilly Heritage Trail with illustrated panels in the villages of Charly, Jussy and Saint-Symphorien",
       "body": {
         "what_is": "<p>The <strong>Andilly Heritage Trail</strong> is a free self-guided interpretive walk crossing the commune of Andilly, in Haute-Savoie, on the south side of the Col du Mont Sion, 6 km north-west of Cruseilles. It comprises <strong>36 illustrated panels</strong> spread across the commune's three villages — Charly, Jussy and Saint-Symphorien — and draws on Dominique Bouverat's book \"Andilly – Charly, Jussy et Saint-Symphorien – Pages d'histoire\".</p><p>Designed by the commune and the local association, the trail tells the rural and religious story of the Genevois: 15th-century chapels (the <strong>Saint-Jacques chapel of Charly</strong>, whose bell tower has been listed as a Monument historique since 1975), fountains, bread ovens, granite houses and traces of village life.</p><p>A waymarked variant called \"Sur les traces des graniteurs du Mont Sion\" extends the walk towards the col, evoking the Piedmontese and Lombard stonecutters who worked the granite in the 19th century. The route can be followed as a single loop or village by village — an ideal cultural stop between Cruseilles, the Saleve and the Geneva border.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parcours patrimoine d'Andilly",
+        "Sentier patrimoine Charly-Jussy-Saint-Symphorien"
+      ],
+      "hero": {
+        "badge": "Free access  Year-round",
+        "lead": "Discover Andilly and its three villages  Charly, Jussy and Saint-Symphorien  along a heritage trail with free access, marked by 36 illustrated panels telling the rural history of the Genevois region at the foot of the Mont Sion pass."
+      },
+      "facts": {
+        "type": "Interpretation trail  Heritage",
+        "access": "Free  No charge",
+        "commune": "Andilly",
+        "duration": "2 to 3 hours depending on village(s) visited",
+        "best_season": "Spring  summer  autumn"
+      },
+      "activities": [
+        {
+          "title": "Read the 36 interpretation panels",
+          "tag": null,
+          "description": "Tour of Andilly's heritage along the 36 illustrated panels spread across Charly, Jussy and Saint-Symphorien: architecture, rural and religious life."
+        },
+        {
+          "title": "Visit the Saint-Jacques chapel in Charly",
+          "tag": null,
+          "description": "15th-century chapel whose bell tower has been listed as a Historic Monument since 1975, the usual starting point of the heritage trail."
+        },
+        {
+          "title": "Follow the Mont Sion granite cutters' variant",
+          "tag": null,
+          "description": "Complementary 10 km loop through Charly, Presilly and the Mont Sion pass, following in the footsteps of 19th-century Piedmontese and Lombard granite cutters."
+        },
+        {
+          "title": "Picnic in a hamlet",
+          "tag": "Family",
+          "description": "Several benches and fountains in the villages crossed allow a family break in the heart of the Andilly heritage trail."
+        },
+        {
+          "title": "Photograph the bread ovens and washhouses",
+          "tag": null,
+          "description": "The Andilly trail highlights the small built heritage: ovens, fountains, washhouses, wayside crosses, barns typical of the Genevois."
+        },
+        {
+          "title": "Combine with a visit to the Grand Parc d'Andilly",
+          "tag": null,
+          "description": "The Grand Parc d'Andilly (medieval theme park) is right next door and lets you extend the family day after the heritage trail."
+        },
+        {
+          "title": "Round off with a walk at Mont Sion",
+          "tag": null,
+          "description": "The Mont Sion pass and its paths let you extend the heritage trail with a true nature outing, linked to the granite cutters."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Address",
+          "v": "Usual start: Charly chapel, 74350 Andilly"
+        },
+        {
+          "k": "Coordinates",
+          "v": "46.069845 N  6.069443 E"
+        },
+        {
+          "k": "Phone",
+          "v": "Andilly town hall  see andilly74.fr",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Official website",
+          "v": "andilly74.com / andilly74.fr"
+        },
+        {
+          "k": "Opening hours",
+          "v": "Free access year-round, self-guided. Outdoor panels accessible 24/7.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Prices",
+          "v": "Free",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Access / Parking",
+          "v": "Parking at Andilly town hall and near the chapels (Charly, Jussy, Saint-Symphorien). 6 km from Cruseilles via the D 1201."
+        },
+        {
+          "k": "Visit duration",
+          "v": "2 to 3 hours to do all three villages, 45 min to 1 hour per village"
+        },
+        {
+          "k": "Audience",
+          "v": "Families, rural heritage enthusiasts, schools"
+        },
+        {
+          "k": "Pets",
+          "v": "Allowed on a leash"
+        },
+        {
+          "k": "Recommended gear",
+          "v": "Comfortable walking shoes. Map available at the town hall or at neighbouring town halls."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is the Andilly Heritage Trail free?",
+          "a": "Yes. The Andilly Heritage Trail is an interpretation trail with free access and no charge year-round. The 36 illustrated panels are installed outdoors and can be visited without reservation."
+        },
+        {
+          "q": "Where does the Andilly Heritage Trail start?",
+          "a": "The usual starting point of the Heritage Trail is at the Charly chapel (Saint-Jacques chapel, 15th century), in the heart of the village of Charly in Andilly. You can also join it from Jussy or Saint-Symphorien."
+        },
+        {
+          "q": "How long does it take to walk the Andilly Heritage Trail?",
+          "a": "Allow 45 min to 1 hour per village for the Andilly Heritage Trail, so 2 to 3 hours to walk Charly, Jussy and Saint-Symphorien in one go. You can also split it across several outings."
+        },
+        {
+          "q": "Is the Andilly Heritage Trail suitable for children?",
+          "a": "Yes. The Andilly Heritage Trail lends itself well to a family outing: the 36 illustrated panels tell local history in an accessible way, the villages allow for short stops and the neighbouring Grand Parc d'Andilly can round off the day."
+        },
+        {
+          "q": "What is there to see on the Andilly Heritage Trail?",
+          "a": "The Heritage Trail showcases small built heritage (fountains, ovens, washhouses, wayside crosses), village chapels including the Saint-Jacques chapel in Charly (bell tower listed as a Historic Monument in 1975) and the history of the Mont Sion granite cutters."
+        },
+        {
+          "q": "Can the Andilly Heritage Trail be extended?",
+          "a": "Yes. A complementary trail 'In the footsteps of the Mont Sion granite cutters' extends the Andilly trail with a loop of about 10 km towards Charly, Presilly and the Mont Sion pass, linked to the history of the 19th-century Piedmontese and Lombard stonecutters."
+        }
+      ],
+      "schema_amenities": [
+        "Interpretation trail",
+        "Free access",
+        "Illustrated panels (36)",
+        "Rural built heritage",
+        "Parking at the start"
+      ]
     },
     "de": {
       "name": "Kulturpfad: Spaziergang durch Andilly",
@@ -254,7 +408,141 @@
       "hero_alt": "Parcours patrimoine d'Andilly mit illustrierten Tafeln in den Dörfern Charly, Jussy und Saint-Symphorien",
       "body": {
         "what_is": "<p>Der <strong>Parcours patrimoine d'Andilly</strong> ist ein kostenloser, frei zugänglicher Interpretationspfad durch die Gemeinde Andilly in der Haute-Savoie, auf der Südseite des Col du Mont Sion, 6 km nordwestlich von Cruseilles. Er umfasst <strong>36 illustrierte Tafeln</strong>, die auf die drei Dörfer der Gemeinde verteilt sind — Charly, Jussy und Saint-Symphorien — und stützt sich auf das Buch von Dominique Bouverat „Andilly – Charly, Jussy et Saint-Symphorien – Pages d'histoire\".</p><p>Von der Gemeinde und einem örtlichen Verein konzipiert, erzählt der Pfad die ländliche und religiöse Geschichte des Genevois: Kapellen aus dem 15. Jahrhundert (die <strong>Kapelle Saint-Jacques in Charly</strong>, deren Glockenturm seit 1975 als Monument historique eingetragen ist), Brunnen, Brotöfen, Granithäuser und Spuren des Dorflebens.</p><p>Eine markierte Variante „Sur les traces des graniteurs du Mont Sion\" verlängert den Spaziergang in Richtung Passhöhe und erinnert an die piemontesischen und lombardischen Steinmetze, die den Granit im 19. Jahrhundert abbauten. Der Weg lässt sich als Rundtour oder Dorf für Dorf gehen — ein idealer Kulturstopp zwischen Cruseilles, dem Salève und der Genfer Grenze.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parcours patrimoine d'Andilly",
+        "Sentier patrimoine Charly-Jussy-Saint-Symphorien"
+      ],
+      "hero": {
+        "badge": "Freier Zugang  Ganzjährig",
+        "lead": "Entdecken Sie Andilly und seine drei Dörfer  Charly, Jussy und Saint-Symphorien  auf einem frei zugänglichen Kulturerbe-Pfad mit 36 illustrierten Tafeln, die die ländliche Geschichte des Genevois am Fuße des Mont-Sion-Passes erzählen."
+      },
+      "facts": {
+        "type": "Erlebnispfad  Kulturerbe",
+        "access": "Frei  Kostenlos",
+        "commune": "Andilly",
+        "duration": "2 bis 3 Stunden je nach besuchten Dörfern",
+        "best_season": "Frühling  Sommer  Herbst"
+      },
+      "activities": [
+        {
+          "title": "Die 36 Erläuterungstafeln lesen",
+          "tag": null,
+          "description": "Rundgang durch das Kulturerbe von Andilly entlang der 36 illustrierten Tafeln in Charly, Jussy und Saint-Symphorien: Architektur, ländliches und religiöses Leben."
+        },
+        {
+          "title": "Die Kapelle Saint-Jacques in Charly besuchen",
+          "tag": null,
+          "description": "Kapelle aus dem 15. Jahrhundert, deren Glockenturm seit 1975 als historisches Monument eingestuft ist  üblicher Ausgangspunkt des Kulturerbe-Pfads."
+        },
+        {
+          "title": "Die Variante der Granitarbeiter vom Mont Sion folgen",
+          "tag": null,
+          "description": "Ergänzende 10-km-Schleife durch Charly, Présilly und den Mont-Sion-Pass auf den Spuren der piemontesischen und lombardischen Granithauer des 19. Jahrhunderts."
+        },
+        {
+          "title": "In einem Weiler picknicken",
+          "tag": "Familie",
+          "description": "Mehrere Bänke und Brunnen in den durchquerten Dörfern ermöglichen eine Familienpause im Herzen des Kulturerbe-Pfads von Andilly."
+        },
+        {
+          "title": "Backöfen und Waschhäuser fotografieren",
+          "tag": null,
+          "description": "Der Pfad von Andilly hebt das kleine bauliche Erbe hervor: Öfen, Brunnen, Waschhäuser, Wegkreuze und für den Genevois typische Scheunen."
+        },
+        {
+          "title": "Mit einem Besuch im Grand Parc d'Andilly kombinieren",
+          "tag": null,
+          "description": "Der Grand Parc d'Andilly (mittelalterlicher Freizeitpark) liegt direkt in der Nähe und ermöglicht es, den Familientag nach dem Kulturerbe-Pfad zu verlängern."
+        },
+        {
+          "title": "Mit einer Wanderung am Mont Sion abrunden",
+          "tag": null,
+          "description": "Der Mont-Sion-Pass und seine Wege ermöglichen es, den Kulturerbe-Pfad mit einem echten Naturausflug zu verlängern, im Bezug zu den Granitarbeitern."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Üblicher Start: Kapelle von Charly, 74350 Andilly"
+        },
+        {
+          "k": "Koordinaten",
+          "v": "46,069845 N  6,069443 O"
+        },
+        {
+          "k": "Telefon",
+          "v": "Rathaus Andilly  siehe andilly74.fr",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Offizielle Website",
+          "v": "andilly74.com / andilly74.fr"
+        },
+        {
+          "k": "Öffnungszeiten",
+          "v": "Ganzjährig frei zugänglich, selbständig. Außentafeln rund um die Uhr zugänglich.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Preise",
+          "v": "Kostenlos",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Anfahrt / Parkplatz",
+          "v": "Parkplatz am Rathaus von Andilly und in der Nähe der Kapellen (Charly, Jussy, Saint-Symphorien). 6 km von Cruseilles über die D 1201."
+        },
+        {
+          "k": "Besuchsdauer",
+          "v": "2 bis 3 Stunden für alle drei Dörfer, 45 Min. bis 1 Stunde pro Dorf"
+        },
+        {
+          "k": "Zielgruppe",
+          "v": "Familien, Liebhaber ländlichen Kulturerbes, Schulklassen"
+        },
+        {
+          "k": "Tiere",
+          "v": "An der Leine erlaubt"
+        },
+        {
+          "k": "Empfohlene Ausrüstung",
+          "v": "Bequeme Wanderschuhe. Karte im Rathaus oder in den Rathäusern der Nachbargemeinden erhältlich."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Ist der Kulturerbe-Pfad von Andilly kostenlos?",
+          "a": "Ja. Der Kulturerbe-Pfad von Andilly ist ein ganzjährig frei und kostenlos zugänglicher Erlebnispfad. Die 36 illustrierten Tafeln stehen im Freien und können ohne Anmeldung besichtigt werden."
+        },
+        {
+          "q": "Wo beginnt der Kulturerbe-Pfad von Andilly?",
+          "a": "Der übliche Startpunkt des Kulturerbe-Pfads befindet sich an der Kapelle von Charly (Kapelle Saint-Jacques, 15. Jh.), im Herzen des Dorfes Charly in Andilly. Sie können ihn auch von Jussy oder Saint-Symphorien aus erreichen."
+        },
+        {
+          "q": "Wie lange dauert der Kulturerbe-Pfad von Andilly?",
+          "a": "Rechnen Sie 45 Min. bis 1 Stunde pro Dorf für den Kulturerbe-Pfad von Andilly, also 2 bis 3 Stunden für Charly, Jussy und Saint-Symphorien am Stück. Sie können ihn auch auf mehrere Ausflüge aufteilen."
+        },
+        {
+          "q": "Ist der Kulturerbe-Pfad von Andilly für Kinder geeignet?",
+          "a": "Ja. Der Kulturerbe-Pfad von Andilly eignet sich gut für einen Familienausflug: Die 36 illustrierten Tafeln erzählen die lokale Geschichte auf verständliche Weise, die Dörfer eignen sich für kurze Etappen, und der benachbarte Grand Parc d'Andilly rundet den Tag ab."
+        },
+        {
+          "q": "Was sieht man auf dem Kulturerbe-Pfad von Andilly?",
+          "a": "Der Kulturerbe-Pfad zeigt das kleine Bauerbe (Brunnen, Öfen, Waschhäuser, Wegkreuze), die Dorfkapellen, darunter die Kapelle Saint-Jacques von Charly (Glockenturm 1975 als historisches Monument eingetragen), und die Geschichte der Granitarbeiter vom Mont Sion."
+        },
+        {
+          "q": "Kann man den Kulturerbe-Pfad von Andilly verlängern?",
+          "a": "Ja. Ein ergänzender Pfad 'Auf den Spuren der Granitarbeiter vom Mont Sion' verlängert den Pfad von Andilly um eine Schleife von etwa 10 km nach Charly, Présilly und zum Mont-Sion-Pass, im Zusammenhang mit der Geschichte der piemontesischen und lombardischen Steinmetze des 19. Jahrhunderts."
+        }
+      ],
+      "schema_amenities": [
+        "Erlebnispfad",
+        "Freier Zugang",
+        "Illustrierte Tafeln (36)",
+        "Ländliches Bauerbe",
+        "Parkplatz am Start"
+      ]
     },
     "it": {
       "name": "Percorso del patrimonio: Passeggiata ad Andilly",
@@ -263,7 +551,141 @@
       "hero_alt": "Parcours patrimoine d'Andilly con pannelli illustrati nei villaggi di Charly, Jussy e Saint-Symphorien",
       "body": {
         "what_is": "<p>Il <strong>Parcours patrimoine d'Andilly</strong> è un sentiero interpretativo libero che attraversa il comune di Andilly, in Alta Savoia, sul versante sud del Col du Mont Sion, a 6 km a nord-ovest di Cruseilles. È composto da <strong>36 pannelli illustrati</strong> distribuiti nei tre villaggi del comune — Charly, Jussy e Saint-Symphorien — e si ispira al libro di Dominique Bouverat «Andilly – Charly, Jussy et Saint-Symphorien – Pages d'histoire».</p><p>Concepito dal comune e dall'associazione locale, il percorso racconta la storia rurale e religiosa del Genevois: cappelle del XV secolo (la <strong>cappella Saint-Jacques di Charly</strong>, il cui campanile è iscritto come Monument historique dal 1975), fontane, forni del pane, case in granito e tracce di vita quotidiana.</p><p>Una variante segnalata «Sur les traces des graniteurs du Mont Sion» prolunga la passeggiata verso il colle ed evoca i tagliapietra piemontesi e lombardi che lavorarono il granito nell'Ottocento. Il tracciato si percorre come anello unico oppure villaggio per villaggio — una tappa culturale ideale fra Cruseilles, il Salève e la frontiera ginevrina.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parcours patrimoine d'Andilly",
+        "Sentier patrimoine Charly-Jussy-Saint-Symphorien"
+      ],
+      "hero": {
+        "badge": "Accesso libero  Tutto l'anno",
+        "lead": "Scoprite Andilly e i suoi tre villaggi  Charly, Jussy e Saint-Symphorien  lungo un percorso del patrimonio ad accesso libero, scandito da 36 pannelli illustrati che raccontano la storia rurale del Genevois ai piedi del colle di Mont Sion."
+      },
+      "facts": {
+        "type": "Sentiero di interpretazione  Patrimonio",
+        "access": "Libero  Gratuito",
+        "commune": "Andilly",
+        "duration": "Da 2 a 3 ore a seconda del villaggio o dei villaggi visitati",
+        "best_season": "Primavera  estate  autunno"
+      },
+      "activities": [
+        {
+          "title": "Leggere i 36 pannelli di interpretazione",
+          "tag": null,
+          "description": "Tour del patrimonio di Andilly lungo i 36 pannelli illustrati distribuiti tra Charly, Jussy e Saint-Symphorien: architettura, vita rurale e religiosa."
+        },
+        {
+          "title": "Visitare la cappella Saint-Jacques di Charly",
+          "tag": null,
+          "description": "Cappella del XV secolo il cui campanile è classificato Monumento storico dal 1975, abituale punto di partenza del percorso del patrimonio."
+        },
+        {
+          "title": "Seguire la variante dei graniteurs del Mont Sion",
+          "tag": null,
+          "description": "Anello complementare di 10 km attraverso Charly, Présilly e il colle di Mont Sion, sulle orme degli scalpellini di granito piemontesi e lombardi del XIX secolo."
+        },
+        {
+          "title": "Fare un picnic in un borgo",
+          "tag": "Famiglia",
+          "description": "Diverse panchine e fontane nei villaggi attraversati permettono una pausa in famiglia nel cuore del sentiero del patrimonio di Andilly."
+        },
+        {
+          "title": "Fotografare i forni a pane e i lavatoi",
+          "tag": null,
+          "description": "Il percorso di Andilly mette in luce il piccolo patrimonio costruito: forni, fontane, lavatoi, croci di cammino, fienili tipici del Genevois."
+        },
+        {
+          "title": "Combinare con una visita al Grand Parc d'Andilly",
+          "tag": null,
+          "description": "Il Grand Parc d'Andilly (parco a tema medievale) è nelle immediate vicinanze e permette di prolungare la giornata in famiglia dopo il percorso del patrimonio."
+        },
+        {
+          "title": "Completare con una passeggiata al Mont Sion",
+          "tag": null,
+          "description": "Il colle di Mont Sion e i suoi sentieri permettono di prolungare il percorso del patrimonio con una vera uscita nella natura, in legame con i graniteurs."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Indirizzo",
+          "v": "Partenza abituale: Cappella di Charly, 74350 Andilly"
+        },
+        {
+          "k": "Coordinate",
+          "v": "46,069845 N  6,069443 E"
+        },
+        {
+          "k": "Telefono",
+          "v": "Municipio di Andilly  vedere andilly74.fr",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Sito ufficiale",
+          "v": "andilly74.com / andilly74.fr"
+        },
+        {
+          "k": "Orari",
+          "v": "Accesso libero tutto l'anno, in autonomia. Pannelli esterni accessibili 24 ore su 24.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tariffe",
+          "v": "Gratuito",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Accesso / Parcheggio",
+          "v": "Parcheggio presso il municipio di Andilly e nelle vicinanze delle cappelle (Charly, Jussy, Saint-Symphorien). A 6 km da Cruseilles tramite la D 1201."
+        },
+        {
+          "k": "Durata della visita",
+          "v": "Da 2 a 3 ore per fare tutti e tre i villaggi, da 45 min a 1 ora per villaggio"
+        },
+        {
+          "k": "Pubblico",
+          "v": "Famiglie, appassionati di patrimonio rurale, scolaresche"
+        },
+        {
+          "k": "Animali",
+          "v": "Ammessi al guinzaglio"
+        },
+        {
+          "k": "Attrezzatura richiesta",
+          "v": "Scarpe da passeggio comode. Mappa disponibile in municipio o nei municipi dei comuni vicini."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Il Percorso del patrimonio di Andilly è gratuito?",
+          "a": "Sì. Il Percorso del patrimonio di Andilly è un sentiero di interpretazione ad accesso libero e gratuito tutto l'anno. I 36 pannelli illustrati sono installati all'aperto e visitabili senza prenotazione."
+        },
+        {
+          "q": "Dove inizia il Percorso del patrimonio di Andilly?",
+          "a": "La partenza abituale del Percorso del patrimonio si trova alla cappella di Charly (cappella Saint-Jacques, XV secolo), nel cuore del villaggio di Charly ad Andilly. Potete raggiungerlo anche da Jussy o Saint-Symphorien."
+        },
+        {
+          "q": "Quanto tempo ci vuole per fare il Percorso del patrimonio di Andilly?",
+          "a": "Calcolate da 45 min a 1 ora per villaggio per il Percorso del patrimonio di Andilly, ossia da 2 a 3 ore per percorrere Charly, Jussy e Saint-Symphorien di seguito. Potete anche suddividerlo in più uscite."
+        },
+        {
+          "q": "Il Percorso del patrimonio di Andilly è adatto ai bambini?",
+          "a": "Sì. Il Percorso del patrimonio di Andilly si presta bene a un'uscita in famiglia: i 36 pannelli illustrati raccontano la storia locale in modo accessibile, i villaggi si prestano a brevi tappe e il vicino Grand Parc d'Andilly permette di completare la giornata."
+        },
+        {
+          "q": "Cosa si vede sul Percorso del patrimonio di Andilly?",
+          "a": "Il Percorso del patrimonio valorizza il piccolo patrimonio costruito (fontane, forni, lavatoi, croci di cammino), le cappelle del villaggio tra cui la cappella Saint-Jacques di Charly (campanile iscritto come Monumento storico nel 1975) e la storia dei graniteurs del Mont Sion."
+        },
+        {
+          "q": "Si può prolungare il Percorso del patrimonio di Andilly?",
+          "a": "Sì. Un percorso complementare 'Sulle tracce dei graniteurs del Mont Sion' prolunga il sentiero di Andilly con un anello di circa 10 km verso Charly, Présilly e il colle di Mont Sion, in legame con la storia degli scalpellini piemontesi e lombardi del XIX secolo."
+        }
+      ],
+      "schema_amenities": [
+        "Sentiero di interpretazione",
+        "Accesso libero",
+        "Pannelli illustrati (36)",
+        "Patrimonio costruito rurale",
+        "Parcheggio alla partenza"
+      ]
     },
     "es": {
       "name": "Recorrido patrimonial: pasear por Andilly",
@@ -272,7 +694,141 @@
       "hero_alt": "Recorrido patrimonial de Andilly con paneles ilustrados en los pueblos de Charly, Jussy y Saint-Symphorien",
       "body": {
         "what_is": "<p>El <strong>Recorrido patrimonial de Andilly</strong> es un sendero de interpretación libre que atraviesa el municipio de Andilly, en Alta Saboya, en la vertiente sur del collado del Mont Sion, a 6 km al noroeste de Cruseilles. Se compone de <strong>36 paneles ilustrados</strong> repartidos en los tres pueblos del municipio —Charly, Jussy y Saint-Symphorien— y se apoya en la obra de Dominique Bouverat «Andilly – Charly, Jussy et Saint-Symphorien – Pages d'histoire».</p><p>El recorrido, ideado por el municipio y la asociación local, narra la historia rural y religiosa del Genevois: capillas del siglo XV (la <strong>capilla Saint-Jacques de Charly</strong>, cuyo campanario está inscrito como Monumento Histórico desde 1975), fuentes, hornos de pan, casas de granito y vida de antaño. Una variante señalizada «Tras las huellas de los canteros del Mont Sion» prolonga el paseo hacia el collado y evoca a los talladores piamonteses y lombardos que explotaron el granito en el siglo XIX. El itinerario se recorre en bucle o pueblo por pueblo, a pie, en familia o en grupo, y es una parada cultural ideal entre Cruseilles, el Salève y la frontera ginebrina.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parcours patrimoine d'Andilly",
+        "Sentier patrimoine Charly-Jussy-Saint-Symphorien"
+      ],
+      "hero": {
+        "badge": "Acceso libre  Todo el año",
+        "lead": "Descubra Andilly y sus tres pueblos  Charly, Jussy y Saint-Symphorien  a lo largo de un recorrido patrimonial de acceso libre, jalonado por 36 paneles ilustrados que cuentan la historia rural del Genevois al pie del puerto del Mont Sion."
+      },
+      "facts": {
+        "type": "Sendero de interpretación  Patrimonio",
+        "access": "Libre  Gratuito",
+        "commune": "Andilly",
+        "duration": "De 2 a 3 h según el pueblo o pueblos visitados",
+        "best_season": "Primavera  verano  otoño"
+      },
+      "activities": [
+        {
+          "title": "Leer los 36 paneles de interpretación",
+          "tag": null,
+          "description": "Recorrido por el patrimonio de Andilly a lo largo de los 36 paneles ilustrados distribuidos por Charly, Jussy y Saint-Symphorien: arquitectura, vida rural y religiosa."
+        },
+        {
+          "title": "Visitar la capilla Saint-Jacques de Charly",
+          "tag": null,
+          "description": "Capilla del siglo XV cuyo campanario está catalogado como Monumento Histórico desde 1975, punto de partida habitual del recorrido patrimonial."
+        },
+        {
+          "title": "Seguir la variante de los graniteurs del Mont Sion",
+          "tag": null,
+          "description": "Bucle complementario de 10 km por Charly, Présilly y el puerto del Mont Sion, tras las huellas de los talladores de granito piamonteses y lombardos del siglo XIX."
+        },
+        {
+          "title": "Hacer un picnic en un caserío",
+          "tag": "Familia",
+          "description": "Varios bancos y fuentes en los pueblos atravesados permiten una pausa en familia en pleno sendero patrimonial de Andilly."
+        },
+        {
+          "title": "Fotografiar los hornos de pan y los lavaderos",
+          "tag": null,
+          "description": "El recorrido de Andilly resalta el pequeño patrimonio construido: hornos, fuentes, lavaderos, cruces de camino y graneros típicos del Genevois."
+        },
+        {
+          "title": "Combinarlo con una visita al Grand Parc d'Andilly",
+          "tag": null,
+          "description": "El Grand Parc d'Andilly (parque de atracciones medievales) está muy cerca y permite prolongar la jornada familiar tras el recorrido patrimonial."
+        },
+        {
+          "title": "Completar con una caminata en el Mont Sion",
+          "tag": null,
+          "description": "El puerto del Mont Sion y sus caminos permiten prolongar el recorrido patrimonial con una verdadera salida a la naturaleza, en relación con los graniteurs."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Dirección",
+          "v": "Salida habitual: Capilla de Charly, 74350 Andilly"
+        },
+        {
+          "k": "Coordenadas",
+          "v": "46,069845 N  6,069443 E"
+        },
+        {
+          "k": "Teléfono",
+          "v": "Ayuntamiento de Andilly  ver andilly74.fr",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Sitio oficial",
+          "v": "andilly74.com / andilly74.fr"
+        },
+        {
+          "k": "Horarios",
+          "v": "Acceso libre todo el año, en autonomía. Paneles exteriores accesibles 24 h/24.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifas",
+          "v": "Gratuito",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Acceso / Aparcamiento",
+          "v": "Aparcamiento en el ayuntamiento de Andilly y cerca de las capillas (Charly, Jussy, Saint-Symphorien). A 6 km de Cruseilles por la D 1201."
+        },
+        {
+          "k": "Duración de la visita",
+          "v": "De 2 a 3 h para los tres pueblos, de 45 min a 1 h por pueblo"
+        },
+        {
+          "k": "Público",
+          "v": "Familias, aficionados al patrimonio rural, grupos escolares"
+        },
+        {
+          "k": "Animales",
+          "v": "Aceptados con correa"
+        },
+        {
+          "k": "Equipamiento requerido",
+          "v": "Calzado cómodo para caminar. Plano disponible en el ayuntamiento o en los ayuntamientos de los municipios vecinos."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿El Recorrido patrimonial de Andilly es gratuito?",
+          "a": "Sí. El Recorrido patrimonial de Andilly es un sendero de interpretación de acceso libre y gratuito todo el año. Los 36 paneles ilustrados están instalados al aire libre y pueden visitarse sin reserva."
+        },
+        {
+          "q": "¿Dónde empieza el Recorrido patrimonial de Andilly?",
+          "a": "La salida habitual del Recorrido patrimonial se sitúa en la capilla de Charly (capilla Saint-Jacques, siglo XV), en el centro del pueblo de Charly en Andilly. También se puede acceder desde Jussy o Saint-Symphorien."
+        },
+        {
+          "q": "¿Cuánto se tarda en hacer el Recorrido patrimonial de Andilly?",
+          "a": "Cuente de 45 min a 1 h por pueblo para el Recorrido patrimonial de Andilly, es decir, de 2 a 3 h para recorrer Charly, Jussy y Saint-Symphorien seguidos. También puede dividirlo en varias salidas."
+        },
+        {
+          "q": "¿El Recorrido patrimonial de Andilly es apto para niños?",
+          "a": "Sí. El Recorrido patrimonial de Andilly se presta bien a una salida familiar: los 36 paneles ilustrados cuentan la historia local de forma accesible, los pueblos permiten pequeñas etapas y el vecino Grand Parc d'Andilly permite completar la jornada."
+        },
+        {
+          "q": "¿Qué se ve en el Recorrido patrimonial de Andilly?",
+          "a": "El Recorrido patrimonial pone en valor el pequeño patrimonio construido (fuentes, hornos, lavaderos, cruces de camino), las capillas del pueblo, entre ellas la capilla Saint-Jacques de Charly (campanario inscrito como Monumento Histórico en 1975), y la historia de los graniteurs del Mont Sion."
+        },
+        {
+          "q": "¿Se puede prolongar el Recorrido patrimonial de Andilly?",
+          "a": "Sí. Un recorrido complementario «Tras las huellas de los graniteurs del Mont Sion» prolonga el sendero de Andilly con un bucle de unos 10 km hacia Charly, Présilly y el puerto del Mont Sion, en relación con la historia de los talladores de piedra piamonteses y lombardos del siglo XIX."
+        }
+      ],
+      "schema_amenities": [
+        "Sendero de interpretación",
+        "Acceso libre",
+        "Paneles ilustrados (36)",
+        "Patrimonio construido rural",
+        "Aparcamiento en la salida"
+      ]
     },
     "nl": {
       "name": "Erfgoedroute: Wandeling door Andilly",
@@ -281,7 +837,141 @@
       "hero_alt": "Parcours patrimoine d'Andilly met geïllustreerde panelen in de dorpen Charly, Jussy en Saint-Symphorien",
       "body": {
         "what_is": "<p>Het <strong>Parcours patrimoine d'Andilly</strong> is een gratis interpretatiepad dat de gemeente Andilly in Haute-Savoie doorkruist, op de zuidflank van de Col du Mont Sion, 6 km ten noordwesten van Cruseilles. Het bestaat uit <strong>36 geïllustreerde panelen</strong> verdeeld over de drie dorpen van de gemeente — Charly, Jussy en Saint-Symphorien — en steunt op het boek van Dominique Bouverat „Andilly – Charly, Jussy et Saint-Symphorien – Pages d'histoire\".</p><p>Het traject, ontworpen door de gemeente en de lokale vereniging, vertelt de landelijke en religieuze geschiedenis van het Genevois: kapellen uit de 15e eeuw (de <strong>kapel Saint-Jacques in Charly</strong>, waarvan de klokkentoren sinds 1975 als Monument historique is ingeschreven), fonteinen, broodovens, granieten huizen en sporen van het dorpsleven.</p><p>Een bewegwijzerde variant „Sur les traces des graniteurs du Mont Sion\" verlengt de wandeling tot de pas en herinnert aan de Piemontese en Lombardische steenhouwers die het graniet in de 19e eeuw bewerkten. De route kan in één lus of dorp per dorp worden afgelegd — een ideale culturele halte tussen Cruseilles, de Salève en de Geneefse grens.</p>"
-      }
+      },
+      "name_alternates": [
+        "Parcours patrimoine d'Andilly",
+        "Sentier patrimoine Charly-Jussy-Saint-Symphorien"
+      ],
+      "hero": {
+        "badge": "Vrij toegankelijk  Het hele jaar",
+        "lead": "Ontdek Andilly en zijn drie dorpen  Charly, Jussy en Saint-Symphorien  langs een vrij toegankelijk erfgoedpad met 36 geïllustreerde panelen die de plattelandsgeschiedenis van het Genevois aan de voet van de Col du Mont Sion vertellen."
+      },
+      "facts": {
+        "type": "Interpretatiepad  Erfgoed",
+        "access": "Vrij  Gratis",
+        "commune": "Andilly",
+        "duration": "2 tot 3 uur afhankelijk van het bezochte dorp of de dorpen",
+        "best_season": "Lente  zomer  herfst"
+      },
+      "activities": [
+        {
+          "title": "De 36 interpretatiepanelen lezen",
+          "tag": null,
+          "description": "Rondgang door het erfgoed van Andilly langs de 36 geïllustreerde panelen verdeeld over Charly, Jussy en Saint-Symphorien: architectuur, plattelandsleven en religieus leven."
+        },
+        {
+          "title": "De Saint-Jacques-kapel in Charly bezoeken",
+          "tag": null,
+          "description": "Vijftiende-eeuwse kapel waarvan de klokkentoren sinds 1975 als historisch monument is geklasseerd; gebruikelijk startpunt van het erfgoedpad."
+        },
+        {
+          "title": "De variant van de graniteurs van de Mont Sion volgen",
+          "tag": null,
+          "description": "Aanvullende lus van 10 km via Charly, Présilly en de Col du Mont Sion, in de voetsporen van de Piemontese en Lombardische graniethouwers uit de 19e eeuw."
+        },
+        {
+          "title": "Picknicken in een gehucht",
+          "tag": "Gezin",
+          "description": "Verschillende bankjes en fonteinen in de doorkruiste dorpen maken een gezinspauze midden op het erfgoedpad van Andilly mogelijk."
+        },
+        {
+          "title": "De broodovens en wasplaatsen fotograferen",
+          "tag": null,
+          "description": "Het parcours van Andilly belicht het kleine gebouwde erfgoed: ovens, fonteinen, wasplaatsen, wegkruisen en voor het Genevois typische schuren."
+        },
+        {
+          "title": "Combineren met een bezoek aan het Grand Parc d'Andilly",
+          "tag": null,
+          "description": "Het Grand Parc d'Andilly (middeleeuws pretpark) ligt vlakbij en maakt het mogelijk de gezinsdag na het erfgoedpad te verlengen."
+        },
+        {
+          "title": "Afsluiten met een wandeling op de Mont Sion",
+          "tag": null,
+          "description": "De Col du Mont Sion en zijn paden maken het mogelijk het erfgoedpad te verlengen met een echte natuuruitstap, in verband met de graniteurs."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adres",
+          "v": "Gebruikelijk startpunt: Kapel van Charly, 74350 Andilly"
+        },
+        {
+          "k": "Coördinaten",
+          "v": "46,069845 N  6,069443 O"
+        },
+        {
+          "k": "Telefoon",
+          "v": "Gemeentehuis Andilly  zie andilly74.fr",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Officiële website",
+          "v": "andilly74.com / andilly74.fr"
+        },
+        {
+          "k": "Openingstijden",
+          "v": "Het hele jaar vrij toegankelijk, zelfstandig. Panelen in de openlucht 24/7 toegankelijk.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarieven",
+          "v": "Gratis",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Toegang / Parkeren",
+          "v": "Parkeren bij het gemeentehuis van Andilly en in de buurt van de kapellen (Charly, Jussy, Saint-Symphorien). Op 6 km van Cruseilles via de D 1201."
+        },
+        {
+          "k": "Bezoekduur",
+          "v": "2 tot 3 uur voor alle drie de dorpen, 45 min tot 1 uur per dorp"
+        },
+        {
+          "k": "Publiek",
+          "v": "Gezinnen, liefhebbers van plattelandserfgoed, scholen"
+        },
+        {
+          "k": "Dieren",
+          "v": "Toegestaan aan de leiband"
+        },
+        {
+          "k": "Benodigde uitrusting",
+          "v": "Comfortabele wandelschoenen. Plattegrond beschikbaar bij het gemeentehuis of bij de gemeentehuizen van de buurgemeenten."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is het erfgoedpad van Andilly gratis?",
+          "a": "Ja. Het erfgoedpad van Andilly is een interpretatiepad dat het hele jaar vrij en gratis toegankelijk is. De 36 geïllustreerde panelen staan buiten en kunnen zonder reservering bekeken worden."
+        },
+        {
+          "q": "Waar begint het erfgoedpad van Andilly?",
+          "a": "Het gebruikelijke startpunt van het erfgoedpad bevindt zich bij de kapel van Charly (Saint-Jacques-kapel, 15e eeuw), in het hart van het dorp Charly in Andilly. U kunt het ook bereiken vanuit Jussy of Saint-Symphorien."
+        },
+        {
+          "q": "Hoe lang duurt het erfgoedpad van Andilly?",
+          "a": "Reken op 45 min tot 1 uur per dorp voor het erfgoedpad van Andilly, ofwel 2 tot 3 uur om Charly, Jussy en Saint-Symphorien achter elkaar te doen. U kunt het ook over meerdere uitstapjes verdelen."
+        },
+        {
+          "q": "Is het erfgoedpad van Andilly geschikt voor kinderen?",
+          "a": "Ja. Het erfgoedpad van Andilly leent zich goed voor een gezinsuitje: de 36 geïllustreerde panelen vertellen de lokale geschiedenis op toegankelijke wijze, de dorpen lenen zich voor kleine etappes en het naburige Grand Parc d'Andilly maakt het mogelijk de dag aan te vullen."
+        },
+        {
+          "q": "Wat ziet men op het erfgoedpad van Andilly?",
+          "a": "Het erfgoedpad belicht het kleine gebouwde erfgoed (fonteinen, ovens, wasplaatsen, wegkruisen), de dorpskapellen waaronder de Saint-Jacques-kapel in Charly (klokkentoren in 1975 ingeschreven als historisch monument), en de geschiedenis van de graniteurs van de Mont Sion."
+        },
+        {
+          "q": "Kan men het erfgoedpad van Andilly verlengen?",
+          "a": "Ja. Een aanvullend parcours 'In de voetsporen van de graniteurs van de Mont Sion' verlengt het pad van Andilly met een lus van ongeveer 10 km naar Charly, Présilly en de Col du Mont Sion, in verband met de geschiedenis van de Piemontese en Lombardische steenhouwers uit de 19e eeuw."
+        }
+      ],
+      "schema_amenities": [
+        "Interpretatiepad",
+        "Vrij toegankelijk",
+        "Geïllustreerde panelen (36)",
+        "Plattelandsbouwerfgoed",
+        "Parkeren bij het startpunt"
+      ]
     }
   },
   "status": "published"
