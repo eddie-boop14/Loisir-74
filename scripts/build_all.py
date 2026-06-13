@@ -87,6 +87,17 @@ def rebuild_hubs():
     print("\n".join(lines[-8:]) if lines else "(hubs rebuilt)")
 
 
+def hygiene_gate():
+    """Strict hygiene scan: 0 Tier 1/2 findings across all rendered fields."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "audit_hygiene.py"), "--strict"],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    print(out.stdout.strip())
+    if out.returncode != 0:
+        raise SystemExit("hygiene gate FAILED")
+
+
 def reachability_gate():
     """Strict reachability: 0 orphans across all 6 locales."""
     out = subprocess.run(
@@ -263,6 +274,7 @@ def main():
         run("idempotency assertion", assert_idempotent)
         return
 
+    run("hygiene gate (Tier 1/2 scan)", hygiene_gate)
     run("render fiche pages", render_all_fiches)
     run("rebuild catalog index", rebuild_catalog_index)
     run("regenerate hubs + homepage nav", rebuild_hubs)
