@@ -128,7 +128,13 @@ def main():
             if merge_payload(blk, fields):
                 if not args.dry_run:
                     rl = d.setdefault("research_log", [])
-                    if not any(r.get("note", "").startswith(f"Translation ingest [{lang}]") and r.get("date") == TODAY for r in rl):
+                    already_logged = any(
+                        isinstance(r, dict)
+                        and r.get("note", "").startswith(f"Translation ingest [{lang}]")
+                        and r.get("date") == TODAY
+                        for r in rl
+                    )
+                    if not already_logged:
                         rl.append({
                             "date": TODAY,
                             "by": "scripts/ingest_translations.py",

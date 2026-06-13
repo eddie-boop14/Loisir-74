@@ -22,17 +22,37 @@ import build_lieu_page as B  # noqa: E402
 LANGS = ["fr", "en", "de", "it", "es", "nl"]
 
 
-def fr_signal(text):
-    """Heuristic: True if `text` looks French. Used to flag FR-residue bodies."""
+def fr_signal(text, lang="en"):
+    """Heuristic: True if `text` is FR-residue (i.e. predominantly French) for
+    a non-FR locale.
+
+    Net-signal approach: count French-distinctive words MINUS target-locale
+    distinctive words. The previous absolute-count rule over-flagged Italian
+    bodies because they reference French proper nouns ("Cascade des Brochaux",
+    "la Vallée d'Aulps") and Italian itself uses "la"/"le".
+    """
     if not text:
         return False
-    s = text[:600].lower()
-    fr_markers = sum(
-        1 for w in [" la ", " le ", " les ", " une ", " un ", " des ", " du ",
-                    " de la ", " est ", " sont ", " aux ", " pour ", " avec ",
-                    " sur ", " dans "] if w in s
-    )
-    return fr_markers >= 3
+    s = text[:800].lower()
+    fr = [" la ", " le ", " les ", " une ", " des ", " du ", " est ", " sont ",
+          " aux ", " pour ", " avec ", " sur ", " dans ", " cette ", " ce ",
+          " son ", " ses "]
+    locale_distinctive = {
+        "en": [" the ", " of ", " and ", " is ", " are ", " with ", " from ",
+               " this ", " these ", " their ", " its "],
+        "de": [" der ", " die ", " das ", " den ", " ist ", " sind ", " und ",
+               " mit ", " für ", " von ", " im ", " auf ", " bei "],
+        "it": [" il ", " lo ", " gli ", " del ", " della ", " degli ", " che ",
+               " è ", " sono ", " non ", " anche ", " tutto ", " un'", " l'"],
+        "es": [" el ", " los ", " que ", " es ", " para ", " con ", " son ",
+               " un ", " una ", " del ", " por ", " en el "],
+        "nl": [" het ", " van ", " een ", " is ", " zijn ", " voor ", " en ",
+               " met ", " op ", " in de ", " naar ", " tot "],
+    }
+    fr_count = sum(1 for w in fr if w in s)
+    loc_count = sum(1 for w in locale_distinctive.get(lang, []) if w in s)
+    # FR-residue iff FR markers dominate by at least 3
+    return fr_count >= 3 and fr_count - loc_count >= 3
 
 
 def main():
@@ -106,7 +126,7 @@ def main():
                 wi = body.get("what_is", "") or i.get("what_is", "")
                 if not wi:
                     missing_body += 1
-                elif fr_signal(wi):
+                elif fr_signal(wi, lang):
                     fr_body += 1
                     report["fr_residue_slugs"][lang].append(slug)
                 else:
