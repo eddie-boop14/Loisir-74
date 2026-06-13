@@ -420,7 +420,7 @@ def update_sitemap():
     """Update the hub entry for /que-faire/ to include the new locale variants."""
     sm = REPO / "sitemap.xml"
     s = sm.read_text(encoding="utf-8")
-    # The existing entry already references /en/que-faire/ etc. as hreflang alternates.
+    # The existing entry already references /en/what-to-do/ etc. as hreflang alternates.
     # Now add full <url> entries for each locale variant.
     added = 0
     new_entries = []
@@ -430,10 +430,10 @@ def update_sitemap():
             continue
         entry = (f'  <url><loc>{url}</loc><changefreq>weekly</changefreq>'
                  f'<xhtml:link rel="alternate" hreflang="fr" href="https://loisirs74.fr/que-faire/"/>'
-                 f'<xhtml:link rel="alternate" hreflang="en" href="https://loisirs74.fr/en/que-faire/"/>'
-                 f'<xhtml:link rel="alternate" hreflang="de" href="https://loisirs74.fr/de/que-faire/"/>'
-                 f'<xhtml:link rel="alternate" hreflang="it" href="https://loisirs74.fr/it/que-faire/"/>'
-                 f'<xhtml:link rel="alternate" hreflang="es" href="https://loisirs74.fr/es/que-faire/"/>'
+                 f'<xhtml:link rel="alternate" hreflang="en" href="https://loisirs74.fr/en/what-to-do/"/>'
+                 f'<xhtml:link rel="alternate" hreflang="de" href="https://loisirs74.fr/de/was-unternehmen/"/>'
+                 f'<xhtml:link rel="alternate" hreflang="it" href="https://loisirs74.fr/it/cosa-fare/"/>'
+                 f'<xhtml:link rel="alternate" hreflang="es" href="https://loisirs74.fr/es/que-hacer/"/>'
                  f'<xhtml:link rel="alternate" hreflang="x-default" href="https://loisirs74.fr/que-faire/"/></url>')
         new_entries.append(entry)
         added += 1

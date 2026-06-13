@@ -292,7 +292,7 @@ HUB_LOCALE_SLUGS = {
     "telecabines":     {"fr": "telecabines",     "en": "cable-cars",     "de": "seilbahnen",        "it": "funivie",         "es": "telefericos",  "nl": "kabelbanen"},
     "voies-vertes":    {"fr": "voies-vertes",    "en": "greenways",      "de": "radwege",           "it": "vie-verdi",       "es": "vias-verdes",  "nl": "fietsroutes"},
     "lacs-plages":     {"fr": "lacs-plages",     "en": "lakes",          "de": "seen",              "it": "laghi",           "es": "lagos",        "nl": "meren"},
-    "bases-de-loisirs":{"fr": "bases-de-loisirs","en": "leisure-parks",  "de": "freizeitparks",     "it": "aree-recreative", "es": "areas-de-ocio","nl": "recreatieparken"},
+    "bases-de-loisirs":{"fr": "bases-de-loisirs","en": "leisure-parks",  "de": "freizeitparks",     "it": "aree-ricreative", "es": "areas-de-ocio","nl": "recreatieparken"},
 }
 
 HUB_LOCALE_LABELS = {

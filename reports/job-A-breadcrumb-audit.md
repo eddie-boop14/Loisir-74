@@ -63,7 +63,7 @@ Top 30 by frequency:
 | fr | `https://loisirs74.fr/bases-de-loisirs/` | `Bases de loisirs` | 33 |
 | en | `https://loisirs74.fr/en/leisure-parks/` | `Leisure parks` | 33 |
 | de | `https://loisirs74.fr/de/freizeitparks/` | `Freizeitparks` | 33 |
-| it | `https://loisirs74.fr/it/aree-recreative/` | `Aree ricreative` | 33 |
+| it | `https://loisirs74.fr/it/aree-ricreative/` | `Aree ricreative` | 33 |
 | es | `https://loisirs74.fr/es/areas-de-ocio/` | `Áreas de ocio` | 33 |
 | nl | `https://loisirs74.fr/nl/recreatieparken/` | `Recreatieparken` | 33 |
 | fr | `https://loisirs74.fr/lacs-plages/` | `Lacs &amp; plages` | 31 |

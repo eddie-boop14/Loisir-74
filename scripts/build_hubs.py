@@ -226,6 +226,7 @@ HUB_DISPLAY = {
     "sorties-detente":   {"fr":"Sorties & détente","en":"Outings & relax","de":"Ausflüge & Erholung","it":"Uscite & relax","es":"Salidas & relax","nl":"Uitstapjes & ontspanning"},
     "sport-jeux":        {"fr":"Sports & jeux","en":"Sports & games","de":"Sport & Spiele","it":"Sport & giochi","es":"Deportes & juegos","nl":"Sport & spelen"},
     "sensations-plein-air": {"fr":"Sensations plein air","en":"Outdoor thrills","de":"Outdoor-Nervenkitzel","it":"Brividi all'aria aperta","es":"Sensaciones al aire libre","nl":"Buitenavontuur"},
+    "que-faire":         {"fr":"Que faire ?","en":"What to do","de":"Was unternehmen","it":"Cosa fare","es":"Qué hacer","nl":"Wat te doen"},
 }
 ALL_BASE_HUBS = list(HUB_DISPLAY.keys())
 
