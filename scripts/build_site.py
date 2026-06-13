@@ -93,6 +93,8 @@ DENY_GLOB = [
     "*.csv",
     ".env*",
     "*.bak", "*.tmp",
+    # Single-character filenames are accidental artefacts — never publish.
+    "?",
 ]
 
 
