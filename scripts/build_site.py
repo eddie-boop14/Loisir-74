@@ -77,6 +77,7 @@ DENY = {
     "Json.bak", "node_modules",
     "report.csv", "email_queue.csv",
     "translations",                  # JOB 7 translation payloads (intermediate)
+    "incoming-generics",             # staging folder for user-sourced générique pics
     # JOB 11: Studio is dev-only. Lives in repo, never deployed.
     "studio.html",
     "studio-consts.js",
