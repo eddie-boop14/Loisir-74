@@ -88,6 +88,26 @@
       "date": "2026-06-13",
       "by": "scripts/ingest_translations.py",
       "note": "Translation ingest [nl]: 5 field(s) updated."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for de from translations/agent_J_de_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for es from translations/agent_J_es_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for it from translations/agent_J_it_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for nl from translations/agent_J_nl_secondary.json."
     }
   ],
   "i18n": {
@@ -256,7 +276,156 @@
       "hero_alt": "Château de la Croix at Scionzier, 16th-century fortified manor overlooking the Arve valley in the Faucigny",
       "body": {
         "what_is": "<p>The <strong>Château de la Croix</strong> is a historic fortified manor that overlooks the Arve valley from the commune of Scionzier (74950), a few kilometres downstream from Cluses, in the Faucigny. While local tradition mentions a medieval 12th-century core, the building as it stands today is essentially a <strong>16th-century construction</strong>, built by the lords of La Croix, who later allied by marriage with the Rochette family. The castle's history is closely tied to that of the Faucigny and its noble lines.</p><p>The château preserves several remarkable decorative features: <strong>17th-century wall paintings</strong> — exceptional in the region — and notably an <strong>1840 panoramic wallpaper</strong> in one of the salons, a rare piece of 19th-century classical interior décor. Several parts of the castle were listed as Monument Historique in 1988, then more broadly in 1994.</p><p>The château is privately owned and not open to the public, but is clearly visible from the road through Scionzier.</p>"
-      }
+      },
+      "name_alternates": [
+        "Château de la Croix Scionzier",
+        "Fortified manor of La Croix",
+        "Château Rochette de la Croix"
+      ],
+      "hero": {
+        "badge": "External view · MH 1994",
+        "lead": "16th-century fortified manor of the lords of La Croix, later Rochette, at Scionzier: 17th-century wall paintings and an 1840 panoramic wallpaper. Listed Monument Historique 1994, visible from the road."
+      },
+      "facts": {
+        "type": "16th-century fortified manor · MH 1994",
+        "access": "Visible from outside (private property)",
+        "tarif": "No interior visit",
+        "commune": "Scionzier",
+        "parking": "Village of Scionzier (free)",
+        "duration": "15 to 30 minutes",
+        "best_season": "Year-round"
+      },
+      "activities": [
+        {
+          "title": "External view of the fortified manor",
+          "tag": "Heritage",
+          "description": "The Château de la Croix at Scionzier is discovered from the road: the discreet silhouette of a 16th-century fortified manor, partly screened by vegetation."
+        },
+        {
+          "title": "Reading the Faucigny context",
+          "tag": null,
+          "description": "The Château de la Croix is closely tied to the seigneurial history of the Faucigny — a teaching stop on the system of fortified manors in the Arve valley."
+        },
+        {
+          "title": "History of the La Croix and Rochette families",
+          "tag": null,
+          "description": "The Château de la Croix was built by the lords of La Croix, later linked by marriage to the Rochette family — noble lines of the Faucigny from the 16th to 18th centuries."
+        },
+        {
+          "title": "Combine with the Arve valley",
+          "tag": null,
+          "description": "The Château de la Croix at Scionzier is best discovered as part of a heritage stop in the Arve valley, between Cluses and Bonneville."
+        },
+        {
+          "title": "Side-trip to Cluses and its industrial heritage",
+          "tag": null,
+          "description": "The Château de la Croix combines easily with a visit to the Cluses Museum of Watchmaking and Bar-Turning, 5 km away — industrial heritage of the Faucigny."
+        },
+        {
+          "title": "Heritage photography",
+          "tag": null,
+          "description": "The Château de la Croix offers a heritage photography subject from the roadside: a discreet fortified manor in its leafy setting in the Arve valley."
+        },
+        {
+          "title": "Discovering the village of Scionzier",
+          "tag": "Family",
+          "description": "An external visit to the Château de la Croix combines with a discovery of the village of Scionzier and its church — a small but complete stop in the heart of the Faucigny."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Address",
+          "v": "Château de la Croix, 74950 Scionzier (visible from the road)"
+        },
+        {
+          "k": "Coordinates",
+          "v": "46.059° N · 6.552° E"
+        },
+        {
+          "k": "Altitude",
+          "v": "≈ 490 m (Arve valley)"
+        },
+        {
+          "k": "Opening times",
+          "v": "Free external view, year-round. No interior visit (private property closed to the public). Verified on 10 June 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Prices",
+          "v": "No ticketing: no interior visit. External view from the road is free. Verified on 10 June 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Official site",
+          "v": "Heritage record on monumentum.fr (PA00118442). No dedicated official site."
+        },
+        {
+          "k": "Phone",
+          "v": "Scionzier town hall: +33 (0)4 50 98 09 36"
+        },
+        {
+          "k": "Access / Parking",
+          "v": "Free parking in the village of Scionzier. The castle is visible from the main road. Reached from the A40, Cluses-Centre exit."
+        },
+        {
+          "k": "Duration",
+          "v": "15 to 30 minutes to look at the castle from outside and read up on its historical context."
+        },
+        {
+          "k": "Audience",
+          "v": "Lovers of heritage and of the seigneurial families of the Faucigny, photographers."
+        },
+        {
+          "k": "Accessibility",
+          "v": "External view from the public road. No dedicated facilities. Private property — no direct access to the castle."
+        },
+        {
+          "k": "Animals",
+          "v": "Dogs allowed on a lead in the village of Scionzier."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can you visit inside the Château de la Croix at Scionzier?",
+          "a": "No, the Château de la Croix at Scionzier is private property and closed to the public. It can only be seen from the road. No interior visits are organised."
+        },
+        {
+          "q": "What is the history of the Château de la Croix?",
+          "a": "The Château de la Croix is a fortified manor mainly built in the 16th century by the lords of La Croix, later linked to the Rochette family. Its history is tied to that of the Faucigny. Inscribed MH 1988, listed MH 1994."
+        },
+        {
+          "q": "Where is the Château de la Croix?",
+          "a": "The Château de la Croix lies in the commune of Scionzier (74950), in the Arve valley (Faucigny), near Cluses. It is visible from the main road. GPS: 46.059° N · 6.552° E."
+        },
+        {
+          "q": "How much does it cost to visit the Château de la Croix?",
+          "a": "The Château de la Croix at Scionzier cannot be visited inside. The external view from the road is free. No ticketing. Verified on 10 June 2026."
+        },
+        {
+          "q": "What are the opening times of the Château de la Croix?",
+          "a": "The Château de la Croix at Scionzier is visible from the road 24/7, year-round. No visiting hours (interior closed). Verified on 10 June 2026."
+        },
+        {
+          "q": "Why is the Château de la Croix listed as a Monument Historique?",
+          "a": "Several parts of the Château de la Croix at Scionzier are listed Monument Historique (1994, PA00118442) for their architectural value and decoration: 17th-century wall paintings and an 1840 panoramic wallpaper in one of the salons."
+        },
+        {
+          "q": "Where can you park to see the Château de la Croix?",
+          "a": "Free parking in the village of Scionzier, near the road from which the Château de la Croix is visible. No dedicated parking for the monument."
+        },
+        {
+          "q": "What else is there to see around the Château de la Croix?",
+          "a": "Around the Château de la Croix at Scionzier, you can visit Cluses and its Museum of Watchmaking and Bar-Turning (5 km), head up to the Solaison plateau, or carry on to Sallanches and the Mont-Blanc country."
+        }
+      ],
+      "schema_amenities": [
+        "16th-century fortified manor",
+        "Listed MH 1994 (PA00118442)",
+        "17th-century wall paintings",
+        "1840 panoramic wallpaper",
+        "External view from the road",
+        "Private property"
+      ]
     },
     "de": {
       "name": "Schloss La Croix",
@@ -265,7 +434,156 @@
       "hero_alt": "Schloss La Croix in Scionzier, Wehrhaus aus dem 16. Jh. über dem Arve-Tal im Faucigny",
       "body": {
         "what_is": "<p>Das <strong>Schloss La Croix</strong> ist ein historisches Wehrhaus, das von der Gemeinde Scionzier (74950) im Faucigny aus über das Arve-Tal blickt, wenige Kilometer talabwärts von Cluses. Während die lokale Überlieferung einen mittelalterlichen Kern aus dem 12. Jh. erwähnt, ist das heutige Gebäude im Wesentlichen ein <strong>Bau aus dem 16. Jahrhundert</strong>, errichtet von den Herren von La Croix, die später durch Heirat mit der Familie Rochette verbunden waren.</p><p>Das Schloss bewahrt mehrere bemerkenswerte Dekorelemente: <strong>Wandmalereien des 17. Jh.</strong> — in der Region außergewöhnlich — und vor allem eine <strong>Panoramatapete von 1840</strong> in einem der Salons, ein seltenes Stück klassischer Innendekoration des 19. Jh. Mehrere Teile wurden 1988 als Monument Historique eingetragen, dann 1994 erweitert.</p><p>Privatbesitz, der Öffentlichkeit nicht zugänglich, aber von der Straße durch Scionzier gut sichtbar.</p>"
-      }
+      },
+      "name_alternates": [
+        "Château de la Croix Scionzier",
+        "Wehrhaus de la Croix",
+        "Château Rochette de la Croix"
+      ],
+      "hero": {
+        "badge": "Außenansicht · MH 1994",
+        "lead": "Wehrhaus aus dem 16. Jahrhundert der Herren von La Croix und dann der Rochette in Scionzier: Wandmalereien des 17. Jh. und Panoramatapete von 1840. 1994 als Monument Historique klassifiziert, von der Straße sichtbar."
+      },
+      "facts": {
+        "type": "Wehrhaus 16. Jh. · MH 1994",
+        "access": "Von außen sichtbar (Privatbesitz)",
+        "tarif": "Keine Innenbesichtigung",
+        "commune": "Scionzier",
+        "parking": "Ort Scionzier (kostenlos)",
+        "duration": "15 bis 30 Minuten",
+        "best_season": "Ganzjährig"
+      },
+      "activities": [
+        {
+          "title": "Außenansicht des Wehrhauses",
+          "tag": "Kulturerbe",
+          "description": "Das Château de la Croix in Scionzier zeigt sich von der Straße aus: die diskrete Silhouette eines Wehrhauses des 16. Jahrhunderts, teilweise von Vegetation verdeckt."
+        },
+        {
+          "title": "Lesart des Faucigny-Kontextes",
+          "tag": null,
+          "description": "Das Château de la Croix ist eng mit der Herrschaftsgeschichte des Faucigny verbunden – eine pädagogische Station zum System der Wehrhäuser des Arve-Tals."
+        },
+        {
+          "title": "Geschichte der Familien de la Croix und Rochette",
+          "tag": null,
+          "description": "Das Château de la Croix wurde von den Herren von La Croix erbaut, die später durch Heirat mit der Familie Rochette verbunden waren – Adelslinien des Faucigny vom 16. bis 18. Jh."
+        },
+        {
+          "title": "Kombination mit dem Arve-Tal",
+          "tag": null,
+          "description": "Das Château de la Croix in Scionzier lässt sich im Rahmen einer Kulturerbe-Etappe im Arve-Tal zwischen Cluses und Bonneville entdecken."
+        },
+        {
+          "title": "Abstecher nach Cluses und sein Industrieerbe",
+          "tag": null,
+          "description": "Das Château de la Croix lässt sich leicht mit einem Besuch des Museums für Uhrmacherei und Decolletage in Cluses (5 km) kombinieren – Industrieerbe des Faucigny."
+        },
+        {
+          "title": "Kulturerbefotografie",
+          "tag": null,
+          "description": "Das Château de la Croix bietet ein Motiv für Kulturerbefotografie am Straßenrand: diskretes Wehrhaus in seinem grünen Rahmen im Arve-Tal."
+        },
+        {
+          "title": "Entdeckung des Dorfes Scionzier",
+          "tag": "Familie",
+          "description": "Die Außenbesichtigung des Château de la Croix verbindet sich mit der Erkundung des Dorfes Scionzier und seiner Kirche – ein kurzer, aber vollständiger Halt im Herzen des Faucigny."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Château de la Croix, 74950 Scionzier (von der Straße sichtbar)"
+        },
+        {
+          "k": "Koordinaten",
+          "v": "46,059° N · 6,552° O"
+        },
+        {
+          "k": "Höhe",
+          "v": "≈ 490 m (Arve-Tal)"
+        },
+        {
+          "k": "Öffnungszeiten",
+          "v": "Freie Außenansicht, ganzjährig. Keine Innenbesichtigung (Privatbesitz, für die Öffentlichkeit geschlossen). Geprüft am 10. Juni 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Preise",
+          "v": "Kein Ticketverkauf: keine Innenbesichtigung. Außenansicht von der Straße kostenlos. Geprüft am 10. Juni 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Offizielle Website",
+          "v": "Denkmaleintrag auf monumentum.fr (PA00118442). Keine eigene offizielle Website."
+        },
+        {
+          "k": "Telefon",
+          "v": "Rathaus Scionzier: +33 (0)4 50 98 09 36"
+        },
+        {
+          "k": "Anfahrt / Parken",
+          "v": "Kostenfreies Parken im Ort Scionzier. Das Schloss ist von der Hauptstraße sichtbar. Erreichbar über die A40, Ausfahrt Cluses-Centre."
+        },
+        {
+          "k": "Besuchsdauer",
+          "v": "15 bis 30 Minuten, um das Schloss von außen zu betrachten und seinen historischen Kontext einzuordnen."
+        },
+        {
+          "k": "Publikum",
+          "v": "Liebhaber von Kulturerbe und der Geschichte der Adelsfamilien des Faucigny, Fotografen."
+        },
+        {
+          "k": "Barrierefreiheit",
+          "v": "Außenansicht von der öffentlichen Straße. Keine besonderen Einrichtungen. Privatbesitz – kein direkter Zugang zum Schloss."
+        },
+        {
+          "k": "Tiere",
+          "v": "Hunde an der Leine im Ort Scionzier erlaubt."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Kann man das Innere des Château de la Croix in Scionzier besichtigen?",
+          "a": "Nein, das Château de la Croix in Scionzier ist Privatbesitz und für die Öffentlichkeit geschlossen. Es ist nur von der Straße aus sichtbar. Es werden keine Innenbesichtigungen angeboten."
+        },
+        {
+          "q": "Was ist die Geschichte des Château de la Croix?",
+          "a": "Das Château de la Croix ist ein im Wesentlichen im 16. Jh. errichtetes Wehrhaus, gebaut von den Herren von La Croix, später mit der Familie Rochette verbunden. Seine Geschichte ist mit dem Faucigny verknüpft. MH 1988 eingetragen, MH 1994 klassifiziert."
+        },
+        {
+          "q": "Wo befindet sich das Château de la Croix?",
+          "a": "Das Château de la Croix liegt in der Gemeinde Scionzier (74950), im Arve-Tal (Faucigny), in der Nähe von Cluses. Es ist von der Hauptstraße sichtbar. GPS: 46,059° N · 6,552° O."
+        },
+        {
+          "q": "Was kostet der Besuch des Château de la Croix?",
+          "a": "Das Château de la Croix in Scionzier ist nicht zu besichtigen. Die Außenansicht von der Straße ist kostenlos. Kein Ticketverkauf. Geprüft am 10. Juni 2026."
+        },
+        {
+          "q": "Wie sind die Öffnungszeiten des Château de la Croix?",
+          "a": "Das Château de la Croix in Scionzier ist 24/7 ganzjährig von der Straße sichtbar. Keine Besichtigungszeiten (Inneres geschlossen). Geprüft am 10. Juni 2026."
+        },
+        {
+          "q": "Warum ist das Château de la Croix als Monument Historique klassifiziert?",
+          "a": "Mehrere Teile des Château de la Croix in Scionzier sind als Monument Historique klassifiziert (1994, PA00118442) wegen ihres architektonischen Wertes und ihrer Dekoration: Wandmalereien des 17. Jh. und Panoramatapete von 1840 in einem Salon."
+        },
+        {
+          "q": "Wo kann man parken, um das Château de la Croix zu sehen?",
+          "a": "Kostenloses Parken im Ort Scionzier, in der Nähe der Straße, von der aus das Château de la Croix sichtbar ist. Kein eigens für das Denkmal vorgesehener Parkplatz."
+        },
+        {
+          "q": "Was gibt es sonst rund um das Château de la Croix zu sehen?",
+          "a": "Rund um das Château de la Croix in Scionzier kann man Cluses und sein Museum für Uhrmacherei und Decolletage (5 km) besuchen, zum Plateau de Solaison aufsteigen oder weiter nach Sallanches und ins Mont-Blanc-Land fahren."
+        }
+      ],
+      "schema_amenities": [
+        "Wehrhaus 16. Jahrhundert",
+        "Klassifiziert MH 1994 (PA00118442)",
+        "Wandmalereien 17. Jahrhundert",
+        "Panoramatapete 1840",
+        "Außenansicht von der Straße",
+        "Privatbesitz"
+      ]
     },
     "it": {
       "name": "Castello de la Croix",
@@ -274,7 +592,156 @@
       "hero_alt": "Castello de la Croix a Scionzier, casa forte XVI sec. sopra la valle dell'Arve nel Faucigny",
       "body": {
         "what_is": "<p>Il <strong>Castello de la Croix</strong> è una casa forte storica che domina la valle dell'Arve dalla frazione di Scionzier (74950), a qualche km a valle di Cluses, nel Faucigny. Se la tradizione locale evoca un nucleo medievale del XII sec., l'edificio attuale è essenzialmente una <strong>costruzione del XVI sec.</strong>, eretta dai signori di La Croix, poi imparentati con la famiglia Rochette.</p><p>Conserva elementi decorativi notevoli: <strong>pitture murali del XVII sec.</strong> — eccezionali nella regione — e soprattutto una <strong>carta da parati panoramica del 1840</strong> in uno dei saloni, pezzo raro del decoro interno classico del XIX sec. Parti classificate Monumento Storico nel 1988, poi nel 1994.</p><p>Proprietà privata, non aperto al pubblico, ma chiaramente visibile dalla strada di Scionzier.</p>"
-      }
+      },
+      "name_alternates": [
+        "Château de la Croix Scionzier",
+        "Casa forte de la Croix",
+        "Château Rochette de la Croix"
+      ],
+      "hero": {
+        "badge": "Vista esterna · MH 1994",
+        "lead": "Casa forte del XVI secolo dei signori di La Croix e poi dei Rochette a Scionzier: pitture murali del XVII secolo e carta da parati panoramica del 1840. Classificata Monumento Storico 1994, visibile dalla strada."
+      },
+      "facts": {
+        "type": "Casa forte XVI secolo · MH 1994",
+        "access": "Visibile dall'esterno (proprietà privata)",
+        "tarif": "Nessuna visita interna",
+        "commune": "Scionzier",
+        "parking": "Paese di Scionzier (gratuito)",
+        "duration": "15-30 minuti",
+        "best_season": "Tutto l'anno"
+      },
+      "activities": [
+        {
+          "title": "Vista esterna della casa forte",
+          "tag": "Patrimonio",
+          "description": "Il Château de la Croix a Scionzier si scopre dalla strada: discreta silhouette di una casa forte del XVI secolo, parzialmente coperta dalla vegetazione."
+        },
+        {
+          "title": "Lettura del contesto del Faucigny",
+          "tag": null,
+          "description": "Il Château de la Croix è strettamente legato alla storia signorile del Faucigny — tappa didattica sul sistema delle case forti della valle dell'Arve."
+        },
+        {
+          "title": "Storia delle famiglie de la Croix e Rochette",
+          "tag": null,
+          "description": "Il Château de la Croix fu costruito dai signori di La Croix, poi imparentati per matrimonio con la famiglia Rochette — casate nobili del Faucigny dai secoli XVI al XVIII."
+        },
+        {
+          "title": "Combinazione con la valle dell'Arve",
+          "tag": null,
+          "description": "Il Château de la Croix a Scionzier si scopre nell'ambito di una tappa patrimoniale nella valle dell'Arve, tra Cluses e Bonneville."
+        },
+        {
+          "title": "Deviazione verso Cluses e il suo patrimonio industriale",
+          "tag": null,
+          "description": "Il Château de la Croix si combina facilmente con una visita al museo dell'Orologeria e del Décolletage di Cluses, a 5 km — patrimonio industriale del Faucigny."
+        },
+        {
+          "title": "Fotografia patrimoniale",
+          "tag": null,
+          "description": "Il Château de la Croix offre un soggetto di fotografia patrimoniale a bordo strada: discreta casa forte nel suo scrigno vegetale, nella valle dell'Arve."
+        },
+        {
+          "title": "Scoperta del paese di Scionzier",
+          "tag": "Famiglia",
+          "description": "La visita esterna del Château de la Croix si combina con la scoperta del paese di Scionzier e della sua chiesa — breve ma completa tappa nel cuore del Faucigny."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Indirizzo",
+          "v": "Château de la Croix, 74950 Scionzier (visibile dalla strada)"
+        },
+        {
+          "k": "Coordinate",
+          "v": "46,059° N · 6,552° E"
+        },
+        {
+          "k": "Altitudine",
+          "v": "≈ 490 m (valle dell'Arve)"
+        },
+        {
+          "k": "Orari",
+          "v": "Vista esterna libera, tutto l'anno. Nessuna visita interna (proprietà privata chiusa al pubblico). Verificato il 10 giugno 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tariffe",
+          "v": "Nessuna biglietteria: nessuna visita interna. Vista esterna dalla strada, gratuita. Verificato il 10 giugno 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Sito ufficiale",
+          "v": "Scheda patrimoniale su monumentum.fr (PA00118442). Nessun sito ufficiale dedicato."
+        },
+        {
+          "k": "Telefono",
+          "v": "Municipio di Scionzier: +33 (0)4 50 98 09 36"
+        },
+        {
+          "k": "Accesso / Parcheggio",
+          "v": "Parcheggio gratuito nel paese di Scionzier. Il castello è visibile dalla strada principale. Accessibile dall'A40 uscita Cluses-Centre."
+        },
+        {
+          "k": "Durata della visita",
+          "v": "15-30 minuti per osservare il castello dall'esterno e leggerne il contesto storico."
+        },
+        {
+          "k": "Pubblico",
+          "v": "Appassionati di patrimonio e di storia delle famiglie signorili del Faucigny, fotografi."
+        },
+        {
+          "k": "Accessibilità",
+          "v": "Vista esterna dalla strada. Nessuna struttura specifica. Proprietà privata — nessun accesso diretto al castello."
+        },
+        {
+          "k": "Animali",
+          "v": "Cani ammessi al guinzaglio nel paese di Scionzier."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Si può visitare l'interno del Château de la Croix a Scionzier?",
+          "a": "No, il Château de la Croix a Scionzier è una proprietà privata chiusa al pubblico. È visibile solo dalla strada. Non sono organizzate visite interne."
+        },
+        {
+          "q": "Qual è la storia del Château de la Croix?",
+          "a": "Il Château de la Croix è una casa forte costruita essenzialmente nel XVI secolo dai signori di La Croix, poi imparentati con la famiglia Rochette. La sua storia è legata a quella del Faucigny. Iscritto MH 1988, classificato MH 1994."
+        },
+        {
+          "q": "Dove si trova il Château de la Croix?",
+          "a": "Il Château de la Croix si trova nel comune di Scionzier (74950), nella valle dell'Arve (Faucigny), vicino a Cluses. È visibile dalla strada principale. GPS: 46,059° N · 6,552° E."
+        },
+        {
+          "q": "Quanto costa visitare il Château de la Croix?",
+          "a": "Il Château de la Croix a Scionzier non è visitabile. La sua vista esterna dalla strada è gratuita. Nessuna biglietteria. Verificato il 10 giugno 2026."
+        },
+        {
+          "q": "Quali sono gli orari del Château de la Croix?",
+          "a": "Il Château de la Croix a Scionzier è visibile dalla strada 24h/24, tutto l'anno. Nessun orario di visita (interno chiuso). Verificato il 10 giugno 2026."
+        },
+        {
+          "q": "Perché il Château de la Croix è classificato Monumento Storico?",
+          "a": "Diverse parti del Château de la Croix a Scionzier sono classificate Monumento Storico (1994, PA00118442) per il loro valore architettonico e i loro decori: pitture murali del XVII secolo e carta da parati panoramica del 1840 in un salone."
+        },
+        {
+          "q": "Dove parcheggiare per vedere il Château de la Croix?",
+          "a": "Parcheggio gratuito nel paese di Scionzier, vicino alla strada da cui il Château de la Croix è visibile. Nessun parcheggio dedicato al monumento."
+        },
+        {
+          "q": "Cos'altro vedere intorno al Château de la Croix?",
+          "a": "Attorno al Château de la Croix a Scionzier si può visitare Cluses e il suo museo dell'Orologeria e del Décolletage (5 km), salire al plateau di Solaison, o proseguire verso Sallanches e il paese del Monte Bianco."
+        }
+      ],
+      "schema_amenities": [
+        "Casa forte XVI secolo",
+        "Classificato MH 1994 (PA00118442)",
+        "Pitture murali XVII secolo",
+        "Carta da parati panoramica 1840",
+        "Vista esterna dalla strada",
+        "Proprietà privata"
+      ]
     },
     "es": {
       "name": "Castillo de la Croix",
@@ -283,7 +750,156 @@
       "hero_alt": "Castillo de la Croix en Scionzier, casa fuerte del s. XVI sobre el valle del Arve en el Faucigny",
       "body": {
         "what_is": "<p>El <strong>Castillo de la Croix</strong> es una casa fuerte histórica que domina el valle del Arve desde la comuna de Scionzier (74950), a unos km aguas abajo de Cluses, en el Faucigny. Aunque la tradición local evoca un núcleo medieval del s. XII, el edificio actual es esencialmente una <strong>construcción del s. XVI</strong>, levantada por los señores de La Croix, luego emparentados con la familia Rochette.</p><p>El castillo conserva elementos decorativos notables: <strong>pinturas murales del s. XVII</strong> — excepcionales en la región — y sobre todo un <strong>papel pintado panorámico de 1840</strong> en uno de los salones, pieza rara del decorado clásico del s. XIX. Partes clasificadas Monumento Histórico en 1988 y luego ampliadas en 1994.</p><p>Propiedad privada, no abierta al público, pero claramente visible desde la carretera de Scionzier.</p>"
-      }
+      },
+      "name_alternates": [
+        "Château de la Croix Scionzier",
+        "Casa fuerte de la Croix",
+        "Château Rochette de la Croix"
+      ],
+      "hero": {
+        "badge": "Vista exterior · MH 1994",
+        "lead": "Casa fuerte del siglo XVI de los señores de La Croix y luego de los Rochette en Scionzier: pinturas murales del siglo XVII y papel pintado panorámico de 1840. Clasificada Monumento Histórico en 1994, visible desde la carretera."
+      },
+      "facts": {
+        "type": "Casa fuerte del s. XVI · MH 1994",
+        "access": "Visible desde el exterior (propiedad privada)",
+        "tarif": "Sin visita interior",
+        "commune": "Scionzier",
+        "parking": "Pueblo de Scionzier (gratuito)",
+        "duration": "15 a 30 minutos",
+        "best_season": "Todo el año"
+      },
+      "activities": [
+        {
+          "title": "Vista exterior de la casa fuerte",
+          "tag": "Patrimonio",
+          "description": "El Château de la Croix en Scionzier se descubre desde la carretera: silueta discreta de una casa fuerte del siglo XVI, parcialmente oculta por la vegetación."
+        },
+        {
+          "title": "Lectura del contexto del Faucigny",
+          "tag": null,
+          "description": "El Château de la Croix está estrechamente ligado a la historia señorial del Faucigny — etapa pedagógica sobre el sistema de casas fuertes del valle del Arve."
+        },
+        {
+          "title": "Historia de las familias de la Croix y Rochette",
+          "tag": null,
+          "description": "El Château de la Croix fue construido por los señores de La Croix, emparentados luego por matrimonio con la familia Rochette — linajes nobles del Faucigny en los siglos XVI-XVIII."
+        },
+        {
+          "title": "Combinación con el valle del Arve",
+          "tag": null,
+          "description": "El Château de la Croix en Scionzier se descubre en el marco de una etapa patrimonial en el valle del Arve, entre Cluses y Bonneville."
+        },
+        {
+          "title": "Desvío hacia Cluses y su patrimonio industrial",
+          "tag": null,
+          "description": "El Château de la Croix se combina fácilmente con una visita al museo de la Relojería y el Décolletage de Cluses, a 5 km — patrimonio industrial del Faucigny."
+        },
+        {
+          "title": "Fotografía patrimonial",
+          "tag": null,
+          "description": "El Château de la Croix ofrece un sujeto de fotografía patrimonial al borde de la carretera: casa fuerte discreta en su marco vegetal, en el valle del Arve."
+        },
+        {
+          "title": "Descubrimiento del pueblo de Scionzier",
+          "tag": "Familia",
+          "description": "La visita exterior del Château de la Croix se combina con el descubrimiento del pueblo de Scionzier y su iglesia — una etapa breve pero completa en el corazón del Faucigny."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Dirección",
+          "v": "Château de la Croix, 74950 Scionzier (visible desde la carretera)"
+        },
+        {
+          "k": "Coordenadas",
+          "v": "46,059° N · 6,552° E"
+        },
+        {
+          "k": "Altitud",
+          "v": "≈ 490 m (valle del Arve)"
+        },
+        {
+          "k": "Horarios",
+          "v": "Vista exterior libre, todo el año. Sin visita interior (propiedad privada cerrada al público). Verificado el 10 de junio de 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifas",
+          "v": "Sin taquilla: sin visita interior. Vista exterior desde la carretera, gratuita. Verificado el 10 de junio de 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Sitio oficial",
+          "v": "Ficha patrimonial en monumentum.fr (PA00118442). Sin sitio oficial propio."
+        },
+        {
+          "k": "Teléfono",
+          "v": "Ayuntamiento de Scionzier: +33 (0)4 50 98 09 36"
+        },
+        {
+          "k": "Acceso / Aparcamiento",
+          "v": "Aparcamiento gratuito en el pueblo de Scionzier. El castillo se ve desde la carretera principal. Accesible desde la A40, salida Cluses-Centre."
+        },
+        {
+          "k": "Duración de la visita",
+          "v": "15 a 30 minutos para observar el castillo desde el exterior y leer su contexto histórico."
+        },
+        {
+          "k": "Público",
+          "v": "Amantes del patrimonio y de la historia de las familias señoriales del Faucigny, fotógrafos."
+        },
+        {
+          "k": "Accesibilidad",
+          "v": "Vista exterior desde la vía pública. Sin acondicionamiento específico. Propiedad privada — sin acceso directo al castillo."
+        },
+        {
+          "k": "Animales",
+          "v": "Perros admitidos con correa en el pueblo de Scionzier."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Se puede visitar el interior del Château de la Croix en Scionzier?",
+          "a": "No, el Château de la Croix en Scionzier es una propiedad privada cerrada al público. Solo es visible desde la carretera. No se organizan visitas interiores."
+        },
+        {
+          "q": "¿Cuál es la historia del Château de la Croix?",
+          "a": "El Château de la Croix es una casa fuerte construida esencialmente en el siglo XVI por los señores de La Croix, emparentados luego con la familia Rochette. Su historia está ligada al Faucigny. Inscrito MH 1988, clasificado MH 1994."
+        },
+        {
+          "q": "¿Dónde se encuentra el Château de la Croix?",
+          "a": "El Château de la Croix se sitúa en la comuna de Scionzier (74950), en el valle del Arve (Faucigny), cerca de Cluses. Es visible desde la carretera principal. GPS: 46,059° N · 6,552° E."
+        },
+        {
+          "q": "¿Cuánto cuesta la visita del Château de la Croix?",
+          "a": "El Château de la Croix en Scionzier no se visita. Su vista exterior desde la carretera es gratuita. Sin taquilla. Verificado el 10 de junio de 2026."
+        },
+        {
+          "q": "¿Cuáles son los horarios del Château de la Croix?",
+          "a": "El Château de la Croix en Scionzier es visible desde la carretera las 24 h, todo el año. Sin horarios de visita (interior cerrado). Verificado el 10 de junio de 2026."
+        },
+        {
+          "q": "¿Por qué el Château de la Croix es Monumento Histórico?",
+          "a": "Varias partes del Château de la Croix en Scionzier están clasificadas Monumento Histórico (1994, PA00118442) por su valor arquitectónico y su decoración: pinturas murales del siglo XVII y papel pintado panorámico de 1840 en un salón."
+        },
+        {
+          "q": "¿Dónde aparcar para ver el Château de la Croix?",
+          "a": "Aparcamiento gratuito en el pueblo de Scionzier, cerca de la carretera desde la que es visible el Château de la Croix. Sin aparcamiento dedicado al monumento."
+        },
+        {
+          "q": "¿Qué más ver alrededor del Château de la Croix?",
+          "a": "Alrededor del Château de la Croix en Scionzier se puede visitar Cluses y su museo de la Relojería y el Décolletage (5 km), subir al plateau de Solaison o continuar hacia Sallanches y el país del Mont-Blanc."
+        }
+      ],
+      "schema_amenities": [
+        "Casa fuerte s. XVI",
+        "Clasificado MH 1994 (PA00118442)",
+        "Pinturas murales s. XVII",
+        "Papel pintado panorámico 1840",
+        "Vista exterior desde la carretera",
+        "Propiedad privada"
+      ]
     },
     "nl": {
       "name": "Kasteel La Croix",
@@ -292,7 +908,156 @@
       "hero_alt": "Kasteel La Croix in Scionzier, versterkt landhuis uit de 16e eeuw boven het Arve-dal in de Faucigny",
       "body": {
         "what_is": "<p>Het <strong>Kasteel La Croix</strong> is een historisch versterkt landhuis dat het Arve-dal domineert vanuit de gemeente Scionzier (74950), enkele kilometers stroomafwaarts van Cluses, in de Faucigny. Hoewel de lokale traditie een 12e-eeuwse middeleeuwse kern vermeldt, is het gebouw zoals het er vandaag bijstaat in wezen een <strong>16e-eeuwse constructie</strong>, gebouwd door de heren van La Croix, later door huwelijk verbonden met de Rochette-familie.</p><p>Het kasteel bewaart opmerkelijke decoratieve elementen: <strong>17e-eeuwse muurschilderingen</strong> — uitzonderlijk in de regio — en vooral een <strong>panoramisch behangpapier uit 1840</strong> in een van de salons, een zeldzaam stuk klassieke 19e-eeuwse interieurdecoratie. Delen werden in 1988 als Monument Historique geregistreerd, dan in 1994 uitgebreid.</p><p>Privébezit, niet open voor publiek, maar duidelijk zichtbaar vanaf de weg door Scionzier.</p>"
-      }
+      },
+      "name_alternates": [
+        "Château de la Croix Scionzier",
+        "Versterkt huis de la Croix",
+        "Château Rochette de la Croix"
+      ],
+      "hero": {
+        "badge": "Buitenzicht · MH 1994",
+        "lead": "Versterkt huis uit de 16e eeuw van de heren van La Croix en later van de Rochettes in Scionzier: 17e-eeuwse muurschilderingen en panoramisch behang uit 1840. Geklasseerd als Monument Historique in 1994, zichtbaar vanaf de weg."
+      },
+      "facts": {
+        "type": "Versterkt huis 16e eeuw · MH 1994",
+        "access": "Vanaf de buitenkant zichtbaar (privé)",
+        "tarif": "Geen binnenbezoek",
+        "commune": "Scionzier",
+        "parking": "Dorp Scionzier (gratis)",
+        "duration": "15 tot 30 minuten",
+        "best_season": "Hele jaar"
+      },
+      "activities": [
+        {
+          "title": "Buitenzicht op het versterkte huis",
+          "tag": "Erfgoed",
+          "description": "Het Château de la Croix in Scionzier is vanaf de weg te zien: discrete silhouet van een versterkt huis uit de 16e eeuw, deels verscholen achter de begroeiing."
+        },
+        {
+          "title": "Lezen van de Faucigny-context",
+          "tag": null,
+          "description": "Het Château de la Croix is nauw verbonden met de feodale geschiedenis van Faucigny — een educatieve halte over het systeem van versterkte huizen in het Arve-dal."
+        },
+        {
+          "title": "Geschiedenis van de families de la Croix en Rochette",
+          "tag": null,
+          "description": "Het Château de la Croix werd gebouwd door de heren van La Croix, die later door huwelijk verbonden raakten met de familie Rochette — adellijke geslachten van Faucigny in de 16e-18e eeuw."
+        },
+        {
+          "title": "Combinatie met het Arve-dal",
+          "tag": null,
+          "description": "Het Château de la Croix in Scionzier ontdekt u als onderdeel van een erfgoedhalte in het Arve-dal, tussen Cluses en Bonneville."
+        },
+        {
+          "title": "Uitstapje naar Cluses en zijn industrieel erfgoed",
+          "tag": null,
+          "description": "Het Château de la Croix laat zich eenvoudig combineren met een bezoek aan het Musée de l'Horlogerie et du Décolletage in Cluses, op 5 km — industrieel erfgoed van Faucigny."
+        },
+        {
+          "title": "Erfgoedfotografie",
+          "tag": null,
+          "description": "Het Château de la Croix biedt een onderwerp voor erfgoedfotografie langs de weg: een discreet versterkt huis in zijn groene omlijsting, in het Arve-dal."
+        },
+        {
+          "title": "Ontdekking van het dorp Scionzier",
+          "tag": "Familie",
+          "description": "Het buitenbezoek aan het Château de la Croix combineert u met een ontdekking van het dorp Scionzier en zijn kerk — een korte maar complete halte in het hart van Faucigny."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adres",
+          "v": "Château de la Croix, 74950 Scionzier (zichtbaar vanaf de weg)"
+        },
+        {
+          "k": "Coördinaten",
+          "v": "46,059° N · 6,552° O"
+        },
+        {
+          "k": "Hoogte",
+          "v": "≈ 490 m (Arve-dal)"
+        },
+        {
+          "k": "Openingstijden",
+          "v": "Buitenzicht vrij, hele jaar door. Geen binnenbezoek (privébezit, gesloten voor publiek). Geverifieerd op 10 juni 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarieven",
+          "v": "Geen ticketverkoop: geen binnenbezoek. Buitenzicht vanaf de weg, gratis. Geverifieerd op 10 juni 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Officiële site",
+          "v": "Erfgoedfiche op monumentum.fr (PA00118442). Geen eigen officiële site."
+        },
+        {
+          "k": "Telefoon",
+          "v": "Gemeentehuis Scionzier: +33 (0)4 50 98 09 36"
+        },
+        {
+          "k": "Toegang / Parking",
+          "v": "Gratis parking in het dorp Scionzier. Het kasteel is zichtbaar vanaf de hoofdweg. Bereikbaar via de A40, afrit Cluses-Centre."
+        },
+        {
+          "k": "Bezoekduur",
+          "v": "15 tot 30 minuten om het kasteel van buitenaf te bekijken en de historische context te begrijpen."
+        },
+        {
+          "k": "Publiek",
+          "v": "Liefhebbers van erfgoed en van de geschiedenis van de adellijke families van Faucigny, fotografen."
+        },
+        {
+          "k": "Toegankelijkheid",
+          "v": "Buitenzicht vanaf de openbare weg. Geen specifieke voorzieningen. Privébezit — geen directe toegang tot het kasteel."
+        },
+        {
+          "k": "Dieren",
+          "v": "Honden toegestaan aan de leiband in het dorp Scionzier."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Kunt u het interieur van het Château de la Croix in Scionzier bezoeken?",
+          "a": "Nee, het Château de la Croix in Scionzier is privébezit en gesloten voor publiek. Het is alleen vanaf de weg zichtbaar. Er worden geen binnenbezoeken georganiseerd."
+        },
+        {
+          "q": "Wat is de geschiedenis van het Château de la Croix?",
+          "a": "Het Château de la Croix is een versterkt huis dat in essentie in de 16e eeuw werd gebouwd door de heren van La Croix, die later verbonden raakten met de familie Rochette. Zijn geschiedenis is verbonden met die van Faucigny. MH ingeschreven 1988, geklasseerd MH 1994."
+        },
+        {
+          "q": "Waar bevindt zich het Château de la Croix?",
+          "a": "Het Château de la Croix ligt in de gemeente Scionzier (74950), in het Arve-dal (Faucigny), nabij Cluses. Het is zichtbaar vanaf de hoofdweg. GPS: 46,059° N · 6,552° O."
+        },
+        {
+          "q": "Hoeveel kost het bezoek aan het Château de la Croix?",
+          "a": "Het Château de la Croix in Scionzier is niet te bezoeken. Het buitenzicht vanaf de weg is gratis. Geen ticketverkoop. Geverifieerd op 10 juni 2026."
+        },
+        {
+          "q": "Wat zijn de openingstijden van het Château de la Croix?",
+          "a": "Het Château de la Croix in Scionzier is 24/7 zichtbaar vanaf de weg, het hele jaar door. Geen bezoekuren (interieur gesloten). Geverifieerd op 10 juni 2026."
+        },
+        {
+          "q": "Waarom is het Château de la Croix geklasseerd als Monument Historique?",
+          "a": "Meerdere delen van het Château de la Croix in Scionzier zijn geklasseerd als Monument Historique (1994, PA00118442) vanwege hun architecturale waarde en decoratie: 17e-eeuwse muurschilderingen en panoramisch behang uit 1840 in een salon."
+        },
+        {
+          "q": "Waar kunt u parkeren om het Château de la Croix te zien?",
+          "a": "Gratis parkeren in het dorp Scionzier, vlakbij de weg waar het Château de la Croix zichtbaar is. Geen eigen parking voor het monument."
+        },
+        {
+          "q": "Wat is er nog te zien rond het Château de la Croix?",
+          "a": "Rond het Château de la Croix in Scionzier kunt u Cluses en het Musée de l'Horlogerie et du Décolletage (5 km) bezoeken, doorstoten naar het plateau de Solaison of verder naar Sallanches en het Mont-Blanc-gebied."
+        }
+      ],
+      "schema_amenities": [
+        "Versterkt huis 16e eeuw",
+        "Geklasseerd MH 1994 (PA00118442)",
+        "17e-eeuwse muurschilderingen",
+        "Panoramisch behang 1840",
+        "Buitenzicht vanaf de weg",
+        "Privébezit"
+      ]
     }
   },
   "status": "published"

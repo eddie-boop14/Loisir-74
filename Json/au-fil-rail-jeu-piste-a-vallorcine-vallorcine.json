@@ -88,6 +88,16 @@
       "date": "2026-06-13",
       "by": "scripts/ingest_translations.py",
       "note": "Translation ingest [nl]: 5 field(s) updated."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for de from translations/agent_I_de_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for it from translations/agent_I_it_secondary.json."
     }
   ],
   "i18n": {
@@ -254,8 +264,154 @@
       "meta_description": "Free family treasure hunt at Vallorcine (Chamonix valley): 3 km, ~1 h 30, starts at the Buet SNCF station, question booklet from the valley Tourist Offices.",
       "hero_alt": "Au Fil du Rail treasure hunt at Vallorcine in the Chamonix valley, 3 km family trail around the village",
       "body": {
-        "what_is": "<p>The <strong>Au Fil du Rail treasure hunt at Vallorcine</strong> is a free family discovery trail of <strong>3 kilometres</strong> and about <strong>1 h 30</strong> of walking, created by the <strong>Chamonix-Mont-Blanc Valley Tourist Office</strong>. The hunt is part of a collection of four \"Au Fil du Rail\" trails (Servoz, Vallorcine, Les Bois de Chamonix, Argentière) linked by the theme of the <strong>Mont-Blanc Express</strong>, the iconic TER line that links Saint-Gervais to Vallorcine and continues on the Swiss side towards Martigny.</p><p>The route <strong>starts at the Buet SNCF station in Vallorcine</strong>, the last French village before the Swiss border, nestled at 1,260 m altitude at the foot of the Aiguilles Rouges range and Mont Blanc. The question booklet invites walkers to explore the Buet hamlet, the village of Vallorcine and its mountain heritage: <strong>wooden chalets, Notre-Dame de l'Assomption church, the old school, sites evoking mountain culture and mining</strong>. Answers are hidden in the landscape and signage: observe, look, learn while walking.</p><p>To take part, simply pick up the <strong>question booklet</strong> free of charge at any of the valley Tourist Offices (Vallorcine, Argentière, Chamonix). The trail is doable year-round, though spring through autumn is the most comfortable window. The format suits families with children aged 6 and up.</p>"
-      }
+        "what_is": "<p>The <strong>Au Fil du Rail treasure hunt at Vallorcine</strong> is a free family discovery trail of <strong>3 kilometres</strong> and about <strong>1 h 30</strong> of walking, created by the <strong>Chamonix-Mont-Blanc Valley Tourist Office</strong>. The hunt is part of a collection of four \"Au Fil du Rail\" trails (Servoz, Vallorcine, Les Bois de Chamonix, Argentière) linked by the theme of the <strong>Mont-Blanc Express</strong>, the iconic TER line that links Saint-Gervais to Vallorcine and continues on the Swiss side towards Martigny.</p><p>The route <strong>starts at the Buet SNCF station in Vallorcine</strong>, the last French village before the Swiss border, nestled at 1,260 m altitude at the foot of the Aiguilles Rouges range and Mont Blanc. The question booklet invites walkers to explore the Buet hamlet, the village of Vallorcine and its mountain heritage: <strong>wooden chalets, Notre-Dame de l'Assomption church, the old school, sites evoking mountain culture and mining</strong>. Answers are hidden in the landscape and signage: observe, look, learn while walking.</p><p>To take part, simply pick up the <strong>question booklet</strong> free of charge at any of the valley Tourist Offices (Vallorcine, Argentière, Chamonix). The trail is doable year-round, though spring through autumn is the most comfortable window. The format suits families with children aged 6 and up.</p>",
+        "activities": [
+          {
+            "title": "3 km quiz route around Le Buet",
+            "tag": "Family",
+            "description": "The Au Fil du Rail trail game in Vallorcine offers a 3 km route of about 1 hr 30 between the Le Buet hamlet and the village of Vallorcine, with a question booklet to complete."
+          },
+          {
+            "title": "Start at Le Buet SNCF station",
+            "tag": null,
+            "description": "The Au Fil du Rail trail game in Vallorcine starts at Le Buet SNCF station, the last stop of the Mont-Blanc Express on the French side before the Swiss border."
+          },
+          {
+            "title": "Discovering the village of Vallorcine",
+            "tag": null,
+            "description": "Along the trail game, you discover the distinctive features of Vallorcine: timber chalets, the church of Notre-Dame de l'Assomption, mountain heritage and local culture."
+          },
+          {
+            "title": "Mont-Blanc Express railway heritage",
+            "tag": null,
+            "description": "The Au Fil du Rail trail game in Vallorcine recalls the history and route of the Mont-Blanc Express, the regional rail line linking the Chamonix Valley to the Swiss border."
+          },
+          {
+            "title": "Free, self-guided activity",
+            "tag": "Free",
+            "description": "The Au Fil du Rail trail game in Vallorcine is entirely free, with no booking required: pick up the booklet at the Tourist Office and play freely, year-round."
+          },
+          {
+            "title": "Setting of the Aiguilles Rouges and Mont Blanc",
+            "tag": null,
+            "description": "The Au Fil du Rail trail game route in Vallorcine offers exceptional panoramas of the Aiguilles Rouges massif and the Argentière glacier from the village (1,260 m)."
+          },
+          {
+            "title": "Chamonix Valley collection",
+            "tag": null,
+            "description": "Au Fil du Rail Vallorcine is part of a collection of 4 trail games (Servoz, Vallorcine, Les Bois, Argentière) linked by the Mont-Blanc Express — easy to chain as a family."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Address",
+            "v": "Start: Le Buet SNCF station, Le Buet, 74660 Vallorcine"
+          },
+          {
+            "k": "Coordinates",
+            "v": "46.019° N · 6.920° E"
+          },
+          {
+            "k": "Altitude",
+            "v": "≈ 1,260 m (village of Vallorcine)"
+          },
+          {
+            "k": "Opening hours",
+            "v": "Free access 24/7, year-round (snow possible in winter). Question booklet available during the opening hours of the Chamonix Valley Tourist Offices. Checked on chamonix.com on 10 June 2026."
+          },
+          {
+            "k": "Prices",
+            "v": "Free. Question booklet provided free of charge by the Chamonix Valley Tourist Offices. Also available to download on chamonix.com."
+          },
+          {
+            "k": "Official site",
+            "v": "chamonix.com (Self-guided visits / Au Fil du Rail Vallorcine)"
+          },
+          {
+            "k": "Phone",
+            "v": "Vallorcine / Chamonix Valley Tourist Office: +33 (0)4 50 54 60 71"
+          },
+          {
+            "k": "Access / Parking",
+            "v": "Mont-Blanc Express train to Le Buet station (Vallorcine or Le Buet stop). By car: Col des Montets from Chamonix then the Vallorcine road; free parking at Le Buet station."
+          },
+          {
+            "k": "Length of visit",
+            "v": "About 1 hr 30 for the full route (3 km), booklet in hand. Variable to suit the family pace."
+          },
+          {
+            "k": "Audience",
+            "v": "Families with accompanied children from age 6-7, curious walkers, Mont-Blanc Express travellers."
+          },
+          {
+            "k": "Required equipment",
+            "v": "Walking shoes, question booklet and pen, water bottle, warm clothing in shoulder season (1,260 m altitude)."
+          },
+          {
+            "k": "Booking",
+            "v": "No booking required. Free activity year-round."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Au Fil du Rail trail game — Vallorcine",
+        "Au Fil du Rail Vallorcine",
+        "Rail and Trail Vallorcine"
+      ],
+      "hero": {
+        "badge": "Free access · Year-round",
+        "lead": "Family trail game (3 km / 1 hr 30) devised by the Chamonix Valley Tourist Office: a free quiz route around Le Buet SNCF station in Vallorcine, in the very heart of the Mont Blanc area."
+      },
+      "facts": {
+        "type": "Family trail game (discovery trail)",
+        "access": "Free access · free of charge",
+        "tarif": "Free",
+        "commune": "Vallorcine",
+        "parking": "Le Buet SNCF station (free)",
+        "duration": "≈ 1 hr 30",
+        "best_season": "Spring, summer, autumn — snow possible in winter"
+      },
+      "faq": [
+        {
+          "q": "What is the Au Fil du Rail trail game in Vallorcine?",
+          "a": "The Au Fil du Rail trail game in Vallorcine is a free family quiz route created by the Chamonix Valley Tourist Office. 3 km and about 1 hr 30 of walking around Le Buet SNCF station, booklet in hand, to discover the village and its heritage."
+        },
+        {
+          "q": "Where can I pick up the Au Fil du Rail booklet in Vallorcine?",
+          "a": "The booklet for the Au Fil du Rail Vallorcine trail game is available free of charge at the Chamonix Valley Tourist Offices: Vallorcine, Chamonix, Argentière, Les Houches, Servoz. It can also be downloaded on chamonix.com."
+        },
+        {
+          "q": "How much does the Au Fil du Rail trail game in Vallorcine cost?",
+          "a": "The Au Fil du Rail Vallorcine trail game is entirely free. No booking, no ticket: just pick up the booklet at the Tourist Office and play independently. Checked on 10 June 2026."
+        },
+        {
+          "q": "What are the opening hours for the Au Fil du Rail trail game in Vallorcine?",
+          "a": "The Au Fil du Rail Vallorcine route is open 24/7 year-round (snow possible in winter). The booklet can be picked up during the opening hours of the valley's Tourist Offices. Checked on 10 June 2026."
+        },
+        {
+          "q": "How long does the Au Fil du Rail trail game in Vallorcine take?",
+          "a": "The Au Fil du Rail trail game in Vallorcine covers 3 km for about 1 hr 30 of walking at a family pace, with stops to answer the booklet's questions."
+        },
+        {
+          "q": "Is the Au Fil du Rail trail game in Vallorcine suitable for children?",
+          "a": "Yes, the Au Fil du Rail Vallorcine trail game is designed for families with accompanied children from age 6-7. The 3 km route has no technical difficulty, and is fun and educational."
+        },
+        {
+          "q": "How do I get to the Au Fil du Rail trail game in Vallorcine?",
+          "a": "The Au Fil du Rail Vallorcine trail game starts at Le Buet SNCF station. Reach it by Mont-Blanc Express train from Chamonix or Saint-Gervais; by car via the Col des Montets, with free parking at the station."
+        },
+        {
+          "q": "What is the best season for the Au Fil du Rail trail game in Vallorcine?",
+          "a": "The Au Fil du Rail Vallorcine trail game is best enjoyed between spring and autumn. Vallorcine sits at 1,260 m: snow may cover the path in winter and make the clues harder to read."
+        }
+      ],
+      "schema_amenities": [
+        "Free family trail game",
+        "3 km / ≈ 1 hr 30",
+        "Question booklet at the Chamonix Valley Tourist Office",
+        "Start at Le Buet SNCF station",
+        "Free access year-round"
+      ]
     },
     "de": {
       "name": "Au Fil du Rail – Schnitzeljagd in Vallorcine",
@@ -263,8 +419,154 @@
       "meta_description": "Kostenlose Familien-Schnitzeljagd in Vallorcine (Chamonix-Tal): 3 km, ca. 1,5 Std., Start am SNCF-Bahnhof Le Buet, Fragenheft bei den Touristeninfos des Tals.",
       "hero_alt": "Schnitzeljagd Au Fil du Rail in Vallorcine im Chamonix-Tal, 3 km Familienrundgang um den SNCF-Bahnhof Le Buet, Haute-Savoie",
       "body": {
-        "what_is": "<p>Die <strong>Schnitzeljagd Au Fil du Rail in Vallorcine</strong> ist ein kostenloser Familien-Entdeckungsrundgang von <strong>3 Kilometern</strong> und etwa <strong>1 Std. 30 Min.</strong> Gehzeit, entwickelt vom <strong>Office de Tourisme der Vallée de Chamonix-Mont-Blanc</strong>. Sie gehört zu einer Reihe von vier 'Au Fil du Rail'-Rundgängen (Servoz, Vallorcine, Les Bois de Chamonix, Argentière), verbunden durch das Thema des <strong>Mont-Blanc Express</strong>, der legendären TER-Linie von Saint-Gervais nach Vallorcine und weiter auf Schweizer Seite nach Martigny.</p><p>Der Rundgang <strong>startet am SNCF-Bahnhof Le Buet in Vallorcine</strong>, dem letzten französischen Dorf vor der Schweizer Grenze, gelegen auf 1 260 m Höhe am Fuß der Aiguilles Rouges und des Mont Blanc. Das Fragenheft lädt ein, den Weiler Le Buet, das Dorf Vallorcine und sein Bergerbe zu erkunden: <strong>Holzchalets, Kirche Notre-Dame de l'Assomption, alte Schule, Stätten zur Berg- und Bergbaukultur</strong>. Die Antworten verstecken sich in der Landschaft und der Beschilderung – beobachten, suchen, lernen im Gehen.</p><p>Zur Teilnahme reicht es, das <strong>Fragenheft kostenlos</strong> in den Touristeninfos des Chamonix-Tals (Vallorcine, Chamonix, Argentière, Les Houches, Servoz) abzuholen oder auf chamonix.com herunterzuladen. Keine Reservierung, keine festen Zeiten. Ideal für <strong>Familien, die mit dem Mont-Blanc Express reisen</strong>, ohne körperliche Schwierigkeit, geeignet für Kinder ab 6–7 Jahren in Begleitung.</p>"
-      }
+        "what_is": "<p>Die <strong>Schnitzeljagd Au Fil du Rail in Vallorcine</strong> ist ein kostenloser Familien-Entdeckungsrundgang von <strong>3 Kilometern</strong> und etwa <strong>1 Std. 30 Min.</strong> Gehzeit, entwickelt vom <strong>Office de Tourisme der Vallée de Chamonix-Mont-Blanc</strong>. Sie gehört zu einer Reihe von vier 'Au Fil du Rail'-Rundgängen (Servoz, Vallorcine, Les Bois de Chamonix, Argentière), verbunden durch das Thema des <strong>Mont-Blanc Express</strong>, der legendären TER-Linie von Saint-Gervais nach Vallorcine und weiter auf Schweizer Seite nach Martigny.</p><p>Der Rundgang <strong>startet am SNCF-Bahnhof Le Buet in Vallorcine</strong>, dem letzten französischen Dorf vor der Schweizer Grenze, gelegen auf 1 260 m Höhe am Fuß der Aiguilles Rouges und des Mont Blanc. Das Fragenheft lädt ein, den Weiler Le Buet, das Dorf Vallorcine und sein Bergerbe zu erkunden: <strong>Holzchalets, Kirche Notre-Dame de l'Assomption, alte Schule, Stätten zur Berg- und Bergbaukultur</strong>. Die Antworten verstecken sich in der Landschaft und der Beschilderung – beobachten, suchen, lernen im Gehen.</p><p>Zur Teilnahme reicht es, das <strong>Fragenheft kostenlos</strong> in den Touristeninfos des Chamonix-Tals (Vallorcine, Chamonix, Argentière, Les Houches, Servoz) abzuholen oder auf chamonix.com herunterzuladen. Keine Reservierung, keine festen Zeiten. Ideal für <strong>Familien, die mit dem Mont-Blanc Express reisen</strong>, ohne körperliche Schwierigkeit, geeignet für Kinder ab 6–7 Jahren in Begleitung.</p>",
+        "activities": [
+          {
+            "title": "3-km-Fragenparcours rund um Le Buet",
+            "tag": "Familie",
+            "description": "Die Schnitzeljagd Au Fil du Rail in Vallorcine bietet einen 3 km langen Parcours von etwa 1 Std. 30 zwischen dem Weiler Le Buet und dem Dorf Vallorcine, mit einem auszufüllenden Frageheft."
+          },
+          {
+            "title": "Start am SNCF-Bahnhof Le Buet",
+            "tag": null,
+            "description": "Die Schnitzeljagd Au Fil du Rail in Vallorcine startet am SNCF-Bahnhof Le Buet, dem Endbahnhof des Mont-Blanc Express auf französischer Seite vor der Schweizer Grenze."
+          },
+          {
+            "title": "Entdeckung des Dorfes Vallorcine",
+            "tag": null,
+            "description": "Im Laufe der Schnitzeljagd entdeckt man die Besonderheiten des Dorfes Vallorcine: Holzchalets, die Kirche Notre-Dame de l'Assomption, Bergkulturerbe und lokale Kultur."
+          },
+          {
+            "title": "Bahnerbe des Mont-Blanc Express",
+            "tag": null,
+            "description": "Die Schnitzeljagd Au Fil du Rail in Vallorcine erinnert an die Geschichte und den Verlauf des Mont-Blanc Express, der TER-Linie vom Chamonix-Tal bis zur Schweizer Grenze."
+          },
+          {
+            "title": "Kostenlose eigenständige Aktivität",
+            "tag": "Kostenlos",
+            "description": "Die Schnitzeljagd Au Fil du Rail in Vallorcine ist völlig kostenlos und ohne Reservierung: Heft im Tourismusbüro abholen und ganzjährig frei spielen."
+          },
+          {
+            "title": "Kulisse der Aiguilles Rouges und des Mont Blanc",
+            "tag": null,
+            "description": "Der Parcours der Schnitzeljagd Au Fil du Rail in Vallorcine bietet außergewöhnliche Panoramen über das Massiv der Aiguilles Rouges und den Argentière-Gletscher vom Dorf aus (1.260 m)."
+          },
+          {
+            "title": "Sammlung Chamonix-Tal",
+            "tag": null,
+            "description": "Au Fil du Rail Vallorcine gehört zu einer Sammlung von 4 Schnitzeljagden (Servoz, Vallorcine, Les Bois, Argentière), die durch den Mont-Blanc Express verbunden sind — Verkettung als Familie möglich."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Adresse",
+            "v": "Start: SNCF-Bahnhof Le Buet, Le Buet, 74660 Vallorcine"
+          },
+          {
+            "k": "Koordinaten",
+            "v": "46,019° N · 6,920° E"
+          },
+          {
+            "k": "Höhe",
+            "v": "≈ 1.260 m (Dorf Vallorcine)"
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": "Freier Zugang rund um die Uhr, ganzjährig (Schnee im Winter möglich). Frageheft erhältlich zu den Öffnungszeiten der Tourismusbüros des Chamonix-Tals. Geprüft auf chamonix.com am 10. Juni 2026."
+          },
+          {
+            "k": "Preise",
+            "v": "Kostenlos. Frageheft wird kostenlos von den Tourismusbüros des Chamonix-Tals ausgegeben. Auch zum Download auf chamonix.com verfügbar."
+          },
+          {
+            "k": "Offizielle Website",
+            "v": "chamonix.com (Rubrik Eigenständige Besuche / Au Fil du Rail Vallorcine)"
+          },
+          {
+            "k": "Telefon",
+            "v": "Tourismusbüro Vallorcine / Chamonix-Tal: +33 (0)4 50 54 60 71"
+          },
+          {
+            "k": "Zugang / Parkplatz",
+            "v": "Zug Mont-Blanc Express bis zum Bahnhof Le Buet (Haltestelle Vallorcine oder Le Buet). Mit dem Auto: Col des Montets ab Chamonix, dann die Straße nach Vallorcine; kostenloser Parkplatz am Bahnhof Le Buet."
+          },
+          {
+            "k": "Besuchsdauer",
+            "v": "Etwa 1 Std. 30 für den kompletten Parcours (3 km) mit dem Frageheft. Variabel je nach Familientempo."
+          },
+          {
+            "k": "Publikum",
+            "v": "Familien mit begleiteten Kindern ab 6-7 Jahren, neugierige Wanderer, Reisende des Mont-Blanc Express."
+          },
+          {
+            "k": "Benötigte Ausrüstung",
+            "v": "Wanderschuhe, Frageheft und Stift, Wasserflasche, warme Kleidung in der Übergangszeit (1.260 m Höhe)."
+          },
+          {
+            "k": "Buchung",
+            "v": "Keine Reservierung erforderlich. Kostenlose Aktivität ganzjährig."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Schnitzeljagd Au Fil du Rail Vallorcine",
+        "Au Fil du Rail Vallorcine",
+        "Rail and Trail Vallorcine"
+      ],
+      "hero": {
+        "badge": "Freier Zugang · Ganzjährig",
+        "lead": "Familien-Schnitzeljagd 3 km / 1 Std. 30, vom Tourismusbüro des Chamonix-Tals konzipiert: kostenloser Fragenparcours rund um den SNCF-Bahnhof Le Buet in Vallorcine, mitten im Mont-Blanc-Gebiet."
+      },
+      "facts": {
+        "type": "Familien-Schnitzeljagd (Entdeckungspfad)",
+        "access": "Freier Zugang · kostenlos",
+        "tarif": "Kostenlos",
+        "commune": "Vallorcine",
+        "parking": "SNCF-Bahnhof Le Buet (kostenlos)",
+        "duration": "≈ 1 Std. 30",
+        "best_season": "Frühling, Sommer, Herbst — Schnee im Winter möglich"
+      },
+      "faq": [
+        {
+          "q": "Was ist die Schnitzeljagd Au Fil du Rail in Vallorcine?",
+          "a": "Die Schnitzeljagd Au Fil du Rail in Vallorcine ist ein kostenloser Familien-Fragenparcours, den das Tourismusbüro des Chamonix-Tals geschaffen hat. 3 km und etwa 1 Std. 30 Spaziergang rund um den SNCF-Bahnhof Le Buet, Heft in der Hand, um das Dorf und sein Kulturerbe zu entdecken."
+        },
+        {
+          "q": "Wo bekommt man das Heft Au Fil du Rail in Vallorcine?",
+          "a": "Das Heft zur Schnitzeljagd Au Fil du Rail Vallorcine ist kostenlos in den Tourismusbüros des Chamonix-Tals erhältlich: Vallorcine, Chamonix, Argentière, Les Houches, Servoz. Es kann auch auf chamonix.com heruntergeladen werden."
+        },
+        {
+          "q": "Wie viel kostet die Schnitzeljagd Au Fil du Rail in Vallorcine?",
+          "a": "Die Schnitzeljagd Au Fil du Rail Vallorcine ist völlig kostenlos. Keine Reservierung, kein Ticket: Heft im Tourismusbüro abholen und eigenständig spielen. Geprüft am 10. Juni 2026."
+        },
+        {
+          "q": "Welche Öffnungszeiten hat die Schnitzeljagd Au Fil du Rail in Vallorcine?",
+          "a": "Der Parcours der Schnitzeljagd Au Fil du Rail Vallorcine ist ganzjährig frei rund um die Uhr zugänglich (Schnee im Winter möglich). Das Heft wird zu den Öffnungszeiten der Tourismusbüros des Tals ausgegeben. Geprüft am 10. Juni 2026."
+        },
+        {
+          "q": "Wie lange dauert die Schnitzeljagd Au Fil du Rail in Vallorcine?",
+          "a": "Die Schnitzeljagd Au Fil du Rail in Vallorcine umfasst 3 km in etwa 1 Std. 30 Gehzeit in Familientempo, mit Stopps zum Beantworten der Fragen aus dem Heft."
+        },
+        {
+          "q": "Ist die Schnitzeljagd Au Fil du Rail in Vallorcine für Kinder geeignet?",
+          "a": "Ja, die Schnitzeljagd Au Fil du Rail Vallorcine ist für Familien mit begleiteten Kindern ab 6-7 Jahren konzipiert. Der 3 km lange Parcours ist technisch unschwierig, spielerisch und pädagogisch."
+        },
+        {
+          "q": "Wie kommt man zur Schnitzeljagd Au Fil du Rail in Vallorcine?",
+          "a": "Die Schnitzeljagd Au Fil du Rail Vallorcine startet am SNCF-Bahnhof Le Buet. Anreise mit dem Zug Mont-Blanc Express ab Chamonix oder Saint-Gervais; mit dem Auto über den Col des Montets, kostenloser Parkplatz am Bahnhof."
+        },
+        {
+          "q": "Welche Jahreszeit ist die beste für die Schnitzeljagd Au Fil du Rail in Vallorcine?",
+          "a": "Die Schnitzeljagd Au Fil du Rail Vallorcine erlebt man vor allem zwischen Frühling und Herbst. Vallorcine liegt auf 1.260 m: Schnee kann den Weg im Winter bedecken und die Hinweise schwerer lesbar machen."
+        }
+      ],
+      "schema_amenities": [
+        "Kostenlose Familien-Schnitzeljagd",
+        "3 km / ≈ 1 Std. 30",
+        "Frageheft am Tourismusbüro Chamonix-Tal",
+        "Start am SNCF-Bahnhof Le Buet",
+        "Freier Zugang ganzjährig"
+      ]
     },
     "it": {
       "name": "Caccia al tesoro Au Fil du Rail a Vallorcine",
@@ -272,8 +574,154 @@
       "meta_description": "Caccia al tesoro familiare gratuita a Vallorcine (valle di Chamonix): 3 km, ~1 h 30, partenza stazione Le Buet, libretto agli uffici turistici della valle.",
       "hero_alt": "Caccia al tesoro Au Fil du Rail a Vallorcine nella valle di Chamonix, percorso familiare di 3 km attorno al villaggio",
       "body": {
-        "what_is": "<p>La <strong>caccia al tesoro Au Fil du Rail a Vallorcine</strong> è un percorso-scoperta familiare gratuito di <strong>3 km</strong> e circa <strong>1 h 30</strong>, creato dall'<strong>Ufficio del Turismo della Valle di Chamonix-Mont-Blanc</strong>. Tema: il <strong>Mont-Blanc Express</strong>.</p><p>Parte dalla <strong>stazione SNCF Le Buet</strong>, ultimo villaggio francese prima della Svizzera, a 1.260 m. Esplorazione di Le Buet, Vallorcine e patrimonio montano: <strong>chalet in legno, chiesa Notre-Dame de l'Assomption, vecchia scuola, miniere</strong>.</p><p>Libretto gratuito agli uffici turistici della valle. Formato per famiglie con bambini dai 6 anni.</p>"
-      }
+        "what_is": "<p>La <strong>caccia al tesoro Au Fil du Rail a Vallorcine</strong> è un percorso-scoperta familiare gratuito di <strong>3 km</strong> e circa <strong>1 h 30</strong>, creato dall'<strong>Ufficio del Turismo della Valle di Chamonix-Mont-Blanc</strong>. Tema: il <strong>Mont-Blanc Express</strong>.</p><p>Parte dalla <strong>stazione SNCF Le Buet</strong>, ultimo villaggio francese prima della Svizzera, a 1.260 m. Esplorazione di Le Buet, Vallorcine e patrimonio montano: <strong>chalet in legno, chiesa Notre-Dame de l'Assomption, vecchia scuola, miniere</strong>.</p><p>Libretto gratuito agli uffici turistici della valle. Formato per famiglie con bambini dai 6 anni.</p>",
+        "activities": [
+          {
+            "title": "Percorso-domande di 3 km attorno a Le Buet",
+            "tag": "Famiglia",
+            "description": "La caccia al tesoro Au Fil du Rail a Vallorcine propone un percorso di 3 km e circa 1 h 30 tra il borgo di Le Buet e il villaggio di Vallorcine, con un libretto-domande da completare."
+          },
+          {
+            "title": "Partenza dalla stazione SNCF di Le Buet",
+            "tag": null,
+            "description": "La caccia al tesoro Au Fil du Rail a Vallorcine parte dalla stazione SNCF di Le Buet, capolinea del Mont-Blanc Express sul versante francese prima del confine svizzero."
+          },
+          {
+            "title": "Scoperta del villaggio di Vallorcine",
+            "tag": null,
+            "description": "Nel corso della caccia al tesoro si scoprono le particolarità del villaggio di Vallorcine: chalet in legno, chiesa di Notre-Dame de l'Assomption, patrimonio montano e cultura locale."
+          },
+          {
+            "title": "Patrimonio ferroviario Mont-Blanc Express",
+            "tag": null,
+            "description": "La caccia al tesoro Au Fil du Rail a Vallorcine evoca la storia e il tracciato del Mont-Blanc Express, linea TER della valle di Chamonix fino al confine svizzero."
+          },
+          {
+            "title": "Attività gratuita in autonomia",
+            "tag": "Gratuito",
+            "description": "La caccia al tesoro Au Fil du Rail a Vallorcine è interamente gratuita, senza prenotazione: si ritira il libretto all'Ufficio del Turismo e si gioca liberamente, tutto l'anno."
+          },
+          {
+            "title": "Cornice delle Aiguilles Rouges e del Monte Bianco",
+            "tag": null,
+            "description": "Il percorso della caccia al tesoro Au Fil du Rail a Vallorcine offre panorami eccezionali sul massiccio delle Aiguilles Rouges e sul ghiacciaio di Argentière dal villaggio (1.260 m)."
+          },
+          {
+            "title": "Collezione Valle di Chamonix",
+            "tag": null,
+            "description": "Au Fil du Rail Vallorcine fa parte di una collezione di 4 cacce al tesoro (Servoz, Vallorcine, Les Bois, Argentière) collegate dal Mont-Blanc Express — concatenazione possibile in famiglia."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Indirizzo",
+            "v": "Partenza: stazione SNCF di Le Buet, Le Buet, 74660 Vallorcine"
+          },
+          {
+            "k": "Coordinate",
+            "v": "46,019° N · 6,920° E"
+          },
+          {
+            "k": "Altitudine",
+            "v": "≈ 1.260 m (villaggio di Vallorcine)"
+          },
+          {
+            "k": "Orari",
+            "v": "Accesso libero 24h/24, tutto l'anno (neve possibile in inverno). Libretto-domande disponibile negli orari di apertura degli Uffici del Turismo della valle di Chamonix. Verificato su chamonix.com il 10 giugno 2026."
+          },
+          {
+            "k": "Tariffe",
+            "v": "Gratuito. Libretto-domande consegnato gratuitamente dagli Uffici del Turismo della valle di Chamonix. Scaricabile anche su chamonix.com."
+          },
+          {
+            "k": "Sito ufficiale",
+            "v": "chamonix.com (sezione Visite in autonomia / Au Fil du Rail Vallorcine)"
+          },
+          {
+            "k": "Telefono",
+            "v": "Ufficio del Turismo Vallorcine / Valle di Chamonix: +33 (0)4 50 54 60 71"
+          },
+          {
+            "k": "Accesso / Parcheggio",
+            "v": "Treno Mont-Blanc Express fino alla stazione di Le Buet (fermata Vallorcine o Le Buet). In auto: col des Montets da Chamonix poi strada per Vallorcine; parcheggio gratuito alla stazione di Le Buet."
+          },
+          {
+            "k": "Durata della visita",
+            "v": "Circa 1 h 30 per il percorso completo (3 km), libretto-domande in mano. Variabile in base al ritmo familiare."
+          },
+          {
+            "k": "Pubblico",
+            "v": "Famiglie con bambini dai 6-7 anni accompagnati, escursionisti curiosi, viaggiatori del Mont-Blanc Express."
+          },
+          {
+            "k": "Attrezzatura richiesta",
+            "v": "Scarpe da passeggio, libretto-domande e penna, borraccia, abbigliamento caldo nelle mezze stagioni (1.260 m di altitudine)."
+          },
+          {
+            "k": "Prenotazione",
+            "v": "Nessuna prenotazione richiesta. Attività libera tutto l'anno."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Caccia al tesoro Au Fil du Rail Vallorcine",
+        "Au Fil du Rail Vallorcine",
+        "Rail and Trail Vallorcine"
+      ],
+      "hero": {
+        "badge": "Accesso libero · Tutto l'anno",
+        "lead": "Caccia al tesoro familiare 3 km / 1 h 30 ideata dall'Ufficio del Turismo della Valle di Chamonix: percorso-domande gratuito attorno alla stazione SNCF di Le Buet a Vallorcine, nel cuore del massiccio del Monte Bianco."
+      },
+      "facts": {
+        "type": "Caccia al tesoro familiare (sentiero-scoperta)",
+        "access": "Accesso libero · gratuito",
+        "tarif": "Gratuito",
+        "commune": "Vallorcine",
+        "parking": "Stazione SNCF di Le Buet (gratuito)",
+        "duration": "≈ 1 h 30",
+        "best_season": "Primavera, estate, autunno — neve possibile in inverno"
+      },
+      "faq": [
+        {
+          "q": "Cos'è la caccia al tesoro Au Fil du Rail a Vallorcine?",
+          "a": "La caccia al tesoro Au Fil du Rail a Vallorcine è un percorso-domande familiare gratuito creato dall'Ufficio del Turismo della Valle di Chamonix. 3 km e circa 1 h 30 di passeggiata attorno alla stazione SNCF di Le Buet, libretto in mano, per scoprire il villaggio e il suo patrimonio."
+        },
+        {
+          "q": "Dove ritirare il libretto Au Fil du Rail a Vallorcine?",
+          "a": "Il libretto della caccia al tesoro Au Fil du Rail Vallorcine si ritira gratuitamente negli Uffici del Turismo della valle di Chamonix: Vallorcine, Chamonix, Argentière, Les Houches, Servoz. È anche scaricabile su chamonix.com."
+        },
+        {
+          "q": "Quanto costa la caccia al tesoro Au Fil du Rail a Vallorcine?",
+          "a": "La caccia al tesoro Au Fil du Rail Vallorcine è interamente gratuita. Nessuna prenotazione, nessun biglietto: basta ritirare il libretto all'Ufficio del Turismo e giocare in autonomia. Verificato il 10 giugno 2026."
+        },
+        {
+          "q": "Quali sono gli orari della caccia al tesoro Au Fil du Rail a Vallorcine?",
+          "a": "Il percorso della caccia al tesoro Au Fil du Rail Vallorcine è accessibile liberamente 24h/24 tutto l'anno (neve possibile in inverno). Il libretto si ritira negli orari di apertura degli Uffici del Turismo della valle. Verificato il 10 giugno 2026."
+        },
+        {
+          "q": "Quanto dura la caccia al tesoro Au Fil du Rail a Vallorcine?",
+          "a": "La caccia al tesoro Au Fil du Rail a Vallorcine copre 3 km in circa 1 h 30 di cammino a un ritmo familiare, con soste per rispondere alle domande del libretto."
+        },
+        {
+          "q": "La caccia al tesoro Au Fil du Rail a Vallorcine è adatta ai bambini?",
+          "a": "Sì, la caccia al tesoro Au Fil du Rail Vallorcine è pensata per famiglie con bambini dai 6-7 anni accompagnati. Il percorso di 3 km non presenta difficoltà tecniche, è ludico e didattico."
+        },
+        {
+          "q": "Come arrivare alla caccia al tesoro Au Fil du Rail a Vallorcine?",
+          "a": "La caccia al tesoro Au Fil du Rail Vallorcine parte dalla stazione SNCF di Le Buet. Vi si accede in treno Mont-Blanc Express da Chamonix o Saint-Gervais; in auto attraverso il col des Montets, parcheggio gratuito alla stazione."
+        },
+        {
+          "q": "Qual è la migliore stagione per la caccia al tesoro Au Fil du Rail a Vallorcine?",
+          "a": "La caccia al tesoro Au Fil du Rail Vallorcine si pratica soprattutto tra primavera e autunno. Vallorcine è a 1.260 m di altitudine: la neve può coprire il sentiero in inverno e rendere più difficile leggere gli indizi."
+        }
+      ],
+      "schema_amenities": [
+        "Caccia al tesoro familiare gratuita",
+        "3 km / ≈ 1 h 30",
+        "Libretto-domande all'Ufficio del Turismo valle di Chamonix",
+        "Partenza stazione SNCF Le Buet",
+        "Accesso libero tutto l'anno"
+      ]
     },
     "es": {
       "name": "Au Fil du Rail – Búsqueda del tesoro en Vallorcine",

@@ -1,0 +1,47 @@
+name: AI Review Agent (Phase 2 Job 8 prep)
+
+# ▶️  Run it: Actions tab → "AI Review Agent" → Run workflow,
+#    or wait for the Monday 06:00 UTC weekly schedule.
+#
+# Setup:
+#   - Requires repo secret ANTHROPIC_API_KEY (Settings → Secrets and variables → Actions).
+#   - The weekly sweep (sweep-loisirs74.yml) is expected to produce
+#     reports/review-queue.json. When that file is missing the agent
+#     fabricates a mock 5-item queue from real fiches in Json/ so the
+#     workflow still exercises end-to-end.
+#   - Output: reports/review-verdicts.json — uploaded as a workflow artifact
+#     with 90-day retention. NOT committed. NOT auto-applied to Json/.
+#     A human reviews the verdicts before any catalogue change.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1"   # Mondays 06:00 UTC
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Run review agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 scripts/review_agent.py
+
+      - name: Upload verdicts artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: review-verdicts-${{ github.run_id }}
+          path: reports/review-verdicts.json
+          if-no-files-found: warn
+          retention-days: 90

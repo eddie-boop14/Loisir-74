@@ -92,6 +92,16 @@
       "date": "2026-06-13",
       "by": "scripts/ingest_translations.py",
       "note": "Translation ingest [nl]: 5 field(s) updated."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for de from translations/agent_I_de_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for it from translations/agent_I_it_secondary.json."
     }
   ],
   "i18n": {
@@ -259,8 +269,155 @@
       "meta_description": "15th-century fortified manor listed MH 1944 at Lully (Chablais): four round corner towers with conical roofs, taken by the Genevans in 1590. Visible from outside.",
       "hero_alt": "Château de Buffavent at Lully in the Chablais: 15th-century fortified manor with four round corner towers",
       "body": {
-        "what_is": "<p>The <strong>Château de Buffavent</strong> is a 15th-century fortified manor set on a natural terrace about 800 metres north-west of the village of Lully (74890), in the Chablais. Its evocative name reportedly comes from <strong>\"bouffâ\"</strong> — to blow in Savoyard dialect — pointing to a wind-exposed site. The trapezoidal main building is about 18.6 m long by 15.8 m wide, with four round corner towers crowned by conical \"pepper-pot\" roofs, characteristic of 15th-century Savoyard military architecture.</p><p>The castle was built by the lords of Langin as a fortified hunting residence, during the expansion phase that peaked in the 15th–16th centuries. In <strong>1590</strong>, Genevan soldiers attacked the castle during the wars between Savoy and Genevan Protestantism: the arrow slits of the left tower still bear traces of cannon fire.</p><p>The château is private property, not open to the public, but is easily visible from the surrounding paths around Lully. Listed as a Monument Historique in 1944.</p>"
-      }
+        "what_is": "<p>The <strong>Château de Buffavent</strong> is a 15th-century fortified manor set on a natural terrace about 800 metres north-west of the village of Lully (74890), in the Chablais. Its evocative name reportedly comes from <strong>\"bouffâ\"</strong> — to blow in Savoyard dialect — pointing to a wind-exposed site. The trapezoidal main building is about 18.6 m long by 15.8 m wide, with four round corner towers crowned by conical \"pepper-pot\" roofs, characteristic of 15th-century Savoyard military architecture.</p><p>The castle was built by the lords of Langin as a fortified hunting residence, during the expansion phase that peaked in the 15th–16th centuries. In <strong>1590</strong>, Genevan soldiers attacked the castle during the wars between Savoy and Genevan Protestantism: the arrow slits of the left tower still bear traces of cannon fire.</p><p>The château is private property, not open to the public, but is easily visible from the surrounding paths around Lully. Listed as a Monument Historique in 1944.</p>",
+        "activities": [
+          {
+            "title": "Exterior view of the fortified manor",
+            "tag": "Heritage",
+            "description": "The Château de Buffavent can be admired from the road and the local footpaths: a stocky silhouette with a trapezoidal main building and 4 round towers topped with pepper-pot roofs."
+          },
+          {
+            "title": "Spotting the 1590 cannonball marks",
+            "tag": null,
+            "description": "On the arrow slits of the left tower of the Château de Buffavent, the impacts left by the Genevans' cannonballs during the 1590 attack are still visible."
+          },
+          {
+            "title": "Architecture of the pepper-pot towers",
+            "tag": null,
+            "description": "The four round towers of the Château de Buffavent at Lully are characteristic of 15th-century Savoyard military architecture, with conical pepper-pot roofs."
+          },
+          {
+            "title": "Discovering the village of Lully",
+            "tag": "Family",
+            "description": "The exterior visit to the Château de Buffavent combines well with discovering the village of Lully — a discreet borough of the Bas-Chablais, 800 m from the castle."
+          },
+          {
+            "title": "Heritage photography",
+            "tag": null,
+            "description": "The Château de Buffavent makes a remarkable photographic subject, especially in the golden evening light or the morning mists of the Chablais countryside."
+          },
+          {
+            "title": "Combine with the Château d'Avully",
+            "tag": null,
+            "description": "The Château de Buffavent lies near the Château d'Avully (Brenthonne, 5 km away) — an ideal \"two castles\" circuit for a heritage day in the Chablais."
+          },
+          {
+            "title": "A walk in the Bas-Chablais countryside",
+            "tag": "Summer",
+            "description": "Around the Château de Buffavent, the meadows, orchards and hedgerows of the Bas-Chablais lend themselves to a free walk — rural lanes and distant views over Lake Geneva."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Address",
+            "v": "Château de Buffavent, hamlet of Buffavent, 74890 Lully (≈ 800 m north-west of the village)"
+          },
+          {
+            "k": "Coordinates",
+            "v": "46.288° N · 6.406° E"
+          },
+          {
+            "k": "Altitude",
+            "v": "≈ 500 m (Buffavent terrace)"
+          },
+          {
+            "k": "Opening hours",
+            "v": "Exterior view freely accessible year-round. No interior visit (private property). Checked on 10 June 2026."
+          },
+          {
+            "k": "Prices",
+            "v": "No ticketing — interior not open. Exterior view free from the road. Checked on 10 June 2026."
+          },
+          {
+            "k": "Official site",
+            "v": "No dedicated official website. Heritage record on monumentum.fr (PA00118404) and Wikipedia."
+          },
+          {
+            "k": "Phone",
+            "v": "Lully town hall: +33 (0)4 50 71 06 67"
+          },
+          {
+            "k": "Access / Parking",
+            "v": "Free parking in the village of Lully. Access to the castle by road or by local paths. From Thonon-les-Bains: ≈ 15 km via the D903 then the D32."
+          },
+          {
+            "k": "Length of visit",
+            "v": "15 to 30 minutes to look at the fortified manor from outside and read about its history. Longer if combined with a country walk."
+          },
+          {
+            "k": "Audience",
+            "v": "Fans of medieval heritage and Savoyard military architecture, photographers."
+          },
+          {
+            "k": "Accessibility",
+            "v": "Exterior view of the Château de Buffavent accessible from the road. No specific facilities. Rural lanes for walks in the surroundings."
+          },
+          {
+            "k": "Animals",
+            "v": "Dogs welcome on a lead on the rural lanes around the Château de Buffavent."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Château de Buffavent Lully",
+        "Maison forte de Buffavent",
+        "Buffavent"
+      ],
+      "hero": {
+        "badge": "Visible from outside · Listed MH 1944",
+        "lead": "15th-century fortified manor perched on a natural terrace at Lully (74): trapezoidal main building flanked by four round pepper-pot towers, traces of Genevan cannonballs (1590), listed as a Historic Monument in 1944."
+      },
+      "facts": {
+        "type": "15th-century fortified manor · Listed MH 1944",
+        "access": "Visible from outside (private property)",
+        "tarif": "No interior visit",
+        "commune": "Lully",
+        "parking": "Village of Lully (free)",
+        "duration": "15 to 30 minutes (exterior view)",
+        "best_season": "Year-round"
+      },
+      "faq": [
+        {
+          "q": "Can you visit the inside of the Château de Buffavent?",
+          "a": "No, the Château de Buffavent is a private property closed to interior visits. The silhouette of the fortified manor and its four pepper-pot towers are clearly visible from the road and the local paths of Lully."
+        },
+        {
+          "q": "Where is the Château de Buffavent?",
+          "a": "The Château de Buffavent stands about 800 m north-west of the village of Lully (74890), in the Bas-Chablais, 15 km from Thonon-les-Bains. GPS: 46.288° N · 6.406° E."
+        },
+        {
+          "q": "What is the history of the Château de Buffavent?",
+          "a": "The Château de Buffavent is a 15th-century fortified manor built by the lords of Langin as a fortified hunting residence. Attacked and taken by the Genevans in 1590 (cannonball marks visible), it was listed as a Historic Monument in 1944."
+        },
+        {
+          "q": "How much does it cost to visit the Château de Buffavent?",
+          "a": "Looking at the Château de Buffavent from outside is free from the public road. There is no interior visit, as the castle is privately owned. Checked on 10 June 2026."
+        },
+        {
+          "q": "What are the opening hours of the Château de Buffavent?",
+          "a": "The exterior view of the Château de Buffavent is freely accessible year-round, 24/7, from the road and the local paths. No scheduled interior visit. Checked on 10 June 2026."
+        },
+        {
+          "q": "How long should I allow to see the Château de Buffavent?",
+          "a": "Allow 15 to 30 minutes to admire the Château de Buffavent from outside, photograph the four pepper-pot towers and read about its history. Longer if you combine it with a country walk."
+        },
+        {
+          "q": "Where can I park to see the Château de Buffavent?",
+          "a": "Free parking in the village of Lully. The Château de Buffavent is then reachable on foot via the road or the local paths, about 800 m from the village."
+        },
+        {
+          "q": "What else is there to see around the Château de Buffavent?",
+          "a": "Around the Château de Buffavent, you can discover the Château d'Avully at Brenthonne (5 km away), the villages of the Bas-Chablais, and the paths leading to Thonon-les-Bains and Lake Geneva."
+        }
+      ],
+      "schema_amenities": [
+        "15th-century fortified manor",
+        "Listed MH 1944 (PA00118404)",
+        "4 round pepper-pot towers",
+        "Traces of 1590 cannonballs",
+        "Free exterior view",
+        "Private property — no interior visit"
+      ]
     },
     "de": {
       "name": "Schloss Buffavent",
@@ -268,8 +425,155 @@
       "meta_description": "Wehrhaus aus dem 15. Jh., MH 1944, in Lully (Chablais): vier runde Ecktürme mit Kegeldächern, 1590 von den Genfern erobert. Von außen sichtbar.",
       "hero_alt": "Schloss Buffavent in Lully im Chablais: Wehrhaus aus dem 15. Jh. mit vier runden Ecktürmen",
       "body": {
-        "what_is": "<p>Das <strong>Schloss Buffavent</strong> ist ein Wehrhaus aus dem <strong>15. Jahrhundert</strong> auf einer natürlichen Terrasse etwa 800 m nordwestlich des Dorfes Lully (74890), im Chablais. Sein anschaulicher Name soll von <strong>„bouffâ\"</strong> stammen — Savoyer Dialekt für „blasen\" — und auf eine sehr windexponierte Lage hinweisen. Der trapezförmige Hauptbau misst etwa 18,6 × 15,8 m, mit vier runden Ecktürmen unter Kegeldächern, typisch für die savoyische Militärarchitektur des 15. Jh.</p><p>Errichtet von den Herren von Langin als befestigte Jagdresidenz in der Expansionsphase des 15./16. Jh. <strong>1590</strong> griffen Genfer Soldaten das Schloss in den Kriegen Savoyens gegen den Genfer Protestantismus an: die Schießscharten des linken Turms tragen noch Spuren von Kanonenkugeln.</p><p>Privatbesitz, der Öffentlichkeit nicht zugänglich, aber gut von den umliegenden Wegen um Lully aus sichtbar. 1944 als Monument Historique eingetragen.</p>"
-      }
+        "what_is": "<p>Das <strong>Schloss Buffavent</strong> ist ein Wehrhaus aus dem <strong>15. Jahrhundert</strong> auf einer natürlichen Terrasse etwa 800 m nordwestlich des Dorfes Lully (74890), im Chablais. Sein anschaulicher Name soll von <strong>„bouffâ\"</strong> stammen — Savoyer Dialekt für „blasen\" — und auf eine sehr windexponierte Lage hinweisen. Der trapezförmige Hauptbau misst etwa 18,6 × 15,8 m, mit vier runden Ecktürmen unter Kegeldächern, typisch für die savoyische Militärarchitektur des 15. Jh.</p><p>Errichtet von den Herren von Langin als befestigte Jagdresidenz in der Expansionsphase des 15./16. Jh. <strong>1590</strong> griffen Genfer Soldaten das Schloss in den Kriegen Savoyens gegen den Genfer Protestantismus an: die Schießscharten des linken Turms tragen noch Spuren von Kanonenkugeln.</p><p>Privatbesitz, der Öffentlichkeit nicht zugänglich, aber gut von den umliegenden Wegen um Lully aus sichtbar. 1944 als Monument Historique eingetragen.</p>",
+        "activities": [
+          {
+            "title": "Außenansicht des Wehrhauses",
+            "tag": "Kulturerbe",
+            "description": "Das Château de Buffavent ist von der Straße und den Gemeindewegen aus sichtbar: gedrungene Silhouette mit trapezförmigem Hauptbau und 4 runden Türmen mit Pfeffermühlen-Dächern."
+          },
+          {
+            "title": "Spuren der Kanonenkugeln von 1590 erkennen",
+            "tag": null,
+            "description": "An den Schießscharten des linken Turms des Château de Buffavent sind noch die Einschläge der Genfer Kanonenkugeln aus dem Angriff von 1590 erkennbar."
+          },
+          {
+            "title": "Architektur der Pfeffermühlentürme",
+            "tag": null,
+            "description": "Die vier runden Türme des Château de Buffavent in Lully sind charakteristisch für die savoyische Militärarchitektur des 15. Jahrhunderts, mit konischen Pfeffermühlen-Dächern."
+          },
+          {
+            "title": "Entdeckung des Dorfes Lully",
+            "tag": "Familie",
+            "description": "Der Außenbesuch des Château de Buffavent kombiniert sich mit der Entdeckung des Dorfes Lully — diskreter Ort des Bas-Chablais, 800 m vom Schloss entfernt."
+          },
+          {
+            "title": "Heritage-Fotografie",
+            "tag": null,
+            "description": "Das Château de Buffavent bietet ein bemerkenswertes Fotomotiv, besonders im goldenen Abendlicht oder im morgendlichen Nebel der Chablais-Landschaft."
+          },
+          {
+            "title": "Kombination mit dem Château d'Avully",
+            "tag": null,
+            "description": "Das Château de Buffavent liegt in der Nähe des Château d'Avully (Brenthonne, 5 km entfernt) — idealer „Zwei-Schlösser“-Rundgang für einen Heritage-Tag im Chablais."
+          },
+          {
+            "title": "Spaziergang in der Landschaft des Bas-Chablais",
+            "tag": "Sommer",
+            "description": "Rund um das Château de Buffavent laden Wiesen, Obstgärten und Hecken des Bas-Chablais zu einem freien Spaziergang ein — ländliche Wege und Ausblicke auf den Genfersee in der Ferne."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Adresse",
+            "v": "Château de Buffavent, Lieu-dit Buffavent, 74890 Lully (≈ 800 m nordwestlich des Dorfes)"
+          },
+          {
+            "k": "Koordinaten",
+            "v": "46,288° N · 6,406° E"
+          },
+          {
+            "k": "Höhe",
+            "v": "≈ 500 m (Buffavent-Terrasse)"
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": "Außenansicht ganzjährig frei. Keine Innenbesichtigung (Privatbesitz). Geprüft am 10. Juni 2026."
+          },
+          {
+            "k": "Preise",
+            "v": "Keine Kasse — Innen nicht zugänglich. Außenansicht von der Straße kostenlos. Geprüft am 10. Juni 2026."
+          },
+          {
+            "k": "Offizielle Website",
+            "v": "Keine eigene offizielle Website. Heritage-Eintrag auf monumentum.fr (PA00118404) und Wikipedia."
+          },
+          {
+            "k": "Telefon",
+            "v": "Rathaus Lully: +33 (0)4 50 71 06 67"
+          },
+          {
+            "k": "Zugang / Parkplatz",
+            "v": "Kostenloses Parken im Dorf Lully. Zugang zum Schloss über die Straße oder die Gemeindewege. Von Thonon-les-Bains: ≈ 15 km über D903 dann D32."
+          },
+          {
+            "k": "Besuchsdauer",
+            "v": "15 bis 30 Minuten, um das Wehrhaus von außen zu betrachten und seine Geschichte zu lesen. Mehr, wenn mit einem Landspaziergang kombiniert."
+          },
+          {
+            "k": "Publikum",
+            "v": "Liebhaber des mittelalterlichen Kulturerbes und der savoyischen Militärarchitektur, Fotografen."
+          },
+          {
+            "k": "Barrierefreiheit",
+            "v": "Außenansicht des Château de Buffavent von der Straße aus zugänglich. Keine spezielle Ausstattung. Ländliche Wege für Spaziergänge in der Umgebung."
+          },
+          {
+            "k": "Tiere",
+            "v": "Hunde an der Leine auf den ländlichen Wegen rund um das Château de Buffavent erlaubt."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Château de Buffavent Lully",
+        "Maison forte de Buffavent",
+        "Buffavent"
+      ],
+      "hero": {
+        "badge": "Von außen sichtbar · MH 1944",
+        "lead": "Wehrhaus aus dem 15. Jahrhundert auf einer natürlichen Terrasse in Lully (74): trapezförmiger Hauptbau flankiert von vier runden Pfeffermühlentürmen, Spuren von Genfer Kanonenkugeln (1590), 1944 als Monument Historique eingetragen."
+      },
+      "facts": {
+        "type": "Wehrhaus 15. Jh. · MH 1944",
+        "access": "Von außen sichtbar (Privatbesitz)",
+        "tarif": "Keine Innenbesichtigung",
+        "commune": "Lully",
+        "parking": "Dorf Lully (kostenlos)",
+        "duration": "15 bis 30 Minuten (Außenansicht)",
+        "best_season": "Ganzjährig"
+      },
+      "faq": [
+        {
+          "q": "Kann man das Innere des Château de Buffavent besichtigen?",
+          "a": "Nein, das Château de Buffavent ist Privatbesitz und für Innenbesichtigungen geschlossen. Die Silhouette des Wehrhauses und seine vier Pfeffermühlentürme sind von der Straße und den Gemeindewegen Lullys aus deutlich sichtbar."
+        },
+        {
+          "q": "Wo befindet sich das Château de Buffavent?",
+          "a": "Das Château de Buffavent liegt etwa 800 m nordwestlich des Dorfes Lully (74890) im Bas-Chablais, 15 km von Thonon-les-Bains entfernt. GPS: 46,288° N · 6,406° E."
+        },
+        {
+          "q": "Wie ist die Geschichte des Château de Buffavent?",
+          "a": "Das Château de Buffavent ist ein Wehrhaus des 15. Jahrhunderts, erbaut von den Herren von Langin als befestigte Jagdresidenz. 1590 von den Genfern angegriffen und eingenommen (sichtbare Kanonenkugel-Spuren), wurde es 1944 als Monument Historique eingetragen."
+        },
+        {
+          "q": "Wie viel kostet der Besuch des Château de Buffavent?",
+          "a": "Die Außenansicht des Château de Buffavent ist von der öffentlichen Straße aus kostenlos. Es gibt keine offene Innenbesichtigung, da das Schloss in Privatbesitz ist. Geprüft am 10. Juni 2026."
+        },
+        {
+          "q": "Welche Öffnungszeiten hat das Château de Buffavent?",
+          "a": "Die Außenansicht des Château de Buffavent ist ganzjährig rund um die Uhr frei zugänglich, von der Straße und den Gemeindewegen aus. Keine programmierte Innenbesichtigung. Geprüft am 10. Juni 2026."
+        },
+        {
+          "q": "Wie viel Zeit sollte man für das Château de Buffavent einplanen?",
+          "a": "Rechnen Sie 15 bis 30 Minuten, um das Château de Buffavent von außen zu betrachten, die vier Pfeffermühlentürme zu fotografieren und seine Geschichte zu lesen. Mehr, wenn Sie es mit einem Landspaziergang kombinieren."
+        },
+        {
+          "q": "Wo kann man für das Château de Buffavent parken?",
+          "a": "Kostenloses Parken im Dorf Lully. Das Château de Buffavent ist dann zu Fuß über die Straße oder die Gemeindewege erreichbar, etwa 800 m vom Dorf entfernt."
+        },
+        {
+          "q": "Was kann man rund um das Château de Buffavent sonst noch sehen?",
+          "a": "Rund um das Château de Buffavent kann man das Château d'Avully in Brenthonne (5 km entfernt), die Dörfer des Bas-Chablais und die Wege nach Thonon-les-Bains und zum Genfersee entdecken."
+        }
+      ],
+      "schema_amenities": [
+        "Wehrhaus 15. Jahrhundert",
+        "Eingetragen MH 1944 (PA00118404)",
+        "4 runde Pfeffermühlentürme",
+        "Spuren der Kanonenkugeln von 1590",
+        "Außenansicht frei",
+        "Privatbesitz — keine Innenbesichtigung"
+      ]
     },
     "it": {
       "name": "Castello di Buffavent",
@@ -277,8 +581,155 @@
       "meta_description": "Casa forte XV sec. iscritta MH 1944 a Lully (Chablais): quattro torri rotonde a tetto conico, presa dai ginevrini nel 1590. Visibile dall'esterno.",
       "hero_alt": "Castello di Buffavent a Lully nel Chablais: casa forte XV sec. con quattro torri rotonde angolari",
       "body": {
-        "what_is": "<p>Il <strong>Castello di Buffavent</strong> è una casa forte del <strong>XV secolo</strong> su una terrazza naturale a circa 800 m a nord-ovest del villaggio di Lully (74890), nel Chablais. Il nome verrebbe da <strong>\"bouffâ\"</strong> — soffiare in patois savoiardo — riferendosi a un sito molto esposto al vento. Corpo trapezoidale di circa 18,6 × 15,8 m, con quattro torri rotonde coperte da tetti conici, caratteristiche dell'architettura militare savoiarda.</p><p>Costruito dai signori di Langin come residenza di caccia fortificata. Nel <strong>1590</strong>, i soldati ginevrini attaccarono il castello durante le guerre tra Savoia e protestantesimo ginevrino: le feritoie della torre sinistra portano ancora tracce di palle di cannone.</p><p>Proprietà privata, non aperta al pubblico, ma ben visibile dai sentieri attorno a Lully. Monumento Storico dal 1944.</p>"
-      }
+        "what_is": "<p>Il <strong>Castello di Buffavent</strong> è una casa forte del <strong>XV secolo</strong> su una terrazza naturale a circa 800 m a nord-ovest del villaggio di Lully (74890), nel Chablais. Il nome verrebbe da <strong>\"bouffâ\"</strong> — soffiare in patois savoiardo — riferendosi a un sito molto esposto al vento. Corpo trapezoidale di circa 18,6 × 15,8 m, con quattro torri rotonde coperte da tetti conici, caratteristiche dell'architettura militare savoiarda.</p><p>Costruito dai signori di Langin come residenza di caccia fortificata. Nel <strong>1590</strong>, i soldati ginevrini attaccarono il castello durante le guerre tra Savoia e protestantesimo ginevrino: le feritoie della torre sinistra portano ancora tracce di palle di cannone.</p><p>Proprietà privata, non aperta al pubblico, ma ben visibile dai sentieri attorno a Lully. Monumento Storico dal 1944.</p>",
+        "activities": [
+          {
+            "title": "Vista esterna della casa forte",
+            "tag": "Patrimonio",
+            "description": "Il Château de Buffavent si scopre dalla strada e dai sentieri comunali: sagoma tozza con corpo di fabbrica trapezoidale e 4 torri rotonde coperte a pepiera."
+          },
+          {
+            "title": "Individuazione delle tracce delle palle di cannone del 1590",
+            "tag": null,
+            "description": "Sulle feritoie della torre di sinistra del Château de Buffavent si distinguono ancora gli impatti lasciati dalle palle di cannone dei Genevesi durante l'attacco del 1590."
+          },
+          {
+            "title": "Architettura delle torri a pepiera",
+            "tag": null,
+            "description": "Le quattro torri rotonde del Château de Buffavent a Lully sono caratteristiche dell'architettura militare savoiarda del XV secolo, con tetti conici a pepiera."
+          },
+          {
+            "title": "Scoperta del villaggio di Lully",
+            "tag": "Famiglia",
+            "description": "La visita esterna del Château de Buffavent si combina con la scoperta del villaggio di Lully — borgo discreto del Bas-Chablais, a 800 m dal castello."
+          },
+          {
+            "title": "Fotografia patrimoniale",
+            "tag": null,
+            "description": "Il Château de Buffavent offre un soggetto fotografico notevole, soprattutto nella luce dorata della sera o nelle brume mattutine della campagna chablaisina."
+          },
+          {
+            "title": "Combinazione con il Château d'Avully",
+            "tag": null,
+            "description": "Il Château de Buffavent si trova vicino al Château d'Avully (Brenthonne, a 5 km) — circuito \"due castelli\" ideale per una giornata patrimonio nel Chablais."
+          },
+          {
+            "title": "Passeggiata nella campagna del Bas-Chablais",
+            "tag": "Estate",
+            "description": "Attorno al Château de Buffavent, prati, frutteti e siepi del Bas-Chablais si prestano a una passeggiata libera — sentieri rurali e viste sul Lago di Ginevra in lontananza."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Indirizzo",
+            "v": "Château de Buffavent, lieu-dit Buffavent, 74890 Lully (≈ 800 m a nord-ovest del villaggio)"
+          },
+          {
+            "k": "Coordinate",
+            "v": "46,288° N · 6,406° E"
+          },
+          {
+            "k": "Altitudine",
+            "v": "≈ 500 m (terrazza di Buffavent)"
+          },
+          {
+            "k": "Orari",
+            "v": "Vista esterna libera, tutto l'anno. Nessuna visita interna (proprietà privata). Verificato il 10 giugno 2026."
+          },
+          {
+            "k": "Tariffe",
+            "v": "Nessuna biglietteria — visita interna non aperta. Vista esterna gratuita dalla strada. Verificato il 10 giugno 2026."
+          },
+          {
+            "k": "Sito ufficiale",
+            "v": "Nessun sito ufficiale proprio del castello. Scheda patrimoniale su monumentum.fr (PA00118404) e Wikipedia."
+          },
+          {
+            "k": "Telefono",
+            "v": "Municipio di Lully: +33 (0)4 50 71 06 67"
+          },
+          {
+            "k": "Accesso / Parcheggio",
+            "v": "Sosta gratuita nel villaggio di Lully. Accesso al castello dalla strada o dai sentieri comunali. Da Thonon-les-Bains: ≈ 15 km dalla D903 poi D32."
+          },
+          {
+            "k": "Durata della visita",
+            "v": "Da 15 a 30 minuti per osservare la casa forte dall'esterno e leggerne la storia. Di più se combinato con una passeggiata in campagna."
+          },
+          {
+            "k": "Pubblico",
+            "v": "Amanti del patrimonio medievale e dell'architettura militare savoiarda, fotografi."
+          },
+          {
+            "k": "Accessibilità",
+            "v": "Vista esterna del Château de Buffavent accessibile dalla strada. Nessun allestimento specifico. Sentieri rurali per le passeggiate nei dintorni."
+          },
+          {
+            "k": "Animali",
+            "v": "Cani ammessi tenuti al guinzaglio sui sentieri rurali attorno al Château de Buffavent."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Château de Buffavent Lully",
+        "Maison forte de Buffavent",
+        "Buffavent"
+      ],
+      "hero": {
+        "badge": "Visibile dall'esterno · MH 1944",
+        "lead": "Casa forte del XV secolo arroccata su una terrazza naturale a Lully (74): corpo di fabbrica trapezoidale fiancheggiato da quattro torri rotonde a pepiera, tracce di palle di cannone genevesi (1590), iscritto Monumento Storico 1944."
+      },
+      "facts": {
+        "type": "Casa forte XV secolo · MH 1944",
+        "access": "Visibile dall'esterno (proprietà privata)",
+        "tarif": "Nessuna visita interna",
+        "commune": "Lully",
+        "parking": "Villaggio di Lully (gratuito)",
+        "duration": "Da 15 a 30 minuti (vista esterna)",
+        "best_season": "Tutto l'anno"
+      },
+      "faq": [
+        {
+          "q": "Si può visitare l'interno del Château de Buffavent?",
+          "a": "No, il Château de Buffavent è una proprietà privata chiusa alla visita interna. La sagoma della casa forte e le sue quattro torri a pepiera sono perfettamente visibili dalla strada e dai sentieri comunali di Lully."
+        },
+        {
+          "q": "Dove si trova il Château de Buffavent?",
+          "a": "Il Château de Buffavent si trova a circa 800 m a nord-ovest del villaggio di Lully (74890), nel Bas-Chablais, a 15 km da Thonon-les-Bains. GPS: 46,288° N · 6,406° E."
+        },
+        {
+          "q": "Qual è la storia del Château de Buffavent?",
+          "a": "Il Château de Buffavent è una casa forte del XV secolo costruita dai signori di Langin come residenza di caccia fortificata. Attaccato e preso dai Genevesi nel 1590 (tracce di palle di cannone visibili), è stato iscritto Monumento Storico nel 1944."
+        },
+        {
+          "q": "Quanto costa la visita del Château de Buffavent?",
+          "a": "L'osservazione esterna del Château de Buffavent è gratuita dalla strada pubblica. Non c'è visita interna aperta, in quanto il castello è una proprietà privata. Verificato il 10 giugno 2026."
+        },
+        {
+          "q": "Quali sono gli orari del Château de Buffavent?",
+          "a": "La vista esterna del Château de Buffavent è accessibile liberamente tutto l'anno, 24h/24, dalla strada e dai sentieri comunali. Nessuna visita interna programmata. Verificato il 10 giugno 2026."
+        },
+        {
+          "q": "Quanto tempo prevedere per vedere il Château de Buffavent?",
+          "a": "Prevedete da 15 a 30 minuti per osservare il Château de Buffavent dall'esterno, fotografare le quattro torri a pepiera e leggerne la storia. Di più se si combina con una passeggiata in campagna."
+        },
+        {
+          "q": "Dove parcheggiare per vedere il Château de Buffavent?",
+          "a": "Sosta gratuita nel villaggio di Lully. Il Château de Buffavent è poi accessibile a piedi dalla strada o dai sentieri comunali, a circa 800 m dal villaggio."
+        },
+        {
+          "q": "Cos'altro vedere attorno al Château de Buffavent?",
+          "a": "Attorno al Château de Buffavent si possono scoprire il Château d'Avully a Brenthonne (a 5 km), i villaggi del Bas-Chablais e i sentieri che portano a Thonon-les-Bains e al Lago di Ginevra."
+        }
+      ],
+      "schema_amenities": [
+        "Casa forte XV secolo",
+        "Iscritto MH 1944 (PA00118404)",
+        "4 torri rotonde a pepiera",
+        "Tracce di palle di cannone del 1590",
+        "Vista esterna libera",
+        "Proprietà privata — nessuna visita interna"
+      ]
     },
     "es": {
       "name": "Castillo de Buffavent",

@@ -88,6 +88,16 @@
       "date": "2026-06-13",
       "by": "scripts/ingest_translations.py",
       "note": "Translation ingest [nl]: 5 field(s) updated."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for de from translations/agent_I_de_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for it from translations/agent_I_it_secondary.json."
     }
   ],
   "i18n": {
@@ -261,8 +271,161 @@
       "meta_description": "Saint-Julien-en-Genevois casino at the gates of Geneva: 112 slot machines, blackjack, roulette, poker, 3 restaurants. Open daily from 10 am.",
       "hero_alt": "Casino de Saint-Julien-en-Genevois near Geneva: slot machines, table games, bars and restaurants",
       "body": {
-        "what_is": "<p>The <strong>Casino de Saint-Julien-en-Genevois</strong> is a gaming establishment on the route d'Annecy, at the gates of Geneva. Its border location makes it one of the most accessible casinos from the Geneva metro area — less than 10 minutes by car. The venue combines slot floor, table-game lounge, poker room and three restaurants and bars, making it a full evening out, not only a destination for players.</p><p>The slot floor has <strong>112 machines</strong>: 11 video pokers, 13 classic reels and 88 video reels from international brands. Slot hours: Sunday–Thursday 10 am–2 am, Friday–Saturday 10 am–3 am. The table-game lounge opens every evening from 8 pm: <strong>2 blackjack tables, 3 traditional English roulettes, 4 Texas Hold'em poker tables and 15 electronic English roulettes</strong>.</p><p>Three on-site restaurants (gastronomic, brasserie and bar) complete the offer. Free parking. ID required (over 18, no exclusion order).</p>"
-      }
+        "what_is": "<p>The <strong>Casino de Saint-Julien-en-Genevois</strong> is a gaming establishment on the route d'Annecy, at the gates of Geneva. Its border location makes it one of the most accessible casinos from the Geneva metro area — less than 10 minutes by car. The venue combines slot floor, table-game lounge, poker room and three restaurants and bars, making it a full evening out, not only a destination for players.</p><p>The slot floor has <strong>112 machines</strong>: 11 video pokers, 13 classic reels and 88 video reels from international brands. Slot hours: Sunday–Thursday 10 am–2 am, Friday–Saturday 10 am–3 am. The table-game lounge opens every evening from 8 pm: <strong>2 blackjack tables, 3 traditional English roulettes, 4 Texas Hold'em poker tables and 15 electronic English roulettes</strong>.</p><p>Three on-site restaurants (gastronomic, brasserie and bar) complete the offer. Free parking. ID required (over 18, no exclusion order).</p>",
+        "activities": [
+          {
+            "title": "112 slot machines",
+            "tag": null,
+            "description": "The Casino of Saint-Julien-en-Genevois offers 112 slot machines: 11 video poker, 13 classic reels and 88 video reels from international brands."
+          },
+          {
+            "title": "Blackjack and roulette tables",
+            "tag": null,
+            "description": "The high-stakes room of the Casino of Saint-Julien has 2 blackjack tables and 3 traditional English roulette wheels, open every evening from 8 pm."
+          },
+          {
+            "title": "Texas Hold'em poker",
+            "tag": null,
+            "description": "The poker room of the Casino of Saint-Julien-en-Genevois offers 4 Texas Hold'em tables, open Mon-Sat from 8 pm and Sun from 4 pm."
+          },
+          {
+            "title": "Electronic English roulette",
+            "tag": null,
+            "description": "15 electronic English roulette wheels are also available at the Casino of Saint-Julien-en-Genevois — a modern alternative to the traditional tables."
+          },
+          {
+            "title": "Le Safran restaurant",
+            "tag": null,
+            "description": "Le Safran gastronomic restaurant at the Casino of Saint-Julien: open Friday and Saturday evenings and Sunday lunch. Refined setting and seasonal menu."
+          },
+          {
+            "title": "Le Paradise bar-restaurant",
+            "tag": null,
+            "description": "Le Paradise, a bar and restaurant in the slot-machine area of the Casino of Saint-Julien: bar open daily from 10 am, food at lunch and in the evening."
+          },
+          {
+            "title": "Le Maloja restaurant",
+            "tag": null,
+            "description": "Le Maloja, a restaurant in the traditional gaming room of the Casino of Saint-Julien: open every evening from 8 pm, intimate atmosphere."
+          },
+          {
+            "title": "Themed evenings and entertainment",
+            "tag": null,
+            "description": "The Casino of Saint-Julien-en-Genevois regularly hosts dance nights, concerts and dinner-shows — see casino-saint-julien.com for the calendar."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Address",
+            "v": "Route d'Annecy, 74160 Saint-Julien-en-Genevois"
+          },
+          {
+            "k": "Coordinates",
+            "v": "46.129° N · 6.088° E"
+          },
+          {
+            "k": "Altitude",
+            "v": "≈ 450 m"
+          },
+          {
+            "k": "Opening hours",
+            "v": "Slot machines: Sun-Thu 10 am-2 am, Fri-Sat 10 am-3 am. Traditional games: every evening from 8 pm. Poker room: Mon-Sat from 8 pm, Sun from 4 pm. Checked on casino-saint-julien.com on 10 June 2026 — hours vary by period."
+          },
+          {
+            "k": "Prices",
+            "v": "Free entry to the Casino of Saint-Julien. Minimum stake varies by game. Restaurants à la carte. Checked on 10 June 2026."
+          },
+          {
+            "k": "Official site",
+            "v": "casino-saint-julien.com"
+          },
+          {
+            "k": "Phone",
+            "v": "+33 (0)4 50 49 17 17"
+          },
+          {
+            "k": "Access / Parking",
+            "v": "Free parking near the Casino of Saint-Julien. Access by car via the A40, Saint-Julien-en-Genevois exit, or via the D1201 from Geneva (≈ 10 minutes)."
+          },
+          {
+            "k": "Length of visit",
+            "v": "1 hr for a quick visit, a full evening for the complete casino + restaurant experience."
+          },
+          {
+            "k": "Audience",
+            "v": "Strictly reserved for adults (18+) on presentation of valid ID. Minors not allowed, even with adults."
+          },
+          {
+            "k": "On-site dining",
+            "v": "3 restaurants at the Casino of Saint-Julien: Le Safran (gastronomic, Fri-Sat evenings and Sun lunch), Le Paradise (bar/brasserie, daily from 10 am), Le Maloja (restaurant, every evening from 8 pm)."
+          },
+          {
+            "k": "Booking",
+            "v": "Entry without reservation (with ID). Restaurants: booking recommended, especially Le Safran at weekends."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Casino of Saint-Julien-en-Genevois",
+        "Casino Partouche Saint-Julien",
+        "Casino Saint-Julien (74)"
+      ],
+      "hero": {
+        "badge": "Free entry · 18+ with ID",
+        "lead": "Casino on the doorstep of Geneva: 112 slot machines, 2 blackjack tables, 3 English roulette wheels, 4 Texas Hold'em poker tables, 3 restaurants (Le Safran, Le Paradise, Le Maloja). Open daily from 10 am."
+      },
+      "facts": {
+        "type": "Casino · slots + table games",
+        "access": "Free entry · 18+",
+        "tarif": "Free entry (paid games)",
+        "commune": "Saint-Julien-en-Genevois",
+        "parking": "Casino car park (free)",
+        "duration": "1 hr to a full evening",
+        "best_season": "Year-round"
+      },
+      "faq": [
+        {
+          "q": "What are the opening hours of the Casino of Saint-Julien?",
+          "a": "Slot machines at the Casino of Saint-Julien: Sun-Thu 10 am-2 am, Fri-Sat 10 am-3 am. Traditional games every evening from 8 pm. Poker room Mon-Sat from 8 pm, Sun from 4 pm. Checked on casino-saint-julien.com on 10 June 2026."
+        },
+        {
+          "q": "What is the minimum age to enter the Casino of Saint-Julien?",
+          "a": "Entry to the Casino of Saint-Julien-en-Genevois is reserved for adults aged 18 and over, on presentation of valid ID. Minors are not admitted, even with an adult."
+        },
+        {
+          "q": "How much does it cost to enter the Casino of Saint-Julien?",
+          "a": "Entry to the Casino of Saint-Julien is free of charge. Only games and dining are paid. ID is required to enter (adults only). Checked on 10 June 2026."
+        },
+        {
+          "q": "How many slot machines are there at the Casino of Saint-Julien?",
+          "a": "The Casino of Saint-Julien-en-Genevois offers 112 slot machines: 11 video poker, 13 classic reels and 88 video reels from international brands."
+        },
+        {
+          "q": "What table games are there at the Casino of Saint-Julien?",
+          "a": "The high-stakes room of the Casino of Saint-Julien includes 2 blackjack tables, 3 traditional English roulette wheels, 4 Texas Hold'em poker tables and 15 electronic English roulette wheels."
+        },
+        {
+          "q": "Is there a restaurant at the Casino of Saint-Julien?",
+          "a": "Yes, the Casino of Saint-Julien-en-Genevois has three restaurants: Le Safran (gastronomic), Le Paradise (bar-brasserie) and Le Maloja (restaurant). Booking recommended, especially for Le Safran at weekends."
+        },
+        {
+          "q": "How do I get to the Casino of Saint-Julien from Geneva?",
+          "a": "The Casino of Saint-Julien-en-Genevois is about 10 minutes by car from Geneva via the D1201, or via the A40, Saint-Julien-en-Genevois exit. Free parking on site."
+        },
+        {
+          "q": "Do I need to book to visit the Casino of Saint-Julien?",
+          "a": "Entry to the Casino of Saint-Julien is without reservation, on presentation of valid ID (18+). For the restaurants, booking is recommended, especially for Le Safran at weekends."
+        }
+      ],
+      "schema_amenities": [
+        "112 slot machines",
+        "Blackjack tables and English roulette",
+        "Texas Hold'em poker",
+        "Electronic English roulette",
+        "3 restaurants (Le Safran, Le Paradise, Le Maloja)",
+        "On the doorstep of Geneva",
+        "Open daily"
+      ]
     },
     "de": {
       "name": "Casino Saint-Julien",
@@ -270,8 +433,161 @@
       "meta_description": "Casino in Saint-Julien-en-Genevois an der Pforte Genfs: 112 Spielautomaten, Blackjack, Roulette, Poker, 3 Restaurants. Täglich ab 10 Uhr geöffnet.",
       "hero_alt": "Casino von Saint-Julien-en-Genevois nahe Genf: Spielautomaten, Tische, Bars und Restaurants",
       "body": {
-        "what_is": "<p>Das <strong>Casino von Saint-Julien-en-Genevois</strong> ist eine Spielstätte an der Route d'Annecy, an der Pforte Genfs. Seine Grenzlage macht es zu einem der von Genf aus am leichtesten erreichbaren Casinos — weniger als 10 Autominuten. Die Anlage kombiniert Spielautomaten, Tischspielsalon, Pokerraum sowie drei Restaurants und Bars und ist damit ein vollständiger Abend, nicht nur für Spieler.</p><p>Auf der Slot-Etage stehen <strong>112 Maschinen</strong>: 11 Video-Poker, 13 klassische Walzen und 88 Video-Walzen internationaler Marken. Slot-Zeiten: So–Do 10–2 Uhr, Fr–Sa 10–3 Uhr. Der Tischsalon öffnet abends ab 20 Uhr: <strong>2 Blackjack-Tische, 3 klassische englische Roulettes, 4 Texas-Hold'em-Tische und 15 elektronische englische Roulettes</strong>.</p><p>Drei Restaurants vor Ort. Gratis-Parkplatz. Ausweispflicht (ab 18, keine Spielsperre).</p>"
-      }
+        "what_is": "<p>Das <strong>Casino von Saint-Julien-en-Genevois</strong> ist eine Spielstätte an der Route d'Annecy, an der Pforte Genfs. Seine Grenzlage macht es zu einem der von Genf aus am leichtesten erreichbaren Casinos — weniger als 10 Autominuten. Die Anlage kombiniert Spielautomaten, Tischspielsalon, Pokerraum sowie drei Restaurants und Bars und ist damit ein vollständiger Abend, nicht nur für Spieler.</p><p>Auf der Slot-Etage stehen <strong>112 Maschinen</strong>: 11 Video-Poker, 13 klassische Walzen und 88 Video-Walzen internationaler Marken. Slot-Zeiten: So–Do 10–2 Uhr, Fr–Sa 10–3 Uhr. Der Tischsalon öffnet abends ab 20 Uhr: <strong>2 Blackjack-Tische, 3 klassische englische Roulettes, 4 Texas-Hold'em-Tische und 15 elektronische englische Roulettes</strong>.</p><p>Drei Restaurants vor Ort. Gratis-Parkplatz. Ausweispflicht (ab 18, keine Spielsperre).</p>",
+        "activities": [
+          {
+            "title": "112 Spielautomaten",
+            "tag": null,
+            "description": "Das Casino von Saint-Julien-en-Genevois bietet 112 Spielautomaten: 11 Video-Poker, 13 klassische Walzen und 88 Video-Walzen internationaler Marken."
+          },
+          {
+            "title": "Blackjack-Tische und Roulettes",
+            "tag": null,
+            "description": "Der Tischspielsaal des Casinos von Saint-Julien verfügt über 2 Blackjack-Tische und 3 traditionelle englische Roulette-Tische, jeden Abend ab 20 Uhr geöffnet."
+          },
+          {
+            "title": "Texas Hold'em Poker",
+            "tag": null,
+            "description": "Der Pokerraum des Casinos von Saint-Julien-en-Genevois bietet 4 Texas-Hold'em-Pokertische, zugänglich Mo-Sa ab 20 Uhr und So ab 16 Uhr."
+          },
+          {
+            "title": "Elektronische englische Roulettes",
+            "tag": null,
+            "description": "15 elektronische englische Roulette-Tische sind ebenfalls im Casino von Saint-Julien-en-Genevois verfügbar — eine moderne Alternative zu den traditionellen Tischen."
+          },
+          {
+            "title": "Restaurant Le Safran",
+            "tag": null,
+            "description": "Gastronomisches Restaurant Le Safran des Casinos von Saint-Julien: geöffnet freitags und samstags abends, sonntags mittags. Gepflegter Rahmen und saisonale Karte."
+          },
+          {
+            "title": "Bar-Restaurant Le Paradise",
+            "tag": null,
+            "description": "Le Paradise, Bar und Restaurant im Spielautomatenraum des Casinos von Saint-Julien: Bar täglich ab 10 Uhr, Verpflegung mittags und abends."
+          },
+          {
+            "title": "Restaurant Le Maloja",
+            "tag": null,
+            "description": "Le Maloja, Restaurant im traditionellen Spielraum des Casinos von Saint-Julien: jeden Abend ab 20 Uhr geöffnet, intimer Rahmen."
+          },
+          {
+            "title": "Themenabende und Animationen",
+            "tag": null,
+            "description": "Das Casino von Saint-Julien-en-Genevois veranstaltet regelmäßig Tanzabende, Konzerte und Diner-Shows — Kalender auf casino-saint-julien.com einsehen."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Adresse",
+            "v": "Route d'Annecy, 74160 Saint-Julien-en-Genevois"
+          },
+          {
+            "k": "Koordinaten",
+            "v": "46,129° N · 6,088° E"
+          },
+          {
+            "k": "Höhe",
+            "v": "≈ 450 m"
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": "Spielautomaten: So-Do 10-2 Uhr, Fr-Sa 10-3 Uhr. Traditionelle Spiele: jeden Abend ab 20 Uhr. Pokerraum: Mo-Sa ab 20 Uhr, So ab 16 Uhr. Geprüft auf casino-saint-julien.com am 10. Juni 2026 — Zeiten je nach Zeitraum variabel."
+          },
+          {
+            "k": "Preise",
+            "v": "Freier und kostenloser Eintritt zum Casino von Saint-Julien. Mindesteinsatz je nach Spiel variabel. Restaurants à la carte. Geprüft am 10. Juni 2026."
+          },
+          {
+            "k": "Offizielle Website",
+            "v": "casino-saint-julien.com"
+          },
+          {
+            "k": "Telefon",
+            "v": "+33 (0)4 50 49 17 17"
+          },
+          {
+            "k": "Zugang / Parkplatz",
+            "v": "Kostenloses Parken in der Nähe des Casinos von Saint-Julien. Zugang mit dem Auto über die A40 Ausfahrt Saint-Julien-en-Genevois oder über die D1201 von Genf (≈ 10 Minuten)."
+          },
+          {
+            "k": "Besuchsdauer",
+            "v": "1 Std. für einen kurzen Rundgang, ganzer Abend für ein vollständiges Erlebnis Casino + Restaurant."
+          },
+          {
+            "k": "Publikum",
+            "v": "Streng Erwachsenen vorbehalten (18 Jahre und älter) gegen Vorlage eines Ausweises. Minderjährige auch in Begleitung nicht zugelassen."
+          },
+          {
+            "k": "Gastronomie vor Ort",
+            "v": "3 Restaurants im Casino von Saint-Julien: Le Safran (gastronomisch, Fr-Sa abends und So mittags), Le Paradise (Bar/Brasserie, täglich ab 10 Uhr), Le Maloja (Restaurant, jeden Abend ab 20 Uhr)."
+          },
+          {
+            "k": "Buchung",
+            "v": "Eintritt ohne Reservierung (mit Ausweis). Restaurants: Reservierung empfohlen, besonders für Le Safran am Wochenende."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Casino Saint-Julien-en-Genevois",
+        "Casino Partouche Saint-Julien",
+        "Casino Saint-Julien (74)"
+      ],
+      "hero": {
+        "badge": "Freier Eintritt · 18+ mit Ausweis",
+        "lead": "Casino vor den Toren Genfs: 112 Spielautomaten, 2 Blackjack-Tische, 3 englische Roulette-Tische, 4 Texas-Hold'em-Pokertische, 3 Restaurants (Le Safran, Le Paradise, Le Maloja). Täglich ab 10 Uhr geöffnet."
+      },
+      "facts": {
+        "type": "Casino · Spielautomaten + Tischspiele",
+        "access": "Freier Eintritt · ab 18 Jahren",
+        "tarif": "Freier Eintritt (Spiele kostenpflichtig)",
+        "commune": "Saint-Julien-en-Genevois",
+        "parking": "Casino-Parkplatz (kostenlos)",
+        "duration": "1 Std. bis ganzer Abend",
+        "best_season": "Ganzjährig"
+      },
+      "faq": [
+        {
+          "q": "Welche Öffnungszeiten hat das Casino von Saint-Julien?",
+          "a": "Spielautomaten des Casinos von Saint-Julien: So-Do 10-2 Uhr, Fr-Sa 10-3 Uhr. Traditionelle Spiele jeden Abend ab 20 Uhr. Pokerraum Mo-Sa ab 20 Uhr, So ab 16 Uhr. Geprüft auf casino-saint-julien.com am 10. Juni 2026."
+        },
+        {
+          "q": "Wie hoch ist das Mindestalter für den Eintritt ins Casino von Saint-Julien?",
+          "a": "Der Zugang zum Casino von Saint-Julien-en-Genevois ist Erwachsenen ab 18 Jahren vorbehalten, gegen Vorlage eines Ausweises. Minderjährige sind nicht zugelassen, auch nicht in Begleitung."
+        },
+        {
+          "q": "Wie viel kostet der Eintritt ins Casino von Saint-Julien?",
+          "a": "Der Eintritt ins Casino von Saint-Julien ist frei und kostenlos. Nur die Spiele und die Gastronomie sind kostenpflichtig. Ein Ausweis ist für den Eintritt erforderlich (nur Erwachsene). Geprüft am 10. Juni 2026."
+        },
+        {
+          "q": "Wie viele Spielautomaten hat das Casino von Saint-Julien?",
+          "a": "Das Casino von Saint-Julien-en-Genevois bietet 112 Spielautomaten: 11 Video-Poker, 13 klassische Walzen und 88 Video-Walzen internationaler Marken."
+        },
+        {
+          "q": "Welche Tischspiele gibt es im Casino von Saint-Julien?",
+          "a": "Der Tischspielsaal des Casinos von Saint-Julien umfasst 2 Blackjack-Tische, 3 traditionelle englische Roulette-Tische, 4 Texas-Hold'em-Pokertische und 15 elektronische englische Roulette-Tische."
+        },
+        {
+          "q": "Gibt es ein Restaurant im Casino von Saint-Julien?",
+          "a": "Ja, das Casino von Saint-Julien-en-Genevois hat drei Restaurants: Le Safran (gastronomisch), Le Paradise (Bar-Brasserie) und Le Maloja (Restaurant). Reservierung empfohlen, besonders für Le Safran am Wochenende."
+        },
+        {
+          "q": "Wie kommt man vom Genf zum Casino von Saint-Julien?",
+          "a": "Das Casino von Saint-Julien-en-Genevois ist etwa 10 Autominuten von Genf entfernt über die D1201 oder über die A40 Ausfahrt Saint-Julien-en-Genevois. Kostenloser Parkplatz vor Ort."
+        },
+        {
+          "q": "Muss man für das Casino von Saint-Julien reservieren?",
+          "a": "Der Zugang zum Casino von Saint-Julien erfolgt ohne Reservierung, gegen Vorlage eines Ausweises (ab 18 Jahren). Für die Restaurants Reservierung empfohlen, besonders für Le Safran am Wochenende."
+        }
+      ],
+      "schema_amenities": [
+        "112 Spielautomaten",
+        "Blackjack-Tische und englische Roulettes",
+        "Texas Hold'em Poker",
+        "Elektronische englische Roulettes",
+        "3 Restaurants (Le Safran, Le Paradise, Le Maloja)",
+        "Vor den Toren Genfs",
+        "Täglich geöffnet"
+      ]
     },
     "it": {
       "name": "Casinò di Saint-Julien",
@@ -279,8 +595,161 @@
       "meta_description": "Casinò di Saint-Julien-en-Genevois alle porte di Ginevra: 112 slot, blackjack, roulette, poker, 3 ristoranti. Aperto tutti i giorni dalle 10.",
       "hero_alt": "Casinò di Saint-Julien-en-Genevois vicino a Ginevra: slot, tavoli, bar e ristoranti",
       "body": {
-        "what_is": "<p>Il <strong>Casinò di Saint-Julien-en-Genevois</strong> è una sala da gioco sulla route d'Annecy, alle porte di Ginevra. La posizione frontaliera ne fa uno dei casinò più accessibili dalla metropoli ginevrina — meno di 10 minuti in auto. Combina sala slot, sala dei grandi giochi, poker room e tre ristoranti e bar.</p><p>Sul fronte slot: <strong>112 macchine</strong>: 11 video poker, 13 a rulli classici e 88 video-rulli di marche internazionali. Slot Dom-Gio 10-2, Ven-Sab 10-3. Sala grandi giochi dalle 20: <strong>2 tavoli blackjack, 3 roulette inglesi tradizionali, 4 tavoli Texas Hold'em poker e 15 roulette inglesi elettroniche</strong>.</p><p>Tre ristoranti. Parcheggio gratuito. Documento richiesto (oltre 18 anni, nessun divieto).</p>"
-      }
+        "what_is": "<p>Il <strong>Casinò di Saint-Julien-en-Genevois</strong> è una sala da gioco sulla route d'Annecy, alle porte di Ginevra. La posizione frontaliera ne fa uno dei casinò più accessibili dalla metropoli ginevrina — meno di 10 minuti in auto. Combina sala slot, sala dei grandi giochi, poker room e tre ristoranti e bar.</p><p>Sul fronte slot: <strong>112 macchine</strong>: 11 video poker, 13 a rulli classici e 88 video-rulli di marche internazionali. Slot Dom-Gio 10-2, Ven-Sab 10-3. Sala grandi giochi dalle 20: <strong>2 tavoli blackjack, 3 roulette inglesi tradizionali, 4 tavoli Texas Hold'em poker e 15 roulette inglesi elettroniche</strong>.</p><p>Tre ristoranti. Parcheggio gratuito. Documento richiesto (oltre 18 anni, nessun divieto).</p>",
+        "activities": [
+          {
+            "title": "112 slot machine",
+            "tag": null,
+            "description": "Il Casinò di Saint-Julien-en-Genevois propone 112 slot machine: 11 video poker, 13 rulli classici e 88 rulli video di marche internazionali."
+          },
+          {
+            "title": "Tavoli di blackjack e roulette",
+            "tag": null,
+            "description": "Il salone dei grandi giochi del Casinò di Saint-Julien conta 2 tavoli di blackjack e 3 roulette inglesi tradizionali, aperte tutte le sere dalle 20."
+          },
+          {
+            "title": "Poker Texas Hold'em",
+            "tag": null,
+            "description": "La poker room del Casinò di Saint-Julien-en-Genevois propone 4 tavoli di Texas Hold'em poker, accessibili lun-sab dalle 20 e dom dalle 16."
+          },
+          {
+            "title": "Roulette inglesi elettroniche",
+            "tag": null,
+            "description": "15 roulette inglesi elettroniche sono anche disponibili al Casinò di Saint-Julien-en-Genevois — un'alternativa moderna ai tavoli tradizionali."
+          },
+          {
+            "title": "Ristorante Le Safran",
+            "tag": null,
+            "description": "Ristorante gastronomico Le Safran del Casinò di Saint-Julien: aperto venerdì e sabato sera, domenica a pranzo. Cornice curata e carta stagionale."
+          },
+          {
+            "title": "Bar-ristorante Le Paradise",
+            "tag": null,
+            "description": "Le Paradise, bar e ristorante nella sala delle slot machine del Casinò di Saint-Julien: bar tutti i giorni dalle 10, ristorazione pranzo e cena."
+          },
+          {
+            "title": "Ristorante Le Maloja",
+            "tag": null,
+            "description": "Le Maloja, ristorante nella sala dei giochi tradizionali del Casinò di Saint-Julien: aperto tutte le sere dalle 20, cornice intima."
+          },
+          {
+            "title": "Serate e animazioni a tema",
+            "tag": null,
+            "description": "Il Casinò di Saint-Julien-en-Genevois programma regolarmente serate danzanti, concerti e cene-spettacolo — consultare casino-saint-julien.com per il calendario."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Indirizzo",
+            "v": "Route d'Annecy, 74160 Saint-Julien-en-Genevois"
+          },
+          {
+            "k": "Coordinate",
+            "v": "46,129° N · 6,088° E"
+          },
+          {
+            "k": "Altitudine",
+            "v": "≈ 450 m"
+          },
+          {
+            "k": "Orari",
+            "v": "Slot machine: dom-gio 10-2, ven-sab 10-3. Giochi tradizionali: tutte le sere dalle 20. Poker room: lun-sab dalle 20, dom dalle 16. Verificato su casino-saint-julien.com il 10 giugno 2026 — orari variabili secondo il periodo."
+          },
+          {
+            "k": "Tariffe",
+            "v": "Ingresso libero e gratuito al Casinò di Saint-Julien. Puntata minima variabile secondo il gioco. Ristoranti à la carte. Verificato il 10 giugno 2026."
+          },
+          {
+            "k": "Sito ufficiale",
+            "v": "casino-saint-julien.com"
+          },
+          {
+            "k": "Telefono",
+            "v": "+33 (0)4 50 49 17 17"
+          },
+          {
+            "k": "Accesso / Parcheggio",
+            "v": "Parcheggio gratuito vicino al Casinò di Saint-Julien. Accesso in auto dalla A40 uscita Saint-Julien-en-Genevois, o dalla D1201 da Ginevra (≈ 10 minuti)."
+          },
+          {
+            "k": "Durata della visita",
+            "v": "1 h per un giro rapido, tutta la serata per un'esperienza completa casinò + ristorante."
+          },
+          {
+            "k": "Pubblico",
+            "v": "Riservato strettamente alle persone maggiorenni (18 anni compiuti) su presentazione di un documento d'identità. Accesso vietato ai minori anche accompagnati."
+          },
+          {
+            "k": "Ristorazione sul posto",
+            "v": "3 ristoranti al Casinò di Saint-Julien: Le Safran (gastronomico, ven-sab sera e dom pranzo), Le Paradise (bar/brasserie, tutti i giorni dalle 10), Le Maloja (ristorante, tutte le sere dalle 20)."
+          },
+          {
+            "k": "Prenotazione",
+            "v": "Ingresso senza prenotazione (su documento). Ristoranti su prenotazione consigliata, soprattutto Le Safran nel weekend."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Casinò di Saint-Julien-en-Genevois",
+        "Casinò Partouche Saint-Julien",
+        "Casinò Saint-Julien (74)"
+      ],
+      "hero": {
+        "badge": "Ingresso libero · 18+ con documento",
+        "lead": "Casinò alle porte di Ginevra: 112 slot machine, 2 tavoli di blackjack, 3 roulette inglesi, 4 tavoli di poker Texas Hold'em, 3 ristoranti (Le Safran, Le Paradise, Le Maloja). Aperto tutti i giorni dalle 10."
+      },
+      "facts": {
+        "type": "Casinò · slot machine + giochi da tavolo",
+        "access": "Ingresso libero · 18 anni compiuti",
+        "tarif": "Ingresso gratuito (giochi a pagamento)",
+        "commune": "Saint-Julien-en-Genevois",
+        "parking": "Parcheggio del casinò (gratuito)",
+        "duration": "Da 1 h a tutta la serata",
+        "best_season": "Tutto l'anno"
+      },
+      "faq": [
+        {
+          "q": "Quali sono gli orari del Casinò di Saint-Julien?",
+          "a": "Slot machine del Casinò di Saint-Julien: dom-gio 10-2, ven-sab 10-3. Giochi tradizionali tutte le sere dalle 20. Poker room lun-sab dalle 20, dom dalle 16. Verificato su casino-saint-julien.com il 10 giugno 2026."
+        },
+        {
+          "q": "Qual è l'età minima per entrare al Casinò di Saint-Julien?",
+          "a": "L'accesso al Casinò di Saint-Julien-en-Genevois è riservato alle persone maggiorenni di 18 anni compiuti, su presentazione di un documento d'identità. I minori non sono ammessi, neppure accompagnati."
+        },
+        {
+          "q": "Quanto costa l'ingresso al Casinò di Saint-Julien?",
+          "a": "L'ingresso al Casinò di Saint-Julien è libero e gratuito. Solo i giochi e la ristorazione sono a pagamento. Un documento d'identità è obbligatorio per entrare (solo maggiorenni). Verificato il 10 giugno 2026."
+        },
+        {
+          "q": "Quante slot machine al Casinò di Saint-Julien?",
+          "a": "Il Casinò di Saint-Julien-en-Genevois propone 112 slot machine: 11 video poker, 13 rulli classici e 88 rulli video di marche internazionali."
+        },
+        {
+          "q": "Quali giochi da tavolo al Casinò di Saint-Julien?",
+          "a": "Il salone dei grandi giochi del Casinò di Saint-Julien comprende 2 tavoli di blackjack, 3 roulette inglesi tradizionali, 4 tavoli di Texas Hold'em poker e 15 roulette inglesi elettroniche."
+        },
+        {
+          "q": "C'è un ristorante al Casinò di Saint-Julien?",
+          "a": "Sì, il Casinò di Saint-Julien-en-Genevois conta tre ristoranti: Le Safran (gastronomico), Le Paradise (bar-brasserie) e Le Maloja (ristorante). Prenotazione consigliata, soprattutto per Le Safran nel weekend."
+        },
+        {
+          "q": "Come arrivare al Casinò di Saint-Julien da Ginevra?",
+          "a": "Il Casinò di Saint-Julien-en-Genevois si trova a circa 10 minuti in auto da Ginevra via la D1201, o via la A40 uscita Saint-Julien-en-Genevois. Parcheggio gratuito sul posto."
+        },
+        {
+          "q": "Bisogna prenotare per andare al Casinò di Saint-Julien?",
+          "a": "L'accesso al Casinò di Saint-Julien si fa senza prenotazione, su presentazione di un documento d'identità (18 anni compiuti). Per i ristoranti, prenotazione consigliata soprattutto per Le Safran nel weekend."
+        }
+      ],
+      "schema_amenities": [
+        "112 slot machine",
+        "Tavoli di blackjack e roulette inglesi",
+        "Poker Texas Hold'em",
+        "Roulette inglesi elettroniche",
+        "3 ristoranti (Le Safran, Le Paradise, Le Maloja)",
+        "Alle porte di Ginevra",
+        "Aperto tutti i giorni"
+      ]
     },
     "es": {
       "name": "Casino de Saint-Julien",

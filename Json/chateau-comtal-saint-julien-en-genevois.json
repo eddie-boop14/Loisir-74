@@ -88,6 +88,16 @@
       "date": "2026-06-13",
       "by": "scripts/ingest_translations.py",
       "note": "Translation ingest [nl]: 5 field(s) updated."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for de from translations/agent_I_de_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for it from translations/agent_I_it_secondary.json."
     }
   ],
   "i18n": {
@@ -255,8 +265,155 @@
       "meta_description": "Medieval remains of the Comtal de Ternier castle at Saint-Julien-en-Genevois: seat of the châtellenie ceded to the Counts of Geneva, separated from La Poype by a defensive ditch.",
       "hero_alt": "Remains of the Château Comtal de Ternier on the hill above Saint-Julien-en-Genevois in Haute-Savoie",
       "body": {
-        "what_is": "<p>The <strong>Château Comtal de Ternier</strong> is one of the two medieval remnants crowning the hill of Ternier, a hamlet of the commune of Saint-Julien-en-Genevois (74160), about two kilometres south of the town centre. Built in the 13th century, it was the seat of the <strong>Châtellenie de Ternier</strong>, an important seigneury controlling the territories south of Geneva, between the Arve and the Laire.</p><p>The fortress originally belonged to the Ternier family, an influential lineage that sometimes rivalled the Counts of Geneva. The castle was then ceded to the Counts and became a comital residence and administrative seat — hence the name \"Comtal\". Not far away stood another fortification, <strong>La Poype</strong>, owned by the Ternier family proper: the two castles were separated by a mound and two defensive ditches still readable in the landscape.</p><p>The site is accessible by marked paths from the Ternier hamlet. Walls and earthworks visible; free access.</p>"
-      }
+        "what_is": "<p>The <strong>Château Comtal de Ternier</strong> is one of the two medieval remnants crowning the hill of Ternier, a hamlet of the commune of Saint-Julien-en-Genevois (74160), about two kilometres south of the town centre. Built in the 13th century, it was the seat of the <strong>Châtellenie de Ternier</strong>, an important seigneury controlling the territories south of Geneva, between the Arve and the Laire.</p><p>The fortress originally belonged to the Ternier family, an influential lineage that sometimes rivalled the Counts of Geneva. The castle was then ceded to the Counts and became a comital residence and administrative seat — hence the name \"Comtal\". Not far away stood another fortification, <strong>La Poype</strong>, owned by the Ternier family proper: the two castles were separated by a mound and two defensive ditches still readable in the landscape.</p><p>The site is accessible by marked paths from the Ternier hamlet. Walls and earthworks visible; free access.</p>",
+        "activities": [
+          {
+            "title": "Reading the remains of the Counts' Castle",
+            "tag": "Heritage",
+            "description": "Spotting the wall sections and excavations of the Counts' Castle of Ternier on the hill of Ternier — discreet but significant remains of a medieval châtellenie."
+          },
+          {
+            "title": "Discovering the mound and ditches",
+            "tag": null,
+            "description": "The Counts' Castle of Ternier was separated from the neighbouring Poype by a mound and two defensive ditches still legible in the landscape of the hill."
+          },
+          {
+            "title": "Combined visit with La Poype",
+            "tag": null,
+            "description": "The Counts' Castle of Ternier is best visited together with the neighbouring Poype de Ternier: a fortified medieval ensemble of two distinct structures on the same hill."
+          },
+          {
+            "title": "View over the Saint-Julien basin",
+            "tag": null,
+            "description": "From the remains of the Counts' Castle of Ternier, an open panorama over the Saint-Julien-en-Genevois basin, the Salève range and the Swiss border."
+          },
+          {
+            "title": "History of the châtellenie of Ternier",
+            "tag": null,
+            "description": "The Counts' Castle of Ternier was the seat of the châtellenie that controlled the southern Genevois territories between the Arve and the Laire — a key stage in the history of the Counts of Geneva."
+          },
+          {
+            "title": "Walk from Saint-Julien",
+            "tag": "Family",
+            "description": "The Counts' Castle of Ternier can easily be reached on foot or by bike from Saint-Julien-en-Genevois (≈ 2 km), via the rural lanes of the Pays de Genève."
+          },
+          {
+            "title": "Medieval-landscape photography",
+            "tag": null,
+            "description": "The remains of the Counts' Castle of Ternier offer an authentic photographic setting: medieval stones, undulating terrain, a discreet Savoyard landscape."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Address",
+            "v": "Hill of Ternier, hamlet of Ternier, 74160 Saint-Julien-en-Genevois (≈ 2 km south of the town centre)"
+          },
+          {
+            "k": "Coordinates",
+            "v": "46.139° N · 6.089° E"
+          },
+          {
+            "k": "Altitude",
+            "v": "≈ 500 m (hill of Ternier)"
+          },
+          {
+            "k": "Opening hours",
+            "v": "Free access 24/7, year-round. Outdoor archaeological site, unguarded. Checked on 10 June 2026."
+          },
+          {
+            "k": "Prices",
+            "v": "Free. No ticketing — open-access site. Checked on 10 June 2026."
+          },
+          {
+            "k": "Official site",
+            "v": "Heritage notices on montsdegeneve.com and Monts du Genevois Tourist Office"
+          },
+          {
+            "k": "Phone",
+            "v": "Monts du Genevois Tourist Office (Saint-Julien): +33 (0)4 50 04 71 63"
+          },
+          {
+            "k": "Access / Parking",
+            "v": "Free parking in the hamlet of Ternier. Access on foot via rural lanes from Saint-Julien-en-Genevois (≈ 2 km). No direct public transport to the hamlet."
+          },
+          {
+            "k": "Length of visit",
+            "v": "30 to 45 minutes for the Counts' Castle alone, 1 hr to 1 hr 30 for a circuit combined with the Poype de Ternier."
+          },
+          {
+            "k": "Audience",
+            "v": "Fans of medieval history and Savoyard châtellenies, walkers, families curious about heritage."
+          },
+          {
+            "k": "Accessibility",
+            "v": "Natural site on a hill: dirt paths, uneven ground, steps. Not wheelchair-accessible. Walking shoes recommended."
+          },
+          {
+            "k": "Animals",
+            "v": "Dogs welcome on a lead on the hill of Ternier."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Counts' Castle",
+        "Castles of Ternier",
+        "Ternier remains — Saint-Julien"
+      ],
+      "hero": {
+        "badge": "Free access · Archaeological site",
+        "lead": "Discover the remains of the Counts' Castle (Château comtal) of Ternier, a former medieval stronghold ceded to the Counts of Geneva and then to Savoy: a discreet silhouette on the hill of Ternier, 2 km from Saint-Julien-en-Genevois."
+      },
+      "facts": {
+        "type": "Medieval remains · former châtellenie",
+        "access": "Free access · free of charge",
+        "tarif": "Free",
+        "commune": "Saint-Julien-en-Genevois",
+        "parking": "Hamlet of Ternier (free)",
+        "duration": "30 to 45 minutes",
+        "best_season": "Year-round"
+      },
+      "faq": [
+        {
+          "q": "What is the Counts' Castle of Ternier?",
+          "a": "The Counts' Castle of Ternier is one of the two medieval remains on the hill of Ternier at Saint-Julien-en-Genevois. It was the seat of the châtellenie of Ternier, ceded to the Counts of Geneva and then to the Counts of Savoy. Today: wall sections and ditches in open access."
+        },
+        {
+          "q": "Where is the Counts' Castle of Ternier?",
+          "a": "The Counts' Castle of Ternier is on the hill of Ternier, a hamlet under the commune of Saint-Julien-en-Genevois (74160), about 2 km south of the town centre, in the Pays de Genève. GPS: 46.139° N · 6.089° E."
+        },
+        {
+          "q": "What is the history of the Counts' Castle of Ternier?",
+          "a": "The Counts' Castle of Ternier dates from the 13th century. It originally belonged to the Ternier family before being ceded to the Counts of Geneva and then to the Counts of Savoy. Damaged by the Bernese and Savoyard wars, it was gradually abandoned."
+        },
+        {
+          "q": "How much does it cost to visit the Counts' Castle of Ternier?",
+          "a": "Visiting the Counts' Castle of Ternier is entirely free: remains in open access on the hill. No ticket desk, no fixed hours. Checked on 10 June 2026."
+        },
+        {
+          "q": "What are the opening hours of the Counts' Castle of Ternier?",
+          "a": "The Counts' Castle of Ternier site is open 24/7, year-round. Daytime is preferable to read the remains and enjoy the panorama. Checked on 10 June 2026."
+        },
+        {
+          "q": "What is the difference between the Counts' Castle and La Poype de Ternier?",
+          "a": "The Counts' Castle of Ternier and La Poype are two fortified structures next to each other on the same hill. The Counts' Castle was a comital residence; La Poype was a fortified manor of the Ternier family. The two were separated by a mound and two ditches."
+        },
+        {
+          "q": "How long should I allow for the Counts' Castle of Ternier?",
+          "a": "Allow 30 to 45 minutes to discover the remains of the Counts' Castle of Ternier; 1 hr to 1 hr 30 for a circuit combined with the neighbouring Poype de Ternier."
+        },
+        {
+          "q": "How do I get to the Counts' Castle of Ternier?",
+          "a": "From Saint-Julien-en-Genevois, the Counts' Castle of Ternier is reachable on foot or by bike (≈ 2 km) via rural lanes. By car, free parking in the hamlet of Ternier. No direct public transport."
+        }
+      ],
+      "schema_amenities": [
+        "13th-century medieval remains",
+        "Former châtellenie of Ternier",
+        "Wall sections and defensive ditches",
+        "Open-access site",
+        "Views over Saint-Julien and the Salève",
+        "Combine with La Poype"
+      ]
     },
     "de": {
       "name": "Gräfliches Schloss von Ternier",
@@ -264,8 +421,155 @@
       "meta_description": "Mittelalterliche Überreste des gräflichen Schlosses Ternier in Saint-Julien-en-Genevois: Sitz der an die Grafen von Genf abgetretenen Châtellenie, durch Graben von La Poype getrennt.",
       "hero_alt": "Überreste des gräflichen Schlosses Ternier auf dem Hügel über Saint-Julien-en-Genevois in Haute-Savoie",
       "body": {
-        "what_is": "<p>Das <strong>gräfliche Schloss von Ternier</strong> ist eines der zwei mittelalterlichen Überreste, die den Hügel von Ternier krönen, einem Weiler der Gemeinde Saint-Julien-en-Genevois (74160), etwa zwei Kilometer südlich der Innenstadt. Im 13. Jh. erbaut, war es Sitz der <strong>Châtellenie von Ternier</strong>, einer wichtigen Seigneurie, die die Gebiete südlich Genfs zwischen Arve und Laire kontrollierte.</p><p>Die Festung gehörte ursprünglich der Familie von Ternier, einer einflussreichen Linie, die mitunter mit den Grafen von Genf wetteiferte. Das Schloss wurde dann an die Grafen abgetreten und wurde gräfliche Residenz und Verwaltungssitz — daher der Name „Comtal\". Unweit stand eine weitere Befestigung, <strong>La Poype</strong>, im Besitz der Familie Ternier selbst: die beiden Burgen waren durch einen Hügel und zwei Verteidigungsgräben getrennt.</p><p>Die Stätte ist über markierte Wege vom Weiler Ternier erreichbar. Mauern und Erdwerke sichtbar; frei zugänglich.</p>"
-      }
+        "what_is": "<p>Das <strong>gräfliche Schloss von Ternier</strong> ist eines der zwei mittelalterlichen Überreste, die den Hügel von Ternier krönen, einem Weiler der Gemeinde Saint-Julien-en-Genevois (74160), etwa zwei Kilometer südlich der Innenstadt. Im 13. Jh. erbaut, war es Sitz der <strong>Châtellenie von Ternier</strong>, einer wichtigen Seigneurie, die die Gebiete südlich Genfs zwischen Arve und Laire kontrollierte.</p><p>Die Festung gehörte ursprünglich der Familie von Ternier, einer einflussreichen Linie, die mitunter mit den Grafen von Genf wetteiferte. Das Schloss wurde dann an die Grafen abgetreten und wurde gräfliche Residenz und Verwaltungssitz — daher der Name „Comtal\". Unweit stand eine weitere Befestigung, <strong>La Poype</strong>, im Besitz der Familie Ternier selbst: die beiden Burgen waren durch einen Hügel und zwei Verteidigungsgräben getrennt.</p><p>Die Stätte ist über markierte Wege vom Weiler Ternier erreichbar. Mauern und Erdwerke sichtbar; frei zugänglich.</p>",
+        "activities": [
+          {
+            "title": "Die Überreste des Château comtal lesen",
+            "tag": "Kulturerbe",
+            "description": "Erkennen der Mauerteile und Ausgrabungen des Château comtal von Ternier auf dem Hügel von Ternier — diskrete, aber bedeutende Überreste einer mittelalterlichen Châtellenie."
+          },
+          {
+            "title": "Entdeckung des Tertres und der Gräben",
+            "tag": null,
+            "description": "Das Château comtal von Ternier war von der benachbarten Poype durch einen Tertre und zwei Verteidigungsgräben getrennt, die in der Landschaft des Hügels noch lesbar sind."
+          },
+          {
+            "title": "Kombinierter Besuch mit La Poype",
+            "tag": null,
+            "description": "Das Château comtal von Ternier besichtigt man mit der benachbarten Poype de Ternier: ein mittelalterliches Festungsensemble aus zwei verschiedenen Bauwerken auf demselben Hügel."
+          },
+          {
+            "title": "Blick auf das Becken von Saint-Julien",
+            "tag": null,
+            "description": "Von den Überresten des Château comtal von Ternier aus freies Panorama über das Becken von Saint-Julien-en-Genevois, die Salève-Kette und die Schweizer Grenze."
+          },
+          {
+            "title": "Geschichte der Châtellenie von Ternier",
+            "tag": null,
+            "description": "Das Château comtal von Ternier war Sitz der Châtellenie, die die südlich-genferischen Territorien zwischen Arve und Laire kontrollierte — eine Schlüsseletappe in der Geschichte der Grafen von Genf."
+          },
+          {
+            "title": "Spaziergang ab Saint-Julien",
+            "tag": "Familie",
+            "description": "Das Château comtal von Ternier ist von Saint-Julien-en-Genevois (≈ 2 km) leicht zu Fuß oder mit dem Fahrrad erreichbar, über die ländlichen Wege des Pays de Genève."
+          },
+          {
+            "title": "Fotografie der mittelalterlichen Landschaft",
+            "tag": null,
+            "description": "Die Überreste des Château comtal von Ternier bieten eine authentische fotografische Kulisse: mittelalterliche Steine, hügeliges Gelände, diskrete savoyische Landschaft."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Adresse",
+            "v": "Hügel von Ternier, Weiler Ternier, 74160 Saint-Julien-en-Genevois (≈ 2 km südlich des Stadtzentrums)"
+          },
+          {
+            "k": "Koordinaten",
+            "v": "46,139° N · 6,089° E"
+          },
+          {
+            "k": "Höhe",
+            "v": "≈ 500 m (Hügel von Ternier)"
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": "Freier Zugang rund um die Uhr, ganzjährig. Archäologische Außenstätte ohne Bewachung. Geprüft am 10. Juni 2026."
+          },
+          {
+            "k": "Preise",
+            "v": "Kostenlos. Keine Kasse — frei zugängliche Stätte. Geprüft am 10. Juni 2026."
+          },
+          {
+            "k": "Offizielle Website",
+            "v": "Heritage-Notizen auf montsdegeneve.com und Tourismusbüro Monts du Genevois"
+          },
+          {
+            "k": "Telefon",
+            "v": "Tourismusbüro Monts du Genevois (Saint-Julien): +33 (0)4 50 04 71 63"
+          },
+          {
+            "k": "Zugang / Parkplatz",
+            "v": "Kostenloses Parken im Weiler Ternier. Zugang zu Fuß über ländliche Wege ab Saint-Julien-en-Genevois (≈ 2 km). Kein direkter öffentlicher Verkehr zum Weiler."
+          },
+          {
+            "k": "Besuchsdauer",
+            "v": "30 bis 45 Minuten für das Château comtal allein, 1 Std. bis 1 Std. 30 im kombinierten Rundgang mit der Poype de Ternier."
+          },
+          {
+            "k": "Publikum",
+            "v": "Liebhaber mittelalterlicher Geschichte und savoyischer Châtellenien, Wanderer, neugierige Familien."
+          },
+          {
+            "k": "Barrierefreiheit",
+            "v": "Naturstandort auf einem Hügel: Erdwege, unebenes Gelände, Stufen. Nicht rollstuhlgerecht. Wanderschuhe empfohlen."
+          },
+          {
+            "k": "Tiere",
+            "v": "Hunde an der Leine auf dem Hügel von Ternier erlaubt."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Château comtal",
+        "Burgen von Ternier",
+        "Überreste Ternier Saint-Julien"
+      ],
+      "hero": {
+        "badge": "Freier Zugang · Archäologische Stätte",
+        "lead": "Entdecken Sie die Überreste des Château comtal von Ternier, einer ehemaligen mittelalterlichen Festung, die den Grafen von Genf und dann Savoyen abgetreten wurde: diskrete Silhouette auf dem Hügel von Ternier, 2 km von Saint-Julien-en-Genevois entfernt."
+      },
+      "facts": {
+        "type": "Mittelalterliche Überreste · ehemalige Châtellenie",
+        "access": "Freier Zugang · kostenlos",
+        "tarif": "Kostenlos",
+        "commune": "Saint-Julien-en-Genevois",
+        "parking": "Weiler Ternier (kostenlos)",
+        "duration": "30 bis 45 Minuten",
+        "best_season": "Ganzjährig"
+      },
+      "faq": [
+        {
+          "q": "Was ist das Château comtal von Ternier?",
+          "a": "Das Château comtal von Ternier ist eine der beiden mittelalterlichen Überreste auf dem Hügel von Ternier in Saint-Julien-en-Genevois. Es war Sitz der Châtellenie von Ternier, abgetreten an die Grafen von Genf und dann an die Grafen von Savoyen. Heute: Mauerteile und Gräben in freiem Zugang."
+        },
+        {
+          "q": "Wo befindet sich das Château comtal von Ternier?",
+          "a": "Das Château comtal von Ternier liegt auf dem Hügel von Ternier, einem Weiler der Gemeinde Saint-Julien-en-Genevois (74160), etwa 2 km südlich des Stadtzentrums, im Pays de Genève. GPS: 46,139° N · 6,089° E."
+        },
+        {
+          "q": "Wie ist die Geschichte des Château comtal von Ternier?",
+          "a": "Das Château comtal von Ternier stammt aus dem 13. Jahrhundert. Es gehörte ursprünglich der Familie von Ternier, bevor es an die Grafen von Genf und dann an die Grafen von Savoyen abgetreten wurde. Beschädigt durch die Berner und Savoyer Kriege, wurde es allmählich aufgegeben."
+        },
+        {
+          "q": "Wie viel kostet der Besuch des Château comtal von Ternier?",
+          "a": "Der Besuch des Château comtal von Ternier ist völlig kostenlos: frei zugängliche Überreste auf dem Hügel. Keine Kasse, keine Öffnungszeiten. Geprüft am 10. Juni 2026."
+        },
+        {
+          "q": "Welche Öffnungszeiten hat das Château comtal von Ternier?",
+          "a": "Der Standort des Château comtal von Ternier ist rund um die Uhr ganzjährig frei zugänglich. Tagsüber für das Lesen der Überreste und das Panorama bevorzugen. Geprüft am 10. Juni 2026."
+        },
+        {
+          "q": "Was ist der Unterschied zwischen dem Château comtal und La Poype de Ternier?",
+          "a": "Das Château comtal von Ternier und La Poype sind zwei benachbarte befestigte Bauwerke auf demselben Hügel. Das Château comtal war Grafenresidenz; La Poype war ein Wehrhaus der Familie von Ternier. Die beiden waren durch einen Tertre und zwei Gräben getrennt."
+        },
+        {
+          "q": "Wie viel Zeit sollte man für das Château comtal von Ternier einplanen?",
+          "a": "Rechnen Sie 30 bis 45 Minuten, um die Überreste des Château comtal von Ternier zu entdecken; 1 Std. bis 1 Std. 30 im kombinierten Rundgang mit der benachbarten Poype de Ternier."
+        },
+        {
+          "q": "Wie kommt man zum Château comtal von Ternier?",
+          "a": "Von Saint-Julien-en-Genevois aus ist das Château comtal von Ternier zu Fuß oder mit dem Fahrrad (≈ 2 km) über ländliche Wege erreichbar. Mit dem Auto kostenloses Parken im Weiler Ternier. Kein direkter öffentlicher Verkehr."
+        }
+      ],
+      "schema_amenities": [
+        "Mittelalterliche Überreste aus dem 13. Jahrhundert",
+        "Ehemalige Châtellenie von Ternier",
+        "Mauerteile und Verteidigungsgräben",
+        "Frei zugänglicher Standort",
+        "Blick auf Saint-Julien und den Salève",
+        "Kombination mit La Poype"
+      ]
     },
     "it": {
       "name": "Castello Comtal di Ternier",
@@ -273,8 +577,155 @@
       "meta_description": "Vestigia medievali del castello Comtal di Ternier a Saint-Julien-en-Genevois: sede della castellania ceduta ai conti di Ginevra, separato da La Poype da un fossato.",
       "hero_alt": "Vestigia del castello Comtal di Ternier sulla collina sopra Saint-Julien-en-Genevois in Alta Savoia",
       "body": {
-        "what_is": "<p>Il <strong>Castello Comtal di Ternier</strong> è uno dei due vestigia medievali che coronano la collina di Ternier, frazione di Saint-Julien-en-Genevois (74160), a circa due km a sud del centro. Costruito nel XIII sec., fu sede della <strong>Castellania di Ternier</strong>, importante signoria che controllava i territori a sud di Ginevra, tra Arve e Laire.</p><p>La fortezza apparteneva originariamente alla famiglia di Ternier, lignaggio influente che a volte rivaleggiava con i conti di Ginevra. Il castello fu poi ceduto ai conti di Ginevra e divenne residenza comitale — da cui il nome \"Comtal\". Non lontano sorgeva un'altra fortificazione, <strong>La Poype</strong>: i due castelli erano separati da una collinetta e due fossati ancora leggibili.</p><p>Il sito è accessibile da sentieri segnati dalla frazione di Ternier. Muri e terrapieni visibili; accesso libero.</p>"
-      }
+        "what_is": "<p>Il <strong>Castello Comtal di Ternier</strong> è uno dei due vestigia medievali che coronano la collina di Ternier, frazione di Saint-Julien-en-Genevois (74160), a circa due km a sud del centro. Costruito nel XIII sec., fu sede della <strong>Castellania di Ternier</strong>, importante signoria che controllava i territori a sud di Ginevra, tra Arve e Laire.</p><p>La fortezza apparteneva originariamente alla famiglia di Ternier, lignaggio influente che a volte rivaleggiava con i conti di Ginevra. Il castello fu poi ceduto ai conti di Ginevra e divenne residenza comitale — da cui il nome \"Comtal\". Non lontano sorgeva un'altra fortificazione, <strong>La Poype</strong>: i due castelli erano separati da una collinetta e due fossati ancora leggibili.</p><p>Il sito è accessibile da sentieri segnati dalla frazione di Ternier. Muri e terrapieni visibili; accesso libero.</p>",
+        "activities": [
+          {
+            "title": "Lettura delle vestigia del Castello comitale",
+            "tag": "Patrimonio",
+            "description": "Individuazione dei tratti di muro e degli scavi del Castello comitale di Ternier sulla collina di Ternier — resti discreti ma significativi di una castellania medievale."
+          },
+          {
+            "title": "Scoperta del terrapieno e dei fossati",
+            "tag": null,
+            "description": "Il Castello comitale di Ternier era separato dalla vicina Poype da un terrapieno e da due fossati difensivi ancora leggibili nel paesaggio della collina."
+          },
+          {
+            "title": "Visita combinata con La Poype",
+            "tag": null,
+            "description": "Il Castello comitale di Ternier si visita con la vicina Poype di Ternier: insieme fortificato medievale, due opere distinte sulla stessa collina."
+          },
+          {
+            "title": "Vista sul bacino di Saint-Julien",
+            "tag": null,
+            "description": "Dalle vestigia del Castello comitale di Ternier, panorama aperto sul bacino di Saint-Julien-en-Genevois, sulla catena del Salève e sulla frontiera svizzera."
+          },
+          {
+            "title": "Storia della castellania di Ternier",
+            "tag": null,
+            "description": "Il Castello comitale di Ternier era sede della castellania che controllava i territori meridionali di Ginevra tra Arve e Laire — tappa chiave della storia dei conti di Ginevra."
+          },
+          {
+            "title": "Passeggiata da Saint-Julien",
+            "tag": "Famiglia",
+            "description": "Il Castello comitale di Ternier si raggiunge facilmente a piedi o in bicicletta da Saint-Julien-en-Genevois (≈ 2 km), per i sentieri rurali del Pays de Genève."
+          },
+          {
+            "title": "Fotografia di paesaggio medievale",
+            "tag": null,
+            "description": "Le vestigia del Castello comitale di Ternier offrono una cornice fotografica autentica: pietre medievali, terreno ondulato, paesaggio savoiardo discreto."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Indirizzo",
+            "v": "Collina di Ternier, borgo di Ternier, 74160 Saint-Julien-en-Genevois (≈ 2 km a sud del centro città)"
+          },
+          {
+            "k": "Coordinate",
+            "v": "46,139° N · 6,089° E"
+          },
+          {
+            "k": "Altitudine",
+            "v": "≈ 500 m (collina di Ternier)"
+          },
+          {
+            "k": "Orari",
+            "v": "Accesso libero 24h/24, tutto l'anno. Sito archeologico esterno senza sorveglianza. Verificato il 10 giugno 2026."
+          },
+          {
+            "k": "Tariffe",
+            "v": "Gratuito. Nessuna biglietteria — sito ad accesso libero. Verificato il 10 giugno 2026."
+          },
+          {
+            "k": "Sito ufficiale",
+            "v": "Schede patrimoniali su montsdegeneve.com e Ufficio del turismo Monts du Genevois"
+          },
+          {
+            "k": "Telefono",
+            "v": "Ufficio del turismo Monts du Genevois (Saint-Julien): +33 (0)4 50 04 71 63"
+          },
+          {
+            "k": "Accesso / Parcheggio",
+            "v": "Sosta gratuita nel borgo di Ternier. Accesso a piedi tramite sentieri rurali da Saint-Julien-en-Genevois (≈ 2 km). Nessun trasporto pubblico diretto al borgo."
+          },
+          {
+            "k": "Durata della visita",
+            "v": "Da 30 a 45 minuti per il solo Castello comitale, da 1 h a 1 h 30 in circuito combinato con la Poype di Ternier."
+          },
+          {
+            "k": "Pubblico",
+            "v": "Amanti della storia medievale e delle castellanie savoiarde, escursionisti, famiglie curiose del patrimonio."
+          },
+          {
+            "k": "Accessibilità",
+            "v": "Sito naturale su collina: sentieri in terra, terreno irregolare, gradini. Non accessibile PMR. Scarpe da passeggio consigliate."
+          },
+          {
+            "k": "Animali",
+            "v": "Cani ammessi tenuti al guinzaglio sulla collina di Ternier."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Castello comitale",
+        "Castelli di Ternier",
+        "Vestigia Ternier Saint-Julien"
+      ],
+      "hero": {
+        "badge": "Accesso libero · Sito archeologico",
+        "lead": "Scoprite le vestigia del Castello comitale di Ternier, antica fortezza medievale ceduta ai conti di Ginevra poi alla Savoia: sagoma discreta sulla collina di Ternier, a 2 km da Saint-Julien-en-Genevois."
+      },
+      "facts": {
+        "type": "Vestigia medievali · ex castellania",
+        "access": "Accesso libero · gratuito",
+        "tarif": "Gratuito",
+        "commune": "Saint-Julien-en-Genevois",
+        "parking": "Borgo di Ternier (gratuito)",
+        "duration": "Da 30 a 45 minuti",
+        "best_season": "Tutto l'anno"
+      },
+      "faq": [
+        {
+          "q": "Cos'è il Castello comitale di Ternier?",
+          "a": "Il Castello comitale di Ternier è una delle due vestigia medievali della collina di Ternier a Saint-Julien-en-Genevois. Fu sede della castellania di Ternier, ceduta ai conti di Ginevra e poi ai conti di Savoia. Oggi: tratti di muro e fossati ad accesso libero."
+        },
+        {
+          "q": "Dove si trova il Castello comitale di Ternier?",
+          "a": "Il Castello comitale di Ternier si trova sulla collina di Ternier, borgo dipendente da Saint-Julien-en-Genevois (74160), a circa 2 km a sud del centro città, nel Pays de Genève. GPS: 46,139° N · 6,089° E."
+        },
+        {
+          "q": "Qual è la storia del Castello comitale di Ternier?",
+          "a": "Il Castello comitale di Ternier risale al XIII secolo. Apparteneva inizialmente alla famiglia di Ternier prima di essere ceduto ai conti di Ginevra, poi ai conti di Savoia. Danneggiato dalle guerre bernesi e savoiarde, fu progressivamente abbandonato."
+        },
+        {
+          "q": "Quanto costa la visita del Castello comitale di Ternier?",
+          "a": "La visita del Castello comitale di Ternier è interamente gratuita: vestigia ad accesso libero sulla collina. Nessuna biglietteria, nessun orario imposto. Verificato il 10 giugno 2026."
+        },
+        {
+          "q": "Quali sono gli orari del Castello comitale di Ternier?",
+          "a": "Il sito del Castello comitale di Ternier è accessibile liberamente 24h/24, tutto l'anno. Preferire le ore diurne per la lettura delle vestigia e il panorama. Verificato il 10 giugno 2026."
+        },
+        {
+          "q": "Qual è la differenza tra il Castello comitale e La Poype di Ternier?",
+          "a": "Il Castello comitale di Ternier e La Poype sono due opere fortificate vicine sulla stessa collina. Il Castello comitale era residenza comitale; La Poype era una casa forte della famiglia di Ternier. Le due erano separate da un terrapieno e due fossati."
+        },
+        {
+          "q": "Quanto tempo prevedere per il Castello comitale di Ternier?",
+          "a": "Prevedete da 30 a 45 minuti per scoprire le vestigia del Castello comitale di Ternier; da 1 h a 1 h 30 in circuito combinato con la vicina Poype di Ternier."
+        },
+        {
+          "q": "Come arrivare al Castello comitale di Ternier?",
+          "a": "Da Saint-Julien-en-Genevois, il Castello comitale di Ternier è accessibile a piedi o in bicicletta (≈ 2 km), per i sentieri rurali. In auto, sosta gratuita nel borgo di Ternier. Nessun trasporto pubblico diretto."
+        }
+      ],
+      "schema_amenities": [
+        "Vestigia medievali del XIII secolo",
+        "Ex castellania di Ternier",
+        "Tratti di muro e fossati difensivi",
+        "Sito ad accesso libero",
+        "Vista su Saint-Julien e sul Salève",
+        "Combinazione con La Poype"
+      ]
     },
     "es": {
       "name": "Castillo Comtal de Ternier",

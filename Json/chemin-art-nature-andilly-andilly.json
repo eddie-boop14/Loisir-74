@@ -88,6 +88,26 @@
       "date": "2026-06-13",
       "by": "scripts/ingest_translations.py",
       "note": "Translation ingest [nl]: 5 field(s) updated."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for de from translations/agent_J_de_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for es from translations/agent_J_es_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for it from translations/agent_J_it_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for nl from translations/agent_J_nl_secondary.json."
     }
   ],
   "i18n": {
@@ -257,7 +277,157 @@
       "hero_alt": "Andilly Art-Nature trail in the Genevois with land art, wooden sculptures and Bougerie pond shelter",
       "body": {
         "what_is": "<p>The <strong>Andilly Art-Nature Trail</strong> is a shaded path unlike any other: it invites each walker to become a land-art artist, creating and leaving along the trail an ephemeral or more lasting work made from what nature offers around (stones, wood, moss, earth). Along the way, walkers also discover genuine <strong>wooden sculptures</strong> installed by artists — a dialogue between permanent art and visitors' spontaneous creations.</p><p>The trail runs through the commune of Andilly (74350), in the Monts du Genevois, halfway between Saint-Julien-en-Genevois and Cruseilles. It is short and flat, accessible to children and occasional walkers alike, in shaded woodland ideal in summer. At the heart of the trail, a stop is offered by the <strong>Bougerie pond</strong>, where three picnic tables are available — perfect for a half-day family outing.</p><p>A small shelter (\"Erraticaborne\") provides cover in case of rain. Free access year-round.</p>"
-      }
+      },
+      "name_alternates": [
+        "Andilly Art Nature Trail",
+        "Andilly Land Art Trail",
+        "Andilly Art Nature Walk"
+      ],
+      "hero": {
+        "badge": "Free access · Family",
+        "lead": "A shaded trail at Andilly where each walker can create an ephemeral land-art work (stone, wood, soil) past wooden sculptures — ideal for a family stroll, with the Bougerie pond and picnic tables."
+      },
+      "facts": {
+        "type": "Family land-art trail",
+        "access": "Free access · free of charge",
+        "tarif": "Free",
+        "commune": "Andilly",
+        "parking": "Andilly village (free)",
+        "duration": "45 min to 1 h 30",
+        "best_season": "Spring to autumn"
+      },
+      "activities": [
+        {
+          "title": "Creating land-art works",
+          "tag": "Family",
+          "description": "On the Andilly Art Nature Trail, each walker can create and leave an ephemeral land-art work in stone, wood or soil — nature as an open-air studio."
+        },
+        {
+          "title": "Discovering the wooden sculptures",
+          "tag": null,
+          "description": "Along the Andilly Art Nature Trail, wooden sculptures installed by artists accompany the walker — to spot and photograph."
+        },
+        {
+          "title": "Picnic at the Bougerie pond",
+          "tag": "Family",
+          "description": "The Andilly Art Nature Trail stops at the Bougerie pond, where 3 picnic tables await walkers — an ideal family break."
+        },
+        {
+          "title": "Extension to the Croix de Vin",
+          "tag": null,
+          "description": "From the Andilly Art Nature Trail, you can extend 15 minutes to the Croix de Vin, a heritage orientation point of the Pays de Genève."
+        },
+        {
+          "title": "Return via the GR Balcon du Léman",
+          "tag": null,
+          "description": "The Andilly Art Nature Trail can be looped by returning to the village along the Saint-Jacques-de-Compostelle path, a.k.a. the GR Balcon du Léman GR65 (20 min)."
+        },
+        {
+          "title": "Erraticaborne panoramic shelter",
+          "tag": null,
+          "description": "The Andilly Art Nature Trail features the Erraticaborne, a panoramic and artistic shelter installed on the route — an original and photogenic stop."
+        },
+        {
+          "title": "Discover the village of Charly",
+          "tag": null,
+          "description": "Near the Andilly Art Nature Trail, the village of Charly can be explored via its heritage panels and Genius Loci medals scannable by smartphone."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Address",
+          "v": "Start from the village of Andilly (74350), Pays de Genève — local 'Chemin Art Nature' signs"
+        },
+        {
+          "k": "Coordinates",
+          "v": "46.070° N · 6.070° E"
+        },
+        {
+          "k": "Altitude",
+          "v": "≈ 600 m (Andilly)"
+        },
+        {
+          "k": "Opening times",
+          "v": "Free access 24/7, year-round (but spring to autumn is best for comfort and light). Verified on 10 June 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Prices",
+          "v": "Free. No ticketing: trail in free access, land-art creations at will. Verified on 10 June 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Official site",
+          "v": "andilly74.com (Andilly town hall) and montsdegeneve.com"
+        },
+        {
+          "k": "Phone",
+          "v": "Andilly town hall: +33 (0)4 50 44 14 60 · Monts du Genevois TO: +33 (0)4 50 04 71 63"
+        },
+        {
+          "k": "Access / Parking",
+          "v": "Free parking in the village of Andilly. Trail reachable on foot from the village centre. No direct public transport."
+        },
+        {
+          "k": "Duration",
+          "v": "45 minutes for the basic out-and-back walk, up to 1 h 30 with the Croix de Vin extension, GR Balcon du Léman and a visit to Charly."
+        },
+        {
+          "k": "Audience",
+          "v": "Families with children of any age, land-art enthusiasts, walkers looking for a short and creative outing."
+        },
+        {
+          "k": "Equipment required",
+          "v": "Walking shoes, smartphone for the Genius Loci medals, optional picnic basket."
+        },
+        {
+          "k": "Animals",
+          "v": "Dogs allowed on a lead on the Andilly Art Nature Trail."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is the Andilly Art Nature Trail?",
+          "a": "The Andilly Art Nature Trail is a shaded trail in the Pays de Genève where each walker can create an ephemeral land-art work (stone, wood, soil) and discover wooden sculptures installed by artists. Free access, ideal for families."
+        },
+        {
+          "q": "How much does the Andilly Art Nature Trail cost?",
+          "a": "The Andilly Art Nature Trail is entirely free: the trail is in free access, and land-art creations using the natural materials on site are unlimited. Verified on 10 June 2026."
+        },
+        {
+          "q": "What are the opening times of the Andilly Art Nature Trail?",
+          "a": "The Andilly Art Nature Trail is freely accessible 24/7, year-round. Spring to autumn is best for the light and for comfortable creating. Verified on 10 June 2026."
+        },
+        {
+          "q": "How long should you plan for the Andilly Art Nature Trail?",
+          "a": "Plan 45 minutes for the basic out-and-back of the Andilly Art Nature Trail, up to 1 h 30 with an extension to the Croix de Vin, the GR Balcon du Léman and a visit to the village of Charly."
+        },
+        {
+          "q": "Where does the Andilly Art Nature Trail start?",
+          "a": "The Andilly Art Nature Trail starts from the village of Andilly (74350), with local signs. GPS: 46.070° N · 6.070° E. Free parking in the village."
+        },
+        {
+          "q": "Is the Andilly Art Nature Trail suitable for children?",
+          "a": "Yes, the Andilly Art Nature Trail is designed as a short, flat family walk through shaded woodland, with a pond, picnic tables and the chance to create your own land-art works. Ideal with children."
+        },
+        {
+          "q": "Is there a picnic spot on the Andilly Art Nature Trail?",
+          "a": "Yes, on the Andilly Art Nature Trail, a stop by the Bougerie pond offers 3 picnic tables — a shaded spot ideal for a family break."
+        },
+        {
+          "q": "What is the Erraticaborne on the Andilly Art Nature Trail?",
+          "a": "The Erraticaborne is a panoramic and artistic shelter installed on the Andilly Art Nature Trail: an original stop combining refuge, viewpoint and artwork, to discover along the way."
+        }
+      ],
+      "schema_amenities": [
+        "Family land-art trail",
+        "Creation of ephemeral works",
+        "Wooden sculptures by artists",
+        "Bougerie pond and 3 picnic tables",
+        "Erraticaborne shelter",
+        "Connection to the GR Balcon du Léman GR65",
+        "Free access year-round"
+      ]
     },
     "de": {
       "name": "Kunst-Natur-Weg von Andilly",
@@ -266,7 +436,157 @@
       "hero_alt": "Kunst-Natur-Weg von Andilly im Genevois mit Land Art, Holzskulpturen und Schutzhütte am Bougerie-Teich",
       "body": {
         "what_is": "<p>Der <strong>Kunst-Natur-Weg von Andilly</strong> ist ein schattiger Pfad anderer Art: er lädt jeden Spaziergänger ein, Land-Art-Künstler zu werden, indem er entlang des Wegs ein vergängliches oder dauerhaftes Werk aus dem schafft, was die Natur bietet (Steine, Holz, Moos, Erde). Unterwegs entdeckt man auch echte <strong>Holzskulpturen</strong> entlang des Pfades — ein Dialog zwischen permanenter Kunst und den spontanen Schöpfungen der Besucher.</p><p>Der Pfad verläuft durch die Gemeinde Andilly (74350) im Monts du Genevois, auf halbem Weg zwischen Saint-Julien-en-Genevois und Cruseilles. Kurz und eben, für Kinder wie für gelegentliche Wanderer geeignet, im schattigen Unterwuchs ideal im Sommer. Im Zentrum des Pfads eine Rast am <strong>Bougerie-Teich</strong>, mit drei Picknicktischen — ideal für einen Halbtagsausflug.</p><p>Eine kleine Schutzhütte (\"Erraticaborne\") bietet bei Regen Schutz. Ganzjährig frei zugänglich.</p>"
-      }
+      },
+      "name_alternates": [
+        "Chemin Art Nature Andilly",
+        "Land-Art-Pfad Andilly",
+        "Spaziergang Art Nature Andilly"
+      ],
+      "hero": {
+        "badge": "Frei zugänglich · Familie",
+        "lead": "Schattiger Pfad in Andilly, auf dem jeder Wanderer ein ephemeres Land-Art-Werk (Stein, Holz, Erde) entlang von Holzskulpturen schaffen kann – ideal für einen Familienspaziergang, mit dem Teich von La Bougerie und Picknicktischen."
+      },
+      "facts": {
+        "type": "Familien-Land-Art-Pfad",
+        "access": "Frei zugänglich · kostenlos",
+        "tarif": "Kostenlos",
+        "commune": "Andilly",
+        "parking": "Dorf Andilly (kostenlos)",
+        "duration": "45 Min. bis 1 Std. 30",
+        "best_season": "Frühling bis Herbst"
+      },
+      "activities": [
+        {
+          "title": "Land-Art-Werke schaffen",
+          "tag": "Familie",
+          "description": "Auf dem Chemin Art Nature in Andilly kann jeder Wanderer ein ephemeres Land-Art-Werk aus Stein, Holz oder Erde schaffen und hinterlassen – die Natur als Open-Air-Atelier."
+        },
+        {
+          "title": "Entdeckung der Holzskulpturen",
+          "tag": null,
+          "description": "Entlang des Chemin Art Nature in Andilly begleiten von Künstlern aufgestellte Holzskulpturen den Spaziergänger – zum Entdecken und Fotografieren."
+        },
+        {
+          "title": "Picknick am Teich von La Bougerie",
+          "tag": "Familie",
+          "description": "Der Chemin Art Nature in Andilly macht Halt am Teich von La Bougerie, wo 3 Picknicktische die Wanderer erwarten – eine ideale Familienpause."
+        },
+        {
+          "title": "Verlängerung zur Croix de Vin",
+          "tag": null,
+          "description": "Vom Chemin Art Nature in Andilly aus kann man die Wanderung 15 Minuten bis zur Croix de Vin verlängern, einem Orientierungs- und Kulturerbepunkt des Pays de Genève."
+        },
+        {
+          "title": "Rückweg über den GR Balcon du Léman",
+          "tag": null,
+          "description": "Der Chemin Art Nature in Andilly lässt sich als Schleife schließen, indem man über den Jakobsweg zurückkehrt, alias GR Balcon du Léman GR65 (20 Min.)."
+        },
+        {
+          "title": "Panoramaunterstand Erraticaborne",
+          "tag": null,
+          "description": "Der Chemin Art Nature in Andilly ermöglicht die Entdeckung der Erraticaborne, eines auf der Strecke errichteten panoramischen und künstlerischen Unterstands, eine originelle und fotogene Etappe."
+        },
+        {
+          "title": "Entdeckung des Dorfes Charly",
+          "tag": null,
+          "description": "Nahe dem Chemin Art Nature in Andilly lässt sich das Dorf Charly erkunden, mit Kulturerbe-Tafeln und per Smartphone scannbaren Genius-Loci-Medaillen."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adresse",
+          "v": "Start vom Dorf Andilly (74350), Pays de Genève – lokale Beschilderung Chemin Art Nature"
+        },
+        {
+          "k": "Koordinaten",
+          "v": "46,070° N · 6,070° O"
+        },
+        {
+          "k": "Höhe",
+          "v": "≈ 600 m (Andilly)"
+        },
+        {
+          "k": "Öffnungszeiten",
+          "v": "Frei zugänglich 24/7, ganzjährig (aber Frühling bis Herbst bevorzugen für Komfort und Licht). Geprüft am 10. Juni 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Preise",
+          "v": "Kostenlos. Kein Ticketverkauf: Pfad frei zugänglich, Land-Art-Kreationen nach Belieben. Geprüft am 10. Juni 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Offizielle Website",
+          "v": "andilly74.com (Rathaus Andilly) und montsdegeneve.com"
+        },
+        {
+          "k": "Telefon",
+          "v": "Rathaus Andilly: +33 (0)4 50 44 14 60 · Tourismusbüro Monts du Genevois: +33 (0)4 50 04 71 63"
+        },
+        {
+          "k": "Anfahrt / Parken",
+          "v": "Kostenfreies Parken im Dorf Andilly. Pfad zu Fuß vom Ortszentrum erreichbar. Keine direkte öffentliche Verbindung."
+        },
+        {
+          "k": "Besuchsdauer",
+          "v": "45 Minuten für den einfachen Hin- und Rückweg, bis zu 1 Std. 30 mit Verlängerung Croix de Vin, GR Balcon du Léman und Besuch von Charly."
+        },
+        {
+          "k": "Publikum",
+          "v": "Familien mit Kindern jeden Alters, Land-Art-Liebhaber, Wanderer auf der Suche nach einem kurzen, kreativen Ausflug."
+        },
+        {
+          "k": "Erforderliche Ausrüstung",
+          "v": "Wanderschuhe, Smartphone für die Genius-Loci-Medaillen, optional Picknickkorb."
+        },
+        {
+          "k": "Tiere",
+          "v": "Hunde an der Leine auf dem Chemin Art Nature in Andilly erlaubt."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Was ist der Chemin Art Nature in Andilly?",
+          "a": "Der Chemin Art Nature in Andilly ist ein schattiger Pfad im Pays de Genève, auf dem jeder Wanderer ein ephemeres Land-Art-Werk (Stein, Holz, Erde) schaffen und von Künstlern aufgestellte Holzskulpturen entdecken kann. Frei zugänglich, ideal für Familien."
+        },
+        {
+          "q": "Was kostet der Chemin Art Nature in Andilly?",
+          "a": "Der Chemin Art Nature in Andilly ist völlig kostenlos: Pfad frei zugänglich, Land-Art-Kreationen mit den natürlichen Materialien des Ortes unbegrenzt. Geprüft am 10. Juni 2026."
+        },
+        {
+          "q": "Wie sind die Öffnungszeiten des Chemin Art Nature in Andilly?",
+          "a": "Der Chemin Art Nature in Andilly ist frei zugänglich 24/7, ganzjährig. Frühling bis Herbst sind für Licht und komfortables Gestalten vorzuziehen. Geprüft am 10. Juni 2026."
+        },
+        {
+          "q": "Wie viel Zeit sollte man für den Chemin Art Nature in Andilly einplanen?",
+          "a": "Rechnen Sie mit 45 Minuten für die Grundrunde des Chemin Art Nature in Andilly, bis zu 1 Std. 30 mit Verlängerung zur Croix de Vin, GR Balcon du Léman und Besuch des Dorfes Charly."
+        },
+        {
+          "q": "Wo beginnt der Chemin Art Nature in Andilly?",
+          "a": "Der Chemin Art Nature in Andilly beginnt im Dorf Andilly (74350), mit lokaler Beschilderung. GPS: 46,070° N · 6,070° O. Kostenfreies Parken im Dorf."
+        },
+        {
+          "q": "Ist der Chemin Art Nature in Andilly für Kinder geeignet?",
+          "a": "Ja, der Chemin Art Nature in Andilly ist als kurzer, flacher Familienspaziergang im schattigen Unterholz konzipiert, mit Teich, Picknicktischen und der Möglichkeit, eigene Land-Art-Werke zu schaffen. Ideal mit Kindern."
+        },
+        {
+          "q": "Gibt es einen Picknickplatz auf dem Chemin Art Nature in Andilly?",
+          "a": "Ja, auf dem Chemin Art Nature in Andilly bietet ein Halt am Teich von La Bougerie 3 Picknicktische – schattiger Ort, ideal für eine Familienpause."
+        },
+        {
+          "q": "Was ist die Erraticaborne auf dem Chemin Art Nature in Andilly?",
+          "a": "Die Erraticaborne ist ein panoramischer und künstlerischer Unterstand auf dem Chemin Art Nature in Andilly: eine originelle Etappe, die Unterstand, Aussichtspunkt und Kunstwerk verbindet, unterwegs zu entdecken."
+        }
+      ],
+      "schema_amenities": [
+        "Familien-Land-Art-Pfad",
+        "Schaffung ephemerer Werke",
+        "Holzskulpturen von Künstlern",
+        "Teich von La Bougerie und 3 Picknicktische",
+        "Unterstand Erraticaborne",
+        "Anschluss an den GR Balcon du Léman GR65",
+        "Ganzjährig frei zugänglich"
+      ]
     },
     "it": {
       "name": "Cammino Arte Natura di Andilly",
@@ -275,7 +595,157 @@
       "hero_alt": "Cammino Arte Natura di Andilly nel Genevois con land art, sculture in legno e riparo sullo stagno della Bougerie",
       "body": {
         "what_is": "<p>Il <strong>cammino Arte Natura di Andilly</strong> è un sentiero ombreggiato non come gli altri: invita ogni passeggero a diventare artista di land art, creando e lasciando lungo il cammino un'opera effimera o più durevole, realizzata con ciò che la natura offre (pietre, legno, muschio, terra). Lungo il percorso si scoprono anche vere <strong>sculture in legno</strong> installate da artisti — dialogo tra arte permanente e creazioni spontanee dei visitatori.</p><p>Il sentiero si trova nel comune di Andilly (74350), nei Monts du Genevois, a metà strada tra Saint-Julien-en-Genevois e Cruseilles. Corto e pianeggiante, accessibile a bambini e camminatori occasionali, in sottobosco ombreggiato ideale d'estate. Al cuore del percorso, una sosta è proposta allo <strong>stagno della Bougerie</strong>, con tre tavoli da picnic.</p><p>Un piccolo riparo (\"Erraticaborne\") offre rifugio in caso di pioggia. Accesso libero tutto l'anno.</p>"
-      }
+      },
+      "name_alternates": [
+        "Chemin Art Nature Andilly",
+        "Sentiero Land Art Andilly",
+        "Passeggiata Art Nature Andilly"
+      ],
+      "hero": {
+        "badge": "Accesso libero · Famiglia",
+        "lead": "Sentiero ombreggiato di Andilly dove ognuno può creare un'opera effimera di land art (pietra, legno, terra) tra sculture in legno — cornice ideale per una passeggiata familiare, stagno della Bougerie, tavoli da picnic."
+      },
+      "facts": {
+        "type": "Sentiero di land art familiare",
+        "access": "Accesso libero · gratuito",
+        "tarif": "Gratuito",
+        "commune": "Andilly",
+        "parking": "Paese di Andilly (gratuito)",
+        "duration": "45 min a 1 h 30",
+        "best_season": "Dalla primavera all'autunno"
+      },
+      "activities": [
+        {
+          "title": "Creazione di opere di land art",
+          "tag": "Famiglia",
+          "description": "Sul Chemin Art Nature di Andilly, ogni camminatore può creare e lasciare un'opera effimera di land art in pietra, legno, terra — la natura come atelier all'aperto."
+        },
+        {
+          "title": "Scoperta delle sculture in legno",
+          "tag": null,
+          "description": "Lungo tutto il Chemin Art Nature di Andilly, sculture in legno installate da artisti accompagnano il camminatore — da scoprire e fotografare."
+        },
+        {
+          "title": "Picnic allo stagno della Bougerie",
+          "tag": "Famiglia",
+          "description": "Il Chemin Art Nature di Andilly fa tappa allo stagno della Bougerie, dove 3 tavoli da picnic attendono i camminatori — pausa ideale in famiglia."
+        },
+        {
+          "title": "Prolungamento verso la Croix de Vin",
+          "tag": null,
+          "description": "Dal Chemin Art Nature di Andilly, possibilità di prolungare 15 minuti fino alla Croix de Vin, punto di orientamento patrimoniale del Pays de Genève."
+        },
+        {
+          "title": "Ritorno per il GR Balcon du Léman",
+          "tag": null,
+          "description": "Il Chemin Art Nature di Andilly può essere chiuso ad anello tornando al paese per il cammino di Santiago di Compostela, alias GR Balcon du Léman GR65 (20 min)."
+        },
+        {
+          "title": "Riparo panoramico Erraticaborne",
+          "tag": null,
+          "description": "Il Chemin Art Nature di Andilly permette di scoprire l'Erraticaborne, riparo panoramico e artistico installato lungo il percorso, tappa originale e fotogenica."
+        },
+        {
+          "title": "Scoperta del paese di Charly",
+          "tag": null,
+          "description": "Vicino al Chemin Art Nature di Andilly, il paese di Charly si visita con i suoi pannelli patrimoniali e le medaglie Genius Loci scansionabili con smartphone."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Indirizzo",
+          "v": "Partenza dal paese di Andilly (74350), Pays de Genève — segnaletica locale Chemin Art Nature"
+        },
+        {
+          "k": "Coordinate",
+          "v": "46,070° N · 6,070° E"
+        },
+        {
+          "k": "Altitudine",
+          "v": "≈ 600 m (Andilly)"
+        },
+        {
+          "k": "Orari",
+          "v": "Accesso libero 24h/24, tutto l'anno (ma preferire dalla primavera all'autunno per comfort e luce). Verificato il 10 giugno 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tariffe",
+          "v": "Gratuito. Nessuna biglietteria: sentiero ad accesso libero, creazioni di land art a volontà. Verificato il 10 giugno 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Sito ufficiale",
+          "v": "andilly74.com (municipio di Andilly) e montsdegeneve.com"
+        },
+        {
+          "k": "Telefono",
+          "v": "Municipio di Andilly: +33 (0)4 50 44 14 60 · UT Monts du Genevois: +33 (0)4 50 04 71 63"
+        },
+        {
+          "k": "Accesso / Parcheggio",
+          "v": "Parcheggio gratuito nel paese di Andilly. Sentiero accessibile a piedi dal centro del paese. Nessun trasporto pubblico diretto."
+        },
+        {
+          "k": "Durata della visita",
+          "v": "45 minuti per la passeggiata andata-ritorno base, fino a 1 h 30 con prolungamento Croix de Vin, GR Balcon du Léman e visita di Charly."
+        },
+        {
+          "k": "Pubblico",
+          "v": "Famiglie con bambini di ogni età, appassionati di land art, escursionisti in cerca di un'uscita breve e creativa."
+        },
+        {
+          "k": "Attrezzatura richiesta",
+          "v": "Scarpe da trekking, smartphone per le medaglie Genius Loci, cestino da picnic facoltativo."
+        },
+        {
+          "k": "Animali",
+          "v": "Cani ammessi al guinzaglio sul Chemin Art Nature di Andilly."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Cos'è il Chemin Art Nature di Andilly?",
+          "a": "Il Chemin Art Nature di Andilly è un sentiero ombreggiato del Pays de Genève dove ognuno può creare un'opera effimera di land art (pietra, legno, terra) e scoprire sculture in legno installate da artisti. Accesso libero, ideale per le famiglie."
+        },
+        {
+          "q": "Quanto costa il Chemin Art Nature di Andilly?",
+          "a": "Il Chemin Art Nature di Andilly è interamente gratuito: sentiero ad accesso libero, creazioni di land art a volontà con i materiali naturali del sito. Verificato il 10 giugno 2026."
+        },
+        {
+          "q": "Quali sono gli orari del Chemin Art Nature di Andilly?",
+          "a": "Il Chemin Art Nature di Andilly è liberamente accessibile 24h/24, tutto l'anno. Preferire dalla primavera all'autunno per la luce e il comfort delle creazioni. Verificato il 10 giugno 2026."
+        },
+        {
+          "q": "Quanto tempo prevedere per il Chemin Art Nature di Andilly?",
+          "a": "Contate 45 minuti per il giro base del Chemin Art Nature di Andilly, fino a 1 h 30 con un prolungamento verso la Croix de Vin, il GR Balcon du Léman e la visita al paese di Charly."
+        },
+        {
+          "q": "Dove parte il Chemin Art Nature di Andilly?",
+          "a": "Il Chemin Art Nature di Andilly parte dal paese di Andilly (74350), con segnaletica locale. GPS: 46,070° N · 6,070° E. Parcheggio gratuito nel paese."
+        },
+        {
+          "q": "Il Chemin Art Nature di Andilly è adatto ai bambini?",
+          "a": "Sì, il Chemin Art Nature di Andilly è pensato come una passeggiata familiare breve e pianeggiante, nel sottobosco ombreggiato, con stagno, tavoli da picnic e possibilità di creare le proprie opere di land art. Ideale con i bambini."
+        },
+        {
+          "q": "C'è un posto per il picnic sul Chemin Art Nature di Andilly?",
+          "a": "Sì, sul Chemin Art Nature di Andilly, una sosta sul bordo dello stagno della Bougerie propone 3 tavoli da picnic — luogo ombreggiato ideale per una pausa familiare."
+        },
+        {
+          "q": "Cos'è l'Erraticaborne sul Chemin Art Nature di Andilly?",
+          "a": "L'Erraticaborne è un riparo panoramico e artistico installato sul Chemin Art Nature di Andilly: tappa originale che combina rifugio, punto di vista e opera d'arte, da scoprire strada facendo."
+        }
+      ],
+      "schema_amenities": [
+        "Sentiero di land art familiare",
+        "Creazione di opere effimere",
+        "Sculture in legno di artisti",
+        "Stagno della Bougerie e 3 tavoli da picnic",
+        "Riparo Erraticaborne",
+        "Connessione GR Balcon du Léman GR65",
+        "Accesso libero tutto l'anno"
+      ]
     },
     "es": {
       "name": "Camino Arte Naturaleza de Andilly",
@@ -284,7 +754,157 @@
       "hero_alt": "Camino Arte Naturaleza de Andilly en el Genevois con land art, esculturas de madera y refugio en el estanque de la Bougerie",
       "body": {
         "what_is": "<p>El <strong>Camino Arte Naturaleza de Andilly</strong> es un sendero sombreado distinto: invita a cada paseante a convertirse en artista de land art, creando y dejando al borde del camino una obra efímera o más duradera, hecha con lo que la naturaleza ofrece (piedras, madera, musgo, tierra). En el recorrido se descubren también verdaderas <strong>esculturas de madera</strong> instaladas por artistas — diálogo entre el arte permanente y las creaciones espontáneas de los visitantes.</p><p>El sendero se ubica en Andilly (74350), en los Monts du Genevois, a medio camino entre Saint-Julien-en-Genevois y Cruseilles. Corto y plano, accesible a niños y caminantes ocasionales, en sotobosque sombreado ideal en verano. En el centro, parada en el <strong>estanque de la Bougerie</strong>, con tres mesas de pícnic.</p><p>Un pequeño refugio (\"Erraticaborne\") protege en caso de lluvia. Acceso libre todo el año.</p>"
-      }
+      },
+      "name_alternates": [
+        "Chemin Art Nature Andilly",
+        "Sendero Land Art Andilly",
+        "Paseo Art Nature Andilly"
+      ],
+      "hero": {
+        "badge": "Acceso libre · Familia",
+        "lead": "Sendero sombreado de Andilly donde cada uno puede crear una obra efímera de land art (piedra, madera, tierra) entre esculturas de madera — marco ideal para un paseo familiar, con el estanque de la Bougerie y mesas de pícnic."
+      },
+      "facts": {
+        "type": "Sendero de land art familiar",
+        "access": "Acceso libre · gratuito",
+        "tarif": "Gratuito",
+        "commune": "Andilly",
+        "parking": "Pueblo de Andilly (gratuito)",
+        "duration": "45 min a 1 h 30",
+        "best_season": "De primavera a otoño"
+      },
+      "activities": [
+        {
+          "title": "Creación de obras de land art",
+          "tag": "Familia",
+          "description": "En el Chemin Art Nature de Andilly, cada caminante puede crear y dejar una obra efímera de land art en piedra, madera, tierra — la naturaleza como taller al aire libre."
+        },
+        {
+          "title": "Descubrimiento de las esculturas de madera",
+          "tag": null,
+          "description": "A lo largo del Chemin Art Nature de Andilly, esculturas de madera instaladas por artistas acompañan al paseante — a localizar y fotografiar."
+        },
+        {
+          "title": "Pícnic en el estanque de la Bougerie",
+          "tag": "Familia",
+          "description": "El Chemin Art Nature de Andilly hace parada en el estanque de la Bougerie, donde 3 mesas de pícnic esperan a los caminantes — pausa ideal en familia."
+        },
+        {
+          "title": "Prolongación hasta la Croix de Vin",
+          "tag": null,
+          "description": "Desde el Chemin Art Nature de Andilly, se puede prolongar 15 minutos hasta la Croix de Vin, punto de orientación patrimonial del Pays de Genève."
+        },
+        {
+          "title": "Regreso por el GR Balcon du Léman",
+          "tag": null,
+          "description": "El Chemin Art Nature de Andilly puede cerrarse en bucle volviendo al pueblo por el camino de Santiago de Compostela, alias GR Balcon du Léman GR65 (20 min)."
+        },
+        {
+          "title": "Refugio panorámico Erraticaborne",
+          "tag": null,
+          "description": "El Chemin Art Nature de Andilly permite descubrir la Erraticaborne, refugio panorámico y artístico instalado en el recorrido, etapa original y fotogénica."
+        },
+        {
+          "title": "Descubrimiento del pueblo de Charly",
+          "tag": null,
+          "description": "Cerca del Chemin Art Nature de Andilly, el pueblo de Charly se recorre con sus paneles patrimoniales y sus medallas Genius Loci escaneables con smartphone."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Dirección",
+          "v": "Salida desde el pueblo de Andilly (74350), Pays de Genève — señalización local Chemin Art Nature"
+        },
+        {
+          "k": "Coordenadas",
+          "v": "46,070° N · 6,070° E"
+        },
+        {
+          "k": "Altitud",
+          "v": "≈ 600 m (Andilly)"
+        },
+        {
+          "k": "Horarios",
+          "v": "Acceso libre 24 h, todo el año (preferir de primavera a otoño por confort y luz). Verificado el 10 de junio de 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarifas",
+          "v": "Gratuito. Sin taquilla: sendero de acceso libre, creaciones de land art a voluntad. Verificado el 10 de junio de 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Sitio oficial",
+          "v": "andilly74.com (ayuntamiento de Andilly) y montsdegeneve.com"
+        },
+        {
+          "k": "Teléfono",
+          "v": "Ayuntamiento de Andilly: +33 (0)4 50 44 14 60 · OT Monts du Genevois: +33 (0)4 50 04 71 63"
+        },
+        {
+          "k": "Acceso / Aparcamiento",
+          "v": "Aparcamiento gratuito en el pueblo de Andilly. Sendero accesible a pie desde el centro del pueblo. Sin transporte público directo."
+        },
+        {
+          "k": "Duración de la visita",
+          "v": "45 minutos para el paseo ida-vuelta básico, hasta 1 h 30 con prolongación Croix de Vin, GR Balcon du Léman y visita a Charly."
+        },
+        {
+          "k": "Público",
+          "v": "Familias con niños de cualquier edad, amantes del land art, senderistas que buscan una salida corta y creativa."
+        },
+        {
+          "k": "Equipamiento requerido",
+          "v": "Calzado de marcha, smartphone para las medallas Genius Loci, cesta de pícnic opcional."
+        },
+        {
+          "k": "Animales",
+          "v": "Perros admitidos con correa en el Chemin Art Nature de Andilly."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Qué es el Chemin Art Nature de Andilly?",
+          "a": "El Chemin Art Nature de Andilly es un sendero sombreado del Pays de Genève donde cada uno puede crear una obra efímera de land art (piedra, madera, tierra) y descubrir esculturas de madera instaladas por artistas. Acceso libre, ideal para familias."
+        },
+        {
+          "q": "¿Cuánto cuesta el Chemin Art Nature de Andilly?",
+          "a": "El Chemin Art Nature de Andilly es totalmente gratuito: sendero de acceso libre, creaciones de land art a voluntad con los materiales naturales del lugar. Verificado el 10 de junio de 2026."
+        },
+        {
+          "q": "¿Cuáles son los horarios del Chemin Art Nature de Andilly?",
+          "a": "El Chemin Art Nature de Andilly es de acceso libre 24 h, todo el año. Preferir de primavera a otoño por la luz y el confort de las creaciones. Verificado el 10 de junio de 2026."
+        },
+        {
+          "q": "¿Cuánto tiempo prever para el Chemin Art Nature de Andilly?",
+          "a": "Cuente 45 minutos para el recorrido básico del Chemin Art Nature de Andilly, hasta 1 h 30 con una prolongación hacia la Croix de Vin, el GR Balcon du Léman y la visita al pueblo de Charly."
+        },
+        {
+          "q": "¿Dónde empieza el Chemin Art Nature de Andilly?",
+          "a": "El Chemin Art Nature de Andilly empieza desde el pueblo de Andilly (74350), con señalización local. GPS: 46,070° N · 6,070° E. Aparcamiento gratuito en el pueblo."
+        },
+        {
+          "q": "¿Es el Chemin Art Nature de Andilly apto para niños?",
+          "a": "Sí, el Chemin Art Nature de Andilly está pensado como un paseo familiar corto y llano, en sotobosque sombreado, con estanque, mesas de pícnic y la posibilidad de crear las propias obras de land art. Ideal con niños."
+        },
+        {
+          "q": "¿Hay un lugar de pícnic en el Chemin Art Nature de Andilly?",
+          "a": "Sí, en el Chemin Art Nature de Andilly, una parada a orillas del estanque de la Bougerie ofrece 3 mesas de pícnic — lugar sombreado ideal para una pausa familiar."
+        },
+        {
+          "q": "¿Qué es la Erraticaborne en el Chemin Art Nature de Andilly?",
+          "a": "La Erraticaborne es un refugio panorámico y artístico instalado en el Chemin Art Nature de Andilly: etapa original que combina refugio, mirador y obra de arte, a descubrir por el camino."
+        }
+      ],
+      "schema_amenities": [
+        "Sendero de land art familiar",
+        "Creación de obras efímeras",
+        "Esculturas de madera de artistas",
+        "Estanque de la Bougerie y 3 mesas de pícnic",
+        "Refugio Erraticaborne",
+        "Conexión GR Balcon du Léman GR65",
+        "Acceso libre todo el año"
+      ]
     },
     "nl": {
       "name": "Kunst-Natuurpad van Andilly",
@@ -293,7 +913,157 @@
       "hero_alt": "Kunst-Natuurpad van Andilly in de Genevois met land art, houten sculpturen en schuilplaats bij de Bougerie-vijver",
       "body": {
         "what_is": "<p>Het <strong>Kunst-Natuurpad van Andilly</strong> is een schaduwrijk pad anders dan andere: het nodigt elke wandelaar uit om landart-kunstenaar te worden, door langs het pad een vluchtig of duurzamer werk te creëren en achter te laten, gemaakt van wat de natuur omheen biedt (stenen, hout, mos, aarde). Langs de wandeling ontdekt men ook echte <strong>houten sculpturen</strong> geplaatst door kunstenaars — een dialoog tussen permanente kunst en spontane creaties van bezoekers.</p><p>Het pad loopt door de gemeente Andilly (74350), in de Monts du Genevois, halverwege Saint-Julien-en-Genevois en Cruseilles. Kort en vlak, toegankelijk voor kinderen en gelegenheidswandelaars, in schaduwrijke ondergroei ideaal in de zomer. In het midden een halte bij de <strong>Bougerie-vijver</strong>, met drie picknicktafels.</p><p>Een kleine schuilplaats (\"Erraticaborne\") biedt beschutting bij regen. Vrije toegang het hele jaar.</p>"
-      }
+      },
+      "name_alternates": [
+        "Chemin Art Nature Andilly",
+        "Land-art-pad Andilly",
+        "Wandeling Art Nature Andilly"
+      ],
+      "hero": {
+        "badge": "Vrij toegankelijk · Familie",
+        "lead": "Schaduwrijk pad in Andilly waar iedereen een vluchtig kunstwerk van land art (steen, hout, aarde) kan maken tussen houten sculpturen — ideaal kader voor een familiewandeling, met de vijver van La Bougerie en picknicktafels."
+      },
+      "facts": {
+        "type": "Familie-land-art-pad",
+        "access": "Vrij toegankelijk · gratis",
+        "tarif": "Gratis",
+        "commune": "Andilly",
+        "parking": "Dorp Andilly (gratis)",
+        "duration": "45 min tot 1 uur 30",
+        "best_season": "Lente tot herfst"
+      },
+      "activities": [
+        {
+          "title": "Creatie van land-art-werken",
+          "tag": "Familie",
+          "description": "Op het Chemin Art Nature van Andilly kan elke wandelaar een vluchtig land-art-werk uit steen, hout of aarde maken en achterlaten — de natuur als openluchtatelier."
+        },
+        {
+          "title": "Ontdekking van de houten sculpturen",
+          "tag": null,
+          "description": "Langs het hele Chemin Art Nature van Andilly begeleiden houten sculpturen, geplaatst door kunstenaars, de wandelaar — om op te merken en te fotograferen."
+        },
+        {
+          "title": "Picknick aan de vijver van La Bougerie",
+          "tag": "Familie",
+          "description": "Het Chemin Art Nature van Andilly stopt aan de vijver van La Bougerie, waar 3 picknicktafels de wandelaars opwachten — ideale familiepauze."
+        },
+        {
+          "title": "Verlenging naar de Croix de Vin",
+          "tag": null,
+          "description": "Vanaf het Chemin Art Nature van Andilly kunt u 15 minuten doorlopen tot de Croix de Vin, een erfgoedoriëntatiepunt van de Pays de Genève."
+        },
+        {
+          "title": "Terugkeer via de GR Balcon du Léman",
+          "tag": null,
+          "description": "Het Chemin Art Nature van Andilly kan worden afgesloten in een lus door terug te keren naar het dorp via het pad naar Santiago de Compostela, alias de GR Balcon du Léman GR65 (20 min)."
+        },
+        {
+          "title": "Panoramische schuilplaats Erraticaborne",
+          "tag": null,
+          "description": "Het Chemin Art Nature van Andilly laat u de Erraticaborne ontdekken, een panoramische en artistieke schuilplaats die op het parcours is geplaatst, een originele en fotogenieke etappe."
+        },
+        {
+          "title": "Ontdekking van het dorp Charly",
+          "tag": null,
+          "description": "Vlakbij het Chemin Art Nature van Andilly verkent u het dorp Charly met zijn erfgoedpanelen en zijn Genius Loci-medailles, scanbaar met smartphone."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adres",
+          "v": "Vertrek vanuit het dorp Andilly (74350), Pays de Genève — lokale bewegwijzering Chemin Art Nature"
+        },
+        {
+          "k": "Coördinaten",
+          "v": "46,070° N · 6,070° O"
+        },
+        {
+          "k": "Hoogte",
+          "v": "≈ 600 m (Andilly)"
+        },
+        {
+          "k": "Openingstijden",
+          "v": "Vrije toegang 24/7, het hele jaar door (maar verkies lente tot herfst voor comfort en licht). Geverifieerd op 10 juni 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Tarieven",
+          "v": "Gratis. Geen ticketverkoop: vrij toegankelijk pad, land-art-creaties naar wens. Geverifieerd op 10 juni 2026.",
+          "verified": "2026-06-10"
+        },
+        {
+          "k": "Officiële site",
+          "v": "andilly74.com (gemeentehuis Andilly) en montsdegeneve.com"
+        },
+        {
+          "k": "Telefoon",
+          "v": "Gemeentehuis Andilly: +33 (0)4 50 44 14 60 · VVV Monts du Genevois: +33 (0)4 50 04 71 63"
+        },
+        {
+          "k": "Toegang / Parking",
+          "v": "Gratis parkeren in het dorp Andilly. Pad te voet bereikbaar vanaf het dorpscentrum. Geen rechtstreeks openbaar vervoer."
+        },
+        {
+          "k": "Bezoekduur",
+          "v": "45 minuten voor de basis-heen-en-terugwandeling, tot 1 uur 30 met verlenging Croix de Vin, GR Balcon du Léman en bezoek aan Charly."
+        },
+        {
+          "k": "Publiek",
+          "v": "Gezinnen met kinderen van alle leeftijden, land-art-liefhebbers, wandelaars op zoek naar een korte, creatieve uitstap."
+        },
+        {
+          "k": "Vereiste uitrusting",
+          "v": "Wandelschoenen, smartphone voor de Genius Loci-medailles, optionele picknickmand."
+        },
+        {
+          "k": "Dieren",
+          "v": "Honden toegestaan aan de leiband op het Chemin Art Nature van Andilly."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Wat is het Chemin Art Nature van Andilly?",
+          "a": "Het Chemin Art Nature van Andilly is een schaduwrijk pad in de Pays de Genève waar iedereen een vluchtig kunstwerk van land art (steen, hout, aarde) kan maken en houten sculpturen kan ontdekken die door kunstenaars zijn geplaatst. Vrije toegang, ideaal voor gezinnen."
+        },
+        {
+          "q": "Hoeveel kost het Chemin Art Nature van Andilly?",
+          "a": "Het Chemin Art Nature van Andilly is volledig gratis: vrij toegankelijk pad, land-art-creaties naar wens met de natuurlijke materialen ter plaatse. Geverifieerd op 10 juni 2026."
+        },
+        {
+          "q": "Wat zijn de openingstijden van het Chemin Art Nature van Andilly?",
+          "a": "Het Chemin Art Nature van Andilly is vrij toegankelijk 24/7, het hele jaar door. Verkies lente tot herfst voor het licht en het comfort van het creëren. Geverifieerd op 10 juni 2026."
+        },
+        {
+          "q": "Hoeveel tijd moet u voorzien voor het Chemin Art Nature van Andilly?",
+          "a": "Reken 45 minuten voor de basisronde van het Chemin Art Nature van Andilly, tot 1 uur 30 met een verlenging naar de Croix de Vin, de GR Balcon du Léman en een bezoek aan het dorp Charly."
+        },
+        {
+          "q": "Waar vertrekt het Chemin Art Nature van Andilly?",
+          "a": "Het Chemin Art Nature van Andilly vertrekt vanuit het dorp Andilly (74350), met lokale bewegwijzering. GPS: 46,070° N · 6,070° O. Gratis parkeren in het dorp."
+        },
+        {
+          "q": "Is het Chemin Art Nature van Andilly geschikt voor kinderen?",
+          "a": "Ja, het Chemin Art Nature van Andilly is bedoeld als korte, vlakke familiewandeling in schaduwrijk onderhout, met vijver, picknicktafels en de mogelijkheid om eigen land-art-werken te maken. Ideaal met kinderen."
+        },
+        {
+          "q": "Is er een picknickplaats op het Chemin Art Nature van Andilly?",
+          "a": "Ja, op het Chemin Art Nature van Andilly biedt een stop aan de vijver van La Bougerie 3 picknicktafels — schaduwrijke plek, ideaal voor een familiepauze."
+        },
+        {
+          "q": "Wat is de Erraticaborne op het Chemin Art Nature van Andilly?",
+          "a": "De Erraticaborne is een panoramische en artistieke schuilplaats op het Chemin Art Nature van Andilly: een originele etappe die schuilplaats, uitzichtpunt en kunstwerk combineert, te ontdekken onderweg."
+        }
+      ],
+      "schema_amenities": [
+        "Familie-land-art-pad",
+        "Creatie van vluchtige werken",
+        "Houten sculpturen van kunstenaars",
+        "Vijver van La Bougerie en 3 picknicktafels",
+        "Schuilplaats Erraticaborne",
+        "Aansluiting GR Balcon du Léman GR65",
+        "Vrije toegang het hele jaar"
+      ]
     }
   },
   "status": "published"

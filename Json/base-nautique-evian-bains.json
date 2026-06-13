@@ -88,6 +88,16 @@
       "date": "2026-06-13",
       "by": "scripts/ingest_translations.py",
       "note": "Translation ingest [nl]: 5 field(s) updated."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for de from translations/agent_I_de_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for it from translations/agent_I_it_secondary.json."
     }
   ],
   "i18n": {
@@ -260,8 +270,160 @@
       "meta_description": "Évian-les-Bains watersports centre: paddle, kayak, sailing, rowing and diving sessions on Lake Geneva, supervised beach June–September. Bookable evening sessions.",
       "hero_alt": "Évian-les-Bains watersports centre on Lake Geneva: paddle, kayak, sailing, diving and rowing to explore the southern shore",
       "body": {
-        "what_is": "<p>The <strong>Évian-les-Bains watersports centre</strong> is one of the main access points to water activities on the southern shore of <strong>Lake Geneva</strong>. Set on the <strong>Évian beach</strong> area, on avenue du Général Dupas, it offers both <strong>self-guided rentals</strong> (paddle, single or double kayak, pedalo, rowing boats) and <strong>supervised sessions</strong> run by the instructors of Évian's historic sailing club.</p><p>Practical info: the centre is open every day in summer from <strong>1 pm to 7 pm</strong>, with a late session on Thursday until <strong>9 pm</strong>. Supervised sessions run all summer: <strong>kayak and stand-up paddle on Wednesday and Saturday evenings</strong>, <strong>rowing on Monday/Wednesday/Friday afternoons</strong>, <strong>sailing on Wednesday afternoon</strong> from early July to late August. A <strong>supervised swimming area</strong> is also open on the adjacent beach from June to September (12 pm–6 pm, 11 am–7 pm in July–August).</p><p>The centre lets <strong>visitors and locals alike</strong> enjoy Lake Geneva in a unique setting — the Léman opening onto the Swiss shore, Évian's belle-époque promenade, the panorama of the Vaud mountains — at affordable group rates (paddle from €15/h, kayak €20/h, supervised sessions around €25/session).</p>"
-      }
+        "what_is": "<p>The <strong>Évian-les-Bains watersports centre</strong> is one of the main access points to water activities on the southern shore of <strong>Lake Geneva</strong>. Set on the <strong>Évian beach</strong> area, on avenue du Général Dupas, it offers both <strong>self-guided rentals</strong> (paddle, single or double kayak, pedalo, rowing boats) and <strong>supervised sessions</strong> run by the instructors of Évian's historic sailing club.</p><p>Practical info: the centre is open every day in summer from <strong>1 pm to 7 pm</strong>, with a late session on Thursday until <strong>9 pm</strong>. Supervised sessions run all summer: <strong>kayak and stand-up paddle on Wednesday and Saturday evenings</strong>, <strong>rowing on Monday/Wednesday/Friday afternoons</strong>, <strong>sailing on Wednesday afternoon</strong> from early July to late August. A <strong>supervised swimming area</strong> is also open on the adjacent beach from June to September (12 pm–6 pm, 11 am–7 pm in July–August).</p><p>The centre lets <strong>visitors and locals alike</strong> enjoy Lake Geneva in a unique setting — the Léman opening onto the Swiss shore, Évian's belle-époque promenade, the panorama of the Vaud mountains — at affordable group rates (paddle from €15/h, kayak €20/h, supervised sessions around €25/session).</p>",
+        "activities": [
+          {
+            "title": "Stand-up paddle on Lake Geneva",
+            "tag": "Summer",
+            "description": "Stand-up paddle rentals and supervised sessions at the Évian water sports base — free outings on Lake Geneva or group lessons on Wednesday and Saturday evenings."
+          },
+          {
+            "title": "Single or double kayak",
+            "tag": null,
+            "description": "Kayak hire at the Évian water sports base (1 or 2 seats) to explore the shoreline at your own pace, or guided sessions with the Évian Sailing Club instructors."
+          },
+          {
+            "title": "Supervised sailing",
+            "tag": null,
+            "description": "Supervised sailing sessions on Wednesday afternoons from 9 July to 20 August, organised by the Évian Sailing Club from the water sports base."
+          },
+          {
+            "title": "Rowing on Lake Geneva",
+            "tag": null,
+            "description": "Introduction and improvement courses in rowing at the Évian water sports base, supervised sessions on Monday, Wednesday and Friday afternoons in the summer season."
+          },
+          {
+            "title": "Scuba diving and freediving",
+            "tag": null,
+            "description": "The Évian water sports base is the starting point for divers and freedivers exploring the wrecks and drop-offs of Lake Geneva off Évian."
+          },
+          {
+            "title": "Lifeguarded beach June-September",
+            "tag": "Family",
+            "description": "Lifeguarded swimming area on Évian beach next to the water sports base: June-September 12 pm-6 pm, July-August 11 am-7 pm."
+          },
+          {
+            "title": "Pedalos and rowing boats",
+            "tag": "Family",
+            "description": "Pedalo and rowing-boat hire at the Évian water sports base for a quiet family outing off the thermal shoreline."
+          },
+          {
+            "title": "View of the Swiss shore of Lake Geneva",
+            "tag": null,
+            "description": "From the Évian water sports base, an open panorama of Lausanne, Vevey, Montreux and the Vaud Alps on the opposite shore of Lake Geneva."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Address",
+            "v": "Évian water sports centre, Avenue du Général Dupas, 74500 Évian-les-Bains"
+          },
+          {
+            "k": "Coordinates",
+            "v": "46.400° N · 6.583° E"
+          },
+          {
+            "k": "Altitude",
+            "v": "≈ 372 m (Lake Geneva level)"
+          },
+          {
+            "k": "Opening hours",
+            "v": "Water sports base in summer season: daily 1 pm-7 pm, until 9 pm on Thursday. Supervised kayak/SUP sessions Wed/Sat 5:30 pm-7 pm (5/07-27/08), rowing Mon/Wed/Fri from 11/07 3 pm-5 pm, sailing Wed 2 pm-4:30 pm (9/07-20/08). Lifeguarded beach June-September 12 pm-6 pm, July-August 11 am-7 pm. Checked on 10 June 2026 — summer programme subject to change."
+          },
+          {
+            "k": "Prices",
+            "v": "Variable by activity, duration and supervision. See ville-evian.fr/loisirs/centre-nautique/ or the Évian Sailing Club. Paid thermal pavilion nearby. Checked on 10 June 2026."
+          },
+          {
+            "k": "Official site",
+            "v": "ville-evian.fr/loisirs/centre-nautique/"
+          },
+          {
+            "k": "Phone",
+            "v": "Évian water sports centre: +33 (0)4 50 75 02 69 · Évian town hall: +33 (0)4 50 83 10 00"
+          },
+          {
+            "k": "Access / Parking",
+            "v": "Public car parks near Évian beach and the water sports centre (avenue du Général Dupas). Évian SNCF station 10 minutes' walk away. Léman Express service from Geneva via Annemasse."
+          },
+          {
+            "k": "Length of visit",
+            "v": "1 hr to 3 hr depending on the activity; half a day for a supervised session plus a swim."
+          },
+          {
+            "k": "Audience",
+            "v": "Families, teenagers, adults, beginners as well as more experienced practitioners. Supervision by qualified instructors."
+          },
+          {
+            "k": "Booking",
+            "v": "Supervised sessions on reservation with the Évian Sailing Club or the water sports centre. Self-guided rentals without prior booking, subject to availability."
+          },
+          {
+            "k": "Required equipment",
+            "v": "Swimsuit, towel, sun cream, water shoes. Water sports equipment supplied by the base. Life jacket included for children."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Évian water sports centre",
+        "Évian water sports base",
+        "Évian beach water sports base"
+      ],
+      "hero": {
+        "badge": "Summer season · 1 pm-7 pm",
+        "lead": "Discover Lake Geneva in the heart of Évian: paddleboarding, kayaking, sailing, rowing and diving, supervised or self-guided, from the Évian beach water sports base, open all summer."
+      },
+      "facts": {
+        "type": "Water sports base (Lake Geneva)",
+        "access": "Pay per activity",
+        "tarif": "Variable by activity — see official site",
+        "commune": "Évian-les-Bains",
+        "parking": "Water sports centre / Évian beach car parks",
+        "duration": "1 hr to half-day",
+        "best_season": "Summer (June to September)"
+      },
+      "faq": [
+        {
+          "q": "What activities does the Évian-les-Bains water sports base offer?",
+          "a": "The Évian-les-Bains water sports base offers paddle, kayak (single or double), sailing, rowing, diving, freediving, pedalos and rowing boats. Activities are self-guided or supervised by the Évian Sailing Club, on Lake Geneva."
+        },
+        {
+          "q": "What are the opening hours of the Évian-les-Bains water sports base?",
+          "a": "The Évian-les-Bains water sports base is open in the summer season daily from 1 pm to 7 pm, with a late opening until 9 pm on Thursdays. Lifeguarded beach June-September 12 pm-6 pm (11 am-7 pm in July-August). Checked on 10 June 2026."
+        },
+        {
+          "q": "What are the prices at the Évian-les-Bains water sports base?",
+          "a": "Prices at the Évian-les-Bains water sports base vary by activity, duration and level of supervision (free rental vs. supervised session). See ville-evian.fr/loisirs/centre-nautique/ or the Évian Sailing Club. Checked on 10 June 2026."
+        },
+        {
+          "q": "Do I need to book at the Évian-les-Bains water sports base?",
+          "a": "Supervised sessions (sailing, rowing, kayak/SUP) at the Évian water sports base require booking with the Sailing Club or the water sports centre. Self-guided rentals (paddle, pedalos) are available without booking, subject to availability."
+        },
+        {
+          "q": "Where is the Évian-les-Bains water sports base?",
+          "a": "The Évian-les-Bains water sports base is on avenue du Général Dupas, on Évian beach by Lake Geneva, 10 minutes' walk from Évian SNCF station. GPS: 46.400° N · 6.583° E."
+        },
+        {
+          "q": "Is the Évian-les-Bains water sports base open year-round?",
+          "a": "No, the Évian-les-Bains water sports base operates mainly in the summer season, peaking from mid-June to the end of August. The adjacent beach is lifeguarded from June to September. Check the calendar on ville-evian.fr."
+        },
+        {
+          "q": "What is the best season for the Évian-les-Bains water sports base?",
+          "a": "Summer (July-August) is the best time to enjoy all the activities at the Évian-les-Bains water sports base: mild Lake Geneva waters, supervised sessions on the programme and a lifeguarded beach."
+        },
+        {
+          "q": "How do I get to the Évian-les-Bains water sports base?",
+          "a": "The Évian-les-Bains water sports base is a few minutes' walk from Évian town centre, from Évian SNCF station (Léman Express to Geneva via Annemasse) and from the quay car parks. CGN boats dock at the neighbouring landing stage."
+        }
+      ],
+      "schema_amenities": [
+        "Water sports base on Lake Geneva",
+        "Paddle, kayak, sailing, rowing",
+        "Diving and freediving",
+        "Self-guided rentals + supervised sessions",
+        "Lifeguarded beach June-September",
+        "Heart of Évian-les-Bains"
+      ]
     },
     "de": {
       "name": "Wassersportzentrum Évian-les-Bains",
@@ -269,8 +431,160 @@
       "meta_description": "Wassersportzentrum Évian-les-Bains: SUP, Kajak, Segeln, Rudern und Tauchen am Genfersee, bewachter Strand Juni–September. Buchbare Abendkurse.",
       "hero_alt": "Wassersportzentrum Évian-les-Bains am Genfersee: SUP, Kajak, Segeln, Tauchen und Rudern zum Erkunden des Südufers",
       "body": {
-        "what_is": "<p>Das <strong>Wassersportzentrum Évian-les-Bains</strong> ist einer der wichtigsten Zugänge zum Wassersport am Südufer des <strong>Genfersees</strong>. Am Strand von <strong>Évian</strong>, in der Avenue du Général Dupas gelegen, bietet es sowohl <strong>Verleih ohne Begleitung</strong> (SUP, Einer- und Zweier-Kajak, Tretboot, Ruderboote) als auch <strong>betreute Kurse</strong> der Trainer des historischen Segelclubs von Évian.</p><p>Praktisch: täglich im Sommer von <strong>13 bis 19 Uhr</strong>, donnerstags bis <strong>21 Uhr</strong>. Betreute Kurse: <strong>Kajak/SUP mittwochs und samstags</strong> abends, <strong>Rudern montags/mittwochs/freitags</strong> nachmittags, <strong>Segeln mittwochs nachmittags</strong> Juli–August. Eine <strong>bewachte Badezone</strong> ist Juni–September geöffnet.</p><p>Erschwingliche Gruppenpreise (SUP ab 15 €/h, Kajak 20 €/h, Kurse rund 25 €/Einheit).</p>"
-      }
+        "what_is": "<p>Das <strong>Wassersportzentrum Évian-les-Bains</strong> ist einer der wichtigsten Zugänge zum Wassersport am Südufer des <strong>Genfersees</strong>. Am Strand von <strong>Évian</strong>, in der Avenue du Général Dupas gelegen, bietet es sowohl <strong>Verleih ohne Begleitung</strong> (SUP, Einer- und Zweier-Kajak, Tretboot, Ruderboote) als auch <strong>betreute Kurse</strong> der Trainer des historischen Segelclubs von Évian.</p><p>Praktisch: täglich im Sommer von <strong>13 bis 19 Uhr</strong>, donnerstags bis <strong>21 Uhr</strong>. Betreute Kurse: <strong>Kajak/SUP mittwochs und samstags</strong> abends, <strong>Rudern montags/mittwochs/freitags</strong> nachmittags, <strong>Segeln mittwochs nachmittags</strong> Juli–August. Eine <strong>bewachte Badezone</strong> ist Juni–September geöffnet.</p><p>Erschwingliche Gruppenpreise (SUP ab 15 €/h, Kajak 20 €/h, Kurse rund 25 €/Einheit).</p>",
+        "activities": [
+          {
+            "title": "Stand-up Paddle auf dem Genfersee",
+            "tag": "Sommer",
+            "description": "Vermietung und betreute Sitzungen Stand-up Paddle an der Wassersportbasis Évian — freie Ausfahrt auf dem Genfersee oder Gruppenkurse am Mittwoch- und Samstagabend."
+          },
+          {
+            "title": "Einer- oder Zweier-Kajak",
+            "tag": null,
+            "description": "Kajakvermietung an der Wassersportbasis Évian (1 oder 2 Plätze), um das Ufer eigenständig zu erkunden, oder geführte Sitzungen mit den Trainern des Segelclubs."
+          },
+          {
+            "title": "Begleitetes Segeln",
+            "tag": null,
+            "description": "Begleitete Segelsitzungen am Mittwochnachmittag vom 9. Juli bis 20. August, organisiert vom Segelclub Évian ab der Wassersportbasis."
+          },
+          {
+            "title": "Rudern auf dem Genfersee",
+            "tag": null,
+            "description": "Einführung und Vertiefung im Rudern an der Wassersportbasis Évian, begleitete Sitzungen montags, mittwochs und freitags am Nachmittag in der Sommersaison."
+          },
+          {
+            "title": "Sporttauchen und Apnoe",
+            "tag": null,
+            "description": "Die Wassersportbasis Évian dient als Ausgangspunkt für Taucher und Apnoetaucher, die Wracks und Steilabbrüche des Genfersees vor Évian erkunden."
+          },
+          {
+            "title": "Bewachter Strand Juni-September",
+            "tag": "Familie",
+            "description": "Bewachte Badezone durch Rettungsschwimmer am Strand von Évian neben der Wassersportbasis: Juni-September 12-18 Uhr, Juli-August 11-19 Uhr."
+          },
+          {
+            "title": "Tretboote und Ruderboote",
+            "tag": "Familie",
+            "description": "Tretboot- und Ruderbootverleih an der Wassersportbasis Évian für einen ruhigen Familienspaziergang vor dem Thermalufer."
+          },
+          {
+            "title": "Blick auf das Schweizer Ufer des Genfersees",
+            "tag": null,
+            "description": "Von der Wassersportbasis Évian aus freier Blick auf Lausanne, Vevey, Montreux und die Waadtländer Alpen am gegenüberliegenden Ufer des Genfersees."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Adresse",
+            "v": "Wassersportzentrum Évian, Avenue du Général Dupas, 74500 Évian-les-Bains"
+          },
+          {
+            "k": "Koordinaten",
+            "v": "46,400° N · 6,583° E"
+          },
+          {
+            "k": "Höhe",
+            "v": "≈ 372 m (Genfersee-Niveau)"
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": "Wassersportbasis in der Sommersaison: täglich 13-19 Uhr, donnerstags bis 21 Uhr. Begleitete Kajak/SUP-Sitzungen Mi/Sa 17:30-19 Uhr (5.7.-27.8.), Rudern Mo/Mi/Fr ab 11.7. 15-17 Uhr, Segeln Mi 14-16:30 Uhr (9.7.-20.8.). Bewachter Strand Juni-September 12-18 Uhr, Juli-August 11-19 Uhr. Geprüft am 10. Juni 2026 — Sommerprogramm kann sich ändern."
+          },
+          {
+            "k": "Preise",
+            "v": "Je nach Aktivität, Dauer und Betreuung unterschiedlich. Siehe ville-evian.fr/loisirs/centre-nautique/ oder Segelclub Évian. Thermalpavillon in der Nähe kostenpflichtig. Geprüft am 10. Juni 2026."
+          },
+          {
+            "k": "Offizielle Website",
+            "v": "ville-evian.fr/loisirs/centre-nautique/"
+          },
+          {
+            "k": "Telefon",
+            "v": "Wassersportzentrum Évian: +33 (0)4 50 75 02 69 · Rathaus Évian: +33 (0)4 50 83 10 00"
+          },
+          {
+            "k": "Zugang / Parkplatz",
+            "v": "Öffentliche Parkplätze in der Nähe des Strandes und des Wassersportzentrums Évian (avenue du Général Dupas). SNCF-Bahnhof Évian 10 Minuten zu Fuß. Léman-Express-Verbindung von Genf über Annemasse."
+          },
+          {
+            "k": "Besuchsdauer",
+            "v": "1 Std. bis 3 Std. je nach Aktivität; halber Tag für eine begleitete Sitzung + Baden."
+          },
+          {
+            "k": "Publikum",
+            "v": "Familien, Jugendliche, Erwachsene, Anfänger wie Fortgeschrittene. Betreuung durch diplomierte Trainer."
+          },
+          {
+            "k": "Buchung",
+            "v": "Begleitete Sitzungen auf Reservierung beim Segelclub Évian oder beim Wassersportzentrum. Eigenständige Vermietungen je nach Verfügbarkeit ohne Voranmeldung."
+          },
+          {
+            "k": "Benötigte Ausrüstung",
+            "v": "Badeanzug, Handtuch, Sonnencreme, Wasserschuhe. Wassersportmaterial von der Basis gestellt. Schwimmweste für Kinder inklusive."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Wassersportzentrum Évian",
+        "Wassersportbasis Évian",
+        "Wassersportbasis Strand Évian"
+      ],
+      "hero": {
+        "badge": "Sommersaison · 13-19 Uhr",
+        "lead": "Entdecken Sie den Genfersee im Herzen von Évian: Paddeln, Kajak, Segeln, Rudern und Tauchen, begleitet oder eigenständig, ab der Wassersportbasis am Strand von Évian, den ganzen Sommer geöffnet."
+      },
+      "facts": {
+        "type": "Wassersportbasis (Genfersee)",
+        "access": "Pro Aktivität kostenpflichtig",
+        "tarif": "Je nach Aktivität — siehe offizielle Website",
+        "commune": "Évian-les-Bains",
+        "parking": "Parkplätze des Wassersportzentrums / Strand Évian",
+        "duration": "1 Std. bis halber Tag",
+        "best_season": "Sommer (Juni bis September)"
+      },
+      "faq": [
+        {
+          "q": "Welche Aktivitäten bietet die Wassersportbasis Évian-les-Bains?",
+          "a": "Die Wassersportbasis Évian-les-Bains bietet Paddel, Kajak (einer oder zweier), Segeln, Rudern, Tauchen, Apnoe, Tretboot und Ruderboote. Aktivitäten eigenständig oder in begleiteten Sitzungen durch den Segelclub Évian auf dem Genfersee."
+        },
+        {
+          "q": "Welche Öffnungszeiten hat die Wassersportbasis Évian-les-Bains?",
+          "a": "Die Wassersportbasis Évian-les-Bains ist in der Sommersaison täglich von 13 bis 19 Uhr geöffnet, donnerstags bis 21 Uhr. Bewachter Strand Juni-September 12-18 Uhr (11-19 Uhr im Juli-August). Geprüft am 10. Juni 2026."
+        },
+        {
+          "q": "Wie hoch sind die Preise an der Wassersportbasis Évian-les-Bains?",
+          "a": "Die Preise an der Wassersportbasis Évian-les-Bains hängen von Aktivität, Dauer und Betreuung ab (freie Vermietung vs. begleitete Sitzung). Siehe ville-evian.fr/loisirs/centre-nautique/ oder Segelclub Évian. Geprüft am 10. Juni 2026."
+        },
+        {
+          "q": "Muss man an der Wassersportbasis Évian-les-Bains reservieren?",
+          "a": "Begleitete Sitzungen (Segeln, Rudern, Kajak/SUP) der Wassersportbasis Évian sind beim Segelclub oder beim Wassersportzentrum zu reservieren. Eigenständige Vermietungen (Paddel, Tretboot) sind je nach Verfügbarkeit ohne Reservierung möglich."
+        },
+        {
+          "q": "Wo befindet sich die Wassersportbasis Évian-les-Bains?",
+          "a": "Die Wassersportbasis Évian-les-Bains liegt an der avenue du Général Dupas, am Strand von Évian am Ufer des Genfersees, 10 Minuten zu Fuß vom SNCF-Bahnhof Évian. GPS: 46,400° N · 6,583° E."
+        },
+        {
+          "q": "Ist die Wassersportbasis Évian-les-Bains ganzjährig geöffnet?",
+          "a": "Nein, die Wassersportbasis Évian-les-Bains arbeitet hauptsächlich in der Sommersaison, mit einer Aktivitätsspitze von Mitte Juni bis Ende August. Der angrenzende Strand ist von Juni bis September bewacht. Kalender auf ville-evian.fr prüfen."
+        },
+        {
+          "q": "Welche Jahreszeit ist die beste für die Wassersportbasis Évian-les-Bains?",
+          "a": "Der Sommer (Juli-August) ist die beste Jahreszeit, um alle Aktivitäten der Wassersportbasis Évian-les-Bains zu genießen: mildes Wasser des Genfersees, begleitete Sitzungen im Programm und bewachter Strand."
+        },
+        {
+          "q": "Wie kommt man zur Wassersportbasis Évian-les-Bains?",
+          "a": "Die Wassersportbasis Évian-les-Bains ist vom Zentrum von Évian in wenigen Minuten zu Fuß erreichbar, vom SNCF-Bahnhof Évian (Léman Express nach Genf über Annemasse) sowie über die Quai-Parkplätze. CGN-Schiffe legen an der nahen Anlegestelle an."
+        }
+      ],
+      "schema_amenities": [
+        "Wassersportbasis am Genfersee",
+        "Paddel, Kajak, Segeln, Rudern",
+        "Tauchen und Apnoe",
+        "Eigenständige Vermietung + begleitete Sitzungen",
+        "Bewachter Strand Juni-September",
+        "Im Herzen von Évian-les-Bains"
+      ]
     },
     "it": {
       "name": "Base nautica di Évian-les-Bains",
@@ -278,8 +592,160 @@
       "meta_description": "Base nautica di Évian-les-Bains: SUP, kayak, vela, canottaggio e immersioni sul Lago di Ginevra, spiaggia sorvegliata giugno-settembre. Sessioni serali prenotabili.",
       "hero_alt": "Base nautica di Évian-les-Bains sul Lago di Ginevra: SUP, kayak, vela, immersioni e canottaggio per esplorare la riva sud",
       "body": {
-        "what_is": "<p>La <strong>base nautica di Évian-les-Bains</strong> è uno dei principali punti d'accesso agli sport acquatici sulla riva sud del <strong>Lago di Ginevra</strong>. Sulla <strong>spiaggia di Évian</strong>, in avenue du Général Dupas, propone sia <strong>noleggi in autonomia</strong> (SUP, kayak singolo o doppio, pedalò, barche da canottaggio) sia <strong>sessioni guidate</strong> dagli istruttori del Club velico di Évian.</p><p>Aperta tutti i giorni in estate dalle <strong>13 alle 19</strong>, fino alle <strong>21 il giovedì</strong>. Sessioni guidate: <strong>kayak/SUP mercoledì e sabato</strong> sera, <strong>canottaggio lunedì-mercoledì-venerdì</strong> pomeriggio, <strong>vela mercoledì pomeriggio</strong> luglio-agosto. <strong>Zona di balneazione sorvegliata</strong> giugno-settembre.</p><p>Tariffe abbordabili: SUP da 15 €/h, kayak 20 €/h, sessioni guidate sui 25 €/sessione.</p>"
-      }
+        "what_is": "<p>La <strong>base nautica di Évian-les-Bains</strong> è uno dei principali punti d'accesso agli sport acquatici sulla riva sud del <strong>Lago di Ginevra</strong>. Sulla <strong>spiaggia di Évian</strong>, in avenue du Général Dupas, propone sia <strong>noleggi in autonomia</strong> (SUP, kayak singolo o doppio, pedalò, barche da canottaggio) sia <strong>sessioni guidate</strong> dagli istruttori del Club velico di Évian.</p><p>Aperta tutti i giorni in estate dalle <strong>13 alle 19</strong>, fino alle <strong>21 il giovedì</strong>. Sessioni guidate: <strong>kayak/SUP mercoledì e sabato</strong> sera, <strong>canottaggio lunedì-mercoledì-venerdì</strong> pomeriggio, <strong>vela mercoledì pomeriggio</strong> luglio-agosto. <strong>Zona di balneazione sorvegliata</strong> giugno-settembre.</p><p>Tariffe abbordabili: SUP da 15 €/h, kayak 20 €/h, sessioni guidate sui 25 €/sessione.</p>",
+        "activities": [
+          {
+            "title": "Stand-up paddle sul Lago di Ginevra",
+            "tag": "Estate",
+            "description": "Noleggio e sessioni con istruttore di stand-up paddle alla base nautica di Évian — uscita libera sul Lago di Ginevra o corsi collettivi il mercoledì e il sabato sera."
+          },
+          {
+            "title": "Kayak singolo o biposto",
+            "tag": null,
+            "description": "Noleggio kayak alla base nautica di Évian (1 o 2 posti) per esplorare la riva in autonomia, o sessioni guidate dagli istruttori del Club di vela."
+          },
+          {
+            "title": "Vela con istruttore",
+            "tag": null,
+            "description": "Sessioni di vela con istruttore il mercoledì pomeriggio dal 9 luglio al 20 agosto, organizzate dal Club di vela di Évian con partenza dalla base nautica."
+          },
+          {
+            "title": "Canottaggio sul Lago di Ginevra",
+            "tag": null,
+            "description": "Iniziazione e perfezionamento del canottaggio alla base nautica di Évian, sessioni con istruttore il lunedì, mercoledì e venerdì pomeriggio in stagione estiva."
+          },
+          {
+            "title": "Immersioni subacquee e apnea",
+            "tag": null,
+            "description": "La base nautica di Évian funge da punto di partenza per i sommozzatori e gli apneisti che esplorano i relitti e le pareti del Lago di Ginevra al largo di Évian."
+          },
+          {
+            "title": "Spiaggia sorvegliata giugno-settembre",
+            "tag": "Famiglia",
+            "description": "Zona di balneazione sorvegliata da bagnini sulla spiaggia di Évian vicino alla base nautica: giugno-settembre 12-18, luglio-agosto 11-19."
+          },
+          {
+            "title": "Pedalò e barche a remi",
+            "tag": "Famiglia",
+            "description": "Noleggio di pedalò e barche a remi alla base nautica di Évian per una passeggiata familiare e tranquilla al largo della riva termale."
+          },
+          {
+            "title": "Vista sulla riva svizzera del Lago di Ginevra",
+            "tag": null,
+            "description": "Dalla base nautica di Évian, panorama aperto su Losanna, Vevey, Montreux e le Alpi vodesi dall'altra parte del Lago di Ginevra."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Indirizzo",
+            "v": "Centro nautico di Évian, Avenue du Général Dupas, 74500 Évian-les-Bains"
+          },
+          {
+            "k": "Coordinate",
+            "v": "46,400° N · 6,583° E"
+          },
+          {
+            "k": "Altitudine",
+            "v": "≈ 372 m (livello del Lago di Ginevra)"
+          },
+          {
+            "k": "Orari",
+            "v": "Base nautica in stagione estiva: tutti i giorni 13-19, fino alle 21 il giovedì. Sessioni con istruttore kayak/SUP mer/sab 17:30-19 (5/07-27/08), canottaggio lun/mer/ven dal 11/07 15-17, vela mer 14-16:30 (9/07-20/08). Spiaggia sorvegliata giugno-settembre 12-18, luglio-agosto 11-19. Verificato il 10 giugno 2026 — programma estivo soggetto a variazioni."
+          },
+          {
+            "k": "Tariffe",
+            "v": "Variabili secondo attività, durata e inquadramento. Consultare ville-evian.fr/loisirs/centre-nautique/ o il Club di vela di Évian. Padiglione termale nelle vicinanze a pagamento. Verificato il 10 giugno 2026."
+          },
+          {
+            "k": "Sito ufficiale",
+            "v": "ville-evian.fr/loisirs/centre-nautique/"
+          },
+          {
+            "k": "Telefono",
+            "v": "Centro nautico Évian: +33 (0)4 50 75 02 69 · Municipio di Évian: +33 (0)4 50 83 10 00"
+          },
+          {
+            "k": "Accesso / Parcheggio",
+            "v": "Parcheggi pubblici vicini alla spiaggia e al centro nautico di Évian (avenue du Général Dupas). Stazione SNCF di Évian a 10 minuti a piedi. Accesso Léman Express da Ginevra via Annemasse."
+          },
+          {
+            "k": "Durata della visita",
+            "v": "Da 1 h a 3 h secondo l'attività; mezza giornata per una sessione con istruttore + bagno."
+          },
+          {
+            "k": "Pubblico",
+            "v": "Famiglie, adolescenti, adulti, principianti come praticanti esperti. Inquadramento da istruttori diplomati."
+          },
+          {
+            "k": "Prenotazione",
+            "v": "Sessioni con istruttore su prenotazione presso il Club di vela di Évian o il centro nautico. Noleggi in autonomia senza prenotazione previa secondo disponibilità."
+          },
+          {
+            "k": "Attrezzatura richiesta",
+            "v": "Costume da bagno, asciugamano, crema solare, calzature acquatiche. Materiale nautico fornito dalla base. Giubbotto di salvataggio incluso per i bambini."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Centro nautico di Évian",
+        "Base nautica di Évian",
+        "Base nautica della Spiaggia di Évian"
+      ],
+      "hero": {
+        "badge": "Stagione estiva · 13-19",
+        "lead": "Scoprite il Lago di Ginevra nel cuore di Évian: paddle, kayak, vela, canottaggio e immersioni con istruttori o in autonomia dalla base nautica della spiaggia di Évian, aperta tutta l'estate."
+      },
+      "facts": {
+        "type": "Base nautica (Lago di Ginevra)",
+        "access": "A pagamento per attività",
+        "tarif": "Variabile secondo l'attività — vedere sito ufficiale",
+        "commune": "Évian-les-Bains",
+        "parking": "Parcheggi del centro nautico / spiaggia di Évian",
+        "duration": "Da 1 h a mezza giornata",
+        "best_season": "Estate (giugno-settembre)"
+      },
+      "faq": [
+        {
+          "q": "Quali attività propone la base nautica di Évian-les-Bains?",
+          "a": "La base nautica di Évian-les-Bains propone paddle, kayak (singolo o biposto), vela, canottaggio, immersioni, apnea, pedalò e barche. Attività in autonomia o in sessioni con istruttore dal Club di vela di Évian, sul Lago di Ginevra."
+        },
+        {
+          "q": "Quali sono gli orari della base nautica di Évian-les-Bains?",
+          "a": "La base nautica di Évian-les-Bains è aperta in stagione estiva tutti i giorni dalle 13 alle 19, con apertura serale fino alle 21 il giovedì. Spiaggia sorvegliata giugno-settembre 12-18 (11-19 in luglio-agosto). Verificato il 10 giugno 2026."
+        },
+        {
+          "q": "Quali sono le tariffe della base nautica di Évian-les-Bains?",
+          "a": "Le tariffe della base nautica di Évian-les-Bains variano secondo attività, durata e inquadramento (noleggio libero vs sessione con istruttore). Consultare ville-evian.fr/loisirs/centre-nautique/ o il Club di vela di Évian. Verificato il 10 giugno 2026."
+        },
+        {
+          "q": "Bisogna prenotare alla base nautica di Évian-les-Bains?",
+          "a": "Le sessioni con istruttore (vela, canottaggio, kayak/SUP) della base nautica di Évian si fanno su prenotazione presso il Club di vela o il centro nautico. I noleggi in autonomia (paddle, pedalò) sono accessibili senza prenotazione secondo disponibilità."
+        },
+        {
+          "q": "Dove si trova la base nautica di Évian-les-Bains?",
+          "a": "La base nautica di Évian-les-Bains si trova in avenue du Général Dupas, sulla spiaggia di Évian in riva al Lago di Ginevra, a 10 minuti a piedi dalla stazione SNCF di Évian. GPS: 46,400° N · 6,583° E."
+        },
+        {
+          "q": "La base nautica di Évian-les-Bains è aperta tutto l'anno?",
+          "a": "No, la base nautica di Évian-les-Bains funziona principalmente in stagione estiva, con un picco di attività da metà giugno a fine agosto. La spiaggia adiacente è sorvegliata da giugno a settembre. Verificare il calendario su ville-evian.fr."
+        },
+        {
+          "q": "Qual è la migliore stagione per la base nautica di Évian-les-Bains?",
+          "a": "L'estate (luglio-agosto) è la migliore stagione per godersi tutte le attività della base nautica di Évian-les-Bains: acque del Lago di Ginevra temperate, sessioni con istruttore in programma e spiaggia sorvegliata."
+        },
+        {
+          "q": "Come arrivare alla base nautica di Évian-les-Bains?",
+          "a": "La base nautica di Évian-les-Bains è accessibile dal centro città di Évian in pochi minuti a piedi, dalla stazione SNCF di Évian (Léman Express verso Ginevra via Annemasse) e dai parcheggi del lungolago. Battelli CGN al pontile vicino."
+        }
+      ],
+      "schema_amenities": [
+        "Base nautica sul Lago di Ginevra",
+        "Paddle, kayak, vela, canottaggio",
+        "Immersioni e apnea",
+        "Noleggi in autonomia + sessioni con istruttore",
+        "Spiaggia sorvegliata giugno-settembre",
+        "Nel cuore di Évian-les-Bains"
+      ]
     },
     "es": {
       "name": "Base náutica de Évian-les-Bains",

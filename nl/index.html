@@ -286,6 +286,8 @@ section.cat{padding:clamp(1.5rem,2.8vw,2.4rem) 0}
   .hero .lede{color:#e8dfca}
   .hero .lede b{color:#fff7e0}
 }
+
+.near-results{padding:1.25rem 0 .25rem;border-bottom:1px solid var(--line)}.near-results-head{margin-bottom:1rem}.near-results-head h2{font:600 1.1rem var(--sans);margin:0;color:var(--ink)}.near-results-head p{font:400 .8rem var(--sans);margin:.15rem 0 0;color:var(--ink-mute)}.near-results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.75rem}.near-card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}.near-card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08)}.near-card img{width:100%;height:120px;object-fit:cover;display:block}.near-card-noimg{height:60px;background:var(--surface-2)}.near-card-body{padding:.65rem .75rem .85rem;display:flex;flex-direction:column;gap:.2rem}.near-card-body strong{font:600 .85rem var(--sans);color:var(--ink);line-height:1.25}.near-card-body .near-meta{font:400 .7rem var(--sans);color:var(--ink-mute)}.near-card-body .near-cta{font:600 .68rem var(--sans);color:var(--accent);margin-top:.2rem;text-transform:uppercase;letter-spacing:.06em}
 </style>
 </head>
 <body>
@@ -1484,8 +1486,19 @@ bRain.onclick=function(){mode='rain';setBtn(bRain);setScene(1);};
   els.forEach(function(e){io.observe(e)});})();
 
 /* slug -> meta lookup from inline JSON */
-var DATA={};
-try{DATA=JSON.parse(document.getElementById('l74-data').textContent)||{};}catch(e){}
+var DATA={}, DATA_READY=false, DATA_LOADING=false, DATA_WAIT=[];
+function loadData(cb){
+  if(DATA_READY){if(cb)cb();return;}
+  if(cb)DATA_WAIT.push(cb);
+  if(DATA_LOADING)return;
+  DATA_LOADING=true;
+  fetch('/api/lieux.json').then(function(r){return r.json();}).then(function(j){
+    if(j&&j.lieux){j.lieux.forEach(function(f){DATA[f.slug]={lat:f.latitude,lng:f.longitude,name:f.name,commune:f.commune,category:f.category,url:(f.urls&&f.urls['nl'])||(f.urls&&f.urls.fr)||('https://loisirs74.fr/'+f.slug),photo:f.photo||''};});}
+    DATA_READY=true;DATA_LOADING=false;
+    var q=DATA_WAIT.splice(0);q.forEach(function(c){try{c();}catch(e){}});
+  }).catch(function(){DATA_LOADING=false;});
+}
+loadData();
 function slugFromCard(card){
   var a=card.querySelector('a.card-photo')||card.querySelector('a.title');
   if(!a)return null;var m=a.getAttribute('href').match(/loisirs74\.fr\/(?:[a-z]{2}\/)?([a-z0-9-]+)\/?$/);
@@ -1500,16 +1513,29 @@ function renderBadges(){
     card.classList.remove('is-closed');
     var meta=document.createElement('div');meta.className='card-meta';
     if(origin&&f.lat!=null){var d=L74.distKm(origin.lat,origin.lng,f.lat,f.lng);
-      meta.insertAdjacentHTML('beforeend','<span class="badge dist">'+STR.km_label.replace('{n}',d)+'</span>');}
+      meta.insertAdjacentHTML('beforeend','<span class="badge dist">'+(STR.km_label||'à {n} km').replace('{n}',d)+'</span>');}
     var z=(f.lat!=null)?L74.zoneOf(f.lat,f.lng):null;
     if(z)meta.insertAdjacentHTML('beforeend','<span class="badge zone">'+z.nom+'</span>');
     var st=L74.statutHoraire(f,now);
-    if(st){meta.insertAdjacentHTML('beforeend','<span class="badge '+(st.ouvert?'open':'closed')+'">'+(st.ouvert?STR.open_prefix:'')+st.texte+'</span>');
+    if(st){meta.insertAdjacentHTML('beforeend','<span class="badge '+(st.ouvert?'open':'closed')+'">'+(st.ouvert?(STR.open_prefix||''):'')+st.texte+'</span>');
       if(!st.ouvert)card.classList.add('is-closed');}
     if(commune)commune.parentNode.insertBefore(meta,commune);
   });
 }
-var origin=null;
+var origin=null, NEAR_RADIUS_KM=15, NEAR_MAX=20;
+function haversine(a,b,c,d){var R=6371,t=function(x){return x*Math.PI/180;};var A=t(c-a),B=t(d-b);var x=Math.sin(A/2)*Math.sin(A/2)+Math.cos(t(a))*Math.cos(t(c))*Math.sin(B/2)*Math.sin(B/2);return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));}
+function renderNearResults(){
+  var panel=document.getElementById('nearResults');
+  if(!origin){if(panel)panel.remove();return;}
+  var items=[];Object.keys(DATA).forEach(function(slug){var f=DATA[slug];if(f.lat==null||f.lng==null)return;var d=haversine(origin.lat,origin.lng,f.lat,f.lng);if(d<=NEAR_RADIUS_KM)items.push({slug:slug,f:f,d:d});});
+  items.sort(function(a,b){return a.d-b.d;});items=items.slice(0,NEAR_MAX);
+  if(!panel){panel=document.createElement('section');panel.id='nearResults';panel.className='near-results';var main=document.querySelector('main')||document.body;main.insertBefore(panel,main.firstChild);}
+  var t='Het dichtst bij u', s='{n} plekken binnen {r} km'.replace('{n}',items.length).replace('{r}',NEAR_RADIUS_KM), see='Bekijk pagina';
+  var html='<div class="wrap"><div class="near-results-head"><h2>'+t+'</h2><p>'+s+'</p></div><div class="near-results-grid">';
+  items.forEach(function(it){var f=it.f,d=Math.round(it.d*10)/10;html+='<a class="near-card" href="'+f.url+'">'+(f.photo?'<img loading="lazy" src="'+f.photo+'" alt="">':'<div class="near-card-noimg"></div>')+'<div class="near-card-body"><strong>'+f.name+'</strong><span class="near-meta">'+f.commune+' · '+d+' km</span><span class="near-cta">'+see+' →</span></div></a>';});
+  html+='</div></div>';panel.innerHTML=html;
+  panel.scrollIntoView({behavior:'smooth',block:'start'});
+}
 function applyProximity(){
   if(!origin)return;
   document.querySelectorAll('.carousel').forEach(function(car){
@@ -1522,11 +1548,24 @@ function applyProximity(){
     });
     cards.forEach(function(c){car.appendChild(c);});
   });
+  renderNearResults();
 }
 var nearBtn=document.getElementById('nearMe');
-nearBtn.onclick=function(){
-  if(origin){origin=null;nearBtn.classList.remove('on');nearBtn.textContent=STR.btn_near;renderBadges();return;}
+if(nearBtn){nearBtn.onclick=function(){
+  if(origin){origin=null;nearBtn.classList.remove('on');nearBtn.textContent=STR.btn_near;var p=document.getElementById('nearResults');if(p)p.remove();renderBadges();return;}
   nearBtn.textContent=STR.btn_near_loading;
+  if(!navigator.geolocation){nearBtn.textContent=STR.btn_near_off;return;}
+  navigator.geolocation.getCurrentPosition(function(pos){
+    origin={lat:pos.coords.latitude,lng:pos.coords.longitude};
+    nearBtn.classList.add('on');nearBtn.textContent=STR.btn_near_on;
+    loadData(function(){applyProximity();renderBadges();});
+  },function(){
+    origin={lat:45.8992,lng:6.1294};
+    nearBtn.classList.add('on');nearBtn.textContent=STR.btn_near_demo;
+    loadData(function(){applyProximity();renderBadges();});
+  },{timeout:6000});
+};}
+renderBadges();  nearBtn.textContent=STR.btn_near_loading;
   if(!navigator.geolocation){nearBtn.textContent=STR.btn_near_off;return;}
   navigator.geolocation.getCurrentPosition(function(pos){
     origin={lat:pos.coords.latitude,lng:pos.coords.longitude};

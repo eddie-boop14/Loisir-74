@@ -88,6 +88,16 @@
       "date": "2026-06-13",
       "by": "scripts/ingest_translations.py",
       "note": "Translation ingest [nl]: 5 field(s) updated."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for de from translations/agent_I_de_secondary.json."
+    },
+    {
+      "date": "2026-06-13",
+      "by": "scripts/merge_secondary.py",
+      "note": "Merged secondary fields for it from translations/agent_I_it_secondary.json."
     }
   ],
   "i18n": {
@@ -255,8 +265,155 @@
       "meta_description": "Network of walking trails at Publier (74): three concentric green/blue/red loops between the village and the Amphion plain, 5.5 km / 200 m climb, views of Lake Geneva.",
       "hero_alt": "Coteau Loops walking network at Publier in Haute-Savoie, three concentric trails with views of Lake Geneva",
       "body": {
-        "what_is": "<p>The <strong>Coteau Loops</strong> form a network of shaded woodland walking trails crisscrossing the commune of Publier (74500), between its hillside village and the Amphion-les-Bains plain on Lake Geneva. The route combines mixed forest, orchards, meadows and balcony viewpoints over <strong>Lake Geneva</strong> and the Swiss shore (Lausanne, Vevey).</p><p>The network is organised in three concentric loops marked with the classic hiking colour code: <strong>green (easiest), blue (intermediate), red (longest)</strong>. About <strong>5.5 km of trails and 200 m of cumulative climb</strong> total, averaging 2 hours at a family pace; shorter loops complete in 1 hour. Five entry panels are installed around the commune as gateways to the network, with maps and difficulty ratings.</p><p>The Coteau Loops are a good option for half-day families looking for fresh air between the lake and the foothills, with shaded passages in summer and lake panoramas in clear weather.</p>"
-      }
+        "what_is": "<p>The <strong>Coteau Loops</strong> form a network of shaded woodland walking trails crisscrossing the commune of Publier (74500), between its hillside village and the Amphion-les-Bains plain on Lake Geneva. The route combines mixed forest, orchards, meadows and balcony viewpoints over <strong>Lake Geneva</strong> and the Swiss shore (Lausanne, Vevey).</p><p>The network is organised in three concentric loops marked with the classic hiking colour code: <strong>green (easiest), blue (intermediate), red (longest)</strong>. About <strong>5.5 km of trails and 200 m of cumulative climb</strong> total, averaging 2 hours at a family pace; shorter loops complete in 1 hour. Five entry panels are installed around the commune as gateways to the network, with maps and difficulty ratings.</p><p>The Coteau Loops are a good option for half-day families looking for fresh air between the lake and the foothills, with shaded passages in summer and lake panoramas in clear weather.</p>",
+        "activities": [
+          {
+            "title": "Easy green loop",
+            "tag": "Family",
+            "description": "The green loop of the Boucles du Coteau in Publier is the shortest and easiest: shaded woodland, no technical difficulty, ideal for an hour's family walk."
+          },
+          {
+            "title": "Intermediate blue loop",
+            "tag": null,
+            "description": "The blue loop of the Boucles du Coteau offers more elevation and better views of Lake Geneva and the Swiss shore: 1 hr 30 to 2 hr depending on pace."
+          },
+          {
+            "title": "Longest red loop",
+            "tag": null,
+            "description": "The red loop of the Boucles du Coteau combines the previous two for about 5.5 km and 200 m of elevation: 2 hr of walking to discover the whole commune of Publier."
+          },
+          {
+            "title": "Views of Lake Geneva",
+            "tag": null,
+            "description": "The Boucles du Coteau in Publier repeatedly offer viewpoints over Lake Geneva and the Swiss shore — Lausanne, Vevey, Montreux, the Vaud Alps in the background."
+          },
+          {
+            "title": "5 waymarked entry panels",
+            "tag": null,
+            "description": "Five information panels have been installed at the various entry points to the Boucles du Coteau in Publier, showing the map, waymarking and difficulty of each loop."
+          },
+          {
+            "title": "Nordic walking and trail running",
+            "tag": null,
+            "description": "The Boucles du Coteau in Publier are popular year-round with Nordic walkers and light trail runners, who enjoy the shaded woodland paths."
+          },
+          {
+            "title": "Dog-friendly walking",
+            "tag": null,
+            "description": "The Boucles du Coteau paths are perfectly suited to walks with a dog on a lead — shaded woodland and moderate local traffic."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Address",
+            "v": "Network of paths in the commune of Publier (74500), between the village centre and the Amphion-les-Bains plain. 5 waymarked entry points."
+          },
+          {
+            "k": "Coordinates",
+            "v": "46.395° N · 6.541° E (centre of Publier)"
+          },
+          {
+            "k": "Altitude",
+            "v": "≈ 460 m village centre, descending to ≈ 380 m on the Amphion plain"
+          },
+          {
+            "k": "Opening hours",
+            "v": "Free access 24/7, year-round. Daytime is recommended for safe waymarking. Checked on 10 June 2026."
+          },
+          {
+            "k": "Prices",
+            "v": "Free. No ticketing; waymarking and upkeep are the responsibility of the commune. Checked on 10 June 2026."
+          },
+          {
+            "k": "Official site",
+            "v": "leman-mountains-explore.com / Léman Mountains Explore Tourist Office (Évian / Publier / Amphion)"
+          },
+          {
+            "k": "Phone",
+            "v": "Amphion-Publier Tourist Office: +33 (0)4 50 70 00 63"
+          },
+          {
+            "k": "Access / Parking",
+            "v": "Free parking in the centre of Publier, or on the Amphion-les-Bains side. Léman Express to Évian then bus / bike. 5 waymarked entry points in the commune."
+          },
+          {
+            "k": "Length of visit",
+            "v": "1 hr for the green loop, 2 hr for the full red loop. Adapt to pace and the number of loops you link together."
+          },
+          {
+            "k": "Distance · Elevation",
+            "v": "≈ 5.5 km cumulative on the network · 200 m elevation for the full loop"
+          },
+          {
+            "k": "Audience",
+            "v": "Families, walkers, Nordic walkers, joggers. Paths with no technical difficulty."
+          },
+          {
+            "k": "Animals",
+            "v": "Dogs welcome on a lead throughout the Boucles du Coteau."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Boucles du Coteau — Publier",
+        "Coteau de Publier paths",
+        "Amphion-Publier hillside network"
+      ],
+      "hero": {
+        "badge": "Free access · Year-round",
+        "lead": "Network of shaded woodland paths between the village of Publier and the Amphion plain: 3 waymarked concentric loops (green, blue, red), 5.5 km / 200 m elevation, with fine views over Lake Geneva."
+      },
+      "facts": {
+        "type": "Walking network — 3 concentric loops",
+        "access": "Free access · free of charge",
+        "tarif": "Free",
+        "commune": "Publier",
+        "parking": "Centre of Publier village (free)",
+        "duration": "1 hr to 2 hr",
+        "best_season": "Spring, summer, autumn"
+      },
+      "faq": [
+        {
+          "q": "What are the Boucles du Coteau in Publier?",
+          "a": "The Boucles du Coteau are a network of 3 concentric walking loops (green, blue, red) in the commune of Publier, between the village centre and the Amphion-les-Bains plain. Shaded woodland, views of Lake Geneva, 5.5 km and 200 m of elevation in total."
+        },
+        {
+          "q": "How many Boucles du Coteau are there in Publier?",
+          "a": "The Boucles du Coteau network in Publier offers 3 waymarked concentric loops: green (easy), blue (intermediate) and red (the longest), with 5 entry panels installed across the commune."
+        },
+        {
+          "q": "How long do the Boucles du Coteau take?",
+          "a": "Allow 1 hr for the green loop of the Boucles du Coteau, up to 2 hr for the full red loop. The duration depends on pace and the number of loops chained together."
+        },
+        {
+          "q": "What is the elevation of the Boucles du Coteau in Publier?",
+          "a": "The full Boucles du Coteau network in Publier totals about 5.5 km and 200 m of positive elevation. The terrain is mostly shaded woodland, with no technical difficulty."
+        },
+        {
+          "q": "How much do the Boucles du Coteau in Publier cost?",
+          "a": "Access to the Boucles du Coteau in Publier is entirely free: open-access paths, waymarked and maintained by the commune. Checked on 10 June 2026."
+        },
+        {
+          "q": "What are the opening hours of the Boucles du Coteau?",
+          "a": "The Boucles du Coteau in Publier are open 24/7 year-round. Daytime is recommended to follow the waymarking and enjoy the views over Lake Geneva. Checked on 10 June 2026."
+        },
+        {
+          "q": "Where can I park for the Boucles du Coteau in Publier?",
+          "a": "Free parking in the centre of Publier or in Amphion-les-Bains. The Boucles du Coteau network has 5 waymarked entry points across the commune, with maps and information."
+        },
+        {
+          "q": "Are the Boucles du Coteau suitable for children?",
+          "a": "Yes, the Boucles du Coteau are ideal for families: the green loop is easy and short, and the woodland terrain is shaded in summer. Dogs are allowed on a lead."
+        }
+      ],
+      "schema_amenities": [
+        "3 waymarked concentric loops",
+        "5.5 km cumulative / 200 m elevation",
+        "Shaded woodland of the Coteau",
+        "Views of Lake Geneva",
+        "Free access year-round",
+        "5 entry panels"
+      ]
     },
     "de": {
       "name": "Die Coteau-Runden",
@@ -264,8 +421,155 @@
       "meta_description": "Wanderwegnetz in Publier (74): drei konzentrische Grüne/Blaue/Rote Runden zwischen Hauptort und Amphion-Ebene, 5,5 km / 200 m, Blick auf den Genfersee.",
       "hero_alt": "Coteau-Runden in Publier in Haute-Savoie, drei konzentrische Schleifen mit Genferseeblick",
       "body": {
-        "what_is": "<p>Die <strong>Coteau-Runden</strong> bilden ein schattiges Waldwegenetz in der Gemeinde Publier (74500), zwischen Hangort und Amphion-les-Bains am <strong>Genfersee</strong>. Die Strecke kombiniert Mischwald, Obstgärten, Wiesen und Balkonblicke auf den See und das Schweizer Ufer (Lausanne, Vevey).</p><p>Das Netz ist in drei konzentrische Schleifen organisiert: <strong>grün (leichteste), blau (mittel), rot (längste)</strong>. Insgesamt etwa <strong>5,5 km Wege und 200 m Höhendifferenz</strong>, durchschnittlich 2 Stunden im Familientempo; kürzere Schleifen 1 h. Fünf Eingangstafeln sind als Zugangspforten installiert, mit Karte und Schwierigkeitsgrad.</p><p>Halbtagestauglich für Familien, die zwischen See und Vorbergen frische Luft suchen, schattig im Sommer und mit Seepanoramen bei klarem Wetter.</p>"
-      }
+        "what_is": "<p>Die <strong>Coteau-Runden</strong> bilden ein schattiges Waldwegenetz in der Gemeinde Publier (74500), zwischen Hangort und Amphion-les-Bains am <strong>Genfersee</strong>. Die Strecke kombiniert Mischwald, Obstgärten, Wiesen und Balkonblicke auf den See und das Schweizer Ufer (Lausanne, Vevey).</p><p>Das Netz ist in drei konzentrische Schleifen organisiert: <strong>grün (leichteste), blau (mittel), rot (längste)</strong>. Insgesamt etwa <strong>5,5 km Wege und 200 m Höhendifferenz</strong>, durchschnittlich 2 Stunden im Familientempo; kürzere Schleifen 1 h. Fünf Eingangstafeln sind als Zugangspforten installiert, mit Karte und Schwierigkeitsgrad.</p><p>Halbtagestauglich für Familien, die zwischen See und Vorbergen frische Luft suchen, schattig im Sommer und mit Seepanoramen bei klarem Wetter.</p>",
+        "activities": [
+          {
+            "title": "Leichter grüner Rundweg",
+            "tag": "Familie",
+            "description": "Der grüne Rundweg der Boucles du Coteau in Publier ist der kürzeste und leichteste: schattige Unterhölzer, ohne technische Schwierigkeit, ideal für einen einstündigen Familienspaziergang."
+          },
+          {
+            "title": "Mittlerer blauer Rundweg",
+            "tag": null,
+            "description": "Der blaue Rundweg der Boucles du Coteau bietet mehr Höhenunterschied und bessere Sicht auf den Genfersee und das Schweizer Ufer: 1 Std. 30 bis 2 Std. je nach Tempo."
+          },
+          {
+            "title": "Längster roter Rundweg",
+            "tag": null,
+            "description": "Der rote Rundweg der Boucles du Coteau kombiniert die beiden vorherigen für etwa 5,5 km und 200 m Höhenunterschied: 2 Std. Gehzeit, um die gesamte Gemeinde Publier zu entdecken."
+          },
+          {
+            "title": "Ausblicke auf den Genfersee",
+            "tag": null,
+            "description": "Die Boucles du Coteau in Publier bieten mehrfach Balkone über dem Genfersee und dem Schweizer Ufer — Lausanne, Vevey, Montreux, Waadtländer Alpen im Hintergrund."
+          },
+          {
+            "title": "5 markierte Eingangstafeln",
+            "tag": null,
+            "description": "Fünf Informationstafeln wurden an den verschiedenen Eingängen der Boucles du Coteau in Publier installiert, mit Karte, Markierung und Schwierigkeitsgrad jedes Rundwegs."
+          },
+          {
+            "title": "Nordic Walking und Laufen",
+            "tag": null,
+            "description": "Die Boucles du Coteau in Publier werden ganzjährig von Nordic-Walking-Fans und leichten Trailläufern frequentiert, die die Wege im schattigen Unterholz schätzen."
+          },
+          {
+            "title": "Spaziergang mit Hund",
+            "tag": null,
+            "description": "Die Pfade der Boucles du Coteau sind perfekt für Spaziergänge mit Hund an der Leine geeignet — schattige Unterhölzer und moderate lokale Frequentierung."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Adresse",
+            "v": "Wegenetz auf der Gemeinde Publier (74500), zwischen dem Ortskern und der Ebene von Amphion-les-Bains. 5 markierte Eingänge."
+          },
+          {
+            "k": "Koordinaten",
+            "v": "46,395° N · 6,541° E (Ortskern von Publier)"
+          },
+          {
+            "k": "Höhe",
+            "v": "≈ 460 m im Ortskern, Abstieg auf ≈ 380 m in der Ebene von Amphion"
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": "Freier Zugang rund um die Uhr, ganzjährig. Tagsüber für die Sicherheit der Markierung bevorzugen. Geprüft am 10. Juni 2026."
+          },
+          {
+            "k": "Preise",
+            "v": "Kostenlos. Keine Kasse, Markierung und Pflege Aufgabe der Gemeinde. Geprüft am 10. Juni 2026."
+          },
+          {
+            "k": "Offizielle Website",
+            "v": "leman-mountains-explore.com / Tourismusbüro Léman Mountains Explore (Évian / Publier / Amphion)"
+          },
+          {
+            "k": "Telefon",
+            "v": "Tourismusbüro Amphion-Publier: +33 (0)4 50 70 00 63"
+          },
+          {
+            "k": "Zugang / Parkplatz",
+            "v": "Kostenloses Parken im Ortskern von Publier oder auf der Seite Amphion-les-Bains. Léman Express bis Évian, dann Bus / Fahrrad. 5 markierte Eingänge auf der Gemeinde."
+          },
+          {
+            "k": "Besuchsdauer",
+            "v": "1 Std. für den grünen Rundweg, 2 Std. für den vollen roten Rundweg. An Tempo und Anzahl der verketteten Rundwege anzupassen."
+          },
+          {
+            "k": "Distanz · Höhenunterschied",
+            "v": "≈ 5,5 km kumuliert im Netz · 200 m Höhenunterschied für den vollen Rundweg"
+          },
+          {
+            "k": "Publikum",
+            "v": "Familien, Spaziergänger, Nordic Walker, Jogger. Pfade ohne technische Schwierigkeit."
+          },
+          {
+            "k": "Tiere",
+            "v": "Hunde an der Leine auf allen Boucles du Coteau erlaubt."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Boucles du Coteau Publier",
+        "Pfade des Coteau Publier",
+        "Netz des Coteau Amphion-Publier"
+      ],
+      "hero": {
+        "badge": "Freier Zugang · Ganzjährig",
+        "lead": "Netz von Fußgängerwegen im schattigen Unterholz zwischen dem Ortskern von Publier und der Ebene von Amphion: 3 konzentrische markierte Rundwege (grün, blau, rot), 5,5 km / 200 m Höhenunterschied, schöne Ausblicke auf den Genfersee."
+      },
+      "facts": {
+        "type": "Wandernetz — 3 konzentrische Rundwege",
+        "access": "Freier Zugang · kostenlos",
+        "tarif": "Kostenlos",
+        "commune": "Publier",
+        "parking": "Ortskern von Publier (kostenlos)",
+        "duration": "1 Std. bis 2 Std.",
+        "best_season": "Frühling, Sommer, Herbst"
+      },
+      "faq": [
+        {
+          "q": "Was sind die Boucles du Coteau in Publier?",
+          "a": "Die Boucles du Coteau sind ein Netz von 3 konzentrischen Wanderrundwegen (grün, blau, rot) auf der Gemeinde Publier, zwischen dem Ortskern und der Ebene von Amphion-les-Bains. Schattige Unterhölzer, Ausblicke auf den Genfersee, 5,5 km und 200 m Höhenunterschied insgesamt."
+        },
+        {
+          "q": "Wie viele Boucles du Coteau gibt es in Publier?",
+          "a": "Das Netz der Boucles du Coteau in Publier bietet 3 konzentrische markierte Rundwege grün (leicht), blau (mittel) und rot (am längsten), mit 5 Eingangstafeln, die auf der Gemeinde installiert sind."
+        },
+        {
+          "q": "Wie viel Zeit sollte man für die Boucles du Coteau einplanen?",
+          "a": "Rechnen Sie 1 Std. für den grünen Rundweg der Boucles du Coteau, bis zu 2 Std. für den vollen roten Rundweg. Die Dauer hängt vom Tempo und der Anzahl der verketteten Rundwege ab."
+        },
+        {
+          "q": "Wie hoch ist der Höhenunterschied der Boucles du Coteau in Publier?",
+          "a": "Das vollständige Netz der Boucles du Coteau in Publier kumuliert etwa 5,5 km und 200 m positiven Höhenunterschied. Das Gelände ist überwiegend schattiges Unterholz, ohne technische Schwierigkeit."
+        },
+        {
+          "q": "Wie viel kosten die Boucles du Coteau in Publier?",
+          "a": "Der Zugang zu den Boucles du Coteau in Publier ist völlig kostenlos: frei zugängliche Pfade, markiert und von der Gemeinde gepflegt. Geprüft am 10. Juni 2026."
+        },
+        {
+          "q": "Welche Öffnungszeiten haben die Boucles du Coteau?",
+          "a": "Die Boucles du Coteau in Publier sind ganzjährig rund um die Uhr frei zugänglich. Tagsüber bevorzugen, um der Markierung zu folgen und die Ausblicke auf den Genfersee zu genießen. Geprüft am 10. Juni 2026."
+        },
+        {
+          "q": "Wo kann man für die Boucles du Coteau in Publier parken?",
+          "a": "Kostenloses Parken im Ortskern von Publier oder in Amphion-les-Bains. Das Netz der Boucles du Coteau hat 5 markierte Eingänge auf der Gemeinde mit Karte und Hinweisen."
+        },
+        {
+          "q": "Sind die Boucles du Coteau für Kinder geeignet?",
+          "a": "Ja, die Boucles du Coteau sind ideal für Familien: Der grüne Rundweg ist leicht und kurz, das Gelände im Unterholz ist im Sommer schattig. Hunde sind an der Leine zugelassen."
+        }
+      ],
+      "schema_amenities": [
+        "3 markierte konzentrische Rundwege",
+        "5,5 km kumuliert / 200 m Höhenunterschied",
+        "Schattige Unterhölzer des Coteau",
+        "Ausblicke auf den Genfersee",
+        "Ganzjährig freier Zugang",
+        "5 Eingangstafeln"
+      ]
     },
     "it": {
       "name": "Gli anelli del Coteau",
@@ -273,8 +577,155 @@
       "meta_description": "Rete di sentieri pedonali a Publier (74): tre anelli concentrici verde/blu/rosso tra capoluogo e piana di Amphion, 5,5 km / 200 m, vista sul Lago di Ginevra.",
       "hero_alt": "Rete degli anelli del Coteau a Publier in Alta Savoia, tre anelli concentrici con vista sul Lago di Ginevra",
       "body": {
-        "what_is": "<p>Gli <strong>anelli del Coteau</strong> formano una rete di sentieri pedonali in sottobosco ombreggiato a Publier (74500), tra il capoluogo sul versante e la piana di Amphion-les-Bains in riva al <strong>Lago di Ginevra</strong>. Foreste miste, frutteti, prati e balconi panoramici sul lago e sulla riva svizzera (Losanna, Vevey).</p><p>Tre anelli concentrici col classico codice colore: <strong>verde (più facile), blu (intermedio), rosso (più lungo)</strong>. Circa <strong>5,5 km e 200 m di dislivello</strong>, in media 2 ore in famiglia; gli anelli brevi si fanno in 1 h. Cinque pannelli di ingresso con mappa e difficoltà.</p><p>Opzione mezza giornata per famiglie tra lago e prealpi, ombreggiata d'estate, con panorami lacustri in tempo limpido.</p>"
-      }
+        "what_is": "<p>Gli <strong>anelli del Coteau</strong> formano una rete di sentieri pedonali in sottobosco ombreggiato a Publier (74500), tra il capoluogo sul versante e la piana di Amphion-les-Bains in riva al <strong>Lago di Ginevra</strong>. Foreste miste, frutteti, prati e balconi panoramici sul lago e sulla riva svizzera (Losanna, Vevey).</p><p>Tre anelli concentrici col classico codice colore: <strong>verde (più facile), blu (intermedio), rosso (più lungo)</strong>. Circa <strong>5,5 km e 200 m di dislivello</strong>, in media 2 ore in famiglia; gli anelli brevi si fanno in 1 h. Cinque pannelli di ingresso con mappa e difficoltà.</p><p>Opzione mezza giornata per famiglie tra lago e prealpi, ombreggiata d'estate, con panorami lacustri in tempo limpido.</p>",
+        "activities": [
+          {
+            "title": "Anello verde facile",
+            "tag": "Famiglia",
+            "description": "L'anello verde degli Anelli del Coteau a Publier è il più corto e il più facile: sottoboschi ombreggiati, senza difficoltà tecnica, ideale per un'ora di passeggiata familiare."
+          },
+          {
+            "title": "Anello blu intermedio",
+            "tag": null,
+            "description": "L'anello blu degli Anelli del Coteau offre un dislivello più marcato e migliori viste sul Lago di Ginevra e sulla riva svizzera: 1 h 30 - 2 h secondo il ritmo."
+          },
+          {
+            "title": "Anello rosso il più lungo",
+            "tag": null,
+            "description": "L'anello rosso degli Anelli del Coteau combina i due precedenti per circa 5,5 km e 200 m di dislivello: 2 h di cammino per scoprire l'intero comune di Publier."
+          },
+          {
+            "title": "Viste sul Lago di Ginevra",
+            "tag": null,
+            "description": "Gli Anelli del Coteau a Publier offrono più volte balconate sul Lago di Ginevra e sulla riva svizzera — Losanna, Vevey, Montreux, Alpi vodesi sullo sfondo."
+          },
+          {
+            "title": "5 pannelli d'ingresso segnalati",
+            "tag": null,
+            "description": "Cinque pannelli informativi sono stati installati ai diversi ingressi degli Anelli del Coteau a Publier, indicando carta, segnaletica e difficoltà di ogni anello."
+          },
+          {
+            "title": "Marcia nordica e corsa",
+            "tag": null,
+            "description": "Gli Anelli del Coteau a Publier sono frequentati tutto l'anno dagli appassionati di marcia nordica e di trail leggero, che approfittano dei sentieri nel sottobosco."
+          },
+          {
+            "title": "Passeggiata con cane",
+            "tag": null,
+            "description": "I sentieri degli Anelli del Coteau sono perfettamente adatti alle passeggiate con un cane al guinzaglio — sottoboschi ombreggiati e frequentazione locale moderata."
+          }
+        ],
+        "practical_info": [
+          {
+            "k": "Indirizzo",
+            "v": "Rete di sentieri sul comune di Publier (74500), tra il capoluogo e la pianura di Amphion-les-Bains. 5 ingressi segnalati."
+          },
+          {
+            "k": "Coordinate",
+            "v": "46,395° N · 6,541° E (capoluogo di Publier)"
+          },
+          {
+            "k": "Altitudine",
+            "v": "≈ 460 m capoluogo, discesa verso ≈ 380 m pianura di Amphion"
+          },
+          {
+            "k": "Orari",
+            "v": "Accesso libero 24h/24, tutto l'anno. Da privilegiare di giorno per la sicurezza della segnaletica. Verificato il 10 giugno 2026."
+          },
+          {
+            "k": "Tariffe",
+            "v": "Gratuito. Nessuna biglietteria, segnaletica e manutenzione a carico del comune. Verificato il 10 giugno 2026."
+          },
+          {
+            "k": "Sito ufficiale",
+            "v": "leman-mountains-explore.com / Ufficio del turismo Léman Mountains Explore (Évian / Publier / Amphion)"
+          },
+          {
+            "k": "Telefono",
+            "v": "Ufficio del turismo Amphion-Publier: +33 (0)4 50 70 00 63"
+          },
+          {
+            "k": "Accesso / Parcheggio",
+            "v": "Parcheggio gratuito nel capoluogo di Publier, o lato Amphion-les-Bains. Léman Express fino a Évian poi bus / bicicletta. 5 ingressi segnalati sul comune."
+          },
+          {
+            "k": "Durata della visita",
+            "v": "1 h per l'anello verde, 2 h per l'anello rosso completo. Da adattare al ritmo e al numero di anelli concatenati."
+          },
+          {
+            "k": "Distanza · Dislivello",
+            "v": "≈ 5,5 km cumulati sulla rete · 200 m di dislivello per l'anello completo"
+          },
+          {
+            "k": "Pubblico",
+            "v": "Famiglie, passeggiatori, marciatori nordici, jogger. Sentiero senza difficoltà tecnica."
+          },
+          {
+            "k": "Animali",
+            "v": "Cani ammessi tenuti al guinzaglio su tutti gli Anelli del Coteau."
+          }
+        ]
+      },
+      "name_alternates": [
+        "Anelli del Coteau Publier",
+        "Sentieri del Coteau Publier",
+        "Rete del Coteau Amphion-Publier"
+      ],
+      "hero": {
+        "badge": "Accesso libero · Tutto l'anno",
+        "lead": "Rete di sentieri pedonali nel sottobosco ombreggiato tra il capoluogo di Publier e la pianura di Amphion: 3 anelli concentrici segnalati (verde, blu, rosso), 5,5 km / 200 m di dislivello, belle prospettive sul Lago di Ginevra."
+      },
+      "facts": {
+        "type": "Rete pedonale — 3 anelli concentrici",
+        "access": "Accesso libero · gratuito",
+        "tarif": "Gratuito",
+        "commune": "Publier",
+        "parking": "Capoluogo di Publier (gratuito)",
+        "duration": "Da 1 h a 2 h",
+        "best_season": "Primavera, estate, autunno"
+      },
+      "faq": [
+        {
+          "q": "Cosa sono gli Anelli del Coteau a Publier?",
+          "a": "Gli Anelli del Coteau sono una rete di 3 anelli pedonali concentrici (verde, blu, rosso) sul comune di Publier, tra il capoluogo e la pianura di Amphion-les-Bains. Sottoboschi ombreggiati, prospettive sul Lago di Ginevra, 5,5 km e 200 m di dislivello in totale."
+        },
+        {
+          "q": "Quanti Anelli del Coteau ci sono a Publier?",
+          "a": "La rete degli Anelli del Coteau a Publier propone 3 anelli concentrici segnalati verde (facile), blu (intermedio) e rosso (il più lungo), con 5 pannelli d'ingresso installati sul comune."
+        },
+        {
+          "q": "Quanto tempo prevedere per gli Anelli del Coteau?",
+          "a": "Prevedete 1 h per l'anello verde degli Anelli del Coteau, fino a 2 h per l'anello rosso completo. La durata varia secondo l'andatura e il numero di anelli concatenati."
+        },
+        {
+          "q": "Qual è il dislivello degli Anelli del Coteau a Publier?",
+          "a": "La rete completa degli Anelli del Coteau a Publier cumula circa 5,5 km e 200 m di dislivello positivo. Il terreno è essenzialmente nel sottobosco ombreggiato, senza difficoltà tecnica."
+        },
+        {
+          "q": "Quanto costano gli Anelli del Coteau a Publier?",
+          "a": "L'accesso agli Anelli del Coteau a Publier è interamente gratuito: sentiero ad accesso libero, segnalato e mantenuto dal comune. Verificato il 10 giugno 2026."
+        },
+        {
+          "q": "Quali sono gli orari degli Anelli del Coteau?",
+          "a": "Gli Anelli del Coteau a Publier sono accessibili liberamente 24h/24 tutto l'anno. Da privilegiare di giorno per seguire la segnaletica e godere delle viste sul Lago di Ginevra. Verificato il 10 giugno 2026."
+        },
+        {
+          "q": "Dove parcheggiare per gli Anelli del Coteau a Publier?",
+          "a": "Parcheggio gratuito nel capoluogo di Publier o ad Amphion-les-Bains. La rete degli Anelli del Coteau conta 5 ingressi segnalati sul comune con carta e indicazioni."
+        },
+        {
+          "q": "Gli Anelli del Coteau sono adatti ai bambini?",
+          "a": "Sì, gli Anelli del Coteau sono ideali per le famiglie: l'anello verde è facile e corto, il terreno nel sottobosco è ombreggiato in estate. I cani sono ammessi al guinzaglio."
+        }
+      ],
+      "schema_amenities": [
+        "3 anelli concentrici segnalati",
+        "5,5 km cumulati / 200 m di dislivello",
+        "Sottoboschi ombreggiati del Coteau",
+        "Viste sul Lago di Ginevra",
+        "Accesso libero tutto l'anno",
+        "5 pannelli d'ingresso"
+      ]
     },
     "es": {
       "name": "Los bucles del Coteau",
