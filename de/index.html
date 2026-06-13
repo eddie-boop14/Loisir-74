@@ -1559,18 +1559,6 @@ if(nearBtn){nearBtn.onclick=function(){
     loadData(function(){applyProximity();renderBadges();});
   },{timeout:6000});
 };}
-renderBadges();  nearBtn.textContent=STR.btn_near_loading;
-  if(!navigator.geolocation){nearBtn.textContent=STR.btn_near_off;return;}
-  navigator.geolocation.getCurrentPosition(function(pos){
-    origin={lat:pos.coords.latitude,lng:pos.coords.longitude};
-    nearBtn.classList.add('on');nearBtn.textContent=STR.btn_near_on;
-    applyProximity();renderBadges();
-  },function(){
-    origin={lat:45.90,lng:6.13};
-    nearBtn.classList.add('on');nearBtn.textContent=STR.btn_near_demo;
-    applyProximity();renderBadges();
-  },{timeout:6000});
-};
 renderBadges();
 setScene(0);
 </script>
