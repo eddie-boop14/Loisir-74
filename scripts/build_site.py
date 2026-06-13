@@ -64,7 +64,6 @@ COPY_ROOT_FILES_GLOB = [
     "sitemap.xml",
     "llms.txt", "llms-full.txt", "robots.txt", "robots-ai.txt",
     "catalog-index.json", "lieux.json", "photo-credits.json",
-    "dt-candidates.json",            # used by Studio Tab 7; noindexed via robots
     "_headers", "_redirects",        # Netlify control files
     "a100618930894cd2bc77bacba5002b64.txt",  # Indeed/Bing verification
 ]
@@ -77,6 +76,17 @@ DENY = {
     "dt-flow-261672",                # raw DataTourisme flow dump if present
     "Json.bak", "node_modules",
     "report.csv", "email_queue.csv",
+    "translations",                  # JOB 7 translation payloads (intermediate)
+    # JOB 11: Studio is dev-only. Lives in repo, never deployed.
+    "studio.html",
+    "studio-consts.js",
+    "studio-dt-importer.js",
+    "studio-editor.js",
+    "studio-enricher.js",
+    "studio-phototheque.js",
+    "studio-render.js",
+    "studio-templates.js",
+    "dt-candidates.json",
 }
 DENY_GLOB = [
     "*.zip", "*.tar.gz", "*.tgz",
