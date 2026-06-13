@@ -24,7 +24,6 @@ from pathlib import Path
 from urllib.parse import quote
 
 REPO = Path(__file__).resolve().parent.parent
-TEMPLATE = REPO / "les-aigles-du-leman.html"
 BASE_URL = "https://loisirs74.fr"
 
 
@@ -47,22 +46,22 @@ def url_q(s):
     return quote(str(s), safe="")
 
 
-def extract_static_blocks():
-    """Pull CSS <style> block and trailing <script> from the template."""
-    tpl = TEMPLATE.read_text(encoding="utf-8")
-    style_match = re.search(r"<style>(.*?)</style>", tpl, re.DOTALL)
-    css = style_match.group(1) if style_match else ""
-    # Trailing script (right before </body> equivalents — pages end with </script>)
-    script_match = re.search(r"<script>\(\(\)=>\{.*?</script>", tpl, re.DOTALL)
-    js = script_match.group(0) if script_match else "<script></script>"
+def load_static_blocks():
+    """Read canonical CSS + trailing JS from scripts/static/*.
+
+    Source of truth: scripts/static/style.css and scripts/static/script.html.
+    These are NEVER overwritten by a build, which makes the rebuild idempotent
+    across cycles (the bug they fix: when CSS was extracted from a live fiche
+    page that was also a rebuild target, each cycle appended another copy of
+    the partner-logo rule into the next cycle's template).
+    """
+    static_dir = REPO / "scripts" / "static"
+    css = (static_dir / "style.css").read_text(encoding="utf-8")
+    js = (static_dir / "script.html").read_text(encoding="utf-8")
     return css, js
 
 
-CSS, JS = extract_static_blocks()
-CSS += (
-    ".partner.static .partner-logo{display:block;max-height:64px;max-width:140px;"
-    "margin-bottom:.55rem;object-fit:contain;border-radius:8px;background:#fff;padding:.3rem}"
-)
+CSS, JS = load_static_blocks()
 
 
 # Map JSON fact keys → French labels for the facts grid

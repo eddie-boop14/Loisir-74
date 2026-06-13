@@ -11,7 +11,7 @@ import sys
 import glob
 from pathlib import Path
 
-ROOT = Path("/home/user/Loisir-74")
+ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://loisirs74.fr/"
 LANGS = ["en", "de", "it", "es", "nl"]
 LINK_RE = re.compile(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">')
