@@ -1,0 +1,274 @@
+#!/usr/bin/env python3
+"""Build the publishable _site/ directory from the repo root.
+
+JOB 2 — stop publishing the repo. Netlify.toml is repointed at _site/ instead
+of the repo root. This script:
+
+  1. Wipes and recreates _site/.
+  2. Copies allowlisted paths (public HTML, locale trees, hub dirs, static
+     assets, public manifests, AI discovery files, studio + DT importer).
+  3. EXCLUDES scripts/, reports/, audit-report.md, dt-candidates working
+     files NOT linked by studio, .zip, .csv, _README.txt, apply-images.py,
+     __pycache__, .git*, .github/, anything starting with `_` (other than
+     _site/, _headers, _redirects, _README.txt — README is excluded).
+  4. Strips `research_log` from every Json/ + content/ + api/lieux.json
+     export so internal verification notes don't ship.
+  5. Patches studio.html with <meta name="robots" content="noindex,nofollow">
+     and a banner.
+  6. Patches robots.txt with Disallow rules for /studio*, /dt-candidates.json,
+     /studio-dt-importer.js (defence-in-depth alongside noindex).
+
+Idempotent: two consecutive runs produce identical _site/.
+"""
+import json
+import re
+import shutil
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parent.parent
+SITE = REPO / "_site"
+LOCALES = ("en", "de", "it", "es", "nl")
+
+# Paths to copy verbatim from REPO into SITE
+COPY_DIRS = [
+    "Json",            # stripped of research_log below
+    "api",             # stripped of research_log
+    "content",         # md mirrors — review for research_log mentions
+    ".well-known",
+] + list(LOCALES)
+
+# Hub directories (rendered listings)
+HUB_DIRS = [
+    "cascades", "chateaux", "musees", "points-de-vue", "sentiers",
+    "telecabines", "voies-vertes", "lacs-plages", "bases-de-loisirs",
+    "baignade-nautisme", "parcs-jardins", "que-faire",
+    "sensations-plein-air", "sorties-detente", "sport-jeux",
+]
+
+# Root-level files to copy verbatim (filename match)
+COPY_ROOT_FILES_GLOB = [
+    "*.html",                        # fiche pages + studio + landing + hub index.html
+    "*.css",
+    "*.js",                          # studio-*.js, script bundles
+    "*.png", "*.jpg", "*.jpeg",
+    "*.svg", "*.ico", "*.webmanifest",
+    "favicon*",
+    "logo*",
+    "generique-*",
+    "og-image*",
+    "apple-touch-icon*", "android-chrome-*",
+    "browserconfig.xml",
+    "BingSiteAuth.xml",
+    "site.webmanifest",
+    "sitemap.xml",
+    "llms.txt", "llms-full.txt", "robots.txt", "robots-ai.txt",
+    "catalog-index.json", "lieux.json", "photo-credits.json",
+    "dt-candidates.json",            # used by Studio Tab 7; noindexed via robots
+    "_headers", "_redirects",        # Netlify control files
+    "a100618930894cd2bc77bacba5002b64.txt",  # Indeed/Bing verification
+]
+
+# Explicit exclude list — never copy these even if they match
+DENY = {
+    "scripts", "reports", "__pycache__", ".git", ".github",
+    "audit-report.md", "_README.txt", "apply-images.py",
+    "_site", "netlify.toml",
+    "dt-flow-261672",                # raw DataTourisme flow dump if present
+    "Json.bak", "node_modules",
+    "report.csv", "email_queue.csv",
+}
+DENY_GLOB = [
+    "*.zip", "*.tar.gz", "*.tgz",
+    "*.csv",
+    ".env*",
+    "*.bak", "*.tmp",
+]
+
+
+def is_denied(name):
+    if name in DENY:
+        return True
+    for pat in DENY_GLOB:
+        if Path(name).match(pat):
+            return True
+    return False
+
+
+def copy_file_with_research_log_strip(src, dst):
+    """Copy a Json/<slug>.json file, removing research_log before write."""
+    d = json.loads(src.read_text(encoding="utf-8"))
+    if "research_log" in d:
+        d.pop("research_log", None)
+    # also strip from any nested partner entries (research_log is canonically
+    # top-level but be defensive)
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    dst.write_text(json.dumps(d, ensure_ascii=False, indent=2) + "\n",
+                   encoding="utf-8")
+
+
+def copy_lieux_index_strip(src, dst):
+    """Strip research_log from the API/catalog index if it's an array of fiches."""
+    d = json.loads(src.read_text(encoding="utf-8"))
+    def _strip(obj):
+        if isinstance(obj, dict):
+            obj.pop("research_log", None)
+            for v in obj.values():
+                _strip(v)
+        elif isinstance(obj, list):
+            for v in obj:
+                _strip(v)
+    _strip(d)
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    dst.write_text(json.dumps(d, ensure_ascii=False, indent=2) + "\n",
+                   encoding="utf-8")
+
+
+def copy_md_strip_research_log(src, dst):
+    """Markdown fiche mirrors: remove any Research log section if present
+    (defence-in-depth; templates currently don't embed it but make sure)."""
+    text = src.read_text(encoding="utf-8")
+    text = re.sub(r"## Research log.*?(?=\n## |\Z)", "", text, flags=re.DOTALL)
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    dst.write_text(text, encoding="utf-8")
+
+
+NOINDEX_BLOCK = (
+    '<meta name="robots" content="noindex,nofollow">\n'
+    '<meta name="googlebot" content="noindex,nofollow">\n'
+)
+
+def patch_studio_html(path):
+    """Inject noindex meta into <head> of studio.html (idempotent)."""
+    h = path.read_text(encoding="utf-8")
+    if 'name="robots" content="noindex' in h:
+        return
+    h = h.replace("<head>", "<head>\n" + NOINDEX_BLOCK, 1)
+    path.write_text(h, encoding="utf-8")
+
+
+ROBOTS_BLOCK = """
+# Studio (internal editor + DataTourisme importer) — not for crawl/index
+Disallow: /studio
+Disallow: /studio.html
+Disallow: /studio-editor.js
+Disallow: /studio-enricher.js
+Disallow: /studio-phototheque.js
+Disallow: /studio-dt-importer.js
+Disallow: /studio-consts.js
+Disallow: /studio-render.js
+Disallow: /studio-templates.js
+Disallow: /dt-candidates.json
+"""
+
+def patch_robots_txt(path):
+    """Append Disallow rules for the Studio + DT importer (idempotent)."""
+    txt = path.read_text(encoding="utf-8")
+    if "Disallow: /studio.html" in txt:
+        return
+    # Insert the new block immediately after the existing Disallow group
+    insertion_marker = "Disallow: /merci-partenaire.html"
+    if insertion_marker in txt:
+        txt = txt.replace(
+            insertion_marker,
+            insertion_marker + "\n" + ROBOTS_BLOCK.rstrip() + "\n",
+            1
+        )
+    else:
+        txt = txt.rstrip() + "\n" + ROBOTS_BLOCK
+    path.write_text(txt, encoding="utf-8")
+
+
+def copy_dir(src, dst, json_strip=False, md_strip=False):
+    """Copy a directory tree, applying research_log strip where requested."""
+    for p in src.rglob("*"):
+        if is_denied(p.name):
+            continue
+        rel = p.relative_to(src)
+        out = dst / rel
+        if p.is_dir():
+            out.mkdir(parents=True, exist_ok=True)
+            continue
+        if json_strip and p.suffix == ".json":
+            copy_file_with_research_log_strip(p, out)
+        elif md_strip and p.suffix == ".md":
+            copy_md_strip_research_log(p, out)
+        else:
+            out.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(p, out)
+
+
+def main():
+    if SITE.exists():
+        shutil.rmtree(SITE)
+    SITE.mkdir(parents=True)
+
+    print("Copying root files...")
+    seen = set()
+    for pattern in COPY_ROOT_FILES_GLOB:
+        for src in sorted(REPO.glob(pattern)):
+            if not src.is_file() or is_denied(src.name) or src.name in seen:
+                continue
+            seen.add(src.name)
+            shutil.copy2(src, SITE / src.name)
+
+    print("Copying hub directories...")
+    for d in HUB_DIRS:
+        src = REPO / d
+        if not src.exists():
+            continue
+        dst = SITE / d
+        dst.mkdir(parents=True, exist_ok=True)
+        for p in src.rglob("*"):
+            if is_denied(p.name): continue
+            if p.is_file():
+                rel = p.relative_to(src)
+                (dst / rel).parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(p, dst / rel)
+
+    print("Copying Json/ with research_log stripped...")
+    copy_dir(REPO / "Json", SITE / "Json", json_strip=True)
+
+    print("Copying api/ with research_log stripped...")
+    api_src = REPO / "api"
+    if api_src.exists():
+        for p in api_src.rglob("*"):
+            if is_denied(p.name) or not p.is_file(): continue
+            rel = p.relative_to(api_src)
+            out = SITE / "api" / rel
+            if p.suffix == ".json":
+                copy_lieux_index_strip(p, out)
+            else:
+                out.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(p, out)
+
+    print("Copying content/ markdown mirrors with research_log scrubbed...")
+    copy_dir(REPO / "content", SITE / "content", md_strip=True)
+
+    print("Copying .well-known/...")
+    copy_dir(REPO / ".well-known", SITE / ".well-known")
+
+    print("Copying locale trees (en/de/it/es/nl)...")
+    for L in LOCALES:
+        src = REPO / L
+        if not src.exists(): continue
+        copy_dir(src, SITE / L)
+
+    print("Patching _site/studio.html with noindex...")
+    studio = SITE / "studio.html"
+    if studio.exists():
+        patch_studio_html(studio)
+
+    print("Patching _site/robots.txt with Studio Disallow rules...")
+    robots = SITE / "robots.txt"
+    if robots.exists():
+        patch_robots_txt(robots)
+
+    # Final stats
+    total = sum(1 for _ in SITE.rglob("*") if _.is_file())
+    size_mb = sum(p.stat().st_size for p in SITE.rglob("*") if p.is_file()) / (1024 * 1024)
+    print(f"\n_site/ contains {total} files, {size_mb:.1f} MB")
+
+
+if __name__ == "__main__":
+    main()

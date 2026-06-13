@@ -1,7 +1,8 @@
 # Netlify configuration for Loisirs 74
 
 [build]
-  publish = "."
+  publish = "_site"
+  command = "python3 scripts/build_site.py"
 
 # Pretty URLs: serve /slug from /slug.html
 [[redirects]]
