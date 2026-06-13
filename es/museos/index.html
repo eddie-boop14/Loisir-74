@@ -816,7 +816,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </details>
 </header>
 <nav aria-label="breadcrumb" class="crumb">
-<a href="https://loisirs74.fr/">Accueil</a>
+<a href="https://loisirs74.fr/es/">Inicio</a>
 <span class="sep">/</span>
 <b>Museos</b>
 </nav>
@@ -830,7 +830,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <div class="wrap">
 <p class="lead">Cuando el tiempo cambia, o simplemente por curiosidad, los museos de Haute-Savoie cuentan la montaña, la historia saboyana, el arte y la ciencia — de la fortaleza medieval al centro interactivo.</p>
 <details class="seo-more">
-<summary>Lire la suite</summary>
+<summary>Leer más</summary>
 <div class="more-body">
 <p>En Annecy, el <b>Musée-Château</b> y el <b>Palais de l'Île</b> dominan el casco antiguo; <b>La Turbine sciences</b> propone un enfoque lúdico e interactivo, ideal en familia.</p>
 <p>En otros lugares, el <b>museo del cine de animación</b>, el <b>Espace Tairraz</b> en Chamonix (alpinismo y cristales) o los ecomuseos hacen revivir los saberes y la historia local.</p>
@@ -843,29 +843,25 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <div class="filter-bar">
 <div class="wrap">
 <div class="filter-bar__head">
-<div class="count-live"><b id="count-n">0</b> <span id="count-label">lieux affichés</span></div>
+<div class="count-live"><b id="count-n">0</b> <span id="count-label">lugares mostrados</span></div>
 <button aria-controls="filter-panel" aria-expanded="false" class="filter-toggle" type="button">
-<span>Filtres</span>
+<span>Filtros</span>
 <span class="filter-toggle__badge" hidden="" id="filter-toggle-badge">0</span>
 <svg aria-hidden="true" class="filter-toggle__chev" height="11" viewbox="0 0 12 12" width="11"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
 </button>
 </div>
 <div class="filter-panel" id="filter-panel">
 <label>
-<span>Commune</span>
-<select id="filt-commune"><option value="">Toutes les communes</option><option value="Annecy">Annecy</option><option value="Annemasse">Annemasse</option><option value="Chamonix-Mont-Blanc">Chamonix-Mont-Blanc</option><option value="Faverges-Seythenex">Faverges-Seythenex</option><option value="Les Houches">Les Houches</option><option value="Présilly">Présilly</option><option value="Sallanches">Sallanches</option><option value="Sciez">Sciez</option><option value="Servoz">Servoz</option><option value="Sevrier">Sevrier</option><option value="Thonon-les-Bains">Thonon-les-Bains</option><option value="Thônes">Thônes</option><option value="Vallorcine">Vallorcine</option><option value="Ville-la-Grand">Ville-la-Grand</option><option value="Viuz-en-Sallaz">Viuz-en-Sallaz</option><option value="Évian-les-Bains">Évian-les-Bains</option></select>
+<span>Municipio</span>
+<select id="filt-commune"><option value="">Todos los municipios</option><option value="Annecy">Annecy</option><option value="Annemasse">Annemasse</option><option value="Chamonix-Mont-Blanc">Chamonix-Mont-Blanc</option><option value="Faverges-Seythenex">Faverges-Seythenex</option><option value="Les Houches">Les Houches</option><option value="Présilly">Présilly</option><option value="Sallanches">Sallanches</option><option value="Sciez">Sciez</option><option value="Servoz">Servoz</option><option value="Sevrier">Sevrier</option><option value="Thonon-les-Bains">Thonon-les-Bains</option><option value="Thônes">Thônes</option><option value="Vallorcine">Vallorcine</option><option value="Ville-la-Grand">Ville-la-Grand</option><option value="Viuz-en-Sallaz">Viuz-en-Sallaz</option><option value="Évian-les-Bains">Évian-les-Bains</option></select>
 </label>
 <label>
-<span>Accès</span>
-<div class="access-group" id="filt-access">
-<button class="active" data-v="all">Tous</button>
-<button data-v="free">Gratuit</button>
-<button data-v="paid">Payant</button>
-</div>
+<span>Acceso</span>
+<div class="access-group" id="filt-access"><button class="active" data-v="all">Todos</button><button data-v="free">Gratis</button><button data-v="paid">De pago</button></div>
 </label>
 <label>
-<span>Tri</span>
-<select id="filt-sort"><option value="commune">Par commune</option><option value="alpha">A → Z</option></select>
+<span>Ordenar</span>
+<select id="filt-sort"><option value="commune">Por municipio</option><option value="alpha">A → Z</option></select>
 </label>
 </div>
 </div>
@@ -1820,7 +1816,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 
 // FILTERS (commune + access + sort)
 (function(){
-  const SG="lieu affiché",PL="lieux affichés";
+  const SG="lugar mostrado",PL="lugares mostrados";
   const communeSel=document.getElementById('filt-commune');
   const accessGroup=document.getElementById('filt-access');
   const sortSel=document.getElementById('filt-sort');

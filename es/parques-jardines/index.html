@@ -262,7 +262,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </details>
 </header>
 <nav aria-label="breadcrumb" class="crumb">
-<a href="https://loisirs74.fr/">Accueil</a>
+<a href="https://loisirs74.fr/es/">Inicio</a>
 <span class="sep">/</span>
 <b>Cascades</b>
 </nav>
@@ -276,7 +276,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <div class="wrap">
 <p class="lead">Para una salida en familia, Haute-Savoie cuenta con parques temáticos, parques de animales, jardines notables y granjas educativas — del gran día de aventura al paseo botánico.</p>
 <details class="seo-more">
-<summary>Lire la suite</summary>
+<summary>Leer más</summary>
 <div class="more-body">
 <p>Para el gran espectáculo, el <b>Grand Parc d'Andilly</b> y sus mundos, el <b>Parc de Merlet</b> y sus animales de montaña frente al Mont-Blanc, o <b>Les Aigles du Léman</b>.</p>
 <p>Para la naturaleza tranquila, el <b>Jardin des Cinq Sens</b> en Yvoire, los jardines alpinos y las granjas educativas ofrecen visitas más sosegadas, ideales con niños pequeños.</p>
@@ -289,29 +289,25 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <div class="filter-bar">
 <div class="wrap">
 <div class="filter-bar__head">
-<div class="count-live"><b id="count-n">0</b> <span id="count-label">lieux affichés</span></div>
+<div class="count-live"><b id="count-n">0</b> <span id="count-label">lugares mostrados</span></div>
 <button aria-controls="filter-panel" aria-expanded="false" class="filter-toggle" type="button">
-<span>Filtres</span>
+<span>Filtros</span>
 <span class="filter-toggle__badge" hidden="" id="filter-toggle-badge">0</span>
 <svg aria-hidden="true" class="filter-toggle__chev" height="11" viewbox="0 0 12 12" width="11"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
 </button>
 </div>
 <div class="filter-panel" id="filter-panel">
 <label>
-<span>Commune</span>
-<select id="filt-commune"><option value="">Toutes les communes</option><option value="Andilly">Andilly</option><option value="Annecy">Annecy</option><option value="Bellevaux">Bellevaux</option><option value="La Balme-de-Sillingy">La Balme-de-Sillingy</option><option value="Les Houches">Les Houches</option><option value="Monnetier-Mornex">Monnetier-Mornex</option><option value="Neydens">Neydens</option><option value="Passy">Passy</option><option value="Rumilly">Rumilly</option><option value="Saint-Gingolph">Saint-Gingolph</option><option value="Saint-Jorioz">Saint-Jorioz</option><option value="Samoëns">Samoëns</option><option value="Sciez">Sciez</option><option value="Sillingy">Sillingy</option><option value="Thonon-les-Bains">Thonon-les-Bains</option><option value="Vallorcine">Vallorcine</option><option value="Vaulx">Vaulx</option><option value="Ville-la-Grand">Ville-la-Grand</option><option value="Viry">Viry</option><option value="Vétraz-Monthoux">Vétraz-Monthoux</option><option value="Yvoire">Yvoire</option><option value="Évian-les-Bains">Évian-les-Bains</option></select>
+<span>Municipio</span>
+<select id="filt-commune"><option value="">Todos los municipios</option><option value="Andilly">Andilly</option><option value="Annecy">Annecy</option><option value="Bellevaux">Bellevaux</option><option value="La Balme-de-Sillingy">La Balme-de-Sillingy</option><option value="Les Houches">Les Houches</option><option value="Monnetier-Mornex">Monnetier-Mornex</option><option value="Neydens">Neydens</option><option value="Passy">Passy</option><option value="Rumilly">Rumilly</option><option value="Saint-Gingolph">Saint-Gingolph</option><option value="Saint-Jorioz">Saint-Jorioz</option><option value="Samoëns">Samoëns</option><option value="Sciez">Sciez</option><option value="Sillingy">Sillingy</option><option value="Thonon-les-Bains">Thonon-les-Bains</option><option value="Vallorcine">Vallorcine</option><option value="Vaulx">Vaulx</option><option value="Ville-la-Grand">Ville-la-Grand</option><option value="Viry">Viry</option><option value="Vétraz-Monthoux">Vétraz-Monthoux</option><option value="Yvoire">Yvoire</option><option value="Évian-les-Bains">Évian-les-Bains</option></select>
 </label>
 <label>
-<span>Accès</span>
-<div class="access-group" id="filt-access">
-<button class="active" data-v="all">Tous</button>
-<button data-v="free">Gratuit</button>
-<button data-v="paid">Payant</button>
-</div>
+<span>Acceso</span>
+<div class="access-group" id="filt-access"><button class="active" data-v="all">Todos</button><button data-v="free">Gratis</button><button data-v="paid">De pago</button></div>
 </label>
 <label>
-<span>Tri</span>
-<select id="filt-sort"><option value="commune">Par commune</option><option value="alpha">A → Z</option></select>
+<span>Ordenar</span>
+<select id="filt-sort"><option value="commune">Por municipio</option><option value="alpha">A → Z</option></select>
 </label>
 </div>
 </div>
@@ -949,7 +945,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 
 // FILTERS (commune + access + sort)
 (function(){
-  const SG="lieu affiché",PL="lieux affichés";
+  const SG="lugar mostrado",PL="lugares mostrados";
   const communeSel=document.getElementById('filt-commune');
   const accessGroup=document.getElementById('filt-access');
   const sortSel=document.getElementById('filt-sort');

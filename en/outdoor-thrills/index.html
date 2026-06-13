@@ -262,7 +262,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </details>
 </header>
 <nav aria-label="breadcrumb" class="crumb">
-<a href="https://loisirs74.fr/">Accueil</a>
+<a href="https://loisirs74.fr/en/">Home</a>
 <span class="sep">/</span>
 <b>Cascades</b>
 </nav>
@@ -276,7 +276,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <div class="wrap">
 <p class="lead">For thrill-seekers, Haute-Savoie is a full-scale playground: free flight facing Mont-Blanc, whitewater, treetop courses and gorge descents.</p>
 <details class="seo-more">
-<summary>Lire la suite</summary>
+<summary>Read more</summary>
 <div class="more-body">
 <p>In the air, <b>paragliding</b> takes off from the Forclaz above Annecy and from the Arve valley; on the ground, <b>via ferrata</b>, <b>canyoning</b> and <b>rafting</b> bring torrents and cliffs alive.</p>
 <p>More family-friendly, the <b>treetop adventure</b> parks and, in winter, <b>dog sledding</b> outings round out the picture.</p>
@@ -289,29 +289,25 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <div class="filter-bar">
 <div class="wrap">
 <div class="filter-bar__head">
-<div class="count-live"><b id="count-n">0</b> <span id="count-label">lieux affichés</span></div>
+<div class="count-live"><b id="count-n">0</b> <span id="count-label">places shown</span></div>
 <button aria-controls="filter-panel" aria-expanded="false" class="filter-toggle" type="button">
-<span>Filtres</span>
+<span>Filters</span>
 <span class="filter-toggle__badge" hidden="" id="filter-toggle-badge">0</span>
 <svg aria-hidden="true" class="filter-toggle__chev" height="11" viewbox="0 0 12 12" width="11"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
 </button>
 </div>
 <div class="filter-panel" id="filter-panel">
 <label>
-<span>Commune</span>
-<select id="filt-commune"><option value="">Toutes les communes</option><option value="Annecy">Annecy</option><option value="Arâches-la-Frasse">Arâches-la-Frasse</option><option value="Bellevaux">Bellevaux</option><option value="Cervens">Cervens</option><option value="Chamonix-Mont-Blanc">Chamonix-Mont-Blanc</option><option value="Châtel">Châtel</option><option value="Doussard">Doussard</option><option value="La Chapelle-d'Abondance">La Chapelle-d'Abondance</option><option value="La Clusaz">La Clusaz</option><option value="Le Grand-Bornand">Le Grand-Bornand</option><option value="Les Gets">Les Gets</option><option value="Magland">Magland</option><option value="Manigod">Manigod</option><option value="Megève">Megève</option><option value="Morzine">Morzine</option><option value="Passy">Passy</option><option value="Présilly">Présilly</option><option value="Reignier-Ésery">Reignier-Ésery</option><option value="Saint-Gervais-les-Bains">Saint-Gervais-les-Bains</option><option value="Saint-Jean-de-Sixt">Saint-Jean-de-Sixt</option><option value="Saint-Paul-en-Chablais">Saint-Paul-en-Chablais</option><option value="Samoëns">Samoëns</option><option value="Sciez">Sciez</option><option value="Sixt-Fer-à-Cheval">Sixt-Fer-à-Cheval</option><option value="Talloires-Montmin">Talloires-Montmin</option><option value="Thonon-les-Bains">Thonon-les-Bains</option><option value="Thônes">Thônes</option><option value="Vallorcine">Vallorcine</option><option value="Évian-les-Bains">Évian-les-Bains</option></select>
+<span>Town</span>
+<select id="filt-commune"><option value="">All towns</option><option value="Annecy">Annecy</option><option value="Arâches-la-Frasse">Arâches-la-Frasse</option><option value="Bellevaux">Bellevaux</option><option value="Cervens">Cervens</option><option value="Chamonix-Mont-Blanc">Chamonix-Mont-Blanc</option><option value="Châtel">Châtel</option><option value="Doussard">Doussard</option><option value="La Chapelle-d'Abondance">La Chapelle-d'Abondance</option><option value="La Clusaz">La Clusaz</option><option value="Le Grand-Bornand">Le Grand-Bornand</option><option value="Les Gets">Les Gets</option><option value="Magland">Magland</option><option value="Manigod">Manigod</option><option value="Megève">Megève</option><option value="Morzine">Morzine</option><option value="Passy">Passy</option><option value="Présilly">Présilly</option><option value="Reignier-Ésery">Reignier-Ésery</option><option value="Saint-Gervais-les-Bains">Saint-Gervais-les-Bains</option><option value="Saint-Jean-de-Sixt">Saint-Jean-de-Sixt</option><option value="Saint-Paul-en-Chablais">Saint-Paul-en-Chablais</option><option value="Samoëns">Samoëns</option><option value="Sciez">Sciez</option><option value="Sixt-Fer-à-Cheval">Sixt-Fer-à-Cheval</option><option value="Talloires-Montmin">Talloires-Montmin</option><option value="Thonon-les-Bains">Thonon-les-Bains</option><option value="Thônes">Thônes</option><option value="Vallorcine">Vallorcine</option><option value="Évian-les-Bains">Évian-les-Bains</option></select>
 </label>
 <label>
-<span>Accès</span>
-<div class="access-group" id="filt-access">
-<button class="active" data-v="all">Tous</button>
-<button data-v="free">Gratuit</button>
-<button data-v="paid">Payant</button>
-</div>
+<span>Access</span>
+<div class="access-group" id="filt-access"><button class="active" data-v="all">All</button><button data-v="free">Free</button><button data-v="paid">Paid</button></div>
 </label>
 <label>
-<span>Tri</span>
-<select id="filt-sort"><option value="commune">Par commune</option><option value="alpha">A → Z</option></select>
+<span>Sort</span>
+<select id="filt-sort"><option value="commune">By town</option><option value="alpha">A → Z</option></select>
 </label>
 </div>
 </div>
@@ -1132,7 +1128,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 
 // FILTERS (commune + access + sort)
 (function(){
-  const SG="lieu affiché",PL="lieux affichés";
+  const SG="place shown",PL="places shown";
   const communeSel=document.getElementById('filt-commune');
   const accessGroup=document.getElementById('filt-access');
   const sortSel=document.getElementById('filt-sort');

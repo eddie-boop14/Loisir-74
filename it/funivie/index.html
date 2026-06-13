@@ -449,9 +449,9 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </details>
 </header>
 <nav aria-label="breadcrumb" class="crumb">
-<a href="https://loisirs74.fr/">Accueil</a>
+<a href="https://loisirs74.fr/it/">Home</a>
 <span class="sep">/</span>
-<b>Télécabines</b>
+<b>Funivie</b>
 </nav>
 <section class="hub-hero">
 <div class="wrap">
@@ -463,7 +463,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <div class="wrap">
 <p class="lead">Non serve salire per ore per raggiungere le altezze: cabinovie, funivie e treni di montagna portano in pochi minuti verso panorami, sentieri d'alta quota e piste.</p>
 <details class="seo-more">
-<summary>Lire la suite</summary>
+<summary>Leggi tutto</summary>
 <div class="more-body">
 <p>Sul versante di Chamonix, la <b>funivia del Brévent</b> e quella dei <b>Grands Montets</b> aprono vedute di fronte al Mont-Blanc; il leggendario <b>Tramway du Mont-Blanc</b> sale da Saint-Gervais.</p>
 <p>Nello Chablais e nelle Portes du Soleil, le cabinovie di <b>Super-Châtel</b>, del <b>Pléney</b> o del <b>Mont-Chéry</b> servono in estate escursioni e mountain bike, in inverno le piste.</p>
@@ -476,29 +476,25 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <div class="filter-bar">
 <div class="wrap">
 <div class="filter-bar__head">
-<div class="count-live"><b id="count-n">0</b> <span id="count-label">lieux affichés</span></div>
+<div class="count-live"><b id="count-n">0</b> <span id="count-label">luoghi visualizzati</span></div>
 <button aria-controls="filter-panel" aria-expanded="false" class="filter-toggle" type="button">
-<span>Filtres</span>
+<span>Filtri</span>
 <span class="filter-toggle__badge" hidden="" id="filter-toggle-badge">0</span>
 <svg aria-hidden="true" class="filter-toggle__chev" height="11" viewbox="0 0 12 12" width="11"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
 </button>
 </div>
 <div class="filter-panel" id="filter-panel">
 <label>
-<span>Commune</span>
-<select id="filt-commune"><option value="">Toutes les communes</option><option value="Chamonix-Mont-Blanc">Chamonix-Mont-Blanc</option><option value="Châtel">Châtel</option><option value="Les Gets">Les Gets</option><option value="Megève">Megève</option><option value="Morzine">Morzine</option><option value="Saint-Gervais-les-Bains">Saint-Gervais-les-Bains</option><option value="Étrembières">Étrembières</option></select>
+<span>Comune</span>
+<select id="filt-commune"><option value="">Tutti i comuni</option><option value="Chamonix-Mont-Blanc">Chamonix-Mont-Blanc</option><option value="Châtel">Châtel</option><option value="Les Gets">Les Gets</option><option value="Megève">Megève</option><option value="Morzine">Morzine</option><option value="Saint-Gervais-les-Bains">Saint-Gervais-les-Bains</option><option value="Étrembières">Étrembières</option></select>
 </label>
 <label>
-<span>Accès</span>
-<div class="access-group" id="filt-access">
-<button class="active" data-v="all">Tous</button>
-<button data-v="free">Gratuit</button>
-<button data-v="paid">Payant</button>
-</div>
+<span>Accesso</span>
+<div class="access-group" id="filt-access"><button class="active" data-v="all">Tutti</button><button data-v="free">Gratis</button><button data-v="paid">A pagamento</button></div>
 </label>
 <label>
-<span>Tri</span>
-<select id="filt-sort"><option value="commune">Par commune</option><option value="alpha">A → Z</option></select>
+<span>Ordina</span>
+<select id="filt-sort"><option value="commune">Per comune</option><option value="alpha">A → Z</option></select>
 </label>
 </div>
 </div>
@@ -777,7 +773,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 
 // FILTERS (commune + access + sort)
 (function(){
-  const SG="lieu affiché",PL="lieux affichés";
+  const SG="luogo visualizzato",PL="luoghi visualizzati";
   const communeSel=document.getElementById('filt-commune');
   const accessGroup=document.getElementById('filt-access');
   const sortSel=document.getElementById('filt-sort');

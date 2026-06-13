@@ -765,9 +765,9 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </details>
 </header>
 <nav aria-label="breadcrumb" class="crumb">
-<a href="https://loisirs74.fr/">Accueil</a>
+<a href="https://loisirs74.fr/it/">Home</a>
 <span class="sep">/</span>
-<b>Points de vue</b>
+<b>Punti panoramici</b>
 </nav>
 <section class="hub-hero">
 <div class="wrap">
@@ -779,7 +779,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <div class="wrap">
 <p class="lead">Dal belvedere raggiungibile in auto alla cima da conquistare, l'Haute-Savoie offre panorami sul Lac d'Annecy, sul Léman e sul massiccio del Mont-Blanc. Alcuni si guadagnano a piedi, altri in funivia.</p>
 <details class="seo-more">
-<summary>Lire la suite</summary>
+<summary>Leggi tutto</summary>
 <div class="more-body">
 <p>Sopra Annecy, il <b>Mont Veyrier</b> e il <b>Semnoz</b> dominano il lago; al confine ginevrino, <b>Le Salève</b> si raggiunge in funivia. Più in alto, l'<b>Aiguille du Midi</b> apre l'alta montagna di fronte al Mont-Blanc.</p>
 <p>Per passi e altopiani, il <b>Plateau de Solaison</b>, il Pont de la Caille e i grandi passi degli Aravis e della Colombière offrono ampie vedute, spesso raggiungibili in auto o in bici.</p>
@@ -792,29 +792,25 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <div class="filter-bar">
 <div class="wrap">
 <div class="filter-bar__head">
-<div class="count-live"><b id="count-n">0</b> <span id="count-label">lieux affichés</span></div>
+<div class="count-live"><b id="count-n">0</b> <span id="count-label">luoghi visualizzati</span></div>
 <button aria-controls="filter-panel" aria-expanded="false" class="filter-toggle" type="button">
-<span>Filtres</span>
+<span>Filtri</span>
 <span class="filter-toggle__badge" hidden="" id="filter-toggle-badge">0</span>
 <svg aria-hidden="true" class="filter-toggle__chev" height="11" viewbox="0 0 12 12" width="11"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
 </button>
 </div>
 <div class="filter-panel" id="filter-panel">
 <label>
-<span>Commune</span>
-<select id="filt-commune"><option value="">Toutes les communes</option><option value="Abondance">Abondance</option><option value="Annecy">Annecy</option><option value="Brizon">Brizon</option><option value="Chamonix-Mont-Blanc">Chamonix-Mont-Blanc</option><option value="Collonges-sous-Salève">Collonges-sous-Salève</option><option value="Cruseilles">Cruseilles</option><option value="Dingy-Saint-Clair">Dingy-Saint-Clair</option><option value="Doussard">Doussard</option><option value="Fillière">Fillière</option><option value="La Clusaz">La Clusaz</option><option value="Le Reposoir">Le Reposoir</option><option value="Manigod">Manigod</option><option value="Monnetier-Mornex">Monnetier-Mornex</option><option value="Passy">Passy</option><option value="Poisy">Poisy</option><option value="Publier">Publier</option><option value="Saint-Gervais-les-Bains">Saint-Gervais-les-Bains</option><option value="Saint-Jorioz">Saint-Jorioz</option><option value="Talloires-Montmin">Talloires-Montmin</option><option value="Taninges">Taninges</option><option value="Veyrier-du-Lac">Veyrier-du-Lac</option><option value="Villard">Villard</option><option value="Viuz-la-Chiésaz">Viuz-la-Chiésaz</option><option value="Étrembières">Étrembières</option></select>
+<span>Comune</span>
+<select id="filt-commune"><option value="">Tutti i comuni</option><option value="Abondance">Abondance</option><option value="Annecy">Annecy</option><option value="Brizon">Brizon</option><option value="Chamonix-Mont-Blanc">Chamonix-Mont-Blanc</option><option value="Collonges-sous-Salève">Collonges-sous-Salève</option><option value="Cruseilles">Cruseilles</option><option value="Dingy-Saint-Clair">Dingy-Saint-Clair</option><option value="Doussard">Doussard</option><option value="Fillière">Fillière</option><option value="La Clusaz">La Clusaz</option><option value="Le Reposoir">Le Reposoir</option><option value="Manigod">Manigod</option><option value="Monnetier-Mornex">Monnetier-Mornex</option><option value="Passy">Passy</option><option value="Poisy">Poisy</option><option value="Publier">Publier</option><option value="Saint-Gervais-les-Bains">Saint-Gervais-les-Bains</option><option value="Saint-Jorioz">Saint-Jorioz</option><option value="Talloires-Montmin">Talloires-Montmin</option><option value="Taninges">Taninges</option><option value="Veyrier-du-Lac">Veyrier-du-Lac</option><option value="Villard">Villard</option><option value="Viuz-la-Chiésaz">Viuz-la-Chiésaz</option><option value="Étrembières">Étrembières</option></select>
 </label>
 <label>
-<span>Accès</span>
-<div class="access-group" id="filt-access">
-<button class="active" data-v="all">Tous</button>
-<button data-v="free">Gratuit</button>
-<button data-v="paid">Payant</button>
-</div>
+<span>Accesso</span>
+<div class="access-group" id="filt-access"><button class="active" data-v="all">Tutti</button><button data-v="free">Gratis</button><button data-v="paid">A pagamento</button></div>
 </label>
 <label>
-<span>Tri</span>
-<select id="filt-sort"><option value="commune">Par commune</option><option value="alpha">A → Z</option></select>
+<span>Ordina</span>
+<select id="filt-sort"><option value="commune">Per comune</option><option value="alpha">A → Z</option></select>
 </label>
 </div>
 </div>
@@ -1405,7 +1401,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 
 // FILTERS (commune + access + sort)
 (function(){
-  const SG="lieu affiché",PL="lieux affichés";
+  const SG="luogo visualizzato",PL="luoghi visualizzati";
   const communeSel=document.getElementById('filt-commune');
   const accessGroup=document.getElementById('filt-access');
   const sortSel=document.getElementById('filt-sort');
