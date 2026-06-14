@@ -81,6 +81,102 @@ def hub_locale_map(hub_dir):
     return m
 
 
+# ---------------------------------------------------------------------------
+# Phase 4 — description-driven photo picker
+# ---------------------------------------------------------------------------
+
+# Minimal FR stopword list — purely structural words that carry no fiche
+# signal. Kept short and predictable for idempotency.
+_STOPWORDS_FR = {
+    "de","la","le","les","du","des","et","en","un","une","à","au","aux",
+    "avec","pour","sur","par","ou","est","sont","dans","plus","aussi",
+    "très","que","qui","se","il","elle","ce","ces","cette","son","sa",
+    "ses","si","mais","donc","car","ne","pas","au","aux","si","non","oui",
+    "comme","tout","tous","toutes","toute","quelque","entre","sous","vers",
+    "depuis","après","avant","être","avoir","fait","faire","peut","aussi",
+    "ainsi","leur","leurs","puis","encore","déjà",
+}
+
+
+def _load_photo_index():
+    p = ROOT / "data" / "photo-index.json"
+    if not p.exists():
+        return {}
+    return json.loads(p.read_text(encoding="utf-8"))
+
+
+def _fiche_words(d):
+    """Extract description keywords from a fiche's FR text fields."""
+    fr = d.get("i18n", {}).get("fr", {}) or {}
+    parts = [fr.get("name", "") or "",
+             fr.get("meta_description", "") or "",
+             fr.get("short_intro", "") or ""]
+    facts = fr.get("facts", {}) or {}
+    for v in facts.values():
+        if v:
+            parts.append(str(v))
+    text = " ".join(parts).lower()
+    words = re.findall(r"[a-zà-ÿ]+", text)
+    return {w for w in words if len(w) > 2 and w not in _STOPWORDS_FR}
+
+
+def pick_photo(d, photo_index, used_in_hub):
+    """Phase 4 picker. Returns (src, score, basename, reason).
+
+    src         — URL or '/'-prefixed path for the <img src>
+    score       — integer keyword overlap; None for real (non-generic) heros
+    basename    — filename only (for data-photo and assignments report)
+    reason      — short tag: "real URL hero" | "real local hero" |
+                  "best unused score" | "cycling — all used"
+
+    The rule:
+      1. If the fiche has a non-generic hero (URL or /<slug>-hero.jpg),
+         keep it. Real photos beat any picker output.
+      2. Otherwise filter the library to photos whose primary type
+         matches the fiche's type, plus the 'fallback' bucket.
+      3. Score each candidate by |fiche_words ∩ photo_keywords|.
+      4. Pick the highest score not already used in this hub.
+      5. If every candidate is used, return the highest score (cycling).
+    """
+    hero = (d.get("hero_image") or "").strip()
+    # Real URL hero
+    if hero.startswith(("http://", "https://")):
+        return (hero, None, hero.rsplit("/", 1)[-1], "real URL hero")
+    # Real local hero (e.g. /<slug>-hero.jpg)
+    if hero.startswith("/") and "generique-" not in hero:
+        return (f"https://loisirs74.fr{hero}", None, hero.lstrip("/").rsplit("/", 1)[-1], "real local hero")
+
+    if not photo_index:
+        # No index → fall through to the legacy generique path. Caller
+        # will compute img_src from d.hero_image (existing behaviour).
+        return (None, None, "", "no photo-index loaded")
+
+    fiche_type = d.get("type") or ""
+    candidates = [fn for fn, meta in photo_index.items()
+                  if meta.get("type") == fiche_type or meta.get("type") == "fallback"]
+    if not candidates:
+        candidates = list(photo_index.keys())
+
+    words = _fiche_words(d)
+    scores = {fn: len(words & set(photo_index[fn].get("keywords", []))) for fn in candidates}
+    # Deterministic tie-break by filename
+    ranked = sorted(candidates, key=lambda fn: (-scores[fn], fn))
+
+    for fn in ranked:
+        if fn not in used_in_hub:
+            used_in_hub.add(fn)
+            return (f"https://loisirs74.fr/{fn}", scores[fn], fn, "best unused score")
+
+    # All candidates exhausted — RESET the pool and pick the best for
+    # THIS fiche. Cycling this way keeps per-fiche relevance while
+    # spreading repeats evenly across the hub. Cap on repeats is
+    # ceil(hub_fiches / candidate_count) per the gate spec.
+    used_in_hub.clear()
+    best = ranked[0]
+    used_in_hub.add(best)
+    return (f"https://loisirs74.fr/{best}", scores[best], best, "cycling — pool reset")
+
+
 def acces_value(d):
     """Return the canonical access value for `data-acces` from JSON.
 
@@ -99,8 +195,13 @@ def acces_value(d):
     return ""
 
 
-def fiche_card_html(d, lang, slug):
-    """Render one card. URL = https://loisirs74.fr[/lang]/slug; title + desc from i18n."""
+def fiche_card_html(d, lang, slug, picked_photo=None):
+    """Render one card. URL = https://loisirs74.fr[/lang]/slug; title + desc from i18n.
+
+    `picked_photo`, when provided, overrides the fiche's hero_image as
+    the displayed card photo. Carries (src, score, basename, reason) from
+    pick_photo() so the card emits data-photo=basename verbatim.
+    """
     i18n = d.get("i18n", {}) or {}
     loc = i18n.get(lang) or {}
     fr = i18n.get("fr") or {}
@@ -120,17 +221,21 @@ def fiche_card_html(d, lang, slug):
         tag_text = CHROME["free" if is_free else "paid"][lang]
     commune = d.get("commune", "")
 
-    # Hero image: generique-* under root, others under /<file>
-    hero = d.get("hero_image") or ""
-    if hero.startswith(("http://", "https://", "//")):
-        img_src = hero
-    elif hero.startswith("/"):
-        img_src = f"https://loisirs74.fr{hero}"
-    elif hero:
-        img_src = f"https://loisirs74.fr/{hero}"
+    # Hero image: picker-overridden when provided (Phase 4), otherwise
+    # fall back to the fiche's hero_image (Phase 3 behaviour).
+    if picked_photo is not None and picked_photo[0]:
+        img_src = picked_photo[0]
     else:
-        cat = d.get("category") or "attraction"
-        img_src = f"https://loisirs74.fr/generique-{cat}.jpg"
+        hero = d.get("hero_image") or ""
+        if hero.startswith(("http://", "https://", "//")):
+            img_src = hero
+        elif hero.startswith("/"):
+            img_src = f"https://loisirs74.fr{hero}"
+        elif hero:
+            img_src = f"https://loisirs74.fr/{hero}"
+        else:
+            cat = d.get("category") or "attraction"
+            img_src = f"https://loisirs74.fr/generique-{cat}.jpg"
 
     alt = (loc.get("hero_alt") or fr.get("hero_alt") or name)
     lang_prefix = f"/{lang}" if lang != "fr" else ""
@@ -164,11 +269,15 @@ def fiche_card_html(d, lang, slug):
     data_acces   = acces_value(d)
     data_lac     = d.get("lake") or ""
     data_type    = d.get("type") or ""
-    # data-photo: basename of the chosen hero. In Phase 3 this is just
-    # the existing hero_image filename; Phase 4 swaps in pick_photo().
-    data_photo   = ""
-    if img_src:
+    # data-photo: basename of the chosen card photo. Phase 4 uses the
+    # picker's own basename (so URL-encoding from img_src never leaks
+    # into the attribute); Phase 3 fallback derives from img_src.
+    if picked_photo is not None and picked_photo[2]:
+        data_photo = picked_photo[2]
+    elif img_src:
         data_photo = img_src.rsplit("/", 1)[-1]
+    else:
+        data_photo = ""
 
     return (
         f'<article class="card"'
@@ -193,14 +302,41 @@ def fiche_card_html(d, lang, slug):
     )
 
 
-def build_main_block(fiches, lang, hub_name=None):
+def build_main_block(fiches, lang, hub_name=None, photo_index=None, assignments=None):
     """Render the <main>…</main> content for a hub: commune-grouped cards.
 
     When `hub_name` is "lacs-plages", each commune-section also carries
     `data-lac="annecy|leman|petits"` derived from each fiche's `lake`
     field (the JSON source of truth). All fiches in a commune share the
     same lake by construction, so reading the first one is sufficient.
+
+    Phase 4: when `photo_index` is provided, `pick_photo()` selects the
+    card photo per fiche from the keyword-scored library, tracking
+    `used_in_hub` to maximise diversity within the hub. `assignments`
+    (optional list) captures (hub, slug, type, photo, score, reason)
+    rows for the post-build report. Picks are computed once per hub
+    (FR-locale-invariant) so all 6 locale variants render the same
+    photo per card — same fiche, same picture across the site.
     """
+    used_in_hub = set()
+    picks = {}
+    if photo_index:
+        # Deterministic iteration order = render order (commune asc,
+        # then FR name asc). Ensures byte-identical output across runs.
+        ordered = sorted(
+            fiches,
+            key=lambda x: (
+                (x[1].get("commune") or "?").lower(),
+                (x[1].get("i18n", {}).get("fr", {}).get("name") or x[0]).lower(),
+            ),
+        )
+        for slug, d in ordered:
+            pick = pick_photo(d, photo_index, used_in_hub)
+            picks[slug] = pick
+            if assignments is not None and hub_name and lang == "fr":
+                assignments.append((hub_name, slug, d.get("type") or "",
+                                    pick[2], pick[1], pick[3]))
+
     by_commune = defaultdict(list)
     for slug, d in fiches:
         by_commune[d.get("commune", "?")].append((slug, d))
@@ -222,7 +358,7 @@ def build_main_block(fiches, lang, hub_name=None):
                      f'<span class="commune-count">{n} {word}</span></div>')
         parts.append('<div class="carousel">')
         for slug, d in entries:
-            parts.append(fiche_card_html(d, lang, slug))
+            parts.append(fiche_card_html(d, lang, slug, picked_photo=picks.get(slug)))
         parts.append('</div>')
         parts.append('</div>')
     parts.append('</div>\n</main>')
@@ -457,6 +593,8 @@ def main():
     only = set(args.only.split(",")) if args.only else None
 
     fiches = load_all_json()
+    photo_index = _load_photo_index()
+    assignments = []  # Phase 4: capture (hub, slug, type, photo, score, reason)
     # Hub names (FR + locales) of EVERY hub on disk, so we don't treat them as fiches
     all_hub_names = set()
     for fr_hub in HUB_FILTERS:
@@ -503,7 +641,9 @@ def main():
                 continue
             p = dir_path / "index.html"
             html = p.read_text(encoding="utf-8")
-            new_main = build_main_block(union, lang, hub_name=fr_hub)
+            new_main = build_main_block(union, lang, hub_name=fr_hub,
+                                        photo_index=photo_index,
+                                        assignments=assignments)
             new_html = splice_main(html, new_main)
             # Filter chrome patches (apply to every hub, every locale).
             new_html = patch_filt_commune(new_html, communes_in_hub, lang)
@@ -528,6 +668,43 @@ def main():
     for lang in ("fr",) + LOCALES:
         changed = patch_homepage_completeness(lang)
         print(f"  [{lang}] {'+all-categories nav' if changed else 'already complete'}")
+
+    # Phase 4: emit the photo-assignment report so Eddie can spot-check
+    # the picks. Sorted by (hub, slug) for deterministic output.
+    if assignments:
+        from collections import Counter
+        per_hub_photo = defaultdict(Counter)
+        for hub, slug, typ, photo, score, reason in assignments:
+            per_hub_photo[hub][photo] += 1
+        max_repeat = {hub: c.most_common(1)[0][1] for hub, c in per_hub_photo.items()}
+        lines = [
+            "# Phase 4 — photo assignments (gate artifact)",
+            "",
+            f"**Date**: 2026-06-14",
+            f"**Total assignments**: {len(assignments)} (one per (hub × slug) on the FR canonical hub)",
+            "",
+            "## Per-hub diversity",
+            "",
+            "| hub | fiches | distinct photos | max repeat of one photo |",
+            "|---|---:|---:|---:|",
+        ]
+        for hub in sorted(per_hub_photo):
+            n_fiches = sum(per_hub_photo[hub].values())
+            n_distinct = len(per_hub_photo[hub])
+            lines.append(f"| `{hub}` | {n_fiches} | {n_distinct} | {max_repeat[hub]} |")
+        lines += [
+            "",
+            "## Per-fiche assignments",
+            "",
+            "| hub | slug | type | photo | score | reason |",
+            "|---|---|---|---|---:|---|",
+        ]
+        for row in sorted(assignments):
+            hub, slug, typ, photo, score, reason = row
+            score_s = str(score) if score is not None else "—"
+            lines.append(f"| `{hub}` | `{slug}` | `{typ}` | `{photo}` | {score_s} | {reason} |")
+        (ROOT / "reports" / "photo-assignments.md").write_text("\n".join(lines), encoding="utf-8")
+        print(f"\nwrote reports/photo-assignments.md  ({len(assignments)} rows)")
 
 
 if __name__ == "__main__":
