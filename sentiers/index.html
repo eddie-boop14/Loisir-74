@@ -166,7 +166,7 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .card:hover .card-photo img{transform:scale(1.06);filter:saturate(1.05)}
 .card-tag{position:absolute;top:14px;right:14px;background:rgba(253,250,243,.95);color:var(--ink);padding:.3rem .7rem;border-radius:999px;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:var(--sans);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:2}
 .card-tag.is-payant{background:var(--accent);color:var(--snow)}
-.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}
+.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}.card-tag.is-seasonal{background:var(--alpenglow);color:var(--snow)}
 .card-body{padding:1.25rem 1.35rem 1.35rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .card-commune{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:.15rem;order:-1}
 .card-commune svg{display:none}
@@ -650,7 +650,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/sentier-pedestre-interpretation-lac-plagnes-abondance">
 <img alt="Sentier d&#x27;interprétation autour du lac des Plagnes à Abondance, Vallée d&#x27;Abondance" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-hiver-neige.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Abondance</span></div><a class="title" href="https://loisirs74.fr/sentier-pedestre-interpretation-lac-plagnes-abondance">Sentier pédestre d'interprétation du lac des Plagnes</a>
@@ -664,7 +664,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/tour-village-abondance-abondance">
 <img alt="Tour du village d&#x27;Abondance avec vue sur le clocher et la Vallée d&#x27;Abondance" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-hiver-neige.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Abondance</span></div><a class="title" href="https://loisirs74.fr/tour-village-abondance-abondance">Tour du village d'Abondance</a>
@@ -683,7 +683,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/suivez-mouche-alby-sur-cheran">
 <img alt="Circuit Suivez la mouche dans le village d&#x27;Alby-sur-Chéran, traces de cordonniers au sol" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-foret.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Alby-sur-Chéran</span></div><a class="title" href="https://loisirs74.fr/suivez-mouche-alby-sur-cheran">Suivez la mouche</a>
@@ -702,7 +702,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/chemin-art-nature-andilly-andilly">
 <img alt="Chemin Art Nature d&#x27;Andilly avec sculptures bois et œuvres land art en pierre, en Pays de Genève, sentier familial ombragé, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-automne-rouge.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Andilly</span></div><a class="title" href="https://loisirs74.fr/chemin-art-nature-andilly-andilly">Chemin Art Nature d'Andilly</a>
@@ -716,7 +716,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/parcours-patrimoine-se-promener-a-andilly-andilly">
 <img alt="Parcours patrimoine d&#x27;Andilly avec panneaux illustrés dans les villages de Charly, Jussy et Saint-Symphorien" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-automne-rouge.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Andilly</span></div><a class="title" href="https://loisirs74.fr/parcours-patrimoine-se-promener-a-andilly-andilly">Parcours patrimoine : Se promener à Andilly</a>
@@ -735,7 +735,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/grp-tour-lac-annecy-annecy">
 <img alt="Sentier GR® de Pays Tour du Lac d&#x27;Annecy randonneur sur les hauteurs du lac avec vue sur le sommet de la Tournette et le massif des Bauges Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-sommet-panorama.jpg"/>
-<span class="card-tag is-gratuit">Gratuit</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/grp-tour-lac-annecy-annecy">GR® de Pays Tour du Lac d'Annecy</a>
@@ -754,7 +754,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/itineraire-pedestre-chemin-bords-dranse-chatel">
 <img alt="Chemin des bords de Dranse entre Châtel et Abondance, Vallée d&#x27;Abondance, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-hiver-neige.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Châtel</span></div><a class="title" href="https://loisirs74.fr/itineraire-pedestre-chemin-bords-dranse-chatel">Itinéraire pédestre - Chemin des bords de Dranse</a>
@@ -768,7 +768,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/sentier-oiseaux-chatel">
 <img alt="Sentier des oiseaux à Châtel depuis le col de Bassachaux, en Vallée d&#x27;Abondance" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-sommet-panorama.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Châtel</span></div><a class="title" href="https://loisirs74.fr/sentier-oiseaux-chatel">Sentier des oiseaux</a>
@@ -782,7 +782,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/sentier-morclan-chatel">
 <img alt="Sentier du Morclan à Châtel, alpages avec vue sur la Vallée d&#x27;Abondance et le Mont de Grange" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-sommet-panorama.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Châtel</span></div><a class="title" href="https://loisirs74.fr/sentier-morclan-chatel">Sentier du Morclan</a>
@@ -796,7 +796,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/sentier-pedestre-eterlou-chatel">
 <img alt="Sentier de l&#x27;Eterlou à Pré-la-Joux à Châtel, boucle pédagogique famille" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-hiver-neige.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Châtel</span></div><a class="title" href="https://loisirs74.fr/sentier-pedestre-eterlou-chatel">Sentier pédestre de l'Eterlou</a>
@@ -810,7 +810,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/sentier-pedestre-sonore-sur-traces-contrebandiers-circuit-familles-chatel">
 <img alt="Sentier sonore des contrebandiers à Châtel, départ lac de Vonnes et Vieille Douane" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-hiver-neige.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Châtel</span></div><a class="title" href="https://loisirs74.fr/sentier-pedestre-sonore-sur-traces-contrebandiers-circuit-familles-chatel">Sentier pédestre sonore sur les traces des contrebandiers - circuit familles</a>
@@ -886,7 +886,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/itineraire-pedestre-bords-arve-gaillard-a-arthaz-gaillard">
 <img alt="Sentier de l&#x27;Arve entre Gaillard et Arthaz, vue sur le Salève, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-sommet-panorama.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Gaillard</span></div><a class="title" href="https://loisirs74.fr/itineraire-pedestre-bords-arve-gaillard-a-arthaz-gaillard">Itinéraire pédestre : les bords de l'Arve - De Gaillard à Arthaz</a>
@@ -905,7 +905,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/chemin-alpage-parcours-decouverte-habere-lullin">
 <img alt="Le chemin de l&#x27;alpage à Habère-Lullin, sentier-découverte de 6,5 km sur les traces du livre de Guy Chatiliez, Vallée Verte, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-hiver-neige.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Habère-Lullin</span></div><a class="title" href="https://loisirs74.fr/chemin-alpage-parcours-decouverte-habere-lullin">Le chemin de l'alpage — Parcours de découverte</a>
@@ -924,7 +924,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/secrets-fees-parcours-decouverte-habere-poche">
 <img alt="Sentiers Secrets de fées au Plateau des Moises à Habère-Poche en Vallée Verte" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-hiver-neige.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Habère-Poche</span></div><a class="title" href="https://loisirs74.fr/secrets-fees-parcours-decouverte-habere-poche">Secrets de fées - parcours de découverte</a>
@@ -943,7 +943,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/boucle-pedestre-detective-nature-jonzier-epagny">
 <img alt="Boucle pédestre Détective Nature sur le Sentier du Vuache à Jonzier-Épagny, parcours familial avec panneaux pédagogiques, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-hiver-neige.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Jonzier-Épagny</span></div><a class="title" href="https://loisirs74.fr/boucle-pedestre-detective-nature-jonzier-epagny">Boucle pédestre Détective Nature (Sentier du Vuache)</a>
@@ -981,7 +981,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/balade-pedestre-tour-lac-mole-tour">
 <img alt="Sentier autour du lac du Môle à La Tour en Haute-Savoie, boucle pédestre familiale accessible PMR au pied du Môle, Faucigny" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-automne-orange.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>La Tour</span></div><a class="title" href="https://loisirs74.fr/balade-pedestre-tour-lac-mole-tour">Balade pédestre - Tour du lac du Môle</a>
@@ -1000,7 +1000,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/sentier-pedestre-a-decouverte-village-vernaz-vernaz">
 <img alt="Sentier pédestre à la découverte du village de la Vernaz, Vallée d&#x27;Aulps" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-automne-orange.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>La Vernaz</span></div><a class="title" href="https://loisirs74.fr/sentier-pedestre-a-decouverte-village-vernaz-vernaz">Sentier pédestre : à la découverte du village de la Vernaz</a>
@@ -1019,7 +1019,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/sentier-geologique-pointe-percee-grand-bornand">
 <img alt="Sentier géologique de la Pointe Percée dans les Aravis depuis le col des Annes, Le Grand-Bornand" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-hiver-neige.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Le Grand-Bornand</span></div><a class="title" href="https://loisirs74.fr/sentier-geologique-pointe-percee-grand-bornand">Sentier géologique de la pointe Percée</a>
@@ -1038,7 +1038,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/tour-du-mont-blanc-les-houches">
 <img alt="Sentier du Tour du Mont-Blanc TMB face au massif du Mont-Blanc et à l&#x27;Aiguille Verte avec randonneurs et balisage GR® blanc-rouge Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-foret-alpine.jpg"/>
-<span class="card-tag is-gratuit">Gratuit</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Les Houches</span></div><a class="title" href="https://loisirs74.fr/tour-du-mont-blanc-les-houches">Tour du Mont-Blanc</a>
@@ -1057,7 +1057,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/mine-lappiaz-morzine">
 <img alt="Sentier de la mine de la Lappiaz à Avoriaz au-dessus de Morzine, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-hiver-neige.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Morzine</span></div><a class="title" href="https://loisirs74.fr/mine-lappiaz-morzine">La mine de la Lappiaz</a>
@@ -1071,7 +1071,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/sentier-renard-morzine">
 <img alt="Sentier du renard à Morzine le long de la Dranse, alpages de Nyon" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-hiver-neige.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Morzine</span></div><a class="title" href="https://loisirs74.fr/sentier-renard-morzine">Le sentier du renard</a>
@@ -1090,7 +1090,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/parcours-marche-boucle-pedestre-uffin-neydens">
 <img alt="Boucle pédestre d&#x27;Uffin à Neydens, panorama sur la plaine genevoise et le Salève" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-automne-rouge.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Neydens</span></div><a class="title" href="https://loisirs74.fr/parcours-marche-boucle-pedestre-uffin-neydens">Parcours de marche : Boucle pédestre d'Uffin</a>
@@ -1146,7 +1146,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/boucles-coteau-publier">
 <img alt="Sentier des boucles du Coteau à Publier en sous-bois avec vue sur le lac Léman, réseau pédestre familial entre chef-lieu et Amphion, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-automne-rouge.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Publier</span></div><a class="title" href="https://loisirs74.fr/boucles-coteau-publier">Les boucles du Coteau</a>
@@ -1254,7 +1254,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/au-fil-rail-jeu-piste-a-servoz-servoz">
 <img alt="Jeu de piste Au Fil du Rail à Servoz dans la vallée de Chamonix, parcours familial gratuit autour de la gare SNCF, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-automne-orange.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Servoz</span></div><a class="title" href="https://loisirs74.fr/au-fil-rail-jeu-piste-a-servoz-servoz">Au Fil du Rail - Jeu de Piste à Servoz</a>
@@ -1344,7 +1344,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/au-fil-rail-jeu-piste-a-vallorcine-vallorcine">
 <img alt="Jeu de piste Au Fil du Rail à Vallorcine dans la vallée de Chamonix, parcours familial 3 km autour de la gare SNCF du Buet, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-sentier-hiver-neige.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Vallorcine</span></div><a class="title" href="https://loisirs74.fr/au-fil-rail-jeu-piste-a-vallorcine-vallorcine">Au Fil du Rail - Jeu de piste à Vallorcine</a>
@@ -1440,8 +1440,9 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
       const communeMatch=!curCommune||sec.dataset.commune===curCommune;
       let vis=0;
       sec.querySelectorAll('.card').forEach(card=>{
-        const isPaid=!!card.querySelector('.card-tag.is-payant');
-        const am=curAccess==='all'||(curAccess==='free'&&!isPaid)||(curAccess==='paid'&&isPaid);
+        const isPaid=!!card.querySelector('.card-tag.is-payant')||!!card.querySelector('.card-tag.is-seasonal');
+        const isFree=!!card.querySelector('.card-tag.is-gratuit')||!!card.querySelector('.card-tag.is-seasonal');
+        const am=curAccess==='all'||(curAccess==='free'&&isFree)||(curAccess==='paid'&&isPaid);
         const show=communeMatch&&am; card.classList.toggle('hidden',!show); if(show){vis++;total++;}
       });
       sec.classList.toggle('hidden',vis===0);

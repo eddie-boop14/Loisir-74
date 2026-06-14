@@ -166,7 +166,7 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .card:hover .card-photo img{transform:scale(1.06);filter:saturate(1.05)}
 .card-tag{position:absolute;top:14px;right:14px;background:rgba(253,250,243,.95);color:var(--ink);padding:.3rem .7rem;border-radius:999px;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:var(--sans);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:2}
 .card-tag.is-payant{background:var(--accent);color:var(--snow)}
-.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}
+.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}.card-tag.is-seasonal{background:var(--alpenglow);color:var(--snow)}
 .card-body{padding:1.25rem 1.35rem 1.35rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .card-commune{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:.15rem;order:-1}
 .card-commune svg{display:none}
@@ -894,7 +894,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/musee-cordonnerie-alby-sur-cheran">
 <img alt="Schoenmakersmuseum in Alby-sur-Chéran onder de bogen van het middeleeuwse stadje, 300 jaar traditie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Alby-sur-Chéran</span></div><a class="title" href="https://loisirs74.fr/nl/musee-cordonnerie-alby-sur-cheran">Schoenmakersmuseum</a>
@@ -941,7 +941,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/musee-chateau-annecy">
 <img alt="Gevel en toren van het Museum-Kasteel van Annecy die de oude stad en het meer vanaf hun rotsspoor domineren" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/nl/musee-chateau-annecy">Museum-Kasteel van Annecy</a>
@@ -955,7 +955,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/palais-de-l-ile-annecy">
 <img alt="Palais de l&#x27;Île op zijn rotseilandje in het Thiou-kanaal, het beeldbepalende monument van het historische centrum van Annecy" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/nl/palais-de-l-ile-annecy">Palais de l'Île</a>
@@ -1012,7 +1012,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/espace-tairraz-musee-des-cristaux-chamonix">
 <img alt="Vitrines met kristallen en mineralen uit de Mont-Blanc in de Espace Tairraz in het centrum van Chamonix" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-moderne.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/nl/espace-tairraz-musee-des-cristaux-chamonix">Espace Tairraz</a>
@@ -1026,7 +1026,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/maison-de-la-memoire-janny-couttet-chamonix">
 <img alt="Granieten gevel van het voormalige Zusterhuis, sinds 2011 het Huis van de Herinnering en het Erfgoed Janny Couttet in de rue des Moulins in Chamonix" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/nl/maison-de-la-memoire-janny-couttet-chamonix">Maison de la Mémoire Janny Couttet</a>
@@ -1040,7 +1040,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/musee-du-mont-blanc-chamonix">
 <img alt="Gevel van het Chamonix Palace uit 1913 waarin het toekomstige Musée du Mont-Blanc komt, avenue Michel Croz in Chamonix" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/nl/musee-du-mont-blanc-chamonix">Musée du Mont-Blanc</a>
@@ -1059,7 +1059,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/bourg-et-ruines-chateau-chaumont-chaumont">
 <img alt="Ruïnes van het middeleeuwse kasteel van Chaumont en historisch dorp boven het Rhône-dal in Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-moderne.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Chaumont</span></div><a class="title" href="https://loisirs74.fr/nl/bourg-et-ruines-chateau-chaumont-chaumont">Dorp en ruïnes van het kasteel van Chaumont</a>
@@ -1078,7 +1078,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/musee-granges-servette-chens-sur-leman">
 <img alt="Museum Granges de Servette in Chens-sur-Léman, hedendaagse kunst en landelijk gereedschap in gerestaureerde schuren" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-moderne.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Chens-sur-Léman</span></div><a class="title" href="https://loisirs74.fr/nl/musee-granges-servette-chens-sur-leman">Museum van de Granges de Servette</a>
@@ -1135,7 +1135,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/musee-ailes-anciennes-excenevex">
 <img alt="Museum van de Oude Vleugels in Excenevex, vliegtuigen en helikopters in restauratie aan het Meer van Genève" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Excenevex</span></div><a class="title" href="https://loisirs74.fr/nl/musee-ailes-anciennes-excenevex">Museum van de Oude Vleugels</a>
@@ -1154,7 +1154,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/musee-archeologique-viuz-faverges">
 <img alt="Vitrines van de vaste tentoonstelling van het Archeologisch Museum van Viuz-Faverges met Gallo-Romeinse voorwerpen en de vlakke koperen bijl van Englannaz" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Faverges-Seythenex</span></div><a class="title" href="https://loisirs74.fr/nl/musee-archeologique-viuz-faverges">Archeologisch Museum van Viuz-Faverges</a>
@@ -1168,7 +1168,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/museum-des-papillons-et-insectes-faverges">
 <img alt="Kleurrijke vitrines met exotische vlinders in het Vlinder- en Insectenmuseum van het Château de Faverges, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Faverges-Seythenex</span></div><a class="title" href="https://loisirs74.fr/nl/museum-des-papillons-et-insectes-faverges">Vlinder- en Insectenmuseum van Faverges</a>
@@ -1187,7 +1187,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/musee-art-et-folklore-regional-fessy">
 <img alt="Regionaal Museum Kunst en Folklore in Fessy, 18e-eeuwse boerderij met 20.000 landelijke voorwerpen van de Bernard Lacroix-collectie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Fessy</span></div><a class="title" href="https://loisirs74.fr/nl/musee-art-et-folklore-regional-fessy">Regionaal Museum voor Kunst en Folklore</a>
@@ -1225,7 +1225,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/musee-nature-gruffy">
 <img alt="Natuurmuseum in Gruffy, fauna en bijen van Haute-Savoye, vlak bij het Meer van Annecy" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Gruffy</span></div><a class="title" href="https://loisirs74.fr/nl/musee-nature-gruffy">Natuurmuseum</a>
@@ -1244,7 +1244,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/ruines-chateau-habere-lullin-habere-lullin">
 <img alt="Ruïnes van het kasteel van Habère-Lullin, Vallée Verte, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-grande-galerie.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Habère-Lullin</span></div><a class="title" href="https://loisirs74.fr/nl/ruines-chateau-habere-lullin-habere-lullin">Ruïnes van het kasteel van Habère-Lullin</a>
@@ -1301,7 +1301,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/musee-montagnard-les-houches">
 <img alt="Hout- en steenfontaal van het huis uit 1750 dat het Bergmuseum van Les Houches herbergt in het hart van het dorp" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Les Houches</span></div><a class="title" href="https://loisirs74.fr/nl/musee-montagnard-les-houches">Bergmuseum van Les Houches</a>
@@ -1315,7 +1315,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/ruines-chateau-st-michel-houches">
 <img alt="Ruïnes van het kasteel Saint-Michel in Les Houches, middeleeuws muurfragment in het bos" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Les Houches</span></div><a class="title" href="https://loisirs74.fr/nl/ruines-chateau-st-michel-houches">Ruïnes van het kasteel Saint-Michel</a>
@@ -1334,7 +1334,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/ancien-remparts-chateau-lullin-lullin">
 <img alt="Voormalige omsluitingsmuur van het kasteel van Lullin met schietgaten, middeleeuws overblijfsel in het dorp" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Lullin</span></div><a class="title" href="https://loisirs74.fr/nl/ancien-remparts-chateau-lullin-lullin">Voormalige muren van het kasteel van Lullin</a>
@@ -1353,7 +1353,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/musee-ermitage-calvaire-megeve">
 <img alt="Museum van de Kluis van de Calvarieberg in Megève, interpretatiecentrum voor de 14 Calvarieberg-kapellen uit 1840-1878" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Megève</span></div><a class="title" href="https://loisirs74.fr/nl/musee-ermitage-calvaire-megeve">Museum van de Kluis van de Calvarieberg</a>
@@ -1372,7 +1372,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/maison-du-saleve-presilly">
 <img alt="Gevel van de voormalige Mikerne-boerderij, sinds enkele jaren de Maison du Salève in Présilly aan de voet van het massief" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Présilly</span></div><a class="title" href="https://loisirs74.fr/nl/maison-du-saleve-presilly">Maison du Salève</a>
@@ -1391,7 +1391,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/notre-histoire-musee-rumilly-rumilly">
 <img alt="Notre Histoire – Museum van Rumilly, voormalige manufactuur, Haute-Savoye" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-moderne.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Rumilly</span></div><a class="title" href="https://loisirs74.fr/nl/notre-histoire-musee-rumilly-rumilly">Notre Histoire – Museum van Rumilly</a>
@@ -1429,7 +1429,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/chateau-comtal-saint-julien-en-genevois">
 <img alt="Overblijfselen van het grafelijk kasteel Ternier op de heuvel boven Saint-Julien-en-Genevois in Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-grande-galerie.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Saint-Julien-en-Genevois</span></div><a class="title" href="https://loisirs74.fr/nl/chateau-comtal-saint-julien-en-genevois">Grafelijk kasteel van Ternier</a>
@@ -1466,7 +1466,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/ferme-ecomusee-clos-parchet-samoens">
 <img alt="Boerderij-Ecomuseum Clos Parchet in Samoëns, traditionele boerderij uit 1815 met collectie van landelijk gerei" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-grande-galerie.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Samoëns</span></div><a class="title" href="https://loisirs74.fr/nl/ferme-ecomusee-clos-parchet-samoens">Boerderij-Ecomuseum van Clos Parchet</a>
@@ -1485,7 +1485,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/musee-prehistoire-geologie-sciez">
 <img alt="Museum Prehistorie en Geologie van Sciez — oever van het Meer van Genève, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Sciez</span></div><a class="title" href="https://loisirs74.fr/nl/musee-prehistoire-geologie-sciez">Musée de Préhistoire et Géologie de Sciez</a>
@@ -1518,7 +1518,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/maison-du-lieutenant-servoz">
 <img alt="Stenen en houten gevel van de Maison du Lieutenant, het oudste huis van het Chamonix-dal, in het gehucht Le Mont in Servoz" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Servoz</span></div><a class="title" href="https://loisirs74.fr/nl/maison-du-lieutenant-servoz">Maison du Lieutenant</a>
@@ -1537,7 +1537,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/fonderie-paccard-sevrier">
 <img alt="Brons en klokken in het atelier van de Klokkengieterij Paccard in Sevrier aan het meer van Annecy" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/fonderie-paccard-sevrier-hero.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Sevrier</span></div><a class="title" href="https://loisirs74.fr/nl/fonderie-paccard-sevrier">Klokkengieterij Paccard</a>
@@ -1570,7 +1570,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/musee-du-chablais-thonon-les-bains">
 <img alt="Gevel van het Château de Sonnaz uit 1666 met het Museum van het Chablais in Thonon-les-Bains boven het Meer van Genève" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/musee-du-chablais-thonon-les-bains-hero.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/nl/musee-du-chablais-thonon-les-bains">Museum van het Chablais</a>
@@ -1584,7 +1584,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/ecomusee-peche-et-du-lac-thonon">
 <img alt="Traditionele houten visserskoten aan de Port de Rives in Thonon waar het Ecomuseum van de visserij en het meer is gevestigd, aan de voet van het Château de Rives" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-moderne.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/nl/ecomusee-peche-et-du-lac-thonon">Ecomuseum van de visserij en het meer</a>
@@ -1636,7 +1636,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/maison-de-barberine-vallorcine">
 <img alt="Gevel van het Vallorcine-huis uit 1705 dat de Maison de Barberine herbergt, in 2023 als Historisch Monument geklasseerd, gehucht Barberine in Vallorcine" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Vallorcine</span></div><a class="title" href="https://loisirs74.fr/nl/maison-de-barberine-vallorcine">Maison de Barberine</a>
@@ -1674,7 +1674,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/musee-paysan-un-site-paysalp-culture-patrimoine-viuz-en-sallaz">
 <img alt="Boerenmuseum PAYSALP in Viuz-en-Sallaz, meeslepende scenografie van het boerenleven, Haute-Savoye" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-grande-galerie.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Viuz-en-Sallaz</span></div><a class="title" href="https://loisirs74.fr/nl/musee-paysan-un-site-paysalp-culture-patrimoine-viuz-en-sallaz">Het Boerenmuseum, een site van PAYSALP Cultuur &amp; Erfgoed</a>
@@ -1688,7 +1688,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/maison-de-la-memoire-paysalp">
 <img alt="Gevel van het Gebouw der 4 Rivieren, thuis van de mediatheek-conservatorium Maison de la Mémoire Paysalp in Viuz-en-Sallaz, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Viuz-en-Sallaz</span></div><a class="title" href="https://loisirs74.fr/nl/maison-de-la-memoire-paysalp">Maison de la Mémoire Paysalp</a>
@@ -1702,7 +1702,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/ecomusee-paysalp-viuz-en-sallaz">
 <img alt="Reconstructie van een Savoyaards boereninterieur uit de 19e eeuw in het Ecomuseum Paysalp in Viuz-en-Sallaz" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-moderne.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Viuz-en-Sallaz</span></div><a class="title" href="https://loisirs74.fr/nl/ecomusee-paysalp-viuz-en-sallaz">Ecomuseum Paysalp</a>
@@ -1721,7 +1721,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/chateau-fonbonne-et-herbularius-evian-bains">
 <img alt="Kasteel van Fonbonne en zijn middeleeuws geïnspireerde Herbularius-tuin in het hart van Évian-les-Bains" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-grande-galerie.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Évian-les-Bains</span></div><a class="title" href="https://loisirs74.fr/nl/chateau-fonbonne-et-herbularius-evian-bains">Kasteel van Fonbonne en zijn Herbularius</a>
@@ -1735,7 +1735,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/nl/palais-lumiere">
 <img alt="Belle-Époque-gevel van het Palais Lumière met zijn gerestaureerde koepel, quai Charles-Albert Besson, Évian-les-Bains, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/b/b0/PalaisLumi%C3%A8re-DSCN1105.jpg"/>
-<span class="card-tag is-payant">Betaald</span>
+<span class="card-tag is-seasonal">Seizoensgebonden</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Évian-les-Bains</span></div><a class="title" href="https://loisirs74.fr/nl/palais-lumiere">Palais Lumière</a>
@@ -1831,8 +1831,9 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
       const communeMatch=!curCommune||sec.dataset.commune===curCommune;
       let vis=0;
       sec.querySelectorAll('.card').forEach(card=>{
-        const isPaid=!!card.querySelector('.card-tag.is-payant');
-        const am=curAccess==='all'||(curAccess==='free'&&!isPaid)||(curAccess==='paid'&&isPaid);
+        const isPaid=!!card.querySelector('.card-tag.is-payant')||!!card.querySelector('.card-tag.is-seasonal');
+        const isFree=!!card.querySelector('.card-tag.is-gratuit')||!!card.querySelector('.card-tag.is-seasonal');
+        const am=curAccess==='all'||(curAccess==='free'&&isFree)||(curAccess==='paid'&&isPaid);
         const show=communeMatch&&am; card.classList.toggle('hidden',!show); if(show){vis++;total++;}
       });
       sec.classList.toggle('hidden',vis===0);

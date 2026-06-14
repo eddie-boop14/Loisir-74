@@ -166,7 +166,7 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .card:hover .card-photo img{transform:scale(1.06);filter:saturate(1.05)}
 .card-tag{position:absolute;top:14px;right:14px;background:rgba(253,250,243,.95);color:var(--ink);padding:.3rem .7rem;border-radius:999px;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:var(--sans);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:2}
 .card-tag.is-payant{background:var(--accent);color:var(--snow)}
-.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}
+.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}.card-tag.is-seasonal{background:var(--alpenglow);color:var(--snow)}
 .card-body{padding:1.25rem 1.35rem 1.35rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .card-commune{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:.15rem;order:-1}
 .card-commune svg{display:none}
@@ -593,7 +593,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/musee-chateau-annecy">
 <img alt="Fachada y torre del Musée-Château d&#x27;Annecy dominando el casco antiguo y el lago desde su espolón rocoso" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/es/musee-chateau-annecy">Musée-Château d'Annecy</a>
@@ -630,7 +630,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/chateau-sires-faucigny-bonneville">
 <img alt="Torre Negra de 21 m y Torre Blanca de 15 m que subsisten del Château des Sires de Faucigny, construido hacia 1260 en Bonneville, Alta Saboya" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/chateau-sires-faucigny-bonneville-hero.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Bonneville</span></div><a class="title" href="https://loisirs74.fr/es/chateau-sires-faucigny-bonneville">Château des Sires de Faucigny</a>
@@ -649,7 +649,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/chateau-avully-brenthonne">
 <img alt="Château d&#x27;Avully en Brenthonne con su foso con agua, puente levadizo restaurado y fachada medieval del siglo XIV restaurada por la familia Guyon, Alta Saboya" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/chateau-avully-brenthonne-hero.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Brenthonne</span></div><a class="title" href="https://loisirs74.fr/es/chateau-avully-brenthonne">Château d'Avully</a>
@@ -687,7 +687,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/chateau-clermont-genevois">
 <img alt="Patio interior renacentista del Château de Clermont con sus tres niveles de galerías abovedadas inspiradas en el Palacio Farnese de Caprarola, Alta Saboya" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/chateau-clermont-genevois-hero.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Clermont</span></div><a class="title" href="https://loisirs74.fr/es/chateau-clermont-genevois">Château de Clermont</a>
@@ -744,7 +744,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/chateau-montrottier-lovagny">
 <img alt="Torre del homenaje cilíndrica del siglo XV y fachada neogótica del Château de Montrottier sobre el parque paisajístico en Lovagny encima de las Gorges du Fier" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/chateau-montrottier-lovagny-hero.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Lovagny</span></div><a class="title" href="https://loisirs74.fr/es/chateau-montrottier-lovagny">Château de Montrottier</a>
@@ -832,7 +832,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/maison-forte-hautetour-saint-gervais">
 <img alt="Maison Forte de Hautetour en Saint-Gervais-les-Bains, casa fuerte medieval restaurada del valle del Mont-Blanc" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/maison-forte-hautetour-saint-gervais-hero.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Saint-Gervais-les-Bains</span></div><a class="title" href="https://loisirs74.fr/es/maison-forte-hautetour-saint-gervais">Maison Forte de Hautetour</a>
@@ -888,7 +888,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/chateau-des-rubins-sallanches">
 <img alt="Fachada medieval del Château des Rubins, casa fuerte del siglo XIV en Sallanches rehabilitada 2019-2021, sede del Observatoire des Alpes, Alta Saboya" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/chateau-des-rubins-sallanches-hero.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Sallanches</span></div><a class="title" href="https://loisirs74.fr/es/chateau-des-rubins-sallanches">Château des Rubins</a>
@@ -958,7 +958,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/chateau-ripaille-thonon">
 <img alt="Château de Ripaille con sus 4 torres y muralla fortificada del siglo XIV restaurada 1892-1903 en la finca de 53 hectáreas a orillas del Lago Lemán en Thonon" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/chateau-ripaille-thonon-hero.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/es/chateau-ripaille-thonon">Château de Ripaille</a>
@@ -972,7 +972,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/chateau-sonnaz-thonon-bains">
 <img alt="Castillo de Sonnaz en Thonon-les-Bains, sede del Museo del Chablais, frente al Lago Lemán" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-chateau-brume.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/es/chateau-sonnaz-thonon-bains">Castillo de Sonnaz</a>
@@ -1005,7 +1005,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/borne-chateau-vuache-vulbens">
 <img alt="Mojón de piedra marcado 1579, último vestigio del castillo del Vuache en Vulbens, al pie de la escalera junto a la iglesia" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-chateau-brume.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Vulbens</span></div><a class="title" href="https://loisirs74.fr/es/borne-chateau-vuache-vulbens">Mojón del castillo del Vuache</a>
@@ -1119,8 +1119,9 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
       const communeMatch=!curCommune||sec.dataset.commune===curCommune;
       let vis=0;
       sec.querySelectorAll('.card').forEach(card=>{
-        const isPaid=!!card.querySelector('.card-tag.is-payant');
-        const am=curAccess==='all'||(curAccess==='free'&&!isPaid)||(curAccess==='paid'&&isPaid);
+        const isPaid=!!card.querySelector('.card-tag.is-payant')||!!card.querySelector('.card-tag.is-seasonal');
+        const isFree=!!card.querySelector('.card-tag.is-gratuit')||!!card.querySelector('.card-tag.is-seasonal');
+        const am=curAccess==='all'||(curAccess==='free'&&isFree)||(curAccess==='paid'&&isPaid);
         const show=communeMatch&&am; card.classList.toggle('hidden',!show); if(show){vis++;total++;}
       });
       sec.classList.toggle('hidden',vis===0);

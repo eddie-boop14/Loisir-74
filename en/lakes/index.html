@@ -167,7 +167,7 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .card:hover .card-photo img{transform:scale(1.06);filter:saturate(1.05)}
 .card-tag{position:absolute;top:14px;right:14px;background:rgba(253,250,243,.95);color:var(--ink);padding:.3rem .7rem;border-radius:999px;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:var(--sans);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:2}
 .card-tag.is-payant{background:var(--accent);color:var(--snow)}
-.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}
+.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}.card-tag.is-seasonal{background:var(--alpenglow);color:var(--snow)}
 .card-body{padding:1.25rem 1.35rem 1.35rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .card-commune{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:.15rem;order:-1}
 .card-commune svg{display:none}
@@ -765,7 +765,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/en/plage-imperial-annecy">
 <img alt="17,000 sqm imported sand and lawn beach: Plage de l&#x27;Impérial in Annecy on Lake Annecy, Haute-Savoie 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<span class="card-tag is-payant">Paid</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/en/plage-imperial-annecy">Plage de l'Impérial</a>
@@ -885,7 +885,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/en/plage-de-doussard">
 <img alt="Sand and lawn beach next to the Bout du Lac nature reserve: Plage de Doussard on Lake Annecy, Haute-Savoie 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac-coucher-soleil.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<span class="card-tag is-seasonal">Seasonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Doussard</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-doussard">Plage de Doussard</a>
@@ -904,7 +904,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/en/plage-de-duingt">
 <img alt="120 m lawn beach facing the Château de Duingt: Plage de Duingt on Lake Annecy, Haute-Savoie 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<span class="card-tag is-seasonal">Seasonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Duingt</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-duingt">Plage de Duingt</a>
@@ -978,7 +978,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/en/plage-de-menthon-saint-bernard">
 <img alt="Menthon-Saint-Bernard municipal beach on the shores of Lake Annecy with views of Semnoz, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Plage_municipale_de_Menthon-Saint-Bernard.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<span class="card-tag is-seasonal">Seasonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Menthon-Saint-Bernard</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-menthon-saint-bernard">Plage de Menthon-Saint-Bernard</a>
@@ -996,7 +996,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/en/plage-de-messery">
 <img alt="400 m lawn beach on the peninsula facing Nyon: Plage de Messery on Lake Geneva, Haute-Savoie 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<span class="card-tag is-seasonal">Seasonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Messery</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-messery">Plage de Messery</a>
@@ -1121,7 +1121,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/en/plage-de-saint-jorioz">
 <img alt="Plage de Saint-Jorioz on Lake Annecy with natural sand, lawns and views of Dents de Lanfon and Tournette" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/plage-de-saint-jorioz-hero.jpg"/>
-<span class="card-tag is-payant">Paid</span>
+<span class="card-tag is-seasonal">Seasonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Saint-Jorioz</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-saint-jorioz">Plage de Saint-Jorioz</a>
@@ -1158,7 +1158,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/en/plage-de-sevrier">
 <img alt="Recently renovated lawn and fine gravel beach: Plage de Sévrier on Lake Annecy, Haute-Savoie 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<span class="card-tag is-seasonal">Seasonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Sévrier</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-sevrier">Plage de Sévrier</a>
@@ -1177,7 +1177,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/en/plage-d-angon-talloires">
 <img alt="Large shaded lawn beach with view of the Château de Duingt: Plage d&#x27;Angon in Talloires-Montmin on Lake Annecy, Haute-Savoie 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac-coucher-soleil.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<span class="card-tag is-seasonal">Seasonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Talloires-Montmin</span></div><a class="title" href="https://loisirs74.fr/en/plage-d-angon-talloires">Plage d'Angon</a>
@@ -1191,7 +1191,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/en/plage-de-talloires">
 <img alt="250x200 m sand and lawn beach with paddling pool, diving boards and slide: Plage de Talloires on Lake Annecy, Haute-Savoie 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac.jpg"/>
-<span class="card-tag is-gratuit">Free</span>
+<span class="card-tag is-seasonal">Seasonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Talloires-Montmin</span></div><a class="title" href="https://loisirs74.fr/en/plage-de-talloires">Plage de Talloires</a>

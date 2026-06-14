@@ -166,7 +166,7 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .card:hover .card-photo img{transform:scale(1.06);filter:saturate(1.05)}
 .card-tag{position:absolute;top:14px;right:14px;background:rgba(253,250,243,.95);color:var(--ink);padding:.3rem .7rem;border-radius:999px;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:var(--sans);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:2}
 .card-tag.is-payant{background:var(--accent);color:var(--snow)}
-.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}
+.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}.card-tag.is-seasonal{background:var(--alpenglow);color:var(--snow)}
 .card-body{padding:1.25rem 1.35rem 1.35rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .card-commune{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:.15rem;order:-1}
 .card-commune svg{display:none}
@@ -894,7 +894,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/musee-cordonnerie-alby-sur-cheran">
 <img alt="Museo de la Zapatería en Alby-sur-Chéran en los soportales del burgo medieval, 300 años de tradición" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Alby-sur-Chéran</span></div><a class="title" href="https://loisirs74.fr/es/musee-cordonnerie-alby-sur-cheran">Museo de la Zapatería</a>
@@ -941,7 +941,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/musee-chateau-annecy">
 <img alt="Fachada y torre del Musée-Château d&#x27;Annecy dominando el casco antiguo y el lago desde su espolón rocoso" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/es/musee-chateau-annecy">Musée-Château d'Annecy</a>
@@ -955,7 +955,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/palais-de-l-ile-annecy">
 <img alt="Palais de l&#x27;Île sobre su islote rocoso en el canal del Thiou, monumento emblemático del centro histórico de Annecy" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/es/palais-de-l-ile-annecy">Palais de l'Île</a>
@@ -1012,7 +1012,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/espace-tairraz-musee-des-cristaux-chamonix">
 <img alt="Vitrinas de cristales y minerales del Mont Blanc en el Espace Tairraz en el centro de Chamonix" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-moderne.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/es/espace-tairraz-musee-des-cristaux-chamonix">Espace Tairraz</a>
@@ -1026,7 +1026,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/maison-de-la-memoire-janny-couttet-chamonix">
 <img alt="Maison de la Mémoire Janny Couttet en Chamonix, centro del patrimonio del valle del Mont-Blanc" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/es/maison-de-la-memoire-janny-couttet-chamonix">Maison de la Mémoire Janny Couttet</a>
@@ -1040,7 +1040,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/musee-du-mont-blanc-chamonix">
 <img alt="Fachada del Chamonix Palace de 1913 que alberga el futuro Musée du Mont-Blanc en avenue Michel Croz, Chamonix" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Chamonix-Mont-Blanc</span></div><a class="title" href="https://loisirs74.fr/es/musee-du-mont-blanc-chamonix">Musée du Mont-Blanc</a>
@@ -1059,7 +1059,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/bourg-et-ruines-chateau-chaumont-chaumont">
 <img alt="Ruinas del castillo medieval de Chaumont y pueblo histórico sobre el valle del Ródano en Alta Saboya" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-moderne.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Chaumont</span></div><a class="title" href="https://loisirs74.fr/es/bourg-et-ruines-chateau-chaumont-chaumont">Burgo y ruinas del castillo de Chaumont</a>
@@ -1078,7 +1078,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/musee-granges-servette-chens-sur-leman">
 <img alt="Museo de las Granges de Servette en Chens-sur-Léman, arte contemporáneo y herramientas rurales en graneros restaurados" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-moderne.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Chens-sur-Léman</span></div><a class="title" href="https://loisirs74.fr/es/musee-granges-servette-chens-sur-leman">Museo de las Granges de Servette</a>
@@ -1135,7 +1135,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/musee-ailes-anciennes-excenevex">
 <img alt="Museo de las Alas Antiguas en Excenevex, aviones y helicópteros en restauración a orillas del Lemán" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Excenevex</span></div><a class="title" href="https://loisirs74.fr/es/musee-ailes-anciennes-excenevex">Museo de las Alas Antiguas</a>
@@ -1154,7 +1154,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/musee-archeologique-viuz-faverges">
 <img alt="Vitrinas de la exposición permanente del Museo Arqueológico de Viuz-Faverges con objetos galo-romanos y el hacha plana de cobre de Englannaz" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Faverges-Seythenex</span></div><a class="title" href="https://loisirs74.fr/es/musee-archeologique-viuz-faverges">Museo Arqueológico de Viuz-Faverges</a>
@@ -1168,7 +1168,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/museum-des-papillons-et-insectes-faverges">
 <img alt="Vitrinas coloridas de mariposas exóticas en el Muséum des Papillons et Insectes del Château de Faverges, Alta Saboya" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Faverges-Seythenex</span></div><a class="title" href="https://loisirs74.fr/es/museum-des-papillons-et-insectes-faverges">Muséum des Papillons et Insectes</a>
@@ -1187,7 +1187,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/musee-art-et-folklore-regional-fessy">
 <img alt="Museo de arte y folklore regional en Fessy, granja del s. XVIII con 20.000 objetos rurales de la colección Bernard Lacroix" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Fessy</span></div><a class="title" href="https://loisirs74.fr/es/musee-art-et-folklore-regional-fessy">Museo de arte y folklore regional</a>
@@ -1225,7 +1225,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/musee-nature-gruffy">
 <img alt="Museo de la Naturaleza en Gruffy, fauna y abejas de Alta Saboya, cerca del Lago de Annecy" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Gruffy</span></div><a class="title" href="https://loisirs74.fr/es/musee-nature-gruffy">Museo de la Naturaleza</a>
@@ -1244,7 +1244,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/ruines-chateau-habere-lullin-habere-lullin">
 <img alt="Ruinas del castillo de Habère-Lullin, Vallée Verte, Alta Saboya" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-grande-galerie.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Habère-Lullin</span></div><a class="title" href="https://loisirs74.fr/es/ruines-chateau-habere-lullin-habere-lullin">Ruinas del castillo de Habère-Lullin</a>
@@ -1301,7 +1301,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/musee-montagnard-les-houches">
 <img alt="Fachada de madera y piedra de la casa de 1750 que alberga el Musée Montagnard des Houches en el corazón del pueblo" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Les Houches</span></div><a class="title" href="https://loisirs74.fr/es/musee-montagnard-les-houches">Musée Montagnard des Houches</a>
@@ -1315,7 +1315,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/ruines-chateau-st-michel-houches">
 <img alt="Ruinas del castillo Saint-Michel en Les Houches, lienzo de muro medieval en el bosque" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Les Houches</span></div><a class="title" href="https://loisirs74.fr/es/ruines-chateau-st-michel-houches">Ruinas del castillo Saint-Michel</a>
@@ -1334,7 +1334,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/ancien-remparts-chateau-lullin-lullin">
 <img alt="Antiguo muro de cerco del castillo de Lullin con saeteras, vestigio medieval visible en el pueblo" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Lullin</span></div><a class="title" href="https://loisirs74.fr/es/ancien-remparts-chateau-lullin-lullin">Antiguas murallas del castillo de Lullin</a>
@@ -1353,7 +1353,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/musee-ermitage-calvaire-megeve">
 <img alt="Museo de la Ermita del Calvario en Megève, centro de interpretación de las 14 capillas del Calvario de 1840 a 1878" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Megève</span></div><a class="title" href="https://loisirs74.fr/es/musee-ermitage-calvaire-megeve">Museo de la Ermita del Calvario</a>
@@ -1372,7 +1372,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/maison-du-saleve-presilly">
 <img alt="Fachada de la antigua granja de Mikerne que alberga la Maison du Salève en Présilly al pie del macizo" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Présilly</span></div><a class="title" href="https://loisirs74.fr/es/maison-du-saleve-presilly">Maison du Salève</a>
@@ -1391,7 +1391,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/notre-histoire-musee-rumilly-rumilly">
 <img alt="Notre Histoire – Museo de Rumilly, antigua manufactura, Alta Saboya" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-moderne.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Rumilly</span></div><a class="title" href="https://loisirs74.fr/es/notre-histoire-musee-rumilly-rumilly">Notre Histoire – Museo de Rumilly</a>
@@ -1429,7 +1429,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/chateau-comtal-saint-julien-en-genevois">
 <img alt="Vestigios del castillo Comtal de Ternier en la colina sobre Saint-Julien-en-Genevois en Alta Saboya" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-grande-galerie.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Saint-Julien-en-Genevois</span></div><a class="title" href="https://loisirs74.fr/es/chateau-comtal-saint-julien-en-genevois">Castillo Comtal de Ternier</a>
@@ -1466,7 +1466,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/ferme-ecomusee-clos-parchet-samoens">
 <img alt="Granja-Ecomuseo Clos Parchet en Samoëns, granja tradicional de 1815 con colección de utensilios rurales" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-grande-galerie.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Samoëns</span></div><a class="title" href="https://loisirs74.fr/es/ferme-ecomusee-clos-parchet-samoens">Granja-Ecomuseo del Clos Parchet</a>
@@ -1485,7 +1485,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/musee-prehistoire-geologie-sciez">
 <img alt="Museo de Prehistoria y Geología de Sciez — orilla del Lemán, Alta Saboya" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Sciez</span></div><a class="title" href="https://loisirs74.fr/es/musee-prehistoire-geologie-sciez">Musée de Préhistoire et Géologie de Sciez</a>
@@ -1518,7 +1518,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/maison-du-lieutenant-servoz">
 <img alt="Fachada de piedra y madera de la Maison du Lieutenant, la casa más antigua del valle de Chamonix, en la aldea de Le Mont en Servoz" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Servoz</span></div><a class="title" href="https://loisirs74.fr/es/maison-du-lieutenant-servoz">Maison du Lieutenant</a>
@@ -1537,7 +1537,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/fonderie-paccard-sevrier">
 <img alt="Fundición Paccard en Sevrier a orillas del lago de Annecy, antigua fundición de campanas y museo" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/fonderie-paccard-sevrier-hero.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Sevrier</span></div><a class="title" href="https://loisirs74.fr/es/fonderie-paccard-sevrier">Fundición Paccard Sevrier</a>
@@ -1570,7 +1570,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/musee-du-chablais-thonon-les-bains">
 <img alt="Fachada del Château de Sonnaz de 1666 que alberga el Musée du Chablais en Thonon-les-Bains, frente al Lago Lemán" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/musee-du-chablais-thonon-les-bains-hero.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/es/musee-du-chablais-thonon-les-bains">Musée du Chablais</a>
@@ -1584,7 +1584,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/ecomusee-peche-et-du-lac-thonon">
 <img alt="Casetas de madera tradicionales de los pescadores del Port de Rives en Thonon que albergan el Écomusée de la pêche et du lac al pie del castillo de Rives" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-moderne.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/es/ecomusee-peche-et-du-lac-thonon">Ecomuseo de la pesca y del lago</a>
@@ -1636,7 +1636,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/maison-de-barberine-vallorcine">
 <img alt="Fachada de la casa de Vallorcine de 1705 que alberga la Maison de Barberine, inscrita Monument Historique en 2023, aldea de Barberine en Vallorcine" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Vallorcine</span></div><a class="title" href="https://loisirs74.fr/es/maison-de-barberine-vallorcine">Maison de Barberine</a>
@@ -1674,7 +1674,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/musee-paysan-un-site-paysalp-culture-patrimoine-viuz-en-sallaz">
 <img alt="Museo Campesino PAYSALP en Viuz-en-Sallaz, escenografía inmersiva de la vida campesina, Alta Saboya" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-grande-galerie.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Viuz-en-Sallaz</span></div><a class="title" href="https://loisirs74.fr/es/musee-paysan-un-site-paysalp-culture-patrimoine-viuz-en-sallaz">El Museo Campesino, un sitio de PAYSALP Cultura y Patrimonio</a>
@@ -1688,7 +1688,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/maison-de-la-memoire-paysalp">
 <img alt="Fachada del Bâtiment des 4 rivières que alberga la Maison de la Mémoire Paysalp — mediateca-conservatorio en Viuz-en-Sallaz, Alta Saboya" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Viuz-en-Sallaz</span></div><a class="title" href="https://loisirs74.fr/es/maison-de-la-memoire-paysalp">Maison de la Mémoire Paysalp</a>
@@ -1702,7 +1702,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/ecomusee-paysalp-viuz-en-sallaz">
 <img alt="Reconstrucción de un interior campesino saboyano del siglo XIX en el Écomusée Paysalp en Viuz-en-Sallaz" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-moderne.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Viuz-en-Sallaz</span></div><a class="title" href="https://loisirs74.fr/es/ecomusee-paysalp-viuz-en-sallaz">Écomusée Paysalp</a>
@@ -1721,7 +1721,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/chateau-fonbonne-et-herbularius-evian-bains">
 <img alt="Castillo de Fonbonne y su jardín Herbularius de inspiración medieval en el corazón de Évian-les-Bains" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-grande-galerie.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-gratuit">Gratis</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Évian-les-Bains</span></div><a class="title" href="https://loisirs74.fr/es/chateau-fonbonne-et-herbularius-evian-bains">Castillo de Fonbonne y su Herbularius</a>
@@ -1735,7 +1735,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/palais-lumiere">
 <img alt="Fachada Belle Époque del Palais Lumière con su cúpula restaurada, quai Charles-Albert Besson, Évian-les-Bains, Alta Saboya" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/b/b0/PalaisLumi%C3%A8re-DSCN1105.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Évian-les-Bains</span></div><a class="title" href="https://loisirs74.fr/es/palais-lumiere">Palais Lumière</a>
@@ -1831,8 +1831,9 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
       const communeMatch=!curCommune||sec.dataset.commune===curCommune;
       let vis=0;
       sec.querySelectorAll('.card').forEach(card=>{
-        const isPaid=!!card.querySelector('.card-tag.is-payant');
-        const am=curAccess==='all'||(curAccess==='free'&&!isPaid)||(curAccess==='paid'&&isPaid);
+        const isPaid=!!card.querySelector('.card-tag.is-payant')||!!card.querySelector('.card-tag.is-seasonal');
+        const isFree=!!card.querySelector('.card-tag.is-gratuit')||!!card.querySelector('.card-tag.is-seasonal');
+        const am=curAccess==='all'||(curAccess==='free'&&isFree)||(curAccess==='paid'&&isPaid);
         const show=communeMatch&&am; card.classList.toggle('hidden',!show); if(show){vis++;total++;}
       });
       sec.classList.toggle('hidden',vis===0);

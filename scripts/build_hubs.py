@@ -60,6 +60,7 @@ CHROME = {
     "lieu_plural":     {"fr": "lieux", "en": "places", "de": "Orte", "it": "luoghi", "es": "lugares", "nl": "plekken"},
     "free":            {"fr": "Gratuit", "en": "Free", "de": "Kostenlos", "it": "Gratis", "es": "Gratis", "nl": "Gratis"},
     "paid":            {"fr": "Payant", "en": "Paid", "de": "Kostenpflichtig", "it": "A pagamento", "es": "De pago", "nl": "Betaald"},
+    "seasonal":        {"fr": "Selon saison", "en": "Seasonal", "de": "Saisonal", "it": "Stagionale", "es": "Por temporada", "nl": "Seizoensgebonden"},
     "google_maps":     {"fr": "Google Maps", "en": "Google Maps", "de": "Google Maps", "it": "Google Maps", "es": "Google Maps", "nl": "Google Maps"},
     "official_site":   {"fr": "Site officiel", "en": "Official site", "de": "Offizielle Website", "it": "Sito ufficiale", "es": "Sitio oficial", "nl": "Officiële site"},
 }
@@ -88,9 +89,17 @@ def fiche_card_html(d, lang, slug):
     name = loc.get("name") or fr.get("name") or slug
     desc = loc.get("meta_description") or fr.get("meta_description") or ""
     desc = desc.strip()[:280]  # cap
-    is_free = bool(d.get("schema_org", {}).get("is_free", False))
-    tag_class = "is-gratuit" if is_free else "is-payant"
-    tag_text = CHROME["free" if is_free else "paid"][lang]
+    # tariff_kind takes precedence over is_free for the visual tag.
+    # "seasonal" → "Selon saison" (mixed-access lieux: site libre · visites guidées payantes)
+    # otherwise → is_free True/False → Gratuit/Payant
+    so = d.get("schema_org", {}) or {}
+    if so.get("tariff_kind") == "seasonal":
+        tag_class = "is-seasonal"
+        tag_text = CHROME["seasonal"][lang]
+    else:
+        is_free = bool(so.get("is_free", False))
+        tag_class = "is-gratuit" if is_free else "is-payant"
+        tag_text = CHROME["free" if is_free else "paid"][lang]
     commune = d.get("commune", "")
 
     # Hero image: generique-* under root, others under /<file>

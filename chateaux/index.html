@@ -166,7 +166,7 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .card:hover .card-photo img{transform:scale(1.06);filter:saturate(1.05)}
 .card-tag{position:absolute;top:14px;right:14px;background:rgba(253,250,243,.95);color:var(--ink);padding:.3rem .7rem;border-radius:999px;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:var(--sans);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:2}
 .card-tag.is-payant{background:var(--accent);color:var(--snow)}
-.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}
+.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}.card-tag.is-seasonal{background:var(--alpenglow);color:var(--snow)}
 .card-body{padding:1.25rem 1.35rem 1.35rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .card-commune{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:.15rem;order:-1}
 .card-commune svg{display:none}
@@ -597,7 +597,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/musee-chateau-annecy">
 <img alt="Façade et tour du Musée-Château d&#x27;Annecy dominant la vieille ville et le lac depuis son éperon rocheux" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-musee-classique.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/musee-chateau-annecy">Musée-Château d'Annecy</a>
@@ -634,7 +634,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/chateau-sires-faucigny-bonneville">
 <img alt="Tour Noire 21 m et Tour Blanche 15 m subsistant du Château des Sires de Faucigny construit vers 1260 à Bonneville Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/chateau-sires-faucigny-bonneville-hero.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Bonneville</span></div><a class="title" href="https://loisirs74.fr/chateau-sires-faucigny-bonneville">Château des Sires de Faucigny</a>
@@ -653,7 +653,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/chateau-avully-brenthonne">
 <img alt="Château d&#x27;Avully à Brenthonne avec ses douves en eau, son pont-levis restauré et sa façade médiévale XIVe siècle restaurée par la famille Guyon Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/chateau-avully-brenthonne-hero.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Brenthonne</span></div><a class="title" href="https://loisirs74.fr/chateau-avully-brenthonne">Château d'Avully</a>
@@ -691,7 +691,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/chateau-clermont-genevois">
 <img alt="Cour intérieure Renaissance du Château de Clermont avec ses trois niveaux de galeries à arcades inspirés du Palais Farnese de Caprarola Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/chateau-clermont-genevois-hero.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Clermont</span></div><a class="title" href="https://loisirs74.fr/chateau-clermont-genevois">Château de Clermont</a>
@@ -748,7 +748,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/chateau-montrottier-lovagny">
 <img alt="Donjon cylindrique XVe siècle et façade néogothique du Château de Montrottier dominant le parc paysager à Lovagny au-dessus des Gorges du Fier" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/chateau-montrottier-lovagny-hero.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Lovagny</span></div><a class="title" href="https://loisirs74.fr/chateau-montrottier-lovagny">Château de Montrottier</a>
@@ -836,7 +836,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/maison-forte-hautetour-saint-gervais">
 <img alt="Façade médiévale de la Maison Forte de Hautetour datant du XIIIe siècle au cœur du village de Saint-Gervais-les-Bains face au massif du Mont-Blanc" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/maison-forte-hautetour-saint-gervais-hero.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Saint-Gervais-les-Bains</span></div><a class="title" href="https://loisirs74.fr/maison-forte-hautetour-saint-gervais">Maison Forte de Hautetour</a>
@@ -892,7 +892,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/chateau-des-rubins-sallanches">
 <img alt="Façade médiévale du Château des Rubins maison forte XIVe siècle de Sallanches rénovée 2019-2021 abritant l&#x27;Observatoire des Alpes Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/chateau-des-rubins-sallanches-hero.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Sallanches</span></div><a class="title" href="https://loisirs74.fr/chateau-des-rubins-sallanches">Château des Rubins</a>
@@ -962,7 +962,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/chateau-ripaille-thonon">
 <img alt="Château de Ripaille avec ses 4 tours et son enceinte fortifiée XIVe siècle restaurée 1892-1903 sur le domaine de 53 hectares au bord du lac Léman Thonon" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/chateau-ripaille-thonon-hero.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/chateau-ripaille-thonon">Château de Ripaille</a>
@@ -976,7 +976,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/chateau-sonnaz-thonon-bains">
 <img alt="Château de Sonnaz au cœur de Thonon-les-Bains, abritant le Musée du Chablais et l&#x27;Office de Tourisme, vue sur le lac Léman, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-chateau-brume.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/chateau-sonnaz-thonon-bains">Château de Sonnaz</a>
@@ -1009,7 +1009,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/borne-chateau-vuache-vulbens">
 <img alt="Borne en pierre marquée de 1579, dernier vestige du château du Vuache à Vulbens, au pied de l&#x27;escalier près de l&#x27;église, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-chateau-brume.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-gratuit">Gratuit</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Vulbens</span></div><a class="title" href="https://loisirs74.fr/borne-chateau-vuache-vulbens">Borne du château du Vuache</a>
@@ -1123,8 +1123,9 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
       const communeMatch=!curCommune||sec.dataset.commune===curCommune;
       let vis=0;
       sec.querySelectorAll('.card').forEach(card=>{
-        const isPaid=!!card.querySelector('.card-tag.is-payant');
-        const am=curAccess==='all'||(curAccess==='free'&&!isPaid)||(curAccess==='paid'&&isPaid);
+        const isPaid=!!card.querySelector('.card-tag.is-payant')||!!card.querySelector('.card-tag.is-seasonal');
+        const isFree=!!card.querySelector('.card-tag.is-gratuit')||!!card.querySelector('.card-tag.is-seasonal');
+        const am=curAccess==='all'||(curAccess==='free'&&isFree)||(curAccess==='paid'&&isPaid);
         const show=communeMatch&&am; card.classList.toggle('hidden',!show); if(show){vis++;total++;}
       });
       sec.classList.toggle('hidden',vis===0);

@@ -167,7 +167,7 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .card:hover .card-photo img{transform:scale(1.06);filter:saturate(1.05)}
 .card-tag{position:absolute;top:14px;right:14px;background:rgba(253,250,243,.95);color:var(--ink);padding:.3rem .7rem;border-radius:999px;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:var(--sans);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:2}
 .card-tag.is-payant{background:var(--accent);color:var(--snow)}
-.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}
+.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}.card-tag.is-seasonal{background:var(--alpenglow);color:var(--snow)}
 .card-body{padding:1.25rem 1.35rem 1.35rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .card-commune{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:.15rem;order:-1}
 .card-commune svg{display:none}
@@ -769,7 +769,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/plage-imperial-annecy">
 <img alt="Plage de sable importé + pelouse 17 000 m² Plage de l&#x27;Impérial à Annecy Lac d&#x27;Annecy Haute-Savoie 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac.jpg"/>
-<span class="card-tag is-gratuit">Gratuit</span>
+<span class="card-tag is-payant">Payant</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/plage-imperial-annecy">Plage de l'Impérial</a>
@@ -889,7 +889,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/plage-de-doussard">
 <img alt="Plage sable + pelouse - adjacente Réserve naturelle Bout du Lac Plage de Doussard à Doussard Lac d&#x27;Annecy Haute-Savoie 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac-coucher-soleil.jpg"/>
-<span class="card-tag is-gratuit">Gratuit</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Doussard</span></div><a class="title" href="https://loisirs74.fr/plage-de-doussard">Plage de Doussard</a>
@@ -908,7 +908,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/plage-de-duingt">
 <img alt="Plage gazonnée 120 m - face au château de Duingt Plage de Duingt à Duingt Lac d&#x27;Annecy Haute-Savoie 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac.jpg"/>
-<span class="card-tag is-gratuit">Gratuit</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Duingt</span></div><a class="title" href="https://loisirs74.fr/plage-de-duingt">Plage de Duingt</a>
@@ -982,7 +982,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/plage-de-menthon-saint-bernard">
 <img alt="Plage municipale de Menthon-Saint-Bernard en bordure du lac d&#x27;Annecy avec vue sur le Semnoz, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Plage_municipale_de_Menthon-Saint-Bernard.jpg"/>
-<span class="card-tag is-gratuit">Gratuit</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Menthon-Saint-Bernard</span></div><a class="title" href="https://loisirs74.fr/plage-de-menthon-saint-bernard">Plage de Menthon-Saint-Bernard</a>
@@ -1000,7 +1000,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/plage-de-messery">
 <img alt="Plage gazonnée 400 m - presqu&#x27;île face à Nyon Plage de Messery à Messery Lac Léman Haute-Savoie 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac.jpg"/>
-<span class="card-tag is-gratuit">Gratuit</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Messery</span></div><a class="title" href="https://loisirs74.fr/plage-de-messery">Plage de Messery</a>
@@ -1125,7 +1125,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/plage-de-saint-jorioz">
 <img alt="Plage de Saint-Jorioz au bord du lac d&#x27;Annecy avec sable naturel, pelouses et vue sur les Dents de Lanfon et la Tournette" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/plage-de-saint-jorioz-hero.jpg"/>
-<span class="card-tag is-payant">Payant</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Saint-Jorioz</span></div><a class="title" href="https://loisirs74.fr/plage-de-saint-jorioz">Plage de Saint-Jorioz</a>
@@ -1162,7 +1162,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/plage-de-sevrier">
 <img alt="Plage pelouse + graviers fins - rénovée récemment Plage de Sévrier à Sévrier Lac d&#x27;Annecy Haute-Savoie 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac.jpg"/>
-<span class="card-tag is-gratuit">Gratuit</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Sévrier</span></div><a class="title" href="https://loisirs74.fr/plage-de-sevrier">Plage de Sévrier</a>
@@ -1181,7 +1181,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/plage-d-angon-talloires">
 <img alt="Plage pelouse vaste ombragée - vue château de Duingt Plage d&#x27;Angon à Talloires-Montmin Lac d&#x27;Annecy Haute-Savoie 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac-coucher-soleil.jpg"/>
-<span class="card-tag is-gratuit">Gratuit</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Talloires-Montmin</span></div><a class="title" href="https://loisirs74.fr/plage-d-angon-talloires">Plage d'Angon</a>
@@ -1195,7 +1195,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/plage-de-talloires">
 <img alt="Plage 250x200m sable+gazon - pataugeoire, plongeoirs, toboggan Plage de Talloires à Talloires-Montmin Lac d&#x27;Annecy Haute-Savoie 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac.jpg"/>
-<span class="card-tag is-gratuit">Gratuit</span>
+<span class="card-tag is-seasonal">Selon saison</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Talloires-Montmin</span></div><a class="title" href="https://loisirs74.fr/plage-de-talloires">Plage de Talloires</a>

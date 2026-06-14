@@ -167,7 +167,7 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .card:hover .card-photo img{transform:scale(1.06);filter:saturate(1.05)}
 .card-tag{position:absolute;top:14px;right:14px;background:rgba(253,250,243,.95);color:var(--ink);padding:.3rem .7rem;border-radius:999px;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:var(--sans);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:2}
 .card-tag.is-payant{background:var(--accent);color:var(--snow)}
-.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}
+.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}.card-tag.is-seasonal{background:var(--alpenglow);color:var(--snow)}
 .card-body{padding:1.25rem 1.35rem 1.35rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .card-commune{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:.15rem;order:-1}
 .card-commune svg{display:none}
@@ -765,7 +765,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-imperial-annecy">
 <img alt="Playa de arena importada y césped de 17.000 m²: Plage de l&#x27;Impérial en Annecy, Lago de Annecy, Alta Saboya 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
+<span class="card-tag is-payant">De pago</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/es/plage-imperial-annecy">Plage de l'Impérial</a>
@@ -885,7 +885,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-de-doussard">
 <img alt="Playa de arena y césped junto a la reserva natural Bout du Lac: Plage de Doussard en el Lago de Annecy, Alta Saboya 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac-coucher-soleil.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Doussard</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-doussard">Plage de Doussard</a>
@@ -904,7 +904,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-de-duingt">
 <img alt="Playa de césped de 120 m frente al Château de Duingt: Plage de Duingt en el Lago de Annecy, Alta Saboya 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Duingt</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-duingt">Plage de Duingt</a>
@@ -978,7 +978,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-de-menthon-saint-bernard">
 <img alt="Playa municipal de Menthon-Saint-Bernard a orillas del lago de Annecy con vista al Semnoz, Alta Saboya" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Plage_municipale_de_Menthon-Saint-Bernard.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Menthon-Saint-Bernard</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-menthon-saint-bernard">Plage de Menthon-Saint-Bernard</a>
@@ -996,7 +996,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-de-messery">
 <img alt="Playa de césped de 400 m en la península frente a Nyon: Plage de Messery, Lago Lemán, Alta Saboya 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Messery</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-messery">Plage de Messery</a>
@@ -1121,7 +1121,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-de-saint-jorioz">
 <img alt="Playa de Saint-Jorioz a la orilla del lago de Annecy con arena natural, céspedes y vista a los Dents de Lanfon y la Tournette" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/plage-de-saint-jorioz-hero.jpg"/>
-<span class="card-tag is-payant">De pago</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Saint-Jorioz</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-saint-jorioz">Plage de Saint-Jorioz</a>
@@ -1158,7 +1158,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-de-sevrier">
 <img alt="Playa de césped y grava fina recientemente renovada: Plage de Sévrier en el Lago de Annecy, Alta Saboya 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Sévrier</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-sevrier">Plage de Sévrier</a>
@@ -1177,7 +1177,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-d-angon-talloires">
 <img alt="Amplio césped sombreado con vista al Château de Duingt: Plage d&#x27;Angon en Talloires-Montmin, Lago Lemán de Annecy, Alta Saboya 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac-coucher-soleil.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Talloires-Montmin</span></div><a class="title" href="https://loisirs74.fr/es/plage-d-angon-talloires">Plage d'Angon</a>
@@ -1191,7 +1191,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/es/plage-de-talloires">
 <img alt="Playa 250 × 200 m de arena y césped con pataugeoire, trampolines y tobogán: Plage de Talloires en el Lago de Annecy, Alta Saboya 74" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-lac.jpg"/>
-<span class="card-tag is-gratuit">Gratis</span>
+<span class="card-tag is-seasonal">Por temporada</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Talloires-Montmin</span></div><a class="title" href="https://loisirs74.fr/es/plage-de-talloires">Plage de Talloires</a>

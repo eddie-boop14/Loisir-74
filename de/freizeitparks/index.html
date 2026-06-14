@@ -166,7 +166,7 @@ main{position:relative;z-index:3;padding-bottom:2rem}
 .card:hover .card-photo img{transform:scale(1.06);filter:saturate(1.05)}
 .card-tag{position:absolute;top:14px;right:14px;background:rgba(253,250,243,.95);color:var(--ink);padding:.3rem .7rem;border-radius:999px;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:var(--sans);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:2}
 .card-tag.is-payant{background:var(--accent);color:var(--snow)}
-.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}
+.card-tag.is-gratuit{background:var(--pine);color:var(--snow)}.card-tag.is-seasonal{background:var(--alpenglow);color:var(--snow)}
 .card-body{padding:1.25rem 1.35rem 1.35rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .card-commune{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:.15rem;order:-1}
 .card-commune svg{display:none}
@@ -876,7 +876,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/de/parc-jean-beauquis-ambilly">
 <img alt="Rathausplatz von Ambilly mit dem schmiedeeisernen Brunnen, wenige Schritte vom Parc Jean Beauquis entfernt (Haute-Savoie)" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Ambilly_place_mairie.jpg"/>
-<span class="card-tag is-payant">Kostenpflichtig</span>
+<span class="card-tag is-gratuit">Kostenlos</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Ambilly</span></div><a class="title" href="https://loisirs74.fr/de/parc-jean-beauquis-ambilly">Parc Jean Beauquis</a>
@@ -928,7 +928,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/de/jardins-europe-annecy">
 <img alt="Île aux Cygnes vom Jardin de l&#x27;Europe aus, am Ufer des Annecy-Sees mit den jahrhundertealten Bäumen des Arboretums" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Ile_aux_Cygnes_%40_Lake_%40_Jardins_de_l%27Europe_%40_Annecy_%2835501071035%29.jpg"/>
-<span class="card-tag is-payant">Kostenpflichtig</span>
+<span class="card-tag is-gratuit">Kostenlos</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/de/jardins-europe-annecy">Jardins de l'Europe</a>
@@ -969,8 +969,8 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/de/parc-imperial-annecy">
-<img alt="Parc de l&#x27;Impérial in Annecy, öffentlicher Garten am Ufer des Annecy-Sees" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-parc.jpg"/>
-<span class="card-tag is-payant">Kostenpflichtig</span>
+<img alt="Männlicher Pfau spreizt sein Gefieder im Parc de l&#x27;Impérial in Annecy, einem öffentlichen Park am Seeufer" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/parc-imperial-annecy-hero.jpg"/>
+<span class="card-tag is-gratuit">Kostenlos</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Annecy</span></div><a class="title" href="https://loisirs74.fr/de/parc-imperial-annecy">Parc de l'Impérial</a>
@@ -1360,7 +1360,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/de/via-ferrata-jallouvre-le-grand-bornand">
 <img alt="Via Ferrata de la Tour du Jallouvre in Le Grand-Bornand, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-escalade-wall.jpg"/>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<span class="card-tag is-seasonal">Saisonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Le Grand-Bornand</span></div><a class="title" href="https://loisirs74.fr/de/via-ferrata-jallouvre-le-grand-bornand">Via Ferrata de la Tour du Jallouvre</a>
@@ -1417,7 +1417,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/de/speleo-grotte-de-balme-magland">
 <img alt="Grotte de Balme — Magland, Arve-Tal, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-attraction.jpg"/>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<span class="card-tag is-seasonal">Saisonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Magland</span></div><a class="title" href="https://loisirs74.fr/de/speleo-grotte-de-balme-magland">Grotte de Balme — Magland</a>
@@ -1487,7 +1487,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/de/filenvol-monnetier-mornex">
 <img alt="Zwischen den Bäumen aufgehängte Katamarannetze im Parcabout Filenvol am Fuß des Petit Salève in Monnetier-Mornex" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-parc.jpg"/>
-<span class="card-tag is-payant">Kostenpflichtig</span>
+<span class="card-tag is-seasonal">Saisonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Monnetier-Mornex</span></div><a class="title" href="https://loisirs74.fr/de/filenvol-monnetier-mornex">Filenvol</a>
@@ -1557,7 +1557,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/de/vitam-neydens">
 <img alt="Parc aquatique extérieur du Vitam à Neydens avec ses toboggans et bassin balnéoforme face aux montagnes" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-parc.jpg"/>
-<span class="card-tag is-payant">Kostenpflichtig</span>
+<span class="card-tag is-seasonal">Saisonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Neydens</span></div><a class="title" href="https://loisirs74.fr/de/vitam-neydens">Vitam Neydens</a>
@@ -1748,7 +1748,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/de/via-ferrata-parc-thermal-saint-gervais">
 <img alt="Via Ferrata du Parc Thermal, Klettersteig in Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-escalade-bloc-outdoor.jpg"/>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<span class="card-tag is-seasonal">Saisonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Saint-Gervais-les-Bains</span></div><a class="title" href="https://loisirs74.fr/de/via-ferrata-parc-thermal-saint-gervais">Via Ferrata du Parc Thermal</a>
@@ -1920,7 +1920,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/de/disc-golf-indiana-ventures-samoens">
 <img alt="Disc-Golf Samoëns — Indiana Ventures" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-attraction.jpg"/>
-<span class="card-tag is-payant">Kostenpflichtig</span>
+<span class="card-tag is-seasonal">Saisonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Samoëns</span></div><a class="title" href="https://loisirs74.fr/de/disc-golf-indiana-ventures-samoens">Disc-Golf Samoëns — Indiana Ventures</a>
@@ -2070,7 +2070,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/de/parc-chateau-taninges">
 <img alt="Parc du Château oberhalb von Taninges im Giffre-Tal, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-parc.jpg"/>
-<span class="card-tag is-payant">Kostenpflichtig</span>
+<span class="card-tag is-gratuit">Kostenlos</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Taninges</span></div><a class="title" href="https://loisirs74.fr/de/parc-chateau-taninges">Parc du Château</a>
@@ -2117,7 +2117,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/de/leman-kid-thonon-les-bains">
 <img alt="Mehrstöckige Spielstrukturen im Indoor-Kinderpark Léman Kid in Thonon-les-Bains" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-parc.jpg"/>
-<span class="card-tag is-payant">Kostenpflichtig</span>
+<span class="card-tag is-seasonal">Saisonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/de/leman-kid-thonon-les-bains">Léman Kid</a>
@@ -2131,7 +2131,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/de/plaine-de-loisirs-de-la-grangette">
 <img alt="Freizeitpark La Grangette — Thonon-les-Bains, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/plaine-de-loisirs-de-la-grangette-hero.jpg"/>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<span class="card-tag is-seasonal">Saisonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Thonon-les-Bains</span></div><a class="title" href="https://loisirs74.fr/de/plaine-de-loisirs-de-la-grangette">Freizeitpark La Grangette</a>
@@ -2164,7 +2164,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/de/via-ferrata-thones">
 <img alt="Klettersteig Thônes, Klettersteig in Haute-Savoie" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-escalade-bouldering.jpg"/>
-<span class="card-tag is-gratuit">Kostenlos</span>
+<span class="card-tag is-seasonal">Saisonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Thônes</span></div><a class="title" href="https://loisirs74.fr/de/via-ferrata-thones">Klettersteig Thônes</a>
@@ -2202,7 +2202,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/de/c5-kids-party-ville-la-grand">
 <img alt="Mehrstöckige Spielanlage und Indoor-Rodelbahn im Kinderpark C5 Kids Party in Ville-la-Grand" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-parc.jpg"/>
-<span class="card-tag is-payant">Kostenpflichtig</span>
+<span class="card-tag is-seasonal">Saisonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Ville-la-Grand</span></div><a class="title" href="https://loisirs74.fr/de/c5-kids-party-ville-la-grand">C5 Kids Party</a>
@@ -2221,7 +2221,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/de/tropicaland-viry">
 <img alt="Lebensgroße Skulptur eines Tyrannosauriers im dichten Dschungel des Dinosaurierparks Tropicaland in Viry" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-parc.jpg"/>
-<span class="card-tag is-payant">Kostenpflichtig</span>
+<span class="card-tag is-seasonal">Saisonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Viry</span></div><a class="title" href="https://loisirs74.fr/de/tropicaland-viry">Tropicaland</a>
@@ -2240,7 +2240,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <article class="card">
 <a class="card-photo" href="https://loisirs74.fr/de/ile-de-tortuga-vetraz-monthoux">
 <img alt="Mehrstöckige Spielstruktur und Piratenschiff im Indoor-Park Île de Tortuga in Vétraz-Monthoux" loading="lazy" referrerpolicy="no-referrer" src="https://loisirs74.fr/generique-parc.jpg"/>
-<span class="card-tag is-payant">Kostenpflichtig</span>
+<span class="card-tag is-seasonal">Saisonal</span>
 </a>
 <div class="card-body">
 <div class="card-commune"><span>Vétraz-Monthoux</span></div><a class="title" href="https://loisirs74.fr/de/ile-de-tortuga-vetraz-monthoux">Île de Tortuga Vétraz-Monthoux</a>
@@ -2388,8 +2388,9 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
       const communeMatch=!curCommune||sec.dataset.commune===curCommune;
       let vis=0;
       sec.querySelectorAll('.card').forEach(card=>{
-        const isPaid=!!card.querySelector('.card-tag.is-payant');
-        const am=curAccess==='all'||(curAccess==='free'&&!isPaid)||(curAccess==='paid'&&isPaid);
+        const isPaid=!!card.querySelector('.card-tag.is-payant')||!!card.querySelector('.card-tag.is-seasonal');
+        const isFree=!!card.querySelector('.card-tag.is-gratuit')||!!card.querySelector('.card-tag.is-seasonal');
+        const am=curAccess==='all'||(curAccess==='free'&&isFree)||(curAccess==='paid'&&isPaid);
         const show=communeMatch&&am; card.classList.toggle('hidden',!show); if(show){vis++;total++;}
       });
       sec.classList.toggle('hidden',vis===0);
