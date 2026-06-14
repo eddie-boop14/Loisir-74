@@ -772,7 +772,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
   els.forEach(el => io.observe(el));
 })();
 
-// FILTERS (commune + access + sort)
+// FILTERS (commune + access + sort) — card-tag mechanism
 (function(){
   const SG="Ort angezeigt",PL="Orte angezeigt";
   const communeSel=document.getElementById('filt-commune');
@@ -785,13 +785,15 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
   function applyFilters(){
     let total=0;
     document.querySelectorAll('.commune-section').forEach(sec=>{
-      const communeMatch=!curCommune||sec.dataset.commune===curCommune;
+      const lacMatch=true;
       let vis=0;
       sec.querySelectorAll('.card').forEach(card=>{
-        const isPaid=!!card.querySelector('.card-tag.is-payant')||!!card.querySelector('.card-tag.is-seasonal');
-        const isFree=!!card.querySelector('.card-tag.is-gratuit')||!!card.querySelector('.card-tag.is-seasonal');
-        const am=curAccess==='all'||(curAccess==='free'&&isFree)||(curAccess==='paid'&&isPaid);
-        const show=communeMatch&&am; card.classList.toggle('hidden',!show); if(show){vis++;total++;}
+        const communeMatch=!curCommune||card.dataset.commune===curCommune.toLowerCase();
+        const acc=card.dataset.acces;
+        const am=curAccess==='all'||(curAccess==='free'&&(acc==='gratuit'||acc==='seasonal'))||(curAccess==='paid'&&(acc==='payant'||acc==='seasonal'));
+        const show=lacMatch&&communeMatch&&am;
+        card.classList.toggle('hidden',!show);
+        if(show){vis++;total++;}
       });
       sec.classList.toggle('hidden',vis===0);
     });

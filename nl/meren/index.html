@@ -1359,25 +1359,25 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 
 // FILTERS (lake + commune + access + sort) — card-tag mechanism
 (function(){
-  const SG="lieu affiché",PL="lieux affichés";
+  const SG="plek weergegeven",PL="plekken weergegeven";
   const lacSel=document.getElementById('filt-lac');
+  let curLac='';
   const communeSel=document.getElementById('filt-commune');
   const accessGroup=document.getElementById('filt-access');
   const sortSel=document.getElementById('filt-sort');
   const countN=document.getElementById('count-n');
   const countLabel=document.getElementById('count-label');
   const emptyState=document.getElementById('empty-state');
-  let curLac='',curCommune='',curAccess='all',curSort='commune';
+  let curCommune='',curAccess='all',curSort='commune';
   function applyFilters(){
     let total=0;
     document.querySelectorAll('.commune-section').forEach(sec=>{
       const lacMatch=!curLac||sec.dataset.lac===curLac;
-      const communeMatch=!curCommune||sec.dataset.commune===curCommune;
       let vis=0;
       sec.querySelectorAll('.card').forEach(card=>{
-        const isPaid=!!card.querySelector('.card-tag.is-payant')||!!card.querySelector('.card-tag.is-seasonal');
-        const isFree=!!card.querySelector('.card-tag.is-gratuit')||!!card.querySelector('.card-tag.is-seasonal');
-        const am=curAccess==='all'||(curAccess==='free'&&isFree)||(curAccess==='paid'&&isPaid);
+        const communeMatch=!curCommune||card.dataset.commune===curCommune.toLowerCase();
+        const acc=card.dataset.acces;
+        const am=curAccess==='all'||(curAccess==='free'&&(acc==='gratuit'||acc==='seasonal'))||(curAccess==='paid'&&(acc==='payant'||acc==='seasonal'));
         const show=lacMatch&&communeMatch&&am;
         card.classList.toggle('hidden',!show);
         if(show){vis++;total++;}

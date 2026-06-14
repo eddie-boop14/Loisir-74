@@ -420,66 +420,117 @@ def patch_filt_access_free_toggle(html, has_free):
     return btn_re.sub(repl, html, count=1)
 
 
-# Replacement filter <script> for lacs-plages: drops PINS+paidOf, reads
-# .card-tag.is-payant/.is-gratuit/.is-seasonal from the rendered DOM (the
-# same mechanism the other 13 hubs use, where card tags come from the
-# JSON catalog via fiche_card_html). The lake match reads sec.dataset.lac
-# which is now emitted by build_main_block for lacs-plages.
-LACS_PLAGES_FILTER_JS = """// FILTERS (lake + commune + access + sort) — card-tag mechanism
-(function(){
-  const SG="lieu affiché",PL="lieux affichés";
-  const lacSel=document.getElementById('filt-lac');
-  const communeSel=document.getElementById('filt-commune');
-  const accessGroup=document.getElementById('filt-access');
-  const sortSel=document.getElementById('filt-sort');
-  const countN=document.getElementById('count-n');
-  const countLabel=document.getElementById('count-label');
-  const emptyState=document.getElementById('empty-state');
-  let curLac='',curCommune='',curAccess='all',curSort='commune';
-  function applyFilters(){
-    let total=0;
-    document.querySelectorAll('.commune-section').forEach(sec=>{
-      const lacMatch=!curLac||sec.dataset.lac===curLac;
-      const communeMatch=!curCommune||sec.dataset.commune===curCommune;
-      let vis=0;
-      sec.querySelectorAll('.card').forEach(card=>{
-        const isPaid=!!card.querySelector('.card-tag.is-payant')||!!card.querySelector('.card-tag.is-seasonal');
-        const isFree=!!card.querySelector('.card-tag.is-gratuit')||!!card.querySelector('.card-tag.is-seasonal');
-        const am=curAccess==='all'||(curAccess==='free'&&isFree)||(curAccess==='paid'&&isPaid);
-        const show=lacMatch&&communeMatch&&am;
-        card.classList.toggle('hidden',!show);
-        if(show){vis++;total++;}
-      });
-      sec.classList.toggle('hidden',vis===0);
-    });
-    if(countN)countN.textContent=total;
-    if(countLabel)countLabel.textContent=total===1?SG:PL;
-    if(emptyState)emptyState.style.display=total===0?'block':'none';
-  }
-  function applySort(){ if(curSort!=='alpha')return;
-    document.querySelectorAll('.commune-section .carousel').forEach(c=>{Array.from(c.querySelectorAll('.card')).sort((a,b)=>(a.querySelector('a.title')?.textContent||'').localeCompare(b.querySelector('a.title')?.textContent||'')).forEach(x=>c.appendChild(x));}); }
-  if(lacSel)lacSel.addEventListener('change',e=>{curLac=e.target.value;applyFilters();});
-  if(communeSel)communeSel.addEventListener('change',e=>{curCommune=e.target.value;applyFilters();});
-  if(accessGroup)accessGroup.addEventListener('click',e=>{if(e.target.tagName==='BUTTON'){accessGroup.querySelectorAll('button').forEach(b=>b.classList.remove('active'));e.target.classList.add('active');curAccess=e.target.dataset.v;applyFilters();}});
-  if(sortSel)sortSel.addEventListener('change',e=>{curSort=e.target.value;applySort();});
-  applyFilters();
-})();"""
+# -- Phase 5 ---------------------------------------------------------
+# Per-hub filter JS variants. Each hub keeps its own block reflecting
+# the filters present on that hub (lacs-plages adds the lake filter; the
+# other 13 hubs share the common shape). They all converge on ONE rule:
+# they read data-* attributes from cards (and section.dataset.lac for the
+# lake filter). No PINS, no paidOf, no .card-tag class queries, no slug
+# arrays. The JSON → build → data-* → filter chain is closed.
 
 
-def patch_lacs_plages_filter_js(html):
-    """Replace the legacy PINS-based filter JS in lacs-plages with the
-    card-tag mechanism. Idempotent: detects whether the new variant is
-    already in place by looking for the `const SG="lieu affiché"`
-    declaration outside any PINS context.
+def _filter_js_common_body(has_lac, sg_label, pl_label):
+    """Return the (function(){...})() body used by every hub.
+
+    `has_lac=True` adds the lake selector + a lacMatch term to applyFilters
+    (lacs-plages variant). `sg_label`/`pl_label` are the singular/plural
+    count labels in the page's locale.
     """
-    # The legacy block starts with the `// FILTERS (lake + commune ...)`
-    # comment and ends just before the very next `</script>` of the page.
-    legacy_re = re.compile(
-        r'// FILTERS \(lake \+ commune \+ access \+ sort\)\s*\n'
-        r'\(function\(\)\{.*?\n\}\)\(\);',
+    lac_decls = (
+        "  const lacSel=document.getElementById('filt-lac');\n"
+        "  let curLac='';\n"
+    ) if has_lac else ""
+    lac_listener = (
+        "  if(lacSel)lacSel.addEventListener('change',e=>{curLac=e.target.value;applyFilters();});\n"
+    ) if has_lac else ""
+    lac_match_line = (
+        "      const lacMatch=!curLac||sec.dataset.lac===curLac;\n"
+    ) if has_lac else "      const lacMatch=true;\n"
+    return (
+        "(function(){\n"
+        f'  const SG="{sg_label}",PL="{pl_label}";\n'
+        + lac_decls +
+        "  const communeSel=document.getElementById('filt-commune');\n"
+        "  const accessGroup=document.getElementById('filt-access');\n"
+        "  const sortSel=document.getElementById('filt-sort');\n"
+        "  const countN=document.getElementById('count-n');\n"
+        "  const countLabel=document.getElementById('count-label');\n"
+        "  const emptyState=document.getElementById('empty-state');\n"
+        "  let curCommune='',curAccess='all',curSort='commune';\n"
+        "  function applyFilters(){\n"
+        "    let total=0;\n"
+        "    document.querySelectorAll('.commune-section').forEach(sec=>{\n"
+        + lac_match_line +
+        "      let vis=0;\n"
+        "      sec.querySelectorAll('.card').forEach(card=>{\n"
+        "        const communeMatch=!curCommune||card.dataset.commune===curCommune.toLowerCase();\n"
+        "        const acc=card.dataset.acces;\n"
+        "        const am=curAccess==='all'||(curAccess==='free'&&(acc==='gratuit'||acc==='seasonal'))||(curAccess==='paid'&&(acc==='payant'||acc==='seasonal'));\n"
+        "        const show=lacMatch&&communeMatch&&am;\n"
+        "        card.classList.toggle('hidden',!show);\n"
+        "        if(show){vis++;total++;}\n"
+        "      });\n"
+        "      sec.classList.toggle('hidden',vis===0);\n"
+        "    });\n"
+        "    if(countN)countN.textContent=total;\n"
+        "    if(countLabel)countLabel.textContent=total===1?SG:PL;\n"
+        "    if(emptyState)emptyState.style.display=total===0?'block':'none';\n"
+        "  }\n"
+        "  function applySort(){ if(curSort!=='alpha')return;\n"
+        "    document.querySelectorAll('.commune-section .carousel').forEach(c=>{Array.from(c.querySelectorAll('.card')).sort((a,b)=>(a.querySelector('a.title')?.textContent||'').localeCompare(b.querySelector('a.title')?.textContent||'')).forEach(x=>c.appendChild(x));}); }\n"
+        + lac_listener +
+        "  if(communeSel)communeSel.addEventListener('change',e=>{curCommune=e.target.value;applyFilters();});\n"
+        "  if(accessGroup)accessGroup.addEventListener('click',e=>{if(e.target.tagName==='BUTTON'){accessGroup.querySelectorAll('button').forEach(b=>b.classList.remove('active'));e.target.classList.add('active');curAccess=e.target.dataset.v;applyFilters();}});\n"
+        "  if(sortSel)sortSel.addEventListener('change',e=>{curSort=e.target.value;applySort();});\n"
+        "  applyFilters();\n"
+        "})();"
+    )
+
+
+# Singular / plural localized labels for the X lieux affichés count.
+COUNT_LABELS = {
+    "fr": ("lieu affiché",         "lieux affichés"),
+    "en": ("place shown",          "places shown"),
+    "de": ("Ort angezeigt",        "Orte angezeigt"),
+    "it": ("luogo visualizzato",   "luoghi visualizzati"),
+    "es": ("lugar mostrado",       "lugares mostrados"),
+    "nl": ("plek weergegeven",     "plekken weergegeven"),
+}
+
+
+def build_filter_js_for_hub(hub_name, lang):
+    """Return the per-hub filter JS body (no <script> wrapper)."""
+    sg, pl = COUNT_LABELS.get(lang, COUNT_LABELS["fr"])
+    has_lac = (hub_name == "lacs-plages")
+    return _filter_js_common_body(has_lac=has_lac, sg_label=sg, pl_label=pl)
+
+
+# Marker comment lives on the FR canonical hub so we can detect prior
+# Phase 5 emissions and re-write idempotently.
+_LACS_PLAGES_COMMENT = "// FILTERS (lake + commune + access + sort) — card-tag mechanism"
+_STANDARD_COMMENT    = "// FILTERS (commune + access + sort) — card-tag mechanism"
+
+
+def patch_hub_filter_js(html, hub_name, lang):
+    """Replace the inline filter `<script>` block on this hub with the
+    Phase 5 data-* variant. Idempotent: detects an existing applyFilters
+    IIFE and swaps it for the new body; runs as no-op if no filter
+    script is present (curated hubs without filters).
+    """
+    new_body = build_filter_js_for_hub(hub_name, lang)
+    comment = _LACS_PLAGES_COMMENT if hub_name == "lacs-plages" else _STANDARD_COMMENT
+    # Match every variant of the existing filter block on every hub:
+    #   // FILTERS (commune + access + sort)
+    #   // FILTERS (commune + access + sort) — card-tag mechanism
+    #   // FILTERS (lake + commune + access + sort) — card-tag mechanism
+    block_re = re.compile(
+        r'// FILTERS \([^)]*\)(?:\s*—\s*card-tag mechanism)?\s*\n'
+        r'\(function\(\)\{.*?applyFilters.*?\}\)\(\);',
         re.DOTALL,
     )
-    return legacy_re.sub(lambda _: LACS_PLAGES_FILTER_JS, html, count=1)
+    if block_re.search(html):
+        return block_re.sub(lambda _: comment + "\n" + new_body, html, count=1)
+    return html
 
 
 def load_all_json():
@@ -648,10 +699,10 @@ def main():
             # Filter chrome patches (apply to every hub, every locale).
             new_html = patch_filt_commune(new_html, communes_in_hub, lang)
             new_html = patch_filt_access_free_toggle(new_html, has_free)
-            # lacs-plages: replace the legacy PINS-based JS with the
-            # card-tag mechanism. Idempotent — re-running is a no-op.
-            if fr_hub == "lacs-plages":
-                new_html = patch_lacs_plages_filter_js(new_html)
+            # Phase 5: per-hub filter JS reads card data-* attributes
+            # only. Per-hub variant kept (lacs-plages has filt-lac, the
+            # other 13 don't). Idempotent.
+            new_html = patch_hub_filter_js(new_html, fr_hub, lang)
             if new_html != html:
                 p.write_text(new_html, encoding="utf-8")
                 regen += 1
