@@ -81,6 +81,24 @@ def hub_locale_map(hub_dir):
     return m
 
 
+def acces_value(d):
+    """Return the canonical access value for `data-acces` from JSON.
+
+    Phase 3 single source of truth: schema_org.tariff_kind + is_free.
+    Returns one of 'seasonal' | 'gratuit' | 'payant' | ''. The empty
+    string means the field is intentionally absent (caller can skip
+    the data-acces attribute or render it empty).
+    """
+    so = d.get("schema_org", {}) or {}
+    if so.get("tariff_kind") == "seasonal":
+        return "seasonal"
+    if so.get("is_free") is True:
+        return "gratuit"
+    if so.get("is_free") is False:
+        return "payant"
+    return ""
+
+
 def fiche_card_html(d, lang, slug):
     """Render one card. URL = https://loisirs74.fr[/lang]/slug; title + desc from i18n."""
     i18n = d.get("i18n", {}) or {}
@@ -137,8 +155,28 @@ def fiche_card_html(d, lang, slug):
     e = lambda s: html_lib.escape(str(s or ""), quote=False)
     a = lambda s: html_lib.escape(str(s or ""), quote=True)
 
+    # Phase 3: emit data-* attributes derived from JSON. Single source of
+    # truth = the fiche JSON. Empty values mean "field intentionally
+    # absent" — never invented, never inferred at render time.
+    # commune is lowercased per the architecture brief; the section-level
+    # data-commune attribute keeps original casing for the legacy filter.
+    data_commune = (commune or "").lower()
+    data_acces   = acces_value(d)
+    data_lac     = d.get("lake") or ""
+    data_type    = d.get("type") or ""
+    # data-photo: basename of the chosen hero. In Phase 3 this is just
+    # the existing hero_image filename; Phase 4 swaps in pick_photo().
+    data_photo   = ""
+    if img_src:
+        data_photo = img_src.rsplit("/", 1)[-1]
+
     return (
-        '<article class="card">\n'
+        f'<article class="card"'
+        f' data-commune="{a(data_commune)}"'
+        f' data-acces="{a(data_acces)}"'
+        f' data-lac="{a(data_lac)}"'
+        f' data-type="{a(data_type)}"'
+        f' data-photo="{a(data_photo)}">\n'
         f'<a class="card-photo" href="{fiche_url}">\n'
         f'<img alt="{a(alt)}" loading="lazy" referrerpolicy="no-referrer" src="{a(img_src)}"/>\n'
         f'<span class="card-tag {tag_class}">{tag_text}</span>\n'
