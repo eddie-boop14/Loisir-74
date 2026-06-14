@@ -729,7 +729,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </label>
 <label>
 <span>Commune</span>
-<select id="filt-commune"><option value="">Toutes les communes</option></select>
+<select id="filt-commune"><option value="">Toutes les communes</option><option value="Annecy">Annecy</option><option value="Bellevaux">Bellevaux</option><option value="Chamonix-Mont-Blanc">Chamonix-Mont-Blanc</option><option value="Chens-sur-Léman">Chens-sur-Léman</option><option value="Cruseilles">Cruseilles</option><option value="Doussard">Doussard</option><option value="Duingt">Duingt</option><option value="Excenevex">Excenevex</option><option value="La Clusaz">La Clusaz</option><option value="Margencel">Margencel</option><option value="Menthon-Saint-Bernard">Menthon-Saint-Bernard</option><option value="Messery">Messery</option><option value="Mont-Saxonnex">Mont-Saxonnex</option><option value="Montriond">Montriond</option><option value="Passy">Passy</option><option value="Publier">Publier</option><option value="Saint-Gingolph">Saint-Gingolph</option><option value="Saint-Jorioz">Saint-Jorioz</option><option value="Sciez">Sciez</option><option value="Sévrier">Sévrier</option><option value="Talloires-Montmin">Talloires-Montmin</option><option value="Thonon-les-Bains">Thonon-les-Bains</option><option value="Veyrier-du-Lac">Veyrier-du-Lac</option><option value="Évian-les-Bains">Évian-les-Bains</option></select>
 </label>
 <label>
 <span>Accès</span>
@@ -749,7 +749,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 <div id="empty-state" style="display:none;text-align:center;padding:3rem 1rem;color:var(--ink-mute)"><p style="font:600 1.05rem var(--sans);color:var(--ink);margin:0 0 .35rem"><b>Aucun résultat</b></p><p style="font:400 .9rem var(--sans);margin:0">Aucun lieu ne correspond aux filtres actifs. Essayez d'élargir votre sélection.</p></div>
 <main>
 <div class="wrap">
-<div class="commune-section" data-commune="Annecy">
+<div class="commune-section" data-commune="Annecy" data-lac="annecy">
 <div class="commune-head"><h3>Annecy</h3><span class="commune-count">3 lieux</span></div>
 <div class="carousel">
 <article class="card">
@@ -796,7 +796,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Bellevaux">
+<div class="commune-section" data-commune="Bellevaux" data-lac="petits">
 <div class="commune-head"><h3>Bellevaux</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -814,7 +814,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Chamonix-Mont-Blanc">
+<div class="commune-section" data-commune="Chamonix-Mont-Blanc" data-lac="petits">
 <div class="commune-head"><h3>Chamonix-Mont-Blanc</h3><span class="commune-count">2 lieux</span></div>
 <div class="carousel">
 <article class="card">
@@ -845,7 +845,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Chens-sur-Léman">
+<div class="commune-section" data-commune="Chens-sur-Léman" data-lac="leman">
 <div class="commune-head"><h3>Chens-sur-Léman</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -864,7 +864,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Cruseilles">
+<div class="commune-section" data-commune="Cruseilles" data-lac="petits">
 <div class="commune-head"><h3>Cruseilles</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -883,7 +883,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Doussard">
+<div class="commune-section" data-commune="Doussard" data-lac="annecy">
 <div class="commune-head"><h3>Doussard</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -902,7 +902,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Duingt">
+<div class="commune-section" data-commune="Duingt" data-lac="annecy">
 <div class="commune-head"><h3>Duingt</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -921,7 +921,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Excenevex">
+<div class="commune-section" data-commune="Excenevex" data-lac="leman">
 <div class="commune-head"><h3>Excenevex</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -939,7 +939,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="La Clusaz">
+<div class="commune-section" data-commune="La Clusaz" data-lac="petits">
 <div class="commune-head"><h3>La Clusaz</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -957,7 +957,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Margencel">
+<div class="commune-section" data-commune="Margencel" data-lac="leman">
 <div class="commune-head"><h3>Margencel</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -976,7 +976,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Menthon-Saint-Bernard">
+<div class="commune-section" data-commune="Menthon-Saint-Bernard" data-lac="annecy">
 <div class="commune-head"><h3>Menthon-Saint-Bernard</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -994,7 +994,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Messery">
+<div class="commune-section" data-commune="Messery" data-lac="leman">
 <div class="commune-head"><h3>Messery</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -1013,7 +1013,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Mont-Saxonnex">
+<div class="commune-section" data-commune="Mont-Saxonnex" data-lac="petits">
 <div class="commune-head"><h3>Mont-Saxonnex</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -1031,7 +1031,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Montriond">
+<div class="commune-section" data-commune="Montriond" data-lac="petits">
 <div class="commune-head"><h3>Montriond</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -1050,7 +1050,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Passy">
+<div class="commune-section" data-commune="Passy" data-lac="petits">
 <div class="commune-head"><h3>Passy</h3><span class="commune-count">2 lieux</span></div>
 <div class="carousel">
 <article class="card">
@@ -1081,7 +1081,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Publier">
+<div class="commune-section" data-commune="Publier" data-lac="leman">
 <div class="commune-head"><h3>Publier</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -1100,7 +1100,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Saint-Gingolph">
+<div class="commune-section" data-commune="Saint-Gingolph" data-lac="leman">
 <div class="commune-head"><h3>Saint-Gingolph</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -1119,7 +1119,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Saint-Jorioz">
+<div class="commune-section" data-commune="Saint-Jorioz" data-lac="annecy">
 <div class="commune-head"><h3>Saint-Jorioz</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -1138,7 +1138,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Sciez">
+<div class="commune-section" data-commune="Sciez" data-lac="leman">
 <div class="commune-head"><h3>Sciez</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -1156,7 +1156,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Sévrier">
+<div class="commune-section" data-commune="Sévrier" data-lac="annecy">
 <div class="commune-head"><h3>Sévrier</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -1175,7 +1175,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Talloires-Montmin">
+<div class="commune-section" data-commune="Talloires-Montmin" data-lac="annecy">
 <div class="commune-head"><h3>Talloires-Montmin</h3><span class="commune-count">2 lieux</span></div>
 <div class="carousel">
 <article class="card">
@@ -1208,7 +1208,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Thonon-les-Bains">
+<div class="commune-section" data-commune="Thonon-les-Bains" data-lac="leman">
 <div class="commune-head"><h3>Thonon-les-Bains</h3><span class="commune-count">3 lieux</span></div>
 <div class="carousel">
 <article class="card">
@@ -1255,7 +1255,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Veyrier-du-Lac">
+<div class="commune-section" data-commune="Veyrier-du-Lac" data-lac="annecy">
 <div class="commune-head"><h3>Veyrier-du-Lac</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -1274,7 +1274,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </article>
 </div>
 </div>
-<div class="commune-section" data-commune="Évian-les-Bains">
+<div class="commune-section" data-commune="Évian-les-Bains" data-lac="leman">
 <div class="commune-head"><h3>Évian-les-Bains</h3><span class="commune-count">1 lieu</span></div>
 <div class="carousel">
 <article class="card">
@@ -1361,68 +1361,43 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
   els.forEach(el => io.observe(el));
 })();
 
-// FILTERS (lake + commune + access + sort)
+// FILTERS (lake + commune + access + sort) — card-tag mechanism
 (function(){
-  const PINS = [{"slug": "plage-de-saint-jorioz", "name": "Plage de Saint-Jorioz", "commune": "Saint-Jorioz", "lat": 45.8335, "lng": 6.1565, "url": "https://loisirs74.fr/plage-de-saint-jorioz", "paid": false}, {"slug": "plage-albigny", "name": "Plage d'Albigny", "commune": "Annecy", "lat": 45.9067, "lng": 6.1489, "url": "https://loisirs74.fr/plage-albigny", "paid": false}, {"slug": "plage-des-marquisats", "name": "Plage des Marquisats", "commune": "Annecy", "lat": 45.893443, "lng": 6.136465, "url": "https://loisirs74.fr/plage-des-marquisats", "paid": false}, {"slug": "plage-de-la-pinede", "name": "Plage de la Pinède", "commune": "Thonon-les-Bains", "lat": 46.3736, "lng": 6.4776, "url": "https://loisirs74.fr/plage-de-la-pinede", "paid": false}, {"slug": "plage-de-saint-disdille", "name": "Plage de Saint-Disdille", "commune": "Thonon-les-Bains", "lat": 46.401, "lng": 6.5026, "url": "https://loisirs74.fr/plage-de-saint-disdille", "paid": false}, {"slug": "plage-de-sciez-sur-leman", "name": "Plage de Sciez-sur-Léman", "commune": "Sciez", "lat": 46.33251, "lng": 6.38413, "url": "https://loisirs74.fr/plage-de-sciez-sur-leman", "paid": false}, {"slug": "lac-de-passy", "name": "Lac de Passy", "commune": "Passy", "lat": 45.9267, "lng": 6.695, "url": "https://loisirs74.fr/lac-de-passy", "paid": false}, {"slug": "lac-vert-passy", "name": "Lac Vert", "commune": "Passy", "lat": 45.9217, "lng": 6.7047, "url": "https://loisirs74.fr/lac-vert-passy", "paid": false}, {"slug": "lac-blanc", "name": "Lac Blanc", "commune": "Chamonix-Mont-Blanc", "lat": 45.9772, "lng": 6.8969, "url": "https://loisirs74.fr/lac-blanc", "paid": false}, {"slug": "lac-cornu", "name": "Lac Cornu", "commune": "Chamonix-Mont-Blanc", "lat": 45.936024, "lng": 6.853158, "url": "https://loisirs74.fr/lac-cornu", "paid": false}, {"slug": "plage-de-menthon-saint-bernard", "name": "Plage de Menthon-Saint-Bernard", "commune": "Menthon-Saint-Bernard", "lat": 45.863626, "lng": 6.186161, "url": "https://loisirs74.fr/plage-de-menthon-saint-bernard", "paid": false}, {"slug": "lac-des-confins", "name": "Lac des Confins", "commune": "La Clusaz", "lat": 45.91583, "lng": 6.47611, "url": "https://loisirs74.fr/lac-des-confins", "paid": false}, {"slug": "plage-d-excenevex", "name": "Plage d'Excenevex", "commune": "Excenevex", "lat": 46.3528, "lng": 6.3489, "url": "https://loisirs74.fr/plage-d-excenevex", "paid": false}, {"slug": "lac-benit", "name": "Lac Bénit", "commune": "Mont-Saxonnex", "lat": 46.0287, "lng": 6.5051, "url": "https://loisirs74.fr/lac-benit", "paid": false}, {"slug": "lac-de-vallon", "name": "Lac de Vallon", "commune": "Bellevaux", "lat": 46.216, "lng": 6.559, "url": "https://loisirs74.fr/lac-de-vallon", "paid": false}, {"slug": "lac-des-dronieres", "name": "Lac des Dronières", "commune": "Cruseilles", "lat": 46.0403, "lng": 6.1218, "url": "https://loisirs74.fr/lac-des-dronieres", "paid": false}, {"slug": "plage-de-duingt", "name": "Plage de Duingt", "commune": "Duingt", "lat": 45.827, "lng": 6.203, "url": "https://loisirs74.fr/plage-de-duingt", "paid": false}, {"slug": "plage-de-tougues-chens", "name": "Plage de Tougues", "commune": "Chens-sur-Léman", "lat": 46.323, "lng": 6.26, "url": "https://loisirs74.fr/plage-de-tougues-chens", "paid": false}, {"slug": "plage-de-messery", "name": "Plage de Messery", "commune": "Messery", "lat": 46.351, "lng": 6.293, "url": "https://loisirs74.fr/plage-de-messery", "paid": false}, {"slug": "plage-de-margencel-sechex", "name": "Plage de Margencel - Port de Séchex", "commune": "Margencel", "lat": 46.347, "lng": 6.42, "url": "https://loisirs74.fr/plage-de-margencel-sechex", "paid": false}];
-  const SHOWN_SG = "lieu affiché";
-  const SHOWN_PL = "lieux affichés";
-  const paidOf = {};
-  PINS.forEach(p => { paidOf[p.slug] = !!p.paid; });
-
-  const lacSel = document.getElementById('filt-lac');
-  const communeSel = document.getElementById('filt-commune');
-  const accessGroup = document.getElementById('filt-access');
-  const sortSel = document.getElementById('filt-sort');
-  const countN = document.getElementById('count-n');
-  const countLabel = document.getElementById('count-label');
-  const emptyState = document.getElementById('empty-state');
-
-  let curLac = '', curCommune = '', curAccess = 'all', curSort = 'commune';
-
+  const SG="lieu affiché",PL="lieux affichés";
+  const lacSel=document.getElementById('filt-lac');
+  const communeSel=document.getElementById('filt-commune');
+  const accessGroup=document.getElementById('filt-access');
+  const sortSel=document.getElementById('filt-sort');
+  const countN=document.getElementById('count-n');
+  const countLabel=document.getElementById('count-label');
+  const emptyState=document.getElementById('empty-state');
+  let curLac='',curCommune='',curAccess='all',curSort='commune';
   function applyFilters(){
-    let total = 0;
-    document.querySelectorAll('.commune-section').forEach(sec => {
-      const lacMatch = !curLac || sec.dataset.lac === curLac;
-      let visibleCards = 0;
-      sec.querySelectorAll('.card').forEach(card => {
-        const communeMatch = !curCommune || card.dataset.commune === curCommune;
-        const titleLink = card.querySelector('a.title');
-        const href = titleLink ? titleLink.getAttribute('href') : '';
-        const slug = href.replace(/\/$/, '').split('/').pop();
-        const isPaid = !!paidOf[slug];
-        const accessMatch = curAccess === 'all' || (curAccess === 'free' && !isPaid) || (curAccess === 'paid' && isPaid);
-        const show = lacMatch && communeMatch && accessMatch;
-        card.classList.toggle('hidden', !show);
-        if (show){ visibleCards++; total++; }
+    let total=0;
+    document.querySelectorAll('.commune-section').forEach(sec=>{
+      const lacMatch=!curLac||sec.dataset.lac===curLac;
+      const communeMatch=!curCommune||sec.dataset.commune===curCommune;
+      let vis=0;
+      sec.querySelectorAll('.card').forEach(card=>{
+        const isPaid=!!card.querySelector('.card-tag.is-payant')||!!card.querySelector('.card-tag.is-seasonal');
+        const isFree=!!card.querySelector('.card-tag.is-gratuit')||!!card.querySelector('.card-tag.is-seasonal');
+        const am=curAccess==='all'||(curAccess==='free'&&isFree)||(curAccess==='paid'&&isPaid);
+        const show=lacMatch&&communeMatch&&am;
+        card.classList.toggle('hidden',!show);
+        if(show){vis++;total++;}
       });
-      sec.classList.toggle('hidden', visibleCards === 0);
+      sec.classList.toggle('hidden',vis===0);
     });
-    if (countN) countN.textContent = total;
-    if (countLabel) countLabel.textContent = total === 1 ? SHOWN_SG : SHOWN_PL;
-    if (emptyState) emptyState.style.display = total === 0 ? 'block' : 'none';
+    if(countN)countN.textContent=total;
+    if(countLabel)countLabel.textContent=total===1?SG:PL;
+    if(emptyState)emptyState.style.display=total===0?'block':'none';
   }
-
-  function applySort(){
-    if (curSort !== 'alpha') return;
-    document.querySelectorAll('.commune-section .carousel').forEach(carousel => {
-      Array.from(carousel.querySelectorAll('.card'))
-        .sort((a,b)=>(a.querySelector('a.title')?.textContent||'').localeCompare(b.querySelector('a.title')?.textContent||''))
-        .forEach(c => carousel.appendChild(c));
-    });
-  }
-
-  if (lacSel) lacSel.addEventListener('change', e => { curLac = e.target.value; applyFilters(); });
-  if (communeSel) communeSel.addEventListener('change', e => { curCommune = e.target.value; applyFilters(); });
-  if (accessGroup) accessGroup.addEventListener('click', e => {
-    if (e.target.tagName === 'BUTTON'){
-      accessGroup.querySelectorAll('button').forEach(b => b.classList.remove('active'));
-      e.target.classList.add('active');
-      curAccess = e.target.dataset.v;
-      applyFilters();
-    }
-  });
-  if (sortSel) sortSel.addEventListener('change', e => { curSort = e.target.value; applySort(); });
-
+  function applySort(){ if(curSort!=='alpha')return;
+    document.querySelectorAll('.commune-section .carousel').forEach(c=>{Array.from(c.querySelectorAll('.card')).sort((a,b)=>(a.querySelector('a.title')?.textContent||'').localeCompare(b.querySelector('a.title')?.textContent||'')).forEach(x=>c.appendChild(x));}); }
+  if(lacSel)lacSel.addEventListener('change',e=>{curLac=e.target.value;applyFilters();});
+  if(communeSel)communeSel.addEventListener('change',e=>{curCommune=e.target.value;applyFilters();});
+  if(accessGroup)accessGroup.addEventListener('click',e=>{if(e.target.tagName==='BUTTON'){accessGroup.querySelectorAll('button').forEach(b=>b.classList.remove('active'));e.target.classList.add('active');curAccess=e.target.dataset.v;applyFilters();}});
+  if(sortSel)sortSel.addEventListener('change',e=>{curSort=e.target.value;applySort();});
   applyFilters();
 })();
 </script>

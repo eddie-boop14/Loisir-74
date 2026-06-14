@@ -155,8 +155,14 @@ def fiche_card_html(d, lang, slug):
     )
 
 
-def build_main_block(fiches, lang):
-    """Render the <main>…</main> content for a hub: commune-grouped cards."""
+def build_main_block(fiches, lang, hub_name=None):
+    """Render the <main>…</main> content for a hub: commune-grouped cards.
+
+    When `hub_name` is "lacs-plages", each commune-section also carries
+    `data-lac="annecy|leman|petits"` derived from each fiche's `lake`
+    field (the JSON source of truth). All fiches in a commune share the
+    same lake by construction, so reading the first one is sufficient.
+    """
     by_commune = defaultdict(list)
     for slug, d in fiches:
         by_commune[d.get("commune", "?")].append((slug, d))
@@ -167,7 +173,13 @@ def build_main_block(fiches, lang):
                          key=lambda x: (x[1].get("i18n", {}).get("fr", {}).get("name", x[0]).lower()))
         n = len(entries)
         word = CHROME["lieu_singular"][lang] if n == 1 else CHROME["lieu_plural"][lang]
-        parts.append(f'<div class="commune-section" data-commune="{commune}">')
+        # Lake attribute for lacs-plages only — derived from JSON `lake` field.
+        lac_attr = ""
+        if hub_name == "lacs-plages":
+            first_lake = entries[0][1].get("lake")
+            if first_lake:
+                lac_attr = f' data-lac="{first_lake}"'
+        parts.append(f'<div class="commune-section" data-commune="{commune}"{lac_attr}>')
         parts.append(f'<div class="commune-head"><h3>{commune}</h3>'
                      f'<span class="commune-count">{n} {word}</span></div>')
         parts.append('<div class="carousel">')
@@ -186,6 +198,114 @@ def splice_main(html, new_main):
         return m_re.sub(lambda _: new_main, html, count=1)
     # No existing <main>: insert before </body>
     return html.replace("</body>", new_main + "\n</body>", 1)
+
+
+# Localized label for the empty-value default option of filt-commune.
+TOUTES_LES_COMMUNES = {
+    "fr": "Toutes les communes", "en": "All towns", "de": "Alle Gemeinden",
+    "it": "Tutti i comuni", "es": "Todos los municipios", "nl": "Alle gemeenten",
+}
+
+
+def patch_filt_commune(html, communes, lang):
+    """Replace the <select id="filt-commune"> options with exactly the
+    communes present in the rendered card set (sorted alphabetically).
+    Eliminates ghost commune options structurally.
+
+    Preserves the first "all communes" option with its locale label.
+    """
+    sel_re = re.compile(r'(<select id="filt-commune">)(.*?)(</select>)', re.DOTALL)
+    m = sel_re.search(html)
+    if not m:
+        return html
+    default_label = TOUTES_LES_COMMUNES.get(lang, TOUTES_LES_COMMUNES["fr"])
+    opts = [f'<option value="">{default_label}</option>']
+    for c in sorted(communes, key=lambda c: (c.lower(), c)):
+        opts.append(f'<option value="{c}">{c}</option>')
+    return sel_re.sub(lambda _: m.group(1) + ''.join(opts) + m.group(3), html, count=1)
+
+
+def patch_filt_access_free_toggle(html, has_free):
+    """If has_free is False, hide the Gratuit/Free button via the `hidden`
+    attribute (preserves DOM for idempotency). Otherwise ensure it's visible.
+
+    Locale-agnostic: we only toggle the `hidden` attribute on the button
+    that carries data-v="free".
+    """
+    # Match the free button with possibly a `hidden` attr already.
+    btn_re = re.compile(r'<button(?P<attrs>[^>]*)data-v="free"(?P<rest>[^>]*)>')
+
+    def repl(m):
+        attrs = (m.group('attrs') or '') + (m.group('rest') or '')
+        # Strip any prior hidden token (idempotency).
+        attrs = re.sub(r'\s*\bhidden\b\s*', ' ', attrs).strip()
+        if not has_free:
+            return f'<button {attrs} data-v="free" hidden>' if attrs else f'<button data-v="free" hidden>'
+        return f'<button {attrs} data-v="free">' if attrs else f'<button data-v="free">'
+
+    return btn_re.sub(repl, html, count=1)
+
+
+# Replacement filter <script> for lacs-plages: drops PINS+paidOf, reads
+# .card-tag.is-payant/.is-gratuit/.is-seasonal from the rendered DOM (the
+# same mechanism the other 13 hubs use, where card tags come from the
+# JSON catalog via fiche_card_html). The lake match reads sec.dataset.lac
+# which is now emitted by build_main_block for lacs-plages.
+LACS_PLAGES_FILTER_JS = """// FILTERS (lake + commune + access + sort) — card-tag mechanism
+(function(){
+  const SG="lieu affiché",PL="lieux affichés";
+  const lacSel=document.getElementById('filt-lac');
+  const communeSel=document.getElementById('filt-commune');
+  const accessGroup=document.getElementById('filt-access');
+  const sortSel=document.getElementById('filt-sort');
+  const countN=document.getElementById('count-n');
+  const countLabel=document.getElementById('count-label');
+  const emptyState=document.getElementById('empty-state');
+  let curLac='',curCommune='',curAccess='all',curSort='commune';
+  function applyFilters(){
+    let total=0;
+    document.querySelectorAll('.commune-section').forEach(sec=>{
+      const lacMatch=!curLac||sec.dataset.lac===curLac;
+      const communeMatch=!curCommune||sec.dataset.commune===curCommune;
+      let vis=0;
+      sec.querySelectorAll('.card').forEach(card=>{
+        const isPaid=!!card.querySelector('.card-tag.is-payant')||!!card.querySelector('.card-tag.is-seasonal');
+        const isFree=!!card.querySelector('.card-tag.is-gratuit')||!!card.querySelector('.card-tag.is-seasonal');
+        const am=curAccess==='all'||(curAccess==='free'&&isFree)||(curAccess==='paid'&&isPaid);
+        const show=lacMatch&&communeMatch&&am;
+        card.classList.toggle('hidden',!show);
+        if(show){vis++;total++;}
+      });
+      sec.classList.toggle('hidden',vis===0);
+    });
+    if(countN)countN.textContent=total;
+    if(countLabel)countLabel.textContent=total===1?SG:PL;
+    if(emptyState)emptyState.style.display=total===0?'block':'none';
+  }
+  function applySort(){ if(curSort!=='alpha')return;
+    document.querySelectorAll('.commune-section .carousel').forEach(c=>{Array.from(c.querySelectorAll('.card')).sort((a,b)=>(a.querySelector('a.title')?.textContent||'').localeCompare(b.querySelector('a.title')?.textContent||'')).forEach(x=>c.appendChild(x));}); }
+  if(lacSel)lacSel.addEventListener('change',e=>{curLac=e.target.value;applyFilters();});
+  if(communeSel)communeSel.addEventListener('change',e=>{curCommune=e.target.value;applyFilters();});
+  if(accessGroup)accessGroup.addEventListener('click',e=>{if(e.target.tagName==='BUTTON'){accessGroup.querySelectorAll('button').forEach(b=>b.classList.remove('active'));e.target.classList.add('active');curAccess=e.target.dataset.v;applyFilters();}});
+  if(sortSel)sortSel.addEventListener('change',e=>{curSort=e.target.value;applySort();});
+  applyFilters();
+})();"""
+
+
+def patch_lacs_plages_filter_js(html):
+    """Replace the legacy PINS-based filter JS in lacs-plages with the
+    card-tag mechanism. Idempotent: detects whether the new variant is
+    already in place by looking for the `const SG="lieu affiché"`
+    declaration outside any PINS context.
+    """
+    # The legacy block starts with the `// FILTERS (lake + commune ...)`
+    # comment and ends just before the very next `</script>` of the page.
+    legacy_re = re.compile(
+        r'// FILTERS \(lake \+ commune \+ access \+ sort\)\s*\n'
+        r'\(function\(\)\{.*?\n\}\)\(\);',
+        re.DOTALL,
+    )
+    return legacy_re.sub(lambda _: LACS_PLAGES_FILTER_JS, html, count=1)
 
 
 def load_all_json():
@@ -324,6 +444,18 @@ def main():
         union_slugs = existing_in_json | matched_slugs
         added = sorted(matched_slugs - existing_in_json)
         union = [(s, fiches[s]) for s in sorted(union_slugs)]
+        # Communes actually present in the rendered card set (source of
+        # truth for filt-commune options). Used by patch_filt_commune to
+        # eliminate ghost options structurally.
+        communes_in_hub = {fiches[s].get("commune") for s in union_slugs if fiches[s].get("commune")}
+        # Does the hub have any free fiche? Drives whether the Gratuit
+        # access-toggle button is rendered hidden. Seasonal counts as
+        # free-eligible (the JS filter treats seasonal as both).
+        has_free = any(
+            fiches[s].get("schema_org", {}).get("is_free") is True
+            or fiches[s].get("schema_org", {}).get("tariff_kind") == "seasonal"
+            for s in union_slugs
+        )
         for lang in ("fr",) + LOCALES:
             hub_name = locale_names.get(lang)
             if not hub_name: continue
@@ -333,8 +465,15 @@ def main():
                 continue
             p = dir_path / "index.html"
             html = p.read_text(encoding="utf-8")
-            new_main = build_main_block(union, lang)
+            new_main = build_main_block(union, lang, hub_name=fr_hub)
             new_html = splice_main(html, new_main)
+            # Filter chrome patches (apply to every hub, every locale).
+            new_html = patch_filt_commune(new_html, communes_in_hub, lang)
+            new_html = patch_filt_access_free_toggle(new_html, has_free)
+            # lacs-plages: replace the legacy PINS-based JS with the
+            # card-tag mechanism. Idempotent — re-running is a no-op.
+            if fr_hub == "lacs-plages":
+                new_html = patch_lacs_plages_filter_js(new_html)
             if new_html != html:
                 p.write_text(new_html, encoding="utf-8")
                 regen += 1
