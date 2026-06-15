@@ -8,7 +8,7 @@
 | hub | fiches | distinct photos | max repeat of one photo |
 |---|---:|---:|---:|
 | `baignade-nautisme` | 24 | 13 | 4 |
-| `bases-de-loisirs` | 85 | 51 | 10 |
+| `bases-de-loisirs` | 85 | 54 | 7 |
 | `cascades` | 16 | 16 | 1 |
 | `chateaux` | 26 | 23 | 3 |
 | `lacs-plages` | 31 | 26 | 3 |
@@ -19,7 +19,7 @@
 | `sensations-plein-air` | 43 | 25 | 7 |
 | `sentiers` | 40 | 7 | 14 |
 | `sorties-detente` | 22 | 10 | 3 |
-| `sport-jeux` | 53 | 22 | 15 |
+| `sport-jeux` | 53 | 30 | 4 |
 | `telecabines` | 12 | 5 | 5 |
 | `voies-vertes` | 5 | 5 | 1 |
 
@@ -100,9 +100,9 @@
 | `bases-de-loisirs` | `leman-kid-thonon-les-bains` | `parc` | `generique-parc.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `montgolfiere-annecy` | `sensations` | `generique-montgolfiere.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `montgolfiere-du-mont-blanc-evian` | `sensations` | `generique-montgolfiere.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `paintball-chamonix` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `paintball-fiz-passy` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `paintball-zone-74-perrignier` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `paintball-chamonix` | `sensations` | `generique-paintball-action.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `paintball-fiz-passy` | `sensations` | `generique-paintball-bunkers.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `paintball-zone-74-perrignier` | `sensations` | `generique-paintball-masque.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `parc-aventure-mont-blanc-saint-gervais` | `parc` | `generique-accrobranche-3.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `parc-chateau-taninges` | `parc` | `generique-parc.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `parc-de-loisirs-du-pontet` | `parc` | `Lac_de_p%C3%AAche_%40_Parc_de_loisirs_du_Pontet_%40_Val_Montjoie_%2850921651901%29.jpg` | — | json hero (url) |
@@ -500,10 +500,10 @@
 | `sorties-detente` | `spa-vitam-bien-etre-neydens` | `bien-etre` | `generique-spa-jardin-tropical.jpg` | — | json hero (local) |
 | `sorties-detente` | `stelsia-casino-megeve` | `divertissement` | `generique-casino-2.jpg` | — | json hero (local) |
 | `sorties-detente` | `thermes-saint-gervais-mont-blanc` | `bien-etre` | `generique-spa-jardin-tropical.jpg` | — | json hero (local) |
-| `sport-jeux` | `arcade-art-of-pinball-poisy` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
+| `sport-jeux` | `arcade-art-of-pinball-poisy` | `divertissement` | `generique-bar-jeux.jpg` | — | json hero (local) |
 | `sport-jeux` | `arcade-funky-factory-thonon` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
 | `sport-jeux` | `bar-a-jeux-youri-bar-cran-gevrier` | `divertissement` | `generique-bar-jeux.jpg` | — | json hero (local) |
-| `sport-jeux` | `billard-thonon-billard-club` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
+| `sport-jeux` | `billard-thonon-billard-club` | `divertissement` | `generique-bar-jeux.jpg` | — | json hero (local) |
 | `sport-jeux` | `bowling-aerodrome-annemasse` | `divertissement` | `generique-bowling-lanes.jpg` | — | json hero (local) |
 | `sport-jeux` | `bowling-le-bowl-annecy` | `divertissement` | `generique-bowling-lanes.jpg` | — | json hero (local) |
 | `sport-jeux` | `bowling-margencel-margencel` | `divertissement` | `generique-bowling-lanes.jpg` | — | json hero (local) |
@@ -531,22 +531,22 @@
 | `sport-jeux` | `lancer-de-hache-l-hachez-vous-annecy` | `divertissement` | `generique-lancer-de-hache.jpg` | — | json hero (local) |
 | `sport-jeux` | `laser-game-evolution-ville-la-grand` | `divertissement` | `generique-laser-game.jpg` | — | json hero (local) |
 | `sport-jeux` | `laser-game-lasermaxx-sillingy` | `divertissement` | `generique-laser-game.jpg` | — | json hero (local) |
-| `sport-jeux` | `padel-mont-blanc-padel-passy` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
-| `sport-jeux` | `padel-tennis-club-allinges` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
-| `sport-jeux` | `padel-tennis-squash-club-thonon` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
-| `sport-jeux` | `paintball-chamonix` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
-| `sport-jeux` | `paintball-fiz-passy` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
-| `sport-jeux` | `paintball-zone-74-perrignier` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
+| `sport-jeux` | `padel-mont-blanc-padel-passy` | `divertissement` | `generique-padel-raquette.jpg` | — | json hero (local) |
+| `sport-jeux` | `padel-tennis-club-allinges` | `divertissement` | `generique-padel-court.jpg` | — | json hero (local) |
+| `sport-jeux` | `padel-tennis-squash-club-thonon` | `divertissement` | `generique-padel-raquettes.jpg` | — | json hero (local) |
+| `sport-jeux` | `paintball-chamonix` | `sensations` | `generique-paintball-action.jpg` | — | json hero (local) |
+| `sport-jeux` | `paintball-fiz-passy` | `sensations` | `generique-paintball-bunkers.jpg` | — | json hero (local) |
+| `sport-jeux` | `paintball-zone-74-perrignier` | `sensations` | `generique-paintball-masque.jpg` | — | json hero (local) |
 | `sport-jeux` | `patinoire-jean-regis-annecy` | `divertissement` | `generique-patinoire-hockey.jpg` | — | json hero (local) |
 | `sport-jeux` | `patinoire-la-clusaz` | `divertissement` | `generique-patinoire-skater.jpg` | — | json hero (local) |
 | `sport-jeux` | `patinoire-morzine` | `divertissement` | `generique-patinoire-hockey.jpg` | — | json hero (local) |
 | `sport-jeux` | `patinoire-palais-megeve` | `divertissement` | `generique-patinoire-skater.jpg` | — | json hero (local) |
 | `sport-jeux` | `patinoire-richard-bozon-chamonix` | `divertissement` | `generique-patinoire-hockey.jpg` | — | json hero (local) |
-| `sport-jeux` | `segway-mobilboard-annecy` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
+| `sport-jeux` | `segway-mobilboard-annecy` | `sensations` | `generique-segway-ville.jpg` | — | json hero (local) |
 | `sport-jeux` | `simulateur-emotion-concept-annecy` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
 | `sport-jeux` | `simulateur-warmup-academy-margencel` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
-| `sport-jeux` | `tir-a-l-arc-abyss-publier` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
-| `sport-jeux` | `tir-a-l-arc-grandbo-archerie-le-grand-bornand` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
+| `sport-jeux` | `tir-a-l-arc-abyss-publier` | `sensations` | `generique-tir-arc-fleche-cible.jpg` | — | json hero (local) |
+| `sport-jeux` | `tir-a-l-arc-grandbo-archerie-le-grand-bornand` | `sensations` | `generique-tir-arc-fleche-cible.jpg` | — | json hero (local) |
 | `sport-jeux` | `trampoline-bam-freesports-annecy` | `divertissement` | `generique-trampoline-park-saut.jpg` | — | json hero (local) |
 | `sport-jeux` | `trampoline-just-jump-marnaz` | `divertissement` | `generique-trampoline-park-saut.jpg` | — | json hero (local) |
 | `sport-jeux` | `trampoline-park-elevation-indoor-neydens` | `divertissement` | `generique-trampoline-park-saut.jpg` | — | json hero (local) |
