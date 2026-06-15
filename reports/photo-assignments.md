@@ -15,10 +15,10 @@
 | `musees` | 50 | 11 | 13 |
 | `parcs-jardins` | 31 | 17 | 11 |
 | `points-de-vue` | 29 | 24 | 5 |
-| `que-faire` | 76 | 35 | 7 |
+| `que-faire` | 76 | 36 | 7 |
 | `sensations-plein-air` | 43 | 25 | 7 |
 | `sentiers` | 40 | 7 | 14 |
-| `sorties-detente` | 22 | 6 | 11 |
+| `sorties-detente` | 22 | 10 | 3 |
 | `sport-jeux` | 53 | 22 | 15 |
 | `telecabines` | 12 | 5 | 5 |
 | `voies-vertes` | 5 | 5 | 1 |
@@ -132,7 +132,7 @@
 | `bases-de-loisirs` | `via-ferrata-saix-de-miolene-abondance` | `sensations` | `generique-escalade-bouldering.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `via-ferrata-sixt-fer-a-cheval` | `sensations` | `generique-escalade-bloc-outdoor.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `via-ferrata-thones` | `sensations` | `generique-escalade-bouldering.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `vitam-neydens` | `parc` | `generique-aquatique-toboggan.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `vitam-neydens` | `parc` | `generique-aquatique-piscine-couverte.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `voile-cercle-thonon-thonon` | `aquatique` | `generique-voile-sunset-1.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `wakepark-ponton-embarcadere-saint-jorioz` | `aquatique` | `generique-wakeboard-1.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `wakepark-tna-cable-park-arenthon` | `aquatique` | `generique-wakeboard-1.jpg` | — | json hero (local) |
@@ -289,7 +289,7 @@
 | `parcs-jardins` | `parc-imperial-annecy` | `parc` | `parc-imperial-annecy-hero.jpg` | — | json hero (local) |
 | `parcs-jardins` | `parc-jean-beauquis-ambilly` | `parc` | `Ambilly_place_mairie.jpg` | — | json hero (url) |
 | `parcs-jardins` | `tropicaland-viry` | `parc` | `generique-parc.jpg` | — | json hero (local) |
-| `parcs-jardins` | `vitam-neydens` | `parc` | `generique-aquatique-toboggan.jpg` | — | json hero (local) |
+| `parcs-jardins` | `vitam-neydens` | `parc` | `generique-aquatique-piscine-couverte.jpg` | — | json hero (local) |
 | `points-de-vue` | `aire-de-decollage-parapente-plaine-joux` | `nature` | `Aire_de_d%C3%A9collage_de_parapentes_%40_Passy_Plaine-Joux_%2851062114852%29.jpg` | — | json hero (url) |
 | `points-de-vue` | `belvedere-du-mont-baron` | `nature` | `Chemin_mont_Veyrier_mont_Baron.jpg` | — | json hero (url) |
 | `points-de-vue` | `col-de-la-colombiere` | `nature` | `col-de-la-colombiere-hero.jpg` | — | json hero (local) |
@@ -327,7 +327,7 @@
 | `que-faire` | `bowling-le-bowl-annecy` | `divertissement` | `generique-bowling-lanes.jpg` | — | json hero (local) |
 | `que-faire` | `bowling-margencel-margencel` | `divertissement` | `generique-bowling-lanes.jpg` | — | json hero (local) |
 | `que-faire` | `bowling-sevrier-sevrier` | `divertissement` | `generique-bowling-strike.jpg` | — | json hero (local) |
-| `que-faire` | `casino-evian-resort-evian` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
+| `que-faire` | `casino-evian-resort-evian` | `divertissement` | `generique-casino.jpg` | — | json hero (local) |
 | `que-faire` | `casino-imperial-palace-annecy` | `divertissement` | `casino-imperial-palace-annecy-hero.jpg` | — | json hero (local) |
 | `que-faire` | `centre-aquatique-cluses` | `aquatique` | `generique-aquatique-piscine-couverte.jpg` | — | json hero (local) |
 | `que-faire` | `centre-aquatique-forme-d-o-chatel` | `aquatique` | `generique-thermes-hammam.jpg` | — | json hero (local) |
@@ -481,24 +481,24 @@
 | `sorties-detente` | `atelier-poterie-chez-el-annecy` | `divertissement` | `generique-atelier-poterie-mains.jpg` | — | json hero (local) |
 | `sorties-detente` | `atelier-poterie-du-prunier-thones` | `divertissement` | `generique-atelier-poterie-mains.jpg` | — | json hero (local) |
 | `sorties-detente` | `atelier-poterie-ryokan-thones` | `divertissement` | `generique-atelier-poterie-mains.jpg` | — | json hero (local) |
-| `sorties-detente` | `casino-evian-resort-evian` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
+| `sorties-detente` | `casino-evian-resort-evian` | `divertissement` | `generique-casino.jpg` | — | json hero (local) |
 | `sorties-detente` | `casino-imperial-palace-annecy` | `divertissement` | `casino-imperial-palace-annecy-hero.jpg` | — | json hero (local) |
-| `sorties-detente` | `casino-saint-julien-saint-julien-en-genevois` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
+| `sorties-detente` | `casino-saint-julien-saint-julien-en-genevois` | `divertissement` | `generique-casino-2.jpg` | — | json hero (local) |
 | `sorties-detente` | `cinema-cine-actuel-studio6-annemasse` | `divertissement` | `generique-cinema.jpg` | — | json hero (local) |
-| `sorties-detente` | `cinema-cine-chateau-bonneville` | `divertissement` | `generique-cinema.jpg` | — | json hero (local) |
-| `sorties-detente` | `cinema-cine-leman-thonon` | `divertissement` | `generique-cinema.jpg` | — | json hero (local) |
+| `sorties-detente` | `cinema-cine-chateau-bonneville` | `divertissement` | `generique-cinema-3.jpg` | — | json hero (local) |
+| `sorties-detente` | `cinema-cine-leman-thonon` | `divertissement` | `generique-cinema-3.jpg` | — | json hero (local) |
 | `sorties-detente` | `cinema-cine-mont-blanc-sallanches` | `divertissement` | `generique-cinema.jpg` | — | json hero (local) |
-| `sorties-detente` | `cinema-le-france-thonon` | `divertissement` | `generique-cinema.jpg` | — | json hero (local) |
-| `sorties-detente` | `cinema-le-parc-la-roche-sur-foron` | `divertissement` | `generique-cinema.jpg` | — | json hero (local) |
+| `sorties-detente` | `cinema-le-france-thonon` | `divertissement` | `generique-cinema-4.jpg` | — | json hero (local) |
+| `sorties-detente` | `cinema-le-parc-la-roche-sur-foron` | `divertissement` | `generique-cinema-4.jpg` | — | json hero (local) |
 | `sorties-detente` | `cinema-le-vox-chamonix` | `divertissement` | `generique-cinema.jpg` | — | json hero (local) |
-| `sorties-detente` | `cinema-les-4-nemours-annecy` | `divertissement` | `generique-cinema.jpg` | — | json hero (local) |
-| `sorties-detente` | `cinema-megarama-annecy` | `divertissement` | `generique-cinema.jpg` | — | json hero (local) |
-| `sorties-detente` | `cinema-pathe-annecy` | `divertissement` | `generique-cinema.jpg` | — | json hero (local) |
-| `sorties-detente` | `cinema-pathe-archamps-imax` | `divertissement` | `generique-cinema.jpg` | — | json hero (local) |
-| `sorties-detente` | `grand-casino-annemasse-annemasse` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
+| `sorties-detente` | `cinema-les-4-nemours-annecy` | `divertissement` | `generique-cinema-2.jpg` | — | json hero (local) |
+| `sorties-detente` | `cinema-megarama-annecy` | `divertissement` | `generique-cinema-3.jpg` | — | json hero (local) |
+| `sorties-detente` | `cinema-pathe-annecy` | `divertissement` | `generique-cinema-4.jpg` | — | json hero (local) |
+| `sorties-detente` | `cinema-pathe-archamps-imax` | `divertissement` | `generique-cinema-2.jpg` | — | json hero (local) |
+| `sorties-detente` | `grand-casino-annemasse-annemasse` | `divertissement` | `generique-casino.jpg` | — | json hero (local) |
 | `sorties-detente` | `spa-qc-terme-chamonix` | `bien-etre` | `generique-thermes-hammam.jpg` | — | json hero (local) |
 | `sorties-detente` | `spa-vitam-bien-etre-neydens` | `bien-etre` | `generique-spa-jardin-tropical.jpg` | — | json hero (local) |
-| `sorties-detente` | `stelsia-casino-megeve` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
+| `sorties-detente` | `stelsia-casino-megeve` | `divertissement` | `generique-casino-2.jpg` | — | json hero (local) |
 | `sorties-detente` | `thermes-saint-gervais-mont-blanc` | `bien-etre` | `generique-spa-jardin-tropical.jpg` | — | json hero (local) |
 | `sport-jeux` | `arcade-art-of-pinball-poisy` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
 | `sport-jeux` | `arcade-funky-factory-thonon` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
