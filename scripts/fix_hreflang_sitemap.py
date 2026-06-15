@@ -210,6 +210,13 @@ def rebuild_sitemap(groups, multilingual):
     def sort_key(u):
         return (u.count("/"), u)
 
+    # GSC freshness signal — Google uses <lastmod> to prioritise recrawl
+    # of pages that have changed. Today's date is a safe default for a
+    # site that's regenerated frequently; per-URL granularity would
+    # require a per-page timestamp source we don't currently keep.
+    import datetime
+    lastmod = datetime.date.today().isoformat()
+
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
              'xmlns:xhtml="http://www.w3.org/1999/xhtml">']
@@ -221,9 +228,9 @@ def rebuild_sitemap(groups, multilingual):
                 for l in (["fr"] + LANGS) if l in g["pages"]
             )
             alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{g["fr_url"]}"/>'
-            lines.append(f"  <url><loc>{u}</loc><changefreq>weekly</changefreq>{alts}</url>")
+            lines.append(f"  <url><loc>{u}</loc><lastmod>{lastmod}</lastmod><changefreq>weekly</changefreq>{alts}</url>")
         else:
-            lines.append(f"  <url><loc>{u}</loc><changefreq>weekly</changefreq></url>")
+            lines.append(f"  <url><loc>{u}</loc><lastmod>{lastmod}</lastmod><changefreq>weekly</changefreq></url>")
     lines.append("</urlset>")
     out = "\n".join(lines) + "\n"
     (ROOT / "sitemap.xml").write_text(out, encoding="utf-8")
