@@ -42,22 +42,668 @@
         "stops_in_bbox": 213
       },
       {
-        "operator": "SNCF / TER",
+        "operator": "SNCF (TER)",
         "slug": "horaires-sncf",
         "valid_from": "2026-06-14",
         "valid_to": "2026-11-30",
         "stops_in_bbox": 321
       }
     ],
+    "operators": {
+      "SIBRA": {
+        "url": "https://www.sibra.fr/",
+        "fare_url": "https://www.sibra.fr/boutique"
+      },
+      "Cars Région Haute-Savoie": {
+        "url": "https://www.laregionvoustransporte.fr/"
+      },
+      "TAC": {
+        "url": "https://tac-mobilites.fr/",
+        "fare_url": "https://boutique.tac-mobilites.fr/"
+      },
+      "Chamonix Bus": {
+        "url": "https://www.montblancbus.transdev.com/reseau/chamonix-bus/"
+      },
+      "Jybus": {
+        "url": "https://www.jybus.fr/",
+        "fare_url": "https://www.jybus.fr/points-de-vente-jybus"
+      },
+      "SNCF (TER)": {
+        "url": "http://www.sncf.com"
+      }
+    },
     "unresolved": [
       "Proxim'iTi (Thonon Agglomération) — dataset present on PAN but no GTFS resource",
       "CGN (Compagnie Générale de Navigation, lake boats) — Swiss source, not on transport.data.gouv.fr"
+    ],
+    "line_conflicts": [
+      {
+        "slug": "abbaye-de-sixt",
+        "prose_lines": [
+          "95"
+        ],
+        "feed_lines_nearby": [
+          "N-CMG",
+          "Y02",
+          "Y94"
+        ],
+        "unconfirmed": [
+          "95"
+        ]
+      },
+      {
+        "slug": "acro-aventures-talloires",
+        "prose_lines": [
+          "61"
+        ],
+        "feed_lines_nearby": [
+          "F1",
+          "F2"
+        ],
+        "unconfirmed": [
+          "61"
+        ]
+      },
+      {
+        "slug": "alpine-coaster-les-planards-chamonix",
+        "prose_lines": [
+          "01",
+          "14"
+        ],
+        "feed_lines_nearby": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "21",
+          "N1"
+        ],
+        "unconfirmed": [
+          "14"
+        ]
+      },
+      {
+        "slug": "aquariaz",
+        "prose_lines": [
+          "351"
+        ],
+        "feed_lines_nearby": [
+          "Y91",
+          "Y92"
+        ],
+        "unconfirmed": [
+          "351"
+        ]
+      },
+      {
+        "slug": "baignade-biotope-combloux",
+        "prose_lines": [
+          "Y82",
+          "Y83"
+        ],
+        "feed_lines_nearby": [
+          "Y83"
+        ],
+        "unconfirmed": [
+          "Y82"
+        ]
+      },
+      {
+        "slug": "bar-a-jeux-youri-bar-cran-gevrier",
+        "prose_lines": [
+          "5"
+        ],
+        "feed_lines_nearby": [
+          "2",
+          "27"
+        ],
+        "unconfirmed": [
+          "5"
+        ]
+      },
+      {
+        "slug": "base-de-loisirs-du-lac-bleu",
+        "prose_lines": [
+          "91"
+        ],
+        "feed_lines_nearby": [
+          "N-CMG",
+          "Y02",
+          "Y94"
+        ],
+        "unconfirmed": [
+          "91"
+        ]
+      },
+      {
+        "slug": "base-de-loisirs-du-vuaz-filliere",
+        "prose_lines": [
+          "81",
+          "82"
+        ],
+        "feed_lines_nearby": [
+          "82"
+        ],
+        "unconfirmed": [
+          "81"
+        ]
+      },
+      {
+        "slug": "cascade-aventure",
+        "prose_lines": [
+          "21"
+        ],
+        "feed_lines_nearby": [
+          "N-BAB"
+        ],
+        "unconfirmed": [
+          "21"
+        ]
+      },
+      {
+        "slug": "cascade-de-la-belle-au-bois",
+        "prose_lines": [
+          "31"
+        ],
+        "feed_lines_nearby": [
+          "Y82",
+          "Y83"
+        ],
+        "unconfirmed": [
+          "31"
+        ]
+      },
+      {
+        "slug": "cascade-du-rouget",
+        "prose_lines": [
+          "6"
+        ],
+        "feed_lines_nearby": [
+          "N-CMG",
+          "Y02",
+          "Y94"
+        ],
+        "unconfirmed": [
+          "6"
+        ]
+      },
+      {
+        "slug": "chateau-clermont-genevois",
+        "prose_lines": [
+          "41"
+        ],
+        "feed_lines_nearby": [
+          "Y13",
+          "Y22"
+        ],
+        "unconfirmed": [
+          "41"
+        ]
+      },
+      {
+        "slug": "chateau-des-rubins-observatoire-des-alpes",
+        "prose_lines": [
+          "1"
+        ],
+        "feed_lines_nearby": [
+          "Y81",
+          "Y83",
+          "Y84",
+          "Y85",
+          "Y86"
+        ],
+        "unconfirmed": [
+          "1"
+        ]
+      },
+      {
+        "slug": "col-des-aravis",
+        "prose_lines": [
+          "1"
+        ],
+        "feed_lines_nearby": [
+          "N-ARAVISBUS"
+        ],
+        "unconfirmed": [
+          "1"
+        ]
+      },
+      {
+        "slug": "ecomusee-peche-et-du-lac-thonon",
+        "prose_lines": [
+          "143"
+        ],
+        "feed_lines_nearby": [
+          "Y03",
+          "Y91"
+        ],
+        "unconfirmed": [
+          "143"
+        ]
+      },
+      {
+        "slug": "ereel-annecy-sillingy",
+        "prose_lines": [
+          "7"
+        ],
+        "feed_lines_nearby": [
+          "10",
+          "24",
+          "30"
+        ],
+        "unconfirmed": [
+          "7"
+        ]
+      },
+      {
+        "slug": "escalade-cortigrimpe-metz-tessy",
+        "prose_lines": [
+          "6"
+        ],
+        "feed_lines_nearby": [
+          "21",
+          "25"
+        ],
+        "unconfirmed": [
+          "6"
+        ]
+      },
+      {
+        "slug": "escape-game-break-out-sevrier",
+        "prose_lines": [
+          "11"
+        ],
+        "feed_lines_nearby": [
+          "15",
+          "Y51"
+        ],
+        "unconfirmed": [
+          "11"
+        ]
+      },
+      {
+        "slug": "espace-aquatique-la-clusaz",
+        "prose_lines": [
+          "1"
+        ],
+        "feed_lines_nearby": [
+          "N-ARAVISBUS"
+        ],
+        "unconfirmed": [
+          "1"
+        ]
+      },
+      {
+        "slug": "fonderie-paccard-sevrier",
+        "prose_lines": [
+          "51"
+        ],
+        "feed_lines_nearby": [
+          "15"
+        ],
+        "unconfirmed": [
+          "51"
+        ]
+      },
+      {
+        "slug": "golf-practice-belvedere-saint-martin-bellevue",
+        "prose_lines": [
+          "16"
+        ],
+        "feed_lines_nearby": [
+          "80"
+        ],
+        "unconfirmed": [
+          "16"
+        ]
+      },
+      {
+        "slug": "ile-de-tortuga-vetraz-monthoux",
+        "prose_lines": [
+          "1"
+        ],
+        "feed_lines_nearby": [
+          "5",
+          "8"
+        ],
+        "unconfirmed": [
+          "1"
+        ]
+      },
+      {
+        "slug": "k2-parapente-doussard",
+        "prose_lines": [
+          "51"
+        ],
+        "feed_lines_nearby": [
+          "Y51"
+        ],
+        "unconfirmed": [
+          "51"
+        ]
+      },
+      {
+        "slug": "la-turbine-sciences-cran-gevrier",
+        "prose_lines": [
+          "5"
+        ],
+        "feed_lines_nearby": [
+          "12"
+        ],
+        "unconfirmed": [
+          "5"
+        ]
+      },
+      {
+        "slug": "lac-des-confins",
+        "prose_lines": [
+          "61"
+        ],
+        "feed_lines_nearby": [
+          "N-ARAVISBUS"
+        ],
+        "unconfirmed": [
+          "61"
+        ]
+      },
+      {
+        "slug": "leman-kid-thonon-les-bains",
+        "prose_lines": [
+          "L2"
+        ],
+        "feed_lines_nearby": [
+          "Y03",
+          "Y91"
+        ],
+        "unconfirmed": [
+          "L2"
+        ]
+      },
+      {
+        "slug": "mont-baron",
+        "prose_lines": [
+          "1",
+          "20"
+        ],
+        "feed_lines_nearby": [
+          "20",
+          "26",
+          "Y62"
+        ],
+        "unconfirmed": [
+          "1"
+        ]
+      },
+      {
+        "slug": "mont-veyrier",
+        "prose_lines": [
+          "20"
+        ],
+        "feed_lines_nearby": [
+          "82",
+          "Y63"
+        ],
+        "unconfirmed": [
+          "20"
+        ]
+      },
+      {
+        "slug": "musee-archeologique-viuz-faverges",
+        "prose_lines": [
+          "51"
+        ],
+        "feed_lines_nearby": [
+          "Y51"
+        ],
+        "unconfirmed": [
+          "51"
+        ]
+      },
+      {
+        "slug": "musee-chateau-annecy",
+        "prose_lines": [
+          "4"
+        ],
+        "feed_lines_nearby": [
+          "13",
+          "15",
+          "26",
+          "27",
+          "S4",
+          "Y51"
+        ],
+        "unconfirmed": [
+          "4"
+        ]
+      },
+      {
+        "slug": "musee-du-batiment-ville-la-grand",
+        "prose_lines": [
+          "4"
+        ],
+        "feed_lines_nearby": [
+          "6",
+          "7",
+          "TANGO"
+        ],
+        "unconfirmed": [
+          "4"
+        ]
+      },
+      {
+        "slug": "museum-des-papillons-et-insectes-faverges",
+        "prose_lines": [
+          "51"
+        ],
+        "feed_lines_nearby": [
+          "Y51"
+        ],
+        "unconfirmed": [
+          "51"
+        ]
+      },
+      {
+        "slug": "palais-de-l-ile-annecy",
+        "prose_lines": [
+          "4"
+        ],
+        "feed_lines_nearby": [
+          "13",
+          "15",
+          "26",
+          "27",
+          "S4",
+          "Y51"
+        ],
+        "unconfirmed": [
+          "4"
+        ]
+      },
+      {
+        "slug": "parc-de-loisirs-du-pontet",
+        "prose_lines": [
+          "71"
+        ],
+        "feed_lines_nearby": [
+          "Y84"
+        ],
+        "unconfirmed": [
+          "71"
+        ]
+      },
+      {
+        "slug": "parc-des-dereches",
+        "prose_lines": [
+          "31",
+          "32"
+        ],
+        "feed_lines_nearby": [
+          "N-BAB",
+          "Y91",
+          "Y92"
+        ],
+        "unconfirmed": [
+          "31",
+          "32"
+        ]
+      },
+      {
+        "slug": "passy-accro-lac",
+        "prose_lines": [
+          "82",
+          "83"
+        ],
+        "feed_lines_nearby": [
+          "Y85"
+        ],
+        "unconfirmed": [
+          "82",
+          "83"
+        ]
+      },
+      {
+        "slug": "patinoire-la-clusaz",
+        "prose_lines": [
+          "62"
+        ],
+        "feed_lines_nearby": [
+          "N-ARAVISBUS"
+        ],
+        "unconfirmed": [
+          "62"
+        ]
+      },
+      {
+        "slug": "plage-albigny",
+        "prose_lines": [
+          "2"
+        ],
+        "feed_lines_nearby": [
+          "13",
+          "26",
+          "5",
+          "Y62"
+        ],
+        "unconfirmed": [
+          "2"
+        ]
+      },
+      {
+        "slug": "plage-de-la-pinede",
+        "prose_lines": [
+          "1"
+        ],
+        "feed_lines_nearby": [
+          "Y03",
+          "Y91"
+        ],
+        "unconfirmed": [
+          "1"
+        ]
+      },
+      {
+        "slug": "plage-des-marquisats",
+        "prose_lines": [
+          "15AB",
+          "6"
+        ],
+        "feed_lines_nearby": [
+          "13",
+          "15",
+          "27",
+          "S4",
+          "Y51"
+        ],
+        "unconfirmed": [
+          "15AB",
+          "6"
+        ]
+      },
+      {
+        "slug": "telecabine-des-chavannes-les-gets",
+        "prose_lines": [
+          "60"
+        ],
+        "feed_lines_nearby": [
+          "N-BAB",
+          "Y91",
+          "Y92"
+        ],
+        "unconfirmed": [
+          "60"
+        ]
+      },
+      {
+        "slug": "telecabine-du-jaillet",
+        "prose_lines": [
+          "1"
+        ],
+        "feed_lines_nearby": [
+          "Y82",
+          "Y83"
+        ],
+        "unconfirmed": [
+          "1"
+        ]
+      },
+      {
+        "slug": "telecabine-du-mont-chery-les-gets",
+        "prose_lines": [
+          "60"
+        ],
+        "feed_lines_nearby": [
+          "Y92"
+        ],
+        "unconfirmed": [
+          "60"
+        ]
+      },
+      {
+        "slug": "telepherique-du-saleve",
+        "prose_lines": [
+          "4",
+          "8"
+        ],
+        "feed_lines_nearby": [
+          "4"
+        ],
+        "unconfirmed": [
+          "8"
+        ]
+      },
+      {
+        "slug": "via-ferrata-pollet-villard-la-clusaz",
+        "prose_lines": [
+          "61"
+        ],
+        "feed_lines_nearby": [
+          "N-ARAVISBUS"
+        ],
+        "unconfirmed": [
+          "61"
+        ]
+      },
+      {
+        "slug": "vitam-neydens",
+        "prose_lines": [
+          "272",
+          "L1"
+        ],
+        "feed_lines_nearby": [
+          "4"
+        ],
+        "unconfirmed": [
+          "272",
+          "L1"
+        ]
+      }
     ],
     "counts": {
       "lieux_total": 392,
       "lieux_with_stops": 284,
       "lieux_empty": 108,
-      "lieux_null_coords": 0
+      "lieux_null_coords": 0,
+      "line_conflicts": 46
     }
   },
   "abbaye-d-aulps": {
@@ -314,7 +960,7 @@
       },
       {
         "name": "Cluses",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 131
       }
     ]
@@ -366,7 +1012,7 @@
       },
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 579
       },
       {
@@ -437,7 +1083,7 @@
     "stops": [
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 344
       },
       {
@@ -564,7 +1210,7 @@
     "stops": [
       {
         "name": "Servoz",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 4
       },
       {
@@ -603,7 +1249,7 @@
       },
       {
         "name": "Le Buet",
-        "operator": "SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 39
       },
       {
@@ -914,7 +1560,7 @@
     "stops": [
       {
         "name": "Évian-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 501
       }
     ]
@@ -970,7 +1616,7 @@
       },
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 325
       },
       {
@@ -1426,7 +2072,7 @@
     "stops": [
       {
         "name": "Megève-Autogare",
-        "operator": "SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 360
       },
       {
@@ -1509,7 +2155,7 @@
       },
       {
         "name": "Chamonix-Mont-Blanc",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 922
       },
       {
@@ -1556,7 +2202,7 @@
     "stops": [
       {
         "name": "Évian-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 853
       }
     ]
@@ -1647,7 +2293,7 @@
       },
       {
         "name": "Cluses",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 87
       }
     ]
@@ -1691,7 +2337,7 @@
     "stops": [
       {
         "name": "Bonneville",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 1037
       },
       {
@@ -1720,7 +2366,7 @@
       },
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 423
       },
       {
@@ -1812,7 +2458,7 @@
       },
       {
         "name": "Saint-Julien-en-Genevois",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 370
       }
     ]
@@ -1916,7 +2562,7 @@
       },
       {
         "name": "Sallanches - Combloux - Megève",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 370
       },
       {
@@ -2011,7 +2657,7 @@
       },
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 1149
       }
     ]
@@ -2023,7 +2669,7 @@
     "stops": [
       {
         "name": "Bonneville",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 656
       }
     ]
@@ -2044,7 +2690,7 @@
       },
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 552
       },
       {
@@ -2238,7 +2884,7 @@
     "stops": [
       {
         "name": "Bonneville",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 726
       }
     ]
@@ -2250,7 +2896,7 @@
     "stops": [
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 121
       },
       {
@@ -2288,7 +2934,7 @@
       },
       {
         "name": "Sallanches - Combloux - Megève",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 562
       },
       {
@@ -2321,7 +2967,7 @@
       },
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 278
       },
       {
@@ -2342,7 +2988,7 @@
     "stops": [
       {
         "name": "La Roche-sur-Foron",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 736
       }
     ]
@@ -2698,7 +3344,7 @@
     "stops": [
       {
         "name": "Évian-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 981
       }
     ]
@@ -2719,7 +3365,7 @@
       },
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 579
       },
       {
@@ -2924,7 +3570,7 @@
     "stops": [
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 1095
       },
       {
@@ -3668,7 +4314,7 @@
       },
       {
         "name": "Sallanches - Combloux - Megève",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 576
       },
       {
@@ -3772,7 +4418,7 @@
     "stops": [
       {
         "name": "Vallorcine",
-        "operator": "SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 390
       },
       {
@@ -3917,7 +4563,7 @@
     "stops": [
       {
         "name": "Évian-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 924
       }
     ]
@@ -3988,7 +4634,7 @@
     "stops": [
       {
         "name": "La Roche-sur-Foron",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 1017
       }
     ]
@@ -4031,7 +4677,7 @@
     "stops": [
       {
         "name": "La Roche-sur-Foron",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 1144
       }
     ]
@@ -4330,7 +4976,7 @@
       },
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 933
       }
     ]
@@ -4351,7 +4997,7 @@
       },
       {
         "name": "Le Châtelard Frontière",
-        "operator": "SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 705
       },
       {
@@ -4650,7 +5296,7 @@
     "stops": [
       {
         "name": "Évian-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 924
       }
     ]
@@ -4840,7 +5486,7 @@
       },
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 579
       },
       {
@@ -4899,7 +5545,7 @@
     "stops": [
       {
         "name": "Megève-Autogare",
-        "operator": "SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 603
       },
       {
@@ -4952,7 +5598,7 @@
     "stops": [
       {
         "name": "Cluses",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 600
       },
       {
@@ -5251,7 +5897,7 @@
       },
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 325
       },
       {
@@ -5386,7 +6032,7 @@
     "stops": [
       {
         "name": "Évian-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 1049
       }
     ]
@@ -5531,7 +6177,7 @@
     "stops": [
       {
         "name": "Taconnaz",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 1065
       },
       {
@@ -5865,7 +6511,7 @@
     "stops": [
       {
         "name": "Megève-Autogare",
-        "operator": "SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 242
       },
       {
@@ -6060,7 +6706,7 @@
     "stops": [
       {
         "name": "Évian-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 765
       }
     ]
@@ -6175,7 +6821,7 @@
       },
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 600
       },
       {
@@ -6425,7 +7071,7 @@
       },
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 574
       },
       {
@@ -6446,7 +7092,7 @@
     "stops": [
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 609
       },
       {
@@ -6542,7 +7188,7 @@
       },
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 984
       }
     ]
@@ -6594,7 +7240,7 @@
       },
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 325
       },
       {
@@ -7127,7 +7773,7 @@
     "stops": [
       {
         "name": "Megève-Autogare",
-        "operator": "SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 167
       },
       {
@@ -7404,7 +8050,7 @@
       },
       {
         "name": "Argentière",
-        "operator": "SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 1032
       }
     ]
@@ -7478,7 +8124,7 @@
     "stops": [
       {
         "name": "Évian-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 933
       }
     ]
@@ -7590,7 +8236,7 @@
     "stops": [
       {
         "name": "Reignier",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 508
       }
     ]
@@ -7620,7 +8266,7 @@
       },
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 701
       }
     ]
@@ -7805,12 +8451,12 @@
     "stops": [
       {
         "name": "Saint-Gervais-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 42
       },
       {
         "name": "Saint-Gervais-les-Bains-Le Fayet",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 54
       },
       {
@@ -7845,7 +8491,7 @@
       },
       {
         "name": "Cluses",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 131
       }
     ]
@@ -8140,7 +8786,7 @@
       },
       {
         "name": "Cluses",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 131
       }
     ]
@@ -8193,7 +8839,7 @@
       },
       {
         "name": "Thonon-les-Bains",
-        "operator": "SNCF / TER / SNCF / TER / SNCF / TER / SNCF / TER",
+        "operator": "SNCF (TER)",
         "distance_m": 579
       },
       {

@@ -77,7 +77,7 @@ NETWORKS = [
     ("offre-de-transports-reseau-tac-annemasse-agglo", "TAC",                        True),
     ("gtfs-reseau-chamonix-mobilite",                  "Chamonix Bus",               True),
     ("offre-de-transports-jybus-a-rumilly",            "Jybus",                      True),
-    ("horaires-sncf",                                  "SNCF / TER",                 False),
+    ("horaires-sncf",                                  "SNCF (TER)",                 False),
 ]
 
 # Networks known to exist but not currently resolvable to a GTFS feed on the
@@ -204,29 +204,56 @@ def stop_lines_map(zf):
     return out
 
 
+def read_agency(zf):
+    """Return {"url": agency_url, "fare_url": agency_fare_url} from agency.txt.
+
+    Both come straight from the feed (required/optional GTFS fields) — never
+    typed or guessed. For multi-agency feeds we take the most common non-blank
+    value. Missing values are omitted (so the caller can flag a blank url).
+    """
+    rows = _read_csv(zf, "agency.txt")
+    if not rows:
+        return {}
+    from collections import Counter
+    def pick(col):
+        vals = [(r.get(col) or "").strip() for r in rows]
+        vals = [v for v in vals if v]
+        return Counter(vals).most_common(1)[0][0] if vals else ""
+    out = {}
+    url = pick("agency_url")
+    fare_url = pick("agency_fare_url")
+    if url:
+        out["url"] = url
+    if fare_url:
+        out["fare_url"] = fare_url
+    return out
+
+
 def load_feed(slug, operator, attach_lines, dataset_index, offline):
     """Resolve, download and read one network feed.
 
-    Returns (stops, validity, info) where stops is a list of dicts
-    {name, operator, lat, lon, lines:[...]} pre-filtered to the HS bbox.
-    Returns (None, None, reason) on failure.
+    Returns (stops, validity, agency, info) where stops is a list of dicts
+    {name, operator, lat, lon, lines:[...]} pre-filtered to the HS bbox and
+    agency is {"url", "fare_url"} read verbatim from agency.txt.
+    Returns (None, None, None, reason) on failure.
     """
     ds = dataset_index.get(slug)
     if not ds:
-        return None, None, f"dataset slug not found on PAN: {slug}"
+        return None, None, None, f"dataset slug not found on PAN: {slug}"
     resolved = resolve_gtfs(ds)
     if not resolved:
-        return None, None, f"no GTFS resource in dataset: {slug}"
+        return None, None, None, f"no GTFS resource in dataset: {slug}"
     url, meta = resolved
     content = download_zip(url, f"{slug}.zip", offline=offline)
     if content is None:
-        return None, None, f"download failed: {slug}"
+        return None, None, None, f"download failed: {slug}"
     try:
         zf = zipfile.ZipFile(io.BytesIO(content))
     except zipfile.BadZipFile:
-        return None, None, f"corrupt zip: {slug}"
+        return None, None, None, f"corrupt zip: {slug}"
 
     validity = feed_validity(zf, meta)
+    agency = read_agency(zf)
     lines_map = stop_lines_map(zf) if attach_lines else {}
 
     stops = []
@@ -249,7 +276,7 @@ def load_feed(slug, operator, attach_lines, dataset_index, offline):
         lines = sorted(lines_map.get(row.get("stop_id"), ()), key=_line_sort_key)
         stops.append({"name": name, "operator": operator,
                       "lat": lat, "lon": lon, "lines": lines})
-    return stops, validity, f"{len(stops)} stops in bbox"
+    return stops, validity, agency, f"{len(stops)} stops in bbox"
 
 
 def _line_sort_key(s):
@@ -259,6 +286,35 @@ def _line_sort_key(s):
 
 def _norm(name):
     return " ".join(name.lower().split())
+
+
+import re as _re
+_LINE_RE = _re.compile(r"\blignes?\s+([0-9A-Za-z]{1,4})\b", _re.I)
+
+
+def public_transport_prose(d):
+    """Return the FR curated how_to_get_there.public_transport string, if any."""
+    fr = (d.get("i18n", {}) or {}).get("fr", {}) or {}
+    body = fr.get("body") if isinstance(fr.get("body"), dict) else {}
+    how = (body or {}).get("how_to_get_there") or fr.get("how_to_get_there") or {}
+    if isinstance(how, dict):
+        return how.get("public_transport") or ""
+    return ""
+
+
+def prose_line_tokens(text):
+    """Extract line identifiers cited in prose, e.g. 'ligne 15' -> {'15'}.
+    Drops bare words that are not plausible line codes."""
+    if not text:
+        return set()
+    out = set()
+    for m in _LINE_RE.finditer(text):
+        tok = m.group(1).strip()
+        # a plausible line code has at least one digit (15, Y51, J5) — skip
+        # accidental captures like 'ligne de' truncations.
+        if any(c.isdigit() for c in tok):
+            out.add(tok)
+    return out
 
 
 def nearest_stops(lat, lon, all_stops):
@@ -323,17 +379,22 @@ def main():
 
     all_stops = []
     feeds_meta = []
+    operators = {}            # operator label -> {"url", "fare_url"} from agency.txt
     unresolved = list(KNOWN_UNRESOLVED)
     for slug, operator, attach_lines in NETWORKS:
-        stops, validity, info = load_feed(slug, operator, attach_lines,
-                                          dataset_index, args.offline)
+        stops, validity, agency, info = load_feed(slug, operator, attach_lines,
+                                                  dataset_index, args.offline)
         if stops is None:
             print(f"  [SKIP] {operator:28} {info}")
             unresolved.append(f"{operator} ({slug}): {info}")
             continue
         vfrom, vto = validity
+        agency = agency or {}
+        if not agency.get("url"):
+            print(f"         (no agency_url in {operator} feed — official link omitted)")
+        operators[operator] = agency
         print(f"  [ OK ] {operator:28} stops={len(stops):<5} "
-              f"valid {vfrom}→{vto}  ({info})")
+              f"valid {vfrom}→{vto}  url={agency.get('url', '—')}")
         all_stops.extend(stops)
         feeds_meta.append({"operator": operator, "slug": slug,
                            "valid_from": vfrom, "valid_to": vto,
@@ -348,6 +409,7 @@ def main():
     index = {}
     empty = []
     null_coords = []
+    line_conflicts = []   # prose line numbers the feed doesn't corroborate nearby
     total = 0
     for jp in sorted(glob.glob(str(ROOT / "Json" / "*.json"))):
         d = json.loads(Path(jp).read_text(encoding="utf-8"))
@@ -369,6 +431,20 @@ def main():
             "license": LICENSE,
             "stops": stops,
         }
+        # Line-number conflict check: compare line numbers cited in the curated
+        # public_transport prose against the lines the feed shows on nearby
+        # stops. Disagreements are FLAGGED for human review — never auto-edited
+        # (a script must not pick a winner between editor and feed).
+        prose_lines = prose_line_tokens(public_transport_prose(d))
+        feed_lines = {ln.upper() for s in stops for ln in s.get("lines", [])}
+        unconfirmed = sorted(t for t in prose_lines if t.upper() not in feed_lines)
+        if unconfirmed and feed_lines:
+            line_conflicts.append({
+                "slug": slug,
+                "prose_lines": sorted(prose_lines),
+                "feed_lines_nearby": sorted(feed_lines),
+                "unconfirmed": unconfirmed,
+            })
 
     payload = {
         "_meta": {
@@ -378,12 +454,15 @@ def main():
             "max_distance_m": MAX_DIST_M,
             "top_n": TOP_N,
             "feeds": feeds_meta,
+            "operators": operators,
             "unresolved": unresolved,
+            "line_conflicts": line_conflicts,
             "counts": {
                 "lieux_total": total,
                 "lieux_with_stops": len(index),
                 "lieux_empty": len(empty),
                 "lieux_null_coords": len(null_coords),
+                "line_conflicts": len(line_conflicts),
             },
         },
     }
@@ -405,6 +484,14 @@ def main():
         print("  unresolved feeds (flagged, not faked):")
         for u in unresolved:
             print(f"    - {u}")
+    print(f"\n  operators with official link: "
+          f"{sum(1 for o in operators.values() if o.get('url'))}/{len(operators)}")
+    if line_conflicts:
+        print(f"\n  LINE-NUMBER CONFLICTS — {len(line_conflicts)} fiche(s) cite a line "
+              f"the feed doesn't show nearby (human review, NOT auto-edited):")
+        for c in line_conflicts:
+            print(f"    - {c['slug']}: prose={c['prose_lines']} "
+                  f"nearby_feed={c['feed_lines_nearby']} unconfirmed={c['unconfirmed']}")
 
 
 if __name__ == "__main__":
