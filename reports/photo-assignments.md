@@ -19,7 +19,7 @@
 | `sensations-plein-air` | 43 | 25 | 7 |
 | `sentiers` | 40 | 7 | 14 |
 | `sorties-detente` | 22 | 10 | 3 |
-| `sport-jeux` | 53 | 30 | 4 |
+| `sport-jeux` | 53 | 34 | 4 |
 | `telecabines` | 12 | 5 | 5 |
 | `voies-vertes` | 5 | 5 | 1 |
 
@@ -500,10 +500,10 @@
 | `sorties-detente` | `spa-vitam-bien-etre-neydens` | `bien-etre` | `generique-spa-jardin-tropical.jpg` | — | json hero (local) |
 | `sorties-detente` | `stelsia-casino-megeve` | `divertissement` | `generique-casino-2.jpg` | — | json hero (local) |
 | `sorties-detente` | `thermes-saint-gervais-mont-blanc` | `bien-etre` | `generique-spa-jardin-tropical.jpg` | — | json hero (local) |
-| `sport-jeux` | `arcade-art-of-pinball-poisy` | `divertissement` | `generique-bar-jeux.jpg` | — | json hero (local) |
-| `sport-jeux` | `arcade-funky-factory-thonon` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
+| `sport-jeux` | `arcade-art-of-pinball-poisy` | `divertissement` | `generique-pinball.jpg` | — | json hero (local) |
+| `sport-jeux` | `arcade-funky-factory-thonon` | `divertissement` | `generique-arcade.jpg` | — | json hero (local) |
 | `sport-jeux` | `bar-a-jeux-youri-bar-cran-gevrier` | `divertissement` | `generique-bar-jeux.jpg` | — | json hero (local) |
-| `sport-jeux` | `billard-thonon-billard-club` | `divertissement` | `generique-bar-jeux.jpg` | — | json hero (local) |
+| `sport-jeux` | `billard-thonon-billard-club` | `divertissement` | `generique-billard.jpg` | — | json hero (local) |
 | `sport-jeux` | `bowling-aerodrome-annemasse` | `divertissement` | `generique-bowling-lanes.jpg` | — | json hero (local) |
 | `sport-jeux` | `bowling-le-bowl-annecy` | `divertissement` | `generique-bowling-lanes.jpg` | — | json hero (local) |
 | `sport-jeux` | `bowling-margencel-margencel` | `divertissement` | `generique-bowling-lanes.jpg` | — | json hero (local) |
@@ -543,8 +543,8 @@
 | `sport-jeux` | `patinoire-palais-megeve` | `divertissement` | `generique-patinoire-skater.jpg` | — | json hero (local) |
 | `sport-jeux` | `patinoire-richard-bozon-chamonix` | `divertissement` | `generique-patinoire-hockey.jpg` | — | json hero (local) |
 | `sport-jeux` | `segway-mobilboard-annecy` | `sensations` | `generique-segway-ville.jpg` | — | json hero (local) |
-| `sport-jeux` | `simulateur-emotion-concept-annecy` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
-| `sport-jeux` | `simulateur-warmup-academy-margencel` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
+| `sport-jeux` | `simulateur-emotion-concept-annecy` | `divertissement` | `generique-simulateur.jpg` | — | json hero (local) |
+| `sport-jeux` | `simulateur-warmup-academy-margencel` | `divertissement` | `generique-simulateur.jpg` | — | json hero (local) |
 | `sport-jeux` | `tir-a-l-arc-abyss-publier` | `sensations` | `generique-tir-arc-fleche-cible.jpg` | — | json hero (local) |
 | `sport-jeux` | `tir-a-l-arc-grandbo-archerie-le-grand-bornand` | `sensations` | `generique-tir-arc-fleche-cible.jpg` | — | json hero (local) |
 | `sport-jeux` | `trampoline-bam-freesports-annecy` | `divertissement` | `generique-trampoline-park-saut.jpg` | — | json hero (local) |
