@@ -23,6 +23,9 @@ import sys
 from pathlib import Path
 from urllib.parse import quote
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from picture_tag import picture_tag
+
 REPO = Path(__file__).resolve().parent.parent
 BASE_URL = "https://loisirs74.fr"
 
@@ -932,8 +935,7 @@ def hero_block(d):
         f'<div class="cta-row reveal">{"".join(cta_buttons)}</div>'
         '</div>'
         '<div class="reveal"><div class="hero-img">'
-        f'<img src="{attr(img_src)}" alt="{attr(alt)}" width="1600" height="1200" '
-        f'fetchpriority="high"{gen_attr}>'
+        f'{picture_tag(img_src, alt, eager=True, extra=gen_attr)}'
         '</div></div>'
         '</div></div></section>'
     )

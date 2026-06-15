@@ -24,6 +24,9 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from picture_tag import picture_tag
 LOCALES = ("en", "de", "it", "es", "nl")
 
 # Filter rules per hub. Basic + thematic hubs that can be derived from
@@ -440,7 +443,7 @@ def fiche_card_html(d, lang, slug, picked_photo=None):
             img_src = f"https://loisirs74.fr/{hero}"
         else:
             cat = d.get("category") or "attraction"
-            img_src = f"https://loisirs74.fr/generique-{cat}.jpg"
+            img_src = f"https://loisirs74.fr/img/generique/generique-{cat}.jpg"
 
     alt = (loc.get("hero_alt") or fr.get("hero_alt") or name)
     lang_prefix = f"/{lang}" if lang != "fr" else ""
@@ -484,6 +487,7 @@ def fiche_card_html(d, lang, slug, picked_photo=None):
     else:
         data_photo = ""
 
+    card_img_extra = ' referrerpolicy="no-referrer"'
     return (
         f'<article class="card"'
         f' data-commune="{a(data_commune)}"'
@@ -492,7 +496,7 @@ def fiche_card_html(d, lang, slug, picked_photo=None):
         f' data-type="{a(data_type)}"'
         f' data-photo="{a(data_photo)}">\n'
         f'<a class="card-photo" href="{fiche_url}">\n'
-        f'<img alt="{a(alt)}" loading="lazy" referrerpolicy="no-referrer" src="{a(img_src)}"/>\n'
+        f'{picture_tag(img_src, alt, eager=False, extra=card_img_extra)}\n'
         f'<span class="card-tag {tag_class}">{tag_text}</span>\n'
         '</a>\n'
         '<div class="card-body">\n'
