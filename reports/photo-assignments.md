@@ -519,7 +519,7 @@
 | `sport-jeux` | `escape-game-issue-secrete-anthy-sur-leman` | `divertissement` | `generique-escape-game-cadenas.jpg` | — | json hero (local) |
 | `sport-jeux` | `escape-game-la-grande-evasion-annecy` | `divertissement` | `generique-escape-game-cadenas.jpg` | — | json hero (local) |
 | `sport-jeux` | `escape-game-mysteres-du-lac-annecy` | `divertissement` | `generique-escape-game-exit.jpg` | — | json hero (local) |
-| `sport-jeux` | `golf-practice-belvedere-saint-martin-bellevue` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
+| `sport-jeux` | `golf-practice-belvedere-saint-martin-bellevue` | `sensations` | `generique-golf.jpg` | — | json hero (local) |
 | `sport-jeux` | `karting-indoor-urban-kartin-la-roche` | `divertissement` | `generique-karting-outdoor-track.jpg` | — | json hero (local) |
 | `sport-jeux` | `karting-mk-circuit-scientrier` | `divertissement` | `generique-karting-outdoor-aerial.jpg` | — | json hero (local) |
 | `sport-jeux` | `karting-mont-blanc-passy` | `divertissement` | `generique-karting-outdoor-3kids.jpg` | — | json hero (local) |
