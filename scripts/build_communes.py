@@ -69,6 +69,7 @@ CATEGORY_LABELS = {
     "bowling":       {"fr": "Bowlings", "en": "Bowling", "de": "Bowling", "it": "Bowling", "es": "Bolera", "nl": "Bowling"},
     "cascade":       {"fr": "Cascades", "en": "Waterfalls", "de": "Wasserfälle", "it": "Cascate", "es": "Cascadas", "nl": "Watervallen"},
     "casino":        {"fr": "Casinos", "en": "Casinos", "de": "Casinos", "it": "Casinò", "es": "Casinos", "nl": "Casino's"},
+    "chateau":       {"fr": "Châteaux & forts", "en": "Castles & forts", "de": "Schlösser & Burgen", "it": "Castelli e forti", "es": "Castillos y fuertes", "nl": "Kastelen & forten"},
     "cinema":        {"fr": "Cinémas", "en": "Cinemas", "de": "Kinos", "it": "Cinema", "es": "Cines", "nl": "Bioscopen"},
     "croisiere":     {"fr": "Croisières", "en": "Cruises", "de": "Schifffahrten", "it": "Crociere", "es": "Cruceros", "nl": "Boottochten"},
     "divers":        {"fr": "Bien-être & divers", "en": "Wellness & more", "de": "Wellness & Mehr", "it": "Benessere e altro", "es": "Bienestar y más", "nl": "Wellness & overig"},
@@ -84,6 +85,7 @@ CATEGORY_LABELS = {
     "sentier":       {"fr": "Sentiers & randonnées", "en": "Trails & hikes", "de": "Wege & Wanderungen", "it": "Sentieri ed escursioni", "es": "Senderos y rutas", "nl": "Paden & wandelingen"},
     "telecabine":    {"fr": "Télécabines & remontées", "en": "Cable cars & lifts", "de": "Seilbahnen & Lifte", "it": "Cabinovie e impianti", "es": "Telecabinas y remontes", "nl": "Kabelbanen & liften"},
     "voie-verte":    {"fr": "Voies vertes", "en": "Greenways", "de": "Radwege", "it": "Vie verdi", "es": "Vías verdes", "nl": "Groene routes"},
+    "wakepark":      {"fr": "Wakepark", "en": "Wakepark", "de": "Wakepark", "it": "Wakepark", "es": "Wakepark", "nl": "Wakepark"},
 }
 
 

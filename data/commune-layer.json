@@ -1,5 +1,5 @@
 {
-  "manifest": "commune-layer-13",
+  "manifest": "commune-layer-32",
   "built_against_sha": "84f0bd2",
   "generated": "2026-06-15",
   "tier": "Tier 1 (marquee, ≥6 lieux)",
@@ -1126,14 +1126,11 @@
       "slug": "megeve",
       "postal_code": "74120",
       "department": "Haute-Savoie",
-      "centroid": {
-        "lat": 45.851,
-        "lon": 6.6235
-      },
       "lieux_count": 6,
-      "intro_fr": "Village-station du Pays du Mont-Blanc, Megève cultive une élégance savoyarde héritée de ses origines de villégiature. Au pied du Jaillet et de la Côte 2000, la commune mêle loisirs de montagne et art de vivre : télécabine du Jaillet, parcours aventure de la Côte 2000, patinoire du Palais, casino, Musée de l'Ermitage du Calvaire et cascade de la Belle au Bois y rythment la découverte.",
+      "demand_tier": "strong",
+      "intro_fr": "Station au cœur du Pays du Mont-Blanc, Megève marie village savoyard et art de vivre. Télécabine du Jaillet, patinoire du Palais, casino, musée de l'Ermitage du Calvaire et Côte 2000 y déclinent les loisirs été comme hiver.",
       "hero_image": null,
-      "hero_strategy": "Code: réutiliser le meilleur hero réel parmi les lieux de la commune (chemin absolu, slash initial) ; sinon generique-{bucket}.jpg. Ne pas inventer de chemin.",
+      "protected_slugs": null,
       "stats": {
         "insee_code": null,
         "population": null,
@@ -1173,11 +1170,941 @@
           "title_fr": "telecabine-du-jaillet"
         }
       ],
-      "research_log": "Commune dérivée des lieux réels du guide (6 fiches, champ commune=Megève) ; intro rédigée à partir de ces lieux. Centroïde = moyenne des coordonnées des lieux. Aucune donnée chiffrée inventée. Statistiques INSEE laissées nulles + flag.",
+      "research_log": "Intro rédigée à partir des 6 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
       "verify_flags": [
-        "Statistiques commune (population, altitude, superficie, code INSEE) à renseigner depuis INSEE/Wikipédia.",
-        "Hero à câbler par Code depuis photo réelle de la commune.",
-        "Commune ajoutée hors payload (commune-layer-12) sur décision Eddie : à confirmer."
+        "Stats commune à renseigner depuis INSEE/Wikipédia."
+      ]
+    },
+    {
+      "commune": "Bellevaux",
+      "slug": "bellevaux",
+      "postal_code": "74470",
+      "department": "Haute-Savoie",
+      "lieux_count": 6,
+      "demand_tier": "local+",
+      "intro_fr": "Village du Chablais niché dans la vallée du Brevon, Bellevaux cultive un tourisme vert à l'écart des grandes stations. Lac de Vallon, cascade de la Diomaz, jardin alpin, ferme pédagogique et musée de la faune y composent une découverte nature et patrimoine.",
+      "hero_image": null,
+      "protected_slugs": null,
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "ferme-pedagogique-petit-mont-bellevaux",
+          "category": "attraction",
+          "title_fr": "ferme-pedagogique-petit-mont-bellevaux"
+        },
+        {
+          "slug": "jardin-alpin-de-bellevaux",
+          "category": "attraction",
+          "title_fr": "jardin-alpin-de-bellevaux"
+        },
+        {
+          "slug": "cascade-de-la-diomaz",
+          "category": "cascade",
+          "title_fr": "cascade-de-la-diomaz"
+        },
+        {
+          "slug": "lac-de-vallon",
+          "category": "lac",
+          "title_fr": "lac-de-vallon"
+        },
+        {
+          "slug": "musee-faune-bellevaux",
+          "category": "musee",
+          "title_fr": "musee-faune-bellevaux"
+        },
+        {
+          "slug": "acroparc-de-bellavallis-bellevaux",
+          "category": "parc",
+          "title_fr": "acroparc-de-bellavallis-bellevaux"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 6 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia."
+      ]
+    },
+    {
+      "commune": "Thônes",
+      "slug": "thones",
+      "postal_code": "74230",
+      "department": "Haute-Savoie",
+      "lieux_count": 6,
+      "demand_tier": "strong",
+      "intro_fr": "Surnommée la capitale des Aravis, Thônes garde l'âme d'un bourg savoyard, entre reblochon et forêts. Via ferrata, karting, ateliers de poterie et deux écomusées du bois et du patrimoine local y rythment la visite.",
+      "hero_image": null,
+      "protected_slugs": null,
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "atelier-poterie-du-prunier-thones",
+          "category": "attraction",
+          "title_fr": "atelier-poterie-du-prunier-thones"
+        },
+        {
+          "slug": "atelier-poterie-ryokan-thones",
+          "category": "attraction",
+          "title_fr": "atelier-poterie-ryokan-thones"
+        },
+        {
+          "slug": "via-ferrata-thones",
+          "category": "attraction",
+          "title_fr": "via-ferrata-thones"
+        },
+        {
+          "slug": "karting-thones",
+          "category": "karting",
+          "title_fr": "karting-thones"
+        },
+        {
+          "slug": "ecomusee-bois-foret-thones",
+          "category": "musee",
+          "title_fr": "ecomusee-bois-foret-thones"
+        },
+        {
+          "slug": "musee-patrimonial-pays-thones-fondateurs-francois-et-lucien-cochat-thones",
+          "category": "musee",
+          "title_fr": "musee-patrimonial-pays-thones-fondateurs-francois-et-lucien-cochat-thones"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 6 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia."
+      ]
+    },
+    {
+      "commune": "Annemasse",
+      "slug": "annemasse",
+      "postal_code": "74100",
+      "department": "Haute-Savoie",
+      "lieux_count": 5,
+      "demand_tier": "local",
+      "intro_fr": "Ville frontalière aux portes de Genève, Annemasse concentre les loisirs urbains de l'agglomération. Aquaparc Château Bleu, grand casino, cinéma, bowling et la galerie d'art Villa du Parc y composent une offre de proximité.",
+      "hero_image": null,
+      "protected_slugs": null,
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "aquaparc-chateau-bleu-annemasse",
+          "category": "aquaparc",
+          "title_fr": "aquaparc-chateau-bleu-annemasse"
+        },
+        {
+          "slug": "bowling-aerodrome-annemasse",
+          "category": "bowling",
+          "title_fr": "bowling-aerodrome-annemasse"
+        },
+        {
+          "slug": "grand-casino-annemasse-annemasse",
+          "category": "casino",
+          "title_fr": "grand-casino-annemasse-annemasse"
+        },
+        {
+          "slug": "cinema-cine-actuel-studio6-annemasse",
+          "category": "cinema",
+          "title_fr": "cinema-cine-actuel-studio6-annemasse"
+        },
+        {
+          "slug": "villa-du-parc-annemasse",
+          "category": "musee",
+          "title_fr": "villa-du-parc-annemasse"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 5 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia."
+      ]
+    },
+    {
+      "commune": "Cluses",
+      "slug": "cluses",
+      "postal_code": "74300",
+      "department": "Haute-Savoie",
+      "lieux_count": 5,
+      "demand_tier": "local",
+      "intro_fr": "Au carrefour de la vallée de l'Arve, Cluses est la cité historique du décolletage. Deux centres aquatiques, le musée de l'Horlogerie et du Décolletage et les véloroutes de l'Arve y mêlent loisirs et patrimoine industriel.",
+      "hero_image": null,
+      "protected_slugs": null,
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "aquaparc-aqualis-cluses",
+          "category": "aquaparc",
+          "title_fr": "aquaparc-aqualis-cluses"
+        },
+        {
+          "slug": "centre-aquatique-cluses",
+          "category": "aquaparc",
+          "title_fr": "centre-aquatique-cluses"
+        },
+        {
+          "slug": "musee-horlogerie-et-decolletage-cluses",
+          "category": "musee",
+          "title_fr": "musee-horlogerie-et-decolletage-cluses"
+        },
+        {
+          "slug": "veloroute-vallee-arve-cluses-sallanches",
+          "category": "voie-verte",
+          "title_fr": "veloroute-vallee-arve-cluses-sallanches"
+        },
+        {
+          "slug": "voie-verte-arve-cluses-thyez",
+          "category": "voie-verte",
+          "title_fr": "voie-verte-arve-cluses-thyez"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 5 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia."
+      ]
+    },
+    {
+      "commune": "Cruseilles",
+      "slug": "cruseilles",
+      "postal_code": "74350",
+      "department": "Haute-Savoie",
+      "lieux_count": 5,
+      "demand_tier": "local",
+      "intro_fr": "Entre Annecy et Genève sur le plateau des Bornes, Cruseilles veille sur les ponts de la Caille, au-dessus des gorges des Usses. Parc et lac des Dronières, accrobranche et sentier-balcon Léman-Salève complètent la halte.",
+      "hero_image": null,
+      "protected_slugs": [
+        "pont-de-la-caille"
+      ],
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "parc-des-dronieres",
+          "category": "domaine",
+          "title_fr": "parc-des-dronieres"
+        },
+        {
+          "slug": "tactiq-aventure-cruseilles",
+          "category": "domaine",
+          "title_fr": "tactiq-aventure-cruseilles"
+        },
+        {
+          "slug": "lac-des-dronieres",
+          "category": "lac",
+          "title_fr": "lac-des-dronieres"
+        },
+        {
+          "slug": "pont-de-la-caille",
+          "category": "point-de-vue",
+          "title_fr": "pont-de-la-caille"
+        },
+        {
+          "slug": "sentier-balcon-leman-saleve",
+          "category": "sentier",
+          "title_fr": "sentier-balcon-leman-saleve"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 5 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia.",
+        "⚠ BLOCS PROTÉGÉS (Chez Nous/Tornet) dans cette commune : pont-de-la-caille — byte-faithful, ne pas altérer."
+      ]
+    },
+    {
+      "commune": "Doussard",
+      "slug": "doussard",
+      "postal_code": "74210",
+      "department": "Haute-Savoie",
+      "lieux_count": 5,
+      "demand_tier": "strong",
+      "intro_fr": "À la pointe sud du Lac d'Annecy, Doussard ouvre sur la réserve naturelle du Bout du Lac, au pied de la Tournette. Plage, base nautique, parapente et sentiers de la réserve en font un spot nature et glisse.",
+      "hero_image": null,
+      "protected_slugs": [
+        "k2-parapente-doussard",
+        "plage-de-doussard",
+        "sentier-bout-du-lac-doussard"
+      ],
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "k2-parapente-doussard",
+          "category": "attraction",
+          "title_fr": "k2-parapente-doussard"
+        },
+        {
+          "slug": "base-nautique-doussard-doussard",
+          "category": "base-nautique",
+          "title_fr": "base-nautique-doussard-doussard"
+        },
+        {
+          "slug": "plage-de-doussard",
+          "category": "plage",
+          "title_fr": "plage-de-doussard"
+        },
+        {
+          "slug": "reserve-naturelle-bout-du-lac",
+          "category": "point-de-vue",
+          "title_fr": "reserve-naturelle-bout-du-lac"
+        },
+        {
+          "slug": "sentier-bout-du-lac-doussard",
+          "category": "sentier",
+          "title_fr": "sentier-bout-du-lac-doussard"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 5 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia.",
+        "⚠ BLOCS PROTÉGÉS (Chez Nous/Tornet) dans cette commune : k2-parapente-doussard, plage-de-doussard, sentier-bout-du-lac-doussard — byte-faithful, ne pas altérer."
+      ]
+    },
+    {
+      "commune": "Fillière",
+      "slug": "filliere",
+      "postal_code": "74570",
+      "department": "Haute-Savoie",
+      "lieux_count": 5,
+      "demand_tier": "local+",
+      "intro_fr": "Commune nouvelle au pied du plateau des Glières, Fillière porte une mémoire de la Résistance et un patrimoine savoyard. Château de Thorens, plateau et col des Glières, base de loisirs du Vuaz et musée de la poterie y dessinent un territoire entre histoire et plein air.",
+      "hero_image": null,
+      "protected_slugs": null,
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "chateau-de-thorens",
+          "category": "chateau",
+          "title_fr": "chateau-de-thorens"
+        },
+        {
+          "slug": "musee-poterie-savoyarde-filliere",
+          "category": "musee",
+          "title_fr": "musee-poterie-savoyarde-filliere"
+        },
+        {
+          "slug": "base-de-loisirs-du-vuaz-filliere",
+          "category": "parc",
+          "title_fr": "base-de-loisirs-du-vuaz-filliere"
+        },
+        {
+          "slug": "col-des-glieres",
+          "category": "point-de-vue",
+          "title_fr": "col-des-glieres"
+        },
+        {
+          "slug": "plateau-des-glieres",
+          "category": "point-de-vue",
+          "title_fr": "plateau-des-glieres"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 5 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia."
+      ]
+    },
+    {
+      "commune": "Le Grand-Bornand",
+      "slug": "le-grand-bornand",
+      "postal_code": "74450",
+      "department": "Haute-Savoie",
+      "lieux_count": 5,
+      "demand_tier": "strong",
+      "intro_fr": "Village-station emblématique des Aravis, Le Grand-Bornand conjugue chalets traditionnels et terrain d'altitude. Via ferrata du Jallouvre, cascade du Chinaillon, chiens de traîneau, tir à l'arc et sentier géologique de la Pointe Percée y rythment les saisons.",
+      "hero_image": null,
+      "protected_slugs": null,
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "chiens-de-traineau-nordic-event-74",
+          "category": "attraction",
+          "title_fr": "chiens-de-traineau-nordic-event-74"
+        },
+        {
+          "slug": "tir-a-l-arc-grandbo-archerie-le-grand-bornand",
+          "category": "attraction",
+          "title_fr": "tir-a-l-arc-grandbo-archerie-le-grand-bornand"
+        },
+        {
+          "slug": "via-ferrata-jallouvre-le-grand-bornand",
+          "category": "attraction",
+          "title_fr": "via-ferrata-jallouvre-le-grand-bornand"
+        },
+        {
+          "slug": "cascade-du-chinaillon",
+          "category": "cascade",
+          "title_fr": "cascade-du-chinaillon"
+        },
+        {
+          "slug": "sentier-geologique-pointe-percee-grand-bornand",
+          "category": "sentier",
+          "title_fr": "sentier-geologique-pointe-percee-grand-bornand"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 5 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia."
+      ]
+    },
+    {
+      "commune": "Publier",
+      "slug": "publier",
+      "postal_code": "74500",
+      "department": "Haute-Savoie",
+      "lieux_count": 5,
+      "demand_tier": "strong",
+      "intro_fr": "Sur la rive sud du Léman autour d'Amphion-les-Bains, Publier marie plages lacustres et nature protégée. Centre nautique Cité de l'Eau, plage d'Amphion, réserve naturelle du delta de la Dranse et boucles de coteau y composent la découverte.",
+      "hero_image": null,
+      "protected_slugs": null,
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "centre-nautique-cite-de-l-eau-publier",
+          "category": "aquaparc",
+          "title_fr": "centre-nautique-cite-de-l-eau-publier"
+        },
+        {
+          "slug": "tir-a-l-arc-abyss-publier",
+          "category": "attraction",
+          "title_fr": "tir-a-l-arc-abyss-publier"
+        },
+        {
+          "slug": "plage-d-amphion-publier",
+          "category": "plage",
+          "title_fr": "plage-d-amphion-publier"
+        },
+        {
+          "slug": "reserve-naturelle-delta-de-la-dranse",
+          "category": "point-de-vue",
+          "title_fr": "reserve-naturelle-delta-de-la-dranse"
+        },
+        {
+          "slug": "boucles-coteau-publier",
+          "category": "sentier",
+          "title_fr": "boucles-coteau-publier"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 5 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia."
+      ]
+    },
+    {
+      "commune": "Saint-Jorioz",
+      "slug": "saint-jorioz",
+      "postal_code": "74410",
+      "department": "Haute-Savoie",
+      "lieux_count": 5,
+      "demand_tier": "strong",
+      "intro_fr": "Sur la rive ouest du Lac d'Annecy, Saint-Jorioz aligne sa grande plage, ses roselières protégées et ses loisirs nautiques. Plage, wakepark, parc de jeux et sentiers des roselières en font une base familiale au bord de l'eau.",
+      "hero_image": null,
+      "protected_slugs": [
+        "criq-parc",
+        "plage-de-saint-jorioz",
+        "sentier-des-roselieres",
+        "sentier-roselieres-saint-jorioz"
+      ],
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "criq-parc",
+          "category": "attraction",
+          "title_fr": "criq-parc"
+        },
+        {
+          "slug": "plage-de-saint-jorioz",
+          "category": "lac",
+          "title_fr": "plage-de-saint-jorioz"
+        },
+        {
+          "slug": "sentier-des-roselieres",
+          "category": "sentier",
+          "title_fr": "sentier-des-roselieres"
+        },
+        {
+          "slug": "sentier-roselieres-saint-jorioz",
+          "category": "sentier",
+          "title_fr": "sentier-roselieres-saint-jorioz"
+        },
+        {
+          "slug": "wakepark-ponton-embarcadere-saint-jorioz",
+          "category": "wakepark",
+          "title_fr": "wakepark-ponton-embarcadere-saint-jorioz"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 5 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia.",
+        "⚠ BLOCS PROTÉGÉS (Chez Nous/Tornet) dans cette commune : criq-parc, plage-de-saint-jorioz, sentier-des-roselieres, sentier-roselieres-saint-jorioz — byte-faithful, ne pas altérer."
+      ]
+    },
+    {
+      "commune": "Samoëns",
+      "slug": "samoens",
+      "postal_code": "74340",
+      "department": "Haute-Savoie",
+      "lieux_count": 5,
+      "demand_tier": "strong",
+      "intro_fr": "Village de caractère au cœur du Haut-Giffre, Samoëns rayonne au pied du Grand Massif. Jardin botanique de la Jaÿsinia, ferme-écomusée du Clos Parchet, base de loisirs du lac aux Dames, rafting et disc-golf y mêlent patrimoine et plein air.",
+      "hero_image": null,
+      "protected_slugs": null,
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "disc-golf-indiana-ventures-samoens",
+          "category": "attraction",
+          "title_fr": "disc-golf-indiana-ventures-samoens"
+        },
+        {
+          "slug": "rafting-rando-rafting-samoens",
+          "category": "attraction",
+          "title_fr": "rafting-rando-rafting-samoens"
+        },
+        {
+          "slug": "base-de-loisirs-du-lac-aux-dames",
+          "category": "domaine",
+          "title_fr": "base-de-loisirs-du-lac-aux-dames"
+        },
+        {
+          "slug": "jardin-jaysinia-samoens",
+          "category": "jardin",
+          "title_fr": "jardin-jaysinia-samoens"
+        },
+        {
+          "slug": "ferme-ecomusee-clos-parchet-samoens",
+          "category": "musee",
+          "title_fr": "ferme-ecomusee-clos-parchet-samoens"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 5 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia."
+      ]
+    },
+    {
+      "commune": "Sillingy",
+      "slug": "sillingy",
+      "postal_code": "74330",
+      "department": "Haute-Savoie",
+      "lieux_count": 5,
+      "demand_tier": "local",
+      "intro_fr": "Aux portes d'Annecy, Sillingy regroupe une forte densité de loisirs indoor et famille. Espace eRêel — réalité virtuelle et parc —, escalade, laser game et forêt enchantée y composent une offre tout-temps du bassin annécien.",
+      "hero_image": null,
+      "protected_slugs": [
+        "ereel-annecy-sillingy",
+        "escalade-space-bloc-sillingy",
+        "la-foret-enchantee-sillingy",
+        "laser-game-lasermaxx-sillingy",
+        "vr-ereel-annecy-sillingy"
+      ],
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "escalade-space-bloc-sillingy",
+          "category": "attraction",
+          "title_fr": "escalade-space-bloc-sillingy"
+        },
+        {
+          "slug": "la-foret-enchantee-sillingy",
+          "category": "attraction",
+          "title_fr": "la-foret-enchantee-sillingy"
+        },
+        {
+          "slug": "laser-game-lasermaxx-sillingy",
+          "category": "attraction",
+          "title_fr": "laser-game-lasermaxx-sillingy"
+        },
+        {
+          "slug": "vr-ereel-annecy-sillingy",
+          "category": "attraction",
+          "title_fr": "vr-ereel-annecy-sillingy"
+        },
+        {
+          "slug": "ereel-annecy-sillingy",
+          "category": "parc",
+          "title_fr": "ereel-annecy-sillingy"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 5 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia.",
+        "⚠ BLOCS PROTÉGÉS (Chez Nous/Tornet) dans cette commune : ereel-annecy-sillingy, escalade-space-bloc-sillingy, la-foret-enchantee-sillingy, laser-game-lasermaxx-sillingy, vr-ereel-annecy-sillingy — byte-faithful, ne pas altérer."
+      ]
+    },
+    {
+      "commune": "Sixt-Fer-à-Cheval",
+      "slug": "sixt-fer-a-cheval",
+      "postal_code": "74740",
+      "department": "Haute-Savoie",
+      "lieux_count": 5,
+      "demand_tier": "strong",
+      "intro_fr": "Au fond de la vallée du Giffre, Sixt-Fer-à-Cheval donne son nom au grand Cirque du Fer à Cheval, amphithéâtre de falaises et de cascades. Cascade du Rouget, abbaye de Sixt, via ferrata et sentiers de la réserve y composent un site naturel majeur.",
+      "hero_image": null,
+      "protected_slugs": null,
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "via-ferrata-sixt-fer-a-cheval",
+          "category": "attraction",
+          "title_fr": "via-ferrata-sixt-fer-a-cheval"
+        },
+        {
+          "slug": "cascade-du-rouget",
+          "category": "cascade",
+          "title_fr": "cascade-du-rouget"
+        },
+        {
+          "slug": "cirque-du-fer-a-cheval",
+          "category": "cascade",
+          "title_fr": "cirque-du-fer-a-cheval"
+        },
+        {
+          "slug": "abbaye-de-sixt",
+          "category": "chateau",
+          "title_fr": "abbaye-de-sixt"
+        },
+        {
+          "slug": "sentier-cascades-sixt-fer-a-cheval",
+          "category": "sentier",
+          "title_fr": "sentier-cascades-sixt-fer-a-cheval"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 5 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia."
+      ]
+    },
+    {
+      "commune": "Abondance",
+      "slug": "abondance",
+      "postal_code": "74360",
+      "department": "Haute-Savoie",
+      "lieux_count": 4,
+      "demand_tier": "strong",
+      "intro_fr": "Berceau de la race bovine et du fromage qui portent son nom, Abondance veille sur son abbaye en vallée du Chablais. Maison du Fromage, sentiers d'interprétation du lac des Plagnes, tour du village et voie verte du Chablais y rythment la visite.",
+      "hero_image": null,
+      "protected_slugs": null,
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "maison-fromage-abondance-abondance",
+          "category": "musee",
+          "title_fr": "maison-fromage-abondance-abondance"
+        },
+        {
+          "slug": "sentier-pedestre-interpretation-lac-plagnes-abondance",
+          "category": "sentier",
+          "title_fr": "sentier-pedestre-interpretation-lac-plagnes-abondance"
+        },
+        {
+          "slug": "tour-village-abondance-abondance",
+          "category": "sentier",
+          "title_fr": "tour-village-abondance-abondance"
+        },
+        {
+          "slug": "voie-verte-du-chablais",
+          "category": "voie-verte",
+          "title_fr": "voie-verte-du-chablais"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 4 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia."
+      ]
+    },
+    {
+      "commune": "Les Gets",
+      "slug": "les-gets",
+      "postal_code": "74260",
+      "department": "Haute-Savoie",
+      "lieux_count": 4,
+      "demand_tier": "strong",
+      "intro_fr": "Station-village des Portes du Soleil entre Morzine et la vallée du Giffre, Les Gets séduit familles et vététistes. Télécabines des Chavannes et du Mont Chéry, musée de la Musique Mécanique et chiens de traîneau y déclinent les saisons.",
+      "hero_image": null,
+      "protected_slugs": null,
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "chiens-de-traineau-la-patte-nordic-les-gets",
+          "category": "attraction",
+          "title_fr": "chiens-de-traineau-la-patte-nordic-les-gets"
+        },
+        {
+          "slug": "musee-musique-mecanique-gets",
+          "category": "musee",
+          "title_fr": "musee-musique-mecanique-gets"
+        },
+        {
+          "slug": "telecabine-des-chavannes-les-gets",
+          "category": "telecabine",
+          "title_fr": "telecabine-des-chavannes-les-gets"
+        },
+        {
+          "slug": "telecabine-du-mont-chery-les-gets",
+          "category": "telecabine",
+          "title_fr": "telecabine-du-mont-chery-les-gets"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 4 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia."
+      ]
+    },
+    {
+      "commune": "Les Houches",
+      "slug": "les-houches",
+      "postal_code": "74310",
+      "department": "Haute-Savoie",
+      "lieux_count": 4,
+      "demand_tier": "strong",
+      "intro_fr": "À l'entrée de la vallée de Chamonix, face au massif du Mont-Blanc, Les Houches mêle nature et panorama. Parc animalier de Merlet, musée Montagnard, ruines du château Saint-Michel et le Tour du Mont-Blanc y composent la découverte.",
+      "hero_image": null,
+      "protected_slugs": null,
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "parc-de-merlet",
+          "category": "attraction",
+          "title_fr": "parc-de-merlet"
+        },
+        {
+          "slug": "musee-montagnard-les-houches",
+          "category": "musee",
+          "title_fr": "musee-montagnard-les-houches"
+        },
+        {
+          "slug": "ruines-chateau-st-michel-houches",
+          "category": "musee",
+          "title_fr": "ruines-chateau-st-michel-houches"
+        },
+        {
+          "slug": "tour-du-mont-blanc-les-houches",
+          "category": "sentier",
+          "title_fr": "tour-du-mont-blanc-les-houches"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 4 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia."
+      ]
+    },
+    {
+      "commune": "Neydens",
+      "slug": "neydens",
+      "postal_code": "74160",
+      "department": "Haute-Savoie",
+      "lieux_count": 4,
+      "demand_tier": "local+",
+      "intro_fr": "Aux portes du Genevois près de Saint-Julien, Neydens s'organise autour du parc de loisirs Vitam. Espace aquatique et spa, trampoline park et boucle pédestre y composent une destination loisirs de l'agglomération franco-genevoise.",
+      "hero_image": null,
+      "protected_slugs": null,
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "trampoline-park-elevation-indoor-neydens",
+          "category": "attraction",
+          "title_fr": "trampoline-park-elevation-indoor-neydens"
+        },
+        {
+          "slug": "spa-vitam-bien-etre-neydens",
+          "category": "divers",
+          "title_fr": "spa-vitam-bien-etre-neydens"
+        },
+        {
+          "slug": "vitam-neydens",
+          "category": "parc",
+          "title_fr": "vitam-neydens"
+        },
+        {
+          "slug": "parcours-marche-boucle-pedestre-uffin-neydens",
+          "category": "sentier",
+          "title_fr": "parcours-marche-boucle-pedestre-uffin-neydens"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 4 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia."
+      ]
+    },
+    {
+      "commune": "Saint-Gingolph",
+      "slug": "saint-gingolph",
+      "postal_code": "74500",
+      "department": "Haute-Savoie",
+      "lieux_count": 4,
+      "demand_tier": "strong",
+      "intro_fr": "Village frontalier partagé entre France et Suisse au bord du Léman, Saint-Gingolph marque le départ de la ViaRhôna côté Haut-Lac. Plage, parc Léman Forest, sentier du littoral et grande randonnée du Léman y composent la halte.",
+      "hero_image": null,
+      "protected_slugs": null,
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "leman-forest-saint-gingolph",
+          "category": "parc",
+          "title_fr": "leman-forest-saint-gingolph"
+        },
+        {
+          "slug": "plage-de-saint-gingolph",
+          "category": "plage",
+          "title_fr": "plage-de-saint-gingolph"
+        },
+        {
+          "slug": "grp-littoral-leman-saint-gingolph",
+          "category": "sentier",
+          "title_fr": "grp-littoral-leman-saint-gingolph"
+        },
+        {
+          "slug": "viarhona-haute-savoie-saint-gingolph-seyssel",
+          "category": "voie-verte",
+          "title_fr": "viarhona-haute-savoie-saint-gingolph-seyssel"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 4 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia."
+      ]
+    },
+    {
+      "commune": "Vallorcine",
+      "slug": "vallorcine",
+      "postal_code": "74660",
+      "department": "Haute-Savoie",
+      "lieux_count": 4,
+      "demand_tier": "strong",
+      "intro_fr": "Dernier village français de la vallée de Chamonix avant la Suisse, Vallorcine cultive un caractère sauvage au pied des Aiguilles Rouges. Jardin alpin des Montets, via ferrata de Bérard, maison de Barberine et jeu de piste du rail y composent la découverte.",
+      "hero_image": null,
+      "protected_slugs": null,
+      "stats": {
+        "insee_code": null,
+        "population": null,
+        "altitude_m": null,
+        "superficie_km2": null,
+        "verify_flag": "INSEE/Wikipédia commune — à renseigner par Code depuis source officielle, ne jamais estimer."
+      },
+      "lieux": [
+        {
+          "slug": "jardin-alpin-des-montets-vallorcine",
+          "category": "attraction",
+          "title_fr": "jardin-alpin-des-montets-vallorcine"
+        },
+        {
+          "slug": "via-ferrata-berard-vallorcine",
+          "category": "attraction",
+          "title_fr": "via-ferrata-berard-vallorcine"
+        },
+        {
+          "slug": "maison-de-barberine-vallorcine",
+          "category": "musee",
+          "title_fr": "maison-de-barberine-vallorcine"
+        },
+        {
+          "slug": "au-fil-rail-jeu-piste-a-vallorcine-vallorcine",
+          "category": "sentier",
+          "title_fr": "au-fil-rail-jeu-piste-a-vallorcine-vallorcine"
+        }
+      ],
+      "research_log": "Intro rédigée à partir des 4 lieux réels + situation géographique établie. Aucune donnée chiffrée inventée. Stats INSEE nulles + flag.",
+      "verify_flags": [
+        "Stats commune à renseigner depuis INSEE/Wikipédia."
       ]
     }
   ]
