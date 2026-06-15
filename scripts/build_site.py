@@ -38,12 +38,17 @@ COPY_DIRS = [
     ".well-known",
 ] + list(LOCALES)
 
-# Hub directories (rendered listings)
+# Hub directories (rendered listings) + the image tree.
+# `img/` holds the canonical generic store (`img/generique/`) and per-lieu
+# heros (`img/<hub>/<slug>-hero.{jpg,webp}`) — every local `<img>`/`<picture>`
+# srcset on the site points into this tree. Must be copied into _site/ or
+# every local hero 404s live.
 HUB_DIRS = [
     "cascades", "chateaux", "musees", "points-de-vue", "sentiers",
     "telecabines", "voies-vertes", "lacs-plages", "bases-de-loisirs",
     "baignade-nautisme", "parcs-jardins", "que-faire",
     "sensations-plein-air", "sorties-detente", "sport-jeux",
+    "img",
 ]
 
 # Root-level files to copy verbatim (filename match)
@@ -327,6 +332,11 @@ def main():
         dropped = filter_sitemap(sm, SITE)
         if dropped:
             print(f"  dropped {dropped} stale <url> entries")
+
+    # Regression guard — fail loudly if the image tree didn't get copied.
+    # (Previously a quiet HUB_DIRS omission shipped 575 broken local heros live.)
+    assert (SITE / "img" / "generique").is_dir(), \
+        "img/ not published into _site/ — check HUB_DIRS in build_site.py"
 
     # Final stats
     total = sum(1 for _ in SITE.rglob("*") if _.is_file())
