@@ -177,6 +177,234 @@ def pick_photo(d, photo_index, used_in_hub):
     return (f"https://loisirs74.fr/{best}", scores[best], best, "cycling — pool reset")
 
 
+# ---------------------------------------------------------------------------
+# Hub <head> patching — title trim + OG block + meta description
+# Source of truth for meta descriptions: data/hub-meta-descriptions.json
+# (90 entries, 120-160 chars, frozen FR place names, QA-gated by Eddie)
+# ---------------------------------------------------------------------------
+
+HUB_TITLE = {
+    "cascades": {
+        "fr": "Cascades & gorges de Haute-Savoie · Loisirs 74",
+        "en": "Waterfalls & gorges of Haute-Savoie · Loisirs 74",
+        "de": "Wasserfälle & Schluchten · Haute-Savoie · Loisirs 74",
+        "it": "Cascate & gole della Haute-Savoie · Loisirs 74",
+        "es": "Cascadas y gargantas de Haute-Savoie · Loisirs 74",
+        "nl": "Watervallen & kloven · Haute-Savoie · Loisirs 74",
+    },
+    "chateaux": {
+        "fr": "Châteaux de Haute-Savoie · Loisirs 74",
+        "en": "Castles of Haute-Savoie · Loisirs 74",
+        "de": "Schlösser der Haute-Savoie · Loisirs 74",
+        "it": "Castelli della Haute-Savoie · Loisirs 74",
+        "es": "Castillos de Haute-Savoie · Loisirs 74",
+        "nl": "Kastelen van Haute-Savoie · Loisirs 74",
+    },
+    "musees": {
+        "fr": "Musées de Haute-Savoie · Loisirs 74",
+        "en": "Museums of Haute-Savoie · Loisirs 74",
+        "de": "Museen in Haute-Savoie · Loisirs 74",
+        "it": "Musei della Haute-Savoie · Loisirs 74",
+        "es": "Museos de Haute-Savoie · Loisirs 74",
+        "nl": "Musea van Haute-Savoie · Loisirs 74",
+    },
+    "points-de-vue": {
+        "fr": "Points de vue de Haute-Savoie · Loisirs 74",
+        "en": "Viewpoints of Haute-Savoie · Loisirs 74",
+        "de": "Aussichtspunkte · Haute-Savoie · Loisirs 74",
+        "it": "Punti panoramici · Haute-Savoie · Loisirs 74",
+        "es": "Miradores de Haute-Savoie · Loisirs 74",
+        "nl": "Uitzichtpunten · Haute-Savoie · Loisirs 74",
+    },
+    "sentiers": {
+        "fr": "Sentiers de randonnée · Haute-Savoie · Loisirs 74",
+        "en": "Hiking trails · Haute-Savoie · Loisirs 74",
+        "de": "Wanderwege · Haute-Savoie · Loisirs 74",
+        "it": "Sentieri escursionistici · Haute-Savoie · Loisirs 74",
+        "es": "Senderos · Haute-Savoie · Loisirs 74",
+        "nl": "Wandelpaden · Haute-Savoie · Loisirs 74",
+    },
+    "telecabines": {
+        "fr": "Télécabines de Haute-Savoie · Loisirs 74",
+        "en": "Cable cars of Haute-Savoie · Loisirs 74",
+        "de": "Seilbahnen in Haute-Savoie · Loisirs 74",
+        "it": "Funivie della Haute-Savoie · Loisirs 74",
+        "es": "Teleféricos · Haute-Savoie · Loisirs 74",
+        "nl": "Kabelbanen · Haute-Savoie · Loisirs 74",
+    },
+    "voies-vertes": {
+        "fr": "Voies vertes de Haute-Savoie · Loisirs 74",
+        "en": "Greenways of Haute-Savoie · Loisirs 74",
+        "de": "Grüne Wege · Haute-Savoie · Loisirs 74",
+        "it": "Vie verdi della Haute-Savoie · Loisirs 74",
+        "es": "Vías verdes · Haute-Savoie · Loisirs 74",
+        "nl": "Fietsroutes · Haute-Savoie · Loisirs 74",
+    },
+    "lacs-plages": {
+        "fr": "Lacs & plages de Haute-Savoie · Loisirs 74",
+        "en": "Lakes & beaches · Haute-Savoie · Loisirs 74",
+        "de": "Seen & Strände · Haute-Savoie · Loisirs 74",
+        "it": "Laghi & spiagge · Haute-Savoie · Loisirs 74",
+        "es": "Lagos & playas · Haute-Savoie · Loisirs 74",
+        "nl": "Meren & stranden · Haute-Savoie · Loisirs 74",
+    },
+    "bases-de-loisirs": {
+        "fr": "Bases de loisirs · Haute-Savoie · Loisirs 74",
+        "en": "Leisure parks · Haute-Savoie · Loisirs 74",
+        "de": "Freizeitparks · Haute-Savoie · Loisirs 74",
+        "it": "Aree ricreative · Haute-Savoie · Loisirs 74",
+        "es": "Áreas de ocio · Haute-Savoie · Loisirs 74",
+        "nl": "Recreatieparken · Haute-Savoie · Loisirs 74",
+    },
+    "baignade-nautisme": {
+        "fr": "Baignade & nautisme · Haute-Savoie · Loisirs 74",
+        "en": "Swimming & watersports · Haute-Savoie · Loisirs 74",
+        "de": "Baden & Wassersport · Haute-Savoie · Loisirs 74",
+        "it": "Nuoto & sport acquatici · Haute-Savoie · Loisirs 74",
+        "es": "Baño & deportes acuáticos · Haute-Savoie · Loisirs 74",
+        "nl": "Zwemmen & watersport · Haute-Savoie · Loisirs 74",
+    },
+    "parcs-jardins": {
+        "fr": "Parcs & jardins de Haute-Savoie · Loisirs 74",
+        "en": "Parks & gardens of Haute-Savoie · Loisirs 74",
+        "de": "Parks & Gärten · Haute-Savoie · Loisirs 74",
+        "it": "Parchi & giardini · Haute-Savoie · Loisirs 74",
+        "es": "Parques & jardines · Haute-Savoie · Loisirs 74",
+        "nl": "Parken & tuinen · Haute-Savoie · Loisirs 74",
+    },
+    "que-faire": {
+        "fr": "Que faire en Haute-Savoie · Loisirs 74",
+        "en": "What to do in Haute-Savoie · Loisirs 74",
+        "de": "Was tun in der Haute-Savoie · Loisirs 74",
+        "it": "Cosa fare in Haute-Savoie · Loisirs 74",
+        "es": "Qué hacer en Haute-Savoie · Loisirs 74",
+        "nl": "Wat te doen in Haute-Savoie · Loisirs 74",
+    },
+    "sensations-plein-air": {
+        "fr": "Sensations plein air · Haute-Savoie · Loisirs 74",
+        "en": "Outdoor thrills · Haute-Savoie · Loisirs 74",
+        "de": "Outdoor-Nervenkitzel · Haute-Savoie · Loisirs 74",
+        "it": "Brividi all'aria aperta · Haute-Savoie · Loisirs 74",
+        "es": "Sensaciones al aire libre · Haute-Savoie · Loisirs 74",
+        "nl": "Buitenavontuur · Haute-Savoie · Loisirs 74",
+    },
+    "sorties-detente": {
+        "fr": "Sorties & détente · Haute-Savoie · Loisirs 74",
+        "en": "Outings & relax · Haute-Savoie · Loisirs 74",
+        "de": "Ausflüge & Erholung · Haute-Savoie · Loisirs 74",
+        "it": "Uscite & relax · Haute-Savoie · Loisirs 74",
+        "es": "Salidas & relax · Haute-Savoie · Loisirs 74",
+        "nl": "Uitstapjes & ontspanning · Haute-Savoie · Loisirs 74",
+    },
+    "sport-jeux": {
+        "fr": "Sports & jeux · Haute-Savoie · Loisirs 74",
+        "en": "Sports & games · Haute-Savoie · Loisirs 74",
+        "de": "Sport & Spiele · Haute-Savoie · Loisirs 74",
+        "it": "Sport & giochi · Haute-Savoie · Loisirs 74",
+        "es": "Deportes & juegos · Haute-Savoie · Loisirs 74",
+        "nl": "Sport & spelen · Haute-Savoie · Loisirs 74",
+    },
+}
+
+OG_LOCALE_TAG = {
+    "fr": "fr_FR", "en": "en_US", "de": "de_DE",
+    "it": "it_IT", "es": "es_ES", "nl": "nl_NL",
+}
+
+
+def _load_hub_meta_descriptions():
+    p = ROOT / "data" / "hub-meta-descriptions.json"
+    if not p.exists():
+        return {}
+    return json.loads(p.read_text(encoding="utf-8"))
+
+
+def _attr_escape(s):
+    """Escape for HTML attribute (quote=True)."""
+    import html as _html
+    return _html.escape(s or "", quote=True)
+
+
+def patch_hub_head(html, canon, lang, slug, descriptions):
+    """Replace <title>, <meta name="description">, and the OG block with
+    the canonical sources of truth: HUB_TITLE constant + hub-meta-
+    descriptions.json. Idempotent.
+    """
+    import html as _html
+
+    new_title = HUB_TITLE.get(canon, {}).get(lang)
+    if not new_title:
+        return html  # safety: leave alone if no template
+
+    new_desc = descriptions.get(canon, {}).get(lang)
+
+    # 1) title
+    html = re.sub(
+        r'<title>[^<]*</title>',
+        f'<title>{_html.escape(new_title, quote=False)}</title>',
+        html, count=1,
+    )
+
+    # 2) meta description — replace the existing one (any attribute order)
+    # Idempotency: use subn to detect whether the tag WAS present (count==0
+    # means no tag found). Comparing strings would incorrectly fall through
+    # when the existing tag already has the same content as the new one,
+    # which would then duplicate the tag on every rebuild. Also collapse
+    # any pre-existing duplicate copies into one.
+    if new_desc:
+        esc = _attr_escape(new_desc)
+        new_meta = f'<meta content="{esc}" name="description"/>'
+        desc_re = re.compile(r'<meta[^>]*name="description"[^>]*/>')
+        n = len(desc_re.findall(html))
+        if n == 0:
+            # No description tag — insert right after the canonical <link>
+            html = re.sub(
+                r'(<link[^>]*rel="canonical"[^>]*/>)',
+                r'\1\n' + new_meta, html, count=1,
+            )
+        elif n == 1:
+            html = desc_re.sub(new_meta, html, count=1)
+        else:
+            # Multiple copies (drift from earlier builds) — collapse to one
+            html = desc_re.sub(new_meta, html, count=1)
+            html = desc_re.sub('', html)
+
+    # 3) OG block (og:type, og:site_name, og:locale, og:url, og:title,
+    # og:description). og:image stays where it is. Idempotent — replace
+    # an existing block of our 6 tags or insert before og:image.
+    url = f"https://loisirs74.fr/{slug}/" if lang == "fr" else f"https://loisirs74.fr/{lang}/{slug}/"
+    og_html = (
+        f'<meta property="og:type" content="website"/>\n'
+        f'<meta property="og:site_name" content="Loisirs 74"/>\n'
+        f'<meta property="og:locale" content="{OG_LOCALE_TAG[lang]}"/>\n'
+        f'<meta property="og:url" content="{url}"/>\n'
+        f'<meta property="og:title" content="{_attr_escape(new_title)}"/>\n'
+        f'<meta property="og:description" content="{_attr_escape(new_desc or "")}"/>'
+    )
+    if 'property="og:title"' in html:
+        # Replace existing 1-6 of our managed OG tags as one block
+        block_re = re.compile(
+            r'(?:<meta property="og:(?:type|site_name|locale|url|title|description)"[^>]*/>\s*){1,6}',
+            re.IGNORECASE,
+        )
+        html = block_re.sub(lambda _: og_html + '\n', html, count=1)
+    elif 'property="og:image"' in html:
+        html = re.sub(
+            r'(<meta[^>]*property="og:image"[^>]*/>)',
+            og_html + r'\n\1',
+            html, count=1,
+        )
+    else:
+        # No OG at all (FR que-faire used to be in this state) —
+        # inject everything including og:image before </head>.
+        html = html.replace(
+            '</head>',
+            og_html + '\n<meta property="og:image" content="https://loisirs74.fr/og-image.jpg"/>\n</head>',
+            1,
+        )
+    return html
+
+
 def acces_value(d):
     """Return the canonical access value for `data-acces` from JSON.
 
@@ -645,6 +873,7 @@ def main():
 
     fiches = load_all_json()
     photo_index = _load_photo_index()
+    hub_descriptions = _load_hub_meta_descriptions()
     assignments = []  # Phase 4: capture (hub, slug, type, photo, score, reason)
     # Hub names (FR + locales) of EVERY hub on disk, so we don't treat them as fiches
     all_hub_names = set()
@@ -703,6 +932,11 @@ def main():
             # only. Per-hub variant kept (lacs-plages has filt-lac, the
             # other 13 don't). Idempotent.
             new_html = patch_hub_filter_js(new_html, fr_hub, lang)
+            # Hub head: title (≤60 chars), meta description (120-160 from
+            # data/hub-meta-descriptions.json), OG block (7 tags). All
+            # idempotent. Single source of truth for descriptions = the
+            # JSON file under data/.
+            new_html = patch_hub_head(new_html, fr_hub, lang, hub_name, hub_descriptions)
             if new_html != html:
                 p.write_text(new_html, encoding="utf-8")
                 regen += 1
