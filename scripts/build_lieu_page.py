@@ -67,6 +67,19 @@ def load_static_blocks():
 CSS, JS = load_static_blocks()
 
 
+def load_transport_index():
+    """Load data/transport_index.json (built by scripts/build_transport_index.py).
+    Maps slug -> {verified, source, license, stops[]}. Empty dict if absent."""
+    p = REPO / "data" / "transport_index.json"
+    if not p.exists():
+        return {}
+    raw = json.loads(p.read_text(encoding="utf-8"))
+    return {k: v for k, v in raw.items() if k != "_meta"}
+
+
+TRANSPORT_INDEX = load_transport_index()
+
+
 # Map JSON fact keys → French labels for the facts grid
 FACT_LABELS = {
     "type": "Type",
@@ -137,6 +150,11 @@ CHROME = {
     "how_transit":     {"fr": "Transports en commun", "en": "Public transport", "de": "Öffentliche Verkehrsmittel", "it": "Trasporti pubblici", "es": "Transporte público", "nl": "Openbaar vervoer"},
     "how_bike":        {"fr": "À vélo", "en": "By bike", "de": "Mit dem Fahrrad", "it": "In bici", "es": "En bici", "nl": "Met de fiets"},
     "events_label":    {"fr": "Événements", "en": "Events", "de": "Veranstaltungen", "it": "Eventi", "es": "Eventos", "nl": "Evenementen"},
+    # Generated transit block (nearest GTFS stops). Only the labels translate —
+    # stop / operator / line names are proper nouns, kept verbatim in all langs.
+    "transit_nearest":  {"fr": "Arrêts les plus proches", "en": "Nearest stops", "de": "Nächste Haltestellen", "it": "Fermate più vicine", "es": "Paradas más cercanas", "nl": "Dichtstbijzijnde haltes"},
+    "transit_verified": {"fr": "Données transport vérifiées le", "en": "Transport data verified on", "de": "Verkehrsdaten geprüft am", "it": "Dati sui trasporti verificati il", "es": "Datos de transporte verificados el", "nl": "Vervoersgegevens geverifieerd op"},
+    "transit_source":   {"fr": "source", "en": "source", "de": "Quelle", "it": "fonte", "es": "fuente", "nl": "bron"},
     # Flip-card hints
     "tap_to_read":     {"fr": "Toucher pour lire", "en": "Tap to read", "de": "Tippen zum Lesen", "it": "Tocca per leggere", "es": "Toca para leer", "nl": "Tik om te lezen"},
     "hover_for_site":  {"fr": "Survoler pour voir le site", "en": "Hover to view site", "de": "Bewegen für Website", "it": "Passa sopra per il sito", "es": "Pasa para ver el sitio", "nl": "Hover voor de site"},
@@ -502,11 +520,20 @@ HOW_MODE = {
 }
 
 
-def how_to_block(how, name, commune):
-    """Render the 'How to get there' how-cards (locale-aware)."""
+def how_to_block(how, name, commune, lat=None, lng=None):
+    """Render the 'How to get there' how-cards (locale-aware).
+
+    The Google Maps deep-link destination uses the fiche's exact
+    `lat,lng` when available — feeding Maps the precise coordinates
+    instead of a name string it would have to geocode. Falls back to the
+    "name, commune, Haute-Savoie" query only when coordinates are null.
+    """
     if not how:
         return ""
-    q = url_q(f"{name}, {commune}, Haute-Savoie")
+    if lat is not None and lng is not None:
+        dest = f"{lat},{lng}"          # exact, no geocode guess
+    else:
+        dest = url_q(f"{name}, {commune}, Haute-Savoie")   # fallback only
     cards = []
     for key in ("car", "public_transport", "bike"):
         text = how.get(key)
@@ -517,7 +544,7 @@ def how_to_block(how, name, commune):
         icon = HOW_ICONS[key]
         cards.append(
             f'<a class="how-card" href="https://www.google.com/maps/dir/?api=1'
-            f"&destination={q}&travelmode={travelmode}" + '" '
+            f"&destination={dest}&travelmode={travelmode}" + '" '
             f'target="_blank" rel="noopener">'
             f'<div class="icon">{icon}</div>'
             f'<h3>{esc(label)}</h3>'
@@ -536,6 +563,38 @@ def how_to_block(how, name, commune):
         f'<h2 class="reveal">{T("h_how")}</h2>'
         f'<div class="how reveal" data-stagger>{"".join(cards)}</div>'
         '</div></section>'
+    )
+
+
+def transit_data_block(slug):
+    """Generated nearest-stops block from the GTFS freshness index (PART B2).
+
+    Augments — never replaces — the curated `how_to_get_there.public_transport`
+    prose rendered by how_to_block. Renders only when the index has ≥1 stop for
+    this lieu. Stop / operator / line names are proper nouns kept verbatim; only
+    the surrounding labels are localised. Carries a verified date + Etalab
+    attribution as required by the licence.
+    """
+    entry = TRANSPORT_INDEX.get(slug)
+    if not entry or not entry.get("stops"):
+        return ""
+    items = []
+    for s in entry["stops"]:
+        bits = [f'<strong>{esc(s["name"])}</strong>', esc(s["operator"])]
+        if s.get("lines"):
+            bits.append(", ".join(esc(str(line)) for line in s["lines"]))
+        bits.append(f'{int(s["distance_m"])} m')
+        items.append(f'<li>{" · ".join(bits)}</li>')
+    attribution = (
+        f'{T("transit_verified")} {esc(entry.get("verified", ""))} · '
+        f'{T("transit_source")} {esc(entry.get("source", ""))} '
+        f'({esc(entry.get("license", ""))})'
+    )
+    return (
+        '<section class="block"><div class="wrap">'
+        f'<h2 class="reveal">{T("transit_nearest")}</h2>'
+        f'<div class="sources reveal"><ul>{"".join(items)}</ul>'
+        f'<p class="caveat">{attribution}</p></div></div></section>'
     )
 
 
@@ -1229,7 +1288,9 @@ def build_page(d, lang="fr"):
     out.append(body_block(name, body_dict))
     out.append(activities_block(L_body("activities", []) or []))
     out.append(practical_block(L_body("practical_info", []) or [], name, d["commune"]))
-    out.append(how_to_block(L_body("how_to_get_there", {}) or {}, name, d["commune"]))
+    out.append(how_to_block(L_body("how_to_get_there", {}) or {}, name, d["commune"],
+                            d.get("latitude"), d.get("longitude")))
+    out.append(transit_data_block(d["slug"]))
     out.append(when_to_visit_block(L_body("when_to_visit", "") or "",
                                    L_body("events", "") or ""))
     out.append(partners_block(d))

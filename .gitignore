@@ -15,3 +15,7 @@ _site/
 # Intermediate JOB 7 translation payloads from parallel agent runs.
 # Merged into translations/<lang>.json then cleaned up.
 translations/agent_*.json
+
+# Cached GTFS zips downloaded by scripts/build_transport_index.py.
+# Re-fetched live on each run; the resolved index is data/transport_index.json.
+data/_gtfs_cache/
