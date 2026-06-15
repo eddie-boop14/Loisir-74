@@ -121,60 +121,37 @@ def _fiche_words(d):
 
 
 def pick_photo(d, photo_index, used_in_hub):
-    """Phase 4 picker. Returns (src, score, basename, reason).
+    """Hub-card photo selector.
 
-    src         — URL or '/'-prefixed path for the <img src>
-    score       — integer keyword overlap; None for real (non-generic) heros
-    basename    — filename only (for data-photo and assignments report)
-    reason      — short tag: "real URL hero" | "real local hero" |
-                  "best unused score" | "cycling — all used"
+    2026-06-15: simplified per the architecture decision — `pick_photo`
+    now ALWAYS defers to `hero_image` from the fiche JSON. The single
+    source of truth for which photo a fiche carries is
+    `scripts/pick_generique.py` → `Json/<slug>.json.hero_image`.
 
-    The rule:
-      1. If the fiche has a non-generic hero (URL or /<slug>-hero.jpg),
-         keep it. Real photos beat any picker output.
-      2. Otherwise filter the library to photos whose primary type
-         matches the fiche's type, plus the 'fallback' bucket.
-      3. Score each candidate by |fiche_words ∩ photo_keywords|.
-      4. Pick the highest score not already used in this hub.
-      5. If every candidate is used, return the highest score (cycling).
+    The previous Phase 4 description-keyword scoring + `used_in_hub`
+    diversity tracking has been removed because it silently overrode
+    `pick_generique.py`'s deliberate family routing on hub cards (a
+    re-routed fiche would show its new hero on the catalog index and
+    its own fiche page, but a different one on the hub card). That
+    contradiction is gone.
+
+    Signature kept stable (photo_index, used_in_hub still accepted) so
+    callers in `build_main_block` continue to work; both args are now
+    ignored. The returned tuple shape (src, score, basename, reason)
+    is also preserved for the assignments-report capture.
     """
     hero = (d.get("hero_image") or "").strip()
-    # Real URL hero
+    if not hero:
+        return (None, None, "", "no hero in JSON")
+    # Absolute URL hero (Wikimedia, Unsplash, etc.)
     if hero.startswith(("http://", "https://")):
-        return (hero, None, hero.rsplit("/", 1)[-1], "real URL hero")
-    # Real local hero (e.g. /<slug>-hero.jpg)
-    if hero.startswith("/") and "generique-" not in hero:
-        return (f"https://loisirs74.fr{hero}", None, hero.lstrip("/").rsplit("/", 1)[-1], "real local hero")
-
-    if not photo_index:
-        # No index → fall through to the legacy generique path. Caller
-        # will compute img_src from d.hero_image (existing behaviour).
-        return (None, None, "", "no photo-index loaded")
-
-    fiche_type = d.get("type") or ""
-    candidates = [fn for fn, meta in photo_index.items()
-                  if meta.get("type") == fiche_type or meta.get("type") == "fallback"]
-    if not candidates:
-        candidates = list(photo_index.keys())
-
-    words = _fiche_words(d)
-    scores = {fn: len(words & set(photo_index[fn].get("keywords", []))) for fn in candidates}
-    # Deterministic tie-break by filename
-    ranked = sorted(candidates, key=lambda fn: (-scores[fn], fn))
-
-    for fn in ranked:
-        if fn not in used_in_hub:
-            used_in_hub.add(fn)
-            return (f"https://loisirs74.fr/{fn}", scores[fn], fn, "best unused score")
-
-    # All candidates exhausted — RESET the pool and pick the best for
-    # THIS fiche. Cycling this way keeps per-fiche relevance while
-    # spreading repeats evenly across the hub. Cap on repeats is
-    # ceil(hub_fiches / candidate_count) per the gate spec.
-    used_in_hub.clear()
-    best = ranked[0]
-    used_in_hub.add(best)
-    return (f"https://loisirs74.fr/{best}", scores[best], best, "cycling — pool reset")
+        return (hero, None, hero.rsplit("/", 1)[-1], "json hero (url)")
+    # Local path hero ("/<slug>-hero.jpg" or "/generique-X.jpg")
+    if hero.startswith("/"):
+        return (f"https://loisirs74.fr{hero}", None,
+                hero.lstrip("/").rsplit("/", 1)[-1], "json hero (local)")
+    # Bare filename (e.g. "generique-aquatique-toboggan.jpg")
+    return (f"https://loisirs74.fr/{hero}", None, hero, "json hero (bare)")
 
 
 # ---------------------------------------------------------------------------
