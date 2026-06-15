@@ -195,6 +195,8 @@ CHROME = {
     "park_goto":        {"fr": "Y aller", "en": "Go", "de": "Hinfahren", "it": "Vai", "es": "Ir", "nl": "Erheen"},
     "park_capacity":    {"fr": "places", "en": "spaces", "de": "Plätze", "it": "posti", "es": "plazas", "nl": "plaatsen"},
     "park_verified":    {"fr": "Parkings vérifiés le", "en": "Parking checked on", "de": "Parkplätze geprüft am", "it": "Parcheggi verificati il", "es": "Aparcamientos verificados el", "nl": "Parkings geverifieerd op"},
+    # Beside-facts source link (master to-do #4): authoritative page one tap away.
+    "source_official":  {"fr": "Source officielle", "en": "Official source", "de": "Offizielle Quelle", "it": "Fonte ufficiale", "es": "Fuente oficial", "nl": "Officiële bron"},
     # Flip-card hints
     "tap_to_read":     {"fr": "Toucher pour lire", "en": "Tap to read", "de": "Tippen zum Lesen", "it": "Tocca per leggere", "es": "Toca para leer", "nl": "Tik om te lezen"},
     "hover_for_site":  {"fr": "Survoler pour voir le site", "en": "Hover to view site", "de": "Bewegen für Website", "it": "Passa sopra per il sito", "es": "Pasa para ver el sitio", "nl": "Hover voor de site"},
@@ -413,8 +415,23 @@ def _fact_label(k):
     return FACT_LABELS.get(k, k.replace("_", " ").capitalize())
 
 
-def facts_block(facts):
-    """Render the 'At a glance' grid (locale-aware)."""
+def first_source_url(d):
+    """Resolve the authoritative page for the beside-facts source link:
+    official_site_url first, else the first usable sources[] URL. Returns ""
+    when the fiche has neither (link is then omitted — never fabricated)."""
+    off = d.get("official_site_url")
+    if off:
+        return off
+    for s in d.get("sources") or []:
+        url = s.get("url") if isinstance(s, dict) else s
+        if url:
+            return url
+    return ""
+
+
+def facts_block(facts, source_url=""):
+    """Render the 'At a glance' grid (locale-aware), with an optional compact
+    'Source officielle →' link beside the panel (master to-do #4)."""
     items = []
     seen = set()
     for k in FACT_ORDER:
@@ -441,10 +458,17 @@ def facts_block(facts):
         )
     if not items:
         return ""
+    source_html = ""
+    if source_url:
+        source_html = (
+            f'<p class="fact-source reveal"><a href="{attr(source_url)}" '
+            f'target="_blank" rel="noopener">{T("source_official")} →</a></p>'
+        )
     return (
         '<section class="block"><div class="wrap"><div class="kicker reveal">'
         f"{T('k_glance')}</div>"
-        f'<div class="facts reveal" data-stagger>{"".join(items)}</div></div></section>'
+        f'<div class="facts reveal" data-stagger>{"".join(items)}</div>'
+        f'{source_html}</div></section>'
     )
 
 
@@ -558,6 +582,16 @@ HOW_MODE = {
     "public_transport": ("how_transit", "transit"),
     "bike": ("how_bike", "bicycling"),
 }
+
+
+def maps_query(d, name, commune):
+    """Maps deep-link target: the fiche's exact lat,lng when present (so Maps
+    drops a pin on the real spot instead of geocoding the name), name string as
+    fallback. Mirrors the Part-A how-card destination logic."""
+    lat, lng = d.get("latitude"), d.get("longitude")
+    if lat is not None and lng is not None:
+        return f"{lat},{lng}"
+    return url_q(f"{name}, {commune}, Haute-Savoie")
 
 
 def how_to_block(how, name, commune, lat=None, lng=None):
@@ -1045,7 +1079,6 @@ def hero_block(d):
     booking_url = d.get("booking_url") or d.get("official_site_url") or "#"
     official = d.get("official_site_url") or ""
     commune = d["commune"]
-    q = url_q(f'{name}, {commune}, Haute-Savoie, France')
 
     # Post-Phase-1: shared generics live at /img/generique/<file>; real
     # per-lieu heros at /img/<hub>/<slug>-hero.jpg. hero_image in Json/
@@ -1094,7 +1127,7 @@ def hero_block(d):
             f'<line x1="13" y1="17" x2="13" y2="19"/></svg>{T("book")}</a>'
         )
     cta_buttons.append(
-        f'<a href="https://www.google.com/maps/search/?api=1&query={q}" class="btn btn-ghost" '
+        f'<a href="https://www.google.com/maps/search/?api=1&query={maps_query(d, name, commune)}" class="btn btn-ghost" '
         'target="_blank" rel="noopener">'
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
         'stroke-linecap="round" stroke-linejoin="round">'
@@ -1133,7 +1166,6 @@ def action_bar(d):
     is_free = d.get("schema_org", {}).get("is_free", False)
     booking_url = d.get("booking_url") or d.get("official_site_url")
     official = d.get("official_site_url") or ""
-    q = url_q(f'{name}, {commune}, Haute-Savoie')
 
     actions = []
     if not is_free and booking_url:
@@ -1146,7 +1178,7 @@ def action_bar(d):
             f'<line x1="13" y1="17" x2="13" y2="19"/></svg><span>{T("book")}</span></a>'
         )
     actions.append(
-        f'<a href="https://www.google.com/maps/dir/?api=1&destination={q}" '
+        f'<a href="https://www.google.com/maps/dir/?api=1&destination={maps_query(d, name, commune)}" '
         'target="_blank" rel="noopener">'
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
         'stroke-linecap="round" stroke-linejoin="round">'
@@ -1407,7 +1439,7 @@ def build_page(d, lang="fr"):
     out.append(build_head(d))
     out.append(build_header(d))
     out.append(hero_block(d))
-    out.append(facts_block(L("facts", {}) or {}))
+    out.append(facts_block(L("facts", {}) or {}, first_source_url(d)))
     body_dict = L("body", {}) if isinstance(L("body", {}), dict) else {}
     if not body_dict:
         body_dict = {"what_is": L_body("what_is", "")}
