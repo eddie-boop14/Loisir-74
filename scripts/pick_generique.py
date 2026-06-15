@@ -45,6 +45,81 @@ def slug_pick(slug, choices):
     return choices[h % len(choices)]
 
 
+def _pool(slug, prefix, n):
+    """Return the slug's deterministic pick from `{prefix}{1..n}.jpg`,
+    filtered to files actually present on disk. Used by hero-pack
+    routing for the new buckets (plage-lac, accrobranche, canyoning,
+    reserve-zone-humide, chiens-de-traineau, alpine-coaster).
+    Returns None if no files in the pool exist."""
+    choices = [f"{prefix}{i}.jpg" for i in range(1, n + 1) if has(f"{prefix}{i}.jpg")]
+    return slug_pick(slug, choices) if choices else None
+
+
+def pick_text_override(slug, text):
+    """Cross-category text and slug rules — fire BEFORE category dispatch
+    because réserves are filed as 'sentier', mushing as 'divers' or
+    'attraction', alpine coaster as 'attraction', accrobranche sometimes
+    as 'domaine' or 'attraction', etc.
+
+    Slug pre-checks (FIRST — they are unambiguous): they short-circuit
+    text-keyword collisions like a mushing kennel sitting inside a
+    Natura 2000 area (granges-de-heidi).
+
+    Then text-keyword rules: mushing / coaster BEFORE wetland, so a
+    mushing fiche whose territory description name-drops a réserve
+    keeps the mushing image.
+    """
+    # ---- SLUG pre-checks (unambiguous) ----
+    if slug.startswith("chiens-de-traineau-"):
+        return _pool(slug, "generique-chiens-de-traineau-", 2)
+    if any(slug.startswith(p) for p in (
+        "accrobranche-", "acroparc-", "acro-aventures-",
+        "parcours-aventure-", "indiana-ventures-",
+        "chatel-accrobranche-", "cote-2000-aventure-",
+        "passy-accro-",
+    )):
+        pool = _pool(slug, "generique-accrobranche-", 12)
+        if pool:
+            return pool
+    if slug.startswith("base-de-loisirs-"):
+        # leisure base / aire de loisirs is typically lakeside in HS —
+        # plage-lac shots fit better than the generic park photo.
+        pool = _pool(slug, "generique-plage-lac-", 15)
+        if pool:
+            return pool
+
+    # ---- TEXT rules: most-specific (mushing/coaster) BEFORE broad (wetland) ----
+    # dog sledding
+    if match_any(text, ["chiens de traîneau", "chiens de traineau",
+                        "traîneau", "traineau", "mushing", "attelage de chiens"]):
+        return _pool(slug, "generique-chiens-de-traineau-", 2)
+    # alpine coaster / luge sur rails
+    if match_any(text, ["luge sur rails", "luge sur rail", "alpine coaster",
+                        "dévalkart", "devalkart", "toboggan sur rails",
+                        "débaroule", "debaroule"]):
+        return _pool(slug, "generique-alpine-coaster-", 2)
+    # accrobranche / parc aventure (cross-category text match for fiches
+    # filed as 'attraction' or 'domaine' but described as accrobranche).
+    if match_any(text, ["accrobranche", "parc accrobranche",
+                        "parc aventure", "parcours aventure",
+                        "arbre en arbre", "tyrolienne géante",
+                        "parcabout"]):
+        pool = _pool(slug, "generique-accrobranche-", 12)
+        if pool:
+            return pool
+    # wetland / nature reserve / boardwalk (broad — checked last)
+    if match_any(text, ["réserve naturelle", "reserve naturelle", "natura 2000",
+                        "marais", "roselière", "roseliere", "zone humide",
+                        "tourbière", "tourbiere"]):
+        return _pool(slug, "generique-reserve-zone-humide-", 8)
+    # vitam (multi-space leisure complex with aquaparc footprint) — the
+    # handoff calls this out specifically: route to aquatique-toboggan,
+    # not the generic park photo.
+    if "centre de loisirs multi-espaces" in text and has("generique-aquatique-toboggan.jpg"):
+        return "generique-aquatique-toboggan.jpg"
+    return None
+
+
 def fr_text(fiche):
     """Concatenated FR text used for keyword matching (lowercased)."""
     fr = (fiche.get("i18n") or {}).get("fr") or {}
@@ -243,6 +318,10 @@ def pick_attraction(slug, text):
         if has("generique-lancer-de-hache.jpg"):
             return "generique-lancer-de-hache.jpg"
 
+    # Canyoning — new pool from the hero pack
+    if match_any(text, ["canyoning", "canyon", "descente de canyon"]):
+        return _pool(slug, "generique-canyoning-", 6)
+
     # Parapente / ULM
     if match_any(text, ["parapente", "ulm", "baptême de l'air", "baptême air"]):
         choices = [v for v in ["generique-parapente-decollage.jpg",
@@ -292,14 +371,23 @@ def pick_base_nautique(slug, text):
             return "generique-barque-aviron.jpg"
     choices = [v for v in ["generique-paddle-aviron-detail.jpg",
                             "generique-barque-aviron.jpg",
-                            "generique-port-annecy.jpg"] if has(v)]
+                            "generique-port-annecy.jpg",
+                            "generique-voile-sunset-1.jpg"] if has(v)]
     return slug_pick(slug, choices) or "generique-lac.jpg"
 
 
 def pick_croisiere(slug, text):
     choices = [v for v in ["generique-croisiere.jpg",
-                            "generique-port-annecy.jpg"] if has(v)]
+                            "generique-port-annecy.jpg",
+                            "generique-voile-sunset-1.jpg"] if has(v)]
     return slug_pick(slug, choices) or "generique-lac.jpg"
+
+
+def pick_jardin(slug, text):
+    """jardin pool — includes the detente seating shot for diversity."""
+    choices = [v for v in ["generique-parc.jpg",
+                            "generique-jardin-detente-1.jpg"] if has(v)]
+    return slug_pick(slug, choices) or "generique-attraction.jpg"
 
 
 def pick_cinema(slug, text):
@@ -326,6 +414,12 @@ def pick_for_fiche(fiche, slug):
     cats = fiche.get("categories") or ([cat] if cat else [])
     text = fr_text(fiche)
 
+    # Cross-category TEXT overrides — réserves/marais are filed as sentier,
+    # mushing as divers, alpine coaster as attraction. These fire first.
+    ov = pick_text_override(slug, text)
+    if ov:
+        return ov, "text-override"
+
     chosen = None
     reason = f"category={cat!r}"
 
@@ -341,6 +435,13 @@ def pick_for_fiche(fiche, slug):
         chosen = "generique-cascade.jpg" if has("generique-cascade.jpg") else None
     elif cat == "lac":
         chosen = pick_lac(slug, text)
+        # Diversity blend: when the lac picker would return the bare
+        # generique-lac.jpg, mix in plage-lac-* shots so the same image
+        # doesn't repeat across every mountain lake card.
+        if chosen == "generique-lac.jpg":
+            blend = _pool(slug, "generique-plage-lac-", 15)
+            if blend:
+                chosen = slug_pick(slug, [chosen, blend])
     elif cat == "domaine":
         chosen = "generique-domaine.jpg" if has("generique-domaine.jpg") else None
     elif cat == "parc":
@@ -350,7 +451,7 @@ def pick_for_fiche(fiche, slug):
     elif cat == "telecabine":
         chosen = "generique-telecabine.jpg" if has("generique-telecabine.jpg") else None
     elif cat == "plage":
-        chosen = pick_plage_or_baignade(slug, text)
+        chosen = _pool(slug, "generique-plage-lac-", 15) or pick_plage_or_baignade(slug, text)
     elif cat == "aquaparc":
         chosen = pick_aquaparc(slug, text)
     elif cat == "cinema":
@@ -368,11 +469,13 @@ def pick_for_fiche(fiche, slug):
     elif cat == "croisiere":
         chosen = pick_croisiere(slug, text)
     elif cat == "accrobranche":
-        chosen = "generique-attraction.jpg"  # no variant yet — Part 2
+        chosen = _pool(slug, "generique-accrobranche-", 12) or "generique-attraction.jpg"
     elif cat == "jardin":
-        chosen = "generique-attraction.jpg"  # no variant yet — Part 2
+        chosen = pick_jardin(slug, text)
     elif cat == "wakepark":
-        chosen = "generique-attraction.jpg"  # no variant yet — Part 2
+        chosen = (_pool(slug, "generique-wakeboard-", 1)
+                  or ("generique-wakeboard.jpg" if has("generique-wakeboard.jpg")
+                      else "generique-attraction.jpg"))
     elif cat == "divers":
         chosen = "generique-attraction.jpg"
     elif cat == "attraction":
