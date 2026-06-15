@@ -55,13 +55,16 @@ def run_job1(src_dir: Path, dry_run: bool):
     already_in_place = 0
     for src_name, new_name, subject in manifest:
         target = ROOT / new_name
+        # Target-on-disk short-circuits everything: the rename has
+        # already happened (this run, or in a prior session, or the
+        # user pre-renamed before upload). No source lookup needed.
+        if target.exists():
+            already_in_place += 1
+            continue
         src = find_source(src_dir, src_name)
         needs_convert = src_name.lower().endswith(".png") and new_name.lower().endswith(".jpg")
         if not src:
             missing.append((src_name, new_name, subject))
-            continue
-        if target.exists():
-            already_in_place += 1
             continue
         if dry_run:
             print(f"  (dry) {src_name} → {new_name}  ({'convert' if needs_convert else 'copy'})")
