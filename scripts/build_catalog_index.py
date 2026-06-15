@@ -29,17 +29,22 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def is_real(hero):
     """A hero is 'real' only when:
     - it's an external URL (Wikimedia/Commons etc.), OR
-    - it's a local /<slug>-hero.jpg AND the file actually exists on disk.
-    Generic placeholders (/generique-*.jpg) and broken local refs both → False.
+    - it's a local per-fiche photo (/img/<hub>/<slug>-hero.jpg or
+      /<slug>-hero.jpg) AND the file actually exists on disk.
+    Generic placeholders (generique-*.jpg) and broken local refs both → False.
+
+    2026-06-15: local images now live under /img/<hub>/. Both the legacy
+    leading-slash format and the new /img/-prefixed format resolve via
+    `lstrip("/")` + path-exists check, so this function works for both.
     """
     if not hero:
         return False
     if hero.startswith(("http://", "https://")):
         return True
     name = hero.lstrip("/")
-    if name.startswith("generique-"):
+    basename = name.rsplit("/", 1)[-1]
+    if basename.startswith("generique-"):
         return False
-    # Local file path — check existence
     return os.path.exists(os.path.join(ROOT, name))
 
 

@@ -26,8 +26,84 @@ TODAY = datetime.date.today().isoformat()
 
 
 def variants_on_disk():
-    """Return the set of `generique-*.jpg` filenames at repo root."""
-    return {p.name for p in ROOT.glob("generique-*.jpg")}
+    """Return the set of `generique-*.jpg` basenames anywhere under img/.
+
+    Post-2026-06-15 migration: every local image lives under
+    /img/<hub>/<filename>. Glob recursively + dedup by basename so the
+    picker still keys on plain filenames (it doesn't care which hub a
+    variant lives in — pick_for_fiche's primary-hub computation later
+    figures that out at write time).
+    """
+    return {p.name for p in (ROOT / "img").rglob("generique-*.jpg")}
+
+
+# Fiche category → primary hub. Mirrors the table in
+# scripts/migrate_to_hub_folders.py and scripts/build_hubs.py HUB_FILTERS.
+CATEGORY_TO_PRIMARY_HUB = {
+    "cascade":       "cascades",
+    "chateau":       "chateaux",
+    "musee":         "musees",
+    "point-de-vue":  "points-de-vue",
+    "sentier":       "sentiers",
+    "telecabine":    "telecabines",
+    "voie-verte":    "voies-vertes",
+    "lac":           "lacs-plages",
+    "plage":         "lacs-plages",
+    "domaine":       "bases-de-loisirs",
+    "parc":          "bases-de-loisirs",
+    "jardin":        "parcs-jardins",
+    "base-nautique": "baignade-nautisme",
+    "wakepark":      "baignade-nautisme",
+    "accrobranche":  "bases-de-loisirs",
+    "aquaparc":      "baignade-nautisme",
+    "croisiere":     "baignade-nautisme",
+    "cinema":        "sorties-detente",
+    "casino":        "sorties-detente",
+    "bowling":       "sport-jeux",
+    "karting":       "sport-jeux",
+    "patinoire":     "sport-jeux",
+    "attraction":    "que-faire",
+    "divers":        "que-faire",
+}
+
+
+def _primary_hub_for_fiche(d):
+    """Return the canonical hub folder for this fiche's local images.
+    Falls back to 'que-faire' (catch-all) if the category is unknown.
+    """
+    cat = (d.get("category") or "").strip()
+    return CATEGORY_TO_PRIMARY_HUB.get(cat, "que-faire")
+
+
+def _hubs_for_image(basename):
+    """Lookup the set of hubs where `basename` currently lives on disk.
+    Reads data/image-hub-map.json (written by migrate_to_hub_folders.py).
+    Returns empty list if the file isn't in the map yet.
+    """
+    p = ROOT / "data" / "image-hub-map.json"
+    if not _hubs_for_image._cache and p.exists():
+        _hubs_for_image._cache.update(json.loads(p.read_text(encoding="utf-8")))
+    return _hubs_for_image._cache.get(basename, [])
+
+_hubs_for_image._cache = {}
+
+
+def _path_for(fiche, chosen):
+    """Build the full /img/<hub>/<chosen> path for a fiche+variant.
+
+    Preference order for the hub folder:
+      1. The fiche's primary hub if the variant also lives there
+         (avoids cross-hub references when possible).
+      2. The first hub in the variant's hub list (deterministic).
+      3. Fall back to /img/que-faire/ if the map has no entry.
+    """
+    preferred = _primary_hub_for_fiche(fiche)
+    hubs = _hubs_for_image(chosen)
+    if hubs:
+        if preferred in hubs:
+            return f"/img/{preferred}/{chosen}"
+        return f"/img/{hubs[0]}/{chosen}"
+    return f"/img/{preferred}/{chosen}"
 
 
 VARIANTS = variants_on_disk()
@@ -444,14 +520,18 @@ def pick_for_fiche(fiche, slug):
     """Return (chosen_variant, reason). Returns (None, reason) if real photo."""
     img = fiche.get("hero_image") or ""
 
-    # Normalize: strip leading slash so "/generique-X.jpg" matches "generique-X.jpg"
+    # Normalize: strip leading slash + take basename. Post-2026-06-15
+    # the path is "/img/<hub>/<file>", but we still want to recognise a
+    # legacy bare "generique-X.jpg" as a generic. Detection runs on the
+    # basename, not the full path.
     normalized = img.lstrip("/") if img else ""
+    basename = normalized.rsplit("/", 1)[-1] if normalized else ""
 
     # Real photo URL — never touch
     if img.startswith(("http://", "https://")) or img.startswith("//"):
         return None, "real-photo-url"
     # Local non-generique path — keep only if the file actually exists on disk
-    if normalized and not normalized.startswith("generique-"):
+    if basename and not basename.startswith("generique-"):
         if (ROOT / normalized).exists():
             return None, "real-photo-path"
         # Missing local hero — re-pick a generique fallback so the page doesn't 404
@@ -578,13 +658,16 @@ def main():
         diversity[chosen] = diversity.get(chosen, 0) + 1
         if chosen == "generique-attraction.jpg" and "Part 2" in reason:
             flagged.append((slug, (d.get("i18n", {}).get("fr") or {}).get("facts", {}).get("type", "")))
-        cur = (d.get("hero_image") or "").lstrip("/")
-        if cur == chosen:
+        # Compose the canonical /img/<hub>/<file> path. The hub is the
+        # fiche's primary hub when the variant lives there, otherwise the
+        # first hub in the variant's hub list. See _path_for() for the
+        # selection logic.
+        new_hero = _path_for(d, chosen)
+        cur = d.get("hero_image") or ""
+        if cur == new_hero:
             no_change += 1
             continue
-        # Write WITHOUT leading slash so the renderer's data-generique branch
-        # (build_lieu_page.py:865) lights up.
-        d["hero_image"] = chosen
+        d["hero_image"] = new_hero
         rl = d.setdefault("research_log", [])
         # dedupe within same day
         already = any(
@@ -597,7 +680,7 @@ def main():
             rl.append({
                 "date": TODAY,
                 "by": "scripts/pick_generique.py",
-                "note": f"hero_image → {chosen} ({reason}).",
+                "note": f"hero_image → {new_hero} ({reason}).",
             })
         Path(fp).write_text(
             json.dumps(d, ensure_ascii=False, indent=2) + "\n",
