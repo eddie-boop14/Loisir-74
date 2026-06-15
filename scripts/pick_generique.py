@@ -55,21 +55,21 @@ def _pool(slug, prefix, n):
     return slug_pick(slug, choices) if choices else None
 
 
-def pick_text_override(slug, text):
+def pick_text_override(slug, text, cat=""):
     """Cross-category text and slug rules — fire BEFORE category dispatch
-    because réserves are filed as 'sentier', mushing as 'divers' or
-    'attraction', alpine coaster as 'attraction', accrobranche sometimes
-    as 'domaine' or 'attraction', etc.
+    so fiches MIS-classified (a parc aventure filed as 'domaine', a
+    dog-sled kennel filed as 'attraction', a réserve sentier filed as
+    'sentier' but legitimately wetland) reach the right pool.
 
-    Slug pre-checks (FIRST — they are unambiguous): they short-circuit
-    text-keyword collisions like a mushing kennel sitting inside a
-    Natura 2000 area (granges-de-heidi).
+    Slug pre-checks (FIRST — unambiguous): the slug alone identifies
+    the family.
 
-    Then text-keyword rules: mushing / coaster BEFORE wetland, so a
-    mushing fiche whose territory description name-drops a réserve
-    keeps the mushing image.
+    Text-keyword rules: gated to cat ∈ {attraction, divers, ''} so a
+    well-categorised fiche keeps its category-branch routing — a plage
+    that name-drops an adjacent réserve doesn't get a wetland image,
+    and a sentier through a réserve stays on the sentier family.
     """
-    # ---- SLUG pre-checks (unambiguous) ----
+    # ---- SLUG pre-checks (always run) ----
     if slug.startswith("chiens-de-traineau-"):
         return _pool(slug, "generique-chiens-de-traineau-", 2)
     if any(slug.startswith(p) for p in (
@@ -82,24 +82,28 @@ def pick_text_override(slug, text):
         if pool:
             return pool
     if slug.startswith("base-de-loisirs-"):
-        # leisure base / aire de loisirs is typically lakeside in HS —
-        # plage-lac shots fit better than the generic park photo.
         pool = _pool(slug, "generique-plage-lac-", 15)
         if pool:
             return pool
+    # Vitam Neydens — multi-space leisure complex (aquaparc + spa +
+    # sport). The handoff calls this out specifically: aquatique-
+    # toboggan, not the generic park photo. Slug pre-check ensures the
+    # rule fires regardless of category (filed as 'parc' upstream).
+    if slug == "vitam-neydens" and has("generique-aquatique-toboggan.jpg"):
+        return "generique-aquatique-toboggan.jpg"
 
-    # ---- TEXT rules: most-specific (mushing/coaster) BEFORE broad (wetland) ----
-    # dog sledding
+    # ---- TEXT rules — only when the category is ambiguous ----
+    if cat not in ("", None, "attraction", "divers"):
+        return None
+
+    # most-specific → broad
     if match_any(text, ["chiens de traîneau", "chiens de traineau",
                         "traîneau", "traineau", "mushing", "attelage de chiens"]):
         return _pool(slug, "generique-chiens-de-traineau-", 2)
-    # alpine coaster / luge sur rails
     if match_any(text, ["luge sur rails", "luge sur rail", "alpine coaster",
                         "dévalkart", "devalkart", "toboggan sur rails",
                         "débaroule", "debaroule"]):
         return _pool(slug, "generique-alpine-coaster-", 2)
-    # accrobranche / parc aventure (cross-category text match for fiches
-    # filed as 'attraction' or 'domaine' but described as accrobranche).
     if match_any(text, ["accrobranche", "parc accrobranche",
                         "parc aventure", "parcours aventure",
                         "arbre en arbre", "tyrolienne géante",
@@ -107,21 +111,24 @@ def pick_text_override(slug, text):
         pool = _pool(slug, "generique-accrobranche-", 12)
         if pool:
             return pool
-    # wetland / nature reserve / boardwalk (broad — checked last)
     if match_any(text, ["réserve naturelle", "reserve naturelle", "natura 2000",
                         "marais", "roselière", "roseliere", "zone humide",
                         "tourbière", "tourbiere"]):
         return _pool(slug, "generique-reserve-zone-humide-", 8)
-    # vitam (multi-space leisure complex with aquaparc footprint) — the
-    # handoff calls this out specifically: route to aquatique-toboggan,
-    # not the generic park photo.
     if "centre de loisirs multi-espaces" in text and has("generique-aquatique-toboggan.jpg"):
         return "generique-aquatique-toboggan.jpg"
     return None
 
 
 def fr_text(fiche):
-    """Concatenated FR text used for keyword matching (lowercased)."""
+    """Concatenated FR prose used for MOOD/SEASON sub-pickers only.
+
+    DO NOT use this for theme-family selection — it includes body.what_is,
+    hero.lead, etc., which mention OTHER activities the venue happens to
+    name-drop (réserve naturelle on a via ferrata page, spa on a jardin
+    page, escalade on a trampoline page, …). That contamination is what
+    the prose-keyword bug was. Family decisions must use type_text().
+    """
     fr = (fiche.get("i18n") or {}).get("fr") or {}
     body = fr.get("body") or {}
     facts = fr.get("facts") or {}
@@ -137,16 +144,38 @@ def fr_text(fiche):
     return " ".join(parts).lower()
 
 
+def type_text(fiche):
+    """Family-selection text — facts.type + name only.
+
+    The keyword-match blob used for THEME decisions (override pools,
+    category-branch routing, sub-family choice). Excludes body prose
+    because the prose mentions other activities the venue advertises
+    or sits next to — which would route the hero to the wrong family.
+    """
+    fr = (fiche.get("i18n") or {}).get("fr") or {}
+    facts = fr.get("facts") or {}
+    return " ".join([
+        str(facts.get("type") or ""),
+        str(fr.get("name") or ""),
+    ]).lower()
+
+
 def match_any(text, words):
     return any(w in text for w in words)
 
 
-def pick_sentier(slug, text):
-    if match_any(text, ["hiver", "neige", "raquette", "ski de fond"]):
+def pick_sentier(slug, text, flavour=""):
+    """Sentier mood sub-picker. Family is already 'sentier' (correct).
+    All branches here switch MOOD/SEASON only — winter snow vs autumn
+    foliage vs alpine ridge vs forest. The handoff allows prose
+    (flavour) for season hints because season doesn't switch family.
+    Match on flavour when present, fall back to text."""
+    blob = (flavour + " " + text) if flavour else text
+    if match_any(blob, ["hiver", "neige", "raquette", "ski de fond"]):
         if has("generique-sentier-hiver-neige.jpg"):
             return "generique-sentier-hiver-neige.jpg"
-    if match_any(text, ["automne", "mélèze", "melèze", "couleur"]):
-        if has("generique-sentier-melezes-automne.jpg") and match_any(text, ["mélèze", "melèze"]):
+    if match_any(blob, ["automne", "mélèze", "melèze", "couleur"]):
+        if has("generique-sentier-melezes-automne.jpg") and match_any(blob, ["mélèze", "melèze"]):
             return "generique-sentier-melezes-automne.jpg"
         for f in ("generique-sentier-automne-rouge.jpg", "generique-sentier-automne-orange.jpg"):
             if has(f):
@@ -155,19 +184,19 @@ def pick_sentier(slug, text):
                                 "generique-sentier-automne-orange.jpg"]
                     if has(x)
                 ])
-    if match_any(text, ["arête", "arete"]):
+    if match_any(blob, ["arête", "arete"]):
         if has("generique-sentier-arete-alpine.jpg"):
             return "generique-sentier-arete-alpine.jpg"
-    if match_any(text, ["sommet", "panorama", "vue", "belvédère", "belvedere"]):
+    if match_any(blob, ["sommet", "panorama", "vue", "belvédère", "belvedere"]):
         if has("generique-sentier-sommet-panorama.jpg"):
             return "generique-sentier-sommet-panorama.jpg"
-    if match_any(text, ["alpin", "alpine", "haute montagne", "altitude"]):
+    if match_any(blob, ["alpin", "alpine", "haute montagne", "altitude"]):
         if has("generique-sentier-foret-alpine.jpg"):
             return "generique-sentier-foret-alpine.jpg"
-    if match_any(text, ["brouillard", "brume", "fog"]):
+    if match_any(blob, ["brouillard", "brume", "fog"]):
         if has("generique-sentier-fog.jpg"):
             return "generique-sentier-fog.jpg"
-    if match_any(text, ["forêt", "foret", "bois", "sapin", "épicéa", "epicea"]):
+    if match_any(blob, ["forêt", "foret", "bois", "sapin", "épicéa", "epicea"]):
         if has("generique-sentier-foret.jpg"):
             return "generique-sentier-foret.jpg"
     return "generique-sentier-foret.jpg" if has("generique-sentier-foret.jpg") else "generique-sentier.jpg"
@@ -219,10 +248,13 @@ def pick_chateau(slug, text):
     return slug_pick(slug, choices) or "generique-chateau.jpg"
 
 
-def pick_lac(slug, text):
+def pick_lac(slug, text, flavour=""):
+    """Family already 'lac'. Sunset vs default is a mood choice — prose
+    (flavour) is allowed for that sub-pick."""
     choices = [v for v in ["generique-lac.jpg", "generique-lac-coucher-soleil.jpg"]
                if has(v)]
-    if match_any(text, ["coucher", "couchant", "crépuscule", "crepuscule"]):
+    blob = (flavour + " " + text) if flavour else text
+    if match_any(blob, ["coucher", "couchant", "crépuscule", "crepuscule"]):
         if has("generique-lac-coucher-soleil.jpg"):
             return "generique-lac-coucher-soleil.jpg"
     return slug_pick(slug, choices) or "generique-lac.jpg"
@@ -322,6 +354,11 @@ def pick_attraction(slug, text):
     if match_any(text, ["canyoning", "canyon", "descente de canyon"]):
         return _pool(slug, "generique-canyoning-", 6)
 
+    # Montgolfière / aérostation — must come BEFORE parapente because
+    # both can hit "baptême de l'air" in facts.type.
+    if match_any(text, ["montgolf", "aérostation", "aerostation", "ballon captif"]):
+        return "generique-montgolfiere.jpg" if has("generique-montgolfiere.jpg") else None
+
     # Parapente / ULM
     if match_any(text, ["parapente", "ulm", "baptême de l'air", "baptême air"]):
         choices = [v for v in ["generique-parapente-decollage.jpg",
@@ -343,6 +380,15 @@ def pick_attraction(slug, text):
                                 "generique-spa-jardin-tropical.jpg",
                                 "generique-thermes-hammam.jpg"] if has(v)]
         return slug_pick(slug, choices)
+
+    # Jardin remarquable / jardin botanique — cross-bucket for fiches
+    # filed as 'attraction' with a clear jardin facts.type
+    if match_any(text, ["jardin remarquable", "jardin botanique",
+                        "arboretum", "jardin alpin"]):
+        choices = [v for v in ["generique-parc.jpg",
+                                "generique-jardin-detente-1.jpg"] if has(v)]
+        if choices:
+            return slug_pick(slug, choices)
 
     # Family-flavoured outdoor (ferme pédagogique, jeux de piste familiaux)
     if match_any(text, ["ferme pédagogique", "ferme pedagogique",
@@ -412,11 +458,19 @@ def pick_for_fiche(fiche, slug):
 
     cat = (fiche.get("category") or "").strip()
     cats = fiche.get("categories") or ([cat] if cat else [])
-    text = fr_text(fiche)
+    # text  = family-selection (facts.type + name only — no body prose)
+    # flavour = MOOD/SEASON variation inside an already-correct family.
+    # Family deciders ALWAYS receive text. flavour goes only to the few
+    # sub-pickers where mood is the choice (pick_sentier season,
+    # plage/lac sunset-vs-misty).
+    text    = type_text(fiche)
+    flavour = fr_text(fiche)
 
-    # Cross-category TEXT overrides — réserves/marais are filed as sentier,
-    # mushing as divers, alpine coaster as attraction. These fire first.
-    ov = pick_text_override(slug, text)
+    # Cross-category overrides — réserves/marais are filed as sentier,
+    # mushing as divers/attraction, alpine coaster as attraction.
+    # type_text-gated now, so prose mentions of "réserve naturelle"
+    # on a via ferrata page no longer fire the wetland pool.
+    ov = pick_text_override(slug, text, cat)
     if ov:
         return ov, "text-override"
 
@@ -424,7 +478,7 @@ def pick_for_fiche(fiche, slug):
     reason = f"category={cat!r}"
 
     if cat == "sentier":
-        chosen = pick_sentier(slug, text)
+        chosen = pick_sentier(slug, text, flavour)
     elif cat == "voie-verte":
         chosen = pick_voie_verte(slug, text)
     elif cat == "musee":
@@ -434,7 +488,7 @@ def pick_for_fiche(fiche, slug):
     elif cat == "cascade":
         chosen = "generique-cascade.jpg" if has("generique-cascade.jpg") else None
     elif cat == "lac":
-        chosen = pick_lac(slug, text)
+        chosen = pick_lac(slug, text, flavour)
         # Diversity blend: when the lac picker would return the bare
         # generique-lac.jpg, mix in plage-lac-* shots so the same image
         # doesn't repeat across every mountain lake card.
@@ -477,14 +531,22 @@ def pick_for_fiche(fiche, slug):
                   or ("generique-wakeboard.jpg" if has("generique-wakeboard.jpg")
                       else "generique-attraction.jpg"))
     elif cat == "divers":
-        chosen = "generique-attraction.jpg"
+        # divers is a residual bucket; route through pick_attraction so
+        # spa/thermes/centre-aquatique with a clear facts.type still
+        # hit their sub-family rule.
+        chosen = pick_attraction(slug, text)
+        if chosen is None:
+            chosen = "generique-attraction.jpg"
+            reason += " · divers unmatched"
+        else:
+            reason += " · type/name match"
     elif cat == "attraction":
         chosen = pick_attraction(slug, text)
         if chosen is None:
             chosen = "generique-attraction.jpg"
             reason += " · unmatched-attraction → flagged for Part 2"
         else:
-            reason += f" · facts/body match"
+            reason += f" · type/name match"
     else:
         # unknown category — keep attraction fallback
         chosen = "generique-attraction.jpg"
