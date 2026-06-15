@@ -87,6 +87,23 @@ def rebuild_hubs():
     print("\n".join(lines[-8:]) if lines else "(hubs rebuilt)")
 
 
+def rebuild_communes():
+    """Render the commune-layer pages and (re)inject the reciprocal "À
+    <Commune>" backlinks onto the aggregated fiches. MUST run after fiche
+    rendering (which wipes the marker-injected backlinks) and BEFORE the
+    reachability gate — otherwise the commune pages read as orphans and the
+    Netlify build (command = build_all.py) fails, freezing the deploy."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "build_communes.py")],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("build_communes failed")
+    lines = out.stdout.strip().split("\n")
+    print("\n".join(lines[-3:]) if lines else "(communes rebuilt)")
+
+
 def status_gate():
     """JOB 6 gate: every fiche must have an explicit status (draft|verified|
     published). Print the distribution. Block if any fiche has status=None."""
@@ -304,6 +321,7 @@ def main():
     run("render fiche pages", render_all_fiches)
     run("rebuild catalog index", rebuild_catalog_index)
     run("regenerate hubs + homepage nav", rebuild_hubs)
+    run("render commune pages + reciprocal backlinks", rebuild_communes)
     run("placement gate vs baseline", placement_gate)
     run("card-diff gate vs snapshot", card_diff_gate)
     run("reachability gate (strict)", reachability_gate)
