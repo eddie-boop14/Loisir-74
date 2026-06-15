@@ -210,17 +210,140 @@ def rebuild_sitemap(groups, multilingual):
     def sort_key(u):
         return (u.count("/"), u)
 
-    # GSC freshness signal — Google uses <lastmod> to prioritise recrawl
-    # of pages that have changed. Today's date is a safe default for a
-    # site that's regenerated frequently; per-URL granularity would
-    # require a per-page timestamp source we don't currently keep.
-    import datetime
-    lastmod = datetime.date.today().isoformat()
+    # Per-URL <lastmod> from the git commit date of each URL's underlying
+    # SOURCE — never a uniform stamp. Source mapping:
+    #   /<slug>           → Json/<slug>.json
+    #   /<lang>/<slug>    → Json/<slug>.json   (all locales share JSON)
+    #   /<hub>/           → max(commit dates of fiches in that hub,
+    #                            scripts/build_hubs.py)
+    #   /<lang>/<hub>/    → same
+    #   /, /<lang>/       → scripts/build_homepage.py + content sources
+    # Anything we can't resolve cleanly falls back to the file mtime of
+    # the rendered HTML.
+    import datetime, subprocess, json as _json
+    from collections import defaultdict
+
+    def _git_dates(paths):
+        """Return {path: 'YYYY-MM-DD'} for each path's most recent commit."""
+        if not paths:
+            return {}
+        out = {}
+        try:
+            res = subprocess.run(
+                ["git", "log", "--name-only", "--format=COMMIT %cs", "--"] + list(paths),
+                cwd=str(ROOT), capture_output=True, text=True, check=True,
+            )
+        except Exception:
+            return {p: None for p in paths}
+        current = None
+        for line in res.stdout.splitlines():
+            if line.startswith("COMMIT "):
+                current = line[len("COMMIT "):].strip()
+            elif line.strip() and current:
+                out.setdefault(line.strip(), current)
+        return out
+
+    # Source-paths: every Json/ file + the two build scripts we treat as
+    # "structural source" for hubs/homepages.
+    json_paths = [str(p.relative_to(ROOT)) for p in (ROOT / "Json").glob("*.json")]
+    structural_paths = [
+        "scripts/build_hubs.py",
+        "scripts/build_homepage.py",
+        "scripts/build_all_locales.py",
+    ]
+    date_map = _git_dates(json_paths + structural_paths)
+
+    # Build hub → list of fiche source paths to take the max over.
+    HUB_FILTERS_CAT = {
+        "cascades":         ("cascade",),
+        "chateaux":         ("chateau",),
+        "musees":           ("musee",),
+        "points-de-vue":    ("point-de-vue",),
+        "sentiers":         ("sentier",),
+        "telecabines":      ("telecabine",),
+        "voies-vertes":     ("voie-verte",),
+        "lacs-plages":      ("lac","plage"),
+        "bases-de-loisirs": ("domaine","parc","base-nautique","wakepark","accrobranche"),
+        "parcs-jardins":    ("parc","jardin"),
+        "baignade-nautisme":("aquaparc","croisiere","base-nautique","wakepark"),
+        "sorties-detente":  ("cinema","casino"),
+        "sport-jeux":       ("bowling","karting","patinoire"),
+    }
+    HUB_SLUGS_PER_LANG = {
+        "cascades":{"fr":"cascades","en":"waterfalls","de":"wasserfaelle","it":"cascate","es":"cascadas","nl":"watervallen"},
+        "chateaux":{"fr":"chateaux","en":"castles","de":"schloesser","it":"castelli","es":"castillos","nl":"kastelen"},
+        "musees":{"fr":"musees","en":"museums","de":"museen","it":"musei","es":"museos","nl":"musea"},
+        "points-de-vue":{"fr":"points-de-vue","en":"viewpoints","de":"aussichtspunkte","it":"punti-panoramici","es":"miradores","nl":"uitzichtpunten"},
+        "sentiers":{"fr":"sentiers","en":"trails","de":"wanderwege","it":"sentieri","es":"senderos","nl":"wandelpaden"},
+        "telecabines":{"fr":"telecabines","en":"cable-cars","de":"seilbahnen","it":"funivie","es":"telefericos","nl":"kabelbanen"},
+        "voies-vertes":{"fr":"voies-vertes","en":"greenways","de":"radwege","it":"vie-verdi","es":"vias-verdes","nl":"fietsroutes"},
+        "lacs-plages":{"fr":"lacs-plages","en":"lakes","de":"seen","it":"laghi","es":"lagos","nl":"meren"},
+        "bases-de-loisirs":{"fr":"bases-de-loisirs","en":"leisure-parks","de":"freizeitparks","it":"aree-ricreative","es":"areas-de-ocio","nl":"recreatieparken"},
+        "parcs-jardins":{"fr":"parcs-jardins","en":"parks-gardens","de":"parks-gaerten","it":"parchi-giardini","es":"parques-jardines","nl":"parken-tuinen"},
+        "baignade-nautisme":{"fr":"baignade-nautisme","en":"swimming-watersports","de":"baden-wassersport","it":"nuoto-sport-acquatici","es":"bano-deportes-acuaticos","nl":"zwemmen-watersport"},
+        "sorties-detente":{"fr":"sorties-detente","en":"outings-relax","de":"ausfluege-erholung","it":"uscite-relax","es":"salidas-relax","nl":"uitstapjes-ontspanning"},
+        "sport-jeux":{"fr":"sport-jeux","en":"sport-games","de":"sport-spiele","it":"sport-giochi","es":"deporte-juegos","nl":"sport-spelen"},
+        "que-faire":{"fr":"que-faire","en":"what-to-do","de":"was-unternehmen","it":"cosa-fare","es":"que-hacer","nl":"wat-te-doen"},
+        "sensations-plein-air":{"fr":"sensations-plein-air","en":"outdoor-thrills","de":"outdoor-nervenkitzel","it":"brividi-aria-aperta","es":"sensaciones-aire-libre","nl":"buitenavontuur"},
+    }
+
+    # Pre-compute hub URL → date
+    hub_date = {}
+    for canon, cats in HUB_FILTERS_CAT.items():
+        # collect fiche slugs matching this hub
+        member_dates = []
+        for jp in json_paths:
+            try:
+                d = _json.loads((ROOT / jp).read_text(encoding="utf-8"))
+            except Exception:
+                continue
+            if d.get("status") == "draft": continue
+            if d.get("category") in cats:
+                dt = date_map.get(jp)
+                if dt: member_dates.append(dt)
+        member_dates.append(date_map.get("scripts/build_hubs.py") or "")
+        hub_max = max(d for d in member_dates if d) if any(member_dates) else None
+        for lang, slug in HUB_SLUGS_PER_LANG[canon].items():
+            url = f"https://loisirs74.fr/{slug}/" if lang == "fr" else f"https://loisirs74.fr/{lang}/{slug}/"
+            hub_date[url] = hub_max
+    # Curated hubs (que-faire, sensations-plein-air): take build_hubs date as proxy
+    for canon in ("que-faire", "sensations-plein-air"):
+        for lang, slug in HUB_SLUGS_PER_LANG[canon].items():
+            url = f"https://loisirs74.fr/{slug}/" if lang == "fr" else f"https://loisirs74.fr/{lang}/{slug}/"
+            hub_date[url] = date_map.get("scripts/build_hubs.py")
+
+    homepage_dates = [date_map.get(p) for p in structural_paths]
+    homepage_max = max(d for d in homepage_dates if d) if any(homepage_dates) else None
+
+    def lastmod_for(u):
+        # Strip protocol/host
+        tail = u.replace("https://loisirs74.fr", "").lstrip("/").rstrip("/")
+        # Homepage
+        if tail == "" or tail in {"en","de","it","es","nl"}:
+            return homepage_max or datetime.date.today().isoformat()
+        # Hub index (any locale)
+        if u in hub_date and hub_date[u]:
+            return hub_date[u]
+        # Fiche: /<slug> or /<lang>/<slug>
+        parts = tail.split("/")
+        if parts[0] in ("en","de","it","es","nl") and len(parts) >= 2:
+            slug = parts[1]
+        else:
+            slug = parts[0]
+        src = f"Json/{slug}.json"
+        if src in date_map:
+            return date_map[src]
+        # Fallback: rendered HTML mtime
+        f = url_to_file(u)
+        if f.exists():
+            return datetime.date.fromtimestamp(f.stat().st_mtime).isoformat()
+        return datetime.date.today().isoformat()
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
              'xmlns:xhtml="http://www.w3.org/1999/xhtml">']
     for u in sorted(all_urls, key=sort_key):
+        lm = lastmod_for(u)
         g = url_group.get(u)
         if g and len(g["pages"]) > 1:
             alts = "".join(
@@ -228,9 +351,9 @@ def rebuild_sitemap(groups, multilingual):
                 for l in (["fr"] + LANGS) if l in g["pages"]
             )
             alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{g["fr_url"]}"/>'
-            lines.append(f"  <url><loc>{u}</loc><lastmod>{lastmod}</lastmod><changefreq>weekly</changefreq>{alts}</url>")
+            lines.append(f"  <url><loc>{u}</loc><lastmod>{lm}</lastmod><changefreq>weekly</changefreq>{alts}</url>")
         else:
-            lines.append(f"  <url><loc>{u}</loc><lastmod>{lastmod}</lastmod><changefreq>weekly</changefreq></url>")
+            lines.append(f"  <url><loc>{u}</loc><lastmod>{lm}</lastmod><changefreq>weekly</changefreq></url>")
     lines.append("</urlset>")
     out = "\n".join(lines) + "\n"
     (ROOT / "sitemap.xml").write_text(out, encoding="utf-8")
