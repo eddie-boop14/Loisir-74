@@ -91,8 +91,22 @@ def load_network_fares():
     return raw.get("operators", {}) or {}
 
 
+def load_parking_index():
+    """Load data/parking_index.json (built by scripts/build_parking_index.py).
+    Returns (index, attribution) where index maps slug -> {verified, source,
+    license, parkings[]}. Empty if absent."""
+    p = REPO / "data" / "parking_index.json"
+    if not p.exists():
+        return {}, ""
+    raw = json.loads(p.read_text(encoding="utf-8"))
+    attrib = (raw.get("_meta", {}) or {}).get("attribution", "")
+    index = {k: v for k, v in raw.items() if k != "_meta"}
+    return index, attrib
+
+
 TRANSPORT_INDEX, TRANSPORT_OPERATORS = load_transport_index()
 NETWORK_FARES = load_network_fares()
+PARKING_INDEX, PARKING_ATTRIB = load_parking_index()
 
 
 # Map JSON fact keys → French labels for the facts grid
@@ -172,6 +186,15 @@ CHROME = {
     "transit_source":   {"fr": "source", "en": "source", "de": "Quelle", "it": "fonte", "es": "fuente", "nl": "bron"},
     "transit_official": {"fr": "Tarifs &amp; horaires officiels", "en": "Official fares &amp; timetables", "de": "Offizielle Tarife &amp; Fahrpläne", "it": "Tariffe e orari ufficiali", "es": "Tarifas y horarios oficiales", "nl": "Officiële tarieven &amp; dienstregeling"},
     "transit_fare":     {"fr": "Tarif", "en": "Fare", "de": "Tarif", "it": "Tariffa", "es": "Tarifa", "nl": "Tarief"},
+    # Parking block (nearest OSM lots + honest tri-state fee badge). Labels only.
+    "park_title":       {"fr": "Stationnement", "en": "Parking", "de": "Parken", "it": "Parcheggio", "es": "Aparcamiento", "nl": "Parkeren"},
+    "park_free":        {"fr": "Gratuit", "en": "Free", "de": "Kostenlos", "it": "Gratis", "es": "Gratis", "nl": "Gratis"},
+    "park_paid":        {"fr": "Payant", "en": "Paid", "de": "Kostenpflichtig", "it": "A pagamento", "es": "De pago", "nl": "Betaald"},
+    "park_conditional": {"fr": "Sous conditions", "en": "Conditional", "de": "Bedingt", "it": "Condizionato", "es": "Con condiciones", "nl": "Voorwaardelijk"},
+    "park_unknown":     {"fr": "À vérifier", "en": "To check", "de": "Zu prüfen", "it": "Da verificare", "es": "Por confirmar", "nl": "Te controleren"},
+    "park_goto":        {"fr": "Y aller", "en": "Go", "de": "Hinfahren", "it": "Vai", "es": "Ir", "nl": "Erheen"},
+    "park_capacity":    {"fr": "places", "en": "spaces", "de": "Plätze", "it": "posti", "es": "plazas", "nl": "plaatsen"},
+    "park_verified":    {"fr": "Parkings vérifiés le", "en": "Parking checked on", "de": "Parkplätze geprüft am", "it": "Parcheggi verificati il", "es": "Aparcamientos verificados el", "nl": "Parkings geverifieerd op"},
     # Flip-card hints
     "tap_to_read":     {"fr": "Toucher pour lire", "en": "Tap to read", "de": "Tippen zum Lesen", "it": "Tocca per leggere", "es": "Toca para leer", "nl": "Tik om te lezen"},
     "hover_for_site":  {"fr": "Survoler pour voir le site", "en": "Hover to view site", "de": "Bewegen für Website", "it": "Passa sopra per il sito", "es": "Pasa para ver el sitio", "nl": "Hover voor de site"},
@@ -641,6 +664,62 @@ def transit_data_block(slug):
         f'<h2 class="reveal">{T("transit_nearest")}</h2>'
         f'<div class="sources reveal"><ul>{"".join(items)}</ul>'
         f'{ops_html}'
+        f'<p class="caveat">{attribution}</p></div></div></section>'
+    )
+
+
+PARK_BADGE = {
+    "free":        ("park_free", "pill-ok"),
+    "paid":        ("park_paid", "pill-paid"),
+    "conditional": ("park_conditional", "pill-mute"),
+    "unknown":     ("park_unknown", "pill-mute"),
+}
+
+
+def parking_block(slug, curated=None):
+    """Nearest-parking block from data/parking_index.json (master to-do #3).
+
+    Renders only when there are OSM lots in range. A curated `facts.parking`
+    note (e.g. Saint-Jorioz "Gratuit (grand parking ombragé)") is shown
+    first/prominent; the OSM lots augment beneath. The fee badge is the honest
+    tri-state from the feed — never "Gratuit" without an explicit fee=no. The
+    "Y aller" deep-link uses each lot's own lat,lng (Part-A coordinate pattern).
+    Carries an ODbL attribution + verified date.
+    """
+    entry = PARKING_INDEX.get(slug)
+    if not entry or not entry.get("parkings"):
+        return ""
+    intro = ""
+    if curated:
+        intro = f'<p class="reveal"><strong>{esc(curated)}</strong></p>'
+    rows = []
+    for p in entry["parkings"]:
+        label_key, pill_cls = PARK_BADGE.get(p.get("status"), ("park_unknown", "pill-mute"))
+        parts = []
+        if p.get("name"):
+            parts.append(f'<strong>{esc(p["name"])}</strong>')
+        parts.append(f'<span class="pill {pill_cls}">{T(label_key)}</span>')
+        parts.append(f'{int(p["distance_m"])} m')
+        if p.get("status") == "conditional" and p.get("condition"):
+            parts.append(esc(p["condition"]))
+        if p.get("capacity"):
+            parts.append(f'{int(p["capacity"])} {T("park_capacity")}')
+        dest = f'{p["lat"]},{p["lon"]}'
+        parts.append(
+            f'<a class="go" href="https://www.google.com/maps/dir/?api=1'
+            f'&destination={dest}&travelmode=driving" target="_blank" '
+            f'rel="noopener">{T("park_goto")} →</a>'
+        )
+        rows.append(f'<li>{" · ".join(parts)}</li>')
+    attribution = (
+        f'{T("park_verified")} {esc(entry.get("verified", ""))} · '
+        f'{esc(PARKING_ATTRIB)}'
+    )
+    return (
+        '<section class="block"><div class="wrap">'
+        f'<h2 class="reveal">{T("park_title")}</h2>'
+        f'{intro}'
+        f'<div class="sources reveal"><ul>{"".join(rows)}</ul>'
         f'<p class="caveat">{attribution}</p></div></div></section>'
     )
 
@@ -1338,6 +1417,7 @@ def build_page(d, lang="fr"):
     out.append(how_to_block(L_body("how_to_get_there", {}) or {}, name, d["commune"],
                             d.get("latitude"), d.get("longitude")))
     out.append(transit_data_block(d["slug"]))
+    out.append(parking_block(d["slug"], (L("facts", {}) or {}).get("parking")))
     out.append(when_to_visit_block(L_body("when_to_visit", "") or "",
                                    L_body("events", "") or ""))
     out.append(partners_block(d))
