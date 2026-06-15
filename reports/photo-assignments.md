@@ -8,12 +8,12 @@
 | hub | fiches | distinct photos | max repeat of one photo |
 |---|---:|---:|---:|
 | `baignade-nautisme` | 24 | 14 | 2 |
-| `bases-de-loisirs` | 85 | 38 | 6 |
+| `bases-de-loisirs` | 85 | 39 | 6 |
 | `cascades` | 16 | 16 | 1 |
 | `chateaux` | 26 | 26 | 1 |
 | `lacs-plages` | 31 | 29 | 2 |
 | `musees` | 50 | 13 | 6 |
-| `parcs-jardins` | 31 | 20 | 3 |
+| `parcs-jardins` | 31 | 21 | 3 |
 | `points-de-vue` | 29 | 28 | 2 |
 | `que-faire` | 76 | 46 | 3 |
 | `sensations-plein-air` | 43 | 15 | 5 |
@@ -82,7 +82,7 @@
 | `bases-de-loisirs` | `chiens-de-traineau-la-patte-nordic-les-gets` | `sensations` | `generique-escalade-bloc-outdoor.jpg` | 0 | best unused score |
 | `bases-de-loisirs` | `chiens-de-traineau-nordic-event-74` | `sensations` | `generique-attraction.jpg` | 0 | cycling — pool reset |
 | `bases-de-loisirs` | `cote-2000-aventure` | `sensations` | `Seilpark_Gantrisch_-_03.jpg` | — | real URL hero |
-| `bases-de-loisirs` | `criq-parc` | `parc` | `generique-famille-foret.jpg` | 4 | best unused score |
+| `bases-de-loisirs` | `criq-parc` | `parc` | `criq-parc-hero.jpg` | — | real local hero |
 | `bases-de-loisirs` | `devalkart-de-manigod` | `sensations` | `generique-escalade-bouldering.jpg` | 0 | best unused score |
 | `bases-de-loisirs` | `disc-golf-indiana-ventures-samoens` | `sensations` | `generique-escalade-bloc-outdoor.jpg` | 1 | cycling — pool reset |
 | `bases-de-loisirs` | `domaine-de-guidou` | `parc` | `generique-domaine.jpg` | 1 | best unused score |
@@ -261,15 +261,15 @@
 | `musees` | `villa-du-parc-annemasse` | `patrimoine` | `generique-musee.jpg` | 2 | best unused score |
 | `parcs-jardins` | `acroparc-de-bellavallis-bellevaux` | `parc` | `generique-famille-foret.jpg` | 1 | best unused score |
 | `parcs-jardins` | `base-de-loisirs-du-vuaz-filliere` | `parc` | `generique-ferme-chevres.jpg` | 1 | best unused score |
-| `parcs-jardins` | `c5-kids-party-ville-la-grand` | `parc` | `generique-ferme-chevres.jpg` | 0 | best unused score |
-| `parcs-jardins` | `criq-parc` | `parc` | `generique-famille-foret.jpg` | 4 | best unused score |
+| `parcs-jardins` | `c5-kids-party-ville-la-grand` | `parc` | `generique-ferme-chevre.jpg` | 0 | best unused score |
+| `parcs-jardins` | `criq-parc` | `parc` | `criq-parc-hero.jpg` | — | real local hero |
 | `parcs-jardins` | `ereel-annecy-sillingy` | `parc` | `generique-domaine.jpg` | 0 | best unused score |
 | `parcs-jardins` | `ferme-pedagogique-les-paturettes-rumilly` | `parc` | `generique-parc.jpg` | 1 | best unused score |
 | `parcs-jardins` | `ferme-pedagogique-petit-mont-bellevaux` | `parc` | `generique-ferme-chevre.jpg` | 2 | best unused score |
 | `parcs-jardins` | `filenvol-monnetier-mornex` | `parc` | `generique-attraction.jpg` | 0 | best unused score |
 | `parcs-jardins` | `full-land-annecy` | `parc` | `generique-famille-balade.jpg` | 1 | best unused score |
 | `parcs-jardins` | `grand-parc-d-andilly` | `parc` | `Les_Grandes_M%C3%A9di%C3%A9vales_d%27Andilly_2016.jpg` | — | real URL hero |
-| `parcs-jardins` | `ile-de-tortuga-vetraz-monthoux` | `parc` | `generique-famille-balade.jpg` | 2 | best unused score |
+| `parcs-jardins` | `ile-de-tortuga-vetraz-monthoux` | `parc` | `generique-famille-balade.jpg` | 2 | cycling — pool reset |
 | `parcs-jardins` | `jardin-alpin-de-bellevaux` | `nature` | `generique-sentier-arete-alpine.jpg` | 1 | best unused score |
 | `parcs-jardins` | `jardin-alpin-des-montets-vallorcine` | `nature` | `generique-sentier-sommet-panorama.jpg` | 2 | best unused score |
 | `parcs-jardins` | `jardin-cimes-passy` | `nature` | `generique-point-de-vue.jpg` | 0 | best unused score |
@@ -281,14 +281,14 @@
 | `parcs-jardins` | `jardins-europe-annecy` | `nature` | `Ile_aux_Cygnes_%40_Lake_%40_Jardins_de_l%27Europe_%40_Annecy_%2835501071035%29.jpg` | — | real URL hero |
 | `parcs-jardins` | `la-foret-enchantee-sillingy` | `divertissement` | `generique-laser-game.jpg` | 4 | best unused score |
 | `parcs-jardins` | `leman-forest-saint-gingolph` | `parc` | `generique-famille-balade.jpg` | 1 | cycling — pool reset |
-| `parcs-jardins` | `leman-kid-thonon-les-bains` | `parc` | `generique-ferme-chevre.jpg` | 0 | best unused score |
+| `parcs-jardins` | `leman-kid-thonon-les-bains` | `parc` | `generique-famille-foret.jpg` | 2 | best unused score |
 | `parcs-jardins` | `les-aigles-du-leman` | `parc` | `Female_falcon_handler_with_eagle_%2825513995343%29.jpg` | — | real URL hero |
 | `parcs-jardins` | `parc-animalier-grande-jeanne-annecy` | `parc` | `parc-animalier-grande-jeanne-annecy-hero.jpg` | — | real local hero |
 | `parcs-jardins` | `parc-chateau-taninges` | `parc` | `generique-parc.jpg` | 2 | best unused score |
 | `parcs-jardins` | `parc-de-merlet` | `parc` | `Panorama_depuis_le_parc_de_Merlet.jpg` | — | real URL hero |
 | `parcs-jardins` | `parc-imperial-annecy` | `parc` | `parc-imperial-annecy-hero.jpg` | — | real local hero |
 | `parcs-jardins` | `parc-jean-beauquis-ambilly` | `parc` | `Ambilly_place_mairie.jpg` | — | real URL hero |
-| `parcs-jardins` | `tropicaland-viry` | `parc` | `generique-parc.jpg` | 3 | cycling — pool reset |
+| `parcs-jardins` | `tropicaland-viry` | `parc` | `generique-ferme-chevres.jpg` | 1 | best unused score |
 | `parcs-jardins` | `vitam-neydens` | `parc` | `generique-domaine.jpg` | 0 | best unused score |
 | `points-de-vue` | `aire-de-decollage-parapente-plaine-joux` | `nature` | `Aire_de_d%C3%A9collage_de_parapentes_%40_Passy_Plaine-Joux_%2851062114852%29.jpg` | — | real URL hero |
 | `points-de-vue` | `belvedere-du-mont-baron` | `nature` | `Chemin_mont_Veyrier_mont_Baron.jpg` | — | real URL hero |
