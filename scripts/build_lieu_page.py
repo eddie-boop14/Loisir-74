@@ -69,15 +69,30 @@ CSS, JS = load_static_blocks()
 
 def load_transport_index():
     """Load data/transport_index.json (built by scripts/build_transport_index.py).
-    Maps slug -> {verified, source, license, stops[]}. Empty dict if absent."""
+    Returns (index, operators) where index maps slug -> {verified, source,
+    license, stops[]} and operators maps operator-label -> {url, fare_url}
+    (read verbatim from each feed's agency.txt). Empty if absent."""
     p = REPO / "data" / "transport_index.json"
+    if not p.exists():
+        return {}, {}
+    raw = json.loads(p.read_text(encoding="utf-8"))
+    operators = (raw.get("_meta", {}) or {}).get("operators", {}) or {}
+    index = {k: v for k, v in raw.items() if k != "_meta"}
+    return index, operators
+
+
+def load_network_fares():
+    """Load data/network_fares.json — manually verified, dated single-ride fares
+    + official tariff URLs per operator. Maps operator-label -> {fare, tariff_url}."""
+    p = REPO / "data" / "network_fares.json"
     if not p.exists():
         return {}
     raw = json.loads(p.read_text(encoding="utf-8"))
-    return {k: v for k, v in raw.items() if k != "_meta"}
+    return raw.get("operators", {}) or {}
 
 
-TRANSPORT_INDEX = load_transport_index()
+TRANSPORT_INDEX, TRANSPORT_OPERATORS = load_transport_index()
+NETWORK_FARES = load_network_fares()
 
 
 # Map JSON fact keys → French labels for the facts grid
@@ -155,6 +170,8 @@ CHROME = {
     "transit_nearest":  {"fr": "Arrêts les plus proches", "en": "Nearest stops", "de": "Nächste Haltestellen", "it": "Fermate più vicine", "es": "Paradas más cercanas", "nl": "Dichtstbijzijnde haltes"},
     "transit_verified": {"fr": "Données transport vérifiées le", "en": "Transport data verified on", "de": "Verkehrsdaten geprüft am", "it": "Dati sui trasporti verificati il", "es": "Datos de transporte verificados el", "nl": "Vervoersgegevens geverifieerd op"},
     "transit_source":   {"fr": "source", "en": "source", "de": "Quelle", "it": "fonte", "es": "fuente", "nl": "bron"},
+    "transit_official": {"fr": "Tarifs &amp; horaires officiels", "en": "Official fares &amp; timetables", "de": "Offizielle Tarife &amp; Fahrpläne", "it": "Tariffe e orari ufficiali", "es": "Tarifas y horarios oficiales", "nl": "Officiële tarieven &amp; dienstregeling"},
+    "transit_fare":     {"fr": "Tarif", "en": "Fare", "de": "Tarif", "it": "Tariffa", "es": "Tarifa", "nl": "Tarief"},
     # Flip-card hints
     "tap_to_read":     {"fr": "Toucher pour lire", "en": "Tap to read", "de": "Tippen zum Lesen", "it": "Tocca per leggere", "es": "Toca para leer", "nl": "Tik om te lezen"},
     "hover_for_site":  {"fr": "Survoler pour voir le site", "en": "Hover to view site", "de": "Bewegen für Website", "it": "Passa sopra per il sito", "es": "Pasa para ver el sitio", "nl": "Hover voor de site"},
@@ -585,6 +602,35 @@ def transit_data_block(slug):
             bits.append(", ".join(esc(str(line)) for line in s["lines"]))
         bits.append(f'{int(s["distance_m"])} m')
         items.append(f'<li>{" · ".join(bits)}</li>')
+    # Per-operator official link (+ dated fare). The link is the operator's own
+    # page — the honest "get your info and go" door — preferred order: a curated
+    # tariff_url, else the feed's agency_fare_url, else its agency_url. Every URL
+    # comes from the feed or the manually-verified fares file; none are guessed.
+    op_lines = []
+    seen = []
+    for s in entry["stops"]:
+        for op in s["operator"].split(" / "):
+            if op not in seen:
+                seen.append(op)
+    for op in seen:
+        meta = TRANSPORT_OPERATORS.get(op, {}) or {}
+        fares = NETWORK_FARES.get(op, {}) or {}
+        link = fares.get("tariff_url") or meta.get("fare_url") or meta.get("url")
+        parts = [f'<strong>{esc(op)}</strong>']
+        if fares.get("fare"):
+            parts.append(f'{T("transit_fare")} : {esc(fares["fare"])}')
+        if link:
+            parts.append(
+                f'<a href="{attr(link)}" target="_blank" rel="noopener">'
+                f'{T("transit_official")} →</a>'
+            )
+        if len(parts) > 1:   # skip operators we can neither link nor price
+            op_lines.append(f'<li>{" · ".join(parts)}</li>')
+    ops_html = (f'<ul class="transit-ops">{"".join(op_lines)}</ul>'
+                if op_lines else "")
+
+    # Etalab attribution is kept separate from the traveller link (licence != the
+    # operator door) — both present.
     attribution = (
         f'{T("transit_verified")} {esc(entry.get("verified", ""))} · '
         f'{T("transit_source")} {esc(entry.get("source", ""))} '
@@ -594,6 +640,7 @@ def transit_data_block(slug):
         '<section class="block"><div class="wrap">'
         f'<h2 class="reveal">{T("transit_nearest")}</h2>'
         f'<div class="sources reveal"><ul>{"".join(items)}</ul>'
+        f'{ops_html}'
         f'<p class="caveat">{attribution}</p></div></div></section>'
     )
 
