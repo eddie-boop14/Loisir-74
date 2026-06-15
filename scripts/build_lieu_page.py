@@ -594,16 +594,19 @@ def maps_query(d, name, commune):
     return url_q(f"{name}, {commune}, Haute-Savoie")
 
 
-def how_to_block(how, name, commune, lat=None, lng=None):
-    """Render the 'How to get there' how-cards (locale-aware).
+def how_to_block(how, name, commune, lat=None, lng=None, slug=None):
+    """Render the unified transport section (locale-aware).
 
-    The Google Maps deep-link destination uses the fiche's exact
-    `lat,lng` when available — feeding Maps the precise coordinates
-    instead of a name string it would have to geocode. Falls back to the
-    "name, commune, Haute-Savoie" query only when coordinates are null.
+    One block: the car / public_transport / bike how-cards PLUS the generated
+    nearest-stops panel (stops · fare · official link · Etalab line) folded in
+    beneath them — no second stacked "Arrêts les plus proches" section. The
+    section renders if there are how-cards OR generated stops; empty-stop lieux
+    show just the curated cards, no empty box.
+
+    The Maps deep-link destination uses the fiche's exact `lat,lng` when
+    available (name fallback when null), as in Part A.
     """
-    if not how:
-        return ""
+    how = how or {}
     if lat is not None and lng is not None:
         dest = f"{lat},{lng}"          # exact, no geocode guess
     else:
@@ -629,25 +632,31 @@ def how_to_block(how, name, commune, lat=None, lng=None):
             '<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>'
             '</svg></span></a>'
         )
-    if not cards:
+    transit_inner = transit_data_inner(slug) if slug else ""
+    if not cards and not transit_inner:
         return ""
+    cards_html = (f'<div class="how reveal" data-stagger>{"".join(cards)}</div>'
+                  if cards else "")
     return (
         '<section class="block"><div class="wrap">'
         f'<div class="kicker reveal">{T("k_access")}</div>'
         f'<h2 class="reveal">{T("h_how")}</h2>'
-        f'<div class="how reveal" data-stagger>{"".join(cards)}</div>'
+        f'{cards_html}'
+        f'{transit_inner}'
         '</div></section>'
     )
 
 
-def transit_data_block(slug):
-    """Generated nearest-stops block from the GTFS freshness index (PART B2).
+def transit_data_inner(slug):
+    """Generated nearest-stops panel from the GTFS freshness index (PART B2).
 
-    Augments — never replaces — the curated `how_to_get_there.public_transport`
-    prose rendered by how_to_block. Renders only when the index has ≥1 stop for
-    this lieu. Stop / operator / line names are proper nouns kept verbatim; only
-    the surrounding labels are localised. Carries a verified date + Etalab
-    attribution as required by the licence.
+    Returned as INNER markup (no own <section>/<h2>) so it folds directly into
+    the unified transport section beneath the how-cards — one transport block,
+    not two stacked ones. Augments, never replaces, the curated
+    public_transport prose. Renders only when the index has ≥1 stop for this
+    lieu. Stop / operator / line names are proper nouns kept verbatim; only the
+    surrounding labels localise. Carries the verified date + Etalab attribution
+    (licence requirement), relocated here from the old standalone section.
     """
     entry = TRANSPORT_INDEX.get(slug)
     if not entry or not entry.get("stops"):
@@ -694,11 +703,11 @@ def transit_data_block(slug):
         f'({esc(entry.get("license", ""))})'
     )
     return (
-        '<section class="block"><div class="wrap">'
-        f'<h2 class="reveal">{T("transit_nearest")}</h2>'
-        f'<div class="sources reveal"><ul>{"".join(items)}</ul>'
+        '<div class="transit-data reveal">'
+        f'<h3>{T("transit_nearest")}</h3>'
+        f'<div class="sources"><ul>{"".join(items)}</ul>'
         f'{ops_html}'
-        f'<p class="caveat">{attribution}</p></div></div></section>'
+        f'<p class="caveat">{attribution}</p></div></div>'
     )
 
 
@@ -1447,8 +1456,7 @@ def build_page(d, lang="fr"):
     out.append(activities_block(L_body("activities", []) or []))
     out.append(practical_block(L_body("practical_info", []) or [], name, d["commune"]))
     out.append(how_to_block(L_body("how_to_get_there", {}) or {}, name, d["commune"],
-                            d.get("latitude"), d.get("longitude")))
-    out.append(transit_data_block(d["slug"]))
+                            d.get("latitude"), d.get("longitude"), d["slug"]))
     out.append(parking_block(d["slug"], (L("facts", {}) or {}).get("parking")))
     out.append(when_to_visit_block(L_body("when_to_visit", "") or "",
                                    L_body("events", "") or ""))
