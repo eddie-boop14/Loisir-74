@@ -859,30 +859,16 @@ def hero_block(d):
     commune = d["commune"]
     q = url_q(f'{name}, {commune}, Haute-Savoie, France')
 
-    # 2026-06-15: every local image now lives under /img/<hub>/<file>.
-    # hero_image in Json/ is always either a full URL or a /img/-prefixed
-    # path. The category fallback below also targets a /img/<hub>/ path.
+    # Post-Phase-1: shared generics live at /img/generique/<file>; real
+    # per-lieu heros at /img/<hub>/<slug>-hero.jpg. hero_image in Json/
+    # is always either a full URL, a /img/-prefixed path, or empty.
     GENERIC_ON_DISK = {"attraction", "cascade", "chateau", "domaine", "lac",
                        "musee", "parc", "point-de-vue", "sentier", "telecabine", "voie-verte"}
-    CATEGORY_TO_HUB = {
-        "cascade":"cascades","chateau":"chateaux","musee":"musees",
-        "point-de-vue":"points-de-vue","sentier":"sentiers",
-        "telecabine":"telecabines","voie-verte":"voies-vertes",
-        "lac":"lacs-plages","plage":"lacs-plages",
-        "domaine":"bases-de-loisirs","parc":"bases-de-loisirs",
-        "jardin":"parcs-jardins","base-nautique":"baignade-nautisme",
-        "wakepark":"baignade-nautisme","accrobranche":"bases-de-loisirs",
-        "aquaparc":"baignade-nautisme","croisiere":"baignade-nautisme",
-        "cinema":"sorties-detente","casino":"sorties-detente",
-        "bowling":"sport-jeux","karting":"sport-jeux",
-        "patinoire":"sport-jeux","attraction":"que-faire","divers":"que-faire",
-    }
     img = d.get("hero_image") or ""
     if img.startswith(("http://", "https://", "//")):
         img_src = img
         gen_attr = ""
     elif img.startswith("/img/"):
-        # Already in the canonical per-hub form
         img_src = img
         basename = img.rsplit("/", 1)[-1]
         if basename.startswith("generique-"):
@@ -891,27 +877,21 @@ def hero_block(d):
         else:
             gen_attr = ""
     elif img.startswith("/"):
-        # Legacy absolute path — pass through
+        # Legacy absolute path — pass through (safety net)
         img_src = img
         gen_attr = ""
     elif img.startswith("generique-"):
-        # Legacy bare filename — route to the fiche's primary hub folder
-        cat = d.get("category") or "attraction"
-        hub = CATEGORY_TO_HUB.get(cat, "que-faire")
-        img_src = f"/img/{hub}/{img}"
+        img_src = f"/img/generique/{img}"
         gen_cat = img[len("generique-"):].rsplit(".", 1)[0]
         gen_attr = f' data-generique="true" data-generique-cat="{gen_cat}"'
     elif img:
-        # Legacy bare local filename
-        cat = d.get("category") or "attraction"
-        hub = CATEGORY_TO_HUB.get(cat, "que-faire")
-        img_src = f"/img/{hub}/{img}"
+        # Legacy bare local non-generic filename — pass through at root
+        img_src = f"/{img}"
         gen_attr = ""
     else:
         cat = d.get("category") or "attraction"
         eff_cat = cat if cat in GENERIC_ON_DISK else "attraction"
-        hub = CATEGORY_TO_HUB.get(eff_cat, "que-faire")
-        img_src = f"/img/{hub}/generique-{eff_cat}.jpg"
+        img_src = f"/img/generique/generique-{eff_cat}.jpg"
         gen_attr = f' data-generique="true" data-generique-cat="{eff_cat}"'
 
     eyebrow_text = clean_eyebrow(badge, is_free)

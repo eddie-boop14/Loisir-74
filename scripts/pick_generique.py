@@ -25,85 +25,27 @@ JSON_DIR = ROOT / "Json"
 TODAY = datetime.date.today().isoformat()
 
 
+CANON = "/img/generique/"
+
+
 def variants_on_disk():
-    """Return the set of `generique-*.jpg` basenames anywhere under img/.
+    """Return the set of `generique-*.jpg` basenames at the canonical
+    location.
 
-    Post-2026-06-15 migration: every local image lives under
-    /img/<hub>/<filename>. Glob recursively + dedup by basename so the
-    picker still keys on plain filenames (it doesn't care which hub a
-    variant lives in — pick_for_fiche's primary-hub computation later
-    figures that out at write time).
+    Post-Phase-1-consolidation: every shared generic lives at
+    `img/generique/<file>`. Real per-lieu heros stay at
+    `img/<hub>/<slug>-hero.jpg` and are routed by the build chain, not
+    by this picker.
     """
-    return {p.name for p in (ROOT / "img").rglob("generique-*.jpg")}
-
-
-# Fiche category → primary hub. Mirrors the table in
-# scripts/migrate_to_hub_folders.py and scripts/build_hubs.py HUB_FILTERS.
-CATEGORY_TO_PRIMARY_HUB = {
-    "cascade":       "cascades",
-    "chateau":       "chateaux",
-    "musee":         "musees",
-    "point-de-vue":  "points-de-vue",
-    "sentier":       "sentiers",
-    "telecabine":    "telecabines",
-    "voie-verte":    "voies-vertes",
-    "lac":           "lacs-plages",
-    "plage":         "lacs-plages",
-    "domaine":       "bases-de-loisirs",
-    "parc":          "bases-de-loisirs",
-    "jardin":        "parcs-jardins",
-    "base-nautique": "baignade-nautisme",
-    "wakepark":      "baignade-nautisme",
-    "accrobranche":  "bases-de-loisirs",
-    "aquaparc":      "baignade-nautisme",
-    "croisiere":     "baignade-nautisme",
-    "cinema":        "sorties-detente",
-    "casino":        "sorties-detente",
-    "bowling":       "sport-jeux",
-    "karting":       "sport-jeux",
-    "patinoire":     "sport-jeux",
-    "attraction":    "que-faire",
-    "divers":        "que-faire",
-}
-
-
-def _primary_hub_for_fiche(d):
-    """Return the canonical hub folder for this fiche's local images.
-    Falls back to 'que-faire' (catch-all) if the category is unknown.
-    """
-    cat = (d.get("category") or "").strip()
-    return CATEGORY_TO_PRIMARY_HUB.get(cat, "que-faire")
-
-
-def _hubs_for_image(basename):
-    """Lookup the set of hubs where `basename` currently lives on disk.
-    Reads data/image-hub-map.json (written by migrate_to_hub_folders.py).
-    Returns empty list if the file isn't in the map yet.
-    """
-    p = ROOT / "data" / "image-hub-map.json"
-    if not _hubs_for_image._cache and p.exists():
-        _hubs_for_image._cache.update(json.loads(p.read_text(encoding="utf-8")))
-    return _hubs_for_image._cache.get(basename, [])
-
-_hubs_for_image._cache = {}
+    return {p.name for p in (ROOT / "img" / "generique").glob("generique-*.jpg")}
 
 
 def _path_for(fiche, chosen):
-    """Build the full /img/<hub>/<chosen> path for a fiche+variant.
-
-    Preference order for the hub folder:
-      1. The fiche's primary hub if the variant also lives there
-         (avoids cross-hub references when possible).
-      2. The first hub in the variant's hub list (deterministic).
-      3. Fall back to /img/que-faire/ if the map has no entry.
-    """
-    preferred = _primary_hub_for_fiche(fiche)
-    hubs = _hubs_for_image(chosen)
-    if hubs:
-        if preferred in hubs:
-            return f"/img/{preferred}/{chosen}"
-        return f"/img/{hubs[0]}/{chosen}"
-    return f"/img/{preferred}/{chosen}"
+    """Build the canonical /img/generique/<chosen> path. Shared art has
+    no single 'category' to belong to, so the canonical store is flat.
+    Real per-lieu heros stay at /img/<hub>/<slug>-hero.jpg and aren't
+    routed through this function."""
+    return f"{CANON}{chosen}"
 
 
 VARIANTS = variants_on_disk()
@@ -152,7 +94,7 @@ def pick_text_override(slug, text, cat=""):
         "accrobranche-", "acroparc-", "acro-aventures-",
         "parcours-aventure-", "indiana-ventures-",
         "chatel-accrobranche-", "cote-2000-aventure-",
-        "passy-accro-",
+        "passy-accro-", "tactiq-aventure-", "leman-forest-",
     )):
         pool = _pool(slug, "generique-accrobranche-", 12)
         if pool:
@@ -161,6 +103,48 @@ def pick_text_override(slug, text, cat=""):
         pool = _pool(slug, "generique-plage-lac-", 15)
         if pool:
             return pool
+    # base-nautique-* and port-* (with "base nautique" in the slug)
+    # paddle/voile/port pool, regardless of upstream category.
+    if slug.startswith("base-nautique-") or "base-nautique-" in slug:
+        choices = [v for v in ["generique-paddle-aviron-detail.jpg",
+                                "generique-barque-aviron.jpg",
+                                "generique-port-annecy.jpg",
+                                "generique-voile-sunset-1.jpg"] if has(v)]
+        pick = slug_pick(slug, choices)
+        if pick:
+            return pick
+    # Spéléologie — cat usually 'attraction' which already calls
+    # pick_attraction, but a slug check guarantees it fires.
+    if slug.startswith("speleo-"):
+        choices = [v for v in ["generique-grotte-cathedrale.jpg",
+                                "generique-grotte-lumiere.jpg"] if has(v)]
+        pick = slug_pick(slug, choices)
+        if pick:
+            return pick
+    # Baignade biologique / biotope
+    if slug.startswith("baignade-"):
+        pool = _pool(slug, "generique-plage-lac-", 15)
+        if pool:
+            return pool
+    # VR centers filed as 'parc' upstream — facts.type/name is
+    # unambiguous so always-fire.
+    if slug.startswith(("ereel-", "vr-")):
+        choices = [v for v in ["generique-vr-immersion.jpg",
+                                "generique-vr-multi-joueurs.jpg"] if has(v)]
+        pick = slug_pick(slug, choices)
+        if pick:
+            return pick
+    # Château ruins/remparts filed upstream as cat='musee' — facts.type
+    # says château fort but the museum category routes to a museum
+    # photo. Route on slug instead.
+    if any(s in slug for s in ("ruines-chateau-", "bourg-et-ruines-chateau-",
+                                "ancien-remparts-chateau-",
+                                "chateau-comtal-")):
+        choices = [v for v in ["generique-chateau-brume.jpg",
+                                "generique-chateau.jpg",
+                                "generique-chateau-toiture.jpg"] if has(v)]
+        if choices:
+            return slug_pick(slug, choices)
     # Vitam Neydens — multi-space leisure complex (aquaparc + spa +
     # sport). The handoff calls this out specifically: aquatique-
     # toboggan, not the generic park photo. Slug pre-check ensures the
