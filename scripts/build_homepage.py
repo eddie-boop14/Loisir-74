@@ -32,6 +32,7 @@ it/index.html, es/index.html are rewritten.
 from __future__ import annotations
 
 import json
+import sys
 import re
 from pathlib import Path
 
@@ -927,6 +928,16 @@ def render_lang_picker(loc_code: str) -> str:
 # --- the build itself --------------------------------------------------------
 
 def build(loc: dict) -> None:
+    # DEPRECATED / UNSAFE (2026-06): this is a legacy builder for the old
+    # raw-category homepage. The live FR homepage has migrated to a thematic-
+    # hub layout this script does NOT reproduce (running it restructures the
+    # page and drops sections); the locale homepages it can still match would
+    # be silently rewritten too. It is NOT in the deploy chain — the homepages
+    # are hub-patched/hand-maintained. Refuse to write unless explicitly forced.
+    if "--force" not in sys.argv:
+        print(f"  SKIP {loc.get('subdir') or 'fr'}/index.html — build_homepage is "
+              f"deprecated/unsafe for the current homepage; pass --force to override.")
+        return
     code = loc["code"]
     subdir = loc["subdir"]
     s = {**STRINGS[code], **EXTRA_STRINGS[code]}
@@ -966,10 +977,10 @@ def build(loc: dict) -> None:
             "see_label": extract_see_all(body, s["see_all_fallback"])[1],
         }
         for card in extract_cards(body):
-            slug_match = CARD_HREF_RE.search(card)
+            slug_match = CARD_SLUG_RE.search(card)
             if not slug_match:
                 continue
-            slug = slug_match.group(1)
+            slug = slug_match.group(1) or slug_match.group(2)
             if slug in placed:
                 continue  # dedupe — a slug routes to exactly one section
             target = section_for_slug(slug) or sid
