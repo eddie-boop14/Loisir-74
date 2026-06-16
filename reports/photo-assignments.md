@@ -12,10 +12,10 @@
 | `cascades` | 16 | 16 | 1 |
 | `chateaux` | 26 | 23 | 3 |
 | `lacs-plages` | 31 | 26 | 3 |
-| `musees` | 50 | 22 | 9 |
+| `musees` | 50 | 23 | 9 |
 | `parcs-jardins` | 31 | 17 | 11 |
 | `points-de-vue` | 29 | 24 | 5 |
-| `que-faire` | 76 | 42 | 5 |
+| `que-faire` | 76 | 43 | 4 |
 | `sensations-plein-air` | 43 | 31 | 3 |
 | `sentiers` | 40 | 7 | 14 |
 | `sorties-detente` | 22 | 10 | 3 |
@@ -223,7 +223,7 @@
 | `musees` | `fonderie-paccard-sevrier` | `patrimoine` | `fonderie-paccard-sevrier-hero.jpg` | — | json hero (local) |
 | `musees` | `la-turbine-sciences-cran-gevrier` | `patrimoine` | `La_Turbine_%40_Cran-G%C3%A9vrier_%2824160730078%29.jpg` | — | json hero (url) |
 | `musees` | `maison-de-barberine-vallorcine` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
-| `musees` | `maison-de-la-memoire-janny-couttet-chamonix` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
+| `musees` | `maison-de-la-memoire-janny-couttet-chamonix` | `patrimoine` | `Alpinistes_Aiguille_du_Midi_03.JPG` | — | json hero (url) |
 | `musees` | `maison-de-la-memoire-paysalp` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
 | `musees` | `maison-du-lieutenant-servoz` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
 | `musees` | `maison-du-saleve-presilly` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
@@ -367,7 +367,7 @@
 | `que-faire` | `laser-game-lasermaxx-sillingy` | `divertissement` | `generique-laser-game.jpg` | — | json hero (local) |
 | `que-faire` | `les-aigles-du-leman` | `parc` | `Female_falcon_handler_with_eagle_%2825513995343%29.jpg` | — | json hero (url) |
 | `que-faire` | `maison-de-barberine-vallorcine` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
-| `que-faire` | `maison-de-la-memoire-janny-couttet-chamonix` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
+| `que-faire` | `maison-de-la-memoire-janny-couttet-chamonix` | `patrimoine` | `Alpinistes_Aiguille_du_Midi_03.JPG` | — | json hero (url) |
 | `que-faire` | `maison-de-la-memoire-paysalp` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
 | `que-faire` | `maison-du-lieutenant-servoz` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
 | `que-faire` | `maison-du-saleve-presilly` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
