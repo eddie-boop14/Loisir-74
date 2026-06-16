@@ -197,6 +197,10 @@ CHROME = {
     "park_verified":    {"fr": "Parkings vérifiés le", "en": "Parking checked on", "de": "Parkplätze geprüft am", "it": "Parcheggi verificati il", "es": "Aparcamientos verificados el", "nl": "Parkings geverifieerd op"},
     # Beside-facts source link (master to-do #4): authoritative page one tap away.
     "source_official":  {"fr": "Source officielle", "en": "Official source", "de": "Offizielle Quelle", "it": "Fonte ufficiale", "es": "Fuente oficial", "nl": "Officiële bron"},
+    # Event modal (per-fiche promo for the venue's own event)
+    "ev_intro":  {"fr": "Le lieu de cette page organise", "en": "The venue on this page is hosting", "de": "Der Ort dieser Seite veranstaltet", "it": "Il luogo di questa pagina organizza", "es": "El lugar de esta página organiza", "nl": "De locatie op deze pagina organiseert"},
+    "ev_cta":    {"fr": "Voir l&#39;événement", "en": "See the event", "de": "Zur Veranstaltung", "it": "Scopri l&#39;evento", "es": "Ver el evento", "nl": "Bekijk het evenement"},
+    "ev_close":  {"fr": "Fermer", "en": "Close", "de": "Schließen", "it": "Chiudi", "es": "Cerrar", "nl": "Sluiten"},
     # Flip-card hints
     "tap_to_read":     {"fr": "Toucher pour lire", "en": "Tap to read", "de": "Tippen zum Lesen", "it": "Tocca per leggere", "es": "Toca para leer", "nl": "Tik om te lezen"},
     "hover_for_site":  {"fr": "Survoler pour voir le site", "en": "Hover to view site", "de": "Bewegen für Website", "it": "Passa sopra per il sito", "es": "Pasa para ver el sitio", "nl": "Hover voor de site"},
@@ -1420,6 +1424,53 @@ def build_footer_block(date_pub, date_mod):
     )
 
 
+# Per-fiche event modals: a venue promoting its OWN event on its own page.
+# `end`: the modal stops showing client-side after this date (no rebuild needed).
+EVENT_MODALS = {
+    "domaine-du-tornet": {
+        "id": "ev-tornet-fm26",
+        "affiche": "/img/events/fete-musique-tornet-2026.jpg",
+        "url": "http://chaletdutornet.com/",
+        "alt": "Affiche Fête de la Musique au Chalet du Tornet — dimanche 21 juin",
+        "end": "2026-06-22",
+    },
+}
+
+
+def event_modal_block(d):
+    """Render a branded, dismissible event modal — only on the fiche of the
+    venue that hosts the event (master to-do: Tornet Fête de la Musique).
+    Shows once per session and auto-disappears (client-side) after `end`. The
+    eyebrow ties it to this exact page so it reads as part of the fiche, not a
+    third-party ad."""
+    ev = EVENT_MODALS.get(d.get("slug"))
+    if not ev:
+        return ""
+    name = L("name", d.get("slug"))
+    img = picture_tag(ev["affiche"], ev["alt"], eager=False)
+    return (
+        f'<div class="event-modal-overlay" id="{ev["id"]}" role="dialog" aria-modal="true" '
+        f'aria-label="{attr(name)}">'
+        '<div class="event-modal">'
+        f'<button class="event-modal-close" type="button" aria-label="{attr(T("ev_close"))}">&times;</button>'
+        f'<div class="event-modal-eyebrow">{T("ev_intro")} · {esc(name)}</div>'
+        f'<a class="event-modal-affiche" href="{attr(ev["url"])}" target="_blank" rel="noopener">{img}</a>'
+        f'<a class="event-modal-cta" href="{attr(ev["url"])}" target="_blank" rel="noopener">{T("ev_cta")} &rarr;</a>'
+        '</div></div>'
+        '<script>(function(){'
+        f'var END=new Date("{ev["end"]}T00:00:00"),KEY="{ev["id"]}";'
+        'if(new Date()>=END)return;try{if(sessionStorage.getItem(KEY))return;}catch(e){}'
+        f'var ov=document.getElementById("{ev["id"]}");if(!ov)return;'
+        'function close(){ov.classList.remove("in");try{sessionStorage.setItem(KEY,"1");}catch(e){}'
+        'setTimeout(function(){ov.style.display="none";},300);}'
+        'setTimeout(function(){ov.style.display="flex";requestAnimationFrame(function(){ov.classList.add("in");});},900);'
+        'ov.querySelector(".event-modal-close").addEventListener("click",close);'
+        'ov.addEventListener("click",function(e){if(e.target===ov)close();});'
+        'document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});'
+        '})();</script>'
+    )
+
+
 def site_footer():
     """Locale-aware <footer class='site'>. URLs prefixed by current locale."""
     lp = f"/{_LANG}" if _LANG != "fr" else ""
@@ -1471,6 +1522,7 @@ def build_page(d, lang="fr"):
     ))
     out.append(action_bar(d))
     out.append(site_footer())
+    out.append(event_modal_block(d))
     out.append(JS)
     out.append("</body></html>")
     LAST_FALLBACK_FIELDS = set(_FALLBACK_FIELDS)
