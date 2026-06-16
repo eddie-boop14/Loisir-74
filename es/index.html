@@ -1525,9 +1525,7 @@ if(nearBtn){nearBtn.onclick=function(){
     nearBtn.classList.add('on');nearBtn.textContent=STR.btn_near_on;
     loadData(function(){applyProximity();renderBadges();});
   },function(){
-    origin={lat:45.8992,lng:6.1294};
-    nearBtn.classList.add('on');nearBtn.textContent=STR.btn_near_demo;
-    loadData(function(){applyProximity();renderBadges();});
+    origin=null;nearBtn.classList.remove('on');nearBtn.textContent=STR.btn_near_off;
   },{timeout:6000});
 };}
 renderBadges();
