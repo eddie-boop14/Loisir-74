@@ -310,6 +310,20 @@ def main():
     print("Copying .well-known/...")
     copy_dir(REPO / ".well-known", SITE / ".well-known")
 
+    # Runtime client JS is referenced as /scripts/<file> by the pages but the
+    # scripts/ dir is otherwise excluded from the publish. Allowlist-copy the
+    # few files that must ship (l74sort: homepage sort/near; nearme: sitewide
+    # proximity component).
+    print("Copying runtime scripts to _site/scripts/...")
+    RUNTIME_JS = ["l74sort.js", "nearme.js"]
+    sdst = SITE / "scripts"
+    sdst.mkdir(parents=True, exist_ok=True)
+    for _name in RUNTIME_JS:
+        _sp = REPO / "scripts" / _name
+        if _sp.exists():
+            shutil.copy2(_sp, sdst / _name)
+            print(f"  + scripts/{_name}")
+
     print("Copying locale trees (en/de/it/es/nl)...")
     for L in LOCALES:
         src = REPO / L

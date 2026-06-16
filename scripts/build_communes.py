@@ -41,6 +41,22 @@ LANGS = ["fr", "en", "de", "it", "es", "nl"]
 BASE = "https://loisirs74.fr"
 MANIFEST = ROOT / "data" / "commune-layer.json"
 INTROS = ROOT / "data" / "commune-intros.json"
+NEARME_LABELS = json.loads((ROOT / "data" / "nearme-labels.json").read_text(encoding="utf-8"))
+
+
+def nearme_button(lang, extra_style=""):
+    """Shared "◎ Près de moi" button — labels via data-* (consumed by
+    /scripts/nearme.js). Honest deny state, no fake location."""
+    lab = NEARME_LABELS.get(lang) or NEARME_LABELS["fr"]
+    a = lambda s: html_lib.escape(str(s), quote=True)
+    style = f' style="{extra_style}"' if extra_style else ""
+    return (
+        f'<button class="near-me" id="nearMe"{style}'
+        f' data-default="{a(lab["def"])}" data-loading="{a(lab["loading"])}"'
+        f' data-on="{a(lab["on"])}" data-off="{a(lab["off"])}"'
+        f' data-results-title="{a(lab["title"])}" data-results-sub="{a(lab["sub"])}"'
+        f' data-cta="{a(lab["cta"])}" data-km="{a(lab["km"])}">{a(lab["def"])}</button>'
+    )
 
 # Per-locale template hub to lift invariant chrome from.
 TEMPLATE_HUB = {
@@ -330,6 +346,7 @@ def render_page(c, lang, intros):
 </span>
 <span><b>loisirs74</b> <i>· Haute-Savoie</i></span>
 </a>
+{nearme_button(lang, "margin-left:auto")}
 <details class="lang-picker">
 <summary><b>{lang.upper()}</b> · {C['langues'][lang]}</summary>
 <div class="lang-menu">
@@ -383,6 +400,7 @@ def render_page(c, lang, intros):
 {grid}
 {lift_footer(lang, alts)}
 {lift_scripts(lang)}
+<script src="/scripts/nearme.js" defer></script>
 </body>
 </html>"""
     return head + "\n" + body + "\n"
