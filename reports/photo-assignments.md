@@ -12,10 +12,10 @@
 | `cascades` | 16 | 16 | 1 |
 | `chateaux` | 26 | 23 | 3 |
 | `lacs-plages` | 31 | 26 | 3 |
-| `musees` | 50 | 23 | 9 |
+| `musees` | 50 | 24 | 9 |
 | `parcs-jardins` | 31 | 17 | 11 |
 | `points-de-vue` | 29 | 24 | 5 |
-| `que-faire` | 76 | 43 | 4 |
+| `que-faire` | 76 | 44 | 4 |
 | `sensations-plein-air` | 43 | 31 | 3 |
 | `sentiers` | 40 | 7 | 14 |
 | `sorties-detente` | 22 | 10 | 3 |
@@ -218,7 +218,7 @@
 | `musees` | `ecomusee-lac-annecy-sevrier` | `patrimoine` | `generique-musee-moderne.jpg` | — | json hero (local) |
 | `musees` | `ecomusee-paysalp-viuz-en-sallaz` | `patrimoine` | `generique-musee-moderne.jpg` | — | json hero (local) |
 | `musees` | `ecomusee-peche-et-du-lac-thonon` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
-| `musees` | `espace-tairraz-musee-des-cristaux-chamonix` | `patrimoine` | `generique-musee-moderne.jpg` | — | json hero (local) |
+| `musees` | `espace-tairraz-musee-des-cristaux-chamonix` | `patrimoine` | `Fluorite-Quartz-164086.jpg` | — | json hero (url) |
 | `musees` | `ferme-ecomusee-clos-parchet-samoens` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
 | `musees` | `fonderie-paccard-sevrier` | `patrimoine` | `fonderie-paccard-sevrier-hero.jpg` | — | json hero (local) |
 | `musees` | `la-turbine-sciences-cran-gevrier` | `patrimoine` | `La_Turbine_%40_Cran-G%C3%A9vrier_%2824160730078%29.jpg` | — | json hero (url) |
@@ -351,7 +351,7 @@
 | `que-faire` | `escape-game-mysteres-du-lac-annecy` | `divertissement` | `generique-escape-game-exit.jpg` | — | json hero (local) |
 | `que-faire` | `espace-aquatique-la-clusaz` | `aquatique` | `generique-aquatique-piscine-couverte.jpg` | — | json hero (local) |
 | `que-faire` | `espace-aquatique-morzine` | `aquatique` | `generique-aquatique-bassin-natation.jpg` | — | json hero (local) |
-| `que-faire` | `espace-tairraz-musee-des-cristaux-chamonix` | `patrimoine` | `generique-musee-moderne.jpg` | — | json hero (local) |
+| `que-faire` | `espace-tairraz-musee-des-cristaux-chamonix` | `patrimoine` | `Fluorite-Quartz-164086.jpg` | — | json hero (url) |
 | `que-faire` | `fonderie-paccard-sevrier` | `patrimoine` | `fonderie-paccard-sevrier-hero.jpg` | — | json hero (local) |
 | `que-faire` | `full-land-annecy` | `parc` | `generique-attraction.jpg` | — | json hero (local) |
 | `que-faire` | `karting-mk-circuit-scientrier` | `divertissement` | `generique-karting-outdoor-aerial.jpg` | — | json hero (local) |
