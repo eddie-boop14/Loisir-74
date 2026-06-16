@@ -416,7 +416,7 @@ def extract_body_ld_blocks(html: str) -> list[str]:
 def extract_footer_categories(html: str) -> str | None:
     """Return the inner <ul>...</ul> from the footer's 'Categories' column."""
     m = re.search(
-        r'<div class="foot-col">\s*<h4>[^<]*[Cc]at[eé]gor[íi]as?\b[^<]*</h4>\s*(<ul>.*?</ul>)',
+        r'<div class="foot-col">\s*<h[34]>[^<]*[Cc]at[eé]gor[íi]as?\b[^<]*</h[34]>\s*(<ul>.*?</ul>)',
         html,
         re.S,
     )
@@ -424,7 +424,7 @@ def extract_footer_categories(html: str) -> str | None:
         return m.group(1)
     # Locale variants: Categorías, Categorie, Kategorien, Categories
     m = re.search(
-        r'<div class="foot-col">\s*<h4>(?:[Kk]ategorien|[Cc]ategor(?:ies|íe|ías|ie))[^<]*</h4>\s*(<ul>.*?</ul>)',
+        r'<div class="foot-col">\s*<h[34]>(?:[Kk]ategorien|[Cc]ategor(?:ies|íe|ías|ie))[^<]*</h[34]>\s*(<ul>.*?</ul>)',
         html, re.S,
     )
     return m.group(1) if m else None
@@ -541,8 +541,8 @@ section.cat h2{font-family:var(--serif);font-size:clamp(1.9rem,1.4rem + 1.7vw,3r
   font-weight:400;color:var(--ink);font-variation-settings:"SOFT" 50;display:flex;align-items:baseline;gap:.65rem;
   flex-wrap:wrap;transition:var(--turn)}
 section.cat h2 .count{font:600 .7rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);transition:var(--turn)}
-.see-all{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--accent);display:inline-flex;
-  align-items:center;gap:.45rem;border-bottom:1px solid var(--accent);padding-bottom:1px;align-self:flex-end;
+.see-all{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:#a04612;display:inline-flex;
+  align-items:center;gap:.45rem;border-bottom:1px solid #a04612;padding-bottom:1px;align-self:flex-end;
   transition:gap .3s var(--ease-out),color 1.1s var(--ease),border-color 1.1s var(--ease)}
 .see-all svg{width:14px;height:14px}
 .see-all:hover{gap:.7rem}
@@ -596,7 +596,7 @@ footer.site{background:color-mix(in srgb,var(--paper) 92%,#000 8%);border-top:1p
   padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;color:var(--ink-2);font-size:.9rem;margin-top:3rem;position:relative;z-index:2;transition:var(--turn)}
 .foot-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;margin-bottom:2.5rem}
 @media(min-width:720px){.foot-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
-.foot-col h4{font:600 .7rem var(--sans);color:var(--ink);text-transform:uppercase;letter-spacing:.18em;margin-bottom:1rem;transition:var(--turn)}
+.foot-col h3{font:600 .7rem var(--sans);color:var(--ink);text-transform:uppercase;letter-spacing:.18em;margin-bottom:1rem;transition:var(--turn)}
 .foot-col ul{display:flex;flex-direction:column;gap:.55rem}
 .foot-col ul a{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--ink-2);transition:var(--turn)}
 .foot-col ul a:hover{color:var(--accent)}
@@ -694,21 +694,21 @@ def render_footer(loc: dict, s: dict, footer_cats_ul: str | None, brand_blurb_p:
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-col">
-        <h4>Loisirs 74</h4>
+        <h3>Loisirs 74</h3>
         {brand_blurb_p}
       </div>
       <div class="foot-col">
-        <h4>{s["foot_cats_h4"]}</h4>
+        <h3>{s["foot_cats_h4"]}</h3>
         {cats}
       </div>
       <div class="foot-col">
-        <h4>{s["foot_lang_h4"]}</h4>
+        <h3>{s["foot_lang_h4"]}</h3>
         <ul>
           {lang_lis}
         </ul>
       </div>
       <div class="foot-col">
-        <h4>{s["foot_mentions_h4"]}</h4>
+        <h3>{s["foot_mentions_h4"]}</h3>
         <ul>
           {s["foot_mentions_lis"]}
         </ul>
