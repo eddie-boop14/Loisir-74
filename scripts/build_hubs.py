@@ -450,11 +450,15 @@ def fiche_card_html(d, lang, slug, picked_photo=None):
     fiche_url = f"https://loisirs74.fr{lang_prefix}/{slug}"
     official = d.get("official_site_url") or ""
     lat = d.get("latitude"); lon = d.get("longitude")
-    if lat is not None and lon is not None:
+    from urllib.parse import quote
+    # Name+commune first → Maps resolves to the real POI; a stored coord can be
+    # a centroid/label point and pins off-venue. Coords = last-resort fallback.
+    if name and commune:
+        maps_url = f"https://www.google.com/maps/search/?api=1&amp;query={quote(name + ', ' + commune + ', Haute-Savoie, France')}"
+    elif lat is not None and lon is not None:
         maps_url = f"https://www.google.com/maps/search/?api=1&amp;query={lat},{lon}"
     else:
-        from urllib.parse import quote
-        maps_url = f"https://www.google.com/maps/search/?api=1&amp;query={quote(name + ', ' + commune + ', Haute-Savoie')}"
+        maps_url = f"https://www.google.com/maps/search/?api=1&amp;query={quote((name or '') + ', ' + (commune or '') + ', Haute-Savoie, France')}"
 
     actions = [
         f'<a href="{maps_url}" rel="noopener" target="_blank">{CHROME["google_maps"][lang]}</a>'

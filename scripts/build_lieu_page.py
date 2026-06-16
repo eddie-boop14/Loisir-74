@@ -589,13 +589,17 @@ HOW_MODE = {
 
 
 def maps_query(d, name, commune):
-    """Maps deep-link target: the fiche's exact lat,lng when present (so Maps
-    drops a pin on the real spot instead of geocoding the name), name string as
-    fallback. Mirrors the Part-A how-card destination logic."""
+    """Maps deep-link target. Prefer the name+commune query so Maps resolves to
+    the real POI in its index — a stored coord can be a commune centroid / OSM
+    label point / rounded value and drops a literal pin off-venue (a
+    destination=lat,lng does NOT snap to the place). Coords = last-resort
+    fallback only."""
+    if name and commune:
+        return url_q(f"{name}, {commune}, Haute-Savoie, France")
     lat, lng = d.get("latitude"), d.get("longitude")
     if lat is not None and lng is not None:
         return f"{lat},{lng}"
-    return url_q(f"{name}, {commune}, Haute-Savoie")
+    return url_q(f"{name or ''}, {commune or ''}, Haute-Savoie, France")
 
 
 def how_to_block(how, name, commune, lat=None, lng=None, slug=None):
@@ -607,14 +611,18 @@ def how_to_block(how, name, commune, lat=None, lng=None, slug=None):
     section renders if there are how-cards OR generated stops; empty-stop lieux
     show just the curated cards, no empty box.
 
-    The Maps deep-link destination uses the fiche's exact `lat,lng` when
-    available (name fallback when null), as in Part A.
+    The Maps deep-link destination prefers the name+commune query (resolves to
+    the real POI); coords are a last-resort fallback (they can pin off-venue).
     """
     how = how or {}
-    if lat is not None and lng is not None:
-        dest = f"{lat},{lng}"          # exact, no geocode guess
+    # Name+commune first so Maps resolves to the real POI; a stored coord can be
+    # a centroid/label point and pins off-venue. Coords = last-resort fallback.
+    if name and commune:
+        dest = url_q(f"{name}, {commune}, Haute-Savoie, France")
+    elif lat is not None and lng is not None:
+        dest = f"{lat},{lng}"
     else:
-        dest = url_q(f"{name}, {commune}, Haute-Savoie")   # fallback only
+        dest = url_q(f"{name or ''}, {commune or ''}, Haute-Savoie, France")
     cards = []
     for key in ("car", "public_transport", "bike"):
         text = how.get(key)
