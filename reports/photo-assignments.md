@@ -8,7 +8,7 @@
 | hub | fiches | distinct photos | max repeat of one photo |
 |---|---:|---:|---:|
 | `baignade-nautisme` | 24 | 13 | 4 |
-| `bases-de-loisirs` | 85 | 54 | 7 |
+| `bases-de-loisirs` | 85 | 60 | 6 |
 | `cascades` | 16 | 16 | 1 |
 | `chateaux` | 26 | 23 | 3 |
 | `lacs-plages` | 31 | 26 | 3 |
@@ -16,7 +16,7 @@
 | `parcs-jardins` | 31 | 17 | 11 |
 | `points-de-vue` | 29 | 24 | 5 |
 | `que-faire` | 76 | 36 | 7 |
-| `sensations-plein-air` | 43 | 25 | 7 |
+| `sensations-plein-air` | 43 | 31 | 3 |
 | `sentiers` | 40 | 7 | 14 |
 | `sorties-detente` | 22 | 10 | 3 |
 | `sport-jeux` | 53 | 34 | 4 |
@@ -68,8 +68,8 @@
 | `bases-de-loisirs` | `base-nautique-evian-bains` | `parc` | `generique-voile-sunset-1.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `base-nautique-marquisats-annecy` | `aquatique` | `generique-paddle-aviron-detail.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `base-nautique-sciez-sciez` | `aquatique` | `generique-paddle-aviron-detail.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `bungee-bun-j-ride-saint-jean-de-sixt` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `bungee-viaduc-saint-gervais` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `bungee-bun-j-ride-saint-jean-de-sixt` | `sensations` | `generique-bungee.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `bungee-viaduc-saint-gervais` | `sensations` | `generique-bungee.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `c5-kids-party-ville-la-grand` | `parc` | `generique-parc.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `canyoning-escape-canyon` | `sensations` | `generique-canyoning-3.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `canyoning-neo-canyon` | `sensations` | `generique-canyoning-6.jpg` | — | json hero (local) |
@@ -115,23 +115,23 @@
 | `bases-de-loisirs` | `passy-accro-lac` | `divertissement` | `Accrobranche_floreval_2.jpg` | — | json hero (url) |
 | `bases-de-loisirs` | `plaine-de-loisirs-de-la-grangette` | `parc` | `plaine-de-loisirs-de-la-grangette-hero.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `port-clerges-base-nautique-thonon-bains` | `parc` | `generique-paddle-aviron-detail.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `rafting-ecolorado-passy-samoens` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `rafting-frogs-rafting-dranse` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `rafting-rando-rafting-samoens` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `speleo-bureau-montagne-saleve` | `sensations` | `generique-grotte-cathedrale.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `speleo-grotte-de-balme-magland` | `sensations` | `generique-grotte-lumiere.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `rafting-ecolorado-passy-samoens` | `sensations` | `generique-rafting-action.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `rafting-frogs-rafting-dranse` | `sensations` | `generique-rafting-riviere.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `rafting-rando-rafting-samoens` | `sensations` | `generique-rafting-rapides.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `speleo-bureau-montagne-saleve` | `sensations` | `generique-speleo-explorateurs.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `speleo-grotte-de-balme-magland` | `sensations` | `generique-speleo-grande-salle.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `tactiq-aventure-cruseilles` | `parc` | `generique-accrobranche-4.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `tropicaland-viry` | `parc` | `generique-parc.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `tyrolienne-fantasticable-chatel` | `sensations` | `generique-accrobranche-8.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `ulm-leman-cervens` | `sensations` | `generique-parapente-vol.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `via-ferrata-berard-vallorcine` | `sensations` | `generique-escalade-wall.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `via-ferrata-curalla-passy` | `sensations` | `generique-escalade-outdoor-falaise.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `via-ferrata-jallouvre-le-grand-bornand` | `sensations` | `generique-escalade-wall.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `via-ferrata-parc-thermal-saint-gervais` | `sensations` | `generique-escalade-bloc-outdoor.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `via-ferrata-pollet-villard-la-clusaz` | `sensations` | `generique-escalade-wall.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `via-ferrata-saix-de-miolene-abondance` | `sensations` | `generique-escalade-bouldering.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `via-ferrata-sixt-fer-a-cheval` | `sensations` | `generique-escalade-bloc-outdoor.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `via-ferrata-thones` | `sensations` | `generique-escalade-bouldering.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `via-ferrata-berard-vallorcine` | `sensations` | `generique-via-ferrata-groupe.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `via-ferrata-curalla-passy` | `sensations` | `generique-via-ferrata-traversee.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `via-ferrata-jallouvre-le-grand-bornand` | `sensations` | `generique-via-ferrata-lac.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `via-ferrata-parc-thermal-saint-gervais` | `sensations` | `generique-via-ferrata-arete.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `via-ferrata-pollet-villard-la-clusaz` | `sensations` | `generique-via-ferrata-gorge.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `via-ferrata-saix-de-miolene-abondance` | `sensations` | `generique-via-ferrata-paroi.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `via-ferrata-sixt-fer-a-cheval` | `sensations` | `generique-via-ferrata-paroi.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `via-ferrata-thones` | `sensations` | `generique-via-ferrata-arete.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `vitam-neydens` | `parc` | `generique-aquatique-piscine-couverte.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `voile-cercle-thonon-thonon` | `aquatique` | `generique-voile-sunset-1.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `wakepark-ponton-embarcadere-saint-jorioz` | `aquatique` | `generique-wakeboard-1.jpg` | — | json hero (local) |
@@ -401,9 +401,9 @@
 | `sensations-plein-air` | `acro-aventures-talloires` | `parc` | `Acro%27Aventures_%40_Planfait_%2850935328546%29.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `acroparc-de-bellavallis-bellevaux` | `parc` | `generique-accrobranche-6.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `alpine-coaster-les-planards-chamonix` | `sensations` | `generique-alpine-coaster-2.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `bungee-bun-j-ride-saint-jean-de-sixt` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `bungee-viaduc-saint-gervais` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `bureau-des-guides-annecy` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `bungee-bun-j-ride-saint-jean-de-sixt` | `sensations` | `generique-bungee.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `bungee-viaduc-saint-gervais` | `sensations` | `generique-bungee.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `bureau-des-guides-annecy` | `sensations` | `generique-via-ferrata-groupe.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `canyoning-escape-canyon` | `sensations` | `generique-canyoning-3.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `canyoning-neo-canyon` | `sensations` | `generique-canyoning-6.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `canyoning-yaute-canyon` | `sensations` | `generique-canyoning-5.jpg` | — | json hero (local) |
@@ -423,21 +423,21 @@
 | `sensations-plein-air` | `parc-aventure-mont-blanc-saint-gervais` | `parc` | `generique-accrobranche-3.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `parcours-aventure-de-sciez` | `parc` | `Accrobranche_floreval_2.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `passy-accro-lac` | `divertissement` | `Accrobranche_floreval_2.jpg` | — | json hero (url) |
-| `sensations-plein-air` | `rafting-ecolorado-passy-samoens` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `rafting-frogs-rafting-dranse` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `rafting-rando-rafting-samoens` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `speleo-bureau-montagne-saleve` | `sensations` | `generique-grotte-cathedrale.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `speleo-grotte-de-balme-magland` | `sensations` | `generique-grotte-lumiere.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `rafting-ecolorado-passy-samoens` | `sensations` | `generique-rafting-action.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `rafting-frogs-rafting-dranse` | `sensations` | `generique-rafting-riviere.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `rafting-rando-rafting-samoens` | `sensations` | `generique-rafting-rapides.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `speleo-bureau-montagne-saleve` | `sensations` | `generique-speleo-explorateurs.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `speleo-grotte-de-balme-magland` | `sensations` | `generique-speleo-grande-salle.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `tyrolienne-fantasticable-chatel` | `sensations` | `generique-accrobranche-8.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `ulm-leman-cervens` | `sensations` | `generique-parapente-vol.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `via-ferrata-berard-vallorcine` | `sensations` | `generique-escalade-wall.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `via-ferrata-curalla-passy` | `sensations` | `generique-escalade-outdoor-falaise.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `via-ferrata-jallouvre-le-grand-bornand` | `sensations` | `generique-escalade-wall.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `via-ferrata-parc-thermal-saint-gervais` | `sensations` | `generique-escalade-bloc-outdoor.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `via-ferrata-pollet-villard-la-clusaz` | `sensations` | `generique-escalade-wall.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `via-ferrata-saix-de-miolene-abondance` | `sensations` | `generique-escalade-bouldering.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `via-ferrata-sixt-fer-a-cheval` | `sensations` | `generique-escalade-bloc-outdoor.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `via-ferrata-thones` | `sensations` | `generique-escalade-bouldering.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `via-ferrata-berard-vallorcine` | `sensations` | `generique-via-ferrata-groupe.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `via-ferrata-curalla-passy` | `sensations` | `generique-via-ferrata-traversee.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `via-ferrata-jallouvre-le-grand-bornand` | `sensations` | `generique-via-ferrata-lac.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `via-ferrata-parc-thermal-saint-gervais` | `sensations` | `generique-via-ferrata-arete.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `via-ferrata-pollet-villard-la-clusaz` | `sensations` | `generique-via-ferrata-gorge.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `via-ferrata-saix-de-miolene-abondance` | `sensations` | `generique-via-ferrata-paroi.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `via-ferrata-sixt-fer-a-cheval` | `sensations` | `generique-via-ferrata-paroi.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `via-ferrata-thones` | `sensations` | `generique-via-ferrata-arete.jpg` | — | json hero (local) |
 | `sentiers` | `au-fil-rail-jeu-piste-a-servoz-servoz` | `nature` | `generique-sentier-automne-orange.jpg` | — | json hero (local) |
 | `sentiers` | `au-fil-rail-jeu-piste-a-vallorcine-vallorcine` | `nature` | `generique-sentier-hiver-neige.jpg` | — | json hero (local) |
 | `sentiers` | `balade-pedestre-tour-lac-mole-tour` | `nature` | `generique-sentier-automne-orange.jpg` | — | json hero (local) |
