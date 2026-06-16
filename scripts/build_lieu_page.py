@@ -1136,6 +1136,21 @@ def hero_block(d):
         img_src = f"/img/generique/generique-{eff_cat}.jpg"
         gen_attr = f' data-generique="true" data-generique-cat="{eff_cat}"'
 
+    # Visible photo attribution (CC BY/BY-SA require it). Shown only for real
+    # credited photos — skip generic placeholders / empty.
+    cred = (d.get("hero_credit") or "").strip()
+    if cred and not re.search(r"g[ée]n[ée]rique|à remplacer|placeholder", cred, re.I):
+        hero_credit_html = (
+            '<div class="hero-credit">'
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+            'stroke-linecap="round" stroke-linejoin="round">'
+            '<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>'
+            '<circle cx="12" cy="13" r="4"/></svg>'
+            f'{esc(cred)}</div>'
+        )
+    else:
+        hero_credit_html = ""
+
     eyebrow_text = clean_eyebrow(badge, is_free)
     cta_buttons = []
     if not is_free and booking_url and booking_url != "#":
@@ -1175,7 +1190,9 @@ def hero_block(d):
         '</div>'
         '<div class="reveal"><div class="hero-img">'
         f'{picture_tag(img_src, alt, eager=True, extra=gen_attr)}'
-        '</div></div>'
+        '</div>'
+        f'{hero_credit_html}'
+        '</div>'
         '</div></div></section>'
     )
 
