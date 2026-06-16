@@ -8,7 +8,7 @@
 | hub | fiches | distinct photos | max repeat of one photo |
 |---|---:|---:|---:|
 | `baignade-nautisme` | 24 | 13 | 4 |
-| `bases-de-loisirs` | 85 | 60 | 6 |
+| `bases-de-loisirs` | 85 | 61 | 6 |
 | `cascades` | 16 | 16 | 1 |
 | `chateaux` | 26 | 23 | 3 |
 | `lacs-plages` | 31 | 26 | 3 |
@@ -84,7 +84,7 @@
 | `bases-de-loisirs` | `cote-2000-aventure` | `sensations` | `Seilpark_Gantrisch_-_03.jpg` | — | json hero (url) |
 | `bases-de-loisirs` | `criq-parc` | `parc` | `criq-parc-hero.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `devalkart-de-manigod` | `sensations` | `generique-alpine-coaster-2.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `disc-golf-indiana-ventures-samoens` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `disc-golf-indiana-ventures-samoens` | `sensations` | `generique-disc-golf.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `domaine-de-guidou` | `parc` | `generique-domaine.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `domaine-de-rovoree-la-chataigniere` | `parc` | `Embarcad%C3%A8re_du_Domaine_de_La_Ch%C3%A2taigni%C3%A8re.jpg` | — | json hero (url) |
 | `bases-de-loisirs` | `domaine-du-tornet` | `parc` | `Lac_de_la_Balme-de-Sillingy_%2851056207507%29.jpg` | — | json hero (url) |
@@ -415,7 +415,7 @@
 | `sensations-plein-air` | `chiens-de-traineau-nordic-event-74` | `sensations` | `generique-chiens-de-traineau-2.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `cote-2000-aventure` | `sensations` | `Seilpark_Gantrisch_-_03.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `devalkart-de-manigod` | `sensations` | `generique-alpine-coaster-2.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `disc-golf-indiana-ventures-samoens` | `sensations` | `generique-attraction.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `disc-golf-indiana-ventures-samoens` | `sensations` | `generique-disc-golf.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `indiana-ventures-saint-paul-en-chablais` | `parc` | `La_plage_de_La_Beunaz.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `k2-parapente-doussard` | `sensations` | `generique-parapente-vol.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `montgolfiere-annecy` | `sensations` | `generique-montgolfiere.jpg` | — | json hero (local) |
