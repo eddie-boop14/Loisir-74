@@ -32,10 +32,15 @@ any field added upstream since load was lost.
   `hero_credit` byte-identical (clobber-regression test in `tests/test_apply_studio_patch.py`).
 
 **3. CI backstop in `build-gate.yml`: no-silent-drop gate.** ✅
-- `scripts/gate_no_key_drop.py` compares every `Json/*.json` against `HEAD~1` (checkout now
-  `fetch-depth: 2`); fails on any dropped top-level key, locale, or per-locale key. Intentional
-  removals → `reports/key-drop-allowlist.txt` or `--allow-drop`.
+- `scripts/gate_no_key_drop.py` compares every `Json/*.json` against a baseline; fails on any
+  dropped top-level key, locale, or per-locale key. Intentional removals →
+  `reports/key-drop-allowlist.txt` or `--allow-drop`.
 - *Verified:* green on the live tree; a deliberate key removal exits 1.
+
+> **Ingress-only rule.** Studio output enters the repo **only** as a dotted-path patch via
+> `scripts/apply_studio_patch.py`; never write a full `<slug>.json` into `Json/` directly. The
+> gate catches dropped *keys*, not reverted *values* — the ingress is the wall, the gate is the
+> backstop. (Full statement in `ARCHITECTURE.md` / `SPEC-studio-data-safety.md`.)
 
 ---
 
