@@ -53,6 +53,18 @@
       "date": "2026-06-10",
       "by": "claude-url-cross-check",
       "note": "Set official_site_url from Google Places (was empty). Cross-checked against google_check.website."
+    },
+    {
+      "date": "2026-06-17",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
+      "fields": [
+        "google_place_id",
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m"
+      ]
     }
   ],
   "partners": [
@@ -1319,5 +1331,10 @@
   ],
   "status": "published",
   "lake": "annecy",
-  "type": "aquatique"
+  "type": "aquatique",
+  "google_place_id": "ChIJrVhSxuGPi0cRrYl7wZFRM8U",
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-17",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 94
 }

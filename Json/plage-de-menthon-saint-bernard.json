@@ -39,7 +39,20 @@
     "tariff_kind": "seasonal"
   },
   "sparse_data": false,
-  "research_log": [],
+  "research_log": [
+    {
+      "date": "2026-06-17",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
+      "fields": [
+        "google_place_id",
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m"
+      ]
+    }
+  ],
   "partners": [
     {
       "tier": "recommended",
@@ -1128,5 +1141,10 @@
   },
   "status": "published",
   "lake": "annecy",
-  "type": "aquatique"
+  "type": "aquatique",
+  "google_place_id": "ChIJkz4ZDpGRi0cR17utsV2DS0M",
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-17",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 29
 }

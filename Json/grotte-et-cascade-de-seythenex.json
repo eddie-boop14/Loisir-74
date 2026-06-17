@@ -93,6 +93,18 @@
       "date": "2026-06-13",
       "by": "scripts/ingest_translations.py",
       "note": "Translation ingest [de]: 5 field(s) updated."
+    },
+    {
+      "date": "2026-06-17",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
+      "fields": [
+        "google_place_id",
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m"
+      ]
     }
   ],
   "partners": [
@@ -1285,5 +1297,10 @@
     }
   ],
   "status": "published",
-  "type": "aquatique"
+  "type": "aquatique",
+  "google_place_id": "ChIJj4Dz3IHqi0cRwXd_gjFdNmU",
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-17",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 21
 }

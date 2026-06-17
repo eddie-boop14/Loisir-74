@@ -78,6 +78,18 @@
       "date": "2026-06-15",
       "by": "scripts/pick_generique.py",
       "note": "hero_image → /img/generique/generique-musee-moderne.jpg (category='musee')."
+    },
+    {
+      "date": "2026-06-17",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
+      "fields": [
+        "google_place_id",
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m"
+      ]
     }
   ],
   "partners": [
@@ -1226,5 +1238,10 @@
     }
   ],
   "status": "published",
-  "type": "patrimoine"
+  "type": "patrimoine",
+  "google_place_id": "ChIJS_Lrh9VxjEcR9QmQ6sZ__YI",
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-17",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 66
 }
