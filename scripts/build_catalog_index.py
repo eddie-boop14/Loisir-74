@@ -56,7 +56,8 @@ def main():
         if not slug:
             continue
         # JOB 6: draft fiches are not in the public catalog.
-        if d.get("status") == "draft":
+        # 'unverified' (source-audit) is held out of the index exactly like draft.
+        if d.get("status") in ("draft", "unverified"):
             continue
         fr = (d.get("i18n") or {}).get("fr") or {}
         name = fr.get("name") or slug

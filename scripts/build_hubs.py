@@ -752,7 +752,8 @@ def load_all_json():
     out = {}
     for p in sorted((ROOT / "Json").glob("*.json")):
         d = json.loads(p.read_text(encoding="utf-8"))
-        if d.get("status") == "draft":
+        # 'unverified' (source-audit) is kept out of hubs exactly like draft.
+        if d.get("status") in ("draft", "unverified"):
             continue
         out[p.stem] = d
     return out
