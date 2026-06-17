@@ -3,7 +3,7 @@ name: Build gate (loisirs74)
 # Runs build_all on every push to main and every PR. Asserts:
 #   - status_gate         every fiche has explicit status field
 #   - hygiene_gate        0 Tier-1/2 scaffolding leaks
-#   - fiche render        all 392 Ã— 6 = 2352 HTMLs produced
+#   - fiche render        all 392 x 6 = 2352 HTMLs produced
 #   - catalog_index       regenerated
 #   - hubs                regenerated from JSON
 #   - placement_gate      protected fiches (chez-nous-a-la-plage, chalet-du-tornet) hosts preserved
@@ -11,7 +11,7 @@ name: Build gate (loisirs74)
 #   - reachability        0 orphans across all 6 locales
 #   - byte-stable double  two consecutive builds produce md5-identical HTMLs
 #
-# Any failure blocks the build â†’ Netlify (or any deploy) sees red.
+# Any failure blocks the build -> Netlify (or any deploy) sees red.
 # This is the structural defence against the mutation-chain disease
 # returning: every push must produce a clean, idempotent, reachable tree.
 
@@ -51,6 +51,9 @@ jobs:
       - name: No-silent-key-drop gate
         run: python3 scripts/gate_no_key_drop.py --base "$BASE"
 
+      - name: No-orphan-geo-verified gate
+        run: python3 scripts/gate_geo_verified.py
+
       - name: Run build_all (every gate inside)
         run: python3 scripts/build_all.py --no-site
 
@@ -70,7 +73,7 @@ jobs:
             diff /tmp/h1.txt /tmp/h2.txt | head -20
             exit 1
           fi
-          echo "âœ“ byte-stable: $(wc -l < /tmp/h1.txt) HTMLs identical across two consecutive builds"
+          echo "[ok] byte-stable: $(wc -l < /tmp/h1.txt) HTMLs identical across two consecutive builds"
 
       - name: Build _site/ (publish target)
         run: python3 scripts/build_site.py
@@ -82,7 +85,7 @@ jobs:
             echo "::error::research_log leaked into $leaks public exports"
             exit 1
           fi
-          echo "âœ“ no research_log in public exports"
+          echo "[ok] no research_log in public exports"
 
       - name: Assert _site/ leak surface closed
         run: |
@@ -96,7 +99,7 @@ jobs:
             echo "::error::leak surface re-opened:$leaks"
             exit 1
           fi
-          echo "âœ“ leak surface closed"
+          echo "[ok] leak surface closed"
 
       - name: Upload _site/ as artifact (optional review)
         if: success()
