@@ -57,6 +57,13 @@ jobs:
       - name: Run build_all (every gate inside)
         run: python3 scripts/build_all.py --no-site
 
+      - name: AI content layer gate
+        # build_all has just regenerated content/<slug>.md + llms.txt +
+        # llms-full.txt. Assert every advertised /content/<slug>.md exists
+        # (0 404s) and the llms counts match the corpus. Derived by
+        # scripts/build_ai_content.py.
+        run: python3 scripts/gate_ai_content.py
+
       - name: Byte-stable double build
         # Build_all has just run. Snapshot, rebuild, diff.
         run: |
