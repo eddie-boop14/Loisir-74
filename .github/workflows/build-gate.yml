@@ -60,8 +60,7 @@ jobs:
       - name: AI content layer gate
         # build_all has just regenerated content/<slug>.md + llms.txt +
         # llms-full.txt. Assert every advertised /content/<slug>.md exists
-        # (0 404s) and the llms counts match the corpus. Derived by
-        # scripts/build_ai_content.py.
+        # (0 404s) and the llms counts match the corpus.
         run: python3 scripts/gate_ai_content.py
 
       - name: Byte-stable double build
@@ -84,6 +83,12 @@ jobs:
 
       - name: Build _site/ (publish target)
         run: python3 scripts/build_site.py
+
+      - name: Published-verified gate
+        # Read-only. No status:"unverified" fiche may appear in catalog-index.json,
+        # api/lieux.json, sitemap.xml, or any hub index.html. No-op while 0 fiches
+        # are flagged; it starts enforcing once the source-audit --apply runs.
+        run: python3 scripts/gate_published_verified.py
 
       - name: Assert _site/ research_log strip
         run: |
