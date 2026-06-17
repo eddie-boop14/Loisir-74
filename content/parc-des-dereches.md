@@ -11,13 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.1792
 longitude: 6.7089
+geo_verified: false
+google_place_id: "ChIJgWkgJUIdjEcRxxg58g7ztCY"
 canonical_url: https://loisirs74.fr/parc-des-dereches
 language: fr
-photo_url: https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80
-photo_type: generic_stock
-photo_author: "David Marcu"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/7/70/Horse_riding_in_the_valley_of_the_Edigan_River.jpg
+photo_type: real
+photo_author: "Alpine meadow"
+photo_license: null
+photo_source: Wikimedia Commons
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Parc des Dérêches est un parc naturel municipal de plus de 5 km de sentiers le long de la Dranse, en plein centre de Morzine. Créé pour offrir aux habitants et visiteurs un espace de verdure protégé, sans voitures ni habitations, le parc propose une boucle principale de 4,5 km accessible à tous, ainsi que des boucles secondaires permettant de varier les distances. Les sentiers larges et ombragés sous les arbres centenaires sont adaptés aux poussettes et vélos.Le parc intègre un parcours santé de 20 ateliers didactiques répartis le long de la Dranse, un skate park refait en 2015, des courts de tennis et padel (Tennis Club Morzine), un centre équestre, un pumptrack, des aires de jeux pour enfants, et des infrastructures payantes adjacentes (Espace Aquatique, patinoires, Palais des Sports et des Congrès). Le site est traversé par plusieurs ponts permettant de composer des boucles courtes ou longues selon l'envie.Le Parc des Dérêches accueille aussi un parcours d'orientation permanent avec 20 balises (cartes disponibles à l'Office de Tourisme et au Palais des Sports), praticable à pied, à vélo ou à cheval toute l'année. Des aires de pique-nique et bancs sont répartis le long des sentiers, faisant du parc un lieu de détente et de sport pour tous âges et tous niveaux.
+Le Parc des Dérêches est un parc naturel municipal de plus de 5 km de sentiers le long de la Dranse, en plein centre de Morzine. Créé pour offrir aux habitants et visiteurs un espace de verdure protégé, sans voitures ni habitations, le parc propose une boucle principale de 4,5 km accessible à tous, ainsi que des boucles secondaires permettant de varier les distances. Les sentiers larges et ombragés sous les arbres centenaires sont adaptés aux poussettes et vélos.
+
+Le parc intègre un parcours santé de 20 ateliers didactiques répartis le long de la Dranse, un skate park refait en 2015, des courts de tennis et padel (Tennis Club Morzine), un centre équestre, un pumptrack, des aires de jeux pour enfants, et des infrastructures payantes adjacentes (Espace Aquatique, patinoires, Palais des Sports et des Congrès). Le site est traversé par plusieurs ponts permettant de composer des boucles courtes ou longues selon l'envie.
+
+Le Parc des Dérêches accueille aussi un parcours d'orientation permanent avec 20 balises (cartes disponibles à l'Office de Tourisme et au Palais des Sports), praticable à pied, à vélo ou à cheval toute l'année. Des aires de pique-nique et bancs sont répartis le long des sentiers, faisant du parc un lieu de détente et de sport pour tous âges et tous niveaux.
 
 ## Activités sur place
 
@@ -123,7 +130,7 @@ R : Parkings gratuits au Palais des Sports et des Congrès (502 route du Palais 
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/parc-des-dereches
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/parc-des-dereches) · [DE](https://loisirs74.fr/de/parc-des-dereches) · [ES](https://loisirs74.fr/es/parc-des-dereches) · [IT](https://loisirs74.fr/it/parc-des-dereches)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/parc-des-dereches) · [DE](https://loisirs74.fr/de/parc-des-dereches) · [ES](https://loisirs74.fr/es/parc-des-dereches) · [IT](https://loisirs74.fr/it/parc-des-dereches) · [NL](https://loisirs74.fr/nl/parc-des-dereches)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=parc-des-dereches

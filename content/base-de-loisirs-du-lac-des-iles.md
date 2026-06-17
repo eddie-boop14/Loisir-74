@@ -11,13 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.920038
 longitude: 6.658268
+geo_verified: false
+google_place_id: "ChIJx9-Ob_QBjEcRKxOrcbs1SS4"
 canonical_url: https://loisirs74.fr/base-de-loisirs-du-lac-des-iles
 language: fr
-photo_url: https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80
-photo_type: generic_stock
-photo_author: "David Marcu"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/b/bd/Les_ARAVIS_depuis_le_LAC_DE_PASSY_-_panoramio.jpg
+photo_type: real
+photo_author: "Alpine meadow"
+photo_license: null
+photo_source: Wikimedia Commons
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Base de loisirs du Lac des Îles, aussi appelée Lac de Passy, est un lac artificiel de 50 hectares créé dans les années 1970 lors de l'excavation des matériaux nécessaires à la construction de l'autoroute A40. Long de plus d'un kilomètre, il offre une vue frontale sur le massif du Mont-Blanc et la chaîne des Fiz, à environ 550 m d'altitude dans la vallée de l'Arve.Le site comprend une plage de sable fin aménagée avec baignade surveillée en juillet-août (zones délimitées 1,20 m), des criques herbeuses, un sentier de promenade de 2,5 km faisant le tour du lac, un parcours de santé en sous-bois (15 ateliers sur 800 m), des aires de pique-nique et plusieurs prestataires d'activités : mini-golf, karting, accrobranche, petits bateaux électriques, pédalos, stand-up paddle, planche à voile. La pêche est autorisée sur les pontons aménagés.Accessible toute l'année, la base de loisirs est un lieu prisé dès les beaux jours pour la baignade, les activités nautiques et les balades en famille. En hiver, le site devient un espace de promenade calme avec vue spectaculaire sur les sommets enneigés. Le lac est géré par la commune de Passy dans une démarche de tourisme durable et de préservation de l'environnement.
+La Base de loisirs du Lac des Îles, aussi appelée Lac de Passy, est un lac artificiel de 50 hectares créé dans les années 1970 lors de l'excavation des matériaux nécessaires à la construction de l'autoroute A40. Long de plus d'un kilomètre, il offre une vue frontale sur le massif du Mont-Blanc et la chaîne des Fiz, à environ 550 m d'altitude dans la vallée de l'Arve.
+
+Le site comprend une plage de sable fin aménagée avec baignade surveillée en juillet-août (zones délimitées  1,20 m), des criques herbeuses, un sentier de promenade de 2,5 km faisant le tour du lac, un parcours de santé en sous-bois (15 ateliers sur 800 m), des aires de pique-nique et plusieurs prestataires d'activités : mini-golf, karting, accrobranche, petits bateaux électriques, pédalos, stand-up paddle, planche à voile. La pêche est autorisée sur les pontons aménagés.
+
+Accessible toute l'année, la base de loisirs est un lieu prisé dès les beaux jours pour la baignade, les activités nautiques et les balades en famille. En hiver, le site devient un espace de promenade calme avec vue spectaculaire sur les sommets enneigés. Le lac est géré par la commune de Passy dans une démarche de tourisme durable et de préservation de l'environnement.
 
 ## Activités sur place
 
@@ -100,7 +107,7 @@ R : Non. L'accès à la Base de loisirs du Lac des Îles est gratuit toute l'ann
 
 **Q : La baignade est-elle surveillée au Lac des Îles ?**
 
-R : Oui. La baignade à la Base de loisirs du Lac des Îles est surveillée en juillet et août uniquement, de 12 h à 18 h, sur la plage de sable avec deux zones délimitées ( 1,20 m). La qualité de l'eau est contrôlée régulièrement.
+R : Oui. La baignade à la Base de loisirs du Lac des Îles est surveillée en juillet et août uniquement, de 12 h à 18 h, sur la plage de sable avec deux zones délimitées (< 1,20 m et > 1,20 m). La qualité de l'eau est contrôlée régulièrement.
 
 **Q : Les chiens sont-ils acceptés à la Base de loisirs du Lac des Îles ?**
 
@@ -123,7 +130,7 @@ R : Oui. Une buvette (Buvette des Criques) et un snack sont ouverts en été sur
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/base-de-loisirs-du-lac-des-iles
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/base-de-loisirs-du-lac-des-iles) · [DE](https://loisirs74.fr/de/base-de-loisirs-du-lac-des-iles) · [ES](https://loisirs74.fr/es/base-de-loisirs-du-lac-des-iles) · [IT](https://loisirs74.fr/it/base-de-loisirs-du-lac-des-iles)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/base-de-loisirs-du-lac-des-iles) · [DE](https://loisirs74.fr/de/base-de-loisirs-du-lac-des-iles) · [ES](https://loisirs74.fr/es/base-de-loisirs-du-lac-des-iles) · [IT](https://loisirs74.fr/it/base-de-loisirs-du-lac-des-iles) · [NL](https://loisirs74.fr/nl/base-de-loisirs-du-lac-des-iles)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=base-de-loisirs-du-lac-des-iles

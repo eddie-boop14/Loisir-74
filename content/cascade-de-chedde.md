@@ -11,15 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9287
 longitude: 6.6933
+geo_verified: false
+google_place_id: "ChIJ09s43bdXiUcR5xcNnAiJZ7I"
 canonical_url: https://loisirs74.fr/cascade-de-chedde
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/a/a3/Cascade_de_Cheddes_-_btv1b10123413v.jpg
 photo_type: real
-photo_author: "
-Ferrand, Henri (1853-1926). Photographe"
-photo_license: "Public domain"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+photo_author: "Cascade du Rouget"
+photo_license: "Wikimedia Commons"
+photo_source: CC BY-SA
+last_updated: 2026-06-08
 source: loisirs74.fr
 ---
 
@@ -41,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Cascade de Chedde, également appelée Cascade de Cœur, est une cascade naturelle située sur la commune de Passy, dans le hameau de Chedde, à environ 660 m d'altitude. Elle est formée par le torrent Ugine (appelé localement le Nant de l'Ugine), qui surgit des flancs de la montagne de Platé. Un rocher au sommet divise les eaux en deux branches qui se rejoignent à la base, créant une silhouette de cœur caractéristique.Dès le milieu du 18ᵉ siècle, la cascade était une étape prisée des voyageurs se rendant de Genève à Chamonix. Les touristes organisaient leur départ pour arriver au lever du soleil, lorsque la lumière dessinait un arc-en-ciel dans la brume d'eau. Le site alimentait autrefois des moulins et des scieries regroupés à proximité. Aujourd'hui, une petite centrale hydroélectrique discrète est intégrée en haut de la cascade. Le site a été classé Site Naturel de France en juin 2024.La cascade est accessible en 5 à 10 minutes de marche depuis le parking du Parc Biolley à Chedde, via un sentier aménagé menant à un promontoire d'observation. Un second sentier non balisé permet de s'approcher encore plus près de la chute. Le débit est particulièrement spectaculaire après de fortes pluies ou au printemps lors de la fonte des neiges.
+La Cascade de Chedde, également appelée Cascade de Cœur, est une cascade naturelle située sur la commune de Passy, dans le hameau de Chedde, à environ 660 m d'altitude. Elle est formée par le torrent Ugine (appelé localement le Nant de l'Ugine), qui surgit des flancs de la montagne de Platé. Un rocher au sommet divise les eaux en deux branches qui se rejoignent à la base, créant une silhouette de cœur caractéristique.
+
+Dès le milieu du 18ᵉ siècle, la cascade était une étape prisée des voyageurs se rendant de Genève à Chamonix. Les touristes organisaient leur départ pour arriver au lever du soleil, lorsque la lumière dessinait un arc-en-ciel dans la brume d'eau. Le site alimentait autrefois des moulins et des scieries regroupés à proximité. Aujourd'hui, une petite centrale hydroélectrique discrète est intégrée en haut de la cascade. Le site a été classé Site Naturel de France en juin 2024.
+
+La cascade est accessible en 5 à 10 minutes de marche depuis le parking du Parc Biolley à Chedde, via un sentier aménagé menant à un promontoire d'observation. Un second sentier non balisé permet de s'approcher encore plus près de la chute. Le débit est particulièrement spectaculaire après de fortes pluies ou au printemps lors de la fonte des neiges.
 
 ## Activités sur place
 
@@ -56,6 +61,12 @@ La silhouette en cœur créée par la division des eaux est particulièrement ph
 
 ### Découvrir la Petite Boucle Baroque en Clair-Obscur
 Un itinéraire familial d'enquête historique partant du Parc Biolley intègre la cascade dans un parcours thématique sur les lieux remarquables de Passy-Chedde.
+
+### Boucle par les chemins forestiers
+Variante longue en boucle empruntant les sentiers forestiers de Chedde pour rejoindre le promontoire. Permet d'allonger la sortie d'environ 1 h avec un cadre boisé apaisant.
+
+### Sortie matinale pour l'arc-en-ciel dans les embruns
+Aux heures matinales, le soleil rasant traverse les embruns et fait apparaître un arc-en-ciel à la base de la chute. Meilleure période : printemps, fort débit.
 
 ## Infos pratiques
 
@@ -124,7 +135,7 @@ R : Oui. Dès le 18ᵉ siècle, la Cascade de Chedde était une étape prisée d
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/cascade-de-chedde
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-de-chedde) · [DE](https://loisirs74.fr/de/cascade-de-chedde) · [ES](https://loisirs74.fr/es/cascade-de-chedde) · [IT](https://loisirs74.fr/it/cascade-de-chedde)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-de-chedde) · [DE](https://loisirs74.fr/de/cascade-de-chedde) · [ES](https://loisirs74.fr/es/cascade-de-chedde) · [IT](https://loisirs74.fr/it/cascade-de-chedde) · [NL](https://loisirs74.fr/nl/cascade-de-chedde)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=cascade-de-chedde

@@ -11,13 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.3703
 longitude: 6.3356
+geo_verified: false
+google_place_id: "ChIJb45-yitBjEcRq1kUG12_flM"
 canonical_url: https://loisirs74.fr/domaine-de-rovoree-la-chataigniere
 language: fr
-photo_url: https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80
-photo_type: generic_stock
-photo_author: "David Marcu"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/f/f8/Embarcad%C3%A8re_du_Domaine_de_La_Ch%C3%A2taigni%C3%A8re.jpg
+photo_type: real
+photo_author: "Alpine meadow"
+photo_license: null
+photo_source: Wikimedia Commons
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Domaine de Rovorée-La Châtaignière est un espace naturel sensible départemental de 24 hectares situé au bord du lac Léman, entre Yvoire et Excenevex. Propriété du Département de la Haute-Savoie et du Conservatoire du Littoral, il est l'un des plus grands sites naturels accessibles au public sur la rive française du Léman. Le domaine comprend une forêt ancienne avec ses châtaigniers séculaires, des prairies, des rives lacustres bordant le lac sur 1,2 km, des grottes à tufs et des vestiges de la place forte médiévale de Rovorée.Le site se distingue par une biodiversité exceptionnelle : on y dénombre 350 espèces floristiques, 87 espèces d'oiseaux, 29 espèces de papillons et 13 espèces de chauves-souris, dont la pipistrelle pygmée (colonie unique en Haute-Savoie). Le domaine n'est pas un parc urbain aménagé mais un espace naturel préservé, façonné au fil des siècles par les pratiques humaines. Le manoir de Rovorée et la demeure de La Châtaignière, deux maisons de maître du XIXe siècle, accueillent aujourd'hui des expositions temporaires et des résidences d'artistes.
+Le Domaine de Rovorée-La Châtaignière est un espace naturel sensible départemental de 24 hectares situé au bord du lac Léman, entre Yvoire et Excenevex. Propriété du Département de la Haute-Savoie et du Conservatoire du Littoral, il est l'un des plus grands sites naturels accessibles au public sur la rive française du Léman. Le domaine comprend une forêt ancienne avec ses châtaigniers séculaires, des prairies, des rives lacustres bordant le lac sur 1,2 km, des grottes à tufs et des vestiges de la place forte médiévale de Rovorée.
+
+Le site se distingue par une biodiversité exceptionnelle : on y dénombre 350 espèces floristiques, 87 espèces d'oiseaux, 29 espèces de papillons et 13 espèces de chauves-souris, dont la pipistrelle pygmée (colonie unique en Haute-Savoie). Le domaine n'est pas un parc urbain aménagé mais un espace naturel préservé, façonné au fil des siècles par les pratiques humaines. Le manoir de Rovorée et la demeure de La Châtaignière, deux maisons de maître du XIXe siècle, accueillent aujourd'hui des expositions temporaires et des résidences d'artistes.
 
 ## Activités sur place
 
@@ -123,7 +128,7 @@ R : Oui. Le Domaine de Rovorée-La Châtaignière propose des visites guidées g
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/domaine-de-rovoree-la-chataigniere
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/domaine-de-rovoree-la-chataigniere) · [DE](https://loisirs74.fr/de/domaine-de-rovoree-la-chataigniere) · [ES](https://loisirs74.fr/es/domaine-de-rovoree-la-chataigniere) · [IT](https://loisirs74.fr/it/domaine-de-rovoree-la-chataigniere)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/domaine-de-rovoree-la-chataigniere) · [DE](https://loisirs74.fr/de/domaine-de-rovoree-la-chataigniere) · [ES](https://loisirs74.fr/es/domaine-de-rovoree-la-chataigniere) · [IT](https://loisirs74.fr/it/domaine-de-rovoree-la-chataigniere) · [NL](https://loisirs74.fr/nl/domaine-de-rovoree-la-chataigniere)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=domaine-de-rovoree-la-chataigniere

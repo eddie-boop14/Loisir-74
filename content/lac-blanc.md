@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9772
 longitude: 6.8969
+geo_verified: false
+google_place_id: "ChIJIwnvpyJNiUcR9sL0MUsClVQ"
 canonical_url: https://loisirs74.fr/lac-blanc
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b4/Lac_Blanc.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b4/Lac_Blanc.JPG
 photo_type: real
-photo_author: "Mrvoyage"
-photo_license: "Public domain"
+photo_author: "Ermakae"
+photo_license: "CC0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Lac Blanc est un lac glaciaire situé à 2 352 mètres d'altitude dans le massif des Aiguilles Rouges, sur la commune de Chamonix-Mont-Blanc. Le lac est composé de deux plans d'eau reliés par un petit cours d'eau et s'inscrit dans la réserve naturelle nationale des Aiguilles Rouges, espace protégé créé pour préserver la faune et la flore alpines. Depuis ses rives, le lac offre un panorama exceptionnel sur le massif du Mont-Blanc, l'Aiguille Verte, les Grandes Jorasses, la Mer de Glace et le glacier d'Argentière.Plusieurs itinéraires de randonnée permettent d'accéder au lac. L'accès le plus courant et le plus familial part de la télécabine de la Flégère (1 877 m), depuis Les Praz de Chamonix, puis environ 2 heures de marche jusqu'au lac. Les randonneurs expérimentés peuvent emprunter l'itinéraire depuis le col des Montets ou Tré-le-Champ (environ 3 heures de marche), avec passages techniques et échelles métalliques. Le lac se situe sur le tracé du Tour du Mont-Blanc (TMB), étape classique des randonneurs au long cours.Un refuge d'altitude, le Refuge du Lac Blanc, est installé à proximité immédiate du lac, permettant restauration et hébergement. Le refuge actuel a été reconstruit après qu'une avalanche a emporté la première construction en 1986. En contrebas, les lacs des Chéserys offrent un panorama complémentaire et constituent une étape prisée à la descente. Le bivouac est autorisé uniquement aux lacs des Chéserys (entre 19h et 9h), pas au Lac Blanc lui-même. La baignade est interdite dans le Lac Blanc et les lacs des Chéserys depuis un arrêté préfectoral du 22 mai 2025.
+Le Lac Blanc est un lac glaciaire situé à 2 352 mètres d'altitude dans le massif des Aiguilles Rouges, sur la commune de Chamonix-Mont-Blanc. Le lac est composé de deux plans d'eau reliés par un petit cours d'eau et s'inscrit dans la réserve naturelle nationale des Aiguilles Rouges, espace protégé créé pour préserver la faune et la flore alpines. Depuis ses rives, le lac offre un panorama exceptionnel sur le massif du Mont-Blanc, l'Aiguille Verte, les Grandes Jorasses, la Mer de Glace et le glacier d'Argentière.
+
+Plusieurs itinéraires de randonnée permettent d'accéder au lac. L'accès le plus courant et le plus familial part de la télécabine de la Flégère (1 877 m), depuis Les Praz de Chamonix, puis environ 2 heures de marche jusqu'au lac. Les randonneurs expérimentés peuvent emprunter l'itinéraire depuis le col des Montets ou Tré-le-Champ (environ 3 heures de marche), avec passages techniques et échelles métalliques. Le lac se situe sur le tracé du Tour du Mont-Blanc (TMB), étape classique des randonneurs au long cours.
+
+Un refuge d'altitude, le Refuge du Lac Blanc, est installé à proximité immédiate du lac, permettant restauration et hébergement. Le refuge actuel a été reconstruit après qu'une avalanche a emporté la première construction en 1986. En contrebas, les lacs des Chéserys offrent un panorama complémentaire et constituent une étape prisée à la descente. Le bivouac est autorisé uniquement aux lacs des Chéserys (entre 19h et 9h), pas au Lac Blanc lui-même. La baignade est interdite dans le Lac Blanc et les lacs des Chéserys depuis un arrêté préfectoral du 22 mai 2025.
 
 ## Activités sur place
 
@@ -130,7 +136,7 @@ R : Oui. Le Refuge du Lac Blanc, situé à proximité immédiate du lac à 2 352
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/lac-blanc
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/lac-blanc) · [DE](https://loisirs74.fr/de/lac-blanc) · [ES](https://loisirs74.fr/es/lac-blanc) · [IT](https://loisirs74.fr/it/lac-blanc)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/lac-blanc) · [DE](https://loisirs74.fr/de/lac-blanc) · [ES](https://loisirs74.fr/es/lac-blanc) · [IT](https://loisirs74.fr/it/lac-blanc) · [NL](https://loisirs74.fr/nl/lac-blanc)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=lac-blanc

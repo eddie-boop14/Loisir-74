@@ -11,12 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9622
 longitude: 6.2547
+geo_verified: false
+google_place_id: "ChIJf2fVdxSMi0cRfgVwKnajjho"
 canonical_url: https://loisirs74.fr/tete-du-parmelan
 language: fr
-photo_url: /tete-du-parmelan-hero.jpg
+photo_url: /img/points-de-vue/tete-du-parmelan-hero.jpg
 photo_type: real
-photo_source: own
-last_updated: 2026-05-18
+photo_author: "Guilhem Vellut from Annecy, France"
+photo_license: "CC BY 2.0"
+photo_source: Wikimedia Commons
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -38,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Tête du Parmelan est le sommet emblématique du Parmelan, vaste plateau calcaire des Bornes culminant à 1 832 m d'altitude. Bien que le point culminant absolu de la montagne atteigne 1 856 m (falaise sud-est), la Tête du Parmelan constitue le sommet identitaire visible depuis Annecy, marqué par une croix et le refuge Camille Dunant géré par le CAF d'Annecy.Le plateau du Parmelan est un anticlinal karstique spectaculaire, composé de calcaire urgonien formant un vaste lapiaz criblé de failles, gouffres et grottes. L'ascension jusqu'à la Tête du Parmelan emprunte soit le Grand Montoir (passage aérien équipé de câbles et chaînes, plus court mais escarpé), soit le Petit Montoir (plus long mais moins raide). Le plateau offre une vue panoramique à 360° sur le Genevois, le lac d'Annecy, les Bauges, les Aravis et le massif du Mont-Blanc.Randonnée classique des Annéciens, la Tête du Parmelan est accessible par plusieurs départs : parking du Bois Brûlé (route forestière de Villaz, 1 170 m), chalet de l'Anglettaz (Aviernoz, 1 450 m, accès le plus court avec 382 m de dénivelé), ou parking de La Blonnière (Dingy-Saint-Clair, 1 029 m). Le refuge Camille Dunant, perché au sommet, propose restauration et hébergement de mi-mai à mi-septembre.
+La Tête du Parmelan est le sommet emblématique du Parmelan, vaste plateau calcaire des Bornes culminant à 1 832 m d'altitude. Bien que le point culminant absolu de la montagne atteigne 1 856 m (falaise sud-est), la Tête du Parmelan constitue le sommet identitaire visible depuis Annecy, marqué par une croix et le refuge Camille Dunant géré par le CAF d'Annecy.
+
+Le plateau du Parmelan est un anticlinal karstique spectaculaire, composé de calcaire urgonien formant un vaste lapiaz criblé de failles, gouffres et grottes. L'ascension jusqu'à la Tête du Parmelan emprunte soit le Grand Montoir (passage aérien équipé de câbles et chaînes, plus court mais escarpé), soit le Petit Montoir (plus long mais moins raide). Le plateau offre une vue panoramique à 360° sur le Genevois, le lac d'Annecy, les Bauges, les Aravis et le massif du Mont-Blanc.
+
+Randonnée classique des Annéciens, la Tête du Parmelan est accessible par plusieurs départs : parking du Bois Brûlé (route forestière de Villaz, 1 170 m), chalet de l'Anglettaz (Aviernoz, 1 450 m, accès le plus court avec 382 m de dénivelé), ou parking de La Blonnière (Dingy-Saint-Clair, 1 029 m). Le refuge Camille Dunant, perché au sommet, propose restauration et hébergement de mi-mai à mi-septembre.
 
 ## Activités sur place
 
@@ -119,7 +127,7 @@ R : Oui, les chiens sont autorisés tenus en laisse sur les sentiers menant à l
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/tete-du-parmelan
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/tete-du-parmelan) · [DE](https://loisirs74.fr/de/tete-du-parmelan) · [ES](https://loisirs74.fr/es/tete-du-parmelan) · [IT](https://loisirs74.fr/it/tete-du-parmelan)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/tete-du-parmelan) · [DE](https://loisirs74.fr/de/tete-du-parmelan) · [ES](https://loisirs74.fr/es/tete-du-parmelan) · [IT](https://loisirs74.fr/it/tete-du-parmelan) · [NL](https://loisirs74.fr/nl/tete-du-parmelan)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=tete-du-parmelan

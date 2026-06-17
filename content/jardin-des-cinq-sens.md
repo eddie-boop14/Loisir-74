@@ -11,15 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.3701
 longitude: 6.3268
+geo_verified: true
+google_place_id: "ChIJP-4wnZpBjEcRv-HOdgfmKm4"
 canonical_url: https://loisirs74.fr/jardin-des-cinq-sens
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/d/d9/Yvoire_Jardin_Cinq_Sens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/d/d9/Yvoire_Jardin_Cinq_Sens.jpg
 photo_type: real
-photo_author: "_YvoireWiki_09.jpg
-derivative work: Jd5s (talk)"
-photo_license: "CC BY-SA 3.0"
+photo_author: "Krzysztof Golik"
+photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-06-06
 source: loisirs74.fr
 ---
 
@@ -41,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Jardin des Cinq Sens est un jardin paysager de 2 600 m² situé au cœur de la cité médiévale d'Yvoire, sur les rives du lac Léman. Créé en 1988 par Yves et Anne-Monique d'Yvoire dans l'ancien potager du château, il est classé Jardin Remarquable par le Ministère de la Culture et membre de l'association des Plus Beaux Jardins de France. Le jardin s'inspire des labyrinthes médiévaux et organise ses espaces autour de cinq jardins intimistes dédiés aux cinq sens : le Jardin du Goût, le Jardin de l'Odorat, le Jardin du Toucher, le Jardin de la Vue et le Jardin de l'Ouïe (représenté par le murmure de l'eau et le chant des oiseaux).Le labyrinthe est composé de charmilles et de pommiers palissés qui délimitent des chambres de verdure. Chaque espace thématique présente une collection de plantes choisies pour leurs propriétés sensorielles, médicinales ou comestibles : 25 variétés de menthes, 25 de sauges, 50 de pélargoniums odorants, des plantes alpines, des légumes oubliés, des arbres fruitiers palissés, des roses anciennes. Plus de 1 500 variétés végétales sont cultivées par une équipe de jardiniers passionnés dirigée depuis 2009 par Matthieu Constans, chef jardinier. Le jardin accueille environ 40 000 visiteurs par an.Le jardin se divise en deux parties : la première comprend une prairie alpine (clin d'œil à l'environnement montagnard), un sous-bois de plantes d'ombre, un tissage d'inspiration Renaissance et un cloître en charmille. La seconde partie, en contrebas, abrite les chambres de verdure et les cinq jardins sensoriels. Chaque visiteur reçoit à l'accueil un plan explicatif, et un quiz-découverte est offert aux enfants pour apprendre en s'amusant. Des visites guidées gratuites sont organisées en saison (programme sur le site officiel).
+Le Jardin des Cinq Sens est un jardin paysager de 2 600 m² situé au cœur de la cité médiévale d'Yvoire, sur les rives du lac Léman. Créé en 1988 par Yves et Anne-Monique d'Yvoire dans l'ancien potager du château, il est classé Jardin Remarquable par le Ministère de la Culture et membre de l'association des Plus Beaux Jardins de France. Le jardin s'inspire des labyrinthes médiévaux et organise ses espaces autour de cinq jardins intimistes dédiés aux cinq sens : le Jardin du Goût, le Jardin de l'Odorat, le Jardin du Toucher, le Jardin de la Vue et le Jardin de l'Ouïe (représenté par le murmure de l'eau et le chant des oiseaux).
+
+Le labyrinthe est composé de charmilles et de pommiers palissés qui délimitent des chambres de verdure. Chaque espace thématique présente une collection de plantes choisies pour leurs propriétés sensorielles, médicinales ou comestibles : 25 variétés de menthes, 25 de sauges, 50 de pélargoniums odorants, des plantes alpines, des légumes oubliés, des arbres fruitiers palissés, des roses anciennes. Plus de 1 500 variétés végétales sont cultivées par une équipe de jardiniers passionnés dirigée depuis 2009 par Matthieu Constans, chef jardinier. Le jardin accueille environ 40 000 visiteurs par an.
+
+Le jardin se divise en deux parties : la première comprend une prairie alpine (clin d'œil à l'environnement montagnard), un sous-bois de plantes d'ombre, un tissage d'inspiration Renaissance et un cloître en charmille. La seconde partie, en contrebas, abrite les chambres de verdure et les cinq jardins sensoriels. Chaque visiteur reçoit à l'accueil un plan explicatif, et un quiz-découverte est offert aux enfants pour apprendre en s'amusant. Des visites guidées gratuites sont organisées en saison (programme sur le site officiel). Le village d'Yvoire fait lui-même partie des Plus Beaux Villages de France, ce qui en fait une destination incontournable en Haute-Savoie pour qui aime allier patrimoine médiéval et jardins d'exception.
 
 ## Activités sur place
 
@@ -67,8 +72,8 @@ Rejoindre une visite guidée gratuite pour découvrir l'histoire du jardin, les 
 
 - **Adresse**: 12 rue du Lac, 74140 Yvoire
 - **Coordonnées**: +33 4 50 72 88 80
-- **Horaires**: Été (10 avr – 13 sept 2026) : tous les jours 10h00–18h30 (billetterie ferme 17h30). Automne (14 sept – 4 oct 2026) : tous les jours 10h00–17h30 (billetterie ferme 16h30). Fermeture annuelle début octobre à mi-avril. Vérifié sur le site officiel le 14 mai 2026 — sous réserve de modifications saisonnières.
-- **Tarifs**: Adulte 15 €. Enfant 6-18 ans 8,50 €. Gratuit moins de 6 ans. Pass Famille (2 adultes + 2 enfants) 38,50 €. Enfant supplémentaire 5 €. Étudiant (- de 26 ans) 11 €. Personne en situation de handicap / accompagnateur 11 €. Forfait saison 25 € (entrées illimitées avril-octobre). Vérifié le 14 mai 2026.
+- **Horaires**: Été (10 avr – 7 sept 2026) : tous les jours 10h00–18h30 (billetterie ferme 17h30). Automne (8 sept – 4 oct 2026) : tous les jours 10h00–17h30 (billetterie ferme 16h30). Fermeture annuelle début octobre à mi-avril. Vérifié sur le site officiel le 6 juin 2026 — sous réserve de modifications saisonnières.
+- **Tarifs**: Adulte 15 €. Enfant 6-18 ans 8,50 €. Gratuit moins de 6 ans. Pass Famille (2 adultes + 2 enfants) 38,50 €. Enfant supplémentaire 5 €. Étudiant (- de 26 ans) 11 €. Personne en situation de handicap / accompagnateur 11 €. Forfait saison 25 € (entrées illimitées avril-octobre). Vérifié le 6 juin 2026.
 - **Réservation**: Conseillée en haute saison (juillet-août). Billetterie en ligne sur jardin5sens.net. Achat possible sur place à l'accueil.
 - **Parking**: Payant à environ 300 m du jardin (village piétonnier)
 - **Animaux**: Non admis (y compris en laisse, en sac ou dans les bras). Seuls les chiens guides sont acceptés.
@@ -103,11 +108,11 @@ R : La réservation en ligne est disponible sur jardin5sens.net (billetterie). E
 
 **Q : Quel est le tarif du Jardin des Cinq Sens ?**
 
-R : Le tarif adulte du Jardin des Cinq Sens est de 15 €. Enfant 6-18 ans : 8,50 €. Gratuit pour les moins de 6 ans. Pass Famille (2 adultes + 2 enfants) : 38,50 €. Étudiant (- de 26 ans) : 11 €. Forfait saison (entrées illimitées avril-octobre) : 25 €. Vérifié le 14 mai 2026.
+R : Le tarif adulte du Jardin des Cinq Sens est de 15 €. Enfant 6-18 ans : 8,50 €. Gratuit pour les moins de 6 ans. Pass Famille (2 adultes + 2 enfants) : 38,50 €. Étudiant (- de 26 ans) : 11 €. Forfait saison (entrées illimitées avril-octobre) : 25 €. Vérifié le 6 juin 2026.
 
 **Q : Quelles sont les horaires du Jardin des Cinq Sens ?**
 
-R : Le Jardin des Cinq Sens est ouvert tous les jours du 10 avril au 13 septembre 2026 de 10h00 à 18h30 (billetterie ferme à 17h30). Du 14 septembre au 4 octobre 2026 : 10h00 à 17h30 (billetterie ferme à 16h30). Fermeture annuelle de début octobre à mi-avril. Vérifié sur le site officiel le 14 mai 2026 — sous réserve de modifications saisonnières.
+R : Le Jardin des Cinq Sens est ouvert tous les jours du 10 avril au 7 septembre 2026 de 10h00 à 18h30 (billetterie ferme à 17h30). Du 8 septembre au 4 octobre 2026 : 10h00 à 17h30 (billetterie ferme à 16h30). Fermeture annuelle de début octobre à mi-avril. Vérifié sur le site officiel le 6 juin 2026 — sous réserve de modifications saisonnières.
 
 **Q : Les chiens sont-ils acceptés au Jardin des Cinq Sens ?**
 
@@ -129,12 +134,16 @@ R : Oui. Le Jardin des Cinq Sens offre gratuitement un quiz-découverte aux enfa
 
 R : Le village d'Yvoire est piétonnier. Des parkings payants se trouvent à environ 300 mètres du Jardin des Cinq Sens. En haute saison (juillet-août), il est recommandé d'arriver tôt le matin pour trouver une place facilement.
 
+**Q : Peut-on visiter Yvoire et le Jardin des Cinq Sens dans la même journée ?**
+
+R : Oui, c'est l'idéal ! Le Jardin des Cinq Sens se trouve au cœur du village médiéval d'Yvoire, classé parmi les Plus Beaux Villages de France. Comptez 1 à 2 heures pour le jardin, puis flânez dans les ruelles médiévales, visitez les remparts, et profitez des rives du lac Léman. Une journée complète est parfaite pour découvrir l'ensemble.
+
 ---
 
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/jardin-des-cinq-sens
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/jardin-des-cinq-sens) · [DE](https://loisirs74.fr/de/jardin-des-cinq-sens) · [ES](https://loisirs74.fr/es/jardin-des-cinq-sens) · [IT](https://loisirs74.fr/it/jardin-des-cinq-sens)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/jardin-des-cinq-sens) · [DE](https://loisirs74.fr/de/jardin-des-cinq-sens) · [ES](https://loisirs74.fr/es/jardin-des-cinq-sens) · [IT](https://loisirs74.fr/it/jardin-des-cinq-sens) · [NL](https://loisirs74.fr/nl/jardin-des-cinq-sens)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=jardin-des-cinq-sens

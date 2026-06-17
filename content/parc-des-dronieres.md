@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.04015
 longitude: 6.122339
+geo_verified: false
+google_place_id: "ChIJLWAM7PSHi0cRaMVzv1jqmcs"
 canonical_url: https://loisirs74.fr/parc-des-dronieres
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/a/a9/Parc_de_Loisirs_des_Droni%C3%A8res_%40_Cruseilles_%2850969087497%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/a/a9/Parc_de_Loisirs_des_Droni%C3%A8res_%40_Cruseilles_%2850969087497%29.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Parc des Dronières est un vaste complexe public de loisirs et de nature situé à Cruseilles, à 20 km d'Annecy et Saint-Julien-en-Genevois, dans un cadre forestier de 3 hectares au pied du Salève. Le site offre un accès libre et gratuit toute l'année, et regroupe un lac, un parc animalier, des sentiers de promenade ombragés, des aires de jeux pour enfants, un parcours de santé de 2,5 km, une piste de bi-cross, et des infrastructures de barbecue et pique-nique.Le parc accueille également des équipements gérés par des opérateurs : le Centre Nautique de l'Espace Bernard Pellarin (piscine en plein air chauffée ouverte de mai à fin août), un parcours aventure en accrobranche (Tactiq Aventure), des courts de tennis et un lac de pêche (permis requis). L'enclos animalier permet d'observer gratuitement des daims, cerfs, biches et mouflons, faisant du parc une destination familiale prisée du Genevois.
+Le Parc des Dronières est un vaste complexe public de loisirs et de nature situé à Cruseilles, à 20 km d'Annecy et Saint-Julien-en-Genevois, dans un cadre forestier de 3 hectares au pied du Salève. Le site offre un accès libre et gratuit toute l'année, et regroupe un lac, un parc animalier, des sentiers de promenade ombragés, des aires de jeux pour enfants, un parcours de santé de 2,5 km, une piste de bi-cross, et des infrastructures de barbecue et pique-nique.
+
+Le parc accueille également des équipements gérés par des opérateurs : le Centre Nautique de l'Espace Bernard Pellarin (piscine en plein air chauffée ouverte de mai à fin août), un parcours aventure en accrobranche (Tactiq Aventure), des courts de tennis et un lac de pêche (permis requis). L'enclos animalier permet d'observer gratuitement des daims, cerfs, biches et mouflons, faisant du parc une destination familiale prisée du Genevois.
 
 ## Activités sur place
 
@@ -126,7 +130,7 @@ R : Le centre nautique de l'Espace Bernard Pellarin est ouvert du 18 mai au 30 a
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/parc-des-dronieres
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/parc-des-dronieres) · [DE](https://loisirs74.fr/de/parc-des-dronieres) · [ES](https://loisirs74.fr/es/parc-des-dronieres) · [IT](https://loisirs74.fr/it/parc-des-dronieres)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/parc-des-dronieres) · [DE](https://loisirs74.fr/de/parc-des-dronieres) · [ES](https://loisirs74.fr/es/parc-des-dronieres) · [IT](https://loisirs74.fr/it/parc-des-dronieres) · [NL](https://loisirs74.fr/nl/parc-des-dronieres)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=parc-des-dronieres

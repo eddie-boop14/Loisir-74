@@ -11,13 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.33251
 longitude: 6.38413
+geo_verified: false
+google_place_id: "ChIJl7KSVUBBjEcR3c4sxWhojuY"
 canonical_url: https://loisirs74.fr/plage-de-sciez-sur-leman
 language: fr
-photo_url: https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Joshua Earle"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/a/a1/Sciez-regate.jpg
+photo_type: real
+photo_author: "Alpine lake"
+photo_license: "Wikimedia Commons"
+photo_source: CC BY-SA
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Plage de Sciez-sur-Léman est une plage municipale engazonnée et arborée du lac Léman, située à Sciez dans le Bas-Chablais, à 375 m d'altitude. Elle jouxte le port de plaisance de Sciez (450 places, labellisé Pavillon Bleu depuis 2009) et s'étend sur les rives sud du Léman, entre Thonon-les-Bains et Yvoire.La plage combine une zone engazonnée ombragée et une zone de baignade sablonneuse surveillée en juillet et août par des maîtres-nageurs. Un tiralo (fauteuil de baignade amphibie) est disponible auprès de la surveillance pour faciliter l'accès aux personnes à mobilité réduite. La plage dispose d'un espace de baignade dédié aux chiens (côté droit face au lac), une des rares plages du Léman à l'autoriser.Le site est bordé de restaurants, brasseries et écoles nautiques (voile, plongée, location de bateaux). Un kiosque et des sanitaires automatiques sont installés. Des saunas en hiver complètent l'offre de loisirs au bord de l'eau toute l'année.
+La Plage de Sciez-sur-Léman est une plage municipale engazonnée et arborée du lac Léman, située à Sciez dans le Bas-Chablais, à 375 m d'altitude. Elle jouxte le port de plaisance de Sciez (450 places, labellisé Pavillon Bleu depuis 2009) et s'étend sur les rives sud du Léman, entre Thonon-les-Bains et Yvoire.
+
+La plage combine une zone engazonnée ombragée et une zone de baignade sablonneuse surveillée en juillet et août par des maîtres-nageurs. Un tiralo (fauteuil de baignade amphibie) est disponible auprès de la surveillance pour faciliter l'accès aux personnes à mobilité réduite. La plage dispose d'un espace de baignade dédié aux chiens (côté droit face au lac), une des rares plages du Léman à l'autoriser.
+
+Le site est bordé de restaurants, brasseries et écoles nautiques (voile, plongée, location de bateaux). Un kiosque et des sanitaires automatiques sont installés. Des saunas en hiver complètent l'offre de loisirs au bord de l'eau toute l'année.
 
 ## Activités sur place
 
@@ -122,7 +129,7 @@ R : Depuis Genève (~25 min en voiture), prendre la D1005 direction Thonon, sort
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/plage-de-sciez-sur-leman
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/plage-de-sciez-sur-leman) · [DE](https://loisirs74.fr/de/plage-de-sciez-sur-leman) · [ES](https://loisirs74.fr/es/plage-de-sciez-sur-leman) · [IT](https://loisirs74.fr/it/plage-de-sciez-sur-leman)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/plage-de-sciez-sur-leman) · [DE](https://loisirs74.fr/de/plage-de-sciez-sur-leman) · [ES](https://loisirs74.fr/es/plage-de-sciez-sur-leman) · [IT](https://loisirs74.fr/it/plage-de-sciez-sur-leman) · [NL](https://loisirs74.fr/nl/plage-de-sciez-sur-leman)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=plage-de-sciez-sur-leman

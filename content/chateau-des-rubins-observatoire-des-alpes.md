@@ -11,6 +11,8 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9476
 longitude: 6.6341
+geo_verified: false
+google_place_id: "ChIJeUySVNH9i0cRvuL3hqXFE5A"
 canonical_url: https://loisirs74.fr/chateau-des-rubins-observatoire-des-alpes
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/9/94/Ch%C3%A2teau_des_Rubins_%40_Sallanches_%2851008901708%29.jpg
@@ -18,7 +20,7 @@ photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +41,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Château des Rubins – Observatoire des Alpes est un musée municipal consacré à la montagne, installé dans un château médiéval du XIVe siècle à Sallanches. Rénové et rouvert en juillet 2021 après deux ans de travaux, il propose une scénographie moderne et interactive unique en Europe.Le parcours muséographique couvre plus de 500 m² répartis sur 4 étages et autant de thématiques : la géologie et la glaciologie, la faune et la flore, l'histoire de l'homme dans les montagnes, les évolutions du climat. Une cinquantaine de modules interactifs permettent une visite immersive dans une ambiance lumineuse et sonore, avec des contenus diffusés en trois langues (français, anglais, italien).Construit au XIVe siècle, le château a traversé les siècles en échappant à la Révolution et au grand incendie de Sallanches de 1840. Racheté par la Ville en 1978, il a d'abord abrité le Centre de la Nature Montagnarde (association d'éducation à l'environnement) de 1985 à 2019, avant de devenir l'Observatoire des Alpes, un musée ouvert toute l'année proposant visites libres, animations courtes (Rubinoscopes), ateliers familiaux (Au labo du château) et causeries mensuelles avec des spécialistes.
+Le Château des Rubins – Observatoire des Alpes est un musée municipal consacré à la montagne, installé dans un château médiéval du XIVe siècle à Sallanches. Rénové et rouvert en juillet 2021 après deux ans de travaux, il propose une scénographie moderne et interactive unique en Europe.
+
+Le parcours muséographique couvre plus de 500 m² répartis sur 4 étages et autant de thématiques : la géologie et la glaciologie, la faune et la flore, l'histoire de l'homme dans les montagnes, les évolutions du climat. Une cinquantaine de modules interactifs permettent une visite immersive dans une ambiance lumineuse et sonore, avec des contenus diffusés en trois langues (français, anglais, italien).
+
+Construit au XIVe siècle, le château a traversé les siècles en échappant à la Révolution et au grand incendie de Sallanches de 1840. Racheté par la Ville en 1978, il a d'abord abrité le Centre de la Nature Montagnarde (association d'éducation à l'environnement) de 1985 à 2019, avant de devenir l'Observatoire des Alpes, un musée ouvert toute l'année proposant visites libres, animations courtes (Rubinoscopes), ateliers familiaux (Au labo du château) et causeries mensuelles avec des spécialistes.
 
 ## Activités sur place
 
@@ -130,7 +136,7 @@ R : Oui, la scénographie du Château des Rubins – Observatoire des Alpes a é
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/chateau-des-rubins-observatoire-des-alpes
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/chateau-des-rubins-observatoire-des-alpes) · [DE](https://loisirs74.fr/de/chateau-des-rubins-observatoire-des-alpes) · [ES](https://loisirs74.fr/es/chateau-des-rubins-observatoire-des-alpes) · [IT](https://loisirs74.fr/it/chateau-des-rubins-observatoire-des-alpes)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/chateau-des-rubins-observatoire-des-alpes) · [DE](https://loisirs74.fr/de/chateau-des-rubins-observatoire-des-alpes) · [ES](https://loisirs74.fr/es/chateau-des-rubins-observatoire-des-alpes) · [IT](https://loisirs74.fr/it/chateau-des-rubins-observatoire-des-alpes) · [NL](https://loisirs74.fr/nl/chateau-des-rubins-observatoire-des-alpes)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=chateau-des-rubins-observatoire-des-alpes

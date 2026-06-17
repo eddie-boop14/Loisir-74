@@ -11,6 +11,8 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9197
 longitude: 6.8847
+geo_verified: false
+google_place_id: "ChIJQeenW0FOiUcRZlLKIxds2Fk"
 canonical_url: https://loisirs74.fr/cascade-du-dard
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/7/79/Cascade_du_Dard_01.jpg
@@ -18,7 +20,7 @@ photo_type: real
 photo_author: "Rémih"
 photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Cascade du Dard est une chute d'eau de 20 mètres de hauteur située à 1 233 m d'altitude sur la commune de Chamonix-Mont-Blanc, en Haute-Savoie. Elle se trouve sur le cours du Dard, un torrent descendant du glacier des Pélerins dans le massif du Mont-Blanc et se jetant dans l'Arve, à proximité de l'entrée nord du tunnel du Mont-Blanc.Accessible après une courte randonnée en forêt depuis le centre de Chamonix (environ 45 minutes) ou une marche de 10 minutes depuis le parking situé sur la route d'accès au tunnel, la cascade offre un spectacle naturel impressionnant au milieu de la verdure. Elle est la dernière d'une série de chutes où l'eau tumultueuse et scintillante constitue une véritable merveille de la nature. Un chalet-buvette adjacent (Chalet du Dard) permet de profiter d'une pause restauration face à la cascade, avec une vue dégagée sur la chaîne des Aiguilles Rouges, le glacier des Bossons et le Mont-Blanc.Le torrent du Dard naît de la fonte du glacier des Pélerins à environ 2 300 mètres d'altitude. Ce glacier, très sensible aux variations climatiques, accumule l'eau de fonte dans des cavités sous-glaciaires. En 2009, le pont en aval de la cascade a été emporté par la rupture d'une de ces poches d'eau — un phénomène de crue glaciaire dont le plus célèbre dans les Alpes reste celui qui détruisit les thermes de Saint-Gervais en 1892. Aujourd'hui, l'étude et la compréhension de ces phénomènes permettent un meilleur contrôle de ce risque.
+La Cascade du Dard est une chute d'eau de 20 mètres de hauteur située à 1 233 m d'altitude sur la commune de Chamonix-Mont-Blanc, en Haute-Savoie. Elle se trouve sur le cours du Dard, un torrent descendant du glacier des Pélerins dans le massif du Mont-Blanc et se jetant dans l'Arve, à proximité de l'entrée nord du tunnel du Mont-Blanc.
+
+Accessible après une courte randonnée en forêt depuis le centre de Chamonix (environ 45 minutes) ou une marche de 10 minutes depuis le parking situé sur la route d'accès au tunnel, la cascade offre un spectacle naturel impressionnant au milieu de la verdure. Elle est la dernière d'une série de chutes où l'eau tumultueuse et scintillante constitue une véritable merveille de la nature. Un chalet-buvette adjacent (Chalet du Dard) permet de profiter d'une pause restauration face à la cascade, avec une vue dégagée sur la chaîne des Aiguilles Rouges, le glacier des Bossons et le Mont-Blanc.
+
+Le torrent du Dard naît de la fonte du glacier des Pélerins à environ 2 300 mètres d'altitude. Ce glacier, très sensible aux variations climatiques, accumule l'eau de fonte dans des cavités sous-glaciaires. En 2009, le pont en aval de la cascade a été emporté par la rupture d'une de ces poches d'eau — un phénomène de crue glaciaire dont le plus célèbre dans les Alpes reste celui qui détruisit les thermes de Saint-Gervais en 1892. Aujourd'hui, l'étude et la compréhension de ces phénomènes permettent un meilleur contrôle de ce risque.
 
 ## Activités sur place
 
@@ -121,7 +127,7 @@ R : Comptez 1 h 30 à 2 h pour un aller-retour depuis le parking du Grépon (cen
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/cascade-du-dard
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-du-dard) · [DE](https://loisirs74.fr/de/cascade-du-dard) · [ES](https://loisirs74.fr/es/cascade-du-dard) · [IT](https://loisirs74.fr/it/cascade-du-dard)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-du-dard) · [DE](https://loisirs74.fr/de/cascade-du-dard) · [ES](https://loisirs74.fr/es/cascade-du-dard) · [IT](https://loisirs74.fr/it/cascade-du-dard) · [NL](https://loisirs74.fr/nl/cascade-du-dard)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=cascade-du-dard

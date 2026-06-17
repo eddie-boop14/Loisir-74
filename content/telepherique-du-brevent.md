@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.927
 longitude: 6.853
+geo_verified: false
+google_place_id: "ChIJoV28AM9NiUcRMLDUMj-MWlw"
 canonical_url: https://loisirs74.fr/telepherique-du-brevent
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/3/3a/T%C3%A9l%C3%A9ph%C3%A9rique_du_Br%C3%A9vent_arriv%C3%A9e.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/2/2a/Brevent_cable_car.jpg
 photo_type: real
-photo_author: "Yann"
-photo_license: "CC BY-SA 3.0"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+photo_author: null
+photo_license: null
+photo_source: null
+last_updated: 2026-05-09
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le téléphérique du Brévent dessert le domaine skiable éponyme de Chamonix situé à 2 525 m d'altitude, exposé plein sud face au massif du Mont Blanc. L'accès s'effectue en deux temps depuis le centre de Chamonix : une télécabine remonte à Planpraz (2 000 m) puis le téléphérique monte au sommet du Brévent. En été (13 juin – 20 septembre 2026 hors fermeture partielle), le site est ouvert aux randonneurs et visiteurs au titre de la sightseeing estivale avec des itinéraires vers Planpraz, le Grand Balcon Sud et la liaison Brévent–Flégère.Orienté plein sud et bordant la réserve naturelle des Aiguilles Rouges, le Brévent est le balcon naturel le plus réputé de la vallée pour observer le Mont Blanc et ses aiguilles. Le panorama embrasse la totalité du versant nord du massif, du Mont Blanc aux Grandes Jorasses. En hiver, le domaine skiable propose pistes alpines, freestyle et liaison avec Flégère. Des zones de décollage parapente sont accessibles depuis Planpraz.
+Le téléphérique du Brévent dessert le domaine skiable éponyme de Chamonix situé à 2 525 m d'altitude, exposé plein sud face au massif du Mont Blanc. L'accès s'effectue en deux temps depuis le centre de Chamonix : une télécabine remonte à Planpraz (2 000 m) puis le téléphérique monte au sommet du Brévent. En été (13 juin – 20 septembre 2026 hors fermeture partielle), le site est ouvert aux randonneurs et visiteurs au titre de la sightseeing estivale avec des itinéraires vers Planpraz, le Grand Balcon Sud et la liaison Brévent–Flégère.
+
+Orienté plein sud et bordant la réserve naturelle des Aiguilles Rouges, le Brévent est le balcon naturel le plus réputé de la vallée pour observer le Mont Blanc et ses aiguilles. Le panorama embrasse la totalité du versant nord du massif, du Mont Blanc aux Grandes Jorasses. En hiver, le domaine skiable propose pistes alpines, freestyle et liaison avec Flégère. Des zones de décollage parapente sont accessibles depuis Planpraz.
 
 ## Activités sur place
 
@@ -118,7 +122,7 @@ R : Oui. Planpraz (2 000 m), accessible via le téléphérique du Brévent, est 
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/telepherique-du-brevent
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/telepherique-du-brevent) · [DE](https://loisirs74.fr/de/telepherique-du-brevent) · [ES](https://loisirs74.fr/es/telepherique-du-brevent) · [IT](https://loisirs74.fr/it/telepherique-du-brevent)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/telepherique-du-brevent) · [DE](https://loisirs74.fr/de/telepherique-du-brevent) · [ES](https://loisirs74.fr/es/telepherique-du-brevent) · [IT](https://loisirs74.fr/it/telepherique-du-brevent) · [NL](https://loisirs74.fr/nl/telepherique-du-brevent)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=telepherique-du-brevent

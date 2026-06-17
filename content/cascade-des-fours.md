@@ -11,6 +11,8 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.938288
 longitude: 6.559696
+geo_verified: false
+google_place_id: "ChIJd2DZIuH7i0cRvZw5fqWjkGo"
 canonical_url: https://loisirs74.fr/cascade-des-fours
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/6/68/Cascade_des_Fours_%40_Lanch%C3%A9ron.jpg
@@ -18,7 +20,7 @@ photo_type: real
 photo_author: "Rémih"
 photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Cascade des Fours est une cascade de haute montagne située dans la Combe des Fours, sur le territoire de la commune de Sallanches, dans le massif des Aravis en Haute-Savoie. Elle prend sa source dans la Gouille des Fours, un lac d'altitude à 2 030 m, situé au pied de la Pierre Fendue, un bloc rocheux fendu tombé au milieu des alpages. Cette cascade alimente le torrent des Fours, affluent de la Sallanche, qui a donné son nom à la ville de Sallanches.L'accès à la cascade se fait par un sentier de randonnée au départ du parking de Lintre-Phiterne, via le Pont de la Flée et les alpages de la Combe des Fours. Le sentier longe le torrent des Fours sur sa partie supérieure et devient très escarpé à l'approche de la cascade. Bien équipé de câbles et de mains courantes, ce tronçon demeure exigeant et nécessite vigilance et pied sûr. La cascade est visible depuis les alpages environnants et marque l'entrée de la vallée suspendue menant à la Gouille des Fours.La Combe des Fours offre un panorama exceptionnel sur le Mont-Blanc, les Aravis et le massif des Fiz. Le secteur abrite également d'autres curiosités naturelles telles que la Pierre Fendue et le Col de Portette (2 128 m). Le nom « Fours » proviendrait soit de la présence ancienne de fours à chaux ou à minerais, soit d'un lieu ensoleillé et chaud selon les sources toponymiques locales. La région est fréquentée par les randonneurs de juin à octobre et pratiquée en cascade de glace l'hiver.
+La Cascade des Fours est une cascade de haute montagne située dans la Combe des Fours, sur le territoire de la commune de Sallanches, dans le massif des Aravis en Haute-Savoie. Elle prend sa source dans la Gouille des Fours, un lac d'altitude à 2 030 m, situé au pied de la Pierre Fendue, un bloc rocheux fendu tombé au milieu des alpages. Cette cascade alimente le torrent des Fours, affluent de la Sallanche, qui a donné son nom à la ville de Sallanches.
+
+L'accès à la cascade se fait par un sentier de randonnée au départ du parking de Lintre-Phiterne, via le Pont de la Flée et les alpages de la Combe des Fours. Le sentier longe le torrent des Fours sur sa partie supérieure et devient très escarpé à l'approche de la cascade. Bien équipé de câbles et de mains courantes, ce tronçon demeure exigeant et nécessite vigilance et pied sûr. La cascade est visible depuis les alpages environnants et marque l'entrée de la vallée suspendue menant à la Gouille des Fours.
+
+La Combe des Fours offre un panorama exceptionnel sur le Mont-Blanc, les Aravis et le massif des Fiz. Le secteur abrite également d'autres curiosités naturelles telles que la Pierre Fendue et le Col de Portette (2 128 m). Le nom « Fours » proviendrait soit de la présence ancienne de fours à chaux ou à minerais, soit d'un lieu ensoleillé et chaud selon les sources toponymiques locales. La région est fréquentée par les randonneurs de juin à octobre et pratiquée en cascade de glace l'hiver.
 
 ## Activités sur place
 
@@ -112,7 +118,7 @@ R : Oui. Au-delà de la Cascade des Fours, le sentier continue jusqu'à la Gouil
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/cascade-des-fours
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-des-fours) · [DE](https://loisirs74.fr/de/cascade-des-fours) · [ES](https://loisirs74.fr/es/cascade-des-fours) · [IT](https://loisirs74.fr/it/cascade-des-fours)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-des-fours) · [DE](https://loisirs74.fr/de/cascade-des-fours) · [ES](https://loisirs74.fr/es/cascade-des-fours) · [IT](https://loisirs74.fr/it/cascade-des-fours) · [NL](https://loisirs74.fr/nl/cascade-des-fours)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=cascade-des-fours

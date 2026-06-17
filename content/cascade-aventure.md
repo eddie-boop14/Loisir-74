@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.1858
 longitude: 6.7089
+geo_verified: false
+google_place_id: "ChIJ91E8ZFMdjEcR18UIjKdaMN0"
 canonical_url: https://loisirs74.fr/cascade-aventure
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/5/5a/Cascade_de_Nyon_%282%29.jpg
 photo_type: real
-photo_author: "Krzysztof Golik"
-photo_license: "CC BY-SA 4.0"
+photo_author: "Forest park"
+photo_license: null
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Cascade Aventure est un parc d'activités sportives de plein air en montagne, installé sur le site de la cascade de Nyon à Morzine (1 000 m d'altitude), en Haute-Savoie. Destiné à tous les âges et tous les niveaux, le parc propose des parcours dans les arbres, du canyoning dans le torrent, et une activité exclusive dans la région : la tyro-ferrata, qui permet de survoler le canyon par la voie des airs.Le site offre 5 parcours acrobatiques équipés de ligne de vie continue pour une sécurité maximale, dont le Parcours des Fées adapté aux plus jeunes (dès 3 ans) et un grand circuit de 6 tyroliennes consécutives dont deux de 100 et 130 mètres de long suspendues à 40 mètres au-dessus de la cascade. Les activités sont encadrées par des guides diplômés et se déroulent dans un environnement naturel préservé, au cœur de la forêt avec le bruit de l'eau en arrière-plan.
+Cascade Aventure est un parc d'activités sportives de plein air en montagne, installé sur le site spectaculaire de la cascade de Nyon à Morzine (1 000 m d'altitude), en Haute-Savoie. Destiné à tous les âges et tous les niveaux, le parc propose des parcours dans les arbres, du canyoning dans le torrent, et une activité exclusive dans la région : la tyro-ferrata, qui permet de survoler le canyon par la voie des airs en combinant escalade, via ferrata et tyroliennes.
+
+Le site offre 5 parcours acrobatiques équipés de ligne de vie continue pour une sécurité maximale, dont le Parcours des Fées adapté aux plus jeunes (dès 3 ans) et un grand circuit de 6 tyroliennes consécutives dont deux de 100 et 130 mètres de long suspendues à 40 mètres au-dessus de la cascade. Les activités sont encadrées par des guides diplômés et se déroulent dans un environnement naturel préservé, au cœur de la forêt avec le bruit de l'eau en arrière-plan. Ce qui distingue Cascade Aventure des autres parcs d'accrobranche de Haute-Savoie, c'est son cadre exceptionnel au-dessus d'un canyon actif, ses tyroliennes vertigineuses survolant la cascade, et la possibilité de combiner plusieurs activités verticales en une seule visite. L'altitude modérée et l'ombrage naturel offrent des conditions idéales même lors des journées chaudes d'été, tandis que la proximité du village de Morzine facilite l'accès et la logistique familiale.
 
 ## Activités sur place
 
@@ -58,6 +62,9 @@ Activité unique dans la région : visiter et admirer le canyon de Nyon par la v
 
 ### Parcours des Fées
 Parcours thématique à 1 mètre du sol où les enfants suivent les fées dans leurs cabanes pour découvrir la nature en toute liberté et sécurité, sous la responsabilité des parents.
+
+### Packs combinés
+Possibilité de combiner plusieurs activités en une journée : parcours arbres + tyroliennes, ou formule découverte incluant canyoning. Tarifs dégressifs sur demande.
 
 ## Infos pratiques
 
@@ -112,12 +119,20 @@ R : Oui. Cascade Aventure propose une sortie canyoning encadrée par un guide di
 
 R : Oui. Le parking de la cascade de Nyon à proximité de Cascade Aventure est gratuit. Accès par la route du Vieux Moulin (563 chemin sous le rocher).
 
+**Q : Quelle est la meilleure période pour visiter Cascade Aventure ?**
+
+R : La meilleure période est de mi-juillet à mi-août, lorsque le parc est ouvert en continu tous les jours et que les conditions sont optimales. Le cadre ombragé en forêt offre un confort idéal même lors des journées chaudes.
+
+**Q : Faut-il apporter son propre équipement à Cascade Aventure ?**
+
+R : Non, tout l'équipement de sécurité est fourni par Cascade Aventure : baudriers, casques, ligne de vie continue pour les parcours arbres. Pour le canyoning, combinaison, casque et équipement technique sont également fournis. Prévoir simplement des chaussures fermées.
+
 ---
 
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/cascade-aventure
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-aventure) · [DE](https://loisirs74.fr/de/cascade-aventure) · [ES](https://loisirs74.fr/es/cascade-aventure) · [IT](https://loisirs74.fr/it/cascade-aventure)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-aventure) · [DE](https://loisirs74.fr/de/cascade-aventure) · [ES](https://loisirs74.fr/es/cascade-aventure) · [IT](https://loisirs74.fr/it/cascade-aventure) · [NL](https://loisirs74.fr/nl/cascade-aventure)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=cascade-aventure

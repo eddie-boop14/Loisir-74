@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.8335
 longitude: 6.1565
+geo_verified: false
+google_place_id: "ChIJnWq5sciRi0cRL4LbfogWio0"
 canonical_url: https://loisirs74.fr/plage-de-saint-jorioz
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/4/47/Terrain_de_beach-volley_-_plage_municipale.jpg
+photo_url: /img/lacs-plages/plage-de-saint-jorioz-hero.jpg
 photo_type: real
 photo_author: "Chrbenoit"
 photo_license: "CC BY-SA 3.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La plage de Saint-Jorioz est la seule grande plage de sable naturel du lac d'Annecy. Située sur la rive ouest du lac, face aux Dents de Lanfon et à la Tournette, elle s'étend sur environ 2 200 m² et combine plage de sable fin (env. 100 mètres de long) avec de vastes pelouses ombragées. La plage municipale est ouverte toute l'année : accès libre et gratuit de septembre à juin, accès payant et surveillé du 1er juillet au 31 août de 9h30 à 17h30.Labellisée Pavillon Bleu depuis 2010, la plage garantit une qualité environnementale élevée : nettoyage quotidien pendant la saison, renouvellement du sable tous les quatre ans, gestion des déchets et sensibilisation du public. Elle a également reçu le label Tourisme et Handicap grâce à ses aménagements spécifiques : rampe d'accès à l'eau et mise à disposition gratuite de deux fauteuils amphibies (Tiralo et Hippocampe) en juillet-août.La plage est équipée d'un plongeoir à 3 niveaux (5 m de hauteur) accessible à la nage depuis les pontons, d'une pataugeoire et d'une aire de jeux pour les plus jeunes, d'un terrain de beach-volley et d'un terrain de pétanque. Un restaurant et un snack sont présents sur place. À proximité immédiate : le port de plaisance de Saint-Jorioz, le sentier des Roselières, et la piste cyclable du tour du lac (9 km jusqu'à Annecy).
+La plage de Saint-Jorioz est la seule grande plage de sable naturel du lac d'Annecy. Située sur la rive ouest du lac, face aux Dents de Lanfon et à la Tournette, elle s'étend sur environ 2 200 m² et combine plage de sable fin (env. 100 mètres de long) avec de vastes pelouses ombragées. La plage municipale est ouverte toute l'année : accès libre et gratuit de septembre à juin, accès payant et surveillé du 1er juillet au 31 août de 9h30 à 17h30.
+
+Labellisée Pavillon Bleu depuis 2010, la plage garantit une qualité environnementale élevée : nettoyage quotidien pendant la saison, renouvellement du sable tous les quatre ans, gestion des déchets et sensibilisation du public. Elle a également reçu le label Tourisme et Handicap grâce à ses aménagements spécifiques : rampe d'accès à l'eau et mise à disposition gratuite de deux fauteuils amphibies (Tiralo et Hippocampe) en juillet-août.
+
+La plage est équipée d'un plongeoir à 3 niveaux (5 m de hauteur) accessible à la nage depuis les pontons, d'une pataugeoire et d'une aire de jeux pour les plus jeunes, d'un terrain de beach-volley et d'un terrain de pétanque. Un restaurant et un snack sont présents sur place. À proximité immédiate : le port de plaisance de Saint-Jorioz, le sentier des Roselières, et la piste cyclable du tour du lac (9 km jusqu'à Annecy).
 
 ## Activités sur place
 
@@ -87,7 +93,7 @@ Piste cyclable du tour du lac d'Annecy (9 km depuis la vieille ville d'Annecy, e
 
 ## Quand y aller
 
-La plage est ouverte toute l'année mais se visite en fonction des saisons. Juillet-août : haute saison avec surveillance MNS, accès payant, plage très fréquentée (arriver avant 11h pour trouver une place au parking). Mai-juin et septembre : températures agréables pour la baignade (20–25 °C), plage gratuite et moins fréquentée, sentier des Roselières fleuri. Avril et octobre : baignade fraîche mais praticable (15–18 °C), idéal pour les balades au bord du lac en famille, presque aucune affluence. Hiver (novembre-mars) : accès libre pour marcher sur la plage et profiter de la vue sur les montagnes enneigées, baignade réservée aux courageux. Exposition plein Nord garantit l'ensoleillement du matin au soir en été car les montagnes sont éloignées.
+La plage est ouverte toute l'année mais se visite en fonction des saisons. <strong>Juillet-août</strong> : haute saison avec surveillance MNS, accès payant, plage très fréquentée (arriver avant 11h pour trouver une place au parking). <strong>Mai-juin et septembre</strong> : températures agréables pour la baignade (20–25 °C), plage gratuite et moins fréquentée, sentier des Roselières fleuri. <strong>Avril et octobre</strong> : baignade fraîche mais praticable (15–18 °C), idéal pour les balades au bord du lac en famille, presque aucune affluence. <strong>Hiver (novembre-mars)</strong> : accès libre pour marcher sur la plage et profiter de la vue sur les montagnes enneigées, baignade réservée aux courageux. Exposition plein Nord garantit l'ensoleillement du matin au soir en été car les montagnes sont éloignées.
 
 ## Événements
 
@@ -124,7 +130,7 @@ R : Oui, la Plage de Saint-Jorioz est labellisée Tourisme et Handicap. Une ramp
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/plage-de-saint-jorioz
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/plage-de-saint-jorioz) · [DE](https://loisirs74.fr/de/plage-de-saint-jorioz) · [ES](https://loisirs74.fr/es/plage-de-saint-jorioz) · [IT](https://loisirs74.fr/it/plage-de-saint-jorioz)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/plage-de-saint-jorioz) · [DE](https://loisirs74.fr/de/plage-de-saint-jorioz) · [ES](https://loisirs74.fr/es/plage-de-saint-jorioz) · [IT](https://loisirs74.fr/it/plage-de-saint-jorioz) · [NL](https://loisirs74.fr/nl/plage-de-saint-jorioz)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=plage-de-saint-jorioz

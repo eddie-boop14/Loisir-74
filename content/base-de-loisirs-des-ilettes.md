@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9505
 longitude: 6.6305
+geo_verified: false
+google_place_id: "ChIJ11EHIAD_i0cRreRdlx7AlbI"
 canonical_url: https://loisirs74.fr/base-de-loisirs-des-ilettes
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/f/f9/Sallanches-69%C2%A9studio_k.jpg
 photo_type: real
-photo_author: "Ville de Sallanches"
-photo_license: "CC BY-SA 4.0"
+photo_author: "Alpine meadow"
+photo_license: null
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Base de loisirs des Ilettes est un complexe de loisirs de plein air situé à 2 km au nord-est du centre-ville de Sallanches, à 557 mètres d'altitude, face au massif du Mont-Blanc. Créée en 1977, elle s'étend sur plusieurs dizaines d'hectares et se compose de trois lacs artificiels, chacun affecté à des activités distinctes : pêche en catégorie 1 pour le premier lac (242 m de long), baignade surveillée et paddle pour le deuxième (450 m de long), et planche à voile ainsi que pêche en catégorie 2 pour le troisième (515 m de long).Le site est aménagé pour la détente et les activités sportives de plein air : parcours santé de 23 agrès entre le deuxième et le troisième lac, terrains de volley-ball et de pétanque, tables de ping-pong, aires de pique-nique équipées, douches extérieures près du poste de secours, toilettes publiques et buvette-restauration en saison estivale. Un observatoire ornithologique situé à l'extrémité nord du troisième lac permet d'observer colverts, foulques macroules et lapins de garenne.Un sentier «&nbsp;Au fil de l'eau&nbsp;» relie la base à la cascade d'Arpenaz (2 km, 30 minutes à pied) via la passerelle de Luzier. Le site est accessible par piste cyclable depuis Sallanches. Un accès par navette estivale est disponible en juillet-août. Attention : des travaux de requalification sont en cours de septembre 2025 à juin 2026 — les sentiers autour des lacs de pêche et de baignade sont fermés durant cette période, seul le lac nord (planche à voile) et la digue de l'Arve restent accessibles.
+La Base de loisirs des Ilettes est un complexe de loisirs de plein air situé à 2 km au nord-est du centre-ville de Sallanches, à 557 mètres d'altitude, face au massif du Mont-Blanc. Créée en 1977, elle s'étend sur plusieurs dizaines d'hectares et se compose de trois lacs artificiels, chacun affecté à des activités distinctes : pêche en catégorie 1 pour le premier lac (242 m de long), baignade surveillée et paddle pour le deuxième (450 m de long), et planche à voile ainsi que pêche en catégorie 2 pour le troisième (515 m de long).
+
+Le site est aménagé pour la détente et les activités sportives de plein air : parcours santé de 23 agrès entre le deuxième et le troisième lac, terrains de volley-ball et de pétanque, tables de ping-pong, aires de pique-nique équipées, douches extérieures près du poste de secours, toilettes publiques et buvette-restauration en saison estivale. Un observatoire ornithologique situé à l'extrémité nord du troisième lac permet d'observer colverts, foulques macroules et lapins de garenne.
+
+Un sentier « Au fil de l'eau » relie la base à la cascade d'Arpenaz (2 km, 30 minutes à pied) via la passerelle de Luzier. Le site est accessible par piste cyclable depuis Sallanches. Un accès par navette estivale est disponible en juillet-août. Attention : des travaux de requalification sont en cours de septembre 2025 à juin 2026 — les sentiers autour des lacs de pêche et de baignade sont fermés durant cette période, seul le lac nord (planche à voile) et la digue de l'Arve restent accessibles.
 
 ## Activités sur place
 
@@ -135,7 +141,7 @@ R : Oui. Des travaux de requalification du site des Ilettes sont en cours de sep
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/base-de-loisirs-des-ilettes
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/base-de-loisirs-des-ilettes) · [DE](https://loisirs74.fr/de/base-de-loisirs-des-ilettes) · [ES](https://loisirs74.fr/es/base-de-loisirs-des-ilettes) · [IT](https://loisirs74.fr/it/base-de-loisirs-des-ilettes)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/base-de-loisirs-des-ilettes) · [DE](https://loisirs74.fr/de/base-de-loisirs-des-ilettes) · [ES](https://loisirs74.fr/es/base-de-loisirs-des-ilettes) · [IT](https://loisirs74.fr/it/base-de-loisirs-des-ilettes) · [NL](https://loisirs74.fr/nl/base-de-loisirs-des-ilettes)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=base-de-loisirs-des-ilettes

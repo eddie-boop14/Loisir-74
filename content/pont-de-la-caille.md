@@ -11,12 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.0133
 longitude: 6.1115
+geo_verified: false
+google_place_id: "ChIJWwk8BLKHi0cRJlSc2z5kmlk"
 canonical_url: https://loisirs74.fr/pont-de-la-caille
 language: fr
-photo_url: /pont-de-la-caille-hero.jpg
+photo_url: /img/points-de-vue/pont-de-la-caille-hero.jpg
 photo_type: real
-photo_source: own
-last_updated: 2026-05-18
+photo_author: null
+photo_license: null
+photo_source: null
+last_updated: 2026-04-23
 source: loisirs74.fr
 ---
 
@@ -37,7 +41,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Pont de la Caille — officiellement pont Charles-Albert — est un pont suspendu en câble d'acier inauguré le 11 juillet 1839, à cheval sur les communes de Cruseilles et d'Allonzier-la-Caille. Long de 180 m, il franchit les gorges des Usses à 147 m de hauteur. Inscrit au titre des Monuments Historiques depuis le 6 mai 1966, il appartient au Conseil Départemental de la Haute-Savoie et figure parmi les 25 sites touristiques emblématiques de la Région Auvergne-Rhône-Alpes. À côté se dresse le pont Caquot, ou pont Neuf, construit entre 1924 et 1928 sous la direction de l'ingénieur Albert Caquot. Son arche de béton non armé fut l'une des plus grandes voûtes au monde à l'époque. C'est lui qui supporte aujourd'hui la circulation automobile sur la RD1201. Le pont Charles-Albert, déchargé du trafic depuis 1929, est réservé aux piétons et aux cyclistes. Un site, deux ponts, une même histoire.
+Le Pont de la Caille — officiellement pont Charles-Albert — est un pont suspendu en câble d'acier inauguré le 11 juillet 1839, à cheval sur les communes de Cruseilles et d'Allonzier-la-Caille. Long de 180 m, il franchit les gorges des Usses à 147 m de hauteur. Inscrit au titre des Monuments Historiques depuis le 6 mai 1966, il appartient au Conseil Départemental de la Haute-Savoie et figure parmi les 25 sites touristiques emblématiques de la Région Auvergne-Rhône-Alpes.
+
+À côté se dresse le pont Caquot, ou pont Neuf, construit entre 1924 et 1928 sous la direction de l'ingénieur Albert Caquot. Son arche de béton non armé fut l'une des plus grandes voûtes au monde à l'époque. C'est lui qui supporte aujourd'hui la circulation automobile sur la RD1201. Le pont Charles-Albert, déchargé du trafic depuis 1929, est réservé aux piétons et aux cyclistes. Un site, deux ponts, une même histoire.
 
 ## Questions fréquentes
 
@@ -78,7 +84,7 @@ R : Le tablier du Pont de la Caille est sécurisé mais la sensation de vide est
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/pont-de-la-caille
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/pont-de-la-caille) · [DE](https://loisirs74.fr/de/pont-de-la-caille) · [ES](https://loisirs74.fr/es/pont-de-la-caille) · [IT](https://loisirs74.fr/it/pont-de-la-caille)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/pont-de-la-caille) · [DE](https://loisirs74.fr/de/pont-de-la-caille) · [ES](https://loisirs74.fr/es/pont-de-la-caille) · [IT](https://loisirs74.fr/it/pont-de-la-caille) · [NL](https://loisirs74.fr/nl/pont-de-la-caille)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=pont-de-la-caille

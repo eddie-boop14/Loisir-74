@@ -11,13 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.732217
 longitude: 6.299157
+geo_verified: true
+google_place_id: "ChIJj4Dz3IHqi0cRwXd_gjFdNmU"
 canonical_url: https://loisirs74.fr/grotte-et-cascade-de-seythenex
 language: fr
-photo_url: https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Jonathan Forage"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/7/7f/Grotte_et_cascade_de_Seythenex_10.jpg
+photo_type: real
+photo_author: "Rémih"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Grotte et Cascade de Seythenex est un site naturel classé Géosite par le Parc Naturel Régional du Massif des Bauges, situé à Faverges-Seythenex en Haute-Savoie. C'est la seule galerie souterraine ouverte au public dans le département, avec 250 mètres de galeries et boyaux accessibles en visite guidée. Le site comprend également une cascade spectaculaire de 40 mètres de haut formée par les eaux du torrent Saint-Ruph.La grotte est ouverte au public depuis 1906, ce qui en fait la première attraction touristique du village. Elle représente l'ancien cours souterrain du torrent et collecte les eaux qui s'infiltrent dans le réseau karstique des montagnes des Bauges. Les galeries présentent un profil circulaire caractéristique de conduits forcés, illustrant le concept géologique de « trou de serrure ». La visite guidée dure environ 40 minutes à une température constante de 10°C, permettant de découvrir les effets spectaculaires de l'érosion sur le calcaire.En surface, un circuit aménagé de chemins et passerelles permet d'accéder au sommet de la cascade et d'admirer sa chute de 40 mètres. Le site propose également deux tyroliennes de 150 mètres de long qui survolent la cascade à 40 mètres de hauteur, ainsi qu'un snack-restaurant avec terrasse panoramique, une aire de pique-nique, une aire de jeux pour enfants et une boutique de produits locaux et souvenirs.
+La Grotte et Cascade de Seythenex est un site naturel classé Géosite par le Parc Naturel Régional du Massif des Bauges, situé à Faverges-Seythenex en Haute-Savoie. C'est la seule galerie souterraine ouverte au public dans le département, avec 250 mètres de galeries et boyaux accessibles en visite guidée. Le site comprend également une cascade spectaculaire de 40 mètres de haut formée par les eaux du torrent Saint-Ruph.
+
+La grotte est ouverte au public depuis 1906, ce qui en fait la première attraction touristique du village. Elle représente l'ancien cours souterrain du torrent et collecte les eaux qui s'infiltrent dans le réseau karstique des montagnes des Bauges. Les galeries présentent un profil circulaire caractéristique de conduits forcés, illustrant le concept géologique de « trou de serrure ». La visite guidée dure environ 40 minutes à une température constante de 10°C, permettant de découvrir les effets spectaculaires de l'érosion sur le calcaire.
+
+En surface, un circuit aménagé de chemins et passerelles permet d'accéder au sommet de la cascade et d'admirer sa chute de 40 mètres. Le site propose également deux tyroliennes de 150 mètres de long qui survolent la cascade à 40 mètres de hauteur, ainsi qu'un snack-restaurant avec terrasse panoramique, une aire de pique-nique, une aire de jeux pour enfants et une boutique de produits locaux et souvenirs.
 
 ## Activités sur place
 
@@ -113,7 +120,7 @@ R : La visite guidée de la Grotte de Seythenex dure environ 40 minutes. Le circ
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/grotte-et-cascade-de-seythenex
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/grotte-et-cascade-de-seythenex) · [DE](https://loisirs74.fr/de/grotte-et-cascade-de-seythenex) · [ES](https://loisirs74.fr/es/grotte-et-cascade-de-seythenex) · [IT](https://loisirs74.fr/it/grotte-et-cascade-de-seythenex)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/grotte-et-cascade-de-seythenex) · [DE](https://loisirs74.fr/de/grotte-et-cascade-de-seythenex) · [ES](https://loisirs74.fr/es/grotte-et-cascade-de-seythenex) · [IT](https://loisirs74.fr/it/grotte-et-cascade-de-seythenex) · [NL](https://loisirs74.fr/nl/grotte-et-cascade-de-seythenex)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=grotte-et-cascade-de-seythenex

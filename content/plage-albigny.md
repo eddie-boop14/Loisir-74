@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9067
 longitude: 6.1489
+geo_verified: false
+google_place_id: "ChIJuxB39MOPi0cRONBGdLFiQyo"
 canonical_url: https://loisirs74.fr/plage-albigny
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/3/3c/Plage_d%27Albigny_%C3%A0_Annecy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/3/3c/Plage_d%27Albigny_%C3%A0_Annecy.jpg
 photo_type: real
-photo_author: "Inconnu"
-photo_license: "CC BY-SA 3.0"
+photo_author: "Guilhem Vellut from Annecy, France"
+photo_license: "CC BY 2.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Plage d'Albigny est la plus grande plage publique gratuite du lac d'Annecy. Située dans le quartier d'Albigny (ancienne commune d'Annecy-le-Vieux), elle s'étend sur plus de 400 mètres de rives engazonnées et sablonneuses face aux montagnes. C'est le seul espace de baignade de ce secteur et l'une des deux seules plages gratuites de la ville avec celle des Marquisats.Plage herbeuse bordée d'arbres et de haies fleuries, elle offre un cadre spacieux et ensoleillé toute la journée. Le fond du lac est sablonneux avec une pente douce facilitant l'accès à l'eau pour les jeunes enfants. Trois blocs sanitaires, douches extérieures gratuites, mise à l'eau PMR avec fauteuils flottants gratuits. Surveillance assurée par des maîtres-nageurs en juillet-août de 11h à 19h.Très fréquentée en été — son principal défaut. Places difficiles à trouver dès midi en haute saison. L'eau est transparente le matin, se voile en après-midi avec l'affluence. Située entre le parc de l'Impérial Palace à l'ouest et le port de plaisance du Petit Port à l'est, accessible à pied depuis le Pâquier (30 min de marche rapide), en vélo (piste cyclable longeant la plage), ou en bus (lignes Sibra, arrêts à proximité).
+La Plage d'Albigny est la plus grande plage publique gratuite du lac d'Annecy. Située dans le quartier d'Albigny (ancienne commune d'Annecy-le-Vieux), elle s'étend sur plus de 400 mètres de rives engazonnées et sablonneuses face aux montagnes. C'est le seul espace de baignade de ce secteur et l'une des deux seules plages gratuites de la ville avec celle des Marquisats.
+
+Plage herbeuse bordée d'arbres et de haies fleuries, elle offre un cadre spacieux et ensoleillé toute la journée. Le fond du lac est sablonneux avec une pente douce facilitant l'accès à l'eau pour les jeunes enfants. Trois blocs sanitaires, douches extérieures gratuites, mise à l'eau PMR avec fauteuils flottants gratuits. Surveillance assurée par des maîtres-nageurs en juillet-août de 11h à 19h.
+
+Très fréquentée en été — son principal défaut. Places difficiles à trouver dès midi en haute saison. L'eau est transparente le matin, se voile en après-midi avec l'affluence. Située entre le parc de l'Impérial Palace à l'ouest et le port de plaisance du Petit Port à l'est, accessible à pied depuis le Pâquier (30 min de marche rapide), en vélo (piste cyclable longeant la plage), ou en bus (lignes Sibra, arrêts à proximité).
 
 ## Activités sur place
 
@@ -131,7 +137,7 @@ R : Oui. Un loueur de kayaks, paddles et rollers se trouve à proximité immédi
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/plage-albigny
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/plage-albigny) · [DE](https://loisirs74.fr/de/plage-albigny) · [ES](https://loisirs74.fr/es/plage-albigny) · [IT](https://loisirs74.fr/it/plage-albigny)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/plage-albigny) · [DE](https://loisirs74.fr/de/plage-albigny) · [ES](https://loisirs74.fr/es/plage-albigny) · [IT](https://loisirs74.fr/it/plage-albigny) · [NL](https://loisirs74.fr/nl/plage-albigny)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=plage-albigny

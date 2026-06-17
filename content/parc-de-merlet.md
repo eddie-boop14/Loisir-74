@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.907456
 longitude: 6.818153
+geo_verified: true
+google_place_id: "ChIJCaYNGsFRiUcRdoSNZlguMPs"
 canonical_url: https://loisirs74.fr/parc-de-merlet
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/f/f0/Panorama_depuis_le_parc_de_Merlet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/f/f0/Panorama_depuis_le_parc_de_Merlet.jpg
 photo_type: real
-photo_author: "Antimuonium"
+photo_author: "Florian Pépellin"
 photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Parc de Merlet est un parc animalier spécialisé dans la faune alpine, situé à 1 500 mètres d'altitude sur un ancien alpage au-dessus des Houches, dans la vallée de Chamonix. Sur 21 hectares de prairies, rochers et forêts de pins, le parc abrite 80 à 100 animaux de 8 espèces de grands mammifères de montagne : bouquetins, chamois, mouflons, daims, cerfs sika, marmottes, chevreuils et lamas. Les animaux circulent en semi-liberté, sans clôtures, et peuvent être approchés facilement tout en restant sur les sentiers balisés.Le site occupe l'emplacement d'un hameau de montagne habité à l'année jusqu'aux années 1900, avant de devenir un alpage saisonnier. Le parc a été créé en 1967-1968 par Philippe Cachat, un Chamoniard passionné de montagne et pilote d'avion, avec Bambi, un chamois apprivoisé devenu mascotte. Aujourd'hui géré par la famille Cachat (6 employés en saison), le parc combine observation de la faune alpine, panorama exceptionnel sur le massif du Mont-Blanc et découverte du patrimoine montagnard à travers ses anciens chalets d'alpage. Un altiport (l'altiport Philippe-Cachat) occupe le centre du parc.Le parc propose deux circuits balisés : un parcours facile (1 h environ) adapté aux poussettes tout-terrain, et un parcours « en forme » pour explorer tous les recoins. Nouveauté 2026 : un parcours sensoriel immersif de 5 minutes, « Les ambiances secrètes de Merlet ». Des animations gratuites sont proposées en juillet-août (Bois et Cornes, La Montagne et ses secrets, Les prédateurs), ainsi que des salles d'exposition et projections vidéo. Le parc est engagé dans une démarche écoresponsable : production locale d'électricité (panneaux photovoltaïques et pico-centrale hydraulique), tri sélectif et zéro déchet.
+Le Parc de Merlet est un parc animalier spécialisé dans la faune alpine, situé à 1 500 mètres d'altitude sur un ancien alpage au-dessus des Houches, dans la vallée de Chamonix. Sur 21 hectares de prairies, rochers et forêts de pins, le parc abrite 80 à 100 animaux de 8 espèces de grands mammifères de montagne : bouquetins, chamois, mouflons, daims, cerfs sika, marmottes, chevreuils et lamas. Les animaux circulent en semi-liberté, sans clôtures, et peuvent être approchés facilement tout en restant sur les sentiers balisés.
+
+Le site occupe l'emplacement d'un hameau de montagne habité à l'année jusqu'aux années 1900, avant de devenir un alpage saisonnier. Le parc a été créé en 1967-1968 par Philippe Cachat, un Chamoniard passionné de montagne et pilote d'avion, avec Bambi, un chamois apprivoisé devenu mascotte. Aujourd'hui géré par la famille Cachat (6 employés en saison), le parc combine observation de la faune alpine, panorama exceptionnel sur le massif du Mont-Blanc et découverte du patrimoine montagnard à travers ses anciens chalets d'alpage. Un altiport (l'altiport Philippe-Cachat) occupe le centre du parc.
+
+Le parc propose deux circuits balisés : un parcours facile (1 h environ) adapté aux poussettes tout-terrain, et un parcours « en forme » pour explorer tous les recoins. Nouveauté 2026 : un parcours sensoriel immersif de 5 minutes, « Les ambiances secrètes de Merlet ». Des animations gratuites sont proposées en juillet-août (Bois et Cornes, La Montagne et ses secrets, Les prédateurs), ainsi que des salles d'exposition et projections vidéo. Le parc est engagé dans une démarche écoresponsable : production locale d'électricité (panneaux photovoltaïques et pico-centrale hydraulique), tri sélectif et zéro déchet.
 
 ## Activités sur place
 
@@ -132,7 +138,7 @@ R : Les pique-niques sont interdits à l'intérieur du Parc de Merlet pour prés
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/parc-de-merlet
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/parc-de-merlet) · [DE](https://loisirs74.fr/de/parc-de-merlet) · [ES](https://loisirs74.fr/es/parc-de-merlet) · [IT](https://loisirs74.fr/it/parc-de-merlet)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/parc-de-merlet) · [DE](https://loisirs74.fr/de/parc-de-merlet) · [ES](https://loisirs74.fr/es/parc-de-merlet) · [IT](https://loisirs74.fr/it/parc-de-merlet) · [NL](https://loisirs74.fr/nl/parc-de-merlet)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=parc-de-merlet

@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.8647
 longitude: 6.2097
+geo_verified: false
+google_place_id: "ChIJ03CfKyeSi0cR1y0C3G70XBw"
 canonical_url: https://loisirs74.fr/chateau-de-menthon-saint-bernard
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/6/6b/Ch%C3%A2teau_de_Menthon-Saint-Bernard_%28novembre_2024%29.JPG
 photo_type: real
-photo_author: "Florian Pépellin"
-photo_license: "CC BY-SA 4.0"
+photo_author: "Rémih"
+photo_license: "CC BY-SA 3.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +41,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Château de Menthon-Saint-Bernard est une forteresse médiévale transformée en résidence seigneuriale, dominant le lac d'Annecy depuis un éperon rocheux à 200 mètres au-dessus de l'eau. Construit à partir du XIIᵉ siècle, il se compose aujourd'hui de 105 pièces réparties dans un ensemble architectural mêlant éléments médiévaux (trois tours carrées d'origine), transformations Renaissance et embellissements romantiques du XIXᵉ siècle sous l'impulsion de René de Menthon, arrière-grand-père des propriétaires actuels.Ce qui distingue le château de Menthon, c'est sa continuité familiale exceptionnelle : il est habité par la même famille depuis sa fondation au XIᵉ siècle, soit 23 générations. C'est le lieu de naissance de saint Bernard de Menthon (1008), fondateur de l'hospice du Grand-Saint-Bernard et patron des alpinistes. Le château conserve son mobilier d'époque, sa bibliothèque de plus de 12 000 ouvrages anciens (dont une Encyclopédie de Diderot et d'Alembert), une cuisine avec passe-plat de 15 mètres creusé dans la roche, et une chapelle dédiée à saint Bernard.Une légende locale veut que Walt Disney se soit inspiré de ses tourelles et de son allure romantique pour dessiner le château de La Belle au bois dormant — bien que cette affirmation ne soit pas documentée. Le château est classé monument historique et s'inscrit depuis 2018 dans une démarche de préservation environnementale : potager en permaculture, vignes en biodynamie replantées à flanc de colline, et cycle de conférences sur ces thèmes.
+Le Château de Menthon-Saint-Bernard est une forteresse médiévale transformée en résidence seigneuriale, dominant le lac d'Annecy depuis un éperon rocheux à 200 mètres au-dessus de l'eau. Construit à partir du XIIᵉ siècle, il se compose aujourd'hui de 105 pièces réparties dans un ensemble architectural mêlant éléments médiévaux (trois tours carrées d'origine), transformations Renaissance et embellissements romantiques du XIXᵉ siècle sous l'impulsion de René de Menthon, arrière-grand-père des propriétaires actuels.
+
+Ce qui distingue le château de Menthon, c'est sa continuité familiale exceptionnelle : il est habité par la même famille depuis sa fondation au XIᵉ siècle, soit 23 générations. C'est le lieu de naissance de saint Bernard de Menthon (1008), fondateur de l'hospice du Grand-Saint-Bernard et patron des alpinistes. Le château conserve son mobilier d'époque, sa bibliothèque de plus de 12 000 ouvrages anciens (dont une Encyclopédie de Diderot et d'Alembert), une cuisine avec passe-plat de 15 mètres creusé dans la roche, et une chapelle dédiée à saint Bernard.
+
+Une légende locale veut que Walt Disney se soit inspiré de ses tourelles et de son allure romantique pour dessiner le château de La Belle au bois dormant — bien que cette affirmation ne soit pas documentée. Le château est classé monument historique et s'inscrit depuis 2018 dans une démarche de préservation environnementale : potager en permaculture, vignes en biodynamie replantées à flanc de colline, et cycle de conférences sur ces thèmes.
 
 ## Activités sur place
 
@@ -131,7 +137,7 @@ R : Le Château de Menthon-Saint-Bernard est toujours habité par la famille de 
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/chateau-de-menthon-saint-bernard
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/chateau-de-menthon-saint-bernard) · [DE](https://loisirs74.fr/de/chateau-de-menthon-saint-bernard) · [ES](https://loisirs74.fr/es/chateau-de-menthon-saint-bernard) · [IT](https://loisirs74.fr/it/chateau-de-menthon-saint-bernard)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/chateau-de-menthon-saint-bernard) · [DE](https://loisirs74.fr/de/chateau-de-menthon-saint-bernard) · [ES](https://loisirs74.fr/es/chateau-de-menthon-saint-bernard) · [IT](https://loisirs74.fr/it/chateau-de-menthon-saint-bernard) · [NL](https://loisirs74.fr/nl/chateau-de-menthon-saint-bernard)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=chateau-de-menthon-saint-bernard

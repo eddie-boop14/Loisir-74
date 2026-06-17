@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.936024
 longitude: 6.853158
+geo_verified: false
+google_place_id: "ChIJJZgeeHhSiUcRkseb_TGzEVA"
 canonical_url: https://loisirs74.fr/lac-cornu
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/6/6a/Lac_Cornu_%40_Hike_to_Lacs_des_Ch%C3%A9serys%2C_Lac_Blanc%2C_Lac_Cornu_%26_Lacs_Noirs_%40_Chamonix_%2815174603960%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/6/6a/Lac_Cornu_%40_Hike_to_Lacs_des_Ch%C3%A9serys%2C_Lac_Blanc%2C_Lac_Cornu_%26_Lacs_Noirs_%40_Chamonix_%2815174603960%29.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Lac Cornu est un lac de haute montagne situé à 2 275 mètres d'altitude dans le massif des Aiguilles Rouges, sur la commune de Chamonix-Mont-Blanc. Il se trouve au cœur de la Réserve Naturelle Nationale des Aiguilles Rouges, dans un cadre minéral et sauvage dominé par l'Aiguille de Charlanon. Le lac doit son nom à sa forme caractéristique en croissant, visible depuis le col Cornu (2 414 m) qui le surplombe.D'une superficie de 5,4 hectares, le Lac Cornu est l'un des lacs d'altitude emblématiques du massif des Aiguilles Rouges, avec une profondeur maximale de 22 mètres. Le lac est gelé ou recouvert de neige environ neuf mois par an ; la période d'accès estival est courte, généralement de début juillet à mi-septembre. La pêche y est autorisée (ombles arctiques et cristivomers), sous réserve de permis, et le lac offre un cadre paisible face au massif du Mont-Blanc.
+Le Lac Cornu est un lac de haute montagne situé à 2 275 mètres d'altitude dans le massif des Aiguilles Rouges, sur la commune de Chamonix-Mont-Blanc. Il se trouve au cœur de la Réserve Naturelle Nationale des Aiguilles Rouges, dans un cadre minéral et sauvage dominé par l'Aiguille de Charlanon. Le lac doit son nom à sa forme caractéristique en croissant, visible depuis le col Cornu (2 414 m) qui le surplombe.
+
+D'une superficie de 5,4 hectares, le Lac Cornu est l'un des lacs d'altitude emblématiques du massif des Aiguilles Rouges, avec une profondeur maximale de 22 mètres. Le lac est gelé ou recouvert de neige environ neuf mois par an ; la période d'accès estival est courte, généralement de début juillet à mi-septembre. La pêche y est autorisée (ombles arctiques et cristivomers), sous réserve de permis, et le lac offre un cadre paisible face au massif du Mont-Blanc.
 
 ## Activités sur place
 
@@ -118,7 +122,7 @@ R : Oui, la pêche est autorisée dans le Lac Cornu, qui abrite des ombles arcti
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/lac-cornu
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/lac-cornu) · [DE](https://loisirs74.fr/de/lac-cornu) · [ES](https://loisirs74.fr/es/lac-cornu) · [IT](https://loisirs74.fr/it/lac-cornu)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/lac-cornu) · [DE](https://loisirs74.fr/de/lac-cornu) · [ES](https://loisirs74.fr/es/lac-cornu) · [IT](https://loisirs74.fr/it/lac-cornu) · [NL](https://loisirs74.fr/nl/lac-cornu)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=lac-cornu

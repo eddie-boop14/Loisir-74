@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.976999
 longitude: 6.642309
+geo_verified: true
+google_place_id: "ChIJpdph5Ez-i0cRacAmd2ohbgU"
 canonical_url: https://loisirs74.fr/cascade-de-l-arpenaz
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/7/74/Cascade_de_l%27Arpenaz.jpg
 photo_type: real
-photo_author: "Aiguilledumidi"
+photo_author: "Zairon"
 photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Cascade de l'Arpenaz est une chute d'eau du massif du Faucigny située sur la commune de Sallanches, à quelques kilomètres au nord du centre-ville. Avec un saut principal de 270 mètres suivi de deux chutes secondaires à sa base, elle est classée au 3e rang des cascades françaises par sa hauteur et au 1er rang des Alpes françaises.La cascade est alimentée par le torrent de l'Arpenaz, aussi appelé Nant d'Arpenaz ou La Laiteuse, qui descend du massif de Platé depuis une altitude de 1 850 m et parcourt 4 km avant de se jeter dans l'Arve. Le nom « Arpenaz » provient du préfixe celtique « Ar » (eau vive) et du suffixe « pen » (tête rocheuse).Le site présente un intérêt géologique remarquable avec son célèbre plissement rocheux en « S », caractéristique des séries calcaires jurassiques des nappes subalpines. Classé site naturel depuis 1991, il offre un aménagement complet : parking gratuit, aires de pique-nique, et point de départ de sentiers de randonnée pédestre et VTT.
+La Cascade de l'Arpenaz est une chute d'eau du massif du Faucigny située sur la commune de Sallanches, à quelques kilomètres au nord du centre-ville. Avec un saut principal de 270 mètres suivi de deux chutes secondaires à sa base, elle est classée au 3e rang des cascades françaises par sa hauteur et au 1er rang des Alpes françaises.
+
+La cascade est alimentée par le torrent de l'Arpenaz, aussi appelé Nant d'Arpenaz ou La Laiteuse, qui descend du massif de Platé depuis une altitude de 1 850 m et parcourt 4 km avant de se jeter dans l'Arve. Le nom « Arpenaz » provient du préfixe celtique « Ar » (eau vive) et du suffixe « pen » (tête rocheuse).
+
+Le site présente un intérêt géologique remarquable avec son célèbre plissement rocheux en « S », caractéristique des séries calcaires jurassiques des nappes subalpines. Classé site naturel depuis 1991, il offre un aménagement complet : parking gratuit, aires de pique-nique, et point de départ de sentiers de randonnée pédestre et VTT.
 
 ## Activités sur place
 
@@ -118,7 +124,7 @@ R : Non. Le sentier depuis le parking jusqu'à la Cascade de l'Arpenaz traverse 
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/cascade-de-l-arpenaz
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-de-l-arpenaz) · [DE](https://loisirs74.fr/de/cascade-de-l-arpenaz) · [ES](https://loisirs74.fr/es/cascade-de-l-arpenaz) · [IT](https://loisirs74.fr/it/cascade-de-l-arpenaz)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-de-l-arpenaz) · [DE](https://loisirs74.fr/de/cascade-de-l-arpenaz) · [ES](https://loisirs74.fr/es/cascade-de-l-arpenaz) · [IT](https://loisirs74.fr/it/cascade-de-l-arpenaz) · [NL](https://loisirs74.fr/nl/cascade-de-l-arpenaz)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=cascade-de-l-arpenaz

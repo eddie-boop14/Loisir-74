@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.0833
 longitude: 6.6833
+geo_verified: false
+google_place_id: "ChIJx9-Ob_QBjEcRKxOrcbs1SS4"
 canonical_url: https://loisirs74.fr/base-de-loisirs-du-lac-bleu
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/5/5c/Morillon_-_vue_sur_le_lac_bleu_et_le_criou.jpg
 photo_type: real
-photo_author: "No machine-readable author provided. Abr~commonswiki assumed (based on copyright claims)."
-photo_license: "CC BY-SA 2.5"
+photo_author: "Alpine meadow"
+photo_license: null
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Base de loisirs du Lac Bleu est un complexe récréatif public situé à 670 m d'altitude à Morillon, dans la vallée du Giffre. Le site est organisé autour d'un petit lac de montagne de 2,5 hectares, entouré de pelouses ombragées, d'une plage de sable et de grands espaces verts aménagés pour les familles. L'accès au parc est libre et gratuit toute l'année.Le lac dispose d'une zone de baignade surveillée en été (juillet-août, 13h–19h), avec des espaces peu profonds délimités pour les jeunes enfants. Autour du lac, plusieurs prestataires de loisirs proposent des activités payantes : parcours accrobranche, centre équestre, Big Air Bag, structures gonflables aquatiques (Le Splash), pumptrack, trampolines, kayak, paddle et terrain de beach-volley. Une aire de jeux pour enfants (toboggans, balançoires, parcours en bois) est accessible gratuitement.Le site organise régulièrement des animations estivales : spectacles pour enfants, concerts en plein air, concours de pêche à la truite. Bar-restaurant La Covagne en bordure du lac. Toilettes publiques, bancs et tables de pique-nique. Espace de lavage pour VTT. Situé dans le domaine du Grand Massif, le Lac Bleu est un point d'arrivée pour les parapentistes. Morillon fait partie de l'office de tourisme intercommunal Haut-Giffre Tourisme.
+La Base de loisirs du Lac Bleu est un complexe récréatif public situé à 670 m d'altitude à Morillon, dans la vallée du Giffre. Le site est organisé autour d'un petit lac de montagne de 2,5 hectares, entouré de pelouses ombragées, d'une plage de sable et de grands espaces verts aménagés pour les familles. L'accès au parc est libre et gratuit toute l'année.
+
+Le lac dispose d'une zone de baignade surveillée en été (juillet-août, 13h–19h), avec des espaces peu profonds délimités pour les jeunes enfants. Autour du lac, plusieurs prestataires de loisirs proposent des activités payantes : parcours accrobranche, centre équestre, Big Air Bag, structures gonflables aquatiques (Le Splash), pumptrack, trampolines, kayak, paddle et terrain de beach-volley. Une aire de jeux pour enfants (toboggans, balançoires, parcours en bois) est accessible gratuitement.
+
+Le site organise régulièrement des animations estivales : spectacles pour enfants, concerts en plein air, concours de pêche à la truite. Bar-restaurant La Covagne en bordure du lac. Toilettes publiques, bancs et tables de pique-nique. Espace de lavage pour VTT. Situé dans le domaine du Grand Massif, le Lac Bleu est un point d'arrivée pour les parapentistes. Morillon fait partie de l'office de tourisme intercommunal Haut-Giffre Tourisme.
 
 ## Activités sur place
 
@@ -125,7 +131,7 @@ R : Ligne de bus Lihsa 91 Cluses–Samoëns, arrêt Morillon village. Depuis l'a
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/base-de-loisirs-du-lac-bleu
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/base-de-loisirs-du-lac-bleu) · [DE](https://loisirs74.fr/de/base-de-loisirs-du-lac-bleu) · [ES](https://loisirs74.fr/es/base-de-loisirs-du-lac-bleu) · [IT](https://loisirs74.fr/it/base-de-loisirs-du-lac-bleu)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/base-de-loisirs-du-lac-bleu) · [DE](https://loisirs74.fr/de/base-de-loisirs-du-lac-bleu) · [ES](https://loisirs74.fr/es/base-de-loisirs-du-lac-bleu) · [IT](https://loisirs74.fr/it/base-de-loisirs-du-lac-bleu) · [NL](https://loisirs74.fr/nl/base-de-loisirs-du-lac-bleu)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=base-de-loisirs-du-lac-bleu

@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.4008
 longitude: 6.5889
+geo_verified: false
+google_place_id: "ChIJxRfISFQjjEcR_mghO5_lIHQ"
 canonical_url: https://loisirs74.fr/thermes-evian
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/3/3d/Anciens_thermes_Evian_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/3/3d/Anciens_thermes_Evian_5.jpg
 photo_type: real
-photo_author: "Camster"
-photo_license: "CC BY-SA 3.0"
+photo_author: "Romainbehar"
+photo_license: "CC0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +41,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Les Thermes d'Évian sont un établissement thermal et de bien-être situé place de la Libération à Évian-les-Bains, au bord du lac Léman. Fondés historiquement en 1827 après la découverte en 1789 par le Comte Jean-Charles de Laizer des vertus thérapeutiques de l'eau d'evian, les thermes proposent aujourd'hui trois pôles d'activité : un espace Aqua (cures thermales conventionnées et libres), un pôle Wellness (soins esthétiques et massages), et un espace Fitness (cours collectifs, cardio-musculation, aquafitness).L'établissement utilise exclusivement l'eau minérale naturelle d'evian®, peu minéralisée, bicarbonatée calcique et magnésienne, reconnue pour ses propriétés diurétiques et sa bonne tolérance digestive. Les Thermes d'Évian sont labellisés Aquacert depuis 2015 et proposent des cures conventionnées de 18 jours prises en charge partiellement par l'Assurance Maladie dans trois orientations thérapeutiques : rhumatologie, affections digestives et maladies métaboliques, affections urinaires et maladies métaboliques.L'espace Wellness s'étend sur 380 m² avec huit cabines de soins éclairées en lumière naturelle (dont une cabine double), une cabine de cryothérapie, deux hammams non mixtes, un sauna mixte, et des salles de repos avec vue sur le lac Léman. Les prestations vont des massages relaxants personnalisés aux soins signature à l'eau evian® (bain hydromassant, massage sous la pluie, piscine à jets d'eau minérale naturelle). L'espace Fitness propose des cours collectifs en salle et en piscine thermale (aquabike, aquarun, aquapilates), une salle de cardio-musculation avec vue sur le lac, ainsi que des abonnements et accès à la carte.
+Les Thermes d'Évian sont un établissement thermal et de bien-être situé place de la Libération à Évian-les-Bains, au bord du lac Léman. Fondés historiquement en 1827 après la découverte en 1789 par le Comte Jean-Charles de Laizer des vertus thérapeutiques de l'eau d'evian, les thermes proposent aujourd'hui trois pôles d'activité : un espace Aqua (cures thermales conventionnées et libres), un pôle Wellness (soins esthétiques et massages), et un espace Fitness (cours collectifs, cardio-musculation, aquafitness).
+
+L'établissement utilise exclusivement l'eau minérale naturelle d'evian®, peu minéralisée, bicarbonatée calcique et magnésienne, reconnue pour ses propriétés diurétiques et sa bonne tolérance digestive. Les Thermes d'Évian sont labellisés Aquacert depuis 2015 et proposent des cures conventionnées de 18 jours prises en charge partiellement par l'Assurance Maladie dans trois orientations thérapeutiques : rhumatologie, affections digestives et maladies métaboliques, affections urinaires et maladies métaboliques.
+
+L'espace Wellness s'étend sur 380 m² avec huit cabines de soins éclairées en lumière naturelle (dont une cabine double), une cabine de cryothérapie, deux hammams non mixtes, un sauna mixte, et des salles de repos avec vue sur le lac Léman. Les prestations vont des massages relaxants personnalisés aux soins signature à l'eau evian® (bain hydromassant, massage sous la pluie, piscine à jets d'eau minérale naturelle). L'espace Fitness propose des cours collectifs en salle et en piscine thermale (aquabike, aquarun, aquapilates), une salle de cardio-musculation avec vue sur le lac, ainsi que des abonnements et accès à la carte.
 
 ## Activités sur place
 
@@ -71,6 +77,8 @@ Séance de cryothérapie jusqu'à -160°C pendant 3 minutes pour booster l'oxyg�
 - **Parking**: Parking privé gratuit sous réserve de disponibilité. Réservé aux véhicules légers. Badge d'accès remis aux abonnés (caution 10 €).
 - **Accessibilité**: Accessible fauteuil roulant avec assistance. Ascenseur 80×130 cm, portes ≥77 cm. WC adaptés. Personnel sensibilisé à l'accueil PMR. Possibilité dépose-minute.
 - **Contact**: thermesevian@evianresort.com · Standard joignable lundi-samedi 9h-18h
+- **Soins du corps / Hammam / Sauna**: 8 cabines de soins (380 m²), cabine double, cabine de cryothérapie, sauna mixte et deux hammams non mixtes. Soins signature à l'eau evian® (bain hydromassant, massage sous la pluie, piscine à jets).
+- **Cure thermale (orientations)**: Cures conventionnées de 18 jours en rhumatologie, affections digestives et métaboliques, affections urinaires et métaboliques. Prescription médicale obligatoire, prise en charge partielle Assurance Maladie. Saison à partir du 12 janvier 2026.
 
 ## Comment y aller
 
@@ -122,7 +130,7 @@ R : Pour les cures conventionnées de 18 jours (rhumatologie, affections digesti
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/thermes-evian
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/thermes-evian) · [DE](https://loisirs74.fr/de/thermes-evian) · [ES](https://loisirs74.fr/es/thermes-evian) · [IT](https://loisirs74.fr/it/thermes-evian)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/thermes-evian) · [DE](https://loisirs74.fr/de/thermes-evian) · [ES](https://loisirs74.fr/es/thermes-evian) · [IT](https://loisirs74.fr/it/thermes-evian) · [NL](https://loisirs74.fr/nl/thermes-evian)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=thermes-evian

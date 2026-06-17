@@ -11,9 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.333
 longitude: 6.375
+geo_verified: false
+google_place_id: "ChIJAy1AVaZqjEcRenkqC5JcF3c"
 canonical_url: https://loisirs74.fr/les-aigles-du-leman
 language: fr
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/8/80/Female_falcon_handler_with_eagle_%2825513995343%29.jpg
+photo_type: real
+photo_author: "Forest park"
+photo_license: null
+photo_source: Wikimedia Commons
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -35,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Les Aigles du Léman est un parc animalier de 8 hectares situé dans le Domaine du Guidou à Sciez, au bord du lac Léman, entièrement dédié à la connaissance et à la protection des rapaces. Le parc abrite près de 350 oiseaux appartenant à plus de 80 espèces différentes — aigles, pygargues, condors, buses, chouettes, hiboux — répartis dans plus d'une centaine de volières conçues pour leur bien-être et leur reproduction.L'attraction majeure du parc est La Terre des Aigles, la plus grande volière de rapaces du monde avec une superficie de 18 000 m², où une soixantaine d'oiseaux évoluent en totale liberté autour des visiteurs dans une expérience immersive unique. Le parc propose également quatre spectacles quotidiens différents dans son Eagle Stadium de 1 000 places assises (dont 400 couvertes), permettant d'observer les rapaces en plein vol à quelques mètres au-dessus de la tête du public.Depuis sa création, Les Aigles du Léman mène un important programme de conservation et de réintroduction du pygargue à queue blanche dans la région lémanique, visible dans la maison des aigles dédiée au projet. Le parc dispose également d'un parc d'hiver situé à 1 500 m d'altitude à la Pointe de Nyon (Morzine), ouvert de décembre à mars pendant la saison de ski.
+Les Aigles du Léman est un parc animalier de 8 hectares situé dans le Domaine du Guidou à Sciez, au bord du lac Léman, entièrement dédié à la connaissance et à la protection des rapaces. Le parc abrite près de 350 oiseaux appartenant à plus de 80 espèces différentes — aigles, pygargues, condors, buses, chouettes, hiboux — répartis dans plus d'une centaine de volières conçues pour leur bien-être et leur reproduction.
+
+L'attraction majeure du parc est La Terre des Aigles, la plus grande volière de rapaces du monde avec une superficie de 18 000 m², où une soixantaine d'oiseaux évoluent en totale liberté autour des visiteurs dans une expérience immersive unique. Le parc propose également quatre spectacles quotidiens différents dans son Eagle Stadium de 1 000 places assises (dont 400 couvertes), permettant d'observer les rapaces en plein vol à quelques mètres au-dessus de la tête du public.
+
+Depuis sa création, Les Aigles du Léman mène un important programme de conservation et de réintroduction du pygargue à queue blanche dans la région lémanique, visible dans la maison des aigles dédiée au projet. Le parc dispose également d'un parc d'hiver situé à 1 500 m d'altitude à la Pointe de Nyon (Morzine), ouvert de décembre à mars pendant la saison de ski.
 
 ## Activités sur place
 
@@ -82,7 +93,7 @@ Accès possible via la D1005 (voie partagée). Itinéraire vélo depuis Thonon-l
 
 ## Quand y aller
 
-Le parc d'été est ouvert d'avril à fin août, avec une montée en puissance progressive : avril et mai en horaires réduits (week-ends et jours fériés uniquement en mai), puis pleine saison de début juin à fin août avec horaires élargis et tous les spectacles. Les meilleurs mois pour la visite sont juin, juillet et août, lorsque les 4 spectacles quotidiens sont proposés et que le parc fonctionne à capacité maximale. Les animations pédagogiques sur les bébés rapaces (La Maison des Petites Plumes) sont particulièrement intéressantes au printemps, période de reproduction. Le parc dispose également d'un parc d'hiver à Morzine (Pointe de Nyon, 1 500 m) ouvert de décembre à mars, accessible par le téléphérique de Nyon.
+Le parc d'été est ouvert d'avril à fin août, avec une montée en puissance progressive : avril et mai en horaires réduits (week-ends et jours fériés uniquement en mai), puis pleine saison de début juin à fin août avec horaires élargis et tous les spectacles. Les meilleurs mois pour la visite sont <strong>juin, juillet et août</strong>, lorsque les 4 spectacles quotidiens sont proposés et que le parc fonctionne à capacité maximale. Les animations pédagogiques sur les bébés rapaces (La Maison des Petites Plumes) sont particulièrement intéressantes au printemps, période de reproduction. Le parc dispose également d'un <strong>parc d'hiver</strong> à Morzine (Pointe de Nyon, 1 500 m) ouvert de décembre à mars, accessible par le téléphérique de Nyon.
 
 ## Événements
 
@@ -127,7 +138,7 @@ R : Oui. Les Aigles du Léman dispose de deux points de restauration : le bar-re
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/les-aigles-du-leman
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/les-aigles-du-leman) · [DE](https://loisirs74.fr/de/les-aigles-du-leman) · [ES](https://loisirs74.fr/es/les-aigles-du-leman) · [IT](https://loisirs74.fr/it/les-aigles-du-leman)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/les-aigles-du-leman) · [DE](https://loisirs74.fr/de/les-aigles-du-leman) · [ES](https://loisirs74.fr/es/les-aigles-du-leman) · [IT](https://loisirs74.fr/it/les-aigles-du-leman) · [NL](https://loisirs74.fr/nl/les-aigles-du-leman)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=les-aigles-du-leman

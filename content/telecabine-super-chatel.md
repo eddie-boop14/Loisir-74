@@ -9,13 +9,18 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
+latitude: 46.2667
+longitude: 6.8417
+geo_verified: true
+google_place_id: "ChIJ0x25DwCjjkcRF-8LM6gMVd8"
 canonical_url: https://loisirs74.fr/telecabine-super-chatel
 language: fr
-photo_url: https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Maël BALLAND"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg
+photo_type: real
+photo_author: null
+photo_license: null
+photo_source: null
+last_updated: 2026-05-09
 source: loisirs74.fr
 ---
 
@@ -27,6 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Téléphérique / Télécabine
 - **Commune**: Châtel, Haute-Savoie (74390)
+- **GPS**: 46.2667, 6.8417
 - **Type**: Télécabine de montagne
 - **Accès**: Payant
 - **Parking**: Parking de Sous le Crêt au pied de la télécabine
@@ -36,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-La télécabine de Super-Châtel part du centre du village de Châtel (1 200 m) et monte à 1 650 m d'altitude. Depuis l'arrivée, un panorama sur les Dents du Midi et les massifs du Chablais s'ouvre sur une large plateforme qui donne accès au réseau de sentiers du domaine de Super-Châtel ainsi qu'aux installations estivales du secteur.En juillet et août, le lac de Super-Châtel (2 ha, 6 m de profondeur) est accessible depuis l'arrivée de la télécabine, accessible à pied en 50 minutes depuis le village ou directement par télécabine. Un restaurant d'altitude, des activités pour enfants et le départ du télésiège du Morclan (accès au panorama à 1 970 m) complètent l'offre. En hiver, la télécabine est le point d'entrée principal du domaine skiable de Châtel.
+La télécabine de Super-Châtel part du centre du village de Châtel (1 200 m) et monte à 1 650 m d'altitude. Depuis l'arrivée, un panorama sur les Dents du Midi et les massifs du Chablais s'ouvre sur une large plateforme qui donne accès au réseau de sentiers du domaine de Super-Châtel ainsi qu'aux installations estivales du secteur.
+
+En juillet et août, le lac de Super-Châtel (2 ha, 6 m de profondeur) est accessible depuis l'arrivée de la télécabine, accessible à pied en 50 minutes depuis le village ou directement par télécabine. Un restaurant d'altitude, des activités pour enfants et le départ du télésiège du Morclan (accès au panorama à 1 970 m) complètent l'offre. En hiver, la télécabine est le point d'entrée principal du domaine skiable de Châtel.
 
 ## Activités sur place
 
@@ -110,7 +118,7 @@ R : Oui, les titulaires d'un Multi Pass Portes du Soleil valide ont accès gratu
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/telecabine-super-chatel
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/telecabine-super-chatel) · [DE](https://loisirs74.fr/de/telecabine-super-chatel) · [ES](https://loisirs74.fr/es/telecabine-super-chatel) · [IT](https://loisirs74.fr/it/telecabine-super-chatel)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/telecabine-super-chatel) · [DE](https://loisirs74.fr/de/telecabine-super-chatel) · [ES](https://loisirs74.fr/es/telecabine-super-chatel) · [IT](https://loisirs74.fr/it/telecabine-super-chatel) · [NL](https://loisirs74.fr/nl/telecabine-super-chatel)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=telecabine-super-chatel

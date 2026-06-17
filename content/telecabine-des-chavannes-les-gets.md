@@ -11,13 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.1577
 longitude: 6.6685
+geo_verified: false
+google_place_id: "ChIJkb_BoicDjEcRGtFiRUMAxUo"
 canonical_url: https://loisirs74.fr/telecabine-des-chavannes-les-gets
 language: fr
-photo_url: https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Maël BALLAND"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg
+photo_type: real
+photo_author: null
+photo_license: null
+photo_source: null
+last_updated: 2026-04-28
 source: loisirs74.fr
 ---
 
@@ -39,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-La télécabine des Chavannes est une remontée mécanique 6 places exploitée par SOLEGETS à Les Gets (74260). Elle relie le front de neige du village (1 170 m) au plateau des Chavannes (1 482 m) en un trajet de 5 minutes sur 1 545 m, avec un dénivelé de 312 m et un débit de 1 200 personnes par heure. Inaugurée en 2010, elle constitue la porte d'entrée principale du Bike Park des Gets en été.En été, la télécabine dessert un réseau de pistes VTT de descente et d'enduro, ainsi que des sentiers de randonnée balisés vers les alpages. En hiver, elle s'intègre au domaine skiable Les Gets – Morzine, partie des Portes du Soleil. Depuis le plateau, le télésiège Chavannes Express prolonge l'accès vers les secteurs de haute altitude et la liaison Portes du Soleil.
+La télécabine des Chavannes est une remontée mécanique 6 places exploitée par SOLEGETS à Les Gets (74260). Elle relie le front de neige du village (1 170 m) au plateau des Chavannes (1 482 m) en un trajet de 5 minutes sur 1 545 m, avec un dénivelé de 312 m et un débit de 1 200 personnes par heure. Inaugurée en 2010, elle constitue la porte d'entrée principale du Bike Park des Gets en été.
+
+En été, la télécabine dessert un réseau de pistes VTT de descente et d'enduro, ainsi que des sentiers de randonnée balisés vers les alpages. En hiver, elle s'intègre au domaine skiable Les Gets – Morzine, partie des Portes du Soleil. Depuis le plateau, le télésiège Chavannes Express prolonge l'accès vers les secteurs de haute altitude et la liaison Portes du Soleil.
 
 ## Activités sur place
 
@@ -119,7 +124,7 @@ R : Oui, plusieurs loueurs de VTT et de VTT électrique sont présents au villag
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/telecabine-des-chavannes-les-gets
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/telecabine-des-chavannes-les-gets) · [DE](https://loisirs74.fr/de/telecabine-des-chavannes-les-gets) · [ES](https://loisirs74.fr/es/telecabine-des-chavannes-les-gets) · [IT](https://loisirs74.fr/it/telecabine-des-chavannes-les-gets)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/telecabine-des-chavannes-les-gets) · [DE](https://loisirs74.fr/de/telecabine-des-chavannes-les-gets) · [ES](https://loisirs74.fr/es/telecabine-des-chavannes-les-gets) · [IT](https://loisirs74.fr/it/telecabine-des-chavannes-les-gets) · [NL](https://loisirs74.fr/nl/telecabine-des-chavannes-les-gets)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=telecabine-des-chavannes-les-gets

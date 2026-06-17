@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.8981
 longitude: 6.0416
+geo_verified: false
+google_place_id: "ChIJt92C0rKEi0cRMrxQwyE0ELY"
 canonical_url: https://loisirs74.fr/gorges-du-fier
 language: fr
-photo_url: /gorges-du-fier-hero.jpg
+photo_url: /img/cascades/gorges-du-fier-hero.jpg
 photo_type: real
-photo_author: "Zivax"
-photo_license: "CC BY-SA 3.0"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+photo_author: null
+photo_license: null
+photo_source: null
+last_updated: 2026-04-23
 source: loisirs74.fr
 ---
 
@@ -39,7 +41,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Les Gorges du Fier sont un canyon étroit et profond situé à Lovagny, à une dizaine de kilomètres à l'ouest d'Annecy. Le Fier, torrent de montagne qui prend sa source au pied du Mont Charvin, y a creusé un passage entre deux parois verticales, et l'érosion millénaire de l'eau sur la roche a abouti au résultat actuel après environ 20 000 ans. Le site est aménagé depuis 1869, date de mise en place de la passerelle de 250 m fixée dans le rocher à 25 m au-dessus du torrent. Cette passerelle est payante et le parcours est ouvert du 15 mars au 15 octobre. Autour du site, la commune de Lovagny a aménagé le Chemin des Châteaux, une boucle pédestre de 2 km en accès libre qui relie l'entrée des Gorges au château de Montrottier et passe par le pont des Liasses et le pont de Pontverre.
+Les Gorges du Fier sont un canyon étroit et profond situé à Lovagny, à une dizaine de kilomètres à l'ouest d'Annecy. Le Fier, torrent de montagne qui prend sa source au pied du Mont Charvin, y a creusé un passage entre deux parois verticales, et l'érosion millénaire de l'eau sur la roche a abouti au résultat actuel après environ 20 000 ans.
+
+Le site est aménagé depuis 1869, date de mise en place de la passerelle de 250 m fixée dans le rocher à 25 m au-dessus du torrent. Cette passerelle est payante et le parcours est ouvert du 15 mars au 15 octobre. Autour du site, la commune de Lovagny a aménagé le Chemin des Châteaux, une boucle pédestre de 2 km en accès libre qui relie l'entrée des Gorges au château de Montrottier et passe par le pont des Liasses et le pont de Pontverre.
 
 ## Questions fréquentes
 
@@ -80,7 +84,7 @@ R : Non. Les passerelles des Gorges du Fier ne sont pas accessibles aux fauteuil
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/gorges-du-fier
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/gorges-du-fier) · [DE](https://loisirs74.fr/de/gorges-du-fier) · [ES](https://loisirs74.fr/es/gorges-du-fier) · [IT](https://loisirs74.fr/it/gorges-du-fier)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/gorges-du-fier) · [DE](https://loisirs74.fr/de/gorges-du-fier) · [ES](https://loisirs74.fr/es/gorges-du-fier) · [IT](https://loisirs74.fr/it/gorges-du-fier) · [NL](https://loisirs74.fr/nl/gorges-du-fier)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=gorges-du-fier
