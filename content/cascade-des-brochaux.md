@@ -11,13 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.2106
 longitude: 6.7743
+geo_verified: false
+google_place_id: "ChIJw3BMGl-mjkcRAKwda4eoeuE"
 canonical_url: https://loisirs74.fr/cascade-des-brochaux
 language: fr
-photo_url: https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Jonathan Forage"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/e/e0/Cascade_des_Brochaux.jpg
+photo_type: real
+photo_author: "Cascade d'Arpenaz"
+photo_license: "Wikimedia Commons"
+photo_source: CC BY-SA
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Cascade des Brochaux est une chute d'eau du massif du Chablais, située dans la Vallée d'Aulps sur la commune de Montriond, en Haute-Savoie. D'une hauteur totale de 30 mètres, elle comporte plusieurs sauts qui creusent des vasques naturelles dans la roche. Alimentée par la Dranse de Montriond, elle se situe à moins de 2 km de la frontière suisse, à environ 1 692 m d'altitude.Accessible en 30 à 40 minutes de marche depuis le village des Lindarets — connu pour ses chèvres en liberté et son architecture traditionnelle —, la cascade est un site prisé des randonneurs et familles. Le sentier serpente en forêt, le long de la rivière, jusqu'à un point de vue sur les chutes. À la base de la cascade se trouve une piscine naturelle permettant une pause rafraîchissante. Le site est également desservi par le Refuge des Brochaux, ouvert été et hiver.
+La Cascade des Brochaux est une chute d'eau du massif du Chablais, située dans la Vallée d'Aulps sur la commune de Montriond, en Haute-Savoie. D'une hauteur totale de 30 mètres, elle comporte plusieurs sauts qui creusent des vasques naturelles dans la roche. Alimentée par la Dranse de Montriond, elle se situe à moins de 2 km de la frontière suisse, à environ 1 692 m d'altitude.
+
+Accessible en 30 à 40 minutes de marche depuis le village des Lindarets — connu pour ses chèvres en liberté et son architecture traditionnelle —, la cascade est un site prisé des randonneurs et familles. Le sentier serpente en forêt, le long de la rivière, jusqu'à un point de vue sur les chutes. À la base de la cascade se trouve une piscine naturelle permettant une pause rafraîchissante. Le site est également desservi par le Refuge des Brochaux, ouvert été et hiver.
 
 ## Activités sur place
 
@@ -120,7 +125,7 @@ R : Oui, le Refuge de l'Abricotine et le Refuge des Brochaux se trouvent à prox
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/cascade-des-brochaux
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-des-brochaux) · [DE](https://loisirs74.fr/de/cascade-des-brochaux) · [ES](https://loisirs74.fr/es/cascade-des-brochaux) · [IT](https://loisirs74.fr/it/cascade-des-brochaux)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-des-brochaux) · [DE](https://loisirs74.fr/de/cascade-des-brochaux) · [ES](https://loisirs74.fr/es/cascade-des-brochaux) · [IT](https://loisirs74.fr/it/cascade-des-brochaux) · [NL](https://loisirs74.fr/nl/cascade-des-brochaux)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=cascade-des-brochaux

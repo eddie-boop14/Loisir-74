@@ -11,13 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.8565
 longitude: 6.6215
+geo_verified: false
+google_place_id: "ChIJ75i_gLvii0cRsfpEpsI1cVE"
 canonical_url: https://loisirs74.fr/cascade-de-la-belle-au-bois
 language: fr
-photo_url: https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Jonathan Forage"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: /img/cascades/cascade-de-la-belle-au-bois-hero.jpg
+photo_type: real
+photo_author: "Cascade d'Arpenaz"
+photo_license: "Wikimedia Commons"
+photo_source: CC BY-SA
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Cascade de la Belle au Bois est une cascade naturelle de 30 mètres de haut, alimentée par le ruisseau du Planay, située sur les hauteurs sud-est de Megève à environ 1 136 m d'altitude. Elle se jette dans une succession de vasques turquoise creusées dans la roche, au cœur d'une forêt dense de pins et de hêtres. Le site est également utilisé pour la pratique du canyoning en été.L'accès se fait par le chemin du Maz, en partie goudronné puis forestier. La dernière section du sentier est technique : descente en sous-bois avec barreaux métalliques fixés sur rochers humides et glissants pour atteindre le pied de la cascade. Une passerelle aménagée permet un point de vue en hauteur plus accessible. Le site est fermé de novembre à mars pour raisons de sécurité (sentier gelé).
+La Cascade de la Belle au Bois est une cascade naturelle de 30 mètres de haut, alimentée par le ruisseau du Planay, située sur les hauteurs sud-est de Megève à environ 1 136 m d'altitude. Elle se jette dans une succession de vasques turquoise creusées dans la roche, au cœur d'une forêt dense de pins et de hêtres. Le site est également utilisé pour la pratique du canyoning en été.
+
+L'accès se fait par le chemin du Maz, en partie goudronné puis forestier. La dernière section du sentier est technique : descente en sous-bois avec barreaux métalliques fixés sur rochers humides et glissants pour atteindre le pied de la cascade. Une passerelle aménagée permet un point de vue en hauteur plus accessible. Le site est fermé de novembre à mars pour raisons de sécurité (sentier gelé).
 
 ## Activités sur place
 
@@ -117,7 +122,7 @@ R : Juin et septembre. En juin, le débit est puissant et les vasques bien alime
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/cascade-de-la-belle-au-bois
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-de-la-belle-au-bois) · [DE](https://loisirs74.fr/de/cascade-de-la-belle-au-bois) · [ES](https://loisirs74.fr/es/cascade-de-la-belle-au-bois) · [IT](https://loisirs74.fr/it/cascade-de-la-belle-au-bois)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-de-la-belle-au-bois) · [DE](https://loisirs74.fr/de/cascade-de-la-belle-au-bois) · [ES](https://loisirs74.fr/es/cascade-de-la-belle-au-bois) · [IT](https://loisirs74.fr/it/cascade-de-la-belle-au-bois) · [NL](https://loisirs74.fr/nl/cascade-de-la-belle-au-bois)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=cascade-de-la-belle-au-bois

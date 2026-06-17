@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.852988
 longitude: 6.223277
+geo_verified: true
+google_place_id: "ChIJR3WMMkqSi0cRn-4M6CgRHow"
 canonical_url: https://loisirs74.fr/acro-aventures-talloires
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/c/c1/Acro%27Aventures_%40_Planfait_%2850935328546%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/c/c1/Acro%27Aventures_%40_Planfait_%2850935328546%29.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Acro'Aventures Talloires est un parc aventure multi-activités situé à Planfait, sur les hauteurs du lac d'Annecy, dans la forêt dominant Talloires-Montmin. Le site propose des parcours acrobatiques en hauteur dans les arbres, accessibles de 1 mètre (parcours enfant) à 25 mètres du sol (grand parcours adulte), tous équipés de lignes de vie continues garantissant la sécurité des participants. Le parc est géré par l'opérateur Acro'Aventures, dont les installations sont conçues par Altus et sécurisées par le système Koala Equipment.Le parc multi-activités comprend plusieurs formules : les parcours aventure (enfant, junior, grand parcours adulte), l'Acro'Filet (structure de filets suspendus sans baudrier pour tous âges), l'Acro'Ninja (parcours d'obstacles type Ninja Warrior), le Hop Up Challenge (nouveauté 2026 avec mur d'escalade et saut pendulaire), la Forêt des Sens (sentier pédestre thématique accessible PMR), la Chasse au Trésor (activité familiale ludique) et la Course d'orientation (27 hectares de forêt avec carte et boussole). Le site est engagé dans une démarche éco-responsable : alimentation électrique par panneaux solaires, toilettes sèches, matériaux locaux.
+Acro'Aventures Talloires est un parc aventure multi-activités situé à Planfait, sur les hauteurs du lac d'Annecy, dans la forêt dominant Talloires-Montmin. Le site propose des parcours acrobatiques en hauteur dans les arbres, accessibles de 1 mètre (parcours enfant) à 25 mètres du sol (grand parcours adulte), tous équipés de lignes de vie continues garantissant la sécurité des participants. Implanté au cœur d'une forêt de 27 hectares, le parc est géré par l'opérateur Acro'Aventures, dont les installations sont conçues par Altus et sécurisées par le système Koala Equipment.
+
+Le parc multi-activités comprend plusieurs formules adaptées à toutes les tailles et tous les niveaux : les parcours aventure (enfant dès 1 m, junior dès 1,20 m, grand parcours adulte dès 1,40 m) avec jusqu'à 11 tyroliennes sur le circuit complet, l'Acro'Filet (structure de filets suspendus sans baudrier pour tous âges avec trampolines, toboggans et passerelles), l'Acro'Ninja (parcours d'obstacles type Ninja Warrior dès 7 ans), le Hop Up Challenge (nouveauté 2026 avec mur d'escalade et saut pendulaire spectaculaire), la Forêt des Sens (sentier pédestre thématique avec ateliers interactifs, accessible PMR, poussettes et fauteuils roulants), la Chasse au Trésor (activité familiale ludique dès 3 ans avec énigmes à résoudre) et la Course d'orientation (27 hectares de forêt avec carte et boussole, 20 balises à trouver). Le site est engagé dans une démarche éco-responsable exemplaire : alimentation électrique par panneaux solaires, toilettes sèches, matériaux locaux, zéro déchet plastique. Idéal pour une demi-journée en famille, un anniversaire ou un team-building dans un cadre naturel préservé à 30 minutes d'Annecy.
 
 ## Activités sur place
 
@@ -73,8 +77,8 @@ Anniversaires, enterrements de vie de jeune fille/garçon, team building Kohlant
 - **Adresse**: Route forestière, Planfait, 74290 Talloires-Montmin
 - **Coordonnées**: 45,8530° N — 6,2233° E
 - **Altitude**: Environ 900 m (site en forêt sur les hauteurs de Talloires)
-- **Horaires**: Ouvert du 28 mars au 15 novembre 2026. Départs quotidiens en juillet-août de 10h à 17h30. Weekends et vacances scolaires uniquement hors juillet-août (mi-avril à fin octobre). Consulter le calendrier détaillé sur le site officiel. Vérifié le 14 mai 2026 — sous réserve de modifications saisonnières.
-- **Tarifs**: Grand Parcours Adulte 27 €, Junior (-16 ans) 22 €. Parcours Junior 22 €. Parcours Enfant 17 €. Acro'Ninja 17 €. Hop Up Challenge 17 €. Acro'Filet 17 € (gratuit -3 ans). Forêt des Sens 5 € (gratuit -3 ans). Chasse au Trésor 10 € (accompagnant 7 €). Course orientation 6 €. Pass multi-activités disponibles. Tarifs groupes sur demande. Vérifié le 14 mai 2026.
+- **Horaires**: Ouvert du 28 mars au 15 novembre 2026. Départs quotidiens en juillet-août de 10h à 17h30. Weekends et vacances scolaires uniquement hors juillet-août (mi-avril à fin octobre). Consulter le calendrier détaillé sur le site officiel. Vérifié le 5 juin 2026 — sous réserve de modifications saisonnières.
+- **Tarifs**: Grand Parcours Adulte 27 €, Junior (-16 ans) 22 €. Parcours Junior 22 €. Parcours Enfant 17 €. Acro'Ninja 17 €. Hop Up Challenge 17 €. Acro'Filet 17 € (gratuit -3 ans). Forêt des Sens 5 € (gratuit -3 ans). Chasse au Trésor 10 € (accompagnant 7 €). Course orientation 6 €. Pass multi-activités disponibles. Tarifs groupes sur demande. Vérifié le 5 juin 2026.
 - **Réservation**: Réservation en ligne sur acro-aventures.com/talloires. Conseillée en haute saison (juillet-août). Paiement CB, chèque, chèque vacances ou espèces accepté.
 - **Parking**: Parking municipal de Planfait à proximité immédiate (payant du 2 mai au 30 septembre selon arrêté communal).
 - **Animaux**: Non admis sur les parcours accrobranche (raisons de sécurité).
@@ -105,11 +109,11 @@ R : La réservation se fait en ligne sur le site officiel acro-aventures.com/tal
 
 **Q : Quel est le tarif d'Acro'Aventures Talloires ?**
 
-R : Le tarif adulte pour le Grand Parcours à Acro'Aventures Talloires est de 27 €. Parcours Junior 22 €. Parcours Enfant 17 €. Acro'Ninja, Hop Up Challenge et Acro'Filet 17 € chacun. Forêt des Sens 5 € (gratuit -3 ans). Chasse au Trésor 10 €. Course orientation 6 €. Pass multi-activités disponibles. Tarifs groupes sur demande. Vérifié le 14 mai 2026.
+R : Le tarif adulte pour le Grand Parcours à Acro'Aventures Talloires est de 27 €. Parcours Junior 22 €. Parcours Enfant 17 €. Acro'Ninja, Hop Up Challenge et Acro'Filet 17 € chacun. Forêt des Sens 5 € (gratuit -3 ans). Chasse au Trésor 10 €. Course orientation 6 €. Pass multi-activités disponibles. Tarifs groupes sur demande. Vérifié le 5 juin 2026.
 
 **Q : Quels sont les horaires d'Acro'Aventures Talloires ?**
 
-R : Acro'Aventures Talloires est ouvert du 28 mars au 15 novembre 2026. En juillet-août, départs quotidiens de 10h à 17h30. Hors juillet-août, ouvert weekends et vacances scolaires (après-midi en période de vacances de Pâques et Toussaint). Horaires précis à consulter sur le calendrier du site officiel. Vérifié sur le site officiel le 14 mai 2026 — sous réserve de modifications saisonnières.
+R : Acro'Aventures Talloires est ouvert du 28 mars au 15 novembre 2026. En juillet-août, départs quotidiens de 10h à 17h30. Hors juillet-août, ouvert weekends et vacances scolaires (après-midi en période de vacances de Pâques et Toussaint). Horaires précis à consulter sur le calendrier du site officiel. Vérifié sur le site officiel le 5 juin 2026 — sous réserve de modifications saisonnières.
 
 **Q : Quelle est la taille minimum pour Acro'Aventures Talloires ?**
 
@@ -131,12 +135,20 @@ R : Comptez 1h pour le Parcours Enfant, 2h pour le Parcours Junior, 2h30 pour le
 
 R : Oui. Le parking municipal de Planfait est situé à proximité immédiate d'Acro'Aventures Talloires. Ce parking est gratuit d'octobre à avril, et payant du 2 mai au 30 septembre selon arrêté municipal (lié à la fréquentation touristique estivale du site de parapente adjacent).
 
+**Q : Quelle est la meilleure période pour visiter Acro'Aventures Talloires ?**
+
+R : Le printemps (avril-mai) et l'automne (septembre-octobre) sont idéaux pour profiter du parc avec moins d'affluence et une forêt aux couleurs changeantes. L'été (juillet-août) offre une ouverture quotidienne mais davantage de monde. Privilégiez les mercredis et weekends hors juillet-août pour un équilibre entre disponibilité et tranquillité.
+
+**Q : Peut-on venir sans réservation à Acro'Aventures Talloires ?**
+
+R : Oui, l'accès sans réservation est possible, mais la réservation en ligne est fortement conseillée en haute saison (juillet-août, weekends de printemps et automne) pour garantir votre créneau horaire. Le parc gère les flux de visiteurs par créneaux pour des raisons de sécurité et de confort.
+
 ---
 
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/acro-aventures-talloires
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/acro-aventures-talloires) · [DE](https://loisirs74.fr/de/acro-aventures-talloires) · [ES](https://loisirs74.fr/es/acro-aventures-talloires) · [IT](https://loisirs74.fr/it/acro-aventures-talloires)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/acro-aventures-talloires) · [DE](https://loisirs74.fr/de/acro-aventures-talloires) · [ES](https://loisirs74.fr/es/acro-aventures-talloires) · [IT](https://loisirs74.fr/it/acro-aventures-talloires) · [NL](https://loisirs74.fr/nl/acro-aventures-talloires)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=acro-aventures-talloires

@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.3997
 longitude: 6.5909
+geo_verified: false
+google_place_id: "ChIJk4KJ11QjjEcRB83us5XRw5U"
 canonical_url: https://loisirs74.fr/palais-lumiere
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b0/PalaisLumi%C3%A8re-DSCN1105.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b0/PalaisLumi%C3%A8re-DSCN1105.jpg
 photo_type: real
-photo_author: "Pintopc"
+photo_author: "Camster"
 photo_license: "CC BY-SA 3.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Palais Lumière est un ancien établissement thermal construit en 1902 par l'architecte Ernest Brunnarius, situé quai Charles-Albert Besson, face au lac Léman. Monument historique inscrit en 1986, le bâtiment a été racheté en 1996 par la Ville d'Évian puis entièrement rénové par les architectes Michel Spitz et François Châtillon pour rouvrir en 2006 en centre culturel et de congrès.L'édifice de 4 200 m² abrite aujourd'hui 700 m² de salles d'exposition sur deux niveaux, hautement équipées pour accueillir des expositions d'envergure internationale (peinture, sculpture, photographie), une médiathèque Charles-Ferdinand Ramuz de 700 m², et un espace de congrès de 2 200 m² avec auditorium de 382 places. Le bâtiment a retrouvé son dôme central de 8,5 m de diamètre culminant à 35 m de haut, ses deux campaniles en pierre ornés de grès flammés, et ses peintures murales de Jean Benderly dans le vestibule.Le Palais Lumière est devenu en quelques années l'un des principaux pôles culturels du bassin lémanique, avec une programmation d'expositions temporaires de renommée internationale : Marc Chagall, Raoul Dufy, Rodin, Charlie Chaplin, Félix Ziem. Le bâtiment a reçu en 2026 le label S3A garantissant un accueil et une accessibilité pour les personnes en situation de handicap intellectuel.
+Le Palais Lumière est un ancien établissement thermal construit en 1902 par l'architecte Ernest Brunnarius, situé quai Charles-Albert Besson, face au lac Léman. Monument historique inscrit en 1986, le bâtiment a été racheté en 1996 par la Ville d'Évian puis entièrement rénové par les architectes Michel Spitz et François Châtillon pour rouvrir en 2006 en centre culturel et de congrès.
+
+L'édifice de 4 200 m² abrite aujourd'hui 700 m² de salles d'exposition sur deux niveaux, hautement équipées pour accueillir des expositions d'envergure internationale (peinture, sculpture, photographie), une médiathèque Charles-Ferdinand Ramuz de 700 m², et un espace de congrès de 2 200 m² avec auditorium de 382 places. Le bâtiment a retrouvé son dôme central de 8,5 m de diamètre culminant à 35 m de haut, ses deux campaniles en pierre ornés de grès flammés, et ses peintures murales de Jean Benderly dans le vestibule.
+
+Le Palais Lumière est devenu en quelques années l'un des principaux pôles culturels du bassin lémanique, avec une programmation d'expositions temporaires de renommée internationale : Marc Chagall, Raoul Dufy, Rodin, Charlie Chaplin, Félix Ziem. Le bâtiment a reçu en 2026 le label S3A garantissant un accueil et une accessibilité pour les personnes en situation de handicap intellectuel.
 
 ## Activités sur place
 
@@ -72,6 +78,8 @@ Médiathèque intégrée au Palais Lumière (700 m² sur trois niveaux), 36 000 
 - **Parking**: Parking du Port à proximité immédiate (payant). Places PMR adaptées à proximité du bâtiment.
 - **Accessibilité**: Ascenseur (80 x 130 cm). Toilettes PMR avec barres d'appui. Fauteuils roulants disponibles à l'accueil sur demande. Boucle magnétique à l'accueil. Label S3A 2026 (accessibilité handicap intellectuel). Visites adaptées sur demande les mercredis et jeudis matin.
 - **Animaux**: Chiens d'assistance acceptés. Autres animaux non autorisés.
+- **Coordonnées**: 46,3997° N · 6,5909° E (face au lac Léman)
+- **Durée de visite**: 1 h à 2 h selon le rythme. Visites commentées d'environ 1 h (publiques tous les jours à 14h30). Parcours familles 6-12 ans d'environ 40 min.
 
 ## Comment y aller
 
@@ -131,7 +139,7 @@ R : Seuls les chiens d'assistance sont acceptés dans les salles d'exposition du
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/palais-lumiere
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/palais-lumiere) · [DE](https://loisirs74.fr/de/palais-lumiere) · [ES](https://loisirs74.fr/es/palais-lumiere) · [IT](https://loisirs74.fr/it/palais-lumiere)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/palais-lumiere) · [DE](https://loisirs74.fr/de/palais-lumiere) · [ES](https://loisirs74.fr/es/palais-lumiere) · [IT](https://loisirs74.fr/it/palais-lumiere) · [NL](https://loisirs74.fr/nl/palais-lumiere)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=palais-lumiere

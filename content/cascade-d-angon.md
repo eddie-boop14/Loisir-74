@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.83278
 longitude: 6.21639
+geo_verified: false
+google_place_id: "ChIJzyoDTqOTi0cRn3d-ycbZ-Rw"
 canonical_url: https://loisirs74.fr/cascade-d-angon
 language: fr
-photo_url: /cascade-d-angon-hero.jpg
+photo_url: /img/cascades/cascade-d-angon-hero.jpg
 photo_type: real
-photo_author: "Aupiano"
-photo_license: "CC BY-SA 4.0"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+photo_author: "Cascade du Rouget"
+photo_license: "Wikimedia Commons"
+photo_source: CC BY-SA
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Cascade d'Angon est une chute d'eau naturelle de 60 mètres de hauteur située sur les contreforts du massif des Bornes-Aravis, au-dessus du lac d'Annecy. Alimentée par la convergence du Nant d'Oy (prenant sa source sur les pentes de la Tournette) et du Nant de Grenant (descendant du Lanfonnet), elle se jette dans un canyon vertical étroit et spectaculaire. Le site est accessible par trois sentiers de randonnée balisés depuis Angon, Vérel ou Talloires, tous convergeant vers le même point d'arrivée au pied de la grande cascade.L'accès final à la cascade se fait par un sentier aérien creusé à flanc de falaise, sécurisé par des barrières métalliques refaites à neuf en 2018 et des chaînes. Ce chemin étroit et parfois glissant passe sous une première petite cascade avant d'atteindre la grande chute principale. La dernière portion nécessite de se baisser sous la roche et de progresser en s'aidant des câbles, dans un environnement humide et minéral. Le site est également un haut lieu du canyoning près d'Annecy, avec des descentes en rappel de 60 mètres praticables en été.En hiver, la cascade gèle partiellement ou totalement, offrant un spectacle différent prisé des photographes. Au printemps, le débit est maximal grâce à la fonte des neiges. En été, la randonnée est particulièrement appréciée pour la fraîcheur du couvert forestier et la brume rafraîchissante générée par les projections d'eau de la cascade. Le site offre également de belles vues ponctuelles sur le lac d'Annecy, notamment sur le château de Duingt et la presqu'île depuis les éclaircies du sentier.
+La Cascade d'Angon est une chute d'eau naturelle de 60 mètres de hauteur située sur les contreforts du massif des Bornes-Aravis, au-dessus du lac d'Annecy. Alimentée par la convergence du Nant d'Oy (prenant sa source sur les pentes de la Tournette) et du Nant de Grenant (descendant du Lanfonnet), elle se jette dans un canyon vertical étroit et spectaculaire. Le site est accessible par trois sentiers de randonnée balisés depuis Angon, Vérel ou Talloires, tous convergeant vers le même point d'arrivée au pied de la grande cascade.
+
+L'accès final à la cascade se fait par un sentier aérien creusé à flanc de falaise, sécurisé par des barrières métalliques refaites à neuf en 2018 et des chaînes. Ce chemin étroit et parfois glissant passe sous une première petite cascade avant d'atteindre la grande chute principale. La dernière portion nécessite de se baisser sous la roche et de progresser en s'aidant des câbles, dans un environnement humide et minéral. Le site est également un haut lieu du canyoning près d'Annecy, avec des descentes en rappel de 60 mètres praticables en été.
+
+En hiver, la cascade gèle partiellement ou totalement, offrant un spectacle différent prisé des photographes. Au printemps, le débit est maximal grâce à la fonte des neiges. En été, la randonnée est particulièrement appréciée pour la fraîcheur du couvert forestier et la brume rafraîchissante générée par les projections d'eau de la cascade. Le site offre également de belles vues ponctuelles sur le lac d'Annecy, notamment sur le château de Duingt et la presqu'île depuis les éclaircies du sentier.
 
 ## Activités sur place
 
@@ -130,7 +136,7 @@ R : Oui, le canyon d'Angon est un haut lieu du canyoning près d'Annecy. 8 chute
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/cascade-d-angon
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-d-angon) · [DE](https://loisirs74.fr/de/cascade-d-angon) · [ES](https://loisirs74.fr/es/cascade-d-angon) · [IT](https://loisirs74.fr/it/cascade-d-angon)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-d-angon) · [DE](https://loisirs74.fr/de/cascade-d-angon) · [ES](https://loisirs74.fr/es/cascade-d-angon) · [IT](https://loisirs74.fr/it/cascade-d-angon) · [NL](https://loisirs74.fr/nl/cascade-d-angon)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=cascade-d-angon

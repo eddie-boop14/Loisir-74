@@ -11,13 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9696
 longitude: 6.5975
+geo_verified: false
+google_place_id: "ChIJEb5dwMT-i0cROhpR-0NR-Ig"
 canonical_url: https://loisirs74.fr/cascade-de-doran
 language: fr
-photo_url: https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Jonathan Forage"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: /img/cascades/cascade-de-doran-hero.jpg
+photo_type: real
+photo_author: "Cascade d'Arpenaz"
+photo_license: "Wikimedia Commons"
+photo_source: CC BY-SA
+last_updated: 2026-06-08
 source: loisirs74.fr
 ---
 
@@ -39,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Cascade de Doran est une cascade naturelle de 70 mètres de haut située à environ 1 200 m d'altitude sur la commune de Sallanches. Elle est classée Monument Naturel depuis le 14 juin 1909, protégée au titre du patrimoine naturel de Haute-Savoie. Visible depuis le fond de la vallée de l'Arve (notamment depuis l'autoroute ou la route nationale en direction de Chamonix), elle se détache en plein milieu d'une forêt de feuillus, perchée 600 mètres plus haut que la plaine.Le torrent qui alimente la cascade prend sa source à la pointe d'Areu (2 468 m), bastion du massif des Bornes. Après un parcours de 5,5 kilomètres, il franchit les falaises de calcaire jurassique pour former la cascade de Doran avant de rejoindre la plaine. En aval, le lit du torrent dévale la pente sur 200 mètres, parsemé de gros blocs rocheux, donnant naissance à une succession de petites cascades secondaires difficiles à apercevoir. L'eau du torrent est captée en amont de la cascade et traitée dans une station à microfiltres pour alimenter une partie de la commune de Sallanches ; cette installation est enterrée et n'a pas dégradé le site classé.La cascade est accessible par un sentier de randonnée d'environ 30 minutes depuis le parking de Burzier. Elle peut également être approchée dans le cadre d'une Via Corda organisée par le Bureau des Guides de Sallanches (activité payante et encadrée, distincte de l'accès libre au site naturel). La falaise de la cascade est également un site d'escalade réputé en Haute-Savoie, avec des voies de niveau 5c à 8c sur calcaire gris et orange, orientées à l'Est.
+La Cascade de Doran est une cascade naturelle de 70 mètres de haut située à environ 1 200 m d'altitude sur la commune de Sallanches. Elle est classée Monument Naturel depuis le 14 juin 1909, protégée au titre du patrimoine naturel de Haute-Savoie. Visible depuis le fond de la vallée de l'Arve (notamment depuis l'autoroute ou la route nationale en direction de Chamonix), elle se détache en plein milieu d'une forêt de feuillus, perchée 600 mètres plus haut que la plaine.
+
+Le torrent qui alimente la cascade prend sa source à la pointe d'Areu (2 468 m), bastion du massif des Bornes. Après un parcours de 5,5 kilomètres, il franchit les falaises de calcaire jurassique pour former la cascade de Doran avant de rejoindre la plaine. En aval, le lit du torrent dévale la pente sur 200 mètres, parsemé de gros blocs rocheux, donnant naissance à une succession de petites cascades secondaires difficiles à apercevoir. L'eau du torrent est captée en amont de la cascade et traitée dans une station à microfiltres pour alimenter une partie de la commune de Sallanches ; cette installation est enterrée et n'a pas dégradé le site classé.
+
+La cascade est accessible par un sentier de randonnée d'environ 30 minutes depuis le parking de Burzier. Elle peut également être approchée dans le cadre d'une Via Corda organisée par le Bureau des Guides de Sallanches (activité payante et encadrée, distincte de l'accès libre au site naturel). La falaise de la cascade est également un site d'escalade réputé en Haute-Savoie, avec des voies de niveau 5c à 8c sur calcaire gris et orange, orientées à l'Est.
 
 ## Activités sur place
 
@@ -54,6 +61,12 @@ Site d'escalade en falaise calcaire avec plus de 50 voies de 5c à 8c. Orientati
 
 ### Via Corda encadrée
 Parcours d'escalade aménagé avec cordes, marche-pieds et tyrolienne franchissant la cascade. Exclusivité du Bureau des Guides de Sallanches. Réservation obligatoire.
+
+### Photo et pause panorama au pied de la chute
+Le vallon de Doran offre un cadre exceptionnel pour la photographie. Lumière idéale en fin de matinée, embruns plus marqués au printemps lors de la fonte des neiges.
+
+### Pique-nique dans le vallon
+Le vallon avec ses prairies offre un cadre idéal pour une pause repas tirée du sac. Respecter la nature : remporter ses déchets, pas de feu hors zones autorisées.
 
 ## Infos pratiques
 
@@ -108,7 +121,7 @@ R : Compter environ 1 h 30 à 2 h pour l'aller-retour depuis le parking de Burzi
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/cascade-de-doran
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-de-doran) · [DE](https://loisirs74.fr/de/cascade-de-doran) · [ES](https://loisirs74.fr/es/cascade-de-doran) · [IT](https://loisirs74.fr/it/cascade-de-doran)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-de-doran) · [DE](https://loisirs74.fr/de/cascade-de-doran) · [ES](https://loisirs74.fr/es/cascade-de-doran) · [IT](https://loisirs74.fr/it/cascade-de-doran) · [NL](https://loisirs74.fr/nl/cascade-de-doran)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=cascade-de-doran

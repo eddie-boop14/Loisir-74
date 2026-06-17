@@ -11,13 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9254
 longitude: 6.6973
+geo_verified: false
+google_place_id: "ChIJof6xaPX9i0cRV64vq-ZEcng"
 canonical_url: https://loisirs74.fr/passy-accro-lac
 language: fr
-photo_url: https://images.unsplash.com/photo-1551632811-561732d1e306?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Holly Mandarich"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg
+photo_type: real
+photo_author: "Forest park"
+photo_license: null
+photo_source: Wikimedia Commons
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Passy Accro Lac (également connu sous le nom Passy Aventure) est un parc multi-activités situé sur la base de loisirs du lac de Passy, à 7 km de Sallanches et 25 km de Chamonix, dans un cadre naturel face au massif du Mont-Blanc. Le parc propose 10 parcours d'accrobranche avec système de lignes de vie continue pour une sécurité maximale, adaptés à tous les âges dès 2 ans pour les parcours d'initiation sans baudrier.Le site se distingue par ses installations variées : plus de 1,2 km de tyroliennes réparties sur l'ensemble des parcours (dont une tyrolienne de 40 m dédiée aux 3-6 ans), un airbag pour des sauts en chute libre de 3 à 7 mètres sur un matelas géant, une catapulte humaine unique en Haute-Savoie propulsant les participants à plus de 12 mètres, et deux escape games en plein air autour du lac pour des aventures mêlant énigmes, observation et travail d'équipe. Le parc accueille familles, groupes scolaires, anniversaires et entreprises dans un environnement boisé en bordure de lac.Passy Accro Lac compte plus de 140 jeux et ateliers répartis sur les 10 parcours, du parcours Pitchounes (10 jeux) pour les tout-petits au parcours Everest (96 jeux) culminant à 14 mètres de hauteur pour les plus intrépides. L'ensemble des installations est encadré par des moniteurs qualifiés et le site bénéficie d'une position privilégiée au sein de la base de loisirs des Îles, permettant de combiner l'accrobranche avec baignade surveillée (en été), aires de pique-nique et promenades autour du lac.
+Passy Accro Lac (également connu sous le nom Passy Aventure) est un parc multi-activités situé sur la base de loisirs du lac de Passy, à 7 km de Sallanches et 25 km de Chamonix, dans un cadre naturel face au massif du Mont-Blanc. Le parc propose 10 parcours d'accrobranche avec système de lignes de vie continue pour une sécurité maximale, adaptés à tous les âges dès 2 ans pour les parcours d'initiation sans baudrier.
+
+Le site se distingue par ses installations variées : plus de 1,2 km de tyroliennes réparties sur l'ensemble des parcours (dont une tyrolienne de 40 m dédiée aux 3-6 ans), un airbag pour des sauts en chute libre de 3 à 7 mètres sur un matelas géant, une catapulte humaine unique en Haute-Savoie propulsant les participants à plus de 12 mètres, et deux escape games en plein air autour du lac pour des aventures mêlant énigmes, observation et travail d'équipe. Le parc accueille familles, groupes scolaires, anniversaires et entreprises dans un environnement boisé en bordure de lac.
+
+Passy Accro Lac compte plus de 140 jeux et ateliers répartis sur les 10 parcours, du parcours Pitchounes (10 jeux) pour les tout-petits au parcours Everest (96 jeux) culminant à 14 mètres de hauteur pour les plus intrépides. L'ensemble des installations est encadré par des moniteurs qualifiés et le site bénéficie d'une position privilégiée au sein de la base de loisirs des Îles, permettant de combiner l'accrobranche avec baignade surveillée (en été), aires de pique-nique et promenades autour du lac.
 
 ## Activités sur place
 
@@ -139,7 +146,7 @@ R : Les 10 parcours de Passy Accro Lac se différencient par le nombre de jeux, 
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/passy-accro-lac
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/passy-accro-lac) · [DE](https://loisirs74.fr/de/passy-accro-lac) · [ES](https://loisirs74.fr/es/passy-accro-lac) · [IT](https://loisirs74.fr/it/passy-accro-lac)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/passy-accro-lac) · [DE](https://loisirs74.fr/de/passy-accro-lac) · [ES](https://loisirs74.fr/es/passy-accro-lac) · [IT](https://loisirs74.fr/it/passy-accro-lac) · [NL](https://loisirs74.fr/nl/passy-accro-lac)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=passy-accro-lac

@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9267
 longitude: 6.695
+geo_verified: false
+google_place_id: "ChIJkdF0NPX9i0cRzRWKHsVdidc"
 canonical_url: https://loisirs74.fr/lac-de-passy
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b2/Lac_vert_de_passy_%281%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b2/Lac_vert_de_passy_%281%29.JPG
 photo_type: real
-photo_author: "Mangatome"
-photo_license: "CC BY-SA 3.0"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+photo_author: "Alpine lake"
+photo_license: "Wikimedia Commons"
+photo_source: CC BY-SA
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Lac de Passy, également appelé Base de loisirs des Îles, est un lac artificiel de plus d'un kilomètre de long couvrant environ 50 hectares, situé à 547 mètres d'altitude dans la vallée de l'Arve. Créé dans les années 1970 suite à l'excavation des matériaux nécessaires à la construction de l'autoroute A40 (autoroute blanche), il est aujourd'hui le plus grand lac aménagé du pays du Mont-Blanc.Ce site remarquable offre une plage de sable aménagée avec zone de baignade surveillée en juillet et août, des criques herbeuses, des pontons en bois, et de nombreuses activités nautiques et terrestres : stand-up paddle, pédalos, bateaux électriques, pêche (parcours de 2e catégorie avec pêche de nuit autorisée), mini-golf, karting, parcours de santé, sentier VTT, et parcours d'orientation. Un sentier de 2 km fait le tour du lac en 30 minutes environ, accessible en poussette, avec des aires de jeux pour enfants.Le lac offre un panorama exceptionnel sur le massif du Mont-Blanc et la chaîne des Fiz. Accessible toute l'année, il propose un cadre de détente en été comme en hiver (promenades le long du lac enneigé). Un camping 3 étoiles et un snack-restaurant sont présents sur place. Le site accueille également des cours d'aquabike en période estivale.
+Le Lac de Passy, également appelé Base de loisirs des Îles, est un lac artificiel de plus d'un kilomètre de long couvrant environ 50 hectares, situé à 547 mètres d'altitude dans la vallée de l'Arve. Créé dans les années 1970 suite à l'excavation des matériaux nécessaires à la construction de l'autoroute A40 (autoroute blanche), il est aujourd'hui le plus grand lac aménagé du pays du Mont-Blanc.
+
+Ce site remarquable offre une plage de sable aménagée avec zone de baignade surveillée en juillet et août, des criques herbeuses, des pontons en bois, et de nombreuses activités nautiques et terrestres : stand-up paddle, pédalos, bateaux électriques, pêche (parcours de 2e catégorie avec pêche de nuit autorisée), mini-golf, karting, parcours de santé, sentier VTT, et parcours d'orientation. Un sentier de 2 km fait le tour du lac en 30 minutes environ, accessible en poussette, avec des aires de jeux pour enfants.
+
+Le lac offre un panorama exceptionnel sur le massif du Mont-Blanc et la chaîne des Fiz. Accessible toute l'année, il propose un cadre de détente en été comme en hiver (promenades le long du lac enneigé). Un camping 3 étoiles et un snack-restaurant sont présents sur place. Le site accueille également des cours d'aquabike en période estivale.
 
 ## Activités sur place
 
@@ -127,7 +133,7 @@ R : Le tour du Lac de Passy est une boucle de 2 km accessible à tous, praticabl
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/lac-de-passy
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/lac-de-passy) · [DE](https://loisirs74.fr/de/lac-de-passy) · [ES](https://loisirs74.fr/es/lac-de-passy) · [IT](https://loisirs74.fr/it/lac-de-passy)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/lac-de-passy) · [DE](https://loisirs74.fr/de/lac-de-passy) · [ES](https://loisirs74.fr/es/lac-de-passy) · [IT](https://loisirs74.fr/it/lac-de-passy) · [NL](https://loisirs74.fr/nl/lac-de-passy)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=lac-de-passy

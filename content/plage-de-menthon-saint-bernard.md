@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.863626
 longitude: 6.186161
+geo_verified: true
+google_place_id: "ChIJkz4ZDpGRi0cR17utsV2DS0M"
 canonical_url: https://loisirs74.fr/plage-de-menthon-saint-bernard
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/d/dd/Plage_municipale_de_Menthon-Saint-Bernard.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/d/dd/Plage_municipale_de_Menthon-Saint-Bernard.jpg
 photo_type: real
 photo_author: "Chrbenoit"
 photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La plage de Menthon-Saint-Bernard est une grande plage municipale engazonnée de 12 000 m² située sur la rive est du lac d'Annecy, à environ 454 m d'altitude. Elle occupe un terrain de forme triangulaire en pente douce jusqu'au lac, bordé d'épaisses haies et d'arbres offrant de l'ombre. L'accès à l'eau se fait par des zones bétonnées sur la majeure partie de la plage, avec une petite bande d'herbe et de rochers côté sud en direction du port.La plage dispose de deux zones de baignade : une pataugeoire peu profonde pour les enfants avec des jeux, et une zone plus profonde ouverte sur le lac. Le fond est constitué de petits cailloux. Les installations bétonnées facilitent l'accès à l'eau et rappellent les piscines naturelles de bord de mer. La plage est équipée de pontons fixes et flottants, de plongeoirs, de plusieurs blocs sanitaires récents avec douches et cabines, ainsi que d'un grand snack avec espace intérieur et extérieur offrant une belle vue sur le lac.Au sud, la promenade Philibert d'Orlye longe le bord du lac jusqu'au port de Menthon. La vue s'étend sur le Semnoz qui s'étire en face, le col de Leschaux et la montagne d'Entrevernes. En haute saison, la plage est surveillée par des maîtres-nageurs sauveteurs. À proximité immédiate se trouvent le Cercle Nautique du Lanfonnet (club de voile) et l'école de plongée Delphis.
+La plage de Menthon-Saint-Bernard est une grande plage municipale engazonnée de 12 000 m² située sur la rive est du lac d'Annecy, à environ 454 m d'altitude. Elle occupe un terrain de forme triangulaire en pente douce jusqu'au lac, bordé d'épaisses haies et d'arbres offrant de l'ombre. L'accès à l'eau se fait par des zones bétonnées sur la majeure partie de la plage, avec une petite bande d'herbe et de rochers côté sud en direction du port.
+
+La plage dispose de deux zones de baignade : une pataugeoire peu profonde pour les enfants avec des jeux, et une zone plus profonde ouverte sur le lac. Le fond est constitué de petits cailloux. Les installations bétonnées facilitent l'accès à l'eau et rappellent les piscines naturelles de bord de mer. La plage est équipée de pontons fixes et flottants, de plongeoirs, de plusieurs blocs sanitaires récents avec douches et cabines, ainsi que d'un grand snack avec espace intérieur et extérieur offrant une belle vue sur le lac.
+
+Au sud, la promenade Philibert d'Orlye longe le bord du lac jusqu'au port de Menthon. La vue s'étend sur le Semnoz qui s'étire en face, le col de Leschaux et la montagne d'Entrevernes. En haute saison, la plage est surveillée par des maîtres-nageurs sauveteurs. À proximité immédiate se trouvent le Cercle Nautique du Lanfonnet (club de voile) et l'école de plongée Delphis.
 
 ## Activités sur place
 
@@ -131,7 +137,7 @@ R : Oui. La Plage de Menthon-Saint-Bernard est surveillée par des maîtres-nage
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/plage-de-menthon-saint-bernard
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/plage-de-menthon-saint-bernard) · [DE](https://loisirs74.fr/de/plage-de-menthon-saint-bernard) · [ES](https://loisirs74.fr/es/plage-de-menthon-saint-bernard) · [IT](https://loisirs74.fr/it/plage-de-menthon-saint-bernard)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/plage-de-menthon-saint-bernard) · [DE](https://loisirs74.fr/de/plage-de-menthon-saint-bernard) · [ES](https://loisirs74.fr/es/plage-de-menthon-saint-bernard) · [IT](https://loisirs74.fr/it/plage-de-menthon-saint-bernard) · [NL](https://loisirs74.fr/nl/plage-de-menthon-saint-bernard)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=plage-de-menthon-saint-bernard

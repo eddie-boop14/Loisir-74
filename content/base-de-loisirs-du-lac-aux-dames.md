@@ -11,6 +11,8 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.0842
 longitude: 6.7258
+geo_verified: false
+google_place_id: "ChIJBwp6XBeqjkcRWBEV8MIflTw"
 canonical_url: https://loisirs74.fr/base-de-loisirs-du-lac-aux-dames
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/9/98/Lac_aux_Dames_%C3%A0_Samo%C3%ABns_en_%C3%A9t%C3%A9_%28juillet_2023%29_1.JPG
@@ -18,7 +20,7 @@ photo_type: real
 photo_author: "Florian Pépellin"
 photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Base de loisirs du Lac aux Dames est un parc de loisirs de 10 hectares situé à Samoëns, construit autour de deux lacs contigus. À l'écart du centre du village, elle offre un environnement calme et sécurisé, loin de la circulation automobile, idéal pour les familles et les groupes d'amis. La base est ouverte toute l'année et accessible gratuitement.Le site propose une grande variété d'activités : baignade surveillée dans le lac de début juillet à début septembre (12h–18h), aire de jeux pour enfants, terrains de sport (football, basket, beach-volley, pétanque), pêche, promenade autour des lacs, stand-up paddle, sentier de découverte. Des équipements payants sont également disponibles : piscine en plein air avec toboggans et trois bassins, courts de tennis et padel, parcours aventure, parapente.La base de loisirs intègre l'Espace Le Bois aux Dames, un centre culturel et sportif avec salle de spectacle (426 places assises, 1 100 debout), qui accueille concerts, pièces de théâtre et événements sportifs. Deux bars-restaurants et des aires de pique-nique avec sanitaires complètent l'offre. Point de départ de randonnées familiales vers les berges du Giffre et le sentier inter-lacs vers Morillon.
+La Base de loisirs du Lac aux Dames est un parc de loisirs de 10 hectares situé à Samoëns, construit autour de deux lacs contigus. À l'écart du centre du village, elle offre un environnement calme et sécurisé, loin de la circulation automobile, idéal pour les familles et les groupes d'amis. La base est ouverte toute l'année et accessible gratuitement.
+
+Le site propose une grande variété d'activités : baignade surveillée dans le lac de début juillet à début septembre (12h–18h), aire de jeux pour enfants, terrains de sport (football, basket, beach-volley, pétanque), pêche, promenade autour des lacs, stand-up paddle, sentier de découverte. Des équipements payants sont également disponibles : piscine en plein air avec toboggans et trois bassins, courts de tennis et padel, parcours aventure, parapente.
+
+La base de loisirs intègre l'Espace Le Bois aux Dames, un centre culturel et sportif avec salle de spectacle (426 places assises, 1 100 debout), qui accueille concerts, pièces de théâtre et événements sportifs. Deux bars-restaurants et des aires de pique-nique avec sanitaires complètent l'offre. Point de départ de randonnées familiales vers les berges du Giffre et le sentier inter-lacs vers Morillon.
 
 ## Activités sur place
 
@@ -139,7 +145,7 @@ R : Oui. La Base de loisirs du Lac aux Dames est ouverte toute l'année. En hive
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/base-de-loisirs-du-lac-aux-dames
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/base-de-loisirs-du-lac-aux-dames) · [DE](https://loisirs74.fr/de/base-de-loisirs-du-lac-aux-dames) · [ES](https://loisirs74.fr/es/base-de-loisirs-du-lac-aux-dames) · [IT](https://loisirs74.fr/it/base-de-loisirs-du-lac-aux-dames)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/base-de-loisirs-du-lac-aux-dames) · [DE](https://loisirs74.fr/de/base-de-loisirs-du-lac-aux-dames) · [ES](https://loisirs74.fr/es/base-de-loisirs-du-lac-aux-dames) · [IT](https://loisirs74.fr/it/base-de-loisirs-du-lac-aux-dames) · [NL](https://loisirs74.fr/nl/base-de-loisirs-du-lac-aux-dames)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=base-de-loisirs-du-lac-aux-dames

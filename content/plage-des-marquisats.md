@@ -11,13 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.893443
 longitude: 6.136465
+geo_verified: true
+google_place_id: "ChIJrVhSxuGPi0cRrYl7wZFRM8U"
 canonical_url: https://loisirs74.fr/plage-des-marquisats
 language: fr
-photo_url: https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Joshua Earle"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b2/Annecy-8.jpg
+photo_type: real
+photo_author: "Lac d'Annecy"
+photo_license: null
+photo_source: Wikimedia Commons
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Plage des Marquisats est une plage engazonnée gratuite située sur la rive ouest du lac d'Annecy, à 500 mètres du centre-ville d'Annecy. Longue d'environ 200 mètres sur une vingtaine de mètres de large, elle est bordée par un banc de sable en bord de lac qui facilite l'accès à l'eau. Le fond du lac est couvert de cailloux et la profondeur augmente rapidement après quelques mètres de la rive.Avec la plage d'Albigny, la Plage des Marquisats est l'une des deux seules plages entièrement gratuites de la commune d'Annecy. Elle bénéficie d'une localisation privilégiée proche du centre nautique, des tennis, de la salle de concert du Brise Glace et du site des Marquisats qui abrite notamment l'école supérieure d'art et design (ESAAA). Du côté nord se trouve la base nautique d'Annecy où évoluent canoës, kayaks, voiliers et plongeurs — la zone de mise à l'eau n'est pas autorisée à la baignade.La plage est ombragée grâce à de nombreux arbres, ce qui en fait un lieu particulièrement apprécié l'été par les familles avec jeunes enfants. Elle est surveillée par des maîtres-nageurs sauveteurs du début des vacances scolaires d'été au 31 août, de 11h à 19h. Hors saison, la plage reste accessible pour la promenade, le pique-nique, le sport ou simplement profiter de la vue sur le lac et les montagnes environnantes.
+La Plage des Marquisats est une plage engazonnée gratuite située sur la rive ouest du lac d'Annecy, à 500 mètres du centre-ville d'Annecy. Longue d'environ 200 mètres sur une vingtaine de mètres de large, elle est bordée par un banc de sable en bord de lac qui facilite l'accès à l'eau. Le fond du lac est couvert de cailloux et la profondeur augmente rapidement après quelques mètres de la rive.
+
+Avec la plage d'Albigny, la Plage des Marquisats est l'une des deux seules plages entièrement gratuites de la commune d'Annecy. Elle bénéficie d'une localisation privilégiée proche du centre nautique, des tennis, de la salle de concert du Brise Glace et du site des Marquisats qui abrite notamment l'école supérieure d'art et design (ESAAA). Du côté nord se trouve la base nautique d'Annecy où évoluent canoës, kayaks, voiliers et plongeurs — la zone de mise à l'eau n'est pas autorisée à la baignade.
+
+La plage est ombragée grâce à de nombreux arbres, ce qui en fait un lieu particulièrement apprécié l'été par les familles avec jeunes enfants. Elle est surveillée par des maîtres-nageurs sauveteurs du début des vacances scolaires d'été au 31 août, de 11h à 19h. Hors saison, la plage reste accessible pour la promenade, le pique-nique, le sport ou simplement profiter de la vue sur le lac et les montagnes environnantes.
 
 ## Activités sur place
 
@@ -127,7 +134,7 @@ R : Oui. La Plage des Marquisats jouxte des clubs de voile, canoë-kayak, aviron
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/plage-des-marquisats
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/plage-des-marquisats) · [DE](https://loisirs74.fr/de/plage-des-marquisats) · [ES](https://loisirs74.fr/es/plage-des-marquisats) · [IT](https://loisirs74.fr/it/plage-des-marquisats)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/plage-des-marquisats) · [DE](https://loisirs74.fr/de/plage-des-marquisats) · [ES](https://loisirs74.fr/es/plage-des-marquisats) · [IT](https://loisirs74.fr/it/plage-des-marquisats) · [NL](https://loisirs74.fr/nl/plage-des-marquisats)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=plage-des-marquisats

@@ -11,12 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.8722
 longitude: 6.4648
+geo_verified: true
+google_place_id: "ChIJfVp_bf7vi0cR8FvJPGZpgOg"
 canonical_url: https://loisirs74.fr/col-des-aravis
 language: fr
-photo_url: /col-des-aravis-hero.jpg
+photo_url: /img/points-de-vue/col-des-aravis-hero.jpg
 photo_type: real
-photo_source: own
-last_updated: 2026-05-18
+photo_author: null
+photo_license: null
+photo_source: null
+last_updated: 2026-04-23
 source: loisirs74.fr
 ---
 
@@ -32,11 +36,16 @@ source: loisirs74.fr
 - **Type**: Col routier et point de vue
 - **Accès**: Libre · Gratuit
 - **Parking**: Gratuit
+- **Chiens**: Tenus en laisse
 - **Meilleure saison**: Mai – octobre
 
 ## Présentation
 
-Le col des Aravis est un col routier de 1 486 m qui sépare la commune de La Clusaz, en Haute-Savoie, de celle de La Giettaz, en Savoie. C'est le point de passage le plus bas traversant la chaîne des Aravis, massif qui s'étend sur 25 km du nord au sud, de Bonneville à Ugine, culminant à la Pointe Percée (2 752 m). Le col est franchi par la route départementale D909, ouverte en 1902, aujourd'hui étape de la Route des Grandes Alpes® reliant Thonon-les-Bains à Nice. Sur place : la chapelle Sainte-Anne, des restaurants, des boutiques souvenirs, des fermes d'alpage avec vente directe de Reblochon, des parkings, et des départs de sentiers. Par temps clair, vue dégagée sur le massif du Mont-Blanc.
+Le col des Aravis est un col routier de 1 486 m qui sépare la commune de La Clusaz, en Haute-Savoie, de celle de La Giettaz, en Savoie. C'est le point de passage le plus bas traversant la chaîne des Aravis, massif qui s'étend sur 25 km du nord au sud, de Bonneville à Ugine, culminant à la Pointe Percée (2 752 m).
+
+Le col est franchi par la route départementale D909, ouverte en 1902, aujourd'hui étape de la Route des Grandes Alpes® reliant Thonon-les-Bains à Nice. Sur place : la chapelle Sainte-Anne, des restaurants, des boutiques souvenirs, des fermes d'alpage avec vente directe de Reblochon, des parkings, et des départs de sentiers. Par temps clair, vue dégagée sur le massif du Mont-Blanc. Le col accueille aussi cyclistes et motards qui empruntent cette ascension mythique.
+
+L'histoire du col est intimement liée au développement touristique de La Clusaz : l'ouverture de la route en 1902 a marqué le début de l'essor de la station. Aujourd'hui, le col des Aravis est un lieu de passage obligé pour les amoureux de montagne, les randonneurs et les cyclotouristes. La dépression d'alpages où s'élève la chapelle est encadrée par les corniches de l'Etale et l'échancrure spectaculaire de la Porte des Aravis au nord.
 
 ## Questions fréquentes
 
@@ -54,7 +63,7 @@ R : Le Col des Aravis culmine à 1 486 m, ce qui en fait le point de passage rou
 
 **Q : Le Col des Aravis est-il ouvert en hiver ?**
 
-R : Oui, la route du Col des Aravis (D909) est maintenue ouverte la majeure partie de l'hiver. Elle peut être fermée exceptionnellement lors de fortes chutes de neige. Vérifier l'état des routes avant de partir.
+R : Oui, la route du Col des Aravis (D909) est maintenue ouverte la majeure partie de l'hiver. Elle peut être fermée exceptionnellement lors de fortes chutes de neige (environ 5 jours par an en moyenne). Vérifier l'état des routes avant de partir.
 
 **Q : Voit-on le Mont-Blanc depuis le Col des Aravis ?**
 
@@ -72,12 +81,20 @@ R : Oui, le Col des Aravis est historiquement franchi par le Tour de France, la 
 
 R : Oui. Plusieurs fermes d'alpage au Col des Aravis pratiquent la vente directe en saison. Le Reblochon est la production historique du massif des Aravis.
 
+**Q : Le col est-il adapté pour une sortie en famille ?**
+
+R : Oui. Le col est accessible en voiture avec parking au sommet, restaurants sur place, et plusieurs balades faciles dans les alpages. La chapelle et les vaches en pâturage intéressent généralement les enfants.
+
+**Q : Quel est le meilleur moment pour monter à vélo ?**
+
+R : De mai à octobre, tôt le matin ou en fin d'après-midi pour éviter la circulation automobile. Les matinées d'été offrent souvent la meilleure visibilité sur le Mont-Blanc.
+
 ---
 
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/col-des-aravis
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/col-des-aravis) · [DE](https://loisirs74.fr/de/col-des-aravis) · [ES](https://loisirs74.fr/es/col-des-aravis) · [IT](https://loisirs74.fr/it/col-des-aravis)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/col-des-aravis) · [DE](https://loisirs74.fr/de/col-des-aravis) · [ES](https://loisirs74.fr/es/col-des-aravis) · [IT](https://loisirs74.fr/it/col-des-aravis) · [NL](https://loisirs74.fr/nl/col-des-aravis)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=col-des-aravis

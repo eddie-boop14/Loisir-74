@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.0564
 longitude: 6.7786
+geo_verified: false
+google_place_id: "ChIJhXuX4IWrjkcR3XyIfgvI2-k"
 canonical_url: https://loisirs74.fr/cascade-du-rouget
 language: fr
-photo_url: /cascade-du-rouget-hero.jpg
+photo_url: /img/cascades/cascade-du-rouget-hero.jpg
 photo_type: real
 photo_author: "Florian Pépellin"
 photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Cascade du Rouget est une cascade naturelle de la Vallée du Giffre qui s'écoule toute l'année depuis le torrent de Sales en amont pour rejoindre le Giffre des Fonds en aval. Située sur la commune de Sixt-Fer-à-Cheval à environ 960 mètres d'altitude, elle constitue l'une des cascades les plus impressionnantes de Haute-Savoie avec ses 80 à 90 mètres de hauteur répartis sur trois sauts successifs. Elle est accessible directement par la route en été, ce qui en fait un site touristique très fréquenté, et marque l'entrée de la réserve naturelle du cirque du Fer-à-Cheval.Surnommée la 'Reine des Alpes', la Cascade du Rouget se distingue par son débit régulier et spectaculaire, particulièrement impressionnant lors de la fonte des neiges au printemps. La chute amont, qui mesure une centaine de mètres avec un ressaut à mi-hauteur, rebondit sur une dalle de pierre créant des projections d'eau qui rendent les abords glissants par fort débit — des accidents se sont déjà produits dans ces conditions. Le site a été classé à l'inventaire des sites naturels dès 1914 et figure parmi les cascades les plus photographiées de la région. Une légende locale attribue à son eau des vertus de virilité et de fécondité, au point que les anciens offraient encore récemment un flacon de cette eau aux jeunes mariés.
+La Cascade du Rouget est une cascade naturelle de la Vallée du Giffre qui s'écoule toute l'année depuis le torrent de Sales en amont pour rejoindre le Giffre des Fonds en aval. Située sur la commune de Sixt-Fer-à-Cheval à environ 960 mètres d'altitude, elle constitue l'une des cascades les plus impressionnantes de Haute-Savoie avec ses 80 à 90 mètres de hauteur répartis sur trois sauts successifs. Elle est accessible directement par la route en été, ce qui en fait un site touristique très fréquenté, et marque l'entrée de la réserve naturelle du cirque du Fer-à-Cheval.
+
+Surnommée la 'Reine des Alpes', la Cascade du Rouget se distingue par son débit régulier et spectaculaire, particulièrement impressionnant lors de la fonte des neiges au printemps. La chute amont, qui mesure une centaine de mètres avec un ressaut à mi-hauteur, rebondit sur une dalle de pierre créant des projections d'eau qui rendent les abords glissants par fort débit — des accidents se sont déjà produits dans ces conditions. Le site a été classé à l'inventaire des sites naturels dès 1914 et figure parmi les cascades les plus photographiées de la région. Une légende locale attribue à son eau des vertus de virilité et de fécondité, au point que les anciens offraient encore récemment un flacon de cette eau aux jeunes mariés.
 
 ## Activités sur place
 
@@ -121,7 +125,7 @@ R : Depuis le parking en été, compter 5 à 10 minutes de marche pour atteindre
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/cascade-du-rouget
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-du-rouget) · [DE](https://loisirs74.fr/de/cascade-du-rouget) · [ES](https://loisirs74.fr/es/cascade-du-rouget) · [IT](https://loisirs74.fr/it/cascade-du-rouget)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-du-rouget) · [DE](https://loisirs74.fr/de/cascade-du-rouget) · [ES](https://loisirs74.fr/es/cascade-du-rouget) · [IT](https://loisirs74.fr/it/cascade-du-rouget) · [NL](https://loisirs74.fr/nl/cascade-du-rouget)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=cascade-du-rouget

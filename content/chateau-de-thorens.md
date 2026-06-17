@@ -11,6 +11,8 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9825
 longitude: 6.2478
+geo_verified: false
+google_place_id: "ChIJN5o4x7aLi0cR_y8Ej-eyTyY"
 canonical_url: https://loisirs74.fr/chateau-de-thorens
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/1/13/Filli%C3%A8re%C2%B0Thorens-Gli%C3%A8res_-_74570_-_2019.06.04_-_Ch%C3%A2teau_de_Thorens_%28vue_de_face%29_%C2%A9_Anthony_Levrot.jpg
@@ -18,7 +20,7 @@ photo_type: real
 photo_author: "Anthony Levrot"
 photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +41,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Château de Thorens est un château historique situé à Fillière (anciennement Thorens-Glières), dans le département de la Haute-Savoie. Bâti en 1060 sur l'ordre du comte Gérold de Genève, ce château fort médiéval est habité par la famille de Sales depuis 1559. Aujourd'hui, il fonctionne comme un hôtel 4 étoiles et lieu de réception, géré par la famille de Roussy de Sales.Le château conserve des éléments architecturaux du Moyen Âge (donjon, tours du XIIe et XIIIe siècles), de l'époque baroque et du XIXe siècle. Il fut la demeure de Saint François de Sales (1567–1622), prince-évêque de Genève, et la villégiature du comte Camille Benso de Cavour (1810–1861), Premier ministre piémontais et artisan de l'unité italienne. Le château conserve de nombreux souvenirs, œuvres d'art et objets ayant appartenu à ces deux figures historiques majeures.Depuis 2020, le Château de Thorens ne propose plus de visites guidées publiques. Il accueille uniquement des clients pour des séjours hôteliers, des mariages, séminaires et événements privés. Le site est inscrit aux Monuments Historiques depuis 1990.
+Le Château de Thorens est un château historique situé à Fillière (anciennement Thorens-Glières), dans le département de la Haute-Savoie. Bâti en 1060 sur l'ordre du comte Gérold de Genève, ce château fort médiéval est habité par la famille de Sales depuis 1559. Aujourd'hui, il fonctionne comme un hôtel 4 étoiles et lieu de réception, géré par la famille de Roussy de Sales.
+
+Le château conserve des éléments architecturaux du Moyen Âge (donjon, tours du XIIe et XIIIe siècles), de l'époque baroque et du XIXe siècle. Il fut la demeure de Saint François de Sales (1567–1622), prince-évêque de Genève, et la villégiature du comte Camille Benso de Cavour (1810–1861), Premier ministre piémontais et artisan de l'unité italienne. Le château conserve de nombreux souvenirs, œuvres d'art et objets ayant appartenu à ces deux figures historiques majeures.
+
+Depuis 2020, le Château de Thorens ne propose plus de visites guidées publiques. Il accueille uniquement des clients pour des séjours hôteliers, des mariages, séminaires et événements privés. Le site est inscrit aux Monuments Historiques depuis 1990.
 
 ## Activités sur place
 
@@ -132,7 +138,7 @@ R : Oui. La Table du Château propose une cuisine française gastronomique à ba
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/chateau-de-thorens
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/chateau-de-thorens) · [DE](https://loisirs74.fr/de/chateau-de-thorens) · [ES](https://loisirs74.fr/es/chateau-de-thorens) · [IT](https://loisirs74.fr/it/chateau-de-thorens)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/chateau-de-thorens) · [DE](https://loisirs74.fr/de/chateau-de-thorens) · [ES](https://loisirs74.fr/es/chateau-de-thorens) · [IT](https://loisirs74.fr/it/chateau-de-thorens) · [NL](https://loisirs74.fr/nl/chateau-de-thorens)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=chateau-de-thorens

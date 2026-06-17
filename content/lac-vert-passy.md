@@ -11,9 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9217
 longitude: 6.7047
+geo_verified: false
+google_place_id: "ChIJjXfsqQtUiUcRVeAJJKLEnts"
 canonical_url: https://loisirs74.fr/lac-vert-passy
 language: fr
-last_updated: 2026-05-18
+photo_url: /img/lacs-plages/lac-vert-passy-hero.jpg
+photo_type: real
+photo_author: "Mangatome"
+photo_license: "CC BY-SA 3.0"
+photo_source: Wikimedia Commons
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -35,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Lac Vert est un lac glaciaire naturel de Haute-Savoie situé à 1 200 mètres d'altitude sur la commune de Passy, au cœur d'une forêt de conifères. Il s'étend sur une superficie d'environ dix hectares et doit son nom à la couleur émeraude caractéristique de ses eaux, causée par la végétation subaquatique et la présence de cyanobactéries. Site naturel classé depuis le 14 juin 1909, il offre un panorama remarquable sur le massif du Mont-Blanc et la chaîne des Fiz.Formé selon l'Office national des forêts lors de l'éboulement du Dérochoir au XVe siècle, le lac compte cinq rochers affleurant à sa surface. Un sentier fait le tour du lac en le surplombant, accessible en une quinzaine de minutes l'été. L'accès se fait depuis le parking de Plaine-Joux (1 350 m) par un sentier forestier facile d'environ 30 minutes de marche. En été, des navettes gratuites circulent entre Plaine-Joux et le lac pour limiter la pression automobile sur le site.
+Le Lac Vert est un lac glaciaire naturel de Haute-Savoie situé à 1 200 mètres d'altitude sur la commune de Passy, au cœur d'une forêt de conifères. Il s'étend sur une superficie d'environ dix hectares et doit son nom à la couleur émeraude caractéristique de ses eaux, causée par la végétation subaquatique et la présence de cyanobactéries. Site naturel classé depuis le 14 juin 1909, il offre un panorama remarquable sur le massif du Mont-Blanc et la chaîne des Fiz.
+
+Formé selon l'Office national des forêts lors de l'éboulement du Dérochoir au XVe siècle, le lac compte cinq rochers affleurant à sa surface. Un sentier fait le tour du lac en le surplombant, accessible en une quinzaine de minutes l'été. L'accès se fait depuis le parking de Plaine-Joux (1 350 m) par un sentier forestier facile d'environ 30 minutes de marche. En été, des navettes gratuites circulent entre Plaine-Joux et le lac pour limiter la pression automobile sur le site.
 
 ## Activités sur place
 
@@ -114,7 +123,7 @@ R : Non. Le sentier d'accès au Lac Vert depuis Plaine-Joux traverse la forêt a
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/lac-vert-passy
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/lac-vert-passy) · [DE](https://loisirs74.fr/de/lac-vert-passy) · [ES](https://loisirs74.fr/es/lac-vert-passy) · [IT](https://loisirs74.fr/it/lac-vert-passy)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/lac-vert-passy) · [DE](https://loisirs74.fr/de/lac-vert-passy) · [ES](https://loisirs74.fr/es/lac-vert-passy) · [IT](https://loisirs74.fr/it/lac-vert-passy) · [NL](https://loisirs74.fr/nl/lac-vert-passy)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=lac-vert-passy

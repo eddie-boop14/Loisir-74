@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.3397
 longitude: 6.6383
+geo_verified: false
+google_place_id: "ChIJX6T2EckjjEcR4u9zJcAisvM"
 canonical_url: https://loisirs74.fr/base-de-loisirs-de-la-beunaz
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/2/21/La_plage_de_La_Beunaz.jpg
 photo_type: real
-photo_author: "Saint-Paul-en-Chablais"
-photo_license: "CC BY-SA 4.0"
+photo_author: "Alpine meadow"
+photo_license: null
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +41,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Base de loisirs de la Beunaz est un espace récréatif aménagé autour d'un lac naturel tempéré de montagne, situé à 900 mètres d'altitude dans le pays de Gavot, sur la commune de Saint-Paul-en-Chablais. Le lac de la Beunaz (qui se prononce « La Beune ») est un lac naturel d'origine glaciaire, caractérisé par une eau tempérée avoisinant les 16 °C, ce qui en fait un lieu de baignade prisé dans le Chablais.Créée en 1951 par André Caza, ancien champion d'Europe de plongeon, la base de loisirs conserve aujourd'hui l'esprit pionnier de son fondateur avec l'emblématique « étoile orange » qui signale le site. Exploitée depuis 1995 par Indiana'Ventures, elle propose un ensemble d'activités aquatiques, terrestres et aériennes sur un site naturel préservé avec roselières et vue sur la Dent d'Oche.Le site comprend une baignade surveillée avec piscine alimentée par l'eau du lac, des plongeoirs de différentes hauteurs, la célèbre Télébeune (tyrolienne aquatique inaugurée en 1959), un parcours accrobranche Indiana Parc, des activités nautiques (canoë, pédalo, stand-up paddle), des structures gonflables, trampolines, terrains de sport, ainsi qu'un restaurant et des hébergements insolites (cabanes dans les arbres, tipis, yourtes) pour prolonger l'expérience.
+La Base de loisirs de la Beunaz est un espace récréatif aménagé autour d'un lac naturel tempéré de montagne, situé à 900 mètres d'altitude dans le pays de Gavot, sur la commune de Saint-Paul-en-Chablais. Le lac de la Beunaz (qui se prononce « La Beune ») est un lac naturel d'origine glaciaire, caractérisé par une eau tempérée avoisinant les 16 °C, ce qui en fait un lieu de baignade prisé dans le Chablais.
+
+Créée en 1951 par André Caza, ancien champion d'Europe de plongeon, la base de loisirs conserve aujourd'hui l'esprit pionnier de son fondateur avec l'emblématique « étoile orange » qui signale le site. Exploitée depuis 1995 par Indiana'Ventures, elle propose un ensemble d'activités aquatiques, terrestres et aériennes sur un site naturel préservé avec roselières et vue sur la Dent d'Oche.
+
+Le site comprend une baignade surveillée avec piscine alimentée par l'eau du lac, des plongeoirs de différentes hauteurs, la célèbre Télébeune (tyrolienne aquatique inaugurée en 1959), un parcours accrobranche Indiana Parc, des activités nautiques (canoë, pédalo, stand-up paddle), des structures gonflables, trampolines, terrains de sport, ainsi qu'un restaurant et des hébergements insolites (cabanes dans les arbres, tipis, yourtes) pour prolonger l'expérience.
 
 ## Activités sur place
 
@@ -135,7 +141,7 @@ R : Oui. La Base de loisirs de la Beunaz propose des hébergements insolites : c
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/base-de-loisirs-de-la-beunaz
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/base-de-loisirs-de-la-beunaz) · [DE](https://loisirs74.fr/de/base-de-loisirs-de-la-beunaz) · [ES](https://loisirs74.fr/es/base-de-loisirs-de-la-beunaz) · [IT](https://loisirs74.fr/it/base-de-loisirs-de-la-beunaz)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/base-de-loisirs-de-la-beunaz) · [DE](https://loisirs74.fr/de/base-de-loisirs-de-la-beunaz) · [ES](https://loisirs74.fr/es/base-de-loisirs-de-la-beunaz) · [IT](https://loisirs74.fr/it/base-de-loisirs-de-la-beunaz) · [NL](https://loisirs74.fr/nl/base-de-loisirs-de-la-beunaz)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=base-de-loisirs-de-la-beunaz

@@ -11,13 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.333
 longitude: 6.381
+geo_verified: false
+google_place_id: "ChIJbY6Z0nNBjEcRIVySaLVB6gQ"
 canonical_url: https://loisirs74.fr/domaine-de-guidou
 language: fr
-photo_url: https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80
-photo_type: generic_stock
-photo_author: "David Marcu"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: /img/generique/generique-domaine.jpg
+photo_type: generic
+photo_author: null
+photo_license: null
+photo_source: null
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Domaine de Guidou est un site naturel protégé de 85 hectares situé sur la commune de Sciez, au bord du lac Léman. Classé Natura 2000, il appartient au Conservatoire du Littoral et des Rivages Lacustres et fait l'objet d'une gestion collégiale entre la commune de Sciez, la LPO Auvergne-Rhône-Alpes, l'ONF et l'Association de gestion du domaine de Guidou. Le site rassemble une mosaïque de milieux : secteurs boisés, parcelles agricoles en culture céréalière, prairies humides et sèches, roselières terrestres.L'un des éléments les plus remarquables du Domaine de Guidou est la présence de dunes de sable fossiles au niveau du Bois du Vernay, formation quasiment unique en Europe. Jusqu'au XVIIIe siècle, l'action du vent sur les bancs de sable exondés du lac créait des dunes semblables à celles du bord de mer. Bien que la régulation du niveau du lac depuis le XXe siècle ait ralenti ce processus, les dunes sont encore visibles dans le paysage, aujourd'hui recouvertes de végétation.Le domaine abrite 520 espèces végétales recensées, dont de rares plantes messicoles (liées aux cultures de céréales) aujourd'hui vulnérables en raison de l'usage des pesticides. La faible profondeur du lac au niveau de la baie de Coudrée en fait également le site le plus important des rives françaises pour l'hivernage des oiseaux d'eau : fuligules morillons et milouins se rassemblent par milliers chaque année, accompagnés de garrots à œil d'or. Au printemps, de nombreux limicoles (chevaliers, gravelots) et échassiers (aigrettes, hérons) y font halte lors de la migration.
+Le Domaine de Guidou est un site naturel protégé de 85 hectares situé sur la commune de Sciez, au bord du lac Léman. Classé Natura 2000, il appartient au Conservatoire du Littoral et des Rivages Lacustres et fait l'objet d'une gestion collégiale entre la commune de Sciez, la LPO Auvergne-Rhône-Alpes, l'ONF et l'Association de gestion du domaine de Guidou. Le site rassemble une mosaïque de milieux : secteurs boisés, parcelles agricoles en culture céréalière, prairies humides et sèches, roselières terrestres.
+
+L'un des éléments les plus remarquables du Domaine de Guidou est la présence de dunes de sable fossiles au niveau du Bois du Vernay, formation quasiment unique en Europe. Jusqu'au XVIIIe siècle, l'action du vent sur les bancs de sable exondés du lac créait des dunes semblables à celles du bord de mer. Bien que la régulation du niveau du lac depuis le XXe siècle ait ralenti ce processus, les dunes sont encore visibles dans le paysage, aujourd'hui recouvertes de végétation.
+
+Le domaine abrite 520 espèces végétales recensées, dont de rares plantes messicoles (liées aux cultures de céréales) aujourd'hui vulnérables en raison de l'usage des pesticides. La faible profondeur du lac au niveau de la baie de Coudrée en fait également le site le plus important des rives françaises pour l'hivernage des oiseaux d'eau : fuligules morillons et milouins se rassemblent par milliers chaque année, accompagnés de garrots à œil d'or. Au printemps, de nombreux limicoles (chevaliers, gravelots) et échassiers (aigrettes, hérons) y font halte lors de la migration.
 
 ## Activités sur place
 
@@ -47,7 +54,7 @@ Le Domaine de Guidou est un site naturel protégé de 85 hectares situé sur la 
 L'observatoire ornithologique de la prairie de la Grande Corne permet d'observer oiseaux nicheurs et migrateurs (fuligules, hérons, aigrettes, chevaliers) tout en assurant leur tranquillité.
 
 ### Découvrir les dunes fossiles du Bois du Vernay
-Les dunes de sable fossiles, créées par le vent sur les rives du lac jusqu'au XVIIIe siècle, constituent une curiosité géologique rare. Sentier balisé à travers le bois.
+Les dunes de sable fossiles, créées par le vent sur les rives du lac jusqu'au XVIII<sup>e</sup> siècle, constituent une curiosité géologique rare. Sentier balisé à travers le bois.
 
 ### Se promener à pied ou à vélo sur les sentiers balisés
 Réseau de sentiers aménagés (dont une passerelle sur prairie inondable) permettant de parcourir les milieux diversifiés du domaine sans déranger les zones sensibles. Chiens en laisse acceptés.
@@ -59,7 +66,7 @@ La LPO organise régulièrement des chantiers d'entretien (fauche des dunes à o
 Plusieurs parcelles agricoles du domaine sont gérées spécifiquement pour conserver les plantes messicoles (espèces liées aux cultures de céréales), aujourd'hui vulnérables en Europe.
 
 ### Explorer le patrimoine historique lié au château de Coudrée
-Anciennement, le domaine de Guidou faisait partie d'une vaste propriété de 250 ha appartenant à la famille des Allinges-Coudrée, bâtisseurs du château de Coudrée au Xe siècle.
+Anciennement, le domaine de Guidou faisait partie d'une vaste propriété de 250 ha appartenant à la famille des Allinges-Coudrée, bâtisseurs du château de Coudrée au X<sup>e</sup> siècle.
 
 ## Infos pratiques
 
@@ -87,7 +94,7 @@ Accessible à vélo depuis Sciez centre ou depuis la ViaRhôna (voie verte du la
 
 ## Quand y aller
 
-Le Domaine de Guidou se visite toute l'année, avec des intérêts saisonniers différents. En hiver (novembre à mars), c'est la période privilégiée pour l'observation des oiseaux d'eau hivernants : les fuligules morillons et milouins se rassemblent par milliers sur la baie de Coudrée, accompagnés de garrots à œil d'or. Au printemps (avril – mai), le site devient une halte migratoire exceptionnelle pour les limicoles (chevaliers, gravelots), les échassiers (aigrettes garzettes, hérons pourprés) et les canards (souchets, sarcelles). La prairie de la Grande Corne est alors souvent inondée, offrant des conditions idéales pour l'observation. En été (juin – août), la fréquentation augmente ; privilégier les matinées pour observer la faune dans le calme. À l'automne (septembre – octobre), c'est la période la plus paisible pour se promener dans les milieux diversifiés du domaine, avec les couleurs des dunes à orchidées et la reprise de l'activité ornithologique.
+Le Domaine de Guidou se visite toute l'année, avec des intérêts saisonniers différents. <strong>En hiver (novembre à mars)</strong>, c'est la période privilégiée pour l'observation des oiseaux d'eau hivernants : les fuligules morillons et milouins se rassemblent par milliers sur la baie de Coudrée, accompagnés de garrots à œil d'or. <strong>Au printemps (avril – mai)</strong>, le site devient une halte migratoire exceptionnelle pour les limicoles (chevaliers, gravelots), les échassiers (aigrettes garzettes, hérons pourprés) et les canards (souchets, sarcelles). La prairie de la Grande Corne est alors souvent inondée, offrant des conditions idéales pour l'observation. <strong>En été (juin – août)</strong>, la fréquentation augmente ; privilégier les matinées pour observer la faune dans le calme. <strong>À l'automne (septembre – octobre)</strong>, c'est la période la plus paisible pour se promener dans les milieux diversifiés du domaine, avec les couleurs des dunes à orchidées et la reprise de l'activité ornithologique.
 
 ## Événements
 
@@ -124,7 +131,7 @@ R : Prévoyez entre 1 h 30 et 3 h pour parcourir les sentiers balisés du Domain
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/domaine-de-guidou
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/domaine-de-guidou) · [DE](https://loisirs74.fr/de/domaine-de-guidou) · [ES](https://loisirs74.fr/es/domaine-de-guidou) · [IT](https://loisirs74.fr/it/domaine-de-guidou)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/domaine-de-guidou) · [DE](https://loisirs74.fr/de/domaine-de-guidou) · [ES](https://loisirs74.fr/es/domaine-de-guidou) · [IT](https://loisirs74.fr/it/domaine-de-guidou) · [NL](https://loisirs74.fr/nl/domaine-de-guidou)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=domaine-de-guidou

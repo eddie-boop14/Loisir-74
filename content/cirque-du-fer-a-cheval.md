@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.0633
 longitude: 6.7978
+geo_verified: false
+google_place_id: "ChIJVwUddNetjkcRhQI6kBvtFSs"
 canonical_url: https://loisirs74.fr/cirque-du-fer-a-cheval
 language: fr
-photo_url: /cirque-du-fer-a-cheval-hero.jpg
+photo_url: /img/cascades/cirque-du-fer-a-cheval-hero.jpg
 photo_type: real
-photo_author: "0x010C"
+photo_author: "Zairon"
 photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Cirque du Fer-à-Cheval est un cirque naturel glaciaire situé sur la commune de Sixt-Fer-à-Cheval, dans la vallée du Giffre, au cœur de la Réserve Naturelle Nationale de Sixt-Passy. Il forme un hémicycle calcaire de 4 à 5 kilomètres de développement avec des parois verticales de 500 à 700 mètres de hauteur, couronnées par des sommets approchant 3 000 mètres d'altitude (Pic de Tenneverge 2 989 m, Cheval Blanc 2 831 m, Grenier de Commune 2 775 m). Il s'agit du plus grand cirque montagneux alpin.Son nom vient de la forme en fer à cheval de ses falaises, qui ferment la partie orientale de la vallée du Giffre. Au printemps, plus de trente cascades alimentées par la fonte des neiges jaillissent de ses falaises pour former de courts torrents, affluents du Giffre. Les plus connues sont la Pleureuse, la Sauffaz, la Méridienne, la Fontaine de l'Or (Pierrette), et la Lyre. Classé Grand Site de France, le cirque accueille environ 500 000 visiteurs par an et fait partie de la plus grande réserve naturelle de Haute-Savoie (9 200 hectares sur 11 200).Les roches du cirque sont des calcaires formés au Jurassique, très fissurés. La forte pluviométrie accentue l'érosion : un éboulement majeur a eu lieu en 1602 (enseveli plusieurs hameaux, rappelé par une chapelle commémorative), puis en 2003 (300 000 m³) et en septembre 2025 (35 000 m³ au lieu-dit Pas Noir), entraînant la fermeture temporaire du secteur Fond de la Combe par arrêté municipal.
+Le Cirque du Fer-à-Cheval est un cirque naturel glaciaire situé sur la commune de Sixt-Fer-à-Cheval, dans la vallée du Giffre, au cœur de la Réserve Naturelle Nationale de Sixt-Passy. Il forme un hémicycle calcaire de 4 à 5 kilomètres de développement avec des parois verticales de 500 à 700 mètres de hauteur, couronnées par des sommets approchant 3 000 mètres d'altitude (Pic de Tenneverge 2 989 m, Cheval Blanc 2 831 m, Grenier de Commune 2 775 m). Il s'agit du plus grand cirque montagneux alpin.
+
+Son nom vient de la forme en fer à cheval de ses falaises, qui ferment la partie orientale de la vallée du Giffre. Au printemps, plus de trente cascades alimentées par la fonte des neiges jaillissent de ses falaises pour former de courts torrents, affluents du Giffre. Les plus connues sont la Pleureuse, la Sauffaz, la Méridienne, la Fontaine de l'Or (Pierrette), et la Lyre. Classé Grand Site de France, le cirque accueille environ 500 000 visiteurs par an et fait partie de la plus grande réserve naturelle de Haute-Savoie (9 200 hectares sur 11 200).
+
+Les roches du cirque sont des calcaires formés au Jurassique, très fissurés. La forte pluviométrie accentue l'érosion : un éboulement majeur a eu lieu en 1602 (enseveli plusieurs hameaux, rappelé par une chapelle commémorative), puis en 2003 (300 000 m³) et en septembre 2025 (35 000 m³ au lieu-dit Pas Noir), entraînant la fermeture temporaire du secteur Fond de la Combe par arrêté municipal.
 
 ## Activités sur place
 
@@ -118,7 +124,7 @@ R : Pour une balade facile au Cirque du Fer-à-Cheval, compter 1h (boucle Fréna
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/cirque-du-fer-a-cheval
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cirque-du-fer-a-cheval) · [DE](https://loisirs74.fr/de/cirque-du-fer-a-cheval) · [ES](https://loisirs74.fr/es/cirque-du-fer-a-cheval) · [IT](https://loisirs74.fr/it/cirque-du-fer-a-cheval)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cirque-du-fer-a-cheval) · [DE](https://loisirs74.fr/de/cirque-du-fer-a-cheval) · [ES](https://loisirs74.fr/es/cirque-du-fer-a-cheval) · [IT](https://loisirs74.fr/it/cirque-du-fer-a-cheval) · [NL](https://loisirs74.fr/nl/cirque-du-fer-a-cheval)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=cirque-du-fer-a-cheval

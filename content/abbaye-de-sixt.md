@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.0539
 longitude: 6.773
+geo_verified: false
+google_place_id: "ChIJF-WRBYarjkcRy7H98SpkIu8"
 canonical_url: https://loisirs74.fr/abbaye-de-sixt
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/4/47/Sixt_abbey_02.jpg
 photo_type: real
-photo_author: "Krzysztof Golik"
+photo_author: "Laurent Vriez"
 photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-L'Abbaye de Sixt est une ancienne abbaye de chanoines réguliers de l'ordre de Saint-Augustin, fondée en 1144 dans la haute vallée du Giffre. Dépendance de la prestigieuse abbaye Saint-Maurice d'Agaune en Valais, elle a contribué pendant des siècles à la présence humaine permanente dans ce secteur de haute montagne isolé, développant l'agropastoralisme et structurant la vie de la vallée.L'ensemble abbatial comprend une église abbatiale du XIIIᵉ siècle, devenue église paroissiale dédiée à Sainte-Madeleine, un logis abbatial au sud édifié entre le XIIᵉ et le XVIIIᵉ siècle, un presbytère et un grenier à l'est. Fermée en 1792 après l'invasion française de la Savoie, l'abbaye a été vendue comme bien national, puis transformée en hôtel à la fin du XIXᵉ siècle. Le logis abbatial a été acquis par le Département de la Haute-Savoie en 2000.Inscrite au titre des Monuments Historiques en 1997, l'abbaye a fait l'objet de recherches archéologiques majeures dans les années 2010 et d'une restauration européenne (projet ALCOTRA PHENIX). Chaque été, le logis abbatial ouvre ses portes pour une exposition thématique gratuite. L'église se visite librement toute l'année.
+L'Abbaye de Sixt est une ancienne abbaye de chanoines réguliers de l'ordre de Saint-Augustin, fondée en 1144 dans la haute vallée du Giffre. Dépendance de la prestigieuse abbaye Saint-Maurice d'Agaune en Valais, elle a contribué pendant des siècles à la présence humaine permanente dans ce secteur de haute montagne isolé, développant l'agropastoralisme et structurant la vie de la vallée.
+
+L'ensemble abbatial comprend une église abbatiale du XIIIᵉ siècle, devenue église paroissiale dédiée à Sainte-Madeleine, un logis abbatial au sud édifié entre le XIIᵉ et le XVIIIᵉ siècle, un presbytère et un grenier à l'est. Fermée en 1792 après l'invasion française de la Savoie, l'abbaye a été vendue comme bien national, puis transformée en hôtel à la fin du XIXᵉ siècle. Le logis abbatial a été acquis par le Département de la Haute-Savoie en 2000.
+
+Inscrite au titre des Monuments Historiques en 1997, l'abbaye a fait l'objet de recherches archéologiques majeures dans les années 2010 et d'une restauration européenne (projet ALCOTRA PHENIX). Chaque été, le logis abbatial ouvre ses portes pour une exposition thématique gratuite. L'église se visite librement toute l'année.
 
 ## Activités sur place
 
@@ -125,7 +131,7 @@ R : Partiellement. Le rez-de-chaussée du logis abbatial de l'Abbaye de Sixt et 
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/abbaye-de-sixt
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/abbaye-de-sixt) · [DE](https://loisirs74.fr/de/abbaye-de-sixt) · [ES](https://loisirs74.fr/es/abbaye-de-sixt) · [IT](https://loisirs74.fr/it/abbaye-de-sixt)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/abbaye-de-sixt) · [DE](https://loisirs74.fr/de/abbaye-de-sixt) · [ES](https://loisirs74.fr/es/abbaye-de-sixt) · [IT](https://loisirs74.fr/it/abbaye-de-sixt) · [NL](https://loisirs74.fr/nl/abbaye-de-sixt)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=abbaye-de-sixt

@@ -11,12 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9583
 longitude: 6.3667
+geo_verified: false
+google_place_id: "ChIJseE6Npz0i0cRY0m-aGMWdY8"
 canonical_url: https://loisirs74.fr/plateau-des-glieres
 language: fr
-photo_url: /plateau-des-glieres-hero.jpg
+photo_url: /img/points-de-vue/plateau-des-glieres-hero.jpg
 photo_type: real
-photo_source: own
-last_updated: 2026-05-18
+photo_author: "Rémih"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -38,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Plateau des Glières est un plateau calcaire situé dans le massif des Bornes, à une altitude moyenne de 1 450 m, s'étendant sur les communes de Glières-Val-de-Borne et Fillière. Accessible depuis Thorens-Glières par une route sinueuse de 15 km, le plateau alterne alpages, tourbières, forêts de conifères et crêtes rocheuses. Il est encadré par la montagne des Auges (1 822 m) à l'est et la montagne des Frêtes (1 910 m) au nord-ouest.Le site est un haut lieu de mémoire de la Résistance française. De janvier à mars 1944, 465 maquisards s'y regroupent sous le commandement du lieutenant Tom Morel puis du capitaine Maurice Anjot pour réceptionner des parachutages d'armes destinés aux maquis de Haute-Savoie. Le 26 mars 1944, ils font face à l'assaut conjoint de la Wehrmacht et de la Milice française : 129 maquisards et 20 habitants y perdent la vie. Le Monument national à la Résistance, œuvre d'Émile Gilioli inaugurée le 2 septembre 1973 par André Malraux, domine le plateau. Inscrit au titre des monuments historiques le 27 mai 2020, il symbolise l'espérance et l'engagement des combattants.Classé Natura 2000 et Espace Naturel Sensible, le plateau abrite une biodiversité remarquable : lynx, loup, plus de 100 espèces d'oiseaux. En hiver, le domaine nordique des Glières propose 29 km de pistes de ski de fond, 17 km d'itinéraires raquettes, des cours de ski nordique et des activités en chiens de traîneau. En été, les visiteurs y pratiquent randonnée pédestre, VTT, escalade, spéléologie, et découvrent l'histoire du maquis via un sentier balisé d'une heure avec 12 panneaux interprétatifs.
+Le Plateau des Glières est un plateau calcaire situé dans le massif des Bornes, à une altitude moyenne de 1 450 m, s'étendant sur les communes de Glières-Val-de-Borne et Fillière. Accessible depuis Thorens-Glières par une route sinueuse de 15 km, le plateau alterne alpages, tourbières, forêts de conifères et crêtes rocheuses. Il est encadré par la montagne des Auges (1 822 m) à l'est et la montagne des Frêtes (1 910 m) au nord-ouest.
+
+Le site est un haut lieu de mémoire de la Résistance française. De janvier à mars 1944, 465 maquisards s'y regroupent sous le commandement du lieutenant Tom Morel puis du capitaine Maurice Anjot pour réceptionner des parachutages d'armes destinés aux maquis de Haute-Savoie. Le 26 mars 1944, ils font face à l'assaut conjoint de la Wehrmacht et de la Milice française : 129 maquisards et 20 habitants y perdent la vie. Le Monument national à la Résistance, œuvre d'Émile Gilioli inaugurée le 2 septembre 1973 par André Malraux, domine le plateau. Inscrit au titre des monuments historiques le 27 mai 2020, il symbolise l'espérance et l'engagement des combattants.
+
+Classé Natura 2000 et Espace Naturel Sensible, le plateau abrite une biodiversité remarquable : lynx, loup, plus de 100 espèces d'oiseaux. En hiver, le domaine nordique des Glières propose 29 km de pistes de ski de fond, 17 km d'itinéraires raquettes, des cours de ski nordique et des activités en chiens de traîneau. En été, les visiteurs y pratiquent randonnée pédestre, VTT, escalade, spéléologie, et découvrent l'histoire du maquis via un sentier balisé d'une heure avec 12 panneaux interprétatifs.
 
 ## Activités sur place
 
@@ -120,7 +128,7 @@ R : Le sentier historique du Plateau des Glières se parcourt en 1 heure. Une vi
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/plateau-des-glieres
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/plateau-des-glieres) · [DE](https://loisirs74.fr/de/plateau-des-glieres) · [ES](https://loisirs74.fr/es/plateau-des-glieres) · [IT](https://loisirs74.fr/it/plateau-des-glieres)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/plateau-des-glieres) · [DE](https://loisirs74.fr/de/plateau-des-glieres) · [ES](https://loisirs74.fr/es/plateau-des-glieres) · [IT](https://loisirs74.fr/it/plateau-des-glieres) · [NL](https://loisirs74.fr/nl/plateau-des-glieres)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=plateau-des-glieres

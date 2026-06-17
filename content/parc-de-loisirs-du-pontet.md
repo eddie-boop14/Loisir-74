@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.82
 longitude: 6.72
+geo_verified: false
+google_place_id: "ChIJFZd6u0VZiUcRi_BGGReT-bw"
 canonical_url: https://loisirs74.fr/parc-de-loisirs-du-pontet
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/5/53/Lac_de_p%C3%AAche_%40_Parc_de_loisirs_du_Pontet_%40_Val_Montjoie_%2850921651901%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/5/53/Lac_de_p%C3%AAche_%40_Parc_de_loisirs_du_Pontet_%40_Val_Montjoie_%2850921651901%29.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Parc de Loisirs du Pontet est le plus grand complexe de loisirs du Pays du Mont-Blanc, situé aux Contamines-Montjoie dans le Val Montjoie, au pied de la plus grande réserve naturelle de France métropolitaine. Le parc s'étend sur 30 hectares et comprend un lac de montagne naturel et un lac de baignade aménagé avec plage surveillée en saison.Créé en 1952 comme attraction estivale de la station, le parc propose aujourd'hui plus de 20 activités : location de barques et pédalos, centre équestre, parcours aventure en forêt, minigolf 18 trous, practice de golf, tir à l'arc, terrains de football, basket et volley, trampolines, structures gonflables, parc du chien polaire, randonnées avec ânes. Le site accueille également un camping-caravaning, un gîte d'étape pour randonneurs et plusieurs prestataires indépendants.L'accès au parc lui-même est gratuit toute la saison. Chaque activité proposée par les prestataires est facturée individuellement. Le cadre naturel exceptionnel — prairies fleuries, forêts de sapins et sommets de la chaîne du Mont-Blanc en toile de fond — fait du Pontet un lieu de détente et de loisirs prisé des familles en été.
+Le Parc de Loisirs du Pontet est le plus grand complexe de loisirs du Pays du Mont-Blanc, situé aux Contamines-Montjoie dans le Val Montjoie, au pied de la plus grande réserve naturelle de France métropolitaine. Le parc s'étend sur 30 hectares et comprend un lac de montagne naturel et un lac de baignade aménagé avec plage surveillée en saison.
+
+Créé en 1952 comme attraction estivale de la station, le parc propose aujourd'hui plus de 20 activités : location de barques et pédalos, centre équestre, parcours aventure en forêt, minigolf 18 trous, practice de golf, tir à l'arc, terrains de football, basket et volley, trampolines, structures gonflables, parc du chien polaire, randonnées avec ânes. Le site accueille également un camping-caravaning, un gîte d'étape pour randonneurs et plusieurs prestataires indépendants.
+
+L'accès au parc lui-même est gratuit toute la saison. Chaque activité proposée par les prestataires est facturée individuellement. Le cadre naturel exceptionnel — prairies fleuries, forêts de sapins et sommets de la chaîne du Mont-Blanc en toile de fond — fait du Pontet un lieu de détente et de loisirs prisé des familles en été.
 
 ## Activités sur place
 
@@ -132,7 +138,7 @@ R : Oui. Les chiens sont acceptés tenus en laisse dans le Parc de Loisirs du Po
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/parc-de-loisirs-du-pontet
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/parc-de-loisirs-du-pontet) · [DE](https://loisirs74.fr/de/parc-de-loisirs-du-pontet) · [ES](https://loisirs74.fr/es/parc-de-loisirs-du-pontet) · [IT](https://loisirs74.fr/it/parc-de-loisirs-du-pontet)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/parc-de-loisirs-du-pontet) · [DE](https://loisirs74.fr/de/parc-de-loisirs-du-pontet) · [ES](https://loisirs74.fr/es/parc-de-loisirs-du-pontet) · [IT](https://loisirs74.fr/it/parc-de-loisirs-du-pontet) · [NL](https://loisirs74.fr/nl/parc-de-loisirs-du-pontet)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=parc-de-loisirs-du-pontet

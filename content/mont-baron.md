@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.902
 longitude: 6.174
+geo_verified: false
+google_place_id: "ChIJNfRTZBiOi0cR2IAMVUtz444"
 canonical_url: https://loisirs74.fr/mont-baron
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b9/Mont_Baron_%40_Veyrier-du-Lac_%2851213738648%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b9/Mont_Baron_%40_Veyrier-du-Lac_%2851213738648%29.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Mont Baron est un sommet du massif des Bornes culminant à 1 299 mètres d'altitude, situé en surplomb de la rive est du lac d'Annecy. Relié au Mont Veyrier (1 291 m) par un sentier de crête spectaculaire, le Mont Baron constitue l'un des belvédères les plus accessibles et les plus fréquentés de la région annécienne.Depuis juillet 2024, l'accès en voiture au Col des Contrebandiers et au Pré Vernet est interdit par arrêté municipal. Les randonneurs partent désormais du petit port d'Annecy-le-Vieux (447 m), ce qui rallonge la marche d'environ 600 mètres de dénivelé supplémentaire. Le sentier traverse d'abord la forêt de hêtres et d'épicéas avant de déboucher sur la crête panoramique. À mi-hauteur subsiste la plateforme en béton de l'ancien téléphérique de Veyrier-du-Lac (1 254 m), équipée d'une table d'orientation — la gare aérienne fut démontée en 2001 après un accident tragique survenu en 1998.Le sommet proprement dit se trouve à dix minutes de marche au nord de cette plateforme, sur une crête calcaire exposée mais sécurisée par des câbles et barrières aux passages aériens. De là, la vue embrasse 180° : le lac d'Annecy en contrebas, le Semnoz au sud-ouest, les sommets du massif des Bauges (Tournette, Dents de Lanfon, Arcalod) au sud-est, la chaîne des Aravis et le Mont Blanc à l'est (visible par le Col des Aravis), et le Jura au nord. La crête se poursuit vers le Mont Veyrier pour ceux qui souhaitent prolonger la randonnée.
+Le Mont Baron est un sommet du massif des Bornes culminant à 1 299 mètres d'altitude, situé en surplomb de la rive est du lac d'Annecy. Relié au Mont Veyrier (1 291 m) par un sentier de crête spectaculaire, le Mont Baron constitue l'un des belvédères les plus accessibles et les plus fréquentés de la région annécienne.
+
+Depuis juillet 2024, l'accès en voiture au Col des Contrebandiers et au Pré Vernet est interdit par arrêté municipal. Les randonneurs partent désormais du petit port d'Annecy-le-Vieux (447 m), ce qui rallonge la marche d'environ 600 mètres de dénivelé supplémentaire. Le sentier traverse d'abord la forêt de hêtres et d'épicéas avant de déboucher sur la crête panoramique. À mi-hauteur subsiste la plateforme en béton de l'ancien téléphérique de Veyrier-du-Lac (1 254 m), équipée d'une table d'orientation — la gare aérienne fut démontée en 2001 après un accident tragique survenu en 1998.
+
+Le sommet proprement dit se trouve à dix minutes de marche au nord de cette plateforme, sur une crête calcaire exposée mais sécurisée par des câbles et barrières aux passages aériens. De là, la vue embrasse 180° : le lac d'Annecy en contrebas, le Semnoz au sud-ouest, les sommets du massif des Bauges (Tournette, Dents de Lanfon, Arcalod) au sud-est, la chaîne des Aravis et le Mont Blanc à l'est (visible par le Col des Aravis), et le Jura au nord. La crête se poursuit vers le Mont Veyrier pour ceux qui souhaitent prolonger la randonnée.
 
 ## Activités sur place
 
@@ -128,7 +134,7 @@ R : Compter 2 h 30 à 3 h 30 aller-retour depuis le parking du Petit Port à Ann
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/mont-baron
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/mont-baron) · [DE](https://loisirs74.fr/de/mont-baron) · [ES](https://loisirs74.fr/es/mont-baron) · [IT](https://loisirs74.fr/it/mont-baron)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/mont-baron) · [DE](https://loisirs74.fr/de/mont-baron) · [ES](https://loisirs74.fr/es/mont-baron) · [IT](https://loisirs74.fr/it/mont-baron) · [NL](https://loisirs74.fr/nl/mont-baron)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=mont-baron

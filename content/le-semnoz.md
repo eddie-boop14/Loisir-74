@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.7887
 longitude: 6.0838
+geo_verified: false
+google_place_id: "ChIJCUPGRmeXi0cRDi2JsQo7hOE"
 canonical_url: https://loisirs74.fr/le-semnoz
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/2/26/Cr%C3%AAt_de_Chatillon_%40_Semnoz_%2835471373476%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/2/26/Cr%C3%AAt_de_Chatillon_%40_Semnoz_%2835471373476%29.jpg
 photo_type: real
-photo_author: "Guilhem Vellut from Annecy, France"
-photo_license: "CC BY 2.0"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+photo_author: null
+photo_license: null
+photo_source: null
+last_updated: 2026-04-23
 source: loisirs74.fr
 ---
 
@@ -39,7 +41,13 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Semnoz est la dernière montagne du massif des Bauges au nord. Long de 15 km, le plateau surplombe la rive ouest du lac d'Annecy depuis le col de Leschaux au sud jusqu'à la ville d'Annecy au nord. Son point culminant, le Crêt de Châtillon, atteint 1699 m et accueille une table d'orientation offrant une vue à 360° sur le Mont Blanc, la Tournette, les Aravis, les Bauges, le lac d'Annecy et, par temps dégagé, le lac du Bourget. Le Semnoz est entièrement inclus dans le Parc naturel régional du Massif des Bauges. La forêt domaniale du Semnoz et la forêt communale d'Annecy couvrent plus de 820 hectares de hêtraies et de sapinières, gérées par l'ONF. La station de ski a été créée à la fin des années 1960 ; elle est gérée depuis 2019 par le Grand Annecy. Le site est accessible librement toute l'année.
+Le Semnoz est la dernière montagne du massif des Bauges au nord. Long de 15 km, le plateau surplombe la rive ouest du lac d'Annecy depuis le col de Leschaux au sud jusqu'à la ville d'Annecy au nord. Son point culminant, le Crêt de Châtillon, atteint 1699 m et accueille une table d'orientation offrant une vue à 360° sur le Mont Blanc, la Tournette, les Aravis, les Bauges, le lac d'Annecy et, par temps dégagé, le lac du Bourget.
+
+Le Semnoz est entièrement inclus dans le Parc naturel régional du Massif des Bauges. La forêt domaniale du Semnoz et la forêt communale d'Annecy couvrent plus de 820 hectares de hêtraies et de sapinières, gérées par l'ONF. La station de ski a été créée à la fin des années 1960 ; elle est gérée depuis 2019 par le Grand Annecy. Le site est accessible librement toute l'année.
+
+Véritable balcon naturel au-dessus d'Annecy, le Semnoz séduit par sa proximité immédiate de la ville (20 minutes par la route) et la diversité de ses activités : randonnées pédestres et VTT en été, ski alpin et nordique en hiver, parc animalier pédagogique, luge d'été sur rails, et nombreux sentiers d'interprétation. C'est aussi un site privilégié pour le parapente et les levers de soleil alpins. Les alpages, où paissent vaches et chèvres entre juin et septembre, produisent des fromages de montagne traditionnels, vendus dans les chalets d'alpage.
+
+Le plateau offre un cadre naturel préservé, à la fois sauvage et accueillant, où la forêt côtoie les pâturages et où l'on croise régulièrement cerfs, biches et mouflons dans le parc de la Grande Jeanne. Le Semnoz figure régulièrement au programme de compétitions sportives régionales, dont la Maxi Race d'Annecy, et accueille chaque année des milliers de promeneurs, sportifs et familles en quête d'air pur et de panoramas exceptionnels.
 
 ## Questions fréquentes
 
@@ -75,12 +83,20 @@ R : Oui, grand parking gratuit à la station Le Semnoz, divisé entre P1 Nordiqu
 
 R : La randonnée, le VTT, le parapente et les balades sur Le Semnoz sont entièrement gratuits. Le tour du plateau (8 km, +367 m), la montée au Crêt de Châtillon depuis la station et les boucles courtes sur les alpages sont accessibles en accès libre. Le parc animalier de la Grande Jeanne, sur la route, est également gratuit.
 
+**Q : Quelle est la meilleure période pour visiter Le Semnoz ?**
+
+R : Le Semnoz se visite toute l'année. Juin à septembre offre des alpages actifs et des sentiers dégagés. Décembre à mars est idéal pour le ski. Octobre ravit par ses couleurs automnales. Évitez avril-mai en transition, sauf pour les amateurs de neige tardive.
+
+**Q : Peut-on dormir au sommet du Semnoz ?**
+
+R : Oui, l'hôtel-restaurant Les Rochers Blancs propose 16 chambres au sommet du Semnoz, ouvert en saison. Il existe aussi l'Éco-Bivouac avec des dômes panoramiques pour une nuit insolite en montagne.
+
 ---
 
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/le-semnoz
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/le-semnoz) · [DE](https://loisirs74.fr/de/le-semnoz) · [ES](https://loisirs74.fr/es/le-semnoz) · [IT](https://loisirs74.fr/it/le-semnoz)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/le-semnoz) · [DE](https://loisirs74.fr/de/le-semnoz) · [ES](https://loisirs74.fr/es/le-semnoz) · [IT](https://loisirs74.fr/it/le-semnoz) · [NL](https://loisirs74.fr/nl/le-semnoz)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=le-semnoz

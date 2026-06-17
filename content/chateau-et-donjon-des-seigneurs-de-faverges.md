@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.7469
 longitude: 6.2947
+geo_verified: false
+google_place_id: "ChIJXfn88Y3qi0cRHHNS7_qRBWY"
 canonical_url: https://loisirs74.fr/chateau-et-donjon-des-seigneurs-de-faverges
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/c/c1/Chambellon_%40_Pont_de_Seythenex.jpg
 photo_type: real
-photo_author: "Rémih"
-photo_license: "CC BY-SA 4.0"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+photo_author: "Alpine castle"
+photo_license: "Wikimedia Commons"
+photo_source: CC BY-SA
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Donjon des Seigneurs de Faverges est une tour ronde du XIIIe siècle située au milieu de la cour intérieure du château de Faverges, à 555 mètres d'altitude. Inscrit à l'inventaire supplémentaire des Monuments Historiques depuis 1991 avec la cour du château, ce donjon faisait partie d'un poste d'observation stratégique entre les anciens comtés de Genève et de Savoie.Restauré et inauguré en 2008, le donjon a retrouvé son hourd circulaire, galerie défensive en bois caractéristique de l'architecture militaire médiévale. Pour atteindre le sommet, il faut gravir 145 marches qui mènent à une plateforme panoramique offrant une vue à 360° sur la ville de Faverges, le Parc Naturel Régional du Massif des Bauges, le massif des Bornes et le bassin de Faverges.La visite du donjon est organisée par l'association des Amis de Viuz-Faverges et les Guides du Patrimoine Savoie Mont Blanc, qui accompagnent les visiteurs et racontent l'histoire du château, de ses propriétaires successifs depuis 1112, et du rôle stratégique du site à travers les siècles. Le château lui-même, propriété privée depuis 2017, accueille événements et hébergements, tandis que le donjon et la cour restent ouverts au public pour la visite patrimoniale.
+Le Donjon des Seigneurs de Faverges est une tour ronde du XIIIe siècle située au milieu de la cour intérieure du château de Faverges, à 555 mètres d'altitude. Inscrit à l'inventaire supplémentaire des Monuments Historiques depuis 1991 avec la cour du château, ce donjon faisait partie d'un poste d'observation stratégique entre les anciens comtés de Genève et de Savoie.
+
+Restauré et inauguré en 2008, le donjon a retrouvé son hourd circulaire, galerie défensive en bois caractéristique de l'architecture militaire médiévale. Pour atteindre le sommet, il faut gravir 145 marches qui mènent à une plateforme panoramique offrant une vue à 360° sur la ville de Faverges, le Parc Naturel Régional du Massif des Bauges, le massif des Bornes et le bassin de Faverges.
+
+La visite du donjon est organisée par l'association des Amis de Viuz-Faverges et les Guides du Patrimoine Savoie Mont Blanc, qui accompagnent les visiteurs et racontent l'histoire du château, de ses propriétaires successifs depuis 1112, et du rôle stratégique du site à travers les siècles. Le château lui-même, propriété privée depuis 2017, accueille événements et hébergements, tandis que le donjon et la cour restent ouverts au public pour la visite patrimoniale.
 
 ## Activités sur place
 
@@ -117,7 +123,7 @@ R : Le Château de Faverges entre dans l'histoire en 1112, construit par le seig
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/chateau-et-donjon-des-seigneurs-de-faverges
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/chateau-et-donjon-des-seigneurs-de-faverges) · [DE](https://loisirs74.fr/de/chateau-et-donjon-des-seigneurs-de-faverges) · [ES](https://loisirs74.fr/es/chateau-et-donjon-des-seigneurs-de-faverges) · [IT](https://loisirs74.fr/it/chateau-et-donjon-des-seigneurs-de-faverges)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/chateau-et-donjon-des-seigneurs-de-faverges) · [DE](https://loisirs74.fr/de/chateau-et-donjon-des-seigneurs-de-faverges) · [ES](https://loisirs74.fr/es/chateau-et-donjon-des-seigneurs-de-faverges) · [IT](https://loisirs74.fr/it/chateau-et-donjon-des-seigneurs-de-faverges) · [NL](https://loisirs74.fr/nl/chateau-et-donjon-des-seigneurs-de-faverges)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=chateau-et-donjon-des-seigneurs-de-faverges

@@ -11,13 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.401
 longitude: 6.5026
+geo_verified: false
+google_place_id: "ChIJ1yN30ZA-jEcRL9CNu9dg2uI"
 canonical_url: https://loisirs74.fr/plage-de-saint-disdille
 language: fr
-photo_url: https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Joshua Earle"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/6/67/Plage_thonon.jpg
+photo_type: real
+photo_author: "Lac d'Annecy"
+photo_license: null
+photo_source: Wikimedia Commons
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-La plage de Saint-Disdille, aussi appelée plage de la Châtaigneraie, est une plage publique gratuite située à l'est de Thonon-les-Bains, dans le quartier de Corzent, sur les rives françaises du lac Léman. Labellisée Pavillon Bleu depuis 2010 pour la qualité de ses eaux et de ses aménagements environnementaux, elle s'étend au pied du vaste parc arboré de la Châtaigneraie (4,6 hectares) et aux abords de la forêt domaniale de Ripaille.La plage se compose d'une zone en herbe ombragée par des châtaigniers centenaires, appréciée pour les pique-niques et la détente, et d'un accès au lac avec un fond en galets et graviers. La baignade est surveillée du 1er juillet au 31 août, de 10h30 à 19h, avec poste de secours et maîtres-nageurs sauveteurs sur place. L'été, plusieurs milliers de promeneurs et baigneurs fréquentent quotidiennement ce site très familial.
+La plage de Saint-Disdille, aussi appelée plage de la Châtaigneraie, est une plage publique gratuite située à l'est de Thonon-les-Bains, dans le quartier de Corzent, sur les rives françaises du lac Léman. Labellisée Pavillon Bleu depuis 2010 pour la qualité de ses eaux et de ses aménagements environnementaux, elle s'étend au pied du vaste parc arboré de la Châtaigneraie (4,6 hectares) et aux abords de la forêt domaniale de Ripaille.
+
+La plage se compose d'une zone en herbe ombragée par des châtaigniers centenaires, appréciée pour les pique-niques et la détente, et d'un accès au lac avec un fond en galets et graviers. La baignade est surveillée du 1er juillet au 31 août, de 10h30 à 19h, avec poste de secours et maîtres-nageurs sauveteurs sur place. L'été, plusieurs milliers de promeneurs et baigneurs fréquentent quotidiennement ce site très familial.
 
 ## Activités sur place
 
@@ -124,7 +129,7 @@ R : La plage de Saint-Disdille est desservie par la ligne de bus LIHSA T1 (arrê
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/plage-de-saint-disdille
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/plage-de-saint-disdille) · [DE](https://loisirs74.fr/de/plage-de-saint-disdille) · [ES](https://loisirs74.fr/es/plage-de-saint-disdille) · [IT](https://loisirs74.fr/it/plage-de-saint-disdille)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/plage-de-saint-disdille) · [DE](https://loisirs74.fr/de/plage-de-saint-disdille) · [ES](https://loisirs74.fr/es/plage-de-saint-disdille) · [IT](https://loisirs74.fr/it/plage-de-saint-disdille) · [NL](https://loisirs74.fr/nl/plage-de-saint-disdille)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=plage-de-saint-disdille

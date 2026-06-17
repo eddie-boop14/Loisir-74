@@ -11,12 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.0287
 longitude: 6.5051
+geo_verified: false
+google_place_id: "ChIJO1k7mQAIjEcRwP9XT6Fz3cE"
 canonical_url: https://loisirs74.fr/lac-benit
 language: fr
-photo_url: /lac-benit-hero.jpg
+photo_url: /img/lacs-plages/lac-benit-hero.jpg
 photo_type: real
-photo_source: own
-last_updated: 2026-05-18
+photo_author: null
+photo_license: null
+photo_source: null
+last_updated: 2026-04-23
 source: loisirs74.fr
 ---
 
@@ -37,7 +41,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Lac Bénit est un petit lac glaciaire de 4,1 hectares, profond de 8,7 m au maximum, situé à 1 452 m d'altitude sur la commune de Mont-Saxonnex, au pied des falaises calcaires du massif du Bargy. Le site est classé en zone Natura 2000 et fait l'objet d'un arrêté municipal permanent qui encadre strictement les pratiques. Baignade, navigation, camping, feux au sol, véhicules à moteur et survol par drone sont interdits. L'accès au lac se fait uniquement à pied, depuis les parkings du Bété ou de Morsulaz. Une buvette d'alpage est ouverte en saison. Depuis le 6 janvier 2026, un arrêté municipal interdit l'accès au lac par le sentier du Bété ; seule la montée par Morsulaz reste praticable.
+Le Lac Bénit est un petit lac glaciaire de 4,1 hectares, profond de 8,7 m au maximum, situé à 1 452 m d'altitude sur la commune de Mont-Saxonnex, au pied des falaises calcaires du massif du Bargy. Le site est classé en zone Natura 2000 et fait l'objet d'un arrêté municipal permanent qui encadre strictement les pratiques.
+
+Baignade, navigation, camping, feux au sol, véhicules à moteur et survol par drone sont interdits. L'accès au lac se fait uniquement à pied, depuis les parkings du Bété ou de Morsulaz. Une buvette d'alpage est ouverte en saison. Depuis le 6 janvier 2026, un arrêté municipal interdit l'accès au lac par le sentier du Bété ; seule la montée par Morsulaz reste praticable.
 
 ## Questions fréquentes
 
@@ -82,7 +88,7 @@ R : Le Lac Bénit couvre 4,1 hectares pour une profondeur maximale de 8,7 mètre
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/lac-benit
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/lac-benit) · [DE](https://loisirs74.fr/de/lac-benit) · [ES](https://loisirs74.fr/es/lac-benit) · [IT](https://loisirs74.fr/it/lac-benit)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/lac-benit) · [DE](https://loisirs74.fr/de/lac-benit) · [ES](https://loisirs74.fr/es/lac-benit) · [IT](https://loisirs74.fr/it/lac-benit) · [NL](https://loisirs74.fr/nl/lac-benit)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=lac-benit

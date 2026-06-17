@@ -11,12 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.0403
 longitude: 6.1218
+geo_verified: false
+google_place_id: "ChIJ-ZZjPO-Hi0cRCrFYqrVniXc"
 canonical_url: https://loisirs74.fr/lac-des-dronieres
 language: fr
-photo_url: /lac-des-dronieres-hero.jpg
+photo_url: /img/lacs-plages/lac-des-dronieres-hero.jpg
 photo_type: real
-photo_source: own
-last_updated: 2026-05-18
+photo_author: null
+photo_license: null
+photo_source: null
+last_updated: 2026-04-23
 source: loisirs74.fr
 ---
 
@@ -37,7 +41,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Lac des Dronières est un plan d'eau situé à 790 m d'altitude au sein du Parc des Dronières, à 400 m du centre-bourg de Cruseilles, entre Annecy et Genève. Le site appartient au domaine public et son accès est libre, gratuit, toute l'année. Autour du lac s'organise un véritable pôle de loisirs communal et intercommunal : un tour du lac piétonnier de 2 km, un parc animalier en enclos, un parcours de santé, un parcours aventure dans les arbres, des terrains de tennis, un centre nautique distinct (Espace Bernard Pellarin, géré par la CCPC), et depuis 2025 une nouvelle aire de loisirs en bord de lac avec pétanque, multisports, basket 3×3 et aires de jeux. La baignade n'est pas autorisée dans le lac ; elle se pratique à la piscine attenante.
+Le Lac des Dronières est un plan d'eau situé à 790 m d'altitude au sein du Parc des Dronières, à 400 m du centre-bourg de Cruseilles, entre Annecy et Genève. Le site appartient au domaine public et son accès est libre, gratuit, toute l'année.
+
+Autour du lac s'organise un véritable pôle de loisirs communal et intercommunal : un tour du lac piétonnier de 2 km, un parc animalier en enclos, un parcours de santé, un parcours aventure dans les arbres, des terrains de tennis, un centre nautique distinct (Espace Bernard Pellarin, géré par la CCPC), et depuis 2025 une nouvelle aire de loisirs en bord de lac avec pétanque, multisports, basket 3×3 et aires de jeux. La baignade n'est pas autorisée dans le lac ; elle se pratique à la piscine attenante. Le site est accessible depuis Cruseilles par la D27, parking gratuit à l'entrée. Aire de pique-nique ombragée, jeux pour enfants et sentier de tour du lac (~1 km) - une base de loisirs de proximité prisée des familles de l'avant-pays genevois en été.
 
 ## Questions fréquentes
 
@@ -86,7 +92,7 @@ R : La ligne 272 Alpbus / tpg / Cars Région dessert Cruseilles depuis Annecy et
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/lac-des-dronieres
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/lac-des-dronieres) · [DE](https://loisirs74.fr/de/lac-des-dronieres) · [ES](https://loisirs74.fr/es/lac-des-dronieres) · [IT](https://loisirs74.fr/it/lac-des-dronieres)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/lac-des-dronieres) · [DE](https://loisirs74.fr/de/lac-des-dronieres) · [ES](https://loisirs74.fr/es/lac-des-dronieres) · [IT](https://loisirs74.fr/it/lac-des-dronieres) · [NL](https://loisirs74.fr/nl/lac-des-dronieres)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=lac-des-dronieres

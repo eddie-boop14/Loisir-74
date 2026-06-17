@@ -11,6 +11,8 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.2419
 longitude: 6.6498
+geo_verified: true
+google_place_id: "ChIJMU17UAEcjEcRJL6u6JYPYxY"
 canonical_url: https://loisirs74.fr/abbaye-d-aulps
 language: fr
 photo_url: https://upload.wikimedia.org/wikipedia/commons/1/11/Aulps_abbey_01.jpg
@@ -18,7 +20,7 @@ photo_type: real
 photo_author: "Krzysztof Golik"
 photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-L'Abbaye d'Aulps (ou Abbaye Sainte-Marie d'Aulps) est une ancienne abbaye cistercienne située à 807 m d'altitude dans la vallée du Haut-Chablais. Fondée vers 1094 par des moines de l'abbaye de Molesme en Bourgogne, elle s'affilie à l'ordre cistercien en 1136 et devient l'un des monastères les plus puissants de la Savoie médiévale. Partiellement détruite en 1823 après avoir accueilli 700 ans de vie monastique, ses vestiges majestueux de l'abbatiale sont classés Monument Historique depuis 1902.Le domaine abrite aujourd'hui le Domaine de Découverte de la Vallée d'Aulps, un centre d'interprétation unique en France installé dans l'ancienne ferme monastique restaurée en 2007. La scénographie, entièrement rénovée en novembre 2020, raconte la vie quotidienne des moines cisterciens au Moyen Âge, leurs fonctions au sein de la communauté, les rapports entre l'abbaye et la Savoie, et l'histoire surprenante de sa destruction.Le circuit de visite comprend les vestiges de l'abbatiale, les anciens celliers, la porterie, un jardin des simples, un potager médiéval et un cloître végétalisé. Une application de réalité augmentée permet de découvrir l'abbaye reconstituée en 3D telle qu'elle était entre les XVIe et XVIIIe siècles, avec casque de réalité virtuelle ou tablette numérique.
+L'Abbaye d'Aulps (ou Abbaye Sainte-Marie d'Aulps) est une ancienne abbaye cistercienne située à 807 m d'altitude dans la vallée du Haut-Chablais. Fondée vers 1094 par des moines de l'abbaye de Molesme en Bourgogne, elle s'affilie à l'ordre cistercien en 1136 et devient l'un des monastères les plus puissants de la Savoie médiévale. Partiellement détruite en 1823 après avoir accueilli 700 ans de vie monastique, ses vestiges majestueux de l'abbatiale sont classés Monument Historique depuis 1902.
+
+Le domaine abrite aujourd'hui le Domaine de Découverte de la Vallée d'Aulps, un centre d'interprétation unique en France installé dans l'ancienne ferme monastique restaurée en 2007. La scénographie, entièrement rénovée en novembre 2020, raconte la vie quotidienne des moines cisterciens au Moyen Âge, leurs fonctions au sein de la communauté, les rapports entre l'abbaye et la Savoie, et l'histoire surprenante de sa destruction.
+
+Le circuit de visite comprend les vestiges de l'abbatiale, les anciens celliers, la porterie, un jardin des simples, un potager médiéval et un cloître végétalisé. Une application de réalité augmentée permet de découvrir l'abbaye reconstituée en 3D telle qu'elle était entre les XVIe et XVIIIe siècles, avec casque de réalité virtuelle ou tablette numérique.
 
 ## Activités sur place
 
@@ -130,7 +136,7 @@ R : Oui, la Taverne La Croix Blanche est présente sur le site de l'Abbaye d'Aul
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/abbaye-d-aulps
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/abbaye-d-aulps) · [DE](https://loisirs74.fr/de/abbaye-d-aulps) · [ES](https://loisirs74.fr/es/abbaye-d-aulps) · [IT](https://loisirs74.fr/it/abbaye-d-aulps)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/abbaye-d-aulps) · [DE](https://loisirs74.fr/de/abbaye-d-aulps) · [ES](https://loisirs74.fr/es/abbaye-d-aulps) · [IT](https://loisirs74.fr/it/abbaye-d-aulps) · [NL](https://loisirs74.fr/nl/abbaye-d-aulps)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=abbaye-d-aulps

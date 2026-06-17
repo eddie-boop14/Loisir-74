@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9063
 longitude: 6.702
+geo_verified: false
+google_place_id: "ChIJ33HhWUtXiUcRCPzvUxwxqAI"
 canonical_url: https://loisirs74.fr/tramway-du-mont-blanc
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/2/28/Saint-Gervais-les-Bains_Tramway_du_Mont-Blanc_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/e/e3/Tramway_Mont-Blanc.jpg
 photo_type: real
-photo_author: "Zairon"
-photo_license: "CC BY-SA 4.0"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+photo_author: null
+photo_license: null
+photo_source: null
+last_updated: 2026-04-28
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Tramway du Mont-Blanc (TMB) est le chemin de fer à crémaillère le plus haut de France. Inaugurée en 1913 par la Compagnie du Tramway du Mont-Blanc, la ligne part du Fayet (580 m) et de Saint-Gervais (792 m) pour rejoindre le Nid d'Aigle (2 412 m) en été, en 1 h 15. Elle parcourt 12,4 km au fil d'un parcours que jalonnent forêts de conifères, alpages et torrents d'altitude.En hiver, le TMB dessert le Plateau de Bellevue (1 800 m) et le domaine skiable Les Houches–Saint-Gervais. En été, quatre nouvelles automotrices (Anne, Marie, Jeanne, Marguerite) conduisent randonneurs et alpinistes au pied du glacier de Bionnassay et du refuge du Nid d'Aigle, point de départ classique de l'ascension du Mont-Blanc par la Voie Royale. 75 % des alpinistes montant au Mont-Blanc empruntent le TMB.
+Le Tramway du Mont-Blanc (TMB) est le chemin de fer à crémaillère le plus haut de France. Inaugurée en 1913 par la Compagnie du Tramway du Mont-Blanc, la ligne part du Fayet (580 m) et de Saint-Gervais (792 m) pour rejoindre le Nid d'Aigle (2 412 m) en été, en 1 h 15. Elle parcourt 12,4 km au fil d'un parcours que jalonnent forêts de conifères, alpages et torrents d'altitude.
+
+En hiver, le TMB dessert le Plateau de Bellevue (1 800 m) et le domaine skiable Les Houches–Saint-Gervais. En été, quatre nouvelles automotrices (Anne, Marie, Jeanne, Marguerite) conduisent randonneurs et alpinistes au pied du glacier de Bionnassay et du refuge du Nid d'Aigle, point de départ classique de l'ascension du Mont-Blanc par la Voie Royale. 75 % des alpinistes montant au Mont-Blanc empruntent le TMB.
 
 ## Activités sur place
 
@@ -127,7 +131,7 @@ R : Le trajet complet depuis Le Fayet jusqu'au Nid d'Aigle dure environ 1 h 15 �
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/tramway-du-mont-blanc
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/tramway-du-mont-blanc) · [DE](https://loisirs74.fr/de/tramway-du-mont-blanc) · [ES](https://loisirs74.fr/es/tramway-du-mont-blanc) · [IT](https://loisirs74.fr/it/tramway-du-mont-blanc)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/tramway-du-mont-blanc) · [DE](https://loisirs74.fr/de/tramway-du-mont-blanc) · [ES](https://loisirs74.fr/es/tramway-du-mont-blanc) · [IT](https://loisirs74.fr/it/tramway-du-mont-blanc) · [NL](https://loisirs74.fr/nl/tramway-du-mont-blanc)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=tramway-du-mont-blanc

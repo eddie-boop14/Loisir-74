@@ -11,13 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.1535
 longitude: 6.666
+geo_verified: false
+google_place_id: "ChIJoZlrSigDjEcRxVLD7e6372g"
 canonical_url: https://loisirs74.fr/telecabine-du-mont-chery-les-gets
 language: fr
-photo_url: https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Maël BALLAND"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg
+photo_type: real
+photo_author: null
+photo_license: null
+photo_source: null
+last_updated: 2026-04-28
 source: loisirs74.fr
 ---
 
@@ -39,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-La télécabine du Mont-Chéry est une remontée mécanique 6 places exploitée par SOLEGETS à Les Gets (74260). Elle relie le centre du village (1 162 m) au sommet du Mont-Chéry (1 535 m) en 5 minutes, avec un dénivelé de 373 m. Construite en 1981 et modernisée, elle offre la particularité de permettre la montée et la descente aux piétons, ce qui est moins courant que côté Chavannes.Le Mont-Chéry est le versant nord et le moins fréquenté des Gets, réputé pour sa vue panoramique sur le massif du Mont Blanc, les Aravis et le Léman. En été, les pistes VTT d'enduro et de descente y accueillent la Coupe du Monde UCI MTB chaque fin août. Deux restaurants de montagne ouverts en saison complètent l'offre.
+La télécabine du Mont-Chéry est une remontée mécanique 6 places exploitée par SOLEGETS à Les Gets (74260). Elle relie le centre du village (1 162 m) au sommet du Mont-Chéry (1 535 m) en 5 minutes, avec un dénivelé de 373 m et un débit d'environ 1 200 personnes par heure. Construite en 1981 et modernisée par la suite, elle offre la particularité de permettre la montée et la descente aux piétons, ce qui est moins courant que côté Chavannes. Le départ se trouve à 200 m du centre village, à proximité directe des parkings.
+
+Le Mont-Chéry est le versant nord et le moins fréquenté des Gets, réputé pour sa vue panoramique à 360° sur le massif du Mont Blanc, les Aravis, le Léman et les Dents du Midi. En été, les pistes VTT d'enduro et de descente y accueillent la Coupe du Monde UCI MTB chaque fin août. Deux restaurants de montagne ouverts en saison (Le Belvédère et Les Chevrelles) complètent l'offre, et un site de décollage parapente est balisé au sommet.
 
 ## Activités sur place
 
@@ -57,6 +62,9 @@ Restaurant Le Belvédère (ouvert 9h00–17h30) et Restaurant Les Chevrelles cô
 
 ### Descente piétonne
 La télécabine permet la descente piétonne — option pratique pour retourner au village après une randonnée sans refaire le même chemin à pied.
+
+### Vol parapente biplace au départ du Mont-Chéry
+Site de décollage parapente balisé au sommet (1 535 m). Plusieurs écoles locales proposent des baptêmes biplace face au Mont Blanc en saison (réservation conseillée).
 
 ## Infos pratiques
 
@@ -119,7 +127,7 @@ R : Oui mais l'accès aux VTT est fermé à partir du 24 août 17h30 jusqu'en fi
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/telecabine-du-mont-chery-les-gets
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/telecabine-du-mont-chery-les-gets) · [DE](https://loisirs74.fr/de/telecabine-du-mont-chery-les-gets) · [ES](https://loisirs74.fr/es/telecabine-du-mont-chery-les-gets) · [IT](https://loisirs74.fr/it/telecabine-du-mont-chery-les-gets)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/telecabine-du-mont-chery-les-gets) · [DE](https://loisirs74.fr/de/telecabine-du-mont-chery-les-gets) · [ES](https://loisirs74.fr/es/telecabine-du-mont-chery-les-gets) · [IT](https://loisirs74.fr/it/telecabine-du-mont-chery-les-gets) · [NL](https://loisirs74.fr/nl/telecabine-du-mont-chery-les-gets)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=telecabine-du-mont-chery-les-gets

@@ -9,14 +9,18 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
+latitude: 46.2719
+longitude: 6.5511
+geo_verified: false
+google_place_id: "ChIJz4DD4IMajEcR0PhQ_FN-8T0"
 canonical_url: https://loisirs74.fr/cascade-de-la-diomaz
 language: fr
-photo_url: /cascade-de-la-diomaz-hero.jpg
+photo_url: /img/cascades/cascade-de-la-diomaz-hero.jpg
 photo_type: real
 photo_author: "Claude PIARD"
 photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -28,6 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Cascade
 - **Commune**: Bellevaux, Haute-Savoie (74470)
+- **GPS**: 46.2719, 6.5511
 - **Type**: Cascade naturelle
 - **Accès**: Libre · Gratuit
 - **Parking**: Gratuit (parkings du lac de Vallon)
@@ -37,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-La cascade de la Diomaz est une cascade naturelle du Chablais, à environ 1 223 m d'altitude, située sur le ruisseau de la Diomaz, un affluent du Brevon. Elle se trouve en limite communale de Mégevette et Bellevaux, et s'atteint en 30 minutes de marche depuis les parkings du lac de Vallon.La cascade est constituée de plusieurs chutes d'eau qui s'écoulent dans des marmites dites « marmites des Chartreux », creusées naturellement dans la roche. Au pied de la cascade, une croix des Chartreux est gravée dans la pierre, marquant l'ancienne limite du territoire des moines chartreux. Le sentier longe le ruisseau de la Diomaz à travers la forêt, avec plusieurs traversées du cours d'eau sur des passerelles ou à gué.
+La cascade de la Diomaz est une cascade naturelle du Chablais, à environ 1 223 m d'altitude, située sur le ruisseau de la Diomaz, un affluent du Brevon. Elle se trouve en limite communale de Mégevette et Bellevaux, et s'atteint en 30 minutes de marche depuis les parkings du lac de Vallon.
+
+La cascade est constituée de plusieurs chutes d'eau qui s'écoulent dans des marmites dites « marmites des Chartreux », creusées naturellement dans la roche. Au pied de la cascade, une croix des Chartreux est gravée dans la pierre, marquant l'ancienne limite du territoire des moines chartreux. Le sentier longe le ruisseau de la Diomaz à travers la forêt, avec plusieurs traversées du cours d'eau sur des passerelles ou à gué.
 
 ## Activités sur place
 
@@ -116,7 +123,7 @@ R : La Croix des Chartreux est une croix gravée dans la pierre au pied de la Ca
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/cascade-de-la-diomaz
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-de-la-diomaz) · [DE](https://loisirs74.fr/de/cascade-de-la-diomaz) · [ES](https://loisirs74.fr/es/cascade-de-la-diomaz) · [IT](https://loisirs74.fr/it/cascade-de-la-diomaz)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-de-la-diomaz) · [DE](https://loisirs74.fr/de/cascade-de-la-diomaz) · [ES](https://loisirs74.fr/es/cascade-de-la-diomaz) · [IT](https://loisirs74.fr/it/cascade-de-la-diomaz) · [NL](https://loisirs74.fr/nl/cascade-de-la-diomaz)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=cascade-de-la-diomaz

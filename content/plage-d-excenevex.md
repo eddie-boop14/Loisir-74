@@ -11,13 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.3528
 longitude: 6.3489
+geo_verified: false
+google_place_id: "ChIJIaRfIi5AjEcR1EDMx_AyY3w"
 canonical_url: https://loisirs74.fr/plage-d-excenevex
 language: fr
-photo_url: https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Joshua Earle"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/c/cd/Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG
+photo_type: real
+photo_author: "Alpine lake"
+photo_license: "Wikimedia Commons"
+photo_source: CC BY-SA
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Plage d'Excenevex est l'unique plage naturelle de sable fin de la rive française du lac Léman. Située dans la baie de Coudrée, à une dizaine de kilomètres de Thonon-les-Bains et 25 km de Genève, elle constitue une exception géologique remarquable : son sable provient de dépôts sous-lacustres formés après la dernière période glaciaire (il y a 12 à 15 000 ans), remaniés par les vents violents et les courants du Rhône. Les dunes lacustres ainsi créées sont uniques en Europe.La plage se distingue par sa pente très douce qui s'étend sur plusieurs dizaines de mètres, permettant de marcher jusqu'à une centaine de mètres avec de l'eau à hauteur de taille. Les températures estivales de l'eau avoisinent les 25°C de juin à septembre, ce qui en fait un lieu de baignade privilégié pour les familles. Le cadre offre une vue panoramique sur la Dent d'Oche et la côte suisse, avec la pinède en arrière-plan. La plage est classée Pavillon Bleu depuis 2018, label garantissant la qualité des eaux et la gestion environnementale du site.L'accès à la plage est libre et gratuit toute l'année pour les piétons. Seul le parking est payant durant la haute saison (week-ends de mai, tous les jours de juin à août) au tarif de 6 € la journée, avec gratuité à partir de 17h. La baignade est surveillée par des maîtres-nageurs du 1er juillet au 30 août, tous les jours de 11h15 à 17h45. La commune réalise des analyses hebdomadaires de la qualité de l'eau sous contrôle de l'ARS.
+La Plage d'Excenevex est l'unique plage naturelle de sable fin de la rive française du lac Léman. Située dans la baie de Coudrée, à une dizaine de kilomètres de Thonon-les-Bains et 25 km de Genève, elle constitue une exception géologique remarquable : son sable provient de dépôts sous-lacustres formés après la dernière période glaciaire (il y a 12 à 15 000 ans), remaniés par les vents violents et les courants du Rhône. Les dunes lacustres ainsi créées sont uniques en Europe.
+
+La plage se distingue par sa pente très douce qui s'étend sur plusieurs dizaines de mètres, permettant de marcher jusqu'à une centaine de mètres avec de l'eau à hauteur de taille. Les températures estivales de l'eau avoisinent les 25°C de juin à septembre, ce qui en fait un lieu de baignade privilégié pour les familles. Le cadre offre une vue panoramique sur la Dent d'Oche et la côte suisse, avec la pinède en arrière-plan. La plage est classée Pavillon Bleu depuis 2018, label garantissant la qualité des eaux et la gestion environnementale du site.
+
+L'accès à la plage est libre et gratuit toute l'année pour les piétons. Seul le parking est payant durant la haute saison (week-ends de mai, tous les jours de juin à août) au tarif de 6 € la journée, avec gratuité à partir de 17h. La baignade est surveillée par des maîtres-nageurs du 1er juillet au 30 août, tous les jours de 11h15 à 17h45. La commune réalise des analyses hebdomadaires de la qualité de l'eau sous contrôle de l'ARS.
 
 ## Activités sur place
 
@@ -130,7 +137,7 @@ R : La Plage d'Excenevex est desservie par bus LIHSA depuis Thonon (arrêt « La
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/plage-d-excenevex
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/plage-d-excenevex) · [DE](https://loisirs74.fr/de/plage-d-excenevex) · [ES](https://loisirs74.fr/es/plage-d-excenevex) · [IT](https://loisirs74.fr/it/plage-d-excenevex)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/plage-d-excenevex) · [DE](https://loisirs74.fr/de/plage-d-excenevex) · [ES](https://loisirs74.fr/es/plage-d-excenevex) · [IT](https://loisirs74.fr/it/plage-d-excenevex) · [NL](https://loisirs74.fr/nl/plage-d-excenevex)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=plage-d-excenevex

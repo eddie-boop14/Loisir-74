@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.861
 longitude: 6.603
+geo_verified: false
+google_place_id: "ChIJXTSGrczii0cRFfaBBZZQt8E"
 canonical_url: https://loisirs74.fr/telecabine-du-jaillet
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/3/3b/MEGEVE_LE_JAYET_9_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg
 photo_type: real
-photo_author: "otterboris"
-photo_license: "CC BY 3.0"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+photo_author: null
+photo_license: null
+photo_source: null
+last_updated: 2026-04-28
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-La télécabine du Jaillet relie le village de Megève (~1 113 m) au plateau du Jaillet (1 585 m) en quelques minutes. Exploitée par la SEM du Jaillet / Les Portes du Mont-Blanc, elle constitue la porte d'entrée du domaine skiable Portes du Mont-Blanc (Megève, Combloux, Cordon, La Giettaz) en hiver. Le départ se trouve au 821 route du Jaillet, avec parking gratuit 7 heures.En été, le sommet dispose d'une aire de jeux panoramique gratuite — trampolines, structures d'escalade, balançoires — face au Mont-Blanc. Les sentiers familiaux partent directement de la gare d'arrivée : boucle du Lac du Jaillet (20 minutes), Col du Jaillet avec sa borne romaine en granit découverte en 1964, et itinéraires vers Combloux à travers les sous-bois. Des pistes VTT et le Giant Swing complètent l'offre estivale.
+La télécabine du Jaillet relie le village de Megève (~1 113 m) au plateau du Jaillet (1 585 m) en quelques minutes. Exploitée par la SEM du Jaillet / Les Portes du Mont-Blanc, elle constitue la porte d'entrée du domaine skiable Portes du Mont-Blanc (Megève, Combloux, Cordon, La Giettaz) en hiver. Le départ se trouve au 821 route du Jaillet, avec parking gratuit 7 heures.
+
+En été, le sommet dispose d'une aire de jeux panoramique gratuite — trampolines, structures d'escalade, balançoires — face au Mont-Blanc. Les sentiers familiaux partent directement de la gare d'arrivée : boucle du Lac du Jaillet (20 minutes), Col du Jaillet avec sa borne romaine en granit découverte en 1964, et itinéraires vers Combloux à travers les sous-bois. Des pistes VTT et le Giant Swing complètent l'offre estivale.
 
 ## Activités sur place
 
@@ -121,7 +125,7 @@ R : Oui, les animaux sont acceptés en laisse dans la télécabine du Jaillet et
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/telecabine-du-jaillet
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/telecabine-du-jaillet) · [DE](https://loisirs74.fr/de/telecabine-du-jaillet) · [ES](https://loisirs74.fr/es/telecabine-du-jaillet) · [IT](https://loisirs74.fr/it/telecabine-du-jaillet)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/telecabine-du-jaillet) · [DE](https://loisirs74.fr/de/telecabine-du-jaillet) · [ES](https://loisirs74.fr/es/telecabine-du-jaillet) · [IT](https://loisirs74.fr/it/telecabine-du-jaillet) · [NL](https://loisirs74.fr/nl/telecabine-du-jaillet)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=telecabine-du-jaillet

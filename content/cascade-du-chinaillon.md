@@ -11,13 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.962517
 longitude: 6.439147
+geo_verified: false
+google_place_id: "ChIJ4xK5PNr2i0cRRtm7GJYEEGA"
 canonical_url: https://loisirs74.fr/cascade-du-chinaillon
 language: fr
-photo_url: https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=1600&q=80
-photo_type: generic_stock
-photo_author: "Jonathan Forage"
-photo_source: Unsplash
-last_updated: 2026-05-18
+photo_url: https://upload.wikimedia.org/wikipedia/commons/4/4f/Le_Chinaillon_%40_Pont_des_Romains_%40_Le_Grand-Bornand_%2851027594708%29.jpg
+photo_type: real
+photo_author: "Cascade du Rouget"
+photo_license: "Wikimedia Commons"
+photo_source: CC BY-SA
+last_updated: 2026-05-14
 source: loisirs74.fr
 ---
 
@@ -39,7 +42,11 @@ source: loisirs74.fr
 
 ## Présentation
 
-La Cascade du Chinaillon, aussi appelée Cascade Mystérieuse, est une chute d'eau naturelle située dans le massif des Aravis, à environ 1 164 mètres d'altitude au-dessus de la station du Grand-Bornand Chinaillon. Alimentée par le Nant du Chinaillon, affluent du Borne, elle se déverse sur une trentaine de mètres dans une gorge étroite sculptée par l'eau. Le site est accessible en une vingtaine de minutes de marche depuis la route principale du Chinaillon, sur un sentier balisé traversant prés et forêt de hêtres.Le nom « mystérieux » de la cascade trouve son origine dans une légende locale : c'est au pied de cette chute d'eau que se seraient rencontrés les premiers habitants du Grand-Bornand, donnant naissance aux « Bornandins ». Cette histoire transmise de génération en génération ajoute une touche de poésie et d'énigme à ce site naturel déjà impressionnant. Au printemps, lorsque la fonte des neiges gonfle le débit du torrent, le spectacle est particulièrement saisissant. En automne, les couleurs flamboyantes de la hêtraie environnante ajoutent un charme différent à la balade.Le sentier mène d'abord à la première partie de la cascade, la plus spectaculaire, puis descend de façon raide vers le torrent du Chinaillon où l'on découvre une gorge sauvage. Le terrain peut être boueux et glissant — de bonnes chaussures de randonnée sont indispensables. Cette promenade facile et rafraîchissante, idéale en famille, permet aussi de découvrir le vieux Chinaillon avec ses chalets d'alpage typiques et ses panoramas sur la chaîne des Aravis.
+La Cascade du Chinaillon, aussi appelée Cascade Mystérieuse, est une chute d'eau naturelle située dans le massif des Aravis, à environ 1 164 mètres d'altitude au-dessus de la station du Grand-Bornand Chinaillon. Alimentée par le Nant du Chinaillon, affluent du Borne, elle se déverse sur une trentaine de mètres dans une gorge étroite sculptée par l'eau. Le site est accessible en une vingtaine de minutes de marche depuis la route principale du Chinaillon, sur un sentier balisé traversant prés et forêt de hêtres.
+
+Le nom « mystérieux » de la cascade trouve son origine dans une légende locale : c'est au pied de cette chute d'eau que se seraient rencontrés les premiers habitants du Grand-Bornand, donnant naissance aux « Bornandins ». Cette histoire transmise de génération en génération ajoute une touche de poésie et d'énigme à ce site naturel déjà impressionnant. Au printemps, lorsque la fonte des neiges gonfle le débit du torrent, le spectacle est particulièrement saisissant. En automne, les couleurs flamboyantes de la hêtraie environnante ajoutent un charme différent à la balade.
+
+Le sentier mène d'abord à la première partie de la cascade, la plus spectaculaire, puis descend de façon raide vers le torrent du Chinaillon où l'on découvre une gorge sauvage. Le terrain peut être boueux et glissant — de bonnes chaussures de randonnée sont indispensables. Cette promenade facile et rafraîchissante, idéale en famille, permet aussi de découvrir le vieux Chinaillon avec ses chalets d'alpage typiques et ses panoramas sur la chaîne des Aravis.
 
 ## Activités sur place
 
@@ -122,7 +129,7 @@ R : Non recommandé. L'eau de la Cascade du Chinaillon et du torrent est glacial
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/cascade-du-chinaillon
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-du-chinaillon) · [DE](https://loisirs74.fr/de/cascade-du-chinaillon) · [ES](https://loisirs74.fr/es/cascade-du-chinaillon) · [IT](https://loisirs74.fr/it/cascade-du-chinaillon)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/cascade-du-chinaillon) · [DE](https://loisirs74.fr/de/cascade-du-chinaillon) · [ES](https://loisirs74.fr/es/cascade-du-chinaillon) · [IT](https://loisirs74.fr/it/cascade-du-chinaillon) · [NL](https://loisirs74.fr/nl/cascade-du-chinaillon)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=cascade-du-chinaillon

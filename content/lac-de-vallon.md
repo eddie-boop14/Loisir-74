@@ -11,12 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.216
 longitude: 6.559
+geo_verified: false
+google_place_id: "ChIJtYI_xnwajEcRnmVGwPPStPk"
 canonical_url: https://loisirs74.fr/lac-de-vallon
 language: fr
-photo_url: /lac-de-vallon-hero.jpg
+photo_url: /img/lacs-plages/lac-de-vallon-hero.jpg
 photo_type: real
-photo_source: own
-last_updated: 2026-05-18
+photo_author: null
+photo_license: null
+photo_source: null
+last_updated: 2026-04-23
 source: loisirs74.fr
 ---
 
@@ -37,7 +41,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le Lac de Vallon est un lac de montagne de 15 hectares situé à 1080 m d'altitude dans le hameau de La Chèvrerie, sur la commune de Bellevaux. Il s'est formé dans la nuit du 11 au 12 mars 1943, quand une coulée de boue a emporté une dizaine de chalets et barré le cours du Brévon. L'eau s'est accumulée derrière ce barrage naturel, submergeant le hameau de l'Écondu dont on aperçoit encore parfois les fondations sous la surface. C'est le plus jeune lac du Chablais. Il est reconnu géosite incontournable du Géoparc mondial UNESCO du Chablais et Zone Naturelle d'Intérêt Écologique, Faunistique et Floristique (ZNIEFF) depuis 1991. Profondeur maximale : 16 m. Accès libre et gratuit toute l'année. Camping, bivouac et feux sont interdits sur le site.
+Le Lac de Vallon est un lac de montagne de 15 hectares situé à 1080 m d'altitude dans le hameau de La Chèvrerie, sur la commune de Bellevaux. Il s'est formé dans la nuit du 11 au 12 mars 1943, quand une coulée de boue a emporté une dizaine de chalets et barré le cours du Brévon. L'eau s'est accumulée derrière ce barrage naturel, submergeant le hameau de l'Écondu dont on aperçoit encore parfois les fondations sous la surface.
+
+C'est le plus jeune lac du Chablais. Il est reconnu géosite incontournable du Géoparc mondial UNESCO du Chablais et Zone Naturelle d'Intérêt Écologique, Faunistique et Floristique (ZNIEFF) depuis 1991. Profondeur maximale : 16 m. Accès libre et gratuit toute l'année. Camping, bivouac et feux sont interdits sur le site. L'accès depuis Bellevaux se fait en voiture jusqu'au parking aménagé en bordure du lac, puis quelques minutes à pied sur sentier plat. Site ouvert d'avril à novembre selon enneigement, idéal en demi-journée ou pour un pique-nique en bord d'eau.
 
 ## Questions fréquentes
 
@@ -82,7 +88,7 @@ R : Oui. Le Lac de Vallon est reconnu géosite incontournable du Géoparc mondia
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/lac-de-vallon
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/lac-de-vallon) · [DE](https://loisirs74.fr/de/lac-de-vallon) · [ES](https://loisirs74.fr/es/lac-de-vallon) · [IT](https://loisirs74.fr/it/lac-de-vallon)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/lac-de-vallon) · [DE](https://loisirs74.fr/de/lac-de-vallon) · [ES](https://loisirs74.fr/es/lac-de-vallon) · [IT](https://loisirs74.fr/it/lac-de-vallon) · [NL](https://loisirs74.fr/nl/lac-de-vallon)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=lac-de-vallon

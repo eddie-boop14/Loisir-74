@@ -11,14 +11,16 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9727
 longitude: 6.9277
+geo_verified: false
+google_place_id: "ChIJXT1F2ZVMiUcR7yARTOxQD20"
 canonical_url: https://loisirs74.fr/telepherique-des-grands-montets
 language: fr
-photo_url: https://upload.wikimedia.org/wikipedia/commons/c/c4/Hike_to_Glacier_d%27Argenti%C3%A8re_-_panoramio_%2861%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+photo_url: https://upload.wikimedia.org/wikipedia/commons/c/c4/Hike_to_Glacier_d%27Argenti%C3%A8re_-_panoramio_%2861%29.jpg
 photo_type: real
-photo_author: "Patrick Nouhailler's…"
-photo_license: "CC BY-SA 3.0"
-photo_source: Wikimedia Commons
-last_updated: 2026-05-18
+photo_author: null
+photo_license: null
+photo_source: null
+last_updated: 2026-04-28
 source: loisirs74.fr
 ---
 
@@ -40,7 +42,9 @@ source: loisirs74.fr
 
 ## Présentation
 
-Le domaine des Grands Montets est le domaine skiable le plus technique de la vallée de Chamonix, situé au-dessus du village d'Argentière. Le site s'étend entre 1 235 m et 2 800 m d'altitude (sommet Aiguille des Grands Montets à 3 275 m) et est réputé pour ses pistes noires et ses itinéraires hors-piste au bord du glacier d'Argentière. L'accès au domaine depuis 2018 s'effectue par la télécabine de Plan Joran (2 134 m), la Lognan amont et le second tronçon d'origine ayant été détruits par un incendie en août 2018.La Compagnie du Mont-Blanc a lancé en 2024 un projet de reconstruction majeur : un nouveau téléphérique 3S conçu par l'architecte Renzo Piano, reliant Argentière à Lognan puis au sommet (3 275 m), avec mise en service prévue en décembre 2026. En conséquence, la télécabine de Plan Joran est fermée du 4 mai au 30 novembre 2026 pour permettre le chantier. Pendant l'été 2026, l'accès au site est donc impossible. En hiver (décembre–début mai), le domaine est accessible aux skieurs uniquement via Plan Joran.
+Le domaine des Grands Montets est le domaine skiable le plus technique de la vallée de Chamonix, situé au-dessus du village d'Argentière. Le site s'étend entre 1 235 m et 2 800 m d'altitude (sommet Aiguille des Grands Montets à 3 275 m) et est réputé pour ses pistes noires et ses itinéraires hors-piste au bord du glacier d'Argentière. L'accès au domaine depuis 2018 s'effectue par la télécabine de Plan Joran (2 134 m), la Lognan amont et le second tronçon d'origine ayant été détruits par un incendie en août 2018.
+
+La Compagnie du Mont-Blanc a lancé en 2024 un projet de reconstruction majeur : un nouveau téléphérique 3S conçu par l'architecte Renzo Piano, reliant Argentière à Lognan puis au sommet (3 275 m), avec mise en service prévue en décembre 2026. En conséquence, la télécabine de Plan Joran est fermée du 4 mai au 30 novembre 2026 pour permettre le chantier. Pendant l'été 2026, l'accès au site est donc impossible. En hiver (décembre–début mai), le domaine est accessible aux skieurs uniquement via Plan Joran.
 
 ## Activités sur place
 
@@ -122,7 +126,7 @@ R : Un restaurant est disponible à Lognan (2 134 m) en saison hivernale. Les in
 ## Source & licence
 
 - **Page web canonique** : https://loisirs74.fr/telepherique-des-grands-montets
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/telepherique-des-grands-montets) · [DE](https://loisirs74.fr/de/telepherique-des-grands-montets) · [ES](https://loisirs74.fr/es/telepherique-des-grands-montets) · [IT](https://loisirs74.fr/it/telepherique-des-grands-montets)
+- **Versions linguistiques** : [EN](https://loisirs74.fr/en/telepherique-des-grands-montets) · [DE](https://loisirs74.fr/de/telepherique-des-grands-montets) · [ES](https://loisirs74.fr/es/telepherique-des-grands-montets) · [IT](https://loisirs74.fr/it/telepherique-des-grands-montets) · [NL](https://loisirs74.fr/nl/telepherique-des-grands-montets)
 - **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
 - **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
 - **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=telepherique-des-grands-montets

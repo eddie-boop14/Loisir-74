@@ -71,6 +71,20 @@ def rebuild_catalog_index():
     print(out.stdout.strip() or "(catalog rebuilt)")
 
 
+def rebuild_ai_content():
+    """Regenerate the AI content layer (content/<slug>.md ×392 + llms.txt +
+    llms-full.txt) from JSON truth, so the advertised /content/<slug>.md URLs
+    always exist and the llms counts can't drift."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "build_ai_content.py")],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("build_ai_content failed")
+    print(out.stdout.strip() or "(ai content rebuilt)")
+
+
 def rebuild_hubs():
     """Regen 13 category hubs from Json/ + patch locale homepages for full
     hub coverage (closes the orphan gap from voies-vertes / sorties-detente
@@ -325,6 +339,7 @@ def main():
     run("placement gate vs baseline", placement_gate)
     run("card-diff gate vs snapshot", card_diff_gate)
     run("reachability gate (strict)", reachability_gate)
+    run("regenerate AI content layer (content/*.md + llms)", rebuild_ai_content)
     if not args.no_site:
         run("build _site/", lambda: subprocess.check_call(
             [sys.executable, str(SCRIPTS / "build_site.py")], cwd=str(ROOT)))
