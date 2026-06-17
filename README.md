@@ -49,6 +49,10 @@ Active. Catalogue and tooling evolve on `main`; treat the live repo as truth ove
 Spotted a wrong detail on a destination? Use the **"Signaler une info"** link on any page,
 or open an issue. Partner enquiries: **"Devenir partenaire."**
 
+Editing via the Studio toolkit? Its output enters the repo **only** as a dotted-path patch
+applied with `scripts/apply_studio_patch.py` — never drop a full `<slug>.json` into `Json/`
+(see the Studio ingress rule in [`ARCHITECTURE.md`](ARCHITECTURE.md)).
+
 ## License & attribution
 Site content © Bleu canard édition. Open data sources retain their own licenses
 (e.g. DATAtourisme — Etalab Open License; photo credits per `photo-credits.json`).

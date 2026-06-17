@@ -64,6 +64,13 @@ enricher, **phototheque** (Wikimedia+Openverse, pulls Commons credit), **dt-impo
   Itinéraire/map link. **Do not ship Studio's Build-tab HTML as production.** The Python
   pipeline is the renderer. (See `STUDIO-ADJUSTMENTS.md`.)
 
+> **Studio ingress rule.** Studio output enters the repo **only** as a dotted-path patch
+> applied via `scripts/apply_studio_patch.py`. A full `<slug>.json` from Studio must **never**
+> be written to `Json/` directly — that reverts any value updated upstream since load (sweep
+> `freshness`, ingested locales, `place_id`). The key-drop gate catches lost *keys*; it cannot
+> catch reverted *values*. **The ingress is the wall; the gate is the backstop.**
+> (See `SPEC-studio-data-safety.md`.)
+
 ## Protected — never touch without explicit go
 `chez-nous-a-la-plage` and `chalet-du-tornet` (the restaurant partners) and any partner
 block (e.g. Chez Nous block inside `criq-parc`). Guarded by the placement + card-diff CI
