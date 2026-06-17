@@ -1,0 +1,7 @@
+# key-drop-allowlist — intentional key/locale removals, one id per line.
+# gate_no_key_drop.py will not fail the build for ids listed here.
+# Format (see scripts/gate_no_key_drop.py):
+#   <slug>:<key>                 a top-level key
+#   <slug>:i18n.<lang>           an entire locale
+#   <slug>:i18n.<lang>.<key>     a key inside a locale
+# Keep this file near-empty: a real removal is rare and deliberate.
