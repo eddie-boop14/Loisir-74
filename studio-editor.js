@@ -549,40 +549,59 @@
 
   function saveJSON() {
     if (!editorState) return alert('Aucune fiche à enregistrer.');
-    // Deep-merge editorState into originalFiche so keys not touched by the form
-    // (research_log, verify_flags, non-FR locales) are preserved exactly.
-    const merged = deepMerge(originalFiche, editorState);
-    const blob = new Blob([JSON.stringify(merged, null, 2) + '\n'], { type: 'application/json' });
+    // Non-destructive: emit a dotted-path PATCH of only what changed vs the
+    // loaded fiche — NOT a full file. A full file built on a stale load base
+    // silently reverts fields written upstream after load (sweep freshness,
+    // ingested locales). Apply with: python3 scripts/apply_studio_patch.py
+    // (SPEC studio-data-safety §4.1).
+    const { patch, delete: del } = diffToPatch(originalFiche, editorState);
+    const n = Object.keys(patch).length + del.length;
+    if (n === 0) {
+      alert('Aucune modification depuis le chargement — rien à exporter.');
+      return;
+    }
+    const doc = {
+      slug: editorState.slug || 'lieu',
+      source: 'studio-editor',
+      base_head: null,            // Studio can't read git HEAD; conflict check skipped
+      patch,
+      delete: del,
+    };
+    const blob = new Blob([JSON.stringify(doc, null, 2) + '\n'], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = (editorState.slug || 'lieu') + '.json';
+    a.download = (editorState.slug || 'lieu') + '.studio-patch.json';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   }
 
-  function deepMerge(base, override) {
-    // base = originalFiche; override = editorState
-    // For most keys, override wins. For i18n, merge per-lang so untouched locales survive.
-    if (base == null) return override;
-    if (Array.isArray(override)) return override;  // arrays are replaced wholesale
-    if (typeof override !== 'object') return override;
-    const out = { ...base };
-    Object.keys(override).forEach((k) => {
-      if (k === 'i18n' && base.i18n) {
-        out.i18n = { ...base.i18n };
-        Object.keys(override.i18n).forEach((lang) => {
-          out.i18n[lang] = deepMerge(base.i18n[lang] || {}, override.i18n[lang]);
-        });
-      } else if (override[k] != null && typeof override[k] === 'object' && !Array.isArray(override[k])) {
-        out[k] = deepMerge(base[k] || {}, override[k]);
-      } else {
-        out[k] = override[k];
+  // Diff edited vs base into dotted-path leaves (objects recurse, arrays whole-
+  // replace) matching scripts/ingest_translations.set_path. Keys present in base
+  // but gone from edited become explicit deletions.
+  function diffToPatch(base, edited) {
+    const patch = {}, del = [];
+    walkDiff(base, edited, '', patch, del);
+    return { patch, delete: del };
+  }
+
+  function walkDiff(b, e, path, patch, del) {
+    if (JSON.stringify(b) === JSON.stringify(e)) return;       // unchanged subtree
+    if (e === undefined) { if (path) del.push(path); return; } // removed key
+    if (Array.isArray(b) || Array.isArray(e)) {                // arrays: wholesale
+      if (path) patch[path] = e;
+      return;
+    }
+    if (b && typeof b === 'object' && e && typeof e === 'object') {
+      const keys = new Set([...Object.keys(b), ...Object.keys(e)]);
+      for (const k of keys) {
+        walkDiff(b ? b[k] : undefined, e ? e[k] : undefined, path ? `${path}.${k}` : k, patch, del);
       }
-    });
-    return out;
+      return;
+    }
+    if (path) patch[path] = e;                                 // scalar / new leaf
   }
 
   // --------------------------------------------------------------------------

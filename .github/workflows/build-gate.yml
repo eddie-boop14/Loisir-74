@@ -30,10 +30,21 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2   # gate_no_key_drop compares each fiche against HEAD~1
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: No-silent-key-drop gate
+        # Fail if any Json/<slug>.json lost a top-level key, an i18n locale, or a
+        # per-locale key vs HEAD~1 (SPEC studio-data-safety §4.4). Read-only, fast.
+        # Intentional removals go through reports/key-drop-allowlist.txt.
+        run: python3 scripts/gate_no_key_drop.py
+
+      - name: Studio patch ingress self-test
+        run: python3 tests/test_apply_studio_patch.py
 
       - name: Run build_all (every gate inside)
         run: python3 scripts/build_all.py --no-site

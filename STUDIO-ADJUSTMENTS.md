@@ -8,33 +8,34 @@ translations, future `place_id`). Fix that first; everything else is secondary.
 
 ---
 
-## P0 — Non-destructive writes (the actual risk) 🔴
+## P0 — Non-destructive writes (the actual risk) ✅ SHIPPED
 
-**Problem (confirmed):** `studio-editor.js` (L552–559) and `studio-enricher.js` (L430–464) export a
+> Full engineering spec + contracts: [`SPEC-studio-data-safety.md`](SPEC-studio-data-safety.md).
+> All three Studio tabs now emit dotted-path patches consumed by one Python ingress, with a CI
+> gate proving no fiche ever silently loses a key.
+
+**Problem (confirmed):** `studio-editor.js` (L552–559) and `studio-enricher.js` (L430–464) exported a
 **full `<slug>.json`** deep-merged against the *loaded* copy. `studio-phototheque.js` (L368–374)
-already exports a correct **partial patch**. Full-file artifacts replace the live file wholesale on
-commit → any field added upstream since load is lost.
+already exported a partial patch. Full-file artifacts replaced the live file wholesale on commit →
+any field added upstream since load was lost.
 
-**1. Editor + Enricher emit a PATCH, not a full file.**
-- Diff `editorState` vs `originalFiche`; serialize **only changed keys** (deep, per-i18n-locale).
-- Output `{slug, <changed keys only>}` — mirror phototheque's shape.
-- *Accept:* exporting a fiche you opened and changed nothing → **empty patch** (`{slug}` only).
-- *Effort:* ~half day.
+**1. Editor + Enricher emit a PATCH, not a full file.** ✅
+- Editor `saveJSON` now diffs `editorState` vs `originalFiche` (`diffToPatch`/`walkDiff`) → dotted
+  paths, arrays whole-replace, removed keys → `delete[]`. Enricher emits its accepted per-path
+  `changes` directly. Both output `{slug, source, base_head, patch, delete}`.
+- *Accept met:* exporting an unchanged fiche → empty patch (alert: "rien à exporter").
 
-**2. Single ingress: `scripts/apply_studio_patch.py` (new).**
-- Input: a Studio patch (`*-patch.json` / enricher / editor). Target: the **freshly-pulled live**
-  `Json/<slug>.json`.
-- **Deep-merge** patch → live (reuse `merge_secondary.py` / `ingest_translations.py` merge logic).
-  Per-locale i18n merge; never drop a key absent from the patch.
-- Append a `research_log` line `{by: "apply_studio_patch.py", date, fields:[...]}`.
-- **No blind `cp` / file-replace anywhere.** This is the only way Studio output enters the repo.
-- *Accept:* patch touching `i18n.fr.intro` leaves `freshness`, `i18n.nl`, `partners`, `place_id`
-  byte-identical. *Effort:* ~half day.
+**2. Single ingress: `scripts/apply_studio_patch.py` (new).** ✅
+- Reuses `ingest_translations.set_path`; no-op detection; full-file-dump guard (>40 paths / ≥2 whole
+  locales rejected); optional conflict tripwire vs `base_head`; `--dry-run`. Stamps `research_log`.
+- *Accept met:* patch touching `i18n.fr.intro` leaves `freshness`, `i18n.de`, `partners`,
+  `hero_credit` byte-identical (clobber-regression test in `tests/test_apply_studio_patch.py`).
 
-**3. CI backstop in `build-gate.yml`: no-silent-drop gate.**
-- Compare each `Json/*.json` against the previous commit; **fail** if any fiche lost a top-level
-  key or an i18n locale (allow explicit deletions via a documented `--allow-drop` flag).
-- Catches clobber regardless of source (Studio, manual, agent). *Effort:* ~half day.
+**3. CI backstop in `build-gate.yml`: no-silent-drop gate.** ✅
+- `scripts/gate_no_key_drop.py` compares every `Json/*.json` against `HEAD~1` (checkout now
+  `fetch-depth: 2`); fails on any dropped top-level key, locale, or per-locale key. Intentional
+  removals → `reports/key-drop-allowlist.txt` or `--allow-drop`.
+- *Verified:* green on the live tree; a deliberate key removal exits 1.
 
 ---
 

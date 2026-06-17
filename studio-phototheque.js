@@ -365,13 +365,21 @@
       }
 
       zip.file(`${slug}-hero.${imageExt}`, imageBytes);
-      const patch = {
+      // Canonical dotted-path patch (SPEC studio-data-safety §4.1) so the single
+      // Python ingress applies it. `source_url` is provenance only — kept at top
+      // level (apply_studio_patch reads `patch`), never written into the fiche.
+      const patchDoc = {
         slug,
-        hero_image: heroImageRef,
-        hero_credit: heroCredit,
+        source: 'studio-phototheque',
+        base_head: null,
         source_url: selected ? selected.full : null,
+        patch: {
+          hero_image: heroImageRef,
+          hero_credit: heroCredit,
+        },
+        delete: [],
       };
-      zip.file(`${slug}-photo-patch.json`, JSON.stringify(patch, null, 2) + '\n');
+      zip.file(`${slug}.studio-patch.json`, JSON.stringify(patchDoc, null, 2) + '\n');
       const readme = [
         `# Photo patch: ${slug}`,
         ``,
@@ -380,13 +388,12 @@
         `Credit: ${heroCredit || '(none / local file)'}`,
         ``,
         `## Integration`,
-        `1. Drop ${slug}-hero.${imageExt} into the repo root.`,
-        `2. Edit Json/${slug}.json:`,
-        `     "hero_image": "${heroImageRef}"`,
-        `     "hero_credit": ${JSON.stringify(heroCredit)}`,
-        `3. Run: python3 scripts/build_lieu_page.py Json/${slug}.json`,
-        `        python3 scripts/localize_lieu.py ${slug}`,
-        `4. Refresh hub cards + homepage + commit.`,
+        `1. git pull --ff-only`,
+        `2. Drop ${slug}-hero.${imageExt} into the repo root.`,
+        `3. Run: python3 scripts/apply_studio_patch.py ${slug}.studio-patch.json`,
+        `        (preview with --dry-run; never cp a full file over Json/)`,
+        `4. Run: python3 scripts/build_all.py --no-site   (re-render + gates)`,
+        `5. Commit + push.`,
       ].join('\n');
       zip.file('README.txt', readme);
 
