@@ -197,6 +197,9 @@ CHROME = {
     "park_verified":    {"fr": "Parkings vérifiés le", "en": "Parking checked on", "de": "Parkplätze geprüft am", "it": "Parcheggi verificati il", "es": "Aparcamientos verificados el", "nl": "Parkings geverifieerd op"},
     # Beside-facts source link (master to-do #4): authoritative page one tap away.
     "source_official":  {"fr": "Source officielle", "en": "Official source", "de": "Offizielle Quelle", "it": "Fonte ufficiale", "es": "Fuente oficial", "nl": "Officiële bron"},
+    # Earn-only geo ✅ badge (derive_geo_verified.py). Gold = verified-only per
+    # J4-BRAND. Label translates; the place name is frozen and not in the label.
+    "geo_verified":     {"fr": "Position vérifiée par loisirs74.fr", "en": "Location verified by loisirs74.fr", "de": "Standort geprüft von loisirs74.fr", "it": "Posizione verificata da loisirs74.fr", "es": "Ubicación verificada por loisirs74.fr", "nl": "Locatie geverifieerd door loisirs74.fr"},
     # Event modal (per-fiche promo for the venue's own event)
     "ev_intro":  {"fr": "Le lieu de cette page organise", "en": "The venue on this page is hosting", "de": "Der Ort dieser Seite veranstaltet", "it": "Il luogo di questa pagina organizza", "es": "El lugar de esta página organiza", "nl": "De locatie op deze pagina organiseert"},
     "ev_cta":    {"fr": "Voir l&#39;événement", "en": "See the event", "de": "Zur Veranstaltung", "it": "Scopri l&#39;evento", "es": "Ver el evento", "nl": "Bekijk het evenement"},
@@ -602,7 +605,35 @@ def maps_query(d, name, commune):
     return url_q(f"{name or ''}, {commune or ''}, Haute-Savoie, France")
 
 
-def how_to_block(how, name, commune, lat=None, lng=None, slug=None):
+def maps_place_param(d, kind):
+    """Maps place-id query param for a venue link, or '' if no canonical id.
+
+    kind = 'destination' (dir/ links) or 'query' (search/ links). Google
+    accepts the text destination/query *and* a *_place_id that pins to the
+    canonical POI — so a stale/off-venue stored coordinate is irrelevant for
+    directions. google_place_id is derived by derive_geo_verified.py and exists
+    on every fiche that has a Google place_id (independent of geo_verified)."""
+    pid = d.get("google_place_id")
+    return f"&{kind}_place_id={url_q(pid)}" if pid else ""
+
+
+def geo_verified_badge(d):
+    """Earn-only ✅ badge. Renders ONLY when geo_verified is true; when false or
+    absent, returns '' — silence, not a scarlet 'unverified' letter. Gold,
+    rendered near the Itinéraire CTA. Label is i18n; place name frozen."""
+    if d.get("geo_verified") is not True:
+        return ""
+    return (
+        '<span class="geo-verified reveal" role="note">'
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+        'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+        '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>'
+        '<circle cx="12" cy="10" r="3"/></svg>'
+        f'<span>{esc(T("geo_verified"))}</span></span>'
+    )
+
+
+def how_to_block(how, name, commune, lat=None, lng=None, slug=None, place_id=None):
     """Render the unified transport section (locale-aware).
 
     One block: the car / public_transport / bike how-cards PLUS the generated
@@ -623,6 +654,9 @@ def how_to_block(how, name, commune, lat=None, lng=None, slug=None):
         dest = f"{lat},{lng}"
     else:
         dest = url_q(f"{name or ''}, {commune or ''}, Haute-Savoie, France")
+    # Canonical-POI pin: routes the how-card directions to the real place
+    # regardless of the stored coordinate. Empty when no google_place_id.
+    pid_param = f"&destination_place_id={url_q(place_id)}" if place_id else ""
     cards = []
     for key in ("car", "public_transport", "bike"):
         text = how.get(key)
@@ -633,7 +667,7 @@ def how_to_block(how, name, commune, lat=None, lng=None, slug=None):
         icon = HOW_ICONS[key]
         cards.append(
             f'<a class="how-card" href="https://www.google.com/maps/dir/?api=1'
-            f"&destination={dest}&travelmode={travelmode}" + '" '
+            f"&destination={dest}{pid_param}&travelmode={travelmode}" + '" '
             f'target="_blank" rel="noopener">'
             f'<div class="icon">{icon}</div>'
             f'<h3>{esc(label)}</h3>'
@@ -1163,7 +1197,7 @@ def hero_block(d):
             f'<line x1="13" y1="17" x2="13" y2="19"/></svg>{T("book")}</a>'
         )
     cta_buttons.append(
-        f'<a href="https://www.google.com/maps/search/?api=1&query={maps_query(d, name, commune)}" class="btn btn-ghost" '
+        f'<a href="https://www.google.com/maps/search/?api=1&query={maps_query(d, name, commune)}{maps_place_param(d, "query")}" class="btn btn-ghost" '
         'target="_blank" rel="noopener">'
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
         'stroke-linecap="round" stroke-linejoin="round">'
@@ -1187,6 +1221,7 @@ def hero_block(d):
         f'{hammer_h1(name)}'
         f'<p class="lede reveal">{esc(lead)}</p>'
         f'<div class="cta-row reveal">{"".join(cta_buttons)}</div>'
+        f'{geo_verified_badge(d)}'
         '</div>'
         '<div class="reveal"><div class="hero-img">'
         f'{picture_tag(img_src, alt, eager=True, extra=gen_attr)}'
@@ -1216,7 +1251,7 @@ def action_bar(d):
             f'<line x1="13" y1="17" x2="13" y2="19"/></svg><span>{T("book")}</span></a>'
         )
     actions.append(
-        f'<a href="https://www.google.com/maps/dir/?api=1&destination={maps_query(d, name, commune)}" '
+        f'<a href="https://www.google.com/maps/dir/?api=1&destination={maps_query(d, name, commune)}{maps_place_param(d, "destination")}" '
         'target="_blank" rel="noopener">'
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
         'stroke-linecap="round" stroke-linejoin="round">'
@@ -1532,7 +1567,8 @@ def build_page(d, lang="fr"):
     out.append(activities_block(L_body("activities", []) or []))
     out.append(practical_block(L_body("practical_info", []) or [], name, d["commune"]))
     out.append(how_to_block(L_body("how_to_get_there", {}) or {}, name, d["commune"],
-                            d.get("latitude"), d.get("longitude"), d["slug"]))
+                            d.get("latitude"), d.get("longitude"), d["slug"],
+                            d.get("google_place_id")))
     out.append(parking_block(d["slug"], (L("facts", {}) or {}).get("parking")))
     out.append(when_to_visit_block(L_body("when_to_visit", "") or "",
                                    L_body("events", "") or ""))

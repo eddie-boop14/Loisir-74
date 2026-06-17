@@ -46,7 +46,20 @@
   "verify_flags": [
     "CREATED 2026-06-04 from lieux.json orphan: needed per-fiche JSON for hub/sitemap rendering."
   ],
-  "research_log": [],
+  "research_log": [
+    {
+      "date": "2026-06-17",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
+      "fields": [
+        "google_place_id",
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m"
+      ]
+    }
+  ],
   "sparse_data": false,
   "date_published_human": "05 juin 2026",
   "date_modified_human": "06 juin 2026",
@@ -699,5 +712,10 @@
   },
   "hero_alt": "Col de la Croix-Fry en Haute-Savoie",
   "status": "published",
-  "type": "nature"
+  "type": "nature",
+  "google_place_id": "ChIJyZ8T-d_xi0cRGpi7Jvjabh8",
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-17",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 68
 }
