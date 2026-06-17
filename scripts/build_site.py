@@ -117,7 +117,8 @@ def copy_file_with_research_log_strip(src, dst):
     """Copy a Json/<slug>.json file. JOB 2: strips research_log; JOB 6: skip
     draft fiches entirely (caller signal via return False)."""
     d = json.loads(src.read_text(encoding="utf-8"))
-    if d.get("status") == "draft":
+    # 'unverified' (source-audit) is excluded from _site exactly like draft.
+    if d.get("status") in ("draft", "unverified"):
         return False
     if "research_log" in d:
         d.pop("research_log", None)
@@ -152,7 +153,7 @@ def copy_md_strip_research_log(src, dst):
     if jp.exists():
         try:
             d = json.loads(jp.read_text(encoding="utf-8"))
-            if d.get("status") == "draft":
+            if d.get("status") in ("draft", "unverified"):
                 return
         except Exception:
             pass

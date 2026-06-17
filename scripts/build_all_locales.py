@@ -72,7 +72,8 @@ def main():
     draft_slugs = []
     for jp in all_paths:
         d = json.loads(Path(jp).read_text(encoding="utf-8"))
-        if d.get("status") == "draft":
+        # 'unverified' (source-audit) is held out of render exactly like draft.
+        if d.get("status") in ("draft", "unverified"):
             draft_slugs.append(d["slug"])
         else:
             published_paths.append(jp)

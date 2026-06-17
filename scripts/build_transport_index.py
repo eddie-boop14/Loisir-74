@@ -413,7 +413,7 @@ def main():
     total = 0
     for jp in sorted(glob.glob(str(ROOT / "Json" / "*.json"))):
         d = json.loads(Path(jp).read_text(encoding="utf-8"))
-        if d.get("status") == "draft":
+        if d.get("status") in ("draft", "unverified"):
             continue
         total += 1
         slug = d["slug"]

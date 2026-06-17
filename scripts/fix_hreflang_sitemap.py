@@ -297,7 +297,7 @@ def rebuild_sitemap(groups, multilingual):
                 d = _json.loads((ROOT / jp).read_text(encoding="utf-8"))
             except Exception:
                 continue
-            if d.get("status") == "draft": continue
+            if d.get("status") in ("draft", "unverified"): continue
             if d.get("category") in cats:
                 dt = date_map.get(jp)
                 if dt: member_dates.append(dt)
