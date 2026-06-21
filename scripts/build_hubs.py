@@ -31,6 +31,25 @@ LOCALES = ("en", "de", "it", "es", "nl")
 
 # Filter rules per hub. Basic + thematic hubs that can be derived from
 # category/subcategories deterministically.
+# Curated cross-cuts for the détente/wellness/hands-on identity. Source of truth
+# for the non-cinema/casino members of sorties-detente, so membership is declared
+# here instead of being scraped from baked HTML. Cross-listing is intentional
+# (a lieu may also appear in its own category hub — e.g. the two musées below).
+CURATED_SORTIES = {
+    # ateliers (hands-on)
+    "atelier-poterie-chez-el-annecy",
+    "atelier-poterie-du-prunier-thones",
+    "atelier-poterie-ryokan-thones",
+    # wellness
+    "spa-qc-terme-chamonix",
+    "spa-vitam-bien-etre-neydens",
+    "thermes-saint-gervais-mont-blanc",
+    # cross-cuts (kept in their own category; cross-listed here)
+    "thermes-evian",                     # category=chateau (Anciens Thermes) — cross-list, not recategorised
+    "musee-poterie-savoyarde-filliere",  # category=musee — sibling of the poterie ateliers
+    "maison-fromage-abondance-abondance",  # category=musee — cheese atelier/visit
+}
+
 HUB_FILTERS = {
     "cascades":         lambda d: d.get("category") == "cascade",
     "chateaux":         lambda d: d.get("category") == "chateau",
@@ -44,7 +63,7 @@ HUB_FILTERS = {
     # Thematic but deterministic
     "parcs-jardins":    lambda d: d.get("category") in ("parc", "jardin"),
     "baignade-nautisme":lambda d: d.get("category") in ("aquaparc", "croisiere", "base-nautique", "wakepark"),
-    "sorties-detente":  lambda d: d.get("category") in ("cinema", "casino"),
+    "sorties-detente":  lambda d: d.get("category") in ("cinema", "casino") or d.get("slug") in CURATED_SORTIES,
     "sport-jeux":       lambda d: d.get("category") in ("bowling", "karting", "patinoire") or
                                   (isinstance(d.get("subcategories"), list) and
                                    any(s in ("sport","sport-jeux","jeu","arcade") for s in d.get("subcategories"))),
