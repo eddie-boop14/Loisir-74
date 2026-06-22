@@ -8,7 +8,7 @@
   "longitude": 6.7036,
   "hero_image": "/img/generique/generique-padel-raquette.jpg",
   "hero_credit": null,
-  "official_site_url": "https://scanned.page/p/FVev7Y",
+  "official_site_url": null,
   "price_from": 20.0,
   "price_currency": "EUR",
   "price_tiers": [],
@@ -23,7 +23,8 @@
     }
   ],
   "verify_flags": [
-    "Adresse exacte, horaires, tarifs et site officiel à confirmer auprès du club (saison 2026)"
+    "Adresse exacte, horaires, tarifs et site officiel à confirmer auprès du club (saison 2026)",
+    "URL retirée : entité commerciale/hébergement ne correspondant pas au lieu (audit source 2026)."
   ],
   "date_published_human": "3 juin 2026",
   "date_modified_human": "7 juin 2026",
@@ -68,6 +69,15 @@
       "note": "derive_geo_verified: geo_verified=false (max_drift=100m).",
       "fields": [
         "google_place_id"
+      ]
+    },
+    {
+      "date": "2026-06-18",
+      "by": "apply_studio_patch.py",
+      "note": "Studio patch [audit_sources apply (handoff 2026)]: 2 set, 0 removed.",
+      "fields": [
+        "official_site_url",
+        "verify_flags"
       ]
     }
   ],
