@@ -1,7 +1,7 @@
 # Phase 4 — photo assignments (gate artifact)
 
 **Date**: 2026-06-14
-**Total assignments**: 543 (one per (hub × slug) on the FR canonical hub)
+**Total assignments**: 546 (one per (hub × slug) on the FR canonical hub)
 
 ## Per-hub diversity
 
@@ -18,7 +18,7 @@
 | `que-faire` | 76 | 44 | 4 |
 | `sensations-plein-air` | 43 | 31 | 3 |
 | `sentiers` | 40 | 7 | 14 |
-| `sorties-detente` | 22 | 10 | 3 |
+| `sorties-detente` | 25 | 13 | 3 |
 | `sport-jeux` | 53 | 34 | 4 |
 | `telecabines` | 12 | 5 | 5 |
 | `voies-vertes` | 5 | 5 | 1 |
@@ -496,9 +496,12 @@
 | `sorties-detente` | `cinema-pathe-annecy` | `divertissement` | `generique-cinema-4.jpg` | — | json hero (local) |
 | `sorties-detente` | `cinema-pathe-archamps-imax` | `divertissement` | `generique-cinema-2.jpg` | — | json hero (local) |
 | `sorties-detente` | `grand-casino-annemasse-annemasse` | `divertissement` | `generique-casino.jpg` | — | json hero (local) |
+| `sorties-detente` | `maison-fromage-abondance-abondance` | `patrimoine` | `Meules_d%27abondance_%28cropped%29.jpg` | — | json hero (url) |
+| `sorties-detente` | `musee-poterie-savoyarde-filliere` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
 | `sorties-detente` | `spa-qc-terme-chamonix` | `bien-etre` | `generique-thermes-hammam.jpg` | — | json hero (local) |
 | `sorties-detente` | `spa-vitam-bien-etre-neydens` | `bien-etre` | `generique-spa-jardin-tropical.jpg` | — | json hero (local) |
 | `sorties-detente` | `stelsia-casino-megeve` | `divertissement` | `generique-casino-2.jpg` | — | json hero (local) |
+| `sorties-detente` | `thermes-evian` | `patrimoine` | `Anciens_thermes_Evian_5.jpg` | — | json hero (url) |
 | `sorties-detente` | `thermes-saint-gervais-mont-blanc` | `bien-etre` | `generique-spa-jardin-tropical.jpg` | — | json hero (local) |
 | `sport-jeux` | `arcade-art-of-pinball-poisy` | `divertissement` | `generique-pinball.jpg` | — | json hero (local) |
 | `sport-jeux` | `arcade-funky-factory-thonon` | `divertissement` | `generique-arcade.jpg` | — | json hero (local) |
