@@ -818,6 +818,100 @@ HUB_DISPLAY = {
 ALL_BASE_HUBS = list(HUB_DISPLAY.keys())
 
 
+# Homepage "Sorties & détente" section — curated lead order (real heroes first),
+# cards lifted from the locale sorties-detente hub so the homepage can't drift.
+CURATED_SORTIES_LEAD = [
+    "casino-imperial-palace-annecy", "spa-qc-terme-chamonix",
+    "thermes-saint-gervais-mont-blanc", "thermes-evian",
+    "atelier-poterie-du-prunier-thones", "cinema-pathe-annecy",
+]
+SORTIES_SUBLINE = {
+    "fr": "Cinémas, casinos, spas et thermes, ateliers — la journée continue, même à l'abri.",
+    "en": "Cinemas, casinos, spas and thermal baths, workshops — the day goes on, even indoors.",
+    "de": "Kinos, Casinos, Spas und Thermen, Ateliers — der Tag geht weiter, auch im Trockenen.",
+    "it": "Cinema, casinò, spa e terme, atelier — la giornata continua, anche al coperto.",
+    "es": "Cines, casinos, spas y termas, talleres — el día continúa, incluso a cubierto.",
+    "nl": "Bioscopen, casino's, spa's en thermen, ateliers — de dag gaat door, ook binnen.",
+}
+SEEALL_SVG = ('<svg fill="none" stroke="currentColor" stroke-linecap="round" '
+              'stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">'
+              '<line x1="5" x2="19" y1="12" y2="12"></line>'
+              '<polyline points="12 5 19 12 12 19"></polyline></svg>')
+
+
+def _hub_cards_by_slug(hub_html):
+    """slug -> its <article class="card">…</article> block from a built hub."""
+    out = {}
+    for m in re.finditer(r'<article class="card"[^>]*>.*?</article>', hub_html, re.S):
+        block = m.group(0)
+        sm = (re.search(r'href="https://loisirs74\.fr/(?:[a-z]{2}/)?([a-z0-9-]+)"\s+class="card-photo"', block)
+              or re.search(r'class="card-photo"\s+href="https://loisirs74\.fr/(?:[a-z]{2}/)?([a-z0-9-]+)"', block))
+        if sm:
+            out[sm.group(1)] = block
+    return out
+
+
+def patch_hub_h1(html, fr_hub, lang):
+    """Single-source the hub <h1> from HUB_DISPLAY (the same string as title/nav),
+    so the homepage, nav, title and h1 read identically per locale. Idempotent."""
+    import html as _html
+    disp = HUB_DISPLAY.get(fr_hub, {}).get(lang)
+    if not disp:
+        return html
+    return re.sub(r'<h1([^>]*)>.*?</h1>',
+                  lambda m: f'<h1{m.group(1)}>{_html.escape(disp, quote=False)}</h1>',
+                  html, count=1, flags=re.S)
+
+
+def patch_homepage_sorties(lang):
+    """Inject (or replace) the homepage 'Sorties & détente' section in the rain
+    band. Cards are lifted from the locale sorties-detente hub (URLs already
+    locale-prefixed → the homepage can't drift from the hub), data-* filter
+    attrs stripped to the homepage card shape. Replaces the FR ghost (ViaRhôna +
+    casino); adds the section to the 5 locales (absent today). Idempotent."""
+    import html as _html
+    base = ROOT if lang == "fr" else ROOT / lang
+    home = base / "index.html"
+    if not home.exists():
+        return False
+    html = home.read_text(encoding="utf-8")
+    hub_slug = hub_locale_map("sorties-detente").get(lang) or "sorties-detente"
+    hub_path = base / hub_slug / "index.html"
+    if not hub_path.exists():
+        return False
+    by_slug = _hub_cards_by_slug(hub_path.read_text(encoding="utf-8"))
+    cards = []
+    for slug in CURATED_SORTIES_LEAD:
+        block = by_slug.get(slug)
+        if block:
+            cards.append(re.sub(r'<article class="card"[^>]*>', '<article class="card">', block, count=1))
+    if not cards:
+        return False
+    prefix = f"/{lang}" if lang != "fr" else ""
+    hub_url = f"https://loisirs74.fr{prefix}/{hub_slug}/"
+    h2 = _html.escape(HUB_DISPLAY["sorties-detente"][lang], quote=False)
+    subline = _html.escape(SORTIES_SUBLINE.get(lang, SORTIES_SUBLINE["fr"]), quote=False)
+    sa = re.search(r'<a class="see-all"[^>]*>(.*?)<svg', html, re.S)
+    see_label = sa.group(1).strip() if sa else "Voir tout"
+    section = (
+        '<section class="cat" id="sorties">\n<div class="wrap">\n<div class="cat-head">\n'
+        f'<div class="cat-head-left">\n<h2>{h2}</h2>\n<p class="cat-sub">{subline}</p>\n</div>\n'
+        f'<a class="see-all" href="{hub_url}">{see_label}\n{SEEALL_SVG}\n</a>\n</div>\n'
+        '<div class="carousel">\n' + "\n".join(cards) + '\n</div>\n</div>\n</section>'
+    )
+    # remove any existing #sorties (FR ghost / prior run), collapsing the
+    # surrounding blank lines to a single newline so the pass is idempotent.
+    html = re.sub(r'\n*<section class="cat" id="sorties">.*?</section>\n*', '\n', html, flags=re.S)
+    if '<section class="all-categories"' in html:
+        html = html.replace('<section class="all-categories"', section + '\n<section class="all-categories"', 1)
+    elif '</main>' in html:
+        html = html.replace('</main>', section + '\n</main>', 1)
+    else:
+        html = re.sub(r'<footer', section + '\n<footer', html, count=1)
+    home.write_text(html, encoding="utf-8")
+    return True
+
+
 def patch_homepage_completeness(lang):
     """Ensure the locale homepage links to every hub directory that exists on
     disk. If some are missing from the existing nav, add a low-prominence
@@ -942,6 +1036,9 @@ def main():
             # idempotent. Single source of truth for descriptions = the
             # JSON file under data/.
             new_html = patch_hub_head(new_html, fr_hub, lang, hub_name, hub_descriptions)
+            # JOB §5a: single-source the <h1> from HUB_DISPLAY (== title/nav),
+            # fixing de/nl/en drift across all 15 hubs.
+            new_html = patch_hub_h1(new_html, fr_hub, lang)
             if new_html != html:
                 p.write_text(new_html, encoding="utf-8")
                 regen += 1
@@ -954,10 +1051,14 @@ def main():
     # Step 2: patch each locale homepage so every hub directory on disk is
     # linked. Closes the orphan gap that came from voies-vertes /
     # sorties-detente being absent from the locale-homepage nav.
-    print("\npatching locale homepages for hub-completeness:")
+    print("\npatching homepages: Sorties & détente section + hub-completeness:")
     for lang in ("fr",) + LOCALES:
+        sortie = patch_homepage_sorties(lang)
         changed = patch_homepage_completeness(lang)
-        print(f"  [{lang}] {'+all-categories nav' if changed else 'already complete'}")
+        bits = []
+        if sortie: bits.append("+sorties")
+        if changed: bits.append("+all-categories nav")
+        print(f"  [{lang}] {' '.join(bits) if bits else 'already complete'}")
 
     # Phase 4: emit the photo-assignment report so Eddie can spot-check
     # the picks. Sorted by (hub, slug) for deterministic output.
