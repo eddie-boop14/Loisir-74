@@ -85,6 +85,21 @@ def rebuild_ai_content():
     print(out.stdout.strip() or "(ai content rebuilt)")
 
 
+def normalize_head_links():
+    """Final HTML pass: make canonical self-referential + one hreflang set +
+    md-alt-iff-exists on every indexable page, and rebuild the sitemap. Runs
+    last (all HTML + content/*.md now exist) so a copy-seeded bad canonical
+    can't survive a build. Idempotent."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "fix_hreflang_sitemap.py"), "--apply", "--sitemap"],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("fix_hreflang_sitemap (normalize head links) failed")
+    print(out.stdout.strip() or "(head links normalized)")
+
+
 def rebuild_hubs():
     """Regen 13 category hubs from Json/ + patch locale homepages for full
     hub coverage (closes the orphan gap from voies-vertes / sorties-detente
@@ -340,6 +355,7 @@ def main():
     run("card-diff gate vs snapshot", card_diff_gate)
     run("reachability gate (strict)", reachability_gate)
     run("regenerate AI content layer (content/*.md + llms)", rebuild_ai_content)
+    run("normalize head links (canonical + hreflang + md-alt)", normalize_head_links)
     if not args.no_site:
         run("build _site/", lambda: subprocess.check_call(
             [sys.executable, str(SCRIPTS / "build_site.py")], cwd=str(ROOT)))

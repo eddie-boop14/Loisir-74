@@ -18,6 +18,54 @@ LINK_RE = re.compile(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">')
 RUN_RE = re.compile(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">(?:\n<link rel="alternate" hreflang="[^"]*" href="[^"]*">)*')
 NOIDX_RE = re.compile(r'<meta name="robots" content="[^"]*noindex')
 
+# Sitewide head-link authority (JOB P1). Order-agnostic strip patterns + the
+# stale href-first "block 2" the hubs/communes/homepage inherited by copying
+# cascades' built HTML. Each block-2 / md-alt strip also eats one trailing
+# newline so removals leave no blank line (keeps the pass idempotent).
+CANON_ANY   = re.compile(r'<link\b[^>]*\brel=("|\')canonical\1[^>]*>')
+REL_CANON   = re.compile(r'<link rel="canonical" href="[^"]*">')
+MDALT_STRIP = re.compile(r'<link\b[^>]*\btype=("|\')text/markdown\1[^>]*>\n?')
+B2_CANON    = re.compile(r'<link href="[^"]*" rel="canonical"\s*/?>\n?')
+B2_HREFLANG = re.compile(r'<link href="[^"]*" hreflang="[^"]*" rel="alternate"\s*/?>\n?')
+CONTENT = ROOT / "content"
+
+
+def fr_slug_of(fr_url):
+    """'…/cascades/' → 'cascades'; '…/abbaye-d-aulps' → 'abbaye-d-aulps'; BASE → ''."""
+    return fr_url[len(BASE):].rstrip("/")
+
+
+def normalize_head(html, self_url, hreflang_run, fr_slug, multilingual):
+    """Self-referential canonical + single hreflang run + md-alt-iff-exists.
+    Surgical & guarded: an already-correct page (the clean lieu pages) passes
+    through byte-identical — every branch is a no-op when nothing is wrong."""
+    # 1. drop the stale href-first block 2 (its canonical + duplicate hreflang).
+    html = B2_CANON.sub("", html)
+    html = B2_HREFLANG.sub("", html)
+    # 2. exactly one rel-first self canonical.
+    desired = f'<link rel="canonical" href="{self_url}">'
+    rel = REL_CANON.search(html)
+    if rel and len(CANON_ANY.findall(html)) == 1:
+        if rel.group(0) != desired:                      # fix href in place
+            html = html[:rel.start()] + desired + html[rel.end():]
+    else:                                                # 0 or >1 / non-rel form
+        html = CANON_ANY.sub("", html)
+        m = re.search(r'<head[^>]*>', html)
+        html = html[:m.end()] + "\n" + desired + html[m.end():]
+    # 3. single hreflang run (multilingual groups only), in place.
+    if multilingual:
+        m = RUN_RE.search(html)
+        if m:
+            if m.group(0) != hreflang_run:
+                html = html[:m.start()] + hreflang_run + html[m.end():]
+        else:
+            html = insert_block(html, hreflang_run)
+    # 4. md-alt only if content/<fr_slug>.md exists; else drop it (never repoint).
+    if not (fr_slug and (CONTENT / f"{fr_slug}.md").exists()):
+        html = MDALT_STRIP.sub("", html)
+    return html
+
+
 
 def is_noindex(group):
     return bool(NOIDX_RE.search(group["pages"]["fr"][1].read_text(encoding="utf-8")))
@@ -101,7 +149,7 @@ def build_groups():
         groups.append(g)
     # lieu pages (by slug/filename)
     for fp in sorted(glob.glob("*.html")):
-        if fp == "index.html":
+        if fp in ("index.html", "404.html"):
             continue
         slug = fp[:-5]
         fr_url = BASE + slug
@@ -146,23 +194,23 @@ def main():
     for fr, u in broken[:10]:
         print("   BROKEN", fr, "->", u)
 
-    # how many page files would change
+    # Normalize canonical + hreflang + md-alt on EVERY indexable page (mono +
+    # multilingual; noindex groups like studio are skipped). Canonical is keyed
+    # to each page's OWN url; the hreflang run is group-wide.
+    indexable = [g for g in groups if not is_noindex(g)]
     changed = []
-    for g in multilingual:
-        canon = "\n".join(canonical_links(g))
+    for g in indexable:
+        multi = len(g["pages"]) > 1
+        run = "\n".join(canonical_links(g))
+        fr_slug = fr_slug_of(g["fr_url"])
         for lang, (url, f) in g["pages"].items():
             html = f.read_text(encoding="utf-8")
-            m = RUN_RE.search(html)
-            cur = m.group(0) if m else ""
-            if cur != canon:
+            new = normalize_head(html, url, run, fr_slug, multi)
+            if new != html:
                 changed.append(f)
                 if apply:
-                    if m:
-                        html = html[:m.start()] + canon + html[m.end():]
-                    else:
-                        html = insert_block(html, canon)
-                    f.write_text(html, encoding="utf-8")
-    print(f"page files needing hreflang normalization: {len(changed)}")
+                    f.write_text(new, encoding="utf-8")
+    print(f"page files needing head-link normalization: {len(changed)}")
     if apply:
         print("  -> applied.")
 
