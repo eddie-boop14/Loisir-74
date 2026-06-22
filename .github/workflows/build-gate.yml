@@ -1,5 +1,129 @@
-- name: Canonical self-reference gate
+name: Build gate (loisirs74)
+
+# Runs build_all on every push to main and every PR. Asserts:
+#   - status_gate         every fiche has explicit status field
+#   - hygiene_gate        0 Tier-1/2 scaffolding leaks
+#   - fiche render        all 392 x 6 = 2352 HTMLs produced
+#   - catalog_index       regenerated
+#   - hubs                regenerated from JSON
+#   - placement_gate      protected fiches (chez-nous-a-la-plage, chalet-du-tornet) hosts preserved
+#   - card-diff gate      protected partner cards byte-faithful vs snapshot
+#   - reachability        0 orphans across all 6 locales
+#   - byte-stable double  two consecutive builds produce md5-identical HTMLs
+#
+# Any failure blocks the build -> Netlify (or any deploy) sees red.
+# This is the structural defence against the mutation-chain disease
+# returning: every push must produce a clean, idempotent, reachable tree.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history: push 'before' / PR base must resolve
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compute key-drop baseline
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE="${{ github.event.pull_request.base.sha }}"
+          else
+            BASE="${{ github.event.before }}"
+            case "$BASE" in 0000000000000000000000000000000000000000|"") BASE="HEAD~1" ;; esac
+          fi
+          echo "BASE=$BASE" >> "$GITHUB_ENV"
+          echo "key-drop baseline = $BASE"
+
+      - name: No-silent-key-drop gate
+        run: python3 scripts/gate_no_key_drop.py --base "$BASE"
+
+      - name: No-orphan-geo-verified gate
+        run: python3 scripts/gate_geo_verified.py
+
+      - name: Run build_all (every gate inside)
+        run: python3 scripts/build_all.py --no-site
+
+      - name: AI content layer gate
+        # build_all has just regenerated content/<slug>.md + llms.txt +
+        # llms-full.txt. Assert every advertised /content/<slug>.md exists
+        # (0 404s) and the llms counts match the corpus.
+        run: python3 scripts/gate_ai_content.py
+
+      - name: Byte-stable double build
+        # Build_all has just run. Snapshot, rebuild, diff.
+        run: |
+          tree_files=(*.html en/*.html de/*.html it/*.html es/*.html nl/*.html \
+                      cascades/*.html chateaux/*.html musees/*.html sentiers/*.html \
+                      points-de-vue/*.html telecabines/*.html voies-vertes/*.html \
+                      lacs-plages/*.html bases-de-loisirs/*.html parcs-jardins/*.html \
+                      baignade-nautisme/*.html sorties-detente/*.html sport-jeux/*.html)
+          md5sum "${tree_files[@]}" 2>/dev/null | sort > /tmp/h1.txt
+          python3 scripts/build_all.py --no-site > /dev/null
+          md5sum "${tree_files[@]}" 2>/dev/null | sort > /tmp/h2.txt
+          if ! diff -q /tmp/h1.txt /tmp/h2.txt >/dev/null; then
+            echo "::error::Build is not byte-stable across cycles"
+            diff /tmp/h1.txt /tmp/h2.txt | head -20
+            exit 1
+          fi
+          echo "[ok] byte-stable: $(wc -l < /tmp/h1.txt) HTMLs identical across two consecutive builds"
+
+      - name: Build _site/ (publish target)
+        run: python3 scripts/build_site.py
+
+      - name: Published-verified gate
+        # Read-only. No status:"unverified" fiche may appear in catalog-index.json,
+        # api/lieux.json, sitemap.xml, or any hub index.html. No-op while 0 fiches
+        # are flagged; it starts enforcing once the source-audit --apply runs.
+        run: python3 scripts/gate_published_verified.py
+
+      - name: Canonical self-reference gate
         # Read-only. Every indexable built page must carry exactly one
         # self-referential <link rel="canonical">; md-alts must resolve.
         # Skips 404.html and noindex pages (e.g. studio).
         run: python3 scripts/gate_canonical_selfref.py
+
+      - name: Assert _site/ research_log strip
+        run: |
+          leaks=$(grep -rl 'research_log' _site/Json/ _site/api/ _site/content/ 2>/dev/null | wc -l)
+          if [ "$leaks" -gt 0 ]; then
+            echo "::error::research_log leaked into $leaks public exports"
+            exit 1
+          fi
+          echo "[ok] no research_log in public exports"
+
+      - name: Assert _site/ leak surface closed
+        run: |
+          # JOB 2's allowlist should never readmit these
+          leaks=""
+          for f in audit-report.md "loisirs74-cascade-de-la-diomaz (1).zip" \
+                   report.csv email_queue.csv _README.txt apply-images.py; do
+            if [ -e "_site/$f" ]; then leaks="$leaks $f"; fi
+          done
+          if [ -n "$leaks" ]; then
+            echo "::error::leak surface re-opened:$leaks"
+            exit 1
+          fi
+          echo "[ok] leak surface closed"
+
+      - name: Upload _site/ as artifact (optional review)
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-${{ github.sha }}
+          path: _site/
+          retention-days: 7
+          if-no-files-found: error
