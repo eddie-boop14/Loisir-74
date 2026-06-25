@@ -9,17 +9,17 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: null
-longitude: null
+latitude: 46.3069
+longitude: 6.6158
 geo_verified: false
 google_place_id: null
 canonical_url: https://loisirs74.fr/gorges-du-pont-du-diable
 language: fr
-photo_url: null
+photo_url: https://upload.wikimedia.org/wikipedia/commons/9/93/Pont_du_Diable_13072015_14.jpg
 photo_type: real
-photo_author: null
-photo_license: null
-photo_source: null
+photo_author: "Vassil"
+photo_license: "CC0"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-25
 source: loisirs74.fr
 ---
@@ -32,6 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Cascade
 - **Commune**: La Vernaz, Haute-Savoie (74200)
+- **GPS**: 46.3069, 6.6158
 - **Type**: Gorges aménagées
 - **Accès**: Payant
 - **Chiens**: Non admis
