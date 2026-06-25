@@ -49,6 +49,17 @@ Véritable balcon naturel au-dessus d'Annecy, le Semnoz séduit par sa proximit�
 
 Le plateau offre un cadre naturel préservé, à la fois sauvage et accueillant, où la forêt côtoie les pâturages et où l'on croise régulièrement cerfs, biches et mouflons dans le parc de la Grande Jeanne. Le Semnoz figure régulièrement au programme de compétitions sportives régionales, dont la Maxi Race d'Annecy, et accueille chaque année des milliers de promeneurs, sportifs et familles en quête d'air pur et de panoramas exceptionnels.
 
+## Infos pratiques
+
+- **Adresse**: Le Semnoz, Crêt de Châtillon, Massif des Bauges (Viuz-la-Chiésaz, Haute-Savoie)
+- **Accès**: Libre et gratuit · Site naturel ouvert toute l'année (route de montagne depuis Annecy)
+- **Altitude**: ≈ 1 699 m (Crêt de Châtillon)
+- **Tarifs**: Accès au site gratuit · Activités (luge d'été, bikepark, ski…) payantes selon la saison — voir le site officiel
+- **Parking**: Gratuit (station)
+- **Activités**: Été : VTT/bikepark, luge d'été, tubing, télémix, parapente · Hiver : ski alpin & nordique, raquettes, luge
+- **Animaux**: Acceptés en laisse en alpage
+- **Site officiel**: semnoz.fr
+
 ## Questions fréquentes
 
 **Q : L'accès à Le Semnoz est-il payant ?**

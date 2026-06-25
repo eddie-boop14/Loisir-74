@@ -45,6 +45,17 @@ Les Gorges du Fier sont un canyon étroit et profond situé à Lovagny, à une d
 
 Le site est aménagé depuis 1869, date de mise en place de la passerelle de 250 m fixée dans le rocher à 25 m au-dessus du torrent. Cette passerelle est payante et le parcours est ouvert du 15 mars au 15 octobre. Autour du site, la commune de Lovagny a aménagé le Chemin des Châteaux, une boucle pédestre de 2 km en accès libre qui relie l'entrée des Gorges au château de Montrottier et passe par le pont des Liasses et le pont de Pontverre.
 
+## Infos pratiques
+
+- **Adresse**: Gorges du Fier, 74330 Lovagny
+- **Horaires**: Tous les jours, 15 mars – 15 octobre. 15/03–14/06 et 01/09–15/10 : 9h30–18h15 (dernière entrée 17h15). 15/06–31/08 : 9h30–19h15 (dernière entrée 18h15).
+- **Tarifs**: Adulte (16+) 6 € · Enfant 7–15 ans 3 € · Moins de 7 ans gratuit · Groupes (20+, sur réservation) 5 € / 2,70 €
+- **Durée**: Visite libre, environ 1 h
+- **Réservation**: Non requise (billets sur place uniquement ; groupes par e-mail)
+- **Accessibilité**: Nombreux escaliers et passerelles suspendues · Porte-bébé obligatoire pour les jeunes enfants · Poussettes non autorisées
+- **Animaux**: Non autorisés
+- **Site officiel**: gorgesdufier.com
+
 ## Questions fréquentes
 
 **Q : L'accès aux Gorges du Fier est-il payant ?**
