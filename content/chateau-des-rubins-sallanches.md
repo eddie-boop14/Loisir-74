@@ -20,7 +20,7 @@ photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-05-24
+last_updated: 2026-06-25
 source: loisirs74.fr
 ---
 

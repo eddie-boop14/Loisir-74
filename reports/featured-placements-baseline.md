@@ -50,7 +50,6 @@ Every appearance below MUST be preserved (or explicitly justified) post-rebuild.
 | segway-mobilboard-annecy | de,en,es,fr,it,nl | 0 | Chez Nous à la Plage |
 | sentier-bout-du-lac-doussard | de,en,es,fr,it,nl | 0 | Chez Nous à la Plage |
 | sentier-des-roselieres | de,en,es,fr,it,nl | 0 | Chez Nous à la Plage |
-| sentier-roselieres-saint-jorioz | de,en,es,fr,it,nl | 0 | Chez Nous à la Plage |
 | sentier-tournette-montmin | de,en,es,fr,it,nl | 0 | Chez Nous à la Plage |
 | simulateur-emotion-concept-annecy | de,en,es,fr,it,nl | 0 | Chez Nous à la Plage |
 | trampoline-bam-freesports-annecy | de,en,es,fr,it,nl | 0 | Chez Nous à la Plage |

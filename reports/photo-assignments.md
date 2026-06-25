@@ -1,25 +1,25 @@
 # Phase 4 — photo assignments (gate artifact)
 
 **Date**: 2026-06-14
-**Total assignments**: 547 (one per (hub × slug) on the FR canonical hub)
+**Total assignments**: 540 (one per (hub × slug) on the FR canonical hub)
 
 ## Per-hub diversity
 
 | hub | fiches | distinct photos | max repeat of one photo |
 |---|---:|---:|---:|
-| `baignade-nautisme` | 24 | 13 | 4 |
+| `baignade-nautisme` | 23 | 13 | 4 |
 | `bases-de-loisirs` | 85 | 61 | 6 |
 | `cascades` | 17 | 17 | 1 |
 | `chateaux` | 26 | 23 | 3 |
 | `lacs-plages` | 31 | 26 | 3 |
-| `musees` | 50 | 24 | 9 |
+| `musees` | 49 | 23 | 9 |
 | `parcs-jardins` | 31 | 17 | 11 |
 | `points-de-vue` | 29 | 24 | 5 |
-| `que-faire` | 76 | 44 | 4 |
+| `que-faire` | 73 | 42 | 4 |
 | `sensations-plein-air` | 43 | 31 | 3 |
-| `sentiers` | 40 | 7 | 14 |
+| `sentiers` | 39 | 7 | 14 |
 | `sorties-detente` | 25 | 13 | 3 |
-| `sport-jeux` | 53 | 34 | 4 |
+| `sport-jeux` | 52 | 33 | 4 |
 | `telecabines` | 12 | 5 | 5 |
 | `voies-vertes` | 5 | 5 | 1 |
 
@@ -27,7 +27,6 @@
 
 | hub | slug | type | photo | score | reason |
 |---|---|---|---|---:|---|
-| `baignade-nautisme` | `aquaparc-aqualis-cluses` | `aquatique` | `generique-aquatique-toboggan.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `aquaparc-chateau-bleu-annemasse` | `aquatique` | `generique-aquatique-toboggan.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `aquaparc-thonon-piscine-olympique-thonon` | `aquatique` | `generique-aquatique-piscine-exterieur.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `aquariaz` | `aquatique` | `Aquariaz.jpg` | — | json hero (url) |
@@ -213,7 +212,6 @@
 | `musees` | `ancien-remparts-chateau-lullin-lullin` | `patrimoine` | `generique-chateau.jpg` | — | json hero (local) |
 | `musees` | `bourg-et-ruines-chateau-chaumont-chaumont` | `patrimoine` | `generique-chateau-brume.jpg` | — | json hero (local) |
 | `musees` | `chateau-comtal-saint-julien-en-genevois` | `patrimoine` | `generique-chateau.jpg` | — | json hero (local) |
-| `musees` | `chateau-des-rubins-observatoire-des-alpes` | `patrimoine` | `Ch%C3%A2teau_des_Rubins_%40_Sallanches_%2851008901708%29.jpg` | — | json hero (url) |
 | `musees` | `chateau-fonbonne-et-herbularius-evian-bains` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
 | `musees` | `ecomusee-bois-foret-thones` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
 | `musees` | `ecomusee-lac-annecy-sevrier` | `patrimoine` | `generique-musee-moderne.jpg` | — | json hero (local) |
@@ -320,7 +318,6 @@
 | `points-de-vue` | `thiou-a-annecy-annecy` | `nature` | `generique-point-de-vue.jpg` | — | json hero (local) |
 | `points-de-vue` | `train-du-montenvers-mer-de-glace` | `nature` | `generique-point-de-vue.jpg` | — | json hero (local) |
 | `points-de-vue` | `voie-verte-du-chablais` | `nature` | `voie-verte-du-chablais-hero.jpg` | — | json hero (local) |
-| `que-faire` | `aquaparc-aqualis-cluses` | `aquatique` | `generique-aquatique-toboggan.jpg` | — | json hero (local) |
 | `que-faire` | `aquaparc-chateau-bleu-annemasse` | `aquatique` | `generique-aquatique-toboggan.jpg` | — | json hero (local) |
 | `que-faire` | `aquaparc-thonon-piscine-olympique-thonon` | `aquatique` | `generique-aquatique-piscine-exterieur.jpg` | — | json hero (local) |
 | `que-faire` | `aquariaz` | `aquatique` | `Aquariaz.jpg` | — | json hero (url) |
@@ -335,7 +332,6 @@
 | `que-faire` | `centre-aquatique-sallanches-mont-blanc` | `aquatique` | `generique-aquatique-toboggan.jpg` | — | json hero (local) |
 | `que-faire` | `centre-nautique-cite-de-l-eau-publier` | `aquatique` | `generique-aquatique-bassin-natation.jpg` | — | json hero (local) |
 | `que-faire` | `centre-nautique-guy-chatel-ayse` | `aquatique` | `generique-aquatique-bassin-natation.jpg` | — | json hero (local) |
-| `que-faire` | `chateau-des-rubins-observatoire-des-alpes` | `patrimoine` | `Ch%C3%A2teau_des_Rubins_%40_Sallanches_%2851008901708%29.jpg` | — | json hero (url) |
 | `que-faire` | `ecomusee-bois-foret-thones` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
 | `que-faire` | `ecomusee-paysalp-viuz-en-sallaz` | `patrimoine` | `generique-musee-moderne.jpg` | — | json hero (local) |
 | `que-faire` | `ecomusee-peche-et-du-lac-thonon` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
@@ -358,7 +354,6 @@
 | `que-faire` | `karting-mk-circuit-scientrier` | `divertissement` | `generique-karting-outdoor-aerial.jpg` | — | json hero (local) |
 | `que-faire` | `karting-mont-blanc-passy` | `divertissement` | `generique-karting-outdoor-3kids.jpg` | — | json hero (local) |
 | `que-faire` | `karting-onkart-viry` | `divertissement` | `generique-karting-outdoor-track.jpg` | — | json hero (local) |
-| `que-faire` | `karting-onlykart-roche-sur-foron` | `divertissement` | `generique-karting-indoor.jpg` | — | json hero (local) |
 | `que-faire` | `karting-rumilly-rumilly` | `divertissement` | `generique-karting-outdoor-aerial.jpg` | — | json hero (local) |
 | `que-faire` | `karting-team-bouvier-pringy` | `divertissement` | `generique-karting-outdoor-aerial.jpg` | — | json hero (local) |
 | `que-faire` | `karting-thones` | `divertissement` | `generique-karting-indoor-motion.jpg` | — | json hero (local) |
@@ -474,7 +469,6 @@
 | `sentiers` | `sentier-pedestre-sens-et-decouverte-animaux-ferme-copponex` | `nature` | `generique-sentier-foret.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-pedestre-sonore-sur-traces-contrebandiers-circuit-familles-chatel` | `nature` | `generique-sentier-hiver-neige.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-renard-morzine` | `nature` | `generique-sentier-hiver-neige.jpg` | — | json hero (local) |
-| `sentiers` | `sentier-roselieres-saint-jorioz` | `nature` | `generique-sentier-foret.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-tournette-montmin` | `nature` | `generique-sentier-sommet-panorama.jpg` | — | json hero (local) |
 | `sentiers` | `suivez-mouche-alby-sur-cheran` | `nature` | `generique-sentier-foret.jpg` | — | json hero (local) |
 | `sentiers` | `tour-du-mont-blanc-les-houches` | `nature` | `generique-sentier-foret-alpine.jpg` | — | json hero (local) |
@@ -528,7 +522,6 @@
 | `sport-jeux` | `karting-mk-circuit-scientrier` | `divertissement` | `generique-karting-outdoor-aerial.jpg` | — | json hero (local) |
 | `sport-jeux` | `karting-mont-blanc-passy` | `divertissement` | `generique-karting-outdoor-3kids.jpg` | — | json hero (local) |
 | `sport-jeux` | `karting-onkart-viry` | `divertissement` | `generique-karting-outdoor-track.jpg` | — | json hero (local) |
-| `sport-jeux` | `karting-onlykart-roche-sur-foron` | `divertissement` | `generique-karting-indoor.jpg` | — | json hero (local) |
 | `sport-jeux` | `karting-rumilly-rumilly` | `divertissement` | `generique-karting-outdoor-aerial.jpg` | — | json hero (local) |
 | `sport-jeux` | `karting-team-bouvier-pringy` | `divertissement` | `generique-karting-outdoor-aerial.jpg` | — | json hero (local) |
 | `sport-jeux` | `karting-thones` | `divertissement` | `generique-karting-indoor-motion.jpg` | — | json hero (local) |
