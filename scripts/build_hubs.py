@@ -48,6 +48,12 @@ CURATED_SORTIES = {
     "thermes-evian",                     # category=chateau (Anciens Thermes) — cross-list, not recategorised
     "musee-poterie-savoyarde-filliere",  # category=musee — sibling of the poterie ateliers
     "maison-fromage-abondance-abondance",  # category=musee — cheese atelier/visit
+    # artisan/terroir batch 2 (category=divers; draft until COORDS/HERO/hours cleared)
+    "cooperative-reblochon-le-farto-thones",
+    "atelier-chocolat-faverges-seythenex",
+    "distillerie-des-aravis-la-clusaz",
+    "brasserie-artisanale-du-leman-allinges",
+    "cooperative-fruitiere-mont-saleve-cruseilles",
 }
 
 HUB_FILTERS = {
