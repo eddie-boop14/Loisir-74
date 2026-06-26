@@ -66,6 +66,10 @@ jobs:
       - name: Run build_all (every gate inside)
         run: python3 scripts/build_all.py --no-site
 
+      - name: Geolocation live gate (Permissions-Policy + #nearMe scripts)
+        # after build_all so the homepages have been patched with nearme.js
+        run: python3 scripts/gate_geolocation_live.py
+
       - name: AI content layer gate
         # build_all has just regenerated content/<slug>.md + llms.txt +
         # llms-full.txt. Assert every advertised /content/<slug>.md exists

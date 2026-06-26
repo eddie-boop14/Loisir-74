@@ -918,6 +918,31 @@ def patch_homepage_sorties(lang):
     return True
 
 
+def patch_homepage_nearme(lang):
+    """Ensure the locale homepage loads /scripts/nearme.js — the script that
+    powers the "◎ Près de moi" proximity button (#nearMe). The button ships in
+    the homepage chrome, but only l74sort.js (sort-only, no geolocation) was
+    included, so the button was bound to nothing. Inject nearme.js right after
+    l74sort.js (or before </body>). Idempotent."""
+    base = ROOT if lang == "fr" else ROOT / lang
+    home = base / "index.html"
+    if not home.exists():
+        return False
+    html = home.read_text(encoding="utf-8")
+    if 'src="/scripts/nearme.js"' in html:
+        return False
+    tag = '<script src="/scripts/nearme.js" defer></script>'
+    l74 = '<script src="/scripts/l74sort.js"></script>'
+    if l74 in html:
+        html = html.replace(l74, l74 + "\n" + tag, 1)
+    elif "</body>" in html:
+        html = html.replace("</body>", tag + "\n</body>", 1)
+    else:
+        return False
+    home.write_text(html, encoding="utf-8")
+    return True
+
+
 def patch_homepage_completeness(lang):
     """Ensure the locale homepage links to every hub directory that exists on
     disk. If some are missing from the existing nav, add a low-prominence
@@ -1061,9 +1086,11 @@ def main():
     for lang in ("fr",) + LOCALES:
         sortie = patch_homepage_sorties(lang)
         changed = patch_homepage_completeness(lang)
+        nearme = patch_homepage_nearme(lang)
         bits = []
         if sortie: bits.append("+sorties")
         if changed: bits.append("+all-categories nav")
+        if nearme: bits.append("+nearme.js")
         print(f"  [{lang}] {' '.join(bits) if bits else 'already complete'}")
 
     # Phase 4: emit the photo-assignment report so Eddie can spot-check
