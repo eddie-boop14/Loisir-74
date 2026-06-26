@@ -333,7 +333,7 @@ def main():
     # few files that must ship (l74sort: homepage sort/near; nearme: sitewide
     # proximity component).
     print("Copying runtime scripts to _site/scripts/...")
-    RUNTIME_JS = ["l74sort.js", "nearme.js"]
+    RUNTIME_JS = ["l74sort.js", "nearme.js", "duck.js"]
     sdst = SITE / "scripts"
     sdst.mkdir(parents=True, exist_ok=True)
     for _name in RUNTIME_JS:

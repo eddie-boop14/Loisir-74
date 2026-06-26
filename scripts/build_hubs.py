@@ -977,6 +977,27 @@ def patch_homepage_sorties(lang):
     return True
 
 
+def patch_duck(html):
+    """Inject the sitewide duck easter egg before </body> if missing. Idempotent.
+    Hubs/homepages are never protected fiches, so no skip needed here."""
+    if 'src="/scripts/duck.js"' in html or "</body>" not in html:
+        return html
+    return html.replace("</body>", '<script src="/scripts/duck.js" defer></script>\n</body>', 1)
+
+
+def patch_homepage_duck(lang):
+    base = ROOT if lang == "fr" else ROOT / lang
+    home = base / "index.html"
+    if not home.exists():
+        return False
+    html = home.read_text(encoding="utf-8")
+    new = patch_duck(html)
+    if new == html:
+        return False
+    home.write_text(new, encoding="utf-8")
+    return True
+
+
 def patch_homepage_nearme(lang):
     """Ensure the locale homepage loads /scripts/nearme.js — the script that
     powers the "◎ Près de moi" proximity button (#nearMe). The button ships in
@@ -1138,6 +1159,7 @@ def main():
             # dedupe now propagate into structured data).
             new_html = patch_hub_itemlist(
                 new_html, build_hub_itemlist(union, fr_hub, lang, hub_name))
+            new_html = patch_duck(new_html)
             if new_html != html:
                 p.write_text(new_html, encoding="utf-8")
                 regen += 1
@@ -1155,6 +1177,7 @@ def main():
         sortie = patch_homepage_sorties(lang)
         changed = patch_homepage_completeness(lang)
         nearme = patch_homepage_nearme(lang)
+        patch_homepage_duck(lang)
         bits = []
         if sortie: bits.append("+sorties")
         if changed: bits.append("-all-categories +que-faire-footer")

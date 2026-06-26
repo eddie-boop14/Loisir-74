@@ -401,6 +401,7 @@ def render_page(c, lang, intros):
 {lift_footer(lang, alts)}
 {lift_scripts(lang)}
 <script src="/scripts/nearme.js" defer></script>
+<script src="/scripts/duck.js" defer></script>
 </body>
 </html>"""
     return head + "\n" + body + "\n"

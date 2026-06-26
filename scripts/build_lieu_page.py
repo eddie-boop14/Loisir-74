@@ -1868,6 +1868,10 @@ def build_page(d, lang="fr"):
     out.append(site_footer())
     out.append(event_modal_block(d))
     out.append(JS)
+    # Sitewide duck easter egg — skip the two protected partner fiches so their
+    # bytes don't change (duck.js also self-disables on those paths).
+    if d.get("slug") not in ("chez-nous-a-la-plage", "chalet-du-tornet"):
+        out.append('<script src="/scripts/duck.js" defer></script>')
     out.append("</body></html>")
     LAST_FALLBACK_FIELDS = set(_FALLBACK_FIELDS)
     return "\n".join(out)
