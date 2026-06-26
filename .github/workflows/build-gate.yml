@@ -97,6 +97,9 @@ jobs:
       - name: Build _site/ (publish target)
         run: python3 scripts/build_site.py
 
+      - name: Link-integrity gate (no internal 404s in _site/)
+        run: python3 scripts/gate_link_integrity.py
+
       - name: Published-verified gate
         # Read-only. No status:"unverified" fiche may appear in catalog-index.json,
         # api/lieux.json, sitemap.xml, or any hub index.html. No-op while 0 fiches

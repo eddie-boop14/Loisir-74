@@ -289,6 +289,23 @@ def main():
                 (dst / rel).parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(p, dst / rel)
 
+    # FR commune pages: build_communes.py writes them to repo ROOT
+    # (bellevaux/index.html, …) but they're in neither COPY_DIRS nor HUB_DIRS,
+    # so they never reached _site/ → every FR "À <commune>" link 404'd live
+    # (the EN/DE/… copies deploy via the recursive LOCALES copy). Derive the
+    # list from the commune layer so new communes auto-publish and this can't
+    # drift again — same omission class as the img/ one guarded below.
+    print("Copying FR commune pages...")
+    commune_slugs = [c["slug"] for c in json.loads(
+        (REPO / "data" / "commune-layer.json").read_text(encoding="utf-8"))["communes"]]
+    n_comm = 0
+    for slug in commune_slugs:
+        src = REPO / slug
+        if (src / "index.html").exists():
+            copy_dir(src, SITE / slug)
+            n_comm += 1
+    print(f"  copied {n_comm} commune dirs")
+
     print("Copying Json/ with research_log stripped...")
     copy_dir(REPO / "Json", SITE / "Json", json_strip=True)
 
