@@ -1003,45 +1003,36 @@ def patch_homepage_nearme(lang):
 
 
 def patch_homepage_completeness(lang):
-    """Ensure the locale homepage links to every hub directory that exists on
-    disk. If some are missing from the existing nav, add a low-prominence
-    'All categories' nav block before </main>. Idempotent."""
+    """Was the 'all-categories' injector → now a stripper + que-faire footer link.
+
+    The mid-page <section class="all-categories"> duplicated the footer category
+    mesh with inconsistent labels (menu "Cascades" vs block/footer "Cascades &
+    gorges") — removed per Eddie. But que-faire lived ONLY in that block on the
+    locale homepages (locale hub navs don't link it), so a naive strip orphaned
+    es/que-hacer, de/was-unternehmen, … (reachability fail). Fix (handoff §A):
+    also ensure que-faire sits in the footer category column, so the footer is
+    the single complete canonical mesh and nothing orphans. Idempotent."""
     base = ROOT if lang == "fr" else ROOT / lang
     home = base / "index.html"
-    if not home.exists(): return False
-    html = home.read_text(encoding="utf-8")
-    # Build per-locale name → slug lookup
-    locale_slugs = {}
-    for fr_hub in ALL_BASE_HUBS:
-        names = hub_locale_map(fr_hub)
-        slug = names.get(lang) or fr_hub
-        if (base / slug / "index.html").exists():
-            locale_slugs[fr_hub] = slug
-    # Which slugs are already linked?
-    linked = set(re.findall(rf'href="https://loisirs74\.fr/{lang+"/" if lang!="fr" else ""}([a-z-]+)/?"', html))
-    missing = [(fr_hub, slug) for fr_hub, slug in locale_slugs.items() if slug not in linked]
-    if not missing: return False
-    # Build an "all categories" nav and insert before </main>
-    lang_prefix = f"/{lang}" if lang != "fr" else ""
-    label = ALL_CATS_LABEL[lang]
-    lis = []
-    for fr_hub, slug in sorted(locale_slugs.items()):
-        disp = HUB_DISPLAY[fr_hub][lang]
-        lis.append(f'<li><a href="https://loisirs74.fr{lang_prefix}/{slug}/">{disp}</a></li>')
-    nav = (
-        '<section class="all-categories" aria-label="' + label + '">'
-        f'<div class="wrap"><h2>{label}</h2>'
-        '<ul class="all-categories-grid">'
-        + ''.join(lis) +
-        '</ul></div></section>'
-    )
-    # Remove a prior copy if present (idempotency)
-    html = re.sub(r'<section class="all-categories"[^>]*>.*?</section>', '', html, flags=re.DOTALL)
-    # Insert before </main> if present; otherwise before footer
-    if '</main>' in html:
-        html = html.replace('</main>', nav + '\n</main>', 1)
-    else:
-        html = html.replace('<footer', nav + '\n<footer', 1)
+    if not home.exists():
+        return False
+    html = orig = home.read_text(encoding="utf-8")
+    # 1. strip the duplicated all-categories block
+    html = re.sub(r'\n*<section class="all-categories"[^>]*>.*?</section>\n*',
+                  '\n', html, flags=re.DOTALL)
+    # 2. ensure que-faire is linked from the footer category column (after
+    #    parcs-jardins), keeping the locale que-faire hub reachable.
+    prefix = f"/{lang}" if lang != "fr" else ""
+    qf_slug = hub_locale_map("que-faire").get(lang) or "que-faire"
+    qf_url = f"https://loisirs74.fr{prefix}/{qf_slug}/"
+    if qf_url not in html:
+        pj_slug = hub_locale_map("parcs-jardins").get(lang) or "parcs-jardins"
+        pj_url = f"https://loisirs74.fr{prefix}/{pj_slug}/"
+        qf_li = f'<li><a href="{qf_url}">{HUB_DISPLAY["que-faire"][lang]}</a></li>'
+        html = re.sub(r'(<li><a href="' + re.escape(pj_url) + r'">[^<]*</a></li>)',
+                      r'\1' + qf_li, html, count=1)
+    if html == orig:
+        return False
     home.write_text(html, encoding="utf-8")
     return True
 
@@ -1157,7 +1148,7 @@ def main():
         nearme = patch_homepage_nearme(lang)
         bits = []
         if sortie: bits.append("+sorties")
-        if changed: bits.append("+all-categories nav")
+        if changed: bits.append("-all-categories +que-faire-footer")
         if nearme: bits.append("+nearme.js")
         print(f"  [{lang}] {' '.join(bits) if bits else 'already complete'}")
 
