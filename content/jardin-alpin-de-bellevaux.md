@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.2719
-longitude: 6.5511
-geo_verified: false
+latitude: 46.25658
+longitude: 6.532231
+geo_verified: true
 google_place_id: "ChIJqQVD6FsXjEcR3_-X1kxobyU"
 canonical_url: https://loisirs74.fr/jardin-alpin-de-bellevaux
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Bellevaux, Haute-Savoie (74470)
-- **GPS**: 46.2719, 6.5511
+- **GPS**: 46.25658, 6.532231
 - **Type**: Jardin botanique
 - **Accès**: Accès libre et gratuit, toute l'année
 - **Meilleure saison**: Juin (pleine floraison)

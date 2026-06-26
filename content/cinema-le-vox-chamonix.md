@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9237
-longitude: 6.8694
-geo_verified: false
+latitude: 45.923138
+longitude: 6.869021
+geo_verified: true
 google_place_id: "ChIJPQAdl3ZOiUcRkFFkZmc7JaQ"
 canonical_url: https://loisirs74.fr/cinema-le-vox-chamonix
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Cinéma
 - **Commune**: Chamonix-Mont-Blanc, Haute-Savoie (74400)
-- **GPS**: 45.9237, 6.8694
+- **GPS**: 45.923138, 6.869021
 - **Type**: Cinéma
 - **Accès**: Intérieur · toute l'année
 - **Meilleure saison**: Toute l'année

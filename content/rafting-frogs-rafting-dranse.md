@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.3712
-longitude: 6.4789
-geo_verified: false
+latitude: 46.362099
+longitude: 6.52016
+geo_verified: true
 google_place_id: "ChIJ71OSKLE9jEcRhZyHKzMw9RA"
 canonical_url: https://loisirs74.fr/rafting-frogs-rafting-dranse
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Thonon-les-Bains, Haute-Savoie (74200)
-- **GPS**: 46.3712, 6.4789
+- **GPS**: 46.362099, 6.52016
 - **Type**: Rafting / hydrospeed / canoraft
 - **Accès**: Extérieur · saison avril-septembre selon débit
 - **Meilleure saison**: Avril à septembre (pic mai-juillet)

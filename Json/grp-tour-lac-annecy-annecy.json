@@ -4,8 +4,8 @@
   "commune": "Annecy",
   "postal_code": "74000",
   "department": "Haute-Savoie",
-  "latitude": 45.8992,
-  "longitude": 6.1294,
+  "latitude": 45.878446,
+  "longitude": 6.142616,
   "hero_image": "/img/generique/generique-sentier-sommet-panorama.jpg",
   "hero_credit": null,
   "booking_domain": "ffrandonnee.fr",
@@ -97,6 +97,22 @@
       "note": "derive_geo_verified: geo_verified=false (max_drift=100m).",
       "fields": [
         "google_place_id"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "by": "geo-backfill",
+      "note": "lat/lng snapped to verified Google Places POI (google_check.google_lat/lng); gps_drift_m→0 by construction."
+    },
+    {
+      "date": "2026-06-26",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
+      "fields": [
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m"
       ]
     }
   ],
@@ -1207,7 +1223,7 @@
     ],
     "google_lat": 45.878446499999995,
     "google_lng": 6.142615999999999,
-    "gps_drift_m": 2524
+    "gps_drift_m": 0
   },
   "freshness": {
     "checked": "2026-06-05",
@@ -1241,7 +1257,7 @@
     },
     "site_reachable": true,
     "price_candidates": [],
-    "gps_drift_m": 2524,
+    "gps_drift_m": 0,
     "needs_price_review": false,
     "recomputed": "2026-06-05 (registry demoted to confirmer-only)"
   },
@@ -1268,5 +1284,9 @@
   ],
   "status": "published",
   "type": "nature",
-  "google_place_id": "ChIJu35o2XaRi0cR38y4F6ujtNA"
+  "google_place_id": "ChIJu35o2XaRi0cR38y4F6ujtNA",
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-26",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 0
 }

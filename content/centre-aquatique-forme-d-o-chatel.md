@@ -11,7 +11,7 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.265
 longitude: 6.838
-geo_verified: false
+geo_verified: true
 google_place_id: "ChIJb4xnfdqjjkcRKAuBUZH47jc"
 canonical_url: https://loisirs74.fr/centre-aquatique-forme-d-o-chatel
 language: fr

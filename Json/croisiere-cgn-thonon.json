@@ -4,8 +4,8 @@
   "commune": "Thonon-les-Bains",
   "postal_code": "74200",
   "department": "Haute-Savoie",
-  "latitude": 46.3697,
-  "longitude": 6.4742,
+  "latitude": 46.376129,
+  "longitude": 6.475182,
   "hero_image": "/img/generique/generique-port-annecy.jpg",
   "hero_credit": null,
   "booking_domain": "cgn.ch",
@@ -96,6 +96,22 @@
       "note": "derive_geo_verified: geo_verified=false (max_drift=100m).",
       "fields": [
         "google_place_id"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "by": "geo-backfill",
+      "note": "lat/lng snapped to verified Google Places POI (google_check.google_lat/lng); gps_drift_m→0 by construction."
+    },
+    {
+      "date": "2026-06-26",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
+      "fields": [
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m"
       ]
     }
   ],
@@ -1257,7 +1273,7 @@
     "hours": null,
     "google_lat": 46.3761285,
     "google_lng": 6.4751824,
-    "gps_drift_m": 719
+    "gps_drift_m": 0
   },
   "freshness": {
     "checked": "2026-06-05",
@@ -1287,7 +1303,7 @@
     },
     "site_reachable": true,
     "price_candidates": [],
-    "gps_drift_m": 719,
+    "gps_drift_m": 0,
     "needs_price_review": false,
     "recomputed": "2026-06-05 (registry demoted to confirmer-only)"
   },
@@ -1310,5 +1326,9 @@
   ],
   "status": "published",
   "type": "aquatique",
-  "google_place_id": "ChIJC7mnajc_jEcRMCzqnuOH8mI"
+  "google_place_id": "ChIJC7mnajc_jEcRMCzqnuOH8mI",
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-26",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 0
 }

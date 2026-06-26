@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9244
-longitude: 6.7036
+latitude: 45.941653
+longitude: 6.694487
 geo_verified: false
 google_place_id: null
 canonical_url: https://loisirs74.fr/via-ferrata-curalla-passy
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Passy, Haute-Savoie (74190)
-- **GPS**: 45.9244, 6.7036
+- **GPS**: 45.941653, 6.694487
 - **Type**: Via ferrata
 - **Accès**: Accès libre (équipement requis)
 - **Meilleure saison**: Avril à fin octobre

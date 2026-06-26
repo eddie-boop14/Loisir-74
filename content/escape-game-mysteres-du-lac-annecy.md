@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.8992
-longitude: 6.1294
+latitude: 45.902315
+longitude: 6.125533
 geo_verified: false
 google_place_id: null
 canonical_url: https://loisirs74.fr/escape-game-mysteres-du-lac-annecy
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Annecy, Haute-Savoie (74000)
-- **GPS**: 45.8992, 6.1294
+- **GPS**: 45.902315, 6.125533
 - **Type**: Escape game
 - **Accès**: Intérieur · toute l'année
 - **Meilleure saison**: Toute l'année

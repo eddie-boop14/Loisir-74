@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9237
-longitude: 6.8694
-geo_verified: false
+latitude: 45.951847
+longitude: 6.901413
+geo_verified: true
 google_place_id: "ChIJJd0trk9MiUcRVuR1eYSvcwk"
 canonical_url: https://loisirs74.fr/accrobranche-la-foret-magique-chamonix
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Chamonix-Mont-Blanc, Haute-Savoie (74400)
-- **GPS**: 45.9237, 6.8694
+- **GPS**: 45.951847, 6.901413
 - **Type**: Parc accrobranche
 - **Accès**: Extérieur · saison estivale
 - **Meilleure saison**: Mai à octobre (selon météo)

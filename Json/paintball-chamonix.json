@@ -4,8 +4,8 @@
   "commune": "Chamonix-Mont-Blanc",
   "postal_code": "74400",
   "department": "Haute-Savoie",
-  "latitude": 45.9237,
-  "longitude": 6.8694,
+  "latitude": 45.932116,
+  "longitude": 6.881119,
   "hero_image": "/img/generique/generique-paintball-action.jpg",
   "hero_credit": null,
   "official_site_url": "https://paintball-esccape-game-chamonix.fr/",
@@ -79,6 +79,22 @@
       "note": "derive_geo_verified: geo_verified=false (max_drift=100m).",
       "fields": [
         "google_place_id"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "by": "geo-backfill",
+      "note": "lat/lng snapped to verified Google Places POI (google_check.google_lat/lng); gps_drift_m→0 by construction."
+    },
+    {
+      "date": "2026-06-26",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
+      "fields": [
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m"
       ]
     }
   ],
@@ -1134,7 +1150,7 @@
     ],
     "google_lat": 45.932116,
     "google_lng": 6.881119,
-    "gps_drift_m": 1303
+    "gps_drift_m": 0
   },
   "data_sources": [
     {
@@ -1159,5 +1175,9 @@
   ],
   "status": "published",
   "type": "sensations",
-  "google_place_id": "ChIJEaFWZNFNiUcRuazf2r4d2xg"
+  "google_place_id": "ChIJEaFWZNFNiUcRuazf2r4d2xg",
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-26",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 0
 }

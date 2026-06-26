@@ -11,7 +11,7 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.88
 longitude: 6.11
-geo_verified: false
+geo_verified: true
 google_place_id: "ChIJP98hbRmbi0cRPluEyI_WrKY"
 canonical_url: https://loisirs74.fr/cinema-megarama-annecy
 language: fr

@@ -4,8 +4,8 @@
   "commune": "Chamonix-Mont-Blanc",
   "postal_code": "74400",
   "department": "Haute-Savoie",
-  "latitude": 45.9237,
-  "longitude": 6.8694,
+  "latitude": 45.923138,
+  "longitude": 6.869021,
   "hero_image": "/img/generique/generique-cinema.jpg",
   "hero_credit": null,
   "official_site_url": null,
@@ -98,6 +98,22 @@
       "note": "derive_geo_verified: geo_verified=false (max_drift=100m).",
       "fields": [
         "google_place_id"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "by": "geo-backfill",
+      "note": "lat/lng snapped to verified Google Places POI (google_check.google_lat/lng); gps_drift_m→0 by construction."
+    },
+    {
+      "date": "2026-06-26",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
+      "fields": [
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m"
       ]
     }
   ],
@@ -1124,7 +1140,7 @@
     ],
     "google_lat": 45.9231384,
     "google_lng": 6.8690213,
-    "gps_drift_m": 69
+    "gps_drift_m": 0
   },
   "data_sources": [
     {
@@ -1149,5 +1165,9 @@
   ],
   "status": "published",
   "type": "divertissement",
-  "google_place_id": "ChIJPQAdl3ZOiUcRkFFkZmc7JaQ"
+  "google_place_id": "ChIJPQAdl3ZOiUcRkFFkZmc7JaQ",
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-26",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 0
 }

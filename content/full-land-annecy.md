@@ -11,7 +11,7 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9483
 longitude: 6.1339
-geo_verified: false
+geo_verified: true
 google_place_id: "ChIJm-wcAGOPi0cRsXCQsxgk_4Q"
 canonical_url: https://loisirs74.fr/full-land-annecy
 language: fr

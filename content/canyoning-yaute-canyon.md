@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.8992
-longitude: 6.1294
-geo_verified: false
+latitude: 45.924247
+longitude: 6.712922
+geo_verified: true
 google_place_id: "ChIJecDXPcxXiUcRCjhS2EVuETg"
 canonical_url: https://loisirs74.fr/canyoning-yaute-canyon
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Annecy, Haute-Savoie (74000)
-- **GPS**: 45.8992, 6.1294
+- **GPS**: 45.924247, 6.712922
 - **Type**: Canyoning
 - **Accès**: Extérieur · saison estivale (mai-septembre)
 - **Meilleure saison**: Mai à septembre

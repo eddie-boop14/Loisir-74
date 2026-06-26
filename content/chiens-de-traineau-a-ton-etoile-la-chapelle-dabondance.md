@@ -11,7 +11,7 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.2865
 longitude: 6.795
-geo_verified: false
+geo_verified: true
 google_place_id: "ChIJgaljAmKhjkcRR5KobprEvU0"
 canonical_url: https://loisirs74.fr/chiens-de-traineau-a-ton-etoile-la-chapelle-dabondance
 language: fr

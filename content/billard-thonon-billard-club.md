@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.3712
-longitude: 6.4789
+latitude: 46.369536
+longitude: 6.476393
 geo_verified: false
 google_place_id: "ChIJSfsVm4k-jEcR5g_KBcn59Rs"
 canonical_url: https://loisirs74.fr/billard-thonon-billard-club
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Thonon-les-Bains, Haute-Savoie (74200)
-- **GPS**: 46.3712, 6.4789
+- **GPS**: 46.369536, 6.476393
 - **Type**: Salle de billard / club
 - **Accès**: Intérieur · toute l'année
 - **Meilleure saison**: Toute l'année

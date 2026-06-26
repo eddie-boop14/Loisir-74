@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.3697
-longitude: 6.4742
-geo_verified: false
+latitude: 46.376129
+longitude: 6.475182
+geo_verified: true
 google_place_id: "ChIJC7mnajc_jEcRMCzqnuOH8mI"
 canonical_url: https://loisirs74.fr/croisiere-cgn-thonon
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Croisière
 - **Commune**: Thonon-les-Bains, Haute-Savoie (74200)
-- **GPS**: 46.3697, 6.4742
+- **GPS**: 46.376129, 6.475182
 - **Type**: Croisière passagers Léman - ligne N2 Lausanne-Thonon
 - **Accès**: Payant - voir tarifs
 - **Parking**: Gratuit sur site

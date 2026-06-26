@@ -11,7 +11,7 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.216
 longitude: 6.559
-geo_verified: false
+geo_verified: true
 google_place_id: "ChIJtYI_xnwajEcRnmVGwPPStPk"
 canonical_url: https://loisirs74.fr/lac-de-vallon
 language: fr

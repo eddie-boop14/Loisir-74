@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.8992
-longitude: 6.1294
-geo_verified: false
+latitude: 45.889669
+longitude: 6.107647
+geo_verified: true
 google_place_id: "ChIJ-9B-3hHRzRIRbHV5IZW19e0"
 canonical_url: https://loisirs74.fr/simulateur-emotion-concept-annecy
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Annecy, Haute-Savoie (74000)
-- **GPS**: 45.8992, 6.1294
+- **GPS**: 45.889669, 6.107647
 - **Type**: Simulateur automobile (centre 8 postes)
 - **Accès**: Payant · sur réservation
 - **Parking**: Selon adresse exacte

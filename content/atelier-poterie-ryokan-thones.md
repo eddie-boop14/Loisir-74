@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.8804
-longitude: 6.3247
-geo_verified: false
+latitude: 45.883084
+longitude: 6.319406
+geo_verified: true
 google_place_id: "ChIJ-0vzdWvzi0cRPTKTqVgrmwU"
 canonical_url: https://loisirs74.fr/atelier-poterie-ryokan-thones
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Thônes, Haute-Savoie (74230)
-- **GPS**: 45.8804, 6.3247
+- **GPS**: 45.883084, 6.319406
 - **Type**: Atelier poterie & céramique
 - **Accès**: Sur réservation
 - **Meilleure saison**: Toute l'année

@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.908
-longitude: 6.13
+latitude: 45.906239
+longitude: 6.131374
 geo_verified: false
 google_place_id: "ChIJDSRXTGGPi0cRqilFePEv2HQ"
 canonical_url: https://loisirs74.fr/escalade-atome-annecy
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Annecy, Haute-Savoie (74000)
-- **GPS**: 45.908, 6.13
+- **GPS**: 45.906239, 6.131374
 - **Type**: Salle d'escalade
 - **Accès**: Intérieur · toute l'année
 - **Meilleure saison**: Toute l'année

@@ -4,8 +4,8 @@
   "commune": "Passy",
   "postal_code": "74190",
   "department": "Haute-Savoie",
-  "latitude": 45.9244,
-  "longitude": 6.7036,
+  "latitude": 45.991515,
+  "longitude": 6.636543,
   "hero_image": "/img/generique/generique-chiens-de-traineau-2.jpg",
   "hero_credit": null,
   "official_site_url": "https://chien-traineau-haute-savoie.fr",
@@ -67,6 +67,22 @@
       "note": "derive_geo_verified: geo_verified=false (max_drift=100m).",
       "fields": [
         "google_place_id"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "by": "geo-backfill",
+      "note": "lat/lng snapped to verified Google Places POI (google_check.google_lat/lng); gps_drift_m→0 by construction."
+    },
+    {
+      "date": "2026-06-26",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
+      "fields": [
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m"
       ]
     }
   ],
@@ -1118,7 +1134,7 @@
     ],
     "google_lat": 45.9915147,
     "google_lng": 6.636543,
-    "gps_drift_m": 9086
+    "gps_drift_m": 0
   },
   "data_sources": [
     {
@@ -1143,5 +1159,9 @@
   ],
   "status": "published",
   "type": "sensations",
-  "google_place_id": "ChIJW1jVNqT_i0cRKsMK_1IVz0w"
+  "google_place_id": "ChIJW1jVNqT_i0cRKsMK_1IVz0w",
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-26",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 0
 }

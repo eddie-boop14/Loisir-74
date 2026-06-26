@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.3697
-longitude: 6.4742
+latitude: 46.385434
+longitude: 6.482844
 geo_verified: false
 google_place_id: "ChIJ1yN30ZA-jEcRL9CNu9dg2uI"
 canonical_url: https://loisirs74.fr/aquaparc-thonon-piscine-olympique-thonon
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Parc aquatique
 - **Commune**: Thonon-les-Bains, Haute-Savoie (74200)
-- **GPS**: 46.3697, 6.4742
+- **GPS**: 46.385434, 6.482844
 - **Type**: Piscine olympique extérieure 50m + plage Léman
 - **Accès**: Payant - voir tarifs
 - **Parking**: Gratuit sur site

@@ -4,8 +4,8 @@
   "commune": "Annecy",
   "postal_code": "74000",
   "department": "Haute-Savoie",
-  "latitude": 45.908,
-  "longitude": 6.13,
+  "latitude": 45.895918,
+  "longitude": 6.109943,
   "hero_image": "/img/generique/generique-escape-game-cadenas.jpg",
   "hero_credit": null,
   "official_site_url": "https://www.latelierdesenigmes.fr",
@@ -78,6 +78,22 @@
       "note": "derive_geo_verified: geo_verified=false (max_drift=100m).",
       "fields": [
         "google_place_id"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "by": "geo-backfill",
+      "note": "lat/lng snapped to verified Google Places POI (google_check.google_lat/lng); gps_drift_m→0 by construction."
+    },
+    {
+      "date": "2026-06-26",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
+      "fields": [
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m"
       ]
     }
   ],
@@ -1198,9 +1214,13 @@
     ],
     "google_lat": 45.895917999999995,
     "google_lng": 6.109943299999999,
-    "gps_drift_m": 1549
+    "gps_drift_m": 0
   },
   "status": "published",
   "type": "divertissement",
-  "google_place_id": "ChIJE6MGXFKFi0cR_k9QxjYjBxA"
+  "google_place_id": "ChIJE6MGXFKFi0cR_k9QxjYjBxA",
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-26",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 0
 }

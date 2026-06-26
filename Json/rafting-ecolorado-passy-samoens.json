@@ -4,8 +4,8 @@
   "commune": "Passy",
   "postal_code": "74190",
   "department": "Haute-Savoie",
-  "latitude": 45.9244,
-  "longitude": 6.7036,
+  "latitude": 45.919448,
+  "longitude": 6.678458,
   "hero_image": "/img/generique/generique-rafting-action.jpg",
   "hero_credit": null,
   "official_site_url": "https://www.ecoloradorafting.com",
@@ -102,6 +102,22 @@
       "note": "derive_geo_verified: geo_verified=false (max_drift=100m).",
       "fields": [
         "google_place_id"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "by": "geo-backfill",
+      "note": "lat/lng snapped to verified Google Places POI (google_check.google_lat/lng); gps_drift_m→0 by construction."
+    },
+    {
+      "date": "2026-06-26",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
+      "fields": [
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m"
       ]
     }
   ],
@@ -1058,7 +1074,7 @@
     ],
     "google_lat": 45.9194482,
     "google_lng": 6.678458,
-    "gps_drift_m": 2021
+    "gps_drift_m": 0
   },
   "freshness": {
     "checked": "2026-06-05",
@@ -1100,7 +1116,7 @@
     },
     "site_reachable": true,
     "price_candidates": [],
-    "gps_drift_m": 2021,
+    "gps_drift_m": 0,
     "needs_price_review": false
   },
   "data_sources": [
@@ -1122,5 +1138,9 @@
   ],
   "status": "published",
   "type": "sensations",
-  "google_place_id": "ChIJixG_mRVWiUcRg01W0xXEa1M"
+  "google_place_id": "ChIJixG_mRVWiUcRg01W0xXEa1M",
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-26",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 0
 }

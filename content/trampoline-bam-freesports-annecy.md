@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.8992
-longitude: 6.1294
-geo_verified: false
+latitude: 45.936807
+longitude: 6.142898
+geo_verified: true
 google_place_id: "ChIJa40tKpiPi0cRAWSkSVjIZy4"
 canonical_url: https://loisirs74.fr/trampoline-bam-freesports-annecy
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Annecy, Haute-Savoie (74000)
-- **GPS**: 45.8992, 6.1294
+- **GPS**: 45.936807, 6.142898
 - **Type**: Trampoline park / freesports
 - **Accès**: Intérieur · toute l'année
 - **Meilleure saison**: Toute l'année

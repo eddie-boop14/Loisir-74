@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.8992
-longitude: 6.1294
+latitude: 45.897616
+longitude: 6.129036
 geo_verified: false
 google_place_id: null
 canonical_url: https://loisirs74.fr/segway-mobilboard-annecy
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Annecy, Haute-Savoie (74000)
-- **GPS**: 45.8992, 6.1294
+- **GPS**: 45.897616, 6.129036
 - **Type**: Visite en Segway
 - **Accès**: Plein air · toute l'année
 - **Meilleure saison**: Toute l'année (selon météo)

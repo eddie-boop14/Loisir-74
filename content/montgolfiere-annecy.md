@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.8992
-longitude: 6.1294
-geo_verified: false
+latitude: 45.897256
+longitude: 6.122886
+geo_verified: true
 google_place_id: "ChIJqWbJ1P6Pi0cRfaJpxJjcjYc"
 canonical_url: https://loisirs74.fr/montgolfiere-annecy
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Annecy, Haute-Savoie (74000)
-- **GPS**: 45.8992, 6.1294
+- **GPS**: 45.897256, 6.122886
 - **Type**: Aérostation (montgolfière)
 - **Accès**: Payant · sur réservation
 - **Parking**: Au point de décollage

@@ -106,6 +106,17 @@
       "fields": [
         "google_place_id"
       ]
+    },
+    {
+      "date": "2026-06-26",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
+      "fields": [
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m"
+      ]
     }
   ],
   "partners": [
@@ -1185,5 +1196,9 @@
   "status": "published",
   "lake": "petits",
   "type": "aquatique",
-  "google_place_id": "ChIJtYI_xnwajEcRnmVGwPPStPk"
+  "google_place_id": "ChIJtYI_xnwajEcRnmVGwPPStPk",
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-26",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 92
 }

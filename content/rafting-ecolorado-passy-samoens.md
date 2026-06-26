@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9244
-longitude: 6.7036
-geo_verified: false
+latitude: 45.919448
+longitude: 6.678458
+geo_verified: true
 google_place_id: "ChIJixG_mRVWiUcRg01W0xXEa1M"
 canonical_url: https://loisirs74.fr/rafting-ecolorado-passy-samoens
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Passy, Haute-Savoie (74190)
-- **GPS**: 45.9244, 6.7036
+- **GPS**: 45.919448, 6.678458
 - **Type**: Rafting / eaux vives
 - **Accès**: Sur réservation — encadré
 - **Meilleure saison**: Avril à octobre

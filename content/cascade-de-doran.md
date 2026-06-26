@@ -11,7 +11,7 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.9696
 longitude: 6.5975
-geo_verified: false
+geo_verified: true
 google_place_id: "ChIJEb5dwMT-i0cROhpR-0NR-Ig"
 canonical_url: https://loisirs74.fr/cascade-de-doran
 language: fr

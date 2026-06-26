@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.3712
-longitude: 6.4789
+latitude: 46.362447
+longitude: 6.465603
 geo_verified: false
 google_place_id: null
 canonical_url: https://loisirs74.fr/padel-tennis-squash-club-thonon
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Thonon-les-Bains, Haute-Savoie (74200)
-- **GPS**: 46.3712, 6.4789
+- **GPS**: 46.362447, 6.465603
 - **Type**: Club de raquettes (padel, tennis, squash)
 - **Accès**: Intérieur et extérieur · toute l'année
 - **Meilleure saison**: Toute l'année

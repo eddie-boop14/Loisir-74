@@ -4,8 +4,8 @@
   "commune": "Bellevaux",
   "postal_code": "74470",
   "department": "Haute-Savoie",
-  "latitude": 46.2719,
-  "longitude": 6.5511,
+  "latitude": 46.259728,
+  "longitude": 6.531059,
   "hero_image": "/img/generique/generique-famille-balade.jpg",
   "hero_credit": null,
   "official_site_url": "https://www.lafermedupetitmont.fr/",
@@ -74,6 +74,22 @@
       "note": "derive_geo_verified: geo_verified=false (max_drift=100m).",
       "fields": [
         "google_place_id"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "by": "geo-backfill",
+      "note": "lat/lng snapped to verified Google Places POI (google_check.google_lat/lng); gps_drift_m→0 by construction."
+    },
+    {
+      "date": "2026-06-26",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
+      "fields": [
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m"
       ]
     }
   ],
@@ -947,7 +963,7 @@
     ],
     "google_lat": 46.259727999999996,
     "google_lng": 6.531059,
-    "gps_drift_m": 2051
+    "gps_drift_m": 0
   },
   "freshness": {
     "checked": "2026-06-05",
@@ -989,7 +1005,7 @@
     },
     "site_reachable": true,
     "price_candidates": [],
-    "gps_drift_m": 2051,
+    "gps_drift_m": 0,
     "needs_price_review": false
   },
   "data_sources": [
@@ -1011,5 +1027,9 @@
   ],
   "status": "published",
   "type": "parc",
-  "google_place_id": "ChIJmZR72zYXjEcRDKXAYOd3XAE"
+  "google_place_id": "ChIJmZR72zYXjEcRDKXAYOd3XAE",
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-26",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 0
 }

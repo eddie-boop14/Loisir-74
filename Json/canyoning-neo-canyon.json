@@ -4,8 +4,8 @@
   "commune": "Annecy",
   "postal_code": "74000",
   "department": "Haute-Savoie",
-  "latitude": 45.8992,
-  "longitude": 6.1294,
+  "latitude": 45.924025,
+  "longitude": 6.665266,
   "hero_image": "/img/generique/generique-canyoning-6.jpg",
   "hero_credit": null,
   "official_site_url": "https://neo-canyon.com",
@@ -76,6 +76,22 @@
       "note": "derive_geo_verified: geo_verified=false (max_drift=100m).",
       "fields": [
         "google_place_id"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "by": "geo-backfill",
+      "note": "lat/lng snapped to verified Google Places POI (google_check.google_lat/lng); gps_drift_m→0 by construction."
+    },
+    {
+      "date": "2026-06-26",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
+      "fields": [
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m"
       ]
     }
   ],
@@ -1162,7 +1178,7 @@
     ],
     "google_lat": 45.924025199999996,
     "google_lng": 6.665266099999999,
-    "gps_drift_m": 41549
+    "gps_drift_m": 0
   },
   "data_sources": [
     {
@@ -1187,5 +1203,9 @@
   ],
   "status": "published",
   "type": "sensations",
-  "google_place_id": "ChIJX1lhLlX_i0cRaDQYfkvU6ss"
+  "google_place_id": "ChIJX1lhLlX_i0cRaDQYfkvU6ss",
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-26",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 0
 }

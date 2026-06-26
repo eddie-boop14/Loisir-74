@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.3697
-longitude: 6.4742
+latitude: 46.377778
+longitude: 6.479681
 geo_verified: false
 google_place_id: "ChIJ8zl5aIk-jEcRx7OR8TPHvSs"
 canonical_url: https://loisirs74.fr/voile-cercle-thonon-thonon
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Base nautique
 - **Commune**: Thonon-les-Bains, Haute-Savoie (74200)
-- **GPS**: 46.3697, 6.4742
+- **GPS**: 46.377778, 6.479681
 - **Type**: Club voile Léman + école de voile
 - **Accès**: Payant - voir tarifs
 - **Parking**: Gratuit sur site

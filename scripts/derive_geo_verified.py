@@ -129,7 +129,8 @@ def resolve_signals(d):
     if drift is None:
         drift = get_path(d, "freshness", "gps_drift_m")
     match = (get_path(d, "freshness", "google_match")
-             or get_path(d, "google_check", "google_match"))
+             or get_path(d, "google_check", "google_match")
+             or get_path(d, "google_check", "match"))
     return place_id, drift, match
 
 

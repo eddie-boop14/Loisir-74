@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.908
-longitude: 6.13
+latitude: 45.901547
+longitude: 6.122171
 geo_verified: false
 google_place_id: "ChIJ9VK601qPi0cR8gWk4oW7KoE"
 canonical_url: https://loisirs74.fr/atelier-poterie-chez-el-annecy
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Annecy, Haute-Savoie (74000)
-- **GPS**: 45.908, 6.13
+- **GPS**: 45.901547, 6.122171
 - **Type**: Atelier poterie
 - **Accès**: Intérieur · toute l'année
 - **Meilleure saison**: Toute l'année

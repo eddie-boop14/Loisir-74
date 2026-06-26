@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9237
-longitude: 6.8694
-geo_verified: false
+latitude: 45.928641
+longitude: 6.873675
+geo_verified: true
 google_place_id: "ChIJVxRQWthNiUcR90gxhto-5aY"
 canonical_url: https://loisirs74.fr/patinoire-richard-bozon-chamonix
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Patinoire
 - **Commune**: Chamonix-Mont-Blanc, Haute-Savoie (74400)
-- **GPS**: 45.9237, 6.8694
+- **GPS**: 45.928641, 6.873675
 - **Type**: Patinoire olympique couverte 60×30m + extérieure 26×56m
 - **Accès**: Payant - voir tarifs
 - **Parking**: Gratuit sur site

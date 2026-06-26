@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.908
-longitude: 6.13
-geo_verified: false
+latitude: 45.895918
+longitude: 6.109943
+geo_verified: true
 google_place_id: "ChIJE6MGXFKFi0cR_k9QxjYjBxA"
 canonical_url: https://loisirs74.fr/escape-game-atelier-des-enigmes-annecy
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Annecy, Haute-Savoie (74000)
-- **GPS**: 45.908, 6.13
+- **GPS**: 45.895918, 6.109943
 - **Type**: Escape game
 - **Accès**: Intérieur · toute l'année
 - **Meilleure saison**: Toute l'année

@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.8992
-longitude: 6.1294
-geo_verified: false
+latitude: 45.916752
+longitude: 6.132892
+geo_verified: true
 google_place_id: "ChIJgWAsaY6Pi0cR5cBGHHQ6QJU"
 canonical_url: https://loisirs74.fr/voie-verte-lac-annecy-annecy
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Voie verte
 - **Commune**: Annecy, Haute-Savoie (74000)
-- **GPS**: 45.8992, 6.1294
+- **GPS**: 45.916752, 6.132892
 - **Type**: Voie verte cyclable et piétonne
 - **Accès**: Libre · Gratuit
 - **Parking**: Pâquier Annecy, Sevrier, Saint-Jorioz, Doussard, Faverges (gratuits)

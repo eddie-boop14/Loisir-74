@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.2719
-longitude: 6.5511
+latitude: 46.2057
+longitude: 6.558014
 geo_verified: false
 google_place_id: "ChIJz4DD4IMajEcR0PhQ_FN-8T0"
 canonical_url: https://loisirs74.fr/cascade-de-la-diomaz
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Cascade
 - **Commune**: Bellevaux, Haute-Savoie (74470)
-- **GPS**: 46.2719, 6.5511
+- **GPS**: 46.2057, 6.558014
 - **Type**: Cascade naturelle
 - **Accès**: Libre · Gratuit
 - **Parking**: Gratuit (parkings du lac de Vallon)

@@ -4,8 +4,8 @@
   "commune": "Annecy",
   "postal_code": "74000",
   "department": "Haute-Savoie",
-  "latitude": 45.8992,
-  "longitude": 6.1294,
+  "latitude": 45.916752,
+  "longitude": 6.132892,
   "hero_image": "/img/generique/generique-voie-verte-cyclistes-lac.jpg",
   "hero_credit": null,
   "booking_domain": "sila.fr",
@@ -99,6 +99,22 @@
       "note": "derive_geo_verified: geo_verified=false (max_drift=100m).",
       "fields": [
         "google_place_id"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "by": "geo-backfill",
+      "note": "lat/lng snapped to verified Google Places POI (google_check.google_lat/lng); gps_drift_m→0 by construction."
+    },
+    {
+      "date": "2026-06-26",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
+      "fields": [
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m"
       ]
     }
   ],
@@ -1242,7 +1258,7 @@
     "hours": null,
     "google_lat": 45.9167517,
     "google_lng": 6.1328921,
-    "gps_drift_m": 1970
+    "gps_drift_m": 0
   },
   "freshness": {
     "checked": "2026-06-05",
@@ -1267,7 +1283,7 @@
       "000",
       "3"
     ],
-    "gps_drift_m": 1970,
+    "gps_drift_m": 0,
     "needs_price_review": true
   },
   "data_sources": [
@@ -1321,5 +1337,9 @@
   ],
   "status": "published",
   "type": "nature",
-  "google_place_id": "ChIJgWAsaY6Pi0cR5cBGHHQ6QJU"
+  "google_place_id": "ChIJgWAsaY6Pi0cR5cBGHHQ6QJU",
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-26",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 0
 }

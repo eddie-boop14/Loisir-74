@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9244
-longitude: 6.7036
-geo_verified: false
+latitude: 45.914456
+longitude: 6.696345
+geo_verified: true
 google_place_id: "ChIJg4FR9DxXiUcRxfT-cZNhxMY"
 canonical_url: https://loisirs74.fr/padel-mont-blanc-padel-passy
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Passy, Haute-Savoie (74190)
-- **GPS**: 45.9244, 6.7036
+- **GPS**: 45.914456, 6.696345
 - **Type**: Padel
 - **Accès**: Couvert · toute l'année
 - **Meilleure saison**: Toute l'année

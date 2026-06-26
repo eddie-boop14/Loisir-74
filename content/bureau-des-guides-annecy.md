@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.8992
-longitude: 6.1294
+latitude: 45.932242
+longitude: 6.170252
 geo_verified: false
 google_place_id: null
 canonical_url: https://loisirs74.fr/bureau-des-guides-annecy
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Annecy, Haute-Savoie (74000)
-- **GPS**: 45.8992, 6.1294
+- **GPS**: 45.932242, 6.170252
 - **Type**: Bureau des guides de haute montagne
 - **Accès**: Extérieur · toute l'année (activités saisonnières)
 - **Meilleure saison**: Toute l'année selon activité (hiver/été)

@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.8804
-longitude: 6.3247
+latitude: 45.896278
+longitude: 6.342911
 geo_verified: false
 google_place_id: "ChIJefcbY2Dyi0cRRtJGSFFCCDQ"
 canonical_url: https://loisirs74.fr/karting-thones
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Karting
 - **Commune**: Thônes, Haute-Savoie (74230)
-- **GPS**: 45.8804, 6.3247
+- **GPS**: 45.896278, 6.342911
 - **Type**: Karting
 - **Accès**: Sur réservation
 - **Meilleure saison**: Toute l'année (indoor) / printemps-automne (extérieur)

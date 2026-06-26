@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.8992
-longitude: 6.1294
-geo_verified: false
+latitude: 45.924025
+longitude: 6.665266
+geo_verified: true
 google_place_id: "ChIJX1lhLlX_i0cRaDQYfkvU6ss"
 canonical_url: https://loisirs74.fr/canyoning-neo-canyon
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Annecy, Haute-Savoie (74000)
-- **GPS**: 45.8992, 6.1294
+- **GPS**: 45.924025, 6.665266
 - **Type**: Canyoning encadré
 - **Accès**: Extérieur · saison estivale
 - **Meilleure saison**: Juin à septembre

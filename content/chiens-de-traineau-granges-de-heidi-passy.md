@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9244
-longitude: 6.7036
-geo_verified: false
+latitude: 45.991515
+longitude: 6.636543
+geo_verified: true
 google_place_id: "ChIJW1jVNqT_i0cRKsMK_1IVz0w"
 canonical_url: https://loisirs74.fr/chiens-de-traineau-granges-de-heidi-passy
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Passy, Haute-Savoie (74190)
-- **GPS**: 45.9244, 6.7036
+- **GPS**: 45.991515, 6.636543
 - **Type**: Chiens de traîneau / mushing
 - **Accès**: Payant · sur réservation
 - **Parking**: Parking de Plaine-Joux

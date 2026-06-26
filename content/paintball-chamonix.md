@@ -9,9 +9,9 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9237
-longitude: 6.8694
-geo_verified: false
+latitude: 45.932116
+longitude: 6.881119
+geo_verified: true
 google_place_id: "ChIJEaFWZNFNiUcRuazf2r4d2xg"
 canonical_url: https://loisirs74.fr/paintball-chamonix
 language: fr
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Chamonix-Mont-Blanc, Haute-Savoie (74400)
-- **GPS**: 45.9237, 6.8694
+- **GPS**: 45.932116, 6.881119
 - **Type**: Paintball
 - **Accès**: Sur réservation
 - **Meilleure saison**: Mars-novembre (centres ext.) / toute l'année (indoor)
