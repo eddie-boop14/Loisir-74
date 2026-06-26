@@ -154,6 +154,7 @@ CHROME = {
     "k_photos":        {"fr": "Photos", "en": "Photos", "de": "Fotos", "it": "Foto", "es": "Fotos", "nl": "Foto's"},
     "k_faq":           {"fr": "FAQ", "en": "FAQ", "de": "FAQ", "it": "FAQ", "es": "FAQ", "nl": "FAQ"},
     "k_sources":       {"fr": "Sources", "en": "Sources", "de": "Quellen", "it": "Fonti", "es": "Fuentes", "nl": "Bronnen"},
+    "k_see_also":      {"fr": "Voir aussi", "en": "See also", "de": "Siehe auch", "it": "Vedi anche", "es": "Ver también", "nl": "Zie ook"},
     # H2 headings
     "h_whatis":        {"fr": "Qu&#39;est-ce que", "en": "What is", "de": "Was ist", "it": "Cos&#39;è", "es": "Qué es", "nl": "Wat is"},
     "h_activities":    {"fr": "Ce qu&#39;on peut y faire", "en": "What you can do here", "de": "Was man hier machen kann", "it": "Cosa si può fare", "es": "Qué se puede hacer", "nl": "Wat je hier kunt doen"},
@@ -1547,6 +1548,51 @@ def site_footer():
 LAST_FALLBACK_FIELDS = set()  # populated by build_page() for callers wanting coverage info
 
 
+_RELATED_CACHE = {}
+
+
+def _related_name(slug, lang):
+    """Localized name of a related fiche (read once, cached). None if the fiche
+    is missing or not renderable — so a dangling related slug renders nothing."""
+    if slug not in _RELATED_CACHE:
+        p = REPO / "Json" / f"{slug}.json"
+        try:
+            _RELATED_CACHE[slug] = json.loads(p.read_text(encoding="utf-8"))
+        except Exception:
+            _RELATED_CACHE[slug] = None
+    d = _RELATED_CACHE[slug]
+    if not d or d.get("status") not in ("published", "verified"):
+        return None
+    i18n = d.get("i18n", {}) or {}
+    return ((i18n.get(lang) or {}).get("name")
+            or (i18n.get("fr") or {}).get("name") or slug)
+
+
+def related_lieux_block(related, lang):
+    """'Voir aussi' — sibling-lieu cross-links (e.g. two distinct points on one
+    ridge). Reads top-level related_lieux: [slug]. Renders nothing if empty or
+    all targets are unrenderable."""
+    if not related:
+        return ""
+    prefix = "" if lang == "fr" else f"/{lang}"
+    items = []
+    for slug in related:
+        nm = _related_name(slug, lang)
+        if not nm:
+            continue
+        url = f"https://loisirs74.fr{prefix}/{slug}"
+        items.append(f'<li><a href="{attr(url)}">{esc(nm)}</a></li>')
+    if not items:
+        return ""
+    return (
+        '<section class="block"><div class="wrap">'
+        f'<div class="kicker reveal">{T("k_see_also")}</div>'
+        f'<h2 class="reveal">{T("k_see_also")}</h2>'
+        f'<ul class="related-lieux reveal">{"".join(items)}</ul>'
+        '</div></section>'
+    )
+
+
 def build_page(d, lang="fr"):
     """Render the full HTML for fiche `d` in `lang`. Returns html string.
     Fallback-field info (which keys fell back to FR) is exposed via
@@ -1575,6 +1621,7 @@ def build_page(d, lang="fr"):
     out.append(partners_block(d))
     out.append(gallery_block(name, d.get("gallery_photos")))
     out.append(faq_block(L("faq", []) or []))
+    out.append(related_lieux_block(d.get("related_lieux", []), lang))
     out.append(sources_block(d.get("sources", [])))
     out.append(data_credits_block(d.get("data_sources", [])))
     out.append(build_footer_block(
