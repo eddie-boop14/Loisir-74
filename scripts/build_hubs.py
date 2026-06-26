@@ -1020,17 +1020,26 @@ def patch_homepage_completeness(lang):
     # 1. strip the duplicated all-categories block
     html = re.sub(r'\n*<section class="all-categories"[^>]*>.*?</section>\n*',
                   '\n', html, flags=re.DOTALL)
-    # 2. ensure que-faire is linked from the footer category column (after
-    #    parcs-jardins), keeping the locale que-faire hub reachable.
+    # 2. footer completeness: ANY hub whose localized URL is linked from neither
+    #    the footer nor the <main> body gets a localized <li> in the footer
+    #    category column (after parcs-jardins). Re-homes que-faire AND
+    #    voies-vertes on the locale homepages; FR (which links them via body
+    #    carousels) is untouched. Immunizes any future strip against orphaning a
+    #    hub. Deterministic order (ALL_BASE_HUBS) ⇒ idempotent.
     prefix = f"/{lang}" if lang != "fr" else ""
-    qf_slug = hub_locale_map("que-faire").get(lang) or "que-faire"
-    qf_url = f"https://loisirs74.fr{prefix}/{qf_slug}/"
-    if qf_url not in html:
-        pj_slug = hub_locale_map("parcs-jardins").get(lang) or "parcs-jardins"
-        pj_url = f"https://loisirs74.fr{prefix}/{pj_slug}/"
-        qf_li = f'<li><a href="{qf_url}">{HUB_DISPLAY["que-faire"][lang]}</a></li>'
+    pj_slug = hub_locale_map("parcs-jardins").get(lang) or "parcs-jardins"
+    pj_url = f"https://loisirs74.fr{prefix}/{pj_slug}/"
+    missing = []
+    for hub in ALL_BASE_HUBS:
+        slug = hub_locale_map(hub).get(lang) or hub
+        if not (base / slug / "index.html").exists():
+            continue
+        url = f"https://loisirs74.fr{prefix}/{slug}/"
+        if url not in html:
+            missing.append(f'<li><a href="{url}">{HUB_DISPLAY[hub][lang]}</a></li>')
+    if missing:
         html = re.sub(r'(<li><a href="' + re.escape(pj_url) + r'">[^<]*</a></li>)',
-                      r'\1' + qf_li, html, count=1)
+                      r'\1' + "".join(missing), html, count=1)
     if html == orig:
         return False
     home.write_text(html, encoding="utf-8")

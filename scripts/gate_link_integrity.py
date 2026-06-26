@@ -122,6 +122,30 @@ def check_carousels():
     return bad
 
 
+def check_homepage_hubs():
+    """Every hub must be linked from its OWN locale homepage (footer or body).
+    Catches a strip/refactor that orphans a hub from the homepage — the
+    que-faire / voies-vertes regression class — at PR time."""
+    sys.path.insert(0, os.path.join(ROOT, "scripts"))
+    from build_hubs import ALL_BASE_HUBS, hub_locale_map  # noqa: E402
+    bad = []
+    for lang in ("fr", "en", "de", "it", "es", "nl"):
+        rel = "index.html" if lang == "fr" else f"{lang}/index.html"
+        home = os.path.join(SITE, rel)
+        if not os.path.exists(home):
+            continue
+        html = open(home, encoding="utf-8", errors="ignore").read()
+        prefix = "" if lang == "fr" else f"/{lang}"
+        for hub in ALL_BASE_HUBS:
+            slug = hub_locale_map(hub).get(lang) or hub
+            hub_file = os.path.join(SITE, *(([lang] if lang != "fr" else []) + [slug, "index.html"]))
+            if not os.path.exists(hub_file):
+                continue   # hub not built for this locale → not expected on homepage
+            if f"https://loisirs74.fr{prefix}/{slug}/" not in html:
+                bad.append(f"{lang} homepage does not link hub /{slug}/")
+    return bad
+
+
 def main():
     if not os.path.isdir(SITE):
         print("::error::_site/ not built — run build_site.py first")
@@ -155,12 +179,20 @@ def main():
                     missing[path].append(page_rel)
 
     bad_carousels = check_carousels()
+    bad_hubs = check_homepage_hubs()
 
     print(f"gate_link_integrity: {pages} pages, {checked} internal links checked; "
-          f"carousel tripwire on every published fiche")
-    if not missing and not bad_carousels:
-        print("✓ every internal link resolves; every fiche has its proximity carousel")
+          f"carousel + homepage-hub tripwires")
+    if not missing and not bad_carousels and not bad_hubs:
+        print("✓ links resolve; every fiche has its carousel; every hub linked from its homepage")
         sys.exit(0)
+
+    if bad_hubs:
+        print(f"::error::{len(bad_hubs)} hub(s) orphaned from their locale homepage:")
+        for b in bad_hubs:
+            print(f"    ✗ {b}")
+        if not missing and not bad_carousels:
+            sys.exit(1)
 
     if bad_carousels:
         print(f"::error::{len(bad_carousels)} fiche page(s) missing the proximity "
