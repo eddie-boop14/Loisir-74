@@ -1621,7 +1621,9 @@ def build_page(d, lang="fr"):
     out.append(partners_block(d))
     out.append(gallery_block(name, d.get("gallery_photos")))
     out.append(faq_block(L("faq", []) or []))
-    out.append(related_lieux_block(d.get("related_lieux", []), lang))
+    _related = related_lieux_block(d.get("related_lieux", []), lang)
+    if _related:
+        out.append(_related)
     out.append(sources_block(d.get("sources", [])))
     out.append(data_credits_block(d.get("data_sources", [])))
     out.append(build_footer_block(
