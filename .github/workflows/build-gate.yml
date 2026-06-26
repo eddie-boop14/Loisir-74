@@ -54,6 +54,9 @@ jobs:
       - name: No-orphan-geo-verified gate
         run: python3 scripts/gate_geo_verified.py
 
+      - name: No-duplicate-lieux gate
+        run: python3 scripts/gate_no_duplicate_lieux.py
+
       - name: Run build_all (every gate inside)
         run: python3 scripts/build_all.py --no-site
 
