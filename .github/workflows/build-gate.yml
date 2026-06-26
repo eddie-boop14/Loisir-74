@@ -57,6 +57,12 @@ jobs:
       - name: No-duplicate-lieux gate
         run: python3 scripts/gate_no_duplicate_lieux.py
 
+      - name: Venue-centroid gate (fail ≥3 on one point, warn on 2)
+        run: python3 scripts/gate_venue_centroid.py
+
+      - name: Translation revert-guard (no payload/Json conflicts)
+        run: python3 scripts/ingest_translations.py --check
+
       - name: Run build_all (every gate inside)
         run: python3 scripts/build_all.py --no-site
 
