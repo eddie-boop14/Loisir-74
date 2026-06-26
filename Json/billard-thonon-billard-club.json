@@ -74,6 +74,19 @@
       "date": "2026-06-26",
       "by": "geo-backfill",
       "note": "lat/lng backfilled from BAN (real per-venue pin; was commune-centre placeholder (46.3712, 6.4789)). google_check signals stale/unmatched — badge pending a future Google sweep."
+    },
+    {
+      "date": "2026-06-26",
+      "by": "place-id-cleanup",
+      "note": "Cleared wrong Google match (was Stella TT Thonon (tennis de table); place_id …cn59Rs). Maps deep-link now falls back to the backfilled coordinate."
+    },
+    {
+      "date": "2026-06-26",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=false (max_drift=100m).",
+      "fields": [
+        "google_place_id"
+      ]
     }
   ],
   "partners": [
@@ -1123,8 +1136,8 @@
   "google_check": {
     "checked": "2026-06-04",
     "query": "Thonon Billard Club (Billard Stella) Thonon-les-Bains Haute-Savoie France",
-    "match": "Stella TT Thonon",
-    "place_id": "ChIJSfsVm4k-jEcR5g_KBcn59Rs",
+    "match": null,
+    "place_id": null,
     "status": "OPERATIONAL",
     "website": "https://www.tennisdetable-thonon.com/",
     "stored_website": "https://thononbillardclub.jimdofree.com",
@@ -1139,9 +1152,9 @@
       "samedi: 14:00 – 18:00",
       "dimanche: Fermé"
     ],
-    "google_lat": 46.3790572,
-    "google_lng": 6.4936169,
-    "gps_drift_m": 1428
+    "google_lat": null,
+    "google_lng": null,
+    "gps_drift_m": null
   },
   "data_sources": [
     {
@@ -1165,6 +1178,5 @@
     }
   ],
   "status": "published",
-  "type": "divertissement",
-  "google_place_id": "ChIJSfsVm4k-jEcR5g_KBcn59Rs"
+  "type": "divertissement"
 }

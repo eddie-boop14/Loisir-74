@@ -12,7 +12,7 @@ country: France
 latitude: 46.377778
 longitude: 6.479681
 geo_verified: false
-google_place_id: "ChIJ8zl5aIk-jEcRx7OR8TPHvSs"
+google_place_id: null
 canonical_url: https://loisirs74.fr/voile-cercle-thonon-thonon
 language: fr
 photo_url: /img/generique/generique-voile-sunset-1.jpg

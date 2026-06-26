@@ -107,6 +107,19 @@
       "date": "2026-06-26",
       "by": "geo-backfill",
       "note": "lat/lng backfilled from BAN (real per-venue pin; was commune-centre placeholder (46.3697, 6.4742)). google_check signals stale/unmatched — badge pending a future Google sweep."
+    },
+    {
+      "date": "2026-06-26",
+      "by": "place-id-cleanup",
+      "note": "Cleared wrong Google match (was Société Nautique du Léman Français (club distinct); place_id …TPHvSs). Maps deep-link now falls back to the backfilled coordinate."
+    },
+    {
+      "date": "2026-06-26",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=false (max_drift=100m).",
+      "fields": [
+        "google_place_id"
+      ]
     }
   ],
   "partners": [
@@ -1229,8 +1242,8 @@
   "google_check": {
     "checked": "2026-06-04",
     "query": "Cercle de la Voile de Thonon Thonon-les-Bains Haute-Savoie France",
-    "match": "Club de Voile, Société Nautique du Léman Français",
-    "place_id": "ChIJ8zl5aIk-jEcRx7OR8TPHvSs",
+    "match": null,
+    "place_id": null,
     "status": "OPERATIONAL",
     "website": "http://www.voilethonon.com/",
     "stored_website": "https://www.thononlesbains.com/",
@@ -1245,17 +1258,17 @@
       "samedi: 09:00 – 12:00, 13:00 – 17:00",
       "dimanche: Fermé"
     ],
-    "google_lat": 46.3778533,
-    "google_lng": 6.479761099999999,
-    "gps_drift_m": 1002
+    "google_lat": null,
+    "google_lng": null,
+    "gps_drift_m": null
   },
   "freshness": {
     "checked": "2026-06-05",
     "status": "OPERATIONAL",
     "confidence": "medium",
     "flag_reason": "Official site not responding",
-    "google_match": "Club de Voile, Société Nautique du Léman Français",
-    "place_id": "ChIJ8zl5aIk-jEcRx7OR8TPHvSs",
+    "google_match": null,
+    "place_id": null,
     "google_status": "OPERATIONAL",
     "website": {
       "value": "http://www.voilethonon.com/",
@@ -1289,7 +1302,7 @@
     },
     "site_reachable": false,
     "price_candidates": [],
-    "gps_drift_m": 1002,
+    "gps_drift_m": null,
     "needs_price_review": false,
     "recomputed": "2026-06-05 (registry demoted to confirmer-only)"
   },
@@ -1313,6 +1326,5 @@
     }
   ],
   "status": "published",
-  "type": "aquatique",
-  "google_place_id": "ChIJ8zl5aIk-jEcRx7OR8TPHvSs"
+  "type": "aquatique"
 }

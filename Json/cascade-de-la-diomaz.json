@@ -47,6 +47,19 @@
       "date": "2026-06-26",
       "by": "geo-backfill",
       "note": "lat/lng backfilled from OSM (real per-venue pin; was commune-centre placeholder (46.2719, 6.5511)). google_check signals stale/unmatched — badge pending a future Google sweep."
+    },
+    {
+      "date": "2026-06-26",
+      "by": "place-id-cleanup",
+      "note": "Cleared wrong Google match (was « La Diomaz » POI à ~7 km (la cascade n'a pas de POI Google propre); place_id …FN-8T0). Maps deep-link now falls back to the backfilled coordinate."
+    },
+    {
+      "date": "2026-06-26",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=false (max_drift=100m).",
+      "fields": [
+        "google_place_id"
+      ]
     }
   ],
   "partners": [
@@ -1125,25 +1138,25 @@
   "google_check": {
     "checked": "2026-06-04",
     "query": "Cascade de la Diomaz Bellevaux Haute-Savoie France",
-    "match": "La Diomaz",
-    "place_id": "ChIJz4DD4IMajEcR0PhQ_FN-8T0",
+    "match": null,
+    "place_id": null,
     "status": "UNKNOWN",
     "website": null,
     "stored_website": null,
     "rating": 4.2,
     "rating_count": 13,
     "hours": null,
-    "google_lat": 46.208366999999996,
-    "google_lng": 6.550817899999999,
-    "gps_drift_m": 7065
+    "google_lat": null,
+    "google_lng": null,
+    "gps_drift_m": null
   },
   "freshness": {
     "checked": "2026-06-05",
     "status": "OPERATIONAL",
     "confidence": "high",
     "flag_reason": "",
-    "google_match": "La Diomaz",
-    "place_id": "ChIJz4DD4IMajEcR0PhQ_FN-8T0",
+    "google_match": null,
+    "place_id": null,
     "google_status": "UNKNOWN",
     "website": null,
     "phone": null,
@@ -1157,7 +1170,7 @@
     },
     "site_reachable": null,
     "price_candidates": [],
-    "gps_drift_m": 7065,
+    "gps_drift_m": null,
     "needs_price_review": false
   },
   "data_sources": [
@@ -1180,6 +1193,5 @@
     }
   ],
   "status": "published",
-  "type": "aquatique",
-  "google_place_id": "ChIJz4DD4IMajEcR0PhQ_FN-8T0"
+  "type": "aquatique"
 }

@@ -12,7 +12,7 @@ country: France
 latitude: 46.385434
 longitude: 6.482844
 geo_verified: false
-google_place_id: "ChIJ1yN30ZA-jEcRL9CNu9dg2uI"
+google_place_id: null
 canonical_url: https://loisirs74.fr/aquaparc-thonon-piscine-olympique-thonon
 language: fr
 photo_url: /img/generique/generique-aquatique-piscine-exterieur.jpg

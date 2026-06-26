@@ -12,7 +12,7 @@ country: France
 latitude: 46.369536
 longitude: 6.476393
 geo_verified: false
-google_place_id: "ChIJSfsVm4k-jEcR5g_KBcn59Rs"
+google_place_id: null
 canonical_url: https://loisirs74.fr/billard-thonon-billard-club
 language: fr
 photo_url: /img/generique/generique-billard.jpg

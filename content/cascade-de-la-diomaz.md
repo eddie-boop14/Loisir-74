@@ -12,7 +12,7 @@ country: France
 latitude: 46.2057
 longitude: 6.558014
 geo_verified: false
-google_place_id: "ChIJz4DD4IMajEcR0PhQ_FN-8T0"
+google_place_id: null
 canonical_url: https://loisirs74.fr/cascade-de-la-diomaz
 language: fr
 photo_url: /img/cascades/cascade-de-la-diomaz-hero.jpg
