@@ -438,7 +438,37 @@ def first_source_url(d):
     return ""
 
 
-def facts_block(facts, source_url=""):
+_ACCES_LABEL = {"fr": "Accessibilité PMR", "en": "Wheelchair access", "de": "Barrierefreiheit",
+                "it": "Accessibilità", "es": "Accesibilidad PMR", "nl": "Toegankelijkheid"}
+_ACCES_STATUS = {
+    "accessible": {"fr": "Accessible", "en": "Accessible", "de": "Barrierefrei",
+                   "it": "Accessibile", "es": "Accesible", "nl": "Toegankelijk"},
+    "partiel": {"fr": "Partiellement accessible", "en": "Partially accessible",
+                "de": "Teilweise barrierefrei", "it": "Parzialmente accessibile",
+                "es": "Parcialmente accesible", "nl": "Gedeeltelijk toegankelijk"},
+    "non_accessible": {"fr": "Non accessible", "en": "Not accessible", "de": "Nicht barrierefrei",
+                       "it": "Non accessibile", "es": "No accesible", "nl": "Niet toegankelijk"},
+}
+_ACCES_SELON = {"fr": "selon", "en": "per", "de": "laut", "it": "secondo", "es": "según", "nl": "volgens"}
+
+
+def acces_pmr_fact(a):
+    """(label, value_html) for the accessibility fact row, or None. Only renders
+    a sourced status (never 'accessible' for an unsourced/null fiche)."""
+    if not isinstance(a, dict) or a.get("status") not in _ACCES_STATUS:
+        return None
+    st = _ACCES_STATUS[a["status"]].get(_LANG) or _ACCES_STATUS[a["status"]]["fr"]
+    val = " · ".join([esc(st)] + ([esc(a["detail"])] if a.get("detail") else []))
+    if a.get("handiplage_level"):
+        val += f' <span class="pill pill-ok">Handiplage {esc(str(a["handiplage_level"]))}</span>'
+    if a.get("source_url") and a.get("source_name"):
+        selon = _ACCES_SELON.get(_LANG, "selon")
+        val += (f' <a class="inline-link" href="{attr(a["source_url"])}" target="_blank" '
+                f'rel="noopener">{selon} {esc(a["source_name"])}</a>')
+    return (_ACCES_LABEL.get(_LANG) or _ACCES_LABEL["fr"], val)
+
+
+def facts_block(facts, source_url="", acces_pmr=None):
     """Render the 'At a glance' grid (locale-aware), with an optional compact
     'Source officielle →' link beside the panel (master to-do #4)."""
     items = []
@@ -465,6 +495,10 @@ def facts_block(facts, source_url=""):
             f'<div class="fact"><div class="k">{esc(_fact_label(k))}</div>'
             f'<div class="v">{esc(v)}</div></div>'
         )
+    ap = acces_pmr_fact(acces_pmr)
+    if ap:
+        items.append(f'<div class="fact"><div class="k">{esc(ap[0])}</div>'
+                     f'<div class="v">{ap[1]}</div></div>')
     if not items:
         return ""
     source_html = ""
@@ -1836,7 +1870,7 @@ def build_page(d, lang="fr"):
     out.append(build_head(d))
     out.append(build_header(d))
     out.append(hero_block(d))
-    out.append(facts_block(L("facts", {}) or {}, first_source_url(d)))
+    out.append(facts_block(L("facts", {}) or {}, first_source_url(d), d.get("acces_pmr")))
     body_dict = L("body", {}) if isinstance(L("body", {}), dict) else {}
     if not body_dict:
         body_dict = {"what_is": L_body("what_is", "")}

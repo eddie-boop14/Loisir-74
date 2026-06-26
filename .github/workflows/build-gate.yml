@@ -60,6 +60,9 @@ jobs:
       - name: Multi-hub membership gate (valid hubs[], no dilution)
         run: python3 scripts/gate_hubs_membership.py
 
+      - name: Accessibility (PMR) schema gate
+        run: python3 scripts/gate_acces_pmr.py
+
       - name: Venue-centroid gate (fail ≥3 on one point, warn on 2)
         run: python3 scripts/gate_venue_centroid.py
 
