@@ -1085,7 +1085,12 @@ def main():
         # Build the union: existing curated slugs ∪ slugs matching the filter.
         existing = existing_hub_fiches(ROOT / fr_hub / "index.html", excludes)
         existing_in_json = {s for s in existing if s in fiches}
-        matched_slugs = {s for s, d in fiches.items() if filt(d)}
+        # Membership = category/curated filter OR an explicit multi-hub opt-in
+        # (top-level `hubs: [<hub-slug>]`). Additive: a lieu keeps its own
+        # category hub and also appears in every hub it lists. Absent/empty
+        # `hubs` ⇒ identical behaviour to before.
+        matched_slugs = {s for s, d in fiches.items()
+                         if filt(d) or fr_hub in (d.get("hubs") or [])}
         union_slugs = existing_in_json | matched_slugs
         added = sorted(matched_slugs - existing_in_json)
         union = [(s, fiches[s]) for s in sorted(union_slugs)]

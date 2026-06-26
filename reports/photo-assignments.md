@@ -1,7 +1,7 @@
 # Phase 4 — photo assignments (gate artifact)
 
 **Date**: 2026-06-14
-**Total assignments**: 540 (one per (hub × slug) on the FR canonical hub)
+**Total assignments**: 541 (one per (hub × slug) on the FR canonical hub)
 
 ## Per-hub diversity
 
@@ -16,7 +16,7 @@
 | `parcs-jardins` | 31 | 17 | 11 |
 | `points-de-vue` | 29 | 24 | 5 |
 | `que-faire` | 73 | 42 | 4 |
-| `sensations-plein-air` | 43 | 31 | 3 |
+| `sensations-plein-air` | 44 | 32 | 3 |
 | `sentiers` | 39 | 7 | 14 |
 | `sorties-detente` | 25 | 13 | 3 |
 | `sport-jeux` | 52 | 33 | 4 |
@@ -414,6 +414,7 @@
 | `sensations-plein-air` | `disc-golf-indiana-ventures-samoens` | `sensations` | `generique-disc-golf.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `indiana-ventures-saint-paul-en-chablais` | `parc` | `La_plage_de_La_Beunaz.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `k2-parapente-doussard` | `sensations` | `generique-parapente-vol.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `le-semnoz` | `nature` | `Cr%C3%AAt_de_Chatillon_%40_Semnoz_%2835471373476%29.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `montgolfiere-annecy` | `sensations` | `generique-montgolfiere.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `montgolfiere-du-mont-blanc-evian` | `sensations` | `generique-montgolfiere.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `parc-aventure-mont-blanc-saint-gervais` | `parc` | `generique-accrobranche-3.jpg` | — | json hero (local) |
