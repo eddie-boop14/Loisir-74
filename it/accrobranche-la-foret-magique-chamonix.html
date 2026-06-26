@@ -124,6 +124,122 @@
 <section class="block"><div class="wrap"><div class="kicker reveal">FAQ</div><h2 class="reveal">Domande frequenti</h2><div class="faq-grid reveal" data-stagger><details class="faq"><summary>Da che età?</summary><p>Il percorso Pitchoun accoglie bambini dai 3 anni, poi percorsi progressivi (giallo, verde, blu) secondo statura. I percorsi sportivi in altezza (rosso, nero) sono accessibili dai 10-12 anni circa o 1,40 m.</p></details><details class="faq"><summary>Quali sono le tariffe?</summary><p>Adulto ~22-28 €, bambino ~18-22 € secondo percorso. Pacchetto famiglia (2 adulti + 2 bambini) a tariffa ridotta. Prezzi 2026 da confermare su laforetmagiquechamonix.com.</p></details><details class="faq"><summary>La sicurezza è garantita?</summary><p>Sì, il parco usa il sistema Smart-Belay: longe che impediscono di sganciare i due moschettoni contemporaneamente, garantendo sicurezza continua. Briefing obbligatorio prima di ogni sessione.</p></details><details class="faq"><summary>Bisogna prenotare?</summary><p>Sì, vivamente consigliato online, soprattutto in luglio-agosto, vacanze scolastiche, weekend e per gruppi o compleanni.</p></details><details class="faq"><summary>Quando è aperto il parco?</summary><p>Circa da maggio a ottobre secondo il meteo. Orari più ampi nei weekend, festivi e vacanze scolastiche estive. Chiuso in inverno.</p></details><details class="faq"><summary>Cosa indossare?</summary><p>Abbigliamento sportivo comodo, scarpe chiuse (sneaker o trail), capelli legati. Imbragatura, casco e longe sono forniti. Portare una giacca leggera anche d'estate (Chamonix è in quota).</p></details><details class="faq"><summary>Il parco è accessibile alle persone a mobilità ridotta?</summary><p>L'acrobatica rimane un'attività fisica in altezza. Alcuni percorsi bassi possono essere adattati; contattare il parco in anticipo.</p></details></div></div></section>
 <section class="block"><div class="wrap"><div class="kicker reveal">Fonti</div><h2 class="reveal">Fonti &amp; verifiche</h2><div class="sources reveal"><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><a href="https://www.laforetmagiquechamonix.com" target="_blank" rel="noopener">laforetmagiquechamonix.com</a></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><a href="https://www.chamonix.com/" target="_blank" rel="noopener">chamonix.com</a></li></ul><p class="caveat">Verifica multi-fonte alla data di pubblicazione. Le informazioni possono cambiare — confermare con il gestore ufficiale prima del viaggio.</p></div></div></section>
 <aside class="data-credits reveal"><div class="wrap"><p class="data-credits-line">Dati parziali: Office de Tourisme de la Vallée de Chamonix-Mont-Blanc via DataTourisme · Apidae Tourisme · <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence" target="_blank" rel="noopener">Licence Ouverte 2.0 (Etalab)</a></p></div></aside>
+<section class="block related" id="related">
+  <style>
+.related{padding:clamp(2rem,4vw,3.5rem) 0;border-top:1px solid var(--line);margin-bottom:5rem}
+.related .wrap{max-width:64rem;margin-inline:auto;padding-inline:clamp(1rem,3vw,2rem)}
+.related .kicker{font-size:.8125rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.related h2{font-size:clamp(1.3rem,1.1rem + .8vw,1.85rem);line-height:1.15;letter-spacing:-.015em;font-weight:800;margin:0 0 .4rem;color:var(--ink)}
+.related .lead{color:var(--ink-soft);max-width:42rem;margin-bottom:1.5rem;font-size:1rem;line-height:1.55}
+.related .carousel{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem}
+@media(max-width:680px){.related .carousel{display:flex;gap:.85rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}.related .carousel::-webkit-scrollbar{display:none}.related .carousel > .card{flex:0 0 75vw;max-width:18rem;scroll-snap-align:start}}
+.related .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s;text-decoration:none;color:inherit}
+.related .card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 30%,var(--line));box-shadow:0 8px 24px -12px rgba(11,13,16,.18)}
+.related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
+.related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.related .card:hover .card-photo img{transform:scale(1.03)}
+.related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
+.related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
+.related .card-body a.title:hover{color:var(--accent)}
+.related .card-commune{font-size:.78rem;color:var(--ink-mute);display:flex;align-items:center;gap:.3rem}
+.related .card-commune svg{width:11px !important;height:11px !important;flex-shrink:0}
+.related .card-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45;margin:.15rem 0 .65rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.related .card-actions{display:flex;gap:.4rem;margin-top:auto}
+.related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
+.related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.related .card-actions a svg{width:13px !important;height:13px !important}
+</style>
+  <div class="wrap">
+    <p class="kicker">Nelle vicinanze</p>
+    <h2>Nelle vicinanze</h2>
+    <p class="lead">Altri luoghi da esplorare nei dintorni e nella stessa categoria</p>
+    <div class="carousel"><article class="card">
+    <a href="https://loisirs74.fr/it/lac-blanc" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Lac_Blanc.JPG" alt="Lac Blanc a 2.352 m di altitudine con vista sul massiccio del Mont-Blanc e le Aiguilles Rouges, Chamonix, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">Gratis</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/it/lac-blanc" class="title">Lac Blanc</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Chamonix-Mont-Blanc</span></div>
+      <p class="card-desc">Lago d'alta quota a 2.352 m nella riserva delle Aiguilles Rouges, di fronte al massiccio del Mont-Blanc. Accesso dalla Flégère o dal colle dei Montets, Chamonix.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Lac%20Blanc%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/it/telepherique-des-grands-montets" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Hike_to_Glacier_d%27Argenti%C3%A8re_-_panoramio_%2861%29.jpg" alt="Vista sul ghiacciaio di Argentière e le Aiguilles Rouges dai Grands Montets, Chamonix-Mont-Blanc, Alta Savoia" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">A pagamento</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/it/telepherique-des-grands-montets" class="title">Funivia dei Grands Montets</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Chamonix-Mont-Blanc</span></div>
+      <p class="card-desc">Il comprensorio dei Grands Montets è in piena ricostruzione dopo l'incendio del 2018. Nuova funivia 3S Renzo Piano prevista dicembre 2026. Accesso invernale via Plan Joran (sciatori).</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Funivia%20dei%20Grands%20Montets%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a><a href="https://domaineschamonix.montblancnaturalresort.com/en/area/grands-montets" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/it/spa-qc-terme-chamonix" class="card-photo">
+      <img src="/img/generique/generique-thermes-hammam.jpg" alt="QC Terme Chamonix — spa termale di fronte al Monte Bianco" loading="lazy">
+      <span class="card-tag">A pagamento</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/it/spa-qc-terme-chamonix" class="title">QC Terme Chamonix</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Chamonix-Mont-Blanc</span></div>
+      <p class="card-desc">QC Terme Chamonix: grande spa con oltre 20 esperienze benessere (saune, hammam, vasche, jacuzzi esterna) e vista sul Monte Bianco.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=QC%20Terme%20Chamonix%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a><a href="https://www.qcterme.com/fr/destinations/chamonix" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/it/paintball-chamonix" class="card-photo">
+      <img src="/img/generique/generique-paintball-action.jpg" alt="Paintball Chamonix — paintball a Chamonix-Mont-Blanc, Alta Savoia" loading="lazy">
+      <span class="card-tag">A pagamento</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/it/paintball-chamonix" class="title">Paintball Chamonix</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Chamonix-Mont-Blanc</span></div>
+      <p class="card-desc">Centro di paintball a Chamonix-Mont-Blanc — terreni attrezzati, scenari diversi, attrezzatura fornita, supervisione pro. Dai 8 anni in formula junior.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Paintball%20Chamonix%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a><a href="https://paintball-esccape-game-chamonix.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/it/alpine-coaster-les-planards-chamonix" class="card-photo">
+      <img src="/img/generique/generique-alpine-coaster-2.jpg" alt="Alpine Coaster des Planards" loading="lazy">
+      <span class="card-tag">A pagamento</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/it/alpine-coaster-les-planards-chamonix" class="title">Alpine Coaster des Planards</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Chamonix-Mont-Blanc</span></div>
+      <p class="card-desc">1.300 m di slittovia su rotaia nel cuore di Chamonix: salti, curve, spirali a 540°. Aperto tutto l'anno, al centro di un parco divertimenti familiare con trampolini, tirolese e oltre 15 attrazioni.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Alpine%20Coaster%20des%20Planards%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a><a href="https://www.planards.fr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/it/via-ferrata-berard-vallorcine" class="card-photo">
+      <img src="/img/generique/generique-via-ferrata-groupe.jpg" alt="Via ferrata de la Cascade de Bérard, percorso AD+ con ponti tibetani sopra il torrente a Vallorcine, Alta Savoia" loading="lazy">
+      <span class="card-tag">Gratis</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/it/via-ferrata-berard-vallorcine" class="title">Via Ferrata de la Cascade de Bérard</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Vallorcine</span></div>
+      <p class="card-desc">Via ferrata ludica AD+ nella valle di Bérard, Vallorcine. Percorso attrezzato di 400 m con ponti tibetani e ristoro. 20 min a piedi dal parcheggio Le Buet.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Via%20Ferrata%20de%20la%20Cascade%20de%20B%C3%A9rard%2C%20Vallorcine%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a><a href="https://www.chamoniarde.com/actualites/a-la-une/via-ferrata-de-la-cascade-de-berard" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a>
+      </div>
+    </div>
+  </article></div>
+  </div>
+</section>
 <div class="wrap"><p class="meta"><span>Pubblicato il 3 juin 2026</span><span class="sep">·</span><span>Aggiornato il 7 juin 2026</span></p></div></main>
 <div class="action-bar" id="actionBar"><div class="wrap"><a class="primary" href="https://www.laforetmagiquechamonix.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v3a3 3 0 0 0 0 6v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3a3 3 0 0 0 0-6V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><line x1="13" y1="5" x2="13" y2="7"/><line x1="13" y1="11" x2="13" y2="13"/><line x1="13" y1="17" x2="13" y2="19"/></svg><span>Prenota</span></a><a href="https://www.google.com/maps/dir/?api=1&destination=La%20For%C3%AAt%20Magique%20Chamonix%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie%2C%20France&destination_place_id=ChIJJd0trk9MiUcRVuR1eYSvcwk" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Indicazioni</span></a><a href="https://www.laforetmagiquechamonix.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg><span>Sito ufficiale</span></a></div></div>
 <footer class="site"><div class="wrap"><div class="foot-grid"><div class="foot-col"><a class="brand" href="https://loisirs74.fr/it/" style="margin-bottom:.85rem"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a><p>Guida indipendente ai luoghi di svago in Alta Savoia. 100% gratis. 100% verificato.</p></div><div class="foot-col"><h4>Esplora</h4><ul><li><a href="https://loisirs74.fr/it/">Home</a></li></ul></div><div class="foot-col"><h4>Contribuisci</h4><ul><li><a href="mailto:photos@loisirs74.fr">Invia foto</a></li><li><a href="https://loisirs74.fr/it/signaler">Segnala info</a></li><li><a href="https://loisirs74.fr/it/devenir-partenaire">Diventa partner</a></li></ul></div><div class="foot-col"><h4>Note legali</h4><ul><li><a href="https://loisirs74.fr/it/mentions-legales">Note legali</a></li><li><a href="https://loisirs74.fr/it/confidentialite">Privacy</a></li><li><a href="https://loisirs74.fr/it/cgv">Termini</a></li></ul></div></div><div class="foot-bottom"><span class="credit">© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Tutti i diritti riservati</span><span>Niente pubblicità. Niente tracking. Niente recensioni Google.</span></div></div></footer>

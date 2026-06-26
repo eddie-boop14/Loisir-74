@@ -124,6 +124,122 @@
 <section class="block"><div class="wrap"><div class="kicker reveal">FAQ</div><h2 class="reveal">Veelgestelde vragen</h2><div class="faq-grid reveal" data-stagger><details class="faq"><summary>Vanaf welke leeftijd?</summary><p>Babyzone, laser vanaf 4, hoofdpark vanaf 3-4.</p></details><details class="faq"><summary>Tarieven?</summary><p>Variabel; contacteer het park.</p></details><details class="faq"><summary>Moet ik reserveren?</summary><p>Niet voor inloop; aanbevolen voor verjaardagen.</p></details><details class="faq"><summary>Parkeren?</summary><p>Ja, gratis.</p></details><details class="faq"><summary>Openingstijden?</summary><p>Buiten vakanties wo/za/zo 10-19, vr 16-19. Vakanties dagelijks 10-19. Zomer 10-17:30.</p></details><details class="faq"><summary>Verjaardag?</summary><p>Ja, themacabines.</p></details><details class="faq"><summary>Snack?</summary><p>Ja, ter plaatse.</p></details></div></div></section>
 <section class="block"><div class="wrap"><div class="kicker reveal">Bronnen</div><h2 class="reveal">Bronnen &amp; verificatie</h2><div class="sources reveal"><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><a href="https://tourisme.fier-et-usses.com/la-foret-enchantee-sillingy.html" target="_blank" rel="noopener">tourisme.fier-et-usses.com</a></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><a href="https://www.pagesjaunes.fr/pros/54284297" target="_blank" rel="noopener">pagesjaunes.fr</a></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><a href="https://www.funbooker.com/fr/presentation/la-foret-enchantee/funpro" target="_blank" rel="noopener">funbooker.com</a></li></ul><p class="caveat">Multi-bron verificatie bij publicatie. Informatie kan veranderen — bevestig bij de officiële beheerder vóór vertrek.</p></div></div></section>
 <aside class="data-credits reveal"><div class="wrap"><p class="data-credits-line">Gedeeltelijke gegevens: Office de Tourisme du Lac d'Annecy via DataTourisme · Apidae Tourisme · <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence" target="_blank" rel="noopener">Licence Ouverte 2.0 (Etalab)</a></p></div></aside>
+<section class="block related" id="related">
+  <style>
+.related{padding:clamp(2rem,4vw,3.5rem) 0;border-top:1px solid var(--line);margin-bottom:5rem}
+.related .wrap{max-width:64rem;margin-inline:auto;padding-inline:clamp(1rem,3vw,2rem)}
+.related .kicker{font-size:.8125rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.related h2{font-size:clamp(1.3rem,1.1rem + .8vw,1.85rem);line-height:1.15;letter-spacing:-.015em;font-weight:800;margin:0 0 .4rem;color:var(--ink)}
+.related .lead{color:var(--ink-soft);max-width:42rem;margin-bottom:1.5rem;font-size:1rem;line-height:1.55}
+.related .carousel{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem}
+@media(max-width:680px){.related .carousel{display:flex;gap:.85rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}.related .carousel::-webkit-scrollbar{display:none}.related .carousel > .card{flex:0 0 75vw;max-width:18rem;scroll-snap-align:start}}
+.related .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s;text-decoration:none;color:inherit}
+.related .card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 30%,var(--line));box-shadow:0 8px 24px -12px rgba(11,13,16,.18)}
+.related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
+.related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.related .card:hover .card-photo img{transform:scale(1.03)}
+.related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
+.related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
+.related .card-body a.title:hover{color:var(--accent)}
+.related .card-commune{font-size:.78rem;color:var(--ink-mute);display:flex;align-items:center;gap:.3rem}
+.related .card-commune svg{width:11px !important;height:11px !important;flex-shrink:0}
+.related .card-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45;margin:.15rem 0 .65rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.related .card-actions{display:flex;gap:.4rem;margin-top:auto}
+.related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
+.related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.related .card-actions a svg{width:13px !important;height:13px !important}
+</style>
+  <div class="wrap">
+    <p class="kicker">In de buurt</p>
+    <h2>In de buurt</h2>
+    <p class="lead">Andere plekken om te ontdekken in de buurt en in dezelfde categorie</p>
+    <div class="carousel"><article class="card">
+    <a href="https://loisirs74.fr/nl/domaine-du-tornet" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Lac_de_la_Balme-de-Sillingy_%2851056207507%29.jpg" alt="Domaine du Tornet in La Balme-de-Sillingy, meer en kersenbomen, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">Gratis</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/nl/domaine-du-tornet" class="title">Domaine du Tornet</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>La Balme-de-Sillingy</span></div>
+      <p class="card-desc">Meer van 7 ha, pumptrack, speeltuin 2025, fitness, ponton, Aziatische kersenbomen. Vrije toegang het hele jaar in La Balme-de-Sillingy.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Domaine%20du%20Tornet%2C%20La%20Balme-de-Sillingy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a><a href="http://chaletdutornet.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Officiële website</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/nl/ereel-annecy-sillingy" class="card-photo">
+      <img src="/img/generique/generique-vr-multi-joueurs.jpg" alt="Speler ondergedompeld in VR op een individueel station in het virtual reality-centrum E.réel in Sillingy bij Annecy" loading="lazy">
+      <span class="card-tag">Betaald</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/nl/ereel-annecy-sillingy" class="title">E.réel Annecy</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sillingy</span></div>
+      <p class="card-desc">Virtual reality-centrum van 300 m² in Grand Épagny (Sillingy): 80+ VR-ervaringen, vanaf 8 jaar begeleid. Vanaf €14 per sessie. Sibra-lijn 7.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=E.r%C3%A9el%20Annecy%2C%20Sillingy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a><a href="https://ereel.fr/espace-vr/annecy/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Officiële website</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/nl/marais-de-poisy" class="card-photo">
+      <img src="/img/points-de-vue/marais-de-poisy-hero.jpg" alt="Marais de Poisy in Poisy, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Gratis</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/nl/marais-de-poisy" class="title">Marais de Poisy</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Poisy</span></div>
+      <p class="card-desc">Beschermd natuurgebied geklasseerd als Kwetsbaar Natuurgebied op 10 min van Annecy. Toegankelijk pad van 1,5 km met observatorium en educatieve panelen.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Marais%20de%20Poisy%2C%20Poisy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a><a href="https://en.lac-annecy.com/course-thematic-walk/marais-de-poisy-poisy/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Officiële website</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/nl/escalade-space-bloc-sillingy" class="card-photo">
+      <img src="/img/generique/generique-escalade-wall.jpg" alt="Space Bloc boulderhal in Sillingy nabij Annecy, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Betaald</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/nl/escalade-space-bloc-sillingy" class="title">Space Bloc</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sillingy</span></div>
+      <p class="card-desc">Boulderhal van meer dan 750 m² in Sillingy (Annecy): regelmatig vernieuwde boulders, kinderzone vanaf 4 jaar, bar/snack, lessen en kampen. Volwassene 14 €.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Space%20Bloc%2C%20Sillingy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a><a href="https://www.spacebloc.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Officiële website</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/nl/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy" class="card-photo">
+      <img src="/img/generique/generique-jardin-detente-1.jpg" alt="Landschappelijke paden en plantencollecties in het Parc des Jardins de Haute-Savoie" loading="lazy">
+      <span class="card-tag">Betaald</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/nl/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy" class="title">Parc des Jardins de Haute-Savoie</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>La Balme-de-Sillingy</span></div>
+      <p class="card-desc">Landschappelijke botanische tuin in La Balme-de-Sillingy: ~50 thematische percelen en nationale collectie Aziatische sierkersen. Rustig bezoek van lente tot herfst.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Parc%20des%20Jardins%20de%20Haute-Savoie%2C%20La%20Balme-de-Sillingy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a><a href="https://www.parcdesjardins-hautesavoie.fr/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Officiële website</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/nl/laser-game-lasermaxx-sillingy" class="card-photo">
+      <img src="/img/generique/generique-laser-game.jpg" alt="Lasermaxx Sillingy — lasergame in Sillingy, Haute-Savoie" loading="lazy">
+      <span class="card-tag">Betaald</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/nl/laser-game-lasermaxx-sillingy" class="title">Lasermaxx Sillingy</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sillingy</span></div>
+      <p class="card-desc">Lasermaxx Sillingy: indoor lasergame op 15 min van Annecy, Lasermaxx-uitrusting nieuwste generatie, spellen 15-20 min, verjaardagen, groepen.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Lasermaxx%20Sillingy%2C%20Sillingy%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a><a href="https://www.lasermaxx74.fr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Officiële website</span></a>
+      </div>
+    </div>
+  </article></div>
+  </div>
+</section>
 <div class="wrap"><p class="meta"><span>Gepubliceerd 1 juin 2026</span><span class="sep">·</span><span>Bijgewerkt 6 juin 2026</span></p></div></main>
 <div class="action-bar" id="actionBar"><div class="wrap"><a class="primary" href="https://www.foret-enchantee.fr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v3a3 3 0 0 0 0 6v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3a3 3 0 0 0 0-6V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><line x1="13" y1="5" x2="13" y2="7"/><line x1="13" y1="11" x2="13" y2="13"/><line x1="13" y1="17" x2="13" y2="19"/></svg><span>Reserveren</span></a><a href="https://www.google.com/maps/dir/?api=1&destination=La%20For%C3%AAt%20Enchant%C3%A9e%2C%20Sillingy%2C%20Haute-Savoie%2C%20France" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Route</span></a><a href="https://www.foret-enchantee.fr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg><span>Officiële site</span></a></div></div>
 <footer class="site"><div class="wrap"><div class="foot-grid"><div class="foot-col"><a class="brand" href="https://loisirs74.fr/nl/" style="margin-bottom:.85rem"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a><p>Onafhankelijke gids voor vrijetijdsbestedingen in Haute-Savoie. Gratis. Geverifieerd.</p></div><div class="foot-col"><h4>Verkennen</h4><ul><li><a href="https://loisirs74.fr/nl/">Startpagina</a></li></ul></div><div class="foot-col"><h4>Bijdragen</h4><ul><li><a href="mailto:photos@loisirs74.fr">Foto&#39;s sturen</a></li><li><a href="https://loisirs74.fr/nl/signaler">Info melden</a></li><li><a href="https://loisirs74.fr/nl/devenir-partenaire">Partner worden</a></li></ul></div><div class="foot-col"><h4>Juridisch</h4><ul><li><a href="https://loisirs74.fr/nl/mentions-legales">Wettelijke vermeldingen</a></li><li><a href="https://loisirs74.fr/nl/confidentialite">Privacy</a></li><li><a href="https://loisirs74.fr/nl/cgv">Algemene voorwaarden</a></li></ul></div></div><div class="foot-bottom"><span class="credit">© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Alle rechten voorbehouden</span><span>Geen advertenties. Geen tracking. Geen Google reviews.</span></div></div></footer>

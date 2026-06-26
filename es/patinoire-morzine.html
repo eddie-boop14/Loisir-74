@@ -124,6 +124,122 @@
 <section class="block"><div class="wrap"><div class="kicker reveal">FAQ</div><h2 class="reveal">Preguntas frecuentes</h2><div class="faq-grid reveal" data-stagger><details class="faq"><summary>¿Hay que reservar?</summary><p>No, sesiones públicas sin reserva. Grupos al 04 50 79 08 43.</p></details><details class="faq"><summary>¿Puedo alquilar patines?</summary><p>Sí, 4,50 €, todas las tallas. Calcetines gruesos recomendados.</p></details><details class="faq"><summary>¿Hay sesiones para niños?</summary><p>Sí, una zona reservada. Menores de 5 años gratis (alquiler aparte).</p></details><details class="faq"><summary>¿Cuándo son las nocturnas?</summary><p>Jueves 20:30-23:00 en invierno. 6,50 € adulto / 4,50 € niño.</p></details><details class="faq"><summary>¿Es accesible la pista?</summary><p>El edificio sí (recepción, vestuarios). El patinaje no es apto para PMR.</p></details><details class="faq"><summary>¿Dónde aparcar?</summary><p>Aparcamiento del Palais des Sports al lado. Gratuito o de pago según temporada.</p></details><details class="faq"><summary>¿Abre en verano?</summary><p>Sí, 13 julio - 30 agosto 2026 lun-vie.</p></details><details class="faq"><summary>¿Hay clases de patinaje?</summary><p>El club local y la ESF ofrecen clases. Consultar en la pista.</p></details></div></div></section>
 <section class="block"><div class="wrap"><div class="kicker reveal">Fuentes</div><h2 class="reveal">Fuentes &amp; verificaciones</h2><div class="sources reveal"><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><a href="https://www.mairie-morzine-avoriaz.com/patinoires/" target="_blank" rel="noopener">mairie-morzine-avoriaz.com</a></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><a href="https://en.morzine-avoriaz.com/equipment/palais-des-sports-ice-rink/" target="_blank" rel="noopener">en.morzine-avoriaz.com</a></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><a href="https://explore.avoriaz.com/fr/activites/patinoire-du-palais-des-sports" target="_blank" rel="noopener">explore.avoriaz.com</a></li></ul><p class="caveat">Verificación multi-fuente en la fecha de publicación. La información puede cambiar — confirme con el operador oficial antes de viajar.</p></div></div></section>
 <aside class="data-credits reveal"><div class="wrap"><p class="data-credits-line">Datos parciales: Office de Tourisme de Morzine vía DataTourisme · Apidae Tourisme · <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence" target="_blank" rel="noopener">Licence Ouverte 2.0 (Etalab)</a></p></div></aside>
+<section class="block related" id="related">
+  <style>
+.related{padding:clamp(2rem,4vw,3.5rem) 0;border-top:1px solid var(--line);margin-bottom:5rem}
+.related .wrap{max-width:64rem;margin-inline:auto;padding-inline:clamp(1rem,3vw,2rem)}
+.related .kicker{font-size:.8125rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.related h2{font-size:clamp(1.3rem,1.1rem + .8vw,1.85rem);line-height:1.15;letter-spacing:-.015em;font-weight:800;margin:0 0 .4rem;color:var(--ink)}
+.related .lead{color:var(--ink-soft);max-width:42rem;margin-bottom:1.5rem;font-size:1rem;line-height:1.55}
+.related .carousel{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1rem}
+@media(max-width:680px){.related .carousel{display:flex;gap:.85rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}.related .carousel::-webkit-scrollbar{display:none}.related .carousel > .card{flex:0 0 75vw;max-width:18rem;scroll-snap-align:start}}
+.related .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s;text-decoration:none;color:inherit}
+.related .card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 30%,var(--line));box-shadow:0 8px 24px -12px rgba(11,13,16,.18)}
+.related .card-photo{display:block;aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;position:relative;flex-shrink:0}
+.related .card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.related .card:hover .card-photo img{transform:scale(1.03)}
+.related .card-tag{position:absolute;top:.6rem;left:.6rem;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
+.related .card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.related .card-body a.title{font-weight:700;font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.005em;text-decoration:none}
+.related .card-body a.title:hover{color:var(--accent)}
+.related .card-commune{font-size:.78rem;color:var(--ink-mute);display:flex;align-items:center;gap:.3rem}
+.related .card-commune svg{width:11px !important;height:11px !important;flex-shrink:0}
+.related .card-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.45;margin:.15rem 0 .65rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.related .card-actions{display:flex;gap:.4rem;margin-top:auto}
+.related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
+.related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.related .card-actions a svg{width:13px !important;height:13px !important}
+</style>
+  <div class="wrap">
+    <p class="kicker">Cerca</p>
+    <h2>Cerca</h2>
+    <p class="lead">Otros lugares para explorar en la zona y en la misma categoría</p>
+    <div class="carousel"><article class="card">
+    <a href="https://loisirs74.fr/es/cascade-aventure" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Cascade_de_Nyon_%282%29.jpg" alt="Cascade Aventure, parque de aventura en los árboles y actividades outdoor cerca de la cascada de Nyon en Morzine, Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">De pago</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/es/cascade-aventure" class="title">Cascade Aventure</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Morzine</span></div>
+      <p class="card-desc">Viva la aventura vertical sobre la cascada de Nyon: recorridos entre árboles, tirolesas gigantes, barranquismo y vía ferrata exclusiva en un parque familiar a 1000 m de altitud.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Cascade%20Aventure%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="https://cascadeaventure.wixsite.com/cascade-aventure" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/es/espace-aquatique-morzine" class="card-photo">
+      <img src="/img/generique/generique-aquatique-bassin-natation.jpg" alt="Espace Aquatique de Morzine" loading="lazy">
+      <span class="card-tag">De pago</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/es/espace-aquatique-morzine" class="title">Espace Aquatique de Morzine</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Morzine</span></div>
+      <p class="card-desc">Centro acuático de Morzine con vasos cubiertos 25 m y 12,5 m, chapoteador, saunas, hammams y vaso olímpico 50 m exterior, tobogán y solárium. Desde 4 €.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Espace%20Aquatique%20de%20Morzine%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="https://www.mairie-morzine-avoriaz.com/espace-aquatique/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/es/telecabine-pleney-morzine" class="card-photo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg" alt="Cabina de la telecabina del Pléney sobre los tejados de Morzine con el macizo del Mont Blanc al fondo" loading="lazy" referrerpolicy="no-referrer">
+      <span class="card-tag">De pago</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/es/telecabine-pleney-morzine" class="title">Telecabina del Pléney</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Morzine</span></div>
+      <p class="card-desc">Telecabina del Pléney en Morzine: BTT, trineo de verano, senderismo y vistas sobre el Chablais y el Mont Blanc. Billetes desde 8,40 € en verano 2026.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Telecabina%20del%20Pl%C3%A9ney%2C%20Morzine%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="https://www.ski-morzine.com/en/summer/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/es/patinoire-richard-bozon-chamonix" class="card-photo">
+      <img src="/img/generique/generique-patinoire-hockey.jpg" alt="Pista olímpica cubierta 60 × 30 m y pista exterior 26 × 56 m en la Patinoire Richard Bozon en Chamonix-Mont-Blanc, Alta Saboya 74" loading="lazy">
+      <span class="card-tag">De pago</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/es/patinoire-richard-bozon-chamonix" class="title">Patinoire Richard Bozon</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Chamonix-Mont-Blanc</span></div>
+      <p class="card-desc">Centro Deportivo Richard-Bozon en Chamonix: pista olímpica cubierta de 60 × 30 m y pista exterior de 26 × 56 m abierta en invierno, a los pies del Mont-Blanc.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Patinoire%20Richard%20Bozon%2C%20Chamonix-Mont-Blanc%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="https://www.chamonix.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/es/patinoire-palais-megeve" class="card-photo">
+      <img src="/img/generique/generique-patinoire-skater.jpg" alt="Pista olímpica del complejo Le Palais, Patinoire du Palais Megève en Megève, Alta Saboya 74" loading="lazy">
+      <span class="card-tag">De pago</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/es/patinoire-palais-megeve" class="title">Patinoire du Palais Megève</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Megève</span></div>
+      <p class="card-desc">Pista olímpica del Palais en Megève, equipamiento clave de la prestigiosa estación: hockey, galas, sesiones públicas y clases durante toda la temporada invernal.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Patinoire%20du%20Palais%20Meg%C3%A8ve%2C%20Meg%C3%A8ve%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="http://lepalaismegeve.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
+      </div>
+    </div>
+  </article>
+<article class="card">
+    <a href="https://loisirs74.fr/es/patinoire-la-clusaz" class="card-photo">
+      <img src="/img/generique/generique-patinoire-skater.jpg" alt="Pista de hielo La Clusaz — Place du Pré de Foire, La Clusaz, Haute-Savoie" loading="lazy">
+      <span class="card-tag">De pago</span>
+    </a>
+    <div class="card-body">
+      <a href="https://loisirs74.fr/es/patinoire-la-clusaz" class="title">Patinoire de La Clusaz</a>
+      <div class="card-commune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>La Clusaz</span></div>
+      <p class="card-desc">Pista cubierta de 1 000 m² en La Clusaz, abierta de fines de diciembre a fines de abril: sesiones públicas, nocturnas, Eisstock el lunes. Desde 5 €.</p>
+      <div class="card-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Patinoire%20de%20La%20Clusaz%2C%20La%20Clusaz%2C%20Haute-Savoie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Ruta</span></a><a href="https://www.laclusaz.org/fr/associations-et-loisirs/patinoire/patinoire.htm" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a>
+      </div>
+    </div>
+  </article></div>
+  </div>
+</section>
 <div class="wrap"><p class="meta"><span>Publicado el 1 juin 2026</span><span class="sep">·</span><span>Actualizado el 6 juin 2026</span></p></div></main>
 <div class="action-bar" id="actionBar"><div class="wrap"><a class="primary" href="https://www.mairie-morzine-avoriaz.com/patinoires/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v3a3 3 0 0 0 0 6v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3a3 3 0 0 0 0-6V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><line x1="13" y1="5" x2="13" y2="7"/><line x1="13" y1="11" x2="13" y2="13"/><line x1="13" y1="17" x2="13" y2="19"/></svg><span>Reservar</span></a><a href="https://www.google.com/maps/dir/?api=1&destination=Patinoire%20de%20Morzine%2C%20Morzine%2C%20Haute-Savoie%2C%20France&destination_place_id=ChIJ3WXfJEIdjEcR7LWUJs6YRZM" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Cómo llegar</span></a><a href="https://www.mairie-morzine-avoriaz.com/patinoires/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg><span>Sitio oficial</span></a></div></div>
 <footer class="site"><div class="wrap"><div class="foot-grid"><div class="foot-col"><a class="brand" href="https://loisirs74.fr/es/" style="margin-bottom:.85rem"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a><p>Guía independiente de los lugares de ocio en Alta Saboya. 100% gratis. 100% verificado.</p></div><div class="foot-col"><h4>Explorar</h4><ul><li><a href="https://loisirs74.fr/es/">Inicio</a></li></ul></div><div class="foot-col"><h4>Contribuir</h4><ul><li><a href="mailto:photos@loisirs74.fr">Enviar fotos</a></li><li><a href="https://loisirs74.fr/es/signaler">Reportar info</a></li><li><a href="https://loisirs74.fr/es/devenir-partenaire">Hacerse socio</a></li></ul></div><div class="foot-col"><h4>Legal</h4><ul><li><a href="https://loisirs74.fr/es/mentions-legales">Avisos legales</a></li><li><a href="https://loisirs74.fr/es/confidentialite">Privacidad</a></li><li><a href="https://loisirs74.fr/es/cgv">Términos</a></li></ul></div></div><div class="foot-bottom"><span class="credit">© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Todos los derechos reservados</span><span>Sin anuncios. Sin tracking. Sin reseñas de Google.</span></div></div></footer>

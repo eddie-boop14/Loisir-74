@@ -95,6 +95,33 @@ def candidates(path):
             os.path.join(SITE, rel, "index.html")]
 
 
+def check_carousels():
+    """Tripwire: every published fiche page in _site must carry the proximity
+    carousel (id="related" + ≥1 card). Catches a rebuild that drops it — the
+    exact regression that wiped update_related.py's output for good."""
+    import glob
+    pub = []
+    for fp in glob.glob(os.path.join(ROOT, "Json", "*.json")):
+        try:
+            d = json.loads(open(fp, encoding="utf-8").read())
+        except Exception:
+            continue
+        if d.get("status") == "published":
+            pub.append(d["slug"])
+    bad = []
+    for slug in pub:
+        for pre in ("", "en", "de", "it", "es", "nl"):
+            rel = f"{slug}.html" if not pre else f"{pre}/{slug}.html"
+            fp = os.path.join(SITE, rel)
+            if not os.path.exists(fp):
+                bad.append(rel + " (missing)")
+                continue
+            html = open(fp, encoding="utf-8", errors="ignore").read()
+            if 'id="related"' not in html or '<article class="card"' not in html:
+                bad.append(rel + " (no carousel)")
+    return bad
+
+
 def main():
     if not os.path.isdir(SITE):
         print("::error::_site/ not built — run build_site.py first")
@@ -127,10 +154,23 @@ def main():
                 if not any(os.path.exists(c) for c in candidates(path)):
                     missing[path].append(page_rel)
 
-    print(f"gate_link_integrity: {pages} pages, {checked} internal links checked")
-    if not missing:
-        print("✓ every internal link resolves to a file in _site/ (or a redirect)")
+    bad_carousels = check_carousels()
+
+    print(f"gate_link_integrity: {pages} pages, {checked} internal links checked; "
+          f"carousel tripwire on every published fiche")
+    if not missing and not bad_carousels:
+        print("✓ every internal link resolves; every fiche has its proximity carousel")
         sys.exit(0)
+
+    if bad_carousels:
+        print(f"::error::{len(bad_carousels)} fiche page(s) missing the proximity "
+              f'carousel (id="related" + cards) — a rebuild dropped it:')
+        for b in bad_carousels[:20]:
+            print(f"    ✗ {b}")
+        if len(bad_carousels) > 20:
+            print(f"    … and {len(bad_carousels) - 20} more")
+        if not missing:
+            sys.exit(1)
 
     total = sum(len(v) for v in missing.values())
     print(f"::error::{len(missing)} broken internal target(s) across {total} link(s):")
