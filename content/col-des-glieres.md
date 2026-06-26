@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.0514
-longitude: 6.3297
+latitude: 45.966746
+longitude: 6.332189
 geo_verified: false
 google_place_id: "ChIJQTbywaL0i0cRC5kGcWOK5vo"
 canonical_url: https://loisirs74.fr/col-des-glieres
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Point de vue
 - **Commune**: Fillière, Haute-Savoie (74570)
-- **GPS**: 46.0514, 6.3297
+- **GPS**: 45.966746, 6.332189
 - **Type**: Col et plateau d'altitude
 - **Accès**: Libre · Gratuit
 - **Parking**: Gratuit (plusieurs parkings sur le plateau)

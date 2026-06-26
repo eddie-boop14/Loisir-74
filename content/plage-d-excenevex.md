@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.3528
-longitude: 6.3489
+latitude: 46.347851
+longitude: 6.358178
 geo_verified: false
 google_place_id: "ChIJIaRfIi5AjEcR1EDMx_AyY3w"
 canonical_url: https://loisirs74.fr/plage-d-excenevex
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Lac & plage
 - **Commune**: Excenevex, Haute-Savoie (74140)
-- **GPS**: 46.3528, 6.3489
+- **GPS**: 46.347851, 6.358178
 - **Type**: Plage de sable naturel (lac Léman)
 - **Accès**: Libre · Gratuit
 - **Parking**: Payant en saison (6 € journée, gratuit dès 17h)

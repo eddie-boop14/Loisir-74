@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.3736
-longitude: 6.4776
+latitude: 46.393678
+longitude: 6.484693
 geo_verified: false
 google_place_id: "ChIJsfZeYQA_jEcRvJ7vtBGKOS8"
 canonical_url: https://loisirs74.fr/plage-de-la-pinede
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Lac & plage
 - **Commune**: Thonon-les-Bains, Haute-Savoie (74200)
-- **GPS**: 46.3736, 6.4776
+- **GPS**: 46.393678, 6.484693
 - **Type**: Plages naturelles en galets
 - **Accès**: Libre · Gratuit
 - **Parking**: Parking de la piscine municipale (à proximité)

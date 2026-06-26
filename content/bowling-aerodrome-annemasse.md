@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.1933
-longitude: 6.235
+latitude: 46.198558
+longitude: 6.258255
 geo_verified: false
 google_place_id: "ChIJ-d0ktRtujEcRwwU4eB0ouv0"
 canonical_url: https://loisirs74.fr/bowling-aerodrome-annemasse
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Bowling
 - **Commune**: Annemasse, Haute-Savoie (74100)
-- **GPS**: 46.1933, 6.235
+- **GPS**: 46.198558, 6.258255
 - **Type**: Bowling - 12 billards + jeux + restaurant
 - **Accès**: Payant - voir tarifs
 - **Parking**: Gratuit sur site

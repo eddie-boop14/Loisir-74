@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9833
-longitude: 6.3
+latitude: 45.965885
+longitude: 6.156665
 geo_verified: false
 google_place_id: "ChIJpVr_aQOLi0cRYUdem0mPwiY"
 canonical_url: https://loisirs74.fr/sentier-espagnols-pas-du-roc-glieres
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Sentier
 - **Commune**: Thorens-Glières, Haute-Savoie (74570)
-- **GPS**: 45.9833, 6.3
+- **GPS**: 45.965885, 6.156665
 - **Type**: Sentier historique - Plateau des Glières
 - **Accès**: Libre · Gratuit
 - **Parking**: Gratuit au départ

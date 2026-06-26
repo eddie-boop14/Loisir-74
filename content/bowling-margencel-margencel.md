@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.35
-longitude: 6.4
+latitude: 46.34491
+longitude: 6.421298
 geo_verified: false
 google_place_id: "ChIJoVG3Kd0_jEcRkgsm_DfysEg"
 canonical_url: https://loisirs74.fr/bowling-margencel-margencel
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Bowling
 - **Commune**: Margencel, Haute-Savoie (74200)
-- **GPS**: 46.35, 6.4
+- **GPS**: 46.34491, 6.421298
 - **Type**: Bowling 20 pistes + restaurant
 - **Accès**: Payant - voir tarifs
 - **Parking**: Gratuit sur site

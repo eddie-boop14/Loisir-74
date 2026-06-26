@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9772
-longitude: 6.8969
+latitude: 45.981467
+longitude: 6.891899
 geo_verified: false
 google_place_id: "ChIJIwnvpyJNiUcR9sL0MUsClVQ"
 canonical_url: https://loisirs74.fr/lac-blanc
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Lac & plage
 - **Commune**: Chamonix-Mont-Blanc, Haute-Savoie (74400)
-- **GPS**: 45.9772, 6.8969
+- **GPS**: 45.981467, 6.891899
 - **Type**: Lac glaciaire d'altitude
 - **Accès**: Libre · Gratuit
 - **Parking**: Parking des Praz de Chamonix (Flégère) ou col des Montets (Tré-le-Champ)

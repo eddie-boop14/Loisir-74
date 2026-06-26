@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.8827376
-longitude: 6.4514906
+latitude: 45.878913
+longitude: 6.451471
 geo_verified: false
 google_place_id: "ChIJ4Tu7QBjwi0cRJOFQXgoTcxA"
 canonical_url: https://loisirs74.fr/via-ferrata-pollet-villard-la-clusaz
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: La Clusaz, Haute-Savoie (74220)
-- **GPS**: 45.8827376, 6.4514906
+- **GPS**: 45.878913, 6.451471
 - **Type**: Via ferrata
 - **Accès**: Accès libre (équipement obligatoire)
 - **Meilleure saison**: Mai à novembre (hors neige)

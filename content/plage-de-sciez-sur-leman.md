@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.33251
-longitude: 6.38413
+latitude: 46.341316
+longitude: 6.391926
 geo_verified: false
 google_place_id: "ChIJl7KSVUBBjEcR3c4sxWhojuY"
 canonical_url: https://loisirs74.fr/plage-de-sciez-sur-leman
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Lac & plage
 - **Commune**: Sciez, Haute-Savoie (74140)
-- **GPS**: 46.33251, 6.38413
+- **GPS**: 46.341316, 6.391926
 - **Type**: Plage lacustre (Léman)
 - **Accès**: Libre · Gratuit
 - **Parking**: Gratuit (P+R à proximité du port)

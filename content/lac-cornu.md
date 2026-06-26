@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.936024
-longitude: 6.853158
+latitude: 45.958109
+longitude: 6.848962
 geo_verified: false
 google_place_id: "ChIJJZgeeHhSiUcRkseb_TGzEVA"
 canonical_url: https://loisirs74.fr/lac-cornu
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Lac & plage
 - **Commune**: Chamonix-Mont-Blanc, Haute-Savoie (74400)
-- **GPS**: 45.936024, 6.853158
+- **GPS**: 45.958109, 6.848962
 - **Type**: Lac de haute montagne
 - **Accès**: Libre · Gratuit
 - **Parking**: Payant (parking télécabine du Brévent à Chamonix, puis télécabine Planpraz)

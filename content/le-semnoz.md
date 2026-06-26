@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.7887
-longitude: 6.0838
+latitude: 45.803367
+longitude: 6.097538
 geo_verified: false
 google_place_id: "ChIJCUPGRmeXi0cRDi2JsQo7hOE"
 canonical_url: https://loisirs74.fr/le-semnoz
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Point de vue
 - **Commune**: Viuz-la-Chiésaz, Haute-Savoie (74540)
-- **GPS**: 45.7887, 6.0838
+- **GPS**: 45.803367, 6.097538
 - **Type**: Plateau de moyenne montagne
 - **Accès**: Libre · Gratuit
 - **Parking**: Gratuit (station)

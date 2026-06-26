@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.259728
-longitude: 6.531059
+latitude: 46.259934
+longitude: 6.531249
 geo_verified: true
 google_place_id: "ChIJmZR72zYXjEcRDKXAYOd3XAE"
 canonical_url: https://loisirs74.fr/ferme-pedagogique-petit-mont-bellevaux
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Bellevaux, Haute-Savoie (74470)
-- **GPS**: 46.259728, 6.531059
+- **GPS**: 46.259934, 6.531249
 - **Type**: Ferme pédagogique
 - **Accès**: Visite libre gratuite · ateliers et hébergements payants
 - **Meilleure saison**: Toute l'année (Lun-Sam)

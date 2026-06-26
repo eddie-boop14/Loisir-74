@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.0333
-longitude: 6.1167
+latitude: 46.032107
+longitude: 6.117224
 geo_verified: false
 google_place_id: "ChIJ2zI0kEUhjEcR8k7qzC91Fik"
 canonical_url: https://loisirs74.fr/sentier-balcon-leman-saleve
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Sentier
 - **Commune**: Cruseilles, Haute-Savoie (74350)
-- **GPS**: 46.0333, 6.1167
+- **GPS**: 46.032107, 6.117224
 - **Type**: Sentier de crête balisé GR
 - **Accès**: Libre · Gratuit
 - **Parking**: Gratuit au départ

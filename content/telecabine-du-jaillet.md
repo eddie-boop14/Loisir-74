@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.861
-longitude: 6.603
+latitude: 45.864191
+longitude: 6.617953
 geo_verified: false
 google_place_id: "ChIJXTSGrczii0cRFfaBBZZQt8E"
 canonical_url: https://loisirs74.fr/telecabine-du-jaillet
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Téléphérique / Télécabine
 - **Commune**: Megève, Haute-Savoie (74120)
-- **GPS**: 45.861, 6.603
+- **GPS**: 45.864191, 6.617953
 - **Type**: Télécabine 6 places
 - **Accès**: Payant
 - **Parking**: Gratuit 7 h (disque horaire obligatoire)

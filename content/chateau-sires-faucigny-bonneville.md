@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.078
-longitude: 6.408
+latitude: 46.116244
+longitude: 6.358393
 geo_verified: false
 google_place_id: "ChIJp-XUoaUMjEcRK8E9phoX384"
 canonical_url: https://loisirs74.fr/chateau-sires-faucigny-bonneville
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Château
 - **Commune**: Bonneville, Haute-Savoie (74130)
-- **GPS**: 46.078, 6.408
+- **GPS**: 46.116244, 6.358393
 - **Type**: Château fort XIIIe siècle, propriété communale
 - **Accès**: Visite guidée payante · Extérieurs libres gratuits
 - **Parking**: Gratuit centre Bonneville

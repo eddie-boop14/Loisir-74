@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.8806
-longitude: 6.3231
+latitude: 45.872871
+longitude: 6.293839
 geo_verified: false
 google_place_id: "ChIJ_dk2-c6Si0cR9B85G6WIxJ8"
 canonical_url: https://loisirs74.fr/ecomusee-bois-foret-thones
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Musée
 - **Commune**: Thônes, Haute-Savoie (74230)
-- **GPS**: 45.8806, 6.3231
+- **GPS**: 45.872871, 6.293839
 - **Type**: Musée du patrimoine forestier
 - **Accès**: Avril à octobre
 - **Meilleure saison**: Avril à octobre

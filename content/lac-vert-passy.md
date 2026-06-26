@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9217
-longitude: 6.7047
+latitude: 45.948625
+longitude: 6.753256
 geo_verified: false
 google_place_id: "ChIJjXfsqQtUiUcRVeAJJKLEnts"
 canonical_url: https://loisirs74.fr/lac-vert-passy
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Lac & plage
 - **Commune**: Passy, Haute-Savoie (74190)
-- **GPS**: 45.9217, 6.7047
+- **GPS**: 45.948625, 6.753256
 - **Type**: Lac glaciaire naturel
 - **Accès**: Libre · Gratuit
 - **Parking**: Gratuit (parking Plaine-Joux)

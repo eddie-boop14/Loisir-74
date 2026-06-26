@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.1
-longitude: 6.35
+latitude: 46.083865
+longitude: 6.366149
 geo_verified: false
 google_place_id: "ChIJi0ZtsRYLjEcRhcm10z29WEI"
 canonical_url: https://loisirs74.fr/wakepark-tna-cable-park-arenthon
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Wakepark
 - **Commune**: Arenthon, Haute-Savoie (74800)
-- **GPS**: 46.1, 6.35
+- **GPS**: 46.083865, 6.366149
 - **Type**: Téléski-nautique - seul vrai cable-park du 74
 - **Accès**: Payant - voir tarifs
 - **Parking**: Gratuit sur site

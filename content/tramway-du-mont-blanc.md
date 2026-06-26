@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9063
-longitude: 6.702
+latitude: 45.897875
+longitude: 6.711024
 geo_verified: false
 google_place_id: "ChIJ33HhWUtXiUcRCPzvUxwxqAI"
 canonical_url: https://loisirs74.fr/tramway-du-mont-blanc
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Téléphérique / Télécabine
 - **Commune**: Saint-Gervais-les-Bains, Haute-Savoie (74170)
-- **GPS**: 45.9063, 6.702
+- **GPS**: 45.897875, 6.711024
 - **Type**: Train à crémaillère panoramique
 - **Accès**: Payant
 - **Parking**: Gratuit au Fayet et à Saint-Gervais

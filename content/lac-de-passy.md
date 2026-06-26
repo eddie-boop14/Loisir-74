@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9267
-longitude: 6.695
+latitude: 45.914605
+longitude: 6.661364
 geo_verified: false
 google_place_id: "ChIJkdF0NPX9i0cRzRWKHsVdidc"
 canonical_url: https://loisirs74.fr/lac-de-passy
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Lac & plage
 - **Commune**: Passy, Haute-Savoie (74190)
-- **GPS**: 45.9267, 6.695
+- **GPS**: 45.914605, 6.661364
 - **Type**: Lac artificiel · Plan d'eau de loisirs
 - **Accès**: Libre · Gratuit
 - **Parking**: Gratuit (payant en juillet-août : 3 €/jour)

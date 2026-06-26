@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.878446
-longitude: 6.142616
+latitude: 45.860063
+longitude: 6.144909
 geo_verified: true
 google_place_id: "ChIJu35o2XaRi0cR38y4F6ujtNA"
 canonical_url: https://loisirs74.fr/grp-tour-lac-annecy-annecy
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Sentier
 - **Commune**: Annecy, Haute-Savoie (74000)
-- **GPS**: 45.878446, 6.142616
+- **GPS**: 45.860063, 6.144909
 - **Type**: GR® de Pays (GRP) pédestre - boucle
 - **Accès**: Libre · Gratuit
 - **Parking**: Pâquier d'Annecy, départs multiples possibles

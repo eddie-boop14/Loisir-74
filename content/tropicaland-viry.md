@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.1167
-longitude: 6.0167
+latitude: 46.129787
+longitude: 6.050031
 geo_verified: false
 google_place_id: "ChIJkx0BeyZ8jEcRQ54D1g8J_D0"
 canonical_url: https://loisirs74.fr/tropicaland-viry
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Parc de loisirs
 - **Commune**: Viry, Haute-Savoie (74580)
-- **GPS**: 46.1167, 6.0167
+- **GPS**: 46.129787, 6.050031
 - **Type**: Parc à dinosaures · jardin botanique · mini-ferme
 - **Accès**: Payant
 - **Parking**: Gratuit sur place

@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.067
-longitude: 6.317
+latitude: 46.076973
+longitude: 6.299401
 geo_verified: false
 google_place_id: null
 canonical_url: https://loisirs74.fr/karting-indoor-urban-kartin-la-roche
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Karting
 - **Commune**: La Roche-sur-Foron, Haute-Savoie (74800)
-- **GPS**: 46.067, 6.317
+- **GPS**: 46.076973, 6.299401
 - **Type**: Karting
 - **Accès**: Intérieur · toute l'année
 - **Meilleure saison**: Toute l'année

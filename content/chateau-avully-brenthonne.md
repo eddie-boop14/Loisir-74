@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.309
-longitude: 6.353
+latitude: 46.271784
+longitude: 6.40132
 geo_verified: false
 google_place_id: "ChIJvXAmHb0UjEcRHUEDDJr9Yr0"
 canonical_url: https://loisirs74.fr/chateau-avully-brenthonne
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Château
 - **Commune**: Brenthonne, Haute-Savoie (74890)
-- **GPS**: 46.309, 6.353
+- **GPS**: 46.271784, 6.40132
 - **Type**: Maison forte XIVe siècle, monument historique
 - **Accès**: Payant (gratuit -5 ans)
 - **Parking**: Gratuit à l'entrée du château

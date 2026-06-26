@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.0608
-longitude: 6.1311
+latitude: 46.076957
+longitude: 6.097679
 geo_verified: false
 google_place_id: "ChIJFayuwuV4jEcRDNanSgYnxRA"
 canonical_url: https://loisirs74.fr/maison-du-saleve-presilly
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Musée
 - **Commune**: Présilly, Haute-Savoie (74160)
-- **GPS**: 46.0608, 6.1311
+- **GPS**: 46.076957, 6.097679
 - **Type**: Centre d'interprétation du Salève, ancienne ferme XVIIIe
 - **Accès**: Payant
 - **Parking**: Gratuit, voitures et bus, à 100 m

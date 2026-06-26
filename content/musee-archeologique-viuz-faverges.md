@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.7542
-longitude: 6.282
+latitude: 45.754238
+longitude: 6.291961
 geo_verified: false
 google_place_id: "ChIJf8new-vqi0cR18Kwx09Epgg"
 canonical_url: https://loisirs74.fr/musee-archeologique-viuz-faverges
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Musée
 - **Commune**: Faverges-Seythenex, Haute-Savoie (74210)
-- **GPS**: 45.7542, 6.282
+- **GPS**: 45.754238, 6.291961
 - **Type**: Musée archéologique de site, vicus gallo-romain Casuaria
 - **Accès**: Payant
 - **Parking**: Stationnement libre gratuit près de l'église

@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.929295
-longitude: 6.874862
+latitude: 45.929396
+longitude: 6.874965
 geo_verified: true
 google_place_id: "ChIJcQ-NQUdNiUcRYWudKwrxzhY"
 canonical_url: https://loisirs74.fr/spa-qc-terme-chamonix
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Sortie loisir
 - **Commune**: Chamonix-Mont-Blanc, Haute-Savoie (74400)
-- **GPS**: 45.929295, 6.874862
+- **GPS**: 45.929396, 6.874965
 - **Type**: Spa thermal & bien-être
 - **Accès**: Intérieur & extérieur · toute l'année
 - **Meilleure saison**: Toute l'année — magique en hiver sous la neige

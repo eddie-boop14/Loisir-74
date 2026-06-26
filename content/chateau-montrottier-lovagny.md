@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.873
-longitude: 6.0727
+latitude: 45.898362
+longitude: 6.03866
 geo_verified: false
 google_place_id: "ChIJTd_676yEi0cR7Gf-Pi9rWOQ"
 canonical_url: https://loisirs74.fr/chateau-montrottier-lovagny
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Château
 - **Commune**: Lovagny, Haute-Savoie (74330)
-- **GPS**: 45.873, 6.0727
+- **GPS**: 45.898362, 6.03866
 - **Type**: Château médiéval + cabinet de curiosités
 - **Accès**: Payant (gratuit -6 ans)
 - **Parking**: Gratuit à l'entrée du domaine

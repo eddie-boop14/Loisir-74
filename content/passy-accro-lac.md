@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9254
-longitude: 6.6973
+latitude: 45.925787
+longitude: 6.703807
 geo_verified: false
 google_place_id: "ChIJof6xaPX9i0cRV64vq-ZEcng"
 canonical_url: https://loisirs74.fr/passy-accro-lac
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Passy, Haute-Savoie (74190)
-- **GPS**: 45.9254, 6.6973
+- **GPS**: 45.925787, 6.703807
 - **Type**: Parc aventure · Accrobranche
 - **Accès**: Payant
 - **Parking**: Gratuit (parking de la plage du lac de Passy)

@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.818153
-longitude: 6.6526193
+latitude: 45.818772
+longitude: 6.652186
 geo_verified: false
 google_place_id: "ChIJDaC6rkVZiUcRJOF8CHVw76c"
 canonical_url: https://loisirs74.fr/cote-2000-aventure
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Megève, Haute-Savoie (74120)
-- **GPS**: 45.818153, 6.6526193
+- **GPS**: 45.818772, 6.652186
 - **Type**: Parc accrobranche
 - **Accès**: Payant
 - **Parking**: Gratuit (devant l'entrée du parc)

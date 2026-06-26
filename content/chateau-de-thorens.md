@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9825
-longitude: 6.2478
+latitude: 45.967018
+longitude: 6.202372
 geo_verified: false
 google_place_id: "ChIJN5o4x7aLi0cR_y8Ej-eyTyY"
 canonical_url: https://loisirs74.fr/chateau-de-thorens
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Château
 - **Commune**: Fillière, Haute-Savoie (74570)
-- **GPS**: 45.9825, 6.2478
+- **GPS**: 45.967018, 6.202372
 - **Type**: Château-hôtel 4 étoiles
 - **Accès**: Payant · Sur réservation
 - **Parking**: Gratuit sur place

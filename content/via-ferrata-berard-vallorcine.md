@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.020328
-longitude: 6.912556
+latitude: 46.019957
+longitude: 6.911574
 geo_verified: false
 google_place_id: "ChIJldZL_0azjkcRVzPFbPg_2Mo"
 canonical_url: https://loisirs74.fr/via-ferrata-berard-vallorcine
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Vallorcine, Haute-Savoie (74660)
-- **GPS**: 46.020328, 6.912556
+- **GPS**: 46.019957, 6.911574
 - **Type**: Via ferrata
 - **Accès**: Accès libre (équipement requis)
 - **Meilleure saison**: Juin à octobre

@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9333
-longitude: 6.7
+latitude: 45.941617
+longitude: 6.711676
 geo_verified: false
 google_place_id: "ChIJAyz1_yxUiUcRUKqyvmhzeB0"
 canonical_url: https://loisirs74.fr/jardin-cimes-passy
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Jardin
 - **Commune**: Passy, Haute-Savoie (74190)
-- **GPS**: 45.9333, 6.7
+- **GPS**: 45.941617, 6.711676
 - **Type**: Jardin alpin paysager face Mont-Blanc
 - **Accès**: Payant - voir tarifs
 - **Parking**: Gratuit sur site

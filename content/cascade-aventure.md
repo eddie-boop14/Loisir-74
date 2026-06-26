@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.1858
-longitude: 6.7089
+latitude: 46.166418
+longitude: 6.711753
 geo_verified: false
 google_place_id: "ChIJ91E8ZFMdjEcR18UIjKdaMN0"
 canonical_url: https://loisirs74.fr/cascade-aventure
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Morzine, Haute-Savoie (74110)
-- **GPS**: 46.1858, 6.7089
+- **GPS**: 46.166418, 6.711753
 - **Type**: Parc d'aventure et activités sportives
 - **Accès**: Payant
 - **Parking**: Parking cascade de Nyon (gratuit)

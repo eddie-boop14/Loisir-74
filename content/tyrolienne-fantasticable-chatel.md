@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.2667
-longitude: 6.8417
+latitude: 46.256145
+longitude: 6.819082
 geo_verified: false
 google_place_id: "ChIJueuk-c2mjkcRbQ6k75C3rRM"
 canonical_url: https://loisirs74.fr/tyrolienne-fantasticable-chatel
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Châtel, Haute-Savoie (74390)
-- **GPS**: 46.2667, 6.8417
+- **GPS**: 46.256145, 6.819082
 - **Type**: Tyrolienne géante
 - **Accès**: Payant (sur réservation)
 - **Meilleure saison**: Fin juin – fin août, week-ends de septembre

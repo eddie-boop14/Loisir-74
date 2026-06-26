@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.1167
-longitude: 6.1075
+latitude: 46.120576
+longitude: 6.093327
 geo_verified: false
 google_place_id: "ChIJFScYGll5jEcRA-RetRKaCOg"
 canonical_url: https://loisirs74.fr/trampoline-park-elevation-indoor-neydens
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Neydens, Haute-Savoie (74160)
-- **GPS**: 46.1167, 6.1075
+- **GPS**: 46.120576, 6.093327
 - **Type**: Trampoline park
 - **Accès**: Intérieur · toute l'année
 - **Meilleure saison**: Toute l'année

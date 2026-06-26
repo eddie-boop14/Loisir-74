@@ -1,11 +1,11 @@
 {
   "slug": "canyoning-neo-canyon",
   "category": "attraction",
-  "commune": "Annecy",
-  "postal_code": "74000",
+  "commune": "Passy",
+  "postal_code": "74190",
   "department": "Haute-Savoie",
-  "latitude": 45.924025,
-  "longitude": 6.665266,
+  "latitude": 45.923922,
+  "longitude": 6.665369,
   "hero_image": "/img/generique/generique-canyoning-6.jpg",
   "hero_credit": null,
   "official_site_url": "https://neo-canyon.com",
@@ -30,7 +30,6 @@
     "Tarifs canyoning 2026 (~55-80 €) à confirmer sur neo-canyon.com",
     "Horaires saisonniers (mai-septembre) à confirmer chaque saison",
     "Point de rendez-vous exact à confirmer lors de la réservation",
-    "geo_multilocation_commune_mismatch: pin disagrees with commune 'Annecy' (>20 km) — multi-location operator? verify the commune before trusting geo_verified.",
     "ACCES_PMR_UNVERIFIED"
   ],
   "date_published_human": "1 juin 2026",
@@ -100,6 +99,29 @@
       "date": "2026-06-26",
       "by": "derive_geo_verified.py",
       "note": "derive_geo_verified: geo_verified=false (max_drift=100m).",
+      "fields": [
+        "geo_verified",
+        "geo_verified_date",
+        "geo_verified_source",
+        "geo_verified_drift_m",
+        "verify_flags"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "by": "apply_studio_patch.py",
+      "note": "Studio patch [geo-review]: 4 set, 0 removed.",
+      "fields": [
+        "latitude",
+        "longitude",
+        "commune",
+        "postal_code"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "by": "derive_geo_verified.py",
+      "note": "derive_geo_verified: geo_verified=true (max_drift=100m).",
       "fields": [
         "geo_verified",
         "geo_verified_date",
@@ -1228,5 +1250,9 @@
     "source_name": null,
     "checked": "2026-06-26",
     "confidence": null
-  }
+  },
+  "geo_verified": true,
+  "geo_verified_date": "2026-06-26",
+  "geo_verified_source": "google_places",
+  "geo_verified_drift_m": 0
 }

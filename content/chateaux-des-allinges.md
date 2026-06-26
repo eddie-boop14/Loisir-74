@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.3395
-longitude: 6.4712
+latitude: 46.328274
+longitude: 6.462804
 geo_verified: false
 google_place_id: "ChIJVzQPRX0VjEcRHB5KkJ1ofho"
 canonical_url: https://loisirs74.fr/chateaux-des-allinges
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Château
 - **Commune**: Allinges, Haute-Savoie (74200)
-- **GPS**: 46.3395, 6.4712
+- **GPS**: 46.328274, 6.462804
 - **Type**: Châteaux forts médiévaux (ruines)
 - **Accès**: Libre · Gratuit
 - **Parking**: Gratuit (au pied de la colline)

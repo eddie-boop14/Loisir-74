@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.9419
-longitude: 6.0944
+latitude: 45.936331
+longitude: 6.108033
 geo_verified: false
 google_place_id: "ChIJe463zJiFi0cRfoEWYPSMKak"
 canonical_url: https://loisirs74.fr/escalade-cortigrimpe-metz-tessy
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Metz-Tessy, Haute-Savoie (74370)
-- **GPS**: 45.9419, 6.0944
+- **GPS**: 45.936331, 6.108033
 - **Type**: Salle d'escalade
 - **Accès**: Payant (entrée à la séance ou abonnement)
 - **Meilleure saison**: Toute l'année (murs extérieurs en été)

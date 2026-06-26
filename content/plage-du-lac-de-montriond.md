@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.1864
-longitude: 6.7178
+latitude: 46.208824
+longitude: 6.719607
 geo_verified: false
 google_place_id: "ChIJPeqU7H2njkcRZ5qWHtggkys"
 canonical_url: https://loisirs74.fr/plage-du-lac-de-montriond
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Plage
 - **Commune**: Montriond, Haute-Savoie (74110)
-- **GPS**: 46.1864, 6.7178
+- **GPS**: 46.208824, 6.719607
 - **Type**: Plage lac de montagne 1 072 m - 3e plan d'eau 74
 - **Accès**: Libre · Gratuit
 - **Parking**: Selon plage - voir détails

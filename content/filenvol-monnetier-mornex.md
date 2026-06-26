@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.143
-longitude: 6.224
+latitude: 46.164963
+longitude: 6.229679
 geo_verified: false
 google_place_id: "ChIJT51VG7FxjEcR0x_7Ydj2adE"
 canonical_url: https://loisirs74.fr/filenvol-monnetier-mornex
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Parc de loisirs
 - **Commune**: Monnetier-Mornex, Haute-Savoie (74560)
-- **GPS**: 46.143, 6.224
+- **GPS**: 46.164963, 6.229679
 - **Type**: Parcabout (filets suspendus) sans harnais
 - **Accès**: Payant
 - **Parking**: Gratuit sur place

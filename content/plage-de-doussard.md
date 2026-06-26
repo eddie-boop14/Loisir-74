@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.7831
-longitude: 6.2169
+latitude: 45.791384
+longitude: 6.216615
 geo_verified: false
 google_place_id: "ChIJxYdY72eUi0cR7lAmIav5o40"
 canonical_url: https://loisirs74.fr/plage-de-doussard
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Plage
 - **Commune**: Doussard, Haute-Savoie (74210)
-- **GPS**: 45.7831, 6.2169
+- **GPS**: 45.791384, 6.216615
 - **Type**: Plage sable + pelouse - adjacente Réserve naturelle Bout du Lac
 - **Accès**: Libre · Gratuit
 - **Parking**: Selon plage - voir détails

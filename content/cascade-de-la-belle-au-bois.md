@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.8565
-longitude: 6.6215
+latitude: 45.850321
+longitude: 6.628772
 geo_verified: false
 google_place_id: "ChIJ75i_gLvii0cRsfpEpsI1cVE"
 canonical_url: https://loisirs74.fr/cascade-de-la-belle-au-bois
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Cascade
 - **Commune**: Megève, Haute-Savoie (74120)
-- **GPS**: 45.8565, 6.6215
+- **GPS**: 45.850321, 6.628772
 - **Type**: Cascade naturelle en forêt
 - **Accès**: Libre · Gratuit
 - **Parking**: Gratuit (parkings du centre-ville, place de la Résistance ou patinoire)

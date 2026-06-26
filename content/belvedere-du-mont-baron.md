@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.8992
-longitude: 6.1868
+latitude: 45.896916
+longitude: 6.185929
 geo_verified: false
 google_place_id: "ChIJTc_Kkx6Oi0cRO2V6DSLx9lM"
 canonical_url: https://loisirs74.fr/belvedere-du-mont-baron
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Point de vue
 - **Commune**: Veyrier-du-Lac, Haute-Savoie (74290)
-- **GPS**: 45.8992, 6.1868
+- **GPS**: 45.896916, 6.185929
 - **Type**: Belvédère panoramique
 - **Accès**: Libre · Gratuit
 - **Parking**: Interdit au Col des Contrebandiers depuis juillet 2024 — départ depuis le bord du lac (Annecy-le-Vieux ou Veyrier-du-Lac)

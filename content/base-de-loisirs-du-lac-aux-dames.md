@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.0842
-longitude: 6.7258
+latitude: 46.100404
+longitude: 6.717103
 geo_verified: false
 google_place_id: "ChIJBwp6XBeqjkcRWBEV8MIflTw"
 canonical_url: https://loisirs74.fr/base-de-loisirs-du-lac-aux-dames
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Base de loisirs
 - **Commune**: Samoëns, Haute-Savoie (74340)
-- **GPS**: 46.0842, 6.7258
+- **GPS**: 46.100404, 6.717103
 - **Type**: Base de loisirs
 - **Accès**: Libre · Gratuit
 - **Parking**: Gratuit (plusieurs parkings sur place)

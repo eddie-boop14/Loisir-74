@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.376
-longitude: 6.475
+latitude: 46.365075
+longitude: 6.496954
 geo_verified: false
 google_place_id: "ChIJT5Szl9Y9jEcRksT-d3DAAxA"
 canonical_url: https://loisirs74.fr/leman-kid-thonon-les-bains
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Parc de loisirs
 - **Commune**: Thonon-les-Bains, Haute-Savoie (74200)
-- **GPS**: 46.376, 6.475
+- **GPS**: 46.365075, 6.496954
 - **Type**: Parc de jeux indoor enfants 0-12 ans
 - **Accès**: Payant
 - **Parking**: Gratuit sur place

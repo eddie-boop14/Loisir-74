@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 46.0119
-longitude: 6.6383
+latitude: 46.042295
+longitude: 6.617254
 geo_verified: false
 google_place_id: "ChIJaYMi28MAjEcRgHAwtED66IU"
 canonical_url: https://loisirs74.fr/speleo-grotte-de-balme-magland
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Attraction
 - **Commune**: Magland, Haute-Savoie (74300)
-- **GPS**: 46.0119, 6.6383
+- **GPS**: 46.042295, 6.617254
 - **Type**: Spéléologie
 - **Accès**: Extérieur · accès sauvage
 - **Meilleure saison**: Printemps à automne (éviter crues)

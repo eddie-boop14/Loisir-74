@@ -9,8 +9,8 @@ department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
 country: France
-latitude: 45.8333
-longitude: 6.2208
+latitude: 45.823629
+longitude: 6.220921
 geo_verified: false
 google_place_id: "ChIJZ_umEpGTi0cRe5Jd41DwOs4"
 canonical_url: https://loisirs74.fr/plage-d-angon-talloires
@@ -32,7 +32,7 @@ source: loisirs74.fr
 
 - **Catégorie**: Plage
 - **Commune**: Talloires-Montmin, Haute-Savoie (74290)
-- **GPS**: 45.8333, 6.2208
+- **GPS**: 45.823629, 6.220921
 - **Type**: Plage pelouse vaste ombragée - vue château de Duingt
 - **Accès**: Libre · Gratuit
 - **Parking**: Selon plage - voir détails
