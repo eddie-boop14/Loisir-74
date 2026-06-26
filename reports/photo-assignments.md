@@ -1,13 +1,13 @@
 # Phase 4 — photo assignments (gate artifact)
 
 **Date**: 2026-06-14
-**Total assignments**: 541 (one per (hub × slug) on the FR canonical hub)
+**Total assignments**: 595 (one per (hub × slug) on the FR canonical hub)
 
 ## Per-hub diversity
 
 | hub | fiches | distinct photos | max repeat of one photo |
 |---|---:|---:|---:|
-| `baignade-nautisme` | 23 | 13 | 4 |
+| `baignade-nautisme` | 50 | 38 | 4 |
 | `bases-de-loisirs` | 85 | 61 | 6 |
 | `cascades` | 17 | 17 | 1 |
 | `chateaux` | 26 | 23 | 3 |
@@ -16,7 +16,7 @@
 | `parcs-jardins` | 31 | 17 | 11 |
 | `points-de-vue` | 29 | 24 | 5 |
 | `que-faire` | 73 | 42 | 4 |
-| `sensations-plein-air` | 44 | 32 | 3 |
+| `sensations-plein-air` | 71 | 54 | 4 |
 | `sentiers` | 39 | 7 | 14 |
 | `sorties-detente` | 25 | 13 | 3 |
 | `sport-jeux` | 52 | 33 | 4 |
@@ -31,7 +31,14 @@
 | `baignade-nautisme` | `aquaparc-thonon-piscine-olympique-thonon` | `aquatique` | `generique-aquatique-piscine-exterieur.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `aquariaz` | `aquatique` | `Aquariaz.jpg` | — | json hero (url) |
 | `baignade-nautisme` | `baignade-biotope-combloux` | `aquatique` | `generique-plage-lac-4.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `base-de-loisirs-de-la-beunaz` | `parc` | `La_plage_de_La_Beunaz.jpg` | — | json hero (url) |
+| `baignade-nautisme` | `base-de-loisirs-des-ilettes` | `parc` | `Sallanches-69%C2%A9studio_k.jpg` | — | json hero (url) |
+| `baignade-nautisme` | `base-de-loisirs-du-lac-aux-dames` | `parc` | `Lac_aux_Dames_%C3%A0_Samo%C3%ABns_en_%C3%A9t%C3%A9_%28juillet_2023%29_1.JPG` | — | json hero (url) |
+| `baignade-nautisme` | `base-de-loisirs-du-lac-bleu` | `parc` | `Morillon_-_vue_sur_le_lac_bleu_et_le_criou.jpg` | — | json hero (url) |
+| `baignade-nautisme` | `base-de-loisirs-du-lac-des-iles` | `parc` | `Les_ARAVIS_depuis_le_LAC_DE_PASSY_-_panoramio.jpg` | — | json hero (url) |
+| `baignade-nautisme` | `base-de-loisirs-orange-montisel-saint-sixt` | `parc` | `generique-plage-lac-12.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `base-nautique-doussard-doussard` | `aquatique` | `generique-barque-aviron.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `base-nautique-evian-bains` | `parc` | `generique-voile-sunset-1.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `base-nautique-marquisats-annecy` | `aquatique` | `generique-paddle-aviron-detail.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `base-nautique-sciez-sciez` | `aquatique` | `generique-paddle-aviron-detail.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `centre-aquatique-cluses` | `aquatique` | `generique-aquatique-piscine-couverte.jpg` | — | json hero (local) |
@@ -45,8 +52,28 @@
 | `baignade-nautisme` | `croisiere-cgn-yvoire` | `aquatique` | `generique-port-annecy.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `espace-aquatique-la-clusaz` | `aquatique` | `generique-aquatique-piscine-couverte.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `espace-aquatique-morzine` | `aquatique` | `generique-aquatique-bassin-natation.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `lac-de-passy` | `aquatique` | `Lac_vert_de_passy_%281%29.JPG` | — | json hero (url) |
+| `baignade-nautisme` | `lac-des-dronieres` | `aquatique` | `lac-des-dronieres-hero.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `parc-de-loisirs-du-pontet` | `parc` | `Lac_de_p%C3%AAche_%40_Parc_de_loisirs_du_Pontet_%40_Val_Montjoie_%2850921651901%29.jpg` | — | json hero (url) |
+| `baignade-nautisme` | `parc-des-dronieres` | `parc` | `Parc_de_Loisirs_des_Droni%C3%A8res_%40_Cruseilles_%2850969087497%29.jpg` | — | json hero (url) |
 | `baignade-nautisme` | `piscine-ile-bleue-seynod` | `aquatique` | `generique-aquatique-piscine-couverte.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `piscine-jean-regis-annecy` | `aquatique` | `generique-aquatique-piscine-couverte.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `plage-albigny` | `aquatique` | `Plage_d%27Albigny_%C3%A0_Annecy.jpg` | — | json hero (url) |
+| `baignade-nautisme` | `plage-d-evian-centre-nautique` | `aquatique` | `generique-plage-lac-5.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `plage-d-excenevex` | `aquatique` | `Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG` | — | json hero (url) |
+| `baignade-nautisme` | `plage-de-doussard` | `aquatique` | `generique-plage-lac-3.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `plage-de-duingt` | `aquatique` | `generique-plage-lac-1.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `plage-de-menthon-saint-bernard` | `aquatique` | `Plage_municipale_de_Menthon-Saint-Bernard.jpg` | — | json hero (url) |
+| `baignade-nautisme` | `plage-de-messery` | `aquatique` | `generique-plage-lac-7.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `plage-de-saint-disdille` | `aquatique` | `Plage_thonon.jpg` | — | json hero (url) |
+| `baignade-nautisme` | `plage-de-saint-jorioz` | `aquatique` | `plage-de-saint-jorioz-hero.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `plage-de-sciez-sur-leman` | `aquatique` | `Sciez-regate.jpg` | — | json hero (url) |
+| `baignade-nautisme` | `plage-de-talloires` | `aquatique` | `generique-plage-lac-13.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `plage-des-marquisats` | `aquatique` | `Annecy-8.jpg` | — | json hero (url) |
+| `baignade-nautisme` | `plage-municipale-thonon` | `aquatique` | `generique-plage-lac-15.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `plaine-de-loisirs-de-la-grangette` | `parc` | `plaine-de-loisirs-de-la-grangette-hero.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `port-clerges-base-nautique-thonon-bains` | `parc` | `generique-paddle-aviron-detail.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `tactiq-aventure-cruseilles` | `parc` | `generique-accrobranche-4.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `voile-cercle-thonon-thonon` | `aquatique` | `generique-voile-sunset-1.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `wakepark-ponton-embarcadere-saint-jorioz` | `aquatique` | `generique-wakeboard-1.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `wakepark-tna-cable-park-arenthon` | `aquatique` | `generique-wakeboard-1.jpg` | — | json hero (local) |
@@ -396,7 +423,13 @@
 | `sensations-plein-air` | `acro-aventures-reignier` | `parc` | `Accrobranche_floreval_2.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `acro-aventures-talloires` | `parc` | `Acro%27Aventures_%40_Planfait_%2850935328546%29.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `acroparc-de-bellavallis-bellevaux` | `parc` | `generique-accrobranche-6.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `aire-de-decollage-parapente-plaine-joux` | `nature` | `Aire_de_d%C3%A9collage_de_parapentes_%40_Passy_Plaine-Joux_%2851062114852%29.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `alpine-coaster-les-planards-chamonix` | `sensations` | `generique-alpine-coaster-2.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `base-de-loisirs-de-la-beunaz` | `parc` | `La_plage_de_La_Beunaz.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `base-de-loisirs-du-lac-aux-dames` | `parc` | `Lac_aux_Dames_%C3%A0_Samo%C3%ABns_en_%C3%A9t%C3%A9_%28juillet_2023%29_1.JPG` | — | json hero (url) |
+| `sensations-plein-air` | `base-de-loisirs-du-lac-bleu` | `parc` | `Morillon_-_vue_sur_le_lac_bleu_et_le_criou.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `base-de-loisirs-du-lac-des-iles` | `parc` | `Les_ARAVIS_depuis_le_LAC_DE_PASSY_-_panoramio.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `base-de-loisirs-orange-montisel-saint-sixt` | `parc` | `generique-plage-lac-12.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `bungee-bun-j-ride-saint-jean-de-sixt` | `sensations` | `generique-bungee.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `bungee-viaduc-saint-gervais` | `sensations` | `generique-bungee.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `bureau-des-guides-annecy` | `sensations` | `generique-via-ferrata-groupe.jpg` | — | json hero (local) |
@@ -404,27 +437,48 @@
 | `sensations-plein-air` | `canyoning-neo-canyon` | `sensations` | `generique-canyoning-6.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `canyoning-yaute-canyon` | `sensations` | `generique-canyoning-5.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `cascade-aventure` | `sensations` | `Cascade_de_Nyon_%282%29.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `cascade-d-angon` | `aquatique` | `cascade-d-angon-hero.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `cascade-de-doran` | `aquatique` | `cascade-de-doran-hero.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `cascade-de-la-belle-au-bois` | `aquatique` | `cascade-de-la-belle-au-bois-hero.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `cascade-de-nyon` | `aquatique` | `Cascade_de_Nyon_%2812%29.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `chatel-accrobranche-1600-chatel` | `parc` | `generique-accrobranche-4.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `chiens-de-traineau-a-ton-etoile-la-chapelle-dabondance` | `sensations` | `generique-chiens-de-traineau-1.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `chiens-de-traineau-evasion-nordique-les-carroz` | `sensations` | `generique-chiens-de-traineau-1.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `chiens-de-traineau-granges-de-heidi-passy` | `sensations` | `generique-chiens-de-traineau-2.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `chiens-de-traineau-la-patte-nordic-les-gets` | `sensations` | `generique-chiens-de-traineau-1.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `chiens-de-traineau-nordic-event-74` | `sensations` | `generique-chiens-de-traineau-2.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `col-de-la-forclaz` | `nature` | `Plateforme_de_d%C3%A9collage_de_deltaplane_%40_Col_de_la_Forclaz.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `cote-2000-aventure` | `sensations` | `Seilpark_Gantrisch_-_03.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `debaroule-clusaz` | `nature` | `generique-sentier-sommet-panorama.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `devalkart-de-manigod` | `sensations` | `generique-alpine-coaster-2.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `disc-golf-indiana-ventures-samoens` | `sensations` | `generique-disc-golf.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `grotte-et-cascade-de-seythenex` | `aquatique` | `Grotte_et_cascade_de_Seythenex_10.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `indiana-ventures-saint-paul-en-chablais` | `parc` | `La_plage_de_La_Beunaz.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `k2-parapente-doussard` | `sensations` | `generique-parapente-vol.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `le-semnoz` | `nature` | `Cr%C3%AAt_de_Chatillon_%40_Semnoz_%2835471373476%29.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `mont-baron` | `nature` | `Mont_Baron_%40_Veyrier-du-Lac_%2851213738648%29.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `mont-saleve` | `nature` | `mont-saleve-hero.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `montgolfiere-annecy` | `sensations` | `generique-montgolfiere.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `montgolfiere-du-mont-blanc-evian` | `sensations` | `generique-montgolfiere.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `parc-aventure-mont-blanc-saint-gervais` | `parc` | `generique-accrobranche-3.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `parc-de-loisirs-du-pontet` | `parc` | `Lac_de_p%C3%AAche_%40_Parc_de_loisirs_du_Pontet_%40_Val_Montjoie_%2850921651901%29.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `parc-des-dronieres` | `parc` | `Parc_de_Loisirs_des_Droni%C3%A8res_%40_Cruseilles_%2850969087497%29.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `parcours-aventure-de-sciez` | `parc` | `Accrobranche_floreval_2.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `passy-accro-lac` | `divertissement` | `Accrobranche_floreval_2.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `plage-de-sevrier` | `aquatique` | `generique-plage-lac-15.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `plateau-de-solaison` | `nature` | `plateau-de-solaison-hero.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `rafting-ecolorado-passy-samoens` | `sensations` | `generique-rafting-action.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `rafting-frogs-rafting-dranse` | `sensations` | `generique-rafting-riviere.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `rafting-rando-rafting-samoens` | `sensations` | `generique-rafting-rapides.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `speleo-bureau-montagne-saleve` | `sensations` | `generique-speleo-explorateurs.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `speleo-grotte-de-balme-magland` | `sensations` | `generique-speleo-grande-salle.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `tactiq-aventure-cruseilles` | `parc` | `generique-accrobranche-4.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `telecabine-des-chavannes-les-gets` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `telecabine-du-jaillet` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `telecabine-du-mont-chery-les-gets` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `telecabine-pleney-morzine` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `telepherique-du-brevent` | `nature` | `Brevent_cable_car.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `tramway-du-mont-blanc` | `nature` | `Tramway_Mont-Blanc.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `tyrolienne-fantasticable-chatel` | `sensations` | `generique-accrobranche-8.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `ulm-leman-cervens` | `sensations` | `generique-parapente-vol.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `via-ferrata-berard-vallorcine` | `sensations` | `generique-via-ferrata-groupe.jpg` | — | json hero (local) |
