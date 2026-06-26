@@ -857,6 +857,65 @@ def _hub_cards_by_slug(hub_html):
     return out
 
 
+def build_hub_itemlist(union, fr_hub, lang, hub_slug):
+    """Build the hub's <head> JSON-LD ItemList from its CURRENT members, so a
+    publish-flip (or dedupe) propagates into structured data. Returns a JSON
+    string (indent=2). Deterministic: members are already slug-sorted in
+    `union`. Replaces the previously-static, drift-prone block."""
+    prefix = "" if lang == "fr" else f"/{lang}"
+    hub_url = f"https://loisirs74.fr{prefix}/{hub_slug}/"
+    display = HUB_DISPLAY[fr_hub][lang]
+    elements = []
+    for i, (slug, d) in enumerate(union, start=1):
+        blk = (d.get("i18n", {}) or {})
+        name = ((blk.get(lang) or {}).get("name")
+                or (blk.get("fr") or {}).get("name") or slug)
+        item = {
+            "@type": "TouristAttraction",
+            "name": name,
+            "url": f"https://loisirs74.fr{prefix}/{slug}",
+        }
+        commune = d.get("commune")
+        if commune:
+            item["address"] = {
+                "@type": "PostalAddress",
+                "addressLocality": commune,
+                "addressRegion": "Haute-Savoie",
+                "addressCountry": "FR",
+            }
+        lat, lng = d.get("latitude"), d.get("longitude")
+        if lat is not None and lng is not None:
+            item["geo"] = {"@type": "GeoCoordinates", "latitude": lat, "longitude": lng}
+        if d.get("hero_image"):
+            item["image"] = d["hero_image"]
+        elements.append({"@type": "ListItem", "position": i, "item": item})
+    obj = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "@id": hub_url + "#itemlist",
+        "name": display,
+        "description": f"{display} · Haute-Savoie",
+        "numberOfItems": len(elements),
+        "itemListOrder": "https://schema.org/ItemListOrderAscending",
+        "inLanguage": lang,
+        "isPartOf": {"@type": "CollectionPage", "@id": hub_url},
+        "itemListElement": elements,
+    }
+    return json.dumps(obj, ensure_ascii=False, indent=2)
+
+
+def patch_hub_itemlist(html, json_str):
+    """Replace the hub's existing ItemList ld+json script with json_str.
+    Leaves the other ld+json blocks (CollectionPage, FAQPage) untouched.
+    Idempotent. No-op if no ItemList script is present."""
+    def repl(m):
+        if '"@type": "ItemList"' in m.group(1):
+            return f'<script type="application/ld+json">{json_str}</script>'
+        return m.group(0)
+    return re.sub(r'<script type="application/ld\+json">(.*?)</script>',
+                  repl, html, flags=re.S)
+
+
 def patch_hub_h1(html, fr_hub, lang):
     """Single-source the hub <h1> from HUB_DISPLAY (the same string as title/nav),
     so the homepage, nav, title and h1 read identically per locale. Idempotent."""
@@ -1070,6 +1129,10 @@ def main():
             # JOB §5a: single-source the <h1> from HUB_DISPLAY (== title/nav),
             # fixing de/nl/en drift across all 15 hubs.
             new_html = patch_hub_h1(new_html, fr_hub, lang)
+            # Regenerate the <head> ItemList from current members (publish-flip /
+            # dedupe now propagate into structured data).
+            new_html = patch_hub_itemlist(
+                new_html, build_hub_itemlist(union, fr_hub, lang, hub_name))
             if new_html != html:
                 p.write_text(new_html, encoding="utf-8")
                 regen += 1

@@ -48,8 +48,12 @@ def is_real(hero):
     return os.path.exists(os.path.join(ROOT, name))
 
 
+LANGS = ("en", "de", "it", "es", "nl")
+
+
 def main():
     out = []
+    api_out = []
     for path in sorted(glob.glob(os.path.join(ROOT, "Json", "*.json"))):
         d = json.load(open(path))
         slug = d.get("slug")
@@ -72,6 +76,23 @@ def main():
             "hero": hero,
             "real": is_real(hero),
         })
+        # api/lieux.json — the public machine index (nearme.js, AI agents).
+        # Regenerated here from published Json/ so a publish-flip auto-appears
+        # (it used to be a static snapshot that drifted).
+        item = {
+            "slug": slug,
+            "name": name,
+            "category": category,
+            "commune": commune,
+            "postal_code": d.get("postal_code") or "",
+            "latitude": d.get("latitude"),
+            "longitude": d.get("longitude"),
+            "urls": {"fr": f"https://loisirs74.fr/{slug}",
+                     **{l: f"https://loisirs74.fr/{l}/{slug}" for l in LANGS}},
+        }
+        if hero:
+            item["photo"] = hero
+        api_out.append(item)
 
     out.sort(key=lambda r: r["slug"])
     target = os.path.join(ROOT, "catalog-index.json")
@@ -79,6 +100,13 @@ def main():
         json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
         f.write("\n")
     print(f"wrote {target}: {len(out)} entries")
+
+    api_out.sort(key=lambda r: r["slug"])
+    api_target = os.path.join(ROOT, "api", "lieux.json")
+    with open(api_target, "w", encoding="utf-8") as f:
+        json.dump({"count": len(api_out), "lieux": api_out}, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    print(f"wrote {api_target}: {len(api_out)} entries")
 
     n_real = sum(1 for r in out if r["real"])
     n_gen = len(out) - n_real
