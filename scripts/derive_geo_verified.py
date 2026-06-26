@@ -59,8 +59,10 @@ import argparse
 import datetime
 import glob
 import json
+import math
 import os
 import re
+import statistics
 import sys
 import unicodedata
 
@@ -69,6 +71,71 @@ TODAY = datetime.date.today().isoformat()
 DEFAULT_MAX_DRIFT = 100
 NAME_OVERLAP_MIN = 0.6
 VERIFIED_SOURCE = "google_places"
+COMMUNE_MAX_KM = 20.0        # pin further than this from its commune centroid ⇒ mismatch
+CENTROID_MIN_FICHES = 3      # need this many to trust a commune centroid
+COMMUNE_FLAG = "geo_multilocation_commune_mismatch"
+
+
+def _haversine(lat1, lon1, lat2, lon2):
+    R = 6371.0
+    p1, p2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dl = math.radians(lon2 - lon1)
+    a = math.sin(dphi / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
+    return 2 * R * math.asin(math.sqrt(a))
+
+
+def build_commune_centroids(files):
+    """commune -> (median_lat, median_lon) from published fiches with coords.
+    Median (per axis) is robust to a single wrong pin (e.g. the Yaute outlier)."""
+    pts = {}
+    for f in files:
+        try:
+            d = json.loads(open(f, encoding="utf-8").read())
+        except Exception:
+            continue
+        if d.get("status") != "published":
+            continue
+        lat, lon, c = d.get("latitude"), d.get("longitude"), d.get("commune")
+        if lat is not None and lon is not None and c:
+            pts.setdefault(c, []).append((lat, lon))
+    return {c: (statistics.median(p[0] for p in v), statistics.median(p[1] for p in v))
+            for c, v in pts.items() if len(v) >= CENTROID_MIN_FICHES}
+
+
+def commune_mismatch(d, centroids):
+    """(is_mismatch, dist_km). A verified pin must sit near its own commune; if
+    it's >COMMUNE_MAX_KM from the commune centroid the commune and the matched
+    Google place disagree (multi-location operator snapped to the wrong town).
+    Unknown commune / no centroid ⇒ can't judge ⇒ not a mismatch."""
+    c = d.get("commune")
+    lat, lon = d.get("latitude"), d.get("longitude")
+    if c not in centroids or lat is None or lon is None:
+        return (False, 0.0)
+    dist = _haversine(lat, lon, *centroids[c])
+    return (dist > COMMUNE_MAX_KM, dist)
+
+
+def set_commune_flag(d, present):
+    """Add/remove the commune-mismatch verify_flag (self-healing). Returns True
+    if verify_flags changed."""
+    vf = d.setdefault("verify_flags", [])
+    existing = [f for f in vf if isinstance(f, str) and f.startswith(COMMUNE_FLAG)]
+    if present:
+        desired = (f"{COMMUNE_FLAG}: pin disagrees with commune "
+                   f"'{d.get('commune')}' (>{int(COMMUNE_MAX_KM)} km) — multi-location "
+                   f"operator? verify the commune before trusting geo_verified.")
+        if existing == [desired]:
+            return False
+        for f in existing:
+            vf.remove(f)
+        vf.append(desired)
+        return True
+    if existing:
+        for f in existing:
+            vf.remove(f)
+        return True
+    return False
 
 # Accent-insensitive token stop-words: French articles/prepositions + a few EN.
 # These carry no discriminating signal for a place name, so they're dropped
@@ -235,15 +302,27 @@ def main():
         print(f"::error::no fiches under {args.json_dir}/", file=sys.stderr)
         sys.exit(1)
 
+    centroids = build_commune_centroids(files)
     n_verified = 0
     n_pid = 0
     n_written = 0
+    n_commune_blocked = 0
     rejected_close = []   # place_id & drift<=max but name-overlap too weak
     verified_slugs = []
     for f in files:
         with open(f, encoding="utf-8") as fh:
             d = json.load(fh)
         info = derive_one(d, args.max_drift)
+        # commune-agreement: a pin that would verify but sits >20 km from its own
+        # commune is a wrong-commune match (Yaute: Annecy fiche → Passy pin).
+        # Block the badge and flag for review instead of locking a false pin.
+        mism, dist = commune_mismatch(d, centroids)
+        blocked = info["verified"] and mism
+        if blocked:
+            info["verified"] = False
+            info["reason"] = f"commune-mismatch (~{round(dist)} km from {d.get('commune')})"
+            n_commune_blocked += 1
+        flag_touched = set_commune_flag(d, blocked)
         if info["place_id"]:
             n_pid += 1
         if info["verified"]:
@@ -258,6 +337,8 @@ def main():
                                    info["drift"], info["overlap"]))
 
         touched = apply_derived(d, info)
+        if flag_touched and "verify_flags" not in touched:
+            touched = touched + ["verify_flags"]
         if touched:
             stamp_log(d, touched, args.max_drift)
             n_written += 1
@@ -271,6 +352,7 @@ def main():
     print(f"  {len(files)} fiches scanned")
     print(f"  {n_pid} carry a place_id -> google_place_id written (pin-fix set)")
     print(f"  {n_verified} earn geo_verified:true  ✅")
+    print(f"  {n_commune_blocked} blocked on commune-mismatch (flagged for review)")
     print(f"  {n_written} fiche file(s) {'would change' if args.dry_run else 'changed'}")
 
     if args.report_rejected and rejected_close:

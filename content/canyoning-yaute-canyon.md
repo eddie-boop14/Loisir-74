@@ -3,8 +3,8 @@ slug: canyoning-yaute-canyon
 name: "Yaute Canyon"
 category: attraction
 category_label: "Attraction"
-commune: "Annecy"
-postal_code: "74000"
+commune: "Passy"
+postal_code: "74190"
 department: "Haute-Savoie"
 department_code: "74"
 region: "Auvergne-Rhône-Alpes"
@@ -31,7 +31,7 @@ source: loisirs74.fr
 ## En bref
 
 - **Catégorie**: Attraction
-- **Commune**: Annecy, Haute-Savoie (74000)
+- **Commune**: Passy, Haute-Savoie (74190)
 - **GPS**: 45.924247, 6.712922
 - **Type**: Canyoning
 - **Accès**: Extérieur · saison estivale (mai-septembre)
@@ -74,7 +74,7 @@ Combinaison néoprène 5 mm intégrale, baudrier, casque, longes et chaussons. P
 
 ## Infos pratiques
 
-- **Adresse**: Point de RDV variable selon canyon (Annecy / Aravis) — précisé à la réservation
+- **Adresse**: Point de RDV selon le canyon : Passy, Saint-Gervais, Chamonix, Samoëns, Morzine, Annecy — précisé à la réservation
 - **Coordonnées**: ~45.899° N · ~6.129° E (zone Annecy)
 - **Téléphone**: Voir yaute-canyon.com
 - **Site officiel**: https://yaute-canyon.com

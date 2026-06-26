@@ -11,7 +11,7 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 45.924025
 longitude: 6.665266
-geo_verified: true
+geo_verified: false
 google_place_id: "ChIJX1lhLlX_i0cRaDQYfkvU6ss"
 canonical_url: https://loisirs74.fr/canyoning-neo-canyon
 language: fr
