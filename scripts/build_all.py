@@ -133,6 +133,21 @@ def rebuild_communes():
     print("\n".join(lines[-3:]) if lines else "(communes rebuilt)")
 
 
+def rebuild_intent_hubs():
+    """Render registry-driven intent-hub pages (data/intent-hubs.json) FR + 5
+    locales and link each from its category hub. Runs after hubs/communes (so
+    member fiches + category hubs exist) and before normalize_head_links (so
+    canonicals/hreflang/sitemap pick the new pages up)."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "build_intent_hubs.py")],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("build_intent_hubs failed")
+    print(out.stdout.strip() or "(intent hubs rebuilt)")
+
+
 def status_gate():
     """JOB 6 gate: every fiche must have an explicit status (draft|verified|
     published). Print the distribution. Block if any fiche has status=None."""
@@ -351,6 +366,7 @@ def main():
     run("rebuild catalog index", rebuild_catalog_index)
     run("regenerate hubs + homepage nav", rebuild_hubs)
     run("render commune pages + reciprocal backlinks", rebuild_communes)
+    run("render intent hubs (registry-driven)", rebuild_intent_hubs)
     run("placement gate vs baseline", placement_gate)
     run("card-diff gate vs snapshot", card_diff_gate)
     run("reachability gate (strict)", reachability_gate)
