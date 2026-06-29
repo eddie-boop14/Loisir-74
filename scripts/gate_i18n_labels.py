@@ -61,6 +61,14 @@ def main():
         if lang not in KNOWN_RTL:
             viol.append(f"_meta.rtl lists unknown rtl lang '{lang}'")
 
+    # A language is "published" when its reviewed flag is non-false: either the
+    # legacy bool true (fr/en references) OR a provenance method string such as
+    # "ai-consensus-3x-2026-06-29". A bare flag is never enough — a method-string
+    # review MUST be backed by reports/i18n-verify-<lang>.json with zero
+    # escalations, so the flag can't be hand-set without the evidence.
+    def is_published(lang):
+        return bool(reviewed.get(lang)) and reviewed.get(lang) is not False
+
     # per-key checks
     n_keys = 0
     for sec in SECTIONS:
@@ -70,10 +78,30 @@ def main():
             for ref in REFERENCE:
                 if not str(row.get(ref, "")).strip():
                     viol.append(f"{sec}.{key}: reference '{ref}' empty")
-            # a reviewed:true language must have EVERY key filled
-            for lang, is_rev in reviewed.items():
-                if is_rev and not str(row.get(lang, "")).strip():
-                    viol.append(f"{sec}.{key}: reviewed lang '{lang}' is empty (FR fallback would leak)")
+            # a published language must have EVERY key filled
+            for lang in reviewed:
+                if is_published(lang) and not str(row.get(lang, "")).strip():
+                    viol.append(f"{sec}.{key}: published lang '{lang}' is empty (FR fallback would leak)")
+
+    # method-string reviews must carry a clean verification report
+    for lang in reviewed:
+        rv = reviewed.get(lang)
+        if lang in REFERENCE:
+            continue
+        if rv and rv is not True:  # a method string (e.g. ai-consensus-3x-…)
+            rep = os.path.join(ROOT, "reports", f"i18n-verify-{lang}.json")
+            if not os.path.exists(rep):
+                viol.append(f"reviewed['{lang}']={rv!r} but reports/i18n-verify-{lang}.json missing")
+            else:
+                try:
+                    rj = json.loads(open(rep, encoding="utf-8").read())
+                except ValueError:
+                    rj = {}
+                if rj.get("escalations", 1) != 0 or rj.get("overall") != "PASS":
+                    viol.append(f"reviewed['{lang}']={rv!r} but verify report not clean "
+                                f"(escalations={rj.get('escalations')}, overall={rj.get('overall')})")
+                if not str(meta.get("review_method", {}).get(lang, "")).strip():
+                    viol.append(f"reviewed['{lang}'] is a method string but _meta.review_method['{lang}'] missing")
 
     # safety: only reviewed languages may be in the published roster
     publishable = {l for l, r in reviewed.items() if r}
