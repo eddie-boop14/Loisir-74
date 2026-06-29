@@ -19,6 +19,7 @@ import argparse
 import html as html_lib
 import json
 import math
+import os
 import re
 import sys
 from pathlib import Path
@@ -1858,6 +1859,145 @@ def related_carousel(d, lang):
             f'    <div class="carousel">{cards}</div>\n  </div>\n</section>')
 
 
+# ---------------------------------------------------------------------------
+# Baignade cluster (HANDOFF 01): "L'essentiel" facts block + "Plages voisines"
+# adjacency mesh. The beach set + its lake groups are the curated members of
+# the three baignade intent hubs — the registry is the single source of truth.
+# ---------------------------------------------------------------------------
+_BAIGNADE_HUBS = {
+    "baignade-lac-annecy": "annecy",
+    "baignade-leman": "leman",
+    "ou-se-baigner-haute-savoie": "montagne",
+}
+_MASTER_HUB = "ou-se-baigner-haute-savoie"
+_LAKE_HUB = {"annecy": "baignade-lac-annecy", "leman": "baignade-leman",
+             "montagne": "ou-se-baigner-haute-savoie"}
+_BAIGNADE_IDX = None  # {slug: {"group","hub","lat","lng"}}
+
+_ESS = {"fr": "L'essentiel", "en": "The essentials", "de": "Das Wichtigste",
+        "it": "L'essenziale", "es": "Lo esencial", "nl": "In het kort"}
+_VOIS = {"fr": "Plages voisines", "en": "Nearby beaches", "de": "Strände in der Nähe",
+         "it": "Spiagge vicine", "es": "Playas cercanas", "nl": "Stranden in de buurt"}
+_GUIDE = {"fr": "Voir le guide baignade", "en": "Swimming guide", "de": "Bade-Guide",
+          "it": "Guida balneazione", "es": "Guía de baño", "nl": "Zwemgids"}
+_ALLSPOTS = {"fr": "Où se baigner en Haute-Savoie", "en": "Where to swim in Haute-Savoie",
+             "de": "Baden in Haute-Savoie", "it": "Dove fare il bagno in Alta Savoia",
+             "es": "Dónde bañarse en Alta Saboya", "nl": "Zwemmen in Haute-Savoie"}
+_CH_SURV = {"fr": "Surveillance", "en": "Lifeguard", "de": "Aufsicht", "it": "Sorveglianza",
+            "es": "Vigilancia", "nl": "Toezicht"}
+_CH_VOIRFICHE = {"fr": "voir fiche", "en": "see details", "de": "siehe Steckbrief",
+                 "it": "vedi scheda", "es": "ver ficha", "nl": "zie fiche"}
+_REG_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                         "data", "intent-hubs.json")
+
+
+def _baignade_index():
+    global _BAIGNADE_IDX
+    if _BAIGNADE_IDX is not None:
+        return _BAIGNADE_IDX
+    idx = {}
+    try:
+        reg = json.loads(open(_REG_PATH, encoding="utf-8").read())
+    except (OSError, ValueError):
+        reg = []
+    json_dir = os.path.join(os.path.dirname(_REG_PATH), "..", "Json")
+    for h in reg:
+        grp = _BAIGNADE_HUBS.get(h.get("slug"))
+        if not grp:
+            continue
+        for m in h.get("members", []):
+            fp = os.path.join(json_dir, f"{m['slug']}.json")
+            try:
+                md = json.loads(open(fp, encoding="utf-8").read())
+            except (OSError, ValueError):
+                continue
+            idx[m["slug"]] = {"group": grp, "hub": h["slug"],
+                              "lat": md.get("latitude"), "lng": md.get("longitude")}
+    _BAIGNADE_IDX = idx
+    return idx
+
+
+def _haversine_km(a, b, c, e):
+    import math
+    if None in (a, b, c, e):
+        return float("inf")
+    R = 6371.0
+    p1, p2 = math.radians(a), math.radians(c)
+    dp = math.radians(c - a); dl = math.radians(e - b)
+    x = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
+    return 2 * R * math.asin(math.sqrt(x))
+
+
+def essentiel_block(d, lang):
+    """Beach-only answer-first highlight strip — swimming-critical curated facts.
+    Every value comes verbatim from i18n.<lang>.facts / acces_pmr; null ⇒ voir fiche."""
+    if d.get("slug") not in _baignade_index():
+        return ""
+    facts = (d.get("i18n", {}).get(lang, {}) or {}).get("facts") \
+        or (d.get("i18n", {}).get("fr", {}) or {}).get("facts") or {}
+    chips = []
+    tarif = facts.get("tarif") or facts.get("access")
+    label_tarif = (FACT_LABELS.get("tarif", {}) or {}).get(lang) if isinstance(FACT_LABELS.get("tarif"), dict) else None
+    chips.append('<span style="display:inline-block;background:#eef4f2;border:1px solid #d6e6e2;'
+                 'border-radius:999px;padding:3px 11px;margin:3px 5px 3px 0;font-size:13px">'
+                 f'💶 {html_lib.escape(str(tarif) if tarif else (_CH_VOIRFICHE.get(lang) or "voir fiche"), quote=True)}</span>')
+    surv = facts.get("surveillance")
+    if surv:
+        chips.append('<span style="display:inline-block;background:#eef4f2;border:1px solid #d6e6e2;'
+                     'border-radius:999px;padding:3px 11px;margin:3px 5px 3px 0;font-size:13px">'
+                     f'🛟 {html_lib.escape(str(surv), quote=True)}</span>')
+    if str(facts.get("pavillon_bleu_2026", "")).strip().upper() == "OUI":
+        chips.append('<span style="display:inline-block;background:#e7f0fb;border:1px solid #bcd6f5;'
+                     'color:#1857a8;border-radius:999px;padding:3px 11px;margin:3px 5px 3px 0;'
+                     'font-size:13px;font-weight:600">🏅 Pavillon Bleu 2026</span>')
+    ap = d.get("acces_pmr")
+    if isinstance(ap, dict) and ap.get("status"):
+        st = (_ACCES_STATUS.get(ap["status"], {}) or {}).get(lang) or _ACCES_STATUS.get(ap["status"], {}).get("fr") or ap["status"]
+        chips.append('<span style="display:inline-block;background:#eef4f2;border:1px solid #d6e6e2;'
+                     'border-radius:999px;padding:3px 11px;margin:3px 5px 3px 0;font-size:13px">'
+                     f'♿ {html_lib.escape(str(st), quote=True)}</span>')
+    title = html_lib.escape(_ESS.get(lang) or _ESS["fr"], quote=True)
+    return ('<section class="essentiel" style="margin:14px 0;padding:12px 14px;background:#fff;'
+            'border:1px solid #e3ddd0;border-left:4px solid #1F6E78;border-radius:12px">'
+            f'<strong style="display:block;margin-bottom:6px;color:#155059">{title}</strong>'
+            + "".join(chips) + '</section>')
+
+
+def plages_voisines_block(d, lang):
+    """Same-lake nearest-neighbour mesh + a link up to the lake's baignade hub
+    and the master 'où se baigner' hub. Pure link equity, generated not placed."""
+    idx = _baignade_index()
+    slug = d.get("slug")
+    if slug not in idx:
+        return ""
+    me = idx[slug]
+    lang_prefix = f"/{lang}" if lang != "fr" else ""
+    # nearest same-group siblings
+    sibs = [(s, info) for s, info in idx.items()
+            if s != slug and info["group"] == me["group"]]
+    sibs.sort(key=lambda si: _haversine_km(me["lat"], me["lng"], si[1]["lat"], si[1]["lng"]))
+    sibs = sibs[:4]
+    links = []
+    # up to the lake hub (or the master hub for the mountain group)
+    hub_slug = me["hub"]
+    links.append(f'<a class="fiche" style="margin:4px 10px 4px 0" '
+                 f'href="{BASE_URL}{lang_prefix}/{hub_slug}">{html_lib.escape(_GUIDE.get(lang) or _GUIDE["fr"], quote=True)} →</a>')
+    for s, _info in sibs:
+        nm = _related_name(s, lang)
+        links.append(f'<a class="fiche" style="margin:4px 10px 4px 0" '
+                     f'href="{BASE_URL}{lang_prefix}/{s}">{html_lib.escape(nm, quote=True)}</a>')
+    # always link the master hub too (cross-lake discovery)
+    if hub_slug != _MASTER_HUB:
+        links.append(f'<a class="fiche" style="margin:4px 10px 4px 0" '
+                     f'href="{BASE_URL}{lang_prefix}/{_MASTER_HUB}">{html_lib.escape(_ALLSPOTS.get(lang) or _ALLSPOTS["fr"], quote=True)} →</a>')
+    title = html_lib.escape(_VOIS.get(lang) or _VOIS["fr"], quote=True)
+    return ('<section class="plages-voisines" style="margin:22px 0;padding:14px 16px;'
+            'background:#fff;border:1px solid #e3ddd0;border-radius:12px">'
+            f'<h2 style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;'
+            f'margin:0 0 8px;color:#155059">{title}</h2>'
+            f'<div>{"".join(links)}</div></section>')
+
+
 def build_page(d, lang="fr"):
     """Render the full HTML for fiche `d` in `lang`. Returns html string.
     Fallback-field info (which keys fell back to FR) is exposed via
@@ -1871,6 +2011,7 @@ def build_page(d, lang="fr"):
     out.append(build_header(d))
     out.append(hero_block(d))
     out.append(facts_block(L("facts", {}) or {}, first_source_url(d), d.get("acces_pmr")))
+    out.append(essentiel_block(d, lang))
     body_dict = L("body", {}) if isinstance(L("body", {}), dict) else {}
     if not body_dict:
         body_dict = {"what_is": L_body("what_is", "")}
@@ -1889,6 +2030,7 @@ def build_page(d, lang="fr"):
     _related = related_lieux_block(d.get("related_lieux", []), lang)
     if _related:
         out.append(_related)
+    out.append(plages_voisines_block(d, lang))
     out.append(sources_block(d.get("sources", [])))
     out.append(data_credits_block(d.get("data_sources", [])))
     _carousel = related_carousel(d, lang)

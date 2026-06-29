@@ -83,6 +83,9 @@ jobs:
         # after build_all so the hub pages have been rendered
         run: python3 scripts/gate_intent_hubs.py
 
+      - name: Baignade-cluster gate (L'essentiel + Plages voisines mesh)
+        run: python3 scripts/gate_baignade_cluster.py
+
       - name: AI content layer gate
         # build_all has just regenerated content/<slug>.md + llms.txt +
         # llms-full.txt. Assert every advertised /content/<slug>.md exists

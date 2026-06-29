@@ -42,7 +42,12 @@ UI = {
     "faq":        {"fr": "Questions fréquentes", "en": "Frequently asked questions", "de": "Häufige Fragen", "it": "Domande frequenti", "es": "Preguntas frecuentes", "nl": "Veelgestelde vragen"},
     "verified":   {"fr": "📍 vérifiée", "en": "📍 verified", "de": "📍 geprüft", "it": "📍 verificata", "es": "📍 verificada", "nl": "📍 geverifieerd"},
     "also":       {"fr": "À lire aussi", "en": "See also", "de": "Siehe auch", "it": "Da leggere anche", "es": "Ver también", "nl": "Zie ook"},
+    "guides":     {"fr": "Les guides par lac", "en": "Guides by lake", "de": "Guides nach See", "it": "Guide per lago", "es": "Guías por lago", "nl": "Gidsen per meer"},
+    "see_guide":  {"fr": "Voir le guide →", "en": "See the guide →", "de": "Zum Guide →", "it": "Vedi la guida →", "es": "Ver la guía →", "nl": "Bekijk de gids →"},
 }
+
+# Populated by main() so render_hub can resolve linked_hubs by slug.
+_ALL_HUBS = {}
 RIVE = {
     "Nord": {"fr": "Nord", "en": "North", "de": "Nord", "it": "Nord", "es": "Norte", "nl": "Noord"},
     "Sud": {"fr": "Sud", "en": "South", "de": "Süd", "it": "Sud", "es": "Sur", "nl": "Zuid"},
@@ -222,6 +227,18 @@ def render_hub(hub, lang, fiches):
     else:
         map_script = map_div = head_leaflet = ""
 
+    # linked-hub cards (a master hub points at sub-hubs by slug)
+    linked_html = ""
+    linked = [_ALL_HUBS[s] for s in hub.get("linked_hubs", []) if s in _ALL_HUBS]
+    if linked:
+        cards = "".join(
+            '<article class="card"><div class="ch"><h3>' + esc(L(lh["h1"], lang)) + '</h3>'
+            f'<span class="rive">{len(lh.get("members", []))}</span></div>'
+            f'<a class="fiche" href="{url_for(lh["slug"], lang)}">{esc(L(UI["see_guide"], lang))}</a></article>'
+            for lh in linked)
+        linked_html = (f'<h2 style="color:var(--teal)">{esc(L(UI["guides"], lang))}</h2>'
+                       f'<div class="cards">{cards}</div>')
+
     foot = L(hub.get("footer_note", {}), lang)
     foot_html = f'<p class="note">{esc(foot)}</p>' if foot else ""
 
@@ -239,6 +256,8 @@ def render_hub(hub, lang, fiches):
 
 <div class="answer">{L(hub["answer"], lang)}
 <div style="margin-top:8px">{pills}</div></div>
+
+{linked_html}
 
 {map_div}
 
@@ -279,7 +298,9 @@ def inject_category_links(hub_links_by_cat, lang):
 
 
 def main():
+    global _ALL_HUBS
     hubs = json.loads(open(REGISTRY, encoding="utf-8").read())
+    _ALL_HUBS = {h["slug"]: h for h in hubs}
     # load member fiches once
     need = {m["slug"] for h in hubs for m in h["members"]}
     fiches = {}
