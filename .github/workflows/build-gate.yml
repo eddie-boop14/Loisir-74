@@ -57,6 +57,9 @@ jobs:
       - name: No-duplicate-lieux gate
         run: python3 scripts/gate_no_duplicate_lieux.py
 
+      - name: No-dead-slug-refs gate (indexes point only at live fiches)
+        run: python3 scripts/gate_no_dead_slug_refs.py
+
       - name: Multi-hub membership gate (valid hubs[], no dilution)
         run: python3 scripts/gate_hubs_membership.py
 
