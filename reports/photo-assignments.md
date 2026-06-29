@@ -1,7 +1,7 @@
 # Phase 4 — photo assignments (gate artifact)
 
 **Date**: 2026-06-14
-**Total assignments**: 595 (one per (hub × slug) on the FR canonical hub)
+**Total assignments**: 598 (one per (hub × slug) on the FR canonical hub)
 
 ## Per-hub diversity
 
@@ -10,14 +10,14 @@
 | `baignade-nautisme` | 50 | 38 | 4 |
 | `bases-de-loisirs` | 85 | 61 | 6 |
 | `cascades` | 17 | 17 | 1 |
-| `chateaux` | 26 | 23 | 3 |
+| `chateaux` | 27 | 23 | 4 |
 | `lacs-plages` | 31 | 26 | 3 |
 | `musees` | 49 | 23 | 9 |
 | `parcs-jardins` | 31 | 17 | 11 |
-| `points-de-vue` | 29 | 24 | 5 |
+| `points-de-vue` | 30 | 24 | 6 |
 | `que-faire` | 73 | 42 | 4 |
 | `sensations-plein-air` | 71 | 54 | 4 |
-| `sentiers` | 39 | 7 | 14 |
+| `sentiers` | 40 | 7 | 14 |
 | `sorties-detente` | 25 | 13 | 3 |
 | `sport-jeux` | 52 | 33 | 4 |
 | `telecabines` | 12 | 5 | 5 |
@@ -200,6 +200,7 @@
 | `chateaux` | `chateau-sonnaz-thonon-bains` | `patrimoine` | `generique-chateau.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-thenieres-ballaison` | `patrimoine` | `generique-chateau.jpg` | — | json hero (local) |
 | `chateaux` | `chateaux-des-allinges` | `patrimoine` | `Allinges_Chateau_Clocher.jpg` | — | json hero (url) |
+| `chateaux` | `eglise-baroque-saint-nicolas-combloux` | `chateau` | `generique-chateau.jpg` | — | json hero (local) |
 | `chateaux` | `maison-forte-hautetour-saint-gervais` | `patrimoine` | `maison-forte-hautetour-saint-gervais-hero.jpg` | — | json hero (local) |
 | `chateaux` | `musee-chateau-annecy` | `patrimoine` | `Castle_%40_Old_City_of_Annecy_%2815186413279%29.jpg` | — | json hero (url) |
 | `chateaux` | `thermes-evian` | `patrimoine` | `Anciens_thermes_Evian_5.jpg` | — | json hero (url) |
@@ -318,6 +319,7 @@
 | `parcs-jardins` | `vitam-neydens` | `parc` | `generique-aquatique-piscine-couverte.jpg` | — | json hero (local) |
 | `points-de-vue` | `aire-de-decollage-parapente-plaine-joux` | `nature` | `Aire_de_d%C3%A9collage_de_parapentes_%40_Passy_Plaine-Joux_%2851062114852%29.jpg` | — | json hero (url) |
 | `points-de-vue` | `belvedere-du-mont-baron` | `nature` | `Chemin_mont_Veyrier_mont_Baron.jpg` | — | json hero (url) |
+| `points-de-vue` | `belvedere-panorama-360-combloux-la-cry` | `point-de-vue` | `generique-point-de-vue.jpg` | — | json hero (local) |
 | `points-de-vue` | `col-de-la-colombiere` | `nature` | `col-de-la-colombiere-hero.jpg` | — | json hero (local) |
 | `points-de-vue` | `col-de-la-croix-fry` | `nature` | `col-de-la-croix-fry-hero.jpg` | — | json hero (local) |
 | `points-de-vue` | `col-de-la-forclaz` | `nature` | `Plateforme_de_d%C3%A9collage_de_deltaplane_%40_Col_de_la_Forclaz.jpg` | — | json hero (url) |
@@ -513,6 +515,7 @@
 | `sentiers` | `sentier-decouverte-plateau-glieres-thorens-glieres` | `nature` | `generique-sentier-hiver-neige.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-des-roselieres` | `nature` | `sentier-des-roselieres-hero.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-desert-de-plate-passy` | `nature` | `generique-sentier-sommet-panorama.jpg` | — | json hero (local) |
+| `sentiers` | `sentier-du-baroque-combloux` | `sentier` | `generique-sentier-foret-alpine.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-espagnols-pas-du-roc-glieres` | `nature` | `generique-sentier-foret-alpine.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-geologique-pointe-percee-grand-bornand` | `nature` | `generique-sentier-hiver-neige.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-maison-saleve-pomier-presilly` | `nature` | `generique-sentier-sommet-panorama.jpg` | — | json hero (local) |
