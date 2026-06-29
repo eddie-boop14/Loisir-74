@@ -53,11 +53,10 @@ PRICE_IN_PER_MTOK = 1.00
 PRICE_OUT_PER_MTOK = 5.00
 
 # Slugs used to fabricate a mock queue when reports/review-queue.json is absent.
-# All five are real fiches in /home/user/Loisir-74/Json/.
+# All are real fiches in /home/user/Loisir-74/Json/.
 MOCK_SLUGS = [
     "abbaye-d-aulps",
     "accrobranche-foret-aventures-manigod",
-    "aquaparc-aqualis-cluses",
     "atelier-poterie-chez-el-annecy",
     "aire-de-decollage-parapente-plaine-joux",
 ]
@@ -75,12 +74,6 @@ MOCK_SIGNALS: dict[str, dict[str, str]] = {
         "source": "direct_fetch",
         "detail": "GET https://www.manigod.com/a-vivre-en-famille/parcours-ludique-nature-en-foret.html -> 404 Not Found.",
         "checked": "2026-06-10",
-    },
-    "aquaparc-aqualis-cluses": {
-        "issue": "Business registry shows SIRET marked 'cessation d'activité' for parent operator.",
-        "source": "registry",
-        "detail": "recherche-entreprises.api.gouv.fr flagged parent SIRET as ceased 2026-04-15; venue may still operate under new SIRET.",
-        "checked": "2026-06-08",
     },
     "atelier-poterie-chez-el-annecy": {
         "issue": "Google Places reports 'permanently closed' status.",
@@ -111,6 +104,10 @@ def _fabricate_queue() -> list[dict[str, Any]]:
     """Build a mock 5-item queue from real fiches in Json/."""
     queue: list[dict[str, Any]] = []
     for slug in MOCK_SLUGS:
+        path = JSON_DIR / f"{slug}.json"
+        if not path.exists():
+            print(f"[review] skipping missing fiche: {slug}", file=sys.stderr)
+            continue
         fiche = _load_fiche(slug)
         name = (
             fiche.get("i18n", {})
