@@ -21,9 +21,12 @@ Strings localized (per hub × 5 locales):
 """
 import re
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import locales  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-LOCS = ("en", "de", "it", "es", "nl")
+LOCS = locales.SECONDARY
 
 HUB_LOCALE_SLUGS = {
     "cascades":            {"en":"waterfalls","de":"wasserfaelle","it":"cascate","es":"cascadas","nl":"watervallen"},

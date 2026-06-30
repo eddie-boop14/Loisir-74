@@ -22,6 +22,9 @@ import json
 import glob
 import re
 import os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import locales  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -48,7 +51,7 @@ def is_real(hero):
     return os.path.exists(os.path.join(ROOT, name))
 
 
-LANGS = ("en", "de", "it", "es", "nl")
+LANGS = locales.SECONDARY
 
 
 def main():

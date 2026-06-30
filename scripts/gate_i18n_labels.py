@@ -21,6 +21,8 @@ import json
 import os
 import re
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import locales  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LABELS = os.path.join(ROOT, "data", "i18n-labels.json")
@@ -29,7 +31,7 @@ KNOWN_RTL = {"ar", "he"}
 SECTIONS = ("fact_labels", "fact_values", "descriptors_by_type",
             "ui_chrome", "hub_names", "months")
 # Languages currently rendered/published by the builders (the active roster).
-PUBLISHED_ROSTER = {"fr", "en", "de", "it", "es", "nl"}
+PUBLISHED_ROSTER = set(locales.PUBLISHED)
 
 
 def main():

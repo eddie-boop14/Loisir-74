@@ -15,10 +15,12 @@ import json
 import os
 import re
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import locales  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REG = os.path.join(ROOT, "data", "intent-hubs.json")
-LANGS = ("fr", "en", "de", "it", "es", "nl")
+LANGS = locales.PUBLISHED
 HUBS = ("baignade-lac-annecy", "baignade-leman", "ou-se-baigner-haute-savoie")
 
 

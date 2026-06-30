@@ -25,10 +25,12 @@ import re
 import shutil
 import sys
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import locales  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 SITE = REPO / "_site"
-LOCALES = ("en", "de", "it", "es", "nl")
+LOCALES = locales.SECONDARY
 
 # Paths to copy verbatim from REPO into SITE
 COPY_DIRS = [
@@ -352,7 +354,7 @@ def main():
     # in-sitemap URLs resolve. They carry self-canonical + index,follow but are
     # NOT in any hreflang cluster. RTL (ar/he) stay undeployed (render-held).
     print("Copying staged-indexable pilot trees (pl/pt/cs)...")
-    for L in ("pl", "pt", "cs"):
+    for L in locales.STAGED_INDEXABLE:
         src = REPO / L
         if not src.exists(): continue
         copy_dir(src, SITE / L)
