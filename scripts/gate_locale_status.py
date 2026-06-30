@@ -80,7 +80,12 @@ def main():
         if not rv or rv is False:
             viol.append(f"{l} is '{L[l]['status']}' but data/i18n-labels.json reviewed[{l!r}]={rv!r} "
                         f"— a non-published language must be vocabulary-verified before it stages/holds")
-    for l in sorted(held):  # held = reviewed but NOT native-cleared
+    # A held language stays noindex until it is render-cleared: +native (a human
+    # spot-check) OR +render-ai (HANDOFF-16: AI-render-verified, report-backed).
+    # A render-ai-cleared language may legitimately remain 'held' while its full
+    # tree is built (verified, publish-pending) — so only the legacy +native flag
+    # (which meant "ship now") is flagged as a held inconsistency here.
+    for l in sorted(held):
         if "+native" in str(reviewed.get(l) or ""):
             viol.append(f"{l} is 'held' but i18n-labels marks it +native — promote it, don't hold it")
 
@@ -111,13 +116,14 @@ def main():
         if code not in sm_langs:
             viol.append(f"staged-indexable '{code}' has no URLs in sitemap.xml — the GSC clock needs them")
 
-    # 5) held languages may carry a NOINDEX staged pilot (HANDOFF-13 Phase C) for
-    #    the native spot-check, but never an indexable page.
+    # 5) held languages may carry a NOINDEX staged pilot for the render check
+    #    (HANDOFF-13 Phase C / HANDOFF-16), but never an indexable page until they
+    #    are render-cleared (+native or +render-ai) AND promoted to published.
     for l in sorted(held):
         for fp in glob.glob(os.path.join(ROOT, l, "**", "*.html"), recursive=True):
             if "noindex" not in open(fp, encoding="utf-8").read()[:2000]:
                 viol.append(f"held language '{l}' has an indexable page {os.path.relpath(fp, ROOT)} "
-                            f"— held must stay noindex until +native")
+                            f"— held must stay noindex until +native/+render-ai + promotion")
 
     print(f"gate_locale_status: published={sorted(published)} "
           f"staged-indexable={sorted(staged_idx)} held={sorted(held)} staged={sorted(staged)}")

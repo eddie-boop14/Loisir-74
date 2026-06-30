@@ -137,6 +137,13 @@ jobs:
         # non-published language leaked into the 6's clusters OR the picker.
         run: python3 scripts/gate_locale_status.py
 
+      - name: Render-verified gate (every +render-ai language has a clean Layer A + B report)
+        # Read-only + lightweight: validates reports/render-verify-<lang>.json
+        # (no browser in CI). The heavy headless-render + vision pass that PRODUCES
+        # those reports is scripts/render_verify.py, run on demand. The honest
+        # replacement for the +native gate that would never fire (HANDOFF-16).
+        run: python3 scripts/gate_render_verified.py
+
       - name: Assert _site/ research_log strip
         run: |
           leaks=$(grep -rl 'research_log' _site/Json/ _site/api/ _site/content/ 2>/dev/null | wc -l)
