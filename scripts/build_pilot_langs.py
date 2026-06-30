@@ -113,8 +113,8 @@ CSS = ("*{box-sizing:border-box}body{margin:0;font-family:-apple-system,system-u
        "footer{margin-top:26px;padding-top:12px;border-top:1px solid #e3ddd0;font-size:12px;color:#5b6b6a}")
 
 
-# Phase C RTL fonts — the script font per held RTL language (HANDOFF-13).
-RTL_FONT = {"ar": "Noto Sans Arabic", "he": "Noto Sans Hebrew"}
+# Non-Latin script fonts per held language (HANDOFF-13 RTL ar/he, HANDOFF-14 ja).
+SCRIPT_FONT = {"ar": "Noto Sans Arabic", "he": "Noto Sans Hebrew", "ja": "Noto Sans JP"}
 
 
 def render(d, lang):
@@ -152,19 +152,21 @@ def render(d, lang):
     staging = ("" if indexable else
                f'<div class="staging">⚠ STAGING — {esc(lang)} pilot · not indexed '
                f'· awaiting native review</div>')
-    # RTL-only chrome — kept off LTR pages so the Latin pilot's only delta is the
-    # shared logical-property CSS. <html dir>, the script font, and the duck
-    # (whose bubble mirrors on dir=rtl) ride only on the RTL pilot.
+    # Held-pilot chrome — kept off the indexable Latin pilot so its only delta is
+    # the shared logical-property CSS. dir="rtl" rides only on RTL pages; the
+    # script font rides on any non-Latin-script lang (ar/he/ja); the duck (which
+    # quacks the page language + mirrors its bubble on dir=rtl) rides on every
+    # held noindex pilot — ar/he/ja — so it can be eyeballed in the spot-check.
     dir_attr = ' dir="rtl"' if rtl else ''
     rtl_head = ""
-    if rtl:
-        fam = RTL_FONT.get(lang, "Noto Sans Arabic")
+    fam = SCRIPT_FONT.get(lang)
+    if fam:
         fam_url = fam.replace(" ", "+")
         rtl_head = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
                     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
                     f'<link href="https://fonts.googleapis.com/css2?family={fam_url}:wght@400;600&display=swap" rel="stylesheet">'
                     f'<style>body{{font-family:"{fam}",system-ui,sans-serif}}</style>')
-    duck = assets.script_tag("duck.js") if rtl else ""
+    duck = assets.script_tag("duck.js") if not indexable else ""
     return f"""<!doctype html><html lang="{lang}"{dir_attr}><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title>

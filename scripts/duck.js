@@ -15,7 +15,7 @@
   if (!lang) { var m = path.match(/^\/(en|de|it|es|nl|pl|pt|cs|ar|he|ja)(\/|$)/); lang = m ? m[1] : 'fr'; }
   var QUACK = { fr: 'Coin coin\u00A0!', en: 'Quack quack!', de: 'Quak quak!',
                 it: 'Qua qua!', es: '\u00A1Cuac cuac!', nl: 'Kwak kwak!',
-                ar: '\u0643\u0648\u0627\u0643 \u0643\u0648\u0627\u0643!', he: '\u05D2\u05E2 \u05D2\u05E2!' };
+                ar: '\u0643\u0648\u0627\u0643 \u0643\u0648\u0627\u0643!', he: '\u05D2\u05E2 \u05D2\u05E2!', ja: '\u30AC\u30FC\u30AC\u30FC\uFF01' };
   var SAY = QUACK[lang] || QUACK.fr;
   var rtl = (document.documentElement.getAttribute('dir') || '').toLowerCase() === 'rtl';
 
