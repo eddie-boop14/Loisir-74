@@ -348,6 +348,15 @@ def main():
         if not src.exists(): continue
         copy_dir(src, SITE / L)
 
+    # Staged-indexable Latin pilot (HANDOFF-11): deploy pl/pt/cs so their
+    # in-sitemap URLs resolve. They carry self-canonical + index,follow but are
+    # NOT in any hreflang cluster. RTL (ar/he) stay undeployed (render-held).
+    print("Copying staged-indexable pilot trees (pl/pt/cs)...")
+    for L in ("pl", "pt", "cs"):
+        src = REPO / L
+        if not src.exists(): continue
+        copy_dir(src, SITE / L)
+
     print("Patching _site/studio.html with noindex...")
     studio = SITE / "studio.html"
     if studio.exists():

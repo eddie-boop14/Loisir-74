@@ -30,6 +30,12 @@ LABELS = json.loads(open(os.path.join(ROOT, "data", "i18n-labels.json"), encodin
 LIVE6 = {"fr", "en", "de", "it", "es", "nl"}
 RTL = set(LABELS["_meta"].get("rtl", []))
 PROTECTED = {"chez-nous-a-la-plage", "chalet-du-tornet"}
+BASE = "https://loisirs74.fr"
+# HANDOFF-11 — the Latin pilot is flipped INDEXABLE to start the GSC clock:
+# self-canonical + index,follow + listed in sitemap (own URLs only), but kept
+# OUT of the 6 live languages' hreflang clusters. RTL (ar/he) stay excluded.
+INDEXABLE = {"pl", "pt", "cs"}
+PILOT_LASTMOD = "2026-06-30"  # the flip date — deterministic for byte-stable rebuilds
 
 # ~20 marquee pilot fiches (Mont-Blanc / Chamonix / Annecy / Évian / Megève set).
 PILOT = [
@@ -122,14 +128,21 @@ def render(d, lang):
         schema["geo"] = {"@type": "GeoCoordinates", "latitude": d["latitude"], "longitude": d["longitude"]}
     title = f"{name} · {commune} — loisirs74"
     meta_desc = (descriptor + (", " if descriptor else "") + commune + " (Haute-Savoie).").strip()
+    indexable = lang in INDEXABLE
+    self_url = f"{BASE}/{lang}/{d['slug']}"
+    robots = "index,follow" if indexable else "noindex,nofollow"
+    canonical = f'<link rel="canonical" href="{self_url}">' if indexable else ""
+    staging = ("" if indexable else
+               f'{staging}')
     return f"""<!doctype html><html lang="{lang}"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title>
-<meta name="robots" content="noindex,nofollow">
+<meta name="robots" content="{robots}">
+{canonical}
 <meta name="description" content="{esc(meta_desc)}">
 <script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>
 <style>{CSS}</style></head><body><div class="wrap">
-<div class="staging">⚠ STAGING — {esc(lang)} pilot · not indexed · awaiting review</div>
+{staging}
 <h1>{esc(name)}</h1>
 {f'<p class="desc">{esc(descriptor)}</p>' if descriptor else ''}
 <dl class="facts">{facts_html}</dl>
@@ -139,12 +152,36 @@ Facts-first pilot · labels: {esc(method)}</footer>
 </div></body></html>"""
 
 
+PILOT_MARK_A = "  <!-- staged-indexable pilot (HANDOFF-11): own URLs only, NO hreflang -->"
+PILOT_MARK_B = "  <!-- /staged-indexable pilot -->"
+
+
+def append_sitemap(urls):
+    """Add the indexable pilot URLs to sitemap.xml (own <loc> only — NO hreflang
+    alternates, so they never enter the 6 live languages' clusters). Idempotent:
+    fix_hreflang_sitemap rewrites the file fresh each build, then this appends."""
+    sm = os.path.join(ROOT, "sitemap.xml")
+    if not os.path.exists(sm):
+        return
+    import re
+    xml = open(sm, encoding="utf-8").read()
+    xml = re.sub(re.escape(PILOT_MARK_A) + r".*?" + re.escape(PILOT_MARK_B) + r"\n?",
+                 "", xml, flags=re.S)
+    block = "\n".join([PILOT_MARK_A] + [
+        f'  <url><loc>{u}</loc><lastmod>{PILOT_LASTMOD}</lastmod>'
+        f'<changefreq>weekly</changefreq></url>' for u in urls] + [PILOT_MARK_B, ""])
+    xml = xml.replace("</urlset>", block + "</urlset>", 1)
+    with open(sm, "w", encoding="utf-8") as fh:
+        fh.write(xml)
+
+
 def main():
     reviewed = LABELS["_meta"].get("reviewed", {})
     eligible = [l for l, r in reviewed.items()
                 if r and r is not False and l not in LIVE6 and l not in RTL]
-    print(f"eligible pilot langs: {eligible}")
+    print(f"eligible pilot langs: {eligible} (indexable: {sorted(set(eligible) & INDEXABLE)})")
     n = 0
+    sitemap_urls = []
     for lang in eligible:
         os.makedirs(os.path.join(ROOT, lang), exist_ok=True)
         for slug in PILOT:
@@ -158,8 +195,11 @@ def main():
             with open(out, "w", encoding="utf-8") as fh:
                 fh.write(render(d, lang))
             n += 1
-    print(f"build_pilot_langs: {n} staged page(s) across {len(eligible)} lang(s) "
-          f"({len(PILOT)} marquee slugs)")
+            if lang in INDEXABLE:
+                sitemap_urls.append(f"{BASE}/{lang}/{slug}")
+    append_sitemap(sorted(sitemap_urls))
+    print(f"build_pilot_langs: {n} pilot page(s) across {len(eligible)} lang(s); "
+          f"{len(sitemap_urls)} added to sitemap (indexable, no hreflang)")
 
 
 if __name__ == "__main__":
