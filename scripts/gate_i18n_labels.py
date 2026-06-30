@@ -110,6 +110,16 @@ def main():
                       and all(str((data[sec].get(k, {})).get(l, "")).strip()
                               for sec in SECTIONS for k in data[sec]))
 
+    # RTL languages (ar/he) are router/vocab-verified but RENDER-HELD until a
+    # native spot-check of the rendered RTL pilot — encoded as "+native" in the
+    # reviewed string. Until then they must NOT have a rendered tree.
+    def native_cleared(lang):
+        return "+native" in str(reviewed.get(lang) or "")
+    render_held = sorted(l for l in rtl if reviewed.get(l) and not native_cleared(l))
+    for lang in render_held:
+        if os.path.isdir(os.path.join(ROOT, lang)):
+            viol.append(f"rtl '{lang}' is render-held (no +native) but a {lang}/ tree exists")
+
     # any unreviewed language must NOT have a rendered tree published
     for lang in present - REFERENCE:
         if not reviewed.get(lang):
@@ -121,8 +131,9 @@ def main():
 
     print(f"gate_i18n_labels: {n_keys} label keys × {len(present)} languages "
           f"({', '.join(sorted(present))})")
-    print(f"  reviewed/published: {sorted(publishable)}")
-    print(f"  filled, awaiting native review (will NOT publish): {awaiting}")
+    print(f"  vocab-verified: {sorted(publishable)}")
+    print(f"  render-held (RTL, native spot-check pending): {render_held}")
+    print(f"  filled, awaiting review: {awaiting}")
     if viol:
         print(f"::error::{len(viol)} i18n-label violation(s):")
         for v in viol[:50]:
