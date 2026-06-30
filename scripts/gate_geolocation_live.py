@@ -60,7 +60,7 @@ def check_pages():
         if 'id="nearMe"' not in html:
             continue
         seen += 1
-        if 'src="/scripts/nearme.js"' not in html:
+        if '/scripts/nearme.js' not in html:
             out.append(rel)
     return out, seen
 

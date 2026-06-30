@@ -37,6 +37,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import build_hubs as H  # noqa: E402  reuse fiche_card_html / acces_value / CHROME / picture_tag
 import locales  # noqa: E402
+import assets  # noqa: E402
 
 LANGS = list(locales.PUBLISHED)
 BASE = "https://loisirs74.fr"
@@ -401,8 +402,8 @@ def render_page(c, lang, intros):
 {grid}
 {lift_footer(lang, alts)}
 {lift_scripts(lang)}
-<script src="/scripts/nearme.js" defer></script>
-<script src="/scripts/duck.js" defer></script>
+{assets.script_tag("nearme.js")}
+{assets.script_tag("duck.js")}
 </body>
 </html>"""
     return head + "\n" + body + "\n"

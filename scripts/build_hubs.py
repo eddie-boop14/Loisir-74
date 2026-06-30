@@ -28,6 +28,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from picture_tag import picture_tag
 import locales  # noqa: E402
+import assets  # noqa: E402
 LOCALES = locales.SECONDARY
 
 # Filter rules per hub. Basic + thematic hubs that can be derived from
@@ -981,9 +982,9 @@ def patch_homepage_sorties(lang):
 def patch_duck(html):
     """Inject the sitewide duck easter egg before </body> if missing. Idempotent.
     Hubs/homepages are never protected fiches, so no skip needed here."""
-    if 'src="/scripts/duck.js"' in html or "</body>" not in html:
+    if '/scripts/duck.js' in html or "</body>" not in html:
         return html
-    return html.replace("</body>", '<script src="/scripts/duck.js" defer></script>\n</body>', 1)
+    return html.replace("</body>", assets.script_tag("duck.js") + "\n</body>", 1)
 
 
 def patch_homepage_duck(lang):
@@ -1010,9 +1011,9 @@ def patch_homepage_nearme(lang):
     if not home.exists():
         return False
     html = home.read_text(encoding="utf-8")
-    if 'src="/scripts/nearme.js"' in html:
+    if '/scripts/nearme.js' in html:
         return False
-    tag = '<script src="/scripts/nearme.js" defer></script>'
+    tag = assets.script_tag("nearme.js")
     l74 = '<script src="/scripts/l74sort.js"></script>'
     if l74 in html:
         html = html.replace(l74, l74 + "\n" + tag, 1)

@@ -134,6 +134,20 @@ def rebuild_communes():
     print("\n".join(lines[-3:]) if lines else "(communes rebuilt)")
 
 
+def version_runtime_assets():
+    """Cache-bust every /scripts/ runtime include with its content hash. Runs
+    after normalize_head_links (all HTML exists), so freshly-rendered pages and
+    committed homepage chrome alike get a current ?v=<hash>. Idempotent."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "version_assets.py")],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("version_assets failed")
+    print(out.stdout.strip() or "(runtime assets versioned)")
+
+
 def rebuild_pilot_langs():
     """Render the staged-indexable Latin pilot (pl/pt/cs) and append its own URLs
     to sitemap.xml. Runs AFTER normalize_head_links (which rewrites sitemap from
@@ -388,6 +402,7 @@ def main():
     run("reachability gate (strict)", reachability_gate)
     run("regenerate AI content layer (content/*.md + llms)", rebuild_ai_content)
     run("normalize head links (canonical + hreflang + md-alt)", normalize_head_links)
+    run("cache-bust runtime /scripts/ includes (content-hash ?v=)", version_runtime_assets)
     run("render staged-indexable pilot (pl/pt/cs) + sitemap", rebuild_pilot_langs)
     if not args.no_site:
         run("build _site/", lambda: subprocess.check_call(

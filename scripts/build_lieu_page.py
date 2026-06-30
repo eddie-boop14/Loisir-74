@@ -28,6 +28,7 @@ from urllib.parse import quote
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from picture_tag import picture_tag
 import locales  # noqa: E402
+import assets  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 BASE_URL = "https://loisirs74.fr"
@@ -2048,7 +2049,7 @@ def build_page(d, lang="fr"):
     # Sitewide duck easter egg — skip the two protected partner fiches so their
     # bytes don't change (duck.js also self-disables on those paths).
     if d.get("slug") not in ("chez-nous-a-la-plage", "chalet-du-tornet"):
-        out.append('<script src="/scripts/duck.js" defer></script>')
+        out.append(assets.script_tag("duck.js"))
     out.append("</body></html>")
     LAST_FALLBACK_FIELDS = set(_FALLBACK_FIELDS)
     return "\n".join(out)
