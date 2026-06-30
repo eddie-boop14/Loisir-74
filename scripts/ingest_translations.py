@@ -44,11 +44,13 @@ import json
 import re
 import sys
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import locales  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 JSON_DIR = ROOT / "Json"
 TRANS_DIR = ROOT / "translations"
-LANGS = ("en", "de", "it", "es", "nl")
+LANGS = locales.SECONDARY
 TODAY = datetime.date.today().isoformat()
 
 

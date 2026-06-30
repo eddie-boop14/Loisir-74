@@ -25,6 +25,8 @@ Usage:
 import os
 import re
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import locales  # noqa: E402
 from collections import defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -110,7 +112,7 @@ def check_carousels():
             pub.append(d["slug"])
     bad = []
     for slug in pub:
-        for pre in ("", "en", "de", "it", "es", "nl"):
+        for pre in ("",) + locales.SECONDARY:
             rel = f"{slug}.html" if not pre else f"{pre}/{slug}.html"
             fp = os.path.join(SITE, rel)
             if not os.path.exists(fp):
@@ -129,7 +131,7 @@ def check_homepage_hubs():
     sys.path.insert(0, os.path.join(ROOT, "scripts"))
     from build_hubs import ALL_BASE_HUBS, hub_locale_map  # noqa: E402
     bad = []
-    for lang in ("fr", "en", "de", "it", "es", "nl"):
+    for lang in locales.PUBLISHED:
         rel = "index.html" if lang == "fr" else f"{lang}/index.html"
         home = os.path.join(SITE, rel)
         if not os.path.exists(home):

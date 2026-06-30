@@ -36,6 +36,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS = ROOT / "scripts"
 sys.path.insert(0, str(SCRIPTS))
+import locales  # noqa: E402
 
 
 def run(label, fn):
@@ -236,7 +237,7 @@ def parse_baseline_hosts():
 def scan_current_placements():
     """Return {slug: set(host_slugs_with_card)} for the protected fiches."""
     hits = {n: set() for n in PROT}
-    for p in list(ROOT.glob("*.html")) + [f for L in ("en","de","it","es","nl") for f in (ROOT / L).glob("*.html") if (ROOT / L).exists()]:
+    for p in list(ROOT.glob("*.html")) + [f for L in locales.SECONDARY for f in (ROOT / L).glob("*.html") if (ROOT / L).exists()]:
         slug = p.stem
         try:
             html = p.read_text(encoding="utf-8")
@@ -284,7 +285,7 @@ def card_diff_gate(strict=True):
     snaps = ROOT / "reports" / "protected-cards"
     failed = False
     for slug in PROT:
-        for lang in ("fr", "en", "de", "it", "es", "nl"):
+        for lang in locales.PUBLISHED:
             snap = snaps / slug / f"{lang}.html"
             if not snap.exists():
                 continue

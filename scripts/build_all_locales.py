@@ -18,8 +18,9 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 import build_lieu_page as B  # noqa: E402
+import locales  # noqa: E402
 
-LANGS = ["fr", "en", "de", "it", "es", "nl"]
+LANGS = list(locales.PUBLISHED)
 
 
 def fr_signal(text, lang="en"):
@@ -81,7 +82,7 @@ def main():
 
     # Garbage-collect any draft HTMLs that were rendered by a prior build.
     for slug in draft_slugs:
-        for tree in (out_base,) + tuple(out_base / L for L in ("en","de","it","es","nl")):
+        for tree in (out_base,) + tuple(out_base / L for L in locales.SECONDARY):
             p = tree / f"{slug}.html"
             if p.exists():
                 p.unlink()

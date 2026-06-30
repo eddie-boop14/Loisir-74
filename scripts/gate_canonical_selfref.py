@@ -20,10 +20,12 @@ import glob
 import os
 import re
 import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import locales  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://loisirs74.fr/"
-LANGS = {"en", "de", "it", "es", "nl"}
+LANGS = set(locales.SECONDARY)
 CANON_ANY = re.compile(r'<link\b[^>]*\brel=("|\')canonical\1[^>]*>', re.I)
 HREF_RE = re.compile(r'href=("|\')([^"\']*)\1')
 MDALT_ANY = re.compile(r'<link\b[^>]*\btype=("|\')text/markdown\1[^>]*>', re.I)

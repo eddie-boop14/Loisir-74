@@ -15,9 +15,11 @@ import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import locales  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-LANGS = ("fr", "en", "de", "it", "es", "nl")
+LANGS = locales.PUBLISHED
 
 # Locale-translated hub display labels per JOB 4 (build_hubs.py HUB_DISPLAY)
 EXPECTED_LABELS = {

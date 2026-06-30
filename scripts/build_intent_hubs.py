@@ -22,11 +22,12 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from build_hubs import hub_locale_map, HUB_DISPLAY  # noqa: E402
+import locales  # noqa: E402
 
 REGISTRY = os.path.join(ROOT, "data", "intent-hubs.json")
 JSON_DIR = os.path.join(ROOT, "Json")
 BASE = "https://loisirs74.fr"
-LANGS = ("fr", "en", "de", "it", "es", "nl")
+LANGS = locales.PUBLISHED
 
 FACT_LABELS = {
     "access":      {"fr": "Accès", "en": "Access", "de": "Zugang", "it": "Accesso", "es": "Acceso", "nl": "Toegang"},

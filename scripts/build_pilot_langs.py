@@ -24,17 +24,20 @@ Frozen FR proper nouns verbatim. Protected fiches never rendered.
 import html as _h
 import json
 import os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import locales  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LABELS = json.loads(open(os.path.join(ROOT, "data", "i18n-labels.json"), encoding="utf-8").read())
-LIVE6 = {"fr", "en", "de", "it", "es", "nl"}
+LIVE6 = set(locales.PUBLISHED)
 RTL = set(LABELS["_meta"].get("rtl", []))
 PROTECTED = {"chez-nous-a-la-plage", "chalet-du-tornet"}
 BASE = "https://loisirs74.fr"
 # HANDOFF-11 — the Latin pilot is flipped INDEXABLE to start the GSC clock:
 # self-canonical + index,follow + listed in sitemap (own URLs only), but kept
 # OUT of the 6 live languages' hreflang clusters. RTL (ar/he) stay excluded.
-INDEXABLE = {"pl", "pt", "cs"}
+INDEXABLE = set(locales.STAGED_INDEXABLE)
 PILOT_LASTMOD = "2026-06-30"  # the flip date — deterministic for byte-stable rebuilds
 
 # ~20 marquee pilot fiches (Mont-Blanc / Chamonix / Annecy / Évian / Megève set).

@@ -35,6 +35,8 @@ import json
 import re
 import sys
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import locales  # noqa: E402
 from collections import defaultdict
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -88,7 +90,7 @@ PATTERNS = [
 ]
 
 # Locales
-LOCALES = ("fr", "en", "de", "it", "es", "nl")
+LOCALES = locales.PUBLISHED
 
 
 def iter_rendered_strings(d):
