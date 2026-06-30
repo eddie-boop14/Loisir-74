@@ -23,6 +23,7 @@ import re
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import locales  # noqa: E402
+import gate_render_verified  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LABELS = os.path.join(ROOT, "data", "i18n-labels.json")
@@ -112,13 +113,20 @@ def main():
                       and all(str((data[sec].get(k, {})).get(l, "")).strip()
                               for sec in SECTIONS for k in data[sec]))
 
-    # RTL languages (ar/he) are router/vocab-verified but RENDER-HELD until a
-    # native spot-check of the rendered RTL pilot — encoded as "+native" in the
-    # reviewed string. Until then they MAY carry a NOINDEX staged pilot (the
-    # HANDOFF-13 Phase C engine, for the spot-check) but must NOT publish an
+    # RTL languages (ar/he) are router/vocab-verified but RENDER-HELD until the
+    # rendered RTL pilot is proven not-broken-and-understood. Two ways to clear:
+    #   +native     — a native human spot-check (the original bar), OR
+    #   +render-ai  — AI-render-verified (HANDOFF-16): headless-render Layer A
+    #                 (RTL/bidi/glyph/no-tofu) + vision comprehension Layer B,
+    #                 backed by a CLEAN reports/render-verify-<lang>.json. The flag
+    #                 can't be hand-set — gate_render_verified enforces the report.
+    # Until cleared they MAY carry a NOINDEX staged pilot but must NOT publish an
     # indexable page.
     def native_cleared(lang):
-        return "+native" in str(reviewed.get(lang) or "")
+        rv = str(reviewed.get(lang) or "")
+        if "+native" in rv:
+            return True
+        return "+render-ai" in rv and gate_render_verified.render_ai_clean(lang, ROOT)
     render_held = sorted(l for l in rtl if reviewed.get(l) and not native_cleared(l))
     for lang in render_held:
         for fp in glob.glob(os.path.join(ROOT, lang, "**", "*.html"), recursive=True):
