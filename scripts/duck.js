@@ -12,10 +12,12 @@
 
   // language: <html lang> first, then URL prefix, default fr
   var lang = (document.documentElement.getAttribute('lang') || '').slice(0, 2).toLowerCase();
-  if (!lang) { var m = path.match(/^\/(en|de|it|es|nl)(\/|$)/); lang = m ? m[1] : 'fr'; }
+  if (!lang) { var m = path.match(/^\/(en|de|it|es|nl|pl|pt|cs|ar|he|ja)(\/|$)/); lang = m ? m[1] : 'fr'; }
   var QUACK = { fr: 'Coin coin\u00A0!', en: 'Quack quack!', de: 'Quak quak!',
-                it: 'Qua qua!', es: '\u00A1Cuac cuac!', nl: 'Kwak kwak!' };
+                it: 'Qua qua!', es: '\u00A1Cuac cuac!', nl: 'Kwak kwak!',
+                ar: '\u0643\u0648\u0627\u0643 \u0643\u0648\u0627\u0643!', he: '\u05D2\u05E2 \u05D2\u05E2!' };
   var SAY = QUACK[lang] || QUACK.fr;
+  var rtl = (document.documentElement.getAttribute('dir') || '').toLowerCase() === 'rtl';
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', place);
   else place();
@@ -67,7 +69,12 @@
       var b = document.createElement('span'); b.textContent = t;
       var r = d.getBoundingClientRect(), bs = b.style;
       bs.position = 'fixed'; bs.zIndex = '9999';
-      bs.left = Math.min(window.innerWidth - 90, Math.max(6, r.left)) + 'px';
+      if (rtl) {           // mirror: anchor the bubble to the duck's right edge
+        bs.right = Math.min(window.innerWidth - 90, Math.max(6, window.innerWidth - r.right)) + 'px';
+        bs.direction = 'rtl';
+      } else {
+        bs.left = Math.min(window.innerWidth - 90, Math.max(6, r.left)) + 'px';
+      }
       bs.top = Math.max(6, r.top - 26) + 'px';
       bs.background = '#1F6E78'; bs.color = '#fff';
       bs.font = '600 12px -apple-system,system-ui,Segoe UI,Roboto,sans-serif';

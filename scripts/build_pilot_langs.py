@@ -27,6 +27,7 @@ import os
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import locales  # noqa: E402
+import assets  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LABELS = json.loads(open(os.path.join(ROOT, "data", "i18n-labels.json"), encoding="utf-8").read())
@@ -107,9 +108,13 @@ CSS = ("*{box-sizing:border-box}body{margin:0;font-family:-apple-system,system-u
        "padding:6px 12px;font-size:12px;font-weight:600;margin-bottom:14px}"
        "h1{font-size:25px;margin:.2em 0}.desc{color:#1F6E78;font-weight:600;margin:.2em 0 1em}"
        "dl.facts{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;background:#fff;border:1px solid #e3ddd0;"
-       "border-radius:12px;padding:14px 16px}dt{color:#5b6b6a;font-size:14px}dd{margin:0;font-weight:600;text-align:right}"
+       "border-radius:12px;padding:14px 16px}dt{color:#5b6b6a;font-size:14px}dd{margin:0;font-weight:600;text-align:end}"
        "a.site{display:inline-block;margin-top:12px;color:#1F6E78;font-weight:600}"
        "footer{margin-top:26px;padding-top:12px;border-top:1px solid #e3ddd0;font-size:12px;color:#5b6b6a}")
+
+
+# Phase C RTL fonts — the script font per held RTL language (HANDOFF-13).
+RTL_FONT = {"ar": "Noto Sans Arabic", "he": "Noto Sans Hebrew"}
 
 
 def render(d, lang):
@@ -117,8 +122,17 @@ def render(d, lang):
     commune = d.get("commune", "")
     desc_key = CATEGORY_DESCRIPTOR.get(d.get("category"))
     descriptor = V("descriptors_by_type", desc_key, lang) if desc_key else ""
+    rtl = locales.DIR.get(lang) == "rtl"
+
+    # RTL bidi isolation (HANDOFF-13): every Latin/numeric run — frozen FR names,
+    # communes, prices, hours, URLs — is wrapped in <bdi> so it never renders
+    # scrambled inside the RTL flow. One helper, impossible to forget. LTR pages
+    # pass straight through, so the Latin pilot stays byte-identical.
+    def bidi(s_esc):
+        return f"<bdi>{s_esc}</bdi>" if rtl else s_esc
+
     rows = fact_rows(d, lang)
-    facts_html = "".join(f"<dt>{esc(lbl)}</dt><dd>{val}</dd>" for lbl, val in rows if lbl)
+    facts_html = "".join(f"<dt>{esc(lbl)}</dt><dd>{bidi(val)}</dd>" for lbl, val in rows if lbl)
     site = d.get("official_site_url")
     site_html = (f'<a class="site" href="{esc(site)}" rel="nofollow noopener" target="_blank">'
                  f'{esc(V("ui_chrome", "site_officiel", lang))} ↗</a>') if site else ""
@@ -136,22 +150,36 @@ def render(d, lang):
     robots = "index,follow" if indexable else "noindex,nofollow"
     canonical = f'<link rel="canonical" href="{self_url}">' if indexable else ""
     staging = ("" if indexable else
-               f'{staging}')
-    return f"""<!doctype html><html lang="{lang}"><head>
+               f'<div class="staging">⚠ STAGING — {esc(lang)} pilot · not indexed '
+               f'· awaiting native review</div>')
+    # RTL-only chrome — kept off LTR pages so the Latin pilot's only delta is the
+    # shared logical-property CSS. <html dir>, the script font, and the duck
+    # (whose bubble mirrors on dir=rtl) ride only on the RTL pilot.
+    dir_attr = ' dir="rtl"' if rtl else ''
+    rtl_head = ""
+    if rtl:
+        fam = RTL_FONT.get(lang, "Noto Sans Arabic")
+        fam_url = fam.replace(" ", "+")
+        rtl_head = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
+                    '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+                    f'<link href="https://fonts.googleapis.com/css2?family={fam_url}:wght@400;600&display=swap" rel="stylesheet">'
+                    f'<style>body{{font-family:"{fam}",system-ui,sans-serif}}</style>')
+    duck = assets.script_tag("duck.js") if rtl else ""
+    return f"""<!doctype html><html lang="{lang}"{dir_attr}><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="robots" content="{robots}">
 {canonical}
-<meta name="description" content="{esc(meta_desc)}">
+<meta name="description" content="{esc(meta_desc)}">{rtl_head}
 <script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>
 <style>{CSS}</style></head><body><div class="wrap">
 {staging}
-<h1>{esc(name)}</h1>
+<h1>{bidi(esc(name))}</h1>
 {f'<p class="desc">{esc(descriptor)}</p>' if descriptor else ''}
 <dl class="facts">{facts_html}</dl>
 {site_html}
 <footer>© 2026 · Bleu canard édition · Edmaster &amp; Claudius 🦆<br>
-Facts-first pilot · labels: {esc(method)}</footer>
+Facts-first pilot · labels: {esc(method)}</footer>{duck}
 </div></body></html>"""
 
 
@@ -180,9 +208,14 @@ def append_sitemap(urls):
 
 def main():
     reviewed = LABELS["_meta"].get("reviewed", {})
+    # Phase C (HANDOFF-13): RTL langs are now eligible too, but render NOINDEX via
+    # the RTL engine (held — staged for native spot-check, never indexed). Only
+    # INDEXABLE (the Latin pilot) carries index,follow + sitemap.
     eligible = [l for l, r in reviewed.items()
-                if r and r is not False and l not in LIVE6 and l not in RTL]
-    print(f"eligible pilot langs: {eligible} (indexable: {sorted(set(eligible) & INDEXABLE)})")
+                if r and r is not False and l not in LIVE6]
+    print(f"eligible pilot langs: {eligible} "
+          f"(indexable: {sorted(set(eligible) & INDEXABLE)}, "
+          f"rtl noindex: {sorted(set(eligible) & RTL)})")
     n = 0
     sitemap_urls = []
     for lang in eligible:

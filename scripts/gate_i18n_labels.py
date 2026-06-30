@@ -114,13 +114,17 @@ def main():
 
     # RTL languages (ar/he) are router/vocab-verified but RENDER-HELD until a
     # native spot-check of the rendered RTL pilot — encoded as "+native" in the
-    # reviewed string. Until then they must NOT have a rendered tree.
+    # reviewed string. Until then they MAY carry a NOINDEX staged pilot (the
+    # HANDOFF-13 Phase C engine, for the spot-check) but must NOT publish an
+    # indexable page.
     def native_cleared(lang):
         return "+native" in str(reviewed.get(lang) or "")
     render_held = sorted(l for l in rtl if reviewed.get(l) and not native_cleared(l))
     for lang in render_held:
-        if os.path.isdir(os.path.join(ROOT, lang)):
-            viol.append(f"rtl '{lang}' is render-held (no +native) but a {lang}/ tree exists")
+        for fp in glob.glob(os.path.join(ROOT, lang, "**", "*.html"), recursive=True):
+            if "noindex" not in open(fp, encoding="utf-8").read()[:2000]:
+                viol.append(f"rtl '{lang}' is render-held (no +native) but "
+                            f"{os.path.relpath(fp, ROOT)} is not noindex")
 
     # any unreviewed language must NOT have a rendered tree published
     for lang in present - REFERENCE:
