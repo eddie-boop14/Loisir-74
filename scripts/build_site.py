@@ -30,7 +30,7 @@ import locales  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 SITE = REPO / "_site"
-LOCALES = locales.SECONDARY
+LOCALES = locales.VISIBLE_SECONDARY
 
 # Paths to copy verbatim from REPO into SITE
 COPY_DIRS = [

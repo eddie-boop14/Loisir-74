@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import locales  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-LANGS = locales.PUBLISHED
+LANGS = locales.PROSE
 
 # Locale-translated hub display labels per JOB 4 (build_hubs.py HUB_DISPLAY)
 EXPECTED_LABELS = {

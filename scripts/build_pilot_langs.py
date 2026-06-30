@@ -31,7 +31,7 @@ import assets  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LABELS = json.loads(open(os.path.join(ROOT, "data", "i18n-labels.json"), encoding="utf-8").read())
-LIVE6 = set(locales.PUBLISHED)
+LIVE6 = set(locales.VISIBLE)
 RTL = set(LABELS["_meta"].get("rtl", []))
 PROTECTED = {"chez-nous-a-la-plage", "chalet-du-tornet"}
 BASE = "https://loisirs74.fr"
@@ -200,6 +200,11 @@ def append_sitemap(urls):
     xml = open(sm, encoding="utf-8").read()
     xml = re.sub(re.escape(PILOT_MARK_A) + r".*?" + re.escape(PILOT_MARK_B) + r"\n?",
                  "", xml, flags=re.S)
+    # Also drop any stray pilot <url> entries that fix_hreflang_sitemap preserved
+    # WITHOUT our markers (it rebuilds the sitemap and strips comments) — else they
+    # duplicate when we re-add the block. Idempotent by <loc>.
+    for u in urls:
+        xml = re.sub(r"[ \t]*<url><loc>" + re.escape(u) + r"</loc>.*?</url>\n?", "", xml, flags=re.S)
     block = "\n".join([PILOT_MARK_A] + [
         f'  <url><loc>{u}</loc><lastmod>{PILOT_LASTMOD}</lastmod>'
         f'<changefreq>weekly</changefreq></url>' for u in urls] + [PILOT_MARK_B, ""])

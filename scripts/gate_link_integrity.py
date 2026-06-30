@@ -112,7 +112,7 @@ def check_carousels():
             pub.append(d["slug"])
     bad = []
     for slug in pub:
-        for pre in ("",) + locales.SECONDARY:
+        for pre in ("",) + locales.PROSE_SECONDARY:
             rel = f"{slug}.html" if not pre else f"{pre}/{slug}.html"
             fp = os.path.join(SITE, rel)
             if not os.path.exists(fp):
@@ -131,7 +131,7 @@ def check_homepage_hubs():
     sys.path.insert(0, os.path.join(ROOT, "scripts"))
     from build_hubs import ALL_BASE_HUBS, hub_locale_map  # noqa: E402
     bad = []
-    for lang in locales.PUBLISHED:
+    for lang in locales.PROSE:
         rel = "index.html" if lang == "fr" else f"{lang}/index.html"
         home = os.path.join(SITE, rel)
         if not os.path.exists(home):

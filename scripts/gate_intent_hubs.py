@@ -25,7 +25,7 @@ from build_hubs import hub_locale_map  # noqa: E402
 import locales  # noqa: E402
 
 REGISTRY = os.path.join(ROOT, "data", "intent-hubs.json")
-LANGS = locales.PUBLISHED
+LANGS = locales.PROSE
 
 
 def page_path(slug, lang):

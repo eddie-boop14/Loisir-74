@@ -90,7 +90,7 @@ PATTERNS = [
 ]
 
 # Locales
-LOCALES = locales.PUBLISHED
+LOCALES = locales.PROSE
 
 
 def iter_rendered_strings(d):

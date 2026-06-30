@@ -29,7 +29,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from picture_tag import picture_tag
 import locales  # noqa: E402
 import assets  # noqa: E402
-LOCALES = locales.SECONDARY
+LOCALES = locales.PROSE_SECONDARY
 
 # Filter rules per hub. Basic + thematic hubs that can be derived from
 # category/subcategories deterministically.
@@ -106,7 +106,7 @@ def hub_locale_map(hub_dir):
         h
     ):
         lang, prefix, name = mt.group(1), mt.group(2), mt.group(3)
-        if lang in locales.SECONDARY:
+        if lang in locales.PROSE_SECONDARY:
             m[lang] = name
     return m
 
@@ -1095,7 +1095,7 @@ def main():
     for d in ROOT.iterdir():
         if d.is_dir() and (d / "index.html").exists() and d.name not in {
             "_site","__pycache__","reports","scripts","Json","api","content",
-            ".well-known", *locales.SECONDARY
+            ".well-known", *locales.ALL_SUBDIR_LANGS
         }:
             all_hub_names.add(d.name)
     excludes = CHROME_SLUGS | all_hub_names
@@ -1129,7 +1129,7 @@ def main():
             or fiches[s].get("schema_org", {}).get("tariff_kind") == "seasonal"
             for s in union_slugs
         )
-        for lang in locales.PUBLISHED:
+        for lang in locales.PROSE:
             hub_name = locale_names.get(lang)
             if not hub_name: continue
             dir_path = (ROOT if lang == "fr" else ROOT / lang) / hub_name
@@ -1175,7 +1175,7 @@ def main():
     # linked. Closes the orphan gap that came from voies-vertes /
     # sorties-detente being absent from the locale-homepage nav.
     print("\npatching homepages: Sorties & détente section + hub-completeness:")
-    for lang in locales.PUBLISHED:
+    for lang in locales.PROSE:
         sortie = patch_homepage_sorties(lang)
         changed = patch_homepage_completeness(lang)
         nearme = patch_homepage_nearme(lang)

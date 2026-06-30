@@ -32,7 +32,7 @@ KNOWN_RTL = {"ar", "he"}
 SECTIONS = ("fact_labels", "fact_values", "descriptors_by_type",
             "ui_chrome", "hub_names", "months")
 # Languages currently rendered/published by the builders (the active roster).
-PUBLISHED_ROSTER = set(locales.PUBLISHED)
+PUBLISHED_ROSTER = set(locales.VISIBLE)
 
 
 def main():

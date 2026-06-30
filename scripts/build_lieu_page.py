@@ -135,7 +135,7 @@ FACT_ORDER = [
 ]
 
 
-SUPPORTED_LANGS = list(locales.PUBLISHED)
+SUPPORTED_LANGS = list(locales.PROSE)
 
 # Per-locale chrome strings (everything outside JSON content). Keep keys terse;
 # T(key) reaches into CHROME[key][_LANG].
@@ -147,7 +147,7 @@ CHROME = {
     "home":            {"fr": "Accueil", "en": "Home", "de": "Startseite", "it": "Home", "es": "Inicio", "nl": "Startpagina"},
     "lang_label":      {"fr": "FR", "en": "EN", "de": "DE", "it": "IT", "es": "ES", "nl": "NL"},
     "lang_choose":     {"fr": "Choisir la langue", "en": "Choose a language", "de": "Sprache wählen", "it": "Scegli una lingua", "es": "Elegir idioma", "nl": "Kies een taal"},
-    "lang_native":     locales.endonyms(locales.PUBLISHED),
+    "lang_native":     locales.endonyms(locales.VISIBLE),
     # Section kickers (small caps eyebrow above each h2)
     "k_glance":        {"fr": "En un coup d&#39;œil", "en": "At a glance", "de": "Auf einen Blick", "it": "In sintesi", "es": "De un vistazo", "nl": "In een oogopslag"},
     "k_activities":    {"fr": "Activités", "en": "Activities", "de": "Aktivitäten", "it": "Attività", "es": "Actividades", "nl": "Activiteiten"},
@@ -1425,7 +1425,7 @@ def build_head(d):
     # produced for every fiche by build_all_locales (with FR-fallback content
     # when a lang block is absent), so the cluster matches what's on disk.
     hreflang_lines = [f'<link rel="alternate" hreflang="fr" href="{fr_url}">']
-    for lg in locales.SECONDARY:
+    for lg in locales.VISIBLE_SECONDARY:
         hreflang_lines.append(f'<link rel="alternate" hreflang="{lg}" href="{BASE_URL}/{lg}/{slug}">')
     hreflang_lines.append(f'<link rel="alternate" hreflang="x-default" href="{fr_url}">')
     hreflang_block = "\n".join(hreflang_lines)
@@ -1496,7 +1496,7 @@ def build_header(d):
 
     # Lang picker: full 6-lang menu. Current locale gets aria-current.
     pick_links = []
-    for lg in locales.PUBLISHED:
+    for lg in locales.VISIBLE:
         prefix = f"/{lg}" if lg != "fr" else ""
         href = f"{BASE_URL}{prefix}/{slug}"
         cur = ' aria-current="true"' if lg == _LANG else ''

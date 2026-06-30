@@ -20,7 +20,7 @@ import locales  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REG = os.path.join(ROOT, "data", "intent-hubs.json")
-LANGS = locales.PUBLISHED
+LANGS = locales.PROSE
 HUBS = ("baignade-lac-annecy", "baignade-leman", "ou-se-baigner-haute-savoie")
 
 

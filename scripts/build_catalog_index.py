@@ -51,7 +51,7 @@ def is_real(hero):
     return os.path.exists(os.path.join(ROOT, name))
 
 
-LANGS = locales.SECONDARY
+LANGS = locales.PROSE_SECONDARY
 
 
 def main():

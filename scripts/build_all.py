@@ -148,6 +148,24 @@ def version_runtime_assets():
     print(out.stdout.strip() or "(runtime assets versioned)")
 
 
+def rebuild_fulltree_langs():
+    """Render every PUBLISHED facts-first language as a full tree (HANDOFF-16):
+    all fiches + 15 localized-slug hubs + communes + homepage. Runs BEFORE
+    normalize_head_links so fix_hreflang_sitemap sees the pages and folds them
+    into the 6's hreflang clusters + sitemap. The prose builders never touch these
+    languages (locales.PROSE excludes them — the structural no-FR-fallback guard)."""
+    import locales as _loc
+    for lang in _loc.FACTS_PUBLISHED:
+        out = subprocess.run(
+            [sys.executable, str(SCRIPTS / "build_fulltree_lang.py"), lang],
+            capture_output=True, text=True, cwd=str(ROOT)
+        )
+        if out.returncode != 0:
+            print(out.stdout); print(out.stderr, file=sys.stderr)
+            raise RuntimeError(f"build_fulltree_lang {lang} failed")
+        print(out.stdout.strip() or f"({lang} full tree rendered)")
+
+
 def rebuild_pilot_langs():
     """Render the staged-indexable Latin pilot (pl/pt/cs) and append its own URLs
     to sitemap.xml. Runs AFTER normalize_head_links (which rewrites sitemap from
@@ -251,7 +269,7 @@ def parse_baseline_hosts():
 def scan_current_placements():
     """Return {slug: set(host_slugs_with_card)} for the protected fiches."""
     hits = {n: set() for n in PROT}
-    for p in list(ROOT.glob("*.html")) + [f for L in locales.SECONDARY for f in (ROOT / L).glob("*.html") if (ROOT / L).exists()]:
+    for p in list(ROOT.glob("*.html")) + [f for L in locales.PROSE_SECONDARY for f in (ROOT / L).glob("*.html") if (ROOT / L).exists()]:
         slug = p.stem
         try:
             html = p.read_text(encoding="utf-8")
@@ -299,7 +317,7 @@ def card_diff_gate(strict=True):
     snaps = ROOT / "reports" / "protected-cards"
     failed = False
     for slug in PROT:
-        for lang in locales.PUBLISHED:
+        for lang in locales.PROSE:
             snap = snaps / slug / f"{lang}.html"
             if not snap.exists():
                 continue
@@ -397,6 +415,7 @@ def main():
     run("regenerate hubs + homepage nav", rebuild_hubs)
     run("render commune pages + reciprocal backlinks", rebuild_communes)
     run("render intent hubs (registry-driven)", rebuild_intent_hubs)
+    run("render facts-first full trees (published facts langs: pl)", rebuild_fulltree_langs)
     run("placement gate vs baseline", placement_gate)
     run("card-diff gate vs snapshot", card_diff_gate)
     run("reachability gate (strict)", reachability_gate)

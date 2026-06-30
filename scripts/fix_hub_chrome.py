@@ -26,7 +26,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import locales  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-LOCS = locales.SECONDARY
+LOCS = locales.PROSE_SECONDARY
 
 HUB_LOCALE_SLUGS = {
     "cascades":            {"en":"waterfalls","de":"wasserfaelle","it":"cascate","es":"cascadas","nl":"watervallen"},
