@@ -1,11 +1,11 @@
 {
   "lang": "cs",
-  "date": "2026-06-29",
+  "date": "2026-06-30",
   "method": "multi-agent back-translation consensus (3x, blind)",
   "keys": 86,
-  "verified": 85,
-  "escalations": 1,
-  "overall": "ESCALATED",
+  "verified": 86,
+  "escalations": 0,
+  "overall": "PASS",
   "results": [
     {
       "id": "fact_labels.type",
@@ -297,28 +297,28 @@
       "id": "fact_labels.surveillance",
       "key": "surveillance",
       "section": "fact_labels",
-      "tgt": "Plavčík",
+      "tgt": "Plážový dohled",
       "fr_ref": "Surveillance",
-      "en_ref": "Lifeguard",
+      "en_ref": "Lifeguard supervision",
       "is_polar": false,
       "verdicts": [
         "MATCH",
-        "UNCERTAIN",
+        "MATCH",
         "MATCH"
       ],
-      "verified": false,
+      "verified": true,
       "back_fr": [
-        "Maître-nageur",
-        "Maître-nageur / Surveillant de baignade",
-        "Maître-nageur"
+        "Surveillance de plage",
+        "Surveillance de plage",
+        "Surveillance de plage"
       ],
       "back_en": [
-        "Lifeguard",
-        "Lifeguard",
-        "Lifeguard"
+        "Beach supervision",
+        "Beach supervision/oversight",
+        "Beach supervision"
       ],
       "reasons": [
-        "verdicts=MATCH/UNCERTAIN/MATCH"
+        "re-translated + re-verified 3/3 MATCH after surveillance reference fix (en: 'Lifeguard'→'Lifeguard supervision'), 2026-06-30"
       ]
     },
     {

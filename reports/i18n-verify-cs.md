@@ -1,29 +1,14 @@
 # i18n verification — cs (multi-agent back-translation consensus)
 
-_© 2026 · Bleu canard édition · method: 3× blind back-translation + polarity sentinel · 2026-06-29_
+_© 2026 · Bleu canard édition · method: 3× blind back-translation + polarity sentinel · 2026-06-30_
 
-- Keys: **86** · Verified (3/3 MATCH): **85** · Escalations: **1**
-- Overall: **ESCALATED**
+- Keys: **86** · Verified (3/3 MATCH): **86** · Escalations: **0**
+- Overall: **PASS**
 
-## Escalations (NOT auto-passed)
+## ✓ Zero escalations — all keys reached 3/3 MATCH consensus.
 
-| key | pl | fr_ref | verdicts | reason |
-|---|---|---|---|---|
-| `surveillance` | Plavčík | Surveillance | MATCH/UNCERTAIN/MATCH | verdicts=MATCH/UNCERTAIN/MATCH |
 
-## Polar terms (polarity sentinel)
+## Note
 
-| key | pl | pole | expected | agree |
-|---|---|---|---|---|
-| `gratuit` | Zdarma | positive | positive | True |
-| `payant` | Placené | negative | negative | True |
-| `oui` | Ano | positive | positive | True |
-| `non` | Ne | negative | negative | True |
-| `surveillee` | Hlídaná pláž | positive | positive | True |
-| `non_surveillee` | Nehlídaná | negative | negative | True |
-| `pmr_accessible` | Přístupné | positive | positive | True |
-| `pmr_non` | Nepřístupné | negative | negative | True |
-| `ouvert` | Otevřeno | positive | positive | True |
-| `ferme` | Zavřeno | negative | negative | True |
-| `dogs_ok` | Povoleni | positive | positive | True |
-| `dogs_no` | Zakázáni | negative | negative | True |
+`surveillance` re-translated + re-verified after the EN reference was corrected from "Lifeguard" (person) to "Lifeguard supervision" (service/category) — 2026-06-30.
+
