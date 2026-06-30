@@ -41,7 +41,7 @@ POLICED = (
     "build_site.py", "build_all_locales.py", "build_lieu_page.py",
     "build_hubs.py", "build_intent_hubs.py", "build_communes.py",
     "build_catalog_index.py", "ingest_translations.py", "fix_hub_chrome.py",
-    "build_pilot_langs.py",
+    "build_pilot_langs.py", "fix_lang_nav.py",
 )
 # Exempt (not scanned): build_fulltree_lang.py (the facts owner), build_all.py
 # (orchestrator), and gate_*/fix_hreflang_sitemap.py (visibility validators /

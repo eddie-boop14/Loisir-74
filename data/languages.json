@@ -2,10 +2,10 @@
   "_meta": {
     "doc": "Single source of truth for the locale roster (HANDOFF-10 Job 1). Every builder, the picker, and hreflang derive the language list + endonym + direction from here via scripts/locales.py — no hardcoded LANGS anywhere. Adding a language is a data edit + render, not a multi-file hunt.",
     "status_model": {
-      "published": "Complete tree (homepage + 15 localized-slug hubs + communes + all fiches), present in sitemap + hreflang + the language picker. The live originals.",
-      "staged-indexable": "Marquee pilot (~20 pages): indexable + self-canonical, OWN URLs listed in sitemap.xml, but NOT in any hreflang cluster and NOT in the picker. pl/pt/cs since PR #15 (2026-06-30) — the GSC clock (HANDOFF-11).",
+      "published": "Complete tree (homepage + 15 localized-slug hubs + communes + all fiches), present in sitemap + hreflang + the language picker. render_mode=prose for the 6 originals (fr/en/de/it/es/nl); render_mode=facts for the facts-first full trees (pl/pt/cs/ja/ar/he, rendered by build_fulltree_lang, render-verified). All 12 published since HANDOFF-20 (2026-07-01).",
+      "staged-indexable": "Marquee pilot (~20 pages): indexable + self-canonical, OWN URLs listed in sitemap.xml, but NOT in any hreflang cluster and NOT in the picker. (No language currently in this state — pl/pt/cs graduated to published facts-first full trees; the pilot lane is retired.)",
       "staged": "Pilot rendered noindex: absent from sitemap, hreflang, and picker. (No language currently in this state.)",
-      "held": "Vocabulary-verified but render-blocked (RTL engine + native spot-check pending). No rendered tree; absent from sitemap, hreflang, and picker. ar/he."
+      "held": "Vocabulary-verified but render-blocked. No rendered tree; absent from sitemap, hreflang, and picker. (No language currently in this state — ar/he/ja graduated to published once the full-tree RTL/dir path was render-verified at scale, HANDOFF-20.)"
     },
     "provenance_note": "Translation provenance (the `reviewed` method string + its clean verify report) is owned SOLELY by data/i18n-labels.json under gate_i18n_labels.py. It is deliberately NOT duplicated here. gate_locale_status.py cross-validates that each language's `status` is consistent with that single source.",
     "render_roster_derivation": {
@@ -76,31 +76,31 @@
     "pt": {
       "endonym": "Português",
       "dir": "ltr",
-      "status": "staged-indexable",
+      "status": "published",
       "render_mode": "facts"
     },
     "cs": {
       "endonym": "Čeština",
       "dir": "ltr",
-      "status": "staged-indexable",
+      "status": "published",
       "render_mode": "facts"
     },
     "ar": {
       "endonym": "العربية",
       "dir": "rtl",
-      "status": "held",
+      "status": "published",
       "render_mode": "facts"
     },
     "he": {
       "endonym": "עברית",
       "dir": "rtl",
-      "status": "held",
+      "status": "published",
       "render_mode": "facts"
     },
     "ja": {
       "endonym": "日本語",
       "dir": "ltr",
-      "status": "held",
+      "status": "published",
       "render_mode": "facts"
     }
   }

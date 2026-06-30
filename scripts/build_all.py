@@ -101,6 +101,24 @@ def normalize_head_links():
     print(out.stdout.strip() or "(head links normalized)")
 
 
+def normalize_lang_nav():
+    """Make the header language picker + footer "Langue" list read the visible
+    roster on every page whose language nav is frozen chrome (hub indexes + the
+    FR homepage — surfaces no builder rewrites). Reads each page's hreflang
+    alternates (just normalized) and inserts any missing VISIBLE language, so a
+    newly-published language appears in the nav for free. Runs AFTER
+    normalize_head_links (the alternates it reads must already be present).
+    Idempotent."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "fix_lang_nav.py")],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("fix_lang_nav (normalize language nav) failed")
+    print(out.stdout.strip() or "(language nav normalized)")
+
+
 def rebuild_hubs():
     """Regen 13 category hubs from Json/ + patch locale homepages for full
     hub coverage (closes the orphan gap from voies-vertes / sorties-detente
@@ -166,19 +184,12 @@ def rebuild_fulltree_langs():
         print(out.stdout.strip() or f"({lang} full tree rendered)")
 
 
-def rebuild_pilot_langs():
-    """Render the staged-indexable Latin pilot (pl/pt/cs) and append its own URLs
-    to sitemap.xml. Runs AFTER normalize_head_links (which rewrites sitemap from
-    the 6 live langs) so the pilot URLs are added on top, with NO hreflang — the
-    6 languages' clusters are never touched (HANDOFF-11)."""
-    out = subprocess.run(
-        [sys.executable, str(SCRIPTS / "build_pilot_langs.py")],
-        capture_output=True, text=True, cwd=str(ROOT)
-    )
-    if out.returncode != 0:
-        print(out.stdout); print(out.stderr, file=sys.stderr)
-        raise RuntimeError("build_pilot_langs failed")
-    print(out.stdout.strip() or "(pilot rendered)")
+# NOTE: rebuild_pilot_langs (the staged-indexable ~20-page pilot) was retired in
+# HANDOFF-20 when pt/cs/ja/ar/he flipped to published. They now render as full
+# facts-first trees via rebuild_fulltree_langs (FACTS_PUBLISHED). No language is
+# staged-indexable anymore, so there is nothing to pilot. build_pilot_langs.py is
+# kept only as the rendering library that build_fulltree_lang imports (V, esc,
+# fact_rows, CSS) — it is no longer invoked as a build step.
 
 
 def rebuild_intent_hubs():
@@ -421,8 +432,8 @@ def main():
     run("reachability gate (strict)", reachability_gate)
     run("regenerate AI content layer (content/*.md + llms)", rebuild_ai_content)
     run("normalize head links (canonical + hreflang + md-alt)", normalize_head_links)
+    run("normalize language nav (picker + footer read the visible roster)", normalize_lang_nav)
     run("cache-bust runtime /scripts/ includes (content-hash ?v=)", version_runtime_assets)
-    run("render staged-indexable pilot (pl/pt/cs) + sitemap", rebuild_pilot_langs)
     if not args.no_site:
         run("build _site/", lambda: subprocess.check_call(
             [sys.executable, str(SCRIPTS / "build_site.py")], cwd=str(ROOT)))

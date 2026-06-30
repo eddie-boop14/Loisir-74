@@ -39,7 +39,8 @@ import build_hubs as H  # noqa: E402  reuse fiche_card_html / acces_value / CHRO
 import locales  # noqa: E402
 import assets  # noqa: E402
 
-LANGS = list(locales.PROSE)
+LANGS = list(locales.PROSE)          # render axis: commune pages built per prose lang
+VIS = list(locales.VISIBLE)          # isolation-ok: nav/hreflang lists the visible roster (incl. pl facts tree)
 BASE = "https://loisirs74.fr"
 MANIFEST = ROOT / "data" / "commune-layer.json"
 INTROS = ROOT / "data" / "commune-intros.json"
@@ -162,10 +163,11 @@ def lift_scripts(lang):
 
 
 def lift_footer(lang, alts):
-    """Footer with the Langue column's 6 links swapped to this commune's URLs."""
+    """Footer with the Langue column's links swapped to this commune's URLs,
+    one per visible language (incl. pl)."""
     footer = re.search(r'<footer class="site">.*?</footer>', template_html(lang), re.S).group(0)
     new_ul = "<ul>" + "".join(
-        f'<li><a href="{attr(alts[l])}" hreflang="{l}">{LANG_NATIVE[l]}</a></li>' for l in LANGS
+        f'<li><a href="{attr(alts[l])}" hreflang="{l}">{LANG_NATIVE[l]}</a></li>' for l in VIS
     ) + "</ul>"
     # The only <ul> in the footer carrying hreflang= is the Langue column.
     footer = re.sub(
@@ -258,7 +260,7 @@ def jsonld_collection(c, lang, url):
 def render_page(c, lang, intros):
     slug = c["slug"]
     commune = c["commune"]
-    alts = {l: commune_url(slug, l) for l in LANGS}
+    alts = {l: commune_url(slug, l) for l in VIS}
     url = alts[lang]
     title = f"{C['whattodo'][lang]} {commune} ? · Loisirs 74"
     intro = intros.get(slug, {}).get(lang) or intros.get(slug, {}).get("fr") or ""
@@ -266,16 +268,16 @@ def render_page(c, lang, intros):
     hero_css = pick_hero_css(c)
 
     # hreflang blocks (both forms, matching the hub template)
-    hl1 = "\n".join(f'<link rel="alternate" hreflang="{l}" href="{alts[l]}">' for l in LANGS) \
+    hl1 = "\n".join(f'<link rel="alternate" hreflang="{l}" href="{alts[l]}">' for l in VIS) \
         + f'\n<link rel="alternate" hreflang="x-default" href="{alts["fr"]}">'
-    hl2 = "\n".join(f'<link href="{alts[l]}" hreflang="{l}" rel="alternate"/>' for l in LANGS) \
+    hl2 = "\n".join(f'<link href="{alts[l]}" hreflang="{l}" rel="alternate"/>' for l in VIS) \
         + f'\n<link href="{alts["fr"]}" hreflang="x-default" rel="alternate"/>'
 
     # header lang-menu
     def _menu_link(l):
         cur = 'aria-current="true" ' if l == lang else ""
         return f'<a {cur}href="{attr(alts[l])}" hreflang="{l}">{LANG_NATIVE[l]}</a>'
-    menu = "".join(_menu_link(l) for l in LANGS)
+    menu = "".join(_menu_link(l) for l in VIS)
     brand_href = f"{BASE}/" if lang == "fr" else f"{BASE}/{lang}/"
 
     # grid grouped by category (lieux already sorted (category, slug) in manifest)
