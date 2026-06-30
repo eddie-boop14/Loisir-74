@@ -111,11 +111,13 @@ def main():
         if code not in sm_langs:
             viol.append(f"staged-indexable '{code}' has no URLs in sitemap.xml — the GSC clock needs them")
 
-    # 5) held languages must have NO rendered tree
+    # 5) held languages may carry a NOINDEX staged pilot (HANDOFF-13 Phase C) for
+    #    the native spot-check, but never an indexable page.
     for l in sorted(held):
-        d = os.path.join(ROOT, l)
-        if os.path.isdir(d) and glob.glob(os.path.join(d, "**", "*.html"), recursive=True):
-            viol.append(f"held language '{l}' has a rendered tree at {l}/ — must stay render-blocked")
+        for fp in glob.glob(os.path.join(ROOT, l, "**", "*.html"), recursive=True):
+            if "noindex" not in open(fp, encoding="utf-8").read()[:2000]:
+                viol.append(f"held language '{l}' has an indexable page {os.path.relpath(fp, ROOT)} "
+                            f"— held must stay noindex until +native")
 
     print(f"gate_locale_status: published={sorted(published)} "
           f"staged-indexable={sorted(staged_idx)} held={sorted(held)} staged={sorted(staged)}")
