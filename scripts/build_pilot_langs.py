@@ -31,7 +31,7 @@ import assets  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LABELS = json.loads(open(os.path.join(ROOT, "data", "i18n-labels.json"), encoding="utf-8").read())
-LIVE6 = set(locales.VISIBLE)
+LIVE6 = set(locales.VISIBLE)  # isolation-ok: exclude visible langs from the pilot
 RTL = set(LABELS["_meta"].get("rtl", []))
 PROTECTED = {"chez-nous-a-la-plage", "chalet-du-tornet"}
 BASE = "https://loisirs74.fr"
