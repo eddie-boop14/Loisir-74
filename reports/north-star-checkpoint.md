@@ -18,8 +18,8 @@ The 60 pilot pages are now **indexable**: `index,follow` + self-canonical, liste
 (own URLs only), deployed to `_site` — and kept **OUT of the 6 live languages' hreflang clusters**
 (grep-proven 0 leaks). Reproducible from the renderer's `INDEXABLE` flag; the 6 are byte-untouched.
 
-- **Clock starts: at the MERGE of the flip PR (#15).** Expected ~2026-06-30.
-- **GSC read date: merge-date + 21 days** (≈ **2026-07-21** if merged ~2026-06-30; adjust if the merge slips).
+- **Clock started: PR #15 MERGED 2026-06-30** (merge commit `b4ee74fe`). The clock is running.
+- **GSC read date: 2026-07-21** (merge-date + 21 days). Fixed — the merge did not slip.
 
 ## The decision gate — answer ~2026-07-21
 Pull GSC for the pl/pt/cs pilot URLs: **impressions · average position · clicks**.
