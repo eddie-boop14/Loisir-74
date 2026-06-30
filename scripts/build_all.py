@@ -133,6 +133,21 @@ def rebuild_communes():
     print("\n".join(lines[-3:]) if lines else "(communes rebuilt)")
 
 
+def rebuild_pilot_langs():
+    """Render the staged-indexable Latin pilot (pl/pt/cs) and append its own URLs
+    to sitemap.xml. Runs AFTER normalize_head_links (which rewrites sitemap from
+    the 6 live langs) so the pilot URLs are added on top, with NO hreflang — the
+    6 languages' clusters are never touched (HANDOFF-11)."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "build_pilot_langs.py")],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("build_pilot_langs failed")
+    print(out.stdout.strip() or "(pilot rendered)")
+
+
 def rebuild_intent_hubs():
     """Render registry-driven intent-hub pages (data/intent-hubs.json) FR + 5
     locales and link each from its category hub. Runs after hubs/communes (so
@@ -372,6 +387,7 @@ def main():
     run("reachability gate (strict)", reachability_gate)
     run("regenerate AI content layer (content/*.md + llms)", rebuild_ai_content)
     run("normalize head links (canonical + hreflang + md-alt)", normalize_head_links)
+    run("render staged-indexable pilot (pl/pt/cs) + sitemap", rebuild_pilot_langs)
     if not args.no_site:
         run("build _site/", lambda: subprocess.check_call(
             [sys.executable, str(SCRIPTS / "build_site.py")], cwd=str(ROOT)))

@@ -13,11 +13,13 @@ _© 2026 · Bleu canard édition · set 2026-06-30 · **answer ~2026-07-21**_
 - Facts-first, vocab-verified labels (pl/pt: ai-consensus-3×; cs: ai-consensus-3× after the surveillance fix).
 - Currently **noindex + absent from sitemap/hreflang** (staged, zero blast radius on the live 6 langs).
 
-## ⚠️ Prerequisite the clock depends on
-Staged pages are `noindex` → they earn **no** GSC impressions while staged. To start the ~3-week
-clock, the pilot must first be made **indexable** — a deliberate, reviewed daylight flip:
-remove `noindex` on the pilot pages + add just those pages to sitemap/hreflang. The measurement
-window begins the day that flip ships. (If the flip happens ~2026-06-30, the read is ~2026-07-21.)
+## ✅ The clock-starting flip — DONE (HANDOFF-11)
+The 60 pilot pages are now **indexable**: `index,follow` + self-canonical, listed in `sitemap.xml`
+(own URLs only), deployed to `_site` — and kept **OUT of the 6 live languages' hreflang clusters**
+(grep-proven 0 leaks). Reproducible from the renderer's `INDEXABLE` flag; the 6 are byte-untouched.
+
+- **Clock starts: at the MERGE of the flip PR (#15).** Expected ~2026-06-30.
+- **GSC read date: merge-date + 21 days** (≈ **2026-07-21** if merged ~2026-06-30; adjust if the merge slips).
 
 ## The decision gate — answer ~2026-07-21
 Pull GSC for the pl/pt/cs pilot URLs: **impressions · average position · clicks**.
