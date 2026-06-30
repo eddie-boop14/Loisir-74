@@ -86,6 +86,11 @@ def main():
                 if not fn.endswith(".html"):
                     continue
                 slug = fn[:-5]
+                # Top-level non-fiche pages (the full-tree homepage index.html;
+                # hubs/communes live in subdirs and aren't listed here) carry no
+                # Json fiche source — Layer A's fact-rendering checks don't apply.
+                if not os.path.exists(os.path.join(ROOT, "Json", f"{slug}.json")):
+                    continue
                 src = source_facts(slug)
                 pg = b.new_page(viewport={"width": 420, "height": 900},
                                 device_scale_factor=2)

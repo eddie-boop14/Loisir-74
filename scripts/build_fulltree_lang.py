@@ -16,6 +16,7 @@ import html as _h
 import json
 import os
 import re
+import shutil
 import unicodedata
 import sys
 
@@ -41,10 +42,36 @@ HUB_SLUGS = {
         "que-faire": "co-robic", "sensations-plein-air": "emocje-plenerowe",
         "sorties-detente": "relaksujace-wycieczki", "sport-jeux": "sport-zabawa",
     },
+    # pt/cs: in-language hub slugs derived from data/i18n-labels.json hub_names
+    # (ASCII-folded). ja/ar/he intentionally absent → FR-canonical fallback via
+    # slug_map's sm.get(lg, hub) until a transliteration scheme is chosen.
+    "pt": {
+        "cascades": "cascatas", "chateaux": "castelos", "lacs-plages": "lagos-e-praias", "musees": "museus",
+        "parcs-jardins": "parques-e-jardins", "points-de-vue": "miradouros", "sentiers": "trilhos",
+        "telecabines": "telefericos", "voies-vertes": "vias-verdes", "baignade-nautisme": "banhos-e-desportos-aquaticos",
+        "bases-de-loisirs": "parques-de-lazer", "que-faire": "o-que-fazer", "sensations-plein-air": "emocoes-ao-ar-livre",
+        "sorties-detente": "passeios-relaxantes", "sport-jeux": "desporto-e-jogos",
+    },
+    "cs": {
+        "cascades": "vodopady", "chateaux": "zamky", "lacs-plages": "jezera-a-plaze", "musees": "muzea",
+        "parcs-jardins": "parky-a-zahrady", "points-de-vue": "vyhlidky", "sentiers": "stezky",
+        "telecabines": "kabinkove-lanovky", "voies-vertes": "zelene-stezky", "baignade-nautisme": "koupani-a-vodni-sporty",
+        "bases-de-loisirs": "rekreacni-arealy", "que-faire": "co-delat", "sensations-plein-air": "zazitky-pod-sirym-nebem",
+        "sorties-detente": "vylety-pro-odpocinek", "sport-jeux": "sport-a-hry",
+    },
 }
 
 esc = P.esc
 V = P.V
+
+
+def bidi(lang, s):
+    """Isolate a frozen Latin/number value (commune name, price, the FR place
+    name) inside an RTL flow with <bdi> so its characters never visually
+    scramble against the surrounding right-to-left text. No-op for LTR. Mirrors
+    the staged pilot's anti-scramble wrapping (HANDOFF-13), which the full-tree
+    renderer must carry too now that ar/he publish through it."""
+    return f"<bdi>{s}</bdi>" if locales.DIR.get(lang) == "rtl" else s
 
 # Commune pages exactly mirror the 6's published set (so cross-language hreflang +
 # the picker resolve), derived from the live commune directories at the FR root.
@@ -133,7 +160,7 @@ def shell(lang, title, meta_desc, canonical, hreflang, body, schema):
     duck = assets.script_tag("duck.js")
     labels_pick = picker(lang, _SHELL_EQUIV[0], _LABELS)
     brand = esc(V("ui_chrome", "accueil", lang)) or "loisirs74"
-    return f"""<!doctype html><html lang="{lang}"><head>
+    return f"""<!doctype html><html lang="{lang}" dir="{locales.DIR[lang]}"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="robots" content="index,follow">
@@ -165,9 +192,9 @@ def card(d, lang):
     commune = d.get("commune", "")
     meta = " · ".join(x for x in (descriptor, commune) if x)
     return (f'<a class="card" href="{url_for(lang, d["slug"])}">'
-            f'<h3>{esc(name)}</h3>'
+            f'<h3>{bidi(lang, esc(name))}</h3>'
             f'{f"<div class=c-desc>{esc(descriptor)}</div>" if descriptor else ""}'
-            f'<div class="c-meta">{esc(commune)}</div></a>')
+            f'<div class="c-meta">{bidi(lang, esc(commune))}</div></a>')
 
 
 def render_fiche(d, lang):
@@ -176,19 +203,19 @@ def render_fiche(d, lang):
     desc_key = P.CATEGORY_DESCRIPTOR.get(d.get("category"))
     descriptor = V("descriptors_by_type", desc_key, lang) if desc_key else ""
     rows = P.fact_rows(d, lang)
-    facts_html = "".join(f"<dt>{esc(lbl)}</dt><dd>{val}</dd>" for lbl, val in rows if lbl)
+    facts_html = "".join(f"<dt>{esc(lbl)}</dt><dd>{bidi(lang, val)}</dd>" for lbl, val in rows if lbl)
     site = d.get("official_site_url")
     site_html = (f'<a class="site" href="{esc(site)}" rel="nofollow noopener" target="_blank">'
                  f'{esc(V("ui_chrome", "site_officiel", lang))} ↗</a>') if site else ""
     equiv = {lg: d["slug"] for lg in locales.VISIBLE}
     with_equiv(equiv)
     cslug = commune_slug(commune) if commune else ""
-    crumb_commune = (f'<a href="{url_for(lang, cslug + "/")}">{esc(commune)}</a> / '
-                     if cslug in PUB_COMMUNES else (f"{esc(commune)} / " if commune else ""))
+    crumb_commune = (f'<a href="{url_for(lang, cslug + "/")}">{bidi(lang, esc(commune))}</a> / '
+                     if cslug in PUB_COMMUNES else (f"{bidi(lang, esc(commune))} / " if commune else ""))
     crumb = (f'<nav class="crumb"><a href="{url_for(lang, "")}">'
-             f'{esc(V("ui_chrome", "accueil", lang))}</a> / {crumb_commune}{esc(name)}</nav>')
+             f'{esc(V("ui_chrome", "accueil", lang))}</a> / {crumb_commune}{bidi(lang, esc(name))}</nav>')
     body = (crumb + '<div class="wrap">'
-            f'<h1>{esc(name)}</h1>'
+            f'<h1>{bidi(lang, esc(name))}</h1>'
             f'{f"<p class=desc>{esc(descriptor)}</p>" if descriptor else ""}'
             f'<dl class="facts">{facts_html}</dl>{site_html}</div>')
     schema = {"@context": "https://schema.org", "@type": "TouristAttraction", "name": name,
@@ -229,9 +256,9 @@ def render_commune(commune, members, lang):
     equiv = {lg: cslug + "/" for lg in locales.VISIBLE}
     with_equiv(equiv)
     whattodo = V("ui_chrome", "accueil", lang)  # fallback; communes use a generic header
-    title_h1 = f"{esc(commune)}"
+    title_h1 = bidi(lang, esc(commune))
     crumb = (f'<nav class="crumb"><a href="{url_for(lang, "")}">'
-             f'{esc(V("ui_chrome", "accueil", lang))}</a> / {esc(commune)}</nav>')
+             f'{esc(V("ui_chrome", "accueil", lang))}</a> / {bidi(lang, esc(commune))}</nav>')
     cards = "".join(card(m, lang) for m in members)
     body = crumb + f'<h2 class="sec">{title_h1}</h2><div class="grid">{cards}</div>'
     schema = {"@context": "https://schema.org", "@type": "CollectionPage", "name": commune,
@@ -299,6 +326,12 @@ def main():
     PUB_COMMUNES = published_communes()
     fiches = load_fiches()
     out = os.path.join(ROOT, lang)
+    # Clean slate: a facts language's whole subtree is owned by this renderer, so
+    # wipe it before rendering. This retires any earlier staged-pilot pages (the
+    # ~20-page pt/cs pilot, the noindex ar/he/ja pilot) — no stale leftovers can
+    # survive a publish, every path in /<lang>/ is a current full-tree page.
+    if os.path.isdir(out):
+        shutil.rmtree(out)
     n_f = n_h = n_c = 0
 
     # fiches
