@@ -276,6 +276,21 @@ FACT_LABELS_I18N = {
     "pavillon_bleu_2026": {"fr": "Pavillon Bleu 2026", "en": "Blue Flag 2026", "de": "Blaue Flagge 2026", "it": "Bandiera Blu 2026", "es": "Bandera Azul 2026", "nl": "Blauwe Vlag 2026"},
 }
 
+# Merge the facts→prose languages' rich chrome (HANDOFF-22) from data, so the
+# rich renderer can produce pl/pt/cs/ja/ar/he pages once their per-fiche prose
+# lands. Translations live in data/rich-chrome-langs.json (reviewable, like the
+# roster). Until a language is in SUPPORTED_LANGS (locales.PROSE) these entries
+# are dormant — present but never rendered, so this changes no current output.
+_RICH_CHROME = json.loads((REPO / "data" / "rich-chrome-langs.json").read_text(encoding="utf-8"))
+for _lg, _vals in _RICH_CHROME["chrome"].items():
+    for _k, _v in _vals.items():
+        CHROME[_k][_lg] = _v
+for _sk, _codes in _RICH_CHROME["locale_codes"].items():
+    CHROME[_sk].update(_codes)
+for _lg, _vals in _RICH_CHROME["fact_labels"].items():
+    for _k, _v in _vals.items():
+        FACT_LABELS_I18N[_k][_lg] = _v
+
 # Module-level locale state set by build_page(d, lang).
 _LANG = "fr"            # current locale
 _LOC = None             # i18n.<lang> block, frozen-merged with FR fallback below
@@ -1420,6 +1435,9 @@ def build_head(d):
     fr_url = f"{BASE_URL}/{slug}"
     html_lang = CHROME["html_lang"][_LANG]
     og_loc = CHROME["og_locale"][_LANG]
+    # dir attribute emitted ONLY for RTL langs (ar/he) so LTR pages — the live 6
+    # and pl/pt/cs/ja — stay byte-identical (no dir="ltr" added).
+    dir_attr = ' dir="rtl"' if locales.DIR.get(_LANG) == "rtl" else ''
 
     # Emit the full 7-lang hreflang cluster (the 6 + pl). The 6's pages are
     # produced for every fiche by build_all_locales (with FR-fallback content
@@ -1437,7 +1455,7 @@ def build_head(d):
     hero_alt = L("hero_alt", name)
 
     return f"""<!doctype html>
-<html lang="{html_lang}" data-theme="auto">
+<html lang="{html_lang}"{dir_attr} data-theme="auto">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -1657,7 +1675,7 @@ _REL_LABELS = {
            "lead": "Andere plekken om te ontdekken in de buurt en in dezelfde categorie",
            "free": "Gratis", "paid": "Betaald", "route": "Route", "site": "Officiële website"},
 }
-_REL_LANGS = ("fr", "de", "en", "es", "it", "nl")
+_REL_LANGS = tuple(locales.VISIBLE)  # isolation-ok: carousel name/commune index spans the visible roster (new langs fall back to FR until their prose lands)
 _REL_CSS = """.related{padding:clamp(2rem,4vw,3.5rem) 0;border-top:1px solid var(--line);margin-bottom:5rem}
 .related .wrap{max-width:64rem;margin-inline:auto;padding-inline:clamp(1rem,3vw,2rem)}
 .related .kicker{font-size:.8125rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
