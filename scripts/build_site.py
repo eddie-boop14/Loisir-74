@@ -30,7 +30,7 @@ import locales  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 SITE = REPO / "_site"
-LOCALES = locales.VISIBLE_SECONDARY
+LOCALES = locales.VISIBLE_SECONDARY  # isolation-ok: deploy-copy roster — pl's rendered tree must reach _site/
 
 # Paths to copy verbatim from REPO into SITE
 COPY_DIRS = [
@@ -344,7 +344,7 @@ def main():
             shutil.copy2(_sp, sdst / _name)
             print(f"  + scripts/{_name}")
 
-    print("Copying locale trees (en/de/it/es/nl)...")
+    print("Copying locale trees (en/de/it/es/nl/pl)...")
     for L in LOCALES:
         src = REPO / L
         if not src.exists(): continue

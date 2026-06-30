@@ -67,7 +67,7 @@ TEMPLATE_HUB = {
 }
 
 OG_LOCALE = {"fr": "fr_FR", "en": "en_US", "de": "de_DE", "it": "it_IT", "es": "es_ES", "nl": "nl_NL"}
-LANG_NATIVE = locales.endonyms(locales.VISIBLE)
+LANG_NATIVE = locales.endonyms(locales.VISIBLE)  # isolation-ok: picker endonyms
 
 C = {  # chrome labels (commune name itself is frozen, never translated)
     "whattodo":  {"fr": "Que faire à", "en": "What to do in", "de": "Was tun in", "it": "Cosa fare a", "es": "Qué hacer en", "nl": "Wat te doen in"},

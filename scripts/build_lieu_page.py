@@ -147,7 +147,7 @@ CHROME = {
     "home":            {"fr": "Accueil", "en": "Home", "de": "Startseite", "it": "Home", "es": "Inicio", "nl": "Startpagina"},
     "lang_label":      {"fr": "FR", "en": "EN", "de": "DE", "it": "IT", "es": "ES", "nl": "NL"},
     "lang_choose":     {"fr": "Choisir la langue", "en": "Choose a language", "de": "Sprache wählen", "it": "Scegli una lingua", "es": "Elegir idioma", "nl": "Kies een taal"},
-    "lang_native":     locales.endonyms(locales.VISIBLE),
+    "lang_native":     locales.endonyms(locales.VISIBLE),  # isolation-ok: picker endonyms (pl in switcher)
     # Section kickers (small caps eyebrow above each h2)
     "k_glance":        {"fr": "En un coup d&#39;œil", "en": "At a glance", "de": "Auf einen Blick", "it": "In sintesi", "es": "De un vistazo", "nl": "In een oogopslag"},
     "k_activities":    {"fr": "Activités", "en": "Activities", "de": "Aktivitäten", "it": "Attività", "es": "Actividades", "nl": "Activiteiten"},
@@ -1421,11 +1421,11 @@ def build_head(d):
     html_lang = CHROME["html_lang"][_LANG]
     og_loc = CHROME["og_locale"][_LANG]
 
-    # Emit the full 6-lang hreflang cluster. Pages for all locales are
+    # Emit the full 7-lang hreflang cluster (the 6 + pl). The 6's pages are
     # produced for every fiche by build_all_locales (with FR-fallback content
     # when a lang block is absent), so the cluster matches what's on disk.
     hreflang_lines = [f'<link rel="alternate" hreflang="fr" href="{fr_url}">']
-    for lg in locales.VISIBLE_SECONDARY:
+    for lg in locales.VISIBLE_SECONDARY:  # isolation-ok: hreflang alternates cluster
         hreflang_lines.append(f'<link rel="alternate" hreflang="{lg}" href="{BASE_URL}/{lg}/{slug}">')
     hreflang_lines.append(f'<link rel="alternate" hreflang="x-default" href="{fr_url}">')
     hreflang_block = "\n".join(hreflang_lines)
@@ -1494,9 +1494,9 @@ def build_header(d):
     else:
         crumb_mid = f'<span>{esc(d["commune"])}</span>'
 
-    # Lang picker: full 6-lang menu. Current locale gets aria-current.
+    # Lang picker: full 7-lang menu (the 6 + pl facts tree). aria-current on active.
     pick_links = []
-    for lg in locales.VISIBLE:
+    for lg in locales.VISIBLE:  # isolation-ok: picker links
         prefix = f"/{lg}" if lg != "fr" else ""
         href = f"{BASE_URL}{prefix}/{slug}"
         cur = ' aria-current="true"' if lg == _LANG else ''

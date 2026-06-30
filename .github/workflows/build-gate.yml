@@ -137,6 +137,13 @@ jobs:
         # non-published language leaked into the 6's clusters OR the picker.
         run: python3 scripts/gate_locale_status.py
 
+      - name: Render-mode isolation gate (facts langs never reach the prose path)
+        # Read-only. Proves the two-axis lane holds: PROSE/FACTS partition VISIBLE,
+        # PUBLISHED stays deleted, and every facts-roster use in a prose/deploy
+        # builder is an explicit `# isolation-ok:` decision (picker/hreflang/deploy)
+        # — so a careless render loop over a facts lang can't merge.
+        run: python3 scripts/gate_render_mode_isolation.py
+
       - name: Render-verified gate (every +render-ai language has a clean Layer A + B report)
         # Read-only + lightweight: validates reports/render-verify-<lang>.json
         # (no browser in CI). The heavy headless-render + vision pass that PRODUCES
