@@ -1,6 +1,6 @@
 {
   "lang": "pl",
-  "date": "2026-06-29",
+  "date": "2026-06-30",
   "method": "multi-agent back-translation consensus (3x, blind)",
   "keys": 86,
   "verified": 86,
@@ -299,7 +299,7 @@
       "section": "fact_labels",
       "pl": "Ratownik",
       "fr_ref": "Surveillance",
-      "en_ref": "Lifeguard",
+      "en_ref": "Lifeguard supervision",
       "is_polar": false,
       "verdicts": [
         "MATCH",
@@ -308,16 +308,19 @@
       ],
       "verified": true,
       "back_fr": [
-        "Maître-nageur / Surveillant",
-        "Sauveteur / Maître-nageur",
-        "Sauveteur"
+        "Surveillance (par les sauveteurs)",
+        "Surveillance par les sauveteurs",
+        "Surveillance par les sauveteurs"
       ],
       "back_en": [
-        "Lifeguard",
-        "Lifeguard",
-        "Lifeguard"
+        "Lifeguard supervision",
+        "Lifeguard supervision",
+        "Lifeguard supervision"
       ],
-      "reasons": []
+      "reasons": [
+        "re-translated + re-verified 3/3 MATCH after surveillance reference fix (en: 'Lifeguard'→'Lifeguard supervision'), 2026-06-30"
+      ],
+      "tgt": "Nadzór ratowniczy"
     },
     {
       "id": "fact_labels.pavillon_bleu",

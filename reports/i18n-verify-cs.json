@@ -1,5 +1,5 @@
 {
-  "lang": "pt",
+  "lang": "cs",
   "date": "2026-06-30",
   "method": "multi-agent back-translation consensus (3x, blind)",
   "keys": 86,
@@ -11,7 +11,7 @@
       "id": "fact_labels.type",
       "key": "type",
       "section": "fact_labels",
-      "tgt": "Tipo",
+      "tgt": "Typ",
       "fr_ref": "Type",
       "en_ref": "Type",
       "is_polar": false,
@@ -37,7 +37,7 @@
       "id": "fact_labels.access",
       "key": "access",
       "section": "fact_labels",
-      "tgt": "Acesso",
+      "tgt": "Přístup",
       "fr_ref": "Accès",
       "en_ref": "Access",
       "is_polar": false,
@@ -63,7 +63,7 @@
       "id": "fact_labels.commune",
       "key": "commune",
       "section": "fact_labels",
-      "tgt": "Município",
+      "tgt": "Obec",
       "fr_ref": "Commune",
       "en_ref": "Town",
       "is_polar": false,
@@ -75,13 +75,13 @@
       "verified": true,
       "back_fr": [
         "Commune",
-        "Commune / Municipalité",
+        "Commune",
         "Commune"
       ],
       "back_en": [
         "Town/Municipality",
-        "Municipality / Town",
-        "Town/Municipality"
+        "Town",
+        "Town"
       ],
       "reasons": []
     },
@@ -89,7 +89,7 @@
       "id": "fact_labels.duration",
       "key": "duration",
       "section": "fact_labels",
-      "tgt": "Duração",
+      "tgt": "Doba trvání",
       "fr_ref": "Durée",
       "en_ref": "Duration",
       "is_polar": false,
@@ -115,7 +115,7 @@
       "id": "fact_labels.tarif",
       "key": "tarif",
       "section": "fact_labels",
-      "tgt": "Preço",
+      "tgt": "Cena",
       "fr_ref": "Tarif",
       "en_ref": "Price",
       "is_polar": false,
@@ -126,9 +126,9 @@
       ],
       "verified": true,
       "back_fr": [
-        "Prix/Tarif",
-        "Prix / Tarif",
-        "Prix/Tarif"
+        "Prix",
+        "Tarif",
+        "Prix"
       ],
       "back_en": [
         "Price",
@@ -141,7 +141,7 @@
       "id": "fact_labels.parking",
       "key": "parking",
       "section": "fact_labels",
-      "tgt": "Estacionamento",
+      "tgt": "Parkování",
       "fr_ref": "Parking",
       "en_ref": "Parking",
       "is_polar": false,
@@ -153,8 +153,8 @@
       "verified": true,
       "back_fr": [
         "Parking/Stationnement",
-        "Parking / Stationnement",
-        "Parking/Stationnement"
+        "Parking",
+        "Parking"
       ],
       "back_en": [
         "Parking",
@@ -167,7 +167,7 @@
       "id": "fact_labels.dogs",
       "key": "dogs",
       "section": "fact_labels",
-      "tgt": "Cães",
+      "tgt": "Psi",
       "fr_ref": "Chiens",
       "en_ref": "Dogs",
       "is_polar": false,
@@ -193,7 +193,7 @@
       "id": "fact_labels.stroller",
       "key": "stroller",
       "section": "fact_labels",
-      "tgt": "Carrinho de bebé",
+      "tgt": "Kočárek",
       "fr_ref": "Poussette",
       "en_ref": "Stroller",
       "is_polar": false,
@@ -219,7 +219,7 @@
       "id": "fact_labels.best_season",
       "key": "best_season",
       "section": "fact_labels",
-      "tgt": "Melhor época",
+      "tgt": "Nejlepší období",
       "fr_ref": "Meilleure saison",
       "en_ref": "Best season",
       "is_polar": false,
@@ -230,12 +230,12 @@
       ],
       "verified": true,
       "back_fr": [
-        "Meilleure saison",
+        "Meilleure période/saison",
         "Meilleure saison",
         "Meilleure saison"
       ],
       "back_en": [
-        "Best season",
+        "Best season/period",
         "Best season",
         "Best season"
       ],
@@ -245,7 +245,7 @@
       "id": "fact_labels.altitude",
       "key": "altitude",
       "section": "fact_labels",
-      "tgt": "Altitude",
+      "tgt": "Nadmořská výška",
       "fr_ref": "Altitude",
       "en_ref": "Altitude",
       "is_polar": false,
@@ -271,7 +271,7 @@
       "id": "fact_labels.lac",
       "key": "lac",
       "section": "fact_labels",
-      "tgt": "Lago",
+      "tgt": "Jezero",
       "fr_ref": "Lac",
       "en_ref": "Lake",
       "is_polar": false,
@@ -297,7 +297,7 @@
       "id": "fact_labels.surveillance",
       "key": "surveillance",
       "section": "fact_labels",
-      "tgt": "Vigilância balnear",
+      "tgt": "Plážový dohled",
       "fr_ref": "Surveillance",
       "en_ref": "Lifeguard supervision",
       "is_polar": false,
@@ -308,14 +308,14 @@
       ],
       "verified": true,
       "back_fr": [
-        "Surveillance balneaire",
-        "Surveillance balneaire (de plage)",
-        "Surveillance balneaire"
+        "Surveillance de plage",
+        "Surveillance de plage",
+        "Surveillance de plage"
       ],
       "back_en": [
-        "Beach/bathing supervision",
-        "Beach/bathing supervision",
-        "Beach (bathing) surveillance"
+        "Beach supervision",
+        "Beach supervision/oversight",
+        "Beach supervision"
       ],
       "reasons": [
         "re-translated + re-verified 3/3 MATCH after surveillance reference fix (en: 'Lifeguard'→'Lifeguard supervision'), 2026-06-30"
@@ -325,7 +325,7 @@
       "id": "fact_labels.pavillon_bleu",
       "key": "pavillon_bleu",
       "section": "fact_labels",
-      "tgt": "Bandeira Azul",
+      "tgt": "Modrá vlajka",
       "fr_ref": "Pavillon Bleu",
       "en_ref": "Blue Flag",
       "is_polar": false,
@@ -338,7 +338,7 @@
       "back_fr": [
         "Pavillon Bleu",
         "Pavillon Bleu",
-        "Pavillon Bleu"
+        "Drapeau bleu"
       ],
       "back_en": [
         "Blue Flag",
@@ -351,7 +351,7 @@
       "id": "fact_labels.difficulty",
       "key": "difficulty",
       "section": "fact_labels",
-      "tgt": "Dificuldade",
+      "tgt": "Obtížnost",
       "fr_ref": "Difficulté",
       "en_ref": "Difficulty",
       "is_polar": false,
@@ -377,7 +377,7 @@
       "id": "fact_labels.acces_pmr",
       "key": "acces_pmr",
       "section": "fact_labels",
-      "tgt": "Acesso para cadeira de rodas",
+      "tgt": "Bezbariérový přístup",
       "fr_ref": "Accès PMR",
       "en_ref": "Wheelchair access",
       "is_polar": false,
@@ -388,13 +388,13 @@
       ],
       "verified": true,
       "back_fr": [
-        "Accès en fauteuil roulant",
-        "Accès en fauteuil roulant / Accès PMR",
-        "Accès fauteuil roulant/PMR"
+        "Accès sans obstacles/PMR",
+        "Accès sans obstacles / Accès PMR",
+        "Accès sans obstacles"
       ],
       "back_en": [
-        "Wheelchair access",
-        "Wheelchair access",
+        "Barrier-free/Wheelchair access",
+        "Barrier-free / Wheelchair access",
         "Wheelchair access"
       ],
       "reasons": []
@@ -403,7 +403,7 @@
       "id": "fact_labels.adresse",
       "key": "adresse",
       "section": "fact_labels",
-      "tgt": "Morada",
+      "tgt": "Adresa",
       "fr_ref": "Adresse",
       "en_ref": "Address",
       "is_polar": false,
@@ -429,7 +429,7 @@
       "id": "fact_labels.horaires",
       "key": "horaires",
       "section": "fact_labels",
-      "tgt": "Horário de funcionamento",
+      "tgt": "Otevírací doba",
       "fr_ref": "Horaires",
       "en_ref": "Opening hours",
       "is_polar": false,
@@ -455,7 +455,7 @@
       "id": "fact_labels.telephone",
       "key": "telephone",
       "section": "fact_labels",
-      "tgt": "Telefone",
+      "tgt": "Telefon",
       "fr_ref": "Téléphone",
       "en_ref": "Phone",
       "is_polar": false,
@@ -481,7 +481,7 @@
       "id": "fact_labels.site_officiel",
       "key": "site_officiel",
       "section": "fact_labels",
-      "tgt": "Site oficial",
+      "tgt": "Oficiální web",
       "fr_ref": "Site officiel",
       "en_ref": "Official website",
       "is_polar": false,
@@ -492,7 +492,7 @@
       ],
       "verified": true,
       "back_fr": [
-        "Site officiel",
+        "Site officiel/web officiel",
         "Site officiel",
         "Site officiel"
       ],
@@ -507,7 +507,7 @@
       "id": "fact_labels.itineraire",
       "key": "itineraire",
       "section": "fact_labels",
-      "tgt": "Como chegar",
+      "tgt": "Trasa",
       "fr_ref": "Itinéraire",
       "en_ref": "Directions",
       "is_polar": false,
@@ -518,14 +518,14 @@
       ],
       "verified": true,
       "back_fr": [
-        "Comment s'y rendre",
-        "Comment s'y rendre / Itinéraire",
-        "Comment s'y rendre/Itinéraire"
+        "Itinéraire/Trajet",
+        "Itinéraire",
+        "Itinéraire"
       ],
       "back_en": [
-        "How to get there/Directions",
-        "How to get there / Directions",
-        "How to get there/Directions"
+        "Route/Directions",
+        "Route / Directions",
+        "Route"
       ],
       "reasons": []
     },
@@ -533,7 +533,7 @@
       "id": "fact_values.gratuit",
       "key": "gratuit",
       "section": "fact_values",
-      "tgt": "Gratuito",
+      "tgt": "Zdarma",
       "fr_ref": "Gratuit",
       "en_ref": "Free",
       "is_polar": true,
@@ -559,7 +559,7 @@
       "id": "fact_values.payant",
       "key": "payant",
       "section": "fact_values",
-      "tgt": "Pago",
+      "tgt": "Placené",
       "fr_ref": "Payant",
       "en_ref": "Paid",
       "is_polar": true,
@@ -585,7 +585,7 @@
       "id": "fact_values.oui",
       "key": "oui",
       "section": "fact_values",
-      "tgt": "Sim",
+      "tgt": "Ano",
       "fr_ref": "Oui",
       "en_ref": "Yes",
       "is_polar": true,
@@ -611,7 +611,7 @@
       "id": "fact_values.non",
       "key": "non",
       "section": "fact_values",
-      "tgt": "Não",
+      "tgt": "Ne",
       "fr_ref": "Non",
       "en_ref": "No",
       "is_polar": true,
@@ -637,7 +637,7 @@
       "id": "fact_values.surveillee",
       "key": "surveillee",
       "section": "fact_values",
-      "tgt": "Com vigilância",
+      "tgt": "Hlídaná pláž",
       "fr_ref": "Plage surveillée",
       "en_ref": "Lifeguarded",
       "is_polar": true,
@@ -648,14 +648,14 @@
       ],
       "verified": true,
       "back_fr": [
-        "Surveillée",
-        "Surveillée / Avec surveillance",
-        "Surveillée"
+        "Plage surveillée",
+        "Plage surveillée",
+        "Plage surveillée"
       ],
       "back_en": [
-        "Supervised/Lifeguarded",
-        "Supervised / Lifeguarded",
-        "Lifeguarded/Supervised"
+        "Lifeguarded (supervised beach)",
+        "Lifeguarded",
+        "Lifeguarded"
       ],
       "reasons": []
     },
@@ -663,7 +663,7 @@
       "id": "fact_values.non_surveillee",
       "key": "non_surveillee",
       "section": "fact_values",
-      "tgt": "Sem vigilância",
+      "tgt": "Nehlídaná",
       "fr_ref": "Non surveillée",
       "en_ref": "No lifeguard",
       "is_polar": true,
@@ -675,13 +675,13 @@
       "verified": true,
       "back_fr": [
         "Non surveillée",
-        "Non surveillée / Sans surveillance",
+        "Non surveillée",
         "Non surveillée"
       ],
       "back_en": [
-        "No lifeguard/Unsupervised",
-        "Unsupervised / No lifeguard",
-        "No lifeguard/Unsupervised"
+        "No lifeguard/unsupervised",
+        "No lifeguard / Unsupervised",
+        "No lifeguard"
       ],
       "reasons": []
     },
@@ -689,7 +689,7 @@
       "id": "fact_values.pmr_accessible",
       "key": "pmr_accessible",
       "section": "fact_values",
-      "tgt": "Acessível",
+      "tgt": "Přístupné",
       "fr_ref": "Accessible",
       "en_ref": "Accessible",
       "is_polar": true,
@@ -715,7 +715,7 @@
       "id": "fact_values.pmr_partiel",
       "key": "pmr_partiel",
       "section": "fact_values",
-      "tgt": "Parcialmente acessível",
+      "tgt": "Částečně přístupné",
       "fr_ref": "Partiellement accessible",
       "en_ref": "Partly accessible",
       "is_polar": false,
@@ -741,7 +741,7 @@
       "id": "fact_values.pmr_non",
       "key": "pmr_non",
       "section": "fact_values",
-      "tgt": "Não acessível",
+      "tgt": "Nepřístupné",
       "fr_ref": "Non accessible",
       "en_ref": "Not accessible",
       "is_polar": true,
@@ -752,7 +752,7 @@
       ],
       "verified": true,
       "back_fr": [
-        "Non accessible",
+        "Non accessible/Inaccessible",
         "Non accessible",
         "Non accessible"
       ],
@@ -767,7 +767,7 @@
       "id": "fact_values.pmr_non_renseigne",
       "key": "pmr_non_renseigne",
       "section": "fact_values",
-      "tgt": "Não especificado",
+      "tgt": "Neuvedeno",
       "fr_ref": "Non renseignée",
       "en_ref": "Not stated",
       "is_polar": false,
@@ -783,9 +783,9 @@
         "Non renseigné"
       ],
       "back_en": [
-        "Not specified/Not stated",
-        "Not stated / Not specified",
-        "Not stated/Not specified"
+        "Not stated/Not specified",
+        "Not stated",
+        "Not stated"
       ],
       "reasons": []
     },
@@ -793,7 +793,7 @@
       "id": "fact_values.ouvert",
       "key": "ouvert",
       "section": "fact_values",
-      "tgt": "Aberto",
+      "tgt": "Otevřeno",
       "fr_ref": "Ouvert",
       "en_ref": "Open",
       "is_polar": true,
@@ -819,7 +819,7 @@
       "id": "fact_values.ferme",
       "key": "ferme",
       "section": "fact_values",
-      "tgt": "Fechado",
+      "tgt": "Zavřeno",
       "fr_ref": "Fermé",
       "en_ref": "Closed",
       "is_polar": true,
@@ -845,7 +845,7 @@
       "id": "fact_values.saisonnier",
       "key": "saisonnier",
       "section": "fact_values",
-      "tgt": "Sazonal",
+      "tgt": "Sezónní",
       "fr_ref": "Saisonnier",
       "en_ref": "Seasonal",
       "is_polar": false,
@@ -871,7 +871,7 @@
       "id": "fact_values.dogs_ok",
       "key": "dogs_ok",
       "section": "fact_values",
-      "tgt": "Permitidos",
+      "tgt": "Povoleni",
       "fr_ref": "Autorisés",
       "en_ref": "Allowed",
       "is_polar": true,
@@ -897,7 +897,7 @@
       "id": "fact_values.dogs_no",
       "key": "dogs_no",
       "section": "fact_values",
-      "tgt": "Não permitidos",
+      "tgt": "Zakázáni",
       "fr_ref": "Interdits",
       "en_ref": "Not allowed",
       "is_polar": true,
@@ -908,13 +908,13 @@
       ],
       "verified": true,
       "back_fr": [
-        "Non autorisés/Interdits",
-        "Non autorisés / Interdits",
-        "Non autorisés/Interdits"
+        "Interdits",
+        "Interdits",
+        "Interdits"
       ],
       "back_en": [
-        "Not allowed",
-        "Not allowed",
+        "Not allowed/Forbidden",
+        "Not allowed / Forbidden",
         "Not allowed"
       ],
       "reasons": []
@@ -923,7 +923,7 @@
       "id": "descriptors_by_type.plage",
       "key": "plage",
       "section": "descriptors_by_type",
-      "tgt": "Praia",
+      "tgt": "Pláž",
       "fr_ref": "Plage",
       "en_ref": "Beach",
       "is_polar": false,
@@ -949,7 +949,7 @@
       "id": "descriptors_by_type.lac",
       "key": "lac",
       "section": "descriptors_by_type",
-      "tgt": "Lago",
+      "tgt": "Jezero",
       "fr_ref": "Lac",
       "en_ref": "Lake",
       "is_polar": false,
@@ -975,7 +975,7 @@
       "id": "descriptors_by_type.cascade",
       "key": "cascade",
       "section": "descriptors_by_type",
-      "tgt": "Cascata",
+      "tgt": "Vodopád",
       "fr_ref": "Cascade",
       "en_ref": "Waterfall",
       "is_polar": false,
@@ -1001,7 +1001,7 @@
       "id": "descriptors_by_type.gorges",
       "key": "gorges",
       "section": "descriptors_by_type",
-      "tgt": "Desfiladeiro",
+      "tgt": "Soutěska",
       "fr_ref": "Gorges",
       "en_ref": "Gorge",
       "is_polar": false,
@@ -1013,7 +1013,7 @@
       "verified": true,
       "back_fr": [
         "Gorges",
-        "Gorges / Défilé",
+        "Gorges",
         "Gorges"
       ],
       "back_en": [
@@ -1027,7 +1027,7 @@
       "id": "descriptors_by_type.chateau",
       "key": "chateau",
       "section": "descriptors_by_type",
-      "tgt": "Castelo",
+      "tgt": "Zámek",
       "fr_ref": "Château",
       "en_ref": "Castle",
       "is_polar": false,
@@ -1043,7 +1043,7 @@
         "Château"
       ],
       "back_en": [
-        "Castle",
+        "Castle/Chateau",
         "Castle",
         "Castle"
       ],
@@ -1053,7 +1053,7 @@
       "id": "descriptors_by_type.musee",
       "key": "musee",
       "section": "descriptors_by_type",
-      "tgt": "Museu",
+      "tgt": "Muzeum",
       "fr_ref": "Musée",
       "en_ref": "Museum",
       "is_polar": false,
@@ -1079,7 +1079,7 @@
       "id": "descriptors_by_type.telecabine",
       "key": "telecabine",
       "section": "descriptors_by_type",
-      "tgt": "Teleférico",
+      "tgt": "Kabinková lanovka",
       "fr_ref": "Télécabine",
       "en_ref": "Cable car",
       "is_polar": false,
@@ -1091,11 +1091,11 @@
       "verified": true,
       "back_fr": [
         "Télécabine",
-        "Télécabine / Téléphérique",
+        "Télécabine",
         "Télécabine"
       ],
       "back_en": [
-        "Cable car",
+        "Cable car (gondola)",
         "Cable car",
         "Cable car"
       ],
@@ -1105,7 +1105,7 @@
       "id": "descriptors_by_type.point_de_vue",
       "key": "point_de_vue",
       "section": "descriptors_by_type",
-      "tgt": "Miradouro",
+      "tgt": "Vyhlídka",
       "fr_ref": "Point de vue",
       "en_ref": "Viewpoint",
       "is_polar": false,
@@ -1116,7 +1116,7 @@
       ],
       "verified": true,
       "back_fr": [
-        "Point de vue",
+        "Point de vue/Belvédère",
         "Point de vue",
         "Point de vue"
       ],
@@ -1131,7 +1131,7 @@
       "id": "descriptors_by_type.sentier",
       "key": "sentier",
       "section": "descriptors_by_type",
-      "tgt": "Trilho",
+      "tgt": "Stezka",
       "fr_ref": "Sentier",
       "en_ref": "Trail",
       "is_polar": false,
@@ -1147,7 +1147,7 @@
         "Sentier"
       ],
       "back_en": [
-        "Trail",
+        "Trail/Path",
         "Trail",
         "Trail"
       ],
@@ -1157,7 +1157,7 @@
       "id": "descriptors_by_type.parc",
       "key": "parc",
       "section": "descriptors_by_type",
-      "tgt": "Parque",
+      "tgt": "Park",
       "fr_ref": "Parc",
       "en_ref": "Park",
       "is_polar": false,
@@ -1183,7 +1183,7 @@
       "id": "descriptors_by_type.voie_verte",
       "key": "voie_verte",
       "section": "descriptors_by_type",
-      "tgt": "Via verde",
+      "tgt": "Zelená stezka",
       "fr_ref": "Voie verte",
       "en_ref": "Greenway",
       "is_polar": false,
@@ -1209,7 +1209,7 @@
       "id": "descriptors_by_type.base_loisirs",
       "key": "base_loisirs",
       "section": "descriptors_by_type",
-      "tgt": "Parque de lazer",
+      "tgt": "Rekreační areál",
       "fr_ref": "Base de loisirs",
       "en_ref": "Leisure park",
       "is_polar": false,
@@ -1221,12 +1221,12 @@
       "verified": true,
       "back_fr": [
         "Base de loisirs",
-        "Base de loisirs / Parc de loisirs",
-        "Base de loisirs/Parc de loisirs"
+        "Base de loisirs",
+        "Base de loisirs"
       ],
       "back_en": [
         "Leisure park/centre",
-        "Leisure park",
+        "Leisure park / Recreation centre",
         "Leisure park"
       ],
       "reasons": []
@@ -1235,7 +1235,7 @@
       "id": "descriptors_by_type.eglise",
       "key": "eglise",
       "section": "descriptors_by_type",
-      "tgt": "Igreja",
+      "tgt": "Kostel",
       "fr_ref": "Église",
       "en_ref": "Church",
       "is_polar": false,
@@ -1261,7 +1261,7 @@
       "id": "ui_chrome.accueil",
       "key": "accueil",
       "section": "ui_chrome",
-      "tgt": "Início",
+      "tgt": "Domů",
       "fr_ref": "Accueil",
       "en_ref": "Home",
       "is_polar": false,
@@ -1287,7 +1287,7 @@
       "id": "ui_chrome.l_essentiel",
       "key": "l_essentiel",
       "section": "ui_chrome",
-      "tgt": "Informações essenciais",
+      "tgt": "To podstatné",
       "fr_ref": "L'essentiel",
       "en_ref": "Key facts",
       "is_polar": false,
@@ -1299,13 +1299,13 @@
       "verified": true,
       "back_fr": [
         "L'essentiel",
-        "L'essentiel / Informations essentielles",
-        "L'essentiel/Informations essentielles"
+        "L'essentiel",
+        "L'essentiel"
       ],
       "back_en": [
-        "Key facts/Essential info",
-        "Key facts / Essential information",
-        "Key facts/Essential info"
+        "The essentials/Key facts",
+        "The essentials / Key facts",
+        "Key facts"
       ],
       "reasons": []
     },
@@ -1313,7 +1313,7 @@
       "id": "ui_chrome.voir_fiche",
       "key": "voir_fiche",
       "section": "ui_chrome",
-      "tgt": "Ver detalhes",
+      "tgt": "Zobrazit detail",
       "fr_ref": "Voir la fiche",
       "en_ref": "View details",
       "is_polar": false,
@@ -1324,9 +1324,9 @@
       ],
       "verified": true,
       "back_fr": [
-        "Voir la fiche/Voir les détails",
-        "Voir les détails / Voir la fiche",
-        "Voir les détails/Voir la fiche"
+        "Voir la fiche/le détail",
+        "Voir la fiche / Voir le détail",
+        "Voir la fiche"
       ],
       "back_en": [
         "View details",
@@ -1339,7 +1339,7 @@
       "id": "ui_chrome.plages_voisines",
       "key": "plages_voisines",
       "section": "ui_chrome",
-      "tgt": "Praias próximas",
+      "tgt": "Pláže v okolí",
       "fr_ref": "Plages voisines",
       "en_ref": "Nearby beaches",
       "is_polar": false,
@@ -1350,9 +1350,9 @@
       ],
       "verified": true,
       "back_fr": [
-        "Plages voisines",
-        "Plages voisines / proches",
-        "Plages voisines/proches"
+        "Plages voisines/à proximité",
+        "Plages voisines / Plages à proximité",
+        "Plages voisines"
       ],
       "back_en": [
         "Nearby beaches",
@@ -1365,7 +1365,7 @@
       "id": "ui_chrome.questions_frequentes",
       "key": "questions_frequentes",
       "section": "ui_chrome",
-      "tgt": "Perguntas frequentes",
+      "tgt": "Časté dotazy",
       "fr_ref": "Questions fréquentes",
       "en_ref": "FAQ",
       "is_polar": false,
@@ -1381,7 +1381,7 @@
         "Questions fréquentes"
       ],
       "back_en": [
-        "FAQ",
+        "FAQ/Frequent questions",
         "FAQ",
         "FAQ"
       ],
@@ -1391,7 +1391,7 @@
       "id": "ui_chrome.y_aller",
       "key": "y_aller",
       "section": "ui_chrome",
-      "tgt": "Como chegar e estacionar",
+      "tgt": "Doprava a parkování",
       "fr_ref": "Y aller & se garer",
       "en_ref": "Getting there & parking",
       "is_polar": false,
@@ -1402,12 +1402,12 @@
       ],
       "verified": true,
       "back_fr": [
-        "Y aller et se garer",
-        "S'y rendre & se garer",
-        "S'y rendre & se garer"
+        "Transport et stationnement",
+        "S'y rendre et se garer / Transport et parking",
+        "Transport et stationnement"
       ],
       "back_en": [
-        "Getting there & parking",
+        "Transport & parking",
         "Getting there & parking",
         "Getting there & parking"
       ],
@@ -1417,7 +1417,7 @@
       "id": "ui_chrome.source_officielle",
       "key": "source_officielle",
       "section": "ui_chrome",
-      "tgt": "Fonte oficial",
+      "tgt": "Oficiální zdroj",
       "fr_ref": "Source officielle",
       "en_ref": "Official source",
       "is_polar": false,
@@ -1443,7 +1443,7 @@
       "id": "ui_chrome.pres_de_moi",
       "key": "pres_de_moi",
       "section": "ui_chrome",
-      "tgt": "Perto de mim",
+      "tgt": "V mém okolí",
       "fr_ref": "Près de moi",
       "en_ref": "Near me",
       "is_polar": false,
@@ -1454,8 +1454,8 @@
       ],
       "verified": true,
       "back_fr": [
-        "Près de moi",
-        "Près de moi",
+        "Près de moi/Dans mon entourage",
+        "Près de moi / Dans mon entourage",
         "Près de moi"
       ],
       "back_en": [
@@ -1469,7 +1469,7 @@
       "id": "ui_chrome.rechercher",
       "key": "rechercher",
       "section": "ui_chrome",
-      "tgt": "Pesquisar",
+      "tgt": "Hledat",
       "fr_ref": "Rechercher",
       "en_ref": "Search",
       "is_polar": false,
@@ -1480,7 +1480,7 @@
       ],
       "verified": true,
       "back_fr": [
-        "Rechercher",
+        "Rechercher/Chercher",
         "Rechercher",
         "Rechercher"
       ],
@@ -1495,7 +1495,7 @@
       "id": "ui_chrome.toutes_categories",
       "key": "toutes_categories",
       "section": "ui_chrome",
-      "tgt": "Todas as categorias",
+      "tgt": "Všechny kategorie",
       "fr_ref": "Toutes les catégories",
       "en_ref": "All categories",
       "is_polar": false,
@@ -1521,7 +1521,7 @@
       "id": "ui_chrome.voir_carte",
       "key": "voir_carte",
       "section": "ui_chrome",
-      "tgt": "Ver no mapa",
+      "tgt": "Zobrazit na mapě",
       "fr_ref": "Voir sur la carte",
       "en_ref": "View on map",
       "is_polar": false,
@@ -1547,7 +1547,7 @@
       "id": "hub_names.cascades",
       "key": "cascades",
       "section": "hub_names",
-      "tgt": "Cascatas",
+      "tgt": "Vodopády",
       "fr_ref": "Cascades",
       "en_ref": "Waterfalls",
       "is_polar": false,
@@ -1573,7 +1573,7 @@
       "id": "hub_names.chateaux",
       "key": "chateaux",
       "section": "hub_names",
-      "tgt": "Castelos",
+      "tgt": "Zámky",
       "fr_ref": "Châteaux",
       "en_ref": "Castles",
       "is_polar": false,
@@ -1599,7 +1599,7 @@
       "id": "hub_names.lacs-plages",
       "key": "lacs-plages",
       "section": "hub_names",
-      "tgt": "Lagos e praias",
+      "tgt": "Jezera a pláže",
       "fr_ref": "Lacs & plages",
       "en_ref": "Lakes & beaches",
       "is_polar": false,
@@ -1610,7 +1610,7 @@
       ],
       "verified": true,
       "back_fr": [
-        "Lacs et plages",
+        "Lacs & plages",
         "Lacs & plages",
         "Lacs & plages"
       ],
@@ -1625,7 +1625,7 @@
       "id": "hub_names.musees",
       "key": "musees",
       "section": "hub_names",
-      "tgt": "Museus",
+      "tgt": "Muzea",
       "fr_ref": "Musées",
       "en_ref": "Museums",
       "is_polar": false,
@@ -1651,7 +1651,7 @@
       "id": "hub_names.parcs-jardins",
       "key": "parcs-jardins",
       "section": "hub_names",
-      "tgt": "Parques e jardins",
+      "tgt": "Parky a zahrady",
       "fr_ref": "Parcs & jardins",
       "en_ref": "Parks & gardens",
       "is_polar": false,
@@ -1662,7 +1662,7 @@
       ],
       "verified": true,
       "back_fr": [
-        "Parcs et jardins",
+        "Parcs & jardins",
         "Parcs & jardins",
         "Parcs & jardins"
       ],
@@ -1677,7 +1677,7 @@
       "id": "hub_names.points-de-vue",
       "key": "points-de-vue",
       "section": "hub_names",
-      "tgt": "Miradouros",
+      "tgt": "Vyhlídky",
       "fr_ref": "Points de vue",
       "en_ref": "Viewpoints",
       "is_polar": false,
@@ -1703,7 +1703,7 @@
       "id": "hub_names.sentiers",
       "key": "sentiers",
       "section": "hub_names",
-      "tgt": "Trilhos",
+      "tgt": "Stezky",
       "fr_ref": "Sentiers",
       "en_ref": "Trails",
       "is_polar": false,
@@ -1729,7 +1729,7 @@
       "id": "hub_names.telecabines",
       "key": "telecabines",
       "section": "hub_names",
-      "tgt": "Teleféricos",
+      "tgt": "Kabinkové lanovky",
       "fr_ref": "Télécabines",
       "en_ref": "Cable cars",
       "is_polar": false,
@@ -1755,7 +1755,7 @@
       "id": "hub_names.voies-vertes",
       "key": "voies-vertes",
       "section": "hub_names",
-      "tgt": "Vias verdes",
+      "tgt": "Zelené stezky",
       "fr_ref": "Voies vertes",
       "en_ref": "Greenways",
       "is_polar": false,
@@ -1781,7 +1781,7 @@
       "id": "hub_names.baignade-nautisme",
       "key": "baignade-nautisme",
       "section": "hub_names",
-      "tgt": "Banhos e desportos aquáticos",
+      "tgt": "Koupání a vodní sporty",
       "fr_ref": "Baignade & nautisme",
       "en_ref": "Swimming & watersports",
       "is_polar": false,
@@ -1792,8 +1792,8 @@
       ],
       "verified": true,
       "back_fr": [
-        "Baignade et nautisme",
-        "Baignade & nautisme / sports nautiques",
+        "Baignade & nautisme/sports nautiques",
+        "Baignade & nautisme",
         "Baignade & nautisme"
       ],
       "back_en": [
@@ -1807,7 +1807,7 @@
       "id": "hub_names.bases-de-loisirs",
       "key": "bases-de-loisirs",
       "section": "hub_names",
-      "tgt": "Parques de lazer",
+      "tgt": "Rekreační areály",
       "fr_ref": "Bases de loisirs",
       "en_ref": "Leisure parks",
       "is_polar": false,
@@ -1819,7 +1819,7 @@
       "verified": true,
       "back_fr": [
         "Bases de loisirs",
-        "Bases de loisirs / Parcs de loisirs",
+        "Bases de loisirs",
         "Bases de loisirs"
       ],
       "back_en": [
@@ -1833,7 +1833,7 @@
       "id": "hub_names.que-faire",
       "key": "que-faire",
       "section": "hub_names",
-      "tgt": "O que fazer",
+      "tgt": "Co dělat",
       "fr_ref": "Que faire",
       "en_ref": "What to do",
       "is_polar": false,
@@ -1859,7 +1859,7 @@
       "id": "hub_names.sensations-plein-air",
       "key": "sensations-plein-air",
       "section": "hub_names",
-      "tgt": "Emoções ao ar livre",
+      "tgt": "Zážitky pod širým nebem",
       "fr_ref": "Sensations plein air",
       "en_ref": "Outdoor thrills",
       "is_polar": false,
@@ -1870,13 +1870,13 @@
       ],
       "verified": true,
       "back_fr": [
+        "Sensations en plein air",
         "Sensations plein air",
-        "Sensations plein air / Émotions en plein air",
         "Sensations plein air"
       ],
       "back_en": [
-        "Outdoor thrills",
-        "Outdoor thrills",
+        "Outdoor thrills/experiences",
+        "Outdoor thrills / Open-air experiences",
         "Outdoor thrills"
       ],
       "reasons": []
@@ -1885,7 +1885,7 @@
       "id": "hub_names.sorties-detente",
       "key": "sorties-detente",
       "section": "hub_names",
-      "tgt": "Passeios relaxantes",
+      "tgt": "Výlety pro odpočinek",
       "fr_ref": "Sorties détente",
       "en_ref": "Relaxing outings",
       "is_polar": false,
@@ -1896,8 +1896,8 @@
       ],
       "verified": true,
       "back_fr": [
+        "Sorties détente/de détente",
         "Sorties détente",
-        "Sorties détente / Balades relaxantes",
         "Sorties détente"
       ],
       "back_en": [
@@ -1911,7 +1911,7 @@
       "id": "hub_names.sport-jeux",
       "key": "sport-jeux",
       "section": "hub_names",
-      "tgt": "Desporto e jogos",
+      "tgt": "Sport a hry",
       "fr_ref": "Sport & jeux",
       "en_ref": "Sport & games",
       "is_polar": false,
@@ -1922,7 +1922,7 @@
       ],
       "verified": true,
       "back_fr": [
-        "Sport et jeux",
+        "Sport & jeux",
         "Sport & jeux",
         "Sport & jeux"
       ],
@@ -1937,7 +1937,7 @@
       "id": "months.01",
       "key": "01",
       "section": "months",
-      "tgt": "janeiro",
+      "tgt": "leden",
       "fr_ref": "janvier",
       "en_ref": "January",
       "is_polar": false,
@@ -1963,7 +1963,7 @@
       "id": "months.02",
       "key": "02",
       "section": "months",
-      "tgt": "fevereiro",
+      "tgt": "únor",
       "fr_ref": "février",
       "en_ref": "February",
       "is_polar": false,
@@ -1989,7 +1989,7 @@
       "id": "months.03",
       "key": "03",
       "section": "months",
-      "tgt": "março",
+      "tgt": "březen",
       "fr_ref": "mars",
       "en_ref": "March",
       "is_polar": false,
@@ -2015,7 +2015,7 @@
       "id": "months.04",
       "key": "04",
       "section": "months",
-      "tgt": "abril",
+      "tgt": "duben",
       "fr_ref": "avril",
       "en_ref": "April",
       "is_polar": false,
@@ -2041,7 +2041,7 @@
       "id": "months.05",
       "key": "05",
       "section": "months",
-      "tgt": "maio",
+      "tgt": "květen",
       "fr_ref": "mai",
       "en_ref": "May",
       "is_polar": false,
@@ -2067,7 +2067,7 @@
       "id": "months.06",
       "key": "06",
       "section": "months",
-      "tgt": "junho",
+      "tgt": "červen",
       "fr_ref": "juin",
       "en_ref": "June",
       "is_polar": false,
@@ -2093,7 +2093,7 @@
       "id": "months.07",
       "key": "07",
       "section": "months",
-      "tgt": "julho",
+      "tgt": "červenec",
       "fr_ref": "juillet",
       "en_ref": "July",
       "is_polar": false,
@@ -2119,7 +2119,7 @@
       "id": "months.08",
       "key": "08",
       "section": "months",
-      "tgt": "agosto",
+      "tgt": "srpen",
       "fr_ref": "août",
       "en_ref": "August",
       "is_polar": false,
@@ -2145,7 +2145,7 @@
       "id": "months.09",
       "key": "09",
       "section": "months",
-      "tgt": "setembro",
+      "tgt": "září",
       "fr_ref": "septembre",
       "en_ref": "September",
       "is_polar": false,
@@ -2171,7 +2171,7 @@
       "id": "months.10",
       "key": "10",
       "section": "months",
-      "tgt": "outubro",
+      "tgt": "říjen",
       "fr_ref": "octobre",
       "en_ref": "October",
       "is_polar": false,
@@ -2197,7 +2197,7 @@
       "id": "months.11",
       "key": "11",
       "section": "months",
-      "tgt": "novembro",
+      "tgt": "listopad",
       "fr_ref": "novembre",
       "en_ref": "November",
       "is_polar": false,
@@ -2223,7 +2223,7 @@
       "id": "months.12",
       "key": "12",
       "section": "months",
-      "tgt": "dezembro",
+      "tgt": "prosinec",
       "fr_ref": "décembre",
       "en_ref": "December",
       "is_polar": false,

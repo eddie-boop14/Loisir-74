@@ -1,4 +1,4 @@
-# i18n verification — pl (multi-agent back-translation consensus)
+# i18n verification — cs (multi-agent back-translation consensus)
 
 _© 2026 · Bleu canard édition · method: 3× blind back-translation + polarity sentinel · 2026-06-30_
 
