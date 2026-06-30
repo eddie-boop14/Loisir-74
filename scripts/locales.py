@@ -1,24 +1,32 @@
 #!/usr/bin/env python3
-"""locales.py — the locale roster, derived (HANDOFF-10 Job 1).
+"""locales.py — the locale roster, derived (HANDOFF-10 Job 1 + HANDOFF-16 Phase 2).
 
-The single place that reads data/languages.json and exposes the exact rosters
-the builders used to hardcode. Every builder, the picker, and hreflang import
-from here instead of repeating a `LANGS = [...]` literal, so adding a language
-is a data edit + render — not a five-file hunt (the same drift class as a stale
-doc).
+One source (data/languages.json), two ORTHOGONAL axes — never conflated again:
 
-Derived rosters (order preserved from data/languages.json):
-  PUBLISHED         ('fr','en','de','it','es','nl')  — the live originals; full
-                    trees, in sitemap + hreflang + picker.
-  SECONDARY         ('en','de','it','es','nl')        — PUBLISHED minus the root
-                    locale (fr renders at the site root, the others under /<lang>/).
-  STAGED_INDEXABLE  ('pl','pt','cs')                  — indexable pilot: own
-                    sitemap URLs, self-canonical, NEVER picker/hreflang.
-  HELD              ('ar','he')                        — vocab-verified, render-blocked.
+  status      lifecycle / visibility: published · staged-indexable · staged · held
+  render_mode HOW a language is rendered: prose (the 6, full translated prose via
+              build_lieu_page/communes/hubs) vs facts (everything else — facts-first
+              via build_fulltree_lang / build_pilot_langs, NO prose, EVER).
 
-ENDONYM / DIR are per-language maps (endonym = the language's own name, never a
-flag; dir = ltr|rtl). endonyms(langs) returns an ordered {lang: endonym} subset
-for the picker / lang_native chrome.
+The forbidden move — a facts language rendered through the prose path with FR
+fallback — is made STRUCTURALLY IMPOSSIBLE: the prose builders iterate PROSE only,
+and PROSE excludes every facts language by construction. There is no roster a
+prose render loop can read that contains a facts language.
+
+Derived rosters (declared order preserved):
+  PROSE             published ∧ render_mode==prose  — the ONLY langs the prose path
+                    may render (fr,en,de,it,es,nl). build_lieu_page/communes/hubs/
+                    intent-hubs/catalog/reachability/prose-gates consume these.
+  PROSE_SECONDARY   PROSE minus the root locale (en,de,it,es,nl).
+  VISIBLE           status==published — appears to users + search: the language
+                    picker, hreflang clusters, and the sitemap. Spans BOTH render
+                    modes (fr..nl + pl). Picker/hreflang/sitemap consume these.
+  VISIBLE_SECONDARY VISIBLE minus root (en,de,it,es,nl,pl).
+  FACTS_PUBLISHED   published ∧ render_mode==facts — full facts-first trees owned
+                    by build_fulltree_lang (pl).
+  STAGED_INDEXABLE  staged-indexable pilots (pt,cs). STAGED / HELD as before.
+  ALL_SUBDIR_LANGS  every non-root language code — the /<lang>/ directories, used
+                    to skip locale dirs during hub/commune discovery.
 """
 import json
 import os
@@ -34,11 +42,23 @@ def _by_status(*statuses):
     return tuple(l for l, v in LANGUAGES.items() if v.get("status") in statuses)
 
 
-PUBLISHED = _by_status("published")
-SECONDARY = tuple(l for l in PUBLISHED if not LANGUAGES[l].get("root"))
+def render_mode(lang):
+    return LANGUAGES.get(lang, {}).get("render_mode", "prose")
+
+
+def _root(l):
+    return LANGUAGES[l].get("root")
+
+
+VISIBLE = _by_status("published")
+VISIBLE_SECONDARY = tuple(l for l in VISIBLE if not _root(l))
+PROSE = tuple(l for l in VISIBLE if render_mode(l) == "prose")
+PROSE_SECONDARY = tuple(l for l in PROSE if not _root(l))
+FACTS_PUBLISHED = tuple(l for l in VISIBLE if render_mode(l) == "facts")
 STAGED_INDEXABLE = _by_status("staged-indexable")
 STAGED = _by_status("staged")
 HELD = _by_status("held")
+ALL_SUBDIR_LANGS = tuple(l for l in LANGUAGES if not _root(l))
 
 ENDONYM = {l: v["endonym"] for l, v in LANGUAGES.items()}
 DIR = {l: v.get("dir", "ltr") for l, v in LANGUAGES.items()}

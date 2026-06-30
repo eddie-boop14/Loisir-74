@@ -50,7 +50,7 @@ import locales  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 JSON_DIR = ROOT / "Json"
 TRANS_DIR = ROOT / "translations"
-LANGS = locales.SECONDARY
+LANGS = locales.PROSE_SECONDARY
 TODAY = datetime.date.today().isoformat()
 
 

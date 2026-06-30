@@ -25,7 +25,7 @@ import locales  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://loisirs74.fr/"
-LANGS = set(locales.SECONDARY)
+LANGS = set(locales.VISIBLE_SECONDARY)
 CANON_ANY = re.compile(r'<link\b[^>]*\brel=("|\')canonical\1[^>]*>', re.I)
 HREF_RE = re.compile(r'href=("|\')([^"\']*)\1')
 MDALT_ANY = re.compile(r'<link\b[^>]*\btype=("|\')text/markdown\1[^>]*>', re.I)

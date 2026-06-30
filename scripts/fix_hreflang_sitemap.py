@@ -15,7 +15,7 @@ import locales  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://loisirs74.fr/"
-LANGS = list(locales.SECONDARY)
+LANGS = list(locales.VISIBLE_SECONDARY)
 LINK_RE = re.compile(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">')
 RUN_RE = re.compile(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">(?:\n<link rel="alternate" hreflang="[^"]*" href="[^"]*">)*')
 NOIDX_RE = re.compile(r'<meta name="robots" content="[^"]*noindex')
@@ -369,14 +369,14 @@ def rebuild_sitemap(groups, multilingual):
         # Strip protocol/host
         tail = u.replace("https://loisirs74.fr", "").lstrip("/").rstrip("/")
         # Homepage
-        if tail == "" or tail in set(locales.SECONDARY):
+        if tail == "" or tail in set(locales.VISIBLE_SECONDARY):
             return homepage_max or datetime.date.today().isoformat()
         # Hub index (any locale)
         if u in hub_date and hub_date[u]:
             return hub_date[u]
         # Fiche: /<slug> or /<lang>/<slug>
         parts = tail.split("/")
-        if parts[0] in locales.SECONDARY and len(parts) >= 2:
+        if parts[0] in locales.VISIBLE_SECONDARY and len(parts) >= 2:
             slug = parts[1]
         else:
             slug = parts[0]

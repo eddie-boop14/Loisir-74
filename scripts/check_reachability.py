@@ -23,7 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import locales  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-ALL_LANGS = locales.PUBLISHED
+ALL_LANGS = locales.PROSE
 
 # Hubs per locale — keyed by local slug. Empty string = FR (root tree).
 HUB_DIRS = {
@@ -51,7 +51,7 @@ def norm(s):
 
 NON_HUB_DIRS = {"_site", "__pycache__", "reports", "scripts", "Json", "api",
                 "content", ".well-known", "node_modules", ".git",
-                *locales.SECONDARY}
+                *locales.ALL_SUBDIR_LANGS}
 
 
 def discover_hubs(base):

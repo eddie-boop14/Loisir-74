@@ -76,15 +76,18 @@ def slug_map(hub):
 
 
 def url_for(lang, path):
-    """Absolute URL for a path in a published locale (fr at root)."""
-    if lang == "fr":
-        return f"{BASE}/{path}".rstrip("/") if path else f"{BASE}/"
-    return f"{BASE}/{lang}/{path}".rstrip("/") if path else f"{BASE}/{lang}/"
+    """Absolute URL for a path in a published locale (fr at root). `path` carries
+    its own trailing slash convention — fiches are file URLs (no slash), hubs/
+    communes/homepage are directory URLs (trailing slash), matching the live 6 so
+    fix_hreflang_sitemap's hub_map (which requires fr-href to end in '/') folds the
+    facts tree into the clusters + sitemap."""
+    prefix = BASE + ("/" if lang == "fr" else f"/{lang}/")
+    return f"{prefix}{path}" if path else (f"{BASE}/" if lang == "fr" else f"{BASE}/{lang}/")
 
 
 def hreflang_block(equiv):
     """equiv: {lang: path-without-lang-prefix}. Emit the cluster + x-default(fr)."""
-    order = list(locales.PUBLISHED)
+    order = list(locales.VISIBLE)
     lines = []
     for lg in order:
         lines.append(f'<link rel="alternate" hreflang="{lg}" href="{url_for(lg, equiv[lg])}">')
@@ -95,7 +98,7 @@ def hreflang_block(equiv):
 def picker(lang, equiv, labels):
     """The endonym language picker — links to this page's equivalent per language."""
     items = []
-    for lg in locales.PUBLISHED:
+    for lg in locales.VISIBLE:
         endo = locales.ENDONYM[lg]
         cur = ' aria-current="true"' if lg == lang else ""
         items.append(f'<a href="{url_for(lg, equiv[lg])}" hreflang="{lg}"{cur}>{esc(endo)}</a>')
@@ -177,10 +180,10 @@ def render_fiche(d, lang):
     site = d.get("official_site_url")
     site_html = (f'<a class="site" href="{esc(site)}" rel="nofollow noopener" target="_blank">'
                  f'{esc(V("ui_chrome", "site_officiel", lang))} ↗</a>') if site else ""
-    equiv = {lg: d["slug"] for lg in locales.PUBLISHED}
+    equiv = {lg: d["slug"] for lg in locales.VISIBLE}
     with_equiv(equiv)
     cslug = commune_slug(commune) if commune else ""
-    crumb_commune = (f'<a href="{url_for(lang, cslug)}">{esc(commune)}</a> / '
+    crumb_commune = (f'<a href="{url_for(lang, cslug + "/")}">{esc(commune)}</a> / '
                      if cslug in PUB_COMMUNES else (f"{esc(commune)} / " if commune else ""))
     crumb = (f'<nav class="crumb"><a href="{url_for(lang, "")}">'
              f'{esc(V("ui_chrome", "accueil", lang))}</a> / {crumb_commune}{esc(name)}</nav>')
@@ -201,7 +204,7 @@ def render_fiche(d, lang):
 
 def render_hub(hub, members, lang):
     sm = slug_map(hub)
-    equiv = {lg: sm.get(lg, hub) for lg in locales.PUBLISHED}
+    equiv = {lg: sm.get(lg, hub) + "/" for lg in locales.VISIBLE}
     with_equiv(equiv)
     label = V("hub_names", hub, lang) or hub
     crumb = (f'<nav class="crumb"><a href="{url_for(lang, "")}">'
@@ -223,7 +226,7 @@ def commune_slug(commune):
 
 def render_commune(commune, members, lang):
     cslug = commune_slug(commune)
-    equiv = {lg: cslug for lg in locales.PUBLISHED}
+    equiv = {lg: cslug + "/" for lg in locales.VISIBLE}
     with_equiv(equiv)
     whattodo = V("ui_chrome", "accueil", lang)  # fallback; communes use a generic header
     title_h1 = f"{esc(commune)}"
@@ -235,14 +238,14 @@ def render_commune(commune, members, lang):
               "inLanguage": lang, "numberOfItems": len(members)}
     return shell(lang, f"{commune} — Haute-Savoie · loisirs74",
                  f"{commune} · Haute-Savoie ({len(members)}).",
-                 url_for(lang, cslug), hreflang_block(equiv), body, schema)
+                 url_for(lang, cslug + "/"), hreflang_block(equiv), body, schema)
 
 
 def render_home(hubs_present, lang):
-    equiv = {lg: "" for lg in locales.PUBLISHED}
+    equiv = {lg: "" for lg in locales.VISIBLE}
     with_equiv(equiv)
     hub_links = "".join(
-        f'<a href="{url_for(lang, slug_map(hub).get(lang, hub))}">{esc(V("hub_names", hub, lang) or hub)}</a>'
+        f'<a href="{url_for(lang, slug_map(hub).get(lang, hub) + "/")}">{esc(V("hub_names", hub, lang) or hub)}</a>'
         for hub in hubs_present)
     body = (f'<h2 class="sec">{esc(V("ui_chrome", "toutes_categories", lang))}</h2>'
             f'<div class="hubs">{hub_links}</div>')

@@ -39,7 +39,7 @@ import build_hubs as H  # noqa: E402  reuse fiche_card_html / acces_value / CHRO
 import locales  # noqa: E402
 import assets  # noqa: E402
 
-LANGS = list(locales.PUBLISHED)
+LANGS = list(locales.PROSE)
 BASE = "https://loisirs74.fr"
 MANIFEST = ROOT / "data" / "commune-layer.json"
 INTROS = ROOT / "data" / "commune-intros.json"
@@ -67,7 +67,7 @@ TEMPLATE_HUB = {
 }
 
 OG_LOCALE = {"fr": "fr_FR", "en": "en_US", "de": "de_DE", "it": "it_IT", "es": "es_ES", "nl": "nl_NL"}
-LANG_NATIVE = locales.endonyms(locales.PUBLISHED)
+LANG_NATIVE = locales.endonyms(locales.VISIBLE)
 
 C = {  # chrome labels (commune name itself is frozen, never translated)
     "whattodo":  {"fr": "Que faire à", "en": "What to do in", "de": "Was tun in", "it": "Cosa fare a", "es": "Qué hacer en", "nl": "Wat te doen in"},

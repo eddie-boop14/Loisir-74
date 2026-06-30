@@ -27,7 +27,7 @@ import locales  # noqa: E402
 REGISTRY = os.path.join(ROOT, "data", "intent-hubs.json")
 JSON_DIR = os.path.join(ROOT, "Json")
 BASE = "https://loisirs74.fr"
-LANGS = locales.PUBLISHED
+LANGS = locales.PROSE
 
 FACT_LABELS = {
     "access":      {"fr": "Accès", "en": "Access", "de": "Zugang", "it": "Accesso", "es": "Acceso", "nl": "Toegang"},

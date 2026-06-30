@@ -55,7 +55,7 @@ def iter_html():
 def main():
     viol = []
     L = locales.LANGUAGES
-    published = set(locales.PUBLISHED)
+    published = set(locales.VISIBLE)
     staged_idx = set(locales.STAGED_INDEXABLE)
     staged = set(locales.STAGED)
     held = set(locales.HELD)

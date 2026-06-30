@@ -14,20 +14,94 @@
       "staged_indexable": "status == staged-indexable — deployed to _site + own sitemap URLs, never picker/hreflang.",
       "held": "status == held — never rendered."
     },
-    "order": ["fr", "en", "de", "it", "es", "nl", "pl", "pt", "cs", "ar", "he", "ja"]
+    "order": [
+      "fr",
+      "en",
+      "de",
+      "it",
+      "es",
+      "nl",
+      "pl",
+      "pt",
+      "cs",
+      "ar",
+      "he",
+      "ja"
+    ]
   },
   "languages": {
-    "fr": { "endonym": "Français",   "dir": "ltr", "status": "published",        "root": true },
-    "en": { "endonym": "English",    "dir": "ltr", "status": "published" },
-    "de": { "endonym": "Deutsch",    "dir": "ltr", "status": "published" },
-    "it": { "endonym": "Italiano",   "dir": "ltr", "status": "published" },
-    "es": { "endonym": "Español",    "dir": "ltr", "status": "published" },
-    "nl": { "endonym": "Nederlands", "dir": "ltr", "status": "published" },
-    "pl": { "endonym": "Polski",     "dir": "ltr", "status": "staged-indexable" },
-    "pt": { "endonym": "Português",  "dir": "ltr", "status": "staged-indexable" },
-    "cs": { "endonym": "Čeština",    "dir": "ltr", "status": "staged-indexable" },
-    "ar": { "endonym": "العربية",    "dir": "rtl", "status": "held" },
-    "he": { "endonym": "עברית",      "dir": "rtl", "status": "held" },
-    "ja": { "endonym": "日本語",      "dir": "ltr", "status": "held" }
+    "fr": {
+      "endonym": "Français",
+      "dir": "ltr",
+      "status": "published",
+      "root": true,
+      "render_mode": "prose"
+    },
+    "en": {
+      "endonym": "English",
+      "dir": "ltr",
+      "status": "published",
+      "render_mode": "prose"
+    },
+    "de": {
+      "endonym": "Deutsch",
+      "dir": "ltr",
+      "status": "published",
+      "render_mode": "prose"
+    },
+    "it": {
+      "endonym": "Italiano",
+      "dir": "ltr",
+      "status": "published",
+      "render_mode": "prose"
+    },
+    "es": {
+      "endonym": "Español",
+      "dir": "ltr",
+      "status": "published",
+      "render_mode": "prose"
+    },
+    "nl": {
+      "endonym": "Nederlands",
+      "dir": "ltr",
+      "status": "published",
+      "render_mode": "prose"
+    },
+    "pl": {
+      "endonym": "Polski",
+      "dir": "ltr",
+      "status": "published",
+      "render_mode": "facts"
+    },
+    "pt": {
+      "endonym": "Português",
+      "dir": "ltr",
+      "status": "staged-indexable",
+      "render_mode": "facts"
+    },
+    "cs": {
+      "endonym": "Čeština",
+      "dir": "ltr",
+      "status": "staged-indexable",
+      "render_mode": "facts"
+    },
+    "ar": {
+      "endonym": "العربية",
+      "dir": "rtl",
+      "status": "held",
+      "render_mode": "facts"
+    },
+    "he": {
+      "endonym": "עברית",
+      "dir": "rtl",
+      "status": "held",
+      "render_mode": "facts"
+    },
+    "ja": {
+      "endonym": "日本語",
+      "dir": "ltr",
+      "status": "held",
+      "render_mode": "facts"
+    }
   }
 }
