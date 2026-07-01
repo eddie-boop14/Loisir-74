@@ -2,9 +2,7 @@ name: Check loisirs74 (Google Maps)
 
 # ▶️  Run it: GitHub app/site → your repo → Actions tab → "Check loisirs74" → Run workflow
 on:
-  workflow_dispatch:        # the manual "play" button
-  schedule:
-    - cron: "0 6 1 * *"     # bonus: auto-run 06:00 on the 1st of every month
+  workflow_dispatch:        # the manual "play" button     # bonus: auto-run 06:00 on the 1st of every month
 
 permissions:
   contents: write           # lets it commit report.csv + updated fiches back
