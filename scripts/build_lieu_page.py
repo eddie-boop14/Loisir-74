@@ -48,6 +48,23 @@ def attr(s):
     return html_lib.escape(str(s), quote=True)
 
 
+# Prose fields (when_to_visit, events, body.what_is) are authored WITH intentional
+# inline HTML (seasonal <ul><li> lists, <p>, <strong>) on some fiches and as plain
+# text on others. HANDOFF-23: one raw-emit path for all of them — if a value
+# carries HTML tags it is authored HTML and must render RAW (escaping printed the
+# literal <p>/<li> on ~15 fiches); otherwise it is plain text and stays escaped so
+# a stray '&'/'<' can't break the page or open an injection surface.
+_PROSE_HTML_RE = re.compile(r'</?(p|ul|ol|li|strong|em|br|a|h[1-6]|blockquote)(\s|>|/)', re.I)
+
+
+def prose(s):
+    """Emit an authored-prose field: raw when it contains inline HTML, escaped otherwise."""
+    if s is None:
+        return ""
+    s = str(s)
+    return s if _PROSE_HTML_RE.search(s) else esc(s)
+
+
 def url_q(s):
     """URL-encode for query string."""
     return quote(str(s), safe="")
@@ -541,7 +558,7 @@ def body_block(name, body):
     return (
         '<section class="block"><div class="wrap">'
         f'<h2 class="reveal">{T("h_whatis")} {esc(name)}</h2>'
-        f'<div class="reveal">{what_is}</div></div></section>'
+        f'<div class="reveal">{prose(what_is)}</div></div></section>'
     )
 
 
@@ -873,11 +890,11 @@ def when_to_visit_block(when, events):
         return ""
     inner = ""
     if when:
-        inner += f'<div class="reveal">{esc(when)}</div>'
+        inner += f'<div class="reveal">{prose(when)}</div>'
     if events:
         inner += (
             '<div class="reveal" style="margin-top:1.25rem">'
-            f'<strong>{T("events_label")}&nbsp;:</strong> {esc(events)}</div>'
+            f'<strong>{T("events_label")}&nbsp;:</strong> {prose(events)}</div>'
         )
     return (
         '<section class="block"><div class="wrap">'

@@ -125,6 +125,12 @@ jobs:
         # are flagged; it starts enforcing once the source-audit --apply runs.
         run: python3 scripts/gate_published_verified.py
 
+      - name: Prose-HTML raw-emit gate (no escaped <p>/<ul>/<li> printed on-page)
+        # Read-only. Authored-HTML prose (when_to_visit, events, body.what_is)
+        # must render raw; fails the build if any page prints a literal escaped
+        # prose tag (&lt;p&gt; …) — the HANDOFF-23 regression class.
+        run: python3 scripts/gate_prose_html.py
+
       - name: Canonical self-reference gate
         # Read-only. Every indexable built page must carry exactly one
         # self-referential <link rel="canonical">; md-alts must resolve.
