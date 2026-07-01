@@ -18,6 +18,25 @@ OUTPUTS:
                       (this is the list you actually email — not all 325)
 
 NEEDS: GOOGLE_MAPS_API_KEY in the environment. The French registry needs no key.
+
+ERROR ≠ DATA (HANDOFF-24). Every Google lookup ends in exactly one of three
+outcomes:
+  OK               — the API answered with fresh data          → may update fields
+  CONFIRMED_ABSENT — the API answered: place gone / no match   → may update fields
+  CHECK_FAILED     — quota, auth, network: a fact about *us*,
+                     not the place                             → keeps the WHOLE
+                     previous freshness block; writes only last_check + check_failed.
+Mass-failure circuit breaker: if more than FAIL_RATE_LIMIT of the Google calls
+in a run fail, the whole run ABORTS before a single fiche is written and exits
+non-zero. (2026-07-01: a dead API key produced a 100%-failure run that
+overwrote 397 fiches — the breaker makes that impossible.)
+
+Reachability discipline: a failed site fetch is only an OBSERVATION. A venue
+is written site_reachable=false only after a SECOND failed fetch on a LATER
+day (site_unreachable_confirmed). And if >FAIL_RATE_LIMIT of the site fetches
+in one run fail, the whole reachability signal for the run is discarded as a
+checker failure (42 venues don't go dark the same morning — 2026-07-01 again).
+A registry error likewise keeps the previous registry block.
 """
 
 import os, sys, json, csv, time, math, glob, re, datetime, urllib.parse, urllib.request
@@ -27,6 +46,8 @@ JSON_DIR  = os.environ.get("LOISIRS_JSON_DIR", "Json")
 TODAY     = datetime.date.today().isoformat()
 FORCE     = "--force" in sys.argv
 NO_SITE   = "--no-site" in sys.argv      # skip official-site fetch if you want it faster
+FAIL_RATE_LIMIT = 0.10   # >10% failed Google calls aborts; >10% failed site fetches
+                         # discards the run's reachability signal
 
 PLACES_URL = "https://places.googleapis.com/v1/places:searchText"
 FIELD_MASK = ",".join([
@@ -175,7 +196,7 @@ def triangulate(cat, g, reg, site):
     return "OPERATIONAL", confidence, "; ".join(reasons)
 
 def priority(fr):
-    s,c=fr["status"],fr["confidence"]
+    s,c=fr.get("status"),fr.get("confidence")
     if s=="CLOSED":        return 0
     if s=="UNVERIFIED":    return 1
     if c=="medium":        return 2
@@ -184,35 +205,124 @@ def priority(fr):
     return 9
 
 
-def sweep_one(f):
-    name,commune,postal,cat=name_of(f),f.get("commune"),f.get("postal_code"),f.get("category")
-    try:    g=google_lookup(name,commune)
-    except Exception as e: g={"error":str(e),"status":"ERROR"}
-    reg = registry_lookup(name,commune,postal)
+def observe_one(f):
+    """Phase 1 — network only. Gathers raw observations for one fiche;
+    nothing is classified or written until the whole run has passed the
+    mass-failure circuit breaker.
+
+    On a Google failure we learn NOTHING about the place, so we skip the
+    other sources too: the fiche's update will be a pure no-op merge."""
+    name,commune,postal=name_of(f),f.get("commune"),f.get("postal_code")
+    try:
+        g=google_lookup(name,commune)          # dict, or None = API answered: no match
+    except Exception as e:
+        return {"google":None,"google_failed":str(e),"registry":None,"site":None}
+    reg = registry_lookup(name,commune,postal) # errors internally → {"state":"ERROR"}
     site= {"reachable":None,"price_candidates":[]} if NO_SITE else site_check(f.get("official_site_url"))
+    return {"google":g,"google_failed":None,"registry":reg,"site":site}
+
+
+def build_freshness(f, prev, obs, site_run_broken):
+    """Phase 2 — classify one fiche's observations into its freshness block.
+
+    ERROR ≠ DATA: CHECK_FAILED keeps every previous value. Only an answered
+    API (OK / CONFIRMED_ABSENT) may change content-bearing fields."""
+    prev = prev or {}
+
+    # -- Google failed → the whole update is a no-op merge -------------------
+    if obs["google_failed"] is not None:
+        fr = dict(prev)
+        fr["last_check"] = TODAY
+        fr["check_failed"] = f"google: {obs['google_failed']}"
+        fr["outcome"] = "CHECK_FAILED"
+        return fr
+
+    g, reg, site = obs["google"], obs["registry"], obs["site"]
+    cat = f.get("category")
+
+    # -- registry: an errored lookup keeps the previous registry block -------
+    registry_failed = (reg or {}).get("state") == "ERROR"
+    if registry_failed:
+        registry_block = dict(prev.get("registry") or
+                              {"state": None, "siret": None, "closure_date": None})
+        reg_for_triangulation = {"state": registry_block.get("state"),
+                                 "closure_date": registry_block.get("closure_date")}
+    else:
+        registry_block = {"state": reg.get("state"), "siret": reg.get("siret"),
+                          "closure_date": reg.get("closure_date")}
+        reg_for_triangulation = reg
+
+    # -- reachability: observation now, verdict only on a 2nd bad day --------
+    raw_reach = (site or {}).get("reachable")
+    prev_reach = prev.get("site_reachable")
+    prev_unreach_on = prev.get("site_last_unreachable")
+    site_check_failed = None
+    unreach_confirmed = False
+    last_unreach = None
+    if raw_reach is False and site_run_broken:
+        # >10% of this run's fetches failed: the checker is broken, not the web
+        reach = prev_reach
+        last_unreach = prev_unreach_on
+        unreach_confirmed = bool(prev.get("site_unreachable_confirmed"))
+        site_check_failed = ("run-level breaker: >10% of site fetches failed "
+                             "this run — observation discarded")
+    elif raw_reach is False:
+        last_unreach = TODAY
+        if prev_unreach_on and prev_unreach_on < TODAY:
+            reach = False               # second failed fetch on a later day
+            unreach_confirmed = True
+        else:
+            reach = prev_reach          # first sighting: remember it, don't flag
+    elif raw_reach is True:
+        reach = True
+    else:                               # no URL / --no-site: keep what we knew
+        reach = prev_reach
+        last_unreach = prev_unreach_on
+        unreach_confirmed = bool(prev.get("site_unreachable_confirmed"))
 
     drift=None
     if g and g.get("lat") is not None and f.get("latitude") is not None:
         drift=haversine_m(float(f["latitude"]),float(f["longitude"]),float(g["lat"]),float(g["lng"]))
 
-    status,conf,reason = triangulate(cat,g,reg,site)
+    status,conf,reason = triangulate(cat, g, reg_for_triangulation,
+                                     {"reachable": reach})
+    outcome = ("CONFIRMED_ABSENT"
+               if (g is None or (g or {}).get("status") == "CLOSED_PERMANENTLY")
+               else "OK")
     g=g or {}
     fr={
         "checked":TODAY,"status":status,"confidence":conf,"flag_reason":reason,
+        "outcome":outcome,
         "google_match":g.get("match"),"place_id":g.get("place_id"),
         "google_status":g.get("status"),
         "website":stamp(g.get("website"),"google") if g.get("website") else None,
         "phone":stamp(g.get("phone"),"google") if g.get("phone") else None,
         "hours":stamp(g.get("hours"),"google") if g.get("hours") else None,
         "rating":g.get("rating"),"rating_count":g.get("rating_count"),
-        "registry":{"state":reg.get("state"),"siret":reg.get("siret"),
-                    "closure_date":reg.get("closure_date")},
-        "site_reachable":site.get("reachable"),
-        "price_candidates":site.get("price_candidates"),   # NOT published — review only
+        "registry":registry_block,
+        "site_reachable":reach,
+        "price_candidates":(site or {}).get("price_candidates") or [],  # NOT published — review only
         "gps_drift_m":drift,
-        "needs_price_review": bool(site.get("price_candidates")) and not f.get("price_from"),
+        "needs_price_review": bool((site or {}).get("price_candidates")) and not f.get("price_from"),
     }
+    if last_unreach:
+        fr["site_last_unreachable"] = last_unreach
+    if unreach_confirmed:
+        fr["site_unreachable_confirmed"] = True
+    if registry_failed:
+        fr["registry_check_failed"] = (reg or {}).get("detail") or "registry lookup error"
+    if site_check_failed:
+        fr["site_check_failed"] = site_check_failed
     return fr
+
+
+def abort_run(failed, attempted):
+    """Mass-failure circuit breaker tripped: nothing was written."""
+    print(f"\n🔴 CIRCUIT BREAKER: {failed}/{attempted} Google calls failed "
+          f"(> {int(FAIL_RATE_LIMIT*100)}% limit).")
+    print("A mass failure is a fact about the checker (dead key, quota, network),")
+    print("not about the venues. ZERO fiches were written. Fix the key and rerun.")
+    sys.exit(2)
 
 
 def main():
@@ -221,21 +331,63 @@ def main():
     if not files: sys.exit(f"ERROR: no .json in {JSON_DIR}/")
     print(f"Sweeping {len(files)} fiches across 3 sources...\n")
 
-    rows=[]
+    # Phase 1 — observe everything IN MEMORY; abort before any write if the
+    # Google failure rate trips the breaker.
+    fail_budget=max(1,int(len(files)*FAIL_RATE_LIMIT))
+    g_failed=attempted=0
+    staged=[]   # (path, fiche, prev, obs)  obs=None → skipped (already checked today)
     for i,path in enumerate(files,1):
         f=json.load(open(path,encoding="utf-8"))
         prev=f.get("freshness")
         if prev and prev.get("checked")==TODAY and not FORCE:
+            staged.append((path,f,prev,None))
+            print(f"[{i:>3}/{len(files)}] {f.get('slug',''):<42} skip")
+            continue
+        attempted+=1
+        obs=observe_one(f)
+        if obs["google_failed"] is not None:
+            g_failed+=1
+            print(f"[{i:>3}/{len(files)}] {f.get('slug',''):<42} 🔌 CHECK_FAILED ({obs['google_failed']})")
+            if g_failed>fail_budget:
+                abort_run(g_failed,attempted)
+        else:
+            print(f"[{i:>3}/{len(files)}] {f.get('slug',''):<42} observed")
+        staged.append((path,f,prev,obs))
+        time.sleep(0.2)
+    if attempted and g_failed/attempted>FAIL_RATE_LIMIT:
+        abort_run(g_failed,attempted)
+
+    # Run-level reachability breaker: if >10% of the fetches failed, the
+    # checker (or the runner's network) is broken — 42 venues don't go dark
+    # the same morning. Discard the whole run's reachability signal.
+    site_obs=[o for _,_,_,o in staged
+              if o and o["google_failed"] is None and (o["site"] or {}).get("reachable") is not None]
+    site_down=sum(1 for o in site_obs if o["site"]["reachable"] is False)
+    site_run_broken=bool(site_obs) and site_down/len(site_obs)>FAIL_RATE_LIMIT
+    if site_run_broken:
+        print(f"\n⚠️  reachability breaker: {site_down}/{len(site_obs)} site fetches failed "
+              "— discarding this run's reachability observations (checker failure, not the web)")
+
+    # Phase 2 — breaker passed: classify + write.
+    rows=[]
+    for path,f,prev,obs in staged:
+        if obs is None:
             fr=prev
         else:
-            fr=sweep_one(f)
+            fr=build_freshness(f,prev,obs,site_run_broken)
             f["freshness"]=fr
-            json.dump(f,open(path,"w",encoding="utf-8"),ensure_ascii=False,indent=2)
-            time.sleep(0.2)
+            with open(path,"w",encoding="utf-8") as fp:
+                json.dump(f,fp,ensure_ascii=False,indent=2)
+                fp.write("\n")   # repo convention: fiches end with a newline
         rows.append((f.get("slug"),name_of(f),f.get("commune"),f.get("official_site_url"),fr))
-        tag={"CLOSED":"❌ CLOSED","UNVERIFIED":"⚠️  no match"}.get(fr["status"],fr["confidence"])
-        print(f"[{i:>3}/{len(files)}] {f.get('slug',''):<42} {tag}"
-              + (f"  ← {fr['flag_reason']}" if fr['flag_reason'] else ""))
+        tag={"CLOSED":"❌ CLOSED","UNVERIFIED":"⚠️  no match"}.get(fr.get("status"),fr.get("confidence"))
+        if fr.get("outcome")=="CHECK_FAILED": tag="🔌 kept previous data"
+        print(f"[   ] {f.get('slug',''):<42} {tag}"
+              + (f"  ← {fr.get('flag_reason')}" if fr.get('flag_reason') else ""))
+    if g_failed:
+        print(f"\n⚠️  {g_failed}/{attempted} Google checks failed (under the breaker limit): "
+              "those fiches kept their WHOLE previous freshness block, "
+              "only last_check/check_failed were stamped.")
 
     rows.sort(key=lambda r:(priority(r[4]),r[0]))
 
@@ -244,8 +396,8 @@ def main():
         w.writerow(["slug","status","confidence","reason","google_match","registry",
                     "site_reachable","website","phone","rating","gps_drift_m","needs_price_review"])
         for slug,name,com,site_url,fr in rows:
-            w.writerow([slug,fr["status"],fr["confidence"],fr["flag_reason"],fr.get("google_match"),
-                        fr["registry"]["state"],fr.get("site_reachable"),
+            w.writerow([slug,fr.get("status"),fr.get("confidence"),fr.get("flag_reason"),fr.get("google_match"),
+                        (fr.get("registry") or {}).get("state"),fr.get("site_reachable"),
                         (fr.get("website") or {}).get("value") if fr.get("website") else "",
                         (fr.get("phone") or {}).get("value") if fr.get("phone") else "",
                         fr.get("rating"),fr.get("gps_drift_m"),fr.get("needs_price_review")])
@@ -254,14 +406,14 @@ def main():
     with open("email_queue.csv","w",newline="",encoding="utf-8") as fp:
         w=csv.writer(fp); w.writerow(["slug","name","commune","status","reason","website","phone"])
         for slug,name,com,site_url,fr in rows:
-            if fr["status"] in ("CLOSED","UNVERIFIED") or fr["confidence"]=="medium":
-                w.writerow([slug,name,com,fr["status"],fr["flag_reason"],
+            if fr.get("status") in ("CLOSED","UNVERIFIED") or fr.get("confidence")=="medium":
+                w.writerow([slug,name,com,fr.get("status"),fr.get("flag_reason"),
                             (fr.get("website") or {}).get("value") if fr.get("website") else (site_url or ""),
                             (fr.get("phone") or {}).get("value") if fr.get("phone") else ""])
 
-    closed=sum(1 for *_,fr in rows if fr["status"]=="CLOSED")
-    unver =sum(1 for *_,fr in rows if fr["status"]=="UNVERIFIED")
-    med   =sum(1 for *_,fr in rows if fr["confidence"]=="medium")
+    closed=sum(1 for *_,fr in rows if fr.get("status")=="CLOSED")
+    unver =sum(1 for *_,fr in rows if fr.get("status")=="UNVERIFIED")
+    med   =sum(1 for *_,fr in rows if fr.get("confidence")=="medium")
     price =sum(1 for *_,fr in rows if fr.get("needs_price_review"))
     print(f"\nDONE. {len(rows)} fiches.")
     print(f"  ❌ {closed} closed   ⚠️ {unver} unverified   ⚠️ {med} need owner confirm")

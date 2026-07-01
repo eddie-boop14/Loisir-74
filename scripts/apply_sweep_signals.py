@@ -38,6 +38,19 @@ JSON_DIR = ROOT / "Json"
 TODAY = datetime.date.today().isoformat()
 
 
+def check_is_valid(block):
+    """ERROR ≠ DATA (HANDOFF-24): a CHECK_FAILED result — or a legacy block
+    written by a failed call (status ERROR) — is a fact about the checker,
+    not the venue. It carries NO signal: no demotion, no flag."""
+    if not block:
+        return False
+    if block.get("check_failed") or block.get("outcome") == "CHECK_FAILED":
+        return False
+    if block.get("status") == "ERROR":
+        return False
+    return True
+
+
 def signal_for(d):
     """Return ('demote' | 'flag' | None, reason_str).
 
@@ -51,7 +64,10 @@ def signal_for(d):
         - freshness.status == "CLOSED" with confidence != "high"
         - google_check.status in (CLOSED_PERMANENTLY, NOT_A_BUSINESS,
           CLOSED_TEMPORARILY)
-        - site_reachable is False (official URL dead)
+        - site unreachable CONFIRMED by two failed fetches on different
+          days (a single bad fetch is an observation, never a flag)
+    NEVER from a failed check (see check_is_valid): CHECK_FAILED blocks
+    are skipped entirely.
 
     Rationale: sentier-…-glieres is flagged Google "permanently closed"
     because Google doesn't classify hiking trails as businesses, not
@@ -61,6 +77,14 @@ def signal_for(d):
     """
     fr = d.get("freshness") or {}
     gc = d.get("google_check") or {}
+    # a freshness block whose google_status is ERROR was written from a
+    # failed call under the pre-HANDOFF-24 scripts — same discipline applies
+    fr_valid = check_is_valid(fr) and fr.get("google_status") != "ERROR"
+    gc_valid = check_is_valid(gc)
+    if not fr_valid:
+        fr = {}
+    if not gc_valid:
+        gc = {}
     fr_status = fr.get("status")
     gc_status = gc.get("status")
     confidence = fr.get("confidence")
@@ -77,9 +101,13 @@ def signal_for(d):
         return "flag", f"google_check: NOT_A_BUSINESS (checked {gc.get('checked', '?')}) — often a Google classifier quirk for trails/paths"
     if gc_status == "CLOSED_TEMPORARILY":
         return "flag", f"google_check: CLOSED_TEMPORARILY (checked {gc.get('checked', '?')}) — could be seasonal"
-    if fr.get("site_reachable") is False:
-        return "flag", f"freshness: official site not responding (checked {fr.get('checked', '?')})"
+    if fr.get("site_reachable") is False and fr.get("site_unreachable_confirmed"):
+        return "flag", (f"freshness: official site not responding, confirmed by a second "
+                        f"failed fetch on a later day (checked {fr.get('checked', '?')})")
     return None, None
+
+
+MASS_SIGNAL_LIMIT = 0.10  # >10% of fiches demoted+flagged in one run = broken checker
 
 
 def apply(args):
@@ -89,6 +117,11 @@ def apply(args):
     upgraded_count = 0
     paths = sorted(JSON_DIR.glob("*.json"))
 
+    # Phase 1 — collect every action IN MEMORY. Nothing is written until the
+    # run passes the mass-signal breaker: if >10% of the catalog throws
+    # negative signals on the same run, the checker is broken, not the world
+    # (2026-07-01: 42 same-day "site down" flags incl. Pathé Annecy).
+    to_write = []
     for jp in paths:
         d = json.loads(jp.read_text(encoding="utf-8"))
         slug = d.get("slug") or jp.stem
@@ -98,8 +131,21 @@ def apply(args):
         if action == "demote":
             if cur_status == "draft":
                 skipped.append((slug, reason)); continue
-            if args.dry_run:
-                demoted.append((slug, cur_status, reason)); continue
+            demoted.append((slug, cur_status, reason))
+            to_write.append((jp, d, reason))
+        elif action == "flag":
+            flagged.append((slug, reason))
+
+    if paths and (len(demoted) + len(flagged)) / len(paths) > MASS_SIGNAL_LIMIT:
+        print(f"\n🔴 MASS-SIGNAL BREAKER: {len(demoted)} demotions + {len(flagged)} flags "
+              f"across {len(paths)} fiches (> {int(MASS_SIGNAL_LIMIT*100)}% limit).")
+        print("That many same-run negative signals means the checkers are broken,")
+        print("not the venues. ZERO fiches were written. Investigate the sweep first.")
+        sys.exit(2)
+
+    # Phase 2 — breaker passed: write the demotions.
+    if not args.dry_run:
+        for jp, d, reason in to_write:
             d["status"] = "draft"
             rl = d.setdefault("research_log", [])
             rl.append({
@@ -108,9 +154,6 @@ def apply(args):
                 "note": f"Demoted to draft. {reason}",
             })
             jp.write_text(json.dumps(d, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-            demoted.append((slug, cur_status, reason))
-        elif action == "flag":
-            flagged.append((slug, reason))
 
     return demoted, flagged, skipped, upgraded_count
 
@@ -201,16 +244,18 @@ def main():
         simulate_dead_venue(args.simulate_dead_venue)
 
     demoted, flagged, skipped, _ = apply(args)
-    write_report(demoted, flagged, skipped)
+    if not args.dry_run:
+        write_report(demoted, flagged, skipped)
 
     print(f"demoted to draft: {len(demoted)}  (was published or verified)")
     for slug, prev, reason in demoted:
         print(f"  - {slug}  [{prev}]  {reason}")
     print(f"flagged for review (kept published): {len(flagged)}")
     print(f"skipped (already draft): {len(skipped)}")
-    print(f"\nReport: reports/job8-sweep-demotions.md")
     if args.dry_run:
-        print("(dry-run — no JSON was written)")
+        print("(dry-run — no JSON and no report was written)")
+    else:
+        print(f"\nReport: reports/job8-sweep-demotions.md")
 
 
 if __name__ == "__main__":
