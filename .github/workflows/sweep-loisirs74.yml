@@ -13,11 +13,7 @@ name: Sweep loisirs74 (3 sources)
 #     they're gitignored locally; download from the run's Summary page)
 
 on:
-  workflow_dispatch:        # the manual "play" button
-  schedule:
-    - cron: "0 7 1 * *"     # 07:00 UTC on the 1st of every month
-                            # (1h offset from check-loisirs74.yml to avoid concurrent commit races)
-
+  workflow_dispatch:        # the manual "play" button 
 permissions:
   contents: write           # lets it commit the updated fiches back
 
