@@ -1,50 +1,58 @@
 # JOB 8 — Sweep signals → state machine
-Run at 2026-06-13. Source signals: `freshness` (sweep_loisirs74.py) + `google_check` (check_loisirs74.py).
+Run at 2026-07-01. Source signals: `freshness` (sweep_loisirs74.py) + `google_check` (check_loisirs74.py).
 
 ## Summary
 
 | action | count |
 |---|---|
 | demoted to draft (new) | 0 |
-| flagged for review (kept published) | 34 |
+| flagged for review (kept published) | 42 |
 | skipped (already draft) | 0 |
 
 ## Flagged for review (kept published — seasonal / temporary signals)
 
 | slug | reason |
 |---|---|
-| aquaparc-aqualis-cluses | freshness: official site not responding (checked 2026-06-05) |
-| aquaparc-thonon-piscine-olympique-thonon | freshness: official site not responding (checked 2026-06-05) |
-| aquariaz | google_check: CLOSED_TEMPORARILY (checked 2026-06-04) — could be seasonal |
-| baignade-biotope-combloux | google_check: CLOSED_TEMPORARILY (checked 2026-06-04) — could be seasonal |
-| cascade-aventure | google_check: CLOSED_TEMPORARILY (checked 2026-06-04) — could be seasonal |
-| casino-evian-resort-evian | google_check: CLOSED_TEMPORARILY (checked 2026-06-04) — could be seasonal |
-| chateau-beauregard-saint-jeoire | freshness: CLOSED (medium confidence, checked 2026-06-05); reason=Google marks permanently closed (registry didn't confirm) |
-| chateau-bellegarde-thonon | freshness: official site not responding (checked 2026-06-05) |
-| chiens-de-traineau-a-ton-etoile-la-chapelle-dabondance | google_check: CLOSED_TEMPORARILY (checked 2026-06-04) — could be seasonal |
-| domaine-du-tornet | freshness: official site not responding (checked 2026-06-05) |
-| fonderie-paccard-sevrier | freshness: official site not responding (checked 2026-06-05) |
-| grp-tour-pays-mont-blanc-sallanches | freshness: official site not responding (checked 2026-06-05) |
-| indiana-ventures-saint-paul-en-chablais | google_check: CLOSED_TEMPORARILY (checked 2026-06-04) — could be seasonal |
-| maison-de-barberine-vallorcine | google_check: CLOSED_TEMPORARILY (checked 2026-06-04) — could be seasonal |
-| maison-de-la-memoire-janny-couttet-chamonix | google_check: CLOSED_TEMPORARILY (checked 2026-06-04) — could be seasonal |
-| musee-cinema-animation-annecy | google_check: CLOSED_TEMPORARILY (checked 2026-06-04) — could be seasonal |
-| musee-montagnard-les-houches | google_check: CLOSED_TEMPORARILY (checked 2026-06-04) — could be seasonal |
-| musee-prehistoire-geologie-sciez | google_check: CLOSED_TEMPORARILY (checked 2026-06-04) — could be seasonal |
-| palais-lumiere | google_check: CLOSED_TEMPORARILY (checked 2026-06-04) — could be seasonal |
-| passy-accro-lac | google_check: CLOSED_TEMPORARILY (checked 2026-06-04) — could be seasonal |
-| patinoire-jean-regis-annecy | google_check: CLOSED_TEMPORARILY (checked 2026-06-04) — could be seasonal |
-| plage-d-amphion-publier | freshness: official site not responding (checked 2026-06-05) |
-| plage-de-saint-gingolph | freshness: official site not responding (checked 2026-06-05) |
-| sentier-bout-du-lac-doussard | freshness: official site not responding (checked 2026-06-05) |
-| sentier-cascades-sixt-fer-a-cheval | freshness: official site not responding (checked 2026-06-05) |
-| sentier-decouverte-plateau-glieres-thorens-glieres | freshness: CLOSED (medium confidence, checked 2026-06-05); reason=Google marks permanently closed (registry didn't confirm) |
-| telecabine-du-jaillet | freshness: official site not responding (checked 2026-06-05) |
-| telecabine-panoramic-mont-blanc | freshness: official site not responding (checked 2026-06-05) |
-| telecabine-pleney-morzine | google_check: CLOSED_TEMPORARILY (checked 2026-06-04) — could be seasonal |
-| tour-des-langues-thonon | freshness: official site not responding (checked 2026-06-05) |
-| tour-du-mont-blanc-les-houches | freshness: official site not responding (checked 2026-06-05) |
-| train-du-montenvers-mer-de-glace | freshness: official site not responding (checked 2026-06-05) |
-| tyrolienne-fantasticable-chatel | google_check: CLOSED_TEMPORARILY (checked 2026-06-04) — could be seasonal |
-| voile-cercle-thonon-thonon | freshness: official site not responding (checked 2026-06-05) |
+| ancien-remparts-chateau-lullin-lullin | freshness: official site not responding (checked 2026-07-01) |
+| aquaparc-thonon-piscine-olympique-thonon | freshness: official site not responding (checked 2026-07-01) |
+| base-nautique-evian-bains | freshness: official site not responding (checked 2026-07-01) |
+| base-nautique-sciez-sciez | freshness: official site not responding (checked 2026-07-01) |
+| boucle-pedestre-detective-nature-jonzier-epagny | freshness: official site not responding (checked 2026-07-01) |
+| casino-evian-resort-evian | freshness: official site not responding (checked 2026-07-01) |
+| centre-aquatique-cluses | freshness: official site not responding (checked 2026-07-01) |
+| cinema-le-france-thonon | freshness: official site not responding (checked 2026-07-01) |
+| cinema-pathe-annecy | freshness: official site not responding (checked 2026-07-01) |
+| cinema-pathe-archamps-imax | freshness: official site not responding (checked 2026-07-01) |
+| col-de-la-colombiere | freshness: official site not responding (checked 2026-07-01) |
+| ecomusee-bois-foret-thones | freshness: official site not responding (checked 2026-07-01) |
+| ecomusee-peche-et-du-lac-thonon | freshness: official site not responding (checked 2026-07-01) |
+| espace-tairraz-musee-des-cristaux-chamonix | freshness: official site not responding (checked 2026-07-01) |
+| full-land-annecy | freshness: official site not responding (checked 2026-07-01) |
+| jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy | freshness: official site not responding (checked 2026-07-01) |
+| la-foret-enchantee-sillingy | freshness: official site not responding (checked 2026-07-01) |
+| lac-des-dronieres | freshness: official site not responding (checked 2026-07-01) |
+| laser-game-evolution-ville-la-grand | freshness: official site not responding (checked 2026-07-01) |
+| maison-de-la-memoire-janny-couttet-chamonix | freshness: official site not responding (checked 2026-07-01) |
+| musee-du-chablais-thonon-les-bains | freshness: official site not responding (checked 2026-07-01) |
+| musee-montagnard-les-houches | freshness: official site not responding (checked 2026-07-01) |
+| musee-nature-gruffy | freshness: official site not responding (checked 2026-07-01) |
+| paintball-zone-74-perrignier | freshness: official site not responding (checked 2026-07-01) |
+| palais-lumiere | freshness: official site not responding (checked 2026-07-01) |
+| parc-jean-beauquis-ambilly | freshness: official site not responding (checked 2026-07-01) |
+| patinoire-la-clusaz | freshness: official site not responding (checked 2026-07-01) |
+| plage-d-amphion-publier | freshness: official site not responding (checked 2026-07-01) |
+| plage-d-evian-centre-nautique | freshness: official site not responding (checked 2026-07-01) |
+| plage-de-duingt | freshness: official site not responding (checked 2026-07-01) |
+| plage-de-margencel-sechex | freshness: official site not responding (checked 2026-07-01) |
+| plage-de-saint-disdille | freshness: official site not responding (checked 2026-07-01) |
+| plage-de-saint-gingolph | freshness: official site not responding (checked 2026-07-01) |
+| plage-municipale-thonon | freshness: official site not responding (checked 2026-07-01) |
+| sentier-cascades-sixt-fer-a-cheval | freshness: official site not responding (checked 2026-07-01) |
+| sentier-pedestre-eterlou-chatel | freshness: official site not responding (checked 2026-07-01) |
+| sentier-pedestre-sonore-sur-traces-contrebandiers-circuit-familles-chatel | freshness: official site not responding (checked 2026-07-01) |
+| simulateur-warmup-academy-margencel | freshness: official site not responding (checked 2026-07-01) |
+| telecabine-du-jaillet | freshness: official site not responding (checked 2026-07-01) |
+| telecabine-panoramic-mont-blanc | freshness: official site not responding (checked 2026-07-01) |
+| train-du-montenvers-mer-de-glace | freshness: official site not responding (checked 2026-07-01) |
+| tyrolienne-fantasticable-chatel | freshness: official site not responding (checked 2026-07-01) |
 
