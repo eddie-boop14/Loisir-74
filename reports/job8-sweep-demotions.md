@@ -1,4 +1,20 @@
 # JOB 8 — Sweep signals → state machine
+
+> ## ⚠️ INVALID RUN — do not act on the 42 flags below
+>
+> The 2026-07-01 run executed after the Google Cloud free trial expired
+> (billing email 2026-06-26): the Places API key was dead, **every Google call
+> errored**, and the checker overwrote verified data with the error state
+> (commits `ad73fc07` + `8ac6ba1d`, reverted by HANDOFF-24 Job 1). The 42
+> "official site not responding" flags all landed on the **same day** —
+> including Pathé Annecy, Casino Evian and the Palais Lumière — which means the
+> reachability checker failed, not the venues. **No demotion or flag from this
+> run is actionable.** The signals were produced by a broken checker, and the
+> underlying fiche data has been restored to its pre-run verified state.
+>
+> The scripts now carry the error≠data rule and a mass-failure circuit breaker
+> (HANDOFF-24 Job 2) so a dead API key can never rewrite fiches again.
+
 Run at 2026-07-01. Source signals: `freshness` (sweep_loisirs74.py) + `google_check` (check_loisirs74.py).
 
 ## Summary
