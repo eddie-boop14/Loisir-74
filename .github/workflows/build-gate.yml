@@ -58,7 +58,11 @@ jobs:
         run: python3 scripts/gate_no_duplicate_lieux.py
 
       - name: No-dead-slug-refs gate (indexes point only at live fiches)
-        run: python3 scripts/gate_no_dead_slug_refs.py
+        # covers data/*_index.json top-level keys AND nested slug values
+        # (_meta included — the HANDOFF-15 hiding spot), seeded-proof tested
+        run: |
+          python3 tests/test_gate_no_dead_slug_refs.py
+          python3 scripts/gate_no_dead_slug_refs.py
 
       - name: i18n label vocabulary gate (no half-shipped language)
         run: python3 scripts/gate_i18n_labels.py
