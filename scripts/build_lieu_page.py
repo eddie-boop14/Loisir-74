@@ -34,6 +34,25 @@ REPO = Path(__file__).resolve().parent.parent
 BASE_URL = "https://loisirs74.fr"
 
 
+# Authored inline HTML allowed in prose fields (HANDOFF-23). A string carrying
+# one of these tags is trusted, repo-authored content and is emitted RAW; plain
+# text keeps the escaping path (so a stray '<' or '&' in ordinary prose stays
+# safe and page bytes stay stable).
+AUTHORED_TAG_RE = re.compile(r"</?(p|ul|ol|li|strong|em|a|br|b|i)\b", re.I)
+
+
+def emit_prose(s):
+    """Raw-emit for authored-HTML prose fields (when_to_visit, events,
+    how_to_get_there, practical_info, activities). Escaping this content
+    printed literal '<strong>' on live pages; translations preserve the
+    source's tag structure (HANDOFF-25 validators), so they flow through
+    the same path."""
+    if s is None:
+        return ""
+    s = str(s)
+    return s if AUTHORED_TAG_RE.search(s) else esc(s)
+
+
 def esc(s):
     """HTML-escape, treating None as empty."""
     if s is None:
@@ -570,10 +589,10 @@ def activities_block(activities):
             f'<div class="flip-inner">'
             f'<div class="flip-front">'
             f'<h4>{esc(title)}{tag_html}</h4>'
-            f'<p class="preview">{esc(desc)}</p>'
+            f'<p class="preview">{emit_prose(desc)}</p>'
             f'{flip_hint()}'
             f'</div>'
-            f'<div class="flip-back"><h4>{esc(title)}</h4><p>{esc(desc)}</p></div>'
+            f'<div class="flip-back"><h4>{esc(title)}</h4><p>{emit_prose(desc)}</p></div>'
             f'</div></button>'
         )
     return (
@@ -607,7 +626,7 @@ def practical_block(practical, name, commune):
             )
         rows.append(
             f'<div class="info-row"><div class="k">{esc(k)}</div>'
-            f'<div class="v"><span>{esc(v)}{extra}</span></div></div>'
+            f'<div class="v"><span>{emit_prose(v)}{extra}</span></div></div>'
         )
     return (
         '<section class="block"><div class="wrap">'
@@ -725,7 +744,7 @@ def how_to_block(how, name, commune, lat=None, lng=None, slug=None, place_id=Non
             f'target="_blank" rel="noopener">'
             f'<div class="icon">{icon}</div>'
             f'<h3>{esc(label)}</h3>'
-            f'<p>{esc(text)}</p>'
+            f'<p>{emit_prose(text)}</p>'
             f'<span class="open">{T("maps_open")} '
             '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
             'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
@@ -873,11 +892,11 @@ def when_to_visit_block(when, events):
         return ""
     inner = ""
     if when:
-        inner += f'<div class="reveal">{esc(when)}</div>'
+        inner += f'<div class="reveal">{emit_prose(when)}</div>'
     if events:
         inner += (
             '<div class="reveal" style="margin-top:1.25rem">'
-            f'<strong>{T("events_label")}&nbsp;:</strong> {esc(events)}</div>'
+            f'<strong>{T("events_label")}&nbsp;:</strong> {emit_prose(events)}</div>'
         )
     return (
         '<section class="block"><div class="wrap">'
