@@ -1,8 +1,17 @@
 name: Check loisirs74 (Google Maps)
 
 # ▶️  Run it: GitHub app/site → your repo → Actions tab → "Check loisirs74" → Run workflow
+#
+# ⚠️ MANUAL-ONLY — do not re-add a cron (HANDOFF-24 Job 3).
+# On 2026-07-01 the scheduled run executed with a dead Google key and
+# overwrote 397 fiches with the error state. A schedule may only return once:
+#   (a) Google Cloud billing is fixed (Eddie),
+#   (b) the error≠data patches are merged (check_loisirs74.py carries the
+#       CHECK_FAILED rule + mass-failure circuit breaker),
+#   (c) one supervised manual run has passed clean.
+# Even then: at most monthly, with the circuit breaker live.
 on:
-  workflow_dispatch:        # the manual "play" button     # bonus: auto-run 06:00 on the 1st of every month
+  workflow_dispatch:        # the manual "play" button
 
 permissions:
   contents: write           # lets it commit report.csv + updated fiches back
