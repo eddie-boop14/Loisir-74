@@ -95,15 +95,44 @@ def test_length_ratio_and_empty_strings_rejected():
     assert any("empty translation" in v for v in m.validate(SRC, out, FROZEN))
 
 
+# -------------------------------------------------------------- custom_id spec
+
+def test_custom_id_meets_api_spec_for_every_real_slug():
+    """Run #2 regression: '<slug>:<lang>' 400'd on the colon AND on 73-char
+    slugs. Every generated id must match ^[a-zA-Z0-9_-]{1,64}$ and stay unique
+    even when truncation eats the distinguishing suffix."""
+    m = _load()
+    long_a = "musee-patrimonial-pays-thones-fondateurs-francois-et-lucien-cochat-thones"
+    long_b = long_a[:-6] + "annecy"          # same 64-char prefix after truncation
+    slugs = ["abbaye-d-aulps", long_a, long_b]
+    ids = [m.make_custom_id("pt", i, s) for i, s in enumerate(slugs)]
+    for cid in ids:
+        assert API_CUSTOM_ID_RE.match(cid), cid
+    assert len(set(ids)) == len(ids), "index must keep truncated ids unique"
+
+
 # --------------------------------------------------------- end-to-end w/ mock
 
+import re as _re
+API_CUSTOM_ID_RE = _re.compile(r"^[a-zA-Z0-9_-]{1,64}$")   # the real API constraint
+
+
 class FakeBatches:
-    """Scripted batch API: each create() pops the next results dict."""
+    """Scripted batch API: each create() pops the next results dict (keyed by
+    SLUG). Enforces the real custom_id constraint — the original fake was too
+    permissive and let the '<slug>:<lang>' 400 (run #2) escape to production."""
     def __init__(self, rounds):
-        self.rounds = rounds       # list of {custom_id: ('ok', text)|('error', why)}
+        self.rounds = rounds       # list of {slug: ('ok', text)|('error', why)}
         self.created = []          # requests of each submitted batch
 
     def create(self, requests):
+        seen = set()
+        for r in requests:
+            cid = r["custom_id"]
+            assert API_CUSTOM_ID_RE.match(cid), \
+                f"API would 400: custom_id {cid!r} violates ^[a-zA-Z0-9_-]{{1,64}}$"
+            assert cid not in seen, f"duplicate custom_id {cid!r}"
+            seen.add(cid)
         self.created.append(requests)
         return type("B", (), {"id": f"batch_{len(self.created)}",
                               "processing_status": "in_progress"})()
@@ -115,7 +144,10 @@ class FakeBatches:
 
     def results(self, batch_id):
         idx = int(batch_id.rsplit("_", 1)[1]) - 1
-        for cid, (kind, payload) in self.rounds[idx].items():
+        for req in self.created[idx]:
+            cid = req["custom_id"]
+            slug = cid.split("-", 2)[2]          # "<lang>-<idx>-<slug>" (untruncated in tests)
+            kind, payload = self.rounds[idx][slug]
             if kind == "ok":
                 blk = type("T", (), {"type": "text", "text": payload})()
                 msg = type("M", (), {"content": [blk]})()
@@ -153,13 +185,13 @@ def test_seeded_bad_result_retried_once_then_logged():
         bad = json.dumps({"meta_title": "tylko tytuł"}, ensure_ascii=False)  # parity fail
         rounds = [
             {   # round 1: one good, two seeded-bad
-                "good-one:pl": ("ok", good),
-                "bad-then-good:pl": ("ok", bad),
-                "bad-twice:pl": ("ok", bad),
+                "good-one": ("ok", good),
+                "bad-then-good": ("ok", bad),
+                "bad-twice": ("ok", bad),
             },
             {   # retry round: one recovers, one fails again
-                "bad-then-good:pl": ("ok", good),
-                "bad-twice:pl": ("ok", bad),
+                "bad-then-good": ("ok", good),
+                "bad-twice": ("ok", bad),
             },
         ]
         client = FakeClient(rounds)
@@ -169,8 +201,8 @@ def test_seeded_bad_result_retried_once_then_logged():
 
         batches = client.messages.batches
         assert len(batches.created) == 2, "exactly one retry batch"
-        assert [r["custom_id"] for r in batches.created[1]] == \
-            ["bad-then-good:pl", "bad-twice:pl"]
+        retry_slugs = sorted(r["custom_id"].split("-", 2)[2] for r in batches.created[1])
+        assert retry_slugs == ["bad-then-good", "bad-twice"]
 
         d = json.loads((jd / "good-one.json").read_text())
         assert d["i18n"]["pl"]["meta_title"].startswith("Abbaye d'Aulps")
