@@ -86,6 +86,14 @@ jobs:
         # after build_all so the homepages have been patched with nearme.js
         run: python3 scripts/gate_geolocation_live.py
 
+      - name: No-escaped-tags gate (authored prose never renders as &lt;tags&gt;)
+        # after build_all so pages are freshly rendered. HANDOFF-23: raw-emit
+        # for authored-HTML prose fields; this keeps every current AND future
+        # (batch-translated) language off the escaping path.
+        run: |
+          python3 tests/test_gate_no_escaped_tags.py
+          python3 scripts/gate_no_escaped_tags.py
+
       - name: Intent-hub registry gate (≥3 members, 6 locales, schema)
         # after build_all so the hub pages have been rendered
         run: python3 scripts/gate_intent_hubs.py
