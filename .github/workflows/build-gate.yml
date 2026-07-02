@@ -83,6 +83,11 @@ jobs:
       - name: i18n label vocabulary gate (no half-shipped language)
         run: python3 scripts/gate_i18n_labels.py
 
+      - name: Duck-quack coverage gate (every published lang quacks natively)
+        # HANDOFF-29: pl/pt/cs published while missing from duck.js's QUACK
+        # map → silent 'Coin coin' fallback. Roster vs map, red on any gap.
+        run: python3 scripts/gate_duck_quacks.py
+
       - name: Multi-hub membership gate (valid hubs[], no dilution)
         run: python3 scripts/gate_hubs_membership.py
 

@@ -1,368 +1,369 @@
-# Protected placements manifest — HANDOFF-28 attestation
+# Protected placements manifest — HANDOFF-29 attestation
 
-Generated 2026-07-02 on branch claude/pt-prose-batch (pre-batch baseline: origin/main @ 363af7f3).
+Generated 2026-07-02 on branch claude/close-pt (baseline: origin/main @ 804e88ff).
 
-Domains watched: cheznousalaplage.com, chaletdutornet.com. Pages carrying either: 358.
+Domains watched: cheznousalaplage.com, chaletdutornet.com. Pages carrying either: 359.
 
-**Attestation:** every pre-existing page carrying a protected domain is byte-identical vs pre-batch main. The pt tree (rewritten by the rich render) carries the domains ONLY as the venues' own official-site links — directly on domaine-du-tornet / chez-nous-a-la-plage-adjacent venues or via the related-carousel site button — exactly as the live six languages do. Protected partner PLACEMENT cards are excluded from the pt render (include_partners=False): their byte-faithful snapshot contract covers the six live languages only.
+**Attestation:** every page outside the pt tree carrying a protected domain is byte-identical vs main. pt pages (rewritten by the HANDOFF-29 close: card excerpts + link fixes) carry the domains only as the venues' own official-site links, directly or via the related carousel — never as placement cards (include_partners=False stands).
 
 | page | state |
 |---|---|
-| acro-aventures-talloires.html | byte-identical vs pre-batch main |
-| ar/domaine-du-tornet.html | byte-identical vs pre-batch main |
-| arcade-art-of-pinball-poisy.html | byte-identical vs pre-batch main |
-| atelier-poterie-chez-el-annecy.html | byte-identical vs pre-batch main |
-| bar-a-jeux-youri-bar-cran-gevrier.html | byte-identical vs pre-batch main |
-| bases-de-loisirs/index.html | byte-identical vs pre-batch main |
-| bureau-des-guides-annecy.html | byte-identical vs pre-batch main |
-| canyoning-neo-canyon.html | byte-identical vs pre-batch main |
-| canyoning-yaute-canyon.html | byte-identical vs pre-batch main |
-| chateau-clermont-genevois.html | byte-identical vs pre-batch main |
-| criq-parc.html | byte-identical vs pre-batch main |
-| cs/domaine-du-tornet.html | byte-identical vs pre-batch main |
-| de/acro-aventures-talloires.html | byte-identical vs pre-batch main |
-| de/arcade-art-of-pinball-poisy.html | byte-identical vs pre-batch main |
-| de/atelier-poterie-chez-el-annecy.html | byte-identical vs pre-batch main |
-| de/bar-a-jeux-youri-bar-cran-gevrier.html | byte-identical vs pre-batch main |
-| de/bureau-des-guides-annecy.html | byte-identical vs pre-batch main |
-| de/canyoning-neo-canyon.html | byte-identical vs pre-batch main |
-| de/canyoning-yaute-canyon.html | byte-identical vs pre-batch main |
-| de/chateau-clermont-genevois.html | byte-identical vs pre-batch main |
-| de/criq-parc.html | byte-identical vs pre-batch main |
-| de/domaine-du-tornet.html | byte-identical vs pre-batch main |
-| de/ereel-annecy-sillingy.html | byte-identical vs pre-batch main |
-| de/escalade-ablok-argonay.html | byte-identical vs pre-batch main |
-| de/escalade-atome-annecy.html | byte-identical vs pre-batch main |
-| de/escalade-climb-up-annecy.html | byte-identical vs pre-batch main |
-| de/escalade-cortigrimpe-metz-tessy.html | byte-identical vs pre-batch main |
-| de/escalade-la-crique-annecy.html | byte-identical vs pre-batch main |
-| de/escalade-space-bloc-sillingy.html | byte-identical vs pre-batch main |
-| de/escape-game-atelier-des-enigmes-annecy.html | byte-identical vs pre-batch main |
-| de/escape-game-break-out-sevrier.html | byte-identical vs pre-batch main |
-| de/escape-game-la-grande-evasion-annecy.html | byte-identical vs pre-batch main |
-| de/escape-game-mysteres-du-lac-annecy.html | byte-identical vs pre-batch main |
-| de/freizeitparks/index.html | byte-identical vs pre-batch main |
-| de/full-land-annecy.html | byte-identical vs pre-batch main |
-| de/gorges-du-fier.html | byte-identical vs pre-batch main |
-| de/grp-tour-lac-annecy-annecy.html | byte-identical vs pre-batch main |
-| de/jardin-les-jardins-secrets-vaulx.html | byte-identical vs pre-batch main |
-| de/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy.html | byte-identical vs pre-batch main |
-| de/k2-parapente-doussard.html | byte-identical vs pre-batch main |
-| de/la-foret-enchantee-sillingy.html | byte-identical vs pre-batch main |
-| de/la-turbine-sciences-cran-gevrier.html | byte-identical vs pre-batch main |
-| de/laser-game-lasermaxx-sillingy.html | byte-identical vs pre-batch main |
-| de/marais-de-poisy.html | byte-identical vs pre-batch main |
-| de/montgolfiere-annecy.html | byte-identical vs pre-batch main |
-| de/parc-animalier-grande-jeanne-annecy.html | byte-identical vs pre-batch main |
-| de/parc-de-peche-domaine-du-moulin-authier.html | byte-identical vs pre-batch main |
-| de/parc-des-dronieres.html | byte-identical vs pre-batch main |
-| de/plage-albigny.html | byte-identical vs pre-batch main |
-| de/plage-d-angon-talloires.html | byte-identical vs pre-batch main |
-| de/plage-de-doussard.html | byte-identical vs pre-batch main |
-| de/plage-de-duingt.html | byte-identical vs pre-batch main |
-| de/plage-de-la-brune-veyrier.html | byte-identical vs pre-batch main |
-| de/plage-de-menthon-saint-bernard.html | byte-identical vs pre-batch main |
-| de/plage-de-saint-jorioz.html | byte-identical vs pre-batch main |
-| de/plage-de-sevrier.html | byte-identical vs pre-batch main |
-| de/plage-de-talloires.html | byte-identical vs pre-batch main |
-| de/plage-des-marquisats.html | byte-identical vs pre-batch main |
-| de/plage-imperial-annecy.html | byte-identical vs pre-batch main |
-| de/pont-de-la-caille.html | byte-identical vs pre-batch main |
-| de/segway-mobilboard-annecy.html | byte-identical vs pre-batch main |
-| de/sentier-bout-du-lac-doussard.html | byte-identical vs pre-batch main |
-| de/sentier-des-roselieres.html | byte-identical vs pre-batch main |
-| de/sentier-tournette-montmin.html | byte-identical vs pre-batch main |
-| de/simulateur-emotion-concept-annecy.html | byte-identical vs pre-batch main |
-| de/tactiq-aventure-cruseilles.html | byte-identical vs pre-batch main |
-| de/trampoline-bam-freesports-annecy.html | byte-identical vs pre-batch main |
-| de/voie-verte-lac-annecy-annecy.html | byte-identical vs pre-batch main |
-| de/vr-ereel-annecy-sillingy.html | byte-identical vs pre-batch main |
-| domaine-du-tornet.html | byte-identical vs pre-batch main |
-| en/acro-aventures-talloires.html | byte-identical vs pre-batch main |
-| en/arcade-art-of-pinball-poisy.html | byte-identical vs pre-batch main |
-| en/atelier-poterie-chez-el-annecy.html | byte-identical vs pre-batch main |
-| en/bar-a-jeux-youri-bar-cran-gevrier.html | byte-identical vs pre-batch main |
-| en/bureau-des-guides-annecy.html | byte-identical vs pre-batch main |
-| en/canyoning-neo-canyon.html | byte-identical vs pre-batch main |
-| en/canyoning-yaute-canyon.html | byte-identical vs pre-batch main |
-| en/chateau-clermont-genevois.html | byte-identical vs pre-batch main |
-| en/criq-parc.html | byte-identical vs pre-batch main |
-| en/domaine-du-tornet.html | byte-identical vs pre-batch main |
-| en/ereel-annecy-sillingy.html | byte-identical vs pre-batch main |
-| en/escalade-ablok-argonay.html | byte-identical vs pre-batch main |
-| en/escalade-atome-annecy.html | byte-identical vs pre-batch main |
-| en/escalade-climb-up-annecy.html | byte-identical vs pre-batch main |
-| en/escalade-cortigrimpe-metz-tessy.html | byte-identical vs pre-batch main |
-| en/escalade-la-crique-annecy.html | byte-identical vs pre-batch main |
-| en/escalade-space-bloc-sillingy.html | byte-identical vs pre-batch main |
-| en/escape-game-atelier-des-enigmes-annecy.html | byte-identical vs pre-batch main |
-| en/escape-game-break-out-sevrier.html | byte-identical vs pre-batch main |
-| en/escape-game-la-grande-evasion-annecy.html | byte-identical vs pre-batch main |
-| en/escape-game-mysteres-du-lac-annecy.html | byte-identical vs pre-batch main |
-| en/full-land-annecy.html | byte-identical vs pre-batch main |
-| en/gorges-du-fier.html | byte-identical vs pre-batch main |
-| en/grp-tour-lac-annecy-annecy.html | byte-identical vs pre-batch main |
-| en/jardin-les-jardins-secrets-vaulx.html | byte-identical vs pre-batch main |
-| en/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy.html | byte-identical vs pre-batch main |
-| en/k2-parapente-doussard.html | byte-identical vs pre-batch main |
-| en/la-foret-enchantee-sillingy.html | byte-identical vs pre-batch main |
-| en/la-turbine-sciences-cran-gevrier.html | byte-identical vs pre-batch main |
-| en/laser-game-lasermaxx-sillingy.html | byte-identical vs pre-batch main |
-| en/leisure-parks/index.html | byte-identical vs pre-batch main |
-| en/marais-de-poisy.html | byte-identical vs pre-batch main |
-| en/montgolfiere-annecy.html | byte-identical vs pre-batch main |
-| en/parc-animalier-grande-jeanne-annecy.html | byte-identical vs pre-batch main |
-| en/parc-de-peche-domaine-du-moulin-authier.html | byte-identical vs pre-batch main |
-| en/parc-des-dronieres.html | byte-identical vs pre-batch main |
-| en/plage-albigny.html | byte-identical vs pre-batch main |
-| en/plage-d-angon-talloires.html | byte-identical vs pre-batch main |
-| en/plage-de-doussard.html | byte-identical vs pre-batch main |
-| en/plage-de-duingt.html | byte-identical vs pre-batch main |
-| en/plage-de-la-brune-veyrier.html | byte-identical vs pre-batch main |
-| en/plage-de-menthon-saint-bernard.html | byte-identical vs pre-batch main |
-| en/plage-de-saint-jorioz.html | byte-identical vs pre-batch main |
-| en/plage-de-sevrier.html | byte-identical vs pre-batch main |
-| en/plage-de-talloires.html | byte-identical vs pre-batch main |
-| en/plage-des-marquisats.html | byte-identical vs pre-batch main |
-| en/plage-imperial-annecy.html | byte-identical vs pre-batch main |
-| en/pont-de-la-caille.html | byte-identical vs pre-batch main |
-| en/segway-mobilboard-annecy.html | byte-identical vs pre-batch main |
-| en/sentier-bout-du-lac-doussard.html | byte-identical vs pre-batch main |
-| en/sentier-des-roselieres.html | byte-identical vs pre-batch main |
-| en/sentier-tournette-montmin.html | byte-identical vs pre-batch main |
-| en/simulateur-emotion-concept-annecy.html | byte-identical vs pre-batch main |
-| en/tactiq-aventure-cruseilles.html | byte-identical vs pre-batch main |
-| en/trampoline-bam-freesports-annecy.html | byte-identical vs pre-batch main |
-| en/voie-verte-lac-annecy-annecy.html | byte-identical vs pre-batch main |
-| en/vr-ereel-annecy-sillingy.html | byte-identical vs pre-batch main |
-| ereel-annecy-sillingy.html | byte-identical vs pre-batch main |
-| es/acro-aventures-talloires.html | byte-identical vs pre-batch main |
-| es/arcade-art-of-pinball-poisy.html | byte-identical vs pre-batch main |
-| es/areas-de-ocio/index.html | byte-identical vs pre-batch main |
-| es/atelier-poterie-chez-el-annecy.html | byte-identical vs pre-batch main |
-| es/bar-a-jeux-youri-bar-cran-gevrier.html | byte-identical vs pre-batch main |
-| es/bureau-des-guides-annecy.html | byte-identical vs pre-batch main |
-| es/canyoning-neo-canyon.html | byte-identical vs pre-batch main |
-| es/canyoning-yaute-canyon.html | byte-identical vs pre-batch main |
-| es/chateau-clermont-genevois.html | byte-identical vs pre-batch main |
-| es/criq-parc.html | byte-identical vs pre-batch main |
-| es/domaine-du-tornet.html | byte-identical vs pre-batch main |
-| es/ereel-annecy-sillingy.html | byte-identical vs pre-batch main |
-| es/escalade-ablok-argonay.html | byte-identical vs pre-batch main |
-| es/escalade-atome-annecy.html | byte-identical vs pre-batch main |
-| es/escalade-climb-up-annecy.html | byte-identical vs pre-batch main |
-| es/escalade-cortigrimpe-metz-tessy.html | byte-identical vs pre-batch main |
-| es/escalade-la-crique-annecy.html | byte-identical vs pre-batch main |
-| es/escalade-space-bloc-sillingy.html | byte-identical vs pre-batch main |
-| es/escape-game-atelier-des-enigmes-annecy.html | byte-identical vs pre-batch main |
-| es/escape-game-break-out-sevrier.html | byte-identical vs pre-batch main |
-| es/escape-game-la-grande-evasion-annecy.html | byte-identical vs pre-batch main |
-| es/escape-game-mysteres-du-lac-annecy.html | byte-identical vs pre-batch main |
-| es/full-land-annecy.html | byte-identical vs pre-batch main |
-| es/gorges-du-fier.html | byte-identical vs pre-batch main |
-| es/grp-tour-lac-annecy-annecy.html | byte-identical vs pre-batch main |
-| es/jardin-les-jardins-secrets-vaulx.html | byte-identical vs pre-batch main |
-| es/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy.html | byte-identical vs pre-batch main |
-| es/k2-parapente-doussard.html | byte-identical vs pre-batch main |
-| es/la-foret-enchantee-sillingy.html | byte-identical vs pre-batch main |
-| es/la-turbine-sciences-cran-gevrier.html | byte-identical vs pre-batch main |
-| es/laser-game-lasermaxx-sillingy.html | byte-identical vs pre-batch main |
-| es/marais-de-poisy.html | byte-identical vs pre-batch main |
-| es/montgolfiere-annecy.html | byte-identical vs pre-batch main |
-| es/parc-animalier-grande-jeanne-annecy.html | byte-identical vs pre-batch main |
-| es/parc-de-peche-domaine-du-moulin-authier.html | byte-identical vs pre-batch main |
-| es/parc-des-dronieres.html | byte-identical vs pre-batch main |
-| es/plage-albigny.html | byte-identical vs pre-batch main |
-| es/plage-d-angon-talloires.html | byte-identical vs pre-batch main |
-| es/plage-de-doussard.html | byte-identical vs pre-batch main |
-| es/plage-de-duingt.html | byte-identical vs pre-batch main |
-| es/plage-de-la-brune-veyrier.html | byte-identical vs pre-batch main |
-| es/plage-de-menthon-saint-bernard.html | byte-identical vs pre-batch main |
-| es/plage-de-saint-jorioz.html | byte-identical vs pre-batch main |
-| es/plage-de-sevrier.html | byte-identical vs pre-batch main |
-| es/plage-de-talloires.html | byte-identical vs pre-batch main |
-| es/plage-des-marquisats.html | byte-identical vs pre-batch main |
-| es/plage-imperial-annecy.html | byte-identical vs pre-batch main |
-| es/pont-de-la-caille.html | byte-identical vs pre-batch main |
-| es/segway-mobilboard-annecy.html | byte-identical vs pre-batch main |
-| es/sentier-bout-du-lac-doussard.html | byte-identical vs pre-batch main |
-| es/sentier-des-roselieres.html | byte-identical vs pre-batch main |
-| es/sentier-tournette-montmin.html | byte-identical vs pre-batch main |
-| es/simulateur-emotion-concept-annecy.html | byte-identical vs pre-batch main |
-| es/tactiq-aventure-cruseilles.html | byte-identical vs pre-batch main |
-| es/trampoline-bam-freesports-annecy.html | byte-identical vs pre-batch main |
-| es/voie-verte-lac-annecy-annecy.html | byte-identical vs pre-batch main |
-| es/vr-ereel-annecy-sillingy.html | byte-identical vs pre-batch main |
-| escalade-ablok-argonay.html | byte-identical vs pre-batch main |
-| escalade-atome-annecy.html | byte-identical vs pre-batch main |
-| escalade-climb-up-annecy.html | byte-identical vs pre-batch main |
-| escalade-cortigrimpe-metz-tessy.html | byte-identical vs pre-batch main |
-| escalade-la-crique-annecy.html | byte-identical vs pre-batch main |
-| escalade-space-bloc-sillingy.html | byte-identical vs pre-batch main |
-| escape-game-atelier-des-enigmes-annecy.html | byte-identical vs pre-batch main |
-| escape-game-break-out-sevrier.html | byte-identical vs pre-batch main |
-| escape-game-la-grande-evasion-annecy.html | byte-identical vs pre-batch main |
-| escape-game-mysteres-du-lac-annecy.html | byte-identical vs pre-batch main |
-| full-land-annecy.html | byte-identical vs pre-batch main |
-| gorges-du-fier.html | byte-identical vs pre-batch main |
-| grp-tour-lac-annecy-annecy.html | byte-identical vs pre-batch main |
-| he/domaine-du-tornet.html | byte-identical vs pre-batch main |
-| it/acro-aventures-talloires.html | byte-identical vs pre-batch main |
-| it/arcade-art-of-pinball-poisy.html | byte-identical vs pre-batch main |
-| it/aree-ricreative/index.html | byte-identical vs pre-batch main |
-| it/atelier-poterie-chez-el-annecy.html | byte-identical vs pre-batch main |
-| it/bar-a-jeux-youri-bar-cran-gevrier.html | byte-identical vs pre-batch main |
-| it/bureau-des-guides-annecy.html | byte-identical vs pre-batch main |
-| it/canyoning-neo-canyon.html | byte-identical vs pre-batch main |
-| it/canyoning-yaute-canyon.html | byte-identical vs pre-batch main |
-| it/chateau-clermont-genevois.html | byte-identical vs pre-batch main |
-| it/criq-parc.html | byte-identical vs pre-batch main |
-| it/domaine-du-tornet.html | byte-identical vs pre-batch main |
-| it/ereel-annecy-sillingy.html | byte-identical vs pre-batch main |
-| it/escalade-ablok-argonay.html | byte-identical vs pre-batch main |
-| it/escalade-atome-annecy.html | byte-identical vs pre-batch main |
-| it/escalade-climb-up-annecy.html | byte-identical vs pre-batch main |
-| it/escalade-cortigrimpe-metz-tessy.html | byte-identical vs pre-batch main |
-| it/escalade-la-crique-annecy.html | byte-identical vs pre-batch main |
-| it/escalade-space-bloc-sillingy.html | byte-identical vs pre-batch main |
-| it/escape-game-atelier-des-enigmes-annecy.html | byte-identical vs pre-batch main |
-| it/escape-game-break-out-sevrier.html | byte-identical vs pre-batch main |
-| it/escape-game-la-grande-evasion-annecy.html | byte-identical vs pre-batch main |
-| it/escape-game-mysteres-du-lac-annecy.html | byte-identical vs pre-batch main |
-| it/full-land-annecy.html | byte-identical vs pre-batch main |
-| it/gorges-du-fier.html | byte-identical vs pre-batch main |
-| it/grp-tour-lac-annecy-annecy.html | byte-identical vs pre-batch main |
-| it/jardin-les-jardins-secrets-vaulx.html | byte-identical vs pre-batch main |
-| it/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy.html | byte-identical vs pre-batch main |
-| it/k2-parapente-doussard.html | byte-identical vs pre-batch main |
-| it/la-foret-enchantee-sillingy.html | byte-identical vs pre-batch main |
-| it/la-turbine-sciences-cran-gevrier.html | byte-identical vs pre-batch main |
-| it/laser-game-lasermaxx-sillingy.html | byte-identical vs pre-batch main |
-| it/marais-de-poisy.html | byte-identical vs pre-batch main |
-| it/montgolfiere-annecy.html | byte-identical vs pre-batch main |
-| it/parc-animalier-grande-jeanne-annecy.html | byte-identical vs pre-batch main |
-| it/parc-de-peche-domaine-du-moulin-authier.html | byte-identical vs pre-batch main |
-| it/parc-des-dronieres.html | byte-identical vs pre-batch main |
-| it/plage-albigny.html | byte-identical vs pre-batch main |
-| it/plage-d-angon-talloires.html | byte-identical vs pre-batch main |
-| it/plage-de-doussard.html | byte-identical vs pre-batch main |
-| it/plage-de-duingt.html | byte-identical vs pre-batch main |
-| it/plage-de-la-brune-veyrier.html | byte-identical vs pre-batch main |
-| it/plage-de-menthon-saint-bernard.html | byte-identical vs pre-batch main |
-| it/plage-de-saint-jorioz.html | byte-identical vs pre-batch main |
-| it/plage-de-sevrier.html | byte-identical vs pre-batch main |
-| it/plage-de-talloires.html | byte-identical vs pre-batch main |
-| it/plage-des-marquisats.html | byte-identical vs pre-batch main |
-| it/plage-imperial-annecy.html | byte-identical vs pre-batch main |
-| it/pont-de-la-caille.html | byte-identical vs pre-batch main |
-| it/segway-mobilboard-annecy.html | byte-identical vs pre-batch main |
-| it/sentier-bout-du-lac-doussard.html | byte-identical vs pre-batch main |
-| it/sentier-des-roselieres.html | byte-identical vs pre-batch main |
-| it/sentier-tournette-montmin.html | byte-identical vs pre-batch main |
-| it/simulateur-emotion-concept-annecy.html | byte-identical vs pre-batch main |
-| it/tactiq-aventure-cruseilles.html | byte-identical vs pre-batch main |
-| it/trampoline-bam-freesports-annecy.html | byte-identical vs pre-batch main |
-| it/voie-verte-lac-annecy-annecy.html | byte-identical vs pre-batch main |
-| it/vr-ereel-annecy-sillingy.html | byte-identical vs pre-batch main |
-| ja/domaine-du-tornet.html | byte-identical vs pre-batch main |
-| jardin-les-jardins-secrets-vaulx.html | byte-identical vs pre-batch main |
-| jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy.html | byte-identical vs pre-batch main |
-| k2-parapente-doussard.html | byte-identical vs pre-batch main |
-| la-foret-enchantee-sillingy.html | byte-identical vs pre-batch main |
-| la-turbine-sciences-cran-gevrier.html | byte-identical vs pre-batch main |
-| laser-game-lasermaxx-sillingy.html | byte-identical vs pre-batch main |
-| marais-de-poisy.html | byte-identical vs pre-batch main |
-| montgolfiere-annecy.html | byte-identical vs pre-batch main |
-| nl/acro-aventures-talloires.html | byte-identical vs pre-batch main |
-| nl/arcade-art-of-pinball-poisy.html | byte-identical vs pre-batch main |
-| nl/atelier-poterie-chez-el-annecy.html | byte-identical vs pre-batch main |
-| nl/bar-a-jeux-youri-bar-cran-gevrier.html | byte-identical vs pre-batch main |
-| nl/bureau-des-guides-annecy.html | byte-identical vs pre-batch main |
-| nl/canyoning-neo-canyon.html | byte-identical vs pre-batch main |
-| nl/canyoning-yaute-canyon.html | byte-identical vs pre-batch main |
-| nl/chateau-clermont-genevois.html | byte-identical vs pre-batch main |
-| nl/criq-parc.html | byte-identical vs pre-batch main |
-| nl/domaine-du-tornet.html | byte-identical vs pre-batch main |
-| nl/ereel-annecy-sillingy.html | byte-identical vs pre-batch main |
-| nl/escalade-ablok-argonay.html | byte-identical vs pre-batch main |
-| nl/escalade-atome-annecy.html | byte-identical vs pre-batch main |
-| nl/escalade-climb-up-annecy.html | byte-identical vs pre-batch main |
-| nl/escalade-cortigrimpe-metz-tessy.html | byte-identical vs pre-batch main |
-| nl/escalade-la-crique-annecy.html | byte-identical vs pre-batch main |
-| nl/escalade-space-bloc-sillingy.html | byte-identical vs pre-batch main |
-| nl/escape-game-atelier-des-enigmes-annecy.html | byte-identical vs pre-batch main |
-| nl/escape-game-break-out-sevrier.html | byte-identical vs pre-batch main |
-| nl/escape-game-la-grande-evasion-annecy.html | byte-identical vs pre-batch main |
-| nl/escape-game-mysteres-du-lac-annecy.html | byte-identical vs pre-batch main |
-| nl/full-land-annecy.html | byte-identical vs pre-batch main |
-| nl/gorges-du-fier.html | byte-identical vs pre-batch main |
-| nl/grp-tour-lac-annecy-annecy.html | byte-identical vs pre-batch main |
-| nl/jardin-les-jardins-secrets-vaulx.html | byte-identical vs pre-batch main |
-| nl/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy.html | byte-identical vs pre-batch main |
-| nl/k2-parapente-doussard.html | byte-identical vs pre-batch main |
-| nl/la-foret-enchantee-sillingy.html | byte-identical vs pre-batch main |
-| nl/la-turbine-sciences-cran-gevrier.html | byte-identical vs pre-batch main |
-| nl/laser-game-lasermaxx-sillingy.html | byte-identical vs pre-batch main |
-| nl/marais-de-poisy.html | byte-identical vs pre-batch main |
-| nl/montgolfiere-annecy.html | byte-identical vs pre-batch main |
-| nl/parc-animalier-grande-jeanne-annecy.html | byte-identical vs pre-batch main |
-| nl/parc-de-peche-domaine-du-moulin-authier.html | byte-identical vs pre-batch main |
-| nl/parc-des-dronieres.html | byte-identical vs pre-batch main |
-| nl/plage-albigny.html | byte-identical vs pre-batch main |
-| nl/plage-d-angon-talloires.html | byte-identical vs pre-batch main |
-| nl/plage-de-doussard.html | byte-identical vs pre-batch main |
-| nl/plage-de-duingt.html | byte-identical vs pre-batch main |
-| nl/plage-de-la-brune-veyrier.html | byte-identical vs pre-batch main |
-| nl/plage-de-menthon-saint-bernard.html | byte-identical vs pre-batch main |
-| nl/plage-de-saint-jorioz.html | byte-identical vs pre-batch main |
-| nl/plage-de-sevrier.html | byte-identical vs pre-batch main |
-| nl/plage-de-talloires.html | byte-identical vs pre-batch main |
-| nl/plage-des-marquisats.html | byte-identical vs pre-batch main |
-| nl/plage-imperial-annecy.html | byte-identical vs pre-batch main |
-| nl/pont-de-la-caille.html | byte-identical vs pre-batch main |
-| nl/recreatieparken/index.html | byte-identical vs pre-batch main |
-| nl/segway-mobilboard-annecy.html | byte-identical vs pre-batch main |
-| nl/sentier-bout-du-lac-doussard.html | byte-identical vs pre-batch main |
-| nl/sentier-des-roselieres.html | byte-identical vs pre-batch main |
-| nl/sentier-tournette-montmin.html | byte-identical vs pre-batch main |
-| nl/simulateur-emotion-concept-annecy.html | byte-identical vs pre-batch main |
-| nl/tactiq-aventure-cruseilles.html | byte-identical vs pre-batch main |
-| nl/trampoline-bam-freesports-annecy.html | byte-identical vs pre-batch main |
-| nl/voie-verte-lac-annecy-annecy.html | byte-identical vs pre-batch main |
-| nl/vr-ereel-annecy-sillingy.html | byte-identical vs pre-batch main |
-| parc-animalier-grande-jeanne-annecy.html | byte-identical vs pre-batch main |
-| parc-de-peche-domaine-du-moulin-authier.html | byte-identical vs pre-batch main |
-| parc-des-dronieres.html | byte-identical vs pre-batch main |
-| pl/domaine-du-tornet.html | byte-identical vs pre-batch main |
-| plage-albigny.html | byte-identical vs pre-batch main |
-| plage-d-angon-talloires.html | byte-identical vs pre-batch main |
-| plage-de-doussard.html | byte-identical vs pre-batch main |
-| plage-de-duingt.html | byte-identical vs pre-batch main |
-| plage-de-la-brune-veyrier.html | byte-identical vs pre-batch main |
-| plage-de-menthon-saint-bernard.html | byte-identical vs pre-batch main |
-| plage-de-saint-jorioz.html | byte-identical vs pre-batch main |
-| plage-de-sevrier.html | byte-identical vs pre-batch main |
-| plage-de-talloires.html | byte-identical vs pre-batch main |
-| plage-des-marquisats.html | byte-identical vs pre-batch main |
-| plage-imperial-annecy.html | byte-identical vs pre-batch main |
-| pont-de-la-caille.html | byte-identical vs pre-batch main |
-| pt/chateau-clermont-genevois.html | REWRITTEN (pt rich render — official-site / carousel link, data-driven, no placement card) |
-| pt/domaine-du-tornet.html | REWRITTEN (pt rich render — official-site / carousel link, data-driven, no placement card) |
-| pt/escalade-space-bloc-sillingy.html | REWRITTEN (pt rich render — official-site / carousel link, data-driven, no placement card) |
-| pt/jardin-les-jardins-secrets-vaulx.html | REWRITTEN (pt rich render — official-site / carousel link, data-driven, no placement card) |
-| pt/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy.html | REWRITTEN (pt rich render — official-site / carousel link, data-driven, no placement card) |
-| pt/la-foret-enchantee-sillingy.html | REWRITTEN (pt rich render — official-site / carousel link, data-driven, no placement card) |
-| pt/laser-game-lasermaxx-sillingy.html | REWRITTEN (pt rich render — official-site / carousel link, data-driven, no placement card) |
-| pt/parc-de-peche-domaine-du-moulin-authier.html | REWRITTEN (pt rich render — official-site / carousel link, data-driven, no placement card) |
-| pt/parc-des-dronieres.html | REWRITTEN (pt rich render — official-site / carousel link, data-driven, no placement card) |
-| pt/tactiq-aventure-cruseilles.html | REWRITTEN (pt rich render — official-site / carousel link, data-driven, no placement card) |
-| pt/vr-ereel-annecy-sillingy.html | REWRITTEN (pt rich render — official-site / carousel link, data-driven, no placement card) |
-| segway-mobilboard-annecy.html | byte-identical vs pre-batch main |
-| sentier-bout-du-lac-doussard.html | byte-identical vs pre-batch main |
-| sentier-des-roselieres.html | byte-identical vs pre-batch main |
-| sentier-tournette-montmin.html | byte-identical vs pre-batch main |
-| simulateur-emotion-concept-annecy.html | byte-identical vs pre-batch main |
-| tactiq-aventure-cruseilles.html | byte-identical vs pre-batch main |
-| trampoline-bam-freesports-annecy.html | byte-identical vs pre-batch main |
-| voie-verte-lac-annecy-annecy.html | byte-identical vs pre-batch main |
-| vr-ereel-annecy-sillingy.html | byte-identical vs pre-batch main |
+| _site/bases-de-loisirs/index.html | NEW (pt tree) |
+| acro-aventures-talloires.html | byte-identical vs main |
+| ar/domaine-du-tornet.html | byte-identical vs main |
+| arcade-art-of-pinball-poisy.html | byte-identical vs main |
+| atelier-poterie-chez-el-annecy.html | byte-identical vs main |
+| bar-a-jeux-youri-bar-cran-gevrier.html | byte-identical vs main |
+| bases-de-loisirs/index.html | byte-identical vs main |
+| bureau-des-guides-annecy.html | byte-identical vs main |
+| canyoning-neo-canyon.html | byte-identical vs main |
+| canyoning-yaute-canyon.html | byte-identical vs main |
+| chateau-clermont-genevois.html | byte-identical vs main |
+| criq-parc.html | byte-identical vs main |
+| cs/domaine-du-tornet.html | byte-identical vs main |
+| de/acro-aventures-talloires.html | byte-identical vs main |
+| de/arcade-art-of-pinball-poisy.html | byte-identical vs main |
+| de/atelier-poterie-chez-el-annecy.html | byte-identical vs main |
+| de/bar-a-jeux-youri-bar-cran-gevrier.html | byte-identical vs main |
+| de/bureau-des-guides-annecy.html | byte-identical vs main |
+| de/canyoning-neo-canyon.html | byte-identical vs main |
+| de/canyoning-yaute-canyon.html | byte-identical vs main |
+| de/chateau-clermont-genevois.html | byte-identical vs main |
+| de/criq-parc.html | byte-identical vs main |
+| de/domaine-du-tornet.html | byte-identical vs main |
+| de/ereel-annecy-sillingy.html | byte-identical vs main |
+| de/escalade-ablok-argonay.html | byte-identical vs main |
+| de/escalade-atome-annecy.html | byte-identical vs main |
+| de/escalade-climb-up-annecy.html | byte-identical vs main |
+| de/escalade-cortigrimpe-metz-tessy.html | byte-identical vs main |
+| de/escalade-la-crique-annecy.html | byte-identical vs main |
+| de/escalade-space-bloc-sillingy.html | byte-identical vs main |
+| de/escape-game-atelier-des-enigmes-annecy.html | byte-identical vs main |
+| de/escape-game-break-out-sevrier.html | byte-identical vs main |
+| de/escape-game-la-grande-evasion-annecy.html | byte-identical vs main |
+| de/escape-game-mysteres-du-lac-annecy.html | byte-identical vs main |
+| de/freizeitparks/index.html | byte-identical vs main |
+| de/full-land-annecy.html | byte-identical vs main |
+| de/gorges-du-fier.html | byte-identical vs main |
+| de/grp-tour-lac-annecy-annecy.html | byte-identical vs main |
+| de/jardin-les-jardins-secrets-vaulx.html | byte-identical vs main |
+| de/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy.html | byte-identical vs main |
+| de/k2-parapente-doussard.html | byte-identical vs main |
+| de/la-foret-enchantee-sillingy.html | byte-identical vs main |
+| de/la-turbine-sciences-cran-gevrier.html | byte-identical vs main |
+| de/laser-game-lasermaxx-sillingy.html | byte-identical vs main |
+| de/marais-de-poisy.html | byte-identical vs main |
+| de/montgolfiere-annecy.html | byte-identical vs main |
+| de/parc-animalier-grande-jeanne-annecy.html | byte-identical vs main |
+| de/parc-de-peche-domaine-du-moulin-authier.html | byte-identical vs main |
+| de/parc-des-dronieres.html | byte-identical vs main |
+| de/plage-albigny.html | byte-identical vs main |
+| de/plage-d-angon-talloires.html | byte-identical vs main |
+| de/plage-de-doussard.html | byte-identical vs main |
+| de/plage-de-duingt.html | byte-identical vs main |
+| de/plage-de-la-brune-veyrier.html | byte-identical vs main |
+| de/plage-de-menthon-saint-bernard.html | byte-identical vs main |
+| de/plage-de-saint-jorioz.html | byte-identical vs main |
+| de/plage-de-sevrier.html | byte-identical vs main |
+| de/plage-de-talloires.html | byte-identical vs main |
+| de/plage-des-marquisats.html | byte-identical vs main |
+| de/plage-imperial-annecy.html | byte-identical vs main |
+| de/pont-de-la-caille.html | byte-identical vs main |
+| de/segway-mobilboard-annecy.html | byte-identical vs main |
+| de/sentier-bout-du-lac-doussard.html | byte-identical vs main |
+| de/sentier-des-roselieres.html | byte-identical vs main |
+| de/sentier-tournette-montmin.html | byte-identical vs main |
+| de/simulateur-emotion-concept-annecy.html | byte-identical vs main |
+| de/tactiq-aventure-cruseilles.html | byte-identical vs main |
+| de/trampoline-bam-freesports-annecy.html | byte-identical vs main |
+| de/voie-verte-lac-annecy-annecy.html | byte-identical vs main |
+| de/vr-ereel-annecy-sillingy.html | byte-identical vs main |
+| domaine-du-tornet.html | byte-identical vs main |
+| en/acro-aventures-talloires.html | byte-identical vs main |
+| en/arcade-art-of-pinball-poisy.html | byte-identical vs main |
+| en/atelier-poterie-chez-el-annecy.html | byte-identical vs main |
+| en/bar-a-jeux-youri-bar-cran-gevrier.html | byte-identical vs main |
+| en/bureau-des-guides-annecy.html | byte-identical vs main |
+| en/canyoning-neo-canyon.html | byte-identical vs main |
+| en/canyoning-yaute-canyon.html | byte-identical vs main |
+| en/chateau-clermont-genevois.html | byte-identical vs main |
+| en/criq-parc.html | byte-identical vs main |
+| en/domaine-du-tornet.html | byte-identical vs main |
+| en/ereel-annecy-sillingy.html | byte-identical vs main |
+| en/escalade-ablok-argonay.html | byte-identical vs main |
+| en/escalade-atome-annecy.html | byte-identical vs main |
+| en/escalade-climb-up-annecy.html | byte-identical vs main |
+| en/escalade-cortigrimpe-metz-tessy.html | byte-identical vs main |
+| en/escalade-la-crique-annecy.html | byte-identical vs main |
+| en/escalade-space-bloc-sillingy.html | byte-identical vs main |
+| en/escape-game-atelier-des-enigmes-annecy.html | byte-identical vs main |
+| en/escape-game-break-out-sevrier.html | byte-identical vs main |
+| en/escape-game-la-grande-evasion-annecy.html | byte-identical vs main |
+| en/escape-game-mysteres-du-lac-annecy.html | byte-identical vs main |
+| en/full-land-annecy.html | byte-identical vs main |
+| en/gorges-du-fier.html | byte-identical vs main |
+| en/grp-tour-lac-annecy-annecy.html | byte-identical vs main |
+| en/jardin-les-jardins-secrets-vaulx.html | byte-identical vs main |
+| en/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy.html | byte-identical vs main |
+| en/k2-parapente-doussard.html | byte-identical vs main |
+| en/la-foret-enchantee-sillingy.html | byte-identical vs main |
+| en/la-turbine-sciences-cran-gevrier.html | byte-identical vs main |
+| en/laser-game-lasermaxx-sillingy.html | byte-identical vs main |
+| en/leisure-parks/index.html | byte-identical vs main |
+| en/marais-de-poisy.html | byte-identical vs main |
+| en/montgolfiere-annecy.html | byte-identical vs main |
+| en/parc-animalier-grande-jeanne-annecy.html | byte-identical vs main |
+| en/parc-de-peche-domaine-du-moulin-authier.html | byte-identical vs main |
+| en/parc-des-dronieres.html | byte-identical vs main |
+| en/plage-albigny.html | byte-identical vs main |
+| en/plage-d-angon-talloires.html | byte-identical vs main |
+| en/plage-de-doussard.html | byte-identical vs main |
+| en/plage-de-duingt.html | byte-identical vs main |
+| en/plage-de-la-brune-veyrier.html | byte-identical vs main |
+| en/plage-de-menthon-saint-bernard.html | byte-identical vs main |
+| en/plage-de-saint-jorioz.html | byte-identical vs main |
+| en/plage-de-sevrier.html | byte-identical vs main |
+| en/plage-de-talloires.html | byte-identical vs main |
+| en/plage-des-marquisats.html | byte-identical vs main |
+| en/plage-imperial-annecy.html | byte-identical vs main |
+| en/pont-de-la-caille.html | byte-identical vs main |
+| en/segway-mobilboard-annecy.html | byte-identical vs main |
+| en/sentier-bout-du-lac-doussard.html | byte-identical vs main |
+| en/sentier-des-roselieres.html | byte-identical vs main |
+| en/sentier-tournette-montmin.html | byte-identical vs main |
+| en/simulateur-emotion-concept-annecy.html | byte-identical vs main |
+| en/tactiq-aventure-cruseilles.html | byte-identical vs main |
+| en/trampoline-bam-freesports-annecy.html | byte-identical vs main |
+| en/voie-verte-lac-annecy-annecy.html | byte-identical vs main |
+| en/vr-ereel-annecy-sillingy.html | byte-identical vs main |
+| ereel-annecy-sillingy.html | byte-identical vs main |
+| es/acro-aventures-talloires.html | byte-identical vs main |
+| es/arcade-art-of-pinball-poisy.html | byte-identical vs main |
+| es/areas-de-ocio/index.html | byte-identical vs main |
+| es/atelier-poterie-chez-el-annecy.html | byte-identical vs main |
+| es/bar-a-jeux-youri-bar-cran-gevrier.html | byte-identical vs main |
+| es/bureau-des-guides-annecy.html | byte-identical vs main |
+| es/canyoning-neo-canyon.html | byte-identical vs main |
+| es/canyoning-yaute-canyon.html | byte-identical vs main |
+| es/chateau-clermont-genevois.html | byte-identical vs main |
+| es/criq-parc.html | byte-identical vs main |
+| es/domaine-du-tornet.html | byte-identical vs main |
+| es/ereel-annecy-sillingy.html | byte-identical vs main |
+| es/escalade-ablok-argonay.html | byte-identical vs main |
+| es/escalade-atome-annecy.html | byte-identical vs main |
+| es/escalade-climb-up-annecy.html | byte-identical vs main |
+| es/escalade-cortigrimpe-metz-tessy.html | byte-identical vs main |
+| es/escalade-la-crique-annecy.html | byte-identical vs main |
+| es/escalade-space-bloc-sillingy.html | byte-identical vs main |
+| es/escape-game-atelier-des-enigmes-annecy.html | byte-identical vs main |
+| es/escape-game-break-out-sevrier.html | byte-identical vs main |
+| es/escape-game-la-grande-evasion-annecy.html | byte-identical vs main |
+| es/escape-game-mysteres-du-lac-annecy.html | byte-identical vs main |
+| es/full-land-annecy.html | byte-identical vs main |
+| es/gorges-du-fier.html | byte-identical vs main |
+| es/grp-tour-lac-annecy-annecy.html | byte-identical vs main |
+| es/jardin-les-jardins-secrets-vaulx.html | byte-identical vs main |
+| es/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy.html | byte-identical vs main |
+| es/k2-parapente-doussard.html | byte-identical vs main |
+| es/la-foret-enchantee-sillingy.html | byte-identical vs main |
+| es/la-turbine-sciences-cran-gevrier.html | byte-identical vs main |
+| es/laser-game-lasermaxx-sillingy.html | byte-identical vs main |
+| es/marais-de-poisy.html | byte-identical vs main |
+| es/montgolfiere-annecy.html | byte-identical vs main |
+| es/parc-animalier-grande-jeanne-annecy.html | byte-identical vs main |
+| es/parc-de-peche-domaine-du-moulin-authier.html | byte-identical vs main |
+| es/parc-des-dronieres.html | byte-identical vs main |
+| es/plage-albigny.html | byte-identical vs main |
+| es/plage-d-angon-talloires.html | byte-identical vs main |
+| es/plage-de-doussard.html | byte-identical vs main |
+| es/plage-de-duingt.html | byte-identical vs main |
+| es/plage-de-la-brune-veyrier.html | byte-identical vs main |
+| es/plage-de-menthon-saint-bernard.html | byte-identical vs main |
+| es/plage-de-saint-jorioz.html | byte-identical vs main |
+| es/plage-de-sevrier.html | byte-identical vs main |
+| es/plage-de-talloires.html | byte-identical vs main |
+| es/plage-des-marquisats.html | byte-identical vs main |
+| es/plage-imperial-annecy.html | byte-identical vs main |
+| es/pont-de-la-caille.html | byte-identical vs main |
+| es/segway-mobilboard-annecy.html | byte-identical vs main |
+| es/sentier-bout-du-lac-doussard.html | byte-identical vs main |
+| es/sentier-des-roselieres.html | byte-identical vs main |
+| es/sentier-tournette-montmin.html | byte-identical vs main |
+| es/simulateur-emotion-concept-annecy.html | byte-identical vs main |
+| es/tactiq-aventure-cruseilles.html | byte-identical vs main |
+| es/trampoline-bam-freesports-annecy.html | byte-identical vs main |
+| es/voie-verte-lac-annecy-annecy.html | byte-identical vs main |
+| es/vr-ereel-annecy-sillingy.html | byte-identical vs main |
+| escalade-ablok-argonay.html | byte-identical vs main |
+| escalade-atome-annecy.html | byte-identical vs main |
+| escalade-climb-up-annecy.html | byte-identical vs main |
+| escalade-cortigrimpe-metz-tessy.html | byte-identical vs main |
+| escalade-la-crique-annecy.html | byte-identical vs main |
+| escalade-space-bloc-sillingy.html | byte-identical vs main |
+| escape-game-atelier-des-enigmes-annecy.html | byte-identical vs main |
+| escape-game-break-out-sevrier.html | byte-identical vs main |
+| escape-game-la-grande-evasion-annecy.html | byte-identical vs main |
+| escape-game-mysteres-du-lac-annecy.html | byte-identical vs main |
+| full-land-annecy.html | byte-identical vs main |
+| gorges-du-fier.html | byte-identical vs main |
+| grp-tour-lac-annecy-annecy.html | byte-identical vs main |
+| he/domaine-du-tornet.html | byte-identical vs main |
+| it/acro-aventures-talloires.html | byte-identical vs main |
+| it/arcade-art-of-pinball-poisy.html | byte-identical vs main |
+| it/aree-ricreative/index.html | byte-identical vs main |
+| it/atelier-poterie-chez-el-annecy.html | byte-identical vs main |
+| it/bar-a-jeux-youri-bar-cran-gevrier.html | byte-identical vs main |
+| it/bureau-des-guides-annecy.html | byte-identical vs main |
+| it/canyoning-neo-canyon.html | byte-identical vs main |
+| it/canyoning-yaute-canyon.html | byte-identical vs main |
+| it/chateau-clermont-genevois.html | byte-identical vs main |
+| it/criq-parc.html | byte-identical vs main |
+| it/domaine-du-tornet.html | byte-identical vs main |
+| it/ereel-annecy-sillingy.html | byte-identical vs main |
+| it/escalade-ablok-argonay.html | byte-identical vs main |
+| it/escalade-atome-annecy.html | byte-identical vs main |
+| it/escalade-climb-up-annecy.html | byte-identical vs main |
+| it/escalade-cortigrimpe-metz-tessy.html | byte-identical vs main |
+| it/escalade-la-crique-annecy.html | byte-identical vs main |
+| it/escalade-space-bloc-sillingy.html | byte-identical vs main |
+| it/escape-game-atelier-des-enigmes-annecy.html | byte-identical vs main |
+| it/escape-game-break-out-sevrier.html | byte-identical vs main |
+| it/escape-game-la-grande-evasion-annecy.html | byte-identical vs main |
+| it/escape-game-mysteres-du-lac-annecy.html | byte-identical vs main |
+| it/full-land-annecy.html | byte-identical vs main |
+| it/gorges-du-fier.html | byte-identical vs main |
+| it/grp-tour-lac-annecy-annecy.html | byte-identical vs main |
+| it/jardin-les-jardins-secrets-vaulx.html | byte-identical vs main |
+| it/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy.html | byte-identical vs main |
+| it/k2-parapente-doussard.html | byte-identical vs main |
+| it/la-foret-enchantee-sillingy.html | byte-identical vs main |
+| it/la-turbine-sciences-cran-gevrier.html | byte-identical vs main |
+| it/laser-game-lasermaxx-sillingy.html | byte-identical vs main |
+| it/marais-de-poisy.html | byte-identical vs main |
+| it/montgolfiere-annecy.html | byte-identical vs main |
+| it/parc-animalier-grande-jeanne-annecy.html | byte-identical vs main |
+| it/parc-de-peche-domaine-du-moulin-authier.html | byte-identical vs main |
+| it/parc-des-dronieres.html | byte-identical vs main |
+| it/plage-albigny.html | byte-identical vs main |
+| it/plage-d-angon-talloires.html | byte-identical vs main |
+| it/plage-de-doussard.html | byte-identical vs main |
+| it/plage-de-duingt.html | byte-identical vs main |
+| it/plage-de-la-brune-veyrier.html | byte-identical vs main |
+| it/plage-de-menthon-saint-bernard.html | byte-identical vs main |
+| it/plage-de-saint-jorioz.html | byte-identical vs main |
+| it/plage-de-sevrier.html | byte-identical vs main |
+| it/plage-de-talloires.html | byte-identical vs main |
+| it/plage-des-marquisats.html | byte-identical vs main |
+| it/plage-imperial-annecy.html | byte-identical vs main |
+| it/pont-de-la-caille.html | byte-identical vs main |
+| it/segway-mobilboard-annecy.html | byte-identical vs main |
+| it/sentier-bout-du-lac-doussard.html | byte-identical vs main |
+| it/sentier-des-roselieres.html | byte-identical vs main |
+| it/sentier-tournette-montmin.html | byte-identical vs main |
+| it/simulateur-emotion-concept-annecy.html | byte-identical vs main |
+| it/tactiq-aventure-cruseilles.html | byte-identical vs main |
+| it/trampoline-bam-freesports-annecy.html | byte-identical vs main |
+| it/voie-verte-lac-annecy-annecy.html | byte-identical vs main |
+| it/vr-ereel-annecy-sillingy.html | byte-identical vs main |
+| ja/domaine-du-tornet.html | byte-identical vs main |
+| jardin-les-jardins-secrets-vaulx.html | byte-identical vs main |
+| jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy.html | byte-identical vs main |
+| k2-parapente-doussard.html | byte-identical vs main |
+| la-foret-enchantee-sillingy.html | byte-identical vs main |
+| la-turbine-sciences-cran-gevrier.html | byte-identical vs main |
+| laser-game-lasermaxx-sillingy.html | byte-identical vs main |
+| marais-de-poisy.html | byte-identical vs main |
+| montgolfiere-annecy.html | byte-identical vs main |
+| nl/acro-aventures-talloires.html | byte-identical vs main |
+| nl/arcade-art-of-pinball-poisy.html | byte-identical vs main |
+| nl/atelier-poterie-chez-el-annecy.html | byte-identical vs main |
+| nl/bar-a-jeux-youri-bar-cran-gevrier.html | byte-identical vs main |
+| nl/bureau-des-guides-annecy.html | byte-identical vs main |
+| nl/canyoning-neo-canyon.html | byte-identical vs main |
+| nl/canyoning-yaute-canyon.html | byte-identical vs main |
+| nl/chateau-clermont-genevois.html | byte-identical vs main |
+| nl/criq-parc.html | byte-identical vs main |
+| nl/domaine-du-tornet.html | byte-identical vs main |
+| nl/ereel-annecy-sillingy.html | byte-identical vs main |
+| nl/escalade-ablok-argonay.html | byte-identical vs main |
+| nl/escalade-atome-annecy.html | byte-identical vs main |
+| nl/escalade-climb-up-annecy.html | byte-identical vs main |
+| nl/escalade-cortigrimpe-metz-tessy.html | byte-identical vs main |
+| nl/escalade-la-crique-annecy.html | byte-identical vs main |
+| nl/escalade-space-bloc-sillingy.html | byte-identical vs main |
+| nl/escape-game-atelier-des-enigmes-annecy.html | byte-identical vs main |
+| nl/escape-game-break-out-sevrier.html | byte-identical vs main |
+| nl/escape-game-la-grande-evasion-annecy.html | byte-identical vs main |
+| nl/escape-game-mysteres-du-lac-annecy.html | byte-identical vs main |
+| nl/full-land-annecy.html | byte-identical vs main |
+| nl/gorges-du-fier.html | byte-identical vs main |
+| nl/grp-tour-lac-annecy-annecy.html | byte-identical vs main |
+| nl/jardin-les-jardins-secrets-vaulx.html | byte-identical vs main |
+| nl/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy.html | byte-identical vs main |
+| nl/k2-parapente-doussard.html | byte-identical vs main |
+| nl/la-foret-enchantee-sillingy.html | byte-identical vs main |
+| nl/la-turbine-sciences-cran-gevrier.html | byte-identical vs main |
+| nl/laser-game-lasermaxx-sillingy.html | byte-identical vs main |
+| nl/marais-de-poisy.html | byte-identical vs main |
+| nl/montgolfiere-annecy.html | byte-identical vs main |
+| nl/parc-animalier-grande-jeanne-annecy.html | byte-identical vs main |
+| nl/parc-de-peche-domaine-du-moulin-authier.html | byte-identical vs main |
+| nl/parc-des-dronieres.html | byte-identical vs main |
+| nl/plage-albigny.html | byte-identical vs main |
+| nl/plage-d-angon-talloires.html | byte-identical vs main |
+| nl/plage-de-doussard.html | byte-identical vs main |
+| nl/plage-de-duingt.html | byte-identical vs main |
+| nl/plage-de-la-brune-veyrier.html | byte-identical vs main |
+| nl/plage-de-menthon-saint-bernard.html | byte-identical vs main |
+| nl/plage-de-saint-jorioz.html | byte-identical vs main |
+| nl/plage-de-sevrier.html | byte-identical vs main |
+| nl/plage-de-talloires.html | byte-identical vs main |
+| nl/plage-des-marquisats.html | byte-identical vs main |
+| nl/plage-imperial-annecy.html | byte-identical vs main |
+| nl/pont-de-la-caille.html | byte-identical vs main |
+| nl/recreatieparken/index.html | byte-identical vs main |
+| nl/segway-mobilboard-annecy.html | byte-identical vs main |
+| nl/sentier-bout-du-lac-doussard.html | byte-identical vs main |
+| nl/sentier-des-roselieres.html | byte-identical vs main |
+| nl/sentier-tournette-montmin.html | byte-identical vs main |
+| nl/simulateur-emotion-concept-annecy.html | byte-identical vs main |
+| nl/tactiq-aventure-cruseilles.html | byte-identical vs main |
+| nl/trampoline-bam-freesports-annecy.html | byte-identical vs main |
+| nl/voie-verte-lac-annecy-annecy.html | byte-identical vs main |
+| nl/vr-ereel-annecy-sillingy.html | byte-identical vs main |
+| parc-animalier-grande-jeanne-annecy.html | byte-identical vs main |
+| parc-de-peche-domaine-du-moulin-authier.html | byte-identical vs main |
+| parc-des-dronieres.html | byte-identical vs main |
+| pl/domaine-du-tornet.html | byte-identical vs main |
+| plage-albigny.html | byte-identical vs main |
+| plage-d-angon-talloires.html | byte-identical vs main |
+| plage-de-doussard.html | byte-identical vs main |
+| plage-de-duingt.html | byte-identical vs main |
+| plage-de-la-brune-veyrier.html | byte-identical vs main |
+| plage-de-menthon-saint-bernard.html | byte-identical vs main |
+| plage-de-saint-jorioz.html | byte-identical vs main |
+| plage-de-sevrier.html | byte-identical vs main |
+| plage-de-talloires.html | byte-identical vs main |
+| plage-des-marquisats.html | byte-identical vs main |
+| plage-imperial-annecy.html | byte-identical vs main |
+| pont-de-la-caille.html | byte-identical vs main |
+| pt/chateau-clermont-genevois.html | REWRITTEN (pt close — official-site/carousel links only, no placement cards) |
+| pt/domaine-du-tornet.html | REWRITTEN (pt close — official-site/carousel links only, no placement cards) |
+| pt/escalade-space-bloc-sillingy.html | REWRITTEN (pt close — official-site/carousel links only, no placement cards) |
+| pt/jardin-les-jardins-secrets-vaulx.html | REWRITTEN (pt close — official-site/carousel links only, no placement cards) |
+| pt/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy.html | REWRITTEN (pt close — official-site/carousel links only, no placement cards) |
+| pt/la-foret-enchantee-sillingy.html | REWRITTEN (pt close — official-site/carousel links only, no placement cards) |
+| pt/laser-game-lasermaxx-sillingy.html | REWRITTEN (pt close — official-site/carousel links only, no placement cards) |
+| pt/parc-de-peche-domaine-du-moulin-authier.html | REWRITTEN (pt close — official-site/carousel links only, no placement cards) |
+| pt/parc-des-dronieres.html | REWRITTEN (pt close — official-site/carousel links only, no placement cards) |
+| pt/tactiq-aventure-cruseilles.html | REWRITTEN (pt close — official-site/carousel links only, no placement cards) |
+| pt/vr-ereel-annecy-sillingy.html | REWRITTEN (pt close — official-site/carousel links only, no placement cards) |
+| segway-mobilboard-annecy.html | byte-identical vs main |
+| sentier-bout-du-lac-doussard.html | byte-identical vs main |
+| sentier-des-roselieres.html | byte-identical vs main |
+| sentier-tournette-montmin.html | byte-identical vs main |
+| simulateur-emotion-concept-annecy.html | byte-identical vs main |
+| tactiq-aventure-cruseilles.html | byte-identical vs main |
+| trampoline-bam-freesports-annecy.html | byte-identical vs main |
+| voie-verte-lac-annecy-annecy.html | byte-identical vs main |
+| vr-ereel-annecy-sillingy.html | byte-identical vs main |
