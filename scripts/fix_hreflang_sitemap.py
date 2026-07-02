@@ -268,27 +268,66 @@ def rebuild_sitemap(groups, multilingual):
     #                            scripts/build_hubs.py)
     #   /<lang>/<hub>/    → same
     #   /, /<lang>/       → scripts/build_homepage.py + content sources
-    # Anything we can't resolve cleanly falls back to the file mtime of
-    # the rendered HTML.
-    import datetime, subprocess, json as _json
+    #
+    # No batch stamps, no blanket "today" (HANDOFF-15):
+    #   * On a SHALLOW clone (Netlify deploys) git treats the shallow-boundary
+    #     commit as a root commit that "adds" the whole tree — attributing
+    #     every file to one date: a blanket stamp in disguise. Boundary
+    #     commits are therefore excluded from date attribution; on a depth-1
+    #     clone that leaves every file unresolved.
+    #   * A URL whose source can't be resolved carries its previously
+    #     committed <lastmod> forward — never the rendered HTML's mtime
+    #     (that's just checkout time).
+    #   * Only a URL that has never been in the sitemap gets stamped today —
+    #     for a genuinely new page, that's the truth.
+    import datetime, subprocess, json as _json, re as _re
     from collections import defaultdict
 
+    def _shallow_boundary_shas():
+        """SHAs recorded in .git/shallow — commits whose parents are absent."""
+        try:
+            r = subprocess.run(["git", "rev-parse", "--git-dir"],
+                               cwd=str(ROOT), capture_output=True, text=True, check=True)
+            shallow_file = Path(r.stdout.strip())
+            if not shallow_file.is_absolute():
+                shallow_file = ROOT / shallow_file
+            shallow_file = shallow_file / "shallow"
+            if shallow_file.exists():
+                return {l.strip() for l in shallow_file.read_text().splitlines() if l.strip()}
+        except Exception:
+            pass
+        return set()
+
+    def _prev_lastmods():
+        """{url: lastmod} from the sitemap as previously committed."""
+        p = ROOT / "sitemap.xml"
+        if not p.exists():
+            return {}
+        txt = p.read_text(encoding="utf-8", errors="ignore")
+        return dict(_re.findall(
+            r"<url><loc>(.*?)</loc><lastmod>(\d{4}-\d{2}-\d{2})</lastmod>", txt))
+
     def _git_dates(paths):
-        """Return {path: 'YYYY-MM-DD'} for each path's most recent commit."""
+        """{path: 'YYYY-MM-DD'} for each path's most recent NON-BOUNDARY
+        commit. Shallow-boundary commits falsely 'add' the whole tree, so a
+        file whose only visible history is the boundary stays unresolved
+        (→ carry-forward) instead of inheriting a blanket date."""
         if not paths:
             return {}
+        boundary = _shallow_boundary_shas()
         out = {}
         try:
             res = subprocess.run(
-                ["git", "log", "--name-only", "--format=COMMIT %cs", "--"] + list(paths),
+                ["git", "log", "--name-only", "--format=COMMIT %H %cs", "--"] + list(paths),
                 cwd=str(ROOT), capture_output=True, text=True, check=True,
             )
         except Exception:
-            return {p: None for p in paths}
+            return {}
         current = None
         for line in res.stdout.splitlines():
             if line.startswith("COMMIT "):
-                current = line[len("COMMIT "):].strip()
+                sha, date = line[len("COMMIT "):].strip().split(" ", 1)
+                current = None if sha in boundary else date
             elif line.strip() and current:
                 out.setdefault(line.strip(), current)
         return out
@@ -301,7 +340,12 @@ def rebuild_sitemap(groups, multilingual):
         "scripts/build_homepage.py",
         "scripts/build_all_locales.py",
     ]
+    _prev = _prev_lastmods()
     date_map = _git_dates(json_paths + structural_paths)
+    _unresolved = sum(1 for p in json_paths if not date_map.get(p))
+    if _unresolved:
+        print(f"sitemap lastmod: {_unresolved}/{len(json_paths)} sources have no "
+              "usable (non-boundary) git date — carrying previous lastmod forward")
 
     # Build hub → list of fiche source paths to take the max over.
     HUB_FILTERS_CAT = {
@@ -368,25 +412,26 @@ def rebuild_sitemap(groups, multilingual):
     def lastmod_for(u):
         # Strip protocol/host
         tail = u.replace("https://loisirs74.fr", "").lstrip("/").rstrip("/")
-        # Homepage
+        # 1) Real (non-boundary) git date of the URL's source
         if tail == "" or tail in set(locales.VISIBLE_SECONDARY):
-            return homepage_max or datetime.date.today().isoformat()
-        # Hub index (any locale)
-        if u in hub_date and hub_date[u]:
+            if homepage_max:
+                return homepage_max
+        elif u in hub_date and hub_date[u]:
             return hub_date[u]
-        # Fiche: /<slug> or /<lang>/<slug>
-        parts = tail.split("/")
-        if parts[0] in locales.VISIBLE_SECONDARY and len(parts) >= 2:
-            slug = parts[1]
         else:
-            slug = parts[0]
-        src = f"Json/{slug}.json"
-        if src in date_map:
-            return date_map[src]
-        # Fallback: rendered HTML mtime
-        f = url_to_file(u)
-        if f.exists():
-            return datetime.date.fromtimestamp(f.stat().st_mtime).isoformat()
+            parts = tail.split("/")
+            if parts[0] in set(locales.VISIBLE_SECONDARY) and len(parts) >= 2:
+                slug = parts[1]
+            else:
+                slug = parts[0]
+            src = f"Json/{slug}.json"
+            if date_map.get(src):
+                return date_map[src]
+        # 2) Carry the previously committed lastmod forward — never mtime,
+        #    never a blanket stamp.
+        if u in _prev:
+            return _prev[u]
+        # 3) Genuinely new URL: today is the truth.
         return datetime.date.today().isoformat()
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
