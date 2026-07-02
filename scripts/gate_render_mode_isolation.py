@@ -43,9 +43,11 @@ POLICED = (
     "build_catalog_index.py", "ingest_translations.py", "fix_hub_chrome.py",
     "build_pilot_langs.py", "fix_lang_nav.py",
 )
-# Exempt (not scanned): build_fulltree_lang.py (the facts owner), build_all.py
-# (orchestrator), and gate_*/fix_hreflang_sitemap.py (visibility validators /
-# the hreflang+sitemap authority) which are SUPPOSED to scope to VISIBLE.
+# Exempt (not scanned): build_fulltree_lang.py (the facts orchestrator) and
+# build_homepage_lang.py (its homepage renderer, HANDOFF-31 — refuses the six
+# by assertion), build_all.py (orchestrator), and gate_*/fix_hreflang_sitemap.py
+# (visibility validators / the hreflang+sitemap authority) which are SUPPOSED
+# to scope to VISIBLE.
 
 
 def main():

@@ -82,7 +82,12 @@ def main():
             shot_dir = os.path.join(out_dir, lang)
             os.makedirs(shot_dir, exist_ok=True)
             pages = []
+            # RV_SAMPLE=N caps the run to the first N fiche pages (deterministic:
+            # alphabetical) — the HANDOFF-31 acceptance uses 20-page RTL samples.
+            sample = int(os.environ.get("RV_SAMPLE", "0") or 0)
             for fn in sorted(os.listdir(ldir)):
+                if sample and len(pages) >= sample:
+                    break
                 if not fn.endswith(".html"):
                     continue
                 slug = fn[:-5]

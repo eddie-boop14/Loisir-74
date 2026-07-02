@@ -68,6 +68,64 @@ TEMPLATE_HUB = {
 }
 
 OG_LOCALE = {"fr": "fr_FR", "en": "en_US", "de": "de_DE", "it": "it_IT", "es": "es_ES", "nl": "nl_NL"}
+
+# HANDOFF-31: facts-first languages render commune pages through THIS template
+# too. Their chrome comes from reviewed vocabulary (data/site-chrome-langs.json)
+# via register_facts_lang(); their hub-lift template is their OWN freshly built
+# hub (so the lifted style/scripts/footer are already localized). The six live
+# locales' path is untouched.
+STRICT_LANGS = set()
+
+
+def register_facts_lang(lang):
+    """Extend C / CATEGORY_LABELS / TEMPLATE_HUB / OG_LOCALE with a facts-first
+    language from reviewed sources. Requires the lang's cascades hub to exist
+    (build_hubs.build_facts_lang_hubs runs first). Idempotent."""
+    if lang in STRICT_LANGS:
+        return
+    H.register_facts_lang(lang)
+    sc = H._data("site-chrome-langs.json")
+    for k, v in sc["commune_chrome"][lang].items():
+        if k in C:
+            C[k][lang] = v
+    for k, v in sc["category_labels"][lang].items():
+        if k in CATEGORY_LABELS:
+            CATEGORY_LABELS[k][lang] = v
+    TEMPLATE_HUB[lang] = f"{lang}/{H.hub_slug_for('cascades', lang)}"
+    OG_LOCALE[lang] = H._FACTS_OG[lang]
+    _TEMPLATE_CACHE.pop(lang, None)
+    STRICT_LANGS.add(lang)
+
+
+def _filter_strings(lang):
+    """Filter-bar strings for render_page. The six live locales ship these as
+    the FR literals below (frozen chrome — byte-identity contract); facts-first
+    languages get the reviewed translations."""
+    if lang in STRICT_LANGS:
+        hc = H._data("site-chrome-langs.json")["hub_chrome"][lang]
+        il = H._data("i18n-labels.json")
+        return {"filtres": hc["filtres"], "acces": hc["acces"], "tous": hc["tous"],
+                "gratuit": il["fact_values"]["gratuit"][lang],
+                "payant": il["fact_values"]["payant"][lang],
+                "tri": hc["tri"], "by_category": hc["by_category"],
+                "no_results": hc["no_results"], "no_match": hc["no_match"]}
+    return {"filtres": "Filtres", "acces": "Accès", "tous": "Tous",
+            "gratuit": "Gratuit", "payant": "Payant", "tri": "Tri",
+            "by_category": "Par catégorie", "no_results": "Aucun résultat",
+            "no_match": "Aucun lieu ne correspond aux filtres actifs."}
+
+
+def _title_q(lang, commune):
+    """'Que faire à <Commune> ?' composed per language. The six keep the exact
+    historical FR-style spacing (byte-identity); facts langs compose with their
+    own punctuation: ja uses its colon prefix and no question mark, ar the
+    Arabic question mark, prefix languages (he 'ב-') attach without a space."""
+    w = C["whattodo"][lang]
+    if lang not in STRICT_LANGS:
+        return f"{w} {commune} ?"
+    sep = "" if w.endswith(("-", ":", "：")) else " "
+    q = {"ja": "", "ar": "؟"}.get(lang, "?")
+    return f"{w}{sep}{commune}{q}"
 LANG_NATIVE = locales.endonyms(locales.VISIBLE)  # isolation-ok: picker endonyms
 
 C = {  # chrome labels (commune name itself is frozen, never translated)
@@ -262,9 +320,14 @@ def render_page(c, lang, intros):
     commune = c["commune"]
     alts = {l: commune_url(slug, l) for l in VIS}
     url = alts[lang]
-    title = f"{C['whattodo'][lang]} {commune} ? · Loisirs 74"
-    intro = intros.get(slug, {}).get(lang) or intros.get(slug, {}).get("fr") or ""
-    meta_desc = f"{C['whattodo'][lang]} {commune} ? {c['lieux_count']} {C['places_in'][lang]} {commune}. {C['meta_tail'][lang]}"
+    title = f"{_title_q(lang, commune)} · Loisirs 74"
+    if lang in STRICT_LANGS:
+        # strict prose: a facts language shows its OWN intro or none at all —
+        # the FR fallback below is for the six live locales only.
+        intro = intros.get(slug, {}).get(lang) or ""
+    else:
+        intro = intros.get(slug, {}).get(lang) or intros.get(slug, {}).get("fr") or ""
+    meta_desc = f"{_title_q(lang, commune)} {c['lieux_count']} {C['places_in'][lang]} {commune}. {C['meta_tail'][lang]}"
     hero_css = pick_hero_css(c)
 
     # hreflang blocks (both forms, matching the hub template)
@@ -301,9 +364,11 @@ def render_page(c, lang, intros):
         )
     grid = '<main>\n<div class="wrap">\n' + "\n".join(sections) + "\n</div>\n</main>"
 
+    # dir attribute rides ONLY on RTL pages (ar/he) — the six stay byte-identical
+    dir_attr = ' dir="rtl"' if locales.DIR.get(lang) == "rtl" else ""
     head = f"""<!DOCTYPE html>
 
-<html lang="{lang}">
+<html lang="{lang}"{dir_attr}>
 <head>
 {hl1}
 <meta charset="utf-8"/>
@@ -337,6 +402,16 @@ def render_page(c, lang, intros):
 </head>"""
 
     catcher = f"{c['lieux_count']} {C['places_in'][lang]} {commune} · Haute-Savoie"
+    fs = _filter_strings(lang)
+    intro_section = (
+        '<section aria-label="intro" class="hub-intro">\n'
+        '<div class="wrap">\n'
+        f'<p class="lead">{esc(intro)}</p>\n'
+        '</div>\n'
+        '</section>'
+    )
+    if lang in STRICT_LANGS and not intro:
+        intro_section = ""   # strict: no intro prose yet → no empty shell section
     body = f"""<body>
 <div aria-hidden="true" class="cursor-glow" id="cursorGlow"></div>
 <header class="site">
@@ -369,38 +444,34 @@ def render_page(c, lang, intros):
 <p class="hub-catcher">{esc(catcher)}</p>
 </div>
 </section>
-<section aria-label="intro" class="hub-intro">
-<div class="wrap">
-<p class="lead">{esc(intro)}</p>
-</div>
-</section>
+{intro_section}
 <div class="filter-bar">
 <div class="wrap">
 <div class="filter-bar__head">
 <div class="count-live"><b id="count-n">0</b> <span id="count-label">{H.CHROME['lieu_plural'][lang]}</span></div>
 <button aria-controls="filter-panel" aria-expanded="false" class="filter-toggle" type="button">
-<span>Filtres</span>
+<span>{fs['filtres']}</span>
 <span class="filter-toggle__badge" hidden="" id="filter-toggle-badge">0</span>
 <svg aria-hidden="true" class="filter-toggle__chev" height="11" viewbox="0 0 12 12" width="11"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
 </button>
 </div>
 <div class="filter-panel" id="filter-panel">
 <label>
-<span>Accès</span>
+<span>{fs['acces']}</span>
 <div class="access-group" id="filt-access">
-<button class="active" data-v="all">Tous</button>
-<button data-v="free">Gratuit</button>
-<button data-v="paid">Payant</button>
+<button class="active" data-v="all">{fs['tous']}</button>
+<button data-v="free">{fs['gratuit']}</button>
+<button data-v="paid">{fs['payant']}</button>
 </div>
 </label>
 <label>
-<span>Tri</span>
-<select id="filt-sort"><option value="commune">Par catégorie</option><option value="alpha">A → Z</option></select>
+<span>{fs['tri']}</span>
+<select id="filt-sort"><option value="commune">{fs['by_category']}</option><option value="alpha">A → Z</option></select>
 </label>
 </div>
 </div>
 </div>
-<div id="empty-state" style="display:none;text-align:center;padding:3rem 1rem;color:var(--ink-mute)"><p style="font:600 1.05rem var(--sans);color:var(--ink);margin:0 0 .35rem"><b>Aucun résultat</b></p><p style="font:400 .9rem var(--sans);margin:0">Aucun lieu ne correspond aux filtres actifs.</p></div>
+<div id="empty-state" style="display:none;text-align:center;padding:3rem 1rem;color:var(--ink-mute)"><p style="font:600 1.05rem var(--sans);color:var(--ink);margin:0 0 .35rem"><b>{fs['no_results']}</b></p><p style="font:400 .9rem var(--sans);margin:0">{fs['no_match']}</p></div>
 {grid}
 {lift_footer(lang, alts)}
 {lift_scripts(lang)}
@@ -420,7 +491,9 @@ PROTECTED = ("Chez Nous à la Plage", "Chalet du Tornet")
 
 def backlink_markup(commune, commune_slug, lang):
     href = commune_url(commune_slug, lang)
-    label = f"{C['backlink'][lang]} {commune}"
+    b = C['backlink'][lang]
+    sep = "" if b.endswith(("-", ":", "：")) else " "   # he 'ב-' / ja '所在地：' attach
+    label = f"{b}{sep}{commune}"
     return (
         "<!--commune-link:start-->"
         f'<div class="wrap" style="margin:.2rem 0 .6rem"><a class="commune-link" '
@@ -450,6 +523,32 @@ def inject_backlink(fiche_path, commune, commune_slug, lang):
     if new != html:
         fiche_path.write_text(new, encoding="utf-8")
     return "written"
+
+
+# ---------------------------------------------------------------- facts langs
+
+def build_for_lang(lang):
+    """HANDOFF-31: render every commune page of ONE facts-first language through
+    this template (same chrome lift, same card renderer as the six) and inject
+    the reciprocal backlinks onto that language's fiches. Called by
+    build_fulltree_lang after the lang's hubs exist (template lift source)."""
+    register_facts_lang(lang)
+    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    communes = manifest["communes"]
+    intros = json.loads(INTROS.read_text(encoding="utf-8")) if INTROS.exists() else {}
+    written = 0
+    for c in communes:
+        out = ROOT / lang / c["slug"] / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(render_page(c, lang, intros), encoding="utf-8")
+        written += 1
+    stats = {"written": 0, "skip-protected": 0, "missing": 0}
+    for c in communes:
+        for l in c["lieux"]:
+            fp = ROOT / lang / f"{l['slug']}.html"
+            r = inject_backlink(fp, c["commune"], c["slug"], lang)
+            stats[r] += 1
+    return written, stats
 
 
 # ---------------------------------------------------------------- main
