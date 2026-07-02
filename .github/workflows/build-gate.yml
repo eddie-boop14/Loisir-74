@@ -51,6 +51,22 @@ jobs:
       - name: No-silent-key-drop gate
         run: python3 scripts/gate_no_key_drop.py --base "$BASE"
 
+      - name: Bot-commit sanity gate (no mass deletion of verified fields)
+        # HANDOFF-24: the 2026-07-01 dead-key run deleted place_id/hours/
+        # website/phone from 397 fiches INSIDE google_check/freshness —
+        # below gate_no_key_drop's radar. >20 fiches losing verified
+        # fields in one diff = a checker rewriting the world. Red.
+        run: python3 scripts/gate_bot_commit_sanity.py --base "$BASE"
+
+      - name: Error≠data + gate tripwire tests (offline)
+        # Proves the mass-failure circuit breakers hold: a simulated
+        # 100%-failure run changes ZERO Json files and exits non-zero,
+        # and a seeded mass-deletion trips gate_bot_commit_sanity.
+        run: |
+          python3 tests/test_error_is_not_data.py
+          python3 tests/test_gate_bot_commit_sanity.py
+          python3 tests/test_translate_batch.py
+
       - name: No-orphan-geo-verified gate
         run: python3 scripts/gate_geo_verified.py
 

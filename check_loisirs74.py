@@ -12,6 +12,17 @@ BONUS:    Google rating, review count, opening hours, GPS drift vs stored coords
 - Resumable: re-running skips fiches already checked today (use --force to redo).
 
 Needs ONE thing from you: a Google Maps API key in the env var GOOGLE_MAPS_API_KEY.
+
+ERROR ≠ DATA (HANDOFF-24). Every check ends in exactly one of three outcomes:
+  OK               — the API answered with fresh data          → may update fields
+  CONFIRMED_ABSENT — the API answered: place gone / no match   → may update fields
+  CHECK_FAILED     — quota, auth, network: a fact about *us*,
+                     not the place                             → keeps ALL previous
+                     values; writes only last_check + check_failed.
+Mass-failure circuit breaker: if more than FAIL_RATE_LIMIT of the calls in a
+run fail, the whole run ABORTS before a single fiche is written and exits
+non-zero. (2026-07-01: a dead API key produced a 100%-failure run that
+overwrote 397 fiches — the breaker makes that impossible.)
 """
 
 import os, sys, json, csv, time, math, glob, datetime
@@ -21,6 +32,7 @@ JSON_DIR = os.environ.get("LOISIRS_JSON_DIR", "Json")
 REPORT = os.environ.get("LOISIRS_REPORT", "report.csv")
 FORCE = "--force" in sys.argv
 TODAY = datetime.date.today().isoformat()
+FAIL_RATE_LIMIT = 0.10   # >10% of calls failing aborts the run, zero writes
 
 PLACES_URL = "https://places.googleapis.com/v1/places:searchText"
 FIELD_MASK = ",".join([
@@ -66,13 +78,29 @@ def build_query(fiche):
     return f"{name} {commune} Haute-Savoie France".strip()
 
 
+def failed_check(prev, query, reason):
+    """CHECK_FAILED — the call failed, so we learned nothing about the place.
+    Keep every previously-verified value; record only that the check failed.
+    `checked` keeps its old date (last SUCCESSFUL check), so a same-day rerun
+    retries instead of skipping."""
+    gc = dict(prev or {})
+    gc.setdefault("query", query)
+    gc["last_check"] = TODAY
+    gc["check_failed"] = reason
+    gc["outcome"] = "CHECK_FAILED"
+    return gc
+
+
 def check_one(fiche):
-    """Returns the google_check dict for one fiche."""
+    """Returns the google_check dict for one fiche.
+    Raises on any API/network failure — the caller classifies that as
+    CHECK_FAILED and must not let it touch existing data."""
     q = build_query(fiche)
     place = query_google(q)
     if not place:
         return {"checked": TODAY, "query": q, "match": None,
-                "status": "NO_MATCH", "website": None,
+                "status": "NO_MATCH", "outcome": "CONFIRMED_ABSENT",
+                "website": None,
                 "rating": None, "rating_count": None,
                 "hours": None, "gps_drift_m": None,
                 "stored_website": fiche.get("official_site_url")}
@@ -84,12 +112,14 @@ def check_one(fiche):
         drift = haversine_m(float(fiche["latitude"]), float(fiche["longitude"]),
                             float(glat), float(glng))
     hours = (place.get("regularOpeningHours", {}) or {}).get("weekdayDescriptions")
+    status = place.get("businessStatus", "UNKNOWN")
     return {
         "checked": TODAY,
         "query": q,
         "match": place.get("displayName", {}).get("text"),
         "place_id": place.get("id"),
-        "status": place.get("businessStatus", "UNKNOWN"),
+        "status": status,
+        "outcome": "CONFIRMED_ABSENT" if status == "CLOSED_PERMANENTLY" else "OK",
         "website": place.get("websiteUri"),
         "stored_website": fiche.get("official_site_url"),
         "rating": place.get("rating"),
@@ -111,6 +141,15 @@ def priority(gc):
     return 9
 
 
+def abort_run(failed, attempted):
+    """Mass-failure circuit breaker tripped: nothing was written."""
+    print(f"\n🔴 CIRCUIT BREAKER: {failed}/{attempted} calls failed "
+          f"(> {int(FAIL_RATE_LIMIT*100)}% limit).")
+    print("A mass failure is a fact about the checker (dead key, quota, network),")
+    print("not about the venues. ZERO fiches were written. Fix the key and rerun.")
+    sys.exit(2)
+
+
 def main():
     if not API_KEY:
         sys.exit("ERROR: set GOOGLE_MAPS_API_KEY first. See setup notes.")
@@ -120,34 +159,57 @@ def main():
         sys.exit(f"ERROR: no .json files found in {JSON_DIR}/")
 
     print(f"Found {len(files)} fiches. Checking against Google...\n")
-    rows = []
+    # Phase 1 — check everything IN MEMORY. Nothing touches disk until the
+    # whole run has passed the mass-failure circuit breaker.
+    fail_budget = max(1, int(len(files) * FAIL_RATE_LIMIT))
+    failed = attempted = 0
+    results = []   # (path, fiche, gc, fresh) — fresh means checked this run
     for i, path in enumerate(files, 1):
         with open(path, encoding="utf-8") as f:
             fiche = json.load(f)
 
         existing = fiche.get("google_check")
         if existing and existing.get("checked") == TODAY and not FORCE:
-            gc = existing
-            tag = "skip"
+            gc, fresh, tag = existing, False, "skip"
         else:
+            attempted += 1
+            fresh = True
             try:
                 gc = check_one(fiche)
+                tag = gc.get("status")
             except Exception as e:
-                gc = {"checked": TODAY, "status": "ERROR",
-                      "query": build_query(fiche), "error": str(e),
-                      "website": None, "stored_website": fiche.get("official_site_url")}
-            fiche["google_check"] = gc
-            with open(path, "w", encoding="utf-8") as f:
-                json.dump(fiche, f, ensure_ascii=False, indent=2)
-            tag = gc.get("status")
-            time.sleep(0.15)  # be gentle on the API
+                failed += 1
+                gc = failed_check(existing, build_query(fiche), str(e))
+                tag = "CHECK_FAILED"
 
-        rows.append((fiche.get("slug", os.path.basename(path)), gc))
+        results.append((path, fiche, gc, fresh))
         flag = ""
-        if gc.get("status") == "CLOSED_PERMANENTLY": flag = "  ❌ CLOSED"
+        if gc.get("outcome") == "CHECK_FAILED":       flag = "  🔌 check failed (kept previous data)"
+        elif gc.get("status") == "CLOSED_PERMANENTLY": flag = "  ❌ CLOSED"
         elif gc.get("status") == "NO_MATCH":          flag = "  ⚠️  no match"
         elif not gc.get("website"):                   flag = "  ⚠️  no website"
         print(f"[{i:>3}/{len(files)}] {fiche.get('slug',''):<45} {tag}{flag}")
+
+        if failed > fail_budget:
+            abort_run(failed, attempted)
+        if fresh:
+            time.sleep(0.15)  # be gentle on the API
+
+    if attempted and failed / attempted > FAIL_RATE_LIMIT:
+        abort_run(failed, attempted)
+
+    # Phase 2 — breaker passed: now (and only now) write the fiches.
+    rows = []
+    for path, fiche, gc, fresh in results:
+        if fresh:
+            fiche["google_check"] = gc
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(fiche, f, ensure_ascii=False, indent=2)
+                f.write("\n")   # repo convention: fiches end with a newline
+        rows.append((fiche.get("slug", os.path.basename(path)), gc))
+    if failed:
+        print(f"\n⚠️  {failed}/{attempted} checks failed (under the breaker limit): "
+              "those fiches kept ALL previous values, only last_check/check_failed were stamped.")
 
     rows.sort(key=lambda r: (priority(r[1]), r[0]))
     with open(REPORT, "w", newline="", encoding="utf-8") as f:
