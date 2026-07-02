@@ -246,6 +246,20 @@ def render_fiche_rich(d, lang):
     import build_lieu_page as LP
     if lang not in LP.SUPPORTED_LANGS:
         LP.SUPPORTED_LANGS.append(lang)
+    if lang not in LP.HUB_LOCALE_SLUGS.get("cascades", {}):
+        # Breadcrumb + JSON-LD hub links must point at THIS tree's localized
+        # hub dirs (/pt/cascatas/), not the FR slugs (dead /pt/cascades/ —
+        # the link-integrity 404 class). Slugs from this builder's own
+        # HUB_SLUGS (what the tree actually renders), labels from the
+        # reviewed vocabulary. Languages absent from HUB_SLUGS (ja/ar/he)
+        # keep the FR-canonical fallback — their trees use FR hub dirs.
+        for fr_slug in LP.HUB_LOCALE_SLUGS:
+            loc = HUB_SLUGS.get(lang, {}).get(fr_slug)
+            if loc:
+                LP.HUB_LOCALE_SLUGS[fr_slug][lang] = loc
+            lbl = V("hub_names", fr_slug, lang)
+            if lbl:
+                LP.HUB_LOCALE_LABELS[fr_slug][lang] = lbl
     if lang not in LP._REL_LABELS:
         # Related-carousel labels from REVIEWED sources only (rich chrome +
         # the facts vocabulary) — never hand-invented, never FR fallback.

@@ -1621,12 +1621,16 @@ def event_modal_block(d):
 def site_footer():
     """Locale-aware <footer class='site'>. URLs prefixed by current locale."""
     lp = f"/{_LANG}" if _LANG != "fr" else ""
+    # signaler / devenir-partenaire / mentions-legales / confidentialite / cgv
+    # exist per-locale for the six only; a facts-lang rich tree links the FR
+    # originals instead of 404ing on /<lang>/… (link-integrity gate).
+    legal_lp = "" if _STRICT_PROSE else lp
     return (
         '<footer class="site"><div class="wrap"><div class="foot-grid">'
         f'<div class="foot-col"><a class="brand" href="{BASE_URL}{lp}/" style="margin-bottom:.85rem"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a><p>{T("f_tagline")}</p></div>'
         f'<div class="foot-col"><h4>{T("f_explore")}</h4><ul><li><a href="{BASE_URL}{lp}/">{T("home")}</a></li></ul></div>'
-        f'<div class="foot-col"><h4>{T("f_contribute")}</h4><ul><li><a href="mailto:photos@loisirs74.fr">{T("f_send_photos")}</a></li><li><a href="{BASE_URL}{lp}/signaler">{T("f_report")}</a></li><li><a href="{BASE_URL}{lp}/devenir-partenaire">{T("f_become_p")}</a></li></ul></div>'
-        f'<div class="foot-col"><h4>{T("f_legal")}</h4><ul><li><a href="{BASE_URL}{lp}/mentions-legales">{T("f_legal_link")}</a></li><li><a href="{BASE_URL}{lp}/confidentialite">{T("f_privacy")}</a></li><li><a href="{BASE_URL}{lp}/cgv">{T("f_cgv")}</a></li></ul></div>'
+        f'<div class="foot-col"><h4>{T("f_contribute")}</h4><ul><li><a href="mailto:photos@loisirs74.fr">{T("f_send_photos")}</a></li><li><a href="{BASE_URL}{legal_lp}/signaler">{T("f_report")}</a></li><li><a href="{BASE_URL}{legal_lp}/devenir-partenaire">{T("f_become_p")}</a></li></ul></div>'
+        f'<div class="foot-col"><h4>{T("f_legal")}</h4><ul><li><a href="{BASE_URL}{legal_lp}/mentions-legales">{T("f_legal_link")}</a></li><li><a href="{BASE_URL}{legal_lp}/confidentialite">{T("f_privacy")}</a></li><li><a href="{BASE_URL}{legal_lp}/cgv">{T("f_cgv")}</a></li></ul></div>'
         f'</div><div class="foot-bottom"><span class="credit">{T("f_copyright")}</span><span>{T("f_promise")}</span></div></div></footer>'
     )
 
@@ -2028,16 +2032,20 @@ def plages_voisines_block(d, lang):
     sibs.sort(key=lambda si: _haversine_km(me["lat"], me["lng"], si[1]["lat"], si[1]["lng"]))
     sibs = sibs[:4]
     links = []
-    # up to the lake hub (or the master hub for the mountain group)
+    # up to the lake hub (or the master hub for the mountain group).
+    # Strict-prose (facts-lang rich) pages skip the intent-hub links: those
+    # pages exist only for the six prose languages — a /pt/baignade-lac-annecy
+    # link would 404 (link-integrity gate).
     hub_slug = me["hub"]
-    links.append(f'<a class="fiche" style="margin:4px 10px 4px 0" '
-                 f'href="{BASE_URL}{lang_prefix}/{hub_slug}">{html_lib.escape(_GUIDE.get(lang) or _GUIDE["fr"], quote=True)} →</a>')
+    if not _STRICT_PROSE:
+        links.append(f'<a class="fiche" style="margin:4px 10px 4px 0" '
+                     f'href="{BASE_URL}{lang_prefix}/{hub_slug}">{html_lib.escape(_GUIDE.get(lang) or _GUIDE["fr"], quote=True)} →</a>')
     for s, _info in sibs:
         nm = _related_name(s, lang)
         links.append(f'<a class="fiche" style="margin:4px 10px 4px 0" '
                      f'href="{BASE_URL}{lang_prefix}/{s}">{html_lib.escape(nm, quote=True)}</a>')
     # always link the master hub too (cross-lake discovery)
-    if hub_slug != _MASTER_HUB:
+    if hub_slug != _MASTER_HUB and not _STRICT_PROSE:
         links.append(f'<a class="fiche" style="margin:4px 10px 4px 0" '
                      f'href="{BASE_URL}{lang_prefix}/{_MASTER_HUB}">{html_lib.escape(_ALLSPOTS.get(lang) or _ALLSPOTS["fr"], quote=True)} →</a>')
     title = html_lib.escape(_VOIS.get(lang) or _VOIS["fr"], quote=True)
