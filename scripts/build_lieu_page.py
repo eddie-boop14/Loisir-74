@@ -516,6 +516,15 @@ def acces_pmr_fact(a):
     return (_ACCES_LABEL.get(_LANG) or _ACCES_LABEL["fr"], val)
 
 
+def _bdi(s_esc):
+    """<bdi>-isolate an (already escaped) Latin/number value inside an RTL flow
+    (ar/he): prices, frozen FR place names, durations would otherwise visually
+    scramble against the right-to-left text. HANDOFF-13's anti-scramble rule,
+    carried onto the rich template now that ar/he render through it
+    (HANDOFF-31). No-op on LTR pages — the six stay byte-identical."""
+    return f"<bdi>{s_esc}</bdi>" if locales.DIR.get(_LANG) == "rtl" else s_esc
+
+
 def facts_block(facts, source_url="", acces_pmr=None):
     """Render the 'At a glance' grid (locale-aware), with an optional compact
     'Source officielle →' link beside the panel (master to-do #4)."""
@@ -533,7 +542,7 @@ def facts_block(facts, source_url="", acces_pmr=None):
                 ok_class = " ok"
             items.append(
                 f'<div class="fact"><div class="k">{esc(_fact_label(k))}</div>'
-                f'<div class="v{ok_class}">{esc(v)}</div></div>'
+                f'<div class="v{ok_class}">{_bdi(esc(v))}</div></div>'
             )
             seen.add(k)
     for k, v in facts.items():
@@ -541,7 +550,7 @@ def facts_block(facts, source_url="", acces_pmr=None):
             continue
         items.append(
             f'<div class="fact"><div class="k">{esc(_fact_label(k))}</div>'
-            f'<div class="v">{esc(v)}</div></div>'
+            f'<div class="v">{_bdi(esc(v))}</div></div>'
         )
     ap = acces_pmr_fact(acces_pmr)
     if ap:
@@ -1480,6 +1489,18 @@ def build_head(d):
 
     # Localize CSS "Générique" overlay
     css = CSS.replace('content: "Générique"', f'content: "{T("generic")}"')
+    if dir_attr:
+        # RTL-only fixups appended to the page CSS (LTR pages byte-identical):
+        # the skip link is parked at left:-9999px, which in an RTL document
+        # EXPANDS the scrollable area leftward (10 000px horizontal overflow —
+        # the Layer A failure class). Park it inline-start instead.
+        css += ("\n[dir=rtl] a.skip{left:auto;inset-inline-start:-9999px}"
+                "\n[dir=rtl] a.skip:focus{inset-inline-start:0}"
+                # the hammer h1 wraps each word of the frozen FR name in an
+                # inline-block span; atomic boxes follow paragraph direction, so
+                # RTL reversed the words ("Rouget du Cascade"). Keep the Latin
+                # name LTR inside the right-aligned RTL hero.
+                "\n[dir=rtl] h1.hammer{direction:ltr;text-align:right}")
 
     ldjson = build_ldjson(d)
     hero_alt = L("hero_alt", name)

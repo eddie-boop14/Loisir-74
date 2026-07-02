@@ -441,8 +441,13 @@ def fiche_card_html(d, lang, slug, picked_photo=None):
     loc = i18n.get(lang) or {}
     fr = i18n.get("fr") or {}
     name = loc.get("name") or fr.get("name") or slug
-    desc = loc.get("meta_description") or fr.get("meta_description") or ""
-    desc = desc.strip()[:280]  # cap
+    if lang in STRICT_LANGS:
+        # facts-first language: the card excerpt is this language's OWN
+        # translated meta_description or nothing — never FR prose. The frozen
+        # FR name above is the only permitted fallback.
+        desc = (loc.get("meta_description") or "").strip()[:280]
+    else:
+        desc = (loc.get("meta_description") or fr.get("meta_description") or "").strip()[:280]
     # tariff_kind takes precedence over is_free for the visual tag.
     # "seasonal" → "Selon saison" (mixed-access lieux: site libre · visites guidées payantes)
     # otherwise → is_free True/False → Gratuit/Payant
@@ -472,7 +477,10 @@ def fiche_card_html(d, lang, slug, picked_photo=None):
             cat = d.get("category") or "attraction"
             img_src = f"https://loisirs74.fr/img/generique/generique-{cat}.jpg"
 
-    alt = (loc.get("hero_alt") or fr.get("hero_alt") or name)
+    if lang in STRICT_LANGS:
+        alt = loc.get("hero_alt") or name   # never FR alt prose on a facts page
+    else:
+        alt = (loc.get("hero_alt") or fr.get("hero_alt") or name)
     lang_prefix = f"/{lang}" if lang != "fr" else ""
     fiche_url = f"https://loisirs74.fr{lang_prefix}/{slug}"
     official = d.get("official_site_url") or ""
@@ -1075,6 +1083,318 @@ CHROME_SLUGS = {
     "politique-confidentialite-loisirs74-phase1","merci-partenaire",
     "merci-signalement","studio","404","index",
 }
+
+
+# ---------------------------------------------------------------------------
+# HANDOFF-31 — facts-first languages (pl/pt/cs/ja/ar/he) render through THIS
+# template too: one hub standard for 12 languages. The FR canonical shell is
+# the chrome source (CSS, filters, footer, scripts); its prose regions
+# (hub-catcher, hub-intro/seo-more, hub-faq + FAQPage JSON-LD) are OMITTED —
+# never FR-filled, never machine-invented. Every localized string comes from
+# reviewed vocabulary files: data/site-chrome-langs.json, data/i18n-labels.json,
+# data/rich-chrome-langs.json, data/nearme-labels.json.
+# The six live locales' code path above is untouched (byte-identity contract).
+# ---------------------------------------------------------------------------
+
+STRICT_LANGS = set()   # facts langs: cards never fall back to FR prose
+
+_FACTS_OG = {"pl": "pl_PL", "pt": "pt_PT", "cs": "cs_CZ",
+             "ja": "ja_JP", "ar": "ar_AR", "he": "he_IL"}
+
+# Localized hub slugs for the facts-first languages (ASCII-folded, URL-clean),
+# moved here from build_fulltree_lang (HANDOFF-31) — this template is now the
+# single owner of hub-slug knowledge. ja/ar/he intentionally absent → the
+# FR-canonical slug rides until a transliteration scheme is chosen.
+HUB_SLUGS_FACTS = {
+    "pl": {
+        "cascades": "wodospady", "chateaux": "zamki", "lacs-plages": "jeziora-plaze",
+        "musees": "muzea", "parcs-jardins": "parki-ogrody", "points-de-vue": "punkty-widokowe",
+        "sentiers": "szlaki", "telecabines": "koleje-gondolowe", "voies-vertes": "zielone-szlaki",
+        "baignade-nautisme": "kapiel-sporty-wodne", "bases-de-loisirs": "parki-rekreacyjne",
+        "que-faire": "co-robic", "sensations-plein-air": "emocje-plenerowe",
+        "sorties-detente": "relaksujace-wycieczki", "sport-jeux": "sport-zabawa",
+    },
+    "pt": {
+        "cascades": "cascatas", "chateaux": "castelos", "lacs-plages": "lagos-e-praias", "musees": "museus",
+        "parcs-jardins": "parques-e-jardins", "points-de-vue": "miradouros", "sentiers": "trilhos",
+        "telecabines": "telefericos", "voies-vertes": "vias-verdes", "baignade-nautisme": "banhos-e-desportos-aquaticos",
+        "bases-de-loisirs": "parques-de-lazer", "que-faire": "o-que-fazer", "sensations-plein-air": "emocoes-ao-ar-livre",
+        "sorties-detente": "passeios-relaxantes", "sport-jeux": "desporto-e-jogos",
+    },
+    "cs": {
+        "cascades": "vodopady", "chateaux": "zamky", "lacs-plages": "jezera-a-plaze", "musees": "muzea",
+        "parcs-jardins": "parky-a-zahrady", "points-de-vue": "vyhlidky", "sentiers": "stezky",
+        "telecabines": "kabinkove-lanovky", "voies-vertes": "zelene-stezky", "baignade-nautisme": "koupani-a-vodni-sporty",
+        "bases-de-loisirs": "rekreacni-arealy", "que-faire": "co-delat", "sensations-plein-air": "zazitky-pod-sirym-nebem",
+        "sorties-detente": "vylety-pro-odpocinek", "sport-jeux": "sport-a-hry",
+    },
+}
+
+_DATA_CACHE = {}
+
+
+def _data(name):
+    if name not in _DATA_CACHE:
+        _DATA_CACHE[name] = json.loads((ROOT / "data" / name).read_text(encoding="utf-8"))
+    return _DATA_CACHE[name]
+
+
+def register_facts_lang(lang):
+    """Extend every per-locale chrome dict of this template with a facts-first
+    language, from reviewed sources only. Idempotent. Must be called before any
+    facts-lang render; the six's dict entries are never touched."""
+    if lang in STRICT_LANGS:
+        return
+    sc = _data("site-chrome-langs.json")
+    hc = sc["hub_chrome"][lang]
+    il = _data("i18n-labels.json")
+    rc = _data("rich-chrome-langs.json")["chrome"][lang]
+    CHROME["lieu_singular"][lang] = hc["lieu_sg"]
+    CHROME["lieu_plural"][lang] = hc["lieu_pl"]
+    CHROME["free"][lang] = il["fact_values"]["gratuit"][lang]
+    CHROME["paid"][lang] = il["fact_values"]["payant"][lang]
+    CHROME["seasonal"][lang] = hc["seasonal"]
+    CHROME["google_maps"][lang] = "Google Maps"
+    CHROME["official_site"][lang] = rc["official_site"]
+    TOUTES_LES_COMMUNES[lang] = hc["toutes_communes"]
+    COUNT_LABELS[lang] = (hc["count_sg"], hc["count_pl"])
+    ALL_CATS_LABEL[lang] = il["ui_chrome"]["toutes_categories"][lang]
+    for hub in HUB_DISPLAY:
+        HUB_DISPLAY[hub][lang] = il["hub_names"][hub][lang]
+    for hub in HUB_TITLE:
+        HUB_TITLE[hub][lang] = f'{il["hub_names"][hub][lang]} · Haute-Savoie · Loisirs 74'
+    OG_LOCALE_TAG[lang] = _FACTS_OG[lang]
+    SORTIES_SUBLINE[lang] = sc["homepage"][lang]["sorties_sub"]
+    STRICT_LANGS.add(lang)
+
+
+def facts_hub_descriptions(lang):
+    """Composed meta descriptions for a facts lang — reviewed strings only
+    (hub name + the commune meta_tail sentence); the six's hand-written
+    data/hub-meta-descriptions.json entries are never machine-extended."""
+    sc = _data("site-chrome-langs.json")
+    il = _data("i18n-labels.json")
+    tail = sc["commune_chrome"][lang]["meta_tail"]
+    return {hub: {lang: f'{il["hub_names"][hub][lang]} · Haute-Savoie. {tail}'}
+            for hub in HUB_DISPLAY}
+
+
+def hub_slug_for(fr_hub, lang):
+    """Localized hub slug for ANY visible language: HUB_SLUGS_FACTS is the
+    authoritative source for the facts langs (pl/pt/cs localized; ja/ar/he
+    fall through to FR-canonical); the six's slugs come from the FR shell's
+    hreflang cluster, exactly like hub_locale_map."""
+    if lang in HUB_SLUGS_FACTS:
+        return HUB_SLUGS_FACTS[lang].get(fr_hub, fr_hub)
+    if lang == "fr":
+        return fr_hub
+    p = ROOT / fr_hub / "index.html"
+    h = p.read_text(encoding="utf-8")
+    m = re.search(
+        rf'<link rel="alternate" hreflang="{lang}" href="https://loisirs74\.fr/(?:[a-z]+/)?([a-z0-9-]+)/?"', h)
+    return m.group(1) if m else fr_hub
+
+
+def _nearme_button_html(lang):
+    lab = _data("nearme-labels.json")[lang]
+    a = lambda s: _attr_escape(str(s))
+    return (
+        f'<button class="near-me" id="nearMe" style="margin-left:auto"'
+        f' data-default="{a(lab["def"])}" data-loading="{a(lab["loading"])}"'
+        f' data-on="{a(lab["on"])}" data-off="{a(lab["off"])}"'
+        f' data-results-title="{a(lab["title"])}" data-results-sub="{a(lab["sub"])}"'
+        f' data-cta="{a(lab["cta"])}" data-km="{a(lab["km"])}">{a(lab["def"])}</button>'
+    )
+
+
+def _patch_collectionpage_jsonld(html, display, lang):
+    """Localize the CollectionPage ld+json (name + inLanguage). Idempotent."""
+    def repl(m):
+        block = m.group(0)
+        if '"@type": "CollectionPage"' not in block and '"@type":"CollectionPage"' not in block:
+            return block
+        block = re.sub(r'"inLanguage":\s*"[a-z-]+"', f'"inLanguage": "{lang}"', block)
+        block = re.sub(r'"name":\s*"[^"]*"', f'"name": {json.dumps(display, ensure_ascii=False)}', block, count=1)
+        return block
+    return re.sub(r'<script type="application/ld\+json">.*?</script>', repl, html, flags=re.S)
+
+
+def render_facts_hub_page(fr_hub, lang, union, communes_in_hub, has_free):
+    """One full hub page for a facts-first language, from the FR canonical
+    shell: same CSS, same filters, same footer, same scripts — prose omitted."""
+    import html as _html
+    sc = _data("site-chrome-langs.json")
+    il = _data("i18n-labels.json")
+    hc = sc["hub_chrome"][lang]
+    hp = sc["homepage"][lang]
+    cc = sc["commune_chrome"][lang]
+    accueil = il["ui_chrome"]["accueil"][lang]
+    display = HUB_DISPLAY[fr_hub][lang]
+    lang_slug = hub_slug_for(fr_hub, lang)
+    url = f"https://loisirs74.fr/{lang}/{lang_slug}/"
+
+    html = (ROOT / fr_hub / "index.html").read_text(encoding="utf-8")
+
+    # --- language + direction -------------------------------------------------
+    import locales as _loc
+    dir_attr = ' dir="rtl"' if _loc.DIR.get(lang) == "rtl" else ""
+    html = re.sub(r'<html lang="fr">', f'<html lang="{lang}"{dir_attr}>', html, count=1)
+
+    # --- prose OUT (strict): catcher, intro/seo-more, FAQ + FAQPage JSON-LD ---
+    html = re.sub(r'\n?<p class="hub-catcher">.*?</p>', '', html, flags=re.S)
+    html = re.sub(r'\n?<section[^>]*class="hub-intro"[^>]*>.*?</section>', '', html, flags=re.S)
+    html = re.sub(r'\n?<section[^>]*class="hub-faq"[^>]*>.*?</section>', '', html, flags=re.S)
+    html = re.sub(r'<script type="application/ld\+json">.*?</script>\n?',
+                  lambda m: '' if '"FAQPage"' in m.group(0) else m.group(0),
+                  html, flags=re.S)
+
+    # --- head: canonical self-reference (hreflang cluster kept — it is already
+    # the complete 12-language set and identical across the cluster) ----------
+    html = re.sub(r'<link rel="canonical" href="[^"]*">',
+                  f'<link rel="canonical" href="{url}">', html, count=1)
+
+    # --- header: brand link, near-me labels, language picker ------------------
+    html = html.replace('<a class="brand" href="https://loisirs74.fr/">',
+                        f'<a class="brand" href="https://loisirs74.fr/{lang}/">', 1)
+    html = re.sub(r'<!--nearme:start-->.*?<!--nearme:end-->',
+                  lambda _m: f'<!--nearme:start-->{_nearme_button_html(lang)}<!--nearme:end-->',
+                  html, flags=re.S, count=1)
+    alts = {l: u for l, u in
+            re.findall(r'<link rel="alternate" hreflang="([a-z]+)" href="([^"]+)"', html)
+            if l != "x-default"}
+    ends = _loc.endonyms(_loc.VISIBLE)  # isolation-ok: picker endonyms for the full roster
+    cur_attr = 'aria-current="true" '
+    menu = "".join(
+        f'<a {cur_attr if l == lang else ""}href="{alts.get(l, "https://loisirs74.fr/")}" '
+        f'hreflang="{l}">{ends[l]}</a>' for l in _loc.VISIBLE)  # isolation-ok: roster nav
+    html = re.sub(
+        r'<details class="lang-picker">\s*<summary>.*?</summary>\s*<div class="lang-menu">.*?</div>\s*</details>',
+        f'<details class="lang-picker">\n<summary><b>{lang.upper()}</b> · {_html.escape(cc["langues"], quote=False)}</summary>\n'
+        f'<div class="lang-menu">\n{menu}\n</div>\n</details>',
+        html, flags=re.S, count=1)
+
+    # --- breadcrumb ------------------------------------------------------------
+    html = re.sub(
+        r'(<nav aria-label="breadcrumb" class="crumb">\s*)<a href="https://loisirs74\.fr/">[^<]*</a>(\s*<span class="sep">/</span>\s*)<b>[^<]*</b>',
+        lambda m: f'{m.group(1)}<a href="https://loisirs74.fr/{lang}/">{_html.escape(accueil, quote=False)}</a>'
+                  f'{m.group(2)}<b>{_html.escape(display, quote=False)}</b>',
+        html, count=1)
+
+    # --- filter bar static strings --------------------------------------------
+    e = lambda s: _html.escape(s, quote=False)
+    for old, new in [
+        ('<span id="count-label">lieux affichés</span>', f'<span id="count-label">{e(hc["count_pl"])}</span>'),
+        ('<span>Filtres</span>', f'<span>{e(hc["filtres"])}</span>'),
+        ('<span>Commune</span>', f'<span>{e(hc["commune"])}</span>'),
+        ('<span>Accès</span>', f'<span>{e(hc["acces"])}</span>'),
+        ('<span>Tri</span>', f'<span>{e(hc["tri"])}</span>'),
+        ('data-v="all">Tous<', f'data-v="all">{e(hc["tous"])}<'),
+        ('data-v="free">Gratuit<', f'data-v="free">{e(CHROME["free"][lang])}<'),
+        ('data-v="paid">Payant<', f'data-v="paid">{e(CHROME["paid"][lang])}<'),
+        ('<option value="commune">Par commune</option>', f'<option value="commune">{e(hc["par_commune"])}</option>'),
+        ('<b>Aucun résultat</b>', f'<b>{e(hc["no_results"])}</b>'),
+    ]:
+        html = html.replace(old, new)
+    html = re.sub(r'Aucun lieu ne correspond aux filtres actifs\.[^<]*',
+                  e(hc["no_match"]), html)
+
+    # --- footer: blurb + column heads + category links + language + legal -----
+    foot = re.search(r'<footer class="site">.*?</footer>', html, re.S)
+    if foot:
+        f_html = foot.group(0)
+        f_html = re.sub(r'(<h4>Loisirs 74</h4>\s*<p>).*?(</p>)',
+                        lambda m: m.group(1) + e(hp["foot_blurb"]) + m.group(2), f_html, flags=re.S)
+        f_html = f_html.replace('<h4>Catégories</h4>', f'<h4>{e(hp["foot_categories_h3"])}</h4>')
+        f_html = f_html.replace('<h4>Langue</h4>', f'<h4>{e(hp["foot_language_h3"])}</h4>')
+        f_html = f_html.replace('<h4>Mentions</h4>', f'<h4>{e(hp["foot_legal_h3"])}</h4>')
+        # category column: FR hub URL -> this language's hub URL + reviewed label
+        def _cat_link(m):
+            path = m.group(1)
+            if path == "":
+                return f'<a href="https://loisirs74.fr/{lang}/">'
+            if (ROOT / path / "index.html").exists() and path in HUB_DISPLAY:
+                return f'<a href="https://loisirs74.fr/{lang}/{hub_slug_for(path, lang)}/">'
+            if (ROOT / path / "index.html").exists():
+                return f'<a href="https://loisirs74.fr/{lang}/{hub_slug_for(path, lang)}/">'
+            return m.group(0)
+        f_html = re.sub(r'<a href="https://loisirs74\.fr/([a-z0-9-]*)/?">', _cat_link, f_html)
+        for fr_lbl, key in [("Mentions légales", "legal"), ("Confidentialité", "privacy"),
+                            ("CGV", "terms"), ("Signaler une info", "report"),
+                            ("Devenir partenaire", "partner")]:
+            f_html = f_html.replace(f'>{fr_lbl}</a>', f'>{e(hp["legal_labels"][key])}</a>')
+        for hub, disp in HUB_DISPLAY.items():
+            f_html = f_html.replace(f'>{e(disp["fr"])}</a>', f'>{e(disp[lang])}</a>')
+        # footer labels that are not HUB_DISPLAY entries (reviewed sources)
+        cl = sc["category_labels"][lang]
+        for fr_lbl, new_lbl in [("Plages", cl["plage"]),
+                                ("Attractions &amp; loisirs", hp["sec_h2"]["attraction"]),
+                                ("Divers", hp["sec_h2"]["divers"]),
+                                ("Sentiers", cl["sentier"]),
+                                ("Bases de loisirs", cl["domaine"]),
+                                ("Points de vue", cl["point-de-vue"]),
+                                ("Télécabines", cl["telecabine"]),
+                                ("Musées", cl["musee"]),
+                                ("Voies vertes", cl["voie-verte"])]:
+            f_html = f_html.replace(f'>{fr_lbl}</a>', f'>{e(new_lbl)}</a>')
+        # legal links stay on the FR root pages — the strict rule from the fiche
+        # footer (no /xx/cgv 404s); only their labels are localized above.
+        html = html.replace(foot.group(0), f_html, 1)
+        # language column: one entry per visible language, this page's own alternates
+        new_ul = "<ul>" + "".join(
+            f'<li><a href="{alts.get(l, "https://loisirs74.fr/")}" hreflang="{l}">{ends[l]}</a></li>'
+            for l in _loc.VISIBLE) + "</ul>"  # isolation-ok: roster nav
+        html = re.sub(
+            r'<ul>(?:\s*<li><a href="[^"]*" hreflang="[a-z-]+">[^<]*</a></li>\s*)+</ul>',
+            lambda _m: new_ul, html, count=1)
+
+    # --- the standard splice pipeline (same calls the six get) ----------------
+    html = splice_main(html, build_main_block(union, lang, hub_name=fr_hub))
+    html = patch_filt_commune(html, communes_in_hub, lang)
+    html = patch_filt_access_free_toggle(html, has_free)
+    html = patch_hub_filter_js(html, fr_hub, lang)
+    html = patch_hub_head(html, fr_hub, lang, lang_slug, facts_hub_descriptions(lang))
+    html = patch_hub_h1(html, fr_hub, lang)
+    html = patch_hub_itemlist(html, build_hub_itemlist(union, fr_hub, lang, lang_slug))
+    html = _patch_collectionpage_jsonld(html, display, lang)
+    html = patch_duck(html)
+    return html
+
+
+def build_facts_lang_hubs(lang, fiches=None):
+    """Render the 15 hub pages of a facts-first language under
+    /<lang>/<localized-slug>/. Membership logic is byte-for-byte the six's
+    (same union rule, same ordering). Returns the list of (fr_hub, lang_slug)."""
+    register_facts_lang(lang)
+    if fiches is None:
+        fiches = load_all_json()
+    fiches = {s: d for s, d in fiches.items()
+              if s not in ("chez-nous-a-la-plage", "chalet-du-tornet")}
+    all_hub_names = set()
+    for fr_hub in HUB_FILTERS:
+        all_hub_names.update(hub_locale_map(fr_hub).values())
+    excludes = CHROME_SLUGS | all_hub_names
+    import locales as _loc
+    written = []
+    for fr_hub, filt in HUB_FILTERS.items():
+        existing = existing_hub_fiches(ROOT / fr_hub / "index.html", excludes)
+        existing_in_json = {s for s in existing if s in fiches}
+        matched = {s for s, d in fiches.items() if filt(d) or fr_hub in (d.get("hubs") or [])}
+        union_slugs = existing_in_json | matched
+        if not union_slugs:
+            continue
+        union = [(s, fiches[s]) for s in sorted(union_slugs)]
+        communes_in_hub = {fiches[s].get("commune") for s in union_slugs if fiches[s].get("commune")}
+        has_free = any(
+            fiches[s].get("schema_org", {}).get("is_free") is True
+            or fiches[s].get("schema_org", {}).get("tariff_kind") == "seasonal"
+            for s in union_slugs)
+        lang_slug = hub_slug_for(fr_hub, lang)
+        out = ROOT / lang / lang_slug / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(render_facts_hub_page(fr_hub, lang, union, communes_in_hub, has_free),
+                       encoding="utf-8")
+        written.append((fr_hub, lang_slug))
+    return written
 
 
 def main():

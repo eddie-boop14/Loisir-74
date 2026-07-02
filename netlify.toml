@@ -3,6 +3,12 @@
 [build]
   publish = "_site"
   command = "python3 scripts/build_all.py"
+  # HANDOFF-31 credit hygiene: skip the build entirely when a push only
+  # touches reports, markdown or docs — none of those reach _site/, so a
+  # ~15-credit production build for them is pure waste (259 deploys burned
+  # 3,885 credits last cycle). Exit 0 = skip build, exit 1 = build.
+  # git diff is against the last DEPLOYED commit ($CACHED_COMMIT_REF).
+  ignore = "! git diff --name-only $CACHED_COMMIT_REF $COMMIT_REF | grep -qvE '^(reports/|docs/)|\\.md$'"
 
 # Pretty URLs: serve /slug from /slug.html
 [[redirects]]
