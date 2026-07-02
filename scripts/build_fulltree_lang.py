@@ -150,6 +150,8 @@ CSS = (P.CSS +
        ".card{background:#fff;border:1px solid #e3ddd0;border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;display:block}"
        ".card h3{font-size:16px;margin:0 0 2px;color:#22302f}.card .c-desc{color:#1F6E78;font-weight:600;font-size:13px}"
        ".card .c-meta{color:#5b6b6a;font-size:13px;margin-top:6px}"
+       ".card .c-excerpt{color:#44514f;font-size:13.5px;line-height:1.5;margin:6px 0 0;"
+       "display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}"
        ".hubs{max-width:1040px;margin:0 auto;padding:8px 18px 28px;display:grid;gap:10px;"
        "grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}.hubs a{background:#fff;border:1px solid #e3ddd0;"
        "border-radius:10px;padding:12px 14px;text-decoration:none;color:#1F6E78;font-weight:700}"
@@ -190,10 +192,19 @@ def card(d, lang):
     desc_key = P.CATEGORY_DESCRIPTOR.get(d.get("category"))
     descriptor = V("descriptors_by_type", desc_key, lang) if desc_key else ""
     commune = d.get("commune", "")
-    meta = " · ".join(x for x in (descriptor, commune) if x)
+    # HANDOFF-29: once a language's prose landed, its cards carry the prose
+    # excerpt like the FR hub cards do — no more bare title+commune stubs.
+    # Source: the fiche's own translated meta_description (hero.lead as the
+    # fallback). Prose-less fiches keep the stub — never FR prose.
+    excerpt = ""
+    if prose_complete(d, lang):
+        blk = d["i18n"][lang]
+        excerpt = (blk.get("meta_description")
+                   or (blk.get("hero") or {}).get("lead") or "").strip()
     return (f'<a class="card" href="{url_for(lang, d["slug"])}">'
             f'<h3>{bidi(lang, esc(name))}</h3>'
             f'{f"<div class=c-desc>{esc(descriptor)}</div>" if descriptor else ""}'
+            f'{f"<p class=c-excerpt>{esc(excerpt)}</p>" if excerpt else ""}'
             f'<div class="c-meta">{bidi(lang, esc(commune))}</div></a>')
 
 
