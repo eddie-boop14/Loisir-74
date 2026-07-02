@@ -82,6 +82,21 @@ CORE_FROZEN = ["Lac d'Annecy", "Léman", "Mont-Blanc", "Aiguille du Midi",
 
 TAG_RE = re.compile(r"<\s*/?\s*([a-zA-Z][a-zA-Z0-9]*)")
 
+# Batches API constraint on custom_id: ^[a-zA-Z0-9_-]{1,64}$
+# The original "<slug>:<lang>" form violated it twice (illegal ':' + slugs up
+# to 73 chars) — run #2 got a 400 BEFORE the batch was created ($0 spent).
+# Uniqueness now comes from the per-batch index; the slug fragment is for
+# humans reading logs. The authoritative custom_id → slug mapping travels in
+# the state file so a resumed poll can still route results.
+CUSTOM_ID_RE = re.compile(r"^[a-zA-Z0-9_-]{1,64}$")
+
+
+def make_custom_id(lang, i, slug):
+    cid = f"{lang}-{i:04d}-{slug}"[:64]
+    if not CUSTOM_ID_RE.match(cid):
+        raise ValueError(f"custom_id out of spec: {cid!r}")
+    return cid
+
 
 # --------------------------------------------------------------------- source
 def extract_source(fiche):
@@ -273,12 +288,16 @@ def get_client():
 
 
 def build_requests(pairs, communes, lang):
+    """Returns (requests, {custom_id: slug}) — the id_map is the only way to
+    route results back to fiches (results arrive in any order)."""
     sys_block = [{"type": "text", "text": system_prompt(lang, communes),
                   "cache_control": {"type": "ephemeral"}}]
-    reqs = []
-    for fiche, src in pairs:
+    reqs, id_map = [], {}
+    for i, (fiche, src) in enumerate(pairs):
+        cid = make_custom_id(lang, i, fiche["slug"])
+        id_map[cid] = fiche["slug"]
         reqs.append({
-            "custom_id": f"{fiche['slug']}:{lang}",
+            "custom_id": cid,
             "params": {
                 "model": MODEL,
                 "max_tokens": MAX_TOKENS,
@@ -286,7 +305,7 @@ def build_requests(pairs, communes, lang):
                 "messages": [{"role": "user", "content": user_prompt(fiche, src)}],
             },
         })
-    return reqs
+    return reqs, id_map
 
 
 def submit_batch(client, reqs):
@@ -381,10 +400,13 @@ def run_language(lang, args, client=None):
     # submit (or resume a pending batch)
     if lang_state.get("batch_id") and not lang_state.get("done"):
         batch_id = lang_state["batch_id"]
-        print(f"[{lang}] resuming pending batch {batch_id}")
+        id_map = lang_state.get("id_map") or {}
+        print(f"[{lang}] resuming pending batch {batch_id} ({len(id_map)} routed ids)")
     else:
-        batch_id = submit_batch(client, build_requests(pairs, communes, lang))
-        state[lang] = {"batch_id": batch_id, "submitted": datetime.date.today().isoformat()}
+        reqs, id_map = build_requests(pairs, communes, lang)
+        batch_id = submit_batch(client, reqs)
+        state[lang] = {"batch_id": batch_id, "id_map": id_map,
+                       "submitted": datetime.date.today().isoformat()}
         save_state(state)
 
     poll_batch(client, batch_id)
@@ -393,7 +415,7 @@ def run_language(lang, args, client=None):
     by_slug = {f["slug"]: (f, s) for f, s in pairs}
     written, retry, failed = 0, [], []
     for cid, (kind, payload) in results.items():
-        slug = cid.rsplit(":", 1)[0]
+        slug = id_map.get(cid)
         if slug not in by_slug:
             continue
         fiche, src = by_slug[slug]
@@ -416,11 +438,13 @@ def run_language(lang, args, client=None):
     if retry:
         print(f"[{lang}] retrying {len(retry)} failed result(s) once…")
         retry_pairs = [(f, s) for f, s, _ in retry]
-        rid = submit_batch(client, build_requests(retry_pairs, communes, lang))
+        rreqs, rid_map = build_requests(retry_pairs, communes, lang)
+        cid_of = {slug: cid for cid, slug in rid_map.items()}
+        rid = submit_batch(client, rreqs)
         poll_batch(client, rid)
         rres = collect_results(client, rid)
         for fiche, src, first_viol in retry:
-            kind, payload = rres.get(f"{fiche['slug']}:{lang}", ("error", "missing"))
+            kind, payload = rres.get(cid_of.get(fiche["slug"], ""), ("error", "missing"))
             viol = None
             if kind == "ok":
                 try:
