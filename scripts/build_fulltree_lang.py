@@ -197,6 +197,86 @@ def card(d, lang):
             f'<div class="c-meta">{bidi(lang, esc(commune))}</div></a>')
 
 
+def prose_complete(d, lang):
+    """True when the fiche carries this language's batch-translated prose
+    (HANDOFF-25 write-back). meta_title is the marker: the validators enforce
+    full key parity vs the EN source before anything is written, so its
+    presence implies the whole prose set is present and validated."""
+    blk = (d.get("i18n") or {}).get(lang) or {}
+    return bool(blk.get("meta_title"))
+
+
+def _vocab_facts(d, lang):
+    """A language-clean facts dict for the rich page's 'At a glance' panel.
+
+    The batch translates PROSE only — the six originals carry hand-translated
+    facts dicts, a new language does not. Letting the panel fall back to FR
+    would print free-text FR ('Toute l'année · Été pour les jardins') on a pt
+    page. Instead we mirror the shipped facts tree's policy (fact_rows):
+    language-independent values + reviewed-vocabulary enums ONLY; free-text FR
+    fact values are omitted, never leaked. In-memory only — never written back."""
+    fr = (d.get("i18n") or {}).get("fr", {}).get("facts") or {}
+    so = d.get("schema_org") or {}
+    out = {}
+    commune = d.get("commune") or fr.get("commune")
+    if commune:
+        out["commune"] = commune
+    if fr.get("duration"):
+        out["duration"] = fr["duration"]          # "1 h 30 – 2 h 30" — neutral
+    price_from = d.get("price_from")
+    cur = {"EUR": "€"}.get(d.get("price_currency"), d.get("price_currency") or "")
+    if isinstance(price_from, (int, float)) and price_from > 0:
+        out["tarif"] = f"{price_from:.2f}".replace(".", ",") + " " + cur
+    elif so.get("is_free") is True:
+        out["tarif"] = V("fact_values", "gratuit", lang)
+    elif so.get("is_free") is False:
+        out["tarif"] = V("fact_values", "payant", lang)
+    if str(fr.get("pavillon_bleu_2026", "")).strip().upper() == "OUI":
+        out["pavillon_bleu_2026"] = V("fact_values", "oui", lang)
+    return out
+
+
+def render_fiche_rich(d, lang):
+    """The RICH path (HANDOFF-22/26): a fiche whose i18n.<lang> prose landed
+    renders through build_lieu_page — the same page the six originals get.
+    build_lieu_page is import-gated on locales.PROSE, so the facts owner
+    enables this one language explicitly; partner placements stay OUT (their
+    byte-faithful snapshot contract covers only the six live languages).
+    Facts remains the fallback for prose-less fiches — never FR prose."""
+    import build_lieu_page as LP
+    if lang not in LP.SUPPORTED_LANGS:
+        LP.SUPPORTED_LANGS.append(lang)
+    if lang not in LP.HUB_LOCALE_SLUGS.get("cascades", {}):
+        # Breadcrumb + JSON-LD hub links must point at THIS tree's localized
+        # hub dirs (/pt/cascatas/), not the FR slugs (dead /pt/cascades/ —
+        # the link-integrity 404 class). Slugs from this builder's own
+        # HUB_SLUGS (what the tree actually renders), labels from the
+        # reviewed vocabulary. Languages absent from HUB_SLUGS (ja/ar/he)
+        # keep the FR-canonical fallback — their trees use FR hub dirs.
+        for fr_slug in LP.HUB_LOCALE_SLUGS:
+            loc = HUB_SLUGS.get(lang, {}).get(fr_slug)
+            if loc:
+                LP.HUB_LOCALE_SLUGS[fr_slug][lang] = loc
+            lbl = V("hub_names", fr_slug, lang)
+            if lbl:
+                LP.HUB_LOCALE_LABELS[fr_slug][lang] = lbl
+    if lang not in LP._REL_LABELS:
+        # Related-carousel labels from REVIEWED sources only (rich chrome +
+        # the facts vocabulary) — never hand-invented, never FR fallback.
+        ch = LP.CHROME
+        LP._REL_LABELS[lang] = {
+            "kicker": ch["k_see_also"][lang], "h2": ch["k_see_also"][lang],
+            "lead": "",
+            "free": V("fact_values", "gratuit", lang),
+            "paid": V("fact_values", "payant", lang),
+            "route": ch["directions"][lang], "site": ch["official_site"][lang],
+        }
+    d["i18n"][lang]["facts"] = _vocab_facts(d, lang)
+    d["acces_pmr"] = None   # PMR summaries are free-text FR — omit, never leak
+    html = LP.build_page(d, lang, include_partners=False, fr_prose_fallback=False)
+    return html, LP.LAST_FALLBACK_FIELDS
+
+
 def render_fiche(d, lang):
     name = d.get("i18n", {}).get("fr", {}).get("name") or d["slug"]
     commune = d.get("commune", "")
@@ -332,11 +412,19 @@ def main():
     # survive a publish, every path in /<lang>/ is a current full-tree page.
     if os.path.isdir(out):
         shutil.rmtree(out)
-    n_f = n_h = n_c = 0
+    n_f = n_h = n_c = n_rich = 0
+    fallback_counts = {}
 
-    # fiches
+    # fiches — rich when the language's prose landed, facts otherwise
     for d in fiches:
-        write(os.path.join(out, d["slug"] + ".html"), render_fiche(d, lang))
+        if prose_complete(d, lang):
+            html, fb = render_fiche_rich(d, lang)
+            write(os.path.join(out, d["slug"] + ".html"), html)
+            n_rich += 1
+            for f in fb:
+                fallback_counts[f] = fallback_counts.get(f, 0) + 1
+        else:
+            write(os.path.join(out, d["slug"] + ".html"), render_fiche(d, lang))
         n_f += 1
 
     # hubs (15) under localized slugs
@@ -375,7 +463,11 @@ def main():
     # homepage
     write(os.path.join(out, "index.html"), render_home(hubs_present, lang))
 
-    print(f"build_fulltree_lang[{lang}]: {n_f} fiches + {n_h} hubs + {n_c} communes + 1 homepage")
+    print(f"build_fulltree_lang[{lang}]: {n_f} fiches ({n_rich} rich, {n_f - n_rich} facts) "
+          f"+ {n_h} hubs + {n_c} communes + 1 homepage")
+    if fallback_counts:
+        print(f"  rich-page FR-fallback fields: {sorted(fallback_counts.items())} "
+              "(name is frozen-FR by design)")
 
 
 if __name__ == "__main__":
