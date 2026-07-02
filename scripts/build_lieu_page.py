@@ -335,11 +335,21 @@ def _set_lang(d, lang):
     _AVAILABLE_LANGS = tuple(L for L in SUPPORTED_LANGS if L in i18n and i18n.get(L))
 
 
+# Strict-prose mode (facts-lang rich render, HANDOFF-22/26): a missing locale
+# field is OMITTED instead of FR-filled — a new language never shows FR prose.
+# Only frozen-by-design fields may still fall back. The six originals render
+# with fr_prose_fallback=True (the historical behavior, byte-identical).
+_STRICT_PROSE = False
+_STRICT_FR_OK = {"name"}   # frozen FR proper name, verbatim in every language
+
+
 def L(key, default=""):
     """Locale-field lookup with FR fallback. Empty string / None / [] / {} count as missing."""
     v = _LOC.get(key) if isinstance(_LOC, dict) else None
     if v not in (None, "", [], {}):
         return v
+    if _STRICT_PROSE and key not in _STRICT_FR_OK:
+        return default
     v = _FR.get(key) if isinstance(_FR, dict) else None
     if v not in (None, "", [], {}):
         _FALLBACK_FIELDS.add(key)
@@ -350,7 +360,8 @@ def L(key, default=""):
 def L_body(key, default=""):
     """Locale-body lookup: i18n.<lang>.body.<key>, fall back to i18n.<lang>.<key>,
     fall back to i18n.fr.body.<key>, then i18n.fr.<key>."""
-    for src_lang, src in ((_LANG, _LOC), ("fr", _FR)):
+    sources = ((_LANG, _LOC),) if _STRICT_PROSE else ((_LANG, _LOC), ("fr", _FR))
+    for src_lang, src in sources:
         if not isinstance(src, dict):
             continue
         body = src.get("body") if isinstance(src.get("body"), dict) else {}
@@ -2037,12 +2048,19 @@ def plages_voisines_block(d, lang):
             f'<div>{"".join(links)}</div></section>')
 
 
-def build_page(d, lang="fr"):
+def build_page(d, lang="fr", include_partners=True, fr_prose_fallback=True):
     """Render the full HTML for fiche `d` in `lang`. Returns html string.
     Fallback-field info (which keys fell back to FR) is exposed via
-    module attribute LAST_FALLBACK_FIELDS after each call."""
-    global LAST_FALLBACK_FIELDS
+    module attribute LAST_FALLBACK_FIELDS after each call.
+
+    include_partners=False keeps protected partner placements OUT of the
+    page — used by the facts-lang rich render (HANDOFF-22/26): partner cards
+    are commercial content under a byte-faithful snapshot contract that only
+    covers the six live languages; a new language ships without them until
+    that contract is explicitly extended."""
+    global LAST_FALLBACK_FIELDS, _STRICT_PROSE
     _set_lang(d, lang)
+    _STRICT_PROSE = not fr_prose_fallback
     name = L("name", "")
 
     out = []
@@ -2063,7 +2081,8 @@ def build_page(d, lang="fr"):
     out.append(parking_block(d["slug"], (L("facts", {}) or {}).get("parking")))
     out.append(when_to_visit_block(L_body("when_to_visit", "") or "",
                                    L_body("events", "") or ""))
-    out.append(partners_block(d))
+    if include_partners:
+        out.append(partners_block(d))
     out.append(gallery_block(name, d.get("gallery_photos")))
     out.append(faq_block(L("faq", []) or []))
     _related = related_lieux_block(d.get("related_lieux", []), lang)
