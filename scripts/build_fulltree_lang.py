@@ -153,21 +153,17 @@ def main():
 
     # 1. fiches — ONE render path: build_lieu_page for every fiche. Prose-
     # complete fiches render rich; prose-less fiches render strict (prose
-    # sections OMITTED) with a head description composed from the reviewed
-    # vocabulary (descriptor + commune) — what the retired facts shell said.
+    # sections OMITTED). Title + meta description fall back inside
+    # build_lieu_page to the HANDOFF-32 facts-derived builders (localized
+    # type + frozen name + commune + tariff + per-language meta_tail) —
+    # unique per fiche per language, never a bare shared commune string.
     n_f = n_rich = 0
     fallback_counts = {}
     for d in fiches:
         if prose_complete(d, lang):
             n_rich += 1
         else:
-            blk = d.setdefault("i18n", {}).setdefault(lang, {})
-            desc_key = P.CATEGORY_DESCRIPTOR.get(d.get("category"))
-            descriptor = V("descriptors_by_type", desc_key, lang) if desc_key else ""
-            commune = d.get("commune", "")
-            meta = (descriptor + (", " if descriptor else "") + commune + " (Haute-Savoie).").strip()
-            if meta != "(Haute-Savoie)." and not blk.get("meta_description"):
-                blk["meta_description"] = meta
+            d.setdefault("i18n", {}).setdefault(lang, {})
         html, fb = render_fiche_rich(d, lang)
         write(os.path.join(out, d["slug"] + ".html"), html)
         for f in fb:
