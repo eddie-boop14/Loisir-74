@@ -164,6 +164,10 @@ def system_prompt(lang, communes):
         "text between them. Never escape tags as &lt;…&gt;.\n"
         "4. Keep numbers, prices (€), times, phone numbers and URLs unchanged.\n"
         "5. Natural, idiomatic prose for travellers — not word-for-word.\n"
+        "6. The output must be VALID JSON: any literal double quote inside a "
+        "string value must be escaped as \\\" — better, use the target "
+        "language's own typographic quotation marks („…“, »…«, «…», 「…」) "
+        "for quoted phrases instead of straight quotes.\n"
         "Return ONLY the translated JSON. No markdown fences, no commentary."
         + rtl
     )
@@ -237,13 +241,59 @@ def validate(src, out, frozen_nouns):
     return viol
 
 
+def repair_json_quotes(t):
+    """Escape unescaped double quotes INSIDE JSON string values.
+
+    The cs run's disease (140/389 rejected twice): Czech prose is full of
+    quoted phrases and the model emitted them as literal '"' inside string
+    values — invalid JSON. Heuristic: while inside a string, a '"' only ends
+    it if the next non-whitespace char is a JSON delimiter (, } ] :) or EOF;
+    any other '"' is content and gets escaped. Conservative by design — if a
+    payload still doesn't parse, it fails exactly as before (validators and
+    the absent-field discipline are untouched)."""
+    out = []
+    i, n = 0, len(t)
+    in_str = False
+    while i < n:
+        c = t[i]
+        if not in_str:
+            if c == '"':
+                in_str = True
+            out.append(c)
+            i += 1
+            continue
+        if c == "\\" and i + 1 < n:
+            out.append(t[i:i + 2])
+            i += 2
+            continue
+        if c == '"':
+            j = i + 1
+            while j < n and t[j] in " \t\r\n":
+                j += 1
+            if j >= n or t[j] in ",}]:":
+                in_str = False
+                out.append(c)
+            else:
+                out.append('\\"')       # interior quote → escape
+            i += 1
+            continue
+        out.append(c)
+        i += 1
+    return "".join(out)
+
+
 def parse_result_text(text):
-    """The model is told to return bare JSON; strip fences defensively."""
+    """The model is told to return bare JSON; strip fences defensively, and
+    repair unescaped in-string quotes before giving up (the cs failure class
+    — the content is fine, the quoting isn't)."""
     t = text.strip()
     if t.startswith("```"):
         t = re.sub(r"^```[a-zA-Z]*\n?", "", t)
         t = re.sub(r"\n?```$", "", t)
-    return json.loads(t)
+    try:
+        return json.loads(t)
+    except json.JSONDecodeError:
+        return json.loads(repair_json_quotes(t))
 
 
 # ------------------------------------------------------------------ estimate
@@ -441,6 +491,12 @@ def run_language(lang, args, client=None):
         rreqs, rid_map = build_requests(retry_pairs, communes, lang)
         cid_of = {slug: cid for cid, slug in rid_map.items()}
         rid = submit_batch(client, rreqs)
+        # persist the retry batch id + routing so a later --recover can re-read
+        # BOTH batches' results for free (results live ~29 days server-side)
+        state = load_state()
+        state.setdefault(lang, {})["retry_batch_id"] = rid
+        state[lang]["retry_id_map"] = rid_map
+        save_state(state)
         poll_batch(client, rid)
         rres = collect_results(client, rid)
         for fiche, src, first_viol in retry:
@@ -477,6 +533,74 @@ def run_language(lang, args, client=None):
     return not failed
 
 
+def recover_language(lang, client):
+    """ZERO-SPEND recovery (HANDOFF GO-CS follow-up): re-read the batches this
+    language already PAID for (results stay retrievable ~29 days) and re-parse
+    every still-missing fiche with the hardened parser. No submit ever happens
+    here — only results retrieval, which is free. Validation and the
+    absent-field discipline are exactly the ones the live run applies."""
+    state = load_state()
+    lang_state = state.get(lang) or {}
+    batches = []          # (batch_id, {custom_id: slug})
+    if lang_state.get("retry_batch_id"):
+        batches.append((lang_state["retry_batch_id"],
+                        {c: s for c, s in (lang_state.get("retry_id_map") or {}).items()}))
+    if lang_state.get("batch_id"):
+        batches.append((lang_state["batch_id"], lang_state.get("id_map") or {}))
+    if not batches:
+        sys.exit(f"[{lang}] nothing to recover — no batch ids in state")
+
+    pairs = pairs_for_lang(lang)                 # exactly the still-missing fiches
+    by_slug = {f["slug"]: (f, s) for f, s in pairs}
+    print(f"[{lang}] recover: {len(by_slug)} fiche(s) still missing; "
+          f"re-reading {len(batches)} paid batch(es)")
+
+    def slug_of(cid, id_map):
+        if cid in id_map:
+            return id_map[cid]
+        # the retry batch of the original cs run predates retry_id_map
+        # persistence — reconstruct from the custom_id's slug fragment
+        # (f"{lang}-{i:04d}-{slug}"[:64]); match by prefix against the
+        # missing set, unique or nothing.
+        frag = cid.split("-", 2)[-1] if cid.count("-") >= 2 else ""
+        hits = [s for s in by_slug if s.startswith(frag) or frag.startswith(s)]
+        return hits[0] if len(hits) == 1 else None
+
+    recovered, still = 0, dict(by_slug)
+    for batch_id, id_map in batches:
+        if not still:
+            break
+        print(f"  reading results of {batch_id} …")
+        results = collect_results(client, batch_id)
+        for cid, (kind, payload) in results.items():
+            if kind != "ok":
+                continue
+            slug = slug_of(cid, id_map)
+            if slug not in still:
+                continue
+            fiche, src = still[slug]
+            try:
+                out = parse_result_text(payload)
+            except Exception:
+                continue                          # still unparsable — next batch
+            if validate(src, out, fiche_frozen_nouns(fiche)):
+                continue                          # content violations → stays absent
+            write_back(fiche, lang, out)
+            del still[slug]
+            recovered += 1
+
+    state = load_state()
+    state.setdefault(lang, {})["written"] = (lang_state.get("written") or 0) + recovered
+    state[lang]["recovered"] = recovered
+    save_state(state)
+    if still:
+        log_failures(lang, [(s, ["unrecoverable after quote-repair (recovery run)"])
+                            for s in sorted(still)])
+    print(f"[{lang}] RECOVERED {recovered} fiche(s) for $0; "
+          f"{len(still)} remain absent: {sorted(still)[:10]}{'…' if len(still) > 10 else ''}")
+    return recovered
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--lang", required=True,
@@ -485,12 +609,21 @@ def main():
                     help="print request count + token/cost estimate and stop (no submit)")
     ap.add_argument("--force", action="store_true",
                     help="redo fiche×lang pairs that are already populated")
+    ap.add_argument("--recover", action="store_true",
+                    help="ZERO-SPEND: re-read this language's already-paid batch results "
+                         "and re-parse the missing fiches with the hardened parser (no submit)")
     args = ap.parse_args()
 
     langs = TARGET_LANGS if args.lang == "all" else [args.lang]
     for lang in langs:
         if lang not in TARGET_LANGS:
             sys.exit(f"ERROR: unknown target language {lang!r} (expected {TARGET_LANGS})")
+
+    if args.recover:
+        client = get_client()
+        for lang in langs:
+            recover_language(lang, client)
+        return
 
     client = None if args.dry_run else get_client()
     for lang in langs:

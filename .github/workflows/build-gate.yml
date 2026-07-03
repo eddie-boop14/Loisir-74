@@ -66,6 +66,7 @@ jobs:
           python3 tests/test_error_is_not_data.py
           python3 tests/test_gate_bot_commit_sanity.py
           python3 tests/test_translate_batch.py
+          python3 tests/test_json_repair.py
 
       - name: No-orphan-geo-verified gate
         run: python3 scripts/gate_geo_verified.py
