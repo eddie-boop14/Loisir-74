@@ -1,0 +1,196 @@
+#!/usr/bin/env python3
+"""HANDOFF-37 — the $0 MT lane, adversarially tested offline (fake engine).
+
+Proves the lane's construction guarantees:
+  * tags / attrs / URLs / entities NEVER reach the MT engine;
+  * identity translation reassembles byte-exact;
+  * frozen nouns are masked, restored verbatim, and survive validate();
+  * placeholder loss / digit mutation / empty output → segment FLAGGED,
+    field stays ABSENT (null discipline), full segment table in the flags file;
+  * patch-tier reassembly completes a field from patched segments;
+  * patch contract respects the $2/lang hard cap.
+"""
+import importlib.util
+import json
+import os
+import sys
+import tempfile
+from pathlib import Path
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def _load():
+    spec = importlib.util.spec_from_file_location(
+        "translate_local_t", os.path.join(ROOT, "scripts", "translate_local.py"))
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+NOUNS = ["Lac d'Annecy", "Haute-Savoie", "Annecy", "Abbaye d'Aulps"]
+
+
+class SpyEngine:
+    """Fake MT: records everything it is asked to translate; configurable."""
+
+    def __init__(self, fn=None):
+        self.seen = []
+        self.fn = fn or (lambda t: t)          # identity by default
+
+    def __call__(self, text):
+        self.seen.append(text)
+        return self.fn(text)
+
+
+def test_tags_entities_urls_never_reach_engine():
+    m = _load()
+    eng = SpyEngine()
+    s = ('<p>Visit <strong>the abbey</strong> &amp; the lake — see '
+         '<a href="https://example.com/x?a=1">the site</a> today.</p>')
+    records = []
+    out, bad = m.translate_string(eng, {}, s, NOUNS, "body.what_is", records)
+    assert bad == 0 and out == s, "identity engine must reassemble byte-exact"
+    joined = "\n".join(eng.seen)
+    assert "<" not in joined and ">" not in joined, "tags leaked into MT"
+    assert "&amp;" not in joined, "entities leaked into MT"
+    assert "https://" not in joined, "URLs must be masked before MT"
+
+
+def test_frozen_nouns_masked_and_restored():
+    m = _load()
+    eng = SpyEngine(lambda t: t.upper())       # aggressive engine
+    s = "The beach at Lac d'Annecy near Annecy is in Haute-Savoie."
+    records = []
+    out, bad = m.translate_string(eng, {}, s, NOUNS, "hero.lead", records)
+    assert bad == 0
+    for noun in ("Lac d'Annecy", "Annecy", "Haute-Savoie"):
+        assert noun in out, f"{noun} not restored verbatim"
+    assert "LAC D'ANNECY" not in out, "noun reached the engine unmasked"
+    # longest-first: 'Lac d'Annecy' masked as ONE token, not 'Lac d''+Annecy
+    assert "Lac d'ANNECY" not in out
+
+
+def test_placeholder_loss_flags_segment():
+    m = _load()
+    eng = SpyEngine(lambda t: "totally rewritten without tokens")
+    records = []
+    out, bad = m.translate_string(
+        eng, {}, "Visit Lac d'Annecy today.", NOUNS, "f", records)
+    assert bad == 1
+    assert any("placeholder lost" in r for rec in records
+               for r in rec.get("reasons", []))
+
+
+def test_digit_mutation_and_empty_flagged():
+    m = _load()
+    eng = SpyEngine(lambda t: t.replace("5", "6"))
+    records = []
+    _, bad = m.translate_string(
+        eng, {}, "Entry costs 5,50 € per adult.", [], "f", records)
+    assert bad == 1 and any("digit parity" in r for rec in records
+                            for r in rec.get("reasons", []))
+    eng = SpyEngine(lambda t: "")
+    records = []
+    _, bad = m.translate_string(eng, {}, "Some real sentence.", [], "f", records)
+    assert bad == 1
+
+
+def test_unmask_tolerates_spacing_and_case():
+    m = _load()
+    out, missing = m.unmask("go to xqv 0 z and XQV1Z", {"0": "Annecy", "1": "Léman"})
+    assert out == "go to Annecy and Léman" and not missing
+    out, missing = m.unmask("no tokens here", {"0": "Annecy"})
+    assert missing == {"0"}
+
+
+def test_mt_run_null_discipline_and_flags_file():
+    m = _load()
+    tbm = m.tb
+    with tempfile.TemporaryDirectory() as tmp:
+        jd = Path(tmp) / "Json"; jd.mkdir()
+        good_src = {"meta_title": "Abbaye d'Aulps · Rates (Annecy)",
+                    "body": {"what_is": "<p>An abbey in <strong>Haute-Savoie</strong>.</p>"}}
+        bad_src = {"meta_title": "Beach fun for 5 € in Annecy",
+                   "hero": {"lead": "A fine beach on Lac d'Annecy."}}
+        for slug, src in (("ok-one", good_src), ("digit-bad", bad_src)):
+            (jd / f"{slug}.json").write_text(json.dumps({
+                "slug": slug, "commune": "Annecy",
+                "i18n": {"fr": {"name": "X"}, "en": src}},
+                ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        tbm.JSON_DIR = jd
+        m.FLAGS_FILE = Path(tmp) / "reports" / "flags-{lang}.json"
+        # engine: identity EXCEPT it breaks digits (5 → 55)
+        eng = SpyEngine(lambda t: t.replace("5", "55"))
+        written, flagged = m.run_mt("pl", engine=eng)
+        d = json.loads((jd / "ok-one.json").read_text())
+        assert d["i18n"]["pl"]["meta_title"].startswith("Abbaye d'Aulps"), \
+            "clean fiche must be written"
+        d = json.loads((jd / "digit-bad.json").read_text())
+        pl = d.get("i18n", {}).get("pl", {})
+        assert "meta_title" not in pl, "flagged field must stay ABSENT"
+        assert "hero" in pl, "clean field of the same fiche still ships"
+        flags = json.loads((Path(tmp) / "reports" / "flags-pl.json").read_text())
+        assert flags["fields"] and flags["fields"][0]["slug"] == "digit-bad"
+        segs = flags["fields"][0]["segments"]
+        assert any(not r.get("ok") and r["kind"] == "text" for r in segs)
+
+
+def test_rebuild_field_with_patches():
+    m = _load()
+    src = {"what_is": "<p>Hello world &amp; more text here.</p>"}
+    records = []
+    eng = SpyEngine(lambda t: "")               # everything fails
+    out, bad = m.translate_value(eng, {}, src, [], "body", records)
+    assert bad >= 1
+    assert m.rebuild_field(src, records, {}, "body") is None, \
+        "unpatched failed segment → field stays absent"
+    patches = {(r["path"], r["i"]): f"T<{r['i']}>".replace("<", "").replace(">", "")
+               for r in records if r["kind"] == "text" and not r.get("ok")}
+    patches = {k: "Bonjour le monde" for k in patches}
+    rebuilt = m.rebuild_field(src, records, patches, "body")
+    assert rebuilt is not None
+    assert rebuilt["what_is"].startswith("<p>") and "&amp;" in rebuilt["what_is"], \
+        "frozen tokens must reassemble verbatim around the patch"
+
+
+def test_patch_contract_and_cap():
+    m = _load()
+    flags = {"lang": "pl", "fields": [{
+        "slug": "s", "field": "body", "src": {"what_is": "x"},
+        "segments": [{"path": "body.what_is", "i": 0, "kind": "text",
+                      "src": "A sentence to patch.", "mt": "", "ok": False,
+                      "reasons": ["empty translation"]}] * 1,
+    }]}
+    reqs, routing = m.patch_requests("pl", flags)
+    assert len(reqs) == 1 and reqs[0]["params"]["model"] == m.PATCH_MODEL
+    in_tok, out_tok, usd = m.patch_estimate(reqs)
+    assert usd < 0.01, "one segment must cost well under a cent"
+    # the $2 cap: 30k segments would blow it → the estimate must say so
+    big = {"lang": "pl", "fields": [{
+        "slug": "s", "field": "body", "src": {},
+        "segments": [{"path": f"p{i}", "i": 0, "kind": "text",
+                      "src": "A long sentence with many words repeated." * 3,
+                      "mt": "", "ok": False, "reasons": ["x"]}
+                     for i in range(30000)]}]}
+    reqs2, _ = m.patch_requests("pl", big)
+    _, _, usd2 = m.patch_estimate(reqs2)
+    assert usd2 > m.PATCH_CAP_USD, "cap scenario must be detectable pre-submit"
+
+
+def _all_tests():
+    return [v for k, v in sorted(globals().items()) if k.startswith("test_")]
+
+
+if __name__ == "__main__":
+    failed = 0
+    for t in _all_tests():
+        try:
+            t(); print(f"PASS {t.__name__}")
+        except AssertionError as e:
+            failed += 1; print(f"FAIL {t.__name__}: {e}")
+        except Exception as e:  # noqa: BLE001
+            failed += 1; print(f"ERROR {t.__name__}: {type(e).__name__}: {e}")
+    total = len(_all_tests())
+    print(f"\n{total - failed}/{total} passed")
+    sys.exit(1 if failed else 0)
