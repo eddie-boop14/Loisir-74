@@ -43,6 +43,10 @@ ROOT = Path(__file__).resolve().parent.parent
 FLAGS_FILE = ROOT / "reports" / "translate-local-flags-{lang}.json"
 
 MT_LANGS = ["pl", "ja", "ar", "he"]          # en→X argos models all exist
+# FR-authored payload fields: an en→X model cannot read French — these NEVER
+# enter local MT; they are flagged whole and only the LLM patch tier (which
+# reads any source language) may translate them.
+FR_SOURCE_FIELDS = {"acces_pmr_detail"}
 PATCH_MODEL = "claude-haiku-4-5"             # PATCH tier only (HANDOFF-37)
 PATCH_IN_PER_MTOK = 0.50                     # batch: 50% off $1.00
 PATCH_OUT_PER_MTOK = 2.50                    # batch: 50% off $5.00
@@ -112,6 +116,9 @@ def check_segment(src, out):
     reasons = []
     if digits_of(src) != digits_of(out):
         reasons.append("digit parity broken")
+    if ("€" in src) != ("€" in out):
+        # rule 4: prices unchanged — the engine likes rewriting € as 'EUR'
+        reasons.append("currency symbol changed")
     ss, os_ = len(src.strip()), len(out.strip())
     if ss >= 20 and not (0.3 <= os_ / max(1, ss) <= 3.0):
         reasons.append(f"segment ratio {os_ / max(1, ss):.2f} outside 0.3-3.0")
@@ -296,6 +303,25 @@ def flags_path(lang):
     return Path(str(FLAGS_FILE).format(lang=lang))
 
 
+def purge_fields(fiche, lang, fields):
+    """Remove stale i18n.<lang> fields (a held field must be ABSENT even if a
+    previous run wrote it). Fresh read, same discipline as write_back."""
+    p = fiche["_path"]
+    d = json.load(open(p, encoding="utf-8"))
+    blk = (d.get("i18n") or {}).get(lang)
+    if not blk:
+        return
+    changed = False
+    for f in fields:
+        if f in blk:
+            del blk[f]
+            changed = True
+    if changed:
+        with open(p, "w", encoding="utf-8") as fp:
+            json.dump(d, fp, ensure_ascii=False, indent=2)
+            fp.write("\n")
+
+
 def run_mt(lang, engine=None, dry_run=False):
     """The $0 base tier. Returns (written, flagged_fields)."""
     pairs = tb.pairs_for_lang(lang)
@@ -321,6 +347,18 @@ def run_mt(lang, engine=None, dry_run=False):
         nouns = tb.fiche_frozen_nouns(fiche) + communes
         out, bad_fields = {}, {}
         for field, v in src.items():
+            if field in FR_SOURCE_FIELDS:
+                # never through en→X MT — whole field to the patch tier
+                records = [dict({"path": f"{field}", "i": i, "kind": k,
+                                 "src": t}, **({} if k == "frozen" else
+                                {"mt": "", "ok": False,
+                                 "reasons": ["FR-source field — LLM patch tier only"]}))
+                           for s in tb.strings_of(v)
+                           for i, (k, t) in enumerate(split_parts(s))]
+                bad_fields[field] = {"src": v, "segments": records,
+                                     "n_flagged": sum(1 for r in records
+                                                      if r["kind"] == "text")}
+                continue
             records = []
             tv, n_bad = translate_value(engine, cache, v, nouns, field, records)
             if n_bad:
@@ -341,6 +379,10 @@ def run_mt(lang, engine=None, dry_run=False):
         if out:
             tb.write_back(fiche, lang, out)
             written += 1
+        if bad_fields:
+            # a re-run may hold a field an EARLIER run wrote — purge the stale
+            # write so null discipline holds across runs, not just within one
+            purge_fields(fiche, lang, bad_fields.keys())
         for field, rec in bad_fields.items():
             flagged_fields.append({"slug": fiche["slug"], "field": field, **rec})
         if k % 50 == 0:
@@ -370,12 +412,13 @@ def patch_requests(lang, flags):
     model keeps XQV<n>Z placeholders and numbers verbatim)."""
     reqs, routing = [], {}
     i = 0
-    sysblock = (f"You translate short tourism text segments from English to "
-                f"{tb.LANG_NAMES[lang]} for loisirs74.fr. Reply with ONLY the "
-                "translated segment - no quotes, no commentary. Any token of "
-                "the form XQV<number>Z is a masked proper name: copy every "
-                "one through VERBATIM, exactly once, in natural position. "
-                "Keep all digits, prices, times and URLs unchanged.")
+    sysblock = (f"You translate short tourism text segments into "
+                f"{tb.LANG_NAMES[lang]} for loisirs74.fr (source segments are "
+                "English or French). Reply with ONLY the translated segment - "
+                "no quotes, no commentary. Any token of the form XQV<number>Z "
+                "is a masked proper name: copy every one through VERBATIM, "
+                "exactly once, in natural position. Keep all digits, prices "
+                "(€ stays €), times and URLs unchanged.")
     for fi, f in enumerate(flags["fields"]):
         for r in f["segments"]:
             if r["kind"] != "text" or r.get("ok"):

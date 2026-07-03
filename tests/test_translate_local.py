@@ -154,6 +154,50 @@ def test_rebuild_field_with_patches():
         "frozen tokens must reassemble verbatim around the patch"
 
 
+def test_currency_symbol_change_flagged():
+    m = _load()
+    eng = SpyEngine(lambda t: t.replace("€", "EUR"))
+    records = []
+    _, bad = m.translate_string(
+        eng, {}, "Entry costs 5,50 € per adult today.", [], "f", records)
+    assert bad == 1 and any("currency" in r for rec in records
+                            for r in rec.get("reasons", []))
+
+
+def test_fr_source_field_never_enters_mt_and_stale_write_purged():
+    m = _load()
+    tbm = m.tb
+    with tempfile.TemporaryDirectory() as tmp:
+        jd = Path(tmp) / "Json"; jd.mkdir()
+        (jd / "beach.json").write_text(json.dumps({
+            "slug": "beach", "commune": "Annecy",
+            "acces_pmr": {"status": "accessible",
+                          "detail": "Rampe d'accès et tapis d'aide à la baignade."},
+            "i18n": {"fr": {"name": "X"},
+                     "en": {"meta_title": "Beach guide (Annecy)"},
+                     # stale write from an imaginary earlier run — must be purged
+                     "pl": {"acces_pmr_detail": "STALE MT GARBAGE"}}},
+            ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        tbm.JSON_DIR = jd
+        m.FLAGS_FILE = Path(tmp) / "reports" / "flags-{lang}.json"
+        eng = SpyEngine()
+        # only run if the batch payload carries the field (post-HANDOFF-35 main)
+        src = tbm.extract_source(json.loads((jd / "beach.json").read_text()))
+        if "acces_pmr_detail" not in src:
+            return                       # pre-#37 base: nothing to prove yet
+        m.run_mt("pl", engine=eng)
+        assert not any("Rampe" in s for s in eng.seen), \
+            "FR-source field reached the en→X engine"
+        d = json.loads((jd / "beach.json").read_text())
+        pl = d["i18n"]["pl"]
+        assert "acces_pmr_detail" not in pl, "stale FR-source write must be purged"
+        assert pl.get("meta_title"), "EN fields still ship"
+        flags = json.loads((Path(tmp) / "reports" / "flags-pl.json").read_text())
+        fr = [f for f in flags["fields"] if f["field"] == "acces_pmr_detail"]
+        assert fr and any("LLM patch tier" in r for s in fr[0]["segments"]
+                          for r in s.get("reasons", []))
+
+
 def test_patch_contract_and_cap():
     m = _load()
     flags = {"lang": "pl", "fields": [{
