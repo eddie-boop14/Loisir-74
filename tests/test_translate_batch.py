@@ -229,6 +229,27 @@ def test_idempotent_rerun_skips_populated_pairs():
         assert len(m.pairs_for_lang("pl", force=True)) == 3
 
 
+def test_missing_fields_only_payload_and_pmr_detail_travels():
+    """HANDOFF-35 Job A: acces_pmr.detail joins the payload (FR-authored
+    content, rendered off-fr only once translated) — and a fiche missing ONLY
+    that field must be re-billed for that field alone, never the whole prose."""
+    m = _load()
+    with tempfile.TemporaryDirectory() as tmp:
+        jd = _fixture_repo(m, tmp)
+        p = jd / "good-one.json"
+        d = json.loads(p.read_text())
+        d["acces_pmr"] = {"status": "accessible",
+                          "detail": "Rampe d'accès et main courante."}
+        d["i18n"]["pl"] = _good()          # full prose already translated…
+        p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        pairs = {f["slug"]: src for f, src in m.pairs_for_lang("pl")}
+        assert pairs["good-one"] == {"acces_pmr_detail": "Rampe d'accès et main courante."}, \
+            "only the missing field may travel — a mop-up costs cents, not $19"
+        # untranslated fiches still carry the full payload incl. the detail? no —
+        # they have no acces_pmr, so payload is the EN prose exactly as before
+        assert set(pairs["bad-twice"]) == set(SRC)
+
+
 def test_dry_run_writes_nothing_and_needs_no_key():
     m = _load()
     with tempfile.TemporaryDirectory() as tmp:
