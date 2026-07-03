@@ -64,9 +64,11 @@
 /partenaire             /devenir-partenaire.html                     200
 /partenaires            /devenir-partenaire.html                     200
 
-# Contact (fallback to email until contact page exists)
-/contact                mailto:contact@loisirs74.fr                  301
-/contact/               mailto:contact@loisirs74.fr                  301
+# Contact -> the report/contact form (mailto: is not a valid Netlify redirect
+# target — the two former rules were skipped as invalid on every deploy, so
+# /contact 404'd anyway; /contact.html already 301s to /signaler-info below)
+/contact                /signaler-info                               301
+/contact/               /signaler-info                               301
 
 # Merged duplicate pages -> canonical
 /cascade-d-arpenaz                              /cascade-de-l-arpenaz                                     301
