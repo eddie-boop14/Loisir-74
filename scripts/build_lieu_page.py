@@ -1367,7 +1367,87 @@ def action_bar(d):
     )
 
 
-def build_ldjson(d):
+# ---------------------------------------------------------------------------
+# HANDOFF-32 — facts-derived title/meta fallbacks. When a language's own
+# meta_title / meta_description is absent, the page must NEVER ship the FR
+# string verbatim (508 duplicate titles across 2,369 pages — Bing was flagging
+# them) nor a bare shared "<commune> (Haute-Savoie)." (×120). Instead: derive
+# from data we already hold in that language — the reviewed vocabulary
+# (descriptors / category labels / price words / the per-language meta_tail
+# sentence) + the frozen FR name and commune. Unique per (fiche, language) by
+# construction: the name separates fiches, the meta_tail separates languages.
+# Translated prose, when it lands, overrides the fallback (floor, not ceiling).
+# ---------------------------------------------------------------------------
+
+_SITE_CHROME = json.loads((REPO / "data" / "site-chrome-langs.json").read_text(encoding="utf-8"))
+_I18N_LABELS = json.loads((REPO / "data" / "i18n-labels.json").read_text(encoding="utf-8"))
+
+
+def _type_label(d):
+    """Localized type for this fiche: singular descriptor where the vocabulary
+    has one (8 langs), else the category label (all 12). Reviewed sources only."""
+    from build_pilot_langs import CATEGORY_DESCRIPTOR
+    cat = d.get("category") or ""
+    desc_key = CATEGORY_DESCRIPTOR.get(cat)
+    if desc_key:
+        v = _I18N_LABELS["descriptors_by_type"].get(desc_key, {}).get(_LANG)
+        if v:
+            return v
+    return _SITE_CHROME["category_labels"].get(_LANG, {}).get(cat, "")
+
+
+def _facts_price(d):
+    """Language-clean price string: a real price, or the localized
+    Gratuit/Payant word. None when the tariff is unknown (never invented)."""
+    so = d.get("schema_org") or {}
+    price_from = d.get("price_from")
+    if isinstance(price_from, (int, float)) and price_from > 0:
+        cur = {"EUR": "€"}.get(d.get("price_currency"), d.get("price_currency") or "€")
+        return f"{price_from:.2f}".replace(".", ",") + f" {cur}"
+    pw = _SITE_CHROME["price_words"].get(_LANG) or {}
+    if so.get("is_free") is True:
+        return pw.get("gratuit")
+    if so.get("is_free") is False:
+        return pw.get("payant")
+    return None
+
+
+def facts_title(d):
+    """`{localized type} {frozen name} · {commune} | Loisirs 74` — the type is
+    dropped when the name already starts with it (no 'Karting Karting de
+    Rumilly'). Unique per fiche (name + commune); cross-language alternates of
+    the SAME fiche may coincide where the type word coincides — that is the
+    hreflang cluster, not a SERP duplicate."""
+    fr = (d.get("i18n") or {}).get("fr") or {}
+    name = fr.get("name") or d.get("slug", "")
+    commune = d.get("commune") or ""
+    t = _type_label(d)
+    if t and name.lower().startswith(t.lower()):
+        t = ""
+    core = f"{t} {name}".strip()
+    return f"{core} · {commune} | Loisirs 74" if commune else f"{core} | Loisirs 74"
+
+
+def facts_meta(d):
+    """`{type} — {name}, {commune} (Haute-Savoie). {price}. {meta_tail}` —
+    every component from reviewed vocabulary or frozen facts; the per-language
+    meta_tail sentence guarantees cross-language uniqueness."""
+    fr = (d.get("i18n") or {}).get("fr") or {}
+    name = fr.get("name") or d.get("slug", "")
+    commune = d.get("commune") or ""
+    t = _type_label(d)
+    place = f"{name}, {commune} (Haute-Savoie)." if commune else f"{name} (Haute-Savoie)."
+    parts = [f"{t} — {place}" if t else place]
+    price = _facts_price(d)
+    if price:
+        parts.append(f"{price}.")
+    tail = _SITE_CHROME["commune_chrome"].get(_LANG, {}).get("meta_tail")
+    if tail:
+        parts.append(tail)
+    return " ".join(parts)
+
+
+def build_ldjson(d, desc_override=""):
     """Build the WebSite + BreadcrumbList + (TouristAttraction|Place) + FAQPage graph (locale-aware)."""
     slug = d["slug"]
     name = L("name", "")
@@ -1417,7 +1497,7 @@ def build_ldjson(d):
         "@id": f"{page_url}#place",
         "name": name,
         "alternateName": L("name_alternates", []),
-        "description": L("meta_description", ""),
+        "description": desc_override or L("meta_description", ""),
         "url": page_url,
         "address": {
             "@type": "PostalAddress",
@@ -1464,8 +1544,21 @@ def build_head(d):
     """Render the <head> section (locale-aware)."""
     slug = d["slug"]
     name = L("name", "")
-    title = L("meta_title", "") or f"{name} · Loisirs 74"
-    desc = L("meta_description", "")
+    # HANDOFF-32: the page's OWN language strings, or the facts-derived
+    # fallback — never the FR meta_title/meta_description verbatim on a non-FR
+    # page (the 508-duplicate-titles disease), never a bare shared commune
+    # string. Two leak paths are closed: the FR *fallback* (absent locale
+    # field) AND the FR *mirror* (locale field present but byte-equal to the
+    # FR string — untranslated Json copies, same class the related-carousel
+    # already suppresses). Translated prose overrides the fallback.
+    def _own(key):
+        v = _LOC.get(key) if isinstance(_LOC, dict) else None
+        if v and _LANG != "fr" and isinstance(_FR, dict) and v == _FR.get(key):
+            return None   # FR-mirrored, untranslated
+        return v
+
+    title = _own("meta_title") or facts_title(d)
+    desc = _own("meta_description") or facts_meta(d)
     lat = d.get("latitude") or 0
     lon = d.get("longitude") or 0
     commune = d["commune"]
@@ -1502,7 +1595,7 @@ def build_head(d):
                 # name LTR inside the right-aligned RTL hero.
                 "\n[dir=rtl] h1.hammer{direction:ltr;text-align:right}")
 
-    ldjson = build_ldjson(d)
+    ldjson = build_ldjson(d, desc_override=desc)
     hero_alt = L("hero_alt", name)
 
     return f"""<!doctype html>

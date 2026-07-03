@@ -115,6 +115,16 @@ jobs:
           python3 tests/test_gate_no_escaped_tags.py
           python3 scripts/gate_no_escaped_tags.py
 
+      - name: Meta-uniqueness gate (every page introduces itself — no SERP duplicates)
+        # after build_all so pages are freshly rendered. HANDOFF-32: FR titles
+        # mirrored into other langs + bare shared commune metas were flagged by
+        # Bing (2,369 / 1,343 pages). Facts-derived fallbacks fixed the corpus;
+        # this keeps any title/meta from being shared by >3 pages across
+        # DIFFERENT content, and any indexable page from shipping meta-less.
+        run: |
+          python3 tests/test_gate_meta_uniqueness.py
+          python3 scripts/gate_meta_uniqueness.py
+
       - name: Intent-hub registry gate (≥3 members, 6 locales, schema)
         # after build_all so the hub pages have been rendered
         run: python3 scripts/gate_intent_hubs.py
