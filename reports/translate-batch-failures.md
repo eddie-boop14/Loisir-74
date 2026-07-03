@@ -152,3 +152,38 @@
 | maison-du-lieutenant-servoz | JSON parse: Expecting ',' delimiter: line 9 column 581 (char 1092); JSON parse: Expecting ',' delimiter: line 9 column 581 (char 1098) |
 | base-de-loisirs-de-la-beunaz | JSON parse: Expecting property name enclosed in double quotes: line 9 column 542 (char 1153); JSON parse: Expecting ',' delimiter: line 9 column 540 (char 1153) |
 
+## cs — run 2026-07-03
+
+| fiche | violations |
+|---|---|
+| acroparc-de-bellavallis-bellevaux | unrecoverable after quote-repair (recovery run) |
+| cascade-de-la-diomaz | unrecoverable after quote-repair (recovery run) |
+| cascade-du-rouget | unrecoverable after quote-repair (recovery run) |
+| chateau-bellegarde-thonon | unrecoverable after quote-repair (recovery run) |
+| chateau-de-menthon-saint-bernard | unrecoverable after quote-repair (recovery run) |
+| chateau-ripaille-thonon | unrecoverable after quote-repair (recovery run) |
+| col-des-glieres | unrecoverable after quote-repair (recovery run) |
+| col-des-pitons-saleve | unrecoverable after quote-repair (recovery run) |
+| criq-parc | unrecoverable after quote-repair (recovery run) |
+| debaroule-clusaz | unrecoverable after quote-repair (recovery run) |
+| domaine-de-guidou | unrecoverable after quote-repair (recovery run) |
+| ereel-annecy-sillingy | unrecoverable after quote-repair (recovery run) |
+| filenvol-monnetier-mornex | unrecoverable after quote-repair (recovery run) |
+| grp-tour-lac-annecy-annecy | unrecoverable after quote-repair (recovery run) |
+| ile-de-tortuga-vetraz-monthoux | unrecoverable after quote-repair (recovery run) |
+| indiana-ventures-saint-paul-en-chablais | unrecoverable after quote-repair (recovery run) |
+| lac-de-passy | unrecoverable after quote-repair (recovery run) |
+| les-aigles-du-leman | unrecoverable after quote-repair (recovery run) |
+| mont-saleve | unrecoverable after quote-repair (recovery run) |
+| musee-patrimonial-pays-thones-fondateurs-francois-et-lucien-cochat-thones | unrecoverable after quote-repair (recovery run) |
+| musee-ski-ancien-chapelle-abondance | unrecoverable after quote-repair (recovery run) |
+| palais-lumiere | unrecoverable after quote-repair (recovery run) |
+| parc-de-merlet | unrecoverable after quote-repair (recovery run) |
+| plage-d-amphion-publier | unrecoverable after quote-repair (recovery run) |
+| sentier-maison-saleve-pomier-presilly | unrecoverable after quote-repair (recovery run) |
+| sentier-morclan-chatel | unrecoverable after quote-repair (recovery run) |
+| telepherique-du-saleve | unrecoverable after quote-repair (recovery run) |
+| tour-des-langues-thonon | unrecoverable after quote-repair (recovery run) |
+| tropicaland-viry | unrecoverable after quote-repair (recovery run) |
+| villa-du-parc-annemasse | unrecoverable after quote-repair (recovery run) |
+
