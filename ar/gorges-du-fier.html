@@ -95,6 +95,17 @@
 .event-modal-close{position:absolute;top:.5rem;right:.5rem;z-index:2;width:34px;height:34px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;display:grid;place-items:center}
 .event-modal-close:hover{background:rgba(0,0,0,.82)}
 @media (prefers-reduced-motion:reduce){.event-modal-overlay,.event-modal{transition:none}}
+.essentiel{margin:14px 0;padding:12px 14px;background:var(--surface);border:1px solid var(--line);border-inline-start:4px solid var(--accent);border-radius:12px}
+.essentiel .ess-title{display:block;margin-bottom:6px;color:var(--ink);font-weight:700}
+.chip{display:inline-block;background:var(--surface-2);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:3px 11px;margin:3px 5px 3px 0;font-size:13px;line-height:1.5}
+[dir=rtl] .chip{margin:3px 0 3px 5px}
+.chip.chip-pb{color:#1857a8;background:color-mix(in srgb,#1857a8 10%,var(--surface));border-color:color-mix(in srgb,#1857a8 32%,var(--line));font-weight:600}
+@media (prefers-color-scheme:dark){.chip.chip-pb{color:#8ab8f0;background:color-mix(in srgb,#5b9bd5 14%,var(--surface));border-color:color-mix(in srgb,#5b9bd5 40%,var(--line))}}
+.plages-voisines{margin:22px 0;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.plages-voisines h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 8px;color:var(--accent)}
+.plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
+.plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
+[dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}
 
 [dir=rtl] a.skip{left:auto;inset-inline-start:-9999px}
 [dir=rtl] a.skip:focus{inset-inline-start:0}
@@ -127,7 +138,7 @@
 <main id="main">
 <div class="wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="https://loisirs74.fr/ar/">الرئيسية</a><span class="sep">/</span><a href="https://loisirs74.fr/ar/cascades/">الشلالات</a><span class="sep">/</span><span aria-current="page">Gorges du Fier</span></nav></div>
 <section class="hero"><div class="wrap"><div class="grid"><div><span class="eyebrow reveal"><span class="dot"></span>مدفوع · احجز عبر الإنترنت</span><h1 class="hammer"><span class="w">Gorges</span> <span class="w">du</span> <span class="w"><em>Fier</em></span></h1><p class="lede reveal"></p><div class="cta-row reveal"><a href="https://www.gorgesdufier.com/" class="btn btn-primary" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v3a3 3 0 0 0 0 6v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3a3 3 0 0 0 0-6V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><line x1="13" y1="5" x2="13" y2="7"/><line x1="13" y1="11" x2="13" y2="13"/><line x1="13" y1="17" x2="13" y2="19"/></svg>احجز</a><a href="https://www.google.com/maps/search/?api=1&query=Gorges%20du%20Fier%2C%20Lovagny%2C%20Haute-Savoie%2C%20France&query_place_id=ChIJt92C0rKEi0cRMrxQwyE0ELY" class="btn btn-ghost" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>عرض على الخريطة</a><a href="https://www.gorgesdufier.com/" class="btn btn-ghost" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>الموقع الرسمي</a></div></div><div class="reveal"><div class="hero-img"><picture><source srcset="/img/cascades/gorges-du-fier-hero.webp" type="image/webp"><img src="/img/cascades/gorges-du-fier-hero.jpg" alt="Gorges du Fier" width="1280" height="1707" fetchpriority="high"></picture></div></div></div></div></section>
-<section class="block"><div class="wrap"><div class="kicker reveal">لمحة سريعة</div><div class="facts reveal" data-stagger><div class="fact"><div class="k">السعر</div><div class="v"><bdi>6,00 €</bdi></div></div><div class="fact"><div class="k">البلدة</div><div class="v"><bdi>Lovagny</bdi></div></div></div><p class="fact-source reveal"><a href="https://www.gorgesdufier.com/" target="_blank" rel="noopener">مصدر رسمي →</a></p></div></section>
+<section class="block"><div class="wrap"><div class="kicker reveal">لمحة سريعة</div><div class="facts reveal" data-stagger><div class="fact"><div class="k">السعر</div><div class="v"><bdi>6,00 €</bdi></div></div><div class="fact"><div class="k">البلدة</div><div class="v"><bdi>Lovagny</bdi></div></div><div class="fact"><div class="k">Accessibilité PMR</div><div class="v">غير متاح للوصول <a class="inline-link" href="https://www.gorgesdufier.com/fr/vos-questions.html" target="_blank" rel="noopener">المصدر: Gorges du Fier (site officiel)</a></div></div></div><p class="fact-source reveal"><a href="https://www.gorgesdufier.com/" target="_blank" rel="noopener">مصدر رسمي →</a></p></div></section>
 
 
 

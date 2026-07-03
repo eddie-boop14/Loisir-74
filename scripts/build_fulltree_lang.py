@@ -129,7 +129,10 @@ def render_fiche_rich(d, lang):
             "route": ch["directions"][lang], "site": ch["official_site"][lang],
         }
     d["i18n"][lang]["facts"] = _vocab_facts(d, lang)
-    d["acces_pmr"] = None   # PMR summaries are free-text FR — omit, never leak
+    # HANDOFF-35: acces_pmr now travels — the renderer localizes the short
+    # status (reviewed fact_values.pmr_*) and suppresses the FR free-text
+    # detail off-fr until i18n.<lang>.acces_pmr_detail exists. The old blunt
+    # `d["acces_pmr"] = None` here hid the whole row on facts langs.
     html = LP.build_page(d, lang, include_partners=False, fr_prose_fallback=False)
     return html, LP.LAST_FALLBACK_FIELDS
 
