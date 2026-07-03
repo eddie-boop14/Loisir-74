@@ -55,8 +55,11 @@ def main():
             if not os.path.exists(p):
                 viol.append(f"{slug}/{lang}: page missing"); continue
             html = open(p, encoding="utf-8").read()
-            if 'class="essentiel"' not in html:
-                viol.append(f"{slug}/{lang}: no L'essentiel block")
+            # HANDOFF-35 defect 5: exactly ONE essentiel block per page —
+            # absence and duplication are both diseases.
+            n_ess = html.count('<section class="essentiel"')
+            if n_ess != 1:
+                viol.append(f"{slug}/{lang}: essentiel block count {n_ess} (must be exactly 1)")
             m = re.search(r'<section class="plages-voisines".*?</section>', html, re.S)
             if not m:
                 viol.append(f"{slug}/{lang}: no Plages voisines block"); continue

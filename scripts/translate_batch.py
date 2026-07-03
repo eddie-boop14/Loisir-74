@@ -134,6 +134,13 @@ def extract_source(fiche):
                 src["body"] = {"what_is": wi}
         else:
             src[f] = v
+    # HANDOFF-35 Job A: acces_pmr.detail is FR-authored CONTENT (not a frozen
+    # name) — the renderer suppresses it off-fr until a translation exists, so
+    # it travels in the payload (source text is FR, the one non-EN field) and
+    # lands as i18n.<lang>.acces_pmr_detail.
+    det = (fiche.get("acces_pmr") or {}).get("detail")
+    if isinstance(det, str) and det.strip():
+        src["acces_pmr_detail"] = det.strip()
     return src
 
 
@@ -519,9 +526,16 @@ def pairs_for_lang(lang, force=False):
         if not src:
             continue                     # no EN prose to translate
         blk = (fiche.get("i18n") or {}).get(lang) or {}
-        if not force and all(f in blk for f in src):
+        if force:
+            pairs.append((fiche, src))
+            continue
+        # HANDOFF-35: send ONLY the still-missing fields. Adding a field to
+        # the payload (acces_pmr_detail) must never re-bill the whole prose of
+        # an already-translated fiche — a pt/cs mop-up costs cents, not $19.
+        missing = {f: v for f, v in src.items() if f not in blk}
+        if not missing:
             continue                     # already populated + validated → skip
-        pairs.append((fiche, src))
+        pairs.append((fiche, missing))
     return pairs
 
 

@@ -497,22 +497,48 @@ _ACCES_STATUS = {
     "non_accessible": {"fr": "Non accessible", "en": "Not accessible", "de": "Nicht barrierefrei",
                        "it": "Non accessibile", "es": "No accesible", "nl": "Niet toegankelijk"},
 }
-_ACCES_SELON = {"fr": "selon", "en": "per", "de": "laut", "it": "secondo", "es": "según", "nl": "volgens"}
+# HANDOFF-35: the old connective ("per Commune Saint-Jorioz") read as broken
+# English and existed for 6 langs only. A label-prefix form ("Source: X") is
+# grammatical in every language; the 6 facts langs come from the reviewed
+# i18n-labels lane (ui_chrome.source_prefix), never a new hardcoded dict.
+_SRC_PREFIX = {"fr": "Source :", "en": "Source:", "de": "Quelle:",
+               "it": "Fonte:", "es": "Fuente:", "nl": "Bron:"}
+_PMR_VALUE_KEY = {"accessible": "pmr_accessible", "partiel": "pmr_partiel",
+                  "non_accessible": "pmr_non"}
+
+
+def _ui_label(hard, key, lang):
+    """Two-lane label lookup (HANDOFF-35): the six live languages keep their
+    hardcoded wording; the six facts languages come from the reviewed
+    data/i18n-labels.json vocabulary; FR is the last-resort fallback."""
+    row = (_I18N_LABELS.get("ui_chrome") or {}).get(key) or {}
+    return hard.get(lang) or row.get(lang) or hard.get("fr") or row.get("fr") or ""
+
+
+def _pmr_status_label(status, lang):
+    """Localized short PMR status for ALL 12 languages (hardcoded 6 +
+    reviewed fact_values.pmr_* for the facts langs; FR fallback)."""
+    row = _ACCES_STATUS.get(status) or {}
+    fv = (_I18N_LABELS.get("fact_values") or {}).get(_PMR_VALUE_KEY.get(status, "")) or {}
+    return row.get(lang) or fv.get(lang) or row.get("fr") or status
 
 
 def acces_pmr_fact(a):
     """(label, value_html) for the accessibility fact row, or None. Only renders
-    a sourced status (never 'accessible' for an unsourced/null fiche)."""
+    a sourced status (never 'accessible' for an unsourced/null fiche).
+    HANDOFF-35: `detail` here is already language-effective — build_page swaps
+    in i18n.<lang>.acces_pmr_detail off-fr and suppresses the FR text (it is
+    CONTENT, not a frozen name); the localized short status always shows."""
     if not isinstance(a, dict) or a.get("status") not in _ACCES_STATUS:
         return None
-    st = _ACCES_STATUS[a["status"]].get(_LANG) or _ACCES_STATUS[a["status"]]["fr"]
+    st = _pmr_status_label(a["status"], _LANG)
     val = " · ".join([esc(st)] + ([esc(a["detail"])] if a.get("detail") else []))
     if a.get("handiplage_level"):
         val += f' <span class="pill pill-ok">Handiplage {esc(str(a["handiplage_level"]))}</span>'
     if a.get("source_url") and a.get("source_name"):
-        selon = _ACCES_SELON.get(_LANG, "selon")
+        pfx = _ui_label(_SRC_PREFIX, "source_prefix", _LANG)
         val += (f' <a class="inline-link" href="{attr(a["source_url"])}" target="_blank" '
-                f'rel="noopener">{selon} {esc(a["source_name"])}</a>')
+                f'rel="noopener">{esc(pfx)} {esc(a["source_name"])}</a>')
     return (_ACCES_LABEL.get(_LANG) or _ACCES_LABEL["fr"], val)
 
 
@@ -2098,36 +2124,32 @@ def _haversine_km(a, b, c, e):
 
 def essentiel_block(d, lang):
     """Beach-only answer-first highlight strip — swimming-critical curated facts.
-    Every value comes verbatim from i18n.<lang>.facts / acces_pmr; null ⇒ voir fiche."""
+    Every value comes verbatim from i18n.<lang>.facts / acces_pmr; null ⇒ voir fiche.
+    HANDOFF-35: theme-aware shared classes (.essentiel/.chip in style.css, CSS
+    variables → readable on light AND dark; the old inline background:#fff
+    ghosted the chips on the dark theme), labels via the two-lane lookup so all
+    12 languages get native wording (PT showed FR 'L'essentiel')."""
     if d.get("slug") not in _baignade_index():
         return ""
     facts = (d.get("i18n", {}).get(lang, {}) or {}).get("facts") \
         or (d.get("i18n", {}).get("fr", {}) or {}).get("facts") or {}
     chips = []
     tarif = facts.get("tarif") or facts.get("access")
-    label_tarif = (FACT_LABELS.get("tarif", {}) or {}).get(lang) if isinstance(FACT_LABELS.get("tarif"), dict) else None
-    chips.append('<span style="display:inline-block;background:#eef4f2;border:1px solid #d6e6e2;'
-                 'border-radius:999px;padding:3px 11px;margin:3px 5px 3px 0;font-size:13px">'
-                 f'💶 {html_lib.escape(str(tarif) if tarif else (_CH_VOIRFICHE.get(lang) or "voir fiche"), quote=True)}</span>')
+    voir = _ui_label(_CH_VOIRFICHE, "voir_fiche", lang) or "voir fiche"
+    chips.append('<span class="chip">'
+                 f'💶 {html_lib.escape(str(tarif) if tarif else voir, quote=True)}</span>')
     surv = facts.get("surveillance")
     if surv:
-        chips.append('<span style="display:inline-block;background:#eef4f2;border:1px solid #d6e6e2;'
-                     'border-radius:999px;padding:3px 11px;margin:3px 5px 3px 0;font-size:13px">'
-                     f'🛟 {html_lib.escape(str(surv), quote=True)}</span>')
+        chips.append(f'<span class="chip">🛟 {html_lib.escape(str(surv), quote=True)}</span>')
     if str(facts.get("pavillon_bleu_2026", "")).strip().upper() == "OUI":
-        chips.append('<span style="display:inline-block;background:#e7f0fb;border:1px solid #bcd6f5;'
-                     'color:#1857a8;border-radius:999px;padding:3px 11px;margin:3px 5px 3px 0;'
-                     'font-size:13px;font-weight:600">🏅 Pavillon Bleu 2026</span>')
+        chips.append('<span class="chip chip-pb">🏅 Pavillon Bleu 2026</span>')
     ap = d.get("acces_pmr")
     if isinstance(ap, dict) and ap.get("status"):
-        st = (_ACCES_STATUS.get(ap["status"], {}) or {}).get(lang) or _ACCES_STATUS.get(ap["status"], {}).get("fr") or ap["status"]
-        chips.append('<span style="display:inline-block;background:#eef4f2;border:1px solid #d6e6e2;'
-                     'border-radius:999px;padding:3px 11px;margin:3px 5px 3px 0;font-size:13px">'
-                     f'♿ {html_lib.escape(str(st), quote=True)}</span>')
-    title = html_lib.escape(_ESS.get(lang) or _ESS["fr"], quote=True)
-    return ('<section class="essentiel" style="margin:14px 0;padding:12px 14px;background:#fff;'
-            'border:1px solid #e3ddd0;border-left:4px solid #1F6E78;border-radius:12px">'
-            f'<strong style="display:block;margin-bottom:6px;color:#155059">{title}</strong>'
+        st = _pmr_status_label(ap["status"], lang)
+        chips.append(f'<span class="chip">♿ {html_lib.escape(str(st), quote=True)}</span>')
+    title = html_lib.escape(_ui_label(_ESS, "l_essentiel", lang), quote=True)
+    return ('<section class="essentiel">'
+            f'<strong class="ess-title">{title}</strong>'
             + "".join(chips) + '</section>')
 
 
@@ -2152,21 +2174,21 @@ def plages_voisines_block(d, lang):
     # link would 404 (link-integrity gate).
     hub_slug = me["hub"]
     if not _STRICT_PROSE:
-        links.append(f'<a class="fiche" style="margin:4px 10px 4px 0" '
+        links.append(f'<a class="fiche" '
                      f'href="{BASE_URL}{lang_prefix}/{hub_slug}">{html_lib.escape(_GUIDE.get(lang) or _GUIDE["fr"], quote=True)} →</a>')
     for s, _info in sibs:
         nm = _related_name(s, lang)
-        links.append(f'<a class="fiche" style="margin:4px 10px 4px 0" '
+        links.append(f'<a class="fiche" '
                      f'href="{BASE_URL}{lang_prefix}/{s}">{html_lib.escape(nm, quote=True)}</a>')
     # always link the master hub too (cross-lake discovery)
     if hub_slug != _MASTER_HUB and not _STRICT_PROSE:
-        links.append(f'<a class="fiche" style="margin:4px 10px 4px 0" '
+        links.append(f'<a class="fiche" '
                      f'href="{BASE_URL}{lang_prefix}/{_MASTER_HUB}">{html_lib.escape(_ALLSPOTS.get(lang) or _ALLSPOTS["fr"], quote=True)} →</a>')
-    title = html_lib.escape(_VOIS.get(lang) or _VOIS["fr"], quote=True)
-    return ('<section class="plages-voisines" style="margin:22px 0;padding:14px 16px;'
-            'background:#fff;border:1px solid #e3ddd0;border-radius:12px">'
-            f'<h2 style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;'
-            f'margin:0 0 8px;color:#155059">{title}</h2>'
+    title = html_lib.escape(_ui_label(_VOIS, "plages_voisines", lang), quote=True)
+    # HANDOFF-35: same background:#fff disease as the essentiel block, on the
+    # same beach pages — themed via the shared .plages-voisines class.
+    return ('<section class="plages-voisines">'
+            f'<h2>{title}</h2>'
             f'<div>{"".join(links)}</div></section>')
 
 
@@ -2185,11 +2207,21 @@ def build_page(d, lang="fr", include_partners=True, fr_prose_fallback=True):
     _STRICT_PROSE = not fr_prose_fallback
     name = L("name", "")
 
+    # HANDOFF-35: acces_pmr.detail is FR-authored CONTENT (not a frozen name).
+    # fr renders it verbatim; every other language shows its own translation
+    # (i18n.<lang>.acces_pmr_detail, populated by the batch lane) or NOTHING —
+    # the localized short status still renders, the FR sentence never leaks.
+    ap_eff = d.get("acces_pmr")
+    if isinstance(ap_eff, dict) and lang != "fr":
+        ap_eff = dict(ap_eff)
+        det = ((d.get("i18n") or {}).get(lang) or {}).get("acces_pmr_detail")
+        ap_eff["detail"] = det if isinstance(det, str) and det.strip() else None
+
     out = []
     out.append(build_head(d))
     out.append(build_header(d))
     out.append(hero_block(d))
-    out.append(facts_block(L("facts", {}) or {}, first_source_url(d), d.get("acces_pmr")))
+    out.append(facts_block(L("facts", {}) or {}, first_source_url(d), ap_eff))
     out.append(essentiel_block(d, lang))
     body_dict = L("body", {}) if isinstance(L("body", {}), dict) else {}
     if not body_dict:
