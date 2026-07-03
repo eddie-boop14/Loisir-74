@@ -17,8 +17,11 @@ USAGE (manual only — NEVER a cron; 2026-07-01's lesson):
 
 NEEDS: ANTHROPIC_API_KEY in the environment (Eddie's Anthropic Platform
 key — NOT the Google one). Model: claude-sonnet-4-6 (per HANDOFF-25).
-Batch pricing $1.50/$7.50 per MTok; the shared instruction block (rules +
-frozen-noun glossary) is prompt-cached across all requests in a batch.
+Batch pricing $1.50/$7.50 per MTok. NOTE (HANDOFF-35): the shared
+instruction block carries a cache_control marker but sits BELOW the model's
+2048-token minimum cacheable prefix, so it is billed as plain input on
+every request — estimate() prices it accordingly, and the >15%-over-contract
+ABORT rule + the --audit reconciliation keep the meter honest.
 
 RESUMABLE + IDEMPOTENT:
   * a submitted batch id is remembered in reports/translate-batch-state.json —
@@ -57,11 +60,24 @@ ROOT = Path(__file__).resolve().parent.parent
 JSON_DIR = ROOT / "Json"
 STATE_FILE = ROOT / "reports" / "translate-batch-state.json"
 FAILURES_MD = ROOT / "reports" / "translate-batch-failures.md"
+CALIBRATION_FILE = ROOT / "reports" / "translate-cost-calibration.json"
+RECONCILIATION_MD = ROOT / "reports" / "translate-cost-reconciliation.md"
 
 MODEL = "claude-sonnet-4-6"          # per HANDOFF-25 — do not silently upgrade
 MAX_TOKENS = 16000
 BATCH_IN_PER_MTOK = 1.50             # $ per MTok, batch (50% off $3.00)
 BATCH_OUT_PER_MTOK = 7.50            # $ per MTok, batch (50% off $15.00)
+BATCH_CACHE_WRITE_PER_MTOK = 1.875   # $ per MTok, batch (50% off 1.25 × $3.00)
+BATCH_CACHE_READ_PER_MTOK = 0.15     # $ per MTok, batch (50% off 0.1 × $3.00)
+# claude-sonnet-4-6's minimum cacheable prefix. Below it the cache_control
+# marker is SILENTLY ignored — no error, no caching, every request re-bills
+# the system prompt as plain input. Our system prompt is ~780 tokens, so the
+# cache NEVER fired on pt/cs (HANDOFF-35 Job B, proven leak #1).
+MIN_CACHEABLE_TOKENS = 2048
+# HANDOFF-35 permanent rule: the dry-run is a contract — a run that exceeds
+# its estimate by >15% ABORTS mid-run (before the next paid submit) and the
+# workflow goes red.
+ABORT_RATIO = 1.15
 
 TARGET_LANGS = ["pl", "pt", "cs", "ja", "ar", "he"]
 RTL_LANGS = {"ar", "he"}
@@ -298,22 +314,119 @@ def parse_result_text(text):
 
 # ------------------------------------------------------------------ estimate
 def est_tokens(text):
-    """Rough chars/3.5 heuristic — for the pre-submit bill preview only."""
+    """Rough chars/3.5 heuristic — the pre-audit fallback only."""
     return int(len(text) / 3.5) + 1
 
 
+def load_calibration():
+    """Audit-derived cost factors (reports/translate-cost-calibration.json,
+    written by --audit from the PAID batches' real per-request usage).
+    Absent/unreadable → {} and estimate() falls back to the documented
+    assumptions below."""
+    if CALIBRATION_FILE.exists():
+        try:
+            return json.loads(CALIBRATION_FILE.read_text(encoding="utf-8"))
+        except ValueError:
+            pass
+    return {}
+
+
+# Output model: out_tokens ≈ source_chars × factor. These are UNCALIBRATED
+# assumptions, deliberately set HIGH from the observed pt/cs overrun scale
+# (~$19 actual vs $7.61 contract back-computes to ~0.7 out-tok per source
+# char) so the pre-audit contract is a ceiling, not a floor. --audit replaces
+# them with measured per-language values; ja/ar/he keep an assumption flag
+# until their own first audited run.
+DEFAULT_OUT_PER_CHAR = {"pl": 0.70, "pt": 0.70, "cs": 0.75,
+                        "ja": 0.85, "ar": 0.80, "he": 0.80}
+DEFAULT_IN_PER_CHAR = 1 / 3.5
+
+
 def estimate(pairs, communes, lang):
+    """Pre-submit bill — the CONTRACT (HANDOFF-35 Job B).
+
+    Honest where the old model leaked:
+      * caching — the system prompt sits below MIN_CACHEABLE_TOKENS, so it is
+        priced as plain uncached input on EVERY request (that is what the API
+        actually billed on pt/cs; the old model priced 388/389 requests' system
+        block at 0.1×);
+      * output — per-language out-tokens-per-source-char factor (audited or
+        conservative default), instead of assuming translation ≈ source size.
+    Returns (n_requests, in_tok, out_tok, usd, calibrated)."""
+    cal = load_calibration()
+    in_per_char = cal.get("input_tokens_per_char") or DEFAULT_IN_PER_CHAR
+    out_per_char = ((cal.get("output_tokens_per_source_char") or {}).get(lang)
+                    or DEFAULT_OUT_PER_CHAR.get(lang, 0.75))
+    calibrated = bool(cal.get("input_tokens_per_char"))
+    n = len(pairs)
+    sys_tok = int(len(system_prompt(lang, communes)) * in_per_char) + 1
+    in_tok = out_tok = 0
+    for fiche, src in pairs:
+        chars = len(user_prompt(fiche, src))
+        in_tok += int(chars * in_per_char) + 1
+        out_tok += int(chars * out_per_char) + 1
+    if sys_tok >= MIN_CACHEABLE_TOKENS:
+        # cache real: first request writes (1.25×), the rest read (0.1×)
+        sys_usd = (sys_tok * BATCH_CACHE_WRITE_PER_MTOK
+                   + sys_tok * max(0, n - 1) * BATCH_CACHE_READ_PER_MTOK) / 1e6
+        sys_tok_total = int(sys_tok * (1.25 + 0.1 * max(0, n - 1)))
+    else:
+        # below the minimum cacheable prefix the marker is silently ignored:
+        # every request re-bills the system prompt as plain input
+        sys_usd = sys_tok * n * BATCH_IN_PER_MTOK / 1e6
+        sys_tok_total = sys_tok * n
+    usd = (in_tok * BATCH_IN_PER_MTOK + out_tok * BATCH_OUT_PER_MTOK) / 1e6 + sys_usd
+    return n, in_tok + sys_tok_total, out_tok, usd, calibrated
+
+
+def legacy_estimate(pairs, communes, lang):
+    """The pre-HANDOFF-35 model, verbatim — what the pt/cs dry-run contracts
+    were computed with ($7.61). Kept ONLY so --audit can decompose the
+    contract-vs-actual delta to the cent. Never used for a new contract."""
     sys_tok = est_tokens(system_prompt(lang, communes))
     in_tok = out_tok = 0
     for fiche, src in pairs:
         body = est_tokens(user_prompt(fiche, src))
         in_tok += body
-        out_tok += body          # translation ≈ source size
-    # cached system: first request writes (1.25x), the rest read (0.1x)
+        out_tok += body          # translation ≈ source size (the leak)
     n = len(pairs)
     sys_cost_tok = sys_tok * (1.25 + 0.1 * max(0, n - 1))
     usd = ((in_tok + sys_cost_tok) * BATCH_IN_PER_MTOK + out_tok * BATCH_OUT_PER_MTOK) / 1e6
     return n, in_tok + int(sys_cost_tok), out_tok, usd
+
+
+# ------------------------------------------------------------ the honest meter
+USAGE_KEYS = ("input_tokens", "output_tokens",
+              "cache_creation_input_tokens", "cache_read_input_tokens")
+
+
+def usage_of(msg):
+    """Per-request token counts straight from the API result (or None)."""
+    u = getattr(msg, "usage", None)
+    if u is None:
+        return None
+    return {k: int(getattr(u, k, 0) or 0) for k in USAGE_KEYS}
+
+
+def sum_usage(rows):
+    tot = {k: 0 for k in USAGE_KEYS}
+    for r in rows:
+        for k in USAGE_KEYS:
+            tot[k] += int(r.get(k, 0) or 0)
+    return tot
+
+
+def usage_cost_usd(tot):
+    """Actual $ at Message Batches prices — what the Console will show."""
+    return (tot["input_tokens"] * BATCH_IN_PER_MTOK
+            + tot["cache_creation_input_tokens"] * BATCH_CACHE_WRITE_PER_MTOK
+            + tot["cache_read_input_tokens"] * BATCH_CACHE_READ_PER_MTOK
+            + tot["output_tokens"] * BATCH_OUT_PER_MTOK) / 1e6
+
+
+def over_budget(actual_usd, est_usd):
+    """The permanent >15% rule: the dry-run number is a contract."""
+    return est_usd > 0 and actual_usd > ABORT_RATIO * est_usd
 
 
 # --------------------------------------------------------------------- state
@@ -376,18 +489,23 @@ def poll_batch(client, batch_id, interval=60):
 
 
 def collect_results(client, batch_id):
-    """{custom_id: ('ok', text) | ('error', reason)} — keyed by custom_id,
-    NEVER by position (results arrive in any order)."""
-    out = {}
+    """({custom_id: ('ok', text) | ('error', reason)}, {custom_id: usage})
+    — keyed by custom_id, NEVER by position (results arrive in any order).
+    usage carries the API's own per-request token counts (the honest meter,
+    HANDOFF-35); absent on mocks/old results → simply not in the dict."""
+    out, usage = {}, {}
     for r in client.messages.batches.results(batch_id):
         rt = r.result.type
         if rt == "succeeded":
             msg = r.result.message
             text = next((b.text for b in msg.content if b.type == "text"), "")
             out[r.custom_id] = ("ok", text)
+            u = usage_of(msg)
+            if u:
+                usage[r.custom_id] = u
         else:
             out[r.custom_id] = ("error", rt)
-    return out
+    return out, usage
 
 
 # ------------------------------------------------------------------ pipeline
@@ -433,9 +551,12 @@ def log_failures(lang, failures):
 def run_language(lang, args, client=None):
     communes = all_communes()
     pairs = pairs_for_lang(lang, force=args.force)
-    n, in_tok, out_tok, usd = estimate(pairs, communes, lang)
+    n, in_tok, out_tok, usd, calibrated = estimate(pairs, communes, lang)
+    cal_note = ("audit-calibrated" if calibrated
+                else "UNCALIBRATED — assumed factors; run the audit mode first (HANDOFF-35)")
     print(f"[{lang}] {n} fiche×lang requests · est ~{in_tok/1000:.0f}k in / "
-          f"~{out_tok/1000:.0f}k out tokens · est ~${usd:.2f} on {MODEL} batch")
+          f"~{out_tok/1000:.0f}k out tokens · est ~${usd:.2f} on {MODEL} batch "
+          f"({cal_note})")
     if not pairs:
         print(f"[{lang}] nothing to do — already populated (use --force to redo)")
         return True
@@ -460,7 +581,23 @@ def run_language(lang, args, client=None):
         save_state(state)
 
     poll_batch(client, batch_id)
-    results = collect_results(client, batch_id)
+    results, usage = collect_results(client, batch_id)
+
+    # THE METER (HANDOFF-35): reconcile actual spend against the contract as
+    # soon as the API tells us what it billed — before any further paid step.
+    tot_main = sum_usage(usage.values())
+    actual = usage_cost_usd(tot_main)
+    if any(tot_main.values()):
+        print(f"[{lang}] METER main batch: {tot_main['input_tokens']:,} in / "
+              f"{tot_main['output_tokens']:,} out / "
+              f"{tot_main['cache_read_input_tokens']:,} cache-read tok "
+              f"→ ${actual:.2f} actual vs ${usd:.2f} contract "
+              f"({(actual / usd * 100) if usd else 0:.0f}%)")
+        state = load_state()
+        state.setdefault(lang, {})["usage_main"] = tot_main
+        state[lang]["actual_usd_main"] = round(actual, 4)
+        state[lang]["contract_usd"] = round(usd, 4)
+        save_state(state)
 
     by_slug = {f["slug"]: (f, s) for f, s in pairs}
     written, retry, failed = 0, [], []
@@ -484,7 +621,27 @@ def run_language(lang, args, client=None):
             write_back(fiche, lang, out)
             written += 1
 
-    # one retry round, fresh requests
+    # one retry round, fresh requests — GATED by the >15% rule: a retry is a
+    # SECOND PAID submit (the cs retry was +153 requests ≈ +$3). Project its
+    # cost from the main batch's ACTUAL per-request average; over budget →
+    # abort before spending, log, red exit. Fields stay absent (recoverable
+    # later via --recover or an approved --force re-run).
+    if retry and any(tot_main.values()):
+        per_req = actual / max(1, len(usage))
+        projected = actual + per_req * len(retry)
+        if over_budget(projected, usd):
+            print(f"[{lang}] BUDGET ABORT: main batch ${actual:.2f} + projected retry "
+                  f"${per_req * len(retry):.2f} > {ABORT_RATIO:.2f}× contract ${usd:.2f} "
+                  f"— retry submit SKIPPED (HANDOFF-35 rule).")
+            log_failures(lang, [(f["slug"], v + ["retry skipped: >15% budget abort"])
+                                for f, s, v in retry])
+            state = load_state()
+            state.setdefault(lang, {})["done"] = True
+            state[lang]["written"] = written
+            state[lang]["budget_abort"] = True
+            save_state(state)
+            sys.exit(2)
+
     if retry:
         print(f"[{lang}] retrying {len(retry)} failed result(s) once…")
         retry_pairs = [(f, s) for f, s, _ in retry]
@@ -498,7 +655,16 @@ def run_language(lang, args, client=None):
         state[lang]["retry_id_map"] = rid_map
         save_state(state)
         poll_batch(client, rid)
-        rres = collect_results(client, rid)
+        rres, rusage = collect_results(client, rid)
+        tot_retry = sum_usage(rusage.values())
+        if any(tot_retry.values()):
+            print(f"[{lang}] METER retry batch: {tot_retry['input_tokens']:,} in / "
+                  f"{tot_retry['output_tokens']:,} out tok "
+                  f"→ ${usage_cost_usd(tot_retry):.2f} actual (on top of the contract)")
+            state = load_state()
+            state.setdefault(lang, {})["usage_retry"] = tot_retry
+            state[lang]["actual_usd_retry"] = round(usage_cost_usd(tot_retry), 4)
+            save_state(state)
         for fiche, src, first_viol in retry:
             kind, payload = rres.get(cid_of.get(fiche["slug"], ""), ("error", "missing"))
             viol = None
@@ -525,6 +691,19 @@ def run_language(lang, args, client=None):
     state.setdefault(lang, {})["done"] = True
     state[lang]["written"] = written
     save_state(state)
+
+    # final reconciliation — always printed; >15% over contract = red run
+    lang_state = load_state().get(lang) or {}
+    final_actual = usage_cost_usd(sum_usage(
+        [u for u in (lang_state.get("usage_main"), lang_state.get("usage_retry")) if u]))
+    if final_actual:
+        pct = (final_actual / usd * 100) if usd else 0
+        print(f"[{lang}] METER final: ${final_actual:.2f} actual vs ${usd:.2f} contract ({pct:.0f}%)")
+        if over_budget(final_actual, usd):
+            print(f"[{lang}] BUDGET OVERRUN >15% — results are written (already paid), "
+                  f"but this run is RED. Audit before the next language (HANDOFF-35).")
+            print(f"[{lang}] DONE: {written}/{len(pairs)} written, {len(failed)} logged failures")
+            sys.exit(3)
 
     print(f"[{lang}] DONE: {written}/{len(pairs)} written, {len(failed)} logged failures")
     print(f"[{lang}] next (separate steps): rich render (HANDOFF-22) + gates —")
@@ -571,7 +750,7 @@ def recover_language(lang, client):
         if not still:
             break
         print(f"  reading results of {batch_id} …")
-        results = collect_results(client, batch_id)
+        results, _usage = collect_results(client, batch_id)
         for cid, (kind, payload) in results.items():
             if kind != "ok":
                 continue
@@ -601,6 +780,264 @@ def recover_language(lang, client):
     return recovered
 
 
+# --------------------------------------------------------------------- audit
+def all_source_pairs():
+    """{slug: (fiche, src)} for EVERY fiche with EN prose — the full corpus,
+    independent of what's already translated (the audit must reconstruct the
+    contract-time request set, and user_prompt() is language-independent)."""
+    out = {}
+    for p in sorted(glob.glob(str(JSON_DIR / "*.json"))):
+        fiche = json.load(open(p, encoding="utf-8"))
+        fiche["_path"] = p
+        src = extract_source(fiche)
+        if src:
+            out[fiche["slug"]] = (fiche, src)
+    return out
+
+
+def _slug_from_cid(cid, id_map, slugs):
+    """custom_id → slug: state-file id_map first, else the slug fragment of
+    f'{lang}-{i:04d}-{slug}'[:64] prefix-matched against the corpus (the pt
+    retry batch predates id-map persistence)."""
+    if cid in id_map:
+        return id_map[cid]
+    frag = cid.split("-", 2)[-1] if cid.count("-") >= 2 else ""
+    if not frag:
+        return None
+    hits = [s for s in slugs if s == frag or s.startswith(frag)]
+    return hits[0] if len(hits) == 1 else None
+
+
+def audit_batch(client, bid, id_map, chars_by_slug, slugs):
+    """Read one paid batch's results ($0) and sum its real usage.
+    Returns a record with token totals, actual $, and — for the requests we
+    can map back to fiches — the source-char base for calibration."""
+    rows, n_ok, n_err = [], 0, 0
+    langs_seen = {}
+    mapped_src_chars = mapped_in_tok = mapped_out_tok = n_mapped = 0
+    out_chars = 0
+    for r in client.messages.batches.results(bid):
+        cid = r.custom_id
+        langs_seen[cid.split("-", 1)[0]] = langs_seen.get(cid.split("-", 1)[0], 0) + 1
+        if r.result.type != "succeeded":
+            n_err += 1
+            continue
+        n_ok += 1
+        msg = r.result.message
+        text = next((b.text for b in msg.content if b.type == "text"), "")
+        out_chars += len(text)
+        u = usage_of(msg)
+        if not u:
+            continue
+        rows.append(u)
+        slug = _slug_from_cid(cid, id_map, slugs)
+        if slug in chars_by_slug:
+            n_mapped += 1
+            mapped_src_chars += chars_by_slug[slug]
+            mapped_in_tok += u["input_tokens"] + u["cache_creation_input_tokens"] \
+                + u["cache_read_input_tokens"]
+            mapped_out_tok += u["output_tokens"]
+    tot = sum_usage(rows)
+    lang = max(langs_seen, key=langs_seen.get) if langs_seen else "?"
+    return {"id": bid, "lang": lang, "ok": n_ok, "err": n_err,
+            "usage": tot, "usd": usage_cost_usd(tot), "out_chars": out_chars,
+            "n_mapped": n_mapped, "mapped_src_chars": mapped_src_chars,
+            "mapped_in_tok": mapped_in_tok, "mapped_out_tok": mapped_out_tok}
+
+
+def audit_workspace(client):
+    """HANDOFF-35 Job B: ZERO-SPEND reconciliation. Enumerate every batch in
+    the workspace (results stay readable ~29 days; retrieval is FREE — nothing
+    is ever submitted here), sum the API's own per-request usage, price it at
+    batch rates, and write:
+      reports/translate-cost-reconciliation.md  — line-item actuals vs contract
+      reports/translate-cost-calibration.json   — measured factors estimate() uses
+    batches.list() also catches batches whose ids never made the state file
+    (the pt retry round)."""
+    state = load_state()
+    known = {}                    # batch_id -> (lang, role, id_map)
+    for lang, ls in state.items():
+        if not isinstance(ls, dict):
+            continue
+        if ls.get("batch_id"):
+            known[ls["batch_id"]] = (lang, "main", ls.get("id_map") or {})
+        if ls.get("retry_batch_id"):
+            known[ls["retry_batch_id"]] = (lang, "retry", ls.get("retry_id_map") or {})
+    batch_ids = list(known)
+    try:
+        for b in client.messages.batches.list():
+            if b.id not in known and b.id not in batch_ids:
+                batch_ids.append(b.id)
+    except Exception as e:  # noqa: BLE001 — list is a convenience, ids in state suffice
+        print(f"  (batches.list unavailable — auditing state-file ids only: {e})")
+
+    corpus = all_source_pairs()
+    slugs = set(corpus)
+    chars_by_slug = {s: len(user_prompt(f, src)) for s, (f, src) in corpus.items()}
+    communes = all_communes()
+
+    records = []
+    for bid in batch_ids:
+        try:
+            b = client.messages.batches.retrieve(bid)
+        except Exception as e:  # noqa: BLE001
+            print(f"  skip {bid}: {e}")
+            continue
+        if getattr(b, "processing_status", "") != "ended":
+            print(f"  skip {bid}: processing_status={b.processing_status}")
+            continue
+        lang_known, role, id_map = known.get(bid, (None, None, {}))
+        print(f"  reading {bid} …")
+        rec = audit_batch(client, bid, id_map, chars_by_slug, slugs)
+        rec["lang"] = lang_known or rec["lang"]
+        # an unrecorded batch for a lang that already has a recorded main
+        # batch can only be its retry round (the pt case)
+        rec["role"] = role or ("retry" if any(
+            k for k, (lg, rl, _) in known.items() if lg == rec["lang"] and rl == "main")
+            else "main")
+        records.append(rec)
+        u = rec["usage"]
+        print(f"    {rec['lang']}/{rec['role']}: {rec['ok']} ok, {rec['err']} err · "
+              f"{u['input_tokens']:,} in / {u['output_tokens']:,} out / "
+              f"{u['cache_creation_input_tokens']:,} cache-write / "
+              f"{u['cache_read_input_tokens']:,} cache-read tok → ${rec['usd']:.2f}")
+
+    if not records:
+        sys.exit("audit: no ended batches found — nothing to reconcile")
+
+    # ---- calibration from the mapped requests (real tokens per real chars)
+    tot_req_chars = sum((r["mapped_src_chars"]
+                         + r["n_mapped"] * len(system_prompt(r["lang"], communes)))
+                        for r in records if r["n_mapped"])
+    tot_in_tok = sum(r["mapped_in_tok"] for r in records)
+    in_per_char = (tot_in_tok / tot_req_chars) if tot_req_chars else None
+    out_per_char = {}
+    for lang in sorted({r["lang"] for r in records}):
+        sc = sum(r["mapped_src_chars"] for r in records if r["lang"] == lang)
+        ot = sum(r["mapped_out_tok"] for r in records if r["lang"] == lang)
+        if sc:
+            out_per_char[lang] = round(ot / sc, 4)
+    tot_all = sum_usage([r["usage"] for r in records])
+    cache_read_share = (tot_all["cache_read_input_tokens"]
+                        / max(1, tot_all["input_tokens"]
+                              + tot_all["cache_creation_input_tokens"]
+                              + tot_all["cache_read_input_tokens"]))
+    calibration = {
+        "_meta": {"written_by": "translate_batch.py --audit",
+                  "date": datetime.date.today().isoformat(),
+                  "batches": [r["id"] for r in records],
+                  "note": "measured from PAID batch results; estimate() prefers "
+                          "these over its documented default assumptions"},
+        "input_tokens_per_char": round(in_per_char, 4) if in_per_char else None,
+        "output_tokens_per_source_char": out_per_char,
+        "cache_read_share_observed": round(cache_read_share, 4),
+    }
+    CALIBRATION_FILE.parent.mkdir(exist_ok=True)
+    CALIBRATION_FILE.write_text(
+        json.dumps(calibration, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"  calibration → {CALIBRATION_FILE}")
+
+    write_reconciliation(records, calibration, corpus, communes)
+    print(f"  reconciliation → {RECONCILIATION_MD}")
+
+
+def write_reconciliation(records, calibration, corpus, communes):
+    """The HANDOFF-35 deliverable: line-item actuals vs the contract, the
+    identified leaks, and the corrected model — explained to the cent."""
+    pairs = list(corpus.values())
+    lines = ["# Translation cost reconciliation — HANDOFF-35 Job B",
+             "",
+             f"_Written by `translate_batch.py --audit` on "
+             f"{datetime.date.today().isoformat()} from the paid batches' own "
+             f"per-request usage (retrieval is free; nothing was submitted)._",
+             "",
+             "## Verified before the audit",
+             "",
+             "1. **Endpoint ✓** — `client.messages.batches.create` "
+             "(`/v1/messages/batches`): the 50% batch discount applies. "
+             "Constants $1.50/$7.50 per MTok match claude-sonnet-4-6 batch pricing.",
+             "2. **Prompt caching ✗** — the shared system prompt (~780 est. tokens) "
+             "sits **below Sonnet 4.6's 2048-token minimum cacheable prefix**, so "
+             "the `cache_control` marker was silently ignored: every request "
+             "re-billed the system block as plain input. The cache-read column "
+             "below is the proof.",
+             "",
+             "## Line items (actuals from usage)",
+             "",
+             "| batch | lang | role | ok | err | in tok | cache-write | cache-read | out tok | actual $ |",
+             "|---|---|---|---|---|---|---|---|---|---|"]
+    for r in records:
+        u = r["usage"]
+        lines.append(f"| `{r['id']}` | {r['lang']} | {r['role']} | {r['ok']} | {r['err']} "
+                     f"| {u['input_tokens']:,} | {u['cache_creation_input_tokens']:,} "
+                     f"| {u['cache_read_input_tokens']:,} | {u['output_tokens']:,} "
+                     f"| ${r['usd']:.2f} |")
+    lines += ["", "## Contract vs actual, to the cent", ""]
+    for lang in sorted({r["lang"] for r in records}):
+        recs = [r for r in records if r["lang"] == lang]
+        main = [r for r in recs if r["role"] == "main"]
+        rets = [r for r in recs if r["role"] != "main"]
+        _, c_in, c_out, c_usd = legacy_estimate(pairs, communes, lang)
+        main_usd = sum(r["usd"] for r in main)
+        retry_usd = sum(r["usd"] for r in rets)
+        act = main_usd + retry_usd
+        u_main = sum_usage([r["usage"] for r in main])
+        sys_tok_est = est_tokens(system_prompt(lang, communes))
+        n_main = sum(r["ok"] + r["err"] for r in main)
+        # decomposition of the main-batch delta vs the contract
+        in_actual_usd = (u_main["input_tokens"] * BATCH_IN_PER_MTOK
+                         + u_main["cache_creation_input_tokens"] * BATCH_CACHE_WRITE_PER_MTOK
+                         + u_main["cache_read_input_tokens"] * BATCH_CACHE_READ_PER_MTOK) / 1e6
+        in_contract_usd = (c_in * BATCH_IN_PER_MTOK) / 1e6
+        out_actual_usd = u_main["output_tokens"] * BATCH_OUT_PER_MTOK / 1e6
+        out_contract_usd = c_out * BATCH_OUT_PER_MTOK / 1e6
+        cache_leak_usd = (sys_tok_est * max(0, n_main - 1)
+                          * (BATCH_IN_PER_MTOK - BATCH_CACHE_READ_PER_MTOK)) / 1e6
+        lines += [f"### {lang}", "",
+                  f"| item | contract | actual | delta |",
+                  f"|---|---|---|---|",
+                  f"| input (incl. system block) | ${in_contract_usd:.2f} | ${in_actual_usd:.2f} "
+                  f"| {in_actual_usd - in_contract_usd:+.2f} |",
+                  f"| output | ${out_contract_usd:.2f} | ${out_actual_usd:.2f} "
+                  f"| {out_actual_usd - out_contract_usd:+.2f} |",
+                  f"| **main batch** | **${c_usd:.2f}** | **${main_usd:.2f}** "
+                  f"| **{main_usd - c_usd:+.2f}** |",
+                  f"| retry round(s) (outside the contract) | $0.00 | ${retry_usd:.2f} "
+                  f"| {retry_usd:+.2f} |",
+                  f"| **total** | **${c_usd:.2f}** | **${act:.2f}** | **{act - c_usd:+.2f}** |",
+                  "",
+                  f"- of the input delta, the never-firing cache accounts for "
+                  f"≈ ${cache_leak_usd:.2f} (system block re-billed at 1× on "
+                  f"{max(0, n_main - 1)} requests instead of 0.1×).",
+                  f"- measured output: "
+                  f"{(calibration['output_tokens_per_source_char'] or {}).get(lang, '—')} "
+                  f"tok per source char vs the old model's implicit "
+                  f"{round(1 / 3.5, 4)} (out ≈ in assumption).",
+                  ""]
+    ipc = calibration.get("input_tokens_per_char")
+    lines += ["## Corrected model (now live in `estimate()`)", "",
+              f"- input: **{ipc} tok/char** measured "
+              f"(was chars/3.5 ≈ {round(1 / 3.5, 4)})",
+              f"- output: per-language measured factors "
+              f"{json.dumps(calibration.get('output_tokens_per_source_char'))} "
+              f"(was out ≈ in)",
+              "- system block priced **uncached** below the 2048-token minimum "
+              "cacheable prefix (was: cached for 388/389 requests)",
+              f"- observed cache-read share: "
+              f"{calibration.get('cache_read_share_observed')}",
+              "",
+              "## Permanent rule now enforced in code",
+              "",
+              "The dry-run number is a contract. A run that exceeds it by >15% "
+              "ABORTS before the next paid submit (retry round / next language) "
+              "and exits red; the final meter line always prints actual vs "
+              "contract. No `go <lang>` until its calibrated dry-run lands and "
+              "the previous languages' deltas are explained above.",
+              ""]
+    RECONCILIATION_MD.parent.mkdir(exist_ok=True)
+    RECONCILIATION_MD.write_text("\n".join(lines), encoding="utf-8")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--lang", required=True,
@@ -612,12 +1049,21 @@ def main():
     ap.add_argument("--recover", action="store_true",
                     help="ZERO-SPEND: re-read this language's already-paid batch results "
                          "and re-parse the missing fiches with the hardened parser (no submit)")
+    ap.add_argument("--audit", action="store_true",
+                    help="ZERO-SPEND (HANDOFF-35): re-read every paid batch's usage, "
+                         "reconcile actual $ vs the dry-run contracts, write the "
+                         "reconciliation report + estimator calibration (no submit; "
+                         "--lang is ignored — the audit covers the whole workspace)")
     args = ap.parse_args()
 
     langs = TARGET_LANGS if args.lang == "all" else [args.lang]
     for lang in langs:
         if lang not in TARGET_LANGS:
             sys.exit(f"ERROR: unknown target language {lang!r} (expected {TARGET_LANGS})")
+
+    if args.audit:
+        audit_workspace(get_client())
+        return
 
     if args.recover:
         client = get_client()

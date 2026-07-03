@@ -173,6 +173,7 @@ def _fixture_repo(m, tmp):
     m.JSON_DIR = jd
     m.STATE_FILE = Path(tmp) / "reports" / "state.json"
     m.FAILURES_MD = Path(tmp) / "reports" / "failures.md"
+    m.CALIBRATION_FILE = Path(tmp) / "reports" / "calibration.json"  # hermetic
     m.time.sleep = lambda s: None
     return jd
 
@@ -237,6 +238,146 @@ def test_dry_run_writes_nothing_and_needs_no_key():
         assert m.run_language("pl", args, client=None) is True
         assert {p.name: p.read_bytes() for p in jd.glob("*.json")} == before
         assert not m.STATE_FILE.exists()
+
+
+# ------------------------------------------------- HANDOFF-35: the honest meter
+
+class UsageFakeBatches(FakeBatches):
+    """FakeBatches whose succeeded messages carry API usage — per-request
+    token counts scripted via self.usage_per_req."""
+    def __init__(self, rounds, usage_per_req):
+        super().__init__(rounds)
+        self.usage_per_req = usage_per_req
+
+    def results(self, batch_id):
+        for row in super().results(batch_id):
+            if row.result.type == "succeeded":
+                u = type("U", (), dict(self.usage_per_req))()
+                row.result.message.usage = u
+            yield row
+
+
+def test_estimate_calibration_and_uncached_system():
+    m = _load()
+    with tempfile.TemporaryDirectory() as tmp:
+        jd = _fixture_repo(m, tmp)
+        m.CALIBRATION_FILE = Path(tmp) / "reports" / "calibration.json"
+        pairs = m.pairs_for_lang("pl")
+        communes = m.all_communes()
+        n, in_tok, out_tok, usd, calibrated = m.estimate(pairs, communes, "pl")
+        assert n == 3 and not calibrated, "no calibration file → uncalibrated"
+        # the system prompt is below MIN_CACHEABLE_TOKENS → billed uncached on
+        # every request: in_tok must include ~n full system blocks, far more
+        # than the old cached model's 1.25 + 0.1(n-1)
+        sys_tok = int(len(m.system_prompt("pl", communes)) * m.DEFAULT_IN_PER_CHAR) + 1
+        assert sys_tok < m.MIN_CACHEABLE_TOKENS
+        body_tok = sum(int(len(m.user_prompt(f, s)) * m.DEFAULT_IN_PER_CHAR) + 1
+                       for f, s in pairs)
+        assert in_tok == body_tok + sys_tok * n, "system must be priced per request"
+        # calibration file wins over the default assumptions
+        m.CALIBRATION_FILE.parent.mkdir(exist_ok=True)
+        m.CALIBRATION_FILE.write_text(json.dumps({
+            "input_tokens_per_char": 0.5,
+            "output_tokens_per_source_char": {"pl": 1.0}}), encoding="utf-8")
+        n2, in2, out2, usd2, calibrated2 = m.estimate(pairs, communes, "pl")
+        assert calibrated2 and in2 > in_tok and out2 > out_tok and usd2 > usd
+
+
+def test_usage_cost_and_over_budget_rule():
+    m = _load()
+    tot = m.sum_usage([
+        {"input_tokens": 1_000_000, "output_tokens": 0,
+         "cache_creation_input_tokens": 0, "cache_read_input_tokens": 0},
+        {"input_tokens": 0, "output_tokens": 2_000_000,
+         "cache_creation_input_tokens": 1_000_000, "cache_read_input_tokens": 1_000_000},
+    ])
+    # 1.50 + 2×7.50 + 1.875 + 0.15 = 18.525 — exact arithmetic, no drift
+    assert abs(m.usage_cost_usd(tot) - 18.525) < 1e-9
+    assert not m.over_budget(1.15, 1.0), "exactly 15% over is the ceiling, not a trip"
+    assert m.over_budget(1.16, 1.0)
+    assert not m.over_budget(5.0, 0.0), "no contract → no trip (dry-run handles it)"
+
+
+def test_budget_abort_skips_retry_submit():
+    """A retry is a SECOND PAID submit — over the >15% contract ceiling it
+    must be SKIPPED, logged, and the run must exit red (HANDOFF-35 rule)."""
+    m = _load()
+    with tempfile.TemporaryDirectory() as tmp:
+        jd = _fixture_repo(m, tmp)
+        good = json.dumps(_good(), ensure_ascii=False)
+        bad = json.dumps({"meta_title": "tylko tytuł"}, ensure_ascii=False)
+        rounds = [{"good-one": ("ok", good), "bad-then-good": ("ok", bad),
+                   "bad-twice": ("ok", bad)},
+                  {}]      # a retry round must never be reached
+        client = FakeClient(rounds)
+        # huge per-request usage → main batch alone busts the tiny contract
+        client.messages.batches = UsageFakeBatches(rounds, {
+            "input_tokens": 500_000, "output_tokens": 500_000,
+            "cache_creation_input_tokens": 0, "cache_read_input_tokens": 0})
+        args = argparse.Namespace(dry_run=False, force=False)
+        code = None
+        try:
+            m.run_language("pl", args, client)
+        except SystemExit as e:
+            code = e.code
+        assert code == 2, f"budget abort must exit 2, got {code!r}"
+        assert len(client.messages.batches.created) == 1, \
+            "the retry batch must NOT be submitted after a budget abort"
+        assert "budget abort" in m.FAILURES_MD.read_text(encoding="utf-8")
+        state = json.loads(m.STATE_FILE.read_text(encoding="utf-8"))
+        assert state["pl"].get("budget_abort") is True
+        assert state["pl"]["usage_main"]["output_tokens"] == 1_500_000
+        # the good result arrived and was paid for — it stays written
+        d = json.loads((jd / "good-one.json").read_text())
+        assert "pl" in d["i18n"]
+
+
+def test_final_overrun_goes_red_but_keeps_paid_results():
+    m = _load()
+    with tempfile.TemporaryDirectory() as tmp:
+        jd = _fixture_repo(m, tmp)
+        good = json.dumps(_good(), ensure_ascii=False)
+        rounds = [{"good-one": ("ok", good), "bad-then-good": ("ok", good),
+                   "bad-twice": ("ok", good)}]
+        client = FakeClient(rounds)
+        client.messages.batches = UsageFakeBatches(rounds, {
+            "input_tokens": 500_000, "output_tokens": 500_000,
+            "cache_creation_input_tokens": 0, "cache_read_input_tokens": 0})
+        args = argparse.Namespace(dry_run=False, force=False)
+        code = None
+        try:
+            m.run_language("pl", args, client)
+        except SystemExit as e:
+            code = e.code
+        assert code == 3, f"final >15% overrun must exit 3, got {code!r}"
+        for slug in ("good-one", "bad-then-good", "bad-twice"):
+            d = json.loads((jd / f"{slug}.json").read_text())
+            assert "pl" in d["i18n"], "paid results must be written before going red"
+
+
+def test_audit_batch_sums_usage_and_maps_slugs():
+    m = _load()
+    with tempfile.TemporaryDirectory() as tmp:
+        jd = _fixture_repo(m, tmp)
+        good = json.dumps(_good(), ensure_ascii=False)
+        rounds = [{"good-one": ("ok", good), "bad-then-good": ("ok", good),
+                   "bad-twice": ("error", "errored")}]
+        batches = UsageFakeBatches(rounds, {
+            "input_tokens": 1000, "output_tokens": 2000,
+            "cache_creation_input_tokens": 0, "cache_read_input_tokens": 0})
+        # submit through build_requests so custom_ids are the real shape
+        pairs = m.pairs_for_lang("pl")
+        reqs, id_map = m.build_requests(pairs, ["Annecy"], "pl")
+        batches.create(reqs)
+        client = FakeClient([]); client.messages.batches = batches
+        corpus = m.all_source_pairs()
+        chars = {s: len(m.user_prompt(f, src)) for s, (f, src) in corpus.items()}
+        rec = m.audit_batch(client, "batch_1", {}, chars, set(corpus))  # empty id_map → prefix mapping
+        assert rec["ok"] == 2 and rec["err"] == 1 and rec["lang"] == "pl"
+        assert rec["usage"]["input_tokens"] == 2000
+        assert rec["usage"]["output_tokens"] == 4000
+        assert rec["n_mapped"] == 2, "slugs must map back via the cid fragment"
+        assert abs(rec["usd"] - (2000 * 1.50 + 4000 * 7.50) / 1e6) < 1e-9
 
 
 def _all_tests():
