@@ -73,6 +73,7 @@ COPY_ROOT_FILES_GLOB = [
     "catalog-index.json", "lieux.json", "photo-credits.json",
     "_headers", "_redirects",        # Netlify control files
     "a100618930894cd2bc77bacba5002b64.txt",  # Indeed/Bing verification
+    "e8aa76cdaf4348d390571ff658e649ca.txt",  # IndexNow key (HANDOFF-33; public by protocol)
 ]
 
 # Explicit exclude list — never copy these even if they match
