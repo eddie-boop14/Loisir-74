@@ -26,10 +26,10 @@ on:
         type: choice
         options: [pt, cs, ja, ar, he, pl]
       mode:
-        description: "dry-run (free, estimate only) or submit (paid — needs Eddie's explicit go)"
+        description: "dry-run (free, estimate) · submit (paid — Eddie's explicit go) · recover (FREE: re-read already-paid batch results with the hardened parser; dispatch ON the lang's prose-batch branch)"
         required: true
         type: choice
-        options: [dry-run, submit]
+        options: [dry-run, submit, recover]
         default: dry-run
 
 permissions:
@@ -52,7 +52,7 @@ jobs:
         run: |
           if [ -z "$ANTHROPIC_API_KEY" ]; then
             echo "::error::ANTHROPIC_API_KEY repo secret is NOT set — do HANDOFF-26 steps 1-2 (Console key + repo secret) first."
-            if [ "${{ inputs.mode }}" = "submit" ]; then exit 1; fi
+            if [ "${{ inputs.mode }}" != "dry-run" ]; then exit 1; fi
             echo "(dry-run continues — the estimate needs no key)"
           else
             echo "ANTHROPIC_API_KEY is set (length ${#ANTHROPIC_API_KEY}; value never printed)."
@@ -62,7 +62,7 @@ jobs:
         run: python3 scripts/translate_batch.py --lang "${{ inputs.lang }}" --dry-run
 
       - name: Install Anthropic SDK
-        if: inputs.mode == 'submit'
+        if: inputs.mode != 'dry-run'
         run: pip install anthropic
 
       - name: Submit + poll + validate + write back (PAID — Eddie approved the dry-run number)
@@ -71,8 +71,17 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 scripts/translate_batch.py --lang "${{ inputs.lang }}"
 
+      - name: Recover — re-read already-paid batch results with the hardened parser ($0)
+        # Dispatch this ON the claude/<lang>-prose-batch branch: the state file
+        # holding the batch ids lives there, and results are pushed back to it.
+        # Results retrieval is free; NOTHING is submitted in this mode.
+        if: inputs.mode == 'recover'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 scripts/translate_batch.py --lang "${{ inputs.lang }}" --recover
+
       - name: Push results to a review branch (never main)
-        if: inputs.mode == 'submit'
+        if: inputs.mode != 'dry-run'
         run: |
           git config user.name "loisirs74-bot"
           git config user.email "bot@loisirs74.fr"
