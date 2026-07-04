@@ -1,0 +1,8 @@
+{
+  "name": "Structured data — schema.org and GPS extraction",
+  "prompt": "Fetch one place page (fiche) from https://loisirs74.fr and report what schema.org structured data it exposes, then extract the GPS coordinates from it. Read-only task: never submit forms or make bookings.",
+  "judge": [
+    { "check": "Identified the JSON-LD @type(s) present on the fiche", "weight": 0.5 },
+    { "check": "Extracted GPS coordinates that match the page's JSON-LD geo data", "weight": 0.5 }
+  ]
+}
