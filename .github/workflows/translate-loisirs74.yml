@@ -41,6 +41,10 @@ jobs:
     timeout-minutes: 350   # poll headroom; batches typically land in 1–2h
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history: the plain (no -f) MT-lane push must
+                           # prove fast-forward against existing claude/*
+                           # branches (the AXIS runs died on this exact class)
 
       - uses: actions/setup-python@v5
         with:
@@ -137,10 +141,22 @@ jobs:
               BRANCH="claude/${{ inputs.lang }}-prose-batch"
               MSG="feat(i18n): ${{ inputs.lang }} prose via batch translation (HANDOFF-25/26)" ;;
           esac
+          # COMMIT FIRST (the paid results live as modifications on main's
+          # tree — never risk a checkout clobbering them), THEN reconcile
+          # with any existing remote branch so the plain push fast-forwards.
+          # Merged lanes leave ancestor branches behind: with the full-depth
+          # clone those are already contained → merge is a no-op.
           git checkout -B "$BRANCH"
           git add Json/ reports/translate-batch-state.json reports/translate-batch-failures.md \
                   reports/translate-cost-reconciliation.md reports/translate-cost-calibration.json \
                   reports/translate-local-flags-*.json 2>/dev/null || true
           git commit -m "$MSG" || { echo "nothing to commit"; exit 0; }
+          if [ -z "$FORCE" ] && git fetch origin "$BRANCH" 2>/dev/null; then
+            git merge --no-edit FETCH_HEAD || {
+              git merge --abort
+              BRANCH="${BRANCH}-$(date +%Y%m%d%H%M)"
+              echo "remote branch diverged with conflicts — pushing to $BRANCH instead (nothing lost, nothing forced)"
+            }
+          fi
           git push $FORCE -u origin "$BRANCH"
           echo "Pushed $BRANCH — open a PR for Eddie's review."
