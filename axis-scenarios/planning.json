@@ -1,0 +1,9 @@
+{
+  "name": "Trip planning — rainy family afternoon in Annecy",
+  "prompt": "Using https://loisirs74.fr, plan a rainy afternoon in or near Annecy for a family: pick 3 indoor venues and quote their prices. This is a read-only research task: browse and read pages only, never submit forms or make bookings.",
+  "judge": [
+    { "check": "Named 3 real venues that exist as pages on loisirs74.fr", "weight": 0.4 },
+    { "check": "Prices quoted match what the venue pages state", "weight": 0.3 },
+    { "check": "Used the site's hub/category navigation to discover venues", "weight": 0.3 }
+  ]
+}

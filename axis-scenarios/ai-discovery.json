@@ -1,0 +1,9 @@
+{
+  "name": "AI discovery — llms.txt and machine-readable resources",
+  "prompt": "Check https://loisirs74.fr/llms.txt and use what it declares to list the machine-readable resources this site offers to agents, then fetch one of those resources and extract one true fact from it. Read-only task: never submit forms or make bookings.",
+  "judge": [
+    { "check": "Found and read /llms.txt", "weight": 0.3 },
+    { "check": "Followed a resource actually declared in llms.txt (e.g. a content/*.md file or the API index)", "weight": 0.4 },
+    { "check": "Extracted a fact that is true per the fetched resource", "weight": 0.3 }
+  ]
+}
