@@ -75,6 +75,24 @@ FR_STOPWORDS = re.compile(
     r"|entre|depuis|de|la|le|au)\b", re.IGNORECASE)
 FR_LOOK_REASON = "FR-looking source — LLM patch tier only"
 
+# Layer-B catch #3 (ar): the engine sometimes returns long segments WHOLLY
+# UNTRANSLATED — English text that sails through digit/ratio checks. For
+# script-target languages the tell is deterministic: the output of a real
+# translation is majority target-script. <30% target-script letters on a
+# >=20-char segment = untranslated → patch tier.
+TARGET_SCRIPT = {
+    "ar": re.compile(r"[\u0600-\u06FF]"),
+    "he": re.compile(r"[\u0590-\u05FF]"),
+    "ja": re.compile(r"[\u3040-\u30FF\u4E00-\u9FFF]"),
+}
+
+
+def script_share(text, script_re):
+    letters = [c for c in text if c.isalpha()]
+    if not letters:
+        return 1.0
+    return sum(1 for c in letters if script_re.match(c)) / len(letters)
+
 
 def looks_french(masked_core):
     return (len(FR_DIACRITICS.findall(masked_core)) >= 2
@@ -132,9 +150,12 @@ def digits_of(s):
     return sorted(re.findall(r"[0-9]", s))
 
 
-def check_segment(src, out):
+def check_segment(src, out, script_re=None):
     """Scripted proofreading — reasons list, empty = OK."""
     reasons = []
+    if script_re is not None and len(src.strip()) >= 20 \
+            and script_share(out, script_re) < 0.3:
+        reasons.append("output not in target script (untranslated)")
     if digits_of(src) != digits_of(out):
         reasons.append("digit parity broken")
     if ("€" in src) != ("€" in out):
@@ -148,7 +169,7 @@ def check_segment(src, out):
     return reasons
 
 
-def translate_segment(engine, cache, text, nouns):
+def translate_segment(engine, cache, text, nouns, script_re=None):
     """One text node through mask → MT → unmask → checks.
     Leading/trailing whitespace is OURS, not the engine's — MT engines trim
     it, which would weld text onto the neighbouring tag (`</strong>jest`).
@@ -167,11 +188,11 @@ def translate_segment(engine, cache, text, nouns):
         cache[masked] = mt
     out, missing = unmask(mt, mapping)
     reasons = [f"placeholder lost: {mapping[n][:40]!r}" for n in sorted(missing)]
-    reasons += check_segment(core, out)
+    reasons += check_segment(core, out, script_re)
     return lead + out + trail, reasons
 
 
-def translate_string(engine, cache, s, nouns, path, records):
+def translate_string(engine, cache, s, nouns, path, records, script_re=None):
     """Whole string value: frozen parts verbatim, text parts through MT.
     Appends one record per part to `records` (the flags-file segment table —
     self-contained for patch-tier reassembly). Returns (translated, n_bad)."""
@@ -181,7 +202,7 @@ def translate_string(engine, cache, s, nouns, path, records):
             records.append({"path": path, "i": i, "kind": "frozen", "src": part})
             out.append(part)
             continue
-        mt, reasons = translate_segment(engine, cache, part, nouns)
+        mt, reasons = translate_segment(engine, cache, part, nouns, script_re)
         records.append({"path": path, "i": i, "kind": "text", "src": part,
                         "mt": mt, "ok": not reasons, "reasons": reasons})
         if reasons:
@@ -190,22 +211,22 @@ def translate_string(engine, cache, s, nouns, path, records):
     return "".join(out), n_bad
 
 
-def translate_value(engine, cache, v, nouns, path, records):
+def translate_value(engine, cache, v, nouns, path, records, script_re=None):
     """Mirror the source structure exactly (shape parity by construction)."""
     if isinstance(v, str):
-        return translate_string(engine, cache, v, nouns, path, records)
+        return translate_string(engine, cache, v, nouns, path, records, script_re)
     if isinstance(v, dict):
         out, bad = {}, 0
         for k, x in v.items():
             out[k], b = translate_value(engine, cache, x, nouns,
-                                        f"{path}.{k}", records)
+                                        f"{path}.{k}", records, script_re)
             bad += b
         return out, bad
     if isinstance(v, list):
         out, bad = [], 0
         for i, x in enumerate(v):
             t, b = translate_value(engine, cache, x, nouns,
-                                   f"{path}[{i}]", records)
+                                   f"{path}[{i}]", records, script_re)
             out.append(t)
             bad += b
         return out, bad
@@ -387,7 +408,8 @@ def run_mt(lang, engine=None, dry_run=False):
                                                       if r["kind"] == "text")}
                 continue
             records = []
-            tv, n_bad = translate_value(engine, cache, v, nouns, field, records)
+            tv, n_bad = translate_value(engine, cache, v, nouns, field, records,
+                                        TARGET_SCRIPT.get(lang))
             if n_bad:
                 bad_fields[field] = {"src": v, "segments": records,
                                      "n_flagged": n_bad}
@@ -455,6 +477,7 @@ def resniff(lang):
         blk = (fiche.get("i18n") or {}).get(lang) or {}
         nouns = tb.fiche_frozen_nouns(fiche) + communes
         bad = []
+        script_re = TARGET_SCRIPT.get(lang)
         for field, v in src.items():
             if field not in blk:
                 continue
@@ -465,6 +488,11 @@ def resniff(lang):
                       and looks_french(mask_nouns(part.strip(), nouns)[0])
                       for s in tb.strings_of(v)
                       for kind, part in split_parts(s))
+            if not hit and script_re is not None:
+                # written value must be majority target-script (untranslated
+                # pass-through sweep — Layer-B catch #3)
+                hit = any(len(w.strip()) >= 20 and script_share(w, script_re) < 0.3
+                          for w in tb.strings_of(blk.get(field)))
             if hit:
                 bad.append(field)
         if bad:
@@ -593,7 +621,7 @@ def run_patch(lang, submit=False):
         rec = next(r for r in f["segments"]
                    if r["path"] == route["path"] and r["i"] == route["i"])
         out = payload.strip()
-        reasons = check_segment(rec["src"], out)
+        reasons = check_segment(rec["src"], out, TARGET_SCRIPT.get(lang))
         # placeholders: Haiku got the raw source, so nouns are plain text —
         # only the scripted checks gate here; frozen-noun survival is proven
         # by the whole-field validate() below.

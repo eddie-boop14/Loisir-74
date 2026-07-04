@@ -261,6 +261,22 @@ def test_resniff_purges_fr_poisoned_populated_fields():
         assert pl.get("meta_title") == "dobre tłumaczenie", "clean field untouched"
 
 
+def test_target_script_check_flags_untranslated_passthrough():
+    """Layer-B catch #3 (ar): the engine returns long segments untranslated —
+    digit/ratio checks pass, but the output is not in the target script."""
+    m = _load()
+    ar = m.TARGET_SCRIPT["ar"]
+    ok = m.check_segment("A treetop venture park with ziplines.", "حديقة مغامرات في قمم الأشجار مع انزلاقات", ar)
+    assert ok == []
+    bad = m.check_segment("A treetop venture park with ziplines.", "A treetop venture park with ziplines.", ar)
+    assert any("target script" in r for r in bad)
+    # loanwords inside majority-Arabic must NOT flag
+    mixed = m.check_segment("A rope course with jumps today.", "مسار الحبال مع jumps رائع جدا هنا", ar)
+    assert mixed == []
+    # pl (no script entry) unaffected
+    assert m.check_segment("Some sentence here today.", "Jakieś zdanie tutaj dzisiaj.", None) == []
+
+
 def test_patch_contract_and_cap():
     m = _load()
     flags = {"lang": "pl", "fields": [{
