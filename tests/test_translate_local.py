@@ -164,7 +164,13 @@ def test_currency_symbol_change_flagged():
                             for r in rec.get("reasons", []))
 
 
-def test_fr_source_field_never_enters_mt_and_stale_write_purged():
+def test_fr_source_field_never_enters_mt():
+    """acces_pmr_detail is FR-authored: it must be flagged to the LLM patch
+    tier without ever reaching the en→X engine, and must NOT be written.
+    (A field already populated is out of scope by design: post-#37
+    pairs_for_lang sends missing fields only, and going forward the patch
+    tier is the ONLY writer of FR-source fields — a provenance-blind purge
+    of populated fields would delete paid patch output.)"""
     m = _load()
     tbm = m.tb
     with tempfile.TemporaryDirectory() as tmp:
@@ -174,14 +180,12 @@ def test_fr_source_field_never_enters_mt_and_stale_write_purged():
             "acces_pmr": {"status": "accessible",
                           "detail": "Rampe d'accès et tapis d'aide à la baignade."},
             "i18n": {"fr": {"name": "X"},
-                     "en": {"meta_title": "Beach guide (Annecy)"},
-                     # stale write from an imaginary earlier run — must be purged
-                     "pl": {"acces_pmr_detail": "STALE MT GARBAGE"}}},
+                     "en": {"meta_title": "Beach guide (Annecy)"}}},
             ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         tbm.JSON_DIR = jd
         m.FLAGS_FILE = Path(tmp) / "reports" / "flags-{lang}.json"
         eng = SpyEngine()
-        # only run if the batch payload carries the field (post-HANDOFF-35 main)
+        # only provable when the payload carries the field (post-#37 main)
         src = tbm.extract_source(json.loads((jd / "beach.json").read_text()))
         if "acces_pmr_detail" not in src:
             return                       # pre-#37 base: nothing to prove yet
@@ -190,12 +194,27 @@ def test_fr_source_field_never_enters_mt_and_stale_write_purged():
             "FR-source field reached the en→X engine"
         d = json.loads((jd / "beach.json").read_text())
         pl = d["i18n"]["pl"]
-        assert "acces_pmr_detail" not in pl, "stale FR-source write must be purged"
+        assert "acces_pmr_detail" not in pl, "FR-source field must stay ABSENT"
         assert pl.get("meta_title"), "EN fields still ship"
         flags = json.loads((Path(tmp) / "reports" / "flags-pl.json").read_text())
         fr = [f for f in flags["fields"] if f["field"] == "acces_pmr_detail"]
         assert fr and any("LLM patch tier" in r for s in fr[0]["segments"]
                           for r in s.get("reasons", []))
+
+
+def test_purge_fields_removes_stale_writes():
+    """purge_fields (used when a re-run flags a field an earlier run wrote,
+    e.g. a future --force lane) removes exactly the named fields."""
+    m = _load()
+    with tempfile.TemporaryDirectory() as tmp:
+        p = Path(tmp) / "beach.json"
+        p.write_text(json.dumps({
+            "slug": "beach",
+            "i18n": {"pl": {"meta_title": "keep", "hero_alt": "stale"}}},
+            ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        m.purge_fields({"_path": str(p)}, "pl", ["hero_alt", "never_there"])
+        d = json.loads(p.read_text())
+        assert d["i18n"]["pl"] == {"meta_title": "keep"}
 
 
 def test_patch_contract_and_cap():
