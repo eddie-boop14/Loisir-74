@@ -37,6 +37,11 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history: the report branch push must prove
+                           # fast-forward against claude/axis-baseline (the
+                           # shallow default caused both first runs' pushes
+                           # to be rejected AFTER the benchmark had scored)
 
       - uses: actions/setup-node@v4
         with:
@@ -96,7 +101,15 @@ jobs:
           git config user.name "loisirs74-bot"
           git config user.email "bot@loisirs74.fr"
           BRANCH="claude/axis-baseline"
-          git checkout -B "$BRANCH"
+          # sync with the existing report branch so the plain push is always
+          # a fast-forward (the report files live untracked in .axis/ and
+          # survive this checkout; both first runs died here on a stale ref)
+          if git fetch origin "$BRANCH" 2>/dev/null; then
+            git checkout -B "$BRANCH" FETCH_HEAD
+            git merge --no-edit origin/main || git merge --abort || true
+          else
+            git checkout -B "$BRANCH"
+          fi
           DEST="reports/axis/$(date +%F)"
           mkdir -p "$DEST"
           cp -r .axis/reports/. "$DEST"/ 2>/dev/null || true
