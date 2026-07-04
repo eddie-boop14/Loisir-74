@@ -217,6 +217,50 @@ def test_purge_fields_removes_stale_writes():
         assert d["i18n"]["pl"] == {"meta_title": "keep"}
 
 
+def test_french_source_sniff_flags_and_never_translates():
+    """HANDOFF-37 Layer-B discovery: 'EN' segments that are actually French
+    must never enter an en→X engine — flagged to the patch tier. Frozen
+    French proper nouns must NOT trip the sniff (they are masked first)."""
+    m = _load()
+    eng = SpyEngine()
+    records = []
+    fr = "Parc accrobranche à 950 m d'altitude au pied de la cascade, avec 8 parcours et des tyroliennes."
+    out, bad = m.translate_string(eng, {}, fr, [], "hero.lead", records)
+    assert bad == 1 and not eng.seen, "French must never reach the engine"
+    assert any(m.FR_LOOK_REASON in r for rec in records
+               for r in rec.get("reasons", []))
+    # EN sentence full of masked French nouns: no trip
+    eng2 = SpyEngine()
+    records2 = []
+    en = "Visit Lac d'Annecy near Annecy and the Château de Menthon today."
+    nouns = ["Lac d'Annecy", "Annecy", "Château de Menthon"]
+    out2, bad2 = m.translate_string(eng2, {}, en, nouns, "f", records2)
+    assert bad2 == 0 and eng2.seen, "masked-noun EN must still translate"
+
+
+def test_resniff_purges_fr_poisoned_populated_fields():
+    m = _load()
+    tbm = m.tb
+    with tempfile.TemporaryDirectory() as tmp:
+        jd = Path(tmp) / "Json"; jd.mkdir()
+        (jd / "poisoned.json").write_text(json.dumps({
+            "slug": "poisoned", "commune": "Annecy",
+            "i18n": {"fr": {"name": "X"},
+                     "en": {"meta_title": "Fine English title (Annecy)",
+                            "hero": {"lead": "Parc accrobranche à 950 m d'altitude avec des parcours et une île aux enfants."}},
+                     "pl": {"meta_title": "dobre tłumaczenie",
+                            "hero": {"lead": "semi-french garbage written by MT"}}}},
+            ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        tbm.JSON_DIR = jd
+        m.FLAGS_FILE = Path(tmp) / "reports" / "flags-{lang}.json"
+        purged = m.resniff("pl")
+        assert purged == 1
+        d = json.loads((jd / "poisoned.json").read_text())
+        pl = d["i18n"]["pl"]
+        assert "hero" not in pl, "FR-poisoned MT write must be purged"
+        assert pl.get("meta_title") == "dobre tłumaczenie", "clean field untouched"
+
+
 def test_patch_contract_and_cap():
     m = _load()
     flags = {"lang": "pl", "fields": [{

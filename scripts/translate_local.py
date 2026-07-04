@@ -59,6 +59,27 @@ URL_RE = re.compile(r"https?://[^\s<>\"]+")
 # tolerant unmask: engines sometimes add spaces or case-fold the placeholder
 UNMASK_RE = re.compile(r"[Xx]\s?[Qq]\s?[Vv]\s?([0-9]+)\s?[Zz]")
 
+# HANDOFF-37 Layer-B discovery: ~12% of the "EN" source segments are actually
+# FRENCH (the EN block mirrors FR on ~214 fiches). An en→X engine cannot read
+# French — it ships the text back nearly verbatim and the digit/ratio checks
+# see nothing wrong. Judged on the MASKED core so frozen French proper nouns
+# (Lac d'Annecy, communes…) never trip it.
+FR_DIACRITICS = re.compile(r"[àâéèêëîïôùûçœÀÂÉÈÊËÎÏÔÙÛÇŒ]")
+# case-insensitive + the short function words: the second Layer-B catch was
+# an ALL-CAPS, diacritic-free French lead ("PARC LOCAL DU MASSIF DES ARAVIS -
+# col de la Croix Fry") that the first regex missed. False positives (English
+# sentences quoting a French title) only cost patch-tier cents; false
+# negatives ship French — asymmetric, so we widen.
+FR_STOPWORDS = re.compile(
+    r"\b(des|avec|dès|aux|pour|sur|une|du|et|les|ou|est|sont|chez|vers"
+    r"|entre|depuis|de|la|le|au)\b", re.IGNORECASE)
+FR_LOOK_REASON = "FR-looking source — LLM patch tier only"
+
+
+def looks_french(masked_core):
+    return (len(FR_DIACRITICS.findall(masked_core)) >= 2
+            or len(FR_STOPWORDS.findall(masked_core)) >= 3)
+
 
 # ------------------------------------------------------------- segmentation
 def split_parts(s):
@@ -136,6 +157,9 @@ def translate_segment(engine, cache, text, nouns):
     trail = text[len(text.rstrip()):]
     core = text.strip()
     masked, mapping = mask_nouns(core, nouns)
+    if looks_french(masked):
+        # never feed French to an en→X engine — straight to the patch tier
+        return text, [FR_LOOK_REASON]
     if masked in cache:
         mt = cache[masked]
     else:
@@ -273,8 +297,11 @@ def collect_unique_masked(pairs, communes):
                     if kind != "text":
                         continue
                     core = part.strip()
-                    if core:
-                        uniq.add(mask_nouns(core, nouns)[0])
+                    if not core:
+                        continue
+                    masked = mask_nouns(core, nouns)[0]
+                    if not looks_french(masked):
+                        uniq.add(masked)
     return sorted(uniq)
 
 
@@ -407,6 +434,40 @@ def run_mt(lang, engine=None, dry_run=False):
 
 
 # -------------------------------------------------------------- patch tier
+def resniff(lang):
+    """One-time maintenance (Layer-B FR-poison discovery): purge every
+    POPULATED i18n.<lang> field whose SOURCE contains FR-looking segments (or
+    is an FR-source field). SAFE only while every populated field is
+    MT-provenance — run BEFORE any patch tier write. The next MT run re-flags
+    the purged fields into the flags file for the patch tier."""
+    communes = tb.all_communes()
+    purged_fields = purged_fiches = 0
+    for fiche, src in tb.pairs_for_lang(lang, force=True):
+        blk = (fiche.get("i18n") or {}).get(lang) or {}
+        nouns = tb.fiche_frozen_nouns(fiche) + communes
+        bad = []
+        for field, v in src.items():
+            if field not in blk:
+                continue
+            if field in FR_SOURCE_FIELDS:
+                bad.append(field)
+                continue
+            hit = any(kind == "text" and part.strip()
+                      and looks_french(mask_nouns(part.strip(), nouns)[0])
+                      for s in tb.strings_of(v)
+                      for kind, part in split_parts(s))
+            if hit:
+                bad.append(field)
+        if bad:
+            purge_fields(fiche, lang, bad)
+            purged_fields += len(bad)
+            purged_fiches += 1
+    print(f"[{lang}] resniff: purged {purged_fields} MT-written field(s) on "
+          f"{purged_fiches} fiche(s) whose source is FR-looking — the next MT "
+          f"run routes them to the patch tier")
+    return purged_fields
+
+
 def patch_requests(lang, flags):
     """One Haiku request per FLAGGED segment (masked source travels — the
     model keeps XQV<n>Z placeholders and numbers verbatim)."""
@@ -561,13 +622,18 @@ def main():
                     help="counts only, no MT, no writes (still $0 either way)")
     ap.add_argument("--patch-dry-run", action="store_true",
                     help="print the Haiku patch contract from the flags file")
+    ap.add_argument("--resniff", action="store_true",
+                    help="purge populated fields whose SOURCE is FR-looking "
+                         "(one-time maintenance; run before any patch write)")
     ap.add_argument("--patch-submit", action="store_true",
                     help="PAID (≤$2 cap): Haiku-patch the flagged segments — "
                          "only after Eddie saw the contract")
     args = ap.parse_args()
     if args.lang not in MT_LANGS:
         sys.exit(f"ERROR: unknown MT lang {args.lang!r} (expected {MT_LANGS})")
-    if args.patch_dry_run or args.patch_submit:
+    if args.resniff:
+        resniff(args.lang)
+    elif args.patch_dry_run or args.patch_submit:
         run_patch(args.lang, submit=args.patch_submit)
     else:
         run_mt(args.lang, dry_run=args.dry_run)
