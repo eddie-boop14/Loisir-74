@@ -65,7 +65,14 @@ UNMASK_RE = re.compile(r"[Xx]\s?[Qq]\s?[Vv]\s?([0-9]+)\s?[Zz]")
 # see nothing wrong. Judged on the MASKED core so frozen French proper nouns
 # (Lac d'Annecy, communes…) never trip it.
 FR_DIACRITICS = re.compile(r"[àâéèêëîïôùûçœÀÂÉÈÊËÎÏÔÙÛÇŒ]")
-FR_STOPWORDS = re.compile(r"\b(des|avec|dès|aux|pour|sur|une|du|et|les|ou|est|sont|chez|vers|entre|depuis)\b")
+# case-insensitive + the short function words: the second Layer-B catch was
+# an ALL-CAPS, diacritic-free French lead ("PARC LOCAL DU MASSIF DES ARAVIS -
+# col de la Croix Fry") that the first regex missed. False positives (English
+# sentences quoting a French title) only cost patch-tier cents; false
+# negatives ship French — asymmetric, so we widen.
+FR_STOPWORDS = re.compile(
+    r"\b(des|avec|dès|aux|pour|sur|une|du|et|les|ou|est|sont|chez|vers"
+    r"|entre|depuis|de|la|le|au)\b", re.IGNORECASE)
 FR_LOOK_REASON = "FR-looking source — LLM patch tier only"
 
 
