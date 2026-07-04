@@ -1,0 +1,23 @@
+# Sparse Index: structured-data / claude-code
+# 21 interactions | env: 2 | svc: 4 | agent: 16 | errors: 0
+#1   agent    system      (no content)
+#2   agent    system      (no content)
+#3   agent    system      (no content)
+#4   agent    assistant   I'll start by loading the web tools I need.
+#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 6ms
+#6   agent    assistant   I need to find a place page (fiche) URL first. Let me search.
+#7   service  tool_use    WebSearch(query: loisirs74.fr fiche lieu Haute-Savoie) -> ok, 3.4KB, 13.2s
+#8   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List the URLs of indiv...) -> ok, 4.2KB, 14.4s
+#9   agent    system      (no content)
+#10  agent    system      (no content)
+#11  agent    system      (no content)
+#12  agent    assistant   Let me fetch a specific fiche and inspect its schema.org structured data.
+#13  service  tool_use    WebFetch(url: https://loisirs74.fr/chateau-de-menthon-saint-bernar...) -> ok, 1.5KB, 4.1s
+#14  agent    system      (no content)
+#15  agent    system      (no content)
+#16  agent    system      (no content)
+#17  agent    assistant   WebFetch strips `<script>` tags during markdown conversion, so JSON-LD wouldn...
+#18  env,servicetool_use    Bash(command: curl -sL --max-time 30 "https://loisirs74.fr/cha...) -> ok, 251B, 199ms
+#19  agent    assistant   The raw HTML has JSON-LD. Let me extract it.
+#20  env      tool_use    Bash(command: cd /tmp; python3 - <<'EOF' import re, html data=...) -> ok, 6.2KB, 41ms
+#21  agent    assistant   I fetched a fiche and inspected its raw HTML. Here's the report. ## Page fetc...

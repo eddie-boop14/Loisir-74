@@ -1,0 +1,13 @@
+# Sparse Index: fact-extraction / claude-code
+# 11 interactions | env: 0 | svc: 3 | agent: 8 | errors: 0
+#1   agent    system      (no content)
+#2   agent    system      (no content)
+#3   agent    system      (no content)
+#4   agent    assistant   I'll research this on loisirs74.fr. Let me load the web tools first.
+#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 2) -> ok, 53B, 7ms
+#6   agent    assistant   (thinking)
+#7   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: Find a link or page ab...) -> ok, 876B, 3.3s
+#8   service  tool_use    WebSearch(query: Plage de Saint-Jorioz loisirs74.fr) -> ok, 3.5KB, 14.1s
+#9   agent    assistant   Let me fetch the detail page directly to confirm the three specific facts.
+#10  service  tool_use    WebFetch(url: https://loisirs74.fr/plage-de-saint-jorioz, prompt: ...) -> ok, 1017B, 4.1s
+#11  agent    assistant   Here are the three requested facts for **Plage de Saint-Jorioz**, from [loisi...

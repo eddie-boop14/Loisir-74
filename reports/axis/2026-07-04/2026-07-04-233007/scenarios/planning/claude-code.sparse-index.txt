@@ -1,0 +1,19 @@
+# Sparse Index: planning / claude-code
+# 17 interactions | env: 0 | svc: 4 | agent: 13 | errors: 0
+#1   agent    system      (no content)
+#2   agent    system      (no content)
+#3   agent    system      (no content)
+#4   agent    assistant   (thinking)
+#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 2) -> ok, 53B, 8ms
+#6   agent    assistant   (thinking)
+#7   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List all indoor activi...) -> ok, 1.6KB, 5.0s
+#8   agent    system      (no content)
+#9   agent    system      (no content)
+#10  agent    system      (no content)
+#11  agent    assistant   (thinking)
+#12  service  tool_use    WebFetch(url: https://loisirs74.fr/bowling-le-bowl-annecy, prompt:...) -> ok, 866B, 3.0s
+#13  service  tool_use    WebFetch(url: https://loisirs74.fr/patinoire-jean-regis-annecy, pr...) -> ok, 880B, 3.2s
+#14  service  tool_use    WebFetch(url: https://loisirs74.fr/musee-chateau-annecy, prompt: G...) -> ok, 872B, 3.4s
+#15  agent    system      (no content)
+#16  agent    system      (no content)
+#17  agent    assistant   Here's a rainy-afternoon plan for the family, all sourced from **loisirs74.fr...

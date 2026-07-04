@@ -1,0 +1,21 @@
+# Sparse Index: comparison / claude-code
+# 19 interactions | env: 0 | svc: 5 | agent: 14 | errors: 0
+#1   agent    system      (no content)
+#2   agent    system      (no content)
+#3   agent    system      (no content)
+#4   agent    assistant   I'll research this using the loisirs74.fr website. Let me load the web tools ...
+#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 6ms
+#6   agent    assistant   I'll start by fetching the loisirs74.fr homepage to understand the site and f...
+#7   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List all beaches (plag...) -> ok, 1.1KB, 4.2s
+#8   agent    assistant   I found three beaches. Let me fetch the detail pages for all three so I can c...
+#9   service  tool_use    WebFetch(url: https://loisirs74.fr/plage-de-saint-jorioz, prompt: ...) -> ok, 385B, 60.0s
+#10  service  tool_use    WebFetch(url: https://loisirs74.fr/plage-albigny, prompt: What is ...) -> ok, 1.4KB, 4.4s
+#11  service  tool_use    WebFetch(url: https://loisirs74.fr/plage-des-marquisats, prompt: W...) -> ok, 1.6KB, 5.0s
+#12  agent    system      (no content)
+#13  agent    system      (no content)
+#14  agent    assistant   Two succeeded; the Saint-Jorioz page timed out. Let me retry it, since it lik...
+#15  service  tool_use    WebFetch(url: https://loisirs74.fr/plage-de-saint-jorioz, prompt: ...) -> ok, 1.5KB, 4.7s
+#16  agent    system      (no content)
+#17  agent    system      (no content)
+#18  agent    system      (no content)
+#19  agent    assistant   I have everything I need. I compared **Plage de Saint-Jorioz** against **Plag...

@@ -1,0 +1,3561 @@
+{
+  "version": "0.1.0",
+  "reportId": "2026-07-04-233007",
+  "timestamp": "2026-07-04T23:34:21.560Z",
+  "durationMs": 254055,
+  "summary": {
+    "total": 6,
+    "completed": 6,
+    "failed": 0,
+    "averageAxisScore": 91
+  },
+  "results": [
+    {
+      "scenarioKey": "ai-discovery",
+      "scenarioName": "AI discovery — llms.txt and machine-readable resources",
+      "agentName": "claude-code",
+      "durationMs": 87440,
+      "exitCode": 0,
+      "failed": false,
+      "file": "scenarios/ai-discovery/claude-code.json",
+      "tokenUsage": {
+        "input": 2812,
+        "output": 1241,
+        "cacheReadInput": 83591
+      },
+      "totalCostUsd": 0.17694225000000002,
+      "score": {
+        "axisScore": 97,
+        "goalAchievement": {
+          "score": 100,
+          "criteria": [
+            {
+              "check": "Found and read /llms.txt",
+              "weight": 0.3,
+              "score": 10,
+              "rationale": "Agent fetched https://loisirs74.fr/llms.txt and correctly enumerated its declared resources. I independently re-fetched the file and got the identical set of declarations."
+            },
+            {
+              "check": "Followed a resource actually declared in llms.txt (e.g. a content/*.md file or the API index)",
+              "weight": 0.4,
+              "score": 10,
+              "rationale": "After lieux.json timed out, the agent followed content/telecabines.md — a real category hub declared under the content/[category].md pattern in llms.txt. Verified the file exists and contains the télécabine listings."
+            },
+            {
+              "check": "Extracted a fact that is true per the fetched resource",
+              "weight": 0.3,
+              "score": 10,
+              "rationale": "The extracted fact (Téléphérique du Brévent, Chamonix-Mont-Blanc, summit 2,525 m) is confirmed true by my independent fetch of telecabines.md, which states '2 525 m' and 'face au Mont Blanc depuis Chamonix'."
+            }
+          ]
+        },
+        "environment": {
+          "score": 100,
+          "interactionCount": 0,
+          "auditedCount": 0,
+          "dimensions": {
+            "success": 100,
+            "speed": 100,
+            "weight": 100,
+            "relevance": 100,
+            "necessity": 80
+          },
+          "audits": [],
+          "necessity": {
+            "category": "environment",
+            "score": 0.8,
+            "unnecessaryIds": [],
+            "rationale": "default"
+          }
+        },
+        "service": {
+          "score": 90,
+          "interactionCount": 3,
+          "auditedCount": 3,
+          "dimensions": {
+            "success": 92,
+            "speed": 67,
+            "weight": 100,
+            "relevance": 100,
+            "necessity": 100
+          },
+          "audits": [
+            {
+              "id": 4,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.8,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch to llms.txt completed cleanly and returned a well-formed, complete listing of declared machine-readable resources (~1.6KB)."
+            },
+            {
+              "id": 6,
+              "categories": [
+                "service"
+              ],
+              "success": 0,
+              "speed": 0.4,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch to https://loisirs74.fr/api/lieux.json failed with 'timeout of 60000ms exceeded' — the service did not return a response within the timeout window, a genuine service/network failure."
+            },
+            {
+              "id": 8,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch to telecabines.md completed in 2.4s and returned a well-formed markdown response with site listings and a concrete fact."
+            }
+          ],
+          "necessity": {
+            "category": "service",
+            "score": 1,
+            "unnecessaryIds": [],
+            "rationale": "default"
+          }
+        },
+        "agent": {
+          "score": 94,
+          "interactionCount": 9,
+          "auditedCount": 9,
+          "dimensions": {
+            "success": 99,
+            "speed": 88,
+            "weight": 97,
+            "relevance": 95,
+            "necessity": 90
+          },
+          "audits": [
+            {
+              "id": 1,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System initialization; required infrastructure, no content."
+            },
+            {
+              "id": 2,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Clear, focused plan to fetch llms.txt first — correct starting point for the task."
+            },
+            {
+              "id": 3,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Direct tool discovery for WebFetch (select query, max_results 1); tiny and necessary to unlock the fetch capability."
+            },
+            {
+              "id": 4,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.8,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Fetched llms.txt with a precise prompt requesting verbatim declared resources; returned exactly the resource list the task needed."
+            },
+            {
+              "id": 5,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Reasonable plan to fetch the JSON index to extract a fact."
+            },
+            {
+              "id": 6,
+              "categories": [
+                "agent"
+              ],
+              "success": 0.8,
+              "speed": 0.4,
+              "weight": 0.5,
+              "contextRelevance": 0.1,
+              "rationale": "Fetch of lieux.json (full index of 397 sites) timed out at 60s; the choice to hit the largest declared resource was heavy and produced no usable output, though a defensible first attempt."
+            },
+            {
+              "id": 7,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Efficient self-correction: correctly diagnosed the timeout as a size issue and pivoted to a lighter category resource."
+            },
+            {
+              "id": 8,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Fetched telecabines.md (small, well-scoped) with a focused prompt; returned site list plus a concrete verifiable fact, fully satisfying the task."
+            },
+            {
+              "id": 9,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Complete, well-organized final answer: listed all declared resources, named the fetched resource, extracted a true fact, and confirmed read-only compliance."
+            }
+          ],
+          "necessity": {
+            "category": "agent",
+            "score": 0.9,
+            "unnecessaryIds": [],
+            "rationale": "Every interaction served the task. #6 timed out and produced no progress, but it was a legitimate attempt at a declared resource, not a redundant or gratuitous call; the agent recovered immediately. No repeated or superfluous operations."
+          }
+        },
+        "weights": {
+          "goal_achievement": 0.4,
+          "environment": 0.2,
+          "service": 0.2,
+          "agent": 0.2
+        },
+        "sparseIndex": {
+          "lines": [
+            "#1   agent    system      (no content)",
+            "#2   agent    assistant   I'll start by fetching the `llms.txt` file to see what resources the site dec...",
+            "#3   agent    tool_use    ToolSearch(query: select:WebFetch, max_results: 1) -> ok, 43B, 7ms",
+            "#4   service  tool_use    WebFetch(url: https://loisirs74.fr/llms.txt, prompt: List verbatim...) -> ok, 1.6KB, 5.4s",
+            "#5   agent    assistant   The `llms.txt` declares several machine-readable resources. Let me fetch one ...",
+            "#6   service  tool_use    WebFetch(url: https://loisirs74.fr/api/lieux.json, prompt: Return ...) -> ok, 235B, 60.0s",
+            "#7   agent    assistant   The JSON file may be large. Let me try a smaller category resource instead.",
+            "#8   service  tool_use    WebFetch(url: https://loisirs74.fr/content/telecabines.md, prompt:...) -> ok, 922B, 2.4s",
+            "#9   agent    assistant   Done. Here's what I found. ## Machine-readable resources declared in `loisirs..."
+          ],
+          "interactions": [
+            {
+              "id": 1,
+              "entryIndices": [
+                0
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#1   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1883,
+              "startMs": 902,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 2,
+              "entryIndices": [
+                1,
+                2
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#2   agent    assistant   I'll start by fetching the `llms.txt` file to see what resources the site dec...",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 801,
+              "startMs": 2785,
+              "contextBytes": 83,
+              "content": "[ASSISTANT] (no text)\n[ASSISTANT] I'll start by fetching the `llms.txt` file to see what resources the site declares."
+            },
+            {
+              "id": 3,
+              "entryIndices": [
+                3,
+                4
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#3   agent    tool_use    ToolSearch(query: select:WebFetch, max_results: 1) -> ok, 43B, 7ms",
+              "toolName": "ToolSearch",
+              "hasError": false,
+              "durationMs": 7,
+              "startMs": 3586,
+              "contextBytes": 43,
+              "content": "[TOOL_USE] ToolSearch\n  Input: query: select:WebFetch, max_results: 1\n  Full input: {\"query\":\"select:WebFetch\",\"max_results\":1}\n[TOOL_RESULT]"
+            },
+            {
+              "id": 4,
+              "entryIndices": [
+                5,
+                6
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#4   service  tool_use    WebFetch(url: https://loisirs74.fr/llms.txt, prompt: List verbatim...) -> ok, 1.6KB, 5.4s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 5358,
+              "startMs": 7082,
+              "contextBytes": 1634,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr/llms.txt, prompt: List verbatim all machine-readable resources, URLs, files, endpoints, or links this llms.txt file de...\n  Full input: {\"url\":\"https://loisirs74.fr/llms.txt\",\"prompt\":\"List verbatim all machine-readable resources, URLs, files, endpoints, or links this llms.txt file declares for AI agents. Include the full content of the file.\"}\n[TOOL_RESULT]\n  Result: # Machine-Readable Resources Declared for AI Agents\n\nBased on the Loisirs 74 discovery section, here are all the machine-readable endpoints and files explicitly declared:\n\n## Primary Discovery Files\n\n1. **Full Content Concatenation**\n   - URL: `https://loisirs74.fr/llms-full.txt`\n   - Purpose: \"All 397 leisure sites with complete facts, activities, FAQ — single file for full ingestion\"\n\n2. **Lieux Index (JSON API)**\n   - URL: `https://loisirs74.fr/api/lieux.json`\n   - Purpose: \"Machine-readable index of all sites with slug, name, category, commune, GPS, canonical URL\"\n\n3. **XML Sitemap**\n   - URL: `https://loisirs74.fr/sitemap.xml`\n   - Purpose: \"Standard XML sitemap with lastmod, hreflang, image entries\"\n\n4. **AI Discovery Manifest**\n   - URL: `https://loisirs74.fr/.well-known/ai-info.json`\n   - Purpose: \"Discovery manifest with all AI-related endpoints\"\n\n## Category Hub Resources\n\nTen category-specific markdown files are declared, each with full URLs following the pattern `https://loisirs74.fr/content/[category].md`:\n\n- `lacs.md` (31 sites)\n- `cascades.md` (17 sites)\n- `bases-de-loisirs.md` (33 sites)\n- `points-de-vue.md` (28 sites)\n- `telecabines.md` (8 sites)\n- `chateaux.md` (2..."
+            },
+            {
+              "id": 5,
+              "entryIndices": [
+                7,
+                8
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#5   agent    assistant   The `llms.txt` declares several machine-readable resources. Let me fetch one ...",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1853,
+              "startMs": 13903,
+              "contextBytes": 122,
+              "content": "[ASSISTANT] (no text)\n[ASSISTANT] The `llms.txt` declares several machine-readable resources. Let me fetch one — the JSON index API — to extract a fact."
+            },
+            {
+              "id": 6,
+              "entryIndices": [
+                9,
+                10
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#6   service  tool_use    WebFetch(url: https://loisirs74.fr/api/lieux.json, prompt: Return ...) -> ok, 235B, 60.0s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 60013,
+              "startMs": 15756,
+              "contextBytes": 235,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr/api/lieux.json, prompt: Return the first entry in this JSON verbatim, including its slug, name, category, commune, and GPS c...\n  Full input: {\"url\":\"https://loisirs74.fr/api/lieux.json\",\"prompt\":\"Return the first entry in this JSON verbatim, including its slug, name, category, commune, and GPS coordinates. Also state the total number of entries.\"}\n[TOOL_RESULT]\n  Result: timeout of 60000ms exceeded"
+            },
+            {
+              "id": 7,
+              "entryIndices": [
+                11,
+                12
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#7   agent    assistant   The JSON file may be large. Let me try a smaller category resource instead.",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1523,
+              "startMs": 77261,
+              "contextBytes": 75,
+              "content": "[ASSISTANT] (no text)\n[ASSISTANT] The JSON file may be large. Let me try a smaller category resource instead."
+            },
+            {
+              "id": 8,
+              "entryIndices": [
+                13,
+                14
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#8   service  tool_use    WebFetch(url: https://loisirs74.fr/content/telecabines.md, prompt:...) -> ok, 922B, 2.4s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 2409,
+              "startMs": 78784,
+              "contextBytes": 922,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr/content/telecabines.md, prompt: List the leisure sites in this file with their name and commune. Give one concrete verifiable fact a...\n  Full input: {\"url\":\"https://loisirs74.fr/content/telecabines.md\",\"prompt\":\"List the leisure sites in this file with their name and commune. Give one concrete verifiable fact about a specific site (e.g. altitude, location, coordinates).\"}\n[TOOL_RESULT]\n  Result: # Téléphériques & Télécabines en Haute-Savoie\n\n## Leisure Sites Listed\n\n1. **Tramway du Mont-Blanc** — Saint-Gervais-les-Bains\n2. **Télécabine de Super-Châtel** — Châtel\n3. **Télécabine des Chavannes** — Les Gets\n4. **Télécabine du Jaillet** — Megève\n5. **Télécabine du Mont-Chéry** — Les Gets\n6. **Télécabine du Pléney** — Morzine\n7. **Téléphérique des Grands Montets** — Chamonix-Mont-Blanc\n8. **Téléphérique du Brévent** — Chamonix-Mont-Blanc\n\n## Verifiable Fact\n\nThe Brévent summit reaches 2,525 meters in elevation, offering views of Mont Blanc from Chamonix. The document specifies that \"AR adulte 41,20 €,\" indicating the round-trip adult fare."
+            },
+            {
+              "id": 9,
+              "entryIndices": [
+                15
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#9   agent    assistant   Done. Here's what I found. ## Machine-readable resources declared in `loisirs...",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": null,
+              "startMs": 88258,
+              "contextBytes": 1342,
+              "content": "[ASSISTANT] Done. Here's what I found.\n\n## Machine-readable resources declared in `loisirs74.fr/llms.txt`\n\nThe site's `llms.txt` declares these resources for AI agents:\n\n**Primary discovery files**\n- `https://loisirs74.fr/llms-full.txt` — all 397 leisure sites with complete facts/activities/FAQ in one file\n- `https://loisirs74.fr/api/lieux.json` — JSON index of all sites (slug, name, category, commune, GPS, canonical URL)\n- `https://loisirs74.fr/sitemap.xml` — XML sitemap (lastmod, hreflang, image entries)\n- `https://loisirs74.fr/.well-known/ai-info.json` — AI discovery manifest listing all AI endpoints\n\n**Category hub markdown files** (`https://loisirs74.fr/content/[category].md`)\n- `lacs.md`, `cascades.md`, `bases-de-loisirs.md`, `points-de-vue.md`, `telecabines.md`, `chateaux.md`, `sentiers.md`, `voies-vertes.md`, `musees.md`, `attractions.md`\n\nIndividual site pages follow `https://loisirs74.fr/content/[site-slug].md`.\n\n## Resource fetched + one true fact\n\nI fetched **`https://loisirs74.fr/content/telecabines.md`** (the JSON API `lieux.json` timed out, so I used a lighter declared resource).\n\n**Extracted fact:** The **Téléphérique du Brévent** in **Chamonix-Mont-Blanc** reaches a summit elevation of **2,525 meters**, offering views of Mont Blanc.\n\nThis was a read-only fetch — no forms submitted and no bookings made."
+            }
+          ],
+          "stats": {
+            "totalInteractions": 9,
+            "byCategory": {
+              "environment": 0,
+              "service": 3,
+              "agent": 6
+            },
+            "totalErrors": 0,
+            "totalDurationMs": 73847,
+            "wallClockMs": 88258,
+            "startupMs": 902,
+            "shutdownMs": 42
+          }
+        },
+        "judging": {
+          "agent": "claude-code"
+        }
+      },
+      "prompt": "Check https://loisirs74.fr/llms.txt and use what it declares to list the machine-readable resources this site offers to agents, then fetch one of those resources and extract one true fact from it. Read-only task: never submit forms or make bookings.",
+      "judge": [
+        {
+          "check": "Found and read /llms.txt",
+          "weight": 0.3
+        },
+        {
+          "check": "Followed a resource actually declared in llms.txt (e.g. a content/*.md file or the API index)",
+          "weight": 0.4
+        },
+        {
+          "check": "Extracted a fact that is true per the fetched resource",
+          "weight": 0.3
+        }
+      ],
+      "agentConfig": {
+        "agent": "claude-code"
+      },
+      "resolvedConfig": {
+        "limits": {
+          "time_minutes": 15
+        }
+      }
+    },
+    {
+      "scenarioKey": "comparison",
+      "scenarioName": "Comparison — two Lac d'Annecy beaches for small children",
+      "agentName": "claude-code",
+      "durationMs": 106158,
+      "exitCode": 0,
+      "failed": false,
+      "file": "scenarios/comparison/claude-code.json",
+      "tokenUsage": {
+        "input": 3886,
+        "output": 2701,
+        "cacheReadInput": 84823
+      },
+      "totalCostUsd": 0.24030025000000005,
+      "score": {
+        "axisScore": 97,
+        "goalAchievement": {
+          "score": 100,
+          "criteria": [
+            {
+              "check": "Compared two real beach pages that exist on loisirs74.fr",
+              "weight": 0.3,
+              "score": 10,
+              "rationale": "Both compared beaches — Plage de Saint-Jorioz and Plage d'Albigny — are real pages on loisirs74.fr; I independently fetched both and they exist. It also cross-checked a third (Marquisats)."
+            },
+            {
+              "check": "Price and lifeguard-supervision facts match the pages",
+              "weight": 0.4,
+              "score": 10,
+              "rationale": "Independently verified: Saint-Jorioz prices (adults €2.60, under 10 free, €1 after 16:30, €22 pass, free Sept–June) and lifeguard hours 9:30–17:30, and Albigny free year-round with lifeguards 11:00–19:00, all match the pages exactly."
+            },
+            {
+              "check": "Gave a reasoned recommendation grounded in those facts",
+              "weight": 0.3,
+              "score": 10,
+              "rationale": "Recommendation of Saint-Jorioz is clearly reasoned from the verified facts (sand beach, gentle slope, wading pool, earlier supervision, negligible cost for under-10s) and includes a fair counter-case for choosing Albigny."
+            }
+          ]
+        },
+        "environment": {
+          "score": 100,
+          "interactionCount": 0,
+          "auditedCount": 0,
+          "dimensions": {
+            "success": 100,
+            "speed": 100,
+            "weight": 100,
+            "relevance": 100,
+            "necessity": 80
+          },
+          "audits": [],
+          "necessity": {
+            "category": "environment",
+            "score": 0.8,
+            "unnecessaryIds": [],
+            "rationale": "default"
+          }
+        },
+        "service": {
+          "score": 92,
+          "interactionCount": 5,
+          "auditedCount": 5,
+          "dimensions": {
+            "success": 94,
+            "speed": 76,
+            "weight": 100,
+            "relevance": 100,
+            "necessity": 100
+          },
+          "audits": [
+            {
+              "id": 7,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch to homepage completed in 4.2s and returned a well-formed list of three beaches with detail-page links. Clean success."
+            },
+            {
+              "id": 9,
+              "categories": [
+                "service"
+              ],
+              "success": 0,
+              "speed": 0.4,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch to plage-de-saint-jorioz failed with 'timeout of 60000ms exceeded' after a full 60s. This is a genuine service/network failure — no well-formed response returned."
+            },
+            {
+              "id": 10,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch to plage-albigny completed in 4.4s and returned a well-formed, detailed response on price, supervision, and family amenities."
+            },
+            {
+              "id": 11,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.8,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch to plage-des-marquisats completed in 5.0s and returned a well-formed, detailed response covering all requested fields."
+            },
+            {
+              "id": 15,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Retry of plage-de-saint-jorioz completed in 4.7s and returned a well-formed detailed response, confirming the earlier failure was a transient timeout."
+            }
+          ],
+          "necessity": {
+            "category": "service",
+            "score": 1,
+            "unnecessaryIds": [],
+            "rationale": "default"
+          }
+        },
+        "agent": {
+          "score": 95,
+          "interactionCount": 19,
+          "auditedCount": 19,
+          "dimensions": {
+            "success": 100,
+            "speed": 92,
+            "weight": 100,
+            "relevance": 95,
+            "necessity": 95
+          },
+          "audits": [
+            {
+              "id": 1,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System/infrastructure message; required setup, no agent cost."
+            },
+            {
+              "id": 2,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System/infrastructure message; required setup."
+            },
+            {
+              "id": 3,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System/infrastructure message; required setup."
+            },
+            {
+              "id": 4,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Focused opening plan: research via loisirs74.fr and load web tools first — coherent and task-aligned."
+            },
+            {
+              "id": 5,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Targeted ToolSearch selecting exactly WebFetch/WebSearch — necessary tool discovery, minimal and precise."
+            },
+            {
+              "id": 6,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Sound plan to fetch homepage first to enumerate beaches before comparing."
+            },
+            {
+              "id": 7,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Homepage fetch with a well-scoped prompt; returned the three Lac d'Annecy beaches plus detail links — directly enabled the next steps."
+            },
+            {
+              "id": 8,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Reasonable decision to pull detail pages to compare price and supervision."
+            },
+            {
+              "id": 9,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.4,
+              "weight": 1,
+              "contextRelevance": 0.3,
+              "rationale": "Tool invocation itself was appropriate and well-scoped, but it timed out (60s) and returned no usable content; output could not be used until the retry at #15."
+            },
+            {
+              "id": 10,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Albigny detail fetch with focused prompt; returned price (free), supervision hours, and family amenities — all used in the final comparison."
+            },
+            {
+              "id": 11,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.8,
+              "weight": 1,
+              "contextRelevance": 0.85,
+              "rationale": "Marquisats fetch succeeded and was well-scoped; task asked for two beaches, so this third page was slightly beyond scope, but it justified the chosen pairing and appears as a reference note in the answer."
+            },
+            {
+              "id": 12,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System/infrastructure message."
+            },
+            {
+              "id": 13,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System/infrastructure message."
+            },
+            {
+              "id": 14,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Good self-correction: recognized the Saint-Jorioz timeout and chose to retry rather than proceed with missing data."
+            },
+            {
+              "id": 15,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Retry of Saint-Jorioz succeeded, returning detailed pricing tiers, supervision hours, and toddler amenities — central to the recommendation."
+            },
+            {
+              "id": 16,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System/infrastructure message."
+            },
+            {
+              "id": 17,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System/infrastructure message."
+            },
+            {
+              "id": 18,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System/infrastructure message."
+            },
+            {
+              "id": 19,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Thorough, well-sourced final answer: clear comparison table on price and supervision, a justified recommendation for small children, a conditional alternative, and an explicit read-only compliance note."
+            }
+          ],
+          "necessity": {
+            "category": "agent",
+            "score": 0.95,
+            "unnecessaryIds": [],
+            "rationale": "Every interaction advanced the task. The only borderline call was fetching the third beach (#11), but it was a reasonable discovery step that let the agent select the most contrastive pairing and was surfaced as a helpful reference. The timeout+retry on Saint-Jorioz (#9→#15) was environment-caused, not wasteful agent behavior."
+          }
+        },
+        "weights": {
+          "goal_achievement": 0.4,
+          "environment": 0.2,
+          "service": 0.2,
+          "agent": 0.2
+        },
+        "sparseIndex": {
+          "lines": [
+            "#1   agent    system      (no content)",
+            "#2   agent    system      (no content)",
+            "#3   agent    system      (no content)",
+            "#4   agent    assistant   I'll research this using the loisirs74.fr website. Let me load the web tools ...",
+            "#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 6ms",
+            "#6   agent    assistant   I'll start by fetching the loisirs74.fr homepage to understand the site and f...",
+            "#7   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List all beaches (plag...) -> ok, 1.1KB, 4.2s",
+            "#8   agent    assistant   I found three beaches. Let me fetch the detail pages for all three so I can c...",
+            "#9   service  tool_use    WebFetch(url: https://loisirs74.fr/plage-de-saint-jorioz, prompt: ...) -> ok, 385B, 60.0s",
+            "#10  service  tool_use    WebFetch(url: https://loisirs74.fr/plage-albigny, prompt: What is ...) -> ok, 1.4KB, 4.4s",
+            "#11  service  tool_use    WebFetch(url: https://loisirs74.fr/plage-des-marquisats, prompt: W...) -> ok, 1.6KB, 5.0s",
+            "#12  agent    system      (no content)",
+            "#13  agent    system      (no content)",
+            "#14  agent    assistant   Two succeeded; the Saint-Jorioz page timed out. Let me retry it, since it lik...",
+            "#15  service  tool_use    WebFetch(url: https://loisirs74.fr/plage-de-saint-jorioz, prompt: ...) -> ok, 1.5KB, 4.7s",
+            "#16  agent    system      (no content)",
+            "#17  agent    system      (no content)",
+            "#18  agent    system      (no content)",
+            "#19  agent    assistant   I have everything I need. I compared **Plage de Saint-Jorioz** against **Plag..."
+          ],
+          "interactions": [
+            {
+              "id": 1,
+              "entryIndices": [
+                0
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#1   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 3789,
+              "startMs": 898,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 2,
+              "entryIndices": [
+                1
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#2   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 0,
+              "startMs": 4687,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 3,
+              "entryIndices": [
+                2
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#3   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1,
+              "startMs": 4687,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 4,
+              "entryIndices": [
+                3,
+                4
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#4   agent    assistant   I'll research this using the loisirs74.fr website. Let me load the web tools ...",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1238,
+              "startMs": 4688,
+              "contextBytes": 83,
+              "content": "[ASSISTANT] (no text)\n[ASSISTANT] I'll research this using the loisirs74.fr website. Let me load the web tools first."
+            },
+            {
+              "id": 5,
+              "entryIndices": [
+                5,
+                6
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 6ms",
+              "toolName": "ToolSearch",
+              "hasError": false,
+              "durationMs": 6,
+              "startMs": 5926,
+              "contextBytes": 53,
+              "content": "[TOOL_USE] ToolSearch\n  Input: query: select:WebFetch,WebSearch, max_results: 5\n  Full input: {\"query\":\"select:WebFetch,WebSearch\",\"max_results\":5}\n[TOOL_RESULT]"
+            },
+            {
+              "id": 6,
+              "entryIndices": [
+                7
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#6   agent    assistant   I'll start by fetching the loisirs74.fr homepage to understand the site and f...",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1113,
+              "startMs": 7860,
+              "contextBytes": 113,
+              "content": "[ASSISTANT] I'll start by fetching the loisirs74.fr homepage to understand the site and find beach listings for Lac d'Annecy."
+            },
+            {
+              "id": 7,
+              "entryIndices": [
+                8,
+                9
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#7   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List all beaches (plag...) -> ok, 1.1KB, 4.2s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 4159,
+              "startMs": 8973,
+              "contextBytes": 1160,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr, prompt: List all beaches (plages) on Lac d'Annecy mentioned on this page, along with any links to their deta...\n  Full input: {\"url\":\"https://loisirs74.fr\",\"prompt\":\"List all beaches (plages) on Lac d'Annecy mentioned on this page, along with any links to their detail pages. What navigation or links exist for finding beaches?\"}\n[TOOL_RESULT]\n  Result: # Beaches on Lac d'Annecy\n\nThe page lists three beaches specifically located on Lac d'Annecy:\n\n1. **Plage de Saint-Jorioz** - \"La seule grande plage de sable naturel du lac d'Annecy, aménagée avec pelouses ombragées, plongeoir et équipements accessibles.\"\n   - Link: https://loisirs74.fr/plage-de-saint-jorioz\n\n2. **Plage d'Albigny** (Annecy) - \"La plus grande plage publique du lac d'Annecy, avec 400 mètres de rives engazonnées face aux montagnes.\"\n   - Link: https://loisirs74.fr/plage-albigny\n\n3. **Plage des Marquisats** (Annecy) - Described as a 200-meter grassy beach on the lake's west shore with summer supervision and accessibility features.\n   - Link: https://loisirs74.fr/plage-des-marquisats\n\n## Navigation Options\n\nThe primary way to discover beaches is through the **\"Lacs & plages\"** category link in the main navigation menu, which provides access to the complete beaches and leisure bases section at https://loisirs74.fr/lacs-plages/"
+            },
+            {
+              "id": 8,
+              "entryIndices": [
+                10
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#8   agent    assistant   I found three beaches. Let me fetch the detail pages for all three so I can c...",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 2516,
+              "startMs": 14902,
+              "contextBytes": 122,
+              "content": "[ASSISTANT] I found three beaches. Let me fetch the detail pages for all three so I can compare entry price and lifeguard supervision."
+            },
+            {
+              "id": 9,
+              "entryIndices": [
+                11,
+                16
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#9   service  tool_use    WebFetch(url: https://loisirs74.fr/plage-de-saint-jorioz, prompt: ...) -> ok, 385B, 60.0s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 60011,
+              "startMs": 17418,
+              "contextBytes": 385,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr/plage-de-saint-jorioz, prompt: What is the entry price (tarif d'entrée / prix) for this beach? Is there lifeguard supervision (surv...\n  Full input: {\"url\":\"https://loisirs74.fr/plage-de-saint-jorioz\",\"prompt\":\"What is the entry price (tarif d'entrée / prix) for this beach? Is there lifeguard supervision (surveillance, maître-nageur, poste de secours, baignade surveillée)? What facilities exist for families with small children? Report all details on prices, supervision hours, and family amenities.\"}\n[TOOL_RESULT]\n  Result: timeout of 60000ms exceeded"
+            },
+            {
+              "id": 10,
+              "entryIndices": [
+                12,
+                14
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#10  service  tool_use    WebFetch(url: https://loisirs74.fr/plage-albigny, prompt: What is ...) -> ok, 1.4KB, 4.4s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 4443,
+              "startMs": 18905,
+              "contextBytes": 1446,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr/plage-albigny, prompt: What is the entry price (tarif d'entrée / prix) for this beach? Is there lifeguard supervision (surv...\n  Full input: {\"url\":\"https://loisirs74.fr/plage-albigny\",\"prompt\":\"What is the entry price (tarif d'entrée / prix) for this beach? Is there lifeguard supervision (surveillance, maître-nageur, poste de secours, baignade surveillée)? What facilities exist for families with small children? Report all details on prices, supervision hours, and family amenities.\"}\n[TOOL_RESULT]\n  Result: # Plage d'Albigny: Entry, Supervision & Family Facilities\n\n## Entry Price\nThe beach is completely free: \"Gratuit · Accès libre\" (Free · Open Access). It's one of only two free public beaches in Annecy.\n\n## Lifeguard Supervision\nSupervision is seasonal. \"Maîtres-nageurs sauveteurs en juillet–août, tous les jours de 11h à 19h\" (Lifeguards operate July-August, daily 11am-7pm). Outside these months, swimming is unsupervised.\n\n## Family-Friendly Amenities\nSeveral features support families with young children:\n\n- **Gentle entry**: The lake bottom is sandy with a gradual slope, facilitating water access for young children\n- **Facilities**: \"3 blocs sanitaires gratuits, 2 blocs de 4 douches extérieures\" (3 free restroom blocks, 8 free outdoor showers)\n- **Play areas**: Children's play zones and ping-pong tables available\n- **Accessibility**: Wheelchair-accessible with free floating chairs (July-August)\n- **Games**: Petanque courts and other recreational options\n\nThe spacious, tree-lined grassy area with shaded sections provides comfortable picnicking and rest spots for families."
+            },
+            {
+              "id": 11,
+              "entryIndices": [
+                13,
+                15
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#11  service  tool_use    WebFetch(url: https://loisirs74.fr/plage-des-marquisats, prompt: W...) -> ok, 1.6KB, 5.0s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 5046,
+              "startMs": 19795,
+              "contextBytes": 1653,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr/plage-des-marquisats, prompt: What is the entry price (tarif d'entrée / prix) for this beach? Is there lifeguard supervision (surv...\n  Full input: {\"url\":\"https://loisirs74.fr/plage-des-marquisats\",\"prompt\":\"What is the entry price (tarif d'entrée / prix) for this beach? Is there lifeguard supervision (surveillance, maître-nageur, poste de secours, baignade surveillée)? What facilities exist for families with small children? Report all details on prices, supervision hours, and family amenities.\"}\n[TOOL_RESULT]\n  Result: # Plage des Marquisats: Entry Price, Supervision & Family Amenities\n\n## Entry Price\nThe beach is completely free: \"Gratuit\" (free admission all year round). It is \"l'une des deux seules plages gratuites d'Annecy\" (one of only two free beaches in Annecy).\n\n## Lifeguard Supervision\nSupervised swimming occurs seasonally: \"surveillée du début des vacances scolaires au 31 août, de 11h à 19h\" (monitored from the start of summer school holidays through August 31, from 11 AM to 7 PM daily). Outside these dates, no lifeguards are present.\n\n## Family-Friendly Facilities\nThe beach offers several amenities for families with young children:\n\n- **Shaded grassy area**: \"La plage est ombragée grâce à de nombreux arbres, ce qui en fait un lieu particulièrement apprécié l'été par les familles avec jeunes enfants\" (numerous trees provide shade, making it especially popular with families)\n\n- **Accessible water entry**: A sandy bank allows \"entrée progressive dans l'eau\" (gradual entry into water) before the rocky lake bottom\n\n- **Basic services**: Free showers, toilets, and seasonal snack facilities\n\n- **Accessibility features**: Accessible pathways, specialized floating wheelchairs, accessible changi..."
+            },
+            {
+              "id": 12,
+              "entryIndices": [
+                17
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#12  agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 504,
+              "startMs": 79741,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 13,
+              "entryIndices": [
+                18
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#13  agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 0,
+              "startMs": 80245,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 14,
+              "entryIndices": [
+                19,
+                20
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#14  agent    assistant   Two succeeded; the Saint-Jorioz page timed out. Let me retry it, since it lik...",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 3212,
+              "startMs": 80245,
+              "contextBytes": 141,
+              "content": "[ASSISTANT] (no text)\n[ASSISTANT] Two succeeded; the Saint-Jorioz page timed out. Let me retry it, since it likely has a different pricing model (it's the natural sand beach)."
+            },
+            {
+              "id": 15,
+              "entryIndices": [
+                21,
+                22
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#15  service  tool_use    WebFetch(url: https://loisirs74.fr/plage-de-saint-jorioz, prompt: ...) -> ok, 1.5KB, 4.7s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 4732,
+              "startMs": 83457,
+              "contextBytes": 1575,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr/plage-de-saint-jorioz, prompt: What is the entry price (tarif d'entrée / prix / gratuit or payant) for this beach? Is there lifegua...\n  Full input: {\"url\":\"https://loisirs74.fr/plage-de-saint-jorioz\",\"prompt\":\"What is the entry price (tarif d'entrée / prix / gratuit or payant) for this beach? Is there lifeguard supervision (surveillance, maître-nageur, poste de secours, baignade surveillée) and what hours? What facilities exist for families with small children? Report all details on prices, supervision hours, and family amenities.\"}\n[TOOL_RESULT]\n  Result: # Plage de Saint-Jorioz: Entry Prices, Lifeguard Supervision & Family Facilities\n\n## Entry Prices\n\n**High Season (July-August):** The beach charges admission during this period.\n- Adults (18+): €2.60\n- Children (10-17): €1.00\n- Under 10: Free\n- After 4:30 PM: €1.00 (all ages)\n- Season pass: €22.00\n\n**Off-Season (September-June):** \"accès libre et gratuit\" (free and open access)\n\n## Lifeguard Supervision\n\nSupervision occurs only during peak summer months. \"Baignade surveillée par des maîtres-nageurs de 9h30 à 17h30 en juillet-août\" (lifeguard-monitored swimming from 9:30 AM to 5:30 PM in July-August). The beach closes from 7-9:30 AM for cleaning during these months.\n\n## Family Facilities\n\nThe beach offers several amenities for young children:\n\n- **Shallow water zone:** A \"pente douce\" (gentle slope) ideal for families\n- **Paddling pool:** \"pataugeoire\" available for toddlers\n- **Play area:** \"aire de jeux pour les plus jeunes\" (playground for young children)\n- **Shaded lawns:** Vast grassy areas under trees for picnicking and rest\n- **Accessibility:** Amphibious wheelchairs (Tiralo and Hippocampe) available free during July-August for disabled visitors"
+            },
+            {
+              "id": 16,
+              "entryIndices": [
+                23
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#16  agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1495,
+              "startMs": 91110,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 17,
+              "entryIndices": [
+                24
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#17  agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 501,
+              "startMs": 92605,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 18,
+              "entryIndices": [
+                25
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#18  agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1,
+              "startMs": 93106,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 19,
+              "entryIndices": [
+                26,
+                27
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#19  agent    assistant   I have everything I need. I compared **Plage de Saint-Jorioz** against **Plag...",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": null,
+              "startMs": 93107,
+              "contextBytes": 2670,
+              "content": "[ASSISTANT] (no text)\n[ASSISTANT] I have everything I need. I compared **Plage de Saint-Jorioz** against **Plage d'Albigny** — the pairing gives the clearest contrast on both price and supervision (I also checked Plage des Marquisats, noted below).\n\n## Comparison (source: loisirs74.fr)\n\n| | **Plage de Saint-Jorioz** | **Plage d'Albigny (Annecy)** |\n|---|---|---|\n| **Entry price (Jul–Aug)** | Paid: adults €2.60, ages 10–17 €1.00, **under 10 free**; €1.00 after 16:30; season pass €22 | **Free** — open access |\n| **Entry price (Sep–Jun)** | Free / open access | Free |\n| **Lifeguard supervision** | Maîtres-nageurs, **9:30–17:30**, July–August | Maîtres-nageurs, **11:00–19:00**, July–August |\n| **Water entry** | Natural sand, gentle slope (*pente douce*) | Sandy bottom, gradual slope |\n| **Toddler amenities** | **Wading pool (pataugeoire)** + playground for young kids | Children's play zones, ping-pong |\n| **Facilities** | Shaded lawns, free amphibious wheelchairs (Jul–Aug) | Free toilets, 8 outdoor showers, shaded lawns, floating chairs |\n\n(For reference, **Plage des Marquisats** is also free and supervised 11:00–19:00 in summer, but its lake bottom turns rocky past the sandy bank — less ideal for toddlers.)\n\n## Recommendation: **Plage de Saint-Jorioz**\n\nFor a family with small children, I'd recommend **Saint-Jorioz**, despite it being the only one that charges:\n\n- **Best water for toddlers.** It's the lake's only large natural *sand* beach with a gentle slope, plus a dedicated **wading pool (pataugeoire)** — the safest, most reassuring setup for small children who aren't strong swimmers.\n- **Supervision aligns with young-child rhythms.** Lifeguards start at **9:30**, covering the morning window before the midday heat and nap time. Albigny's guards don't come on duty until **11:00**, leaving the early-morning swim unsupervised.\n- **Cost is negligible.** Children under 10 enter **free**, and adults pay only €2.60 (€1.00 after 16:30). A young family effectively pays a cou\n... (truncated)"
+            }
+          ],
+          "stats": {
+            "totalInteractions": 19,
+            "byCategory": {
+              "environment": 0,
+              "service": 5,
+              "agent": 14
+            },
+            "totalErrors": 0,
+            "totalDurationMs": 92767,
+            "wallClockMs": 93107,
+            "startupMs": 898,
+            "shutdownMs": 38
+          }
+        },
+        "judging": {
+          "agent": "claude-code"
+        }
+      },
+      "prompt": "Using https://loisirs74.fr, compare two beaches on Lac d'Annecy on entry price and lifeguard supervision, then recommend one of the two for a family with small children and say why. Read-only task: browse and read pages only, never submit forms or make bookings.",
+      "judge": [
+        {
+          "check": "Compared two real beach pages that exist on loisirs74.fr",
+          "weight": 0.3
+        },
+        {
+          "check": "Price and lifeguard-supervision facts match the pages",
+          "weight": 0.4
+        },
+        {
+          "check": "Gave a reasoned recommendation grounded in those facts",
+          "weight": 0.3
+        }
+      ],
+      "agentConfig": {
+        "agent": "claude-code"
+      },
+      "resolvedConfig": {
+        "limits": {
+          "time_minutes": 15
+        }
+      }
+    },
+    {
+      "scenarioKey": "fact-extraction",
+      "scenarioName": "Fact extraction — price, hours, accessibility",
+      "agentName": "claude-code",
+      "durationMs": 34584,
+      "exitCode": 0,
+      "failed": false,
+      "file": "scenarios/fact-extraction/claude-code.json",
+      "tokenUsage": {
+        "input": 2810,
+        "output": 1065,
+        "cacheReadInput": 66516
+      },
+      "totalCostUsd": 0.34183650000000004,
+      "score": {
+        "axisScore": 97,
+        "goalAchievement": {
+          "score": 100,
+          "criteria": [
+            {
+              "check": "Found the entry price 2,60 € (adult, paid season)",
+              "weight": 0.3,
+              "score": 10,
+              "rationale": "Agent found entry price 'Adulte (18 ans et +) : 2,60 €', which I independently verified from the loisirs74.fr detail page. Correct."
+            },
+            {
+              "check": "Found the wheelchair accessibility status (accessible)",
+              "weight": 0.2,
+              "score": 10,
+              "rationale": "Agent reported wheelchair accessibility (Tourisme et Handicap label, access ramp, matting with handrail, amphibious wheelchairs), verified on the page. Accessible status correctly identified."
+            },
+            {
+              "check": "Used loisirs74.fr pages as the source, not general knowledge",
+              "weight": 0.3,
+              "score": 10,
+              "rationale": "Agent fetched and cited the actual loisirs74.fr detail page (https://loisirs74.fr/plage-de-saint-jorioz), not general knowledge. Source is explicitly linked and verifiable."
+            },
+            {
+              "check": "Reached the answer in few steps without dead ends or 404s",
+              "weight": 0.2,
+              "score": 10,
+              "rationale": "Agent reached the answer efficiently: one WebFetch of the homepage plus a WebSearch to locate the detail URL, then one direct fetch of the correct detail page. No 404s or dead ends; the detail URL resolved on first try (~35s total)."
+            }
+          ]
+        },
+        "environment": {
+          "score": 100,
+          "interactionCount": 0,
+          "auditedCount": 0,
+          "dimensions": {
+            "success": 100,
+            "speed": 100,
+            "weight": 100,
+            "relevance": 100,
+            "necessity": 80
+          },
+          "audits": [],
+          "necessity": {
+            "category": "environment",
+            "score": 0.8,
+            "unnecessaryIds": [],
+            "rationale": "default"
+          }
+        },
+        "service": {
+          "score": 94,
+          "interactionCount": 3,
+          "auditedCount": 3,
+          "dimensions": {
+            "success": 100,
+            "speed": 79,
+            "weight": 100,
+            "relevance": 100,
+            "necessity": 100
+          },
+          "audits": [
+            {
+              "id": 7,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch to loisirs74.fr completed successfully in 3.3s, returning a well-formed 876B response with the detail page URL and navigation info."
+            },
+            {
+              "id": 8,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.6,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebSearch completed successfully in 14.1s, returning a well-formed 3.5KB response with structured links and descriptive content scoped to the allowed domain."
+            },
+            {
+              "id": 10,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch to the detail page completed successfully in 4.1s, returning a well-formed 1017B response with the three requested facts extracted."
+            }
+          ],
+          "necessity": {
+            "category": "service",
+            "score": 1,
+            "unnecessaryIds": [],
+            "rationale": "default"
+          }
+        },
+        "agent": {
+          "score": 93,
+          "interactionCount": 11,
+          "auditedCount": 11,
+          "dimensions": {
+            "success": 100,
+            "speed": 93,
+            "weight": 95,
+            "relevance": 84,
+            "necessity": 90
+          },
+          "audits": [
+            {
+              "id": 1,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System setup message; required infrastructure."
+            },
+            {
+              "id": 2,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System setup message; required infrastructure."
+            },
+            {
+              "id": 3,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System setup message; required infrastructure."
+            },
+            {
+              "id": 4,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Concise, coherent plan statement announcing the tool-loading step; focused and productive."
+            },
+            {
+              "id": 5,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Targeted ToolSearch loading exactly the two web tools needed (WebFetch, WebSearch); minimal, necessary discovery."
+            },
+            {
+              "id": 6,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Internal reasoning step; appropriate before acting."
+            },
+            {
+              "id": 7,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch of homepage with a tight prompt to locate the detail page URL; returned the exact detail URL and navigation context that directly enabled the next step."
+            },
+            {
+              "id": 8,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.6,
+              "weight": 0.9,
+              "contextRelevance": 0.7,
+              "rationale": "WebSearch ran successfully and supplied corroborating overview/hours data, but #7 had already surfaced the canonical detail URL, so this call was largely redundant with the workflow; output only mildly additive since #10 re-extracted the facts authoritatively."
+            },
+            {
+              "id": 9,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Clear plan statement to fetch the detail page and confirm the three facts; well-focused."
+            },
+            {
+              "id": 10,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch of the detail page with a precise three-fact extraction prompt; returned exactly the price, hours, and accessibility details used verbatim in the answer. Core value step."
+            },
+            {
+              "id": 11,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Final answer delivering the three labeled facts with sources and an explicit read-only confirmation; complete and on-task."
+            }
+          ],
+          "necessity": {
+            "category": "agent",
+            "score": 0.9,
+            "unnecessaryIds": [
+              8
+            ],
+            "rationale": "Nearly all interactions were necessary and tightly sequenced. The only weak link is #8 (WebSearch): #7 had already identified the canonical detail URL, and #10 authoritatively extracted the facts directly, so the search was largely redundant corroboration rather than a required step. Everything else was essential and right-sized."
+          }
+        },
+        "weights": {
+          "goal_achievement": 0.4,
+          "environment": 0.2,
+          "service": 0.2,
+          "agent": 0.2
+        },
+        "sparseIndex": {
+          "lines": [
+            "#1   agent    system      (no content)",
+            "#2   agent    system      (no content)",
+            "#3   agent    system      (no content)",
+            "#4   agent    assistant   I'll research this on loisirs74.fr. Let me load the web tools first.",
+            "#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 2) -> ok, 53B, 7ms",
+            "#6   agent    assistant   (thinking)",
+            "#7   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: Find a link or page ab...) -> ok, 876B, 3.3s",
+            "#8   service  tool_use    WebSearch(query: Plage de Saint-Jorioz loisirs74.fr) -> ok, 3.5KB, 14.1s",
+            "#9   agent    assistant   Let me fetch the detail page directly to confirm the three specific facts.",
+            "#10  service  tool_use    WebFetch(url: https://loisirs74.fr/plage-de-saint-jorioz, prompt: ...) -> ok, 1017B, 4.1s",
+            "#11  agent    assistant   Here are the three requested facts for **Plage de Saint-Jorioz**, from [loisi..."
+          ],
+          "interactions": [
+            {
+              "id": 1,
+              "entryIndices": [
+                0
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#1   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 2964,
+              "startMs": 593,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 2,
+              "entryIndices": [
+                1
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#2   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 10,
+              "startMs": 3557,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 3,
+              "entryIndices": [
+                2
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#3   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 2,
+              "startMs": 3567,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 4,
+              "entryIndices": [
+                3,
+                4
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#4   agent    assistant   I'll research this on loisirs74.fr. Let me load the web tools first.",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 830,
+              "startMs": 3569,
+              "contextBytes": 68,
+              "content": "[ASSISTANT] (no text)\n[ASSISTANT] I'll research this on loisirs74.fr. Let me load the web tools first."
+            },
+            {
+              "id": 5,
+              "entryIndices": [
+                5,
+                6
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 2) -> ok, 53B, 7ms",
+              "toolName": "ToolSearch",
+              "hasError": false,
+              "durationMs": 7,
+              "startMs": 4399,
+              "contextBytes": 53,
+              "content": "[TOOL_USE] ToolSearch\n  Input: query: select:WebFetch,WebSearch, max_results: 2\n  Full input: {\"query\":\"select:WebFetch,WebSearch\",\"max_results\":2}\n[TOOL_RESULT]"
+            },
+            {
+              "id": 6,
+              "entryIndices": [
+                7
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#6   agent    assistant   (thinking)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1508,
+              "startMs": 5893,
+              "contextBytes": 0,
+              "content": "[ASSISTANT] (no text)"
+            },
+            {
+              "id": 7,
+              "entryIndices": [
+                8,
+                10
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#7   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: Find a link or page ab...) -> ok, 876B, 3.3s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 3304,
+              "startMs": 7401,
+              "contextBytes": 876,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr, prompt: Find a link or page about \"Plage de Saint-Jorioz\". Return the URL of its detail page if present, and...\n  Full input: {\"url\":\"https://loisirs74.fr\",\"prompt\":\"Find a link or page about \\\"Plage de Saint-Jorioz\\\". Return the URL of its detail page if present, and any navigation/search info.\"}\n[TOOL_RESULT]\n  Result: # Plage de Saint-Jorioz - Details\n\n**Detail Page URL:** https://loisirs74.fr/plage-de-saint-jorioz\n\n**Navigation Info:**\n- Located under the \"Nature & grand air\" section\n- Found in the \"Lacs & plages\" category\n- Accessible via the main category link: https://loisirs74.fr/lacs-plages/\n\n**Description:** The site describes it as \"La seule grande plage de sable naturel du lac d'Annecy, aménagée avec pelouses ombragées, plongeoir et équipements accessibles\" (the only large natural sand beach on Lake Annecy, equipped with shaded lawns, diving board, and accessible facilities).\n\n**Additional Links on Detail Page:**\n- Google Maps directions available\n- Official site link to Saint-Jorioz municipality"
+            },
+            {
+              "id": 8,
+              "entryIndices": [
+                9,
+                11
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#8   service  tool_use    WebSearch(query: Plage de Saint-Jorioz loisirs74.fr) -> ok, 3.5KB, 14.1s",
+              "toolName": "WebSearch",
+              "hasError": false,
+              "durationMs": 14091,
+              "startMs": 7995,
+              "contextBytes": 3572,
+              "content": "[TOOL_USE] WebSearch\n  Input: query: Plage de Saint-Jorioz loisirs74.fr\n  Full input: {\"query\":\"Plage de Saint-Jorioz loisirs74.fr\",\"allowed_domains\":[\"loisirs74.fr\"]}\n[TOOL_RESULT]\n  Result: Web search results for query: \"Plage de Saint-Jorioz loisirs74.fr\"\n\nLinks: [{\"title\":\"Plage de Saint-Jorioz · Tarife und Öffnungszeiten (74)\",\"url\":\"https://loisirs74.fr/de/plage-de-saint-jorioz\"},{\"title\":\"Plage de Talloires · GRATUIT · 2026 - Loisirs 74\",\"url\":\"https://loisirs74.fr/nl/plage-de-talloires\"},{\"title\":\"Yaute Canyon — Canyoning Aravis & Annecy | Loisirs 74\",\"url\":\"https://loisirs74.fr/canyoning-yaute-canyon\"},{\"title\":\"Compagnie des Bateaux du Lac d'Annecy · 2026 - Loisirs 74\",\"url\":\"https://loisirs74.fr/nl/croisiere-bateaux-annecy-annecy\"},{\"title\":\"Bam Freesports Annecy — Trampoline park & freesports | Loisirs 74\",\"url\":\"https://loisirs74.fr/it/trampoline-bam-freesports-annecy\"},{\"title\":\"Passy Accro Lac: tarieven, tijden en reservering (Passy)\",\"url\":\"https://loisirs74.fr/nl/passy-accro-lac\"},{\"title\":\"Aquariaz · Tarifs et horaires officiels (Avoriaz) - Loisirs 74\",\"url\":\"https://loisirs74.fr/nl/aquariaz\"},{\"title\":\"Salle de bloc d'escalade Annecy - Ablok Argonay - Loisirs 74\",\"url\":\"https://loisirs74.fr/nl/escalade-ablok-argonay\"},{\"title\":\"Plan d'eau Biotope de Combloux — Baignade biologique en Haute-Savoie | Loisirs 74\",\"url\":\"https://loisirs74.fr/baignade-bioto..."
+            },
+            {
+              "id": 9,
+              "entryIndices": [
+                12,
+                13
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#9   agent    assistant   Let me fetch the detail page directly to confirm the three specific facts.",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1838,
+              "startMs": 23459,
+              "contextBytes": 74,
+              "content": "[ASSISTANT] (no text)\n[ASSISTANT] Let me fetch the detail page directly to confirm the three specific facts."
+            },
+            {
+              "id": 10,
+              "entryIndices": [
+                14,
+                15
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#10  service  tool_use    WebFetch(url: https://loisirs74.fr/plage-de-saint-jorioz, prompt: ...) -> ok, 1017B, 4.1s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 4082,
+              "startMs": 25297,
+              "contextBytes": 1017,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr/plage-de-saint-jorioz, prompt: Extract exactly three facts: (1) entry price / tarif, (2) opening hours / horaires, (3) wheelchair a...\n  Full input: {\"url\":\"https://loisirs74.fr/plage-de-saint-jorioz\",\"prompt\":\"Extract exactly three facts: (1) entry price / tarif, (2) opening hours / horaires, (3) wheelchair accessibility / accessibilité PMR fauteuil roulant. Quote the figures and details precisely.\"}\n[TOOL_RESULT]\n  Result: # Three Key Facts: Plage de Saint-Jorioz\n\n**(1) Entry Price / Tarif:**\n\"Adulte (18 ans et +) : 2,60 € · Enfant 10–17 ans : 1 € · Moins de 10 ans : gratuit\"\nThe beach is free from September through June.\n\n**(2) Opening Hours / Horaires:**\n\"Accès libre et gratuit du 1er janvier au 30 juin et du 1er septembre au 31 décembre. Accès payant et surveillance MNS du 1er juillet au 31 août de 9h30 à 17h30.\"\nDaily cleaning occurs from 7–9:30 AM during summer.\n\n**(3) Wheelchair Accessibility / Accessibilité:**\n\"Rampe d'accès à l'eau, tapis avec main courante et deux fauteuils amphibies (tiralo + hippocampe) gratuits en juillet-août\"\nThe beach holds the \"Tourisme et Handicap\" label and offers level entry, adapted restrooms, and reserved parking."
+            },
+            {
+              "id": 11,
+              "entryIndices": [
+                16
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#11  agent    assistant   Here are the three requested facts for **Plage de Saint-Jorioz**, from [loisi...",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": null,
+              "startMs": 35130,
+              "contextBytes": 876,
+              "content": "[ASSISTANT] Here are the three requested facts for **Plage de Saint-Jorioz**, from [loisirs74.fr](https://loisirs74.fr/plage-de-saint-jorioz):\n\n- **Entry price:** Adult (18+) €2.60 · Child 10–17 €1 · Under 10 free. Access is free off-season (September–June); paid only in July–August.\n- **Opening hours:** Free open access 1 Jan–30 Jun and 1 Sep–31 Dec. Paid access with lifeguards (MNS) 1 Jul–31 Aug, 9:30 AM–5:30 PM (closed 7:00–9:30 AM for cleaning in summer).\n- **Wheelchair accessibility:** \"Tourisme et Handicap\" label — water-access ramp, matting with handrail, adapted restrooms, reserved parking, plus two amphibious wheelchairs (Tiralo + Hippocampe) provided free in July–August.\n\nI only browsed and read the pages; no forms were submitted or bookings made.\n\nSources:\n- [Plage de Saint-Jorioz — Loisirs 74](https://loisirs74.fr/plage-de-saint-jorioz)"
+            }
+          ],
+          "stats": {
+            "totalInteractions": 11,
+            "byCategory": {
+              "environment": 0,
+              "service": 3,
+              "agent": 8
+            },
+            "totalErrors": 0,
+            "totalDurationMs": 28636,
+            "wallClockMs": 35130,
+            "startupMs": 593,
+            "shutdownMs": 37
+          }
+        },
+        "judging": {
+          "agent": "claude-code"
+        }
+      },
+      "prompt": "Find the entry price, opening hours and wheelchair accessibility of Plage de Saint-Jorioz using https://loisirs74.fr. Return them as three labeled facts. This is a read-only research task: browse and read pages only, never submit forms or make bookings.",
+      "judge": [
+        {
+          "check": "Found the entry price 2,60 € (adult, paid season)",
+          "weight": 0.3
+        },
+        {
+          "check": "Found the wheelchair accessibility status (accessible)",
+          "weight": 0.2
+        },
+        {
+          "check": "Used loisirs74.fr pages as the source, not general knowledge",
+          "weight": 0.3
+        },
+        {
+          "check": "Reached the answer in few steps without dead ends or 404s",
+          "weight": 0.2
+        }
+      ],
+      "agentConfig": {
+        "agent": "claude-code"
+      },
+      "resolvedConfig": {
+        "limits": {
+          "time_minutes": 15
+        }
+      }
+    },
+    {
+      "scenarioKey": "multilingual-cs",
+      "scenarioName": "Multilingual — Czech tree navigation",
+      "agentName": "claude-code",
+      "durationMs": 16449,
+      "exitCode": 0,
+      "failed": false,
+      "file": "scenarios/multilingual-cs/claude-code.json",
+      "tokenUsage": {
+        "input": 2808,
+        "output": 560,
+        "cacheReadInput": 45898
+      },
+      "totalCostUsd": 0.11251825,
+      "score": {
+        "axisScore": 98,
+        "goalAchievement": {
+          "score": 100,
+          "criteria": [
+            {
+              "check": "Navigated the /cs/ language tree of loisirs74.fr",
+              "weight": 0.3,
+              "score": 10,
+              "rationale": "Agent fetched https://loisirs74.fr/cs/ — the Czech (/cs/) language tree — and extracted the beach entry from it. Independently confirmed the page returns this content."
+            },
+            {
+              "check": "Reported the correct price (2,60 €) and commune (Saint-Jorioz)",
+              "weight": 0.4,
+              "score": 10,
+              "rationale": "Reported price 2,60 € (paid in July/August, free rest of year) and commune Saint-Jorioz. Both match my independent WebFetch verification."
+            },
+            {
+              "check": "Answered in Czech",
+              "weight": 0.3,
+              "score": 10,
+              "rationale": "Final answer is fully in Czech (Obec, Vstupné, placené v červenci a srpnu, zbytek roku zdarma), and correctly noted read-only compliance."
+            }
+          ]
+        },
+        "environment": {
+          "score": 100,
+          "interactionCount": 0,
+          "auditedCount": 0,
+          "dimensions": {
+            "success": 100,
+            "speed": 100,
+            "weight": 100,
+            "relevance": 100,
+            "necessity": 80
+          },
+          "audits": [],
+          "necessity": {
+            "category": "environment",
+            "score": 0.8,
+            "unnecessaryIds": [],
+            "rationale": "default"
+          }
+        },
+        "service": {
+          "score": 95,
+          "interactionCount": 1,
+          "auditedCount": 1,
+          "dimensions": {
+            "success": 100,
+            "speed": 90,
+            "weight": 100,
+            "relevance": 100,
+            "necessity": 100
+          },
+          "audits": [
+            {
+              "id": 6,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch to https://loisirs74.fr/cs/ completed successfully in 4.5s, returning a well-formed 941B response with structured data (municipality, entrance fee, related links, description). No timeouts, 5xx errors, auth/rate-limit failures, or malformed payloads."
+            }
+          ],
+          "necessity": {
+            "category": "service",
+            "score": 1,
+            "unnecessaryIds": [],
+            "rationale": "default"
+          }
+        },
+        "agent": {
+          "score": 96,
+          "interactionCount": 7,
+          "auditedCount": 7,
+          "dimensions": {
+            "success": 100,
+            "speed": 97,
+            "weight": 100,
+            "relevance": 100,
+            "necessity": 100
+          },
+          "audits": [
+            {
+              "id": 1,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System initialization message — required infrastructure setup."
+            },
+            {
+              "id": 2,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System initialization message — required infrastructure setup."
+            },
+            {
+              "id": 3,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System initialization message — required infrastructure setup."
+            },
+            {
+              "id": 4,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Assistant thinking/planning step preceding the tool discovery — focused and productive lead-in to the correct approach."
+            },
+            {
+              "id": 5,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Targeted ToolSearch selecting WebFetch/WebSearch by name — minimal, necessary tool discovery for a web-read task; result directly used."
+            },
+            {
+              "id": 6,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Single WebFetch to the exact required URL with a well-scoped prompt covering fee + commune + links. Read-only, honoring constraints. Output fully answered the task."
+            },
+            {
+              "id": 7,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Final Czech answer synthesizing the fetch result: commune (Saint-Jorioz), fee (2,60 € July/Aug, free otherwise), plus a read-only confirmation. Accurate, on-language, and complete."
+            }
+          ],
+          "necessity": {
+            "category": "agent",
+            "score": 1,
+            "unnecessaryIds": [],
+            "rationale": "Every step was necessary: system init, a brief plan, one targeted tool-discovery call, one WebFetch to the required URL, and the final answer. No redundant or wasted operations."
+          }
+        },
+        "weights": {
+          "goal_achievement": 0.4,
+          "environment": 0.2,
+          "service": 0.2,
+          "agent": 0.2
+        },
+        "sparseIndex": {
+          "lines": [
+            "#1   agent    system      (no content)",
+            "#2   agent    system      (no content)",
+            "#3   agent    system      (no content)",
+            "#4   agent    assistant   (thinking)",
+            "#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 7ms",
+            "#6   service  tool_use    WebFetch(url: https://loisirs74.fr/cs/, prompt: Find the \"Plage de...) -> ok, 941B, 4.5s",
+            "#7   agent    assistant   Na základě stránky https://loisirs74.fr/cs/: ## Plage de Saint-Jorioz - **Obe..."
+          ],
+          "interactions": [
+            {
+              "id": 1,
+              "entryIndices": [
+                0
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#1   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 2880,
+              "startMs": 608,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 2,
+              "entryIndices": [
+                1
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#2   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 8,
+              "startMs": 3488,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 3,
+              "entryIndices": [
+                2
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#3   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 2,
+              "startMs": 3496,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 4,
+              "entryIndices": [
+                3
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#4   agent    assistant   (thinking)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 500,
+              "startMs": 3498,
+              "contextBytes": 0,
+              "content": "[ASSISTANT] (no text)"
+            },
+            {
+              "id": 5,
+              "entryIndices": [
+                4,
+                5
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 7ms",
+              "toolName": "ToolSearch",
+              "hasError": false,
+              "durationMs": 7,
+              "startMs": 3998,
+              "contextBytes": 53,
+              "content": "[TOOL_USE] ToolSearch\n  Input: query: select:WebFetch,WebSearch, max_results: 5\n  Full input: {\"query\":\"select:WebFetch,WebSearch\",\"max_results\":5}\n[TOOL_RESULT]"
+            },
+            {
+              "id": 6,
+              "entryIndices": [
+                6,
+                7
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#6   service  tool_use    WebFetch(url: https://loisirs74.fr/cs/, prompt: Find the \"Plage de...) -> ok, 941B, 4.5s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 4502,
+              "startMs": 7956,
+              "contextBytes": 941,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr/cs/, prompt: Find the \"Plage de Saint-Jorioz\" (Saint-Jorioz beach). What is the entrance fee (vstupné / tarif / p...\n  Full input: {\"url\":\"https://loisirs74.fr/cs/\",\"prompt\":\"Find the \\\"Plage de Saint-Jorioz\\\" (Saint-Jorioz beach). What is the entrance fee (vstupné / tarif / prix) and which commune (municipality) is it in? Also list any links related to Saint-Jorioz beach.\"}\n[TOOL_RESULT]\n  Result: # Plage de Saint-Jorioz\n\n**Municipality:** Saint-Jorioz\n\n**Entrance Fee:** The beach has variable pricing. According to the page: \"Placený vstup v červenci a srpnu (2,60 €), zbytek roku zdarma\" — meaning paid entry during July and August at €2.60, with free access the rest of the year.\n\n**Related Links:**\n- Route/Directions: Google Maps link to the beach\n- Official website: https://saint-jorioz.fr/fr/rb/1110735/decouvrir-la-plage\n\n**Additional Details:** The page describes it as \"Velká přírodní písčitá pláž na Lac d'Annecy s výhledem na Dents de Lanfon\" (a large natural sandy beach on Lake Annecy with views of the Dents de Lanfon) and notes it holds a Blue Flag award."
+            },
+            {
+              "id": 7,
+              "entryIndices": [
+                8,
+                9
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#7   agent    assistant   Na základě stránky https://loisirs74.fr/cs/: ## Plage de Saint-Jorioz - **Obe...",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": null,
+              "startMs": 13920,
+              "contextBytes": 416,
+              "content": "[ASSISTANT] (no text)\n[ASSISTANT] Na základě stránky https://loisirs74.fr/cs/:\n\n## Plage de Saint-Jorioz\n\n- **Obec (commune):** Saint-Jorioz (u Lac d'Annecy)\n- **Vstupné:** placené v červenci a srpnu (**2,60 €**), zbytek roku **zdarma**\n\nJde o velkou přírodní písčitou pláž na Lac d'Annecy s výhledem na Dents de Lanfon, oceněnou modrou vlajkou (Blue Flag).\n\n*(Pouze čtení — žádné formuláře ani rezervace jsem neodesílal.)*"
+            }
+          ],
+          "stats": {
+            "totalInteractions": 7,
+            "byCategory": {
+              "environment": 0,
+              "service": 1,
+              "agent": 6
+            },
+            "totalErrors": 0,
+            "totalDurationMs": 7899,
+            "wallClockMs": 13920,
+            "startupMs": 608,
+            "shutdownMs": 48
+          }
+        },
+        "judging": {
+          "agent": "claude-code"
+        }
+      },
+      "prompt": "V češtině: pomocí https://loisirs74.fr/cs/ najdi vstupné a obec (commune) pro Plage de Saint-Jorioz a odpověz česky. Pouze čtení: nikdy neodesílej formuláře ani rezervace.",
+      "judge": [
+        {
+          "check": "Navigated the /cs/ language tree of loisirs74.fr",
+          "weight": 0.3
+        },
+        {
+          "check": "Reported the correct price (2,60 €) and commune (Saint-Jorioz)",
+          "weight": 0.4
+        },
+        {
+          "check": "Answered in Czech",
+          "weight": 0.3
+        }
+      ],
+      "agentConfig": {
+        "agent": "claude-code"
+      },
+      "resolvedConfig": {
+        "limits": {
+          "time_minutes": 15
+        }
+      }
+    },
+    {
+      "scenarioKey": "planning",
+      "scenarioName": "Trip planning — rainy family afternoon in Annecy",
+      "agentName": "claude-code",
+      "durationMs": 39198,
+      "exitCode": 0,
+      "failed": false,
+      "file": "scenarios/planning/claude-code.json",
+      "tokenUsage": {
+        "input": 2810,
+        "output": 2120,
+        "cacheReadInput": 65252
+      },
+      "totalCostUsd": 0.20614175000000004,
+      "score": {
+        "axisScore": 96,
+        "goalAchievement": {
+          "score": 94,
+          "criteria": [
+            {
+              "check": "Named 3 real venues that exist as pages on loisirs74.fr",
+              "weight": 0.4,
+              "score": 10,
+              "rationale": "All three named venues — Le Bowl Bowling Annecy, Patinoire Jean Régis, and Musée-Château d'Annecy — exist as real pages on loisirs74.fr, confirmed by independent fetches. All are genuinely indoor and in central Annecy."
+            },
+            {
+              "check": "Prices quoted match what the venue pages state",
+              "weight": 0.3,
+              "score": 10,
+              "rationale": "Every quoted price matches the venue pages exactly: bowling €8/€6 per game; ice rink €4.60 adult / €3.00 child entry + €3.40 skate rental; château €6.50–€7.00 adult, €3.50–€4.00 reduced, €8–€9 combined, under-12 free. All verified independently."
+            },
+            {
+              "check": "Used the site's hub/category navigation to discover venues",
+              "weight": 0.3,
+              "score": 8,
+              "rationale": "The agent fetched the loisirs74.fr homepage/hub, which returned venues organized by the site's categories (Sport & jeux, Sorties & détente, Patrimoine & culture, etc.), and used that categorized listing to select venues. It leveraged the site's navigation structure to discover venues rather than drilling into individual category sub-hubs, so discovery was slightly shallow but effective and appropriate."
+            }
+          ]
+        },
+        "environment": {
+          "score": 100,
+          "interactionCount": 0,
+          "auditedCount": 0,
+          "dimensions": {
+            "success": 100,
+            "speed": 100,
+            "weight": 100,
+            "relevance": 100,
+            "necessity": 80
+          },
+          "audits": [],
+          "necessity": {
+            "category": "environment",
+            "score": 0.8,
+            "unnecessaryIds": [],
+            "rationale": "default"
+          }
+        },
+        "service": {
+          "score": 95,
+          "interactionCount": 4,
+          "auditedCount": 4,
+          "dimensions": {
+            "success": 100,
+            "speed": 90,
+            "weight": 100,
+            "relevance": 100,
+            "necessity": 100
+          },
+          "audits": [
+            {
+              "id": 7,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch to loisirs74.fr homepage completed in 5.0s and returned a well-formed markdown table of indoor venues with names, categories, and links. No errors."
+            },
+            {
+              "id": 12,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch to the bowling venue page completed in 3.0s and returned well-formed structured data including address, hours, and prices. No errors."
+            },
+            {
+              "id": 13,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch to the patinoire page completed in 3.2s and returned well-formed structured data including address, hours, and prices. No errors."
+            },
+            {
+              "id": 14,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch to the musée-château page completed in 3.4s and returned well-formed structured data including address, hours, and tiered prices. No errors."
+            }
+          ],
+          "necessity": {
+            "category": "service",
+            "score": 1,
+            "unnecessaryIds": [],
+            "rationale": "default"
+          }
+        },
+        "agent": {
+          "score": 96,
+          "interactionCount": 17,
+          "auditedCount": 17,
+          "dimensions": {
+            "success": 100,
+            "speed": 97,
+            "weight": 100,
+            "relevance": 100,
+            "necessity": 100
+          },
+          "audits": [
+            {
+              "id": 1,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System init message, required infrastructure."
+            },
+            {
+              "id": 2,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System init message, required infrastructure."
+            },
+            {
+              "id": 3,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System init message, required infrastructure."
+            },
+            {
+              "id": 4,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Initial planning/thinking before acting; productive."
+            },
+            {
+              "id": 5,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Tool discovery for WebFetch/WebSearch — necessary and minimal (max_results 2, direct select query)."
+            },
+            {
+              "id": 6,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Thinking to plan the first fetch; focused."
+            },
+            {
+              "id": 7,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch of homepage with a well-scoped prompt returned a clean list of indoor Annecy venues with links — directly enabled venue selection."
+            },
+            {
+              "id": 8,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System message, infrastructure."
+            },
+            {
+              "id": 9,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System message, infrastructure."
+            },
+            {
+              "id": 10,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System message, infrastructure."
+            },
+            {
+              "id": 11,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Thinking to select 3 venues and plan detail fetches; focused."
+            },
+            {
+              "id": 12,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch of bowling page with a price-focused prompt returned exact tarifs, hours, address — all used in final answer."
+            },
+            {
+              "id": 13,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch of ice rink page returned entry/rental/child prices — all used in final answer."
+            },
+            {
+              "id": 14,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch of museum page returned adult/reduced/free admission prices — all used in final answer."
+            },
+            {
+              "id": 15,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System message, infrastructure."
+            },
+            {
+              "id": 16,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System message, infrastructure."
+            },
+            {
+              "id": 17,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Final synthesis: 3 indoor venues with quoted prices, sourced from loisirs74.fr, plus a budget table and read-only compliance note. Fully satisfies the task."
+            }
+          ],
+          "necessity": {
+            "category": "agent",
+            "score": 1,
+            "unnecessaryIds": [],
+            "rationale": "Every interaction was necessary: one tool-discovery call, one homepage survey to identify candidates, and exactly three detail fetches for the three chosen venues. No redundant or wasted calls; read-only constraint respected."
+          }
+        },
+        "weights": {
+          "goal_achievement": 0.4,
+          "environment": 0.2,
+          "service": 0.2,
+          "agent": 0.2
+        },
+        "sparseIndex": {
+          "lines": [
+            "#1   agent    system      (no content)",
+            "#2   agent    system      (no content)",
+            "#3   agent    system      (no content)",
+            "#4   agent    assistant   (thinking)",
+            "#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 2) -> ok, 53B, 8ms",
+            "#6   agent    assistant   (thinking)",
+            "#7   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List all indoor activi...) -> ok, 1.6KB, 5.0s",
+            "#8   agent    system      (no content)",
+            "#9   agent    system      (no content)",
+            "#10  agent    system      (no content)",
+            "#11  agent    assistant   (thinking)",
+            "#12  service  tool_use    WebFetch(url: https://loisirs74.fr/bowling-le-bowl-annecy, prompt:...) -> ok, 866B, 3.0s",
+            "#13  service  tool_use    WebFetch(url: https://loisirs74.fr/patinoire-jean-regis-annecy, pr...) -> ok, 880B, 3.2s",
+            "#14  service  tool_use    WebFetch(url: https://loisirs74.fr/musee-chateau-annecy, prompt: G...) -> ok, 872B, 3.4s",
+            "#15  agent    system      (no content)",
+            "#16  agent    system      (no content)",
+            "#17  agent    assistant   Here's a rainy-afternoon plan for the family, all sourced from **loisirs74.fr..."
+          ],
+          "interactions": [
+            {
+              "id": 1,
+              "entryIndices": [
+                0
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#1   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 2689,
+              "startMs": 715,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 2,
+              "entryIndices": [
+                1
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#2   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 519,
+              "startMs": 3404,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 3,
+              "entryIndices": [
+                2
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#3   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 2,
+              "startMs": 3923,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 4,
+              "entryIndices": [
+                3
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#4   agent    assistant   (thinking)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 267,
+              "startMs": 3925,
+              "contextBytes": 0,
+              "content": "[ASSISTANT] (no text)"
+            },
+            {
+              "id": 5,
+              "entryIndices": [
+                4,
+                5
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 2) -> ok, 53B, 8ms",
+              "toolName": "ToolSearch",
+              "hasError": false,
+              "durationMs": 8,
+              "startMs": 4192,
+              "contextBytes": 53,
+              "content": "[TOOL_USE] ToolSearch\n  Input: query: select:WebFetch,WebSearch, max_results: 2\n  Full input: {\"query\":\"select:WebFetch,WebSearch\",\"max_results\":2}\n[TOOL_RESULT]"
+            },
+            {
+              "id": 6,
+              "entryIndices": [
+                6
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#6   agent    assistant   (thinking)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1180,
+              "startMs": 5695,
+              "contextBytes": 0,
+              "content": "[ASSISTANT] (no text)"
+            },
+            {
+              "id": 7,
+              "entryIndices": [
+                7,
+                8
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#7   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List all indoor activi...) -> ok, 1.6KB, 5.0s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 4984,
+              "startMs": 6875,
+              "contextBytes": 1620,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr, prompt: List all indoor activities/venues (activités couvertes / intérieur) listed, especially those in or n...\n  Full input: {\"url\":\"https://loisirs74.fr\",\"prompt\":\"List all indoor activities/venues (activités couvertes / intérieur) listed, especially those in or near Annecy. Give names, categories, and any links (URLs).\"}\n[TOOL_RESULT]\n  Result: # Indoor Activities/Venues in Haute-Savoie (Annecy Area)\n\n## Annecy-Based Indoor Venues\n\n| Name | Category | Link |\n|------|----------|------|\n| Le Bowl Bowling Annecy | Sport & jeux | https://loisirs74.fr/bowling-le-bowl-annecy |\n| Patinoire Jean Régis | Sport & jeux | https://loisirs74.fr/patinoire-jean-regis-annecy |\n| Atome Climbing | Sport & jeux | https://loisirs74.fr/escalade-atome-annecy |\n| Climb Up Annecy | Sport & jeux | https://loisirs74.fr/escalade-climb-up-annecy |\n| Casino Impérial Palace Annecy | Sorties & détente | https://loisirs74.fr/casino-imperial-palace-annecy |\n| Pathé Annecy | Sorties & détente | https://loisirs74.fr/cinema-pathe-annecy |\n| Musée-Château d'Annecy | Patrimoine & culture | https://loisirs74.fr/musee-chateau-annecy |\n\n## Other Indoor Venues (Nearby)\n\n| Name | Location | Category | Link |\n|------|----------|----------|------|\n| Aquariaz | Morzine | Baignade & nautisme | https://loisirs74.fr/aquariaz |\n| Centre Aquatique Château Bleu | Annemasse | Baignade & nautisme | https://loisirs74.fr/aquaparc-chateau-bleu-annemasse |\n| Centre Aquatique Sallanches | Sallanches | Baignade & nautisme | https://loisirs74.fr/centre-aquatique-sallanches-mont-blan..."
+            },
+            {
+              "id": 8,
+              "entryIndices": [
+                9
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#8   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1503,
+              "startMs": 14118,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 9,
+              "entryIndices": [
+                10
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#9   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 0,
+              "startMs": 15621,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 10,
+              "entryIndices": [
+                11
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#10  agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 0,
+              "startMs": 15621,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 11,
+              "entryIndices": [
+                12
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#11  agent    assistant   (thinking)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1531,
+              "startMs": 15621,
+              "contextBytes": 0,
+              "content": "[ASSISTANT] (no text)"
+            },
+            {
+              "id": 12,
+              "entryIndices": [
+                13,
+                16
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#12  service  tool_use    WebFetch(url: https://loisirs74.fr/bowling-le-bowl-annecy, prompt:...) -> ok, 866B, 3.0s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 2986,
+              "startMs": 17152,
+              "contextBytes": 866,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr/bowling-le-bowl-annecy, prompt: Give the venue name, location/address, opening hours, and all prices (tarifs) including any per-game...\n  Full input: {\"url\":\"https://loisirs74.fr/bowling-le-bowl-annecy\",\"prompt\":\"Give the venue name, location/address, opening hours, and all prices (tarifs) including any per-game, per-person, family, or child rates. Quote exact prices in euros.\"}\n[TOOL_RESULT]\n  Result: # Le Bowl Bowling Annecy\n\n**Venue Name:** Le Bowl Bowling Annecy\n\n**Location/Address:** \"9 boulevard du Fier, 74000 Annecy\"\n\n**Opening Hours:** \n- Monday-Thursday: 2 PM – 1 AM\n- Friday-Saturday: 2 PM – 4 AM\n- Sunday: 2 PM – midnight\n\n**Prices (2026):**\n- Adult: \"8 € la partie\" (per game)\n- Child: 6 € per game\n- Family packages available for evenings\n\nThe venue is described as a nighttime leisure complex combining 16 bowling lanes with an integrated restaurant and nightclub (open Friday-Saturday, 11 PM–4 AM). Free parking is available on-site, and the facility is partially accessible for people with reduced mobility."
+            },
+            {
+              "id": 13,
+              "entryIndices": [
+                14,
+                17
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#13  service  tool_use    WebFetch(url: https://loisirs74.fr/patinoire-jean-regis-annecy, pr...) -> ok, 880B, 3.2s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 3186,
+              "startMs": 18629,
+              "contextBytes": 880,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr/patinoire-jean-regis-annecy, prompt: Give the venue name, location/address, opening hours, and all prices (tarifs) including entry, skate...\n  Full input: {\"url\":\"https://loisirs74.fr/patinoire-jean-regis-annecy\",\"prompt\":\"Give the venue name, location/address, opening hours, and all prices (tarifs) including entry, skate rental, child/adult/family rates. Quote exact prices in euros.\"}\n[TOOL_RESULT]\n  Result: # Patinoire Jean Régis\n\n**Venue Name:** Patinoire Jean Régis\n\n**Location/Address:** 27 rue du Stade, 74000 Annecy (near Parc des Sports)\n\n**Opening Hours:** \n- Wednesday, Saturday, Sunday: 14h-18h\n- Friday evening: 20h-23h (disco night)\n- Daily during school holidays\n\n**Prices (2026):**\n- Adult entry: €4.60\n- Skate rental: €3.40\n- Child entry: €3.00\n- Session duration: 2 hours\n\nThe facility is described as a \"patinoire couverte de 58 × 28 m\" (covered ice rink 58 × 28 meters) managed by the city of Annecy, offering public sessions, Friday disco evenings, and courses in figure skating and hockey. Seasonal passes are also available."
+            },
+            {
+              "id": 14,
+              "entryIndices": [
+                15,
+                18
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#14  service  tool_use    WebFetch(url: https://loisirs74.fr/musee-chateau-annecy, prompt: G...) -> ok, 872B, 3.4s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 3394,
+              "startMs": 19431,
+              "contextBytes": 872,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr/musee-chateau-annecy, prompt: Give the venue name, location/address, opening hours, and all prices (tarifs) including adult, reduc...\n  Full input: {\"url\":\"https://loisirs74.fr/musee-chateau-annecy\",\"prompt\":\"Give the venue name, location/address, opening hours, and all prices (tarifs) including adult, reduced, child rates and any free admission info. Quote exact prices in euros.\"}\n[TOOL_RESULT]\n  Result: # Musée-Château d'Annecy\n\n**Venue Name:** Musée-Château d'Annecy\n\n**Location/Address:** 1 place du Château, 74000 Annecy\n\n**Opening Hours:**\n- June–September 2026: \"10h30-18h continu, fermé mardi\"\n- October–May 2026: \"10h-12h30 et 14h-17h30, fermé mardi et jours fériés\"\n- Last entry: 45 minutes before closing\n\n**Prices (2026):**\n- Adult: €6.50 (September–June) / €7.00 (July–August)\n- Reduced rate: €3.50–€4.00 (ages 12–25, students, job seekers)\n- Combined ticket (Château + Palais de l'Île): €8.00–€9.00\n- **Free admission:** Children under 12, teachers, first Sunday of each month October–May"
+            },
+            {
+              "id": 15,
+              "entryIndices": [
+                19
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#15  agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 633,
+              "startMs": 26371,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 16,
+              "entryIndices": [
+                20
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#16  agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 10,
+              "startMs": 27004,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 17,
+              "entryIndices": [
+                21,
+                22
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#17  agent    assistant   Here's a rainy-afternoon plan for the family, all sourced from **loisirs74.fr...",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": null,
+              "startMs": 27014,
+              "contextBytes": 2187,
+              "content": "[ASSISTANT] (no text)\n[ASSISTANT] Here's a rainy-afternoon plan for the family, all sourced from **loisirs74.fr** (read-only — no bookings made). All three venues are indoor and in central Annecy.\n\n## 🌧️ Rainy Afternoon in Annecy — 3 Indoor Venues\n\n### 1. Musée-Château d'Annecy — culture to start (early afternoon)\nA covered castle-museum, easy first stop while the rain is heaviest.\n- **Where:** 1 place du Château, 74000 Annecy\n- **Hours (summer, Jul–Aug):** 10h30–18h continuous · **closed Tuesdays**\n- **Prices:**\n  - Adult: **€7.00** (Jul–Aug; €6.50 rest of year)\n  - Reduced (12–25, students, job seekers): **€3.50–€4.00**\n  - **Children under 12: free**\n  - Combined ticket (Château + Palais de l'Île): **€8.00–€9.00**\n\n### 2. Patinoire Jean Régis — covered ice rink (mid-afternoon)\nA 58×28 m indoor rink, ~2-hour public sessions.\n- **Where:** 27 rue du Stade, 74000 Annecy\n- **Hours:** Wed/Sat/Sun 14h–18h (daily during school holidays; Fri 20h–23h disco)\n- **Prices:**\n  - Adult entry: **€4.60**\n  - Child entry: **€3.00**\n  - Skate rental: **€3.40** per person\n\n### 3. Le Bowl Bowling Annecy — finish with bowling (late afternoon)\n16 lanes with an on-site restaurant; free parking.\n- **Where:** 9 boulevard du Fier, 74000 Annecy\n- **Hours:** opens 14h daily (Mon–Thu to 1h; Fri–Sat to 4h; Sun to midnight)\n- **Prices:**\n  - Adult: **€8.00** per game\n  - Child: **€6.00** per game\n  - Family evening packages available\n\n## Sample budget — family of 4 (2 adults + 2 kids under 12)\n| Venue | Cost |\n|---|---|\n| Château (2 adults €7 + 2 kids free) | €14.00 |\n| Ice rink (2×€4.60 + 2×€3.00 entry, +4×€3.40 rental) | €28.80 |\n| Bowling (2×€8 + 2×€6, one game each) | €28.00 |\n| **Total** | **≈ €70.80** |\n\n**Notes:** Today (Sat 4 Jul) all three are open. The museum is **closed Tuesdays**, so avoid that day. Prices are as published on loisirs74.fr for 2026; confirm the ice-rink session times if you go outside school holidays (weekday afternoons may be limited). Want me to pull details on al\n... (truncated)"
+            }
+          ],
+          "stats": {
+            "totalInteractions": 17,
+            "byCategory": {
+              "environment": 0,
+              "service": 4,
+              "agent": 13
+            },
+            "totalErrors": 0,
+            "totalDurationMs": 22892,
+            "wallClockMs": 27014,
+            "startupMs": 715,
+            "shutdownMs": 51
+          }
+        },
+        "judging": {
+          "agent": "claude-code"
+        }
+      },
+      "prompt": "Using https://loisirs74.fr, plan a rainy afternoon in or near Annecy for a family: pick 3 indoor venues and quote their prices. This is a read-only research task: browse and read pages only, never submit forms or make bookings.",
+      "judge": [
+        {
+          "check": "Named 3 real venues that exist as pages on loisirs74.fr",
+          "weight": 0.4
+        },
+        {
+          "check": "Prices quoted match what the venue pages state",
+          "weight": 0.3
+        },
+        {
+          "check": "Used the site's hub/category navigation to discover venues",
+          "weight": 0.3
+        }
+      ],
+      "agentConfig": {
+        "agent": "claude-code"
+      },
+      "resolvedConfig": {
+        "limits": {
+          "time_minutes": 15
+        }
+      }
+    },
+    {
+      "scenarioKey": "structured-data",
+      "scenarioName": "Structured data — schema.org and GPS extraction",
+      "agentName": "claude-code",
+      "durationMs": 54887,
+      "exitCode": 0,
+      "failed": false,
+      "file": "scenarios/structured-data/claude-code.json",
+      "tokenUsage": {
+        "input": 2943,
+        "output": 2384,
+        "cacheReadInput": 115085
+      },
+      "totalCostUsd": 0.3959765,
+      "score": {
+        "axisScore": 58,
+        "goalAchievement": {
+          "score": 0,
+          "criteria": [
+            {
+              "check": "Identified the JSON-LD @type(s) present on the fiche",
+              "weight": 0.5,
+              "score": 0,
+              "rationale": "Failed to parse judge response"
+            },
+            {
+              "check": "Extracted GPS coordinates that match the page's JSON-LD geo data",
+              "weight": 0.5,
+              "score": 0,
+              "rationale": "Failed to parse judge response"
+            }
+          ]
+        },
+        "environment": {
+          "score": 100,
+          "interactionCount": 2,
+          "auditedCount": 2,
+          "dimensions": {
+            "success": 100,
+            "speed": 100,
+            "weight": 100,
+            "relevance": 100,
+            "necessity": 100
+          },
+          "audits": [
+            {
+              "id": 18,
+              "categories": [
+                "environment"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "curl completed with EXIT: 0, downloaded 92373 bytes to /tmp/fiche.html, and the grep confirmed 'ld+json' present. Shell executed cleanly with no errors."
+            },
+            {
+              "id": 20,
+              "categories": [
+                "environment"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "python3 heredoc ran to completion, parsed the file, and produced well-formed output (1 JSON-LD block extracted and printed). No exceptions, syntax errors, or non-zero exit."
+            }
+          ],
+          "necessity": {
+            "category": "environment",
+            "score": 1,
+            "unnecessaryIds": [],
+            "rationale": "default"
+          }
+        },
+        "service": {
+          "score": 94,
+          "interactionCount": 4,
+          "auditedCount": 4,
+          "dimensions": {
+            "success": 100,
+            "speed": 76,
+            "weight": 100,
+            "relevance": 100,
+            "necessity": 100
+          },
+          "audits": [
+            {
+              "id": 7,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.6,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebSearch completed and returned a well-formed results payload (links + summary, 3.4KB). No errors, timeouts, or rate limits. The domain wasn't indexed, but the service itself responded reliably."
+            },
+            {
+              "id": 8,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.6,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch to loisirs74.fr homepage completed successfully, returning a well-formed markdown list of fiche URLs (4.2KB). No service errors."
+            },
+            {
+              "id": 13,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch to the fiche page completed and returned a well-formed structured-data analysis (1.5KB). The service responded correctly; the fact that JSON-LD was stripped during markdown conversion is a tool-behavior/agent concern, not a service failure."
+            },
+            {
+              "id": 18,
+              "categories": [
+                "service"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "curl fetch completed with EXIT: 0, downloaded 92373 bytes, and grep confirmed 'ld+json' present. Clean, well-formed response from the service."
+            }
+          ],
+          "necessity": {
+            "category": "service",
+            "score": 1,
+            "unnecessaryIds": [],
+            "rationale": "default"
+          }
+        },
+        "agent": {
+          "score": 94,
+          "interactionCount": 21,
+          "auditedCount": 21,
+          "dimensions": {
+            "success": 100,
+            "speed": 93,
+            "weight": 100,
+            "relevance": 87,
+            "necessity": 95
+          },
+          "audits": [
+            {
+              "id": 1,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System init interaction, required infrastructure."
+            },
+            {
+              "id": 2,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System init interaction, required infrastructure."
+            },
+            {
+              "id": 3,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System init interaction, required infrastructure."
+            },
+            {
+              "id": 4,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Clear, concise planning statement to load web tools; focused and productive."
+            },
+            {
+              "id": 5,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Targeted ToolSearch selecting exactly WebFetch/WebSearch by name; necessary tool discovery, right-sized."
+            },
+            {
+              "id": 6,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Sound reasoning: needs a fiche URL first before extraction."
+            },
+            {
+              "id": 7,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.6,
+              "weight": 1,
+              "contextRelevance": 0.4,
+              "rationale": "WebSearch ran fine but returned no results from the target domain — output was largely irrelevant noise. The agent correctly pivoted to WebFetch instead. Marginally useful choice but low payoff."
+            },
+            {
+              "id": 8,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.6,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "WebFetch of homepage with focused prompt returned a clean list of fiche URLs; directly enabled selecting a page. Right-sized and highly relevant."
+            },
+            {
+              "id": 9,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System interaction."
+            },
+            {
+              "id": 10,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System interaction."
+            },
+            {
+              "id": 11,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System interaction."
+            },
+            {
+              "id": 12,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Focused plan to fetch a specific fiche and inspect schema.org data."
+            },
+            {
+              "id": 13,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 0.8,
+              "rationale": "WebFetch with a detailed, well-scoped schema.org prompt. Ran successfully but markdown conversion stripped the JSON-LD, so the result under-reported. Still useful — it surfaced map links and let the agent diagnose the stripping issue and pivot."
+            },
+            {
+              "id": 14,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System interaction."
+            },
+            {
+              "id": 15,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System interaction."
+            },
+            {
+              "id": 16,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "System interaction."
+            },
+            {
+              "id": 17,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Excellent self-correction: correctly diagnosed that WebFetch strips <script> tags and decided to fetch raw HTML via curl."
+            },
+            {
+              "id": 18,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Efficient curl to file plus wc and grep for 'ld+json' in one command — confirmed JSON-LD exists with minimal I/O. Read-only GET, well-scoped."
+            },
+            {
+              "id": 19,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 0.9,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Concise plan to extract the JSON-LD."
+            },
+            {
+              "id": 20,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Python regex extraction of JSON-LD blocks and microdata from local file — precisely targeted, surfaced the GeoCoordinates and all @types. Right-sized."
+            },
+            {
+              "id": 21,
+              "categories": [
+                "agent"
+              ],
+              "success": 1,
+              "speed": 1,
+              "weight": 1,
+              "contextRelevance": 1,
+              "rationale": "Thorough, accurate final report: schema types enumerated, GPS coordinates extracted verbatim, sanity-checked against geography, and confirmed read-only compliance."
+            }
+          ],
+          "necessity": {
+            "category": "agent",
+            "score": 0.95,
+            "unnecessaryIds": [
+              7
+            ],
+            "rationale": "Nearly every interaction was necessary and well-targeted. The WebSearch (#7) was the only marginal call — it returned nothing from the target domain and the agent got its URLs from WebFetch (#8) instead. It was a reasonable first attempt but ultimately unproductive. All other steps (tool discovery, homepage fetch, fiche fetch, curl, extraction) were required and efficient."
+          }
+        },
+        "weights": {
+          "goal_achievement": 0.4,
+          "environment": 0.2,
+          "service": 0.2,
+          "agent": 0.2
+        },
+        "sparseIndex": {
+          "lines": [
+            "#1   agent    system      (no content)",
+            "#2   agent    system      (no content)",
+            "#3   agent    system      (no content)",
+            "#4   agent    assistant   I'll start by loading the web tools I need.",
+            "#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 6ms",
+            "#6   agent    assistant   I need to find a place page (fiche) URL first. Let me search.",
+            "#7   service  tool_use    WebSearch(query: loisirs74.fr fiche lieu Haute-Savoie) -> ok, 3.4KB, 13.2s",
+            "#8   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List the URLs of indiv...) -> ok, 4.2KB, 14.4s",
+            "#9   agent    system      (no content)",
+            "#10  agent    system      (no content)",
+            "#11  agent    system      (no content)",
+            "#12  agent    assistant   Let me fetch a specific fiche and inspect its schema.org structured data.",
+            "#13  service  tool_use    WebFetch(url: https://loisirs74.fr/chateau-de-menthon-saint-bernar...) -> ok, 1.5KB, 4.1s",
+            "#14  agent    system      (no content)",
+            "#15  agent    system      (no content)",
+            "#16  agent    system      (no content)",
+            "#17  agent    assistant   WebFetch strips `<script>` tags during markdown conversion, so JSON-LD wouldn...",
+            "#18  env,servicetool_use    Bash(command: curl -sL --max-time 30 \"https://loisirs74.fr/cha...) -> ok, 251B, 199ms",
+            "#19  agent    assistant   The raw HTML has JSON-LD. Let me extract it.",
+            "#20  env      tool_use    Bash(command: cd /tmp; python3 - <<'EOF' import re, html data=...) -> ok, 6.2KB, 41ms",
+            "#21  agent    assistant   I fetched a fiche and inspected its raw HTML. Here's the report. ## Page fetc..."
+          ],
+          "interactions": [
+            {
+              "id": 1,
+              "entryIndices": [
+                0
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#1   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 3875,
+              "startMs": 635,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 2,
+              "entryIndices": [
+                1
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#2   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 532,
+              "startMs": 4510,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 3,
+              "entryIndices": [
+                2
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#3   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1,
+              "startMs": 5042,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 4,
+              "entryIndices": [
+                3,
+                4
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#4   agent    assistant   I'll start by loading the web tools I need.",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 521,
+              "startMs": 5043,
+              "contextBytes": 43,
+              "content": "[ASSISTANT] (no text)\n[ASSISTANT] I'll start by loading the web tools I need."
+            },
+            {
+              "id": 5,
+              "entryIndices": [
+                5,
+                6
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 6ms",
+              "toolName": "ToolSearch",
+              "hasError": false,
+              "durationMs": 6,
+              "startMs": 5564,
+              "contextBytes": 53,
+              "content": "[TOOL_USE] ToolSearch\n  Input: query: select:WebFetch,WebSearch, max_results: 5\n  Full input: {\"query\":\"select:WebFetch,WebSearch\",\"max_results\":5}\n[TOOL_RESULT]"
+            },
+            {
+              "id": 6,
+              "entryIndices": [
+                7,
+                8
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#6   agent    assistant   I need to find a place page (fiche) URL first. Let me search.",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1008,
+              "startMs": 7166,
+              "contextBytes": 61,
+              "content": "[ASSISTANT] (no text)\n[ASSISTANT] I need to find a place page (fiche) URL first. Let me search."
+            },
+            {
+              "id": 7,
+              "entryIndices": [
+                9,
+                11
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#7   service  tool_use    WebSearch(query: loisirs74.fr fiche lieu Haute-Savoie) -> ok, 3.4KB, 13.2s",
+              "toolName": "WebSearch",
+              "hasError": false,
+              "durationMs": 13203,
+              "startMs": 8174,
+              "contextBytes": 3519,
+              "content": "[TOOL_USE] WebSearch\n  Input: query: loisirs74.fr fiche lieu Haute-Savoie\n  Full input: {\"query\":\"loisirs74.fr fiche lieu Haute-Savoie\"}\n[TOOL_RESULT]\n  Result: Web search results for query: \"loisirs74.fr fiche lieu Haute-Savoie\"\n\nLinks: [{\"title\":\"Complexes et bases de loisirs en Haute-Savoie (74)\",\"url\":\"https://www.haute-savoie-tourisme.org/loisirs/complexes-de-loisirs\"},{\"title\":\"Haute-Savoie : Guide voyage, vacances et tourisme du département (74)\",\"url\":\"https://www.haute-savoie-tourisme.org/\"},{\"title\":\"Parc de loisirs attraction du 74 (Haute Savoie)\",\"url\":\"https://parc-de-loisir.annuairefrancais.fr/74-haute-savoie-dept/\"},{\"title\":\"Activités en Haute-Savoie (74) : les meilleures idées de loisirs\",\"url\":\"https://www.funbooker.com/fr/place/haute-savoie\"},{\"title\":\"Activités et loisirs en Haute-Savoie : à réserver ou à offrir\",\"url\":\"https://www.cap-adrenaline.com/haute-savoie-74.html\"},{\"title\":\"Découvrez les meilleures bases de loisirs en Haute-Savoie - Activités, horaires et infos pratiques\",\"url\":\"https://www.pagesjaunes.fr/annuaire/departement/haute-savoie-74/base-de-loisirs\"},{\"title\":\"Loisirs en Haute Savoie (74)\",\"url\":\"https://www.haute-savoie-tourisme.org/loisirs\"},{\"title\":\"Centre de loisirs Haute Savoie\",\"url\":\"https://www.allo-loisirs.fr/etablissements/centre-de-loisirs-en-Haute-Savoie-74.html\"},{\"title\":\"Centres de vaca..."
+            },
+            {
+              "id": 8,
+              "entryIndices": [
+                10,
+                12
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#8   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List the URLs of indiv...) -> ok, 4.2KB, 14.4s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 14367,
+              "startMs": 9072,
+              "contextBytes": 4299,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr, prompt: List the URLs of individual place pages (fiches) linked from this homepage. Return full URLs.\n  Full input: {\"url\":\"https://loisirs74.fr\",\"prompt\":\"List the URLs of individual place pages (fiches) linked from this homepage. Return full URLs.\"}\n[TOOL_RESULT]\n  Result: # Individual Place Page URLs from Loisirs74 Homepage\n\nHere are the URLs of individual place pages (fiches) linked from the homepage:\n\n## Lakes & Beaches\n- https://loisirs74.fr/plage-de-saint-jorioz\n- https://loisirs74.fr/plage-albigny\n- https://loisirs74.fr/plage-des-marquisats\n- https://loisirs74.fr/plage-de-la-pinede\n- https://loisirs74.fr/plage-de-saint-disdille\n- https://loisirs74.fr/plage-de-sciez-sur-leman\n\n## Recreation Areas & Domains\n- https://loisirs74.fr/domaine-du-tornet\n- https://loisirs74.fr/base-de-loisirs-des-ilettes\n- https://loisirs74.fr/base-de-loisirs-du-lac-des-iles\n- https://loisirs74.fr/domaine-de-guidou\n- https://loisirs74.fr/parc-des-dereches\n\n## Waterfalls & Gorges\n- https://loisirs74.fr/cascade-de-doran\n- https://loisirs74.fr/cirque-du-fer-a-cheval\n- https://loisirs74.fr/cascade-de-chedde\n- https://loisirs74.fr/cascade-du-dard\n- https://loisirs74.fr/cascade-de-l-arpenaz\n- https://loisirs74.fr/cascade-des-fours\n\n## Viewpoints & Mountain Passes\n- https://loisirs74.fr/mont-veyrier\n- https://loisirs74.fr/mont-saleve\n- https://loisirs74.fr/plateau-des-glieres\n- https://loisirs74.fr/aire-de-decollage-parapente-plaine-joux\n- https://loisirs74.fr/col-de-la-forcla..."
+            },
+            {
+              "id": 9,
+              "entryIndices": [
+                13
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#9   agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1508,
+              "startMs": 25851,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 10,
+              "entryIndices": [
+                14
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#10  agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1,
+              "startMs": 27359,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 11,
+              "entryIndices": [
+                15
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#11  agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1,
+              "startMs": 27360,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 12,
+              "entryIndices": [
+                16,
+                17
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#12  agent    assistant   Let me fetch a specific fiche and inspect its schema.org structured data.",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 2587,
+              "startMs": 27361,
+              "contextBytes": 73,
+              "content": "[ASSISTANT] (no text)\n[ASSISTANT] Let me fetch a specific fiche and inspect its schema.org structured data."
+            },
+            {
+              "id": 13,
+              "entryIndices": [
+                18,
+                19
+              ],
+              "categories": [
+                "service"
+              ],
+              "sparseLine": "#13  service  tool_use    WebFetch(url: https://loisirs74.fr/chateau-de-menthon-saint-bernar...) -> ok, 1.5KB, 4.1s",
+              "toolName": "WebFetch",
+              "hasError": false,
+              "durationMs": 4136,
+              "startMs": 29948,
+              "contextBytes": 1509,
+              "content": "[TOOL_USE] WebFetch\n  Input: url: https://loisirs74.fr/chateau-de-menthon-saint-bernard, prompt: Report all schema.org structured data on this page. Specifically: any JSON-LD (<script type=\"applica...\n  Full input: {\"url\":\"https://loisirs74.fr/chateau-de-menthon-saint-bernard\",\"prompt\":\"Report all schema.org structured data on this page. Specifically: any JSON-LD (<script type=\\\"application/ld+json\\\">) blocks, microdata (itemtype/itemprop attributes), or RDFa. List each schema.org @type used and the key properties. Also report any geographic/GPS coordinates present (latitude/longitude, geo, GeoCoordinates, or map links). Quote raw values verbatim.\"}\n[TOOL_RESULT]\n  Result: # Schema.org Structured Data Analysis\n\nBased on my review of the provided webpage content, **no JSON-LD blocks, microdata (itemtype/itemprop), or RDFa structured data are present** in the HTML markup supplied.\n\n## Geographic Coordinates\n\nThe page contains **no explicit latitude/longitude values** in standard geo formats. However, geographic references appear in:\n\n1. **Google Maps links** with query parameters:\n   - `query=Château%20de%20Menthon-Saint-Bernard%2C%20Menthon-Saint-Bernard%2C%20Haute-Savoie%2C%20France`\n   - `query_place_id=ChIJ03CfKyeSi0cR1y0C3G70XBw`\n\n2. **Textual location data**:\n   - \"Allée du Château, 74290 Menthon-Saint-Bernard\"\n   - \"Altitude: 593 m (château)\"\n   - \"200 m au-dessus du lac d'Annecy\"\n\n3. **Distance reference**: \"Depuis Annecy (~12 km, 20 min)\"\n\n## Conclusion\n\nWhile the page is rich in tourism information and includes map integration, **no formal schema.org markup (JSON-LD, microdata, or RDFa) is embedded in the source code provided**. Geographic data exists only as natural language text and Google Maps hyperlinks."
+            },
+            {
+              "id": 14,
+              "entryIndices": [
+                20
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#14  agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1507,
+              "startMs": 36215,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 15,
+              "entryIndices": [
+                21
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#15  agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1,
+              "startMs": 37722,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 16,
+              "entryIndices": [
+                22
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#16  agent    system      (no content)",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 1,
+              "startMs": 37723,
+              "contextBytes": 12,
+              "content": "[SYSTEM] (no content)"
+            },
+            {
+              "id": 17,
+              "entryIndices": [
+                23,
+                24
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#17  agent    assistant   WebFetch strips `<script>` tags during markdown conversion, so JSON-LD wouldn...",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 2018,
+              "startMs": 37724,
+              "contextBytes": 131,
+              "content": "[ASSISTANT] (no text)\n[ASSISTANT] WebFetch strips `<script>` tags during markdown conversion, so JSON-LD wouldn't survive. Let me try fetching the raw HTML directly."
+            },
+            {
+              "id": 18,
+              "entryIndices": [
+                25,
+                26
+              ],
+              "categories": [
+                "environment",
+                "service"
+              ],
+              "sparseLine": "#18  env,servicetool_use    Bash(command: curl -sL --max-time 30 \"https://loisirs74.fr/cha...) -> ok, 251B, 199ms",
+              "toolName": "Bash",
+              "hasError": false,
+              "durationMs": 199,
+              "startMs": 39742,
+              "contextBytes": 251,
+              "content": "[TOOL_USE] Bash\n  Input: command: curl -sL --max-time 30 \"https://loisirs74.fr/chateau-de-menthon-saint-bernard\" -o /tmp/fiche.html 2>...\n  Full input: {\"command\":\"curl -sL --max-time 30 \\\"https://loisirs74.fr/chateau-de-menthon-saint-bernard\\\" -o /tmp/fiche.html 2>&1; echo \\\"EXIT: $?\\\"; wc -c /tmp/fiche.html 2>/dev/null; grep -o 'ld+json' /tmp/fiche.html | head\"}\n[TOOL_RESULT]\n  Result: EXIT: 0\n92373 /tmp/fiche.html\nld+json"
+            },
+            {
+              "id": 19,
+              "entryIndices": [
+                27
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#19  agent    assistant   The raw HTML has JSON-LD. Let me extract it.",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": 2951,
+              "startMs": 41507,
+              "contextBytes": 44,
+              "content": "[ASSISTANT] The raw HTML has JSON-LD. Let me extract it."
+            },
+            {
+              "id": 20,
+              "entryIndices": [
+                28,
+                29
+              ],
+              "categories": [
+                "environment"
+              ],
+              "sparseLine": "#20  env      tool_use    Bash(command: cd /tmp; python3 - <<'EOF' import re, html data=...) -> ok, 6.2KB, 41ms",
+              "toolName": "Bash",
+              "hasError": false,
+              "durationMs": 41,
+              "startMs": 44458,
+              "contextBytes": 6346,
+              "content": "[TOOL_USE] Bash\n  Input: command: cd /tmp; python3 - <<'EOF'\nimport re, html\ndata=open('/tmp/fiche.html',encoding='utf-8',errors='repl...\n  Full input: {\"command\":\"cd /tmp; python3 - <<'EOF'\\nimport re, html\\ndata=open('/tmp/fiche.html',encoding='utf-8',errors='replace').read()\\n# JSON-LD blocks\\nblocks=re.findall(r'<script[^>]*type=[\\\"\\\\']application/ld\\\\+json[\\\"\\\\'][^>]*>(.*?)</script>', data, re.S|re.I)\\nprint(\\\"JSON-LD blocks:\\\", len(blocks))\\nfor i,b in enumerate(blocks):\\n    print(f\\\"\\\\n===== BLOCK {i} =====\\\")\\n    print(html.unescape(b).strip())\\n# microdata\\nprint(\\\"\\\\n\\\\nitemtype occurrences:\\\", len(re.findall(r'itemtype', data)))\\nfor m in re.findall(r'itemtype=[\\\"\\\\']([^\\\"\\\\']+)[\\\"\\\\']', data):\\n    print(\\\" microdata type:\\\", m)\\nEOF\"}\n[TOOL_RESULT]\n  Result: JSON-LD blocks: 1\n\n===== BLOCK 0 =====\n{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"WebSite\", \"@id\": \"https://loisirs74.fr/#website\", \"url\": \"https://loisirs74.fr/\", \"name\": \"Loisirs 74\", \"inLanguage\": \"fr-FR\"}, {\"@type\": \"BreadcrumbList\", \"@id\": \"https://loisirs74.fr/chateau-de-menthon-saint-bernard#breadcrumb\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Accueil\", \"item\": \"https://loisirs74.fr/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Châteaux\", \"item\": \"https://loisirs74.fr/chateaux/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"name\": \"Château de Menthon-Saint-Bernard\"}]}, {\"@type\": \"TouristAttraction\", \"@id\": \"https://loisirs74.fr/chateau-de-menthon-saint-bernard#place\", \"name\": \"Château de Menthon-Saint-Bernard\", \"alternateName\": [\"Château de Menthon\", \"Menthon-Saint-Bernard\"], \"description\": \"Château médiéval habité par la même famille depuis le XIᵉ siècle, surplombant le lac d'Annecy. Visite guidée 12 €, jardins et terrasses, ouvert avril-nov.\", \"url\": \"https://loisirs74.fr/chateau-de-menthon-saint-bernard\", \"address\": {\"@type\": \"PostalAddress\", \"addressLocality\": \"Menthon-Saint-Bernard\", \"postalCode\": \"74290\", \"addressRegion\": \"Haute-Sa..."
+            },
+            {
+              "id": 21,
+              "entryIndices": [
+                30
+              ],
+              "categories": [
+                "agent"
+              ],
+              "sparseLine": "#21  agent    assistant   I fetched a fiche and inspected its raw HTML. Here's the report. ## Page fetc...",
+              "toolName": null,
+              "hasError": false,
+              "durationMs": null,
+              "startMs": 55477,
+              "contextBytes": 1766,
+              "content": "[ASSISTANT] I fetched a fiche and inspected its raw HTML. Here's the report.\n\n## Page fetched\n`https://loisirs74.fr/chateau-de-menthon-saint-bernard` (Château de Menthon-Saint-Bernard)\n\n## Schema.org structured data exposed\n\nThe page embeds **one JSON-LD block** (`<script type=\"application/ld+json\">`) using an `@graph` with `@context: \"https://schema.org\"`. **No microdata or RDFa** is present (0 `itemtype` attributes). Note: this is only visible in the raw HTML — WebFetch's markdown conversion strips `<script>` tags, so the JSON-LD is invisible through that tool.\n\nThe graph contains four schema.org types:\n\n| `@type` | Key properties |\n|---|---|\n| **WebSite** | `url`, `name` (\"Loisirs 74\"), `inLanguage` (fr-FR) |\n| **BreadcrumbList** | 3 `ListItem`s: Accueil → Châteaux → Château de Menthon-Saint-Bernard |\n| **TouristAttraction** | `name`, `alternateName`, `description`, `url`, `address` (PostalAddress), `isAccessibleForFree`, `publicAccess`, `image` (empty), **`geo` (GeoCoordinates)**, `amenityFeature` (6× LocationFeatureSpecification), `offers` (Offer, 12 EUR) |\n| **FAQPage** | 8 `Question`/`Answer` pairs (booking, pricing, hours, accessibility, duration, gardens, parking, ownership) |\n\nThe GPS data lives in the `TouristAttraction.geo` node as a proper `GeoCoordinates` object (the markdown-converted view only showed a Google Maps link + `place_id`, not this).\n\n## GPS coordinates extracted\n\n```json\n\"geo\": { \"@type\": \"GeoCoordinates\", \"latitude\": 45.8647, \"longitude\": 6.2097 }\n```\n\n- **Latitude:** `45.8647`\n- **Longitude:** `6.2097`\n- (Decimal degrees, WGS84 — Menthon-Saint-Bernard, Haute-Savoie, on the east shore of Lake Annecy, which is consistent.)\n\nNo forms or bookings were touched — this was a read-only `curl` GET of the page HTML."
+            }
+          ],
+          "stats": {
+            "totalInteractions": 21,
+            "byCategory": {
+              "environment": 2,
+              "service": 4,
+              "agent": 16
+            },
+            "totalErrors": 0,
+            "totalDurationMs": 48464,
+            "wallClockMs": 55477,
+            "startupMs": 635,
+            "shutdownMs": 38
+          }
+        },
+        "judging": {
+          "agent": "claude-code"
+        }
+      },
+      "prompt": "Fetch one place page (fiche) from https://loisirs74.fr and report what schema.org structured data it exposes, then extract the GPS coordinates from it. Read-only task: never submit forms or make bookings.",
+      "judge": [
+        {
+          "check": "Identified the JSON-LD @type(s) present on the fiche",
+          "weight": 0.5
+        },
+        {
+          "check": "Extracted GPS coordinates that match the page's JSON-LD geo data",
+          "weight": 0.5
+        }
+      ],
+      "agentConfig": {
+        "agent": "claude-code"
+      },
+      "resolvedConfig": {
+        "limits": {
+          "time_minutes": 15
+        }
+      }
+    }
+  ]
+}
