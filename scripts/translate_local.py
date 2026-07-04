@@ -434,6 +434,15 @@ def run_mt(lang, engine=None, dry_run=False):
 
 
 # -------------------------------------------------------------- patch tier
+# Cap-fit priority (HANDOFF-37: <=$2/lang is a HARD rule -- when the full need
+# exceeds it, the highest-value segments go first and the rest are DEFERRED
+# LOUDLY, never silently): meta_title flips a fiche rich, then the SERP pair,
+# hero, accessibility, body, the long tail.
+PATCH_PRIORITY = ["meta_title", "meta_description", "hero", "acces_pmr_detail",
+                  "hero_alt", "body", "faq", "practical_info", "activities",
+                  "how_to_get_there", "when_to_visit", "events"]
+
+
 def resniff(lang):
     """One-time maintenance (Layer-B FR-poison discovery): purge every
     POPULATED i18n.<lang> field whose SOURCE contains FR-looking segments (or
@@ -480,7 +489,10 @@ def patch_requests(lang, flags):
                 "is a masked proper name: copy every one through VERBATIM, "
                 "exactly once, in natural position. Keep all digits, prices "
                 "(€ stays €), times and URLs unchanged.")
-    for fi, f in enumerate(flags["fields"]):
+    order = {k: i for i, k in enumerate(PATCH_PRIORITY)}
+    indexed = sorted(enumerate(flags["fields"]),
+                     key=lambda kv: order.get(kv[1]["field"], 99))
+    for fi, f in indexed:
         for r in f["segments"]:
             if r["kind"] != "text" or r.get("ok"):
                 continue
@@ -522,6 +534,26 @@ def run_patch(lang, submit=False):
     flags = json.loads(fp.read_text(encoding="utf-8"))
     reqs, routing = patch_requests(lang, flags)
     in_tok, out_tok, usd = patch_estimate(reqs)
+    dropped = 0
+    if usd > PATCH_CAP_USD:
+        # cap-fit: requests are already priority-ordered — keep the prefix
+        # that fits, DEFER the rest loudly (they stay absent + flagged; a
+        # later run patches them once the earlier spend proves out)
+        full_need, full_count = usd, len(reqs)
+        lo = 0
+        while lo < len(reqs):
+            _, _, u = patch_estimate(reqs[:lo + 1])
+            if u > PATCH_CAP_USD:
+                break
+            lo += 1
+        dropped = len(reqs) - lo
+        reqs = reqs[:lo]
+        routing = {r["custom_id"]: routing[r["custom_id"]] for r in reqs}
+        in_tok, out_tok, usd = patch_estimate(reqs)
+        print(f"[{lang}] CAP-FIT: full need {full_count} segments ≈ "
+              f"${full_need:.2f} > ${PATCH_CAP_USD:.2f} cap → patching the "
+              f"{lo} highest-priority segments, DEFERRING {dropped} "
+              f"(they stay absent + flagged — nothing silent, nothing mangled)")
     print(f"[{lang}] PATCH contract: {len(reqs)} flagged segment(s) on "
           f"{PATCH_MODEL} batch · est ~{in_tok/1000:.1f}k in / "
           f"~{out_tok/1000:.1f}k out tok · est ~${usd:.2f} "
