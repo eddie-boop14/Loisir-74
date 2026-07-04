@@ -1,0 +1,112 @@
+name: AXIS benchmark (agent experience, manual)
+
+# ▶️  Run it: Actions tab → "AXIS benchmark" → Run workflow
+#
+# HANDOFF-38: @netlify/axis — "Lighthouse for agents". Runs a real
+# claude-code agent against 6 READ-ONLY tourist scenarios on PRODUCTION
+# loisirs74.fr and scores four dimensions: Goal Achievement · Environment ·
+# Service · Agent. Our llms.txt / facts / AEO bet gets a NUMBER.
+#
+# ⚠️ MANUAL-ONLY — NEVER a cron (standing rule). Each scenario is a real
+# agent run on the ANTHROPIC_API_KEY: small single-page tasks, but real
+# spend — the report + PR must state the actual $.
+#
+# Hard rule (HANDOFF-38): no scenario touches cheznousalaplage.com /
+# chaletdutornet.com or any booking flow — enforced by a grep gate below.
+#
+# Results: .axis/reports/ → committed under reports/axis/<date>/ on branch
+# claude/axis-baseline (never main). First run also locks `axis baseline`
+# for regression diffs on every future run.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "run (execute scenarios + push report) · baseline (also lock the score as the regression baseline — first run)"
+        required: true
+        type: choice
+        options: [run, baseline]
+        default: run
+
+permissions:
+  contents: write   # pushes the report branch
+
+jobs:
+  axis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Presence-check ANTHROPIC_API_KEY (never echoed)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY repo secret is NOT set."
+            exit 1
+          fi
+          echo "ANTHROPIC_API_KEY is set (length ${#ANTHROPIC_API_KEY}; value never printed)."
+
+      - name: Protected-domain gate (scenarios are read-only, partners untouchable)
+        run: |
+          hits=$(grep -ril 'cheznousalaplage\.com\|chaletdutornet\.com\|chez-nous-a-la-plage\|chalet-du-tornet' axis-scenarios/ | wc -l)
+          if [ "$hits" -gt 0 ]; then
+            echo "::error::a scenario references a protected placement — refusing to run"
+            exit 1
+          fi
+          grep -Li 'read-only\|Pouze čtení' axis-scenarios/*.json | while read f; do
+            echo "::error::$f lacks the read-only instruction"; exit 1
+          done
+          echo "[ok] scenarios clean: no protected domains, read-only discipline stated in every prompt"
+
+      - name: Install AXIS + the claude-code adapter's CLI
+        run: |
+          npm install @netlify/axis@1.17.0
+          npm install -g @anthropic-ai/claude-code
+
+      - name: Restore the committed baseline (fresh CI checkout — the yardstick round-trips through the repo)
+        run: |
+          if [ -d reports/axis/baseline ]; then
+            mkdir -p .axis
+            cp -r reports/axis/baseline .axis/baselines
+            echo "[ok] committed baseline restored"
+          else
+            echo "(no committed baseline yet — first run locks it with mode=baseline)"
+          fi
+
+      - name: Run the benchmark (6 scenarios, production, read-only)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npx axis run --output-dir .axis/reports --json | tee axis-run.json
+
+      - name: Lock the baseline (first run — regression yardstick)
+        if: inputs.mode == 'baseline'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npx axis baseline set default
+
+      - name: Push report to the review branch (never main)
+        if: always()
+        run: |
+          git config user.name "loisirs74-bot"
+          git config user.email "bot@loisirs74.fr"
+          BRANCH="claude/axis-baseline"
+          git checkout -B "$BRANCH"
+          DEST="reports/axis/$(date +%F)"
+          mkdir -p "$DEST"
+          cp -r .axis/reports/. "$DEST"/ 2>/dev/null || true
+          cp axis-run.json "$DEST"/ 2>/dev/null || true
+          if [ "${{ inputs.mode }}" = "baseline" ] && [ -d .axis/baselines ]; then
+            rm -rf reports/axis/baseline
+            cp -r .axis/baselines reports/axis/baseline
+          fi
+          git add "$DEST" reports/axis/baseline 2>/dev/null || git add "$DEST"
+          git commit -m "report: AXIS benchmark $(date +%F) (HANDOFF-38, mode ${{ inputs.mode }})" \
+            || { echo "nothing to commit"; exit 0; }
+          git push -u origin "$BRANCH"
+          echo "Pushed $BRANCH — the score + transcripts are in $DEST for the PR."
