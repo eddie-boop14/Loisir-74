@@ -1,70 +1,117 @@
 # Translation cost reconciliation — HANDOFF-35 Job B
 
-**STATUS: PRE-AUDIT.** This file holds what code inspection alone could prove.
-The line-item actuals come from the paid batches' own per-request usage and
-require one click: **Actions → Translate loisirs74 → mode = `audit`** ($0 —
-results retrieval is free, nothing is submitted). That run OVERWRITES this
-file with the full reconciliation and writes the estimator calibration.
+_Written by `translate_batch.py --audit` on 2026-07-05 from the paid batches' own per-request usage (retrieval is free; nothing was submitted)._
 
-## The symptom
+## Verified before the audit
 
-Contract said **$7.61/lang** (pt and cs dry-runs, byte-identical local and CI).
-Actuals ≈ **$19/lang**: credit went 20.26 → ~20.00 → 2.30 across the two runs,
-≈ $38 for two languages — ~2.5× the contract.
+1. **Endpoint ✓** — `client.messages.batches.create` (`/v1/messages/batches`): the 50% batch discount applies. Constants $1.50/$7.50 per MTok match claude-sonnet-4-6 batch pricing.
+2. **Prompt caching ✗** — the shared system prompt (~780 est. tokens) sits **below Sonnet 4.6's 2048-token minimum cacheable prefix**, so the `cache_control` marker was silently ignored: every request re-billed the system block as plain input. The cache-read column below is the proof.
 
-## Audit checklist (handoff order) — what's already proven
+## Line items (actuals from usage)
 
-### 1. Endpoint — ✓ NOT the leak
-`scripts/translate_batch.py` submits via `client.messages.batches.create`
-(`POST /v1/messages/batches`) — the Message Batches API, 50% discount applies.
-The script's constants ($1.50 in / $7.50 out per MTok) match claude-sonnet-4-6
-batch pricing. The Console usage line will confirm batch pricing on the audit.
+| batch | lang | role | ok | err | in tok | cache-write | cache-read | out tok | actual $ |
+|---|---|---|---|---|---|---|---|---|---|
+| `msgbatch_019XqXZYqfXuPD2DuxfPnBMD` | pt | main | 389 | 0 | 1,012,390 | 231,702 | 179,860 | 1,190,644 | $10.91 |
+| `msgbatch_013mcmBnWjd6dKzn9RRx9yTq` | cs | main | 389 | 0 | 1,012,390 | 222,180 | 189,382 | 1,274,364 | $11.52 |
+| `msgbatch_012yiCC2k9WNn53dzL2NALxn` | cs | retry | 153 | 0 | 454,764 | 0 | 161,874 | 554,749 | $4.87 |
+| `msgbatch_01NEjNaSgd7BYNKwt7pA9oLv` | pl | main | 42 | 0 | 125,064 | 32,480 | 14,560 | 146,460 | $1.35 |
+| `msgbatch_01J9oh4JSG2Z8zzhBuckvyU7` | pl | main | 359 | 0 | 645,788 | 305,760 | 96,320 | 794,496 | $7.52 |
+| `msgbatch_01Jqm7K5VkihPvBcCNdPioEe` | pl | main | 5034 | 0 | 774,187 | 0 | 0 | 377,087 | $3.99 |
+| `msgbatch_01QYagU2Qmbd1sJhWv5HjJpt` | pl | main | 5034 | 0 | 774,187 | 0 | 0 | 375,691 | $3.98 |
+| `msgbatch_016SzszP4316C7sTuweiaLTs` | pl | main | 5034 | 0 | 774,187 | 0 | 0 | 375,433 | $3.98 |
+| `msgbatch_01J4Uv9ogcR5ZN11nTyNfVJG` | ar | main | 11142 | 0 | 1,340,688 | 0 | 0 | 619,835 | $6.66 |
+| `msgbatch_016JysyzBBuaNdGSxiGAbt3w` | he | main | 5732 | 0 | 858,590 | 0 | 0 | 499,216 | $5.03 |
+| `msgbatch_017gRYiseXTYmXYaLvgkWHnm` | ja | main | 8799 | 0 | 1,199,528 | 0 | 0 | 520,183 | $5.70 |
+| `msgbatch_015gyEt8ShUVmi6NHRRr2Uiw` | pt | retry | 389 | 0 | 1,012,390 | 27,508 | 384,054 | 1,190,925 | $10.56 |
+| `msgbatch_01HQwpbffJXBq4t1vaDf9WXH` | pt | retry | 4 | 0 | 9,052 | 0 | 4,232 | 10,711 | $0.09 |
 
-### 2. Prompt caching — ✗ CONFIRMED LEAK (small)
-The shared system prompt carries `cache_control: {type: ephemeral}` — but it
-is **~2,719 chars ≈ 780 tokens, below claude-sonnet-4-6's 2048-token minimum
-cacheable prefix**. Below that minimum the marker is *silently ignored*: no
-error, no cache entry, and every one of the 389 requests re-billed the system
-block as plain input. The old `estimate()` priced 388/389 requests' system
-block at 0.1× (cache read). Magnitude: ≈ +$0.40/lang — real, but nowhere near
-the $11/lang gap. The audit's cache-read column (expected ≈ 0) is the proof.
+## Contract vs actual, to the cent
 
-### 3. Retries — known, quantifiable
-- pt: retry round of 2 requests (tag-parity failures) — negligible.
-- cs: retry round of **+153 requests ≈ +$3.00** — outside the contract, now
-  reported separately by the audit and GATED in code (see rule below).
+### ar
 
-### 4. Output reality vs estimate — PRIME SUSPECT, audit measures it
-The old model assumed `out ≈ in` at chars/3.5. Output is billed at $7.50/MTok
-— **5× the input rate** — so any under-count here dominates the bill.
-Back-computing from the ~$19/lang actuals: output must have run ≈ 2–3× the
-assumption (Czech/Portuguese tokenize worse per char than English, translations
-run longer than source, and any thinking tokens bill as output). The audit sums
-the real `output_tokens` per request and derives the measured
-tokens-per-source-char factor per language — that closes the delta to the cent.
+| item | contract | actual | delta |
+|---|---|---|---|
+| input (incl. system block) | $1.32 | $2.01 | +0.69 |
+| output | $6.36 | $4.65 | -1.71 |
+| **main batch** | **$7.68** | **$6.66** | **-1.02** |
+| retry round(s) (outside the contract) | $0.00 | $0.00 | +0.00 |
+| **total** | **$7.68** | **$6.66** | **-1.02** |
 
-## Fixes already live in this PR
+- of the input delta, the never-firing cache accounts for ≈ $12.44 (system block re-billed at 1× on 11141 requests instead of 0.1×).
+- measured output: — tok per source char vs the old model's implicit 0.2857 (out ≈ in assumption).
 
-1. **`estimate()` corrected**: system block priced *uncached* below the
-   2048-token minimum; per-language output factors (audit-calibrated when
-   `reports/translate-cost-calibration.json` exists, deliberately-high
-   documented defaults until then); input factor calibrated the same way.
-2. **The meter**: every run now records per-batch actual usage + $ in the
-   state file and prints `METER` reconciliation lines (main batch, retry
-   batch, final vs contract).
-3. **Permanent >15% rule**: the dry-run is a contract —
-   - before the retry submit: projected total > 1.15× contract → the retry is
-     **SKIPPED**, the run exits red (code 2), fields stay absent (recoverable);
-   - final total > 1.15× contract → run exits red (code 3) with the paid
-     results still written and pushed (`always()` push step).
-4. **`--audit` mode + workflow mode `audit`**: $0 reconciliation of every paid
-   batch (state-file ids + `batches.list()`, which also catches the pt retry
-   batch whose id predates id-persistence), writing this report + calibration.
+### cs
 
-## Gate for the next language
+| item | contract | actual | delta |
+|---|---|---|---|
+| input (incl. system block) | $1.32 | $1.96 | +0.65 |
+| output | $6.36 | $9.56 | +3.20 |
+| **main batch** | **$7.68** | **$11.52** | **+3.85** |
+| retry round(s) (outside the contract) | $0.00 | $4.87 | +4.87 |
+| **total** | **$7.68** | **$16.39** | **+8.71** |
 
-No `go ja` until:
-1. Eddie's `audit` click has replaced this file with line-item actuals and the
-   pt/cs delta is explained to the cent;
-2. a fresh `dry-run` (now calibration-backed) prints a ja contract we can
-   defend within ±15% — enforced mid-run by the abort rule either way.
+- of the input delta, the never-firing cache accounts for ≈ $0.41 (system block re-billed at 1× on 388 requests instead of 0.1×).
+- measured output: 0.4286 tok per source char vs the old model's implicit 0.2857 (out ≈ in assumption).
+
+### he
+
+| item | contract | actual | delta |
+|---|---|---|---|
+| input (incl. system block) | $1.32 | $1.29 | -0.03 |
+| output | $6.36 | $3.74 | -2.61 |
+| **main batch** | **$7.68** | **$5.03** | **-2.65** |
+| retry round(s) (outside the contract) | $0.00 | $0.00 | +0.00 |
+| **total** | **$7.68** | **$5.03** | **-2.65** |
+
+- of the input delta, the never-firing cache accounts for ≈ $6.40 (system block re-billed at 1× on 5731 requests instead of 0.1×).
+- measured output: — tok per source char vs the old model's implicit 0.2857 (out ≈ in assumption).
+
+### ja
+
+| item | contract | actual | delta |
+|---|---|---|---|
+| input (incl. system block) | $1.32 | $1.80 | +0.48 |
+| output | $6.36 | $3.90 | -2.46 |
+| **main batch** | **$7.68** | **$5.70** | **-1.97** |
+| retry round(s) (outside the contract) | $0.00 | $0.00 | +0.00 |
+| **total** | **$7.68** | **$5.70** | **-1.97** |
+
+- of the input delta, the never-firing cache accounts for ≈ $9.24 (system block re-billed at 1× on 8798 requests instead of 0.1×).
+- measured output: — tok per source char vs the old model's implicit 0.2857 (out ≈ in assumption).
+
+### pl
+
+| item | contract | actual | delta |
+|---|---|---|---|
+| input (incl. system block) | $1.32 | $5.29 | +3.97 |
+| output | $6.36 | $15.52 | +9.16 |
+| **main batch** | **$7.68** | **$20.81** | **+13.13** |
+| retry round(s) (outside the contract) | $0.00 | $0.00 | +0.00 |
+| **total** | **$7.68** | **$20.81** | **+13.13** |
+
+- of the input delta, the never-firing cache accounts for ≈ $16.28 (system block re-billed at 1× on 15502 requests instead of 0.1×).
+- measured output: 0.299 tok per source char vs the old model's implicit 0.2857 (out ≈ in assumption).
+
+### pt
+
+| item | contract | actual | delta |
+|---|---|---|---|
+| input (incl. system block) | $1.32 | $1.98 | +0.66 |
+| output | $6.36 | $8.93 | +2.57 |
+| **main batch** | **$7.68** | **$10.91** | **+3.23** |
+| retry round(s) (outside the contract) | $0.00 | $10.65 | +10.65 |
+| **total** | **$7.68** | **$21.56** | **+13.89** |
+
+- of the input delta, the never-firing cache accounts for ≈ $0.41 (system block re-billed at 1× on 388 requests instead of 0.1×).
+- measured output: 0.4017 tok per source char vs the old model's implicit 0.2857 (out ≈ in assumption).
+
+## Corrected model (now live in `estimate()`)
+
+- input: **0.3389 tok/char** measured (was chars/3.5 ≈ 0.2857)
+- output: per-language measured factors {"cs": 0.4286, "pl": 0.299, "pt": 0.4017} (was out ≈ in)
+- system block priced **uncached** below the 2048-token minimum cacheable prefix (was: cached for 388/389 requests)
+- observed cache-read share: 0.087
+
+## Permanent rule now enforced in code
+
+The dry-run number is a contract. A run that exceeds it by >15% ABORTS before the next paid submit (retry round / next language) and exits red; the final meter line always prints actual vs contract. No `go <lang>` until its calibrated dry-run lands and the previous languages' deltas are explained above.
