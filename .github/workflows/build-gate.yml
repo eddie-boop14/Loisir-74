@@ -68,6 +68,9 @@ jobs:
           python3 tests/test_translate_batch.py
           python3 tests/test_json_repair.py
           python3 tests/test_translate_local.py
+          python3 tests/test_gate_facet_layer.py
+          python3 tests/test_gate_protected_placements.py
+          python3 tests/test_robots_txt.py
 
       - name: No-orphan-geo-verified gate
         run: python3 scripts/gate_geo_verified.py
@@ -135,10 +138,23 @@ jobs:
         run: python3 scripts/gate_baignade_cluster.py
 
       - name: AI content layer gate
-        # build_all has just regenerated content/<slug>.md + llms.txt +
-        # llms-full.txt. Assert every advertised /content/<slug>.md exists
-        # (0 404s) and the llms counts match the corpus.
+        # build_all has just regenerated content/<slug>.md (FR+EN) +
+        # api/lieu/*.json + llms.txt + llms-full.txt + ai-info.json. Assert
+        # every advertised surface exists (0 404s) and counts match the corpus.
         run: python3 scripts/gate_ai_content.py
+
+      - name: Facet-layer STRICT gate (HANDOFF-39A)
+        # The agent-parser promise: byte-verbatim heading canon in exact order
+        # (FR + EN md) and the 12-key typed JSON contract, nulls preserved,
+        # zero fabrication vs Json/ truth. Seeded-defect proof runs in the
+        # offline test block above.
+        run: python3 scripts/gate_facet_layer.py
+
+      - name: Protected-placements byte-guard (HANDOFF-39A-B, EVERY run)
+        # sha256 of every partner-carrying page vs the committed manifest
+        # reports/protected-placements.md. Any drift is red unless an
+        # EDMASTER-APPROVED trailer is in the last 20 reachable commits.
+        run: python3 scripts/gate_protected_placements.py
 
       - name: Byte-stable double build
         # Build_all has just run. Snapshot, rebuild, diff.
@@ -163,6 +179,10 @@ jobs:
 
       - name: Link-integrity gate (no internal 404s in _site/)
         run: python3 scripts/gate_link_integrity.py
+
+      - name: Redirect-shadow gate (no 301 source shadows a built 200 path)
+        # HANDOFF-39A-C2: after build_site so it checks the publish tree.
+        run: python3 scripts/gate_redirect_shadows.py
 
       - name: Published-verified gate
         # Read-only. No status:"unverified" fiche may appear in catalog-index.json,

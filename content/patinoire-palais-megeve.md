@@ -15,6 +15,7 @@ geo_verified: false
 google_place_id: "ChIJb9j8isvii0cRiGJZCghePhg"
 canonical_url: https://loisirs74.fr/patinoire-palais-megeve
 language: fr
+facet_json: https://loisirs74.fr/api/lieu/patinoire-palais-megeve.json
 photo_url: /img/generique/generique-patinoire-skater.jpg
 photo_type: generic
 photo_author: null
@@ -26,117 +27,42 @@ source: loisirs74.fr
 
 # Patinoire du Palais Megève
 
-> Patinoire olympique intégrée au complexe Le Palais des Sports de Megève, fondé par les Rothschild. Hockey, galas, séances publiques et cours se succèdent au cœur d'un équipement qui comprend également piscine et fitness, pièce maîtresse de cette station prestigieuse.
+## Faits
 
-## En bref
+- Commune: Megève, Haute-Savoie (74120)
+- GPS: 45.8567, 6.6189
+- Catégorie: patinoire
+- Type: Patinoire olympique + équipement complexe Le Palais
 
-- **Catégorie**: Patinoire
-- **Commune**: Megève, Haute-Savoie (74120)
-- **GPS**: 45.8567, 6.6189
-- **Type**: Patinoire olympique + équipement complexe Le Palais
-- **Accès**: Payant - voir tarifs
-- **Parking**: Gratuit sur site
-- **Chiens**: Non (intérieur)
-- **Meilleure saison**: Décembre-mars principalement (saison hiver)
-- **Durée**: 2h séance
+## Horaires
 
-## Présentation
+Horaires du Patinoire du Palais Megève : Vacances scolaires hiver : tous les jours 14h-18h + 20h-22h. Hors vacances : week-ends. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
 
-La Patinoire du Palais Megève fait partie du complexe Le Palais des Sports de Megève, équipement majeur de cette station de ski prestigieuse fondée par les Rothschild. Patinoire olympique complétée d'une piscine et d'un espace fitness, elle accueille des séances publiques, des cours encadrés, des matchs de hockey et des galas tout au long de la saison.
+## Tarifs
 
-La Patinoire du Palais Megève fait partie du complexe Le Palais des Sports de Megève - équipement majeur de cette station de ski prestigieuse fondée par les Rothschild. Patinoire olympique + piscine + fitness.
+- À partir de: 6 EUR
 
-La Patinoire du Palais Megève accueille en saison hivernale le hockey du Mont-Blanc Hockey Club + galas de patinage artistique + championnats régionaux. Calendrier événementiel chargé décembre-mars.
+## Accès (PMR)
 
-Tarifs 2026 : Adulte 6 €, Enfant 4,50 €. Saison : Décembre-mars principalement (saison hiver). Horaires : Vacances scolaires hiver : tous les jours 14h-18h + 20h-22h. Hors vacances : week-ends. PMR : Oui.
+- Statut: Accessible
+- Détail: Acceslibre: places de parking adaptees et reservees, entree et chemin exterieur de plain-pied, largeur min 90 cm, revetement adapte au fauteuil roulant, toilettes adaptees.
+- Source: Acceslibre — https://acceslibre.beta.gouv.fr/app/74-megeve/a/equipement-sportif/erp/le-palais-megeve/
 
-## Activités sur place
+## Parking
 
-### Palais des Sports équipement complexe
-La Patinoire du Palais Megève fait partie du complexe Le Palais des Sports de Megève - équipement majeur de cette station de ski prestigieuse fondée par les Rothschild. Patinoire olympique + piscine + fitness.
+Gratuit sur site
 
-### Hockey + galas patinage saison
-La Patinoire du Palais Megève accueille en saison hivernale le hockey du Mont-Blanc Hockey Club + galas de patinage artistique + championnats régionaux. Calendrier événementiel chargé décembre-mars.
+## Transport
 
-### Séances publiques + cours
-La Patinoire du Palais Megève propose en complément des séances publiques quotidiennes en saison + cours initiation/perfectionnement patinage artistique et hockey. Patins en location 4,50 € inclus.
+- Megève-Autogare (SNCF (TER), ~242 m)
+- Autogare (Cars Région Haute-Savoie, ~253 m, lignes Y82, Y83)
+- College E. Allais (Cars Région Haute-Savoie, ~358 m, lignes Y82)
+- Source: transport.data.gouv.fr — Licence Etalab 2.0 (2026-06-15)
 
-### Tarif 6 €
-Le Patinoire du Palais Megève propose une tarification adulte de 6 €. Tarif enfant : 4,50 €. Durée moyenne : 2h séance. Saison : Décembre-mars principalement (saison hiver).
+## Saison
 
-## Infos pratiques
+Décembre-mars principalement (saison hiver)
 
-- **Adresse**: 247 route du Palais des Sports, 74120 Megève
-- **Coordonnées**: 45.8567° N · 6.6189° E
-- **Saison**: Décembre-mars principalement (saison hiver)
-- **Horaires**: Horaires du Patinoire du Palais Megève : Vacances scolaires hiver : tous les jours 14h-18h + 20h-22h. Hors vacances : week-ends. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
-- **Tarifs**: Tarifs 2026 du Patinoire du Palais Megève : Adulte 6 € - Enfant 4,50 € - Location patins comprise. Vérifié le 24 mai 2026.
-- **Parking**: Parking du Patinoire du Palais Megève : généralement gratuit ou intégré. Vérifier sur place selon affluence.
-- **Animaux**: Animaux au Patinoire du Palais Megève : Non (intérieur)
-- **Accessibilité**: PMR au Patinoire du Palais Megève : Oui. Vérifié le 24 mai 2026.
-- **Durée**: 2h séance
+## Source officielle
 
-## Comment y aller
-
-### En voiture
-Megève (74120) - adresse 247 route du Palais des Sports, 74120 Megève. Parking gratuit sur site. Vérifier disponibilité haute saison.
-
-### Transports en commun
-Transports publics vers Megève selon saison. Léman Express + cars Région Haute-Savoie. Vérifier ligne et horaires.
-
-### À vélo
-Accès vélo possible vers le Patinoire du Palais Megève selon proximité Voie verte du Lac d'Annecy, ViaRhôna EV17 ou autres voies vertes Loisirs 74.
-
-## Quand y aller
-
-Le Patinoire du Palais Megève se visite principalement en saison Décembre-mars principalement (saison hiver). PATINOIRE OLYMPIQUE DU PALAIS - équipement majeur Megève station prestigieuse. Hockey + galas + séances publiques + cours.. Tarifs 2026 : Adulte 6 €.
-
-## Événements
-
-Animations et événements au Patinoire du Palais Megève selon calendrier opérateur. Suivre site officiel haute-savoie-tourisme.org pour actualités saison 2026.
-
-## Questions fréquentes
-
-**Q : Comment réserver le Patinoire du Palais Megève ?**
-
-R : Pour réserver le Patinoire du Palais Megève, rendez-vous sur le site officiel haute-savoie-tourisme.org ou téléphonez au +33 (0)4 50 21 15 71. Réservation en ligne conseillée en haute saison juillet-août.
-
-**Q : Quel est le tarif du Patinoire du Palais Megève en 2026 ?**
-
-R : Tarifs 2026 du Patinoire du Palais Megève : Adulte 6 €, Enfant 4,50 €, Location patins comprise. Vérifié le 24 mai 2026 sur haute-savoie-tourisme.org - sous réserve de modifications.
-
-**Q : Quels sont les horaires du Patinoire du Palais Megève ?**
-
-R : Horaires du Patinoire du Palais Megève : Vacances scolaires hiver : tous les jours 14h-18h + 20h-22h. Hors vacances : week-ends. Saison : Décembre-mars principalement (saison h. Vérifié sur le site officiel le 24 mai 2026 - sous réserve de modifications saisonnières.
-
-**Q : Le Patinoire du Palais Megève est-il accessible aux PMR ?**
-
-R : PMR au Patinoire du Palais Megève : Oui. Vérifier les conditions précises sur place. Pour les activités physiques (accrobranche, karting, sports nautiques), la PMR n'est généralement pas applicable.
-
-**Q : Les animaux sont-ils acceptés au Patinoire du Palais Megève ?**
-
-R : Animaux au Patinoire du Palais Megève : Non (intérieur). Vérifier les conditions précises sur place avant la visite. Précautions particulières pour activités sportives ou sites animaliers selon les espèces.
-
-**Q : Combien de temps pour visiter le Patinoire du Palais Megève ?**
-
-R : Durée moyenne au Patinoire du Palais Megève : 2h séance. Selon le profil de visiteur et l'activité choisie. Prévoir plus de temps en haute saison juillet-août en raison de l'affluence touristique.
-
-**Q : Comment se rendre au Patinoire du Palais Megève ?**
-
-R : Le Patinoire du Palais Megève est situé à Megève (74120) - 247 route du Palais des Sports, 74120 Megève. Téléphone : +33 (0)4 50 21 15 71. Accès voiture conseillé, parking généralement disponible sur site.
-
-**Q : Quelle est la saison d'ouverture du Patinoire du Palais Megève ?**
-
-R : Saison du Patinoire du Palais Megève : Décembre-mars principalement (saison h. Argument distinctif : PATINOIRE OLYMPIQUE DU PALAIS - équipement majeur Megève station prestigieuse. H. Activité loisirs majeure de la Haute-Savoie pour la saison 2026.
-
----
-
-## Source & licence
-
-- **Page web canonique** : https://loisirs74.fr/patinoire-palais-megeve
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/patinoire-palais-megeve) · [DE](https://loisirs74.fr/de/patinoire-palais-megeve) · [ES](https://loisirs74.fr/es/patinoire-palais-megeve) · [IT](https://loisirs74.fr/it/patinoire-palais-megeve) · [NL](https://loisirs74.fr/nl/patinoire-palais-megeve)
-- **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
-- **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
-- **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=patinoire-palais-megeve
-
-*Les informations peuvent évoluer ; vérifier auprès de la commune avant un déplacement spécifique.*
+http://lepalaismegeve.com/
