@@ -1,0 +1,18 @@
+# Sparse Index: planning / claude-code
+# 16 interactions | env: 0 | svc: 5 | agent: 11 | errors: 0
+#1   agent    system      (no content)
+#2   agent    assistant   I'll research indoor family venues near Annecy using loisirs74.fr. Let me loa...
+#3   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 7ms
+#4   agent    assistant   I'll start by fetching the loisirs74.fr homepage to understand the site struc...
+#5   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List the main categori...) -> ok, 1.6KB, 4.7s
+#6   agent    system      (no content)
+#7   agent    system      (no content)
+#8   agent    assistant   Good — several indoor Annecy venues found. For a family, the best fits are bo...
+#9   service  tool_use    WebFetch(url: https://loisirs74.fr/bowling-le-bowl-annecy, prompt:...) -> ok, 1.3KB, 3.9s
+#10  service  tool_use    WebFetch(url: https://loisirs74.fr/patinoire-jean-regis-annecy, pr...) -> ok, 1.2KB, 4.5s
+#11  service  tool_use    WebFetch(url: https://loisirs74.fr/escalade-atome-annecy, prompt: ...) -> ok, 1.3KB, 4.9s
+#12  service  tool_use    WebFetch(url: https://loisirs74.fr/cinema-pathe-annecy, prompt: Gi...) -> ok, 1.3KB, 4.6s
+#13  agent    system      (no content)
+#14  agent    system      (no content)
+#15  agent    system      (no content)
+#16  agent    assistant   I have what I need. Here's a rainy-afternoon plan built entirely from loisirs...

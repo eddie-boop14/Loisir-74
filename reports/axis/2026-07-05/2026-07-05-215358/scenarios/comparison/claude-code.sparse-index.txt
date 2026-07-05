@@ -1,0 +1,20 @@
+# Sparse Index: comparison / claude-code
+# 18 interactions | env: 0 | svc: 5 | agent: 13 | errors: 0
+#1   agent    system      (no content)
+#2   agent    system      (no content)
+#3   agent    system      (no content)
+#4   agent    assistant   I'll research this using web tools. Let me load them first.
+#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 7ms
+#6   agent    assistant   Let me start by exploring the site to find beaches on Lac d'Annecy.
+#7   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List all beaches (plag...) -> ok, 1.2KB, 4.3s
+#8   service  tool_use    WebSearch(query: loisirs74.fr plage Lac d'Annecy baignade surveillé...) -> ok, 4.4KB, 19.4s
+#9   agent    system      (no content)
+#10  agent    system      (no content)
+#11  agent    assistant   I have detailed info on Saint-Jorioz. Let me fetch two more beach pages direc...
+#12  service  tool_use    WebFetch(url: https://loisirs74.fr/plage-de-saint-jorioz, prompt: ...) -> ok, 1.4KB, 5.0s
+#13  service  tool_use    WebFetch(url: https://loisirs74.fr/parc-imperial-annecy, prompt: R...) -> ok, 1.3KB, 5.3s
+#14  agent    assistant   The Impérial page is more about the park than the beach. Let me get a cleaner...
+#15  service  tool_use    WebFetch(url: https://loisirs74.fr/plage-albigny, prompt: Report t...) -> ok, 1.3KB, 5.4s
+#16  agent    system      (no content)
+#17  agent    system      (no content)
+#18  agent    assistant   I now have solid data on two beaches from loisirs74.fr. Here's the comparison...

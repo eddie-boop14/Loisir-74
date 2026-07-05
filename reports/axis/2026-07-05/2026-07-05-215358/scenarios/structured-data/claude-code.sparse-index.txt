@@ -1,0 +1,17 @@
+# Sparse Index: structured-data / claude-code
+# 15 interactions | env: 2 | svc: 2 | agent: 12 | errors: 0
+#1   agent    system      (no content)
+#2   agent    assistant   I'll start by loading the web tools and finding a place page (fiche) on the s...
+#3   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 6ms
+#4   agent    assistant   I'll find a fiche (place page) on the site first.
+#5   service  tool_use    WebSearch(query: loisirs74.fr fiche lieu) -> ok, 4.3KB, 21.8s
+#6   agent    system      (no content)
+#7   agent    system      (no content)
+#8   agent    system      (no content)
+#9   agent    assistant   Let me pick the Parc de l'Impérial fiche and fetch its raw HTML to inspect th...
+#10  env,servicetool_use    Bash(command: curl -sL -A "Mozilla/5.0" https://loisirs74.fr/p...) -> ok, 271B, 521ms
+#11  agent    assistant   Got the raw HTML. Let me extract the JSON-LD structured data blocks.
+#12  env      tool_use    Bash(command: cd /tmp/axis-oXqby7/work; grep -o 'application/l...) -> ok, 4.8KB, 74ms
+#13  agent    system      (no content)
+#14  agent    system      (no content)
+#15  agent    assistant   I have everything needed. Here's the report. ## Fiche examined **Parc de l'Im...
