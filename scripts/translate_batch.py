@@ -423,12 +423,22 @@ def sum_usage(rows):
     return tot
 
 
-def usage_cost_usd(tot):
-    """Actual $ at Message Batches prices — what the Console will show."""
-    return (tot["input_tokens"] * BATCH_IN_PER_MTOK
-            + tot["cache_creation_input_tokens"] * BATCH_CACHE_WRITE_PER_MTOK
-            + tot["cache_read_input_tokens"] * BATCH_CACHE_READ_PER_MTOK
-            + tot["output_tokens"] * BATCH_OUT_PER_MTOK) / 1e6
+def usage_cost_usd(tot, in_per_mtok=BATCH_IN_PER_MTOK,
+                   out_per_mtok=BATCH_OUT_PER_MTOK,
+                   cache_write_per_mtok=BATCH_CACHE_WRITE_PER_MTOK,
+                   cache_read_per_mtok=BATCH_CACHE_READ_PER_MTOK):
+    """Actual $ at Message Batches prices — what the Console will show.
+
+    The rates DEFAULT to this module's Sonnet batch lane (claude-sonnet-4-6),
+    unchanged. The Haiku PATCH tier (translate_local.run_patch) must pass its
+    own $0.50/$2.50 rates — otherwise a Haiku batch is priced at Sonnet rates
+    (3× too high), the phantom overspend trips the $2 cap, and the run goes RED
+    even though the batch was cheap and fine (the bug behind the 'fails but
+    still bills' patch-submit runs)."""
+    return (tot["input_tokens"] * in_per_mtok
+            + tot["cache_creation_input_tokens"] * cache_write_per_mtok
+            + tot["cache_read_input_tokens"] * cache_read_per_mtok
+            + tot["output_tokens"] * out_per_mtok) / 1e6
 
 
 def over_budget(actual_usd, est_usd):

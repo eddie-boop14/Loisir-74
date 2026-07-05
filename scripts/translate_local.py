@@ -50,6 +50,8 @@ FR_SOURCE_FIELDS = {"acces_pmr_detail"}
 PATCH_MODEL = "claude-haiku-4-5"             # PATCH tier only (HANDOFF-37)
 PATCH_IN_PER_MTOK = 0.50                     # batch: 50% off $1.00
 PATCH_OUT_PER_MTOK = 2.50                    # batch: 50% off $5.00
+PATCH_CACHE_WRITE_PER_MTOK = 0.625           # batch: 50% off 1.25 × $1.00
+PATCH_CACHE_READ_PER_MTOK = 0.05             # batch: 50% off 0.1 × $1.00
 PATCH_CAP_USD = 2.00                         # hard per-lang cap, aborts submit
 PATCH_MAX_TOKENS = 1000                      # segments avg 80 chars
 
@@ -604,12 +606,35 @@ def run_patch(lang, submit=False):
                   encoding="utf-8")
     tb.poll_batch(client, bid)
     results, usage = tb.collect_results(client, bid)
+    return _apply_patch_results(lang, flags, routing, results, usage, fp,
+                                contract_usd=usd)
+
+
+def _apply_patch_results(lang, flags, routing, results, usage, fp,
+                         contract_usd=None):
+    """Route a (already-paid) Haiku patch batch's results back into the flags
+    table, reassemble + validate every now-complete field, write it back, and
+    persist the flags file. Shared by the submit path (run_patch) and the FREE
+    recover path (run_patch_recover) so a batch that already billed is never
+    re-paid to be claimed.
+
+    `contract_usd` is the dry-run contract for the >15% abort (submit only). On
+    recover it is None — the spend is already sunk, so the results ALWAYS land;
+    aborting there would just re-lose paid work (the original bug)."""
     tot = tb.sum_usage(usage.values())
-    actual = tb.usage_cost_usd(tot)
+    # HANDOFF-37 patch tier is Haiku ($0.50/$2.50), NOT the module's Sonnet
+    # batch rates — price it with the patch rates or a Haiku batch reads 3× too
+    # high, trips the $2 cap on a phantom overspend, and the run goes RED after
+    # already billing (the 'fails but takes my credit' bug).
+    actual = tb.usage_cost_usd(tot,
+                               in_per_mtok=PATCH_IN_PER_MTOK,
+                               out_per_mtok=PATCH_OUT_PER_MTOK,
+                               cache_write_per_mtok=PATCH_CACHE_WRITE_PER_MTOK,
+                               cache_read_per_mtok=PATCH_CACHE_READ_PER_MTOK)
     if any(tot.values()):
+        vs = f" vs ${contract_usd:.2f} contract" if contract_usd is not None else " (recover)"
         print(f"[{lang}] METER patch batch: {tot['input_tokens']:,} in / "
-              f"{tot['output_tokens']:,} out tok → ${actual:.2f} actual "
-              f"vs ${usd:.2f} contract")
+              f"{tot['output_tokens']:,} out tok → ${actual:.2f} actual{vs}")
 
     # route results back into the segment tables
     patched_segs = 0
@@ -669,10 +694,36 @@ def run_patch(lang, submit=False):
     print(f"[{lang}] PATCH DONE: {patched_segs} segments patched · "
           f"{written_fields} fields completed+written · {still} still held "
           f"(absent, logged in {fp.name})")
-    if any(tot.values()) and tb.over_budget(actual, usd):
+    if contract_usd is not None and any(tot.values()) and tb.over_budget(actual, contract_usd):
         print(f"[{lang}] BUDGET OVERRUN >15% on the patch — RED (HANDOFF-35 rule).")
         sys.exit(3)
     return still == 0
+
+
+def run_patch_recover(lang, batch_id=None):
+    """FREE: re-read an already-PAID Haiku patch batch and land its results —
+    no new submit. Anthropic keeps batch results ~29 days; when a patch-submit
+    billed but its results were discarded (the meter/git-add bugs), this claims
+    them instead of paying again. Rebuilds the routing from the SAME flags file
+    (custom_ids are deterministic — {lang}-p<NNNNN> over the priority order), so
+    the batch's results map back exactly. Batch id: --batch-id, else the flags
+    file's patch_batch_id."""
+    fp = flags_path(lang)
+    if not fp.exists():
+        sys.exit(f"[{lang}] no flags file ({fp.name}) — nothing to recover")
+    flags = json.loads(fp.read_text(encoding="utf-8"))
+    _reqs, routing = patch_requests(lang, flags)
+    bid = batch_id or flags.get("patch_batch_id")
+    if not bid:
+        sys.exit(f"[{lang}] no batch id — pass --batch-id <msgbatch_…> (from the "
+                 "run log) or ensure the flags file carries patch_batch_id")
+    print(f"[{lang}] RECOVER: re-reading already-paid batch {bid} "
+          "(retrieval is FREE — no new submit, no new charge)")
+    client = tb.get_client()
+    tb.poll_batch(client, bid)          # returns at once if already ended
+    results, usage = tb.collect_results(client, bid)
+    return _apply_patch_results(lang, flags, routing, results, usage, fp,
+                                contract_usd=None)
 
 
 def main():
@@ -688,11 +739,19 @@ def main():
     ap.add_argument("--patch-submit", action="store_true",
                     help="PAID (≤$2 cap): Haiku-patch the flagged segments — "
                          "only after Eddie saw the contract")
+    ap.add_argument("--patch-recover", action="store_true",
+                    help="FREE: re-read an already-PAID patch batch and land its "
+                         "results (no new submit). Use --batch-id or the flags "
+                         "file's patch_batch_id.")
+    ap.add_argument("--batch-id", default=None,
+                    help="msgbatch_… id for --patch-recover (from the run log)")
     args = ap.parse_args()
     if args.lang not in MT_LANGS:
         sys.exit(f"ERROR: unknown MT lang {args.lang!r} (expected {MT_LANGS})")
     if args.resniff:
         resniff(args.lang)
+    elif args.patch_recover:
+        run_patch_recover(args.lang, batch_id=args.batch_id)
     elif args.patch_dry_run or args.patch_submit:
         run_patch(args.lang, submit=args.patch_submit)
     else:

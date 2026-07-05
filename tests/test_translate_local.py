@@ -301,6 +301,85 @@ def test_patch_contract_and_cap():
     assert usd2 > m.PATCH_CAP_USD, "cap scenario must be detectable pre-submit"
 
 
+def test_patch_meter_prices_at_haiku_not_sonnet():
+    """Regression for the 'fails but still bills' patch-submit bug: the ACTUAL
+    cost of a Haiku patch batch must be priced at Haiku rates ($0.50/$2.50),
+    not the module's Sonnet batch rates ($1.50/$7.50). With the real run #17
+    usage (774,187 in / 377,087 out) the Haiku price is ~$1.33 (under the
+    $1.45 estimate and the $2 cap → PASS); the Sonnet mis-price was $3.99
+    (phantom overspend → false RED after already billing)."""
+    m = _load()
+    tb = m.tb
+    tot = {k: 0 for k in tb.USAGE_KEYS}
+    tot["input_tokens"] = 774187
+    tot["output_tokens"] = 377087
+
+    haiku = tb.usage_cost_usd(tot,
+                              in_per_mtok=m.PATCH_IN_PER_MTOK,
+                              out_per_mtok=m.PATCH_OUT_PER_MTOK,
+                              cache_write_per_mtok=m.PATCH_CACHE_WRITE_PER_MTOK,
+                              cache_read_per_mtok=m.PATCH_CACHE_READ_PER_MTOK)
+    assert abs(haiku - 1.33) < 0.02, f"Haiku patch price should be ~$1.33, got ${haiku:.2f}"
+
+    # the DEFAULT (unchanged) rates are the Sonnet batch lane — this is the
+    # mis-price the patch meter used to inherit; keep it pinned so a future
+    # rate edit can't silently re-break the patch tier.
+    sonnet = tb.usage_cost_usd(tot)
+    assert abs(sonnet - 3.99) < 0.02, f"default rates are Sonnet (~$3.99), got ${sonnet:.2f}"
+
+    est = 1.45  # the pl dry-run contract for this batch
+    assert not tb.over_budget(haiku, est), "Haiku actual ≤ estimate must NOT trip the >15% abort"
+    assert tb.over_budget(sonnet, est), "the Sonnet mis-price is what falsely tripped it"
+
+
+def test_patch_recover_lands_paid_results_without_resubmit():
+    """The recover path claims an already-PAID patch batch: no new submit, and
+    it must NOT abort on cost (the spend is sunk — aborting would re-lose the
+    paid work, which is the original bug). Feeds a fake batch result through
+    run_patch_recover and asserts the field lands."""
+    m = _load()
+    tbm = m.tb
+    with tempfile.TemporaryDirectory() as tmp:
+        jd = Path(tmp) / "Json"; jd.mkdir()
+        (jd / "spot.json").write_text(json.dumps({
+            "slug": "spot", "commune": "Annecy",
+            "i18n": {"fr": {"name": "X"},
+                     "en": {"hero": {"lead": "A calm spot open all year."}}}},
+            ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        tbm.JSON_DIR = jd
+        m.FLAGS_FILE = Path(tmp) / "reports" / "flags-{lang}.json"
+
+        # base MT tier fails the segment (empty) → it is flagged, pl absent
+        m.run_mt("pl", engine=SpyEngine(lambda t: ""))
+        d = json.loads((jd / "spot.json").read_text())
+        assert "pl" not in d["i18n"] or "hero" not in d["i18n"]["pl"], \
+            "field must start absent (flagged)"
+
+        # reconstruct the deterministic routing to know the batch custom_id
+        flags = json.loads((Path(tmp) / "reports" / "flags-pl.json").read_text())
+        reqs, routing = m.patch_requests("pl", flags)
+        assert len(reqs) == 1
+        cid = reqs[0]["custom_id"]
+
+        # fake an already-ended, already-paid batch: a good pl translation, and
+        # deliberately "expensive" usage that WOULD trip the >15% abort if the
+        # recover path wrongly enforced a budget.
+        good = "Spokojne miejsce otwarte cały rok."
+        fake_usage = {k: 0 for k in tbm.USAGE_KEYS}
+        fake_usage["input_tokens"] = 5_000_000
+        fake_usage["output_tokens"] = 5_000_000
+        tbm.get_client = lambda: object()
+        tbm.poll_batch = lambda client, bid, **kw: None
+        tbm.collect_results = lambda client, bid: ({cid: ("ok", good)},
+                                                   {cid: fake_usage})
+
+        ok = m.run_patch_recover("pl", batch_id="msgbatch_fake")  # must NOT sys.exit
+        d = json.loads((jd / "spot.json").read_text())
+        assert d["i18n"]["pl"]["hero"]["lead"] == good, \
+            "recovered translation must be written back to the fiche"
+        assert ok is True
+
+
 def _all_tests():
     return [v for k, v in sorted(globals().items()) if k.startswith("test_")]
 
