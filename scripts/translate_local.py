@@ -50,6 +50,8 @@ FR_SOURCE_FIELDS = {"acces_pmr_detail"}
 PATCH_MODEL = "claude-haiku-4-5"             # PATCH tier only (HANDOFF-37)
 PATCH_IN_PER_MTOK = 0.50                     # batch: 50% off $1.00
 PATCH_OUT_PER_MTOK = 2.50                    # batch: 50% off $5.00
+PATCH_CACHE_WRITE_PER_MTOK = 0.625           # batch: 50% off 1.25 × $1.00
+PATCH_CACHE_READ_PER_MTOK = 0.05             # batch: 50% off 0.1 × $1.00
 PATCH_CAP_USD = 2.00                         # hard per-lang cap, aborts submit
 PATCH_MAX_TOKENS = 1000                      # segments avg 80 chars
 
@@ -605,7 +607,15 @@ def run_patch(lang, submit=False):
     tb.poll_batch(client, bid)
     results, usage = tb.collect_results(client, bid)
     tot = tb.sum_usage(usage.values())
-    actual = tb.usage_cost_usd(tot)
+    # HANDOFF-37 patch tier is Haiku ($0.50/$2.50), NOT the module's Sonnet
+    # batch rates — price it with the patch rates or a Haiku batch reads 3× too
+    # high, trips the $2 cap on a phantom overspend, and the run goes RED after
+    # already billing (the 'fails but takes my credit' bug).
+    actual = tb.usage_cost_usd(tot,
+                               in_per_mtok=PATCH_IN_PER_MTOK,
+                               out_per_mtok=PATCH_OUT_PER_MTOK,
+                               cache_write_per_mtok=PATCH_CACHE_WRITE_PER_MTOK,
+                               cache_read_per_mtok=PATCH_CACHE_READ_PER_MTOK)
     if any(tot.values()):
         print(f"[{lang}] METER patch batch: {tot['input_tokens']:,} in / "
               f"{tot['output_tokens']:,} out tok → ${actual:.2f} actual "

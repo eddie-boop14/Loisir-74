@@ -301,6 +301,37 @@ def test_patch_contract_and_cap():
     assert usd2 > m.PATCH_CAP_USD, "cap scenario must be detectable pre-submit"
 
 
+def test_patch_meter_prices_at_haiku_not_sonnet():
+    """Regression for the 'fails but still bills' patch-submit bug: the ACTUAL
+    cost of a Haiku patch batch must be priced at Haiku rates ($0.50/$2.50),
+    not the module's Sonnet batch rates ($1.50/$7.50). With the real run #17
+    usage (774,187 in / 377,087 out) the Haiku price is ~$1.33 (under the
+    $1.45 estimate and the $2 cap → PASS); the Sonnet mis-price was $3.99
+    (phantom overspend → false RED after already billing)."""
+    m = _load()
+    tb = m.tb
+    tot = {k: 0 for k in tb.USAGE_KEYS}
+    tot["input_tokens"] = 774187
+    tot["output_tokens"] = 377087
+
+    haiku = tb.usage_cost_usd(tot,
+                              in_per_mtok=m.PATCH_IN_PER_MTOK,
+                              out_per_mtok=m.PATCH_OUT_PER_MTOK,
+                              cache_write_per_mtok=m.PATCH_CACHE_WRITE_PER_MTOK,
+                              cache_read_per_mtok=m.PATCH_CACHE_READ_PER_MTOK)
+    assert abs(haiku - 1.33) < 0.02, f"Haiku patch price should be ~$1.33, got ${haiku:.2f}"
+
+    # the DEFAULT (unchanged) rates are the Sonnet batch lane — this is the
+    # mis-price the patch meter used to inherit; keep it pinned so a future
+    # rate edit can't silently re-break the patch tier.
+    sonnet = tb.usage_cost_usd(tot)
+    assert abs(sonnet - 3.99) < 0.02, f"default rates are Sonnet (~$3.99), got ${sonnet:.2f}"
+
+    est = 1.45  # the pl dry-run contract for this batch
+    assert not tb.over_budget(haiku, est), "Haiku actual ≤ estimate must NOT trip the >15% abort"
+    assert tb.over_budget(sonnet, est), "the Sonnet mis-price is what falsely tripped it"
+
+
 def _all_tests():
     return [v for k, v in sorted(globals().items()) if k.startswith("test_")]
 

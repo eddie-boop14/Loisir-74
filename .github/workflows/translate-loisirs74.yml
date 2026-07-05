@@ -147,9 +147,20 @@ jobs:
           # Merged lanes leave ancestor branches behind: with the full-depth
           # clone those are already contained → merge is a no-op.
           git checkout -B "$BRANCH"
-          git add Json/ reports/translate-batch-state.json reports/translate-batch-failures.md \
-                  reports/translate-cost-reconciliation.md reports/translate-cost-calibration.json \
-                  reports/translate-local-flags-*.json 2>/dev/null || true
+          # Stage the paid results. `git add A B C` is ATOMIC: if ANY literal
+          # pathspec is missing (e.g. translate-cost-calibration.json, which
+          # only exists after mode=audit) git add FATALS and stages NOTHING —
+          # silently discarding the paid Json patch (the bug that made every
+          # patch-submit land 0 commits while still billing). Add Json/ always,
+          # then each optional report file only if it exists.
+          git add Json/
+          for f in reports/translate-batch-state.json \
+                   reports/translate-batch-failures.md \
+                   reports/translate-cost-reconciliation.md \
+                   reports/translate-cost-calibration.json \
+                   reports/translate-local-flags-*.json; do
+            [ -e "$f" ] && git add "$f"
+          done
           git commit -m "$MSG" || { echo "nothing to commit"; exit 0; }
           if [ -z "$FORCE" ] && git fetch origin "$BRANCH" 2>/dev/null; then
             git merge --no-edit FETCH_HEAD || {
