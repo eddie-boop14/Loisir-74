@@ -1,0 +1,20 @@
+# Sparse Index: planning / claude-code
+# 18 interactions | env: 0 | svc: 5 | agent: 13 | errors: 0
+#1   agent    system      (no content)
+#2   agent    system      (no content)
+#3   agent    system      (no content)
+#4   agent    assistant   I'll research indoor venues near Annecy using loisirs74.fr. Let me load the w...
+#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 6ms
+#6   agent    assistant   I'll start by exploring the loisirs74.fr site to find indoor venues near Annecy.
+#7   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List indoor activities...) -> ok, 1.7KB, 6.0s
+#8   service  tool_use    WebSearch(query: loisirs74.fr Annecy activités intérieur famille pluie) -> ok, 6.1KB, 28.4s
+#9   agent    system      (no content)
+#10  agent    system      (no content)
+#11  agent    system      (no content)
+#12  agent    assistant   Good candidates found on loisirs74.fr. Let me fetch the specific venue pages ...
+#13  service  tool_use    WebFetch(url: https://loisirs74.fr/musee-chateau-annecy, prompt: W...) -> ok, 1.3KB, 5.2s
+#14  service  tool_use    WebFetch(url: https://loisirs74.fr/bowling-le-bowl-annecy, prompt:...) -> ok, 1.0KB, 3.5s
+#15  service  tool_use    WebFetch(url: https://loisirs74.fr/escalade-climb-up-annecy, promp...) -> ok, 1.2KB, 4.2s
+#16  agent    system      (no content)
+#17  agent    system      (no content)
+#18  agent    assistant   Here's a rainy-afternoon plan for a family in Annecy, with three indoor venue...

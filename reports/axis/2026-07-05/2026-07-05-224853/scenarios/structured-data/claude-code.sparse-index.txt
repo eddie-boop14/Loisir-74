@@ -1,0 +1,17 @@
+# Sparse Index: structured-data / claude-code
+# 15 interactions | env: 2 | svc: 3 | agent: 11 | errors: 0
+#1   agent    system      (no content)
+#2   agent    assistant   I'll start by loading the web tools and finding a place page (fiche) on the s...
+#3   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 6ms
+#4   agent    assistant   I'll find a place page on the site first.
+#5   service  tool_use    WebSearch(query: loisirs74.fr fiche lieu site:loisirs74.fr) -> ok, 4.7KB, 25.1s
+#6   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List links to individu...) -> ok, 4.5KB, 15.2s
+#7   agent    system      (no content)
+#8   agent    system      (no content)
+#9   agent    assistant   I have plenty of fiche URLs. WebFetch strips structured data (it converts to ...
+#10  env,servicetool_use    Bash(command: curl -sL -A "Mozilla/5.0 (compatible; research)"...) -> ok, 509B, 404ms
+#11  agent    assistant   Found one JSON-LD block, no microdata. Let me extract it.
+#12  env      tool_use    Bash(command: python3 - <<'EOF' import re, json html = open('/...) -> ok, 6.6KB, 36ms
+#13  agent    system      (no content)
+#14  agent    system      (no content)
+#15  agent    assistant   Done. I fetched one fiche and inspected its raw HTML (WebFetch's markdown con...

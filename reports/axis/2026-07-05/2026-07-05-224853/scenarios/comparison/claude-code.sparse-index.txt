@@ -1,0 +1,16 @@
+# Sparse Index: comparison / claude-code
+# 14 interactions | env: 0 | svc: 4 | agent: 10 | errors: 0
+#1   agent    system      (no content)
+#2   agent    assistant   I'll research beaches on Lac d'Annecy using loisirs74.fr. Let me start by fet...
+#3   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 8ms
+#4   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List the beaches (plag...) -> ok, 1.1KB, 3.9s
+#5   agent    system      (no content)
+#6   agent    system      (no content)
+#7   agent    assistant   Let me read the individual beach pages to get detailed price and supervision ...
+#8   service  tool_use    WebFetch(url: https://loisirs74.fr/plage-de-saint-jorioz, prompt: ...) -> ok, 1.1KB, 4.4s
+#9   service  tool_use    WebFetch(url: https://loisirs74.fr/plage-des-marquisats, prompt: W...) -> ok, 1.2KB, 4.0s
+#10  service  tool_use    WebFetch(url: https://loisirs74.fr/plage-albigny, prompt: What is ...) -> ok, 1.1KB, 3.6s
+#11  agent    system      (no content)
+#12  agent    system      (no content)
+#13  agent    system      (no content)
+#14  agent    assistant   I compared two beaches on Lac d'Annecy using the pages on loisirs74.fr. I cho...
