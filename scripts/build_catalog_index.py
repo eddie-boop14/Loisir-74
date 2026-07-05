@@ -92,6 +92,10 @@ def main():
             "longitude": d.get("longitude"),
             "urls": {"fr": f"https://loisirs74.fr/{slug}",
                      **{l: f"https://loisirs74.fr/{l}/{slug}" for l in LANGS}},
+            # HANDOFF-39 facet layer: per-lieu machine surfaces (md FR/EN + typed JSON)
+            "facet_md": f"https://loisirs74.fr/content/{slug}.md",
+            "facet_md_en": f"https://loisirs74.fr/content/en/{slug}.md",
+            "facet_json": f"https://loisirs74.fr/api/lieu/{slug}.json",
         }
         if hero:
             item["photo"] = hero

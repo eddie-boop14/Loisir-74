@@ -1,7 +1,10 @@
+# HANDOFF-39A-C1: the facet mirrors are agent food, never index candidates —
+# ~800 md/json mirrors must not compete with the ranking HTML pages.
+# noindex ≠ 404: md-alt links keep resolving, agents keep eating.
 /content/*
   Content-Type: text/markdown; charset=utf-8
-  X-Robots-Tag: index, follow
-  Cache-Control: public, max-age=3600
+  X-Robots-Tag: noindex
+  Cache-Control: public, max-age=300, s-maxage=86400
   Access-Control-Allow-Origin: *
 
 /llms.txt
@@ -16,9 +19,19 @@
   Cache-Control: public, max-age=3600
   Access-Control-Allow-Origin: *
 
+# HANDOFF-39 blocker 2 (AXIS): long s-maxage on /api/* so agents hit the CDN
+# cache, not origin (the lieux.json ECONNRESET class). Covers the per-lieu
+# facet JSON tree /api/lieu/<slug>.json too. noindex per HANDOFF-39A-C1.
+/api/*
+  Content-Type: application/json; charset=utf-8
+  X-Robots-Tag: noindex
+  Cache-Control: public, max-age=300, s-maxage=86400
+  Access-Control-Allow-Origin: *
+
 /api/lieux.json
   Content-Type: application/json; charset=utf-8
-  Cache-Control: public, max-age=3600
+  X-Robots-Tag: noindex
+  Cache-Control: public, max-age=300, s-maxage=86400
   Access-Control-Allow-Origin: *
 
 /.well-known/ai-info.json

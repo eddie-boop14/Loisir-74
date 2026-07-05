@@ -16,6 +16,7 @@ Any violation → exit 1 (build red). Regenerate with scripts/build_ai_content.p
 """
 import argparse
 import glob
+import json
 import os
 import re
 import sys
@@ -39,21 +40,44 @@ def main():
 
     violations = []
 
-    # 1. advertised md exists for every fiche
-    missing = [s for s in slugs
-               if not os.path.exists(os.path.join(args.content_dir, f"{s}.md"))]
-    if missing:
-        violations.append(f"{len(missing)} advertised /content/*.md missing (404s): "
-                          + ", ".join(missing[:8]) + (" …" if len(missing) > 8 else ""))
+    # 1. advertised surfaces exist for every fiche (HANDOFF-39: md FR + md EN
+    #    + typed facet JSON — three surfaces, zero advertised 404s)
+    for label, mk in (
+        ("/content/*.md", lambda s: os.path.join(args.content_dir, f"{s}.md")),
+        ("/content/en/*.md", lambda s: os.path.join(args.content_dir, "en", f"{s}.md")),
+        ("/api/lieu/*.json", lambda s: os.path.join(args.root, "api", "lieu", f"{s}.json")),
+    ):
+        missing = [s for s in slugs if not os.path.exists(mk(s))]
+        if missing:
+            violations.append(f"{len(missing)} advertised {label} missing (404s): "
+                              + ", ".join(missing[:8]) + (" …" if len(missing) > 8 else ""))
 
-    # 4a. research_log must not leak into any per-lieu md
-    leaks = [s for s in slugs
-             if os.path.exists(os.path.join(args.content_dir, f"{s}.md"))
-             and "research_log" in open(os.path.join(args.content_dir, f"{s}.md"),
-                                        encoding="utf-8").read()]
-    if leaks:
-        violations.append(f"research_log leaked into {len(leaks)} content/*.md: "
-                          + ", ".join(leaks[:8]))
+    # 4a. research_log must not leak into any per-lieu surface
+    for label, mk in (
+        ("content/*.md", lambda s: os.path.join(args.content_dir, f"{s}.md")),
+        ("content/en/*.md", lambda s: os.path.join(args.content_dir, "en", f"{s}.md")),
+        ("api/lieu/*.json", lambda s: os.path.join(args.root, "api", "lieu", f"{s}.json")),
+    ):
+        leaks = [s for s in slugs
+                 if os.path.exists(mk(s))
+                 and "research_log" in open(mk(s), encoding="utf-8").read()]
+        if leaks:
+            violations.append(f"research_log leaked into {len(leaks)} {label}: "
+                              + ", ".join(leaks[:8]))
+
+    # 5. ai-info.json is GENERATED and counts from truth (HANDOFF-39: the
+    #    hand-authored file drifted to 87 vs 392 — never again)
+    ai_info_path = os.path.join(args.root, ".well-known", "ai-info.json")
+    if not os.path.exists(ai_info_path):
+        violations.append(".well-known/ai-info.json missing")
+    else:
+        try:
+            info = json.load(open(ai_info_path, encoding="utf-8"))
+            if info.get("content_count") != n:
+                violations.append(f"ai-info.json content_count={info.get('content_count')}"
+                                  f" ≠ corpus {n}")
+        except Exception as e:
+            violations.append(f"ai-info.json unreadable: {e}")
 
     # 2. llms-full.txt
     full_path = os.path.join(args.root, "llms-full.txt")
@@ -89,8 +113,8 @@ def main():
         if "research_log" in idx:
             violations.append("research_log leaked into llms.txt")
 
-    print(f"gate_ai_content: {n} fiches; "
-          f"{n - len(missing)} have content/*.md; checked llms.txt + llms-full.txt")
+    print(f"gate_ai_content: {n} fiches; checked content/*.md + content/en/*.md "
+          f"+ api/lieu/*.json + llms.txt + llms-full.txt + ai-info.json")
     if not violations:
         print("✓ AI content layer complete and in sync with the corpus (0 advertised 404s)")
         sys.exit(0)

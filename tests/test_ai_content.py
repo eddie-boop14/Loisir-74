@@ -87,8 +87,10 @@ def test_md_shape_and_geo_no_research_log():
     assert "geo_verified: true" in md
     assert 'google_place_id: "ChIJ_test"' in md
     assert "# Château Fixture" in md
-    assert "## En bref" in md and "## Présentation" in md
-    assert "## Questions fréquentes" in md
+    # HANDOFF-39 facet canon: the eight anchors, byte-verbatim, in order
+    body = md.split("---", 2)[2]
+    anchors = [ln for ln in body.split("\n") if ln.startswith("##")]
+    assert anchors == bac.FACET_HEADINGS["fr"]
     assert "research_log" not in md and "secret" not in md
     assert md.endswith("\n")
 
@@ -99,10 +101,22 @@ def test_md_unverified_geo_false():
     assert "google_place_id: null" in md
 
 
-def test_md_strips_html_to_paragraphs():
+def test_md_facet_lanes_and_en_canon():
+    # HANDOFF-39: facts lines only — the old prose body never leaks in
     md = bac.render_md(_fiche())
-    assert "Le Château est beau." in md          # tags stripped
     assert "<p>" not in md and "<strong>" not in md
+    assert "## Présentation" not in md and "## En bref" not in md
+    assert "- Parking" not in md            # Parking is a section, not a bullet
+    assert "Gratuit" in md                   # facts.parking rendered under ## Parking
+    # unknown lanes: fixture has no tarif/price data and no acces_pmr
+    assert "Non renseigné" in md
+    # EN file: EN canon anchors + frozen FR name verbatim
+    md_en = bac.render_md(_fiche(), "en")
+    body = md_en.split("---", 2)[2]
+    anchors = [ln for ln in body.split("\n") if ln.startswith("##")]
+    assert anchors == bac.FACET_HEADINGS["en"]
+    assert "# Château Fixture" in md_en
+    assert "Not specified" in md_en
 
 
 def test_iso_date_french():
