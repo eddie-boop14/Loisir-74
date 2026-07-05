@@ -1,0 +1,23 @@
+# Sparse Index: structured-data / claude-code
+# 21 interactions | env: 3 | svc: 4 | agent: 15 | errors: 0
+#1   agent    system      (no content)
+#2   agent    system      (no content)
+#3   agent    system      (no content)
+#4   agent    assistant   (thinking)
+#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 8ms
+#6   agent    assistant   (thinking)
+#7   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List URLs of individua...) -> ok, 4.2KB, 14.2s
+#8   service  tool_use    WebSearch(query: loisirs74.fr fiche lieu activité) -> ok, 3.3KB, 14.4s
+#9   agent    system      (no content)
+#10  agent    system      (no content)
+#11  agent    system      (no content)
+#12  agent    assistant   (thinking)
+#13  service  tool_use    WebFetch(url: https://loisirs74.fr/chateau-de-menthon-saint-bernar...) -> ok, 1.3KB, 7.7s
+#14  agent    system      (no content)
+#15  agent    system      (no content)
+#16  agent    assistant   WebFetch strips `<script>` tags during markdown conversion, so it can't see J...
+#17  env,servicetool_use    Bash(command: curl -sL --compressed -A "Mozilla/5.0" https://l...) -> ok, 268B, 166ms
+#18  env      tool_use    Bash(command: cd /tmp; grep -o '<script[^>]*application/ld+jso...) -> ok, 316B, 57ms
+#19  agent    assistant   (thinking)
+#20  env      tool_use    Bash(command: cd /tmp && python3 - <<'EOF' import re html=open...) -> ok, 7.3KB, 249ms
+#21  agent    assistant   I fetched a live fiche page (`Château de Menthon-Saint-Bernard`) and pulled t...

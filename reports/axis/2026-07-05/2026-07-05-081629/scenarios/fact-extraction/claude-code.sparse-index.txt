@@ -1,0 +1,12 @@
+# Sparse Index: fact-extraction / claude-code
+# 10 interactions | env: 0 | svc: 2 | agent: 8 | errors: 0
+#1   agent    system      (no content)
+#2   agent    system      (no content)
+#3   agent    system      (no content)
+#4   agent    assistant   (thinking)
+#5   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 2) -> ok, 53B, 7ms
+#6   agent    assistant   (thinking)
+#7   service  tool_use    WebSearch(query: Plage de Saint-Jorioz loisirs74.fr) -> ok, 3.6KB, 15.6s
+#8   agent    assistant   Let me fetch the page directly to confirm these details.
+#9   service  tool_use    WebFetch(url: https://loisirs74.fr/plage-de-saint-jorioz, prompt: ...) -> ok, 967B, 4.7s
+#10  agent    assistant   Here are the three facts for **Plage de Saint-Jorioz**, from [loisirs74.fr](h...

@@ -1,0 +1,1133 @@
+{
+  "scenarioKey": "ai-discovery",
+  "scenarioName": "AI discovery — llms.txt and machine-readable resources",
+  "agentName": "claude-code",
+  "prompt": "Check https://loisirs74.fr/llms.txt and use what it declares to list the machine-readable resources this site offers to agents, then fetch one of those resources and extract one true fact from it. Read-only task: never submit forms or make bookings.",
+  "judge": [
+    {
+      "check": "Found and read /llms.txt",
+      "weight": 0.3
+    },
+    {
+      "check": "Followed a resource actually declared in llms.txt (e.g. a content/*.md file or the API index)",
+      "weight": 0.4
+    },
+    {
+      "check": "Extracted a fact that is true per the fetched resource",
+      "weight": 0.3
+    }
+  ],
+  "agentConfig": {
+    "agent": "claude-code"
+  },
+  "output": {
+    "transcript": [
+      {
+        "type": "system",
+        "timestamp": "2026-07-05T08:16:29.963Z",
+        "content": {
+          "type": "system",
+          "subtype": "init",
+          "cwd": "/tmp/axis-EgGcJb/work",
+          "session_id": "a5170334-bd03-460a-8155-9a3db99fcbbc",
+          "tools": [
+            "Task",
+            "Bash",
+            "CronCreate",
+            "CronDelete",
+            "CronList",
+            "DesignSync",
+            "Edit",
+            "EnterWorktree",
+            "ExitWorktree",
+            "NotebookEdit",
+            "Read",
+            "ReportFindings",
+            "ScheduleWakeup",
+            "SendMessage",
+            "Skill",
+            "TaskCreate",
+            "TaskGet",
+            "TaskList",
+            "TaskOutput",
+            "TaskStop",
+            "TaskUpdate",
+            "ToolSearch",
+            "WebFetch",
+            "WebSearch",
+            "Workflow",
+            "Write"
+          ],
+          "mcp_servers": [],
+          "model": "claude-opus-4-8[1m]",
+          "permissionMode": "bypassPermissions",
+          "slash_commands": [
+            "deep-research",
+            "design-sync",
+            "dataviz",
+            "update-config",
+            "verify",
+            "debug",
+            "code-review",
+            "simplify",
+            "batch",
+            "fewer-permission-prompts",
+            "loop",
+            "claude-api",
+            "run",
+            "run-skill-generator",
+            "agents",
+            "clear",
+            "compact",
+            "config",
+            "context",
+            "heapdump",
+            "init",
+            "__remote-workflow",
+            "reload-skills",
+            "review",
+            "security-review",
+            "usage",
+            "insights",
+            "recap",
+            "goal",
+            "design",
+            "design-consent",
+            "design-revoke",
+            "team-onboarding"
+          ],
+          "apiKeySource": "ANTHROPIC_API_KEY",
+          "claude_code_version": "2.1.201",
+          "output_style": "default",
+          "agents": [
+            "claude",
+            "Explore",
+            "general-purpose",
+            "Plan",
+            "statusline-setup"
+          ],
+          "skills": [
+            "deep-research",
+            "design-sync",
+            "dataviz",
+            "update-config",
+            "verify",
+            "debug",
+            "code-review",
+            "simplify",
+            "batch",
+            "fewer-permission-prompts",
+            "loop",
+            "claude-api",
+            "run",
+            "run-skill-generator"
+          ],
+          "plugins": [],
+          "analytics_disabled": true,
+          "product_feedback_disabled": false,
+          "uuid": "f75124d8-7181-48e0-98ff-6e2b1fe98618",
+          "fast_mode_state": "off"
+        }
+      },
+      {
+        "type": "assistant",
+        "timestamp": "2026-07-05T08:16:31.490Z",
+        "content": {
+          "type": "assistant",
+          "message": {
+            "model": "claude-opus-4-8",
+            "id": "msg_015nTz4GUBvCurfNEUUn3QHv",
+            "type": "message",
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "",
+                "signature": "EpMCCmMIDxgCKkBsmTINenh/X99bIUkAa5tf8ipYRb2RfHNhm3jE3jcxjcBru7XSv3twqNSTJ9FSbSNEN/qQGm+Irvy/yoTH7bv0Mg9jbGF1ZGUtb3B1cy00LTg4AEIIdGhpbmtpbmcSDCEtKyDFZlzDO4WYuxoMhVcI7sc4sit/giz8IjBCRvnKmni/pCFfsDmZMUp9eRQEIUmFQbgCFyD3LQc4/WXYEKZXQdrym3K2HhawkvgqXunQkHV/y2Z8qODLJy+5YQUGYQ8e/AbS+mBL8GYw8cv1ZqE1qaoUD0KKWTx6sdSG5AocIDBOJro9HXVPd71u8kk0hQ9QgqwmFcKpx9VxbeNPfKMiJzW7veX3SUGPKycYAQ=="
+              }
+            ],
+            "stop_reason": null,
+            "stop_sequence": null,
+            "stop_details": null,
+            "usage": {
+              "input_tokens": 2804,
+              "cache_creation_input_tokens": 1126,
+              "cache_read_input_tokens": 13659,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 1126,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "output_tokens": 5,
+              "service_tier": "standard",
+              "inference_geo": "global"
+            },
+            "context_management": null
+          },
+          "parent_tool_use_id": null,
+          "session_id": "a5170334-bd03-460a-8155-9a3db99fcbbc",
+          "uuid": "c11aa62e-28e7-4bb6-98b7-885440e4b525",
+          "request_id": "req_011CciaZVmijKoWmUiXks6oE"
+        }
+      },
+      {
+        "type": "assistant",
+        "timestamp": "2026-07-05T08:16:32.009Z",
+        "content": {
+          "type": "assistant",
+          "message": {
+            "model": "claude-opus-4-8",
+            "id": "msg_015nTz4GUBvCurfNEUUn3QHv",
+            "type": "message",
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "I'll start by fetching the `llms.txt` file to see what it declares."
+              }
+            ],
+            "stop_reason": null,
+            "stop_sequence": null,
+            "stop_details": null,
+            "usage": {
+              "input_tokens": 2804,
+              "cache_creation_input_tokens": 1126,
+              "cache_read_input_tokens": 13659,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 1126,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "output_tokens": 5,
+              "service_tier": "standard",
+              "inference_geo": "global"
+            },
+            "context_management": null
+          },
+          "parent_tool_use_id": null,
+          "session_id": "a5170334-bd03-460a-8155-9a3db99fcbbc",
+          "uuid": "ff9da1eb-6e73-41f5-92b7-7314cf564dcf",
+          "request_id": "req_011CciaZVmijKoWmUiXks6oE"
+        }
+      },
+      {
+        "type": "assistant",
+        "timestamp": "2026-07-05T08:16:32.402Z",
+        "content": {
+          "type": "assistant",
+          "message": {
+            "model": "claude-opus-4-8",
+            "id": "msg_015nTz4GUBvCurfNEUUn3QHv",
+            "type": "message",
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool_use",
+                "id": "toolu_01QT1XWxg5T7kHcFAorLAMSf",
+                "name": "ToolSearch",
+                "input": {
+                  "query": "select:WebFetch",
+                  "max_results": 3
+                },
+                "caller": {
+                  "type": "direct"
+                }
+              }
+            ],
+            "stop_reason": null,
+            "stop_sequence": null,
+            "stop_details": null,
+            "usage": {
+              "input_tokens": 2804,
+              "cache_creation_input_tokens": 1126,
+              "cache_read_input_tokens": 13659,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 1126,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "output_tokens": 5,
+              "service_tier": "standard",
+              "inference_geo": "global"
+            },
+            "context_management": null
+          },
+          "parent_tool_use_id": null,
+          "session_id": "a5170334-bd03-460a-8155-9a3db99fcbbc",
+          "uuid": "37c8059a-5540-48ba-8da9-00c686f829ab",
+          "request_id": "req_011CciaZVmijKoWmUiXks6oE"
+        }
+      },
+      {
+        "type": "tool_result",
+        "timestamp": "2026-07-05T08:16:32.408Z",
+        "content": {
+          "type": "user",
+          "message": {
+            "role": "user",
+            "content": [
+              {
+                "type": "tool_result",
+                "tool_use_id": "toolu_01QT1XWxg5T7kHcFAorLAMSf",
+                "content": [
+                  {
+                    "type": "tool_reference",
+                    "tool_name": "WebFetch"
+                  }
+                ]
+              }
+            ]
+          },
+          "parent_tool_use_id": null,
+          "session_id": "a5170334-bd03-460a-8155-9a3db99fcbbc",
+          "uuid": "c040f594-9944-4b53-a21b-8def60d49f89",
+          "timestamp": "2026-07-05T08:16:32.408Z",
+          "tool_use_result": {
+            "matches": [
+              "WebFetch"
+            ],
+            "query": "select:WebFetch",
+            "total_deferred_tools": 17
+          }
+        }
+      },
+      {
+        "type": "assistant",
+        "timestamp": "2026-07-05T08:16:35.282Z",
+        "content": {
+          "type": "assistant",
+          "message": {
+            "model": "claude-opus-4-8",
+            "id": "msg_018ZAjQoxonuxyAjXqH6aC4w",
+            "type": "message",
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool_use",
+                "id": "toolu_01RWRnSebErKRxyYxkbBheuR",
+                "name": "WebFetch",
+                "input": {
+                  "url": "https://loisirs74.fr/llms.txt",
+                  "prompt": "List verbatim all URLs and machine-readable resources (JSON, API endpoints, data files, feeds, etc.) declared in this file. Include the full URL and any description for each."
+                },
+                "caller": {
+                  "type": "direct"
+                }
+              }
+            ],
+            "stop_reason": null,
+            "stop_sequence": null,
+            "stop_details": null,
+            "usage": {
+              "input_tokens": 2,
+              "cache_creation_input_tokens": 4388,
+              "cache_read_input_tokens": 13752,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 4388,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "output_tokens": 52,
+              "service_tier": "standard",
+              "inference_geo": "global"
+            },
+            "context_management": null
+          },
+          "parent_tool_use_id": null,
+          "session_id": "a5170334-bd03-460a-8155-9a3db99fcbbc",
+          "uuid": "adb29bc8-2ce7-47f5-a946-ed139803bce9",
+          "request_id": "req_011CciaZgDXbCSq35pSNWrAn"
+        }
+      },
+      {
+        "type": "tool_result",
+        "timestamp": "2026-07-05T08:16:42.624Z",
+        "content": {
+          "type": "user",
+          "message": {
+            "role": "user",
+            "content": [
+              {
+                "tool_use_id": "toolu_01RWRnSebErKRxyYxkbBheuR",
+                "type": "tool_result",
+                "content": "# Loisirs 74: Complete URL and Machine-Readable Resource Inventory\n\n## Core API & Data Endpoints\n\n| Resource | URL | Description |\n|----------|-----|-------------|\n| **API Index** | `https://loisirs74.fr/api/lieux.json` | Machine-readable index of all 397 sites with slug, name, category, commune, GPS, and per-lieu facet URLs |\n| **Full Content Dump** | `https://loisirs74.fr/llms-full.txt` | All 397 leisure destinations' French markdown concatenated for bulk ingestion |\n| **Sitemap** | `https://loisirs74.fr/sitemap.xml` | Standard XML sitemap with lastmod, hreflang, and image entries |\n| **AI Discovery Manifest** | `https://loisirs74.fr/.well-known/ai-info.json` | Discovery manifest listing all AI-related endpoints |\n\n## Per-Lieu Content Patterns\n\n**Canonical Pattern:** Substitute `{slug}` with destination identifier (e.g., `lac-blanc`):\n\n| Format | URL Pattern | Language |\n|--------|------------|----------|\n| **Markdown (canonical)** | `https://loisirs74.fr/content/{slug}.md` | French |\n| **Markdown (translated)** | `https://loisirs74.fr/content/en/{slug}.md` | English (12 languages available) |\n| **Typed JSON** | `https://loisirs74.fr/api/lieu/{slug}.json` | Structured data with nulls preserved |\n| **HTML (French)** | `https://loisirs74.fr/{slug}` | Web page |\n| **HTML (multilingual)** | `https://loisirs74.fr/{lang}/{slug}` | Other language variants |\n\n## Category Hub Markdown Files\n\n| Category | URL | Count |\n|----------|-----|-------|\n| Lakes & Beaches | `https://loisirs74.fr/content/lacs.md` | 31 sites |\n| Waterfalls | `https://loisirs74.fr/content/cascades.md` | 17 sites |\n| Leisure Bases | `https://loisirs74.fr/content/bases-de-loisirs.md` | 33 sites |\n| Viewpoints | `https://loisirs74.fr/content/points-de-vue.md` | 28 sites |\n| Cable Cars | `https://loisirs74.fr/content/telecabines.md` | 8 sites |\n| Castles | `https://loisirs74.fr/content/chateaux.md` | 26 sites |\n| Trails | `https://loisirs74.fr/content/sentiers.md` | 40 sites |\n| Greenways | `https://loisirs74.fr/content/voies-vertes.md` | 5 sites |\n| Museums | `https://loisirs74.fr/content/musees.md` | 49 sites |\n| Attractions | `https://loisirs74.fr/content/attractions.md` | 160 sites |"
+              }
+            ]
+          },
+          "parent_tool_use_id": null,
+          "session_id": "a5170334-bd03-460a-8155-9a3db99fcbbc",
+          "uuid": "87cbcffd-f0e9-4ed6-b1df-4a4a4f229055",
+          "timestamp": "2026-07-05T08:16:42.622Z",
+          "tool_use_result": {
+            "bytes": 106356,
+            "code": 200,
+            "codeText": "OK",
+            "result": "# Loisirs 74: Complete URL and Machine-Readable Resource Inventory\n\n## Core API & Data Endpoints\n\n| Resource | URL | Description |\n|----------|-----|-------------|\n| **API Index** | `https://loisirs74.fr/api/lieux.json` | Machine-readable index of all 397 sites with slug, name, category, commune, GPS, and per-lieu facet URLs |\n| **Full Content Dump** | `https://loisirs74.fr/llms-full.txt` | All 397 leisure destinations' French markdown concatenated for bulk ingestion |\n| **Sitemap** | `https://loisirs74.fr/sitemap.xml` | Standard XML sitemap with lastmod, hreflang, and image entries |\n| **AI Discovery Manifest** | `https://loisirs74.fr/.well-known/ai-info.json` | Discovery manifest listing all AI-related endpoints |\n\n## Per-Lieu Content Patterns\n\n**Canonical Pattern:** Substitute `{slug}` with destination identifier (e.g., `lac-blanc`):\n\n| Format | URL Pattern | Language |\n|--------|------------|----------|\n| **Markdown (canonical)** | `https://loisirs74.fr/content/{slug}.md` | French |\n| **Markdown (translated)** | `https://loisirs74.fr/content/en/{slug}.md` | English (12 languages available) |\n| **Typed JSON** | `https://loisirs74.fr/api/lieu/{slug}.json` | Structured data with nulls preserved |\n| **HTML (French)** | `https://loisirs74.fr/{slug}` | Web page |\n| **HTML (multilingual)** | `https://loisirs74.fr/{lang}/{slug}` | Other language variants |\n\n## Category Hub Markdown Files\n\n| Category | URL | Count |\n|----------|-----|-------|\n| Lakes & Beaches | `https://loisirs74.fr/content/lacs.md` | 31 sites |\n| Waterfalls | `https://loisirs74.fr/content/cascades.md` | 17 sites |\n| Leisure Bases | `https://loisirs74.fr/content/bases-de-loisirs.md` | 33 sites |\n| Viewpoints | `https://loisirs74.fr/content/points-de-vue.md` | 28 sites |\n| Cable Cars | `https://loisirs74.fr/content/telecabines.md` | 8 sites |\n| Castles | `https://loisirs74.fr/content/chateaux.md` | 26 sites |\n| Trails | `https://loisirs74.fr/content/sentiers.md` | 40 sites |\n| Greenways | `https://loisirs74.fr/content/voies-vertes.md` | 5 sites |\n| Museums | `https://loisirs74.fr/content/musees.md` | 49 sites |\n| Attractions | `https://loisirs74.fr/content/attractions.md` | 160 sites |",
+            "durationMs": 7338,
+            "url": "https://loisirs74.fr/llms.txt"
+          }
+        }
+      },
+      {
+        "type": "assistant",
+        "timestamp": "2026-07-05T08:16:45.519Z",
+        "content": {
+          "type": "assistant",
+          "message": {
+            "model": "claude-opus-4-8",
+            "id": "msg_01RHfSGhGvDbaQqN18c9oTpQ",
+            "type": "message",
+            "role": "assistant",
+            "content": [
+              {
+                "type": "thinking",
+                "thinking": "",
+                "signature": "EsoCCmMIDxgCKkA6zYBy3w1djVa3RnIfEPiOMkU9SgeK8l4OAvPCKv310n5RoRe1ezXit19wQ/aHNBWigGRjO8qZqHZAFkeTzHe5Mg9jbGF1ZGUtb3B1cy00LTg4AEIIdGhpbmtpbmcSDKqx4V/WKJwVdQaHjRoMGLPNJc9t7oyaS5m8IjArk2NzZToyzflyeCvYojRS38lFIuGA6Lt0LjqtZlQGceIupuj5JsVQRf8OMAuESDcqlAGUw9QDS8JeRZE6PbyL2TMAdXHM5Bhrv+h1bhRXGmnWxLXuat68olW1GWmbmt2zF6QspWOsnmK3F4Lq/dHPibqnyceT9toq8VJCyOt8RQGutZuPXq932rquhRTGxc0ue1s7Q9kGl4V2Seyea47pkZslgNsUYfzb/TXDYEfnV8oVkS23v029cOSOwyHA9IUVJmk/ZXSUGAE="
+              }
+            ],
+            "stop_reason": null,
+            "stop_sequence": null,
+            "stop_details": null,
+            "usage": {
+              "input_tokens": 2,
+              "cache_creation_input_tokens": 1152,
+              "cache_read_input_tokens": 18140,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 1152,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "output_tokens": 3,
+              "service_tier": "standard",
+              "inference_geo": "global"
+            },
+            "context_management": null
+          },
+          "parent_tool_use_id": null,
+          "session_id": "a5170334-bd03-460a-8155-9a3db99fcbbc",
+          "uuid": "19387021-b332-4969-a88f-543bebac49b1",
+          "request_id": "req_011CciaaRtqbdY9Cu8hFcnix"
+        }
+      },
+      {
+        "type": "assistant",
+        "timestamp": "2026-07-05T08:16:46.604Z",
+        "content": {
+          "type": "assistant",
+          "message": {
+            "model": "claude-opus-4-8",
+            "id": "msg_01RHfSGhGvDbaQqN18c9oTpQ",
+            "type": "message",
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "The `llms.txt` declares several machine-readable resources. Let me fetch one — the API index — to extract a fact."
+              }
+            ],
+            "stop_reason": null,
+            "stop_sequence": null,
+            "stop_details": null,
+            "usage": {
+              "input_tokens": 2,
+              "cache_creation_input_tokens": 1152,
+              "cache_read_input_tokens": 18140,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 1152,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "output_tokens": 3,
+              "service_tier": "standard",
+              "inference_geo": "global"
+            },
+            "context_management": null
+          },
+          "parent_tool_use_id": null,
+          "session_id": "a5170334-bd03-460a-8155-9a3db99fcbbc",
+          "uuid": "7c9f5ee3-47cc-45f5-b358-e6d7d6a986b0",
+          "request_id": "req_011CciaaRtqbdY9Cu8hFcnix"
+        }
+      },
+      {
+        "type": "assistant",
+        "timestamp": "2026-07-05T08:16:47.829Z",
+        "content": {
+          "type": "assistant",
+          "message": {
+            "model": "claude-opus-4-8",
+            "id": "msg_01RHfSGhGvDbaQqN18c9oTpQ",
+            "type": "message",
+            "role": "assistant",
+            "content": [
+              {
+                "type": "tool_use",
+                "id": "toolu_0155iGhJiFdFsryW3u4EixCp",
+                "name": "WebFetch",
+                "input": {
+                  "url": "https://loisirs74.fr/api/lieux.json",
+                  "prompt": "Return the very first entry in this JSON verbatim, including its slug, name, category, commune, and GPS coordinates. Also state the total number of entries."
+                },
+                "caller": {
+                  "type": "direct"
+                }
+              }
+            ],
+            "stop_reason": null,
+            "stop_sequence": null,
+            "stop_details": null,
+            "usage": {
+              "input_tokens": 2,
+              "cache_creation_input_tokens": 1152,
+              "cache_read_input_tokens": 18140,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 1152,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "output_tokens": 3,
+              "service_tier": "standard",
+              "inference_geo": "global"
+            },
+            "context_management": null
+          },
+          "parent_tool_use_id": null,
+          "session_id": "a5170334-bd03-460a-8155-9a3db99fcbbc",
+          "uuid": "be380bda-bb6e-4a0d-8482-836e105ae298",
+          "request_id": "req_011CciaaRtqbdY9Cu8hFcnix"
+        }
+      },
+      {
+        "type": "tool_result",
+        "timestamp": "2026-07-05T08:16:49.792Z",
+        "content": {
+          "type": "user",
+          "message": {
+            "role": "user",
+            "content": [
+              {
+                "tool_use_id": "toolu_0155iGhJiFdFsryW3u4EixCp",
+                "type": "tool_result",
+                "content": "# First Entry and Total Count\n\n**First Entry:**\n- **Slug:** abbaye-d-aulps\n- **Name:** Abbaye d'Aulps\n- **Category:** chateau\n- **Commune:** Saint-Jean-d'Aulps\n- **GPS Coordinates:** 46.2419, 6.6498\n\n**Total Entries:** 392"
+              }
+            ]
+          },
+          "parent_tool_use_id": null,
+          "session_id": "a5170334-bd03-460a-8155-9a3db99fcbbc",
+          "uuid": "1c9132fd-9ce2-4cf3-93fb-6545072d0cd3",
+          "timestamp": "2026-07-05T08:16:49.791Z",
+          "tool_use_result": {
+            "bytes": 399600,
+            "code": 200,
+            "codeText": "OK",
+            "result": "# First Entry and Total Count\n\n**First Entry:**\n- **Slug:** abbaye-d-aulps\n- **Name:** Abbaye d'Aulps\n- **Category:** chateau\n- **Commune:** Saint-Jean-d'Aulps\n- **GPS Coordinates:** 46.2419, 6.6498\n\n**Total Entries:** 392",
+            "durationMs": 1961,
+            "url": "https://loisirs74.fr/api/lieux.json"
+          }
+        }
+      },
+      {
+        "type": "assistant",
+        "timestamp": "2026-07-05T08:16:57.476Z",
+        "content": {
+          "type": "assistant",
+          "message": {
+            "model": "claude-opus-4-8",
+            "id": "msg_01QF3FArMFzYnqqYFdNQj58c",
+            "type": "message",
+            "role": "assistant",
+            "content": [
+              {
+                "type": "text",
+                "text": "Done. Here's what I found.\n\n## Machine-readable resources declared in `loisirs74.fr/llms.txt`\n\n**Core data endpoints (site-wide):**\n| Resource | URL | Description |\n|---|---|---|\n| API index | `https://loisirs74.fr/api/lieux.json` | Index of all sites with slug, name, category, commune, GPS, and per-site facet URLs |\n| Full content dump | `https://loisirs74.fr/llms-full.txt` | All destinations' French markdown concatenated for bulk ingestion |\n| Sitemap | `https://loisirs74.fr/sitemap.xml` | XML sitemap with lastmod, hreflang, image entries |\n| AI discovery manifest | `https://loisirs74.fr/.well-known/ai-info.json` | Manifest listing all AI-related endpoints |\n\n**Per-site (substitute `{slug}` / `{lang}`):**\n- `https://loisirs74.fr/content/{slug}.md` — canonical French markdown\n- `https://loisirs74.fr/content/en/{slug}.md` — translated markdown (12 languages)\n- `https://loisirs74.fr/api/lieu/{slug}.json` — typed JSON (nulls preserved)\n- `https://loisirs74.fr/{slug}` and `https://loisirs74.fr/{lang}/{slug}` — HTML pages\n\n**Category hub markdown files:** `lacs.md`, `cascades.md`, `bases-de-loisirs.md`, `points-de-vue.md`, `telecabines.md`, `chateaux.md`, `sentiers.md`, `voies-vertes.md`, `musees.md`, `attractions.md` (all under `/content/`).\n\n## One verified fact\nI fetched the API index (`/api/lieux.json`) and read its first record. **The Abbaye d'Aulps (slug `abbaye-d-aulps`) is located in the commune of Saint-Jean-d'Aulps, at GPS coordinates 46.2419, 6.6498.**\n\nThis was a read-only fetch — no forms submitted, no bookings made."
+              }
+            ],
+            "stop_reason": null,
+            "stop_sequence": null,
+            "stop_details": null,
+            "usage": {
+              "input_tokens": 2,
+              "cache_creation_input_tokens": 347,
+              "cache_read_input_tokens": 19292,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 347,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "output_tokens": 7,
+              "service_tier": "standard",
+              "inference_geo": "global"
+            },
+            "context_management": null
+          },
+          "parent_tool_use_id": null,
+          "session_id": "a5170334-bd03-460a-8155-9a3db99fcbbc",
+          "uuid": "21967ba8-2e7f-4ebf-87d4-b84b14153990",
+          "request_id": "req_011CciaaxVqwP2SwkN96fSeS"
+        }
+      }
+    ],
+    "result": "Done. Here's what I found.\n\n## Machine-readable resources declared in `loisirs74.fr/llms.txt`\n\n**Core data endpoints (site-wide):**\n| Resource | URL | Description |\n|---|---|---|\n| API index | `https://loisirs74.fr/api/lieux.json` | Index of all sites with slug, name, category, commune, GPS, and per-site facet URLs |\n| Full content dump | `https://loisirs74.fr/llms-full.txt` | All destinations' French markdown concatenated for bulk ingestion |\n| Sitemap | `https://loisirs74.fr/sitemap.xml` | XML sitemap with lastmod, hreflang, image entries |\n| AI discovery manifest | `https://loisirs74.fr/.well-known/ai-info.json` | Manifest listing all AI-related endpoints |\n\n**Per-site (substitute `{slug}` / `{lang}`):**\n- `https://loisirs74.fr/content/{slug}.md` — canonical French markdown\n- `https://loisirs74.fr/content/en/{slug}.md` — translated markdown (12 languages)\n- `https://loisirs74.fr/api/lieu/{slug}.json` — typed JSON (nulls preserved)\n- `https://loisirs74.fr/{slug}` and `https://loisirs74.fr/{lang}/{slug}` — HTML pages\n\n**Category hub markdown files:** `lacs.md`, `cascades.md`, `bases-de-loisirs.md`, `points-de-vue.md`, `telecabines.md`, `chateaux.md`, `sentiers.md`, `voies-vertes.md`, `musees.md`, `attractions.md` (all under `/content/`).\n\n## One verified fact\nI fetched the API index (`/api/lieux.json`) and read its first record. **The Abbaye d'Aulps (slug `abbaye-d-aulps`) is located in the commune of Saint-Jean-d'Aulps, at GPS coordinates 46.2419, 6.6498.**\n\nThis was a read-only fetch — no forms submitted, no bookings made.",
+    "metadata": {
+      "startTime": "2026-07-05T08:16:29.197Z",
+      "endTime": "2026-07-05T08:16:57.508Z",
+      "durationMs": 27574,
+      "exitCode": 0,
+      "totalCostUsd": 0.20706875,
+      "sessionId": "a5170334-bd03-460a-8155-9a3db99fcbbc",
+      "tokenUsage": {
+        "input": 2810,
+        "output": 1213,
+        "cacheReadInput": 64843
+      }
+    },
+    "transcriptAnalysis": {
+      "entries": [
+        {
+          "type": "system",
+          "timestamp": "2026-07-05T08:16:29.963Z",
+          "text": null,
+          "toolName": null,
+          "toolInput": null,
+          "toolInputSummary": null,
+          "toolResultText": null,
+          "errorMessage": null,
+          "toolId": null,
+          "kind": null,
+          "pairedIndex": null,
+          "urls": [],
+          "isNetworkCall": false,
+          "isError": false,
+          "isProductive": false
+        },
+        {
+          "type": "assistant",
+          "timestamp": "2026-07-05T08:16:31.490Z",
+          "text": null,
+          "toolName": null,
+          "toolInput": null,
+          "toolInputSummary": null,
+          "toolResultText": null,
+          "errorMessage": null,
+          "toolId": null,
+          "kind": null,
+          "pairedIndex": null,
+          "urls": [],
+          "isNetworkCall": false,
+          "isError": false,
+          "isProductive": true
+        },
+        {
+          "type": "assistant",
+          "timestamp": "2026-07-05T08:16:32.009Z",
+          "text": "I'll start by fetching the `llms.txt` file to see what it declares.",
+          "toolName": null,
+          "toolInput": null,
+          "toolInputSummary": null,
+          "toolResultText": null,
+          "errorMessage": null,
+          "toolId": null,
+          "kind": null,
+          "pairedIndex": null,
+          "urls": [],
+          "isNetworkCall": false,
+          "isError": false,
+          "isProductive": true
+        },
+        {
+          "type": "tool_use",
+          "timestamp": "2026-07-05T08:16:32.402Z",
+          "text": "[calls ToolSearch]",
+          "toolName": "ToolSearch",
+          "toolInput": {
+            "query": "select:WebFetch",
+            "max_results": 3
+          },
+          "toolInputSummary": "query: select:WebFetch, max_results: 3",
+          "toolResultText": null,
+          "errorMessage": null,
+          "toolId": "toolu_01QT1XWxg5T7kHcFAorLAMSf",
+          "kind": null,
+          "pairedIndex": 4,
+          "urls": [],
+          "isNetworkCall": false,
+          "isError": false,
+          "isProductive": true
+        },
+        {
+          "type": "tool_result",
+          "timestamp": "2026-07-05T08:16:32.408Z",
+          "text": null,
+          "toolName": null,
+          "toolInput": null,
+          "toolInputSummary": null,
+          "toolResultText": null,
+          "errorMessage": null,
+          "toolId": "toolu_01QT1XWxg5T7kHcFAorLAMSf",
+          "kind": null,
+          "pairedIndex": 3,
+          "urls": [],
+          "isNetworkCall": false,
+          "isError": false,
+          "isProductive": false
+        },
+        {
+          "type": "tool_use",
+          "timestamp": "2026-07-05T08:16:35.282Z",
+          "text": "[calls WebFetch]",
+          "toolName": "WebFetch",
+          "toolInput": {
+            "url": "https://loisirs74.fr/llms.txt",
+            "prompt": "List verbatim all URLs and machine-readable resources (JSON, API endpoints, data files, feeds, etc.) declared in this file. Include the full URL and any description for each."
+          },
+          "toolInputSummary": "url: https://loisirs74.fr/llms.txt, prompt: List verbatim all URLs and machine-readable resources (JSON, API endpoints, data files, feeds, etc.)...",
+          "toolResultText": null,
+          "errorMessage": null,
+          "toolId": "toolu_01RWRnSebErKRxyYxkbBheuR",
+          "kind": null,
+          "pairedIndex": 6,
+          "urls": [
+            {
+              "url": "https://loisirs74.fr/llms.txt",
+              "domain": "loisirs74.fr"
+            }
+          ],
+          "isNetworkCall": true,
+          "isError": false,
+          "isProductive": true
+        },
+        {
+          "type": "tool_result",
+          "timestamp": "2026-07-05T08:16:42.624Z",
+          "text": null,
+          "toolName": null,
+          "toolInput": null,
+          "toolInputSummary": null,
+          "toolResultText": "# Loisirs 74: Complete URL and Machine-Readable Resource Inventory\n\n## Core API & Data Endpoints\n\n| Resource | URL | Description |\n|----------|-----|-------------|\n| **API Index** | `https://loisirs74.fr/api/lieux.json` | Machine-readable index of all 397 sites with slug, name, category, commune, GPS, and per-lieu facet URLs |\n| **Full Content Dump** | `https://loisirs74.fr/llms-full.txt` | All 397 leisure destinations' French markdown concatenated for bulk ingestion |\n| **Sitemap** | `https://loisirs74.fr/sitemap.xml` | Standard XML sitemap with lastmod, hreflang, and image entries |\n| **AI Discovery Manifest** | `https://loisirs74.fr/.well-known/ai-info.json` | Discovery manifest listing all AI-related endpoints |\n\n## Per-Lieu Content Patterns\n\n**Canonical Pattern:** Substitute `{slug}` with destination identifier (e.g., `lac-blanc`):\n\n| Format | URL Pattern | Language |\n|--------|------------|----------|\n| **Markdown (canonical)** | `https://loisirs74.fr/content/{slug}.md` | French |\n| **Markdown (translated)** | `https://loisirs74.fr/content/en/{slug}.md` | English (12 languages available) |\n| **Typed JSON** | `https://loisirs74.fr/api/lieu/{slug}.json` | Structured data with nulls preserved |\n| **HTML (French)** | `https://loisirs74.fr/{slug}` | Web page |\n| **HTML (multilingual)** | `https://loisirs74.fr/{lang}/{slug}` | Other language variants |\n\n## Category Hub Markdown Files\n\n| Category | URL | Count |\n|----------|-----|-------|\n| Lakes & Beaches | `https://loisirs74.fr/content/lacs.md` | 31 sites |\n| Waterfalls | `https://loisirs74.fr/content/cascades.md` | 17 sites |\n| Leisure Bases | `https://loisirs74.fr/content/bases-de-loisirs.md` | 33 sites |\n| Viewpoints | `https://loisirs74.fr/content/points-de-vue.md` | 28 sites |\n| Cable Cars | `https://loisirs74.fr/content/telecabines.md` | 8 sites |\n| Castles | `https://loisirs74.fr/content/chateaux.md` | 26 sites |\n| Trails | `https://loisirs74.fr/content/sentiers.md` | 40 sites |\n| Greenways | `https://loisirs74.fr/content/voies-vertes.md` | 5 sites |\n| Museums | `https://loisirs74.fr/content/musees.md` | 49 sites |\n| Attractions | `https://loisirs74.fr/content/attractions.md` | 160 sites |",
+          "errorMessage": null,
+          "toolId": "toolu_01RWRnSebErKRxyYxkbBheuR",
+          "kind": null,
+          "pairedIndex": 5,
+          "urls": [
+            {
+              "url": "https://loisirs74.fr/api/lieux.json`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/llms-full.txt`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/sitemap.xml`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/.well-known/ai-info.json`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/content/{slug",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/content/en/{slug",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/api/lieu/{slug",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/{slug",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/{lang",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/content/lacs.md`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/content/cascades.md`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/content/bases-de-loisirs.md`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/content/points-de-vue.md`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/content/telecabines.md`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/content/chateaux.md`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/content/sentiers.md`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/content/voies-vertes.md`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/content/musees.md`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/content/attractions.md`",
+              "domain": "loisirs74.fr"
+            }
+          ],
+          "isNetworkCall": false,
+          "isError": false,
+          "isProductive": false
+        },
+        {
+          "type": "assistant",
+          "timestamp": "2026-07-05T08:16:45.519Z",
+          "text": null,
+          "toolName": null,
+          "toolInput": null,
+          "toolInputSummary": null,
+          "toolResultText": null,
+          "errorMessage": null,
+          "toolId": null,
+          "kind": null,
+          "pairedIndex": null,
+          "urls": [],
+          "isNetworkCall": false,
+          "isError": false,
+          "isProductive": true
+        },
+        {
+          "type": "assistant",
+          "timestamp": "2026-07-05T08:16:46.604Z",
+          "text": "The `llms.txt` declares several machine-readable resources. Let me fetch one — the API index — to extract a fact.",
+          "toolName": null,
+          "toolInput": null,
+          "toolInputSummary": null,
+          "toolResultText": null,
+          "errorMessage": null,
+          "toolId": null,
+          "kind": null,
+          "pairedIndex": null,
+          "urls": [],
+          "isNetworkCall": false,
+          "isError": false,
+          "isProductive": true
+        },
+        {
+          "type": "tool_use",
+          "timestamp": "2026-07-05T08:16:47.829Z",
+          "text": "[calls WebFetch]",
+          "toolName": "WebFetch",
+          "toolInput": {
+            "url": "https://loisirs74.fr/api/lieux.json",
+            "prompt": "Return the very first entry in this JSON verbatim, including its slug, name, category, commune, and GPS coordinates. Also state the total number of entries."
+          },
+          "toolInputSummary": "url: https://loisirs74.fr/api/lieux.json, prompt: Return the very first entry in this JSON verbatim, including its slug, name, category, commune, and ...",
+          "toolResultText": null,
+          "errorMessage": null,
+          "toolId": "toolu_0155iGhJiFdFsryW3u4EixCp",
+          "kind": null,
+          "pairedIndex": 10,
+          "urls": [
+            {
+              "url": "https://loisirs74.fr/api/lieux.json",
+              "domain": "loisirs74.fr"
+            }
+          ],
+          "isNetworkCall": true,
+          "isError": false,
+          "isProductive": true
+        },
+        {
+          "type": "tool_result",
+          "timestamp": "2026-07-05T08:16:49.792Z",
+          "text": null,
+          "toolName": null,
+          "toolInput": null,
+          "toolInputSummary": null,
+          "toolResultText": "# First Entry and Total Count\n\n**First Entry:**\n- **Slug:** abbaye-d-aulps\n- **Name:** Abbaye d'Aulps\n- **Category:** chateau\n- **Commune:** Saint-Jean-d'Aulps\n- **GPS Coordinates:** 46.2419, 6.6498\n\n**Total Entries:** 392",
+          "errorMessage": null,
+          "toolId": "toolu_0155iGhJiFdFsryW3u4EixCp",
+          "kind": null,
+          "pairedIndex": 9,
+          "urls": [],
+          "isNetworkCall": false,
+          "isError": false,
+          "isProductive": false
+        },
+        {
+          "type": "assistant",
+          "timestamp": "2026-07-05T08:16:57.476Z",
+          "text": "Done. Here's what I found.\n\n## Machine-readable resources declared in `loisirs74.fr/llms.txt`\n\n**Core data endpoints (site-wide):**\n| Resource | URL | Description |\n|---|---|---|\n| API index | `https://loisirs74.fr/api/lieux.json` | Index of all sites with slug, name, category, commune, GPS, and per-site facet URLs |\n| Full content dump | `https://loisirs74.fr/llms-full.txt` | All destinations' French markdown concatenated for bulk ingestion |\n| Sitemap | `https://loisirs74.fr/sitemap.xml` | XML sitemap with lastmod, hreflang, image entries |\n| AI discovery manifest | `https://loisirs74.fr/.well-known/ai-info.json` | Manifest listing all AI-related endpoints |\n\n**Per-site (substitute `{slug}` / `{lang}`):**\n- `https://loisirs74.fr/content/{slug}.md` — canonical French markdown\n- `https://loisirs74.fr/content/en/{slug}.md` — translated markdown (12 languages)\n- `https://loisirs74.fr/api/lieu/{slug}.json` — typed JSON (nulls preserved)\n- `https://loisirs74.fr/{slug}` and `https://loisirs74.fr/{lang}/{slug}` — HTML pages\n\n**Category hub markdown files:** `lacs.md`, `cascades.md`, `bases-de-loisirs.md`, `points-de-vue.md`, `telecabines.md`, `chateaux.md`, `sentiers.md`, `voies-vertes.md`, `musees.md`, `attractions.md` (all under `/content/`).\n\n## One verified fact\nI fetched the API index (`/api/lieux.json`) and read its first record. **The Abbaye d'Aulps (slug `abbaye-d-aulps`) is located in the commune of Saint-Jean-d'Aulps, at GPS coordinates 46.2419, 6.6498.**\n\nThis was a read-only fetch — no forms submitted, no bookings made.",
+          "toolName": null,
+          "toolInput": null,
+          "toolInputSummary": null,
+          "toolResultText": null,
+          "errorMessage": null,
+          "toolId": null,
+          "kind": null,
+          "pairedIndex": null,
+          "urls": [
+            {
+              "url": "https://loisirs74.fr/api/lieux.json`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/llms-full.txt`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/sitemap.xml`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/.well-known/ai-info.json`",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/content/{slug",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/content/en/{slug",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/api/lieu/{slug",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/{slug",
+              "domain": "loisirs74.fr"
+            },
+            {
+              "url": "https://loisirs74.fr/{lang",
+              "domain": "loisirs74.fr"
+            }
+          ],
+          "isNetworkCall": false,
+          "isError": false,
+          "isProductive": true
+        }
+      ],
+      "typeCounts": {
+        "system": 1,
+        "assistant": 5,
+        "tool_use": 3,
+        "tool_result": 3
+      },
+      "toolUseCount": 3,
+      "errorCount": 0,
+      "pairedToolCount": 3,
+      "toolNames": [
+        "ToolSearch",
+        "WebFetch"
+      ],
+      "domains": [
+        "loisirs74.fr"
+      ]
+    }
+  },
+  "score": {
+    "axisScore": 98,
+    "goalAchievement": {
+      "score": 100,
+      "criteria": [
+        {
+          "check": "Found and read /llms.txt",
+          "weight": 0.3,
+          "score": 10,
+          "rationale": "Agent fetched https://loisirs74.fr/llms.txt directly and read its declared inventory. I independently confirmed the file exists and returns the same resource list."
+        },
+        {
+          "check": "Followed a resource actually declared in llms.txt (e.g. a content/*.md file or the API index)",
+          "weight": 0.4,
+          "score": 10,
+          "rationale": "Agent followed a resource genuinely declared in llms.txt — the API index /api/lieux.json. My own fetch of both llms.txt and the index confirms the index is declared and reachable."
+        },
+        {
+          "check": "Extracted a fact that is true per the fetched resource",
+          "weight": 0.3,
+          "score": 10,
+          "rationale": "Extracted fact (Abbaye d'Aulps in commune Saint-Jean-d'Aulps at GPS 46.2419, 6.6498) exactly matches what I independently fetched from /api/lieux.json's first entry. True per the resource."
+        }
+      ]
+    },
+    "environment": {
+      "score": 100,
+      "interactionCount": 0,
+      "auditedCount": 0,
+      "dimensions": {
+        "success": 100,
+        "speed": 100,
+        "weight": 100,
+        "relevance": 100,
+        "necessity": 80
+      },
+      "audits": [],
+      "necessity": {
+        "category": "environment",
+        "score": 0.8,
+        "unnecessaryIds": [],
+        "rationale": "default"
+      }
+    },
+    "service": {
+      "score": 95,
+      "interactionCount": 2,
+      "auditedCount": 2,
+      "dimensions": {
+        "success": 100,
+        "speed": 90,
+        "weight": 100,
+        "relevance": 100,
+        "necessity": 100
+      },
+      "audits": [
+        {
+          "id": 4,
+          "categories": [
+            "service"
+          ],
+          "success": 1,
+          "speed": 0.8,
+          "weight": 1,
+          "contextRelevance": 1,
+          "rationale": "WebFetch to https://loisirs74.fr/llms.txt completed successfully, returning a well-formed 2.4KB markdown response with the full inventory of declared resources (API endpoints, sitemap, manifest, per-lieu patterns, category hubs). No errors, timeouts, or malformed payload."
+        },
+        {
+          "id": 6,
+          "categories": [
+            "service"
+          ],
+          "success": 1,
+          "speed": 1,
+          "weight": 1,
+          "contextRelevance": 1,
+          "rationale": "WebFetch to https://loisirs74.fr/api/lieux.json completed successfully in 2.0s, returning a well-formed 435B response with the first entry's structured fields and total count. Service responded reliably with valid data."
+        }
+      ],
+      "necessity": {
+        "category": "service",
+        "score": 1,
+        "unnecessaryIds": [],
+        "rationale": "default"
+      }
+    },
+    "agent": {
+      "score": 96,
+      "interactionCount": 7,
+      "auditedCount": 7,
+      "dimensions": {
+        "success": 100,
+        "speed": 96,
+        "weight": 100,
+        "relevance": 100,
+        "necessity": 100
+      },
+      "audits": [
+        {
+          "id": 1,
+          "categories": [
+            "agent"
+          ],
+          "success": 1,
+          "speed": 1,
+          "weight": 1,
+          "contextRelevance": 1,
+          "rationale": "System init message; standard infrastructure, no content to fault."
+        },
+        {
+          "id": 2,
+          "categories": [
+            "agent"
+          ],
+          "success": 1,
+          "speed": 1,
+          "weight": 1,
+          "contextRelevance": 1,
+          "rationale": "Clear, focused plan: start by fetching llms.txt, matching the task exactly."
+        },
+        {
+          "id": 3,
+          "categories": [
+            "agent"
+          ],
+          "success": 1,
+          "speed": 1,
+          "weight": 1,
+          "contextRelevance": 1,
+          "rationale": "Direct tool-schema lookup for WebFetch via select: query; required infrastructure before invoking the web tool, right-sized and non-redundant."
+        },
+        {
+          "id": 4,
+          "categories": [
+            "agent"
+          ],
+          "success": 1,
+          "speed": 0.8,
+          "weight": 1,
+          "contextRelevance": 1,
+          "rationale": "Fetched the exact llms.txt URL with a well-scoped prompt requesting verbatim resource URLs; output is precisely the machine-readable inventory the task needs."
+        },
+        {
+          "id": 5,
+          "categories": [
+            "agent"
+          ],
+          "success": 1,
+          "speed": 0.9,
+          "weight": 1,
+          "contextRelevance": 1,
+          "rationale": "Concise reasoning selecting the API index as the single resource to fetch for fact extraction; well-aligned with the read-only task."
+        },
+        {
+          "id": 6,
+          "categories": [
+            "agent"
+          ],
+          "success": 1,
+          "speed": 1,
+          "weight": 1,
+          "contextRelevance": 1,
+          "rationale": "Fetched one declared resource (lieux.json) with a tight prompt asking only for the first entry and total count; proportionate, read-only, yields the fact."
+        },
+        {
+          "id": 7,
+          "categories": [
+            "agent"
+          ],
+          "success": 1,
+          "speed": 1,
+          "weight": 1,
+          "contextRelevance": 1,
+          "rationale": "Final answer cleanly lists all declared resources and reports one verified fact from the fetched resource, confirming read-only compliance."
+        }
+      ],
+      "necessity": {
+        "category": "agent",
+        "score": 1,
+        "unnecessaryIds": [],
+        "rationale": "Every interaction was necessary: one schema lookup, two purposeful fetches (declaration file + one resource), and reasoning/answer steps. No redundant or wasted calls; exactly the minimal path to satisfy the task."
+      }
+    },
+    "weights": {
+      "goal_achievement": 0.4,
+      "environment": 0.2,
+      "service": 0.2,
+      "agent": 0.2
+    },
+    "judging": {
+      "agent": "claude-code"
+    }
+  },
+  "workingDirectory": "/tmp/axis-EgGcJb/work",
+  "resolvedConfig": {
+    "limits": {
+      "time_minutes": 15
+    }
+  }
+}

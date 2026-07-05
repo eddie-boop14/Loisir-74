@@ -1,0 +1,9 @@
+# Sparse Index: ai-discovery / claude-code
+# 7 interactions | env: 0 | svc: 2 | agent: 5 | errors: 0
+#1   agent    system      (no content)
+#2   agent    assistant   I'll start by fetching the `llms.txt` file to see what it declares.
+#3   agent    tool_use    ToolSearch(query: select:WebFetch, max_results: 3) -> ok, 43B, 6ms
+#4   service  tool_use    WebFetch(url: https://loisirs74.fr/llms.txt, prompt: List verbatim...) -> ok, 2.4KB, 7.3s
+#5   agent    assistant   The `llms.txt` declares several machine-readable resources. Let me fetch one ...
+#6   service  tool_use    WebFetch(url: https://loisirs74.fr/api/lieux.json, prompt: Return ...) -> ok, 435B, 2.0s
+#7   agent    assistant   Done. Here's what I found. ## Machine-readable resources declared in `loisirs...
