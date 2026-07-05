@@ -332,6 +332,54 @@ def test_patch_meter_prices_at_haiku_not_sonnet():
     assert tb.over_budget(sonnet, est), "the Sonnet mis-price is what falsely tripped it"
 
 
+def test_patch_recover_lands_paid_results_without_resubmit():
+    """The recover path claims an already-PAID patch batch: no new submit, and
+    it must NOT abort on cost (the spend is sunk — aborting would re-lose the
+    paid work, which is the original bug). Feeds a fake batch result through
+    run_patch_recover and asserts the field lands."""
+    m = _load()
+    tbm = m.tb
+    with tempfile.TemporaryDirectory() as tmp:
+        jd = Path(tmp) / "Json"; jd.mkdir()
+        (jd / "spot.json").write_text(json.dumps({
+            "slug": "spot", "commune": "Annecy",
+            "i18n": {"fr": {"name": "X"},
+                     "en": {"hero": {"lead": "A calm spot open all year."}}}},
+            ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        tbm.JSON_DIR = jd
+        m.FLAGS_FILE = Path(tmp) / "reports" / "flags-{lang}.json"
+
+        # base MT tier fails the segment (empty) → it is flagged, pl absent
+        m.run_mt("pl", engine=SpyEngine(lambda t: ""))
+        d = json.loads((jd / "spot.json").read_text())
+        assert "pl" not in d["i18n"] or "hero" not in d["i18n"]["pl"], \
+            "field must start absent (flagged)"
+
+        # reconstruct the deterministic routing to know the batch custom_id
+        flags = json.loads((Path(tmp) / "reports" / "flags-pl.json").read_text())
+        reqs, routing = m.patch_requests("pl", flags)
+        assert len(reqs) == 1
+        cid = reqs[0]["custom_id"]
+
+        # fake an already-ended, already-paid batch: a good pl translation, and
+        # deliberately "expensive" usage that WOULD trip the >15% abort if the
+        # recover path wrongly enforced a budget.
+        good = "Spokojne miejsce otwarte cały rok."
+        fake_usage = {k: 0 for k in tbm.USAGE_KEYS}
+        fake_usage["input_tokens"] = 5_000_000
+        fake_usage["output_tokens"] = 5_000_000
+        tbm.get_client = lambda: object()
+        tbm.poll_batch = lambda client, bid, **kw: None
+        tbm.collect_results = lambda client, bid: ({cid: ("ok", good)},
+                                                   {cid: fake_usage})
+
+        ok = m.run_patch_recover("pl", batch_id="msgbatch_fake")  # must NOT sys.exit
+        d = json.loads((jd / "spot.json").read_text())
+        assert d["i18n"]["pl"]["hero"]["lead"] == good, \
+            "recovered translation must be written back to the fiche"
+        assert ok is True
+
+
 def _all_tests():
     return [v for k, v in sorted(globals().items()) if k.startswith("test_")]
 
