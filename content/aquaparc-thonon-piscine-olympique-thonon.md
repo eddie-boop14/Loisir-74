@@ -15,6 +15,7 @@ geo_verified: false
 google_place_id: null
 canonical_url: https://loisirs74.fr/aquaparc-thonon-piscine-olympique-thonon
 language: fr
+facet_json: https://loisirs74.fr/api/lieu/aquaparc-thonon-piscine-olympique-thonon.json
 photo_url: /img/generique/generique-aquatique-piscine-exterieur.jpg
 photo_type: generic
 photo_author: null
@@ -26,119 +27,42 @@ source: loisirs74.fr
 
 # Piscine Olympique de Thonon
 
-> Bassin olympique extérieur de 50 mètres en bord de Léman à Thonon-les-Bains, complété de plongeoirs, d'un bassin pour les enfants et d'une plage. Équipement public majeur de Thonon Agglomération ouvert en saison estivale, à un tarif très accessible.
+## Faits
 
-## En bref
+- Commune: Thonon-les-Bains, Haute-Savoie (74200)
+- GPS: 46.385434, 6.482844
+- Catégorie: aquaparc
+- Type: Piscine olympique extérieure 50m + plage Léman
 
-- **Catégorie**: Parc aquatique
-- **Commune**: Thonon-les-Bains, Haute-Savoie (74200)
-- **GPS**: 46.385434, 6.482844
-- **Type**: Piscine olympique extérieure 50m + plage Léman
-- **Accès**: Payant - voir tarifs
-- **Parking**: Gratuit sur site
-- **Chiens**: Non (piscine)
-- **Meilleure saison**: Mai-septembre (saison extérieure)
-- **Durée**: Demi-journée à journée
+## Horaires
 
-## Présentation
+Horaires du Piscine Olympique de Thonon : Saison : tous les jours 10h-19h. Variations selon météo. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
 
-La Piscine Olympique de Thonon est un équipement nautique d'envergure installé en bord de Léman à Thonon-les-Bains. Elle réunit un bassin extérieur olympique de 50 mètres, un bassin enfants et plusieurs plongeoirs, le tout doublé d'une plage face au lac. Équipement public majeur de Thonon Agglomération, elle ouvre en saison estivale, de mai à septembre.
+## Tarifs
 
-La Piscine Olympique de Thonon dispose d'un bassin extérieur 50 m olympique + bassin enfants + plongeoirs. Équipement public majeur de Thonon Agglomération en saison estivale mai-septembre.
+- À partir de: 4 EUR
 
-La Piscine Olympique de Thonon est complétée par un accès direct à la plage berges du Léman - baignade en lac en plus de la piscine. Vue Alpes vaudoises côté suisse.
+## Accès (PMR)
 
-Tarifs 2026 : Adulte 4 € adulte, Enfant 2,80 € enfant. Saison : Mai-septembre (saison extérieure). Horaires : Saison : tous les jours 10h-19h. Variations selon météo. PMR : Oui.
+- Statut: Partiellement accessible
+- Détail: Entrée de plain-pied, places de parking adaptées et réservées, largeur de porte d'au moins 80 cm (fiche Acceslibre incomplète, 21%).
+- Source: Acceslibre — https://acceslibre.beta.gouv.fr/app/74-thonon-les-bains/a/piscine/erp/plage-municipale/
 
-## Activités sur place
+## Parking
 
-### Piscine olympique extérieure 50m
-La Piscine Olympique de Thonon dispose d'un bassin extérieur 50 m olympique + bassin enfants + plongeoirs. Équipement public majeur de Thonon Agglomération en saison estivale mai-septembre.
+Gratuit sur site
 
-### Plage berges Léman intégrée
-La Piscine Olympique de Thonon est complétée par un accès direct à la plage berges du Léman - baignade en lac en plus de la piscine. Vue Alpes vaudoises côté suisse.
+## Transport
 
-### Tarif public abordable
-La Piscine Olympique de Thonon pratique des tarifs publics abordables : 4 € adulte / 2,80 € enfant - équipement public subventionné. Alternative économique aux centres aquatiques privés.
+- Les Arts (Cars Région Haute-Savoie, ~442 m, lignes Y03, Y91)
+- Thonon-les-Bains (SNCF (TER), ~579 m)
+- Lycée Versoie (Cars Région Haute-Savoie, ~647 m, lignes Y03, Y91)
+- Source: transport.data.gouv.fr — Licence Etalab 2.0 (2026-06-15)
 
-### Tarif 4 € adulte
-Le Piscine Olympique de Thonon propose une tarification adulte de 4 € adulte. Tarif enfant : 2,80 € enfant. Durée moyenne : Demi-journée à journée. Saison : Mai-septembre (saison extérieure).
+## Saison
 
-## Infos pratiques
+Mai-septembre (saison extérieure)
 
-- **Adresse**: Allée des Marronniers, 74200 Thonon-les-Bains
-- **Coordonnées**: 46.3697° N · 6.4742° E
-- **Saison**: Mai-septembre (saison extérieure)
-- **Horaires**: Horaires du Piscine Olympique de Thonon : Saison : tous les jours 10h-19h. Variations selon météo. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
-- **Tarifs**: Tarifs 2026 du Piscine Olympique de Thonon : Adulte 4 € adulte - Enfant 2,80 € enfant - Tarif famille saison. Vérifié le 24 mai 2026.
-- **Réservation**: Réservation au Piscine Olympique de Thonon via thononlesbains.com ou téléphone +33 (0)4 50 71 06 22. Recommandée en haute saison. Vérifié le 24 mai 2026.
-- **Parking**: Parking du Piscine Olympique de Thonon : généralement gratuit ou intégré. Vérifier sur place selon affluence.
-- **Animaux**: Animaux au Piscine Olympique de Thonon : Non (piscine)
-- **Accessibilité**: PMR au Piscine Olympique de Thonon : Oui. Vérifié le 24 mai 2026.
-- **Durée**: Demi-journée à journée
-- **Contact**: Téléphone Piscine Olympique de Thonon : +33 (0)4 50 71 06 22 - Site officiel thononlesbains.com. Vérifié le 24 mai 2026.
+## Source officielle
 
-## Comment y aller
-
-### En voiture
-Thonon-les-Bains (74200) - adresse Allée des Marronniers, 74200 Thonon-les-Bains. Parking gratuit sur site. Vérifier disponibilité haute saison.
-
-### Transports en commun
-Transports publics vers Thonon-les-Bains selon saison. Léman Express + cars Région Haute-Savoie. Vérifier ligne et horaires.
-
-### À vélo
-Accès vélo possible vers le Piscine Olympique de Thonon selon proximité Voie verte du Lac d'Annecy, ViaRhôna EV17 ou autres voies vertes Loisirs 74.
-
-## Quand y aller
-
-Le Piscine Olympique de Thonon se visite principalement en saison Mai-septembre (saison extérieure). PISCINE OLYMPIQUE EXTÉRIEURE 50 M + PLAGE BORDS LÉMAN + plongeoirs - équipement public majeur. Pas cher.. Tarifs 2026 : Adulte 4 € adulte.
-
-## Événements
-
-Animations et événements au Piscine Olympique de Thonon selon calendrier opérateur. Suivre site officiel thononlesbains.com pour actualités saison 2026.
-
-## Questions fréquentes
-
-**Q : Comment réserver le Piscine Olympique de Thonon ?**
-
-R : Pour réserver le Piscine Olympique de Thonon, rendez-vous sur le site officiel thononlesbains.com ou téléphonez au +33 (0)4 50 71 06 22. Réservation en ligne conseillée en haute saison juillet-août.
-
-**Q : Quel est le tarif du Piscine Olympique de Thonon en 2026 ?**
-
-R : Tarifs 2026 du Piscine Olympique de Thonon : Adulte 4 € adulte, Enfant 2,80 € enfant, Tarif famille saison. Vérifié le 24 mai 2026 sur thononlesbains.com - sous réserve de modifications.
-
-**Q : Quels sont les horaires du Piscine Olympique de Thonon ?**
-
-R : Horaires du Piscine Olympique de Thonon : Saison : tous les jours 10h-19h. Variations selon météo. Saison : Mai-septembre (saison extérieure). Vérifié sur le site officiel le 24 mai 2026 - sous réserve de modifications saisonnières.
-
-**Q : Le Piscine Olympique de Thonon est-il accessible aux PMR ?**
-
-R : PMR au Piscine Olympique de Thonon : Oui. Vérifier les conditions précises sur place. Pour les activités physiques (accrobranche, karting, sports nautiques), la PMR n'est généralement pas applicable.
-
-**Q : Les animaux sont-ils acceptés au Piscine Olympique de Thonon ?**
-
-R : Animaux au Piscine Olympique de Thonon : Non (piscine). Vérifier les conditions précises sur place avant la visite. Précautions particulières pour activités sportives ou sites animaliers selon les espèces.
-
-**Q : Combien de temps pour visiter le Piscine Olympique de Thonon ?**
-
-R : Durée moyenne au Piscine Olympique de Thonon : Demi-journée à journée. Selon le profil de visiteur et l'activité choisie. Prévoir plus de temps en haute saison juillet-août en raison de l'affluence touristique.
-
-**Q : Comment se rendre au Piscine Olympique de Thonon ?**
-
-R : Le Piscine Olympique de Thonon est situé à Thonon-les-Bains (74200) - Allée des Marronniers, 74200 Thonon-les-Bains. Téléphone : +33 (0)4 50 71 06 22. Accès voiture conseillé, parking généralement disponible sur site.
-
-**Q : Quelle est la saison d'ouverture du Piscine Olympique de Thonon ?**
-
-R : Saison du Piscine Olympique de Thonon : Mai-septembre (saison extérieure). Argument distinctif : PISCINE OLYMPIQUE EXTÉRIEURE 50 M + PLAGE BORDS LÉMAN + plongeoirs - équipement . Activité loisirs majeure de la Haute-Savoie pour la saison 2026.
-
----
-
-## Source & licence
-
-- **Page web canonique** : https://loisirs74.fr/aquaparc-thonon-piscine-olympique-thonon
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/aquaparc-thonon-piscine-olympique-thonon) · [DE](https://loisirs74.fr/de/aquaparc-thonon-piscine-olympique-thonon) · [ES](https://loisirs74.fr/es/aquaparc-thonon-piscine-olympique-thonon) · [IT](https://loisirs74.fr/it/aquaparc-thonon-piscine-olympique-thonon) · [NL](https://loisirs74.fr/nl/aquaparc-thonon-piscine-olympique-thonon)
-- **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
-- **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
-- **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=aquaparc-thonon-piscine-olympique-thonon
-
-*Les informations peuvent évoluer ; vérifier auprès de la commune avant un déplacement spécifique.*
+https://www.ville-thonon.fr/decouvrir-la-ville/sport/plage-municipale/

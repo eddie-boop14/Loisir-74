@@ -15,6 +15,7 @@ geo_verified: false
 google_place_id: null
 canonical_url: https://loisirs74.fr/sentier-du-baroque-combloux
 language: fr
+facet_json: https://loisirs74.fr/api/lieu/sentier-du-baroque-combloux.json
 photo_url: /img/generique/generique-sentier-foret-alpine.jpg
 photo_type: generic
 photo_author: null
@@ -26,44 +27,37 @@ source: loisirs74.fr
 
 # Sentier du Baroque
 
-> Itinéraire thématique d'environ 20 km, de l'église de Combloux à Notre-Dame-de-la-Gorge, à la découverte de l'art baroque savoyard.
+## Faits
 
-## En bref
+- Commune: Combloux, Haute-Savoie (74920)
+- GPS: 45.89606, 6.641622
+- Catégorie: sentier
+- Type: Itinéraire baroque · ~20 km
 
-- **Catégorie**: Sentier
-- **Commune**: Combloux, Haute-Savoie (74920)
-- **GPS**: 45.89606, 6.641622
-- **Type**: Itinéraire baroque · ~20 km
-- **Accès**: Départ à l'église Saint-Nicolas de Combloux, 74920 Combloux ; à pied ou à vélo
-- **Durée**: Environ 7 h (réalisable en 2 étapes : ~4 h Combloux–St-Nicolas-de-Véroce, ~3 h St-Nicolas-de-Véroce–Notre-Dame-de-la-Gorge)
+## Horaires
 
-## Présentation
+Non renseigné
 
-Le Sentier du Baroque est un itinéraire thématique d'environ 20 km dont le point de départ est l'église Saint-Nicolas de Combloux et qui conduit, de village en village, jusqu'à l'église Notre-Dame-de-la-Gorge aux Contamines-Montjoie, à la découverte des trésors de l'art baroque savoyard. Praticable à pied ou à vélo, il se parcourt en environ 7 heures (dénivelé positif d'environ 200 m, altitude min. ~921 m, max. ~1223 m) et peut se faire en deux étapes : Combloux–Saint-Nicolas-de-Véroce puis Saint-Nicolas-de-Véroce–Notre-Dame-de-la-Gorge.
+## Tarifs
 
-## Infos pratiques
+Non renseigné
 
-- **Commune**: Combloux (74920), Pays du Mont-Blanc
-- **Coordonnées**: 45.89606° N — 6.64162° E
+## Accès (PMR)
 
-## Questions fréquentes
+Non renseigné
 
-**Q : Où commence le Sentier du Baroque ?**
+## Parking
 
-R : À l'église Saint-Nicolas de Combloux. L'itinéraire mène, de village en village, jusqu'à l'église Notre-Dame-de-la-Gorge aux Contamines-Montjoie.
+Non renseigné
 
-**Q : Combien de temps faut-il ?**
+## Transport
 
-R : Environ 7 heures pour les ~20 km, réalisables en deux étapes (Combloux–Saint-Nicolas-de-Véroce, puis Saint-Nicolas-de-Véroce–Notre-Dame-de-la-Gorge). À pied ou à vélo.
+Non renseigné
 
----
+## Saison
 
-## Source & licence
+Non renseigné
 
-- **Page web canonique** : https://loisirs74.fr/sentier-du-baroque-combloux
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/sentier-du-baroque-combloux) · [DE](https://loisirs74.fr/de/sentier-du-baroque-combloux) · [ES](https://loisirs74.fr/es/sentier-du-baroque-combloux) · [IT](https://loisirs74.fr/it/sentier-du-baroque-combloux) · [NL](https://loisirs74.fr/nl/sentier-du-baroque-combloux)
-- **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
-- **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
-- **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=sentier-du-baroque-combloux
+## Source officielle
 
-*Les informations peuvent évoluer ; vérifier auprès de la commune avant un déplacement spécifique.*
+https://www.combloux.com/en/itineraires/randonnee-pedestre-sur-le-sentier-du-baroque/

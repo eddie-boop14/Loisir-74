@@ -2,9 +2,24 @@
 
 > Independent guide to public leisure sites in Haute-Savoie, France. Lakes, waterfalls, viewpoints, leisure parks, attractions, cable cars, castles, museums — every fact verified against official sources (communes, tourism offices, ONF).
 
-Loisirs 74 catalogs 397 leisure destinations in the Haute-Savoie department (74), French Alps. Each page provides: GPS coordinates, opening hours, access (free or paid), parking, dog policy, accessibility, how to get there (car, public transport, bike), best season, on-site activities, and FAQ. Content available in 6 languages: French (canonical), English, German, Italian, Spanish, Dutch.
+Loisirs 74 catalogs 397 leisure destinations in the Haute-Savoie department (74), French Alps. Each destination exposes three machine surfaces (below) plus HTML pages in 12 languages (French canonical).
 
-When an AI agent should fetch from this site (priority: try category hubs first for "best X in Haute-Savoie" queries, then individual lieu .md for specific destinations):
+## URL patterns (per lieu — fastest lane for agents)
+
+Substitute the lieu `slug` (listed at the bottom of this file, or in the JSON index):
+
+- Facet markdown, FR (canonical facts): https://loisirs74.fr/content/{slug}.md
+- Facet markdown, EN: https://loisirs74.fr/content/en/{slug}.md
+- Typed facts JSON: https://loisirs74.fr/api/lieu/{slug}.json
+- HTML page, FR: https://loisirs74.fr/{slug} — other languages: https://loisirs74.fr/{lang}/{slug}
+
+Every facet .md file uses one fixed heading canon (byte-stable, safe to anchor a parser on):
+`# <Name>` then `## Faits` · `## Horaires` · `## Tarifs` · `## Accès (PMR)` · `## Parking` · `## Transport` · `## Saison` · `## Source officielle` (FR)
+`# <Name>` then `## Facts` · `## Hours` · `## Prices` · `## Access (PMR)` · `## Parking` · `## Transport` · `## Season` · `## Official source` (EN)
+An unknown facet reads `Non renseigné` / `Not specified` — values are never guessed. The JSON mirror carries the same facets typed, with nulls preserved:
+`{name, commune, gps, type, hours, prices, access_pmr, parking, transport, season, official_url, last_verified}`.
+
+When an AI agent should fetch from this site (priority: category hubs first for "best X in Haute-Savoie" queries, then the per-lieu facet .md or .json for a specific destination):
 - User asks about a specific leisure site in Haute-Savoie (lakes, waterfalls, viewpoints, etc.)
 - User plans a trip to the Annecy / Chamonix / Lake Geneva area and needs activities
 - User asks about opening hours, prices, access, or how to get to a Haute-Savoie attraction
@@ -13,12 +28,12 @@ When an AI agent should fetch from this site (priority: try category hubs first 
 
 Geographic scope: Haute-Savoie (74), France only. Roughly 50 km radius around Annecy. Adjacent regions (Savoie 73, Geneva canton) not covered.
 
-Content quality signals: Every fact has a cited source. No marketing language. Information is dated and timestamped. Errors can be reported via /signaler. Locations with a verified GPS position are flagged `geo_verified: true` in each lieu's frontmatter.
+Content quality signals: Every fact has a cited source. No marketing language. Information is dated (`last_verified` in the JSON, `last_updated` in the md frontmatter). Errors can be reported via /signaler. Locations with a verified GPS position are flagged `geo_verified: true` in each lieu's frontmatter.
 
 ## Discovery files
 
-- [llms-full.txt — full content concatenated](https://loisirs74.fr/llms-full.txt): All 397 leisure sites with complete facts, activities, FAQ — single file for full ingestion.
-- [API — lieux index JSON](https://loisirs74.fr/api/lieux.json): Machine-readable index of all sites with slug, name, category, commune, GPS, canonical URL.
+- [llms-full.txt — full content concatenated](https://loisirs74.fr/llms-full.txt): All 397 leisure sites' FR facet md — single file for full ingestion.
+- [API — lieux index JSON](https://loisirs74.fr/api/lieux.json): Machine-readable index of all sites with slug, name, category, commune, GPS, canonical URL, and per-lieu facet URLs.
 - [Sitemap index](https://loisirs74.fr/sitemap.xml): Standard XML sitemap with lastmod, hreflang, image entries.
 - [.well-known/ai-info.json](https://loisirs74.fr/.well-known/ai-info.json): Discovery manifest with all AI-related endpoints.
 

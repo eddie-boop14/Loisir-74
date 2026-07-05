@@ -1,25 +1,37 @@
 #!/usr/bin/env python3
-"""Self-generating AI content layer — SPECaicontentlayer.
+"""Self-generating AI content layer — SPECaicontentlayer + HANDOFF-39 facet layer.
 
 ONE generator owns the whole machine-readable layer so it can never drift again:
 
-  Json/<slug>.json ──▶ content/<slug>.md   (×392, FR canonical, geo frontmatter)
-                   ├──▶ llms-full.txt       (all 392 md concatenated, header from truth)
-                   └──▶ llms.txt            (index: counts + full listing from truth)
+  Json/<slug>.json ──▶ content/<slug>.md        (×N, FR facet canon, geo frontmatter)
+                   ├──▶ content/en/<slug>.md    (×N, EN facet canon — EN only, no other langs)
+                   ├──▶ api/lieu/<slug>.json    (×N, typed facts JSON, nulls preserved)
+                   ├──▶ llms.txt                (the MAP: what-is · URL patterns · anchors · hubs · listing)
+                   ├──▶ llms-full.txt           (all FR md concatenated, header from truth)
+                   └──▶ .well-known/ai-info.json (discovery manifest, counts from truth)
 
-Invariant: the layer is DERIVED, never hand-edited. Counts and the file set come
-from the JSON corpus at build time, so "87 vs 392" can't recur and the 308 live
-404s on advertised /content/<slug>.md URLs are closed.
+HANDOFF-39 facet canon (byte-verbatim, gate-enforced by gate_facet_layer.py):
+  FR: # <Name> · ## Faits · ## Horaires · ## Tarifs · ## Accès (PMR) ·
+      ## Parking · ## Transport · ## Saison · ## Source officielle
+  EN: # <Name> · ## Facts · ## Hours · ## Prices · ## Access (PMR) ·
+      ## Parking · ## Transport · ## Season · ## Official source
+Facts lines only, no prose padding. Unknown → "Non renseigné" / "Not specified"
+in the md; null stays null in the JSON — a value is NEVER guessed. Frozen FR
+names verbatim in both language files. LF only, UTF-8 only.
 
-The md format matches the existing hand-made 84 (frontmatter + markdown body),
-and the frontmatter now carries the geo signal shipped in the geo-verify lane:
-geo_verified + google_place_id. `research_log` is NEVER included.
+JSON contract /api/lieu/<slug>.json (gate-enforced):
+  {name, commune, gps, type, hours, prices, access_pmr, parking, transport,
+   season, official_url, last_verified}
+  — all 12 keys ALWAYS present; null allowed; absent-key forbidden; types fixed.
+  FR is the canonical language for prose facets (hours), per the site ai_policy.
 
-The 9 hand-curated hub dumps (content/<category>.md) are left untouched — this
-generator only owns the per-lieu md and the two llms files.
+Invariant: the layer is DERIVED, never hand-edited. `research_log` is NEVER
+included. The 9 hand-curated hub dumps (content/<category>.md) are untouched —
+this generator owns per-lieu md (FR + EN), the per-lieu JSON tree, the two llms
+files, and ai-info.json.
 
 Idempotent: re-run with unchanged JSON ⇒ byte-identical output (except the
-llms-full "Generated:" date, which is today by design — §4.2).
+llms-full "Generated:" + ai-info "last_updated" dates, today by design — §4.2).
 
 Usage:
     python3 scripts/build_ai_content.py            # write the whole layer
@@ -28,7 +40,6 @@ Usage:
 import argparse
 import datetime
 import glob
-import html
 import json
 import os
 import re
@@ -80,23 +91,22 @@ CATEGORY_LABEL_FR = {
     "jardin": "Jardin",
 }
 
-# "En bref" block: fixed (fact_key, French label) order. Pseudo-keys handled
-# specially. Mirrors the hand-made template (note: dogs labelled "Chiens" here).
-EN_BREF = [
-    ("__category__", "Catégorie"),
-    ("__commune__", "Commune"),
-    ("__gps__", "GPS"),
-    ("type", "Type"),
-    ("access", "Accès"),
-    ("parking", "Parking"),
-    ("dogs", "Chiens"),
-    ("best_season", "Meilleure saison"),
-    ("duration", "Durée"),
-]
-
-HOW_LABELS = [("car", "En voiture"),
-              ("public_transport", "Transports en commun"),
-              ("bike", "À vélo")]
+# ── HANDOFF-39 facet canon ──────────────────────────────────────────────────
+# The eight H2 anchors, byte-verbatim, in this exact order (gate-enforced).
+FACET_HEADINGS = {
+    "fr": ["## Faits", "## Horaires", "## Tarifs", "## Accès (PMR)",
+           "## Parking", "## Transport", "## Saison", "## Source officielle"],
+    "en": ["## Facts", "## Hours", "## Prices", "## Access (PMR)",
+           "## Parking", "## Transport", "## Season", "## Official source"],
+}
+UNKNOWN = {"fr": "Non renseigné", "en": "Not specified"}
+# Reviewed PMR status labels — copied verbatim from the fr/en rows of
+# build_lieu_page._ACCES_STATUS (the vocabulary the HTML pages render).
+PMR_STATUS_LABEL = {
+    "accessible": {"fr": "Accessible", "en": "Accessible"},
+    "partiel": {"fr": "Partiellement accessible", "en": "Partially accessible"},
+    "non_accessible": {"fr": "Non accessible", "en": "Not accessible"},
+}
 
 # llms.txt hub buckets: (label, [categories], hub_md_slug). The last bucket is a
 # computed catch-all for any category not claimed above, so a new category can
@@ -114,12 +124,14 @@ HUBS = [
     ("Attractions & loisirs", None, "attractions"),  # None = catch-all
 ]
 
-LANG_VERSIONS = [("EN", "en"), ("DE", "de"), ("ES", "es"), ("IT", "it"), ("NL", "nl")]
-
 
 # ── helpers ─────────────────────────────────────────────────────────────────
 def fr(d):
     return (d.get("i18n", {}) or {}).get("fr", {}) or {}
+
+
+def lang_block(d, lang):
+    return (d.get("i18n", {}) or {}).get(lang, {}) or {}
 
 
 def name_of(d):
@@ -144,20 +156,6 @@ def iso_date(human):
     if mon not in MONTHS_FR:
         return None
     return f"{year:04d}-{MONTHS_FR[mon]:02d}-{day:02d}"
-
-
-def html_to_text(s):
-    """Strip the light HTML in body.what_is to plain prose. <p> boundaries become
-    paragraph breaks; inline emphasis tags are dropped (matching the template,
-    which carries no markdown bold in the prose)."""
-    if not s:
-        return ""
-    s = re.sub(r"</p>\s*<p>", "\n\n", s)
-    s = re.sub(r"</?p>", "", s)
-    s = re.sub(r"<br\s*/?>", "\n", s)
-    s = re.sub(r"<[^>]+>", "", s)          # drop any remaining tags
-    s = html.unescape(s)
-    return s.strip()
 
 
 def photo_fields(d):
@@ -185,15 +183,161 @@ def truncate(text, limit=150):
     return cut + "…"
 
 
-# ── per-lieu markdown ───────────────────────────────────────────────────────
-def render_md(d):
-    f = fr(d)
+def load_transport_index():
+    path = os.path.join(ROOT, "data", "transport_index.json")
+    if not os.path.exists(path):
+        return {}, {}
+    t = json.load(open(path, encoding="utf-8"))
+    meta = t.get("_meta") or {}
+    return t, meta
+
+
+TRANSPORT, TRANSPORT_META = load_transport_index()
+
+
+def practical_value(block, prefixes):
+    """First practical_info value whose key starts with one of `prefixes`
+    (case-insensitive), else None. Facts lane only — no synthesis."""
+    for e in (block.get("practical_info") or []):
+        k = (e.get("k") or "").strip().lower()
+        if k and e.get("v") and any(k.startswith(p) for p in prefixes):
+            return str(e["v"]).strip()
+    return None
+
+
+HOURS_KEYS = {"fr": ("horaire",), "en": ("hours", "opening hours")}
+
+
+def hours_prose(d, lang):
+    """The honest hours lane: the language's own practical_info prose, FR
+    canonical fallback (facts are facts), else None. No machine hours field
+    exists in the corpus — flagged as the weakest facet, never synthesized."""
+    v = practical_value(lang_block(d, lang), HOURS_KEYS.get(lang, ()))
+    if v is None and lang != "fr":
+        v = practical_value(fr(d), HOURS_KEYS["fr"])
+    return v
+
+
+def lang_fact(d, lang, key):
+    """facts.<key> in the file's own language, FR fallback, else None."""
+    v = (lang_block(d, lang).get("facts") or {}).get(key)
+    if not v and lang != "fr":
+        v = (fr(d).get("facts") or {}).get(key)
+    return str(v).strip() if v else None
+
+
+def official_url_of(d):
+    if d.get("official_site_url"):
+        return d["official_site_url"]
+    for s in (d.get("sources") or []):
+        if isinstance(s, str) and s.startswith(("http://", "https://")):
+            return s
+        if isinstance(s, dict) and s.get("url"):
+            return s["url"]
+    return None
+
+
+# ── the shared facet mapping (feeds BOTH the md renderer and the JSON) ──────
+def lieu_facets(d):
+    """Language-independent typed facet dict — the single source both surfaces
+    render from, so md and JSON can never drift. Null discipline: a facet the
+    corpus doesn't know stays None; nothing is guessed."""
     slug = d["slug"]
-    name = name_of(d)
+    facts = fr(d).get("facts") or {}
+
+    gps = None
+    if d.get("latitude") is not None and d.get("longitude") is not None:
+        gps = {"lat": d["latitude"], "lng": d["longitude"]}
+
+    tiers = [{"name": t.get("name"), "price": t.get("price"), "note": t.get("note")}
+             for t in (d.get("price_tiers") or []) if isinstance(t, dict)]
+    is_free = (d.get("schema_org") or {}).get("is_free")
+    if d.get("price_from") is not None or tiers or is_free is not None or facts.get("tarif"):
+        prices = {
+            "from": d.get("price_from"),
+            "currency": d.get("price_currency"),
+            "tiers": tiers,
+            "is_free": is_free if isinstance(is_free, bool) else None,
+            "note": facts.get("tarif") or None,
+        }
+    else:
+        prices = None
+
+    a = d.get("acces_pmr")
+    if isinstance(a, dict) and a.get("status") in PMR_STATUS_LABEL:
+        access_pmr = {
+            "status": a["status"],
+            "detail": a.get("detail") or None,
+            "equipment": a.get("equipment") or [],
+            "handiplage_level": a.get("handiplage_level"),
+            "source_url": a.get("source_url") or None,
+            "source_name": a.get("source_name") or None,
+        }
+    else:
+        access_pmr = None
+
+    t = TRANSPORT.get(slug) or {}
+    stops = t.get("stops") or []
+    if stops:
+        transport = {
+            "source": t.get("source"),
+            "license": t.get("license"),
+            "verified": t.get("verified"),
+            "stops": [{"name": s.get("name"), "operator": s.get("operator"),
+                       "distance_m": s.get("distance_m"),
+                       "lines": s.get("lines") or []} for s in stops],
+        }
+    else:
+        transport = None
+
+    last_verified = ((d.get("freshness") or {}).get("checked")
+                     or (d.get("google_check") or {}).get("checked") or None)
+
+    return {
+        "name": name_of(d),
+        "commune": d.get("commune") or None,
+        "gps": gps,
+        "type": d.get("category") or None,
+        "hours": hours_prose(d, "fr"),
+        "prices": prices,
+        "access_pmr": access_pmr,
+        "parking": facts.get("parking") or None,
+        "transport": transport,
+        "season": facts.get("best_season") or None,
+        "official_url": official_url_of(d),
+        "last_verified": last_verified,
+    }
+
+
+def flat(v):
+    """One clean facts line: collapse internal whitespace/newlines, no trailing
+    space — the md canon is line-oriented and the strict gate forbids trailing
+    whitespace and stray heading-like lines. JSON keeps values verbatim."""
+    return " ".join(str(v).split()) if v is not None else None
+
+
+def fmt_price(p, currency):
+    if p is None:
+        return None
+    n = f"{p:g}" if isinstance(p, (int, float)) else str(p)
+    return f"{n} {currency}" if currency else n
+
+
+# ── per-lieu facet markdown (FR + EN canon) ─────────────────────────────────
+def render_md(d, lang="fr"):
+    """HANDOFF-39 facet md: YAML frontmatter + the byte-verbatim heading canon.
+    Facts lines only. Unknown facet → the language's UNKNOWN token; the value
+    itself is never invented. Frozen FR name verbatim in BOTH language files."""
+    slug = d["slug"]
+    name = name_of(d)                      # frozen FR name, verbatim
     cat = d.get("category", "")
     label = CATEGORY_LABEL_FR.get(cat, cat.replace("-", " ").capitalize())
     ptype, pauthor, plicense, psource = photo_fields(d)
+    fx = lieu_facets(d)
+    unk = UNKNOWN[lang]
+    lb = lang_block(d, lang)
 
+    canonical = f"{BASE_URL}/{slug}" if lang == "fr" else f"{BASE_URL}/{lang}/{slug}"
     fm = [
         ("slug", slug, False),
         ("name", name, True),
@@ -207,11 +351,11 @@ def render_md(d):
         ("country", COUNTRY, False),
         ("latitude", d.get("latitude"), False),
         ("longitude", d.get("longitude"), False),
-        # NEW — the geo signal from the geo-verify lane:
         ("geo_verified", "true" if d.get("geo_verified") is True else "false", False),
         ("google_place_id", d.get("google_place_id"), True),
-        ("canonical_url", f"{BASE_URL}/{slug}", False),
-        ("language", "fr", False),
+        ("canonical_url", canonical, False),
+        ("language", lang, False),
+        ("facet_json", f"{BASE_URL}/api/lieu/{slug}.json", False),
         ("photo_url", d.get("hero_image"), False),
         ("photo_type", ptype, False),
         ("photo_author", pauthor, True),
@@ -231,132 +375,145 @@ def render_md(d):
     lines.append("---")
     out = ["\n".join(lines), ""]
 
+    H = FACET_HEADINGS[lang]
     out.append(f"# {name}")
     out.append("")
 
-    lead = (f.get("hero") or {}).get("lead")
-    if lead:
-        out.append(f"> {lead}")
-        out.append("")
-
-    # En bref
-    facts = f.get("facts") or {}
-    bref = []
-    for key, lbl in EN_BREF:
-        if key == "__category__":
-            val = label
-        elif key == "__commune__":
-            commune = d.get("commune")
-            postal = d.get("postal_code")
-            val = f"{commune}, {DEPARTMENT}" + (f" ({postal})" if postal else "") if commune else None
-        elif key == "__gps__":
-            lat, lon = d.get("latitude"), d.get("longitude")
-            val = f"{lat}, {lon}" if lat is not None and lon is not None else None
-        else:
-            val = facts.get(key)
-        if val:
-            bref.append(f"- **{lbl}**: {val}")
-    if bref:
-        out.append("## En bref")
-        out.append("")
-        out.extend(bref)
-        out.append("")
-
-    # Présentation
-    what_is = html_to_text((f.get("body") or {}).get("what_is"))
-    if what_is:
-        out.append("## Présentation")
-        out.append("")
-        out.append(what_is)
-        out.append("")
-
-    # Activités sur place
-    activities = f.get("activities") or []
-    acts = [a for a in activities if a.get("title")]
-    if acts:
-        out.append("## Activités sur place")
-        out.append("")
-        for a in acts:
-            out.append(f"### {a['title']}")
-            if a.get("description"):
-                out.append(a["description"])
-            out.append("")
-
-    # Infos pratiques
-    practical = [e for e in (f.get("practical_info") or []) if e.get("k") and e.get("v")]
-    if practical:
-        out.append("## Infos pratiques")
-        out.append("")
-        for e in practical:
-            out.append(f"- **{e['k']}**: {e['v']}")
-        out.append("")
-
-    # Comment y aller
-    how = f.get("how_to_get_there") or {}
-    how_items = [(lbl, how.get(k)) for k, lbl in HOW_LABELS if how.get(k)]
-    if how_items:
-        out.append("## Comment y aller")
-        out.append("")
-        for lbl, txt in how_items:
-            out.append(f"### {lbl}")
-            out.append(txt)
-            out.append("")
-
-    # Quand y aller
-    when = f.get("when_to_visit")
-    if when:
-        out.append("## Quand y aller")
-        out.append("")
-        out.append(when)
-        out.append("")
-
-    # Événements
-    events = f.get("events")
-    if events:
-        out.append("## Événements")
-        out.append("")
-        out.append(events)
-        out.append("")
-
-    # Questions fréquentes
-    faqs = [q for q in (f.get("faq") or []) if q.get("q") and q.get("a")]
-    if faqs:
-        out.append("## Questions fréquentes")
-        out.append("")
-        for q in faqs:
-            out.append(f"**Q : {q['q']}**")
-            out.append("")
-            out.append(f"R : {q['a']}")
-            out.append("")
-
-    # Source & licence footer
-    versions = " · ".join(f"[{lbl}]({BASE_URL}/{lc}/{slug})" for lbl, lc in LANG_VERSIONS)
-    out.append("---")
+    # ## Faits / ## Facts
+    out.append(H[0])
     out.append("")
-    out.append("## Source & licence")
+    commune = d.get("commune")
+    postal = d.get("postal_code")
+    commune_line = (f"{commune}, {DEPARTMENT}" + (f" ({postal})" if postal else "")
+                    if commune else unk)
+    gps_line = f"{fx['gps']['lat']}, {fx['gps']['lng']}" if fx["gps"] else unk
+    type_line = flat(lang_fact(d, lang, "type")) or unk
+    out.append(f"- Commune: {commune_line}")
+    out.append(f"- GPS: {gps_line}")
+    out.append(f"- {'Catégorie' if lang == 'fr' else 'Category'}: {cat or unk}")
+    out.append(f"- Type: {type_line}")
     out.append("")
-    out.append(f"- **Page web canonique** : {BASE_URL}/{slug}")
-    out.append(f"- **Versions linguistiques** : {versions}")
-    out.append("- **Éditeur** : loisirs74.fr — guide indépendant des lieux de "
-               "loisirs publics en Haute-Savoie, France")
-    out.append("- **Sources** : vérifications croisées via communes, offices de "
-               "tourisme, ONF, OpenStreetMap, Wikipedia")
-    out.append(f"- **Signaler une erreur** : {BASE_URL}/signaler?lieu={slug}")
+
+    # ## Horaires / ## Hours
+    out.append(H[1])
     out.append("")
-    out.append("*Les informations peuvent évoluer ; vérifier auprès de la commune "
-               "avant un déplacement spécifique.*")
+    out.append(flat(hours_prose(d, lang)) or unk)
+    out.append("")
+
+    # ## Tarifs / ## Prices
+    out.append(H[2])
+    out.append("")
+    pr = fx["prices"]
+    price_lines = []
+    if pr:
+        cur = pr["currency"] or ""
+        if pr["from"] is not None:
+            lbl = "À partir de" if lang == "fr" else "From"
+            price_lines.append(f"- {lbl}: {fmt_price(pr['from'], cur)}")
+        for t in pr["tiers"]:
+            seg = f"- {flat(t['name'])}: {fmt_price(t['price'], cur)}"
+            if t.get("note"):
+                seg += f" — {flat(t['note'])}"
+            price_lines.append(seg)
+        if not price_lines:
+            if pr["is_free"] is True:
+                price_lines.append("Gratuit" if lang == "fr" else "Free")
+            elif lang_fact(d, lang, "tarif"):
+                price_lines.append(flat(lang_fact(d, lang, "tarif")))
+            elif pr["note"]:
+                price_lines.append(flat(pr["note"]))
+    out.extend(price_lines or [unk])
+    out.append("")
+
+    # ## Accès (PMR)
+    out.append(H[3])
+    out.append("")
+    ap = fx["access_pmr"]
+    if ap:
+        out.append(f"- {'Statut' if lang == 'fr' else 'Status'}: "
+                   f"{PMR_STATUS_LABEL[ap['status']][lang]}")
+        # detail only in the file's own language — the FR free text is CONTENT,
+        # never mirrored into the EN file (HANDOFF-35 rule carried over).
+        detail = ap["detail"] if lang == "fr" else (lb.get("acces_pmr_detail") or None)
+        if detail:
+            out.append(f"- {'Détail' if lang == 'fr' else 'Detail'}: {flat(detail)}")
+        if ap["handiplage_level"]:
+            out.append(f"- Handiplage: {flat(ap['handiplage_level'])}")
+        if ap["source_url"] and ap["source_name"]:
+            out.append(f"- Source: {flat(ap['source_name'])} — {flat(ap['source_url'])}")
+    else:
+        out.append(unk)
+    out.append("")
+
+    # ## Parking
+    out.append(H[4])
+    out.append("")
+    out.append(flat(lang_fact(d, lang, "parking")) or unk)
+    out.append("")
+
+    # ## Transport
+    out.append(H[5])
+    out.append("")
+    tr = fx["transport"]
+    if tr:
+        word_lines = "lignes" if lang == "fr" else "lines"
+        for s in tr["stops"]:
+            seg = f"- {flat(s['name'])} ({flat(s['operator'])}, ~{s['distance_m']} m"
+            if s["lines"]:
+                seg += f", {word_lines} {', '.join(flat(x) for x in s['lines'])}"
+            seg += ")"
+            out.append(seg)
+        gen = TRANSPORT_META.get("generated")
+        out.append(f"- Source: {tr['source']} — {tr['license']}"
+                   + (f" ({gen})" if gen else ""))
+    else:
+        out.append(unk)
+    out.append("")
+
+    # ## Saison / ## Season
+    out.append(H[6])
+    out.append("")
+    out.append(flat(lang_fact(d, lang, "best_season")) or unk)
+    out.append("")
+
+    # ## Source officielle / ## Official source
+    out.append(H[7])
+    out.append("")
+    out.append(flat(fx["official_url"]) or unk)
 
     return "\n".join(out).rstrip() + "\n"
 
 
-# ── llms.txt index ──────────────────────────────────────────────────────────
+# ── per-lieu typed JSON ─────────────────────────────────────────────────────
+def render_lieu_json(d):
+    """The /api/lieu/<slug>.json contract: exactly the 12 keys, always present,
+    null preserved. FR canonical for prose facets."""
+    return json.dumps(lieu_facets(d), ensure_ascii=False, indent=2) + "\n"
+
+
+# ── llms.txt — the MAP ──────────────────────────────────────────────────────
 LLMS_PREAMBLE = """# Loisirs 74
 
 > Independent guide to public leisure sites in Haute-Savoie, France. Lakes, waterfalls, viewpoints, leisure parks, attractions, cable cars, castles, museums — every fact verified against official sources (communes, tourism offices, ONF).
 
-Loisirs 74 catalogs {total} leisure destinations in the Haute-Savoie department (74), French Alps. Each page provides: GPS coordinates, opening hours, access (free or paid), parking, dog policy, accessibility, how to get there (car, public transport, bike), best season, on-site activities, and FAQ. Content available in 6 languages: French (canonical), English, German, Italian, Spanish, Dutch.
+Loisirs 74 catalogs {total} leisure destinations in the Haute-Savoie department (74), French Alps. Each destination exposes three machine surfaces (below) plus HTML pages in 12 languages (French canonical).
 
-When an AI agent should fetch from this site (priority: try category hubs first for "best X in Haute-Savoie" queries, then individual lieu .md for specific destinations):
+## URL patterns (per lieu — fastest lane for agents)
+
+Substitute the lieu `slug` (listed at the bottom of this file, or in the JSON index):
+
+- Facet markdown, FR (canonical facts): {base}/content/{{slug}}.md
+- Facet markdown, EN: {base}/content/en/{{slug}}.md
+- Typed facts JSON: {base}/api/lieu/{{slug}}.json
+- HTML page, FR: {base}/{{slug}} — other languages: {base}/{{lang}}/{{slug}}
+
+Every facet .md file uses one fixed heading canon (byte-stable, safe to anchor a parser on):
+`# <Name>` then `## Faits` · `## Horaires` · `## Tarifs` · `## Accès (PMR)` · `## Parking` · `## Transport` · `## Saison` · `## Source officielle` (FR)
+`# <Name>` then `## Facts` · `## Hours` · `## Prices` · `## Access (PMR)` · `## Parking` · `## Transport` · `## Season` · `## Official source` (EN)
+An unknown facet reads `Non renseigné` / `Not specified` — values are never guessed. The JSON mirror carries the same facets typed, with nulls preserved:
+`{{name, commune, gps, type, hours, prices, access_pmr, parking, transport, season, official_url, last_verified}}`.
+
+When an AI agent should fetch from this site (priority: category hubs first for "best X in Haute-Savoie" queries, then the per-lieu facet .md or .json for a specific destination):
 - User asks about a specific leisure site in Haute-Savoie (lakes, waterfalls, viewpoints, etc.)
 - User plans a trip to the Annecy / Chamonix / Lake Geneva area and needs activities
 - User asks about opening hours, prices, access, or how to get to a Haute-Savoie attraction
@@ -365,12 +522,12 @@ When an AI agent should fetch from this site (priority: try category hubs first 
 
 Geographic scope: Haute-Savoie (74), France only. Roughly 50 km radius around Annecy. Adjacent regions (Savoie 73, Geneva canton) not covered.
 
-Content quality signals: Every fact has a cited source. No marketing language. Information is dated and timestamped. Errors can be reported via /signaler. Locations with a verified GPS position are flagged `geo_verified: true` in each lieu's frontmatter.
+Content quality signals: Every fact has a cited source. No marketing language. Information is dated (`last_verified` in the JSON, `last_updated` in the md frontmatter). Errors can be reported via /signaler. Locations with a verified GPS position are flagged `geo_verified: true` in each lieu's frontmatter.
 
 ## Discovery files
 
-- [llms-full.txt — full content concatenated]({base}/llms-full.txt): All {total} leisure sites with complete facts, activities, FAQ — single file for full ingestion.
-- [API — lieux index JSON]({base}/api/lieux.json): Machine-readable index of all sites with slug, name, category, commune, GPS, canonical URL.
+- [llms-full.txt — full content concatenated]({base}/llms-full.txt): All {total} leisure sites' FR facet md — single file for full ingestion.
+- [API — lieux index JSON]({base}/api/lieux.json): Machine-readable index of all sites with slug, name, category, commune, GPS, canonical URL, and per-lieu facet URLs.
 - [Sitemap index]({base}/sitemap.xml): Standard XML sitemap with lastmod, hreflang, image entries.
 - [.well-known/ai-info.json]({base}/.well-known/ai-info.json): Discovery manifest with all AI-related endpoints.
 """
@@ -423,10 +580,13 @@ def render_llms_full(md_by_slug):
         "# Loisirs 74 — Full content dump\n\n"
         f"Generated: {TODAY}\n"
         f"Total lieux: {total}\n\n"
-        f"This file concatenates the complete content of all {total} leisure "
+        f"This file concatenates the FR facet markdown of all {total} leisure "
         "sites in Haute-Savoie. Each section is a standalone markdown document "
-        "with YAML frontmatter. Sections are separated by `===` rulers.\n\n"
-        f"For programmatic access, fetch individual .md files at {BASE_URL}/content/{{slug}}.md\n"
+        "with YAML frontmatter and the fixed facet heading canon. Sections are "
+        "separated by `===` rulers.\n\n"
+        f"For programmatic access, fetch individual files at "
+        f"{BASE_URL}/content/{{slug}}.md (FR), {BASE_URL}/content/en/{{slug}}.md "
+        f"(EN), or {BASE_URL}/api/lieu/{{slug}}.json (typed JSON).\n"
     )
     parts = [header]
     for slug in sorted(md_by_slug):
@@ -435,6 +595,79 @@ def render_llms_full(md_by_slug):
         parts.append(md_by_slug[slug].rstrip())
         parts.append("")
     return "\n".join(parts).rstrip() + "\n"
+
+
+# ── .well-known/ai-info.json — generated, counts from truth ─────────────────
+def published_site_langs():
+    path = os.path.join(ROOT, "data", "languages.json")
+    try:
+        roster = json.load(open(path, encoding="utf-8"))["languages"]
+        langs = [r["code"] for r in roster if r.get("status") == "published"]
+        return langs or ["fr"]
+    except Exception:
+        return ["fr", "en", "de", "es", "it", "nl"]
+
+
+def render_ai_info(fiches):
+    info = {
+        "name": "Loisirs 74",
+        "description": ("Independent guide to public leisure sites in Haute-Savoie, "
+                        "France. Lakes, waterfalls, viewpoints, cable cars, beaches, "
+                        "and more — all facts verified from official sources."),
+        "publisher": "bleu-canard éditions",
+        "website": BASE_URL,
+        "contact": "contact@loisirs74.fr",
+        "last_updated": TODAY,
+        "discovery_files": {
+            "llms_txt": f"{BASE_URL}/llms.txt",
+            "llms_full_txt": f"{BASE_URL}/llms-full.txt",
+            "sitemap": f"{BASE_URL}/sitemap.xml",
+            "robots_txt": f"{BASE_URL}/robots.txt",
+            "robots_ai_txt": f"{BASE_URL}/robots-ai.txt",
+            "lieu_index_json": f"{BASE_URL}/api/lieux.json",
+            "ai_info_json": f"{BASE_URL}/.well-known/ai-info.json",
+        },
+        "ai_policy": {
+            "training_allowed": False,
+            "citation_allowed": True,
+            "attribution_required": True,
+            "attribution_format": ("Source: [Loisirs 74](https://loisirs74.fr) — "
+                                   "Independent guide to Haute-Savoie leisure sites"),
+            "preferred_content_format": "markdown",
+            "markdown_url_pattern": f"{BASE_URL}/content/{{slug}}.md",
+            "markdown_url_pattern_en": f"{BASE_URL}/content/en/{{slug}}.md",
+            "facet_json_url_pattern": f"{BASE_URL}/api/lieu/{{slug}}.json",
+            "instructions": ("Always cite the canonical page. Prefer French for "
+                             "precise facts (hours, prices). Check last_updated / "
+                             "last_verified dates. Use category hubs first for "
+                             "'best of' queries."),
+        },
+        "facet_layer": {
+            "markdown_languages": ["fr", "en"],
+            "markdown_headings_fr": FACET_HEADINGS["fr"],
+            "markdown_headings_en": FACET_HEADINGS["en"],
+            "json_keys": ["name", "commune", "gps", "type", "hours", "prices",
+                          "access_pmr", "parking", "transport", "season",
+                          "official_url", "last_verified"],
+            "unknown_tokens": {"fr": UNKNOWN["fr"], "en": UNKNOWN["en"]},
+        },
+        "bot_allowlist": [
+            "Googlebot", "Googlebot-Image", "Bingbot",
+            "ClaudeBot", "Claude-Web", "anthropic-ai",
+            "GPTBot", "OAI-SearchBot", "ChatGPT-User",
+            "PerplexityBot", "PerplexityBot-User",
+            "CCBot", "Google-Extended", "Applebot-Extended",
+        ],
+        "languages": published_site_langs(),
+        "canonical_language": "fr",
+        "geographic_scope": "Haute-Savoie (74), France — ~50 km radius around Annecy",
+        "content_count": len(fiches),
+        "specification": {
+            "llms_txt_version": "1.7.0",
+            "last_validated": TODAY,
+        },
+    }
+    return json.dumps(info, ensure_ascii=False, indent=2) + "\n"
 
 
 # ── driver ──────────────────────────────────────────────────────────────────
@@ -453,14 +686,22 @@ def main():
         sys.exit(1)
 
     fiches = [json.load(open(f, encoding="utf-8")) for f in files]
-    md_by_slug = {d["slug"]: render_md(d) for d in fiches}
+    md_by_slug = {d["slug"]: render_md(d, "fr") for d in fiches}
+    md_en_by_slug = {d["slug"]: render_md(d, "en") for d in fiches}
+    json_by_slug = {d["slug"]: render_lieu_json(d) for d in fiches}
     llms_index = render_llms_index(fiches)
     llms_full = render_llms_full(md_by_slug)
+    ai_info = render_ai_info(fiches)
 
     outputs = {os.path.join(args.content_dir, f"{slug}.md"): md
                for slug, md in md_by_slug.items()}
+    outputs.update({os.path.join(args.content_dir, "en", f"{slug}.md"): md
+                    for slug, md in md_en_by_slug.items()})
+    outputs.update({os.path.join(args.root, "api", "lieu", f"{slug}.json"): j
+                    for slug, j in json_by_slug.items()})
     outputs[os.path.join(args.root, "llms.txt")] = llms_index
     outputs[os.path.join(args.root, "llms-full.txt")] = llms_full
+    outputs[os.path.join(args.root, ".well-known", "ai-info.json")] = ai_info
 
     changed = 0
     for path, content in outputs.items():
@@ -475,13 +716,33 @@ def main():
                 with open(path, "w", encoding="utf-8") as fh:
                     fh.write(content)
 
+    # prune stale files in the two dirs this generator wholly owns (a removed
+    # slug must not leave a live mirror behind). content/ root is shared with
+    # the 9 hand-curated hub dumps, so it is never pruned here.
+    slugs = set(md_by_slug)
+    pruned = 0
+    for pattern, keyfn in (
+        (os.path.join(args.content_dir, "en", "*.md"),
+         lambda p: os.path.basename(p)[:-3]),
+        (os.path.join(args.root, "api", "lieu", "*.json"),
+         lambda p: os.path.basename(p)[:-5]),
+    ):
+        for p in glob.glob(pattern):
+            if keyfn(p) not in slugs:
+                pruned += 1
+                if not args.check:
+                    os.remove(p)
+
     verified = sum(1 for d in fiches if d.get("geo_verified") is True)
     tag = "[check] " if args.check else ""
-    print(f"{tag}build_ai_content: {len(md_by_slug)} content/*.md, "
+    print(f"{tag}build_ai_content: {len(md_by_slug)} content/*.md (FR) + "
+          f"{len(md_en_by_slug)} content/en/*.md + {len(json_by_slug)} api/lieu/*.json, "
           f"llms.txt ({llms_index.count(chr(10))+1} lines), "
-          f"llms-full.txt ({len(llms_full)} bytes); {verified} geo_verified.")
-    print(f"  {changed} file(s) {'would change' if args.check else 'written'}.")
-    if args.check and changed:
+          f"llms-full.txt ({len(llms_full)} bytes), ai-info.json; "
+          f"{verified} geo_verified.")
+    print(f"  {changed} file(s) {'would change' if args.check else 'written'}, "
+          f"{pruned} stale pruned.")
+    if args.check and (changed or pruned):
         sys.exit(1)
 
 

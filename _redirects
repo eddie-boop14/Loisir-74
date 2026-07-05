@@ -42,6 +42,59 @@
 /es/otros       /                     301
 /es/otros/      /                     301
 
+# Agent-guess aliases (HANDOFF-39 blocker 1, AXIS-measured): agents speculatively
+# fetch semantic URLs like /plages-lac-annecy and hit 404 before recovering.
+# 301 the natural FR+EN guesses onto the canonical hubs. Every source here is
+# gate-checked against the built tree (gate_redirect_shadows.py): none may
+# shadow an existing 200 path.
+/baignade            /baignade-nautisme          301
+/baignade/           /baignade-nautisme/         301
+/baignade/*          /baignade-nautisme/:splat   301
+/piscines            /baignade-nautisme          301
+/piscines/           /baignade-nautisme/         301
+/plages-lac-annecy   /baignade-lac-annecy        301
+/plages-lac-annecy/  /baignade-lac-annecy        301
+/plage-lac-annecy    /baignade-lac-annecy        301
+/plage-lac-annecy/   /baignade-lac-annecy        301
+/cascades-haute-savoie   /cascades               301
+/cascades-haute-savoie/  /cascades/              301
+/chutes-d-eau        /cascades                   301
+/chutes-d-eau/       /cascades/                  301
+/randonnee           /sentiers                   301
+/randonnee/          /sentiers/                  301
+/randonnees          /sentiers                   301
+/randonnees/         /sentiers/                  301
+/chateaux-haute-savoie   /chateaux               301
+/chateaux-haute-savoie/  /chateaux/              301
+/musees-haute-savoie     /musees                 301
+/musees-haute-savoie/    /musees/                301
+/activites           /que-faire                  301
+/activites/          /que-faire/                 301
+/beaches             /en/lakes                   301
+/beaches/            /en/lakes/                  301
+/lakes               /en/lakes                   301
+/lakes/              /en/lakes/                  301
+/waterfalls          /en/waterfalls              301
+/waterfalls/         /en/waterfalls/             301
+/castles             /en/castles                 301
+/castles/            /en/castles/                301
+/museums             /en/museums                 301
+/museums/            /en/museums/                301
+/hiking              /en/trails                  301
+/hiking/             /en/trails/                 301
+/trails              /en/trails                  301
+/trails/             /en/trails/                 301
+/swimming            /en/swimming-watersports    301
+/swimming/           /en/swimming-watersports/   301
+/viewpoints          /en/viewpoints              301
+/viewpoints/         /en/viewpoints/             301
+/en/beaches-lake-annecy   /en/baignade-lac-annecy  301
+/en/beaches-lake-annecy/  /en/baignade-lac-annecy  301
+/en/hiking           /en/trails                  301
+/en/hiking/          /en/trails/                 301
+/en/swimming         /en/swimming-watersports    301
+/en/swimming/        /en/swimming-watersports/   301
+
 # Legal pages — clean URLs
 /mentions-legales       /mentions-legales-loisirs74-phase1.html     200
 /mentions-legales/      /mentions-legales-loisirs74-phase1.html     200

@@ -15,6 +15,7 @@ geo_verified: true
 google_place_id: "ChIJEaFWZNFNiUcRuazf2r4d2xg"
 canonical_url: https://loisirs74.fr/paintball-chamonix
 language: fr
+facet_json: https://loisirs74.fr/api/lieu/paintball-chamonix.json
 photo_url: /img/generique/generique-paintball-action.jpg
 photo_type: generic
 photo_author: null
@@ -26,124 +27,40 @@ source: loisirs74.fr
 
 # Paintball Chamonix
 
-> Centre de paintball à Chamonix-Mont-Blanc — terrains aménagés, scénarios variés, équipement fourni, encadrement pro. Dès 8 ans en formule junior.
+## Faits
 
-## En bref
+- Commune: Chamonix-Mont-Blanc, Haute-Savoie (74400)
+- GPS: 45.948385, 6.893163
+- Catégorie: attraction
+- Type: Paintball
 
-- **Catégorie**: Attraction
-- **Commune**: Chamonix-Mont-Blanc, Haute-Savoie (74400)
-- **GPS**: 45.948385, 6.893163
-- **Type**: Paintball
-- **Accès**: Sur réservation
-- **Meilleure saison**: Mars-novembre (centres ext.) / toute l'année (indoor)
-- **Durée**: 2-3h sur place
+## Horaires
 
-## Présentation
+Sur réservation. Créneaux étendus le week-end et pendant les vacances scolaires. Saison principale : printemps-été-automne ; les centres extérieurs peuvent réduire l'activité en hiver.
 
-Paintball Chamonix est un centre de paintball situé à Chamonix-Mont-Blanc, en Haute-Savoie. Le centre se trouve dans la vallée de Chamonix-Mont-Blanc (74400), au cœur de la capitale française de l'alpinisme. Idéal en alternative ski/randonnée ou jour de pluie pour les vacanciers en station. Le site propose des parties sur terrains spécialement aménagés, avec scénarios variés et équipement complet fourni (masque facial intégral, marqueur, combinaison ou plastron, billes de peinture). L'encadrement est assuré par des arbitres professionnels qui rappellent les consignes de sécurité avant chaque partie.
+## Tarifs
 
-Formats de jeu. Parties extérieures sur terrains forestiers ou prés aménagés ; scénarios variés selon le centre et la saison. Les scénarios habituels incluent : capture du drapeau, élimination, défense de zone, président à protéger, attaque/défense d'une base. Une partie type dure 10-15 minutes, suivie d'un debrief, puis enchaînement de plusieurs parties sur 1h30 à 2h de jeu effectif. Les tarifs sont en général dégressifs selon le nombre de billes (forfait 100, 200, 300 billes) et le nombre de joueurs.
+~25-50 € selon forfait billes
 
-Public et conditions. L'activité est accessible aux adultes (16-18 ans selon le centre, parfois avec autorisation parentale) et aux enfants à partir de 8 ans en formule junior / low impact (marqueurs adaptés, billes plus tendres, intensité réduite). Très demandé pour les anniversaires, les EVG/EVJF et le team-building, le paintball requiert une réservation préalable avec un effectif minimum (souvent 6-8 joueurs). Tenue conseillée : vêtements couvrants robustes et chaussures de sport ou crantées. Cumul d'éclats de peinture inévitable — prévoir une tenue de rechange.
+## Accès (PMR)
 
-## Activités sur place
+Non renseigné
 
-### Format de jeu
-Paintball en extérieur dans la vallée de Chamonix — décors montagne, obstacles bois et gonflables. Activité tempérée par l'altitude (~1000m). Pluvieux possible en demi-saison — flexibilité prévue.
+## Parking
 
-### Scénarios variés
-Capture du drapeau, élimination, défense de zone, président à protéger, attaque/défense d'une base. Les arbitres adaptent les scénarios à l'effectif et au niveau.
+Non renseigné
 
-### Junior / low impact dès 8 ans
-Formule junior à partir de 8 ans avec marqueurs adaptés à la morphologie de l'enfant, billes plus tendres (paintball low impact) et intensité réduite. Idéal pour anniversaires d'enfants.
+## Transport
 
-### Anniversaires, EVG, EVJF, team-building
-Formules dédiées : anniversaire (gâteau et boissons sur place possibles), EVG/EVJF (épreuves humoristiques en option), team-building (parcours coopératifs, coaching). Devis sur demande.
+- PLACE DU TRIANGLE DE L'AMITIE (Chamonix Bus, ~82 m, lignes 04)
+- CASINO (Chamonix Bus, ~113 m, lignes 04)
+- MUMMERY (Chamonix Bus, ~203 m, lignes 01, 10, V2)
+- Source: transport.data.gouv.fr — Licence Etalab 2.0 (2026-06-15)
 
-### Sécurité & équipement
-Masque facial intégral obligatoire (jamais retiré sur terrain), combinaison ou plastron, gants conseillés, marqueur calibré. Briefing sécurité avant chaque session par les arbitres pro.
+## Saison
 
-### Forfaits billes & tarifs dégressifs
-Formules 100, 200, 300, 500 billes incluant location de l'équipement et 1h30-2h sur terrain. Recharge de billes possible en cours de partie. Tarif dégressif au-delà de 8-10 joueurs.
+Mars-novembre (centres ext.) / toute l'année (indoor)
 
-### Encadrement par arbitres pro
-Chaque partie est arbitrée par un professionnel qui rappelle les règles, valide les éliminations et veille à la sécurité. Encadrement renforcé pour les enfants et les débutants.
+## Source officielle
 
-### Tenue conseillée
-Vêtements couvrants robustes (jean, sweat) à manches longues, chaussures de sport ou crantées. Prévoir une tenue de rechange : éclats de peinture inévitables. Lunettes possibles sous le masque.
-
-## Infos pratiques
-
-- **Adresse**: Vallée de Chamonix-Mont-Blanc, 74400 Chamonix — adresse exacte via l'Office de Tourisme
-- **Coordonnées GPS**: 45.9237° N · 6.8694° E
-- **Téléphone**: à confirmer (Office de Tourisme Chamonix)
-- **Site officiel**: à confirmer
-- **Horaires**: Sur réservation. Créneaux étendus le week-end et pendant les vacances scolaires. Saison principale : printemps-été-automne ; les centres extérieurs peuvent réduire l'activité en hiver.
-- **Tarifs**: ~25-35 € forfait 100 billes, ~35-50 € forfait 200 billes (équipement inclus). Tarifs dégressifs groupes 8-10+ et formules anniversaire/EVG/EVJF. Prix 2026 à confirmer.
-- **Réservation**: Obligatoire par téléphone ou site officiel. Effectif minimum souvent 6-8 joueurs. Confirmation 48h à l'avance recommandée.
-- **Durée moyenne**: 2-3h sur place (1h30-2h de jeu effectif réparti en 6-10 parties courtes).
-- **Parking**: Parking sur place ou à proximité immédiate, généralement gratuit.
-- **Accessibilité**: Activité physique — non adaptée PMR. Public valide et sportif.
-- **Public**: Adultes (16/18 ans selon centre), enfants dès 8 ans en formule junior / low impact. Très demandé pour anniversaires, EVG/EVJF, team-building.
-- **Langues**: Français, anglais (selon disponibilité du personnel).
-
-## Comment y aller
-
-### En voiture
-Voir l'adresse exacte ; le centre est accessible en voiture depuis les axes A40 (Faucigny / vallée de l'Arve) ou A41 (Annecy-Genève). Parking gratuit sur place.
-
-### Transports en commun
-Transports en commun : gare TER la plus proche selon la commune ; bus locaux peu fréquents. Privilégier la voiture ou le covoiturage pour le groupe.
-
-### À vélo
-Accès vélo possible selon itinéraires locaux ; prévoir le matériel de protection séparément.
-
-## Quand y aller
-
-Saison principale : printemps, été et début d'automne (mars-novembre). Affluence forte les week-ends, ponts et vacances scolaires. Préférer le matin en été (temps frais). Hiver : possible sur les centres indoor, parfois fermé sur les centres extérieurs.
-
-## Événements
-
-Formules anniversaire, EVG/EVJF, team-building, séminaires d'entreprise. Tournois ponctuels et soirées spéciales (nuit, lumière noire) selon le centre. Programme à demander au centre.
-
-## Questions fréquentes
-
-**Q : À partir de quel âge peut-on jouer au paintball chez Paintball Chamonix ?**
-
-R : L'accès en formule adulte est généralement réservé aux 16 ans et plus (parfois avec autorisation parentale entre 16 et 18 ans). Une formule junior / low impact est proposée dès 8 ans avec un équipement et des billes adaptés.
-
-**Q : Combien coûte une partie au Paintball Chamonix ?**
-
-R : Comptez ~25-35 € par personne pour un forfait 100 billes (équipement + 1h30 de jeu) et ~35-50 € pour 200 billes. Tarifs dégressifs au-delà de 8-10 joueurs et selon les formules anniversaire/EVG/EVJF. Prix 2026 à confirmer sur place.
-
-**Q : Faut-il réserver au Paintball Chamonix ?**
-
-R : Oui, la réservation est obligatoire. Le centre fonctionne sur créneaux et avec un effectif minimum (souvent 6-8 joueurs pour démarrer une partie). Réservation par téléphone ou via le site officiel. Confirmation conseillée 48h à l'avance.
-
-**Q : Que faut-il apporter / porter au Paintball Chamonix ?**
-
-R : Portez des vêtements couvrants et robustes à manches longues (jean ou pantalon de sport, sweat) ainsi que des chaussures de sport ou crantées. Le centre fournit masque, combinaison/plastron et marqueur. Prévoir une tenue de rechange et une serviette.
-
-**Q : Le paintball au Paintball Chamonix est-il en intérieur ou en extérieur ?**
-
-R : Voir la fiche : certains centres jouent uniquement en extérieur (sur terrain forestier, scénarisé), d'autres proposent une salle indoor type CQB pour des parties courtes et rapides, parfois les deux. Les conditions météo affectent uniquement les terrains extérieurs.
-
-**Q : Combien de temps dure une session au Paintball Chamonix ?**
-
-R : Comptez 2-3h sur place : briefing sécurité, équipement, plusieurs parties de 10-15 min entrecoupées de debriefs, soit 1h30-2h de jeu effectif. Pour les groupes ou anniversaires, prévoir une demi-journée.
-
-**Q : Est-ce dangereux ou douloureux de jouer au paintball au Paintball Chamonix ?**
-
-R : Bien encadré, le paintball est sécurisé : masque obligatoire, marqueur calibré, briefing initial, arbitres présents. Un impact peut laisser un petit bleu temporaire — c'est attendu. La formule low impact / junior réduit fortement l'intensité pour les enfants.
-
----
-
-## Source & licence
-
-- **Page web canonique** : https://loisirs74.fr/paintball-chamonix
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/paintball-chamonix) · [DE](https://loisirs74.fr/de/paintball-chamonix) · [ES](https://loisirs74.fr/es/paintball-chamonix) · [IT](https://loisirs74.fr/it/paintball-chamonix) · [NL](https://loisirs74.fr/nl/paintball-chamonix)
-- **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
-- **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
-- **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=paintball-chamonix
-
-*Les informations peuvent évoluer ; vérifier auprès de la commune avant un déplacement spécifique.*
+https://paintball-esccape-game-chamonix.fr/

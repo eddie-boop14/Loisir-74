@@ -15,57 +15,49 @@ geo_verified: false
 google_place_id: null
 canonical_url: https://loisirs74.fr/distillerie-des-aravis-la-clusaz
 language: fr
+facet_json: https://loisirs74.fr/api/lieu/distillerie-des-aravis-la-clusaz.json
 photo_url: null
 photo_type: real
 photo_author: null
 photo_license: null
 photo_source: null
-last_updated: 2026-07-04
+last_updated: 2026-07-05
 source: loisirs74.fr
 ---
 
 # Distillerie des Aravis
 
-> Au centre de La Clusaz, à deux minutes du front de neige, la Distillerie des Aravis perpétue depuis trois générations la fabrication de la fameuse liqueur des Aravis et du génépi.
+## Faits
 
-## En bref
+- Commune: La Clusaz, Haute-Savoie (74220)
+- GPS: Non renseigné
+- Catégorie: divers
+- Type: Distillerie artisanale
 
-- **Catégorie**: Sortie loisir
-- **Commune**: La Clusaz, Haute-Savoie (74220)
-- **Type**: Distillerie artisanale
-- **Accès**: Boutique · Dégustation
-- **Meilleure saison**: Toute l'année (station)
+## Horaires
 
-## Présentation
+À confirmer auprès de la distillerie (reprise récente)
 
-Au centre de La Clusaz, à deux minutes du front de neige, la Distillerie des Aravis perpétue depuis trois générations la fabrication de la fameuse liqueur des Aravis et du génépi. Reprise par Romain et Sarah Gauthier, enfants de distillateurs, elle propose une immersion dans l'atelier de fabrication et une dégustation des spiritueux de montagne, à consommer avec modération.
+## Tarifs
 
-## Infos pratiques
+Non renseigné
 
-- **Adresse**: Centre de La Clusaz, près de la patinoire — 74220 La Clusaz
-- **Activité**: Immersion dans l'atelier de fabrication du génépi · dégustation en boutique
-- **Horaires**: À confirmer auprès de la distillerie (reprise récente)
-- **Tarifs**: Dégustation/boutique · à confirmer
-- **Site officiel**: distilleriearavis.fr
+## Accès (PMR)
 
-## Questions fréquentes
+Non renseigné
 
-**Q : Que peut-on faire à la Distillerie des Aravis ?**
+## Parking
 
-R : La distillerie propose une immersion dans l'atelier de fabrication du génépi et une dégustation de ses liqueurs de montagne, dans sa boutique au centre de La Clusaz, à deux pas du front de neige.
+Non renseigné
 
-**Q : Où se trouve la Distillerie des Aravis ?**
+## Transport
 
-R : À La Clusaz (≈ 1 100 m d'altitude), au pied du massif des Aravis, à environ 27 km d'Annecy, au cœur du village près de la patinoire.
+Non renseigné
 
----
+## Saison
 
-## Source & licence
+Toute l'année (station)
 
-- **Page web canonique** : https://loisirs74.fr/distillerie-des-aravis-la-clusaz
-- **Versions linguistiques** : [EN](https://loisirs74.fr/en/distillerie-des-aravis-la-clusaz) · [DE](https://loisirs74.fr/de/distillerie-des-aravis-la-clusaz) · [ES](https://loisirs74.fr/es/distillerie-des-aravis-la-clusaz) · [IT](https://loisirs74.fr/it/distillerie-des-aravis-la-clusaz) · [NL](https://loisirs74.fr/nl/distillerie-des-aravis-la-clusaz)
-- **Éditeur** : loisirs74.fr — guide indépendant des lieux de loisirs publics en Haute-Savoie, France
-- **Sources** : vérifications croisées via communes, offices de tourisme, ONF, OpenStreetMap, Wikipedia
-- **Signaler une erreur** : https://loisirs74.fr/signaler?lieu=distillerie-des-aravis-la-clusaz
+## Source officielle
 
-*Les informations peuvent évoluer ; vérifier auprès de la commune avant un déplacement spécifique.*
+https://distilleriearavis.fr/
