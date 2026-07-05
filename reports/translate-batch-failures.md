@@ -187,3 +187,40 @@
 | tropicaland-viry | unrecoverable after quote-repair (recovery run) |
 | villa-du-parc-annemasse | unrecoverable after quote-repair (recovery run) |
 
+## pl — run 2026-07-05
+
+| fiche | violations |
+|---|---|
+| plage-de-tougues-chens | JSON parse: Expecting property name enclosed in double quotes: line 19 column 191 (char 1372); JSON parse: Expecting property name enclosed in double quotes: line 19 column 197 (char 1404) |
+| espace-tairraz-musee-des-cristaux-chamonix | JSON parse: Expecting property name enclosed in double quotes: line 97 column 100 (char 6457); JSON parse: Expecting property name enclosed in double quotes: line 1 column 6105 (char 6104) |
+| ereel-annecy-sillingy | JSON parse: Expecting property name enclosed in double quotes: line 1 column 5667 (char 5666); JSON parse: Expecting property name enclosed in double quotes: line 103 column 160 (char 6101) |
+| maison-de-la-memoire-paysalp | JSON parse: Expecting property name enclosed in double quotes: line 94 column 99 (char 6140); JSON parse: Expecting property name enclosed in double quotes: line 94 column 106 (char 6039) |
+| domaine-de-guidou | JSON parse: Expecting property name enclosed in double quotes: line 81 column 103 (char 5078); JSON parse: Expecting property name enclosed in double quotes: line 81 column 103 (char 5070) |
+| indiana-ventures-saint-paul-en-chablais | JSON parse: Expecting property name enclosed in double quotes: line 38 column 75 (char 3608); JSON parse: Expecting property name enclosed in double quotes: line 38 column 73 (char 3602) |
+| acroparc-de-bellavallis-bellevaux | JSON parse: Expecting property name enclosed in double quotes: line 97 column 119 (char 5544); JSON parse: Expecting property name enclosed in double quotes: line 97 column 119 (char 5548) |
+| villa-du-parc-annemasse | JSON parse: Expecting property name enclosed in double quotes: line 98 column 99 (char 5953); JSON parse: Expecting property name enclosed in double quotes: line 98 column 99 (char 5946) |
+| musee-chateau-annecy | JSON parse: Expecting property name enclosed in double quotes: line 139 column 200 (char 11728); JSON parse: Expecting property name enclosed in double quotes: line 139 column 209 (char 11799) |
+| tour-des-langues-thonon | JSON parse: Expecting ',' delimiter: line 97 column 542 (char 7153); JSON parse: Expecting ',' delimiter: line 97 column 564 (char 7208) |
+| chateau-bellegarde-thonon | JSON parse: Expecting property name enclosed in double quotes: line 6 column 1348 (char 1567); JSON parse: Expecting property name enclosed in double quotes: line 6 column 1355 (char 1585) |
+| plage-imperial-annecy | JSON parse: Expecting property name enclosed in double quotes: line 14 column 281 (char 2253); JSON parse: Expecting property name enclosed in double quotes: line 8 column 656 (char 1273) |
+| chateau-thenieres-ballaison | JSON parse: Expecting property name enclosed in double quotes: line 22 column 115 (char 1144); JSON parse: Expecting property name enclosed in double quotes: line 22 column 110 (char 1133) |
+| plage-de-messery | frozen noun lost: "Lac d'Annecy"; frozen noun lost: "Lac d'Annecy"; HTML structure parity: tag multiset differs from source |
+| maison-de-la-memoire-janny-couttet-chamonix | JSON parse: Expecting property name enclosed in double quotes: line 98 column 93 (char 6679); JSON parse: Expecting property name enclosed in double quotes: line 98 column 100 (char 6747) |
+| pointe-de-miribel | JSON parse: Expecting property name enclosed in double quotes: line 1 column 166 (char 165); JSON parse: Expecting property name enclosed in double quotes: line 1 column 166 (char 165) |
+| musee-cinema-animation-annecy | JSON parse: Expecting property name enclosed in double quotes: line 6 column 1009 (char 1194); JSON parse: Expecting property name enclosed in double quotes: line 6 column 1013 (char 1201) |
+| criq-parc | JSON parse: Expecting property name enclosed in double quotes: line 55 column 107 (char 3805); JSON parse: Expecting property name enclosed in double quotes: line 55 column 106 (char 3830) |
+| casino-evian-resort-evian | frozen noun lost: "Lac d'Annecy"; frozen noun lost: "Lac d'Annecy" |
+| musee-ski-ancien-chapelle-abondance | JSON parse: Expecting property name enclosed in double quotes: line 8 column 156 (char 1877); JSON parse: Expecting property name enclosed in double quotes: line 8 column 156 (char 1865) |
+| maison-de-barberine-vallorcine | JSON parse: Expecting property name enclosed in double quotes: line 126 column 274 (char 10622); JSON parse: Expecting property name enclosed in double quotes: line 126 column 260 (char 10555) |
+| col-des-pitons-saleve | JSON parse: Expecting ',' delimiter: line 3 column 1846 (char 1858); JSON parse: Expecting property name enclosed in double quotes: line 3 column 669 (char 681) |
+| notre-histoire-musee-rumilly-rumilly | JSON parse: Expecting property name enclosed in double quotes: line 72 column 105 (char 4589); JSON parse: Expecting property name enclosed in double quotes: line 72 column 109 (char 4773) |
+| gorges-du-pont-du-diable | JSON parse: Expecting property name enclosed in double quotes: line 8 column 60 (char 603); JSON parse: Expecting property name enclosed in double quotes: line 8 column 60 (char 596) |
+| tactiq-aventure-cruseilles | JSON parse: Expecting property name enclosed in double quotes: line 79 column 75 (char 3311); JSON parse: Expecting property name enclosed in double quotes: line 79 column 75 (char 3297) |
+| chateau-sires-faucigny-bonneville | JSON parse: Expecting ',' delimiter: line 22 column 130 (char 3426); JSON parse: Expecting ',' delimiter: line 22 column 115 (char 3311) |
+| maison-forte-hautetour-saint-gervais | JSON parse: Expecting property name enclosed in double quotes: line 2 column 110 (char 111); JSON parse: Expecting property name enclosed in double quotes: line 2 column 117 (char 118) |
+| chateau-clermont-genevois | JSON parse: Expecting property name enclosed in double quotes: line 1 column 7079 (char 7078); JSON parse: Expecting property name enclosed in double quotes: line 1 column 7190 (char 7189) |
+| filenvol-monnetier-mornex | JSON parse: Expecting property name enclosed in double quotes: line 80 column 164 (char 5074); JSON parse: Expecting property name enclosed in double quotes: line 80 column 165 (char 4920) |
+| musee-patrimonial-pays-thones-fondateurs-francois-et-lucien-cochat-thones | JSON parse: Expecting property name enclosed in double quotes: line 24 column 81 (char 3270); JSON parse: Expecting property name enclosed in double quotes: line 24 column 130 (char 3760) |
+| sentier-maison-saleve-pomier-presilly | JSON parse: Expecting property name enclosed in double quotes: line 3 column 124 (char 136); JSON parse: Expecting property name enclosed in double quotes: line 3 column 109 (char 121) |
+| plage-d-amphion-publier | JSON parse: Expecting ',' delimiter: line 19 column 78 (char 2398); JSON parse: Expecting ',' delimiter: line 19 column 78 (char 2353) |
+
