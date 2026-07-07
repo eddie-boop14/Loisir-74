@@ -31,6 +31,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import translate_local as tl          # noqa: E402
 import translate_batch as tb          # noqa: E402
 
+# HANDOFF-41: the pipeline's looks_french() short-circuit exists to keep FRENCH
+# text out of the argos en→X engine (it would ship French back verbatim). But
+# the in-session LLM tier reads French natively, so we DISABLE the short-circuit:
+# French source segments are masked, translated, and validated like any other.
+# This pulls the ~4,100 FR-source segments/lang (EN-mirrors-FR fiches) into scope.
+tl.looks_french = lambda _masked: False
+
 ROOT = Path(__file__).resolve().parent.parent
 SCRATCH = ROOT / "scratchpad"
 SCRATCH.mkdir(exist_ok=True)

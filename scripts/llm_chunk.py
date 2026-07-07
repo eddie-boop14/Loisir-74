@@ -30,7 +30,10 @@ def split(lang, size):
 
 def assemble(lang):
     outdir = SCRATCH / "out" / lang
-    cache = {}
+    # MERGE into the existing cache — never rebuild from scratch, or good
+    # translations outside the current work-list chunks would be lost.
+    cf = SCRATCH / f"cache-{lang}.json"
+    cache = json.loads(cf.read_text("utf-8")) if cf.exists() else {}
     missing_files = []
     seg_files = sorted((SCRATCH / "chunks" / lang).glob("chunk-*.json"))
     for cf in seg_files:
