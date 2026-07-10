@@ -61,7 +61,7 @@ Non renseigné
 
 Toute l'année · raquettes en hiver
 - Fenêtre d'accès hiver: Non renseigné
-- Infrastructure hiver: Non renseigné
+- Infrastructure hiver: Raquettes
 - Panorama enneigé: Non renseigné
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 

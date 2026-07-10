@@ -60,7 +60,7 @@ Gratuit au départ
 
 Mai-octobre (route fermée hiver)
 - Winter access window: Not specified
-- Winter infrastructure: Not specified
+- Winter infrastructure: Snowshoeing
 - Snow panorama: Not specified
 - Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 

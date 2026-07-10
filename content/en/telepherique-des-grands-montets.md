@@ -61,7 +61,7 @@ Grands-Montets car park (chemin de la Glacière, Argentière)
 
 December – early May (ski) · Closed summer 2026
 - Winter access window: Not specified
-- Winter infrastructure: Not specified
+- Winter infrastructure: Ski touring
 - Snow panorama: Not specified
 - Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 

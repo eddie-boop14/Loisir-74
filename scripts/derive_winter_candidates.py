@@ -179,7 +179,7 @@ def cmd_report():
               f"col={'Y' if p.get('col_chains') else '-'}")
 
 
-def cmd_apply(only_slug=None):
+def cmd_apply(only_slug=None, infra_only=False):
     if not os.path.exists(REPORT_JSON):
         sys.exit("[winter] no winter-candidates.json — run --report first")
     cands = json.load(open(REPORT_JSON, encoding="utf-8"))["candidates"]
@@ -187,25 +187,34 @@ def cmd_apply(only_slug=None):
     for p in cands:
         if only_slug and p["slug"] != only_slug:
             continue
-        if not (p.get("confirmed") or (only_slug and p["slug"] == only_slug)):
+        # infra_only: apply the DIRECT-evidence winter_infra rows (treated as
+        # confirmed) and NOTHING else. The inferred access/snow_view/col_chains
+        # stay in the report for a later human-verified pass.
+        if infra_only:
+            if not p.get("winter_infra"):
+                continue
+        elif not (p.get("confirmed") or (only_slug and p["slug"] == only_slug)):
             continue
         path = os.path.join(JSON_DIR, p["slug"] + ".json")
         d = json.load(open(path, encoding="utf-8"))
         facts = d.setdefault("i18n", {}).setdefault("fr", {}).setdefault("facts", {})
+        applied = {}
         if "winter_infra" in p:
-            facts["winter_infra"] = p["winter_infra"]
-        if "winter_access" in p:
-            facts["winter_access"] = p["winter_access"]
-        if "snow_view" in p:
-            facts["snow_view"] = p["snow_view"]
-        if p.get("col_chains"):
-            facts["col_chains"] = True
-        json.dump(d, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-        open(path, "a").write("")   # keep trailing newline discipline
+            facts["winter_infra"] = p["winter_infra"]; applied["winter_infra"] = p["winter_infra"]
+        if not infra_only:
+            if "winter_access" in p:
+                facts["winter_access"] = p["winter_access"]; applied["winter_access"] = p["winter_access"]
+            if "snow_view" in p:
+                facts["snow_view"] = p["snow_view"]; applied["snow_view"] = p["snow_view"]
+            if p.get("col_chains"):
+                facts["col_chains"] = True; applied["col_chains"] = True
+        with open(path, "w", encoding="utf-8") as fh:
+            json.dump(d, fh, ensure_ascii=False, indent=2)
+            fh.write("\n")
         wrote += 1
-        print(f"  applied {p['slug']}: "
-              f"{ {k: v for k, v in p.items() if k.startswith('winter') or k in ('snow_view', 'col_chains')} }")
-    print(f"[winter] applied {wrote} confirmed candidate(s). Re-run build_all + gates.")
+        print(f"  applied {p['slug']}: {applied}")
+    print(f"[winter] applied {wrote} candidate(s){' (infra-only)' if infra_only else ''}. "
+          "Re-run build_all + gates.")
 
 
 def main():
@@ -213,11 +222,13 @@ def main():
     ap.add_argument("--report", action="store_true")
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--slug", help="apply just this slug (treats its proposal as confirmed)")
+    ap.add_argument("--infra-only", action="store_true",
+                    help="apply only the direct-evidence winter_infra rows")
     args = ap.parse_args()
     if args.report:
         cmd_report()
     elif args.apply:
-        cmd_apply(only_slug=args.slug)
+        cmd_apply(only_slug=args.slug, infra_only=args.infra_only)
     else:
         ap.print_help()
         sys.exit(1)

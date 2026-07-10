@@ -60,7 +60,7 @@ Payant (7 € env. — au bout de la route)
 
 Mai – juin (cascades) · Juin – septembre (randonnée)
 - Fenêtre d'accès hiver: Non renseigné
-- Infrastructure hiver: Non renseigné
+- Infrastructure hiver: Raquettes · Ski nordique
 - Panorama enneigé: Non renseigné
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 

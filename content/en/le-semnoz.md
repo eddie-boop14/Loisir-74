@@ -58,7 +58,7 @@ Not specified
 
 June – October (summer); December – March (ski)
 - Winter access window: Not specified
-- Winter infrastructure: Not specified
+- Winter infrastructure: Snowshoeing · Cross-country skiing · Sledging
 - Snow panorama: Not specified
 - Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 

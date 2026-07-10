@@ -66,7 +66,7 @@ Free at Le Fayet and Saint-Gervais
 
 June – September (summer) · December – April (winter)
 - Winter access window: Not specified
-- Winter infrastructure: Not specified
+- Winter infrastructure: Snowshoeing · Cross-country skiing · Ski touring
 - Snow panorama: Not specified
 - Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 

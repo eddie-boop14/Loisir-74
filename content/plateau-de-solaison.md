@@ -59,7 +59,7 @@ Non renseigné
 
 Juin-octobre (été) ; déc-mars (ski de fond)
 - Fenêtre d'accès hiver: Non renseigné
-- Infrastructure hiver: Non renseigné
+- Infrastructure hiver: Raquettes · Ski nordique · Ski de fond · Ski de rando · Luge
 - Panorama enneigé: Non renseigné
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 

@@ -69,7 +69,7 @@ Free 7 h (parking disc required)
 
 4 July – 30 August (summer) · Winter ski
 - Winter access window: Not specified
-- Winter infrastructure: Not specified
+- Winter infrastructure: Snowshoeing
 - Snow panorama: Not specified
 - Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
