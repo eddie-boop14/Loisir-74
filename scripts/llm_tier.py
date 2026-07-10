@@ -38,6 +38,55 @@ import translate_batch as tb          # noqa: E402
 # This pulls the ~4,100 FR-source segments/lang (EN-mirrors-FR fiches) into scope.
 tl.looks_french = lambda _masked: False
 
+# HANDOFF-41: the "output not in target script" check runs on the UNMASKED
+# output, where restored proper nouns (French place names — Abbaye d'Aulps,
+# Saint-Jean-d'Aulps) are Latin and drag the target-script share below 0.3 even
+# when the translatable text was translated correctly (料金と営業時間 = "rates and
+# hours"). The pipeline already MASKS those nouns before translating, so the
+# script test belongs on the MASKED output with the XQV placeholders stripped —
+# that excludes proper nouns from the denominator. A genuinely untranslated
+# segment still has its translatable words in Latin after stripping → still
+# flagged. Only correct, name-dense translations are unblocked.
+import re as _re            # noqa: E402
+_XQV_STRIP = _re.compile(r"XQV[0-9]+Z")
+# CJK compresses hard vs English/French ("Stroll through the medieval gardens"
+# → "中世の庭園を散策", 0.23×). The 0.3 ratio floor is Euro-calibrated; use a
+# lower floor for Japanese so legit-compact prose passes while true content
+# drops (<0.15) still flag. ar/he track source length → keep 0.3.
+_RATIO_FLOOR = {"ja": 0.15}
+_APPLY_LANG = None
+
+
+def _llm_translate_segment(engine, cache, text, nouns, script_re=None):
+    lead = text[:len(text) - len(text.lstrip())]
+    trail = text[len(text.rstrip()):]
+    core = text.strip()
+    masked, mapping = tl.mask_nouns(core, nouns)
+    mt = cache[masked] if masked in cache else engine(masked)
+    cache.setdefault(masked, mt)
+    out, missing = tl.unmask(mt, mapping)
+    reasons = [f"placeholder lost: {mapping[n][:40]!r}" for n in sorted(missing)]
+    # digit / currency / empty (unmasked pair) + lang-aware length ratio
+    if tl.digits_of(core) != tl.digits_of(out):
+        reasons.append("digit parity broken")
+    if ("€" in core) != ("€" in out):
+        reasons.append("currency symbol changed")
+    ss, os_ = len(core.strip()), len(out.strip())
+    floor = _RATIO_FLOOR.get(_APPLY_LANG, 0.3)
+    if ss >= 20 and not (floor <= os_ / max(1, ss) <= 3.0):
+        reasons.append(f"segment ratio {os_ / max(1, ss):.2f} outside {floor}-3.0")
+    if ss and not os_:
+        reasons.append("empty translation")
+    # target-script check on the MASKED output, proper nouns removed
+    if script_re is not None and len(core) >= 20:
+        stripped = _XQV_STRIP.sub("", mt)
+        if tl.script_share(stripped, script_re) < 0.3:
+            reasons.append("output not in target script (untranslated)")
+    return lead + out + trail, reasons
+
+
+tl.translate_segment = _llm_translate_segment
+
 ROOT = Path(__file__).resolve().parent.parent
 SCRATCH = ROOT / "scratchpad"
 SCRATCH.mkdir(exist_ok=True)
@@ -74,6 +123,8 @@ def cmd_purge_he():
 
 
 def cmd_apply(lang):
+    global _APPLY_LANG
+    _APPLY_LANG = lang
     cache_file = SCRATCH / f"cache-{lang}.json"
     if not cache_file.exists():
         sys.exit(f"[{lang}] no cache file {cache_file.name} — translate first")
