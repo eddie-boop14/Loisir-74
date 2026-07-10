@@ -70,6 +70,10 @@ Payant (Grépon, Aiguille du Midi)
 ## Season
 
 Juin – septembre (été) · décembre – mars (ski)
+- Winter access window: Not specified
+- Winter infrastructure: Not specified
+- Snow panorama: Not specified
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

@@ -59,6 +59,10 @@ Free (Nant Sec parking)
 ## Season
 
 May–June (snowmelt, maximum flow) · July–October (easy access)
+- Winter access window: Not specified
+- Winter infrastructure: Not specified
+- Snow panorama: Not specified
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

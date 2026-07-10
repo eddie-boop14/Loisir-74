@@ -60,6 +60,10 @@ Not specified
 ## Season
 
 Winter (skiing) and summer (hiking, cycling)
+- Winter access window: Not specified
+- Winter infrastructure: Not specified
+- Snow panorama: Not specified
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

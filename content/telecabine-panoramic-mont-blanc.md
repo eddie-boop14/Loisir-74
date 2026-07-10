@@ -68,6 +68,10 @@ Payant (Grépon, Aiguille du Midi à Chamonix)
 ## Saison
 
 Juillet – mi-septembre
+- Fenêtre d'accès hiver: Non renseigné
+- Infrastructure hiver: Non renseigné
+- Panorama enneigé: Non renseigné
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

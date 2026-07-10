@@ -17,7 +17,7 @@ Every facet .md file uses one fixed heading canon (byte-stable, safe to anchor a
 `# <Name>` then `## Faits` · `## Horaires` · `## Tarifs` · `## Accès (PMR)` · `## Parking` · `## Transport` · `## Saison` · `## Source officielle` (FR)
 `# <Name>` then `## Facts` · `## Hours` · `## Prices` · `## Access (PMR)` · `## Parking` · `## Transport` · `## Season` · `## Official source` (EN)
 An unknown facet reads `Non renseigné` / `Not specified` — values are never guessed. The JSON mirror carries the same facets typed, with nulls preserved:
-`{name, commune, gps, type, hours, prices, access_pmr, parking, transport, season, official_url, last_verified}`.
+`{name, commune, gps, type, hours, prices, access_pmr, parking, transport, season, winter, official_url, last_verified}`.
 
 When an AI agent should fetch from this site (priority: category hubs first for "best X in Haute-Savoie" queries, then the per-lieu facet .md or .json for a specific destination):
 - User asks about a specific leisure site in Haute-Savoie (lakes, waterfalls, viewpoints, etc.)

@@ -60,6 +60,10 @@ Paid (May to September) · Free off-season
 ## Season
 
 Spring (peak flow) · Summer (cool forest coverage)
+- Winter access window: Not specified
+- Winter infrastructure: Not specified
+- Snow panorama: Not specified
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

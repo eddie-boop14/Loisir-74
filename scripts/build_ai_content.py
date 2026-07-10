@@ -21,8 +21,10 @@ names verbatim in both language files. LF only, UTF-8 only.
 
 JSON contract /api/lieu/<slug>.json (gate-enforced):
   {name, commune, gps, type, hours, prices, access_pmr, parking, transport,
-   season, official_url, last_verified}
-  — all 12 keys ALWAYS present; null allowed; absent-key forbidden; types fixed.
+   season, winter, official_url, last_verified}
+  — all 13 keys ALWAYS present; null allowed; absent-key forbidden; types fixed.
+  winter (v2, HANDOFF-winter): null off WINTER_NODES; else {access, infrastructure,
+  snow_view, equipment:"loi_montagne_ii", col_chains}.
   FR is the canonical language for prose facets (hours), per the site ai_policy.
 
 Invariant: the layer is DERIVED, never hand-edited. `research_log` is NEVER
@@ -100,6 +102,67 @@ FACET_HEADINGS = {
            "## Parking", "## Transport", "## Season", "## Official source"],
 }
 UNKNOWN = {"fr": "Non renseigné", "en": "Not specified"}
+
+# ── HANDOFF-winter · structured ## Saison scaffolding (JOB A) ────────────────
+# Winter keys are BULLET lines under the existing ## Saison heading (never a new
+# ##). Emitted only for WINTER_NODES categories. Values come from facts.winter_*
+# (null-safe; JOB B populates). Controlled vocab — anything off-list is a build
+# error (gate_winter_schema). Frozen: Mont-Blanc, Loi Montagne II verbatim.
+WINTER_NODES = {"sentier", "point-de-vue", "cascade", "telecabine", "voie-verte"}
+WINTER_ACCESS = {
+    "open":    {"fr": "Ouvert (accès déneigé)",      "en": "Open (cleared road)"},
+    "closed":  {"fr": "Fermé (route fermée l'hiver)", "en": "Closed (road shut in winter)"},
+    "partial": {"fr": "Accès partiel",                "en": "Partial access"},
+}
+WINTER_INFRA = {
+    "raquettes":       {"fr": "Raquettes",          "en": "Snowshoeing"},
+    "ski_nordique":    {"fr": "Ski nordique",       "en": "Nordic skiing"},
+    "ski_fond":        {"fr": "Ski de fond",        "en": "Cross-country skiing"},
+    "ski_rando":       {"fr": "Ski de rando",       "en": "Ski touring"},
+    "chiens_traineau": {"fr": "Chiens de traîneau", "en": "Dog sledding"},
+    "luge":            {"fr": "Luge",               "en": "Sledging"},
+}
+SNOW_VIEW = {
+    "mont_blanc": {"fr": "Vue Mont-Blanc dégagée", "en": "Clear Mont-Blanc view"},
+    "alpes":      {"fr": "Panorama alpin",         "en": "Alpine panorama"},
+    "lac":        {"fr": "Vue sur le lac",         "en": "Lake view"},
+    "none":       {"fr": "Pas de panorama neige",  "en": "No snow panorama"},
+}
+EQUIP = {
+    "fr": "Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)",
+    "en": "Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)",
+}
+EQUIP_COL = {"fr": " · chaînes conseillées pour l'accès au col",
+             "en": " · chains advised for col access"}
+WINTER_LABELS = {
+    "access": {"fr": "Fenêtre d'accès hiver", "en": "Winter access window"},
+    "infra":  {"fr": "Infrastructure hiver",  "en": "Winter infrastructure"},
+    "view":   {"fr": "Panorama enneigé",      "en": "Snow panorama"},
+    "equip":  {"fr": "Équipement obligatoire", "en": "Equipment mandated"},
+}
+
+
+def winter_bullets(d, lang):
+    """The `- Key: value` winter lines under ## Saison, or [] for non-winter
+    nodes / non-fr-en. Equipment is a verified dept-wide constant (always known
+    for a qualifying Haute-Savoie node); access/infra/view are null → UNKNOWN."""
+    if (d.get("category") or "") not in WINTER_NODES or lang not in ("fr", "en"):
+        return []
+    fk = (fr(d).get("facts") or {})
+    L, unk = WINTER_LABELS, UNKNOWN[lang]
+    a = fk.get("winter_access")
+    av = WINTER_ACCESS[a][lang] if a in WINTER_ACCESS else unk
+    infra = [WINTER_INFRA[x][lang] for x in (fk.get("winter_infra") or [])
+             if x in WINTER_INFRA]
+    sv = fk.get("snow_view")
+    svv = SNOW_VIEW[sv][lang] if sv in SNOW_VIEW else unk
+    eq = EQUIP[lang] + (EQUIP_COL[lang] if fk.get("col_chains") else "")
+    return [
+        f"- {L['access'][lang]}: {av}",
+        f"- {L['infra'][lang]}: {' · '.join(infra) if infra else unk}",
+        f"- {L['view'][lang]}: {svv}",
+        f"- {L['equip'][lang]}: {eq}",
+    ]
 # Reviewed PMR status labels — copied verbatim from the fr/en rows of
 # build_lieu_page._ACCES_STATUS (the vocabulary the HTML pages render).
 PMR_STATUS_LABEL = {
@@ -304,6 +367,13 @@ def lieu_facets(d):
         "parking": facts.get("parking") or None,
         "transport": transport,
         "season": facts.get("best_season") or None,
+        "winter": None if (d.get("category") or "") not in WINTER_NODES else {
+            "access":         facts.get("winter_access"),       # enum|null
+            "infrastructure": facts.get("winter_infra") or [],
+            "snow_view":      facts.get("snow_view"),           # enum|null
+            "equipment":      "loi_montagne_ii",                # constant token, HS
+            "col_chains":     bool(facts.get("col_chains")),
+        },
         "official_url": official_url_of(d),
         "last_verified": last_verified,
     }
@@ -470,10 +540,11 @@ def render_md(d, lang="fr"):
         out.append(unk)
     out.append("")
 
-    # ## Saison / ## Season
+    # ## Saison / ## Season  (+ HANDOFF-winter bullets for WINTER_NODES, fr/en)
     out.append(H[6])
     out.append("")
     out.append(flat(lang_fact(d, lang, "best_season")) or unk)
+    out.extend(winter_bullets(d, lang))
     out.append("")
 
     # ## Source officielle / ## Official source
@@ -486,7 +557,7 @@ def render_md(d, lang="fr"):
 
 # ── per-lieu typed JSON ─────────────────────────────────────────────────────
 def render_lieu_json(d):
-    """The /api/lieu/<slug>.json contract: exactly the 12 keys, always present,
+    """The /api/lieu/<slug>.json contract: exactly the 13 keys, always present,
     null preserved. FR canonical for prose facets."""
     return json.dumps(lieu_facets(d), ensure_ascii=False, indent=2) + "\n"
 
@@ -511,7 +582,7 @@ Every facet .md file uses one fixed heading canon (byte-stable, safe to anchor a
 `# <Name>` then `## Faits` · `## Horaires` · `## Tarifs` · `## Accès (PMR)` · `## Parking` · `## Transport` · `## Saison` · `## Source officielle` (FR)
 `# <Name>` then `## Facts` · `## Hours` · `## Prices` · `## Access (PMR)` · `## Parking` · `## Transport` · `## Season` · `## Official source` (EN)
 An unknown facet reads `Non renseigné` / `Not specified` — values are never guessed. The JSON mirror carries the same facets typed, with nulls preserved:
-`{{name, commune, gps, type, hours, prices, access_pmr, parking, transport, season, official_url, last_verified}}`.
+`{{name, commune, gps, type, hours, prices, access_pmr, parking, transport, season, winter, official_url, last_verified}}`.
 
 When an AI agent should fetch from this site (priority: category hubs first for "best X in Haute-Savoie" queries, then the per-lieu facet .md or .json for a specific destination):
 - User asks about a specific leisure site in Haute-Savoie (lakes, waterfalls, viewpoints, etc.)

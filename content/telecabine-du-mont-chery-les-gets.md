@@ -71,6 +71,10 @@ Parkings village (200 m de la gare aval)
 ## Saison
 
 Juillet – août (randonnée, VTT), décembre – avril (ski)
+- Fenêtre d'accès hiver: Non renseigné
+- Infrastructure hiver: Non renseigné
+- Panorama enneigé: Non renseigné
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

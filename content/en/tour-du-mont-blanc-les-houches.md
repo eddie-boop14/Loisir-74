@@ -61,6 +61,10 @@ Parking Les Houches centre + téléphérique Prarion
 ## Season
 
 Mi-juin à mi-septembre uniquement
+- Winter access window: Not specified
+- Winter infrastructure: Not specified
+- Snow panorama: Not specified
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

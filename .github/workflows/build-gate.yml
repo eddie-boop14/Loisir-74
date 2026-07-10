@@ -151,6 +151,12 @@ jobs:
         # offline test block above.
         run: python3 scripts/gate_facet_layer.py
 
+      - name: Winter-schema gate (HANDOFF-winter)
+        # ## Saison winter bullets only on WINTER_NODES; controlled vocab only
+        # (no typos/inference); no subjective snow ratings; equipment line =
+        # verified Loi Montagne II constant; Mont-Blanc / Loi Montagne II frozen.
+        run: python3 scripts/gate_winter_schema.py
+
       - name: Protected-placements byte-guard (HANDOFF-39A-B, EVERY run)
         # sha256 of every partner-carrying page vs the committed manifest
         # reports/protected-placements.md. Any drift is red unless an

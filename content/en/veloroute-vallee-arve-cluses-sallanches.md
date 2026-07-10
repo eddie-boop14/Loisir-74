@@ -59,6 +59,10 @@ Gratuits gares SNCF Bonneville/Cluses/Sallanches
 ## Season
 
 Avril-octobre · Toute l'année
+- Winter access window: Not specified
+- Winter infrastructure: Not specified
+- Snow panorama: Not specified
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

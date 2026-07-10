@@ -952,6 +952,44 @@ def when_to_visit_block(when, events):
     )
 
 
+def season_card(d):
+    """HANDOFF-winter §5 — compact structured Season card on the fiche, the
+    Google-ranking surface. Emits only for WINTER_NODES categories, FR + EN
+    inline (the other 10 langs route through the translation lane under the
+    winter_* label keys — not hand-jammed here). Reads the SAME i18n.fr.facts
+    winter_* fields as the facet md/json (one source, no divergence). All data
+    null → equipment-only card (verified dept constant; HANDOFF-winter §8 default).
+    Frozen Mont-Blanc / Loi Montagne II verbatim. Never touches partner blocks."""
+    import build_ai_content as _bac
+    if (d.get("category") or "") not in _bac.WINTER_NODES or _LANG not in ("fr", "en"):
+        return ""
+    lang = _LANG
+    fk = (_FR.get("facts") or {}) if isinstance(_FR, dict) else {}
+    L_, unk = _bac.WINTER_LABELS, ("Non renseigné" if lang == "fr" else "Not specified")
+    a = fk.get("winter_access")
+    av = _bac.WINTER_ACCESS[a][lang] if a in _bac.WINTER_ACCESS else unk
+    infra = [_bac.WINTER_INFRA[x][lang] for x in (fk.get("winter_infra") or [])
+             if x in _bac.WINTER_INFRA]
+    iv = " · ".join(infra) if infra else unk
+    sv = fk.get("snow_view")
+    svv = _bac.SNOW_VIEW[sv][lang] if sv in _bac.SNOW_VIEW else unk
+    eq = _bac.EQUIP[lang] + (_bac.EQUIP_COL[lang] if fk.get("col_chains") else "")
+    rows = [(L_["access"][lang], av), (L_["infra"][lang], iv),
+            (L_["view"][lang], svv), (L_["equip"][lang], eq)]
+    facts = "".join(
+        f'<div class="fact"><div class="k">{esc(k)}</div>'
+        f'<div class="v"><bdi>{esc(v)}</bdi></div></div>' for k, v in rows)
+    kicker = "Hiver" if lang == "fr" else "Winter"
+    head = "Saison hivernale" if lang == "fr" else "Winter season"
+    return (
+        '<section class="block"><div class="wrap">'
+        f'<div class="kicker reveal">{kicker}</div>'
+        f'<h2 class="reveal">{esc(head)}</h2>'
+        f'<div class="facts reveal" data-stagger>{facts}</div>'
+        '</div></section>'
+    )
+
+
 def faq_block(faq):
     if not faq:
         return ""
@@ -2235,6 +2273,7 @@ def build_page(d, lang="fr", include_partners=True, fr_prose_fallback=True):
     out.append(parking_block(d["slug"], (L("facts", {}) or {}).get("parking")))
     out.append(when_to_visit_block(L_body("when_to_visit", "") or "",
                                    L_body("events", "") or ""))
+    out.append(season_card(d))
     if include_partners:
         out.append(partners_block(d))
     out.append(gallery_block(name, d.get("gallery_photos")))
