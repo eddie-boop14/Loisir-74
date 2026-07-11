@@ -67,7 +67,12 @@ PATTERNS = [
          r"(?:\s*[\(\[\.~]|\s+via\b|\s+sur\b|\s+selon\b|\s+les\s+sources?\b)",
          re.M | re.I
      ), 1),
-    ("TODO marker",              re.compile(r"\bTODO\b"), 1),
+    # "TODO" is a code scaffolding marker — but also the Spanish word for "all"
+    # ("TODO EL AÑO" = "all year"). Match the marker (uppercase TODO), but not
+    # when it's the Spanish word followed by a determiner/quantifier continuation.
+    ("TODO marker",
+     re.compile(r"\bTODO\b(?!\s+(?i:el|los?|la|las|lo|un|una|unos|unas|su|sus|"
+                r"incluido|tipo|p[uú]blico|el\s+a[nñ]o)\b)"), 1),
     ("FIXME marker",             re.compile(r"\bFIXME\b"), 1),
     ("XXX marker",               re.compile(r"(?<![/_-])\bXXX\b(?![/_-])"), 1),
     ("lorem ipsum",              re.compile(r"\blorem ipsum\b", re.I), 1),
