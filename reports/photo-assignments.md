@@ -17,7 +17,7 @@
 | `points-de-vue` | 30 | 27 | 3 |
 | `que-faire` | 73 | 42 | 4 |
 | `sensations-plein-air` | 71 | 54 | 4 |
-| `sentiers` | 40 | 8 | 14 |
+| `sentiers` | 40 | 9 | 13 |
 | `sorties-detente` | 25 | 13 | 3 |
 | `sport-jeux` | 52 | 33 | 4 |
 | `telecabines` | 12 | 8 | 5 |
@@ -517,7 +517,7 @@
 | `sentiers` | `sentier-desert-de-plate-passy` | `nature` | `generique-sentier-sommet-panorama.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-du-baroque-combloux` | `sentier` | `generique-sentier-foret-alpine.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-espagnols-pas-du-roc-glieres` | `nature` | `sentier-espagnols-pas-du-roc-glieres-hero.jpg` | — | json hero (local) |
-| `sentiers` | `sentier-geologique-pointe-percee-grand-bornand` | `nature` | `generique-sentier-hiver-neige.jpg` | — | json hero (local) |
+| `sentiers` | `sentier-geologique-pointe-percee-grand-bornand` | `nature` | `sentier-geologique-pointe-percee-grand-bornand-hero.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-maison-saleve-pomier-presilly` | `nature` | `generique-sentier-sommet-panorama.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-morclan-chatel` | `nature` | `generique-sentier-sommet-panorama.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-oiseaux-chatel` | `nature` | `generique-sentier-sommet-panorama.jpg` | — | json hero (local) |
