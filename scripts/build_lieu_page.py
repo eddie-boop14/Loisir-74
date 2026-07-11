@@ -260,6 +260,9 @@ CHROME = {
     # Footer dates
     "published":       {"fr": "Publié le", "en": "Published", "de": "Veröffentlicht", "it": "Pubblicato il", "es": "Publicado el", "nl": "Gepubliceerd"},
     "updated":         {"fr": "Mis à jour le", "en": "Updated", "de": "Aktualisiert", "it": "Aggiornato il", "es": "Actualizado el", "nl": "Bijgewerkt"},
+    # Share button (PWA-share handoff)
+    "share":           {"fr": "Partager", "en": "Share", "de": "Teilen", "it": "Condividi", "es": "Compartir", "nl": "Delen"},
+    "link_copied":     {"fr": "Lien copié ✓", "en": "Link copied ✓", "de": "Link kopiert ✓", "it": "Link copiato ✓", "es": "Enlace copiado ✓", "nl": "Link gekopieerd ✓"},
     # Generic photo overlay text (CSS post-process)
     "generic":         {"fr": "Générique", "en": "Generic", "de": "Generisch", "it": "Generico", "es": "Genérico", "nl": "Algemeen"},
     # Photo email subject prefix
@@ -310,8 +313,47 @@ for _lg, _vals in _RICH_CHROME["fact_labels"].items():
     for _k, _v in _vals.items():
         FACT_LABELS_I18N[_k][_lg] = _v
 
+# Real per-lieu lastmod (HANDOFF lastmod). Single source: data/lastmod.json,
+# derived by scripts/derive_lastmod.py from git content-commit dates (corpus-wide
+# sweeps excluded). Read by three consumers — the visible jj/mm/aa stamp, the
+# schema.org dateModified (ISO), and (via the manifest) the sitemap. Supersedes
+# the manual date_modified_human field, kept in Json for schema stability.
+try:
+    _LASTMOD = json.loads((REPO / "data" / "lastmod.json").read_text(encoding="utf-8"))
+except Exception:
+    _LASTMOD = {}
+
+# Protected partner domains. A page that will carry one takes the byte-frozen
+# path: it keeps the old manual stamp, gets no dateModified and no share button —
+# so the gate_protected_placements byte-guard stays green with no approval
+# trailer. The handoff defers the new stamp/share on these to Eddie's separately
+# approved commit.
+_PROTECTED_PARTNER_DOMAINS = ("cheznousalaplage.com", "chaletdutornet.com")
+
+# The authoritative set of pages that carry a protected partner domain is the
+# gate's own manifest (reports/protected-placements.md) — the same set it byte-
+# checks. Some placements are injected by cross-fiche promos not present in a
+# fiche's own data, so a data-only heuristic under-detects; the manifest is
+# ground truth. Freeze any fiche whose output path is listed here.
+def _load_protected_pages():
+    p = REPO / "reports" / "protected-placements.md"
+    pages = set()
+    try:
+        for line in p.read_text(encoding="utf-8").splitlines():
+            if line.startswith("| ") and ".html |" in line:
+                cell = line.split("|")[1].strip()
+                if cell and cell != "page":
+                    pages.add(cell)
+    except Exception:
+        pass
+    return pages
+
+
+_PROTECTED_PAGES = _load_protected_pages()
+
 # Module-level locale state set by build_page(d, lang).
 _LANG = "fr"            # current locale
+_FROZEN = False         # current page carries a protected partner → byte-frozen
 _LOC = None             # i18n.<lang> block, frozen-merged with FR fallback below
 _FR = None              # i18n.fr block (fallback source)
 _FALLBACK_FIELDS = set()  # fields where current build fell back to FR
@@ -1392,8 +1434,10 @@ def hero_block(d):
     )
 
 
-def action_bar(d):
-    """Sticky bottom action bar (Book / Directions / Official site) — locale-aware."""
+def action_bar(d, frozen=False):
+    """Sticky bottom action bar (Book / Directions / Official site / Share) —
+    locale-aware. `frozen` (protected partner page) drops the Share button so the
+    page stays byte-identical."""
     name = L("name", "")
     commune = d["commune"]
     is_free = d.get("schema_org", {}).get("is_free", False)
@@ -1427,10 +1471,51 @@ def action_bar(d):
             '<path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/>'
             f'</svg><span>{T("official_site")}</span></a>'
         )
+    # Share (PWA-share handoff): native share sheet where available, clipboard
+    # fallback otherwise — never a dead button. Dropped on byte-frozen partner
+    # pages. Each language shares its OWN canonical URL.
+    share = ""
+    if not frozen:
+        actions.append(
+            f'<button type="button" class="share-btn" onclick="shareLieu(this)" '
+            f'data-copied="{attr(T("link_copied"))}">'
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+            'stroke-linecap="round" stroke-linejoin="round">'
+            '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/>'
+            '<circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>'
+            '<line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>'
+            f'<span class="share-label">{T("share")}</span></button>'
+        )
+        share = (
+            # Inlined here (not in style.css) so protected partner pages — which
+            # never receive this block — stay byte-identical without an approval
+            # trailer. style.css is inlined per page, so editing it would touch
+            # every page including the frozen ones.
+            '<style>.action-bar .share-btn{flex:1;display:inline-flex;flex-direction:column;'
+            'align-items:center;justify-content:center;gap:.15rem;padding:.55rem .5rem;'
+            'border-radius:10px;background:var(--surface);border:1px solid var(--line);'
+            'color:var(--ink);font-size:.7rem;font-weight:600;line-height:1.2;text-align:center;'
+            'cursor:pointer;font-family:inherit}.action-bar .share-btn:hover{background:var(--accent);'
+            'color:var(--accent-ink);border-color:var(--accent);transform:translateY(-2px)}'
+            '.action-bar .share-btn svg{width:18px;height:18px;margin-bottom:.1rem}'
+            '.action-bar .share-btn[data-done]{background:var(--good);color:var(--accent-ink);'
+            'border-color:var(--good)}.action-bar .share-btn[data-done] .share-label{display:none}'
+            '.action-bar .share-btn[data-done]::after{content:attr(data-copied)}'
+            '@media (min-width:720px){.action-bar .share-btn{flex-direction:row;font-size:.8125rem;'
+            'padding:.7rem 1rem}.action-bar .share-btn svg{margin:0}}</style>'
+            '<script>function shareLieu(b){'
+            'var u=(document.querySelector(\'link[rel=canonical]\')||{}).href||location.href,'
+            't=document.title;'
+            'if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}'
+            'if(navigator.clipboard){navigator.clipboard.writeText(u).then(function(){'
+            'b.dataset.done="1";setTimeout(function(){delete b.dataset.done;},2000);'
+            '}).catch(function(){window.prompt(b.getAttribute("data-copied"),u);});}'
+            'else{window.prompt(b.getAttribute("data-copied"),u);}}</script>'
+        )
     return (
         '<div class="action-bar" id="actionBar"><div class="wrap">'
         + "".join(actions)
-        + '</div></div>'
+        + '</div></div>' + share
     )
 
 
@@ -1577,6 +1662,12 @@ def build_ldjson(d, desc_override=""):
         "publicAccess": bool(sch.get("public_access", True)),
         "image": "",
     }
+    # schema.org dateModified: ISO from the lastmod manifest. Byte-frozen partner
+    # pages are left untouched (keeps gate_protected_placements green).
+    if not _FROZEN:
+        _lm = _lastmod_iso(d)
+        if _lm:
+            place["dateModified"] = _lm
     if lat is not None and lon is not None:
         place["geo"] = {"@type": "GeoCoordinates", "latitude": lat, "longitude": lon}
     if amenities:
@@ -2233,6 +2324,42 @@ def plages_voisines_block(d, lang):
             f'<div>{"".join(links)}</div></section>')
 
 
+def _lastmod_iso(d):
+    """ISO YYYY-MM-DD for this fiche from the manifest, or '' if absent."""
+    return _LASTMOD.get(d.get("slug"), "")
+
+
+def _lastmod_display(d):
+    """Visible stamp date `jj/mm/aa`, derived from the manifest; falls back to
+    the manual date_modified_human when the manifest has no entry."""
+    iso = _lastmod_iso(d)
+    if iso:
+        y, m, day = iso.split("-")
+        return f"{day}/{m}/{y[2:]}"
+    return d.get("date_modified_human", "")
+
+
+def _carries_protected_partner(d, lang, include_partners):
+    """True if this render will emit a protected partner domain, so the
+    byte-frozen path applies (keeps gate_protected_placements green with no
+    approval trailer). Primary signal: the page's output path is in the gate
+    manifest (ground truth — covers cross-fiche promo injections). Belt-and-
+    suspenders data heuristic for anything the manifest hasn't captured yet."""
+    slug = d.get("slug") or ""
+    relpath = f"{slug}.html" if lang == "fr" else f"{lang}/{slug}.html"
+    if relpath in _PROTECTED_PAGES:
+        return True
+    ev = EVENT_MODALS.get(slug)
+    if ev and any(dom in ev.get("url", "") for dom in _PROTECTED_PARTNER_DOMAINS):
+        return True
+    if include_partners:
+        blob = (json.dumps(d.get("featured_businesses") or [], ensure_ascii=False)
+                + json.dumps(d.get("partners") or [], ensure_ascii=False))
+        if any(dom in blob for dom in _PROTECTED_PARTNER_DOMAINS):
+            return True
+    return False
+
+
 def build_page(d, lang="fr", include_partners=True, fr_prose_fallback=True):
     """Render the full HTML for fiche `d` in `lang`. Returns html string.
     Fallback-field info (which keys fell back to FR) is exposed via
@@ -2243,9 +2370,10 @@ def build_page(d, lang="fr", include_partners=True, fr_prose_fallback=True):
     are commercial content under a byte-faithful snapshot contract that only
     covers the six live languages; a new language ships without them until
     that contract is explicitly extended."""
-    global LAST_FALLBACK_FIELDS, _STRICT_PROSE
+    global LAST_FALLBACK_FIELDS, _STRICT_PROSE, _FROZEN
     _set_lang(d, lang)
     _STRICT_PROSE = not fr_prose_fallback
+    _FROZEN = _carries_protected_partner(d, lang, include_partners)
     name = L("name", "")
 
     # HANDOFF-35: acces_pmr.detail is FR-authored CONTENT (not a frozen name).
@@ -2292,9 +2420,9 @@ def build_page(d, lang="fr", include_partners=True, fr_prose_fallback=True):
         out.append(_carousel)
     out.append(build_footer_block(
         d.get("date_published_human", ""),
-        d.get("date_modified_human", "")
+        d.get("date_modified_human", "") if _FROZEN else _lastmod_display(d)
     ))
-    out.append(action_bar(d))
+    out.append(action_bar(d, frozen=_FROZEN))
     out.append(site_footer())
     out.append(event_modal_block(d))
     out.append(JS)

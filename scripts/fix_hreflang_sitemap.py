@@ -342,6 +342,19 @@ def rebuild_sitemap(groups, multilingual):
     ]
     _prev = _prev_lastmods()
     date_map = _git_dates(json_paths + structural_paths)
+    # Prefer the committed lastmod manifest (scripts/derive_lastmod.py) for every
+    # Json source. Raw git credits a corpus-wide sweep (e.g. a 389-file i18n
+    # backfill) as each lieu's change — the uniform-stamp trap this sitemap is
+    # meant to avoid. The manifest excludes those sweeps, so per-URL and hub-max
+    # dates stay honest. Structural paths (hubs/homepage) keep their git date.
+    try:
+        _lm_manifest = _json.loads((ROOT / "data" / "lastmod.json").read_text(encoding="utf-8"))
+        for _jp in json_paths:
+            _slug = Path(_jp).stem
+            if _lm_manifest.get(_slug):
+                date_map[_jp] = _lm_manifest[_slug]
+    except Exception:
+        pass
     _unresolved = sum(1 for p in json_paths if not date_map.get(p))
     if _unresolved:
         print(f"sitemap lastmod: {_unresolved}/{len(json_paths)} sources have no "

@@ -225,6 +225,14 @@ jobs:
         # door the May import walked through stays shut.
         run: python3 scripts/gate_i18n_leak.py
 
+      - name: Lastmod honesty gate (real per-lieu dates, no uniform-stamp anti-pattern)
+        # Read-only. data/lastmod.json is derived from git content-commit dates
+        # (corpus-wide sweeps excluded) by scripts/derive_lastmod.py and committed
+        # so renders are deterministic. This asserts ≥15 distinct dates and that no
+        # single date covers >40% of the manifest OR of sitemap.xml — the tripwire
+        # against the 4,434-URL uniform stamp this engine replaced.
+        run: python3 scripts/derive_lastmod.py --verify
+
       - name: Render-verified gate (every +render-ai language has a clean Layer A + B report)
         # Read-only + lightweight: validates reports/render-verify-<lang>.json
         # (no browser in CI). The heavy headless-render + vision pass that PRODUCES
