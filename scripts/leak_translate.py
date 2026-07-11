@@ -58,16 +58,26 @@ FACTS_FROZEN_KEYS = {"winter_access", "winter_infra", "snow_view", "col_chains",
                      "commune"}
 
 
+def _norm_thousands(text):
+    """Collapse a thousands separator (space/dot/nbsp) that sits between a 1-3
+    digit group and a 3-digit group: '1 461' → '1461', '1.035' → '1035'. This
+    normalizes FR '1 461 m' vs DE '1461 m' without over-merging two distinct
+    adjacent numbers ('2026 2026' — the second group is 4 digits, not 3)."""
+    prev = None
+    while prev != text:
+        prev = text
+        text = re.sub(r"(?<!\d)(\d{1,3})[ .  ](\d{3})(?!\d)", r"\1\2", text)
+    return text
+
+
 def digit_runs(text):
-    """Multiset of maximal digit runs. Deliberately does NOT collapse thousands
-    separators — '1 477' reads as {1,477} in both FR and its DE rendering, so it
-    matches, while avoiding the over-merge of two adjacent numbers ('2026 2026').
+    """Multiset of maximal digit runs, after normalizing thousands separators.
     The apply check requires every SOURCE run to survive (drops/changes fail);
     EXTRA output digits are allowed — Roman→Arabic century conversion (XIIIe →
     '13. Jahrhundert') is a correct translation, not a fabricated number. Added
     prices are still caught by the separate € count check."""
     from collections import Counter
-    return Counter(re.findall(r"\d+", text))
+    return Counter(re.findall(r"\d+", _norm_thousands(text)))
 
 
 def winter_tokens(fiche):
