@@ -14,13 +14,13 @@
 | `lacs-plages` | 31 | 26 | 3 |
 | `musees` | 49 | 23 | 9 |
 | `parcs-jardins` | 31 | 17 | 11 |
-| `points-de-vue` | 30 | 24 | 6 |
+| `points-de-vue` | 30 | 25 | 5 |
 | `que-faire` | 73 | 42 | 4 |
 | `sensations-plein-air` | 71 | 54 | 4 |
 | `sentiers` | 40 | 7 | 14 |
 | `sorties-detente` | 25 | 13 | 3 |
 | `sport-jeux` | 52 | 33 | 4 |
-| `telecabines` | 12 | 5 | 5 |
+| `telecabines` | 12 | 6 | 5 |
 | `voies-vertes` | 5 | 5 | 1 |
 
 ## Per-fiche assignments
@@ -345,7 +345,7 @@
 | `points-de-vue` | `telepherique-du-saleve` | `nature` | `generique-point-de-vue.jpg` | — | json hero (local) |
 | `points-de-vue` | `tete-du-parmelan` | `nature` | `tete-du-parmelan-hero.jpg` | — | json hero (local) |
 | `points-de-vue` | `thiou-a-annecy-annecy` | `nature` | `generique-point-de-vue.jpg` | — | json hero (local) |
-| `points-de-vue` | `train-du-montenvers-mer-de-glace` | `nature` | `generique-point-de-vue.jpg` | — | json hero (local) |
+| `points-de-vue` | `train-du-montenvers-mer-de-glace` | `nature` | `train-du-montenvers-mer-de-glace-hero.jpg` | — | json hero (local) |
 | `points-de-vue` | `voie-verte-du-chablais` | `nature` | `voie-verte-du-chablais-hero.jpg` | — | json hero (local) |
 | `que-faire` | `aquaparc-chateau-bleu-annemasse` | `aquatique` | `generique-aquatique-toboggan.jpg` | — | json hero (local) |
 | `que-faire` | `aquaparc-thonon-piscine-olympique-thonon` | `aquatique` | `generique-aquatique-piscine-exterieur.jpg` | — | json hero (local) |
@@ -618,7 +618,7 @@
 | `telecabines` | `telepherique-des-grands-montets` | `nature` | `Hike_to_Glacier_d%27Argenti%C3%A8re_-_panoramio_%2861%29.jpg` | — | json hero (url) |
 | `telecabines` | `telepherique-du-brevent` | `nature` | `Brevent_cable_car.jpg` | — | json hero (url) |
 | `telecabines` | `telepherique-du-saleve` | `nature` | `generique-point-de-vue.jpg` | — | json hero (local) |
-| `telecabines` | `train-du-montenvers-mer-de-glace` | `nature` | `generique-point-de-vue.jpg` | — | json hero (local) |
+| `telecabines` | `train-du-montenvers-mer-de-glace` | `nature` | `train-du-montenvers-mer-de-glace-hero.jpg` | — | json hero (local) |
 | `telecabines` | `tramway-du-mont-blanc` | `nature` | `Tramway_Mont-Blanc.jpg` | — | json hero (url) |
 | `voies-vertes` | `veloroute-vallee-arve-cluses-sallanches` | `nature` | `generique-voie-verte-cyclistes-riviere.jpg` | — | json hero (local) |
 | `voies-vertes` | `viarhona-haute-savoie-saint-gingolph-seyssel` | `nature` | `generique-voie-verte.jpg` | — | json hero (local) |

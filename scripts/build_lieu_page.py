@@ -275,7 +275,7 @@ CHROME = {
     "f_legal_link":    {"fr": "Mentions légales", "en": "Legal notice", "de": "Impressum", "it": "Note legali", "es": "Avisos legales", "nl": "Wettelijke vermeldingen"},
     "f_privacy":       {"fr": "Confidentialité", "en": "Privacy", "de": "Datenschutz", "it": "Privacy", "es": "Privacidad", "nl": "Privacy"},
     "f_cgv":           {"fr": "CGV", "en": "Terms", "de": "AGB", "it": "Termini", "es": "Términos", "nl": "Algemene voorwaarden"},
-    "f_copyright":     {"fr": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Tous droits réservés", "en": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · All rights reserved", "de": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Alle Rechte vorbehalten", "it": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Tutti i diritti riservati", "es": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Todos los derechos reservados", "nl": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Alle rechten voorbehouden"},
+    "f_copyright":     {"fr": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Tous droits réservés", "en": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · All rights reserved", "de": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Alle Rechte vorbehalten", "it": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Tutti i diritti riservati", "es": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Todos los derechos reservados", "nl": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Alle rechten voorbehouden"},
     "f_promise":       {"fr": "Sans pub. Sans tracking. Sans avis Google.", "en": "No ads. No tracking. No Google reviews.", "de": "Keine Werbung. Kein Tracking. Keine Google-Bewertungen.", "it": "Niente pubblicità. Niente tracking. Niente recensioni Google.", "es": "Sin anuncios. Sin tracking. Sin reseñas de Google.", "nl": "Geen advertenties. Geen tracking. Geen Google reviews."},
 }
 
@@ -1242,9 +1242,12 @@ def gallery_block(name, photos=None):
                 continue
             url = src if src.startswith(("http://", "https://", "/")) else f"/{src}"
             alt = p.get("alt") or name
+            credit = p.get("credit")
+            cred_html = (f'<span class="tile-credit">{esc(credit)}</span>'
+                         if credit else "")
             parts.append(
                 f'<div class="tile"><img src="{attr(url)}" alt="{attr(alt)}" '
-                'loading="lazy" width="600" height="600"></div>'
+                f'loading="lazy" width="600" height="600">{cred_html}</div>'
             )
         tiles = "".join(parts) if parts else placeholder * 6
     else:

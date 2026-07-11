@@ -16,11 +16,11 @@ google_place_id: "ChIJk8jOuihMiUcRMjQj3Kkyl5Q"
 canonical_url: https://loisirs74.fr/en/train-du-montenvers-mer-de-glace
 language: en
 facet_json: https://loisirs74.fr/api/lieu/train-du-montenvers-mer-de-glace.json
-photo_url: /img/generique/generique-point-de-vue.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/points-de-vue/train-du-montenvers-mer-de-glace-hero.jpg
+photo_type: real
+photo_author: "Tiia Monto"
+photo_license: "CC BY-SA 3.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-21
 source: loisirs74.fr
 ---
