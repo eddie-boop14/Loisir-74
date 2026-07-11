@@ -94,7 +94,7 @@ PROSE_FIELDS = ["meta_title", "meta_description", "hero", "hero_alt", "body",
 # Core frozen nouns — stay VERBATIM untranslated in every language.
 # Communes + each fiche's frozen FR name are added programmatically.
 CORE_FROZEN = ["Lac d'Annecy", "Léman", "Mont-Blanc", "Aiguille du Midi",
-               "Haute-Savoie", "ViaRhôna", "GR®", "Faucigny"]
+               "Haute-Savoie", "ViaRhôna", "GR®", "Faucigny", "Loisirs 74"]
 
 TAG_RE = re.compile(r"<\s*/?\s*([a-zA-Z][a-zA-Z0-9]*)")
 

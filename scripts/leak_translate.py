@@ -82,21 +82,37 @@ def winter_tokens(fiche):
     return toks
 
 
-def work_for(fiche, fields):
-    """Build the FR-source payload for exactly the leaked fields of one fiche.
-    facts drops its frozen/controlled sub-keys from the translatable payload
-    (they are re-attached verbatim at apply time)."""
+def _translatable_letters(value, frozen):
+    """Letters left after stripping frozen nouns, digits and punctuation — a
+    proxy for 'is there real prose to translate here'. A meta_title like
+    'Col de la Colombière · Le Reposoir (Haute-Savoie) | Loisirs 74' is entirely
+    frozen names + brand, so its target is byte-identical to FR by nature: no
+    point translating it (it can only leak forever or get its brand mistranslated)."""
+    text = " ".join(TB.strings_of(value))
+    for n in sorted(frozen, key=len, reverse=True):
+        text = text.replace(n, " ")
+    text = re.sub(r"[\W\d_]+", "", text, flags=re.UNICODE)
+    return len(text)
+
+
+def work_for(fiche, fields, frozen=None):
+    """Build the FR-source payload for the leaked fields of one fiche. facts
+    drops its frozen/controlled sub-keys; proper-noun-only fields (no real prose
+    after removing frozen names/numbers) are dropped as untranslatable and
+    returned separately so the gate can allowlist them instead of re-batching."""
     fr = (fiche.get("i18n") or {}).get("fr") or {}
-    out = {}
+    out, untranslatable = {}, []
     for f in fields:
         v = fr.get(f)
         if v in (None, "", [], {}):
             continue
-        if f == "facts" and isinstance(v, dict):
-            out[f] = {k: val for k, val in v.items() if k not in FACTS_FROZEN_KEYS}
-        else:
-            out[f] = v
-    return out
+        payload = ({k: val for k, val in v.items() if k not in FACTS_FROZEN_KEYS}
+                   if f == "facts" and isinstance(v, dict) else v)
+        if frozen is not None and _translatable_letters(payload, frozen) < 8:
+            untranslatable.append(f)
+            continue
+        out[f] = payload
+    return out, untranslatable
 
 
 def load_baseline_lang(lang):
@@ -115,24 +131,31 @@ def cmd_extract(lang, limit=None, slugs=None):
     prot = protected_pages()
     excluded = [s for s in sorted(work) if _is_protected(s, lang, prot)]
     items = []
+    untr = {}   # {slug: [fields]} proper-noun-only, allowlist candidates
     for slug in sorted(work):
         if _is_protected(slug, lang, prot):
             continue  # partner-carrying page stays byte-frozen (flagged, not translated)
         fiche = load_fiche(slug)
         fields = work[slug]
-        payload = work_for(fiche, fields)
+        frozen = TB.fiche_frozen_nouns(fiche)
+        payload, ut = work_for(fiche, fields, frozen)
+        if ut:
+            untr[slug] = ut
         if not payload:
             continue
         items.append({
             "slug": slug,
             "name": (fiche.get("i18n", {}).get("fr", {}) or {}).get("name") or slug,
             "commune": fiche.get("commune") or "",
-            "frozen": TB.fiche_frozen_nouns(fiche),
+            "frozen": frozen,
             "winter_tokens": winter_tokens(fiche),
             "fields": payload,
         })
         if limit and len(items) >= limit:
             break
+    if untr:
+        json.dump(untr, open(os.path.join(ROOT, "reports", f"leak-untranslatable-{lang}.json"),
+                             "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     outp = os.path.join(ROOT, "reports", f"leak-work-{lang}.json")
     json.dump({"lang": lang, "items": items}, open(outp, "w", encoding="utf-8"),
               ensure_ascii=False, indent=1)
@@ -142,6 +165,11 @@ def cmd_extract(lang, limit=None, slugs=None):
     if excluded:
         print(f"[leak-tr] {lang}: EXCLUDED {len(excluded)} partner-carrying fiches "
               f"(byte-frozen, flag for Eddie): {', '.join(excluded)}")
+    if untr:
+        nf = sum(len(v) for v in untr.values())
+        print(f"[leak-tr] {lang}: {nf} proper-noun-only field(s) across {len(untr)} fiches "
+              f"are UNTRANSLATABLE (byte-identical to FR by nature) → "
+              f"reports/leak-untranslatable-{lang}.json for allowlist, not batched")
 
 
 def validate_item(fiche, src_fields, out_fields, frozen, wtokens):
