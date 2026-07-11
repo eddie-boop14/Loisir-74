@@ -116,7 +116,7 @@ def test_mt_run_null_discipline_and_flags_file():
         for slug, src in (("ok-one", good_src), ("digit-bad", bad_src)):
             (jd / f"{slug}.json").write_text(json.dumps({
                 "slug": slug, "commune": "Annecy",
-                "i18n": {"fr": {"name": "X"}, "en": src}},
+                "i18n": {"fr": {**src, "name": "X"}}},
                 ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         tbm.JSON_DIR = jd
         m.FLAGS_FILE = Path(tmp) / "reports" / "flags-{lang}.json"
@@ -179,8 +179,7 @@ def test_fr_source_field_never_enters_mt():
             "slug": "beach", "commune": "Annecy",
             "acces_pmr": {"status": "accessible",
                           "detail": "Rampe d'accès et tapis d'aide à la baignade."},
-            "i18n": {"fr": {"name": "X"},
-                     "en": {"meta_title": "Beach guide (Annecy)"}}},
+            "i18n": {"fr": {"name": "X", "meta_title": "Beach guide (Annecy)"}}},
             ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         tbm.JSON_DIR = jd
         m.FLAGS_FILE = Path(tmp) / "reports" / "flags-{lang}.json"
@@ -245,8 +244,8 @@ def test_resniff_purges_fr_poisoned_populated_fields():
         jd = Path(tmp) / "Json"; jd.mkdir()
         (jd / "poisoned.json").write_text(json.dumps({
             "slug": "poisoned", "commune": "Annecy",
-            "i18n": {"fr": {"name": "X"},
-                     "en": {"meta_title": "Fine English title (Annecy)",
+            "i18n": {"fr": {"name": "X",
+                            "meta_title": "Fine English title (Annecy)",
                             "hero": {"lead": "Parc accrobranche à 950 m d'altitude avec des parcours et une île aux enfants."}},
                      "pl": {"meta_title": "dobre tłumaczenie",
                             "hero": {"lead": "semi-french garbage written by MT"}}}},
@@ -343,8 +342,8 @@ def test_patch_recover_lands_paid_results_without_resubmit():
         jd = Path(tmp) / "Json"; jd.mkdir()
         (jd / "spot.json").write_text(json.dumps({
             "slug": "spot", "commune": "Annecy",
-            "i18n": {"fr": {"name": "X"},
-                     "en": {"hero": {"lead": "A calm spot open all year."}}}},
+            "i18n": {"fr": {"name": "X",
+                            "hero": {"lead": "A calm spot open all year."}}}},
             ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         tbm.JSON_DIR = jd
         m.FLAGS_FILE = Path(tmp) / "reports" / "flags-{lang}.json"

@@ -166,8 +166,10 @@ class FakeClient:
 def _fixture_repo(m, tmp):
     jd = Path(tmp) / "Json"; jd.mkdir()
     for slug in ("good-one", "bad-then-good", "bad-twice"):
+        # FR is the translation source (HANDOFF amendment: was i18n.en). The
+        # source prose lives in fr now; en is just another target language.
         fiche = {"slug": slug, "commune": "Annecy",
-                 "i18n": {"fr": {"name": "Abbaye d'Aulps"}, "en": dict(SRC)}}
+                 "i18n": {"fr": {**dict(SRC), "name": "Abbaye d'Aulps"}}}
         (jd / f"{slug}.json").write_text(
             json.dumps(fiche, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     m.JSON_DIR = jd
