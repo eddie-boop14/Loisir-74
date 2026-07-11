@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Sciez, Haute-Savoie (74140)
 - GPS: 46.3258, 6.3856
 - Category: base-nautique
-- Type: Base voile Léman - kite/dériveur/catamaran
+- Type: Léman sailing base - kite/dinghy/catamaran
 
 ## Hours
 
-Horaires du Centre nautique Voile Léman Sciez : Saison : tous les jours 9h-18h. Hors saison sur réservation. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of Centre nautique Voile Léman Sciez: Season: every day 9am-6pm. Out of season by appointment. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires du Centre nautique Voile Léman Sciez : Saison : tous les jours 9h-18h.
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -57,7 +57,7 @@ Not specified
 
 ## Season
 
-Mai-septembre
+May-September
 
 ## Official source
 

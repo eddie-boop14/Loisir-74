@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Arenthon, Haute-Savoie (74800)
 - GPS: 46.083865, 6.366149
 - Category: wakepark
-- Type: Téléski-nautique - seul vrai cable-park du 74
+- Type: Cable wakeboard park - the only true cable-park in the 74
 
 ## Hours
 
-Horaires du TNA Cable Park : Mai-juin et septembre : week-ends + fériés 11h-19h - juillet-août : tous les jours 10h-19h. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of TNA Cable Park: May-June and September: weekends and public holidays 11am-7pm - July-August: every day 10am-7pm. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Mai-septembre
+May-September
 
 ## Official source
 

@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Châtillon-sur-Cluses, Haute-Savoie (74300)
 - GPS: 46.083, 6.577
 - Category: chateau
-- Type: Ruines château fort, site communal
+- Type: Ruined hill fort, municipal site
 
 ## Hours
 
-ACCÈS LIBRE 24h/24, 7j/7, toute l'année aux ruines du Château de Châtillon-sur-Cluses. Sentier balisé depuis le centre du village. Praticable mai-octobre principalement, conditions hivernales variables (neige, verglas) à vérifier auprès de la mairie de Châtillon-sur-Cluses. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+FREE ACCESS 24/7, year-round to the ruins of Château de Châtillon-sur-Cluses. Marked trail from the village centre. Best conditions mainly May-October, winter conditions vary (snow, ice) - check with Châtillon-sur-Cluses town hall. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit village + sentier 15-20 min
+Free in the village + 15-20 min walk
 
 ## Transport
 
@@ -59,7 +59,7 @@ Gratuit village + sentier 15-20 min
 
 ## Season
 
-Mai - octobre · Toute l'année par beau temps
+May - October · Year-round in good weather
 
 ## Official source
 

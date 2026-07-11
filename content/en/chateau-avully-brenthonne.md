@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Brenthonne, Haute-Savoie (74890)
 - GPS: 46.271784, 6.40132
 - Category: chateau
-- Type: Maison forte XIVe siècle, monument historique
+- Type: 14th-century fortified house, historic monument
 
 ## Hours
 
-OUVERTURE 2026 : Visite TOUTE L'ANNÉE sur rendez-vous (individuel et groupes). 1er JUILLET - 31 AOÛT : ouvert lundi-vendredi 13h30-18h SANS rendez-vous. Week-ends en juillet-août sur réservation. Réservation préalable par téléphone ou chateauavully.com. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+2026 OPENING: Visits YEAR-ROUND by appointment (individuals and groups). 1 JULY - 31 AUGUST: open Monday-Friday 1:30pm-6pm WITHOUT appointment. Weekends in July-August by reservation. Advance booking by phone or at chateauavully.com. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -53,7 +53,7 @@ Not specified
 
 ## Parking
 
-Gratuit à l'entrée du château
+Free at the château entrance
 
 ## Transport
 
@@ -61,7 +61,7 @@ Not specified
 
 ## Season
 
-1er juillet - 31 août (sans RDV) · Toute l'année sur RDV
+1 July - 31 August (no appointment needed) · Year-round by appointment
 
 ## Official source
 

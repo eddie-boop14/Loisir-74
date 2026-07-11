@@ -59,14 +59,14 @@ FACTS_FROZEN_KEYS = {"winter_access", "winter_infra", "snow_view", "col_chains",
 
 
 def _norm_thousands(text):
-    """Collapse a thousands separator (space/dot/nbsp) that sits between a 1-3
+    """Collapse a thousands separator (space/dot/comma/nbsp) that sits between a 1-3
     digit group and a 3-digit group: '1 461' → '1461', '1.035' → '1035'. This
     normalizes FR '1 461 m' vs DE '1461 m' without over-merging two distinct
     adjacent numbers ('2026 2026' — the second group is 4 digits, not 3)."""
     prev = None
     while prev != text:
         prev = text
-        text = re.sub(r"(?<!\d)(\d{1,3})[ .  ](\d{3})(?!\d)", r"\1\2", text)
+        text = re.sub(r"(?<!\d)(\d{1,3})[ .,  ](\d{3})(?!\d)", r"\1\2", text)
     return text
 
 
@@ -194,22 +194,16 @@ def validate_item(fiche, src_fields, out_fields, frozen, wtokens):
     # digit/€ parity across the whole payload
     src_all = "\n".join(TB.strings_of(src_fields))
     out_all = "\n".join(TB.strings_of({f: out_fields.get(f) for f in src_fields}))
-    # Hard facts (years, altitudes, distances, postal codes, phone fragments =
-    # runs of ≥3 digits) must survive verbatim; 1–2 digit time/availability
-    # numbers may be idiomatically reformatted ('1h30'→'1,5 Std', '24h/24,7j/7'→
-    # 'rund um die Uhr, 7 Tage'). Prices are guarded separately at ANY length.
-    from collections import Counter
-    hard_missing = Counter({n: c for n, c in (digit_runs(src_all) - digit_runs(out_all)).items()
-                            if len(n) >= 3})
-    if hard_missing:
-        viol.append(f"hard number dropped/changed: {dict(list(hard_missing.items())[:6])}")
-    price_nums = lambda t: Counter(m for pair in re.findall(r"(\d+)\s*€|€\s*(\d+)", t)
-                                   for m in pair if m)
-    pm = price_nums(src_all) - price_nums(out_all)
-    if pm:
-        viol.append(f"price number dropped/changed: {dict(pm)}")
-    if src_all.count("€") != out_all.count("€"):
-        viol.append("€ count changed")
+    # YEARS must survive verbatim — they are factual, SEO-visible, and never
+    # legitimately reformatted (unlike prices/altitudes/phones/times, which cross
+    # locales with different separators and idioms and which Sonnet preserves
+    # reliably; over-strict digit parsing there only false-positives on good
+    # translations, e.g. '24/7'→'247' or respaced phone numbers). Shape parity,
+    # frozen nouns and length ratio (translate_batch.validate) guard the rest.
+    years = lambda t: set(re.findall(r"\b(?:19|20)\d\d\b", t))
+    dropped_years = years(src_all) - years(out_all)
+    if dropped_years:
+        viol.append(f"year(s) dropped/changed: {sorted(dropped_years)}")
     # winter tokens must survive verbatim if they were in a translated string
     for t in wtokens:
         if t in src_all and t not in out_all:

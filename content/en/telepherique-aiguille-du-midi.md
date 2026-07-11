@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Été 2026 : 13/06–30/06 tous les jours 7h10–17h30 · 1/07–23/08 tous les jours 6h10–18h00 · 24/08–13/09 tous les jours 7h10–17h30 · 14/09–27/09 tous les jours 8h10–17h00 · 28/09–1/11 tous les jours 8h10–16h30. Hiver 2025-2026 : 20/12–29/03 tous les jours 8h10–16h30. Fermeture maintenance annuelle 2/11–18/12/2026. Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications saisonnières.
+Summer 2026: 13/06–30/06 every day 7:10am–5:30pm · 1/07–23/08 every day 6:10am–6:00pm · 24/08–13/09 every day 7:10am–5:30pm · 14/09–27/09 every day 8:10am–5:00pm · 28/09–1/11 every day 8:10am–4:30pm. Winter 2025-2026: 20/12–29/03 every day 8:10am–4:30pm. Annual maintenance closure 2/11–18/12/2026. Verified on the official website on 21 May 2026 — subject to seasonal changes.
 
 ## Prices
 

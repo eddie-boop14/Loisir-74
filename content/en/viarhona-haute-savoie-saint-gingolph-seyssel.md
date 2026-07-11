@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Saint-Gingolph, Haute-Savoie (74500)
 - GPS: 46.3917, 6.8056
 - Category: voie-verte
-- Type: Véloroute internationale (EV17) - voies vertes + routes partagées
+- Type: International cycle route (EV17) - greenways plus shared roads
 
 ## Hours
 
-ACCÈS LIBRE 24h/24, 7j/7, toute l'année à la ViaRhôna Haute-Savoie. Voies vertes éclairées en zone urbaine. Passerelles et ouvrages d'art accessibles à toute heure. Vérifié sur viarhona.com et hautesavoie.fr le 24 mai 2026 — sous réserve de modifications saisonnières.
+OPEN ACCESS 24/7, year-round on the ViaRhôna Haute-Savoie. Greenways lit in urban areas. Footbridges and structures accessible at any hour. Checked on viarhona.com and hautesavoie.fr on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuits aux principaux points d'accès (gares, OT)
+Free at main access points (stations, tourist offices)
 
 ## Transport
 
@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Avril-octobre · Toute l'année basse altitude
+April-October · year-round at low altitude
 - Winter access window: Not specified
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified

@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Passy, Haute-Savoie (74190)
 - GPS: 45.941617, 6.711676
 - Category: jardin
-- Type: Jardin alpin paysager face Mont-Blanc
+- Type: Alpine landscape garden facing Mont-Blanc
 
 ## Hours
 
-Horaires du Jardin des Cimes : Tous les jours 10h-18h en saison. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of the Jardin des Cimes: Every day 10am-6pm during the season. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -59,7 +59,7 @@ Gratuit sur site
 
 ## Season
 
-8 mai - 27 septembre 2026
+8 May - 27 September 2026
 
 ## Official source
 

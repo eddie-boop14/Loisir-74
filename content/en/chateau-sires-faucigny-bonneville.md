@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Bonneville, Haute-Savoie (74130)
 - GPS: 46.116244, 6.358393
 - Category: chateau
-- Type: Château fort XIIIe siècle, propriété communale
+- Type: 13th-century fortified château, municipal property
 
 ## Hours
 
-EXTÉRIEURS LIBRES 24h/24, 7j/7, toute l'année. VISITES GUIDÉES ponctuelles organisées par Faucigny Glières Tourisme : 5-8 dates annuelles, généralement mai-septembre. CALENDRIER 2026 à consulter sur ccfg.fr ou tourisme-faucigny-glieres.fr. ATTENTION : Vérifier auprès de Faucigny Glières Tourisme avant déplacement (statut rénovation 2026). Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+EXTERIOR FREELY ACCESSIBLE 24/7, year-round. Occasional GUIDED TOURS organised by Faucigny Glières Tourisme: 5-8 dates a year, generally May-September. 2026 CALENDAR available at ccfg.fr or tourisme-faucigny-glieres.fr. NOTE: check with Faucigny Glières Tourisme before visiting (2026 restoration status). Checked on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -51,7 +51,7 @@ Not specified
 
 ## Parking
 
-Gratuit centre Bonneville
+Free in central Bonneville
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit centre Bonneville
 
 ## Season
 
-Mai-septembre · Calendrier visites guidées
+May-September · guided tour calendar
 
 ## Official source
 

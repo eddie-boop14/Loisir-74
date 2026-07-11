@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Annemasse, Haute-Savoie (74100)
 - GPS: 46.193, 6.232
 - Category: musee
-- Type: Centre d'art contemporain d'intérêt national, label Ministère Culture 2020
+- Type: Centre of art of national interest, Ministry of Culture label 2020
 
 ## Hours
 
-Mercredi à Dimanche 14h-18h. Fermé Lundi et Mardi. Fermetures exceptionnelles entre deux expositions (vérifier sur villaduparc.org). Vérifié sur le site officiel le 23 mai 2026 — sous réserve de modifications saisonnières.
+Wednesday to Sunday 2pm-6pm. Closed Monday and Tuesday. Exceptional closures between exhibitions (check villaduparc.org). Checked on the official website on 23 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Free
 
 ## Parking
 
-Parc Montessuit à proximité, stationnement de rue
+Parc Montessuit nearby, street parking
 
 ## Transport
 
@@ -60,7 +60,7 @@ Parc Montessuit à proximité, stationnement de rue
 
 ## Season
 
-Toute l'année Mer-Dim 14h-18h
+Year-round, Wed-Sun 2pm-6pm
 
 ## Official source
 

@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Les Houches, Haute-Savoie (74310)
 - GPS: 45.8908, 6.7956
 - Category: sentier
-- Type: Sentier de Grande Randonnée international (GR® TMB)
+- Type: International long-distance trail (GR® TMB)
 
 ## Hours
 
-Tour du Mont-Blanc PRATICABLE MI-JUIN À MI-SEPTEMBRE UNIQUEMENT. Hors saison : cols enneigés, refuges fermés, refuges hivernaux 1 seule étape équipée. Vérifier ouverture des refuges et conditions cols sur ffrandonnee.fr, chamonix.com, autourdumontblanc.com. Vérifié le 24 mai 2026 — sous réserve de modifications saisonnières.
+Tour du Mont-Blanc WALKABLE MID-JUNE TO MID-SEPTEMBER ONLY. Off-season: passes snow-covered, refuges closed, only one winter emergency shelter stage equipped. Check refuge opening and pass conditions at ffrandonnee.fr, chamonix.com, autourdumontblanc.com. Verified on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Free
 
 ## Parking
 
-Parking Les Houches centre + téléphérique Prarion
+Les Houches centre car park + Prarion cable car
 
 ## Transport
 
@@ -60,7 +60,7 @@ Parking Les Houches centre + téléphérique Prarion
 
 ## Season
 
-Mi-juin à mi-septembre uniquement
+Mid-June to mid-September only
 - Winter access window: Not specified
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified

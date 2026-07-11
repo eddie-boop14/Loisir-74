@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Viry, Haute-Savoie (74580)
 - GPS: 46.129787, 6.050031
 - Category: parc
-- Type: Parc à dinosaures · jardin botanique · mini-ferme
+- Type: Dinosaur park · botanical garden · mini-farm
 
 ## Hours
 
-Vacances d'été : Mer-Dim 14h-18h (fermé Lun/Mar, fermé jours fériés). Vacances scolaires zone A hors été : Mar-Dim 14h-17h (fermé Lun). Hors vacances : Mer, Sam, Dim 14h-18h été, 14h-17h hiver. Fermé jours fériés, 25 décembre et 1er janvier. Dernière entrée 1 h avant fermeture. Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications saisonnières.
+Summer holidays: Wed-Sun 2pm-6pm (closed Mon/Tue, closed on public holidays). Zone A school holidays outside summer: Tue-Sun 2pm-5pm (closed Mon). Outside holidays: Wed, Sat, Sun 2pm-6pm summer, 2pm-5pm winter. Closed on public holidays, 25 December and 1 January. Last entry 1 hour before closing. Checked on the official website on 21 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -52,7 +52,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur place
+Free on site
 
 ## Transport
 
@@ -60,7 +60,7 @@ Not specified
 
 ## Season
 
-Mars – octobre · vacances scolaires zone A toute l'année
+March – October · zone A school holidays year-round
 
 ## Official source
 

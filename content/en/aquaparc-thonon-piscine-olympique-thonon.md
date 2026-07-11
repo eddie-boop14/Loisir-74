@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Thonon-les-Bains, Haute-Savoie (74200)
 - GPS: 46.385434, 6.482844
 - Category: aquaparc
-- Type: Piscine olympique extérieure 50m + plage Léman
+- Type: Outdoor 50m olympic pool + Léman beach
 
 ## Hours
 
-Horaires du Piscine Olympique de Thonon : Saison : tous les jours 10h-19h. Variations selon météo. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of Piscine Olympique de Thonon: Season: every day 10am-7pm. Subject to weather variations. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires du Piscine Olympique de Thonon : Saison : tous les jours 10h-19h. Varia
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit sur site
 
 ## Season
 
-Mai-septembre (saison extérieure)
+May-September (outdoor season)
 
 ## Official source
 

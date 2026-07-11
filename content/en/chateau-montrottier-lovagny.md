@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Lovagny, Haute-Savoie (74330)
 - GPS: 45.898362, 6.03866
 - Category: chateau
-- Type: Château médiéval + cabinet de curiosités
+- Type: Medieval château + cabinet of curiosities
 
 ## Hours
 
-Ouvert du 29 mars au 31 octobre 2026. Mer-Dim 14h-18h (29 mars-30 juin, sept-oct). Tous les jours 10h-18h en juillet-août. Dernière entrée 17h. FERMÉ DU 1er NOVEMBRE AU 28 MARS pour saison morte. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Open from 29 March to 31 October 2026. Wed-Sun 2pm-6pm (29 March-30 June, Sept-Oct). Every day 10am-6pm in July-August. Last admission 5pm. CLOSED FROM 1 NOVEMBER TO 28 MARCH for the off-season. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -55,7 +55,7 @@ Ouvert du 29 mars au 31 octobre 2026. Mer-Dim 14h-18h (29 mars-30 juin, sept-oct
 
 ## Parking
 
-Gratuit à l'entrée du domaine
+Free at the entrance to the estate
 
 ## Transport
 
@@ -66,7 +66,7 @@ Gratuit à l'entrée du domaine
 
 ## Season
 
-29 mars - 31 octobre 2026, fermé l'hiver
+29 March - 31 October 2026, closed in winter
 
 ## Official source
 

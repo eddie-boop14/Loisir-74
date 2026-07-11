@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Thonon-les-Bains, Haute-Savoie (74200)
 - GPS: 46.3759, 6.478152
 - Category: croisiere
-- Type: Croisière passagers Léman - ligne N2 Lausanne-Thonon
+- Type: Passenger cruises on Léman - N2 Lausanne-Thonon line
 
 ## Hours
 
-Horaires du CGN escale Thonon : Ligne N2 Lausanne-Ouchy → Thonon toute l'année - fréquences variables selon saison, vérifier cgn.ch. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of CGN escale Thonon: N2 line Lausanne-Ouchy → Thonon year-round - frequencies vary by season, check cgn.ch. Checked on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires du CGN escale Thonon : Ligne N2 Lausanne-Ouchy → Thonon toute l'anné
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit sur site
 
 ## Season
 
-Toute l'année
+Year-round
 
 ## Official source
 

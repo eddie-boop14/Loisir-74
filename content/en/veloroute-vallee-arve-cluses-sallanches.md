@@ -32,7 +32,7 @@ source: loisirs74.fr
 - Commune: Cluses, Haute-Savoie (74300)
 - GPS: 46.0617, 6.5811
 - Category: voie-verte
-- Type: Véloroute (V61) - voie verte en site propre majoritaire
+- Type: Cycle route (V61) - mostly dedicated greenway
 
 ## Hours
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuits gares SNCF Bonneville/Cluses/Sallanches
+Free at Bonneville/Cluses/Sallanches SNCF stations
 
 ## Transport
 
@@ -58,7 +58,7 @@ Gratuits gares SNCF Bonneville/Cluses/Sallanches
 
 ## Season
 
-Avril-octobre · Toute l'année
+April-October · year-round
 - Winter access window: Not specified
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified

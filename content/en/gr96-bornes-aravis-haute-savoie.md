@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Saint-Pierre-en-Faucigny, Haute-Savoie (74800)
 - GPS: 46.0667, 6.4
 - Category: sentier
-- Type: Sentier de Grande Randonnée (GR®)
+- Type: Long-distance hiking trail (GR®)
 
 ## Hours
 
-ACCÈS LIBRE 24h/24, 7j/7, toute l'année au GR® 96 Bornes-Aravis. Saison recommandée : Juin-octobre. Conditions hors saison variables. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+FREE ACCESS 24/7, year-round on the GR® 96 Bornes-Aravis. Recommended season: June-October. Off-season conditions vary. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit au départ
+Free at the trailhead
 
 ## Transport
 
@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Juin-octobre
+June-October
 - Winter access window: Not specified
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified

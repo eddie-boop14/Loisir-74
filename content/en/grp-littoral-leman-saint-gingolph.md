@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Saint-Gingolph, Haute-Savoie (74500)
 - GPS: 46.3917, 6.8056
 - Category: sentier
-- Type: GR® de Pays (GRP) pédestre
+- Type: GR® de Pays (GRP) walking trail
 
 ## Hours
 
-ACCÈS LIBRE 24h/24, 7j/7, toute l'année au GR® de Pays Littoral du Léman. Saison recommandée : Avril-novembre. Conditions hors saison variables. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+OPEN ACCESS 24/7, all year round, on the GR® de Pays Littoral du Léman. Recommended season: April-November. Conditions outside this season vary. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit au départ
+Free at the trailhead
 
 ## Transport
 
@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Avril-novembre
+April-November
 - Winter access window: Not specified
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified

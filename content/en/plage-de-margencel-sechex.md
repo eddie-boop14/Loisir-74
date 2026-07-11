@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Margencel, Haute-Savoie (74200)
 - GPS: 46.347, 6.42
 - Category: plage
-- Type: Plage nature gazonnée - embouchure du Redon
+- Type: Natural grassy beach - mouth of the Redon
 
 ## Hours
 
-Horaires de la Plage de Margencel - Port de Séchex : Accès libre. Baignade NON surveillée (pas de MNS). Hors saison : accès libre.. Vérifié sur le site officiel le 24 mai 2026 — sous réserve d'arrêté municipal 2026.
+Opening hours of Plage de Margencel - Port de Séchex: Free access. Bathing is NOT supervised (no lifeguards). Off-season: free access.. Verified on the official website on 24 May 2026 — subject to municipal decree 2026.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Selon plage - voir détails
+Depends on the beach - see details
 
 ## Transport
 
@@ -57,7 +57,7 @@ Selon plage - voir détails
 
 ## Season
 
-Juillet - août (surveillance MNS)
+July - August (lifeguard supervision)
 
 ## Official source
 

@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Vétraz-Monthoux, Haute-Savoie (74100)
 - GPS: 46.1849, 6.2725
 - Category: parc
-- Type: Parc de loisirs indoor enfants 0-12 ans
+- Type: Indoor leisure park for children aged 0-12
 
 ## Hours
 
-Ouvert 7j/7 de 9h30 à 20h00 toute l'année, hors fermetures exceptionnelles. Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications.
+Open 7 days a week from 9:30am to 8pm all year round, except exceptional closures. Verified on the official website on 21 May 2026 — subject to changes.
 
 ## Prices
 
@@ -59,7 +59,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur place (grande capacité)
+Free on site (large capacity)
 
 ## Transport
 
@@ -70,7 +70,7 @@ Gratuit sur place (grande capacité)
 
 ## Season
 
-Toute l'année (climatisé l'été, chauffé l'hiver)
+All year round (air-conditioned in summer, heated in winter)
 
 ## Official source
 

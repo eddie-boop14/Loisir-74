@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Cluses, Haute-Savoie (74300)
 - GPS: 46.0617, 6.5811
 - Category: voie-verte
-- Type: Voie verte locale famille
+- Type: Local family greenway
 
 ## Hours
 
-ACCÈS LIBRE 24h/24, 7j/7, toute l'année au Promenade du bord d'Arve Cluses-Thyez. Saison recommandée : Toute l'année. Conditions hors saison variables. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+FREE ACCESS 24/7, year-round at the Promenade du bord d'Arve Cluses-Thyez. Recommended season: year-round. Off-season conditions vary. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Free
 
 ## Parking
 
-Gratuit au départ
+Free at the starting point
 
 ## Transport
 
@@ -59,7 +59,7 @@ Gratuit au départ
 
 ## Season
 
-Toute l'année
+Year-round
 - Winter access window: Not specified
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified

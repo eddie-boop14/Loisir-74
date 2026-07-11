@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Neydens, Haute-Savoie (74160)
 - GPS: 46.1233, 6.1095
 - Category: parc
-- Type: Centre de loisirs multi-espaces · aquatique, spa, sport, jeux
+- Type: Multi-activity leisure centre · water park, spa, sport, play
 
 ## Hours
 
-Aquatique : Mer 10h–20h30 · Sam/Dim 10h–20h · Lun/Mar/Jeu/Ven hors vacances 12h–16h (bassin natation + toboggans intérieurs) puis 16h–20h30 (complet + balnéo extérieur). Espace extérieur ouvert en haute saison (ex. 23-25 mai 2026). Spa, Escalade, Plaine de jeux ont leurs propres horaires sur ucpavitam.fr/fr/infos-pratiques/horaires. Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications saisonnières.
+Water park: Wed 10am–8:30pm · Sat/Sun 10am–8pm · Mon/Tue/Thu/Fri outside holidays 12pm–4pm (swimming pool plus indoor slides) then 4pm–8:30pm (full access plus outdoor balneotherapy). Outdoor area open in high season (e.g. 23-25 May 2026). Spa, Climbing wall and Play area have their own hours at ucpavitam.fr/fr/infos-pratiques/horaires. Checked on the official website on 21 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -62,7 +62,7 @@ Aquatique : Mer 10h–20h30 · Sam/Dim 10h–20h · Lun/Mar/Jeu/Ven hors vacance
 
 ## Parking
 
-Gratuit sur place (3 000 places)
+Free on site (3,000 spaces)
 
 ## Transport
 
@@ -73,7 +73,7 @@ Gratuit sur place (3 000 places)
 
 ## Season
 
-Toute l'année · juin-septembre pour l'extérieur
+Year-round · June-September for the outdoor area
 
 ## Official source
 

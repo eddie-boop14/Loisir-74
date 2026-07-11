@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Chamonix-Mont-Blanc, Haute-Savoie (74400)
 - GPS: 45.922, 6.87
 - Category: musee
-- Type: Musée minéralogique et d'alpinisme, réseau CCVCMB
+- Type: Mineralogical and mountaineering museum, CCVCMB network
 
 ## Hours
 
-4 mai – 30 juin 2026 : Mardi à Dimanche 14h–18h, fermé Lundi. 1er juillet – 31 août 2026 : Mardi à Dimanche 10h–13h et 14h–18h, fermé Lundi. Fermé 1er janvier, 1er mai, 25 décembre. Vérifié sur le site officiel le 23 mai 2026 — sous réserve de modifications saisonnières.
+4 May – 30 June 2026: Tuesday to Sunday 2pm–6pm, closed Monday. 1 July – 31 August 2026: Tuesday to Sunday 10am–1pm and 2pm–6pm, closed Monday. Closed 1 January, 1 May, 25 December. Verified on the official website on 23 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -54,7 +54,7 @@ source: loisirs74.fr
 
 ## Parking
 
-Parking Saint-Michel (couvert, 308 places, payant) sous le musée
+Saint-Michel car park (covered, 308 spaces, paid) beneath the museum
 
 ## Transport
 
@@ -65,7 +65,7 @@ Parking Saint-Michel (couvert, 308 places, payant) sous le musée
 
 ## Season
 
-Toute l'année · juillet-août matin et après-midi
+Year-round · July-August morning and afternoon
 
 ## Official source
 

@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Saint-Gervais-les-Bains, Haute-Savoie (74170)
 - GPS: 45.8908, 6.7128
 - Category: accrobranche
-- Type: Parc accrobranche - 7 parcours, tyroliennes 400m, via ferrata
+- Type: Tree-top adventure park - 7 courses, 400m zip lines, via ferrata
 
 ## Hours
 
-Horaires du Mont-Blanc Parc Aventure : Avril-juin sam-dim 10h-18h - juillet-août tous les jours 9h-19h - septembre-octobre week-ends 10h-18h. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of Mont-Blanc Parc Aventure: April-June Sat-Sun 10h-18h - July-August every day 9h-19h - September-October weekends 10h-18h. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -59,7 +59,7 @@ Gratuit sur site
 
 ## Season
 
-Avril-octobre
+April-October
 
 ## Official source
 

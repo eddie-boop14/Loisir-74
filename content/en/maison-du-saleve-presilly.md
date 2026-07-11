@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Présilly, Haute-Savoie (74160)
 - GPS: 46.076957, 6.097679
 - Category: musee
-- Type: Centre d'interprétation du Salève, ancienne ferme XVIIIe
+- Type: Salève interpretation centre, former 18th-century farmhouse
 
 ## Hours
 
-Février-juin / septembre-décembre : Mer, Sam, Dim 14h-18h. Vacances scolaires (zone A) : Mar-Dim 14h-18h. Juillet-août : Mar-Dim 10h-18h. Fermé lundi toute l'année, 1er mai, 1er dim. de septembre, 25 déc, 1er janv. 24 et 31 déc 14h-17h. Fermeture annuelle 5 janvier – 1er février inclus. Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications saisonnières.
+February-June / September-December: Wed, Sat, Sun 2pm-6pm. School holidays (Zone A): Tue-Sun 2pm-6pm. July-August: Tue-Sun 10am-6pm. Closed Monday year-round, 1 May, first Sun. of September, 25 Dec, 1 Jan. 24 and 31 Dec 2pm-5pm. Annual closure 5 January – 1 February inclusive. Verified on the official website on 21 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -61,7 +61,7 @@ Février-juin / septembre-décembre : Mer, Sam, Dim 14h-18h. Vacances scolaires 
 
 ## Parking
 
-Gratuit, voitures et bus, à 100 m
+Free, cars and coaches, 100 m away
 
 ## Transport
 
@@ -69,7 +69,7 @@ Not specified
 
 ## Season
 
-Toute l'année sauf 5 janv - 1er fév
+All year round except 5 Jan - 1 Feb
 
 ## Official source
 

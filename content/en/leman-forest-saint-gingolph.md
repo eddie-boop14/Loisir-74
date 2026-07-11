@@ -32,15 +32,15 @@ source: loisirs74.fr
 - Commune: Saint-Gingolph, Haute-Savoie (74500)
 - GPS: 46.3833, 6.795
 - Category: parc
-- Type: Parc aventure accrobranche + laser game
+- Type: Rope adventure park + laser game
 
 ## Hours
 
-Saison Pâques – Toussaint. Avril/mai/juin/septembre/octobre : week-ends, certains mercredis et presque tous les jours pendant les vacances scolaires. Juillet/août : tous les jours 10h–19h. Horaires détaillés à confirmer sur leman-forest.com/en/schedules/. Vérifié le 21 mai 2026 — sous réserve de modifications saisonnières et météo.
+Season Easter – All Saints' Day. April/May/June/September/October: weekends, some Wednesdays and almost every day during school holidays. July/August: every day 10am–7pm. Detailed hours to be confirmed at leman-forest.com/en/schedules/. Verified on 21 May 2026 — subject to seasonal and weather changes.
 
 ## Prices
 
-Tarifs sur place ou par téléphone (non publiés en clair sur le site)
+Prices available on site or by phone (not published openly on the website)
 
 ## Access (PMR)
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Sur place
+On site
 
 ## Transport
 
@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Juin – septembre (tous les jours) · avril-mai et oct : week-ends
+June – September (every day) · April-May and October: weekends
 
 ## Official source
 

@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Annemasse, Haute-Savoie (74100)
 - GPS: 46.198558, 6.258255
 - Category: bowling
-- Type: Bowling - 12 billards + jeux + restaurant
+- Type: Bowling - 12 pool tables + games + restaurant
 
 ## Hours
 
-Horaires du Bowling de l'Aérodrome : Lun-jeu 14h-1h, ven-sam 14h-3h, dim 14h-minuit. Vacances ouverture 12h. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of Bowling de l'Aérodrome: Mon-Thu 2pm-1am, Fri-Sat 2pm-3am, Sun 2pm-midnight. Opens at noon during school holidays. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires du Bowling de l'Aérodrome : Lun-jeu 14h-1h, ven-sam 14h-3h, dim 14h-mi
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit sur site
 
 ## Season
 
-Toute l'année
+All year round
 
 ## Official source
 

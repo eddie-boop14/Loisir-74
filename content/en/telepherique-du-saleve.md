@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Été 01/04–01/11/2026 : Dim-Lun-Mar-Mer 9h00–18h45 (dernière montée 18h30) · Jeu-Ven-Sam 9h00–22h45 (nocturnes). Hiver 17/01–31/03/2026 : Mer/Ven/Sam/Dim 9h00–16h45. Fermeture quinquennale 3/11/2025–16/01/2026 (terminée). Vérifié sur le site officiel le 21 mai 2026 — sous réserve météo.
+Summer 01/04–01/11/2026: Sun-Mon-Tue-Wed 9:00am–6:45pm (last ascent 6:30pm) · Thu-Fri-Sat 9:00am–10:45pm (late nights). Winter 17/01–31/03/2026: Wed/Fri/Sat/Sun 9:00am–4:45pm. Five-yearly closure 3/11/2025–16/01/2026 (completed). Verified on the official website on 21 May 2026 — subject to weather.
 
 ## Prices
 

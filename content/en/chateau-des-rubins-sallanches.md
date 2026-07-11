@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Sallanches, Haute-Savoie (74700)
 - GPS: 45.938, 6.633
 - Category: chateau
-- Type: Maison forte XIVe + centre d'interprétation moderne
+- Type: 14th-century fortified house + modern interpretation centre
 
 ## Hours
 
-OUVERT TOUTE L'ANNÉE. Hors vacances scolaires : Mer-Dim 14h-18h, fermé lundi et mardi. Vacances scolaires et juillet-août : tous les jours 10h-18h. Dernière entrée 1h avant fermeture. FERMÉ 25 DÉCEMBRE et 1er JANVIER. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+OPEN YEAR-ROUND. Outside school holidays: Wed-Sun 2pm-6pm, closed Monday and Tuesday. School holidays and July-August: every day 10am-6pm. Last admission 1h before closing. CLOSED 25 DECEMBER and 1 JANUARY. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -53,7 +53,7 @@ OUVERT TOUTE L'ANNÉE. Hors vacances scolaires : Mer-Dim 14h-18h, fermé lundi e
 
 ## Parking
 
-Gratuit à proximité (Montée des Rubins)
+Free nearby (Montée des Rubins)
 
 ## Transport
 
@@ -64,7 +64,7 @@ Gratuit à proximité (Montée des Rubins)
 
 ## Season
 
-Toute l'année
+Year-round
 
 ## Official source
 

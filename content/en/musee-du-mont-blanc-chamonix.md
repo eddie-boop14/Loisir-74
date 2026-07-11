@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Chamonix-Mont-Blanc, Haute-Savoie (74400)
 - GPS: 45.9235, 6.87111
 - Category: musee
-- Type: Musée de la montagne, label Musée de France, ancien Chamonix Palace 1913
+- Type: Mountain museum, Musée de France label, former 1913 Chamonix Palace
 
 ## Hours
 
-RÉOUVERTURE LE 11 JUILLET 2026. Horaires quotidiens post-réouverture pas encore publiés par la CCVCMB au 23 mai 2026. Fermé pour rénovation du 20 septembre 2021 au 10 juillet 2026 inclus. Vérifié sur le site officiel le 23 mai 2026 — sous réserve de modifications saisonnières.
+REOPENS 11 JULY 2026. Daily post-reopening hours not yet published by the CCVCMB as of 23 May 2026. Closed for renovation from 20 September 2021 to 10 July 2026 inclusive. Verified on the official website 23 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -53,7 +53,7 @@ Not specified
 
 ## Parking
 
-Parking Saint-Michel (308 places, payant) ou Mont-Blanc à proximité
+Saint-Michel car park (308 spaces, paid) or Mont-Blanc car park nearby
 
 ## Transport
 
@@ -64,7 +64,7 @@ Parking Saint-Michel (308 places, payant) ou Mont-Blanc à proximité
 
 ## Season
 
-Réouverture 11 juillet 2026 · ouvert toute l'année à suivre
+Reopens 11 July 2026 · open year-round thereafter
 
 ## Official source
 

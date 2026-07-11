@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Publier, Haute-Savoie (74500)
 - GPS: 46.3897, 6.5519
 - Category: plage
-- Type: Plage 15 000 m² pelouse + grève galets - Pavillon Bleu
+- Type: Beach 15,000 m² lawn + pebble shoreline - Blue Flag
 
 ## Hours
 
-Horaires de la Plage Municipale d'Amphion : Surveillance MNS juillet-août 2026 selon arrêté municipal commune Publier. Hors saison : accès libre non surveillé.. Vérifié sur le site officiel le 24 mai 2026 — sous réserve d'arrêté municipal 2026.
+Opening hours of Plage Municipale d'Amphion: lifeguard supervision July-August 2026 per municipal decree of the commune of Publier. Off-season: free, unsupervised access.. Verified on the official website on 24 May 2026 — subject to municipal decree 2026.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires de la Plage Municipale d'Amphion : Surveillance MNS juillet-août 2026 
 
 ## Parking
 
-Selon plage - voir détails
+Depends on the beach - see details
 
 ## Transport
 
@@ -57,7 +57,7 @@ Not specified
 
 ## Season
 
-Juillet - août (surveillance MNS)
+July - August (lifeguard supervision)
 
 ## Official source
 

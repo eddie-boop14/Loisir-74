@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Chamonix-Mont-Blanc, Haute-Savoie (74400)
 - GPS: 45.927, 6.853
 - Category: telecabine
-- Type: Téléphérique panoramique
+- Type: Panoramic cable car
 
 ## Hours
 
-Hiver (13 déc 2025 – 19 avr 2026) : tous les jours 8h50–16h45/17h15 selon période. Fermeture intersaison 20 avr – 12 jun 2026. Été (13 jun – 20 sep 2026) : tous les jours 8h35–18h (juillet–août 8h20–18h). Vérifiez le calendrier précis sur site. Vérifié sur le site officiel le 9 mai 2026.
+Winter (13 Dec 2025 – 19 Apr 2026): every day 8:50am–4:45pm/5:15pm depending on the period. Off-season closure 20 Apr – 12 June 2026. Summer (13 June – 20 Sep 2026): every day 8:35am–6:00pm (July–August 8:20am–6:00pm). Check the exact schedule on the website. Verified on the official website on 9 May 2026.
 
 ## Prices
 
@@ -53,7 +53,7 @@ Hiver (13 déc 2025 – 19 avr 2026) : tous les jours 8h50–16h45/17h15 selon p
 
 ## Parking
 
-Parking Les Pélerins (payant, entrée de Chamonix)
+Les Pélerins car park (paid, Chamonix entrance)
 
 ## Transport
 
@@ -64,7 +64,7 @@ Parking Les Pélerins (payant, entrée de Chamonix)
 
 ## Season
 
-Juillet – mi-septembre (été) · Décembre – avril (ski)
+July – mid-September (summer) · December – April (skiing)
 - Winter access window: Not specified
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified

@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Monnetier-Mornex, Haute-Savoie (74560)
 - GPS: 46.164963, 6.229679
 - Category: parc
-- Type: Parcabout (filets suspendus) sans harnais
+- Type: Parcabout (suspended nets), no harness
 
 ## Hours
 
-Ouvert 365 jours par an du 1er janvier au 31 décembre sans aucune exception. Horaires été (1er avril – 31 octobre) : tous les jours 9h–18h. Horaires hiver (1er novembre – 31 mars) : tous les jours 10h–17h. Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications.
+Open 365 days a year from 1 January to 31 December with no exceptions. Summer hours (1 April – 31 October): every day 9am–6pm. Winter hours (1 November – 31 March): every day 10am–5pm. Verified on the official website on 21 May 2026 — subject to change.
 
 ## Prices
 
@@ -59,7 +59,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur place
+Free on site
 
 ## Transport
 
@@ -67,7 +67,7 @@ Not specified
 
 ## Season
 
-Toute l'année — ouvert 365 jours/an
+Year-round — open 365 days a year
 
 ## Official source
 

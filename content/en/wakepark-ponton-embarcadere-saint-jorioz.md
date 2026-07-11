@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Saint-Jorioz, Haute-Savoie (74410)
 - GPS: 45.8167, 6.175
 - Category: wakepark
-- Type: Wakeboard et ski nautique boat-towed
+- Type: Boat-towed wakeboarding and water skiing
 
 ## Hours
 
-Horaires du Ponton de l'Embarcadère Wakepark : Mai-juin + septembre : sur réservation - juillet-août : tous les jours 9h-19h sur réservation. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of the Ponton de l'Embarcadère Wakepark: May-June plus September: by reservation - July-August: every day 9am-7pm by reservation. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires du Ponton de l'Embarcadère Wakepark : Mai-juin + septembre : sur rése
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -59,7 +59,7 @@ Gratuit sur site
 
 ## Season
 
-Mai-septembre
+May-September
 
 ## Official source
 

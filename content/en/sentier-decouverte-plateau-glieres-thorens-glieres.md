@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-ACCÈS LIBRE 24h/24, 7j/7, toute l'année au Sentier de découverte du Plateau des Glières. Saison recommandée : Mai-octobre (route fermée hiver). Conditions hors saison variables. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+FREE ACCESS 24/7, all year round, on the Sentier de découverte du Plateau des Glières. Recommended season: May-October (road closed in winter). Off-season conditions vary. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 

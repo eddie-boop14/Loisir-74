@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Faverges-Seythenex, Haute-Savoie (74210)
 - GPS: 45.754238, 6.291961
 - Category: musee
-- Type: Musée archéologique de site, vicus gallo-romain Casuaria
+- Type: Archaeological site museum, Gallo-Roman vicus of Casuaria
 
 ## Hours
 
-5 janvier - 14 juin 2026 : Lundi-Vendredi 14h30-18h, fermé jours fériés. 16 juin - 7 septembre 2026 (cycle été) : Lundi-Samedi 14h30-18h30. 8 septembre - 20 décembre 2026 : Lun-Ven 14h30-18h30, fermé jours fériés. Vérifié sur le site officiel le 23 mai 2026 — sous réserve de modifications saisonnières.
+5 January - 14 June 2026: Monday-Friday 2.30pm-6pm, closed public holidays. 16 June - 7 September 2026 (summer schedule): Monday-Saturday 2.30pm-6.30pm. 8 September - 20 December 2026: Mon-Fri 2.30pm-6.30pm, closed public holidays. Verified on the official website on 23 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -57,7 +57,7 @@ source: loisirs74.fr
 
 ## Parking
 
-Stationnement libre gratuit près de l'église
+Free on-street parking near the church
 
 ## Transport
 
@@ -66,7 +66,7 @@ Stationnement libre gratuit près de l'église
 
 ## Season
 
-Toute l'année Lun-Ven, juillet-août Lun-Sam
+All year round Mon-Fri, July-August Mon-Sat
 
 ## Official source
 

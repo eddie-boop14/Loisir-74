@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Sixt-Fer-à-Cheval, Haute-Savoie (74740)
 - GPS: 46.05, 6.7833
 - Category: sentier
-- Type: Sentier de randonnée - Réserve naturelle
+- Type: Hiking trail - nature reserve
 
 ## Hours
 
-ACCÈS LIBRE 24h/24, 7j/7, toute l'année au Sentier des Cascades de Sixt. Saison recommandée : Mai-octobre. Conditions hors saison variables. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+FREE ACCESS 24/7, all year round, on the Sentier des Cascades de Sixt. Recommended season: May-October. Off-season conditions vary. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit au départ
+Free at the start
 
 ## Transport
 
@@ -58,7 +58,7 @@ Gratuit au départ
 
 ## Season
 
-Mai-octobre
+May-October
 - Winter access window: Not specified
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified

@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Annecy, Haute-Savoie (74000)
 - GPS: 45.8917, 6.1361
 - Category: base-nautique
-- Type: École de voile + aviron + paddle - SRVA + Sports Nautiques
+- Type: Sailing + rowing + paddleboarding school - SRVA + Sports Nautiques
 
 ## Hours
 
-Horaires du Base nautique des Marquisats : Cours et locations selon planning - vérifier sur site. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of Base nautique des Marquisats: Lessons and rentals according to schedule - check on site. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires du Base nautique des Marquisats : Cours et locations selon planning - v
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit sur site
 
 ## Season
 
-Mars-octobre
+March-October
 
 ## Official source
 

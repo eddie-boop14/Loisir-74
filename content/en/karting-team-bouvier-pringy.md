@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Annecy, Haute-Savoie (74370)
 - GPS: 45.9667, 6.1167
 - Category: karting
-- Type: Club karting + moto-cross associatif
+- Type: Associative karting + motocross club
 
 ## Hours
 
-Horaires du Team Bouvier 74 Pringy : Sur réservation - club associatif accès limité. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of Team Bouvier 74 Pringy: By booking - associative club with limited access. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -59,7 +59,7 @@ Gratuit sur site
 
 ## Season
 
-Toute l'année (selon météo)
+All year round (weather permitting)
 
 ## Official source
 

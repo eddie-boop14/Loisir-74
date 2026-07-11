@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Reignier-Ésery, Haute-Savoie (74930)
 - GPS: 46.129, 6.272
 - Category: chateau
-- Type: Donjon médiéval, ruine sécurisée
+- Type: Medieval keep, secured ruin
 
 ## Hours
 
-ACCÈS LIBRE 24h/24, 7j/7, toute l'année à la Tour de Bellecombe. Sentier praticable principalement mai-octobre, conditions hivernales variables (neige, verglas). Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+FREE ACCESS 24/7, all year, at the Tour de Bellecombe. The trail is passable mainly May-October, with variable winter conditions (snow, ice). Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit route de l'Éculaz
+Free on route de l'Éculaz
 
 ## Transport
 
@@ -57,7 +57,7 @@ Gratuit route de l'Éculaz
 
 ## Season
 
-Toute l'année · Mai-octobre optimal
+All year · May-October optimal
 
 ## Official source
 

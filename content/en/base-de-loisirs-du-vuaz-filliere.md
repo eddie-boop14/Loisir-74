@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Fillière, Haute-Savoie (74570)
 - GPS: 45.990619, 6.249247
 - Category: parc
-- Type: Aire de loisirs communale gratuite
+- Type: Free municipal leisure area
 
 ## Hours
 
-Accès libre toute l'année, 24h/24. Aucune fermeture saisonnière documentée. Vérifié sur les fiches officielles le 21 mai 2026.
+Open access year-round, 24/7. No documented seasonal closure. Verified on official listings 21 May 2026.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur place (Route de la Louvatière)
+Free on site (Route de la Louvatière)
 
 ## Transport
 
@@ -59,7 +59,7 @@ Gratuit sur place (Route de la Louvatière)
 
 ## Season
 
-Avril – octobre · accessible toute l'année
+April – October · accessible year-round
 
 ## Official source
 

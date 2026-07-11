@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Évian-les-Bains, Haute-Savoie (74500)
 - GPS: 46.4011, 6.5894
 - Category: croisiere
-- Type: Croisière passagers Léman - ligne N1 Lausanne-Évian
+- Type: Passenger cruises on Léman - N1 Lausanne-Évian line
 
 ## Hours
 
-Horaires du CGN escale Évian : Ligne N1 Lausanne-Ouchy → Évian toute l'année, fréquences variables selon saison - vérifier cgn.ch. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of CGN escale Évian: N1 line Lausanne-Ouchy → Évian year-round, frequencies vary by season — check cgn.ch. Checked on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires du CGN escale Évian : Ligne N1 Lausanne-Ouchy → Évian toute l'anné
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -58,7 +58,7 @@ Gratuit sur site
 
 ## Season
 
-Toute l'année
+Year-round
 
 ## Official source
 

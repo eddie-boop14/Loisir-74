@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Sevrier, Haute-Savoie (74320)
 - GPS: 45.844078, 6.150756
 - Category: musee
-- Type: Musée et fonderie de cloches en activité, entreprise familiale 1796
+- Type: Museum and working bell foundry, family business since 1796
 
 ## Hours
 
-Toute l'année : Lundi à Samedi 10h-12h30 et 14h-18h. Dimanche et jours fériés : APRÈS-MIDI UNIQUEMENT 14h-18h. Jeudi sur réservation obligatoire (places limitées). Premières 3 semaines d'août : visite musée + fonderie tous les jours 10h-12h30 et 14h-18h. Fermeture annuelle 25 décembre et 1er janvier. Dernière entrée 2 h avant fermeture. Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications saisonnières.
+Year-round: Monday to Saturday 10am-12:30pm and 2pm-6pm. Sunday and public holidays: AFTERNOON ONLY 2pm-6pm. Thursday by mandatory reservation (limited spaces). First 3 weeks of August: museum + foundry visit every day 10am-12:30pm and 2pm-6pm. Annual closure 25 December and 1 January. Last entry 2 hours before closing. Verified on the official website on 21 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -61,7 +61,7 @@ Toute l'année : Lundi à Samedi 10h-12h30 et 14h-18h. Dimanche et jours férié
 
 ## Parking
 
-Gratuit sur place
+Free on site
 
 ## Transport
 
@@ -72,7 +72,7 @@ Gratuit sur place
 
 ## Season
 
-Mars – octobre · coulée le jeudi sauf août
+March – October · casting on Thursdays except August
 
 ## Official source
 

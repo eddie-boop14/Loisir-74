@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Annecy, Haute-Savoie (74000)
 - GPS: 45.9008, 6.1294
 - Category: croisiere
-- Type: Croisière passagers - flotte 5 bateaux 100% électrique-hybride
+- Type: Passenger cruises - fleet of 5 boats, 100% electric-hybrid
 
 ## Hours
 
-Horaires du Compagnie des Bateaux du Lac d'Annecy : Croisières quotidiennes selon saison : haute saison départs toutes les heures 10h-18h ; basse saison départs réduits, vérifier programme. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of the Compagnie des Bateaux du Lac d'Annecy: daily cruises depending on the season: peak season, departures every hour 10am-6pm; off-peak season, reduced departures, check the schedule. Checked on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires du Compagnie des Bateaux du Lac d'Annecy : Croisières quotidiennes sel
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit sur site
 
 ## Season
 
-Toute l'année
+Year-round
 
 ## Official source
 

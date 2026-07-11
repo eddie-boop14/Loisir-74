@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Annecy, Haute-Savoie (74000)
 - GPS: 45.8975, 6.1322
 - Category: patinoire
-- Type: Patinoire couverte 58×28 m - séances publiques + cours
+- Type: Indoor rink 58×28 m - public sessions + lessons
 
 ## Hours
 
-Horaires du Patinoire Jean Régis : Mer + sam + dim 14h-18h. Vendredi soir 20h-23h disco. Vacances tous les jours. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of Patinoire Jean Régis: Wed + Sat + Sun 14h-18h. Friday evening 20h-23h disco. Every day during school holidays. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires du Patinoire Jean Régis : Mer + sam + dim 14h-18h. Vendredi soir 20h-2
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit sur site
 
 ## Season
 
-Toute l'année
+All year round
 
 ## Official source
 

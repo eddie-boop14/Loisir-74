@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Faverges-Seythenex, Haute-Savoie (74210)
 - GPS: 45.7457, 6.2975
 - Category: musee
-- Type: Muséum d'entomologie associatif, Château de Faverges
+- Type: Association-run entomology museum, Château de Faverges
 
 ## Hours
 
-JUSQU'AU 15 JUIN 2026 : Mercredi 14h-18h sur RDV au 07 78 41 33 51. DU 17 JUIN AU 31 AOÛT 2026 : Lun-Ven 14h-18h30, Sam 9h30-12h30, fermé Dim. Vacances scolaires : Mer 13h30-17h sur RDV. Groupes sur réservation toute l'année. Vérifié sur le site officiel le 23 mai 2026 — sous réserve de modifications saisonnières.
+UNTIL 15 JUNE 2026: Wednesday 2pm-6pm by appointment on 07 78 41 33 51. FROM 17 JUNE TO 31 AUGUST 2026: Mon-Fri 2pm-6:30pm, Sat 9:30am-12:30pm, closed Sun. School holidays: Wed 1:30pm-5pm by appointment. Groups by reservation year-round. Verified on the official website 23 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -56,7 +56,7 @@ JUSQU'AU 15 JUIN 2026 : Mercredi 14h-18h sur RDV au 07 78 41 33 51. DU 17 JUIN A
 
 ## Parking
 
-Gratuit à l'extérieur du château, autocars acceptés
+Free outside the château, coaches welcome
 
 ## Transport
 
@@ -66,7 +66,7 @@ Gratuit à l'extérieur du château, autocars acceptés
 
 ## Season
 
-17 juin - 31 août Lun-Sam · Hors saison sur RDV
+17 June - 31 August Mon-Sat · outside season by appointment
 
 ## Official source
 

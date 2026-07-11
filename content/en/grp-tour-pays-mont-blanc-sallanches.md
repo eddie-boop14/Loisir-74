@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Sallanches, Haute-Savoie (74700)
 - GPS: 45.9389, 6.6306
 - Category: sentier
-- Type: GR® de Pays (GRP) pédestre - boucle
+- Type: GR® de Pays (GRP) walking trail - loop
 
 ## Hours
 
-ACCÈS LIBRE 24h/24, 7j/7, toute l'année au GR® de Pays Tour du Pays du Mont-Blanc. Saison recommandée : Mi-juin à mi-septembre. Conditions hors saison variables. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+OPEN ACCESS 24/7, all year round, on the GR® de Pays Tour du Pays du Mont-Blanc. Recommended season: Mid-June to mid-September. Conditions outside this season vary. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit au départ
+Free at the trailhead
 
 ## Transport
 
@@ -59,7 +59,7 @@ Gratuit au départ
 
 ## Season
 
-Mi-juin à mi-septembre
+Mid-June to mid-September
 - Winter access window: Not specified
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified

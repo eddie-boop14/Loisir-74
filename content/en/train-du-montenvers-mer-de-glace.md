@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-23/05–03/07/2026 tous les jours 8h30–17h00 (télécabine fermée jusqu'au 29/05, grotte fermée jusqu'au 5/06) · 04/07–30/08 tous les jours 8h00–17h30 · 31/08–13/09 8h30–17h00 · 14/09–01/11 8h30–16h30 (télécabine fermée 28/09–16/10, grotte fermée 28/09–01/11). Hiver 22/11/2025–13/03/2026 tous les jours 10h00–16h30. Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications saisonnières.
+23/05–03/07/2026 daily 8:30am–5:00pm (cable car closed until 29/05, cave closed until 5/06) · 04/07–30/08 daily 8:00am–5:30pm · 31/08–13/09 8:30am–5:00pm · 14/09–01/11 8:30am–4:30pm (cable car closed 28/09–16/10, cave closed 28/09–01/11). Winter 22/11/2025–13/03/2026 daily 10:00am–4:30pm. Checked on the official website on 21 May 2026 — subject to seasonal changes.
 
 ## Prices
 

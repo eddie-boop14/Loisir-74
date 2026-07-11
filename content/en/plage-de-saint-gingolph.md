@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Saint-Gingolph, Haute-Savoie (74500)
 - GPS: 46.3917, 6.8025
 - Category: plage
-- Type: Plage municipale - frontière franco-suisse
+- Type: Municipal beach - Franco-Swiss border
 
 ## Hours
 
-Horaires de la Plage Municipale de Saint-Gingolph : Surveillance MNS juillet-août 2026 selon arrêté municipal commune Saint-Gingolph. Hors saison : accès libre non surveillé.. Vérifié sur le site officiel le 24 mai 2026 — sous réserve d'arrêté municipal 2026.
+Hours of the Plage Municipale de Saint-Gingolph: lifeguard supervision July-August 2026 per the municipal order of the commune of Saint-Gingolph. Off-season: free unsupervised access. Verified on the official website on 24 May 2026 — subject to the 2026 municipal order.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Selon plage - voir détails
+Depends on the beach - see details
 
 ## Transport
 
@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Juillet - août (surveillance MNS)
+July - August (lifeguard supervision)
 
 ## Official source
 

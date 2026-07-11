@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Évian-les-Bains, Haute-Savoie (74500)
 - GPS: 46.4022, 6.5867
 - Category: casino
-- Type: Casino jeux historique - Belle Époque
+- Type: Historic casino - Belle Époque
 
 ## Hours
 
-Horaires du Casino Évian Resort : Salle des machines à sous : 10h-3h. Salle des jeux de table : 20h30-3h. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of Casino Évian Resort: Slot machine room: 10am-3am. Table games room: 8:30pm-3am. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -57,7 +57,7 @@ Gratuit sur site
 
 ## Season
 
-Toute l'année
+All year round
 
 ## Official source
 

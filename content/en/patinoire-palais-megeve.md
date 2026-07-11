@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Megève, Haute-Savoie (74120)
 - GPS: 45.8567, 6.6189
 - Category: patinoire
-- Type: Patinoire olympique + équipement complexe Le Palais
+- Type: Olympic rink + Le Palais complex facility
 
 ## Hours
 
-Horaires du Patinoire du Palais Megève : Vacances scolaires hiver : tous les jours 14h-18h + 20h-22h. Hors vacances : week-ends. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of Patinoire du Palais Megève: Winter school holidays: every day 14h-18h + 20h-22h. Outside holidays: weekends. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires du Patinoire du Palais Megève : Vacances scolaires hiver : tous les jo
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit sur site
 
 ## Season
 
-Décembre-mars principalement (saison hiver)
+Mainly December-March (winter season)
 
 ## Official source
 

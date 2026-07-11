@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Saison 2026 publiée par l'exploitant : 4 juillet – 27 septembre 2026. 04/07–23/08 premier retour 7h00, dernier retour 15h45, dernier aller simple 16h30 (service continu). 24/08–06/09 et 07/09–27/09 horaires ajustés. ACTUELLEMENT FERMÉ jusqu'au 4 juillet 2026. Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications saisonnières et météo.
+2026 season published by the operator: 4 July – 27 September 2026. 04/07–23/08 first return 7:00am, last return 3:45pm, last one-way ride 4:30pm (continuous service). 24/08–06/09 and 07/09–27/09 adjusted hours. CURRENTLY CLOSED until 4 July 2026. Verified on the official website on 21 May 2026 — subject to seasonal and weather changes.
 
 ## Prices
 

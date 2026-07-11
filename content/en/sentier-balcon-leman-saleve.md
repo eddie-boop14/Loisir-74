@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Cruseilles, Haute-Savoie (74350)
 - GPS: 46.032107, 6.117224
 - Category: sentier
-- Type: Sentier de crête balisé GR
+- Type: Waymarked GR ridge trail
 
 ## Hours
 
-ACCÈS LIBRE 24h/24, 7j/7, toute l'année au Sentier du Balcon du Léman. Saison recommandée : Avril-novembre. Conditions hors saison variables. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+FREE ACCESS 24/7, all year round, on the Sentier du Balcon du Léman. Recommended season: April-November. Off-season conditions vary. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit au départ
+Free at the start
 
 ## Transport
 
@@ -58,7 +58,7 @@ Gratuit au départ
 
 ## Season
 
-Avril-novembre
+April-November
 - Winter access window: Not specified
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified
