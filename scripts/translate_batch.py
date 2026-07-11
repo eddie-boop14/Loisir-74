@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """translate_batch.py — HANDOFF-25: the 21M-char prose job at ~1/20th the cost.
 
-Translates every fiche's EN prose into the facts-first languages
+Translates every fiche's FR prose (the authored source of truth) into the facts-first languages
 (pl/pt/cs/ja/ar/he) through the Anthropic Message Batches API — 50% off
 input AND output vs interactive, ~2,382 requests total, machine-validated
 on arrival, written back into Json/<slug>.json under i18n.<lang>.
@@ -33,7 +33,7 @@ RESUMABLE + IDEMPOTENT:
     stay ABSENT (null discipline — never a bad write).
 
 EVERY result is validated before write-back (the standard-keeper):
-  1. JSON parses + KEY PARITY with the EN source (no missing, no invented);
+  1. JSON parses + KEY PARITY with the FR source (no missing, no invented);
   2. FROZEN NOUNS verbatim (core glossary + every commune + the fiche's
      frozen FR name — any term present in the source must survive untouched);
   3. HTML STRUCTURE parity (same tag multiset as source; no &lt;escaped&gt;
@@ -116,12 +116,14 @@ def make_custom_id(lang, i, slug):
 
 # --------------------------------------------------------------------- source
 def extract_source(fiche):
-    """The EN prose payload for one fiche — only fields present in source
-    travel; fields absent stay absent (the model is told never to invent)."""
-    en = (fiche.get("i18n") or {}).get("en") or {}
+    """The FR prose payload for one fiche — FR is the authored source of truth
+    (HANDOFF amendment: was i18n.en, a derivative; EN is now a target like any
+    other langue). Only fields present in source travel; fields absent stay
+    absent (the model is told never to invent)."""
+    fr = (fiche.get("i18n") or {}).get("fr") or {}
     src = {}
     for f in PROSE_FIELDS:
-        v = en.get(f)
+        v = fr.get(f)
         if v in (None, "", [], {}):
             continue
         if f == "hero":
@@ -135,9 +137,9 @@ def extract_source(fiche):
         else:
             src[f] = v
     # HANDOFF-35 Job A: acces_pmr.detail is FR-authored CONTENT (not a frozen
-    # name) — the renderer suppresses it off-fr until a translation exists, so
-    # it travels in the payload (source text is FR, the one non-EN field) and
-    # lands as i18n.<lang>.acces_pmr_detail.
+    # name) at fiche["acces_pmr"]["detail"], outside the i18n block — the
+    # renderer suppresses it off-fr until a translation exists, so it travels in
+    # the payload and lands as i18n.<lang>.acces_pmr_detail.
     det = (fiche.get("acces_pmr") or {}).get("detail")
     if isinstance(det, str) and det.strip():
         src["acces_pmr_detail"] = det.strip()
@@ -172,7 +174,7 @@ def system_prompt(lang, communes):
            "proper names and all numbers exactly as-is — the renderer handles "
            "bidi isolation; do not add RLM/LRM marks.") if lang in RTL_LANGS else ""
     return (
-        f"You translate tourism prose for loisirs74.fr from English to "
+        f"You translate tourism prose for loisirs74.fr from French to "
         f"{LANG_NAMES[lang]}.\n"
         "You receive a JSON object; return ONLY the same JSON object with every "
         "string value translated. Rules:\n"
@@ -534,7 +536,7 @@ def pairs_for_lang(lang, force=False):
         fiche["_path"] = p
         src = extract_source(fiche)
         if not src:
-            continue                     # no EN prose to translate
+            continue                     # no FR prose to translate
         blk = (fiche.get("i18n") or {}).get(lang) or {}
         if force:
             pairs.append((fiche, src))
@@ -806,7 +808,7 @@ def recover_language(lang, client):
 
 # --------------------------------------------------------------------- audit
 def all_source_pairs():
-    """{slug: (fiche, src)} for EVERY fiche with EN prose — the full corpus,
+    """{slug: (fiche, src)} for EVERY fiche with FR prose — the full corpus,
     independent of what's already translated (the audit must reconstruct the
     contract-time request set, and user_prompt() is language-independent)."""
     out = {}
