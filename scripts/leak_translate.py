@@ -28,20 +28,46 @@ import translate_batch as TB  # noqa: E402  (reuse validators + frozen-noun logi
 
 JSON_DIR = os.path.join(ROOT, "Json")
 BASELINE = os.path.join(ROOT, "reports", "i18n-leak-baseline.json")
+PROT_MANIFEST = os.path.join(ROOT, "reports", "protected-placements.md")
+
+
+def protected_pages():
+    """Set of built page paths carrying a partner domain (gate ground truth).
+    A fiche whose <lang>/<slug>.html is here is byte-frozen — the leak job must
+    NOT translate it (that would drift a protected page). Excluded + flagged for
+    Eddie's separately-approved partner-page commit, mirroring the lastmod/share
+    handoff decision."""
+    pages = set()
+    try:
+        for line in open(PROT_MANIFEST, encoding="utf-8").read().splitlines():
+            if line.startswith("| ") and ".html |" in line:
+                c = line.split("|")[1].strip()
+                if c and c != "page":
+                    pages.add(c)
+    except Exception:
+        pass
+    return pages
+
+
+def _is_protected(slug, lang, prot):
+    return (f"{lang}/{slug}.html" in prot) or (lang == "fr" and f"{slug}.html" in prot)
 
 # facts sub-keys that are controlled tokens / frozen data, NOT prose — never
 # translated (the winter gate enforces their vocab; commune is a frozen name).
 FACTS_FROZEN_KEYS = {"winter_access", "winter_infra", "snow_view", "col_chains",
                      "commune"}
-DIGIT_RUN = re.compile(r"\d[\d\s.,]*\d|\d")
 
 
-def digit_groups(text):
-    """Multiset of digit sequences with thousands separators (space/dot/comma)
-    stripped — so '1 477' and '1.477' compare equal, but a dropped/added number
-    is caught."""
+def digit_runs(text):
+    """Multiset of maximal digit runs. Deliberately does NOT collapse thousands
+    separators — '1 477' reads as {1,477} in both FR and its DE rendering, so it
+    matches, while avoiding the over-merge of two adjacent numbers ('2026 2026').
+    The apply check requires every SOURCE run to survive (drops/changes fail);
+    EXTRA output digits are allowed — Roman→Arabic century conversion (XIIIe →
+    '13. Jahrhundert') is a correct translation, not a fabricated number. Added
+    prices are still caught by the separate € count check."""
     from collections import Counter
-    return Counter(re.sub(r"[\s.,]", "", g) for g in DIGIT_RUN.findall(text))
+    return Counter(re.findall(r"\d+", text))
 
 
 def winter_tokens(fiche):
@@ -86,8 +112,12 @@ def cmd_extract(lang, limit=None, slugs=None):
     work = load_baseline_lang(lang)
     if slugs:
         work = {s: work[s] for s in slugs if s in work}
+    prot = protected_pages()
+    excluded = [s for s in sorted(work) if _is_protected(s, lang, prot)]
     items = []
     for slug in sorted(work):
+        if _is_protected(slug, lang, prot):
+            continue  # partner-carrying page stays byte-frozen (flagged, not translated)
         fiche = load_fiche(slug)
         fields = work[slug]
         payload = work_for(fiche, fields)
@@ -109,6 +139,9 @@ def cmd_extract(lang, limit=None, slugs=None):
     nfields = sum(len(i["fields"]) for i in items)
     print(f"[leak-tr] {lang}: {len(items)} fiches · {nfields} fields → "
           f"{os.path.relpath(outp, ROOT)} (source = i18n.fr, verbatim)")
+    if excluded:
+        print(f"[leak-tr] {lang}: EXCLUDED {len(excluded)} partner-carrying fiches "
+              f"(byte-frozen, flag for Eddie): {', '.join(excluded)}")
 
 
 def validate_item(fiche, src_fields, out_fields, frozen, wtokens):
@@ -123,8 +156,20 @@ def validate_item(fiche, src_fields, out_fields, frozen, wtokens):
     # digit/€ parity across the whole payload
     src_all = "\n".join(TB.strings_of(src_fields))
     out_all = "\n".join(TB.strings_of({f: out_fields.get(f) for f in src_fields}))
-    if digit_groups(src_all) != digit_groups(out_all):
-        viol.append("digit parity: a number was dropped/added/changed")
+    # Hard facts (years, altitudes, distances, postal codes, phone fragments =
+    # runs of ≥3 digits) must survive verbatim; 1–2 digit time/availability
+    # numbers may be idiomatically reformatted ('1h30'→'1,5 Std', '24h/24,7j/7'→
+    # 'rund um die Uhr, 7 Tage'). Prices are guarded separately at ANY length.
+    from collections import Counter
+    hard_missing = Counter({n: c for n, c in (digit_runs(src_all) - digit_runs(out_all)).items()
+                            if len(n) >= 3})
+    if hard_missing:
+        viol.append(f"hard number dropped/changed: {dict(list(hard_missing.items())[:6])}")
+    price_nums = lambda t: Counter(m for pair in re.findall(r"(\d+)\s*€|€\s*(\d+)", t)
+                                   for m in pair if m)
+    pm = price_nums(src_all) - price_nums(out_all)
+    if pm:
+        viol.append(f"price number dropped/changed: {dict(pm)}")
     if src_all.count("€") != out_all.count("€"):
         viol.append("€ count changed")
     # winter tokens must survive verbatim if they were in a translated string
@@ -142,10 +187,13 @@ def cmd_apply(lang):
     work = {i["slug"]: i for i in json.load(open(workp, encoding="utf-8"))["items"]}
     outs = json.load(open(outp, encoding="utf-8"))
     outs = outs.get("items", outs) if isinstance(outs, dict) else outs
-    applied = failed = 0
+    prot = protected_pages()
+    applied = failed = skipped = 0
     fail_log = []
     for slug, out_fields in (outs.items() if isinstance(outs, dict) else
                              ((o["slug"], o["fields"]) for o in outs)):
+        if _is_protected(slug, lang, prot):
+            skipped += 1; continue  # partner-carrying page stays byte-frozen
         if slug not in work:
             fail_log.append((slug, ["not in work-list"])); failed += 1; continue
         w = work[slug]
@@ -170,7 +218,8 @@ def cmd_apply(lang):
             json.dump(fiche, fh, ensure_ascii=False, indent=2)
             fh.write("\n")
         applied += 1
-    print(f"[leak-tr] {lang}: applied {applied} fiches, {failed} failed validation")
+    print(f"[leak-tr] {lang}: applied {applied} fiches, {failed} failed validation, "
+          f"{skipped} skipped (protected/byte-frozen)")
     for slug, viol in fail_log[:30]:
         print(f"    ✗ {slug}: {viol[0]}")
 
