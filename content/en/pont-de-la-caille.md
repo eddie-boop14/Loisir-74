@@ -18,7 +18,7 @@ language: en
 facet_json: https://loisirs74.fr/api/lieu/pont-de-la-caille.json
 photo_url: /img/points-de-vue/pont-de-la-caille-hero.jpg
 photo_type: real
-photo_author: null
+photo_author: "Bénédicte"
 photo_license: null
 photo_source: null
 last_updated: 2026-04-23

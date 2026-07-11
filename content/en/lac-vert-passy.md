@@ -18,9 +18,9 @@ language: en
 facet_json: https://loisirs74.fr/api/lieu/lac-vert-passy.json
 photo_url: /img/lacs-plages/lac-vert-passy-hero.jpg
 photo_type: real
-photo_author: "Mangatome"
-photo_license: "CC BY-SA 3.0"
-photo_source: Wikimedia Commons
+photo_author: "Bénédicte"
+photo_license: null
+photo_source: null
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---

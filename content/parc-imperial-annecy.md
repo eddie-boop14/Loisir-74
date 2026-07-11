@@ -18,7 +18,7 @@ language: fr
 facet_json: https://loisirs74.fr/api/lieu/parc-imperial-annecy.json
 photo_url: /img/bases-de-loisirs/parc-imperial-annecy-hero.jpg
 photo_type: real
-photo_author: "Photo: Vivek Doshi on Unsplash"
+photo_author: "Vivek Doshi on Unsplash"
 photo_license: null
 photo_source: null
 last_updated: 2026-06-10
