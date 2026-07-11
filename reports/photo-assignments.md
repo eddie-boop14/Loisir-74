@@ -14,13 +14,13 @@
 | `lacs-plages` | 31 | 26 | 3 |
 | `musees` | 49 | 23 | 9 |
 | `parcs-jardins` | 31 | 17 | 11 |
-| `points-de-vue` | 30 | 25 | 5 |
+| `points-de-vue` | 30 | 27 | 3 |
 | `que-faire` | 73 | 42 | 4 |
 | `sensations-plein-air` | 71 | 54 | 4 |
-| `sentiers` | 40 | 7 | 14 |
+| `sentiers` | 40 | 8 | 14 |
 | `sorties-detente` | 25 | 13 | 3 |
 | `sport-jeux` | 52 | 33 | 4 |
-| `telecabines` | 12 | 6 | 5 |
+| `telecabines` | 12 | 8 | 5 |
 | `voies-vertes` | 5 | 5 | 1 |
 
 ## Per-fiche assignments
@@ -171,7 +171,7 @@
 | `cascades` | `cascade-de-nyon` | `aquatique` | `Cascade_de_Nyon_%2812%29.jpg` | — | json hero (url) |
 | `cascades` | `cascade-des-brochaux` | `aquatique` | `Cascade_des_Brochaux.jpg` | — | json hero (url) |
 | `cascades` | `cascade-des-fours` | `aquatique` | `Cascade_des_Fours_%40_Lanch%C3%A9ron.jpg` | — | json hero (url) |
-| `cascades` | `cascade-du-chinaillon` | `aquatique` | `Le_Chinaillon_%40_Pont_des_Romains_%40_Le_Grand-Bornand_%2851027594708%29.jpg` | — | json hero (url) |
+| `cascades` | `cascade-du-chinaillon` | `aquatique` | `cascade-du-chinaillon-hero.jpg` | — | json hero (local) |
 | `cascades` | `cascade-du-dard` | `aquatique` | `Cascade_du_Dard_01.jpg` | — | json hero (url) |
 | `cascades` | `cascade-du-rouget` | `aquatique` | `cascade-du-rouget-hero.jpg` | — | json hero (local) |
 | `cascades` | `cirque-du-fer-a-cheval` | `aquatique` | `cirque-du-fer-a-cheval-hero.jpg` | — | json hero (local) |
@@ -207,7 +207,7 @@
 | `chateaux` | `tour-bellecombe-reignier` | `patrimoine` | `generique-chateau-brume.jpg` | — | json hero (local) |
 | `chateaux` | `tour-des-langues-thonon` | `patrimoine` | `tour-des-langues-thonon-hero.jpg` | — | json hero (local) |
 | `lacs-plages` | `lac-benit` | `aquatique` | `lac-benit-hero.jpg` | — | json hero (local) |
-| `lacs-plages` | `lac-blanc` | `aquatique` | `Lac_Blanc.JPG` | — | json hero (url) |
+| `lacs-plages` | `lac-blanc` | `aquatique` | `lac-blanc-hero.jpg` | — | json hero (local) |
 | `lacs-plages` | `lac-cornu` | `aquatique` | `Lac_Cornu_%40_Hike_to_Lacs_des_Ch%C3%A9serys%2C_Lac_Blanc%2C_Lac_Cornu_%26_Lacs_Noirs_%40_Chamonix_%2815174603960%29.jpg` | — | json hero (url) |
 | `lacs-plages` | `lac-de-passy` | `aquatique` | `Lac_vert_de_passy_%281%29.JPG` | — | json hero (url) |
 | `lacs-plages` | `lac-de-vallon` | `aquatique` | `lac-de-vallon-hero.jpg` | — | json hero (local) |
@@ -341,8 +341,8 @@
 | `points-de-vue` | `reserve-naturelle-delta-de-la-dranse` | `nature` | `reserve-naturelle-delta-de-la-dranse-hero.jpg` | — | json hero (local) |
 | `points-de-vue` | `sentier-des-roselieres` | `nature` | `sentier-des-roselieres-hero.jpg` | — | json hero (local) |
 | `points-de-vue` | `telecabine-panoramic-mont-blanc` | `nature` | `generique-point-de-vue.jpg` | — | json hero (local) |
-| `points-de-vue` | `telepherique-aiguille-du-midi` | `nature` | `generique-point-de-vue.jpg` | — | json hero (local) |
-| `points-de-vue` | `telepherique-du-saleve` | `nature` | `generique-point-de-vue.jpg` | — | json hero (local) |
+| `points-de-vue` | `telepherique-aiguille-du-midi` | `nature` | `telepherique-aiguille-du-midi-hero.jpg` | — | json hero (local) |
+| `points-de-vue` | `telepherique-du-saleve` | `nature` | `telepherique-du-saleve-hero.jpg` | — | json hero (local) |
 | `points-de-vue` | `tete-du-parmelan` | `nature` | `tete-du-parmelan-hero.jpg` | — | json hero (local) |
 | `points-de-vue` | `thiou-a-annecy-annecy` | `nature` | `generique-point-de-vue.jpg` | — | json hero (local) |
 | `points-de-vue` | `train-du-montenvers-mer-de-glace` | `nature` | `train-du-montenvers-mer-de-glace-hero.jpg` | — | json hero (local) |
@@ -516,7 +516,7 @@
 | `sentiers` | `sentier-des-roselieres` | `nature` | `sentier-des-roselieres-hero.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-desert-de-plate-passy` | `nature` | `generique-sentier-sommet-panorama.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-du-baroque-combloux` | `sentier` | `generique-sentier-foret-alpine.jpg` | — | json hero (local) |
-| `sentiers` | `sentier-espagnols-pas-du-roc-glieres` | `nature` | `generique-sentier-foret-alpine.jpg` | — | json hero (local) |
+| `sentiers` | `sentier-espagnols-pas-du-roc-glieres` | `nature` | `sentier-espagnols-pas-du-roc-glieres-hero.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-geologique-pointe-percee-grand-bornand` | `nature` | `generique-sentier-hiver-neige.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-maison-saleve-pomier-presilly` | `nature` | `generique-sentier-sommet-panorama.jpg` | — | json hero (local) |
 | `sentiers` | `sentier-morclan-chatel` | `nature` | `generique-sentier-sommet-panorama.jpg` | — | json hero (local) |
@@ -614,10 +614,10 @@
 | `telecabines` | `telecabine-panoramic-mont-blanc` | `nature` | `generique-point-de-vue.jpg` | — | json hero (local) |
 | `telecabines` | `telecabine-pleney-morzine` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
 | `telecabines` | `telecabine-super-chatel` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
-| `telecabines` | `telepherique-aiguille-du-midi` | `nature` | `generique-point-de-vue.jpg` | — | json hero (local) |
+| `telecabines` | `telepherique-aiguille-du-midi` | `nature` | `telepherique-aiguille-du-midi-hero.jpg` | — | json hero (local) |
 | `telecabines` | `telepherique-des-grands-montets` | `nature` | `Hike_to_Glacier_d%27Argenti%C3%A8re_-_panoramio_%2861%29.jpg` | — | json hero (url) |
 | `telecabines` | `telepherique-du-brevent` | `nature` | `Brevent_cable_car.jpg` | — | json hero (url) |
-| `telecabines` | `telepherique-du-saleve` | `nature` | `generique-point-de-vue.jpg` | — | json hero (local) |
+| `telecabines` | `telepherique-du-saleve` | `nature` | `telepherique-du-saleve-hero.jpg` | — | json hero (local) |
 | `telecabines` | `train-du-montenvers-mer-de-glace` | `nature` | `train-du-montenvers-mer-de-glace-hero.jpg` | — | json hero (local) |
 | `telecabines` | `tramway-du-mont-blanc` | `nature` | `Tramway_Mont-Blanc.jpg` | — | json hero (url) |
 | `voies-vertes` | `veloroute-vallee-arve-cluses-sallanches` | `nature` | `generique-voie-verte-cyclistes-riviere.jpg` | — | json hero (local) |

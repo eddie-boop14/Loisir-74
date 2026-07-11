@@ -233,8 +233,14 @@ def photo_fields(d):
         return ("generic" if is_generic else "real"), None, None, None
     parts = [p.strip() for p in credit.split("·") if p.strip()]
     author = parts[0] if parts else None
+    if author:
+        # visitor credits read "Photo : <Name>" — the label isn't the author
+        author = re.sub(r"^photo\s*:\s*", "", author, flags=re.I) or None
     source = parts[-1] if len(parts) >= 2 else None
     license_ = parts[1] if len(parts) >= 3 else None
+    # a trailing courtesy segment ("merci ! 🦆") is not a source
+    if source and not re.search(r"(wikimedia|commons|flickr|cc|©|http)", source, re.I):
+        source = None
     return "real", author, license_, source
 
 

@@ -16,11 +16,11 @@ google_place_id: "ChIJ4xK5PNr2i0cRRtm7GJYEEGA"
 canonical_url: https://loisirs74.fr/cascade-du-chinaillon
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/cascade-du-chinaillon.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/4/4f/Le_Chinaillon_%40_Pont_des_Romains_%40_Le_Grand-Bornand_%2851027594708%29.jpg
+photo_url: /img/cascades/cascade-du-chinaillon-hero.jpg
 photo_type: real
-photo_author: "Cascade du Rouget"
-photo_license: "Wikimedia Commons"
-photo_source: CC BY-SA
+photo_author: "Bénédicte"
+photo_license: null
+photo_source: null
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---

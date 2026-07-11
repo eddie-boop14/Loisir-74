@@ -16,9 +16,9 @@ google_place_id: "ChIJpVr_aQOLi0cRYUdem0mPwiY"
 canonical_url: https://loisirs74.fr/sentier-espagnols-pas-du-roc-glieres
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/sentier-espagnols-pas-du-roc-glieres.json
-photo_url: /img/generique/generique-sentier-foret-alpine.jpg
-photo_type: generic
-photo_author: null
+photo_url: /img/sentiers/sentier-espagnols-pas-du-roc-glieres-hero.jpg
+photo_type: real
+photo_author: "Bénédicte"
 photo_license: null
 photo_source: null
 last_updated: 2026-05-24

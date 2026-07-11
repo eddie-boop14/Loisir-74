@@ -86,6 +86,7 @@ DENY = {
     "report.csv", "email_queue.csv",
     "translations",                  # JOB 7 translation payloads (intermediate)
     "incoming-generics",             # staging folder for user-sourced générique pics
+    "incoming-benedicte",            # Bénédicte originals + sources/ — never public
     # JOB 11: Studio is dev-only. Lives in repo, never deployed.
     "studio.html",
     "studio-consts.js",
