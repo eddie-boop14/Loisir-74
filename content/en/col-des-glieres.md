@@ -60,7 +60,7 @@ May–October (summer) · December–March (cross-country skiing)
 - Winter access window: Not specified
 - Winter infrastructure: Snowshoeing · Nordic skiing · Cross-country skiing
 - Snow panorama: Not specified
-- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar) · chains advised for col access
 
 ## Official source
 

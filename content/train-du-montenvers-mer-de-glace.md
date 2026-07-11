@@ -74,7 +74,7 @@ Payant (Mont-Blanc/Planards) ou gratuit (Biolay)
 Juin – septembre (visites complètes) · décembre – mars (ambiance hivernale)
 - Fenêtre d'accès hiver: Non renseigné
 - Infrastructure hiver: Non renseigné
-- Panorama enneigé: Non renseigné
+- Panorama enneigé: Panorama alpin
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle

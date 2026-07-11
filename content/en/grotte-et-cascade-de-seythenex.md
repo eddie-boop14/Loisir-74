@@ -62,7 +62,7 @@ Not specified
 ## Season
 
 April – September
-- Winter access window: Not specified
+- Winter access window: Closed (road shut in winter)
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified
 - Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)

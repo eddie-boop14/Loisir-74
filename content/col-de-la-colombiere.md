@@ -57,10 +57,10 @@ Non renseigné
 ## Saison
 
 Juin à septembre
-- Fenêtre d'accès hiver: Non renseigné
+- Fenêtre d'accès hiver: Fermé (route fermée l'hiver)
 - Infrastructure hiver: Non renseigné
-- Panorama enneigé: Non renseigné
-- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+- Panorama enneigé: Panorama alpin
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars) · chaînes conseillées pour l'accès au col
 
 ## Source officielle
 

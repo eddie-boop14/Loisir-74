@@ -63,7 +63,7 @@ Gratuit à Plaine-Joux (parking station)
 Toute l'année · Thermiques l'après-midi
 - Fenêtre d'accès hiver: Non renseigné
 - Infrastructure hiver: Non renseigné
-- Panorama enneigé: Non renseigné
+- Panorama enneigé: Vue Mont-Blanc dégagée
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle

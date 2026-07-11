@@ -57,10 +57,10 @@ Not specified
 ## Season
 
 June to September
-- Winter access window: Not specified
+- Winter access window: Closed (road shut in winter)
 - Winter infrastructure: Not specified
-- Snow panorama: Not specified
-- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+- Snow panorama: Alpine panorama
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar) · chains advised for col access
 
 ## Official source
 

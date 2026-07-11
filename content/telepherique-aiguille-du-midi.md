@@ -73,7 +73,7 @@ Payant (Grépon, Aiguille du Midi)
 Juin – septembre (été) · décembre – mars (ski)
 - Fenêtre d'accès hiver: Non renseigné
 - Infrastructure hiver: Non renseigné
-- Panorama enneigé: Non renseigné
+- Panorama enneigé: Vue Mont-Blanc dégagée
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle

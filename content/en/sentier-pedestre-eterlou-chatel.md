@@ -58,7 +58,7 @@ Not specified
 
 1 May - 31 October
 - Winter access window: Not specified
-- Winter infrastructure: Sledging
+- Winter infrastructure: Not specified
 - Snow panorama: Not specified
 - Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 

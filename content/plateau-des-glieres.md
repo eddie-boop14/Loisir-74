@@ -59,8 +59,8 @@ Non renseigné
 Toute l'année · Ski de fond décembre – mars · Randonnée juin – septembre
 - Fenêtre d'accès hiver: Non renseigné
 - Infrastructure hiver: Raquettes · Ski nordique · Ski de fond · Chiens de traîneau · Luge
-- Panorama enneigé: Non renseigné
-- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+- Panorama enneigé: Panorama alpin
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars) · chaînes conseillées pour l'accès au col
 
 ## Source officielle
 

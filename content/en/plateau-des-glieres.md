@@ -59,8 +59,8 @@ Not specified
 Year-round · Cross-country skiing December – March · Hiking June – September
 - Winter access window: Not specified
 - Winter infrastructure: Snowshoeing · Nordic skiing · Cross-country skiing · Dog sledding · Sledging
-- Snow panorama: Not specified
-- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+- Snow panorama: Alpine panorama
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar) · chains advised for col access
 
 ## Official source
 

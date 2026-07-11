@@ -60,7 +60,7 @@ Parking Grands-Montets (chemin de la Glacière, Argentière)
 ## Saison
 
 Décembre – début mai (ski) · Fermé été 2026
-- Fenêtre d'accès hiver: Non renseigné
+- Fenêtre d'accès hiver: Fermé (route fermée l'hiver)
 - Infrastructure hiver: Ski de rando
 - Panorama enneigé: Non renseigné
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)

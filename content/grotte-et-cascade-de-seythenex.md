@@ -63,7 +63,7 @@ Non renseigné
 ## Saison
 
 Avril – septembre
-- Fenêtre d'accès hiver: Non renseigné
+- Fenêtre d'accès hiver: Fermé (route fermée l'hiver)
 - Infrastructure hiver: Non renseigné
 - Panorama enneigé: Non renseigné
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)

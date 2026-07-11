@@ -61,7 +61,7 @@ Centre village La Clusaz / parking de la Patinoire
 
 Été 2026 (saison remontées)
 - Fenêtre d'accès hiver: Non renseigné
-- Infrastructure hiver: Luge
+- Infrastructure hiver: Non renseigné
 - Panorama enneigé: Non renseigné
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 

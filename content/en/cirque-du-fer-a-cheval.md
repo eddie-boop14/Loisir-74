@@ -59,7 +59,7 @@ Paid (approx. €7 — at the road's end)
 ## Season
 
 May–June (waterfalls) · June–September (hiking)
-- Winter access window: Not specified
+- Winter access window: Partial access
 - Winter infrastructure: Snowshoeing · Nordic skiing
 - Snow panorama: Not specified
 - Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)

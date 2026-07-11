@@ -62,8 +62,8 @@ Non renseigné
 Hiver (ski) et été (rando, vélo)
 - Fenêtre d'accès hiver: Non renseigné
 - Infrastructure hiver: Ski de fond
-- Panorama enneigé: Non renseigné
-- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+- Panorama enneigé: Vue Mont-Blanc dégagée
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars) · chaînes conseillées pour l'accès au col
 
 ## Source officielle
 
