@@ -216,6 +216,15 @@ jobs:
         # — so a careless render loop over a facts lang can't merge.
         run: python3 scripts/gate_render_mode_isolation.py
 
+      - name: i18n FR-leak ratchet (no new FR-scaffold in a non-FR lang)
+        # Read-only. A non-FR field byte-identical to i18n.fr (canonical JSON, >60
+        # chars) is an untranslated French scaffold served to that language and to
+        # Google. The known May-import backlog is baselined (reports/i18n-leak-
+        # baseline.json) and only WARNs; ANY leak outside the baseline FAILS the
+        # build. The baseline can only shrink (--tighten after each batch) — so the
+        # door the May import walked through stays shut.
+        run: python3 scripts/gate_i18n_leak.py
+
       - name: Render-verified gate (every +render-ai language has a clean Layer A + B report)
         # Read-only + lightweight: validates reports/render-verify-<lang>.json
         # (no browser in CI). The heavy headless-render + vision pass that PRODUCES
