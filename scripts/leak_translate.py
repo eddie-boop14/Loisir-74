@@ -134,7 +134,7 @@ def load_fiche(slug):
     return json.load(open(os.path.join(JSON_DIR, slug + ".json"), encoding="utf-8"))
 
 
-def cmd_extract(lang, limit=None, slugs=None):
+def cmd_extract(lang, limit=None, slugs=None, include_protected=False):
     work = load_baseline_lang(lang)
     if slugs:
         work = {s: work[s] for s in slugs if s in work}
@@ -143,7 +143,7 @@ def cmd_extract(lang, limit=None, slugs=None):
     items = []
     untr = {}   # {slug: [fields]} proper-noun-only, allowlist candidates
     for slug in sorted(work):
-        if _is_protected(slug, lang, prot):
+        if _is_protected(slug, lang, prot) and not include_protected:
             continue  # partner-carrying page stays byte-frozen (flagged, not translated)
         fiche = load_fiche(slug)
         fields = work[slug]
@@ -172,9 +172,13 @@ def cmd_extract(lang, limit=None, slugs=None):
     nfields = sum(len(i["fields"]) for i in items)
     print(f"[leak-tr] {lang}: {len(items)} fiches · {nfields} fields → "
           f"{os.path.relpath(outp, ROOT)} (source = i18n.fr, verbatim)")
-    if excluded:
+    if excluded and not include_protected:
         print(f"[leak-tr] {lang}: EXCLUDED {len(excluded)} partner-carrying fiches "
               f"(byte-frozen, flag for Eddie): {', '.join(excluded)}")
+    if include_protected and excluded:
+        print(f"[leak-tr] {lang}: INCLUDING {len(excluded)} partner-carrying fiches "
+              f"(EDMASTER-approved run — partner block byte-diff verified separately): "
+              f"{', '.join(excluded)}")
     if untr:
         nf = sum(len(v) for v in untr.values())
         print(f"[leak-tr] {lang}: {nf} proper-noun-only field(s) across {len(untr)} fiches "
@@ -211,7 +215,7 @@ def validate_item(fiche, src_fields, out_fields, frozen, wtokens):
     return viol
 
 
-def cmd_apply(lang):
+def cmd_apply(lang, include_protected=False):
     workp = os.path.join(ROOT, "reports", f"leak-work-{lang}.json")
     outp = os.path.join(ROOT, "reports", f"leak-out-{lang}.json")
     if not os.path.exists(outp):
@@ -224,7 +228,7 @@ def cmd_apply(lang):
     fail_log = []
     for slug, out_fields in (outs.items() if isinstance(outs, dict) else
                              ((o["slug"], o["fields"]) for o in outs)):
-        if _is_protected(slug, lang, prot):
+        if _is_protected(slug, lang, prot) and not include_protected:
             skipped += 1; continue  # partner-carrying page stays byte-frozen
         if slug not in work:
             fail_log.append((slug, ["not in work-list"])); failed += 1; continue
@@ -263,12 +267,17 @@ def main():
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--limit", type=int)
     ap.add_argument("--slugs", help="comma-separated slug subset")
+    ap.add_argument("--include-protected", action="store_true",
+                    help="INCLUDE partner-carrying fiches (EDMASTER-approved runs "
+                         "only; partner block byte-stability is verified separately). "
+                         "Default excludes them, keeping the carrying page byte-frozen.")
     args = ap.parse_args()
     slugs = args.slugs.split(",") if args.slugs else None
     if args.extract:
-        cmd_extract(args.lang, limit=args.limit, slugs=slugs)
+        cmd_extract(args.lang, limit=args.limit, slugs=slugs,
+                    include_protected=args.include_protected)
     elif args.apply:
-        cmd_apply(args.lang)
+        cmd_apply(args.lang, include_protected=args.include_protected)
     else:
         ap.print_help(); sys.exit(1)
 
