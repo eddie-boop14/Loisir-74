@@ -32,7 +32,7 @@ source: loisirs74.fr
 - Commune: Thonon-les-Bains, Haute-Savoie (74200)
 - GPS: 46.3787, 6.4793
 - Category: musee
-- Type: Écomusée municipal, 3 guérites traditionnelles 12e s.
+- Type: Municipal open-air museum, 3 traditional 12th-c. huts
 
 ## Hours
 
@@ -56,7 +56,7 @@ RÉOUVERTURE SAISON 30 MAI 2026 (week-end Fête du Nautisme). Mai/juin/sept : Me
 
 ## Parking
 
-Parking Aristide Briand à 620 m
+Aristide Briand car park, 620 m away
 
 ## Transport
 
@@ -66,7 +66,7 @@ Parking Aristide Briand à 620 m
 
 ## Season
 
-30 mai — 30 septembre · juillet-août quotidien
+30 May — 30 September · daily in July-August
 
 ## Official source
 

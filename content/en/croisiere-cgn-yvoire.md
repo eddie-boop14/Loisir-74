@@ -32,7 +32,7 @@ source: loisirs74.fr
 - Commune: Yvoire, Haute-Savoie (74140)
 - GPS: 46.3725, 6.3258
 - Category: croisiere
-- Type: Croisière passagers Léman saisonnière - ligne N3 Yvoire-Nyon
+- Type: Seasonal Léman passenger cruise — Yvoire-Nyon N3 line
 
 ## Hours
 
@@ -49,7 +49,7 @@ Horaires du CGN escale Yvoire : Ligne N3 Nyon-Yvoire - traversée 20 min - fréq
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -57,7 +57,7 @@ Not specified
 
 ## Season
 
-04/04-29/05/2026 week-ends + 30/05-20/09/2026 tous les jours + 21/09-01/11/2026 week-ends
+04/04-29/05/2026 weekends + 30/05-20/09/2026 daily + 21/09-01/11/2026 weekends
 
 ## Official source
 
