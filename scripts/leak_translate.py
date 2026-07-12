@@ -204,7 +204,11 @@ def validate_item(fiche, src_fields, out_fields, frozen, wtokens):
     # reliably; over-strict digit parsing there only false-positives on good
     # translations, e.g. '24/7'→'247' or respaced phone numbers). Shape parity,
     # frozen nouns and length ratio (translate_batch.validate) guard the rest.
-    years = lambda t: set(re.findall(r"\b(?:19|20)\d\d\b", t))
+    # A DECADE keeps its year across locales but changes suffix — FR "années 2010",
+    # EN "the 2010s", DE "2010er Jahre" all preserve 2010; the plain \b…\b form
+    # misses "2010s"/"2010er" (trailing letter blocks the boundary) and false-flags
+    # a drop. Require no *digit* on either side so "20100"/"12010" still don't match.
+    years = lambda t: set(re.findall(r"(?<!\d)(?:19|20)\d\d(?!\d)", t))
     dropped_years = years(src_all) - years(out_all)
     if dropped_years:
         viol.append(f"year(s) dropped/changed: {sorted(dropped_years)}")

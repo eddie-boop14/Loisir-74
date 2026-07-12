@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Sillingy, Haute-Savoie (74330)
 - GPS: 45.9431939, 6.0737711
 - Category: parc
-- Type: Centre de réalité virtuelle (VR) · 80+ expériences
+- Type: Virtual reality (VR) centre · 80+ experiences
 
 ## Hours
 
-Hors vacances scolaires : Lun 14h–19h, Mar 14h–20h, Mer 10h–12h30 et 14h–21h, Jeu 14h–22h15, Ven 14h–23h30, Sam 10h–12h30 et 14h–23h30, Dim 10h–12h30 et 14h–19h. Vacances scolaires : identique sauf Mardi 'sur devis'. Ouvert toute l'année. Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications.
+Outside school holidays: Mon 2pm–7pm, Tue 2pm–8pm, Wed 10am–12:30pm and 2pm–9pm, Thu 2pm–10:15pm, Fri 2pm–11:30pm, Sat 10am–12:30pm and 2pm–11:30pm, Sun 10am–12:30pm and 2pm–7pm. School holidays: same, except Tuesday 'on request'. Open year-round. Verified on the official website on 21 May 2026 — subject to changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Hors vacances scolaires : Lun 14h–19h, Mar 14h–20h, Mer 10h–12h30 et 14h�
 
 ## Parking
 
-Privatif gratuit sur place (voitures, cars, minibus)
+Free private parking on site (cars, coaches, minibuses)
 
 ## Transport
 
@@ -60,7 +60,7 @@ Privatif gratuit sur place (voitures, cars, minibus)
 
 ## Season
 
-Toute l'année · idéal jours pluvieux / soirées
+Year-round · ideal for rainy days / evenings
 
 ## Official source
 

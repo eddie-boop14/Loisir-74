@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Doussard, Haute-Savoie (74210)
 - GPS: 45.7833, 6.2167
 - Category: sentier
-- Type: Sentier d'interprétation - PMR depuis 2010
+- Type: Interpretive trail - accessible for reduced mobility since 2010
 
 ## Hours
 
-ACCÈS LIBRE 24h/24, 7j/7, toute l'année au Sentier pédagogique du Bout du Lac d'Annecy. Saison recommandée : Toute l'année. Conditions hors saison variables. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+OPEN ACCESS 24/7, year-round at the Sentier pédagogique du Bout du Lac d'Annecy. Recommended season: Year-round. Off-season conditions vary. Verified on the official site on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Free
 
 ## Parking
 
-Gratuit au départ
+Free at the trailhead
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit au départ
 
 ## Season
 
-Toute l'année
+Year-round
 - Winter access window: Not specified
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified

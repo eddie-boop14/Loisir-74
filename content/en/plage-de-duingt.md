@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Duingt, Haute-Savoie (74410)
 - GPS: 45.827, 6.203
 - Category: plage
-- Type: Plage gazonnée 120 m - face au château de Duingt
+- Type: Grassy beach, 120 m - facing Duingt castle
 
 ## Hours
 
-Horaires de la Plage de Duingt : Surveillance MNS juillet-août 2026 (local accolé au Club Nautique). Horaires précis à confirmer arrêté municipal. Hors saison : accès libre non surveillé.. Vérifié sur le site officiel le 24 mai 2026 — sous réserve d'arrêté municipal 2026.
+Opening hours at Plage de Duingt: lifeguard supervision July-August 2026 (post attached to the Club Nautique). Precise hours to be confirmed by municipal order. Off-season: free access, unsupervised.. Verified on the official site on 24 May 2026 — subject to 2026 municipal order.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Selon plage - voir détails
+Depends on the beach - see details
 
 ## Transport
 
@@ -59,7 +59,7 @@ Selon plage - voir détails
 
 ## Season
 
-Juillet - août (surveillance MNS)
+July - August (lifeguard supervision)
 
 ## Official source
 

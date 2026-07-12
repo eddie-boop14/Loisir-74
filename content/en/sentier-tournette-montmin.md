@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Talloires-Montmin, Haute-Savoie (74290)
 - GPS: 45.8392, 6.2433
 - Category: sentier
-- Type: Sentier alpin - ascension classique
+- Type: Alpine trail - classic ascent
 
 ## Hours
 
-ACCÈS LIBRE 24h/24, 7j/7, toute l'année au Sentier de la Tournette depuis Montmin. Saison recommandée : Juin-octobre. Conditions hors saison variables. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+OPEN ACCESS 24/7, year-round at the Sentier de la Tournette depuis Montmin. Recommended season: June-October. Off-season conditions vary. Verified on the official site on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Free
 
 ## Parking
 
-Gratuit au départ
+Free at the trailhead
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit au départ
 
 ## Season
 
-Juin-octobre
+June-October
 - Winter access window: Not specified
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified

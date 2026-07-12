@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Annecy, Haute-Savoie (74000)
 - GPS: 45.860063, 6.144909
 - Category: sentier
-- Type: GR® de Pays (GRP) pédestre - boucle
+- Type: GR® de Pays (GRP) walking route - loop
 
 ## Hours
 
-GR® de Pays Tour du Lac d'Annecy PRATICABLE MAI-OCTOBRE PRINCIPALEMENT. Étapes basses (Annecy-Semnoz) praticables toute l'année par beau temps. Cols Tournette enneigés novembre-avril. Vérifier conditions sur ffrandonnee.fr et lac-annecy.com. Vérifié le 24 mai 2026 — sous réserve de modifications saisonnières.
+GR® de Pays Tour du Lac d'Annecy MAINLY PASSABLE MAY-OCTOBER. Lower stages (Annecy-Semnoz) passable year-round in good weather. Tournette passes snow-covered November-April. Check conditions on ffrandonnee.fr and lac-annecy.com. Verified 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Free
 
 ## Parking
 
-Pâquier d'Annecy, départs multiples possibles
+Pâquier d'Annecy, multiple possible starting points
 
 ## Transport
 
@@ -60,7 +60,7 @@ Pâquier d'Annecy, départs multiples possibles
 
 ## Season
 
-Mai-octobre
+May-October
 - Winter access window: Not specified
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified

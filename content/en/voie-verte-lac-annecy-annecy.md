@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Annecy, Haute-Savoie (74000)
 - GPS: 45.916752, 6.132892
 - Category: voie-verte
-- Type: Voie verte cyclable et piétonne
+- Type: Cycling and pedestrian greenway
 
 ## Hours
 
-ACCÈS LIBRE 24h/24, 7j/7, toute l'année à la Voie verte du Lac d'Annecy. Éclairage public en zone urbaine (Annecy, Sevrier centre). Travaux 2025-2026 : 8 tranches d'élargissement sur 15,3 km côté ouest, déviations ponctuelles balisées. Vérifié sur sila.fr le 24 mai 2026 — sous réserve de modifications saisonnières.
+OPEN ACCESS 24/7, all year round, to the Voie verte du Lac d'Annecy. Public lighting in urban areas (Annecy, Sevrier centre). Works 2025-2026: 8 phases of widening over 15.3 km on the west side, occasional signposted diversions. Verified on sila.fr on 24 May 2026 - subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Free
 
 ## Parking
 
-Pâquier Annecy, Sevrier, Saint-Jorioz, Doussard, Faverges (gratuits)
+Pâquier Annecy, Sevrier, Saint-Jorioz, Doussard, Faverges (free)
 
 ## Transport
 
@@ -60,7 +60,7 @@ Pâquier Annecy, Sevrier, Saint-Jorioz, Doussard, Faverges (gratuits)
 
 ## Season
 
-Toute l'année · Pic juin-août
+All year round - Peak June-August
 - Winter access window: Not specified
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified

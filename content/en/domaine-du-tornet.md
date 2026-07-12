@@ -32,7 +32,7 @@ source: loisirs74.fr
 - Commune: La Balme-de-Sillingy, Haute-Savoie (74330)
 - GPS: 45.970952, 6.032109
 - Category: domaine
-- Type: Domaine de loisirs public
+- Type: Public leisure estate
 
 ## Hours
 
@@ -49,7 +49,7 @@ Not specified
 
 ## Parking
 
-Gratuit (bornes VE + parking autocar)
+Free (EV charging points + coach parking)
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit (bornes VE + parking autocar)
 
 ## Season
 
-Fin mars – mi-avril (cerisiers) · Mai – septembre
+Late March – mid-April (cherry blossoms) · May – September
 
 ## Official source
 

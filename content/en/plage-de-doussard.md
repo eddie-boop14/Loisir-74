@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Doussard, Haute-Savoie (74210)
 - GPS: 45.791384, 6.216615
 - Category: plage
-- Type: Plage sable + pelouse - adjacente Réserve naturelle Bout du Lac
+- Type: Sand + lawn beach - adjacent to the Bout du Lac nature reserve
 
 ## Hours
 
-Horaires de la Plage de Doussard : Surveillance MNS juillet-août 2026 selon arrêté municipal commune Doussard. Hors saison : accès libre non surveillé.. Vérifié sur le site officiel le 24 mai 2026 — sous réserve d'arrêté municipal 2026.
+Opening hours at Plage de Doussard: lifeguard supervision July-August 2026 under the municipal order of the commune of Doussard. Off-season: free access, unsupervised.. Verified on the official site on 24 May 2026 — subject to 2026 municipal order.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires de la Plage de Doussard : Surveillance MNS juillet-août 2026 selon arr
 
 ## Parking
 
-Selon plage - voir détails
+Depends on the beach - see details
 
 ## Transport
 
@@ -60,7 +60,7 @@ Selon plage - voir détails
 
 ## Season
 
-Juillet - août (surveillance MNS)
+July - August (lifeguard supervision)
 
 ## Official source
 
