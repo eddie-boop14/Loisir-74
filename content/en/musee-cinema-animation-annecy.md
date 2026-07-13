@@ -32,15 +32,15 @@ source: loisirs74.fr
 - Commune: Annecy, Haute-Savoie (74000)
 - GPS: 45.9047, 6.1275
 - Category: musee
-- Type: Musée du cinéma d'animation, label 'Musées de France', architecture contemporaine
+- Type: Musée du cinéma d'animation, 'Musées de France' label, contemporary architecture
 
 ## Hours
 
-OUVERTURE LE 19 JUIN 2026. Horaires annoncés : Mardi à Dimanche 10h-18h, dernière entrée 45 min avant fermeture. Fermé lundi, 1er janvier, 1er mai, 25 décembre. Horaires spéciaux pendant le Festival d'Annecy (21-27 juin 2026). Vérifié sur le site officiel CITIA le 21 mai 2026 — sous réserve de modifications saisonnières.
+OPENING ON 19 JUNE 2026. Announced hours: Tuesday to Sunday 10am-6pm, last entry 45 minutes before closing. Closed Mondays, 1 January, 1 May, 25 December. Special hours during the Festival d'Annecy (21-27 June 2026). Verified on the official CITIA website on 21 May 2026 — subject to seasonal changes.
 
 ## Prices
 
-Grille tarifaire à venir (ouverture 19 juin 2026)
+Pricing to be announced (opening 19 June 2026)
 
 ## Access (PMR)
 
@@ -49,7 +49,7 @@ Grille tarifaire à venir (ouverture 19 juin 2026)
 
 ## Parking
 
-Parking Hôtel-de-Ville (420 places, payant) et Saint-François
+Hôtel-de-Ville car park (420 spaces, paid) and Saint-François
 
 ## Transport
 
@@ -60,7 +60,7 @@ Parking Hôtel-de-Ville (420 places, payant) et Saint-François
 
 ## Season
 
-Ouvert toute l'année dès le 19 juin 2026
+Open year-round from 19 June 2026
 
 ## Official source
 
