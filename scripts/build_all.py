@@ -192,6 +192,31 @@ def rebuild_fulltree_langs():
 # fact_rows, CSS) — it is no longer invoked as a build step.
 
 
+def rebuild_facet_hub_pages():
+    """HANDOFF-facet-hubs: render the 5 HTML facet hubs (FR+PROSE) + 8 md mirrors.
+    Runs BEFORE normalize_head_links so fix_hreflang_sitemap folds the new pages
+    into canonical/hreflang/sitemap."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "build_facet_hubs.py"), "--pages"],
+        cwd=str(ROOT), capture_output=True, text=True)
+    print(out.stdout.strip())
+    if out.returncode != 0:
+        print(out.stderr, file=sys.stderr)
+        raise RuntimeError("build_facet_hubs --pages failed")
+
+
+def rebuild_facet_hub_links():
+    """Inject the facet-hub 0-orphan nav into each locale homepage — AFTER
+    normalize_lang_nav so a later homepage rewrite can't strip the block."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "build_facet_hubs.py"), "--links"],
+        cwd=str(ROOT), capture_output=True, text=True)
+    print(out.stdout.strip())
+    if out.returncode != 0:
+        print(out.stderr, file=sys.stderr)
+        raise RuntimeError("build_facet_hubs --links failed")
+
+
 def rebuild_intent_hubs():
     """Render registry-driven intent-hub pages (data/intent-hubs.json) FR + 5
     locales and link each from its category hub. Runs after hubs/communes (so
@@ -431,8 +456,10 @@ def main():
     run("card-diff gate vs snapshot", card_diff_gate)
     run("reachability gate (strict)", reachability_gate)
     run("regenerate AI content layer (content/*.md + llms)", rebuild_ai_content)
+    run("render facet hubs + mirrors (HANDOFF-facet-hubs)", rebuild_facet_hub_pages)
     run("normalize head links (canonical + hreflang + md-alt)", normalize_head_links)
     run("normalize language nav (picker + footer read the visible roster)", normalize_lang_nav)
+    run("inject facet-hub homepage links (0-orphan, after lang-nav)", rebuild_facet_hub_links)
     run("cache-bust runtime /scripts/ includes (content-hash ?v=)", version_runtime_assets)
     if not args.no_site:
         run("build _site/", lambda: subprocess.check_call(
