@@ -110,35 +110,46 @@ UNKNOWN = {"fr": "Non renseigné", "en": "Not specified"}
 # error (gate_winter_schema). Frozen: Mont-Blanc, Loi Montagne II verbatim.
 WINTER_NODES = {"sentier", "point-de-vue", "cascade", "telecabine", "voie-verte"}
 WINTER_ACCESS = {
-    "open":    {"fr": "Ouvert (accès déneigé)",      "en": "Open (cleared road)"},
-    "closed":  {"fr": "Fermé (route fermée l'hiver)", "en": "Closed (road shut in winter)"},
-    "partial": {"fr": "Accès partiel",                "en": "Partial access"},
+    "open": {"fr": "Ouvert (accès déneigé)", "en": "Open (cleared road)", "de": "Geöffnet (Zufahrt geräumt)", "it": "Aperto (accesso sgombrato)", "es": "Abierto (acceso despejado)", "nl": "Open (toegangsweg sneeuwvrij)"},
+    "closed": {"fr": "Fermé (route fermée l'hiver)", "en": "Closed (road shut in winter)", "de": "Geschlossen (Straße im Winter gesperrt)", "it": "Chiuso (strada chiusa in inverno)", "es": "Cerrado (carretera cerrada en invierno)", "nl": "Gesloten (weg 's winters dicht)"},
+    "partial": {"fr": "Accès partiel", "en": "Partial access", "de": "Teilweiser Zugang", "it": "Accesso parziale", "es": "Acceso parcial", "nl": "Gedeeltelijke toegang"},
 }
+
 WINTER_INFRA = {
-    "raquettes":       {"fr": "Raquettes",          "en": "Snowshoeing"},
-    "ski_nordique":    {"fr": "Ski nordique",       "en": "Nordic skiing"},
-    "ski_fond":        {"fr": "Ski de fond",        "en": "Cross-country skiing"},
-    "ski_rando":       {"fr": "Ski de rando",       "en": "Ski touring"},
-    "chiens_traineau": {"fr": "Chiens de traîneau", "en": "Dog sledding"},
-    "luge":            {"fr": "Luge",               "en": "Sledging"},
+    "raquettes": {"fr": "Raquettes", "en": "Snowshoeing", "de": "Schneeschuhwandern", "it": "Ciaspole", "es": "Raquetas de nieve", "nl": "Sneeuwschoenwandelen"},
+    "ski_nordique": {"fr": "Ski nordique", "en": "Nordic skiing", "de": "Nordischer Skisport", "it": "Sci nordico", "es": "Esquí nórdico", "nl": "Noords skiën"},
+    "ski_fond": {"fr": "Ski de fond", "en": "Cross-country skiing", "de": "Langlauf", "it": "Sci di fondo", "es": "Esquí de fondo", "nl": "Langlaufen"},
+    "ski_rando": {"fr": "Ski de rando", "en": "Ski touring", "de": "Skitouren", "it": "Scialpinismo", "es": "Esquí de travesía", "nl": "Toerskiën"},
+    "chiens_traineau": {"fr": "Chiens de traîneau", "en": "Dog sledding", "de": "Hundeschlittenfahrten", "it": "Cani da slitta", "es": "Trineo de perros", "nl": "Hondensleetochten"},
+    "luge": {"fr": "Luge", "en": "Sledging", "de": "Rodeln", "it": "Slittino", "es": "Trineo", "nl": "Sleeën"},
 }
+
 SNOW_VIEW = {
-    "mont_blanc": {"fr": "Vue Mont-Blanc dégagée", "en": "Clear Mont-Blanc view"},
-    "alpes":      {"fr": "Panorama alpin",         "en": "Alpine panorama"},
-    "lac":        {"fr": "Vue sur le lac",         "en": "Lake view"},
-    "none":       {"fr": "Pas de panorama neige",  "en": "No snow panorama"},
+    "mont_blanc": {"fr": "Vue Mont-Blanc dégagée", "en": "Clear Mont-Blanc view", "de": "Freier Blick auf den Mont-Blanc", "it": "Vista libera sul Mont-Blanc", "es": "Vista despejada del Mont-Blanc", "nl": "Vrij zicht op de Mont-Blanc"},
+    "alpes": {"fr": "Panorama alpin", "en": "Alpine panorama", "de": "Alpenpanorama", "it": "Panorama alpino", "es": "Panorama alpino", "nl": "Alpenpanorama"},
+    "lac": {"fr": "Vue sur le lac", "en": "Lake view", "de": "Seeblick", "it": "Vista sul lago", "es": "Vista al lago", "nl": "Uitzicht op het meer"},
+    "none": {"fr": "Pas de panorama neige", "en": "No snow panorama", "de": "Kein Schneepanorama", "it": "Nessun panorama innevato", "es": "Sin panorama nevado", "nl": "Geen sneeuwpanorama"},
 }
-EQUIP = {
-    "fr": "Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)",
-    "en": "Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)",
-}
+
+EQUIP = {"fr": "Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)",
+         "en": "Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)",
+         "de": "Loi Montagne II — Winterreifen oder Ketten Pflicht (1. Nov. – 31. März)",
+         "it": "Loi Montagne II — pneumatici invernali o catene obbligatori (1 nov – 31 mar)",
+         "es": "Loi Montagne II — neumáticos de invierno o cadenas obligatorios (1 nov – 31 mar)",
+         "nl": "Loi Montagne II — winterbanden of kettingen verplicht (1 nov – 31 mrt)"}
+
 EQUIP_COL = {"fr": " · chaînes conseillées pour l'accès au col",
-             "en": " · chains advised for col access"}
+         "en": " · chains advised for col access",
+         "de": " · Ketten für die Passzufahrt empfohlen",
+         "it": " · catene consigliate per l'accesso al colle",
+         "es": " · cadenas recomendadas para el acceso al puerto de montaña",
+         "nl": " · kettingen aanbevolen voor de toegang tot de pas"}
+
 WINTER_LABELS = {
-    "access": {"fr": "Fenêtre d'accès hiver", "en": "Winter access window"},
-    "infra":  {"fr": "Infrastructure hiver",  "en": "Winter infrastructure"},
-    "view":   {"fr": "Panorama enneigé",      "en": "Snow panorama"},
-    "equip":  {"fr": "Équipement obligatoire", "en": "Equipment mandated"},
+    "access": {"fr": "Fenêtre d'accès hiver", "en": "Winter access window", "de": "Zugang im Winter", "it": "Accesso invernale", "es": "Acceso en invierno", "nl": "Wintertoegang"},
+    "infra": {"fr": "Infrastructure hiver", "en": "Winter infrastructure", "de": "Winterinfrastruktur", "it": "Infrastrutture invernali", "es": "Infraestructura invernal", "nl": "Winterinfrastructuur"},
+    "view": {"fr": "Panorama enneigé", "en": "Snow panorama", "de": "Schneepanorama", "it": "Panorama innevato", "es": "Panorama nevado", "nl": "Sneeuwpanorama"},
+    "equip": {"fr": "Équipement obligatoire", "en": "Equipment mandated", "de": "Vorgeschriebene Ausrüstung", "it": "Equipaggiamento obbligatorio", "es": "Equipamiento obligatorio", "nl": "Verplichte uitrusting"},
 }
 
 

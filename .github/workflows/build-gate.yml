@@ -151,6 +151,13 @@ jobs:
         # offline test block above.
         run: python3 scripts/gate_facet_layer.py
 
+      - name: Facet-hubs gate (HANDOFF-facet-hubs — inverted facet layer)
+        # Derived membership (api non-null / is_free true, published only),
+        # displayed values byte-equal the source projection, info-framed titles,
+        # honest md-mirror counts. Pairs with the protected/canonical/byte-stable
+        # steps below.
+        run: python3 scripts/gate_facet_hubs.py
+
       - name: Winter-schema gate (HANDOFF-winter)
         # ## Saison winter bullets only on WINTER_NODES; controlled vocab only
         # (no typos/inference); no subjective snow ratings; equipment line =

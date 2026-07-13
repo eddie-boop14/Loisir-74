@@ -1,0 +1,444 @@
+{
+  "_meta": {
+    "job": "HANDOFF-facet-hubs — registry editorial payload (step 2)",
+    "built_against_head": "4977d35",
+    "author": "Claudius",
+    "edition": "Bleu canard édition · Edmaster & Claudius · Tous droits réservés 🦆 2026",
+    "rules": "Info-framing throughout except is_free (verified boolean). Straight quotes only. Frozen FR place names verbatim in all languages. Counts are NEVER in this copy — the builder computes and appends the coverage line."
+  },
+  "facets": [
+    {
+      "facet_key": "parking",
+      "source": "api",
+      "hub_slug": "parking-sites-loisirs-74",
+      "html_hub": true,
+      "group_by": "category",
+      "i18n": {
+        "fr": {
+          "title": "Parking — où se garer, lieu par lieu | Haute-Savoie",
+          "h1": "Parking : les infos vérifiées, site par site",
+          "meta_description": "Où se garer pour chaque site de loisirs de Haute-Savoie : les infos parking vérifiées, lieu par lieu, issues de sources officielles.",
+          "intro": "Avant de partir, la question du parking se pose partout en Haute-Savoie : abords du Lac d'Annecy saturés en été, hameaux de montagne aux places comptées, sites naturels sans stationnement aménagé. Cette page rassemble, lieu par lieu, l'information parking telle qu'elle figure sur chaque fiche — texte vérifié, jamais reformulé. Quand une fiche ne documente pas le stationnement, le lieu n'apparaît pas ici."
+        },
+        "en": {
+          "title": "Parking — where to park, site by site | Haute-Savoie",
+          "h1": "Parking: verified info, site by site",
+          "meta_description": "Where to park at each leisure site in Haute-Savoie: verified parking information, site by site, from official sources.",
+          "intro": "Parking is a real question everywhere in Haute-Savoie: packed shores around Lac d'Annecy in summer, mountain hamlets with a handful of spaces, natural sites with no dedicated parking at all. This page gathers, site by site, the parking information exactly as it appears on each fiche — verified text, never rewritten. If a fiche does not document parking, the site is not listed here."
+        },
+        "de": {
+          "title": "Parken — Parkinfos Ort für Ort | Haute-Savoie",
+          "h1": "Parken: geprüfte Infos, Ort für Ort",
+          "meta_description": "Parken an Freizeitorten in Haute-Savoie: geprüfte Parkplatz-Infos, Ort für Ort, aus offiziellen Quellen.",
+          "intro": "Die Parkfrage stellt sich überall in Haute-Savoie: volle Ufer am Lac d'Annecy im Sommer, Bergweiler mit wenigen Stellplätzen, Naturorte ganz ohne ausgewiesenes Parken. Diese Seite sammelt Ort für Ort die Parkinformation genau so, wie sie auf der jeweiligen Fiche steht — geprüfter Text, nie umformuliert. Dokumentiert eine Fiche das Parken nicht, erscheint der Ort hier nicht."
+        },
+        "it": {
+          "title": "Parcheggio — dove sostare, luogo per luogo | Haute-Savoie",
+          "h1": "Parcheggio: informazioni verificate, sito per sito",
+          "meta_description": "Dove parcheggiare nei siti di svago dell'Haute-Savoie: informazioni verificate sul parcheggio, luogo per luogo, da fonti ufficiali.",
+          "intro": "La questione del parcheggio si pone ovunque in Haute-Savoie: rive del Lac d'Annecy affollate in estate, frazioni di montagna con pochi posti, siti naturali senza sosta attrezzata. Questa pagina raccoglie, luogo per luogo, l'informazione sul parcheggio così come figura su ogni scheda — testo verificato, mai riformulato. Se una scheda non documenta il parcheggio, il luogo non compare qui."
+        },
+        "es": {
+          "title": "Aparcamiento — dónde aparcar, lugar por lugar | Haute-Savoie",
+          "h1": "Aparcamiento: información verificada, sitio por sitio",
+          "meta_description": "Dónde aparcar en cada sitio de ocio de Haute-Savoie: información de aparcamiento verificada, lugar por lugar, de fuentes oficiales.",
+          "intro": "La cuestión del aparcamiento se plantea en toda Haute-Savoie: orillas del Lac d'Annecy saturadas en verano, aldeas de montaña con plazas contadas, parajes naturales sin estacionamiento habilitado. Esta página reúne, lugar por lugar, la información de aparcamiento tal como figura en cada ficha — texto verificado, nunca reformulado. Si una ficha no documenta el aparcamiento, el lugar no aparece aquí."
+        },
+        "nl": {
+          "title": "Parkeren — waar parkeren, plek voor plek | Haute-Savoie",
+          "h1": "Parkeren: geverifieerde info, plek voor plek",
+          "meta_description": "Waar parkeren bij elke vrijetijdslocatie in Haute-Savoie: geverifieerde parkeerinfo, plek voor plek, uit officiële bronnen.",
+          "intro": "De parkeervraag speelt overal in Haute-Savoie: drukke oevers rond het Lac d'Annecy in de zomer, bergdorpjes met een handvol plaatsen, natuurplekken zonder aangelegde parkeerplaats. Deze pagina bundelt per locatie de parkeerinformatie precies zoals die op elke fiche staat — geverifieerde tekst, nooit herschreven. Documenteert een fiche het parkeren niet, dan staat de plek hier niet."
+        }
+      },
+      "faq": [
+        {
+          "q": {
+            "fr": "D'où viennent les informations parking ?",
+            "en": "Where does the parking information come from?",
+            "de": "Woher stammen die Parkinformationen?",
+            "it": "Da dove provengono le informazioni sul parcheggio?",
+            "es": "¿De dónde procede la información de aparcamiento?",
+            "nl": "Waar komt de parkeerinformatie vandaan?"
+          },
+          "a": {
+            "fr": "Chaque information provient de la fiche du lieu, vérifiée auprès de sources officielles (communes, offices de tourisme, gestionnaires). Le texte affiché ici est celui de la fiche, à l'identique.",
+            "en": "Each entry comes from the site's fiche, verified against official sources (communes, tourist offices, site operators). The text shown here is the fiche text, unchanged.",
+            "de": "Jede Angabe stammt von der Fiche des Ortes, geprüft anhand offizieller Quellen (Gemeinden, Tourismusbüros, Betreiber). Der hier gezeigte Text ist der Fiche-Text, unverändert.",
+            "it": "Ogni informazione proviene dalla scheda del luogo, verificata su fonti ufficiali (comuni, uffici del turismo, gestori). Il testo mostrato qui è quello della scheda, identico.",
+            "es": "Cada dato procede de la ficha del lugar, verificado con fuentes oficiales (municipios, oficinas de turismo, gestores). El texto mostrado aquí es el de la ficha, sin cambios.",
+            "nl": "Elke vermelding komt van de fiche van de locatie, geverifieerd bij officiële bronnen (gemeenten, toeristenbureaus, beheerders). De tekst hier is de fichetekst, ongewijzigd."
+          }
+        },
+        {
+          "q": {
+            "fr": "Pourquoi certains lieux n'apparaissent pas sur cette page ?",
+            "en": "Why are some sites missing from this page?",
+            "de": "Warum fehlen manche Orte auf dieser Seite?",
+            "it": "Perché alcuni luoghi non compaiono in questa pagina?",
+            "es": "¿Por qué algunos lugares no aparecen en esta página?",
+            "nl": "Waarom ontbreken sommige plekken op deze pagina?"
+          },
+          "a": {
+            "fr": "Un lieu figure ici uniquement si sa fiche documente le stationnement. Quand l'information n'est pas vérifiée, elle reste « Non renseigné » sur la fiche — jamais devinée, jamais inventée.",
+            "en": "A site is listed here only if its fiche documents parking. When the information is not verified, it stays \"Not specified\" on the fiche — never guessed, never invented.",
+            "de": "Ein Ort erscheint hier nur, wenn seine Fiche das Parken dokumentiert. Ist die Angabe nicht geprüft, bleibt sie auf der Fiche als nicht angegeben — nie geraten, nie erfunden.",
+            "it": "Un luogo figura qui solo se la sua scheda documenta la sosta. Quando l'informazione non è verificata, resta non specificata sulla scheda — mai indovinata, mai inventata.",
+            "es": "Un lugar figura aquí solo si su ficha documenta el estacionamiento. Cuando la información no está verificada, permanece como no especificada en la ficha — nunca adivinada, nunca inventada.",
+            "nl": "Een plek staat hier alleen als de fiche het parkeren documenteert. Is de informatie niet geverifieerd, dan blijft die op de fiche als niet vermeld staan — nooit geraden, nooit verzonnen."
+          }
+        }
+      ]
+    },
+    {
+      "facet_key": "transport",
+      "source": "api",
+      "hub_slug": "acces-transports-en-commun-74",
+      "html_hub": true,
+      "group_by": "category",
+      "i18n": {
+        "fr": {
+          "title": "Transports en commun — y aller sans voiture | Haute-Savoie",
+          "h1": "Bus, train, bateau : les accès documentés, lieu par lieu",
+          "meta_description": "Rejoindre les sites de loisirs de Haute-Savoie en bus, train ou bateau : les infos transport vérifiées, lieu par lieu.",
+          "intro": "Beaucoup de sites de Haute-Savoie se rejoignent sans voiture : lignes de bus autour du Lac d'Annecy et du Léman, gares du Faucigny et de la vallée de Chamonix-Mont-Blanc, navettes saisonnières des stations. Cette page liste, lieu par lieu, l'information transport telle qu'elle figure sur chaque fiche — texte vérifié, à l'identique. Les lieux dont la fiche ne documente pas de desserte n'apparaissent pas ici."
+        },
+        "en": {
+          "title": "Public transport — getting there without a car | Haute-Savoie",
+          "h1": "Bus, train, boat: documented access, site by site",
+          "meta_description": "Reach Haute-Savoie leisure sites by bus, train or boat: verified public transport information, site by site.",
+          "intro": "Many Haute-Savoie sites can be reached without a car: bus lines around Lac d'Annecy and Léman, train stations in the Faucigny and the Chamonix-Mont-Blanc valley, seasonal resort shuttles. This page lists, site by site, the transport information exactly as it appears on each fiche — verified text, unchanged. Sites whose fiche documents no service are not listed here."
+        },
+        "de": {
+          "title": "ÖPNV — Anreise ohne Auto | Haute-Savoie",
+          "h1": "Bus, Bahn, Schiff: dokumentierte Anbindung, Ort für Ort",
+          "meta_description": "Freizeitorte in Haute-Savoie mit Bus, Bahn oder Schiff erreichen: geprüfte Verkehrsinfos, Ort für Ort.",
+          "intro": "Viele Orte in Haute-Savoie sind ohne Auto erreichbar: Buslinien rund um Lac d'Annecy und Léman, Bahnhöfe im Faucigny und im Tal von Chamonix-Mont-Blanc, saisonale Shuttles der Stationen. Diese Seite listet Ort für Ort die Verkehrsinformation genau so, wie sie auf der jeweiligen Fiche steht — geprüfter Text, unverändert. Orte ohne dokumentierte Anbindung erscheinen hier nicht."
+        },
+        "it": {
+          "title": "Trasporti pubblici — arrivarci senza auto | Haute-Savoie",
+          "h1": "Bus, treno, battello: gli accessi documentati, luogo per luogo",
+          "meta_description": "Raggiungere i siti di svago dell'Haute-Savoie in bus, treno o battello: informazioni verificate sui trasporti, luogo per luogo.",
+          "intro": "Molti siti dell'Haute-Savoie si raggiungono senza auto: linee di bus attorno al Lac d'Annecy e al Léman, stazioni ferroviarie del Faucigny e della valle di Chamonix-Mont-Blanc, navette stagionali delle stazioni. Questa pagina elenca, luogo per luogo, l'informazione sui trasporti così come figura su ogni scheda — testo verificato, identico. I luoghi la cui scheda non documenta un collegamento non compaiono qui."
+        },
+        "es": {
+          "title": "Transporte público — llegar sin coche | Haute-Savoie",
+          "h1": "Bus, tren, barco: accesos documentados, lugar por lugar",
+          "meta_description": "Llegar a los sitios de ocio de Haute-Savoie en bus, tren o barco: información de transporte verificada, lugar por lugar.",
+          "intro": "Muchos sitios de Haute-Savoie se alcanzan sin coche: líneas de autobús alrededor del Lac d'Annecy y del Léman, estaciones de tren del Faucigny y del valle de Chamonix-Mont-Blanc, lanzaderas estacionales. Esta página lista, lugar por lugar, la información de transporte tal como figura en cada ficha — texto verificado, idéntico. Los lugares cuya ficha no documenta conexión no aparecen aquí."
+        },
+        "nl": {
+          "title": "Openbaar vervoer — er komen zonder auto | Haute-Savoie",
+          "h1": "Bus, trein, boot: gedocumenteerde bereikbaarheid, plek voor plek",
+          "meta_description": "Vrijetijdslocaties in Haute-Savoie bereiken met bus, trein of boot: geverifieerde vervoersinfo, plek voor plek.",
+          "intro": "Veel plekken in Haute-Savoie zijn zonder auto bereikbaar: buslijnen rond het Lac d'Annecy en het Léman, treinstations in de Faucigny en het dal van Chamonix-Mont-Blanc, seizoensshuttles van de skigebieden. Deze pagina toont per locatie de vervoersinformatie precies zoals die op elke fiche staat — geverifieerde tekst, ongewijzigd. Plekken zonder gedocumenteerde verbinding staan hier niet."
+        }
+      },
+      "faq": [
+        {
+          "q": {
+            "fr": "Les horaires de bus et de train sont-ils à jour ?",
+            "en": "Are the bus and train times up to date?",
+            "de": "Sind die Bus- und Bahnzeiten aktuell?",
+            "it": "Gli orari di bus e treni sono aggiornati?",
+            "es": "¿Están actualizados los horarios de bus y tren?",
+            "nl": "Zijn de bus- en treintijden actueel?"
+          },
+          "a": {
+            "fr": "Cette page décrit la desserte documentée sur chaque fiche (ligne, arrêt, gare), pas les horaires en temps réel. Vérifiez toujours les horaires du jour auprès de l'opérateur indiqué avant de partir.",
+            "en": "This page describes the service documented on each fiche (line, stop, station), not live timetables. Always check the day's times with the operator named before setting off.",
+            "de": "Diese Seite beschreibt die auf jeder Fiche dokumentierte Anbindung (Linie, Haltestelle, Bahnhof), keine Echtzeit-Fahrpläne. Prüfen Sie die Tageszeiten stets beim genannten Betreiber.",
+            "it": "Questa pagina descrive il collegamento documentato su ogni scheda (linea, fermata, stazione), non gli orari in tempo reale. Verificate sempre gli orari del giorno presso l'operatore indicato.",
+            "es": "Esta página describe la conexión documentada en cada ficha (línea, parada, estación), no horarios en tiempo real. Compruebe siempre los horarios del día con el operador indicado.",
+            "nl": "Deze pagina beschrijft de op elke fiche gedocumenteerde verbinding (lijn, halte, station), geen realtime dienstregeling. Controleer de actuele tijden altijd bij de genoemde vervoerder."
+          }
+        },
+        {
+          "q": {
+            "fr": "Pourquoi certains lieux n'apparaissent pas sur cette page ?",
+            "en": "Why are some sites missing from this page?",
+            "de": "Warum fehlen manche Orte auf dieser Seite?",
+            "it": "Perché alcuni luoghi non compaiono in questa pagina?",
+            "es": "¿Por qué algunos lugares no aparecen en esta página?",
+            "nl": "Waarom ontbreken sommige plekken op deze pagina?"
+          },
+          "a": {
+            "fr": "Un lieu figure ici uniquement si sa fiche documente un accès en transports en commun. Sans information vérifiée, la fiche indique « Non renseigné » — jamais une supposition.",
+            "en": "A site is listed here only if its fiche documents public transport access. Without verified information, the fiche reads \"Not specified\" — never an assumption.",
+            "de": "Ein Ort erscheint hier nur, wenn seine Fiche einen ÖPNV-Zugang dokumentiert. Ohne geprüfte Angabe steht auf der Fiche nicht angegeben — nie eine Vermutung.",
+            "it": "Un luogo figura qui solo se la sua scheda documenta un accesso con i trasporti pubblici. Senza informazione verificata, la scheda indica non specificato — mai una supposizione.",
+            "es": "Un lugar figura aquí solo si su ficha documenta un acceso en transporte público. Sin información verificada, la ficha indica no especificado — nunca una suposición.",
+            "nl": "Een plek staat hier alleen als de fiche een ov-verbinding documenteert. Zonder geverifieerde informatie vermeldt de fiche niet vermeld — nooit een aanname."
+          }
+        }
+      ]
+    },
+    {
+      "facet_key": "access_pmr",
+      "source": "api",
+      "hub_slug": "acces-pmr-haute-savoie",
+      "html_hub": true,
+      "group_by": "category",
+      "i18n": {
+        "fr": {
+          "title": "Accès PMR — les infos vérifiées, lieu par lieu | Haute-Savoie",
+          "h1": "Accès PMR et poussette : ce que documente chaque fiche",
+          "meta_description": "Accès PMR et poussette dans les sites de loisirs de Haute-Savoie : l'information vérifiée de chaque fiche, sans promesse, lieu par lieu.",
+          "intro": "L'accessibilité ne se devine pas : un sentier « facile » peut cacher un passage impraticable en fauteuil, une plage aménagée peut ne l'être qu'en été. Cette page réunit, lieu par lieu, l'information d'accès PMR et poussette telle qu'elle figure sur chaque fiche — le texte exact, qui précise parfois des limites ou des conditions. Lisez chaque mention en entier : la présence d'un lieu ici signifie qu'une information existe, pas que l'accès est garanti."
+        },
+        "en": {
+          "title": "Wheelchair access info — verified, site by site | Haute-Savoie",
+          "h1": "Wheelchair and stroller access: what each fiche documents",
+          "meta_description": "Wheelchair and stroller access at Haute-Savoie leisure sites: each fiche's verified information, no promises, site by site.",
+          "intro": "Accessibility cannot be guessed: an \"easy\" trail may hide a section impassable by wheelchair, an equipped beach may only be equipped in summer. This page gathers, site by site, the wheelchair and stroller access information exactly as it appears on each fiche — the exact text, which sometimes states limits or conditions. Read each entry in full: a site's presence here means information exists, not that access is guaranteed."
+        },
+        "de": {
+          "title": "Barrierefreiheit — geprüfte Infos, Ort für Ort | Haute-Savoie",
+          "h1": "Rollstuhl- und Kinderwagenzugang: was jede Fiche dokumentiert",
+          "meta_description": "Rollstuhl- und Kinderwagenzugang an Freizeitorten in Haute-Savoie: die geprüfte Info jeder Fiche, ohne Versprechen, Ort für Ort.",
+          "intro": "Barrierefreiheit lässt sich nicht erraten: ein als leicht geltender Weg kann eine mit dem Rollstuhl unpassierbare Stelle verbergen, ein ausgestatteter Strand nur im Sommer ausgestattet sein. Diese Seite sammelt Ort für Ort die Zugangsinformation genau so, wie sie auf der jeweiligen Fiche steht — der exakte Text, der teils Grenzen oder Bedingungen nennt. Lesen Sie jeden Eintrag ganz: Ein Ort steht hier, weil eine Information existiert, nicht weil der Zugang garantiert ist."
+        },
+        "it": {
+          "title": "Accesso PMR — informazioni verificate, luogo per luogo | Haute-Savoie",
+          "h1": "Accesso in sedia a rotelle e passeggino: cosa documenta ogni scheda",
+          "meta_description": "Accesso PMR e passeggino nei siti di svago dell'Haute-Savoie: l'informazione verificata di ogni scheda, senza promesse, luogo per luogo.",
+          "intro": "L'accessibilità non si indovina: un sentiero facile può nascondere un tratto impraticabile in sedia a rotelle, una spiaggia attrezzata può esserlo solo in estate. Questa pagina riunisce, luogo per luogo, l'informazione di accesso PMR e passeggino così come figura su ogni scheda — il testo esatto, che a volte precisa limiti o condizioni. Leggete ogni voce per intero: la presenza di un luogo qui significa che un'informazione esiste, non che l'accesso è garantito."
+        },
+        "es": {
+          "title": "Acceso PMR — información verificada, lugar por lugar | Haute-Savoie",
+          "h1": "Acceso en silla de ruedas y carrito: lo que documenta cada ficha",
+          "meta_description": "Acceso PMR y carrito en los sitios de ocio de Haute-Savoie: la información verificada de cada ficha, sin promesas, lugar por lugar.",
+          "intro": "La accesibilidad no se adivina: un sendero fácil puede esconder un tramo impracticable en silla de ruedas, una playa adaptada puede estarlo solo en verano. Esta página reúne, lugar por lugar, la información de acceso PMR y carrito tal como figura en cada ficha — el texto exacto, que a veces precisa límites o condiciones. Lea cada entrada completa: la presencia de un lugar aquí significa que existe información, no que el acceso esté garantizado."
+        },
+        "nl": {
+          "title": "Rolstoeltoegang — geverifieerde info, plek voor plek | Haute-Savoie",
+          "h1": "Rolstoel- en kinderwagentoegang: wat elke fiche documenteert",
+          "meta_description": "Rolstoel- en kinderwagentoegang bij vrijetijdslocaties in Haute-Savoie: de geverifieerde info van elke fiche, zonder beloftes, plek voor plek.",
+          "intro": "Toegankelijkheid laat zich niet raden: een makkelijk pad kan een stuk verbergen dat met een rolstoel onbegaanbaar is, een aangepast strand kan alleen in de zomer aangepast zijn. Deze pagina bundelt per locatie de toegangsinformatie precies zoals die op elke fiche staat — de exacte tekst, die soms grenzen of voorwaarden noemt. Lees elke vermelding volledig: een plek staat hier omdat er informatie bestaat, niet omdat toegang gegarandeerd is."
+        }
+      },
+      "faq": [
+        {
+          "q": {
+            "fr": "Un lieu listé ici est-il forcément accessible en fauteuil ?",
+            "en": "Is a site listed here necessarily wheelchair accessible?",
+            "de": "Ist ein hier gelisteter Ort zwingend rollstuhlgerecht?",
+            "it": "Un luogo elencato qui è necessariamente accessibile in sedia a rotelle?",
+            "es": "¿Un lugar listado aquí es necesariamente accesible en silla de ruedas?",
+            "nl": "Is een hier vermelde plek per se rolstoeltoegankelijk?"
+          },
+          "a": {
+            "fr": "Non. Un lieu figure ici parce que sa fiche documente une information d'accès — qui peut décrire un accès partiel, saisonnier ou limité. Le texte exact de la fiche fait foi, pas la présence dans la liste.",
+            "en": "No. A site is listed because its fiche documents access information — which may describe partial, seasonal or limited access. The fiche's exact text is authoritative, not presence in this list.",
+            "de": "Nein. Ein Ort steht hier, weil seine Fiche eine Zugangsinformation dokumentiert — die auch einen teilweisen, saisonalen oder eingeschränkten Zugang beschreiben kann. Maßgeblich ist der exakte Fiche-Text, nicht die Listung.",
+            "it": "No. Un luogo figura qui perché la sua scheda documenta un'informazione di accesso — che può descrivere un accesso parziale, stagionale o limitato. Fa fede il testo esatto della scheda, non la presenza nell'elenco.",
+            "es": "No. Un lugar figura aquí porque su ficha documenta una información de acceso — que puede describir un acceso parcial, estacional o limitado. El texto exacto de la ficha es lo que cuenta, no la presencia en la lista.",
+            "nl": "Nee. Een plek staat hier omdat de fiche toegangsinformatie documenteert — die ook gedeeltelijke, seizoensgebonden of beperkte toegang kan beschrijven. De exacte fichetekst is leidend, niet de vermelding in deze lijst."
+          }
+        },
+        {
+          "q": {
+            "fr": "Comment signaler une erreur d'accessibilité ?",
+            "en": "How can I report an accessibility error?",
+            "de": "Wie melde ich einen Fehler zur Barrierefreiheit?",
+            "it": "Come segnalare un errore di accessibilità?",
+            "es": "¿Cómo señalar un error de accesibilidad?",
+            "nl": "Hoe meld ik een fout over toegankelijkheid?"
+          },
+          "a": {
+            "fr": "Chaque fiche comporte un lien « Signaler une info ». Une correction vérifiée sur place ou auprès du gestionnaire est intégrée à la fiche après contrôle des sources.",
+            "en": "Every fiche carries a \"Report an issue\" link. A correction verified on site or with the operator is added to the fiche after source checking.",
+            "de": "Jede Fiche hat einen Link zum Melden einer Info. Eine vor Ort oder beim Betreiber geprüfte Korrektur wird nach Quellenprüfung in die Fiche übernommen.",
+            "it": "Ogni scheda include un link per segnalare un'informazione. Una correzione verificata sul posto o presso il gestore viene integrata nella scheda dopo il controllo delle fonti.",
+            "es": "Cada ficha incluye un enlace para señalar una información. Una corrección verificada in situ o con el gestor se integra en la ficha tras el control de fuentes.",
+            "nl": "Elke fiche heeft een link om informatie te melden. Een ter plaatse of bij de beheerder geverifieerde correctie wordt na bronnencontrole in de fiche opgenomen."
+          }
+        }
+      ]
+    },
+    {
+      "facet_key": "is_free",
+      "source": "manifest_bool",
+      "hub_slug": "sorties-gratuites-haute-savoie",
+      "html_hub": true,
+      "group_by": "category",
+      "i18n": {
+        "fr": {
+          "title": "Sorties gratuites en Haute-Savoie — lacs, cascades, panoramas",
+          "h1": "Sorties gratuites : les sites en accès libre, vérifiés",
+          "meta_description": "Les sorties gratuites de Haute-Savoie vérifiées une par une : plages, cascades, points de vue, sentiers et sites en accès libre.",
+          "intro": "La Haute-Savoie offre énormément sans billet : plages publiques du Lac d'Annecy et du Léman, cascades, points de vue, sentiers, villages et patrimoine en accès libre. Cette page liste les sites dont la gratuité est vérifiée sur la fiche — pas les « gratuits sauf parking » déguisés : quand un coût annexe existe, la fiche le précise. Un site payant ou au statut non vérifié n'apparaît pas ici."
+        },
+        "en": {
+          "title": "Free things to do in Haute-Savoie — lakes, waterfalls, viewpoints",
+          "h1": "Free outings: verified free-entry sites",
+          "meta_description": "Free things to do in Haute-Savoie, verified one by one: public beaches, waterfalls, viewpoints, trails and free-entry sites.",
+          "intro": "Haute-Savoie offers a great deal without a ticket: public beaches on Lac d'Annecy and Léman, waterfalls, viewpoints, trails, villages and free-entry heritage. This page lists sites whose free entry is verified on the fiche — not disguised \"free except parking\" entries: when a side cost exists, the fiche says so. A paid site, or one whose status is unverified, is not listed here."
+        },
+        "de": {
+          "title": "Kostenlose Ausflüge in Haute-Savoie — Seen, Wasserfälle, Aussichten",
+          "h1": "Kostenlose Ausflüge: geprüfte Orte mit freiem Zugang",
+          "meta_description": "Kostenlose Ausflüge in Haute-Savoie, einzeln geprüft: öffentliche Strände, Wasserfälle, Aussichtspunkte, Wege und frei zugängliche Orte.",
+          "intro": "Haute-Savoie bietet sehr viel ohne Ticket: öffentliche Strände am Lac d'Annecy und am Léman, Wasserfälle, Aussichtspunkte, Wege, Dörfer und frei zugängliches Kulturerbe. Diese Seite listet Orte, deren freier Zugang auf der Fiche geprüft ist — keine verkappten Fälle von gratis außer Parkplatz: Existiert ein Nebenkostenpunkt, nennt ihn die Fiche. Ein kostenpflichtiger oder ungeprüfter Ort erscheint hier nicht."
+        },
+        "it": {
+          "title": "Uscite gratuite in Haute-Savoie — laghi, cascate, panorami",
+          "h1": "Uscite gratuite: i siti ad accesso libero, verificati",
+          "meta_description": "Le uscite gratuite dell'Haute-Savoie verificate una per una: spiagge pubbliche, cascate, punti panoramici, sentieri e siti ad accesso libero.",
+          "intro": "L'Haute-Savoie offre moltissimo senza biglietto: spiagge pubbliche del Lac d'Annecy e del Léman, cascate, punti panoramici, sentieri, villaggi e patrimonio ad accesso libero. Questa pagina elenca i siti la cui gratuità è verificata sulla scheda — non i finti gratuiti tranne il parcheggio: quando esiste un costo accessorio, la scheda lo precisa. Un sito a pagamento o dallo stato non verificato non compare qui."
+        },
+        "es": {
+          "title": "Salidas gratuitas en Haute-Savoie — lagos, cascadas, miradores",
+          "h1": "Salidas gratuitas: sitios de acceso libre, verificados",
+          "meta_description": "Las salidas gratuitas de Haute-Savoie verificadas una a una: playas públicas, cascadas, miradores, senderos y sitios de acceso libre.",
+          "intro": "Haute-Savoie ofrece muchísimo sin entrada: playas públicas del Lac d'Annecy y del Léman, cascadas, miradores, senderos, pueblos y patrimonio de acceso libre. Esta página lista los sitios cuya gratuidad está verificada en la ficha — no los falsos gratis salvo aparcamiento: cuando existe un coste anexo, la ficha lo precisa. Un sitio de pago o de estado no verificado no aparece aquí."
+        },
+        "nl": {
+          "title": "Gratis uitjes in Haute-Savoie — meren, watervallen, uitzichten",
+          "h1": "Gratis uitjes: geverifieerde plekken met vrije toegang",
+          "meta_description": "Gratis uitjes in Haute-Savoie, één voor één geverifieerd: openbare stranden, watervallen, uitzichtpunten, paden en vrij toegankelijke plekken.",
+          "intro": "Haute-Savoie biedt enorm veel zonder ticket: openbare stranden aan het Lac d'Annecy en het Léman, watervallen, uitzichtpunten, paden, dorpen en vrij toegankelijk erfgoed. Deze pagina toont plekken waarvan de vrije toegang op de fiche is geverifieerd — geen verkapte gevallen van gratis behalve parkeren: bestaat er een bijkomende kost, dan vermeldt de fiche dat. Een betaalde of niet-geverifieerde plek staat hier niet."
+        }
+      },
+      "faq": [
+        {
+          "q": {
+            "fr": "« Gratuit » signifie-t-il vraiment aucun coût ?",
+            "en": "Does \"free\" really mean no cost at all?",
+            "de": "Bedeutet kostenlos wirklich null Kosten?",
+            "it": "Gratuito significa davvero nessun costo?",
+            "es": "¿Gratuito significa realmente ningún coste?",
+            "nl": "Betekent gratis echt helemaal geen kosten?"
+          },
+          "a": {
+            "fr": "Gratuit signifie ici : entrée libre, vérifiée sur la fiche. Des coûts annexes peuvent exister (parking, télécabine d'accès, location) — quand c'est le cas, la fiche du lieu le précise. Consultez-la avant de partir.",
+            "en": "Free here means: free entry, verified on the fiche. Side costs may exist (parking, access cable car, rentals) — when they do, the site's fiche says so. Check it before you go.",
+            "de": "Kostenlos heißt hier: freier Eintritt, auf der Fiche geprüft. Nebenkosten können existieren (Parken, Zubringer-Seilbahn, Verleih) — wenn ja, nennt die Fiche sie. Vor dem Ausflug prüfen.",
+            "it": "Gratuito qui significa: ingresso libero, verificato sulla scheda. Possono esistere costi accessori (parcheggio, cabinovia di accesso, noleggi) — in tal caso la scheda del luogo lo precisa. Consultatela prima di partire.",
+            "es": "Gratuito aquí significa: entrada libre, verificada en la ficha. Pueden existir costes anexos (aparcamiento, teleférico de acceso, alquileres) — cuando los hay, la ficha del lugar lo precisa. Consúltela antes de salir.",
+            "nl": "Gratis betekent hier: vrije toegang, geverifieerd op de fiche. Bijkomende kosten kunnen bestaan (parkeren, toegangskabelbaan, verhuur) — als dat zo is, vermeldt de fiche het. Raadpleeg die voor vertrek."
+          }
+        },
+        {
+          "q": {
+            "fr": "La gratuité peut-elle changer selon la saison ?",
+            "en": "Can free entry change with the season?",
+            "de": "Kann sich der freie Zugang je nach Saison ändern?",
+            "it": "La gratuità può cambiare con la stagione?",
+            "es": "¿La gratuidad puede cambiar según la temporada?",
+            "nl": "Kan vrije toegang per seizoen veranderen?"
+          },
+          "a": {
+            "fr": "Oui, certaines plages ou sites deviennent payants en haute saison. La fiche indique les conditions connues et leur date de vérification — en cas de doute, la source officielle liée sur la fiche fait foi.",
+            "en": "Yes, some beaches or sites charge in high season. The fiche states the known conditions and their verification date — when in doubt, the official source linked on the fiche is authoritative.",
+            "de": "Ja, manche Strände oder Orte sind in der Hochsaison kostenpflichtig. Die Fiche nennt die bekannten Bedingungen und ihr Prüfdatum — im Zweifel gilt die auf der Fiche verlinkte offizielle Quelle.",
+            "it": "Sì, alcune spiagge o siti diventano a pagamento in alta stagione. La scheda indica le condizioni note e la data di verifica — in caso di dubbio fa fede la fonte ufficiale collegata sulla scheda.",
+            "es": "Sí, algunas playas o sitios pasan a ser de pago en temporada alta. La ficha indica las condiciones conocidas y su fecha de verificación — en caso de duda, la fuente oficial enlazada en la ficha es la referencia.",
+            "nl": "Ja, sommige stranden of plekken worden betalend in het hoogseizoen. De fiche vermeldt de bekende voorwaarden en de verificatiedatum — bij twijfel geldt de officiële bron waarnaar de fiche linkt."
+          }
+        }
+      ]
+    },
+    {
+      "facet_key": "winter",
+      "source": "api",
+      "hub_slug": "infos-hiver-haute-savoie",
+      "html_hub": true,
+      "group_by": "category",
+      "i18n": {
+        "fr": {
+          "title": "Infos hiver — que devient chaque site à la saison froide | Haute-Savoie",
+          "h1": "L'hiver, lieu par lieu : ce que documente chaque fiche",
+          "meta_description": "Que devient chaque site de Haute-Savoie en hiver : fermeture, accès modifié, activité hivernale — l'info vérifiée, lieu par lieu.",
+          "intro": "En Haute-Savoie, l'hiver transforme les lieux : cascades gelées, sentiers enneigés, routes d'accès fermées, télécabines qui passent en mode ski, plages désertes mais toujours ouvertes. Cette page réunit, lieu par lieu, l'information hivernale documentée sur chaque fiche — telle quelle, qu'elle annonce une fermeture, un accès modifié ou une activité propre à la saison. La présence d'un lieu ici signifie qu'une info hiver existe, pas qu'il est ouvert."
+        },
+        "en": {
+          "title": "Winter info — what each site becomes in the cold season | Haute-Savoie",
+          "h1": "Winter, site by site: what each fiche documents",
+          "meta_description": "What each Haute-Savoie site becomes in winter: closures, changed access, winter activities — verified info, site by site.",
+          "intro": "In Haute-Savoie, winter transforms places: frozen waterfalls, snowed-in trails, closed access roads, cable cars switching to ski mode, beaches deserted but still open. This page gathers, site by site, the winter information documented on each fiche — as is, whether it announces a closure, changed access or a season-specific activity. A site's presence here means winter info exists, not that it is open."
+        },
+        "de": {
+          "title": "Winterinfos — was aus jedem Ort in der kalten Saison wird | Haute-Savoie",
+          "h1": "Der Winter, Ort für Ort: was jede Fiche dokumentiert",
+          "meta_description": "Was aus jedem Ort in Haute-Savoie im Winter wird: Schließung, geänderter Zugang, Winteraktivität — geprüfte Info, Ort für Ort.",
+          "intro": "In Haute-Savoie verwandelt der Winter die Orte: gefrorene Wasserfälle, verschneite Wege, gesperrte Zufahrten, Seilbahnen im Skibetrieb, verlassene, aber offene Strände. Diese Seite sammelt Ort für Ort die auf jeder Fiche dokumentierte Winterinformation — unverändert, ob sie eine Schließung, einen geänderten Zugang oder eine Saisonaktivität nennt. Ein Ort steht hier, weil eine Winterinfo existiert, nicht weil er geöffnet ist."
+        },
+        "it": {
+          "title": "Info inverno — cosa diventa ogni sito nella stagione fredda | Haute-Savoie",
+          "h1": "L'inverno, luogo per luogo: cosa documenta ogni scheda",
+          "meta_description": "Cosa diventa ogni sito dell'Haute-Savoie in inverno: chiusure, accessi modificati, attività invernali — info verificata, luogo per luogo.",
+          "intro": "In Haute-Savoie l'inverno trasforma i luoghi: cascate gelate, sentieri innevati, strade di accesso chiuse, cabinovie in modalità sci, spiagge deserte ma sempre aperte. Questa pagina riunisce, luogo per luogo, l'informazione invernale documentata su ogni scheda — così com'è, che annunci una chiusura, un accesso modificato o un'attività di stagione. La presenza di un luogo qui significa che esiste un'info inverno, non che sia aperto."
+        },
+        "es": {
+          "title": "Info invierno — qué es cada sitio en la temporada fría | Haute-Savoie",
+          "h1": "El invierno, lugar por lugar: lo que documenta cada ficha",
+          "meta_description": "Qué es cada sitio de Haute-Savoie en invierno: cierres, accesos modificados, actividades invernales — info verificada, lugar por lugar.",
+          "intro": "En Haute-Savoie, el invierno transforma los lugares: cascadas heladas, senderos nevados, carreteras de acceso cerradas, teleféricos en modo esquí, playas desiertas pero abiertas. Esta página reúne, lugar por lugar, la información invernal documentada en cada ficha — tal cual, ya anuncie un cierre, un acceso modificado o una actividad propia de la temporada. La presencia de un lugar aquí significa que existe información de invierno, no que esté abierto."
+        },
+        "nl": {
+          "title": "Winterinfo — wat elke plek wordt in het koude seizoen | Haute-Savoie",
+          "h1": "De winter, plek voor plek: wat elke fiche documenteert",
+          "meta_description": "Wat elke plek in Haute-Savoie wordt in de winter: sluiting, gewijzigde toegang, winteractiviteit — geverifieerde info, plek voor plek.",
+          "intro": "In Haute-Savoie verandert de winter de plekken: bevroren watervallen, besneeuwde paden, gesloten toegangswegen, kabelbanen in skimodus, verlaten maar open stranden. Deze pagina bundelt per locatie de winterinformatie die op elke fiche gedocumenteerd is — onveranderd, of die nu een sluiting, gewijzigde toegang of seizoensactiviteit meldt. Een plek staat hier omdat er winterinfo bestaat, niet omdat die open is."
+        }
+      },
+      "faq": [
+        {
+          "q": {
+            "fr": "Un lieu listé ici est-il ouvert en hiver ?",
+            "en": "Is a site listed here open in winter?",
+            "de": "Ist ein hier gelisteter Ort im Winter geöffnet?",
+            "it": "Un luogo elencato qui è aperto in inverno?",
+            "es": "¿Un lugar listado aquí está abierto en invierno?",
+            "nl": "Is een hier vermelde plek open in de winter?"
+          },
+          "a": {
+            "fr": "Pas nécessairement. Cette page liste les lieux dont la fiche documente une information hivernale — qui peut être une fermeture, un accès modifié ou une activité de saison. Le texte de chaque mention fait foi.",
+            "en": "Not necessarily. This page lists sites whose fiche documents winter information — which may be a closure, changed access or a seasonal activity. Each entry's text is authoritative.",
+            "de": "Nicht unbedingt. Diese Seite listet Orte, deren Fiche eine Winterinformation dokumentiert — das kann eine Schließung, ein geänderter Zugang oder eine Saisonaktivität sein. Maßgeblich ist der Text des Eintrags.",
+            "it": "Non necessariamente. Questa pagina elenca i luoghi la cui scheda documenta un'informazione invernale — che può essere una chiusura, un accesso modificato o un'attività stagionale. Fa fede il testo di ogni voce.",
+            "es": "No necesariamente. Esta página lista los lugares cuya ficha documenta una información invernal — que puede ser un cierre, un acceso modificado o una actividad de temporada. El texto de cada entrada es lo que cuenta.",
+            "nl": "Niet per se. Deze pagina toont plekken waarvan de fiche winterinformatie documenteert — dat kan een sluiting, gewijzigde toegang of seizoensactiviteit zijn. De tekst van elke vermelding is leidend."
+          }
+        },
+        {
+          "q": {
+            "fr": "Les conditions d'enneigement sont-elles suivies en temps réel ?",
+            "en": "Are snow conditions tracked in real time?",
+            "de": "Werden die Schneeverhältnisse in Echtzeit verfolgt?",
+            "it": "Le condizioni di innevamento sono seguite in tempo reale?",
+            "es": "¿Las condiciones de nieve se siguen en tiempo real?",
+            "nl": "Worden de sneeuwcondities in realtime gevolgd?"
+          },
+          "a": {
+            "fr": "Non. Les fiches décrivent le régime hivernal habituel d'un lieu, pas la météo du jour. Avant une sortie hivernale, vérifiez les conditions et les fermetures du jour auprès de la source officielle liée sur la fiche.",
+            "en": "No. Fiches describe a site's usual winter regime, not today's weather. Before a winter outing, check current conditions and closures with the official source linked on the fiche.",
+            "de": "Nein. Die Fiches beschreiben das übliche Winterregime eines Ortes, nicht das Tageswetter. Prüfen Sie vor einem Winterausflug die aktuellen Bedingungen und Sperrungen bei der auf der Fiche verlinkten offiziellen Quelle.",
+            "it": "No. Le schede descrivono il regime invernale abituale di un luogo, non il meteo del giorno. Prima di un'uscita invernale, verificate condizioni e chiusure del giorno presso la fonte ufficiale collegata sulla scheda.",
+            "es": "No. Las fichas describen el régimen invernal habitual de un lugar, no el tiempo del día. Antes de una salida invernal, compruebe las condiciones y cierres del día con la fuente oficial enlazada en la ficha.",
+            "nl": "Nee. De fiches beschrijven het gebruikelijke winterregime van een plek, niet het weer van vandaag. Controleer vóór een wintertocht de actuele omstandigheden en sluitingen bij de officiële bron op de fiche."
+          }
+        }
+      ]
+    },
+    {
+      "facet_key": "hours",
+      "source": "api",
+      "hub_slug": null,
+      "html_hub": false
+    },
+    {
+      "facet_key": "prices",
+      "source": "api",
+      "hub_slug": null,
+      "html_hub": false
+    },
+    {
+      "facet_key": "season",
+      "source": "api",
+      "hub_slug": null,
+      "html_hub": false
+    }
+  ]
+}
