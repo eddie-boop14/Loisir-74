@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Printemps (fonte des neiges) · visible toute l'année
+Spring (snowmelt) - visible all year round
 - Winter access window: Not specified
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified
