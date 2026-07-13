@@ -1,7 +1,7 @@
 # Phase 4 — photo assignments (gate artifact)
 
 **Date**: 2026-06-14
-**Total assignments**: 598 (one per (hub × slug) on the FR canonical hub)
+**Total assignments**: 599 (one per (hub × slug) on the FR canonical hub)
 
 ## Per-hub diversity
 
@@ -9,7 +9,7 @@
 |---|---:|---:|---:|
 | `baignade-nautisme` | 50 | 38 | 4 |
 | `bases-de-loisirs` | 85 | 61 | 6 |
-| `cascades` | 17 | 17 | 1 |
+| `cascades` | 18 | 18 | 1 |
 | `chateaux` | 27 | 23 | 4 |
 | `lacs-plages` | 31 | 26 | 3 |
 | `musees` | 49 | 23 | 9 |
@@ -165,6 +165,7 @@
 | `cascades` | `cascade-d-angon` | `aquatique` | `cascade-d-angon-hero.jpg` | — | json hero (local) |
 | `cascades` | `cascade-de-chedde` | `aquatique` | `Cascade_de_Cheddes_-_btv1b10123413v.jpg` | — | json hero (url) |
 | `cascades` | `cascade-de-doran` | `aquatique` | `cascade-de-doran-hero.jpg` | — | json hero (local) |
+| `cascades` | `cascade-de-fontany-saint-ferreol` | `aquatique` | `cascade-de-fontany-saint-ferreol-hero.jpg` | — | json hero (local) |
 | `cascades` | `cascade-de-l-arpenaz` | `aquatique` | `Cascade_de_l%27Arpenaz.jpg` | — | json hero (url) |
 | `cascades` | `cascade-de-la-belle-au-bois` | `aquatique` | `cascade-de-la-belle-au-bois-hero.jpg` | — | json hero (local) |
 | `cascades` | `cascade-de-la-diomaz` | `aquatique` | `cascade-de-la-diomaz-hero.jpg` | — | json hero (local) |
