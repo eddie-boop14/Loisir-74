@@ -25,6 +25,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import locales  # noqa: E402
 import build_facet_hubs as B  # noqa: E402  reuse membership + projection (single source)
+import build_ai_content as _bac  # noqa: E402  winter controlled-vocab maps
 
 LANGS = locales.PROSE
 CLAIM_DENY = ["accessibles", "ouverts en hiver", "parking gratuit", "lieux gratuits",
@@ -38,6 +39,20 @@ def main():
     facets = reg["facets"]
     html_facets = [f for f in facets if f.get("html_hub")]
     viol = []
+
+    # 0. winter controlled-vocab must be locale-COMPLETE across PROSE (R1 hardening):
+    # a missing token→locale is a reverse-i18n-leak waiting to ship. No fallback.
+    for name in ("WINTER_ACCESS", "WINTER_INFRA", "SNOW_VIEW", "WINTER_LABELS"):
+        m = getattr(_bac, name)
+        for k, v in m.items():
+            for lang in LANGS:
+                if lang not in v:
+                    viol.append(f"winter vocab {name}[{k}] missing locale {lang}")
+    for name in ("EQUIP", "EQUIP_COL"):
+        m = getattr(_bac, name)
+        for lang in LANGS:
+            if lang not in m:
+                viol.append(f"winter vocab {name} missing locale {lang}")
 
     for f in html_facets:
         key = f["facet_key"]

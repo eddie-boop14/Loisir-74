@@ -163,9 +163,14 @@ def facet_value_text(facet_key, slug, api, fiches, lang):
             parts.append(" ".join(b for b in bits if b))
         return " ; ".join(p for p in parts if p)
     if facet_key == "winter":
-        # winter controlled-vocab labels ship in fr/en only (like the fiche winter
-        # block) — the other PROSE locales fall back to en, verbatim controlled vocab.
-        wl = lambda m: (m.get(lang) or m.get("en") or m.get("fr") or "")
+        # winter controlled-vocab labels — STRICT per-locale, NO fallback (R1): a
+        # token missing a PROSE locale must FAIL the build, never silently emit an
+        # EN string on a non-EN page (the reverse-leak class gate_i18n_leak kills).
+        def wl(m):
+            if lang not in m:
+                raise KeyError(f"winter vocab missing locale {lang!r} for {m!r} — "
+                               "extend the map in build_ai_content.py (no fallback)")
+            return m[lang]
         fk = ((fiches.get(slug, {}).get("i18n") or {}).get("fr") or {}).get("facts") or {}
         rows = []
         a = fk.get("winter_access")
