@@ -40,7 +40,7 @@ Non renseigné
 
 ## Tarifs
 
-Gratuit
+4,60 € (adulte) · 2,50 € (enfant –16 ans)
 
 ## Accès (PMR)
 

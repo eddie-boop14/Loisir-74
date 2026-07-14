@@ -120,10 +120,39 @@ def newest_lastmod():
 
 
 # ------------------------------------------------------------ membership (derived)
+def _price_signals_paid(prices):
+    """True if the fiche's authoritative price data (api/lieu.prices) shows a
+    real entry cost — used to keep the free hub honest even when lieux.json's
+    is_free flag has drifted. A side cost the note discloses (e.g. free access,
+    paid rental) still shows the note; only an ENTRY price excludes."""
+    if not isinstance(prices, dict):
+        return False
+    if prices.get("is_free") is False:
+        return True
+    frm = prices.get("from")
+    try:
+        if frm is not None and float(frm) > 0:
+            return True
+    except (TypeError, ValueError):
+        pass
+    for t in (prices.get("tiers") or []):
+        try:
+            if float(t.get("price") or 0) > 0:
+                return True
+        except (TypeError, ValueError):
+            pass
+    return False
+
+
 def is_member(facet, slug, api, lieux):
     key, src = facet["facet_key"], facet["source"]
     if src == "manifest_bool":                      # is_free
-        return bool(lieux.get(slug, {}).get("is_free") is True)
+        # lieux.json is_free is the entry gate, BUT it has drifted paid on ~26
+        # fiches — cross-check the authoritative fiche price data so a paid site
+        # (escape game, cable car, climbing gym) never renders as "gratuit".
+        if lieux.get(slug, {}).get("is_free") is not True:
+            return False
+        return not _price_signals_paid((api.get(slug, {}) or {}).get("prices"))
     return api.get(slug, {}).get(key) is not None   # api non-null
 
 
@@ -400,7 +429,7 @@ def main():
     reg = load_registry()
     facets = reg["facets"]
     api, fiches, lieux = load_all()
-    total = len(api)                      # 398 api set (§8 scope)
+    total = len(api)                      # published api set (draft fiches have no page)
     built = newest_lastmod()
     html_facets = [f for f in facets if f.get("html_hub")]
     html_pages = md_files = injected = 0

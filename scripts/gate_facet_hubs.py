@@ -54,6 +54,17 @@ def main():
             if lang not in m:
                 viol.append(f"winter vocab {name} missing locale {lang}")
 
+    # 0b. free-hub honesty: no member of the is_free hub may carry a paid price at
+    # source (the lieux.json is_free flag drifted paid on ~27 fiches — a paid
+    # escape game / cable car must never render as "gratuit"). Belt for the
+    # builder's own cross-check, and it catches manifest re-drift.
+    for f in facets:
+        if f["facet_key"] != "is_free":
+            continue
+        for slug in B.members_of(f, api, lieux):
+            if B._price_signals_paid((api.get(slug, {}) or {}).get("prices")):
+                viol.append(f"is_free member {slug} has a paid price at source (api/lieu)")
+
     for f in html_facets:
         key = f["facet_key"]
         members = set(B.members_of(f, api, lieux))

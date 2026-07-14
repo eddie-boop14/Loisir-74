@@ -1,13 +1,13 @@
 ---
 facet: is_free
 scope: haute-savoie-74
-lieux_documented: 134
+lieux_documented: 107
 lieux_total: 393
 last_built: 2026-07-13
 source: loisirs74.fr
 ---
 
-# Gratuité — index transversal (393 lieux, 134 documentés)
+# Gratuité — index transversal (393 lieux, 107 documentés)
 
 ## Abbaye de Sixt — Sixt-Fer-à-Cheval
 Free entry
@@ -40,14 +40,6 @@ Fiche: https://loisirs74.fr/base-de-loisirs-du-vuaz-filliere · JSON: https://lo
 ## Belvédère du Mont Baron — Veyrier-du-Lac
 Free entry
 Fiche: https://loisirs74.fr/belvedere-du-mont-baron · JSON: https://loisirs74.fr/api/lieu/belvedere-du-mont-baron.json
-
-## Annecy Guides de Montagne (Bureau des guides) — Annecy
-Sortie collective dès ~60-100 € · sorties privées sur devis
-Fiche: https://loisirs74.fr/bureau-des-guides-annecy · JSON: https://loisirs74.fr/api/lieu/bureau-des-guides-annecy.json
-
-## Cascade Aventure — Morzine
-Tarifs disponibles sur demande (06 83 19 21 18)
-Fiche: https://loisirs74.fr/cascade-aventure · JSON: https://loisirs74.fr/api/lieu/cascade-aventure.json
 
 ## Cascade d'Angon — Talloires-Montmin
 Free entry
@@ -113,10 +105,6 @@ Fiche: https://loisirs74.fr/chateau-bellegarde-thonon · JSON: https://loisirs74
 Gratuit toute l'année
 Fiche: https://loisirs74.fr/chateau-chatillon-sur-cluses · JSON: https://loisirs74.fr/api/lieu/chateau-chatillon-sur-cluses.json
 
-## Château de Thorens — Fillière
-Tarifs sur demande (hébergement et événements)
-Fiche: https://loisirs74.fr/chateau-de-thorens · JSON: https://loisirs74.fr/api/lieu/chateau-de-thorens.json
-
 ## Château et Donjon des Seigneurs de Faverges — Faverges-Seythenex
 Free entry
 Fiche: https://loisirs74.fr/chateau-et-donjon-des-seigneurs-de-faverges · JSON: https://loisirs74.fr/api/lieu/chateau-et-donjon-des-seigneurs-de-faverges.json
@@ -157,10 +145,6 @@ Fiche: https://loisirs74.fr/col-des-glieres · JSON: https://loisirs74.fr/api/li
 Free entry
 Fiche: https://loisirs74.fr/col-des-pitons-saleve · JSON: https://loisirs74.fr/api/lieu/col-des-pitons-saleve.json
 
-## Disc Golf de Samoëns — Indiana Ventures — Samoëns
-Accès libre · location disques ~5-10 € (Indiana Ventures)
-Fiche: https://loisirs74.fr/disc-golf-indiana-ventures-samoens · JSON: https://loisirs74.fr/api/lieu/disc-golf-indiana-ventures-samoens.json
-
 ## Domaine de Guidou — Sciez
 Free entry
 Fiche: https://loisirs74.fr/domaine-de-guidou · JSON: https://loisirs74.fr/api/lieu/domaine-de-guidou.json
@@ -172,50 +156,6 @@ Fiche: https://loisirs74.fr/domaine-de-rovoree-la-chataigniere · JSON: https://
 ## Domaine du Tornet — La Balme-de-Sillingy
 Free entry
 Fiche: https://loisirs74.fr/domaine-du-tornet · JSON: https://loisirs74.fr/api/lieu/domaine-du-tornet.json
-
-## Ablok Annecy (Argonay) — Argonay
-Entrée adulte ~13-15 € · réductions enfants, étudiants, abonnements
-Fiche: https://loisirs74.fr/escalade-ablok-argonay · JSON: https://loisirs74.fr/api/lieu/escalade-ablok-argonay.json
-
-## Atome Climbing Annecy — Annecy
-Entrée ~15-20 € · pack matériel · abonnements
-Fiche: https://loisirs74.fr/escalade-atome-annecy · JSON: https://loisirs74.fr/api/lieu/escalade-atome-annecy.json
-
-## Climb Up Annecy — Annecy
-Entrée adulte ~13-16 € · réductions enfants, étudiants, abonnements
-Fiche: https://loisirs74.fr/escalade-climb-up-annecy · JSON: https://loisirs74.fr/api/lieu/escalade-climb-up-annecy.json
-
-## La Crique — Criq'Bloc & Criq'Parc — Annecy
-Bloc adulte ~12-15 € · Parc ~15-22 €
-Fiche: https://loisirs74.fr/escalade-la-crique-annecy · JSON: https://loisirs74.fr/api/lieu/escalade-la-crique-annecy.json
-
-## Space Bloc — Sillingy
-Adulte 14 €
-Fiche: https://loisirs74.fr/escalade-space-bloc-sillingy · JSON: https://loisirs74.fr/api/lieu/escalade-space-bloc-sillingy.json
-
-## L'Atelier des Énigmes Annecy — Annecy
-~25-35 €/personne selon créneau et taille du groupe
-Fiche: https://loisirs74.fr/escape-game-atelier-des-enigmes-annecy · JSON: https://loisirs74.fr/api/lieu/escape-game-atelier-des-enigmes-annecy.json
-
-## Issue Secrète Anthy-sur-Léman — Anthy-sur-Léman
-~25-35 €/personne selon créneau et taille du groupe
-Fiche: https://loisirs74.fr/escape-game-issue-secrete-anthy-sur-leman · JSON: https://loisirs74.fr/api/lieu/escape-game-issue-secrete-anthy-sur-leman.json
-
-## La Grande Évasion — Escape Game Annecy — Annecy
-~22-30 €/pers. selon nombre de joueurs
-Fiche: https://loisirs74.fr/escape-game-la-grande-evasion-annecy · JSON: https://loisirs74.fr/api/lieu/escape-game-la-grande-evasion-annecy.json
-
-## Mystères du Lac — Annecy
-22-38 € / session (selon nb joueurs)
-Fiche: https://loisirs74.fr/escape-game-mysteres-du-lac-annecy · JSON: https://loisirs74.fr/api/lieu/escape-game-mysteres-du-lac-annecy.json
-
-## Full Land Annecy — Argonay
-Entrée enfant à partir de ~8 € (à confirmer)
-Fiche: https://loisirs74.fr/full-land-annecy · JSON: https://loisirs74.fr/api/lieu/full-land-annecy.json
-
-## Gorges du Fier — Lovagny
-Free entry
-Fiche: https://loisirs74.fr/gorges-du-fier · JSON: https://loisirs74.fr/api/lieu/gorges-du-fier.json
 
 ## GR® 96 Bornes-Aravis — Saint-Pierre-en-Faucigny
 Gratuit toute l'année
@@ -236,14 +176,6 @@ Fiche: https://loisirs74.fr/grp-tour-pays-mont-blanc-sallanches · JSON: https:/
 ## Jardin botanique alpin La Jaÿsinia — Samoëns
 Gratuit (entrée libre)
 Fiche: https://loisirs74.fr/jardin-jaysinia-samoens · JSON: https://loisirs74.fr/api/lieu/jardin-jaysinia-samoens.json
-
-## K2 Parapente Doussard — Doussard
-Vol biplace ~95-180 € selon formule (à confirmer)
-Fiche: https://loisirs74.fr/k2-parapente-doussard · JSON: https://loisirs74.fr/api/lieu/k2-parapente-doussard.json
-
-## La Forêt Enchantée — Sillingy
-Nous contacter pour la grille tarifaire
-Fiche: https://loisirs74.fr/la-foret-enchantee-sillingy · JSON: https://loisirs74.fr/api/lieu/la-foret-enchantee-sillingy.json
 
 ## Lac Bénit — Mont-Saxonnex
 Free entry
@@ -277,21 +209,9 @@ Fiche: https://loisirs74.fr/lac-des-dronieres · JSON: https://loisirs74.fr/api/
 Free entry
 Fiche: https://loisirs74.fr/lac-vert-passy · JSON: https://loisirs74.fr/api/lieu/lac-vert-passy.json
 
-## L'Hachez-Vous Annecy — Annecy
-Session ~20-30 € / pers · formules groupes & anniversaires
-Fiche: https://loisirs74.fr/lancer-de-hache-l-hachez-vous-annecy · JSON: https://loisirs74.fr/api/lieu/lancer-de-hache-l-hachez-vous-annecy.json
-
-## Laser Game Evolution Annemasse — Ville-la-Grand
-Partie ~9-12 € · formules 2-3 parties · groupes/anniversaires
-Fiche: https://loisirs74.fr/laser-game-evolution-ville-la-grand · JSON: https://loisirs74.fr/api/lieu/laser-game-evolution-ville-la-grand.json
-
 ## Le Semnoz — Viuz-la-Chiésaz
 Free entry
 Fiche: https://loisirs74.fr/le-semnoz · JSON: https://loisirs74.fr/api/lieu/le-semnoz.json
-
-## Léman Forest — Saint-Gingolph
-Tarifs sur place ou par téléphone (non publiés en clair sur le site)
-Fiche: https://loisirs74.fr/leman-forest-saint-gingolph · JSON: https://loisirs74.fr/api/lieu/leman-forest-saint-gingolph.json
 
 ## Maison de la Mémoire Paysalp — Viuz-en-Sallaz
 Entrée libre · Animations payantes à la carte
@@ -313,17 +233,9 @@ Fiche: https://loisirs74.fr/mont-baron · JSON: https://loisirs74.fr/api/lieu/mo
 Free entry
 Fiche: https://loisirs74.fr/mont-joly · JSON: https://loisirs74.fr/api/lieu/mont-joly.json
 
-## Mont Salève — Monnetier-Mornex
-Adulte 13 € AR · Enfant 5,80 € AR · Famille 49 €
-Fiche: https://loisirs74.fr/mont-saleve · JSON: https://loisirs74.fr/api/lieu/mont-saleve.json
-
 ## Mont Veyrier — Annecy
 Free entry
 Fiche: https://loisirs74.fr/mont-veyrier · JSON: https://loisirs74.fr/api/lieu/mont-veyrier.json
-
-## Musée du cinéma d'animation — Annecy
-Grille tarifaire à venir (ouverture 19 juin 2026)
-Fiche: https://loisirs74.fr/musee-cinema-animation-annecy · JSON: https://loisirs74.fr/api/lieu/musee-cinema-animation-annecy.json
 
 ## Musée du Bâtiment — Ville-la-Grand
 Entrée libre · Dons déductibles 66%
@@ -381,10 +293,6 @@ Fiche: https://loisirs74.fr/plage-de-la-pinede · JSON: https://loisirs74.fr/api
 Gratuit (parking Zone Bleue disque, max 3h)
 Fiche: https://loisirs74.fr/plage-de-margencel-sechex · JSON: https://loisirs74.fr/api/lieu/plage-de-margencel-sechex.json
 
-## Plage de Menthon-Saint-Bernard — Menthon-Saint-Bernard
-4,60 € (adulte) · 2,50 € (enfant –16 ans)
-Fiche: https://loisirs74.fr/plage-de-menthon-saint-bernard · JSON: https://loisirs74.fr/api/lieu/plage-de-menthon-saint-bernard.json
-
 ## Plage de Messery — Messery
 Gratuit (parking payant 3 €/jour 1er juin-15 sept, badge)
 Fiche: https://loisirs74.fr/plage-de-messery · JSON: https://loisirs74.fr/api/lieu/plage-de-messery.json
@@ -396,10 +304,6 @@ Fiche: https://loisirs74.fr/plage-de-saint-disdille · JSON: https://loisirs74.f
 ## Plage Municipale de Saint-Gingolph — Saint-Gingolph
 Gratuit
 Fiche: https://loisirs74.fr/plage-de-saint-gingolph · JSON: https://loisirs74.fr/api/lieu/plage-de-saint-gingolph.json
-
-## Plage de Saint-Jorioz — Saint-Jorioz
-À partir de 2,60 € (adulte) · Gratuit hors saison
-Fiche: https://loisirs74.fr/plage-de-saint-jorioz · JSON: https://loisirs74.fr/api/lieu/plage-de-saint-jorioz.json
 
 ## Plage de Sciez-sur-Léman — Sciez
 Free entry
@@ -424,10 +328,6 @@ Fiche: https://loisirs74.fr/plage-des-marquisats · JSON: https://loisirs74.fr/a
 ## Plage du Lac de Montriond — Montriond
 Gratuit
 Fiche: https://loisirs74.fr/plage-du-lac-de-montriond · JSON: https://loisirs74.fr/api/lieu/plage-du-lac-de-montriond.json
-
-## Plage de l'Impérial — Annecy
-PAYANTE dès 2026 - tarif à confirmer (mairie évoque 'tarifs très modiques' première année)
-Fiche: https://loisirs74.fr/plage-imperial-annecy · JSON: https://loisirs74.fr/api/lieu/plage-imperial-annecy.json
 
 ## Plaine de loisirs de la Grangette — Thonon-les-Bains
 Accès libre · activités payantes (mini-golf, locations)
@@ -497,10 +397,6 @@ Fiche: https://loisirs74.fr/sentier-maison-saleve-pomier-presilly · JSON: https
 Gratuit toute l'année
 Fiche: https://loisirs74.fr/sentier-tournette-montmin · JSON: https://loisirs74.fr/api/lieu/sentier-tournette-montmin.json
 
-## Téléphérique des Grands Montets — Chamonix-Mont-Blanc
-Billet AlpiSki AGM : adulte 36,80 € (caisse) — ou forfait Chamonix Le Pass
-Fiche: https://loisirs74.fr/telepherique-des-grands-montets · JSON: https://loisirs74.fr/api/lieu/telepherique-des-grands-montets.json
-
 ## Tête du Parmelan — Dingy-Saint-Clair
 Free entry
 Fiche: https://loisirs74.fr/tete-du-parmelan · JSON: https://loisirs74.fr/api/lieu/tete-du-parmelan.json
@@ -516,10 +412,6 @@ Fiche: https://loisirs74.fr/tour-des-langues-thonon · JSON: https://loisirs74.f
 ## Tour du Mont-Blanc — Les Houches
 Sentier gratuit · Refuges 60-90 €/nuit demi-pension
 Fiche: https://loisirs74.fr/tour-du-mont-blanc-les-houches · JSON: https://loisirs74.fr/api/lieu/tour-du-mont-blanc-les-houches.json
-
-## R'Jump Léman — Vétraz-Monthoux
-14 €/h · 10 € heure suppl. · 12 € groupe
-Fiche: https://loisirs74.fr/trampoline-park-rjump-vetraz-monthoux · JSON: https://loisirs74.fr/api/lieu/trampoline-park-rjump-vetraz-monthoux.json
 
 ## Véloroute Vallée de l'Arve — Cluses
 Gratuit toute l'année
