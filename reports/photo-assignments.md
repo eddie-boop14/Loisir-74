@@ -12,7 +12,7 @@
 | `cascades` | 18 | 18 | 1 |
 | `chateaux` | 27 | 23 | 4 |
 | `lacs-plages` | 31 | 26 | 3 |
-| `musees` | 49 | 23 | 9 |
+| `musees` | 49 | 25 | 9 |
 | `parcs-jardins` | 31 | 17 | 11 |
 | `points-de-vue` | 30 | 27 | 3 |
 | `que-faire` | 73 | 42 | 4 |
@@ -239,8 +239,8 @@
 | `lacs-plages` | `plage-imperial-annecy` | `aquatique` | `generique-plage-lac-10.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-municipale-thonon` | `aquatique` | `generique-plage-lac-15.jpg` | — | json hero (local) |
 | `musees` | `ancien-remparts-chateau-lullin-lullin` | `patrimoine` | `generique-chateau.jpg` | — | json hero (local) |
-| `musees` | `bourg-et-ruines-chateau-chaumont-chaumont` | `patrimoine` | `generique-chateau-brume.jpg` | — | json hero (local) |
-| `musees` | `chateau-comtal-saint-julien-en-genevois` | `patrimoine` | `generique-chateau.jpg` | — | json hero (local) |
+| `musees` | `bourg-et-ruines-chateau-chaumont-chaumont` | `patrimoine` | `bourg-et-ruines-chateau-chaumont-chaumont-hero.jpg` | — | json hero (local) |
+| `musees` | `chateau-comtal-saint-julien-en-genevois` | `patrimoine` | `chateau-comtal-saint-julien-en-genevois-hero.jpg` | — | json hero (local) |
 | `musees` | `chateau-fonbonne-et-herbularius-evian-bains` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
 | `musees` | `ecomusee-bois-foret-thones` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
 | `musees` | `ecomusee-lac-annecy-sevrier` | `patrimoine` | `generique-musee-moderne.jpg` | — | json hero (local) |
