@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/chateau-comtal-saint-julien-en-genevois
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/chateau-comtal-saint-julien-en-genevois.json
-photo_url: /img/generique/generique-chateau.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/musees/chateau-comtal-saint-julien-en-genevois-hero.jpg
+photo_type: real
+photo_author: "erbog74"
+photo_license: "CC0"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-10
 source: loisirs74.fr
 ---

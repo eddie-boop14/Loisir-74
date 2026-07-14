@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-OPEN ACCESS 24/7, all year round, to the Voie verte du Lac d'Annecy. Public lighting in urban areas (Annecy, Sevrier centre). Works 2025-2026: 8 phases of widening over 15.3 km on the west side, occasional signposted diversions. Verified on sila.fr on 24 May 2026 - subject to seasonal changes.
+FREE ACCESS 24/7, year-round to the Voie verte du Lac d'Annecy. Public lighting in urban areas (Annecy, Sevrier centre). 2025-2026 works: 8 widening phases over 15.3 km on the west side, occasional waymarked diversions. Verified on sila.fr on 24 May 2026 - subject to seasonal changes.
 
 ## Prices
 
