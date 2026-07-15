@@ -1,13 +1,13 @@
 ---
 facet: prices
 scope: haute-savoie-74
-lieux_documented: 392
-lieux_total: 394
+lieux_documented: 401
+lieux_total: 403
 last_built: 2026-07-13
 source: loisirs74.fr
 ---
 
-# Tarifs — index transversal (394 lieux, 392 documentés)
+# Tarifs — index transversal (403 lieux, 401 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 À partir de 7 € (adulte)
@@ -92,6 +92,10 @@ Fiche: https://loisirs74.fr/au-fil-rail-jeu-piste-a-servoz-servoz · JSON: https
 ## Au Fil du Rail - Jeu de piste à Vallorcine — Vallorcine
 Gratuit
 Fiche: https://loisirs74.fr/au-fil-rail-jeu-piste-a-vallorcine-vallorcine · JSON: https://loisirs74.fr/api/lieu/au-fil-rail-jeu-piste-a-vallorcine-vallorcine.json
+
+## Avoriaz — Morzine
+
+Fiche: https://loisirs74.fr/avoriaz · JSON: https://loisirs74.fr/api/lieu/avoriaz.json
 
 ## Plan d'eau Biotope de Combloux — Combloux
 Adulte : 6,50 €–7,50 € · Enfant 5-14 ans : 5,50 €–6 €
@@ -304,6 +308,10 @@ Fiche: https://loisirs74.fr/centre-nautique-cite-de-l-eau-publier · JSON: https
 ## Centre Nautique Guy Châtel — Ayse
 Entrée ~3-6 € (à confirmer)
 Fiche: https://loisirs74.fr/centre-nautique-guy-chatel-ayse · JSON: https://loisirs74.fr/api/lieu/centre-nautique-guy-chatel-ayse.json
+
+## Chamonix-Mont-Blanc — Chamonix-Mont-Blanc
+
+Fiche: https://loisirs74.fr/chamonix-mont-blanc · JSON: https://loisirs74.fr/api/lieu/chamonix-mont-blanc.json
 
 ## Château d'Avully — Brenthonne
 Adulte 10 € · Étudiant 8 € · Enfant 5-12 ans 5 €
@@ -633,6 +641,10 @@ Fiche: https://loisirs74.fr/ferme-pedagogique-petit-mont-bellevaux · JSON: http
 Adulte 25 € · Sénior 16 € · 0-4 ans gratuit · forfaits dégressifs
 Fiche: https://loisirs74.fr/filenvol-monnetier-mornex · JSON: https://loisirs74.fr/api/lieu/filenvol-monnetier-mornex.json
 
+## Flaine — Arâches-la-Frasse
+
+Fiche: https://loisirs74.fr/flaine · JSON: https://loisirs74.fr/api/lieu/flaine.json
+
 ## Fonderie Paccard — Sevrier
 Musée 9,50 € · Avec fonderie 14 € · Visite Découverte 20 € · -10 ans gratuit
 Fiche: https://loisirs74.fr/fonderie-paccard-sevrier · JSON: https://loisirs74.fr/api/lieu/fonderie-paccard-sevrier.json
@@ -769,6 +781,10 @@ Fiche: https://loisirs74.fr/karting-team-bouvier-pringy · JSON: https://loisirs
 ~18-22 € la session 10 min
 Fiche: https://loisirs74.fr/karting-thones · JSON: https://loisirs74.fr/api/lieu/karting-thones.json
 
+## La Clusaz — La Clusaz
+
+Fiche: https://loisirs74.fr/la-clusaz · JSON: https://loisirs74.fr/api/lieu/la-clusaz.json
+
 ## La Forêt Enchantée — Sillingy
 Nous contacter pour la grille tarifaire
 Fiche: https://loisirs74.fr/la-foret-enchantee-sillingy · JSON: https://loisirs74.fr/api/lieu/la-foret-enchantee-sillingy.json
@@ -821,6 +837,10 @@ Fiche: https://loisirs74.fr/laser-game-evolution-ville-la-grand · JSON: https:/
 Partie ~9-12 € · formules 2-3 parties · groupes/anniversaires
 Fiche: https://loisirs74.fr/laser-game-lasermaxx-sillingy · JSON: https://loisirs74.fr/api/lieu/laser-game-lasermaxx-sillingy.json
 
+## Le Grand-Bornand — Le Grand-Bornand
+
+Fiche: https://loisirs74.fr/le-grand-bornand · JSON: https://loisirs74.fr/api/lieu/le-grand-bornand.json
+
 ## Le Semnoz — Viuz-la-Chiésaz
 
 Fiche: https://loisirs74.fr/le-semnoz · JSON: https://loisirs74.fr/api/lieu/le-semnoz.json
@@ -836,6 +856,10 @@ Fiche: https://loisirs74.fr/leman-kid-thonon-les-bains · JSON: https://loisirs7
 ## Les Aigles du Léman — Sciez
 À partir de 15 € (adulte)
 Fiche: https://loisirs74.fr/les-aigles-du-leman · JSON: https://loisirs74.fr/api/lieu/les-aigles-du-leman.json
+
+## Les Gets — Les Gets
+
+Fiche: https://loisirs74.fr/les-gets · JSON: https://loisirs74.fr/api/lieu/les-gets.json
 
 ## Maison de Barberine — Vallorcine
 Adulte 5 € · Réduit 3,50 € · -18 ans gratuit · Pass Musées 25 €/an
@@ -865,9 +889,17 @@ Fiche: https://loisirs74.fr/maison-forte-hautetour-saint-gervais · JSON: https:
 5,50 € adulte · 4,50 € réduit · DUO Abbaye 9 €
 Fiche: https://loisirs74.fr/maison-fromage-abondance-abondance · JSON: https://loisirs74.fr/api/lieu/maison-fromage-abondance-abondance.json
 
+## Manigod — Manigod
+
+Fiche: https://loisirs74.fr/manigod · JSON: https://loisirs74.fr/api/lieu/manigod.json
+
 ## Marais de Poisy — Poisy
 
 Fiche: https://loisirs74.fr/marais-de-poisy · JSON: https://loisirs74.fr/api/lieu/marais-de-poisy.json
+
+## Megève — Megève
+
+Fiche: https://loisirs74.fr/megeve · JSON: https://loisirs74.fr/api/lieu/megeve.json
 
 ## La mine de la Lappiaz — Morzine
 Gratuit
@@ -896,6 +928,10 @@ Fiche: https://loisirs74.fr/montgolfiere-annecy · JSON: https://loisirs74.fr/ap
 ## Montgolfières du Mont-Blanc — Évian-les-Bains
 Sur devis — individuel, couple, groupe
 Fiche: https://loisirs74.fr/montgolfiere-du-mont-blanc-evian · JSON: https://loisirs74.fr/api/lieu/montgolfiere-du-mont-blanc-evian.json
+
+## Morzine — Morzine
+
+Fiche: https://loisirs74.fr/morzine · JSON: https://loisirs74.fr/api/lieu/morzine.json
 
 ## Musée des ailes anciennes — Excenevex
 Gratuit (don bienvenu)

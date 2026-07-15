@@ -1,7 +1,7 @@
 # Phase 4 — photo assignments (gate artifact)
 
 **Date**: 2026-06-14
-**Total assignments**: 599 (one per (hub × slug) on the FR canonical hub)
+**Total assignments**: 608 (one per (hub × slug) on the FR canonical hub)
 
 ## Per-hub diversity
 
@@ -20,6 +20,7 @@
 | `sentiers` | 40 | 9 | 13 |
 | `sorties-detente` | 25 | 13 | 3 |
 | `sport-jeux` | 52 | 33 | 4 |
+| `stations-de-ski` | 9 | 8 | 2 |
 | `telecabines` | 12 | 8 | 5 |
 | `voies-vertes` | 5 | 5 | 1 |
 
@@ -609,6 +610,15 @@
 | `sport-jeux` | `trampoline-park-rjump-vetraz-monthoux` | `divertissement` | `generique-trampoline-park-saut.jpg` | — | json hero (local) |
 | `sport-jeux` | `vr-ereel-annecy-sillingy` | `divertissement` | `generique-vr-multi-joueurs.jpg` | — | json hero (local) |
 | `sport-jeux` | `vr-hypnotik-room-jumpers-fillinges` | `divertissement` | `generique-vr-immersion.jpg` | — | json hero (local) |
+| `stations-de-ski` | `avoriaz` | `montagne` | `generique-ski-freestyle.jpg` | — | json hero (local) |
+| `stations-de-ski` | `chamonix-mont-blanc` | `montagne` | `generique-sentier-arete-alpine.jpg` | — | json hero (local) |
+| `stations-de-ski` | `flaine` | `montagne` | `generique-ski-piste.jpg` | — | json hero (local) |
+| `stations-de-ski` | `la-clusaz` | `montagne` | `generique-ski-piste.jpg` | — | json hero (local) |
+| `stations-de-ski` | `le-grand-bornand` | `montagne` | `generique-ski-descente.jpg` | — | json hero (local) |
+| `stations-de-ski` | `les-gets` | `montagne` | `generique-snowboard-poudreuse.jpg` | — | json hero (local) |
+| `stations-de-ski` | `manigod` | `montagne` | `generique-telesiege.jpg` | — | json hero (local) |
+| `stations-de-ski` | `megeve` | `montagne` | `generique-foret-neige-aerien.jpg` | — | json hero (local) |
+| `stations-de-ski` | `morzine` | `montagne` | `generique-snowboard-saut.jpg` | — | json hero (local) |
 | `telecabines` | `telecabine-des-chavannes-les-gets` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
 | `telecabines` | `telecabine-du-jaillet` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
 | `telecabines` | `telecabine-du-mont-chery-les-gets` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |

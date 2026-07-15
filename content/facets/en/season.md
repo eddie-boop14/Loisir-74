@@ -1,13 +1,13 @@
 ---
 facet: season
 scope: haute-savoie-74
-lieux_documented: 391
-lieux_total: 394
+lieux_documented: 400
+lieux_total: 403
 last_built: 2026-07-13
 source: loisirs74.fr
 ---
 
-# Saison — index transversal (394 lieux, 391 documentés)
+# Saison — index transversal (403 lieux, 400 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Toute l'année · Été pour les jardins
@@ -92,6 +92,10 @@ Fiche: https://loisirs74.fr/au-fil-rail-jeu-piste-a-servoz-servoz · JSON: https
 ## Au Fil du Rail - Jeu de piste à Vallorcine — Vallorcine
 Printemps, été, automne — neige possible l'hiver
 Fiche: https://loisirs74.fr/au-fil-rail-jeu-piste-a-vallorcine-vallorcine · JSON: https://loisirs74.fr/api/lieu/au-fil-rail-jeu-piste-a-vallorcine-vallorcine.json
+
+## Avoriaz — Morzine
+Hiver (ski) · station animée aussi en été (VTT, rando)
+Fiche: https://loisirs74.fr/avoriaz · JSON: https://loisirs74.fr/api/lieu/avoriaz.json
 
 ## Plan d'eau Biotope de Combloux — Combloux
 13 juin au 6 septembre 2026
@@ -304,6 +308,10 @@ Fiche: https://loisirs74.fr/centre-nautique-cite-de-l-eau-publier · JSON: https
 ## Centre Nautique Guy Châtel — Ayse
 Toute l'année — extérieur juin-août
 Fiche: https://loisirs74.fr/centre-nautique-guy-chatel-ayse · JSON: https://loisirs74.fr/api/lieu/centre-nautique-guy-chatel-ayse.json
+
+## Chamonix-Mont-Blanc — Chamonix-Mont-Blanc
+Hiver (ski alpin, hors-piste, nordique) · vallée animée toute l'année (alpinisme, randonnée)
+Fiche: https://loisirs74.fr/chamonix-mont-blanc · JSON: https://loisirs74.fr/api/lieu/chamonix-mont-blanc.json
 
 ## Château d'Avully — Brenthonne
 1er juillet - 31 août (sans RDV) · Toute l'année sur RDV
@@ -629,6 +637,10 @@ Fiche: https://loisirs74.fr/ferme-pedagogique-petit-mont-bellevaux · JSON: http
 Toute l'année — ouvert 365 jours/an
 Fiche: https://loisirs74.fr/filenvol-monnetier-mornex · JSON: https://loisirs74.fr/api/lieu/filenvol-monnetier-mornex.json
 
+## Flaine — Arâches-la-Frasse
+Hiver (ski) · station animée aussi l'été
+Fiche: https://loisirs74.fr/flaine · JSON: https://loisirs74.fr/api/lieu/flaine.json
+
 ## Fonderie Paccard — Sevrier
 Mars – octobre · coulée le jeudi sauf août
 Fiche: https://loisirs74.fr/fonderie-paccard-sevrier · JSON: https://loisirs74.fr/api/lieu/fonderie-paccard-sevrier.json
@@ -765,6 +777,10 @@ Fiche: https://loisirs74.fr/karting-team-bouvier-pringy · JSON: https://loisirs
 Toute l'année (indoor) / printemps-automne (extérieur)
 Fiche: https://loisirs74.fr/karting-thones · JSON: https://loisirs74.fr/api/lieu/karting-thones.json
 
+## La Clusaz — La Clusaz
+Hiver (ski) · station animée toute l'année
+Fiche: https://loisirs74.fr/la-clusaz · JSON: https://loisirs74.fr/api/lieu/la-clusaz.json
+
 ## La Forêt Enchantée — Sillingy
 Toute l'année (idéal mauvais temps)
 Fiche: https://loisirs74.fr/la-foret-enchantee-sillingy · JSON: https://loisirs74.fr/api/lieu/la-foret-enchantee-sillingy.json
@@ -817,6 +833,10 @@ Fiche: https://loisirs74.fr/laser-game-evolution-ville-la-grand · JSON: https:/
 Toute l'année
 Fiche: https://loisirs74.fr/laser-game-lasermaxx-sillingy · JSON: https://loisirs74.fr/api/lieu/laser-game-lasermaxx-sillingy.json
 
+## Le Grand-Bornand — Le Grand-Bornand
+Hiver (ski alpin & nordique) · station animée toute l'année
+Fiche: https://loisirs74.fr/le-grand-bornand · JSON: https://loisirs74.fr/api/lieu/le-grand-bornand.json
+
 ## Le Semnoz — Viuz-la-Chiésaz
 Juin – octobre (été) ; décembre – mars (ski)
 Fiche: https://loisirs74.fr/le-semnoz · JSON: https://loisirs74.fr/api/lieu/le-semnoz.json
@@ -832,6 +852,10 @@ Fiche: https://loisirs74.fr/leman-kid-thonon-les-bains · JSON: https://loisirs7
 ## Les Aigles du Léman — Sciez
 Avril – août (parc d'été)
 Fiche: https://loisirs74.fr/les-aigles-du-leman · JSON: https://loisirs74.fr/api/lieu/les-aigles-du-leman.json
+
+## Les Gets — Les Gets
+Hiver (ski) · Été (VTT & bikepark)
+Fiche: https://loisirs74.fr/les-gets · JSON: https://loisirs74.fr/api/lieu/les-gets.json
 
 ## Maison de Barberine — Vallorcine
 1er juillet — 31 août 2026 uniquement
@@ -861,9 +885,17 @@ Fiche: https://loisirs74.fr/maison-forte-hautetour-saint-gervais · JSON: https:
 Toute l'année · fermé 1er nov-15 déc
 Fiche: https://loisirs74.fr/maison-fromage-abondance-abondance · JSON: https://loisirs74.fr/api/lieu/maison-fromage-abondance-abondance.json
 
+## Manigod — Manigod
+Hiver (ski) · village vivant toute l'année
+Fiche: https://loisirs74.fr/manigod · JSON: https://loisirs74.fr/api/lieu/manigod.json
+
 ## Marais de Poisy — Poisy
 Printemps et automne
 Fiche: https://loisirs74.fr/marais-de-poisy · JSON: https://loisirs74.fr/api/lieu/marais-de-poisy.json
+
+## Megève — Megève
+Hiver (ski) · station animée toute l'année
+Fiche: https://loisirs74.fr/megeve · JSON: https://loisirs74.fr/api/lieu/megeve.json
 
 ## La mine de la Lappiaz — Morzine
 Mi-juin à mi-octobre (hors neige)
@@ -892,6 +924,10 @@ Fiche: https://loisirs74.fr/montgolfiere-annecy · JSON: https://loisirs74.fr/ap
 ## Montgolfières du Mont-Blanc — Évian-les-Bains
 Avril à octobre · matin (lever du jour)
 Fiche: https://loisirs74.fr/montgolfiere-du-mont-blanc-evian · JSON: https://loisirs74.fr/api/lieu/montgolfiere-du-mont-blanc-evian.json
+
+## Morzine — Morzine
+Hiver (ski) · station animée toute l'année
+Fiche: https://loisirs74.fr/morzine · JSON: https://loisirs74.fr/api/lieu/morzine.json
 
 ## Musée des ailes anciennes — Excenevex
 Toute l'année (jeudi et samedi)
