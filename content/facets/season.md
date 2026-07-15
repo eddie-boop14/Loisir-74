@@ -1,13 +1,13 @@
 ---
 facet: season
 scope: haute-savoie-74
-lieux_documented: 390
-lieux_total: 393
+lieux_documented: 391
+lieux_total: 394
 last_built: 2026-07-13
 source: loisirs74.fr
 ---
 
-# Saison — index transversal (393 lieux, 390 documentés)
+# Saison — index transversal (394 lieux, 391 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Toute l'année · Été pour les jardins
@@ -40,6 +40,10 @@ Fiche: https://loisirs74.fr/acroparc-de-bellavallis-bellevaux · JSON: https://l
 ## Aire de décollage parapente de Plaine-Joux — Passy
 Toute l'année · Thermiques l'après-midi
 Fiche: https://loisirs74.fr/aire-de-decollage-parapente-plaine-joux · JSON: https://loisirs74.fr/api/lieu/aire-de-decollage-parapente-plaine-joux.json
+
+## Aire de repos de l'ancienne gare de Bredannaz — Doussard
+Toute l'année · idéale d'avril à octobre à vélo ou à pied
+Fiche: https://loisirs74.fr/aire-de-repos-bredannaz-doussard · JSON: https://loisirs74.fr/api/lieu/aire-de-repos-bredannaz-doussard.json
 
 ## Alpine Coaster des Planards — Chamonix-Mont-Blanc
 Toute l'année

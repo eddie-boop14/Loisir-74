@@ -1,13 +1,13 @@
 ---
 facet: prices
 scope: haute-savoie-74
-lieux_documented: 391
-lieux_total: 393
+lieux_documented: 392
+lieux_total: 394
 last_built: 2026-07-13
 source: loisirs74.fr
 ---
 
-# Tarifs — index transversal (393 lieux, 391 documentés)
+# Tarifs — index transversal (394 lieux, 392 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 À partir de 7 € (adulte)
@@ -40,6 +40,10 @@ Fiche: https://loisirs74.fr/acroparc-de-bellavallis-bellevaux · JSON: https://l
 ## Aire de décollage parapente de Plaine-Joux — Passy
 
 Fiche: https://loisirs74.fr/aire-de-decollage-parapente-plaine-joux · JSON: https://loisirs74.fr/api/lieu/aire-de-decollage-parapente-plaine-joux.json
+
+## Aire de repos de l'ancienne gare de Bredannaz — Doussard
+
+Fiche: https://loisirs74.fr/aire-de-repos-bredannaz-doussard · JSON: https://loisirs74.fr/api/lieu/aire-de-repos-bredannaz-doussard.json
 
 ## Alpine Coaster des Planards — Chamonix-Mont-Blanc
 1 descente 9,50 € ; 6 tours (5+1) 47,50 € ; 10 tours (8+2) 76 €

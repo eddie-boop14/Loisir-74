@@ -1,13 +1,13 @@
 ---
 facet: is_free
 scope: haute-savoie-74
-lieux_documented: 107
-lieux_total: 393
+lieux_documented: 108
+lieux_total: 394
 last_built: 2026-07-13
 source: loisirs74.fr
 ---
 
-# Gratuité — index transversal (393 lieux, 107 documentés)
+# Gratuité — index transversal (394 lieux, 108 documentés)
 
 ## Abbaye de Sixt — Sixt-Fer-à-Cheval
 Accès libre
@@ -16,6 +16,10 @@ Fiche: https://loisirs74.fr/abbaye-de-sixt · JSON: https://loisirs74.fr/api/lie
 ## Aire de décollage parapente de Plaine-Joux — Passy
 Accès libre
 Fiche: https://loisirs74.fr/aire-de-decollage-parapente-plaine-joux · JSON: https://loisirs74.fr/api/lieu/aire-de-decollage-parapente-plaine-joux.json
+
+## Aire de repos de l'ancienne gare de Bredannaz — Doussard
+Accès libre
+Fiche: https://loisirs74.fr/aire-de-repos-bredannaz-doussard · JSON: https://loisirs74.fr/api/lieu/aire-de-repos-bredannaz-doussard.json
 
 ## Base de loisirs des Ilettes — Sallanches
 Accès libre
