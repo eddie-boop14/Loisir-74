@@ -47,8 +47,8 @@ COPY_DIRS = [
 # every local hero 404s live.
 HUB_DIRS = [
     "cascades", "chateaux", "musees", "points-de-vue", "sentiers",
-    "telecabines", "voies-vertes", "lacs-plages", "bases-de-loisirs",
-    "baignade-nautisme", "parcs-jardins", "que-faire",
+    "telecabines", "stations-de-ski", "voies-vertes", "lacs-plages",
+    "bases-de-loisirs", "baignade-nautisme", "parcs-jardins", "que-faire",
     "sensations-plein-air", "sorties-detente", "sport-jeux",
     "img",
 ]

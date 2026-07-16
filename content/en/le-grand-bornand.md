@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Hiver (ski alpin & nordique) · station animée toute l'année
+Winter (alpine & Nordic skiing) · a resort alive all year round
 
 ## Official source
 

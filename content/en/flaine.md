@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Hiver (ski) · station animée aussi l'été
+Winter (skiing) · also lively in summer
 
 ## Official source
 

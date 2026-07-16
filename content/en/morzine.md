@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Hiver (ski) · station animée toute l'année
+Winter (skiing) · a resort lively all year round
 
 ## Official source
 

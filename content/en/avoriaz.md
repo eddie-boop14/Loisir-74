@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Hiver (ski) · station animée aussi en été (VTT, rando)
+Winter (skiing) · resort also lively in summer (mountain biking, hiking)
 
 ## Official source
 

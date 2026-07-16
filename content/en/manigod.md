@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Hiver (ski) · village vivant toute l'année
+Winter (skiing) · a lively village all year round
 
 ## Official source
 

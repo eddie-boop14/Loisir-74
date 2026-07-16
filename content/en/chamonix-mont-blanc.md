@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Hiver (ski alpin, hors-piste, nordique) · vallée animée toute l'année (alpinisme, randonnée)
+Winter (alpine skiing, off-piste, cross-country) · the valley is lively year-round (mountaineering, hiking)
 
 ## Official source
 

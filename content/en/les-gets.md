@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Hiver (ski) · Été (VTT & bikepark)
+Winter (skiing) · Summer (mountain biking & bikepark)
 
 ## Official source
 
