@@ -1074,10 +1074,10 @@ def selections_chips(d, lang):
         f'<div class="kicker reveal">{esc(_SELECTIONS_LABEL[lang])}</div>'
         f'<div class="reveal" style="display:flex;flex-wrap:wrap;gap:8px">{chips}</div>'
         '</div></section>'
-        '<style>.chip-sel{display:inline-block;background:var(--paper-2,#f4efe4);'
-        'border:1px solid var(--line,#e3ddd0);border-radius:999px;padding:4px 14px;'
-        'font-size:13px;font-weight:600;color:var(--ink,#22302f);text-decoration:none}'
-        '.chip-sel:hover{border-color:#1F6E78;color:#1F6E78}</style>'
+        '<style>.chip-sel{display:inline-block;background:var(--surface-2);'
+        'border:1px solid var(--line);border-radius:999px;padding:4px 14px;'
+        'font-size:13px;font-weight:600;color:var(--ink);text-decoration:none}'
+        '.chip-sel:hover{border-color:var(--accent);color:var(--accent)}</style>'
     )
 
 

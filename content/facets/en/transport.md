@@ -2,12 +2,12 @@
 facet: transport
 scope: haute-savoie-74
 lieux_documented: 281
-lieux_total: 422
+lieux_total: 423
 last_built: 2026-07-13
 source: loisirs74.fr
 ---
 
-# Transports — index transversal (422 lieux, 281 documentés)
+# Transports — index transversal (423 lieux, 281 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Abbaye (Cars Région Haute-Savoie · 235 m · lignes N-BAB) ; College H. Corbet (Cars Région Haute-Savoie · 873 m · lignes Y91) ; Chef-lieu (Cars Région Haute-Savoie · 1105 m · lignes N-BAB, Y91)

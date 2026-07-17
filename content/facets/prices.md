@@ -1,13 +1,13 @@
 ---
 facet: prices
 scope: haute-savoie-74
-lieux_documented: 420
-lieux_total: 422
+lieux_documented: 421
+lieux_total: 423
 last_built: 2026-07-13
 source: loisirs74.fr
 ---
 
-# Tarifs — index transversal (422 lieux, 420 documentés)
+# Tarifs — index transversal (423 lieux, 421 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 À partir de 7 € (adulte)
@@ -904,6 +904,10 @@ Fiche: https://loisirs74.fr/les-gets · JSON: https://loisirs74.fr/api/lieu/les-
 ## Les Houches — Les Houches
 
 Fiche: https://loisirs74.fr/les-houches · JSON: https://loisirs74.fr/api/lieu/les-houches.json
+
+## Luge d'été de La Sambuy — Faverges-Seythenex
+Voir le site officiel
+Fiche: https://loisirs74.fr/luge-ete-sambuy-faverges-seythenex · JSON: https://loisirs74.fr/api/lieu/luge-ete-sambuy-faverges-seythenex.json
 
 ## Maison de Barberine — Vallorcine
 Adulte 5 € · Réduit 3,50 € · -18 ans gratuit · Pass Musées 25 €/an

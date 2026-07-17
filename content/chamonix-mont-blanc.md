@@ -18,8 +18,8 @@ language: fr
 facet_json: https://loisirs74.fr/api/lieu/chamonix-mont-blanc.json
 photo_url: /img/stations-de-ski/chamonix-mont-blanc-hero.jpg
 photo_type: real
-photo_author: "Guilhem Vellut from Annecy, France"
-photo_license: "CC BY 2.0"
+photo_author: "Florian Pépellin"
+photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-07-15
 source: loisirs74.fr
