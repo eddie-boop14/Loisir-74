@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/en/bernex
 language: en
 facet_json: https://loisirs74.fr/api/lieu/bernex.json
-photo_url: /img/generique/generique-foret-enneigee.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/stations-de-ski/bernex-hero.jpg
+photo_type: real
+photo_author: "ot bernex"
+photo_license: "Public domain"
+photo_source: Wikimedia Commons
 last_updated: 2026-07-16
 source: loisirs74.fr
 ---

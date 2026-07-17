@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/en/combloux
 language: en
 facet_json: https://loisirs74.fr/api/lieu/combloux.json
-photo_url: /img/generique/generique-foret-neige-aerien.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/stations-de-ski/combloux-hero.jpg
+photo_type: real
+photo_author: "DimiTalen"
+photo_license: "CC0"
+photo_source: Wikimedia Commons
 last_updated: 2026-07-16
 source: loisirs74.fr
 ---

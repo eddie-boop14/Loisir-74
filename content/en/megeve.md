@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/en/megeve
 language: en
 facet_json: https://loisirs74.fr/api/lieu/megeve.json
-photo_url: /img/generique/generique-foret-neige-aerien.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/stations-de-ski/megeve-hero.jpg
+photo_type: real
+photo_author: "Tabl-trai"
+photo_license: "CC BY-SA 3.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-07-15
 source: loisirs74.fr
 ---

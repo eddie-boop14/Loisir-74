@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/la-chapelle-d-abondance
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/la-chapelle-d-abondance.json
-photo_url: /img/generique/generique-snowboard-saut.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/stations-de-ski/la-chapelle-d-abondance-hero.jpg
+photo_type: real
+photo_author: "Florian Pépellin"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-07-16
 source: loisirs74.fr
 ---

@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/thollon-les-memises
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/thollon-les-memises.json
-photo_url: /img/generique/generique-lac-hiver.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/stations-de-ski/thollon-les-memises-hero.jpg
+photo_type: real
+photo_author: "Björn S."
+photo_license: "CC BY-SA 3.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-07-16
 source: loisirs74.fr
 ---

@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/praz-de-lys-sommand
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/praz-de-lys-sommand.json
-photo_url: /img/generique/generique-sentier-arete-alpine.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/stations-de-ski/praz-de-lys-sommand-hero.jpg
+photo_type: real
+photo_author: "Nilk95"
+photo_license: "CC BY 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-07-16
 source: loisirs74.fr
 ---

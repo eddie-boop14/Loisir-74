@@ -20,7 +20,7 @@
 | `sentiers` | 40 | 9 | 13 |
 | `sorties-detente` | 25 | 13 | 3 |
 | `sport-jeux` | 52 | 33 | 4 |
-| `stations-de-ski` | 28 | 13 | 4 |
+| `stations-de-ski` | 28 | 28 | 1 |
 | `telecabines` | 12 | 8 | 5 |
 | `voies-vertes` | 5 | 5 | 1 |
 
@@ -610,34 +610,34 @@
 | `sport-jeux` | `trampoline-park-rjump-vetraz-monthoux` | `divertissement` | `generique-trampoline-park-saut.jpg` | — | json hero (local) |
 | `sport-jeux` | `vr-ereel-annecy-sillingy` | `divertissement` | `generique-vr-multi-joueurs.jpg` | — | json hero (local) |
 | `sport-jeux` | `vr-hypnotik-room-jumpers-fillinges` | `divertissement` | `generique-vr-immersion.jpg` | — | json hero (local) |
-| `stations-de-ski` | `avoriaz` | `montagne` | `generique-ski-freestyle.jpg` | — | json hero (local) |
-| `stations-de-ski` | `bernex` | `montagne` | `generique-foret-enneigee.jpg` | — | json hero (local) |
-| `stations-de-ski` | `chamonix-mont-blanc` | `montagne` | `generique-sentier-arete-alpine.jpg` | — | json hero (local) |
-| `stations-de-ski` | `chatel` | `montagne` | `generique-snowboard-poudreuse.jpg` | — | json hero (local) |
-| `stations-de-ski` | `combloux` | `montagne` | `generique-foret-neige-aerien.jpg` | — | json hero (local) |
-| `stations-de-ski` | `cordon` | `montagne` | `generique-foret-neige-aerien.jpg` | — | json hero (local) |
-| `stations-de-ski` | `flaine` | `montagne` | `generique-ski-piste.jpg` | — | json hero (local) |
-| `stations-de-ski` | `hirmentaz-les-haberes` | `montagne` | `generique-ski-descente.jpg` | — | json hero (local) |
-| `stations-de-ski` | `la-chapelle-d-abondance` | `montagne` | `generique-snowboard-saut.jpg` | — | json hero (local) |
-| `stations-de-ski` | `la-clusaz` | `montagne` | `generique-ski-piste.jpg` | — | json hero (local) |
-| `stations-de-ski` | `le-grand-bornand` | `montagne` | `generique-ski-descente.jpg` | — | json hero (local) |
-| `stations-de-ski` | `le-reposoir` | `montagne` | `generique-foret-enneigee.jpg` | — | json hero (local) |
-| `stations-de-ski` | `les-brasses` | `montagne` | `generique-foret-enneigee-crepuscule.jpg` | — | json hero (local) |
-| `stations-de-ski` | `les-carroz` | `montagne` | `generique-ski-piste.jpg` | — | json hero (local) |
-| `stations-de-ski` | `les-contamines-montjoie` | `montagne` | `generique-sentier-hiver-neige.jpg` | — | json hero (local) |
-| `stations-de-ski` | `les-gets` | `montagne` | `generique-snowboard-poudreuse.jpg` | — | json hero (local) |
-| `stations-de-ski` | `les-houches` | `montagne` | `generique-sentier-arete-alpine.jpg` | — | json hero (local) |
-| `stations-de-ski` | `manigod` | `montagne` | `generique-telesiege.jpg` | — | json hero (local) |
-| `stations-de-ski` | `megeve` | `montagne` | `generique-foret-neige-aerien.jpg` | — | json hero (local) |
-| `stations-de-ski` | `mont-saxonnex` | `montagne` | `generique-sentier-foret-alpine.jpg` | — | json hero (local) |
-| `stations-de-ski` | `morillon` | `montagne` | `generique-foret-enneigee.jpg` | — | json hero (local) |
-| `stations-de-ski` | `morzine` | `montagne` | `generique-snowboard-saut.jpg` | — | json hero (local) |
-| `stations-de-ski` | `passy-plaine-joux` | `montagne` | `generique-foret-neige-aerien.jpg` | — | json hero (local) |
-| `stations-de-ski` | `praz-de-lys-sommand` | `montagne` | `generique-sentier-arete-alpine.jpg` | — | json hero (local) |
-| `stations-de-ski` | `saint-gervais-les-bains` | `montagne` | `generique-telesiege.jpg` | — | json hero (local) |
-| `stations-de-ski` | `saint-jean-d-aulps` | `montagne` | `generique-foret-enneigee-crepuscule.jpg` | — | json hero (local) |
-| `stations-de-ski` | `samoens` | `montagne` | `generique-ski-descente.jpg` | — | json hero (local) |
-| `stations-de-ski` | `thollon-les-memises` | `montagne` | `generique-lac-hiver.jpg` | — | json hero (local) |
+| `stations-de-ski` | `avoriaz` | `montagne` | `avoriaz-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `bernex` | `montagne` | `bernex-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `chamonix-mont-blanc` | `montagne` | `chamonix-mont-blanc-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `chatel` | `montagne` | `chatel-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `combloux` | `montagne` | `combloux-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `cordon` | `montagne` | `cordon-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `flaine` | `montagne` | `flaine-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `hirmentaz-les-haberes` | `montagne` | `hirmentaz-les-haberes-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `la-chapelle-d-abondance` | `montagne` | `la-chapelle-d-abondance-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `la-clusaz` | `montagne` | `la-clusaz-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `le-grand-bornand` | `montagne` | `le-grand-bornand-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `le-reposoir` | `montagne` | `le-reposoir-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `les-brasses` | `montagne` | `les-brasses-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `les-carroz` | `montagne` | `les-carroz-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `les-contamines-montjoie` | `montagne` | `les-contamines-montjoie-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `les-gets` | `montagne` | `les-gets-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `les-houches` | `montagne` | `les-houches-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `manigod` | `montagne` | `manigod-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `megeve` | `montagne` | `megeve-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `mont-saxonnex` | `montagne` | `mont-saxonnex-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `morillon` | `montagne` | `morillon-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `morzine` | `montagne` | `morzine-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `passy-plaine-joux` | `montagne` | `passy-plaine-joux-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `praz-de-lys-sommand` | `montagne` | `praz-de-lys-sommand-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `saint-gervais-les-bains` | `montagne` | `saint-gervais-les-bains-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `saint-jean-d-aulps` | `montagne` | `saint-jean-d-aulps-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `samoens` | `montagne` | `samoens-hero.jpg` | — | json hero (local) |
+| `stations-de-ski` | `thollon-les-memises` | `montagne` | `thollon-les-memises-hero.jpg` | — | json hero (local) |
 | `telecabines` | `telecabine-des-chavannes-les-gets` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
 | `telecabines` | `telecabine-du-jaillet` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
 | `telecabines` | `telecabine-du-mont-chery-les-gets` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
