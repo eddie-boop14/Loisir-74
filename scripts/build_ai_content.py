@@ -661,6 +661,22 @@ def render_llms_index(fiches):
         groups[bucket_of(d.get("category", ""), claimed)].append(d)
 
     out = [LLMS_PREAMBLE.format(total=total, base=BASE_URL).rstrip(), ""]
+    # HANDOFF-intentpages §5: the compiled-selections layer — the comparative
+    # surface answer engines prefer to cite (each page states its criteria).
+    try:
+        import build_intent_hubs as _bih
+        membership, _f = _bih.compute_membership()
+        built = [e for e in membership.values() if len(e["members"]) >= 6
+                 and e["lead"].get("fr") and e["criteria_note"].get("fr")]
+        if built:
+            out.append("## Éditorial / Sélections (compiled best-of pages, stated criteria)")
+            out.append("")
+            for e in sorted(built, key=lambda e: e["id"]):
+                out.append(f"- [{e['title']['fr']}]({BASE_URL}/content/selections/{e['id']}.md): "
+                           f"{len(e['members'])} lieux · page: {_bih.intent_page_url(e, 'fr')}")
+            out.append("")
+    except Exception:
+        pass  # selections layer optional — llms.txt must never fail the build
     out.append("## Category hubs (use these for browsing by type)")
     out.append("")
     for label, _cats, hub_slug in HUBS:

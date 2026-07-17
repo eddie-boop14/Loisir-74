@@ -325,6 +325,303 @@ def main():
         inject_category_links(cat_links, lang)
     print(f"build_intent_hubs: {len(hubs)} hub(s) × {len(LANGS)} locales = {written} pages; "
           f"category links injected")
+    build_intent_pages()
+
+
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# HANDOFF-intentpages — compiled head-term pages (selector-driven layer)
+#
+# Second registry data/intent-registry.json: each entry is a QUERY (selector)
+# + stated ranking + hand-authored per-lang title/lead/criteria_note. Pages
+# are COMPILED: member set == selector output (gate-enforced), ranking is
+# computed from the stated criteria only, and the criteria_note renders
+# visibly (mandatory when the title carries a superlative). A lang ships only
+# when its title+lead exist — no machine titles. URLs nest under the
+# localized que-faire hub dir (fr: que-faire/<sub>/, en: what-to-do/<sub>/).
+# Canonical/hreflang/sitemap fold in downstream via fix_hreflang_sitemap;
+# lastmod is honest for free (byte-stable renders only change when a member
+# changes, so git-derived lastmod == max member change).
+# ═══════════════════════════════════════════════════════════════════════════
+import re as _re
+
+REGISTRY2 = os.path.join(ROOT, "data", "intent-registry.json")
+SELECT_MD_DIR = os.path.join(ROOT, "content", "selections")
+
+CHIP_LABELS = {
+    "free":    {"fr": "Gratuit", "en": "Free"},
+    "pmr":     {"fr": "Accès PMR", "en": "Wheelchair access"},
+    "parking": {"fr": "Parking", "en": "Parking"},
+    "winter":  {"fr": "Hiver ✓", "en": "Winter ✓"},
+}
+UI2 = {
+    "criteria": {"fr": "Comment cette sélection est faite", "en": "How this selection is made"},
+    "members":  {"fr": "La sélection", "en": "The selection"},
+}
+_DUR_RE = _re.compile(r"(?:(\d+)\s*h(?:\s*(\d{1,2}))?)|(?:(\d{1,3})\s*min)", _re.I)
+
+
+def _duration_hours(fiche):
+    """Min parsable duration (hours) from FR facts keys containing durée/duration."""
+    best = None
+    for k, v in (fiche.get("i18n", {}).get("fr", {}).get("facts") or {}).items():
+        if not _re.search(r"dur[ée]e|duration|temps", k, _re.I) or not isinstance(v, str):
+            continue
+        for m in _DUR_RE.finditer(v):
+            h = (int(m.group(1)) + int(m.group(2) or 0) / 60) if m.group(1) else int(m.group(3)) / 60
+            best = h if best is None else min(best, h)
+    return best
+
+
+def _fr_facts(f):
+    return f.get("i18n", {}).get("fr", {}).get("facts") or {}
+
+
+def _is_free(f):
+    return str(f.get("schema_org", {}).get("is_free")) == "True"
+
+
+def _is_pmr(f):
+    return (f.get("acces_pmr") or {}).get("status") in ("accessible", "partiel")
+
+
+def _has_winter(f):
+    fk = _fr_facts(f)
+    return bool(fk.get("winter_access") or fk.get("winter_infra"))
+
+
+def _real_photo(f):
+    h = f.get("hero_image") or ""
+    return bool(h) and "generique" not in h
+
+
+def _facet_richness(f):
+    fk = _fr_facts(f)
+    filled = sum(1 for v in fk.values() if v not in (None, "", [], False))
+    return min(filled, 8) / 8.0
+
+
+def selector_match(f, sel, sets):
+    """Deterministic membership predicate — THE page definition."""
+    if f.get("status") != "published":
+        return False
+    communes = sel.get("communes") or (sets.get(sel["communes_set"]) if sel.get("communes_set") else None)
+    if communes and f.get("commune") not in communes:
+        return False
+    cats, pats = sel.get("categories"), sel.get("slug_patterns_extra")
+    if cats or pats:
+        in_cat = bool(cats) and f.get("category") in cats
+        in_pat = bool(pats) and any(_re.search(p, f.get("slug", "")) for p in pats)
+        if not (in_cat or in_pat):
+            return False
+    if sel.get("is_free") and not _is_free(f):
+        return False
+    if sel.get("family_ok") and _fr_facts(f).get("family_ok") is not True:
+        return False
+    if sel.get("pmr") and not _is_pmr(f):
+        return False
+    if sel.get("snow_view") and _fr_facts(f).get("snow_view") != sel["snow_view"]:
+        return False
+    if sel.get("winter_any") and not _has_winter(f):
+        return False
+    if sel.get("duration_max_h") is not None:
+        h = _duration_hours(f)
+        if h is None or h > sel["duration_max_h"]:
+            return False
+    return True
+
+
+_SCORES = {"has_real_photo": _real_photo, "is_free": _is_free,
+           "facet_richness": _facet_richness, "pmr": _is_pmr, "winter": _has_winter}
+
+
+def rank_members(slugs, fiches, ranking):
+    def key(s):
+        f = fiches[s]
+        return tuple(-float(_SCORES[r](f)) for r in ranking if r in _SCORES) + (s,)
+    return sorted(slugs, key=key)
+
+
+def compute_membership(fiches=None):
+    """{page_id: {..entry, 'members': [slug,…]}} — the single truth used by the
+    page builder, the fiche 'sélections' chips and the gate."""
+    reg = json.loads(open(REGISTRY2, encoding="utf-8").read())
+    sets = reg["_meta"]["commune_sets"]
+    if fiches is None:
+        import glob as _g
+        fiches = {}
+        for p in _g.glob(os.path.join(JSON_DIR, "*.json")):
+            d = json.loads(open(p, encoding="utf-8").read())
+            fiches[d.get("slug") or os.path.basename(p)[:-5]] = d
+    out = {}
+    for e in reg["pages"]:
+        matched = [s for s, f in fiches.items() if selector_match(f, e["selector"], sets)]
+        members = rank_members(matched, fiches, e["ranking"])[: e.get("max_items", 20)]
+        out[e["id"]] = {**e, "members": members}
+    return out, fiches
+
+
+def _qf_prefix(lang):
+    """Localized que-faire dir for this lang (fr: que-faire, en: what-to-do…)."""
+    return "que-faire" if lang == "fr" else hub_locale_map("que-faire").get(lang, "que-faire")
+
+
+def intent_page_url(entry, lang):
+    sub = entry["sub"].get(lang) or entry["sub"]["fr"]
+    pfx = _qf_prefix(lang)
+    return f"{BASE}/{pfx}/{sub}/" if lang == "fr" else f"{BASE}/{lang}/{pfx}/{sub}/"
+
+
+def _chips(f, lang, parking):
+    out = []
+    if _is_free(f):
+        out.append(CHIP_LABELS["free"][lang])
+    if _is_pmr(f):
+        out.append(CHIP_LABELS["pmr"][lang])
+    if f.get("slug") in parking:
+        out.append(CHIP_LABELS["parking"][lang])
+    if _has_winter(f):
+        out.append(CHIP_LABELS["winter"][lang])
+    return "".join(f'<span class="pill">{esc(c)}</span>' for c in out)
+
+
+def _member_card(f, lang, parking):
+    name = fiche_name(f, lang)
+    i18n = f.get("i18n", {})
+    desc = i18n.get(lang, {}).get("meta_description") or i18n.get("fr", {}).get("meta_description") or ""
+    hero = f.get("hero_image") or ""
+    thumb = (f'<img class="thumb" loading="lazy" src="{esc(hero)}" alt="{esc(name)}">'
+             if _real_photo(f) else "")
+    commune = esc(f.get("commune") or "")
+    return (
+        '<article class="card sel">\n'
+        f'  {thumb}<div class="selbody"><div class="ch"><h3>{esc(name)}</h3>'
+        f'<span class="rive">{commune}</span></div>\n'
+        f'  <div style="margin:4px 0 6px">{_chips(f, lang, parking)}</div>\n'
+        f'  <p class="meta" style="font-size:14px">{esc(desc)}</p>\n'
+        f'  <a class="fiche" href="{url_for(f["slug"], lang)}">{esc(L(UI["see_fiche"], lang))}</a></div>\n'
+        '</article>'
+    )
+
+
+CSS2 = CSS + """
+.card.sel{display:flex;gap:14px;align-items:flex-start}
+.thumb{width:118px;height:88px;object-fit:cover;border-radius:9px;flex:0 0 auto;border:1px solid var(--line)}
+.selbody{flex:1 1 auto;min-width:0}
+.criteria{background:#eef4f2;border:1px solid #d6e6e2;border-radius:12px;padding:12px 16px;margin:14px 0;font-size:14px;color:var(--teal2)}
+@media(max-width:480px){.card.sel{flex-direction:column}.thumb{width:100%;height:150px}}"""
+
+
+def render_intent_page(entry, lang, fiches, parking, built_langs):
+    members = [fiches[s] for s in entry["members"] if s in fiches]
+    title, lead = entry["title"][lang], entry["lead"][lang]
+    note = entry["criteria_note"][lang]
+    # bucketed (itinerary) vs flat list
+    if entry.get("buckets"):
+        sections, used = [], set()
+        for b in entry["buckets"]:
+            grp = [f for f in members if f.get("category") in b["categories"] and f["slug"] not in used]
+            used.update(f["slug"] for f in grp)
+            if not grp:
+                continue
+            cards = "".join(_member_card(f, lang, parking) for f in grp)
+            sections.append(f'<h2 style="color:var(--teal)">{esc(L(b["label"], lang))} · {len(grp)}</h2>'
+                            f'<div class="cards">{cards}</div>')
+        body = "".join(sections)
+    else:
+        cards = "".join(_member_card(f, lang, parking) for f in members)
+        body = (f'<h2 style="color:var(--teal)">{esc(L(UI2["members"], lang))} · {len(members)}</h2>'
+                f'<div class="cards">{cards}</div>')
+    items = [{"@type": "ListItem", "position": i, "name": fiche_name(f, lang),
+              "url": url_for(f["slug"], lang) + "/"} for i, f in enumerate(members, 1)]
+    graph = {"@context": "https://schema.org",
+             "@graph": [{"@type": "ItemList", "name": title, "itemListElement": items}]}
+    canon = intent_page_url(entry, lang)
+    alts = "".join(f'<link rel="alternate" hreflang="{l}" href="{intent_page_url(entry, l)}">'
+                   for l in built_langs)
+    return f"""<!doctype html><html lang="{lang}"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{esc(title)} · Loisirs 74</title>
+<meta name="description" content="{esc(lead[:158])}">
+<link rel="canonical" href="{canon}">{alts}
+<script type="application/ld+json">{json.dumps(graph, ensure_ascii=False)}</script>
+<style>{CSS2}</style></head><body><div class="wrap">
+
+<div class="kicker">Loisirs 74 · {esc(_qf_prefix(lang).replace("-", " "))}</div>
+<h1>{esc(title)}</h1>
+<p class="lead">{esc(lead)}</p>
+
+<div class="criteria"><b>{esc(UI2["criteria"][lang])}</b> — {esc(note)}</div>
+
+{body}
+
+<footer>© 2026 · Bleu canard édition · Edmaster &amp; Claudius · Tous droits réservés 🦆</footer>
+</div></body></html>"""
+
+
+def _write_select_md(entry, lang, fiches):
+    members = [fiches[s] for s in entry["members"] if s in fiches]
+    lines = [f"# {entry['title'][lang]}", "", entry["lead"][lang], "",
+             f"> {entry['criteria_note'][lang]}", ""]
+    for f in members:
+        nm = fiche_name(f, lang)
+        lines.append(f"- [{nm}]({url_for(f['slug'], lang)}) — {f.get('commune', '')}"
+                     f" · [md](https://loisirs74.fr/content/{'en/' if lang == 'en' else ''}{f['slug']}.md)")
+    lines += ["", f"Source: {intent_page_url(entry, lang)}", ""]
+    out = os.path.join(SELECT_MD_DIR, f"{entry['id']}.md") if lang == "fr" \
+        else os.path.join(SELECT_MD_DIR, "en", f"{entry['id']}.md")
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    open(out, "w", encoding="utf-8").write("\n".join(lines))
+
+
+MARK2_A, MARK2_B = "<!--intent-pages:start-->", "<!--intent-pages:end-->"
+
+
+def _inject_qf_links(pages, lang):
+    """Reachability: link every built intent page from the (localized) que-faire hub."""
+    pfx = _qf_prefix(lang)
+    path = os.path.join(ROOT, pfx, "index.html") if lang == "fr" \
+        else os.path.join(ROOT, lang, pfx, "index.html")
+    if not os.path.exists(path):
+        return
+    html = open(path, encoding="utf-8").read()
+    html = _re.sub(r"\s*" + _re.escape(MARK2_A) + r".*?" + _re.escape(MARK2_B), "", html, flags=_re.S)
+    links = "".join(
+        f'<a href="{intent_page_url(e, lang)}" style="display:inline-block;margin:2px 10px 2px 0;'
+        f'color:#1F6E78;font-weight:600">{esc(e["title"][lang])} →</a>'
+        for e in pages)
+    block = (MARK2_A + '<nav class="intent-pages" style="max-width:1080px;margin:18px auto;padding:0 18px">'
+             + links + '</nav>' + MARK2_B)
+    html = html.replace("</body>", "\n" + block + "</body>", 1)
+    open(path, "w", encoding="utf-8").write(html)
+
+
+def build_intent_pages():
+    membership, fiches = compute_membership()
+    parking = set(json.loads(open(os.path.join(ROOT, "data", "parking_index.json"),
+                                  encoding="utf-8").read()).keys())
+    written, skipped = 0, []
+    for entry in membership.values():
+        built_langs = [l for l in entry["title"] if entry["lead"].get(l) and entry["criteria_note"].get(l)]
+        if len(entry["members"]) < 6:
+            skipped.append(f"{entry['id']} ({len(entry['members'])} members)")
+            continue
+        for lang in built_langs:
+            html = render_intent_page(entry, lang, fiches, parking, built_langs)
+            sub = entry["sub"].get(lang) or entry["sub"]["fr"]
+            out = os.path.join(ROOT, _qf_prefix(lang), sub, "index.html") if lang == "fr" \
+                else os.path.join(ROOT, lang, _qf_prefix(lang), sub, "index.html")
+            os.makedirs(os.path.dirname(out), exist_ok=True)
+            open(out, "w", encoding="utf-8").write(html)
+            _write_select_md(entry, lang, fiches)
+            written += 1
+    for lang in ("fr", "en"):
+        buildable = [e for e in membership.values() if len(e["members"]) >= 6
+                     and e["lead"].get(lang) and e["criteria_note"].get(lang)]
+        _inject_qf_links(buildable, lang)
+    print(f"build_intent_pages: {written} page(s) written; "
+          f"skipped(min_items<6): {', '.join(skipped) or 'none'}")
 
 
 if __name__ == "__main__":

@@ -1039,6 +1039,48 @@ def season_card(d):
     )
 
 
+_SELECTIONS_CACHE = None
+_SELECTIONS_LABEL = {"fr": "Figure dans nos sélections", "en": "Featured in our selections"}
+
+
+def selections_chips(d, lang):
+    """HANDOFF-intentpages §5 upward links: chip row linking every intent page
+    this fiche is compiled into (registry membership, computed — never curated).
+    Renders only in langs whose intent pages exist (fr/en today). The chip is a
+    plain internal link; partner blocks untouched."""
+    global _SELECTIONS_CACHE
+    if lang not in _SELECTIONS_LABEL:
+        return ""
+    if _SELECTIONS_CACHE is None:
+        import build_intent_hubs as _bih
+        membership, _ = _bih.compute_membership()
+        by_slug = {}
+        for e in membership.values():
+            if len(e["members"]) < 6:      # unbuilt pages (min_items law) — no links
+                continue
+            for s in e["members"]:
+                by_slug.setdefault(s, []).append(e)
+        _SELECTIONS_CACHE = (by_slug, _bih)
+    by_slug, _bih = _SELECTIONS_CACHE
+    entries = by_slug.get(d.get("slug") or "", [])
+    entries = [e for e in entries if e["title"].get(lang) and e["lead"].get(lang)]
+    if not entries:
+        return ""
+    chips = "".join(
+        f'<a class="chip-sel" href="{_bih.intent_page_url(e, lang)}">{esc(e["title"][lang])}</a>'
+        for e in sorted(entries, key=lambda e: e["id"]))
+    return (
+        '<section class="block"><div class="wrap">'
+        f'<div class="kicker reveal">{esc(_SELECTIONS_LABEL[lang])}</div>'
+        f'<div class="reveal" style="display:flex;flex-wrap:wrap;gap:8px">{chips}</div>'
+        '</div></section>'
+        '<style>.chip-sel{display:inline-block;background:var(--paper-2,#f4efe4);'
+        'border:1px solid var(--line,#e3ddd0);border-radius:999px;padding:4px 14px;'
+        'font-size:13px;font-weight:600;color:var(--ink,#22302f);text-decoration:none}'
+        '.chip-sel:hover{border-color:#1F6E78;color:#1F6E78}</style>'
+    )
+
+
 def faq_block(faq):
     if not faq:
         return ""
@@ -2416,6 +2458,7 @@ def build_page(d, lang="fr", include_partners=True, fr_prose_fallback=True):
         out.append(partners_block(d))
     out.append(gallery_block(name, d.get("gallery_photos")))
     out.append(faq_block(L("faq", []) or []))
+    out.append(selections_chips(d, lang))
     _related = related_lieux_block(d.get("related_lieux", []), lang)
     if _related:
         out.append(_related)

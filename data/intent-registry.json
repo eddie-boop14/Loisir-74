@@ -1,0 +1,180 @@
+{
+  "_meta": {
+    "job": "HANDOFF-intentpages — compiled head-term layer (selector-driven, zero hand-curation)",
+    "author": "Claudius-Fable",
+    "edition": "Bleu canard édition · Edmaster & Claudius · Tous droits réservés 🦆 2026",
+    "rules": "Pages are COMPILED from the fiche layer: member set == selector output (gate-enforced determinism). Rankings are computed from the stated criteria only. criteria_note renders visibly on every page (mandatory when the title carries a superlative). Titles are hand-authored per lang — a lang ships only when its title+lead exist.",
+    "commune_sets": {
+      "ANNECY_BASIN": ["Annecy", "Annecy-le-Vieux", "Sévrier", "Saint-Jorioz", "Duingt", "Doussard", "Lathuile", "Talloires-Montmin", "Menthon-Saint-Bernard", "Veyrier-du-Lac"],
+      "LEMAN": ["Thonon-les-Bains", "Évian-les-Bains", "Publier", "Neuvecelle", "Maxilly-sur-Léman", "Lugrin", "Meillerie", "Saint-Paul-en-Chablais", "Sciez", "Yvoire", "Excenevex", "Nernier", "Messery", "Chens-sur-Léman", "Douvaine", "Anthy-sur-Léman", "Margencel"],
+      "CHAMONIX_VALLEY": ["Chamonix-Mont-Blanc", "Les Houches", "Vallorcine", "Servoz"]
+    }
+  },
+  "pages": [
+    {
+      "id": "lac-annecy-en-famille",
+      "sub": {"fr": "lac-annecy-en-famille", "en": "lake-annecy-with-kids"},
+      "title": {"fr": "Lac d'Annecy en famille : les meilleures activités", "en": "Lake Annecy with kids: the best things to do"},
+      "lead": {"fr": "Plages surveillées, parcs, sorties douces au bord de l'eau : autour du lac d'Annecy, la famille est chez elle. Cette sélection est compilée automatiquement depuis nos fiches vérifiées — pas une liste écrite un jour et jamais relue.", "en": "Supervised beaches, parks and easy lakeside outings: around Lake Annecy, families are at home. This selection is compiled automatically from our verified fact sheets — not a list written once and never revisited."},
+      "criteria_note": {"fr": "Sélection compilée depuis nos fiches vérifiées : lieux signalés adaptés aux familles (catégorie ou signalement explicite), photos réelles et gratuité priorisées. Mise à jour automatique à chaque évolution des fiches.", "en": "Compiled from our verified fact sheets: places flagged family-suitable (by category or explicit tag), real photos and free entry ranked first. Updates automatically whenever a sheet changes."},
+      "selector": {"communes_set": "ANNECY_BASIN", "family_ok": true},
+      "ranking": ["has_real_photo", "is_free", "facet_richness"],
+      "max_items": 20
+    },
+    {
+      "id": "quand-il-pleut-annecy",
+      "sub": {"fr": "quand-il-pleut-a-annecy", "en": "rainy-day-annecy"},
+      "title": {"fr": "Que faire à Annecy quand il pleut ? Nos lieux à l'abri", "en": "Things to do in Annecy when it rains: indoor picks"},
+      "lead": {"fr": "Musées, cinémas, patinoire, piscines couvertes, escape games : quand le ciel se gâte sur le bassin annécien, la journée continue à l'abri. Compilé depuis nos fiches, jamais inventé.", "en": "Museums, cinemas, ice rink, indoor pools, escape rooms: when the sky turns over the Annecy basin, the day carries on under cover. Compiled from our fact sheets, never invented."},
+      "criteria_note": {"fr": "Sélection compilée : catégories intérieures (musées, cinémas, patinoires, piscines, bowling…) et activités couvertes identifiées sur nos fiches du bassin annécien. Mise à jour automatique.", "en": "Compiled selection: indoor categories (museums, cinemas, ice rinks, pools, bowling…) and covered activities identified on our Annecy-basin sheets. Updates automatically."},
+      "selector": {"communes_set": "ANNECY_BASIN", "categories": ["musee", "cinema", "casino", "aquaparc", "bowling", "patinoire"], "slug_patterns_extra": ["escape-game", "atelier-poterie", "trampoline", "simulateur", "lancer-de-hache", "bar-a-jeux", "laser", "escalade-(climb|atome|crique)"]},
+      "ranking": ["has_real_photo", "facet_richness", "is_free"],
+      "max_items": 18
+    },
+    {
+      "id": "gratuit-lac-annecy",
+      "sub": {"fr": "gratuit-lac-annecy", "en": "free-things-lake-annecy"},
+      "title": {"fr": "Lac d'Annecy gratuit : plages, sentiers et lieux sans billet", "en": "Free things to do around Lake Annecy"},
+      "lead": {"fr": "Le tour du lac ne coûte rien quand on sait où aller : plages publiques, belvédères, sentiers et patrimoine en accès libre. Chaque entrée ci-dessous est une fiche vérifiée dont la gratuité est un fait contrôlé, pas une promesse.", "en": "Touring the lake costs nothing when you know where to go: public beaches, viewpoints, trails and open heritage. Every entry below is a verified sheet whose free entry is a checked fact, not a promise."},
+      "criteria_note": {"fr": "Sélection compilée : uniquement des lieux dont la gratuité est vérifiée sur la fiche (fait contrôlé). Photos réelles priorisées. Mise à jour automatique.", "en": "Compiled selection: only places whose free entry is verified on the sheet (checked fact). Real photos ranked first. Updates automatically."},
+      "selector": {"communes_set": "ANNECY_BASIN", "is_free": true},
+      "ranking": ["has_real_photo", "facet_richness"],
+      "max_items": 20
+    },
+    {
+      "id": "plus-belles-cascades-haute-savoie",
+      "sub": {"fr": "plus-belles-cascades-haute-savoie", "en": "best-waterfalls-haute-savoie"},
+      "title": {"fr": "Les plus belles cascades de Haute-Savoie (critères transparents)", "en": "The best waterfalls in Haute-Savoie, ranked openly"},
+      "lead": {"fr": "Du Rouget, « reine des Alpes », aux gorges secrètes du Chablais : la Haute-Savoie est un pays d'eau tombée. Ce classement n'est pas un avis : il est calculé depuis nos fiches — accès, saison, photos réelles, richesse des faits vérifiés.", "en": "From the Rouget, 'queen of the Alps', to the Chablais' hidden gorges: Haute-Savoie is waterfall country. This ranking is not an opinion — it is computed from our sheets: access, season, real photos, richness of verified facts."},
+      "criteria_note": {"fr": "« Plus belles » = classement calculé : photo réelle, gratuité, richesse des faits vérifiés (accès, saison, durée). Aucun avis éditorial. Mise à jour automatique à chaque évolution des fiches.", "en": "'Best' = computed ranking: real photo, free access, richness of verified facts (access, season, duration). No editorial opinion. Updates automatically as sheets evolve."},
+      "selector": {"categories": ["cascade"]},
+      "ranking": ["has_real_photo", "is_free", "facet_richness"],
+      "max_items": 18
+    },
+    {
+      "id": "plus-beaux-points-de-vue-mont-blanc",
+      "sub": {"fr": "plus-beaux-points-de-vue-mont-blanc", "en": "best-mont-blanc-viewpoints"},
+      "title": {"fr": "Les plus beaux points de vue sur le Mont-Blanc (vue vérifiée)", "en": "The best Mont-Blanc viewpoints — verified sightlines"},
+      "lead": {"fr": "Voir le Mont-Blanc, vraiment : chaque lieu ci-dessous porte une vue sur le massif vérifiée sur source officielle (table d'orientation, exploitant, office de tourisme) — c'est le critère d'entrée, pas une impression. Le Montenvers, par exemple, n'y figure pas : son exploitant précise que le Mont-Blanc n'y est pas visible.", "en": "Actually seeing Mont-Blanc: every place below carries a view of the massif verified against an official source (orientation table, operator, tourist office) — that is the entry criterion, not an impression. Montenvers, for instance, is absent: its operator states Mont-Blanc cannot be seen from there."},
+      "criteria_note": {"fr": "Critère d'entrée : vue Mont-Blanc vérifiée sur source officielle (fait « panorama » de la fiche). Classement : photo réelle, gratuité, richesse des faits. Mise à jour automatique.", "en": "Entry criterion: Mont-Blanc view verified against an official source (the sheet's 'panorama' fact). Ranking: real photo, free access, fact richness. Updates automatically."},
+      "selector": {"snow_view": "mont_blanc"},
+      "ranking": ["has_real_photo", "is_free", "facet_richness"],
+      "max_items": 15
+    },
+    {
+      "id": "chamonix-en-famille",
+      "sub": {"fr": "chamonix-en-famille", "en": "chamonix-with-kids"},
+      "title": {"fr": "Chamonix en famille : activités testées et vérifiées", "en": "Chamonix with kids: family things to do"},
+      "lead": {"fr": "La vallée de Chamonix n'est pas réservée aux alpinistes : parc animalier de Merlet, luge sur rail, lacs et trains panoramiques accueillent aussi les petites jambes. Sélection compilée depuis nos fiches de la vallée.", "en": "The Chamonix valley is not just for mountaineers: the Merlet animal park, rail sledging, lakes and panoramic trains welcome little legs too. Compiled from our valley sheets."},
+      "criteria_note": {"fr": "Sélection compilée : lieux de la vallée de Chamonix signalés adaptés aux familles (catégorie ou signalement explicite sur la fiche). Photos réelles priorisées. Mise à jour automatique.", "en": "Compiled selection: Chamonix-valley places flagged family-suitable (by category or explicit tag on the sheet). Real photos ranked first. Updates automatically."},
+      "selector": {"communes_set": "CHAMONIX_VALLEY", "family_ok": true},
+      "ranking": ["has_real_photo", "is_free", "facet_richness"],
+      "max_items": 15
+    },
+    {
+      "id": "canicule-fraicheur-haute-savoie",
+      "sub": {"fr": "canicule-ou-trouver-la-fraicheur", "en": "heatwave-cool-spots-haute-savoie"},
+      "title": {"fr": "Canicule en Haute-Savoie : où trouver la fraîcheur ?", "en": "Heatwave in Haute-Savoie: where to cool down"},
+      "lead": {"fr": "Quand la vallée suffoque, la Haute-Savoie a des échappatoires : cascades encaissées, gorges, lacs de montagne et grottes où la température chute de dix degrés. Sélection compilée depuis nos fiches — eau et ombre vérifiées.", "en": "When the valley swelters, Haute-Savoie has escape routes: shaded waterfalls, gorges, mountain lakes and caves where the temperature drops ten degrees. Compiled from our sheets — water and shade, verified."},
+      "criteria_note": {"fr": "Sélection compilée : catégories fraîcheur (cascades, gorges, lacs, plages, piscines) et grottes identifiées sur nos fiches. Gratuité et photos réelles priorisées. Mise à jour automatique.", "en": "Compiled selection: cool-air categories (waterfalls, gorges, lakes, beaches, pools) and caves identified on our sheets. Free entry and real photos ranked first. Updates automatically."},
+      "selector": {"categories": ["cascade", "lac", "plage", "aquaparc"], "slug_patterns_extra": ["grotte", "gorges"]},
+      "ranking": ["is_free", "has_real_photo", "facet_richness"],
+      "max_items": 20
+    },
+    {
+      "id": "hiver-sans-skier-haute-savoie",
+      "sub": {"fr": "hiver-sans-skier", "en": "winter-without-skiing-haute-savoie"},
+      "title": {"fr": "L'hiver en Haute-Savoie sans skier : raquettes, luge, panoramas", "en": "Winter in Haute-Savoie without skiing"},
+      "lead": {"fr": "Pas besoin de forfait pour aimer l'hiver : plateaux nordiques en raquettes, trains panoramiques, cols enneigés et luge. Chaque lieu ci-dessous porte des faits hiver vérifiés sur source officielle — accès hivernal, activités, panorama.", "en": "No lift pass needed to love winter: snowshoe plateaus, panoramic trains, snowbound passes and sledging. Every place below carries winter facts verified against official sources — winter access, activities, panorama."},
+      "criteria_note": {"fr": "Critère d'entrée : faits hiver vérifiés sur la fiche (accès hivernal ou activités nordiques documentés sur source officielle — couche « saison hivernale »). Classement : photo réelle, gratuité, richesse des faits. Mise à jour automatique.", "en": "Entry criterion: verified winter facts on the sheet (winter access or nordic activities documented from official sources). Ranking: real photo, free access, fact richness. Updates automatically."},
+      "selector": {"winter_any": true},
+      "ranking": ["has_real_photo", "is_free", "facet_richness"],
+      "max_items": 20
+    },
+    {
+      "id": "plus-beaux-chateaux-haute-savoie",
+      "sub": {"fr": "plus-beaux-chateaux-haute-savoie", "en": "best-castles-haute-savoie"},
+      "title": {"fr": "Les plus beaux châteaux de Haute-Savoie à visiter", "en": "The best castles to visit in Haute-Savoie"},
+      "lead": {"fr": "Des donjons médiévaux du lac d'Annecy aux maisons fortes du Chablais, la Haute-Savoie garde ses pierres. Ce classement est calculé depuis nos fiches vérifiées — visitable, documenté, photographié.", "en": "From Lake Annecy's medieval keeps to the Chablais' fortified houses, Haute-Savoie keeps its stones. This ranking is computed from our verified sheets — visitable, documented, photographed."},
+      "criteria_note": {"fr": "« Plus beaux » = classement calculé : photo réelle, gratuité, richesse des faits vérifiés (horaires, accès, patrimoine). Aucun avis éditorial. Mise à jour automatique.", "en": "'Best' = computed ranking: real photo, free entry, richness of verified facts (hours, access, heritage). No editorial opinion. Updates automatically."},
+      "selector": {"categories": ["chateau"]},
+      "ranking": ["has_real_photo", "is_free", "facet_richness"],
+      "max_items": 18
+    },
+    {
+      "id": "annecy-en-couple",
+      "sub": {"fr": "annecy-en-couple", "en": "annecy-for-couples"},
+      "title": {"fr": "Annecy en couple : balades, panoramas et adresses à deux", "en": "Annecy for couples: walks, views and dates"},
+      "lead": {"fr": "La Venise des Alpes se visite très bien à deux : quais du Thiou, belvédères au couchant, croisières et jardins. Sélection compilée depuis nos fiches du bassin — panoramas, patrimoine et douceur au bord de l'eau.", "en": "The Venice of the Alps works beautifully as a couple: the Thiou quays, sunset viewpoints, cruises and gardens. Compiled from our basin sheets — views, heritage and lakeside calm."},
+      "criteria_note": {"fr": "Sélection compilée : catégories propices aux sorties à deux (points de vue, jardins, croisières, patrimoine, sorties) sur le bassin annécien. Photos réelles priorisées. Mise à jour automatique.", "en": "Compiled selection: couple-friendly categories (viewpoints, gardens, cruises, heritage, outings) around the Annecy basin. Real photos ranked first. Updates automatically."},
+      "selector": {"communes_set": "ANNECY_BASIN", "categories": ["point-de-vue", "jardin", "parc", "croisiere", "chateau", "musee", "casino", "cinema"]},
+      "ranking": ["has_real_photo", "facet_richness", "is_free"],
+      "max_items": 16
+    },
+    {
+      "id": "accessible-pmr-haute-savoie",
+      "sub": {"fr": "accessible-pmr-haute-savoie", "en": "wheelchair-accessible-haute-savoie"},
+      "title": {"fr": "Haute-Savoie accessible : lieux vérifiés PMR", "en": "Accessible Haute-Savoie: verified wheelchair-friendly places"},
+      "lead": {"fr": "L'accessibilité ne se devine pas, elle se vérifie : chaque lieu ci-dessous porte un statut PMR contrôlé sur nos fiches — accessible ou partiellement accessible, avec le détail quand il existe. C'est le critère d'entrée de cette page.", "en": "Accessibility is not guessed, it is verified: every place below carries a checked accessibility status on our sheets — accessible or partially accessible, with detail where it exists. That is this page's entry criterion."},
+      "criteria_note": {"fr": "Critère d'entrée : statut PMR vérifié sur la fiche (accessible ou partiellement accessible). Classement : photo réelle, gratuité, richesse des faits. Mise à jour automatique.", "en": "Entry criterion: verified accessibility status on the sheet (accessible or partially accessible). Ranking: real photo, free entry, fact richness. Updates automatically."},
+      "selector": {"pmr": true},
+      "ranking": ["has_real_photo", "is_free", "facet_richness"],
+      "max_items": 20
+    },
+    {
+      "id": "randonnees-faciles-lac-annecy",
+      "sub": {"fr": "randonnees-faciles-lac-annecy", "en": "easy-hikes-lake-annecy"},
+      "title": {"fr": "Randonnées faciles autour du lac d'Annecy (2h30 max)", "en": "Easy hikes around Lake Annecy (under 2.5 hours)"},
+      "lead": {"fr": "Marcher au-dessus du lac sans viser un sommet : sentiers, belvédères et boucles dont la durée vérifiée sur la fiche reste sous 2h30. Le critère est un fait, pas une impression de facilité.", "en": "Walking above the lake without chasing a summit: trails, viewpoints and loops whose verified duration on the sheet stays under 2.5 hours. The criterion is a fact, not a feeling of easiness."},
+      "criteria_note": {"fr": "Critère d'entrée : sentier du bassin annécien dont la durée indiquée sur la fiche est ≤ 2h30. Les sentiers sans durée vérifiée sont exclus (honnêteté par défaut). Mise à jour automatique.", "en": "Entry criterion: Annecy-basin trail whose stated sheet duration is ≤ 2.5 h. Trails without a verified duration are excluded (honest by default). Updates automatically."},
+      "selector": {"communes_set": "ANNECY_BASIN", "categories": ["sentier", "voie-verte", "point-de-vue"], "duration_max_h": 2.5},
+      "ranking": ["has_real_photo", "is_free", "facet_richness"],
+      "max_items": 14
+    },
+    {
+      "id": "leman-cote-francais",
+      "sub": {"fr": "leman-cote-francais", "en": "french-side-lake-geneva"},
+      "title": {"fr": "Le Léman côté français : que faire de Thonon à Yvoire ?", "en": "Lake Geneva, French side: Thonon to Yvoire"},
+      "lead": {"fr": "Entre Genève et la Suisse d'en face, la rive française du Léman aligne cités médiévales, thermes, plages et ports. Sélection compilée depuis nos fiches du littoral — d'Yvoire à Meillerie.", "en": "Between Geneva and the Swiss shore opposite, the French side of Lake Geneva lines up medieval towns, thermal baths, beaches and harbours. Compiled from our shoreline sheets — Yvoire to Meillerie."},
+      "criteria_note": {"fr": "Sélection compilée : toutes nos fiches vérifiées des communes du littoral lémanique français. Photos réelles et gratuité priorisées. Mise à jour automatique.", "en": "Compiled selection: all our verified sheets from French Lake-Geneva shoreline communes. Real photos and free entry ranked first. Updates automatically."},
+      "selector": {"communes_set": "LEMAN"},
+      "ranking": ["has_real_photo", "is_free", "facet_richness"],
+      "max_items": 20
+    },
+    {
+      "id": "avec-des-ados-haute-savoie",
+      "sub": {"fr": "avec-des-ados-haute-savoie", "en": "teens-thrills-haute-savoie"},
+      "title": {"fr": "Haute-Savoie avec des ados : sensations et défis", "en": "Haute-Savoie with teens: thrills and challenges"},
+      "lead": {"fr": "Passé douze ans, la balade familiale ne suffit plus : via ferrata, rafting, tyroliennes, karting et accrobranche prennent le relais. Sélection compilée depuis nos fiches sensations.", "en": "Past twelve, the family stroll no longer cuts it: via ferrata, rafting, ziplines, karting and treetop courses take over. Compiled from our thrill sheets."},
+      "criteria_note": {"fr": "Sélection compilée : catégories et activités sensations identifiées sur nos fiches (via ferrata, canyoning, rafting, tyrolienne, karting, accrobranche…). Photos réelles priorisées. Mise à jour automatique.", "en": "Compiled selection: thrill categories and activities identified on our sheets (via ferrata, canyoning, rafting, zipline, karting, treetop…). Real photos ranked first. Updates automatically."},
+      "selector": {"categories": ["karting", "accrobranche", "wakepark", "bowling", "patinoire"], "slug_patterns_extra": ["via-ferrata", "canyoning", "rafting", "tyrolienne", "bungee", "bun-j", "devalkart", "alpine-coaster", "trampoline", "paintball", "escalade", "laser", "wakeboard", "speleo"]},
+      "ranking": ["has_real_photo", "facet_richness", "is_free"],
+      "max_items": 18
+    },
+    {
+      "id": "1-jour-a-annecy",
+      "sub": {"fr": "1-jour-a-annecy", "en": "one-day-in-annecy"},
+      "title": {"fr": "Une journée à Annecy : l'itinéraire qui tient debout", "en": "One day in Annecy: an itinerary that holds up"},
+      "lead": {"fr": "Un seul jour pour la Venise des Alpes : le matin au patrimoine, l'après-midi au lac, le soir en ville. Chaque étape ci-dessous est une fiche vérifiée — horaires, accès et faits contrôlés, pas des souvenirs de blog.", "en": "One day for the Venice of the Alps: heritage in the morning, the lake in the afternoon, town in the evening. Every stop below is a verified sheet — hours, access and facts checked, not blog memories."},
+      "criteria_note": {"fr": "Itinéraire compilé : étapes groupées par moment de la journée depuis nos fiches d'Annecy (patrimoine le matin, lac l'après-midi, sorties le soir). Photos réelles priorisées. Mise à jour automatique.", "en": "Compiled itinerary: stops grouped by moment of the day from our Annecy sheets (heritage mornings, lake afternoons, outings at night). Real photos ranked first. Updates automatically."},
+      "selector": {"communes": ["Annecy"]},
+      "buckets": [
+        {"key": "matin", "label": {"fr": "Le matin — vieille ville & patrimoine", "en": "Morning — old town & heritage"}, "categories": ["musee", "chateau", "point-de-vue"]},
+        {"key": "apres-midi", "label": {"fr": "L'après-midi — le lac", "en": "Afternoon — the lake"}, "categories": ["plage", "lac", "croisiere", "base-nautique", "voie-verte", "parc", "jardin"]},
+        {"key": "soir", "label": {"fr": "Le soir — la ville", "en": "Evening — the town"}, "categories": ["cinema", "casino", "bowling", "attraction"]}
+      ],
+      "ranking": ["has_real_photo", "facet_richness", "is_free"],
+      "max_items": 18
+    },
+    {
+      "id": "meilleures-stations-familiales",
+      "sub": {"fr": "meilleures-stations-familiales", "en": "best-family-ski-resorts-haute-savoie"},
+      "title": {"fr": "Les meilleures stations familiales de Haute-Savoie", "en": "The best family ski resorts in Haute-Savoie"},
+      "lead": {"fr": "Vingt-huit stations sur nos fiches, toutes documentées sur sources officielles : celles qui reviennent ici sont signalées familiales — domaines doux, villages vivants, hors-ski réel. Le classement est calculé, pas décrété.", "en": "Twenty-eight resorts on our sheets, all documented from official sources: the ones here are flagged family-friendly — gentle ski areas, living villages, real off-slope life. The ranking is computed, not decreed."},
+      "criteria_note": {"fr": "Critère d'entrée : station signalée familiale sur la fiche. Classement : photo réelle, richesse des faits vérifiés (domaine, altitude, accès, hors-ski). Aucun avis éditorial. Mise à jour automatique.", "en": "Entry criterion: resort flagged family-friendly on its sheet. Ranking: real photo, richness of verified facts (ski area, altitude, access, off-slope). No editorial opinion. Updates automatically."},
+      "selector": {"categories": ["station"], "family_ok": true},
+      "ranking": ["has_real_photo", "facet_richness"],
+      "max_items": 16
+    }
+  ]
+}
