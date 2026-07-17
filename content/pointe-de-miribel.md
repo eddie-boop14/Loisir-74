@@ -63,7 +63,7 @@ Non renseigné
 Mai à octobre (randonnée) ; décembre à mars (raquettes)
 - Fenêtre d'accès hiver: Non renseigné
 - Infrastructure hiver: Raquettes · Ski de fond
-- Panorama enneigé: Non renseigné
+- Panorama enneigé: Vue Mont-Blanc dégagée
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle

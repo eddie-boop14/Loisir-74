@@ -60,7 +60,7 @@ Centre village La Clusaz / parking de la Patinoire
 ## Saison
 
 Été 2026 (saison remontées)
-- Fenêtre d'accès hiver: Non renseigné
+- Fenêtre d'accès hiver: Fermé (route fermée l'hiver) — État en temps réel : inforoute74.fr
 - Infrastructure hiver: Non renseigné
 - Panorama enneigé: Non renseigné
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)

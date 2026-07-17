@@ -59,7 +59,7 @@ Non renseigné
 
 Juin à septembre · Hiver en raquettes
 - Fenêtre d'accès hiver: Non renseigné
-- Infrastructure hiver: Raquettes · Ski de fond
+- Infrastructure hiver: Raquettes
 - Panorama enneigé: Non renseigné
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 

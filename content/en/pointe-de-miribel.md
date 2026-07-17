@@ -62,7 +62,7 @@ Not specified
 May to October (hiking); December to March (snowshoes)
 - Winter access window: Not specified
 - Winter infrastructure: Snowshoeing · Cross-country skiing
-- Snow panorama: Not specified
+- Snow panorama: Clear Mont-Blanc view
 - Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source

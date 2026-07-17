@@ -60,7 +60,7 @@ La Clusaz village centre / Patinoire car park
 ## Season
 
 Summer 2026 (lift season)
-- Winter access window: Not specified
+- Winter access window: Closed (road shut in winter) — Live status: inforoute74.fr
 - Winter infrastructure: Not specified
 - Snow panorama: Not specified
 - Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)

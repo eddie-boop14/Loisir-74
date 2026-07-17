@@ -26,7 +26,7 @@ Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/balade-pedestre-tour-lac-mole-tour · JSON: https://loisirs74.fr/api/lieu/balade-pedestre-tour-lac-mole-tour.json
 
 ## Belvédère du Mont Baron — Veyrier-du-Lac
-Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Alpine panorama · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/belvedere-du-mont-baron · JSON: https://loisirs74.fr/api/lieu/belvedere-du-mont-baron.json
 
 ## Table d'orientation de la Cry — Combloux
@@ -70,11 +70,11 @@ Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/cascade-de-la-diomaz · JSON: https://loisirs74.fr/api/lieu/cascade-de-la-diomaz.json
 
 ## Cascade de Nyon — Morzine
-Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Closed (road shut in winter) · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/cascade-de-nyon · JSON: https://loisirs74.fr/api/lieu/cascade-de-nyon.json
 
 ## Cascade des Brochaux — Montriond
-Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Closed (road shut in winter) · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/cascade-des-brochaux · JSON: https://loisirs74.fr/api/lieu/cascade-des-brochaux.json
 
 ## Cascade des Fours — Sallanches
@@ -86,7 +86,7 @@ Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/cascade-du-chinaillon · JSON: https://loisirs74.fr/api/lieu/cascade-du-chinaillon.json
 
 ## Cascade du Dard — Chamonix-Mont-Blanc
-Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Partial access · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/cascade-du-dard · JSON: https://loisirs74.fr/api/lieu/cascade-du-dard.json
 
 ## Cascade du Rouget — Sixt-Fer-à-Cheval
@@ -130,7 +130,7 @@ Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/col-des-pitons-saleve · JSON: https://loisirs74.fr/api/lieu/col-des-pitons-saleve.json
 
 ## Débaroule — Parcours ludique — La Clusaz
-Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Closed (road shut in winter) · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/debaroule-clusaz · JSON: https://loisirs74.fr/api/lieu/debaroule-clusaz.json
 
 ## Gorges de la Diosaz — Servoz
@@ -178,7 +178,7 @@ Open (cleared road) · Cross-country skiing · Nordic skiing · Ski touring · S
 Fiche: https://loisirs74.fr/le-semnoz · JSON: https://loisirs74.fr/api/lieu/le-semnoz.json
 
 ## Marais de Poisy — Poisy
-Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Open (cleared road) · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/marais-de-poisy · JSON: https://loisirs74.fr/api/lieu/marais-de-poisy.json
 
 ## La mine de la Lappiaz — Morzine
@@ -198,11 +198,11 @@ Snowshoeing · Clear Mont-Blanc view · Loi Montagne II — winter tyres or chai
 Fiche: https://loisirs74.fr/mont-saleve · JSON: https://loisirs74.fr/api/lieu/mont-saleve.json
 
 ## Mont Veyrier — Annecy
-Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Closed (road shut in winter) · Clear Mont-Blanc view · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/mont-veyrier · JSON: https://loisirs74.fr/api/lieu/mont-veyrier.json
 
 ## Parcours de marche : Boucle pédestre d'Uffin — Neydens
-Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Open (cleared road) · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/parcours-marche-boucle-pedestre-uffin-neydens · JSON: https://loisirs74.fr/api/lieu/parcours-marche-boucle-pedestre-uffin-neydens.json
 
 ## Parcours patrimoine : Se promener à Andilly — Andilly
@@ -222,11 +222,11 @@ Open (cleared road) · Cross-country skiing · Nordic skiing · Snowshoeing · D
 Fiche: https://loisirs74.fr/plateau-des-glieres · JSON: https://loisirs74.fr/api/lieu/plateau-des-glieres.json
 
 ## Pointe de Miribel — Villard
-Snowshoeing · Cross-country skiing · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Snowshoeing · Cross-country skiing · Clear Mont-Blanc view · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/pointe-de-miribel · JSON: https://loisirs74.fr/api/lieu/pointe-de-miribel.json
 
 ## Pont de la Caille — Cruseilles
-Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Open (cleared road) · Alpine panorama · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/pont-de-la-caille · JSON: https://loisirs74.fr/api/lieu/pont-de-la-caille.json
 
 ## Réserve naturelle du Bout-du-Lac d'Annecy — Doussard
@@ -238,7 +238,7 @@ Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/reserve-naturelle-delta-de-la-dranse · JSON: https://loisirs74.fr/api/lieu/reserve-naturelle-delta-de-la-dranse.json
 
 ## Secrets de fées - parcours de découverte — Habère-Poche
-Snowshoeing · Cross-country skiing · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Snowshoeing · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/secrets-fees-parcours-decouverte-habere-poche · JSON: https://loisirs74.fr/api/lieu/secrets-fees-parcours-decouverte-habere-poche.json
 
 ## Sentier du Balcon du Léman — Cruseilles
@@ -254,11 +254,11 @@ Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/sentier-cascades-sixt-fer-a-cheval · JSON: https://loisirs74.fr/api/lieu/sentier-cascades-sixt-fer-a-cheval.json
 
 ## Sentier de découverte du Plateau des Glières — Thorens-Glières
-Snowshoeing · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Open (cleared road) · Snowshoeing · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/sentier-decouverte-plateau-glieres-thorens-glieres · JSON: https://loisirs74.fr/api/lieu/sentier-decouverte-plateau-glieres-thorens-glieres.json
 
 ## Sentier des Roselières — Saint-Jorioz
-Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Open (cleared road) · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/sentier-des-roselieres · JSON: https://loisirs74.fr/api/lieu/sentier-des-roselieres.json
 
 ## Sentier du Désert de Platé — Passy
@@ -310,7 +310,7 @@ Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/sentier-pedestre-sonore-sur-traces-contrebandiers-circuit-familles-chatel · JSON: https://loisirs74.fr/api/lieu/sentier-pedestre-sonore-sur-traces-contrebandiers-circuit-familles-chatel.json
 
 ## Le sentier du renard — Morzine
-Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Snowshoeing · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/sentier-renard-morzine · JSON: https://loisirs74.fr/api/lieu/sentier-renard-morzine.json
 
 ## Sentier de la Tournette depuis Montmin — Talloires-Montmin
@@ -362,7 +362,7 @@ Clear Mont-Blanc view · Loi Montagne II — winter tyres or chains required (1 
 Fiche: https://loisirs74.fr/telepherique-du-saleve · JSON: https://loisirs74.fr/api/lieu/telepherique-du-saleve.json
 
 ## Tête du Parmelan — Dingy-Saint-Clair
-Snowshoeing · Ski touring · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Open (cleared road) · Snowshoeing · Ski touring · Clear Mont-Blanc view · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/tete-du-parmelan · JSON: https://loisirs74.fr/api/lieu/tete-du-parmelan.json
 
 ## Le Thiou à Annecy — Annecy

@@ -62,9 +62,9 @@ Gratuit (Petit Port, stade Annecy-le-Vieux)
 ## Saison
 
 Avril – octobre (éviter gel et neige)
-- Fenêtre d'accès hiver: Non renseigné
+- Fenêtre d'accès hiver: Fermé (route fermée l'hiver) — État en temps réel : inforoute74.fr
 - Infrastructure hiver: Non renseigné
-- Panorama enneigé: Non renseigné
+- Panorama enneigé: Vue Mont-Blanc dégagée
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
