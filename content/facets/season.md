@@ -3,7 +3,7 @@ facet: season
 scope: haute-savoie-74
 lieux_documented: 420
 lieux_total: 423
-last_built: 2026-07-13
+last_built: 2026-07-17
 source: loisirs74.fr
 ---
 
