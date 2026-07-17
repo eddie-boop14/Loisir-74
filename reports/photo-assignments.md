@@ -15,7 +15,7 @@
 | `musees` | 49 | 25 | 9 |
 | `parcs-jardins` | 31 | 17 | 11 |
 | `points-de-vue` | 30 | 27 | 3 |
-| `que-faire` | 73 | 42 | 4 |
+| `que-faire` | 73 | 43 | 4 |
 | `sensations-plein-air` | 71 | 54 | 4 |
 | `sentiers` | 40 | 9 | 13 |
 | `sorties-detente` | 25 | 13 | 3 |
@@ -416,7 +416,7 @@
 | `que-faire` | `patinoire-richard-bozon-chamonix` | `divertissement` | `generique-patinoire-hockey.jpg` | — | json hero (local) |
 | `que-faire` | `piscine-ile-bleue-seynod` | `aquatique` | `generique-aquatique-piscine-couverte.jpg` | — | json hero (local) |
 | `que-faire` | `piscine-jean-regis-annecy` | `aquatique` | `generique-aquatique-piscine-couverte.jpg` | — | json hero (local) |
-| `que-faire` | `spa-qc-terme-chamonix` | `bien-etre` | `generique-thermes-hammam.jpg` | — | json hero (local) |
+| `que-faire` | `spa-qc-terme-chamonix` | `bien-etre` | `spa-qc-terme-chamonix-hero.jpg` | — | json hero (local) |
 | `que-faire` | `spa-vitam-bien-etre-neydens` | `bien-etre` | `generique-spa-jardin-tropical.jpg` | — | json hero (local) |
 | `que-faire` | `thermes-saint-gervais-mont-blanc` | `bien-etre` | `generique-spa-jardin-tropical.jpg` | — | json hero (local) |
 | `que-faire` | `trampoline-park-elevation-indoor-neydens` | `divertissement` | `generique-trampoline-park-saut.jpg` | — | json hero (local) |
@@ -553,7 +553,7 @@
 | `sorties-detente` | `grand-casino-annemasse-annemasse` | `divertissement` | `generique-casino.jpg` | — | json hero (local) |
 | `sorties-detente` | `maison-fromage-abondance-abondance` | `patrimoine` | `Meules_d%27abondance_%28cropped%29.jpg` | — | json hero (url) |
 | `sorties-detente` | `musee-poterie-savoyarde-filliere` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
-| `sorties-detente` | `spa-qc-terme-chamonix` | `bien-etre` | `generique-thermes-hammam.jpg` | — | json hero (local) |
+| `sorties-detente` | `spa-qc-terme-chamonix` | `bien-etre` | `spa-qc-terme-chamonix-hero.jpg` | — | json hero (local) |
 | `sorties-detente` | `spa-vitam-bien-etre-neydens` | `bien-etre` | `generique-spa-jardin-tropical.jpg` | — | json hero (local) |
 | `sorties-detente` | `stelsia-casino-megeve` | `divertissement` | `generique-casino-2.jpg` | — | json hero (local) |
 | `sorties-detente` | `thermes-evian` | `patrimoine` | `Anciens_thermes_Evian_5.jpg` | — | json hero (url) |

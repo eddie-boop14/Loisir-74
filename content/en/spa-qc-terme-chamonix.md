@@ -16,9 +16,9 @@ google_place_id: "ChIJcQ-NQUdNiUcRYWudKwrxzhY"
 canonical_url: https://loisirs74.fr/en/spa-qc-terme-chamonix
 language: en
 facet_json: https://loisirs74.fr/api/lieu/spa-qc-terme-chamonix.json
-photo_url: /img/generique/generique-thermes-hammam.jpg
-photo_type: generic
-photo_author: null
+photo_url: /img/sorties-detente/spa-qc-terme-chamonix-hero.jpg
+photo_type: real
+photo_author: "Sarah"
 photo_license: null
 photo_source: null
 last_updated: 2026-06-07
