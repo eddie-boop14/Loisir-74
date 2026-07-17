@@ -1,13 +1,13 @@
 ---
 facet: prices
 scope: haute-savoie-74
-lieux_documented: 411
-lieux_total: 413
+lieux_documented: 420
+lieux_total: 422
 last_built: 2026-07-13
 source: loisirs74.fr
 ---
 
-# Tarifs — index transversal (413 lieux, 411 documentés)
+# Tarifs — index transversal (422 lieux, 420 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 À partir de 7 € (adulte)
@@ -156,6 +156,10 @@ Fiche: https://loisirs74.fr/base-nautique-sciez-sciez · JSON: https://loisirs74
 ## Belvédère du Mont Baron — Veyrier-du-Lac
 
 Fiche: https://loisirs74.fr/belvedere-du-mont-baron · JSON: https://loisirs74.fr/api/lieu/belvedere-du-mont-baron.json
+
+## Bernex — Bernex
+
+Fiche: https://loisirs74.fr/bernex · JSON: https://loisirs74.fr/api/lieu/bernex.json
 
 ## Thonon Billard Club (Billard Stella) — Thonon-les-Bains
 Cotisation annuelle club + tarifs séance à confirmer
@@ -505,6 +509,10 @@ Fiche: https://loisirs74.fr/col-des-pitons-saleve · JSON: https://loisirs74.fr/
 
 Fiche: https://loisirs74.fr/combloux · JSON: https://loisirs74.fr/api/lieu/combloux.json
 
+## Cordon — Cordon
+
+Fiche: https://loisirs74.fr/cordon · JSON: https://loisirs74.fr/api/lieu/cordon.json
+
 ## Côte 2000 Aventure — Megève
 À partir de 12 € (enfant 1 tour)
 Fiche: https://loisirs74.fr/cote-2000-aventure · JSON: https://loisirs74.fr/api/lieu/cote-2000-aventure.json
@@ -705,6 +713,10 @@ Fiche: https://loisirs74.fr/grp-tour-lac-annecy-annecy · JSON: https://loisirs7
 Gratuit toute l'année
 Fiche: https://loisirs74.fr/grp-tour-pays-mont-blanc-sallanches · JSON: https://loisirs74.fr/api/lieu/grp-tour-pays-mont-blanc-sallanches.json
 
+## Hirmentaz – Les Habères — Bellevaux
+
+Fiche: https://loisirs74.fr/hirmentaz-les-haberes · JSON: https://loisirs74.fr/api/lieu/hirmentaz-les-haberes.json
+
 ## Île de Tortuga Vétraz-Monthoux — Vétraz-Monthoux
 À partir de 9,90 € (enfant -95 cm) · 14,90 € (enfant +95 cm) · 1 adulte gratuit/enfant
 Fiche: https://loisirs74.fr/ile-de-tortuga-vetraz-monthoux · JSON: https://loisirs74.fr/api/lieu/ile-de-tortuga-vetraz-monthoux.json
@@ -853,6 +865,10 @@ Fiche: https://loisirs74.fr/laser-game-lasermaxx-sillingy · JSON: https://loisi
 
 Fiche: https://loisirs74.fr/le-grand-bornand · JSON: https://loisirs74.fr/api/lieu/le-grand-bornand.json
 
+## Le Reposoir — Le Reposoir
+
+Fiche: https://loisirs74.fr/le-reposoir · JSON: https://loisirs74.fr/api/lieu/le-reposoir.json
+
 ## Le Semnoz — Viuz-la-Chiésaz
 
 Fiche: https://loisirs74.fr/le-semnoz · JSON: https://loisirs74.fr/api/lieu/le-semnoz.json
@@ -869,6 +885,10 @@ Fiche: https://loisirs74.fr/leman-kid-thonon-les-bains · JSON: https://loisirs7
 À partir de 15 € (adulte)
 Fiche: https://loisirs74.fr/les-aigles-du-leman · JSON: https://loisirs74.fr/api/lieu/les-aigles-du-leman.json
 
+## Les Brasses — Viuz-en-Sallaz
+
+Fiche: https://loisirs74.fr/les-brasses · JSON: https://loisirs74.fr/api/lieu/les-brasses.json
+
 ## Les Carroz — Arâches-la-Frasse
 
 Fiche: https://loisirs74.fr/les-carroz · JSON: https://loisirs74.fr/api/lieu/les-carroz.json
@@ -880,6 +900,10 @@ Fiche: https://loisirs74.fr/les-contamines-montjoie · JSON: https://loisirs74.f
 ## Les Gets — Les Gets
 
 Fiche: https://loisirs74.fr/les-gets · JSON: https://loisirs74.fr/api/lieu/les-gets.json
+
+## Les Houches — Les Houches
+
+Fiche: https://loisirs74.fr/les-houches · JSON: https://loisirs74.fr/api/lieu/les-houches.json
 
 ## Maison de Barberine — Vallorcine
 Adulte 5 € · Réduit 3,50 € · -18 ans gratuit · Pass Musées 25 €/an
@@ -936,6 +960,10 @@ Fiche: https://loisirs74.fr/mont-joly · JSON: https://loisirs74.fr/api/lieu/mon
 ## Mont Salève — Monnetier-Mornex
 Adulte 13 € AR · Enfant 5,80 € AR · Famille 49 €
 Fiche: https://loisirs74.fr/mont-saleve · JSON: https://loisirs74.fr/api/lieu/mont-saleve.json
+
+## Mont-Saxonnex — Mont-Saxonnex
+
+Fiche: https://loisirs74.fr/mont-saxonnex · JSON: https://loisirs74.fr/api/lieu/mont-saxonnex.json
 
 ## Mont Veyrier — Annecy
 
@@ -1148,6 +1176,10 @@ Fiche: https://loisirs74.fr/parcours-patrimoine-se-promener-a-andilly-andilly ·
 ## Passy Accro Lac — Passy
 À partir de 6 € (parcours Pitchounes)
 Fiche: https://loisirs74.fr/passy-accro-lac · JSON: https://loisirs74.fr/api/lieu/passy-accro-lac.json
+
+## Passy Plaine-Joux — Passy
+
+Fiche: https://loisirs74.fr/passy-plaine-joux · JSON: https://loisirs74.fr/api/lieu/passy-plaine-joux.json
 
 ## Patinoire Jean Régis — Annecy
 4,60 € + location patins 3,40 €
@@ -1512,6 +1544,10 @@ Fiche: https://loisirs74.fr/thermes-saint-gervais-mont-blanc · JSON: https://lo
 ## Le Thiou à Annecy — Annecy
 À partir de 0 EUR
 Fiche: https://loisirs74.fr/thiou-a-annecy-annecy · JSON: https://loisirs74.fr/api/lieu/thiou-a-annecy-annecy.json
+
+## Thollon-les-Mémises — Thollon-les-Mémises
+
+Fiche: https://loisirs74.fr/thollon-les-memises · JSON: https://loisirs74.fr/api/lieu/thollon-les-memises.json
 
 ## ABYSS — Tir à l'arc Publier — Publier
 Séance ~15-25 €/pers. · cours réguliers ~150-200 €/an

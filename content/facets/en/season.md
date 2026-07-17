@@ -1,13 +1,13 @@
 ---
 facet: season
 scope: haute-savoie-74
-lieux_documented: 410
-lieux_total: 413
+lieux_documented: 419
+lieux_total: 422
 last_built: 2026-07-13
 source: loisirs74.fr
 ---
 
-# Saison — index transversal (413 lieux, 410 documentés)
+# Saison — index transversal (422 lieux, 419 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Toute l'année · Été pour les jardins
@@ -156,6 +156,10 @@ Fiche: https://loisirs74.fr/base-nautique-sciez-sciez · JSON: https://loisirs74
 ## Belvédère du Mont Baron — Veyrier-du-Lac
 Avril – octobre
 Fiche: https://loisirs74.fr/belvedere-du-mont-baron · JSON: https://loisirs74.fr/api/lieu/belvedere-du-mont-baron.json
+
+## Bernex — Bernex
+Hiver (ski alpin et nordique) · été pour la randonnée vers la Dent d'Oche
+Fiche: https://loisirs74.fr/bernex · JSON: https://loisirs74.fr/api/lieu/bernex.json
 
 ## Thonon Billard Club (Billard Stella) — Thonon-les-Bains
 Toute l'année
@@ -505,6 +509,10 @@ Fiche: https://loisirs74.fr/col-des-pitons-saleve · JSON: https://loisirs74.fr/
 Hiver (ski) · village animé toute l'année
 Fiche: https://loisirs74.fr/combloux · JSON: https://loisirs74.fr/api/lieu/combloux.json
 
+## Cordon — Cordon
+Hiver (ski en famille) · été (randonnée, vue sur le Mont-Blanc)
+Fiche: https://loisirs74.fr/cordon · JSON: https://loisirs74.fr/api/lieu/cordon.json
+
 ## Côte 2000 Aventure — Megève
 Juillet – août (ouverture quotidienne) · reste de l'année sur réservation
 Fiche: https://loisirs74.fr/cote-2000-aventure · JSON: https://loisirs74.fr/api/lieu/cote-2000-aventure.json
@@ -701,6 +709,10 @@ Fiche: https://loisirs74.fr/grp-tour-lac-annecy-annecy · JSON: https://loisirs7
 Mi-juin à mi-septembre
 Fiche: https://loisirs74.fr/grp-tour-pays-mont-blanc-sallanches · JSON: https://loisirs74.fr/api/lieu/grp-tour-pays-mont-blanc-sallanches.json
 
+## Hirmentaz – Les Habères — Bellevaux
+Hiver (ski) · stations familiales toute l'année
+Fiche: https://loisirs74.fr/hirmentaz-les-haberes · JSON: https://loisirs74.fr/api/lieu/hirmentaz-les-haberes.json
+
 ## Île de Tortuga Vétraz-Monthoux — Vétraz-Monthoux
 Toute l'année (climatisé l'été, chauffé l'hiver)
 Fiche: https://loisirs74.fr/ile-de-tortuga-vetraz-monthoux · JSON: https://loisirs74.fr/api/lieu/ile-de-tortuga-vetraz-monthoux.json
@@ -849,6 +861,10 @@ Fiche: https://loisirs74.fr/laser-game-lasermaxx-sillingy · JSON: https://loisi
 Hiver (ski alpin & nordique) · station animée toute l'année
 Fiche: https://loisirs74.fr/le-grand-bornand · JSON: https://loisirs74.fr/api/lieu/le-grand-bornand.json
 
+## Le Reposoir — Le Reposoir
+Hiver (ski alpin, raquettes) — saison sous réserve d'enneigement
+Fiche: https://loisirs74.fr/le-reposoir · JSON: https://loisirs74.fr/api/lieu/le-reposoir.json
+
 ## Le Semnoz — Viuz-la-Chiésaz
 Juin – octobre (été) ; décembre – mars (ski)
 Fiche: https://loisirs74.fr/le-semnoz · JSON: https://loisirs74.fr/api/lieu/le-semnoz.json
@@ -865,6 +881,10 @@ Fiche: https://loisirs74.fr/leman-kid-thonon-les-bains · JSON: https://loisirs7
 Avril – août (parc d'été)
 Fiche: https://loisirs74.fr/les-aigles-du-leman · JSON: https://loisirs74.fr/api/lieu/les-aigles-du-leman.json
 
+## Les Brasses — Viuz-en-Sallaz
+Hiver (ski alpin & nordique) · rando et VTT l'été
+Fiche: https://loisirs74.fr/les-brasses · JSON: https://loisirs74.fr/api/lieu/les-brasses.json
+
 ## Les Carroz — Arâches-la-Frasse
 Hiver (ski) · station animée aussi l'été
 Fiche: https://loisirs74.fr/les-carroz · JSON: https://loisirs74.fr/api/lieu/les-carroz.json
@@ -876,6 +896,10 @@ Fiche: https://loisirs74.fr/les-contamines-montjoie · JSON: https://loisirs74.f
 ## Les Gets — Les Gets
 Hiver (ski) · Été (VTT & bikepark)
 Fiche: https://loisirs74.fr/les-gets · JSON: https://loisirs74.fr/api/lieu/les-gets.json
+
+## Les Houches — Les Houches
+Hiver (ski) · village animé toute l'année
+Fiche: https://loisirs74.fr/les-houches · JSON: https://loisirs74.fr/api/lieu/les-houches.json
 
 ## Maison de Barberine — Vallorcine
 1er juillet — 31 août 2026 uniquement
@@ -932,6 +956,10 @@ Fiche: https://loisirs74.fr/mont-joly · JSON: https://loisirs74.fr/api/lieu/mon
 ## Mont Salève — Monnetier-Mornex
 Avril à novembre (téléphérique)
 Fiche: https://loisirs74.fr/mont-saleve · JSON: https://loisirs74.fr/api/lieu/mont-saleve.json
+
+## Mont-Saxonnex — Mont-Saxonnex
+Hiver (ski alpin familial) · randonnée et lac Bénit en été
+Fiche: https://loisirs74.fr/mont-saxonnex · JSON: https://loisirs74.fr/api/lieu/mont-saxonnex.json
 
 ## Mont Veyrier — Annecy
 Avril – octobre (éviter gel et neige)
@@ -1144,6 +1172,10 @@ Fiche: https://loisirs74.fr/parcours-patrimoine-se-promener-a-andilly-andilly ·
 ## Passy Accro Lac — Passy
 Juin à septembre (fermé avril-mai, ouverture partielle printemps/automne)
 Fiche: https://loisirs74.fr/passy-accro-lac · JSON: https://loisirs74.fr/api/lieu/passy-accro-lac.json
+
+## Passy Plaine-Joux — Passy
+Hiver (ski alpin et nordique) · été (randonnée, parapente)
+Fiche: https://loisirs74.fr/passy-plaine-joux · JSON: https://loisirs74.fr/api/lieu/passy-plaine-joux.json
 
 ## Patinoire Jean Régis — Annecy
 Toute l'année
@@ -1508,6 +1540,10 @@ Fiche: https://loisirs74.fr/thermes-saint-gervais-mont-blanc · JSON: https://lo
 ## Le Thiou à Annecy — Annecy
 Toute l'année
 Fiche: https://loisirs74.fr/thiou-a-annecy-annecy · JSON: https://loisirs74.fr/api/lieu/thiou-a-annecy-annecy.json
+
+## Thollon-les-Mémises — Thollon-les-Mémises
+Hiver (ski) · télécabine ouverte aussi en été
+Fiche: https://loisirs74.fr/thollon-les-memises · JSON: https://loisirs74.fr/api/lieu/thollon-les-memises.json
 
 ## ABYSS — Tir à l'arc Publier — Publier
 Toute l'année (selon configuration)
