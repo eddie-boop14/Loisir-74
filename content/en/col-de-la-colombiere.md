@@ -57,7 +57,7 @@ Not specified
 ## Season
 
 June to September
-- Winter access window: Closed (road shut in winter)
+- Winter access window: Closed (road shut in winter) — Live status: inforoute74.fr
 - Winter infrastructure: Not specified
 - Snow panorama: Alpine panorama
 - Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar) · chains advised for col access

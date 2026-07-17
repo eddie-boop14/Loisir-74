@@ -152,6 +152,29 @@ WINTER_LABELS = {
     "equip": {"fr": "Équipement obligatoire", "en": "Equipment mandated", "de": "Vorgeschriebene Ausrüstung", "it": "Equipaggiamento obbligatorio", "es": "Equipamiento obligatorio", "nl": "Verplichte uitrusting"},
 }
 
+# JOB B — the inforoute74 escape hatch. When the access régime is closed/partial or
+# the node carries a col, the fiche STATES THE SEASONAL RÉGIME with its source and
+# delegates live status to the Département. We never assert today's road state.
+# URL invariant; label localized (the winter card itself renders fr/en, so those two
+# are what surface — the six PROSE forms are kept for the facet layer + parity).
+INFOROUTE_URL = "https://www.inforoute74.fr"
+INFOROUTE_HOST = "inforoute74.fr"
+WINTER_LIVE = {"fr": "État en temps réel :", "en": "Live status:", "de": "Echtzeit-Status:",
+               "it": "Stato in tempo reale:", "es": "Estado en tiempo real:", "nl": "Realtime status:"}
+
+
+def winter_needs_inforoute(fk):
+    """True when the access line must carry the inforoute74 delegation link:
+    winter_access ∈ {closed, partial} OR col_chains true."""
+    return fk.get("winter_access") in ("closed", "partial") or bool(fk.get("col_chains"))
+
+
+def winter_inforoute_md(fk, lang):
+    """Plain-text suffix for the facet md / text surfaces ('' when not needed)."""
+    if not winter_needs_inforoute(fk):
+        return ""
+    return f" — {WINTER_LIVE.get(lang, WINTER_LIVE['en'])} {INFOROUTE_HOST}"
+
 
 def winter_bullets(d, lang):
     """The `- Key: value` winter lines under ## Saison, or [] for non-winter
@@ -169,7 +192,7 @@ def winter_bullets(d, lang):
     svv = SNOW_VIEW[sv][lang] if sv in SNOW_VIEW else unk
     eq = EQUIP[lang] + (EQUIP_COL[lang] if fk.get("col_chains") else "")
     return [
-        f"- {L['access'][lang]}: {av}",
+        f"- {L['access'][lang]}: {av}{winter_inforoute_md(fk, lang)}",
         f"- {L['infra'][lang]}: {' · '.join(infra) if infra else unk}",
         f"- {L['view'][lang]}: {svv}",
         f"- {L['equip'][lang]}: {eq}",
@@ -390,6 +413,7 @@ def lieu_facets(d):
             "snow_view":      facts.get("snow_view"),           # enum|null
             "equipment":      "loi_montagne_ii",                # constant token, HS
             "col_chains":     bool(facts.get("col_chains")),
+            "inforoute":      INFOROUTE_URL if winter_needs_inforoute(facts) else None,
         },
         "official_url": official_url_of(d),
         "last_verified": last_verified,

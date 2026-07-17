@@ -66,7 +66,7 @@ Gratuit au Fayet et à Saint-Gervais
 ## Saison
 
 Juin – septembre (été) · Décembre – avril (hiver)
-- Fenêtre d'accès hiver: Non renseigné
+- Fenêtre d'accès hiver: Ouvert (accès déneigé)
 - Infrastructure hiver: Raquettes · Ski de fond · Ski de rando
 - Panorama enneigé: Vue Mont-Blanc dégagée
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)

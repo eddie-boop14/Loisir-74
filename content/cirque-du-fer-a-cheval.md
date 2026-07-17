@@ -59,8 +59,8 @@ Payant (7 € env. — au bout de la route)
 ## Saison
 
 Mai – juin (cascades) · Juin – septembre (randonnée)
-- Fenêtre d'accès hiver: Accès partiel
-- Infrastructure hiver: Raquettes · Ski nordique
+- Fenêtre d'accès hiver: Accès partiel — État en temps réel : inforoute74.fr
+- Infrastructure hiver: Ski de fond · Ski nordique · Raquettes
 - Panorama enneigé: Non renseigné
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 

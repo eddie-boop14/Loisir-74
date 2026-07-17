@@ -57,8 +57,8 @@ Non renseigné
 ## Saison
 
 Toute l'année · Ski de fond décembre – mars · Randonnée juin – septembre
-- Fenêtre d'accès hiver: Non renseigné
-- Infrastructure hiver: Raquettes · Ski nordique · Ski de fond · Chiens de traîneau · Luge
+- Fenêtre d'accès hiver: Ouvert (accès déneigé) — État en temps réel : inforoute74.fr
+- Infrastructure hiver: Ski de fond · Ski nordique · Raquettes · Chiens de traîneau · Luge
 - Panorama enneigé: Panorama alpin
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars) · chaînes conseillées pour l'accès au col
 

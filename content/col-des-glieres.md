@@ -57,9 +57,9 @@ Non renseigné
 ## Saison
 
 Mai – octobre (été) · Décembre – mars (ski nordique)
-- Fenêtre d'accès hiver: Non renseigné
+- Fenêtre d'accès hiver: Ouvert (accès déneigé) — État en temps réel : inforoute74.fr
 - Infrastructure hiver: Raquettes · Ski nordique · Ski de fond
-- Panorama enneigé: Non renseigné
+- Panorama enneigé: Panorama alpin
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars) · chaînes conseillées pour l'accès au col
 
 ## Source officielle

@@ -102,7 +102,7 @@ Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/chemin-art-nature-andilly-andilly · JSON: https://loisirs74.fr/api/lieu/chemin-art-nature-andilly-andilly.json
 
 ## Cirque du Fer-à-Cheval — Sixt-Fer-à-Cheval
-Partial access · Snowshoeing · Nordic skiing · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Partial access · Cross-country skiing · Nordic skiing · Snowshoeing · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/cirque-du-fer-a-cheval · JSON: https://loisirs74.fr/api/lieu/cirque-du-fer-a-cheval.json
 
 ## Col de la Colombière — Le Reposoir
@@ -110,7 +110,7 @@ Closed (road shut in winter) · Alpine panorama · Loi Montagne II — winter ty
 Fiche: https://loisirs74.fr/col-de-la-colombiere · JSON: https://loisirs74.fr/api/lieu/col-de-la-colombiere.json
 
 ## Col de la Croix-Fry — Manigod
-Cross-country skiing · Clear Mont-Blanc view · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar) · chains advised for col access
+Open (cleared road) · Cross-country skiing · Nordic skiing · Snowshoeing · Clear Mont-Blanc view · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar) · chains advised for col access
 Fiche: https://loisirs74.fr/col-de-la-croix-fry · JSON: https://loisirs74.fr/api/lieu/col-de-la-croix-fry.json
 
 ## Col de la Forclaz — Talloires-Montmin
@@ -118,11 +118,11 @@ Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar) · chains
 Fiche: https://loisirs74.fr/col-de-la-forclaz · JSON: https://loisirs74.fr/api/lieu/col-de-la-forclaz.json
 
 ## Col des Aravis — La Clusaz
-Clear Mont-Blanc view · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar) · chains advised for col access
+Open (cleared road) · Clear Mont-Blanc view · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar) · chains advised for col access
 Fiche: https://loisirs74.fr/col-des-aravis · JSON: https://loisirs74.fr/api/lieu/col-des-aravis.json
 
 ## Col des Glières — Fillière
-Snowshoeing · Nordic skiing · Cross-country skiing · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar) · chains advised for col access
+Open (cleared road) · Snowshoeing · Nordic skiing · Cross-country skiing · Alpine panorama · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar) · chains advised for col access
 Fiche: https://loisirs74.fr/col-des-glieres · JSON: https://loisirs74.fr/api/lieu/col-des-glieres.json
 
 ## Le Salève (Col des Pitons) — Collonges-sous-Salève
@@ -174,7 +174,7 @@ Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/itineraire-pedestre-chemin-bords-dranse-chatel · JSON: https://loisirs74.fr/api/lieu/itineraire-pedestre-chemin-bords-dranse-chatel.json
 
 ## Le Semnoz — Viuz-la-Chiésaz
-Snowshoeing · Cross-country skiing · Sledging · Clear Mont-Blanc view · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Open (cleared road) · Cross-country skiing · Nordic skiing · Ski touring · Snowshoeing · Sledging · Clear Mont-Blanc view · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/le-semnoz · JSON: https://loisirs74.fr/api/lieu/le-semnoz.json
 
 ## Marais de Poisy — Poisy
@@ -214,11 +214,11 @@ Snowshoeing · Nordic skiing · Cross-country skiing · Loi Montagne II — wint
 Fiche: https://loisirs74.fr/plateau-de-loex · JSON: https://loisirs74.fr/api/lieu/plateau-de-loex.json
 
 ## Plateau de Solaison — Brizon
-Snowshoeing · Nordic skiing · Cross-country skiing · Ski touring · Sledging · Alpine panorama · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Open (cleared road) · Cross-country skiing · Nordic skiing · Snowshoeing · Sledging · Alpine panorama · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/plateau-de-solaison · JSON: https://loisirs74.fr/api/lieu/plateau-de-solaison.json
 
 ## Plateau des Glières — Fillière
-Snowshoeing · Nordic skiing · Cross-country skiing · Dog sledding · Sledging · Alpine panorama · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar) · chains advised for col access
+Open (cleared road) · Cross-country skiing · Nordic skiing · Snowshoeing · Dog sledding · Sledging · Alpine panorama · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar) · chains advised for col access
 Fiche: https://loisirs74.fr/plateau-des-glieres · JSON: https://loisirs74.fr/api/lieu/plateau-des-glieres.json
 
 ## Pointe de Miribel — Villard
@@ -270,7 +270,7 @@ Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/sentier-du-baroque-combloux · JSON: https://loisirs74.fr/api/lieu/sentier-du-baroque-combloux.json
 
 ## Sentier des Espagnols / Pas du Roc — Thorens-Glières
-Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Alpine panorama · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/sentier-espagnols-pas-du-roc-glieres · JSON: https://loisirs74.fr/api/lieu/sentier-espagnols-pas-du-roc-glieres.json
 
 ## Sentier géologique de la pointe Percée — Le Grand-Bornand
@@ -346,7 +346,7 @@ Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/telecabine-super-chatel · JSON: https://loisirs74.fr/api/lieu/telecabine-super-chatel.json
 
 ## Téléphérique de l'Aiguille du Midi — Chamonix-Mont-Blanc
-Clear Mont-Blanc view · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Open (cleared road) · Clear Mont-Blanc view · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/telepherique-aiguille-du-midi · JSON: https://loisirs74.fr/api/lieu/telepherique-aiguille-du-midi.json
 
 ## Téléphérique des Grands Montets — Chamonix-Mont-Blanc
@@ -378,11 +378,11 @@ Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/tour-village-abondance-abondance · JSON: https://loisirs74.fr/api/lieu/tour-village-abondance-abondance.json
 
 ## Train du Montenvers - Mer de Glace — Chamonix-Mont-Blanc
-Alpine panorama · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Open (cleared road) · Alpine panorama · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/train-du-montenvers-mer-de-glace · JSON: https://loisirs74.fr/api/lieu/train-du-montenvers-mer-de-glace.json
 
 ## Tramway du Mont-Blanc — Saint-Gervais-les-Bains
-Snowshoeing · Cross-country skiing · Ski touring · Clear Mont-Blanc view · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Open (cleared road) · Snowshoeing · Cross-country skiing · Ski touring · Clear Mont-Blanc view · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/tramway-du-mont-blanc · JSON: https://loisirs74.fr/api/lieu/tramway-du-mont-blanc.json
 
 ## Véloroute Vallée de l'Arve — Cluses

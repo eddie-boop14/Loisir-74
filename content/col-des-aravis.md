@@ -58,7 +58,7 @@ Gratuit
 ## Saison
 
 Mai – octobre
-- Fenêtre d'accès hiver: Non renseigné
+- Fenêtre d'accès hiver: Ouvert (accès déneigé) — État en temps réel : inforoute74.fr
 - Infrastructure hiver: Non renseigné
 - Panorama enneigé: Vue Mont-Blanc dégagée
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars) · chaînes conseillées pour l'accès au col

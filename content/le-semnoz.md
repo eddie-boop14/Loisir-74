@@ -57,8 +57,8 @@ Non renseigné
 ## Saison
 
 Juin – octobre (été) ; décembre – mars (ski)
-- Fenêtre d'accès hiver: Non renseigné
-- Infrastructure hiver: Raquettes · Ski de fond · Luge
+- Fenêtre d'accès hiver: Ouvert (accès déneigé)
+- Infrastructure hiver: Ski de fond · Ski nordique · Ski de rando · Raquettes · Luge
 - Panorama enneigé: Vue Mont-Blanc dégagée
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 

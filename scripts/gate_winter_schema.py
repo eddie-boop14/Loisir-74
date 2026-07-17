@@ -61,7 +61,7 @@ def check_json_vocab(d, viol):
             viol.append(f"{slug}: snow_view {sv!r} carries a subjective rating word")
 
 
-def check_md(rel, text, lang, cats, viol):
+def check_md(rel, text, lang, cats, dicts, viol):
     slug = os.path.basename(rel)[:-3]
     is_winter = cats.get(slug) in B.WINTER_NODES
     labels = LABELS[lang]
@@ -72,6 +72,20 @@ def check_md(rel, text, lang, cats, viol):
         return
     if not is_winter:
         return
+    # rule 4b (JOB B): the inforoute74 delegation suffix on the ACCESS line must be
+    # present exactly when the régime requires it (closed/partial OR col_chains), and
+    # absent otherwise. The gate ACCEPTS the suffix (recognizes it as valid schema).
+    facts = ((dicts.get(slug) or {}).get("i18n") or {}).get("fr", {}).get("facts") or {}
+    acc_label = labels["access"]
+    acc_lines = [ln for ln in winter_lines if ln.startswith(f"- {acc_label}:")]
+    if acc_lines:
+        suffix = f"— {B.WINTER_LIVE[lang]} {B.INFOROUTE_HOST}"
+        has = suffix in acc_lines[0]
+        need = B.winter_needs_inforoute(facts)
+        if need and not has:
+            viol.append(f"{rel}: access line missing the inforoute74 suffix (régime requires it)")
+        if has and not need:
+            viol.append(f"{rel}: access line carries the inforoute74 suffix but régime doesn't require it")
     # rule 4: equipment line present and byte-exact (constant + optional col clause)
     eq_label = labels["equip"]
     eq_lines = [ln for ln in winter_lines if ln.startswith(f"- {eq_label}:")]
@@ -97,9 +111,10 @@ def check_md(rel, text, lang, cats, viol):
 
 
 def main():
-    cats = {s: d.get("category") for s, d in slug_category().items()}
+    dicts = slug_category()
+    cats = {s: d.get("category") for s, d in dicts.items()}
     viol = []
-    for d in slug_category().values():
+    for d in dicts.values():
         check_json_vocab(d, viol)
     for lang, base in CONTENT.items():
         if not os.path.isdir(base):
@@ -107,7 +122,7 @@ def main():
         for p in glob.glob(os.path.join(base, "*.md")):
             rel = os.path.relpath(p, ROOT)
             text = open(p, encoding="utf-8").read()
-            check_md(rel, text, lang, cats, viol)
+            check_md(rel, text, lang, cats, dicts, viol)
     if viol:
         print("gate_winter_schema: FAIL")
         for v in viol[:60]:

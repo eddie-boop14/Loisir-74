@@ -65,7 +65,7 @@ Free at Le Fayet and Saint-Gervais
 ## Season
 
 June – September (summer) · December – April (winter)
-- Winter access window: Not specified
+- Winter access window: Open (cleared road)
 - Winter infrastructure: Snowshoeing · Cross-country skiing · Ski touring
 - Snow panorama: Clear Mont-Blanc view
 - Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)

@@ -1016,11 +1016,18 @@ def season_card(d):
     sv = fk.get("snow_view")
     svv = _bac.SNOW_VIEW[sv][lang] if sv in _bac.SNOW_VIEW else unk
     eq = _bac.EQUIP[lang] + (_bac.EQUIP_COL[lang] if fk.get("col_chains") else "")
-    rows = [(L_["access"][lang], av), (L_["infra"][lang], iv),
-            (L_["view"][lang], svv), (L_["equip"][lang], eq)]
+    # JOB B: closed/partial régime or a col → state the régime + delegate live status
+    # to the Département (inforoute74). Plain external link; URL invariant.
+    acc_suffix = ""
+    if _bac.winter_needs_inforoute(fk):
+        acc_suffix = (f' — {esc(_bac.WINTER_LIVE[lang])} '
+                      f'<a href="{_bac.INFOROUTE_URL}" target="_blank" rel="noopener">'
+                      f'{_bac.INFOROUTE_HOST}</a>')
+    rows = [(L_["access"][lang], av, acc_suffix), (L_["infra"][lang], iv, ""),
+            (L_["view"][lang], svv, ""), (L_["equip"][lang], eq, "")]
     facts = "".join(
         f'<div class="fact"><div class="k">{esc(k)}</div>'
-        f'<div class="v"><bdi>{esc(v)}</bdi></div></div>' for k, v in rows)
+        f'<div class="v"><bdi>{esc(v)}{sfx}</bdi></div></div>' for k, v, sfx in rows)
     kicker = "Hiver" if lang == "fr" else "Winter"
     head = "Saison hivernale" if lang == "fr" else "Winter season"
     return (

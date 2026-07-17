@@ -59,7 +59,7 @@ Gratuit (parking Nant Sec)
 ## Saison
 
 Mai – juin (fonte des neiges, débit maximal) · Juillet – octobre (accès facile)
-- Fenêtre d'accès hiver: Accès partiel
+- Fenêtre d'accès hiver: Accès partiel — État en temps réel : inforoute74.fr
 - Infrastructure hiver: Raquettes
 - Panorama enneigé: Non renseigné
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)

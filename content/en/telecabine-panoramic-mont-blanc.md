@@ -67,7 +67,7 @@ Payant (Grépon, Aiguille du Midi à Chamonix)
 ## Season
 
 Juillet – mi-septembre
-- Winter access window: Closed (road shut in winter)
+- Winter access window: Closed (road shut in winter) — Live status: inforoute74.fr
 - Winter infrastructure: Not specified
 - Snow panorama: Clear Mont-Blanc view
 - Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
