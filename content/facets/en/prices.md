@@ -1,13 +1,13 @@
 ---
 facet: prices
 scope: haute-savoie-74
-lieux_documented: 401
-lieux_total: 403
+lieux_documented: 411
+lieux_total: 413
 last_built: 2026-07-13
 source: loisirs74.fr
 ---
 
-# Tarifs — index transversal (403 lieux, 401 documentés)
+# Tarifs — index transversal (413 lieux, 411 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 À partir de 7 € (adulte)
@@ -393,6 +393,10 @@ Fiche: https://loisirs74.fr/chateau-thenieres-ballaison · JSON: https://loisirs
 
 Fiche: https://loisirs74.fr/chateaux-des-allinges · JSON: https://loisirs74.fr/api/lieu/chateaux-des-allinges.json
 
+## Châtel — Châtel
+
+Fiche: https://loisirs74.fr/chatel · JSON: https://loisirs74.fr/api/lieu/chatel.json
+
 ## Châtel Accrobranche 1600 — Châtel
 Dès 14,90 € (P'tit Kid 2025) à 31,20 € (Super 2025)
 Fiche: https://loisirs74.fr/chatel-accrobranche-1600-chatel · JSON: https://loisirs74.fr/api/lieu/chatel-accrobranche-1600-chatel.json
@@ -496,6 +500,10 @@ Fiche: https://loisirs74.fr/col-des-glieres · JSON: https://loisirs74.fr/api/li
 ## Le Salève (Col des Pitons) — Collonges-sous-Salève
 
 Fiche: https://loisirs74.fr/col-des-pitons-saleve · JSON: https://loisirs74.fr/api/lieu/col-des-pitons-saleve.json
+
+## Combloux — Combloux
+
+Fiche: https://loisirs74.fr/combloux · JSON: https://loisirs74.fr/api/lieu/combloux.json
 
 ## Côte 2000 Aventure — Megève
 À partir de 12 € (enfant 1 tour)
@@ -781,6 +789,10 @@ Fiche: https://loisirs74.fr/karting-team-bouvier-pringy · JSON: https://loisirs
 ~18-22 € la session 10 min
 Fiche: https://loisirs74.fr/karting-thones · JSON: https://loisirs74.fr/api/lieu/karting-thones.json
 
+## La Chapelle-d'Abondance — La Chapelle-d'Abondance
+
+Fiche: https://loisirs74.fr/la-chapelle-d-abondance · JSON: https://loisirs74.fr/api/lieu/la-chapelle-d-abondance.json
+
 ## La Clusaz — La Clusaz
 
 Fiche: https://loisirs74.fr/la-clusaz · JSON: https://loisirs74.fr/api/lieu/la-clusaz.json
@@ -857,6 +869,14 @@ Fiche: https://loisirs74.fr/leman-kid-thonon-les-bains · JSON: https://loisirs7
 À partir de 15 € (adulte)
 Fiche: https://loisirs74.fr/les-aigles-du-leman · JSON: https://loisirs74.fr/api/lieu/les-aigles-du-leman.json
 
+## Les Carroz — Arâches-la-Frasse
+
+Fiche: https://loisirs74.fr/les-carroz · JSON: https://loisirs74.fr/api/lieu/les-carroz.json
+
+## Les Contamines-Montjoie — Les Contamines-Montjoie
+
+Fiche: https://loisirs74.fr/les-contamines-montjoie · JSON: https://loisirs74.fr/api/lieu/les-contamines-montjoie.json
+
 ## Les Gets — Les Gets
 
 Fiche: https://loisirs74.fr/les-gets · JSON: https://loisirs74.fr/api/lieu/les-gets.json
@@ -928,6 +948,10 @@ Fiche: https://loisirs74.fr/montgolfiere-annecy · JSON: https://loisirs74.fr/ap
 ## Montgolfières du Mont-Blanc — Évian-les-Bains
 Sur devis — individuel, couple, groupe
 Fiche: https://loisirs74.fr/montgolfiere-du-mont-blanc-evian · JSON: https://loisirs74.fr/api/lieu/montgolfiere-du-mont-blanc-evian.json
+
+## Morillon — Morillon
+
+Fiche: https://loisirs74.fr/morillon · JSON: https://loisirs74.fr/api/lieu/morillon.json
 
 ## Morzine — Morzine
 
@@ -1273,6 +1297,10 @@ Fiche: https://loisirs74.fr/pont-de-la-caille · JSON: https://loisirs74.fr/api/
 
 Fiche: https://loisirs74.fr/port-clerges-base-nautique-thonon-bains · JSON: https://loisirs74.fr/api/lieu/port-clerges-base-nautique-thonon-bains.json
 
+## Praz de Lys – Sommand — Taninges (et Mieussy)
+
+Fiche: https://loisirs74.fr/praz-de-lys-sommand · JSON: https://loisirs74.fr/api/lieu/praz-de-lys-sommand.json
+
 ## Ecolorado Rafting — Passy
 À partir de 30 €
 Fiche: https://loisirs74.fr/rafting-ecolorado-passy-samoens · JSON: https://loisirs74.fr/api/lieu/rafting-ecolorado-passy-samoens.json
@@ -1300,6 +1328,18 @@ Fiche: https://loisirs74.fr/ruines-chateau-habere-lullin-habere-lullin · JSON: 
 ## Ruines du château St Michel — Les Houches
 À partir de 0 EUR
 Fiche: https://loisirs74.fr/ruines-chateau-st-michel-houches · JSON: https://loisirs74.fr/api/lieu/ruines-chateau-st-michel-houches.json
+
+## Saint-Gervais-les-Bains — Saint-Gervais-les-Bains
+
+Fiche: https://loisirs74.fr/saint-gervais-les-bains · JSON: https://loisirs74.fr/api/lieu/saint-gervais-les-bains.json
+
+## Saint-Jean-d'Aulps — Saint-Jean-d'Aulps
+
+Fiche: https://loisirs74.fr/saint-jean-d-aulps · JSON: https://loisirs74.fr/api/lieu/saint-jean-d-aulps.json
+
+## Samoëns — Samoëns
+
+Fiche: https://loisirs74.fr/samoens · JSON: https://loisirs74.fr/api/lieu/samoens.json
 
 ## Secrets de fées - parcours de découverte — Habère-Poche
 À partir de 5 EUR

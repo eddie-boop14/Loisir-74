@@ -1,13 +1,13 @@
 ---
 facet: season
 scope: haute-savoie-74
-lieux_documented: 400
-lieux_total: 403
+lieux_documented: 410
+lieux_total: 413
 last_built: 2026-07-13
 source: loisirs74.fr
 ---
 
-# Saison — index transversal (403 lieux, 400 documentés)
+# Saison — index transversal (413 lieux, 410 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Toute l'année · Été pour les jardins
@@ -393,6 +393,10 @@ Fiche: https://loisirs74.fr/chateau-thenieres-ballaison · JSON: https://loisirs
 Avril – octobre
 Fiche: https://loisirs74.fr/chateaux-des-allinges · JSON: https://loisirs74.fr/api/lieu/chateaux-des-allinges.json
 
+## Châtel — Châtel
+Hiver (ski) · station animée toute l'année
+Fiche: https://loisirs74.fr/chatel · JSON: https://loisirs74.fr/api/lieu/chatel.json
+
 ## Châtel Accrobranche 1600 — Châtel
 Été (4 juillet - 30 août 2026)
 Fiche: https://loisirs74.fr/chatel-accrobranche-1600-chatel · JSON: https://loisirs74.fr/api/lieu/chatel-accrobranche-1600-chatel.json
@@ -496,6 +500,10 @@ Fiche: https://loisirs74.fr/col-des-glieres · JSON: https://loisirs74.fr/api/li
 ## Le Salève (Col des Pitons) — Collonges-sous-Salève
 Mai – octobre (route déneigée)
 Fiche: https://loisirs74.fr/col-des-pitons-saleve · JSON: https://loisirs74.fr/api/lieu/col-des-pitons-saleve.json
+
+## Combloux — Combloux
+Hiver (ski) · village animé toute l'année
+Fiche: https://loisirs74.fr/combloux · JSON: https://loisirs74.fr/api/lieu/combloux.json
 
 ## Côte 2000 Aventure — Megève
 Juillet – août (ouverture quotidienne) · reste de l'année sur réservation
@@ -777,6 +785,10 @@ Fiche: https://loisirs74.fr/karting-team-bouvier-pringy · JSON: https://loisirs
 Toute l'année (indoor) / printemps-automne (extérieur)
 Fiche: https://loisirs74.fr/karting-thones · JSON: https://loisirs74.fr/api/lieu/karting-thones.json
 
+## La Chapelle-d'Abondance — La Chapelle-d'Abondance
+Hiver (ski alpin & nordique) · nature en été
+Fiche: https://loisirs74.fr/la-chapelle-d-abondance · JSON: https://loisirs74.fr/api/lieu/la-chapelle-d-abondance.json
+
 ## La Clusaz — La Clusaz
 Hiver (ski) · station animée toute l'année
 Fiche: https://loisirs74.fr/la-clusaz · JSON: https://loisirs74.fr/api/lieu/la-clusaz.json
@@ -853,6 +865,14 @@ Fiche: https://loisirs74.fr/leman-kid-thonon-les-bains · JSON: https://loisirs7
 Avril – août (parc d'été)
 Fiche: https://loisirs74.fr/les-aigles-du-leman · JSON: https://loisirs74.fr/api/lieu/les-aigles-du-leman.json
 
+## Les Carroz — Arâches-la-Frasse
+Hiver (ski) · station animée aussi l'été
+Fiche: https://loisirs74.fr/les-carroz · JSON: https://loisirs74.fr/api/lieu/les-carroz.json
+
+## Les Contamines-Montjoie — Les Contamines-Montjoie
+Hiver (ski) · village nature apprécié toute l'année
+Fiche: https://loisirs74.fr/les-contamines-montjoie · JSON: https://loisirs74.fr/api/lieu/les-contamines-montjoie.json
+
 ## Les Gets — Les Gets
 Hiver (ski) · Été (VTT & bikepark)
 Fiche: https://loisirs74.fr/les-gets · JSON: https://loisirs74.fr/api/lieu/les-gets.json
@@ -924,6 +944,10 @@ Fiche: https://loisirs74.fr/montgolfiere-annecy · JSON: https://loisirs74.fr/ap
 ## Montgolfières du Mont-Blanc — Évian-les-Bains
 Avril à octobre · matin (lever du jour)
 Fiche: https://loisirs74.fr/montgolfiere-du-mont-blanc-evian · JSON: https://loisirs74.fr/api/lieu/montgolfiere-du-mont-blanc-evian.json
+
+## Morillon — Morillon
+Hiver (ski) · lac Bleu et hors-ski en été
+Fiche: https://loisirs74.fr/morillon · JSON: https://loisirs74.fr/api/lieu/morillon.json
 
 ## Morzine — Morzine
 Hiver (ski) · station animée toute l'année
@@ -1269,6 +1293,10 @@ Fiche: https://loisirs74.fr/pont-de-la-caille · JSON: https://loisirs74.fr/api/
 Avril à octobre · Hiver pour clubs
 Fiche: https://loisirs74.fr/port-clerges-base-nautique-thonon-bains · JSON: https://loisirs74.fr/api/lieu/port-clerges-base-nautique-thonon-bains.json
 
+## Praz de Lys – Sommand — Taninges (et Mieussy)
+Hiver (ski alpin & nordique) · station active aussi l'été
+Fiche: https://loisirs74.fr/praz-de-lys-sommand · JSON: https://loisirs74.fr/api/lieu/praz-de-lys-sommand.json
+
 ## Ecolorado Rafting — Passy
 Avril à octobre
 Fiche: https://loisirs74.fr/rafting-ecolorado-passy-samoens · JSON: https://loisirs74.fr/api/lieu/rafting-ecolorado-passy-samoens.json
@@ -1296,6 +1324,18 @@ Fiche: https://loisirs74.fr/ruines-chateau-habere-lullin-habere-lullin · JSON: 
 ## Ruines du château St Michel — Les Houches
 Du printemps à l'automne · selon enneigement
 Fiche: https://loisirs74.fr/ruines-chateau-st-michel-houches · JSON: https://loisirs74.fr/api/lieu/ruines-chateau-st-michel-houches.json
+
+## Saint-Gervais-les-Bains — Saint-Gervais-les-Bains
+Hiver (ski) · station thermale et de montagne toute l'année
+Fiche: https://loisirs74.fr/saint-gervais-les-bains · JSON: https://loisirs74.fr/api/lieu/saint-gervais-les-bains.json
+
+## Saint-Jean-d'Aulps — Saint-Jean-d'Aulps
+Hiver (ski) · station tranquille toute l'année
+Fiche: https://loisirs74.fr/saint-jean-d-aulps · JSON: https://loisirs74.fr/api/lieu/saint-jean-d-aulps.json
+
+## Samoëns — Samoëns
+Hiver (ski) · village vivant toute l'année
+Fiche: https://loisirs74.fr/samoens · JSON: https://loisirs74.fr/api/lieu/samoens.json
 
 ## Secrets de fées - parcours de découverte — Habère-Poche
 Juin à septembre · Hiver en raquettes
