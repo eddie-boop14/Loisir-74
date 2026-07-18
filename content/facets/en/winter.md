@@ -1,13 +1,13 @@
 ---
 facet: winter
 scope: haute-savoie-74
-lieux_documented: 100
+lieux_documented: 99
 lieux_total: 424
 last_built: 2026-07-18
 source: loisirs74.fr
 ---
 
-# Hiver — index transversal (424 lieux, 100 documentés)
+# Hiver — index transversal (424 lieux, 99 documentés)
 
 ## Aire de décollage parapente de Plaine-Joux — Passy
 Clear Mont-Blanc view · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
@@ -170,7 +170,7 @@ Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/grp-tour-pays-mont-blanc-sallanches · JSON: https://loisirs74.fr/api/lieu/grp-tour-pays-mont-blanc-sallanches.json
 
 ## Itinéraire pédestre : les bords de l'Arve - De Gaillard à Arthaz — Gaillard
-Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Open (cleared road) · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/itineraire-pedestre-bords-arve-gaillard-a-arthaz-gaillard · JSON: https://loisirs74.fr/api/lieu/itineraire-pedestre-bords-arve-gaillard-a-arthaz-gaillard.json
 
 ## Itinéraire pédestre - Chemin des bords de Dranse — Châtel
@@ -212,10 +212,6 @@ Fiche: https://loisirs74.fr/parcours-marche-boucle-pedestre-uffin-neydens · JSO
 ## Parcours patrimoine : Se promener à Andilly — Andilly
 Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/parcours-patrimoine-se-promener-a-andilly-andilly · JSON: https://loisirs74.fr/api/lieu/parcours-patrimoine-se-promener-a-andilly-andilly.json
-
-## Plateau de Loëx — Habère-Poche
-Snowshoeing · Nordic skiing · Cross-country skiing · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
-Fiche: https://loisirs74.fr/plateau-de-loex · JSON: https://loisirs74.fr/api/lieu/plateau-de-loex.json
 
 ## Plateau de Solaison — Brizon
 Open (cleared road) · Cross-country skiing · Nordic skiing · Snowshoeing · Sledging · Alpine panorama · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
@@ -298,7 +294,7 @@ Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/sentier-pedestre-a-decouverte-village-vernaz-vernaz · JSON: https://loisirs74.fr/api/lieu/sentier-pedestre-a-decouverte-village-vernaz-vernaz.json
 
 ## Sentier pédestre de l'Eterlou — Châtel
-Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Open (cleared road) · Snowshoeing · Sledging · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/sentier-pedestre-eterlou-chatel · JSON: https://loisirs74.fr/api/lieu/sentier-pedestre-eterlou-chatel.json
 
 ## Sentier pédestre d'interprétation du lac des Plagnes — Abondance
@@ -342,7 +338,7 @@ Closed (road shut in winter) · Clear Mont-Blanc view · Loi Montagne II — win
 Fiche: https://loisirs74.fr/telecabine-panoramic-mont-blanc · JSON: https://loisirs74.fr/api/lieu/telecabine-panoramic-mont-blanc.json
 
 ## Télécabine du Pléney — Morzine
-Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+Open (cleared road) · Sledging · Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 Fiche: https://loisirs74.fr/telecabine-pleney-morzine · JSON: https://loisirs74.fr/api/lieu/telecabine-pleney-morzine.json
 
 ## Télécabine de Super-Châtel — Châtel

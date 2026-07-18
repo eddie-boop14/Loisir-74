@@ -1,13 +1,13 @@
 ---
 facet: winter
 scope: haute-savoie-74
-lieux_documented: 100
+lieux_documented: 99
 lieux_total: 424
 last_built: 2026-07-18
 source: loisirs74.fr
 ---
 
-# Hiver — index transversal (424 lieux, 100 documentés)
+# Hiver — index transversal (424 lieux, 99 documentés)
 
 ## Aire de décollage parapente de Plaine-Joux — Passy
 Vue Mont-Blanc dégagée · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
@@ -170,7 +170,7 @@ Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/grp-tour-pays-mont-blanc-sallanches · JSON: https://loisirs74.fr/api/lieu/grp-tour-pays-mont-blanc-sallanches.json
 
 ## Itinéraire pédestre : les bords de l'Arve - De Gaillard à Arthaz — Gaillard
-Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Ouvert (accès déneigé) · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/itineraire-pedestre-bords-arve-gaillard-a-arthaz-gaillard · JSON: https://loisirs74.fr/api/lieu/itineraire-pedestre-bords-arve-gaillard-a-arthaz-gaillard.json
 
 ## Itinéraire pédestre - Chemin des bords de Dranse — Châtel
@@ -212,10 +212,6 @@ Fiche: https://loisirs74.fr/parcours-marche-boucle-pedestre-uffin-neydens · JSO
 ## Parcours patrimoine : Se promener à Andilly — Andilly
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/parcours-patrimoine-se-promener-a-andilly-andilly · JSON: https://loisirs74.fr/api/lieu/parcours-patrimoine-se-promener-a-andilly-andilly.json
-
-## Plateau de Loëx — Habère-Poche
-Raquettes · Ski nordique · Ski de fond · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
-Fiche: https://loisirs74.fr/plateau-de-loex · JSON: https://loisirs74.fr/api/lieu/plateau-de-loex.json
 
 ## Plateau de Solaison — Brizon
 Ouvert (accès déneigé) · Ski de fond · Ski nordique · Raquettes · Luge · Panorama alpin · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
@@ -298,7 +294,7 @@ Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/sentier-pedestre-a-decouverte-village-vernaz-vernaz · JSON: https://loisirs74.fr/api/lieu/sentier-pedestre-a-decouverte-village-vernaz-vernaz.json
 
 ## Sentier pédestre de l'Eterlou — Châtel
-Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Ouvert (accès déneigé) · Raquettes · Luge · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/sentier-pedestre-eterlou-chatel · JSON: https://loisirs74.fr/api/lieu/sentier-pedestre-eterlou-chatel.json
 
 ## Sentier pédestre d'interprétation du lac des Plagnes — Abondance
@@ -342,7 +338,7 @@ Fermé (route fermée l'hiver) · Vue Mont-Blanc dégagée · Loi Montagne II �
 Fiche: https://loisirs74.fr/telecabine-panoramic-mont-blanc · JSON: https://loisirs74.fr/api/lieu/telecabine-panoramic-mont-blanc.json
 
 ## Télécabine du Pléney — Morzine
-Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Ouvert (accès déneigé) · Luge · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/telecabine-pleney-morzine · JSON: https://loisirs74.fr/api/lieu/telecabine-pleney-morzine.json
 
 ## Télécabine de Super-Châtel — Châtel

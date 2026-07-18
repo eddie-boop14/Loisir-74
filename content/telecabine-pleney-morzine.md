@@ -66,8 +66,8 @@ Parkings du village de Morzine
 ## Saison
 
 Juillet – août (été) · Décembre – avril (hiver)
-- Fenêtre d'accès hiver: Non renseigné
-- Infrastructure hiver: Non renseigné
+- Fenêtre d'accès hiver: Ouvert (accès déneigé)
+- Infrastructure hiver: Luge
 - Panorama enneigé: Non renseigné
 - Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 

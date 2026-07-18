@@ -1141,6 +1141,10 @@ Fiche: https://loisirs74.fr/parc-chateau-taninges · JSON: https://loisirs74.fr/
 Juin – septembre (baignade) · Avril – octobre (parc)
 Fiche: https://loisirs74.fr/parc-de-loisirs-du-pontet · JSON: https://loisirs74.fr/api/lieu/parc-de-loisirs-du-pontet.json
 
+## Parc de loisirs de Chamonix — Les Planards — Chamonix-Mont-Blanc
+Toute l'année (attractions l'été, ski l'hiver ; luge 4 saisons)
+Fiche: https://loisirs74.fr/parc-de-loisirs-les-planards-chamonix · JSON: https://loisirs74.fr/api/lieu/parc-de-loisirs-les-planards-chamonix.json
+
 ## Parc de Merlet — Les Houches
 Mai – septembre
 Fiche: https://loisirs74.fr/parc-de-merlet · JSON: https://loisirs74.fr/api/lieu/parc-de-merlet.json
@@ -1308,10 +1312,6 @@ Fiche: https://loisirs74.fr/plage-municipale-thonon · JSON: https://loisirs74.f
 ## Plaine de loisirs de la Grangette — Thonon-les-Bains
 Mai-septembre
 Fiche: https://loisirs74.fr/plaine-de-loisirs-de-la-grangette · JSON: https://loisirs74.fr/api/lieu/plaine-de-loisirs-de-la-grangette.json
-
-## Plateau de Loëx — Habère-Poche
-Mai-octobre (été) · décembre-mars (ski)
-Fiche: https://loisirs74.fr/plateau-de-loex · JSON: https://loisirs74.fr/api/lieu/plateau-de-loex.json
 
 ## Plateau de Solaison — Brizon
 Juin-octobre (été) ; déc-mars (ski de fond)

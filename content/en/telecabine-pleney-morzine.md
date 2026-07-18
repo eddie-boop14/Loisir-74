@@ -66,8 +66,8 @@ Morzine village car parks
 ## Season
 
 July – August (summer) · December – April (winter)
-- Winter access window: Not specified
-- Winter infrastructure: Not specified
+- Winter access window: Open (cleared road)
+- Winter infrastructure: Sledging
 - Snow panorama: Not specified
 - Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 

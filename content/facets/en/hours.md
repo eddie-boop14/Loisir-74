@@ -1,13 +1,13 @@
 ---
 facet: hours
 scope: haute-savoie-74
-lieux_documented: 320
+lieux_documented: 319
 lieux_total: 424
 last_built: 2026-07-18
 source: loisirs74.fr
 ---
 
-# Horaires — index transversal (424 lieux, 320 documentés)
+# Horaires — index transversal (424 lieux, 319 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 15 juin – 15 sept : tous les jours 10h–19h. 1er janv – 31 mars : lundi au vendredi 14h–18h (fermé 1er janv). 1er avr – 14 juin et 16 sept – 30 sept : lundi au vendredi et dimanche 14h–18h30 (fermé samedi, fermé 1er mai). Oct : lundi au vendredi 14h–18h. Vérifié sur le site officiel le 14 mai 2026 — sous réserve de modifications saisonnières.
@@ -948,10 +948,6 @@ Fiche: https://loisirs74.fr/plage-municipale-thonon · JSON: https://loisirs74.f
 ## Plaine de loisirs de la Grangette — Thonon-les-Bains
 Plaine accessible librement toute l'année ; baignade surveillée en juillet-août ; mini-golf et locations en saison
 Fiche: https://loisirs74.fr/plaine-de-loisirs-de-la-grangette · JSON: https://loisirs74.fr/api/lieu/plaine-de-loisirs-de-la-grangette.json
-
-## Plateau de Loëx — Habère-Poche
-Accès libre toute l'année ; route ouverte en saison estivale ; accès hivernal par site nordique
-Fiche: https://loisirs74.fr/plateau-de-loex · JSON: https://loisirs74.fr/api/lieu/plateau-de-loex.json
 
 ## Port des Clerges - Base Nautique — Thonon-les-Bains
 Base ouverte selon créneaux des clubs résidents. Consulter Chablais Aviron Thonon pour les sorties d'initiation.

@@ -1,13 +1,13 @@
 ---
 facet: is_free
 scope: haute-savoie-74
-lieux_documented: 108
+lieux_documented: 107
 lieux_total: 424
 last_built: 2026-07-18
 source: loisirs74.fr
 ---
 
-# Gratuité — index transversal (424 lieux, 108 documentés)
+# Gratuité — index transversal (424 lieux, 107 documentés)
 
 ## Abbaye de Sixt — Sixt-Fer-à-Cheval
 Accès libre
@@ -336,10 +336,6 @@ Fiche: https://loisirs74.fr/plage-du-lac-de-montriond · JSON: https://loisirs74
 ## Plaine de loisirs de la Grangette — Thonon-les-Bains
 Accès libre · activités payantes (mini-golf, locations)
 Fiche: https://loisirs74.fr/plaine-de-loisirs-de-la-grangette · JSON: https://loisirs74.fr/api/lieu/plaine-de-loisirs-de-la-grangette.json
-
-## Plateau de Loëx — Habère-Poche
-Accès libre · forfait nordique en hiver
-Fiche: https://loisirs74.fr/plateau-de-loex · JSON: https://loisirs74.fr/api/lieu/plateau-de-loex.json
 
 ## Plateau de Solaison — Brizon
 Accès libre

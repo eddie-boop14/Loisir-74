@@ -20,9 +20,9 @@ No lift pass needed to love winter: snowshoe plateaus, panoramic trains, snowbou
 - [Pont de la Caille](https://loisirs74.fr/en/pont-de-la-caille) — Cruseilles · [md](https://loisirs74.fr/content/en/pont-de-la-caille.md)
 - [Tête du Parmelan](https://loisirs74.fr/en/tete-du-parmelan) — Dingy-Saint-Clair · [md](https://loisirs74.fr/content/en/tete-du-parmelan.md)
 - [Col de la Colombière](https://loisirs74.fr/en/col-de-la-colombiere) — Le Reposoir · [md](https://loisirs74.fr/content/en/col-de-la-colombiere.md)
-- [Plateau de Loëx](https://loisirs74.fr/en/plateau-de-loex) — Habère-Poche · [md](https://loisirs74.fr/content/en/plateau-de-loex.md)
 - [Reedbed Trail](https://loisirs74.fr/en/sentier-des-roselieres) — Saint-Jorioz · [md](https://loisirs74.fr/content/en/sentier-des-roselieres.md)
 - [Pointe de Miribel](https://loisirs74.fr/en/pointe-de-miribel) — Villard · [md](https://loisirs74.fr/content/en/pointe-de-miribel.md)
 - [Marais de Poisy](https://loisirs74.fr/en/marais-de-poisy) — Poisy · [md](https://loisirs74.fr/content/en/marais-de-poisy.md)
+- [Grotte et Cascade de Seythenex](https://loisirs74.fr/en/grotte-et-cascade-de-seythenex) — Faverges-Seythenex · [md](https://loisirs74.fr/content/en/grotte-et-cascade-de-seythenex.md)
 
 Source: https://loisirs74.fr/en/what-to-do/winter-without-skiing-haute-savoie/

@@ -1145,6 +1145,10 @@ Fiche: https://loisirs74.fr/parc-chateau-taninges · JSON: https://loisirs74.fr/
 
 Fiche: https://loisirs74.fr/parc-de-loisirs-du-pontet · JSON: https://loisirs74.fr/api/lieu/parc-de-loisirs-du-pontet.json
 
+## Parc de loisirs de Chamonix — Les Planards — Chamonix-Mont-Blanc
+Voir le site officiel
+Fiche: https://loisirs74.fr/parc-de-loisirs-les-planards-chamonix · JSON: https://loisirs74.fr/api/lieu/parc-de-loisirs-les-planards-chamonix.json
+
 ## Parc de Merlet — Les Houches
 À partir de 9 € (adulte)
 Fiche: https://loisirs74.fr/parc-de-merlet · JSON: https://loisirs74.fr/api/lieu/parc-de-merlet.json
@@ -1312,10 +1316,6 @@ Fiche: https://loisirs74.fr/plage-municipale-thonon · JSON: https://loisirs74.f
 ## Plaine de loisirs de la Grangette — Thonon-les-Bains
 Accès libre · activités payantes (mini-golf, locations)
 Fiche: https://loisirs74.fr/plaine-de-loisirs-de-la-grangette · JSON: https://loisirs74.fr/api/lieu/plaine-de-loisirs-de-la-grangette.json
-
-## Plateau de Loëx — Habère-Poche
-Accès libre · forfait nordique en hiver
-Fiche: https://loisirs74.fr/plateau-de-loex · JSON: https://loisirs74.fr/api/lieu/plateau-de-loex.json
 
 ## Plateau de Solaison — Brizon
 Accès libre

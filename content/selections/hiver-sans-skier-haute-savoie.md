@@ -20,9 +20,9 @@ Pas besoin de forfait pour aimer l'hiver : plateaux nordiques en raquettes, trai
 - [Pont de la Caille](https://loisirs74.fr/pont-de-la-caille) — Cruseilles · [md](https://loisirs74.fr/content/pont-de-la-caille.md)
 - [Tête du Parmelan](https://loisirs74.fr/tete-du-parmelan) — Dingy-Saint-Clair · [md](https://loisirs74.fr/content/tete-du-parmelan.md)
 - [Col de la Colombière](https://loisirs74.fr/col-de-la-colombiere) — Le Reposoir · [md](https://loisirs74.fr/content/col-de-la-colombiere.md)
-- [Plateau de Loëx](https://loisirs74.fr/plateau-de-loex) — Habère-Poche · [md](https://loisirs74.fr/content/plateau-de-loex.md)
 - [Sentier des Roselières](https://loisirs74.fr/sentier-des-roselieres) — Saint-Jorioz · [md](https://loisirs74.fr/content/sentier-des-roselieres.md)
 - [Pointe de Miribel](https://loisirs74.fr/pointe-de-miribel) — Villard · [md](https://loisirs74.fr/content/pointe-de-miribel.md)
 - [Marais de Poisy](https://loisirs74.fr/marais-de-poisy) — Poisy · [md](https://loisirs74.fr/content/marais-de-poisy.md)
+- [Grotte et Cascade de Seythenex](https://loisirs74.fr/grotte-et-cascade-de-seythenex) — Faverges-Seythenex · [md](https://loisirs74.fr/content/grotte-et-cascade-de-seythenex.md)
 
 Source: https://loisirs74.fr/que-faire/hiver-sans-skier/

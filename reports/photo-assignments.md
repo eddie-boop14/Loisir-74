@@ -1,20 +1,20 @@
 # Phase 4 — photo assignments (gate artifact)
 
 **Date**: 2026-06-14
-**Total assignments**: 628 (one per (hub × slug) on the FR canonical hub)
+**Total assignments**: 629 (one per (hub × slug) on the FR canonical hub)
 
 ## Per-hub diversity
 
 | hub | fiches | distinct photos | max repeat of one photo |
 |---|---:|---:|---:|
 | `baignade-nautisme` | 50 | 38 | 4 |
-| `bases-de-loisirs` | 85 | 61 | 6 |
+| `bases-de-loisirs` | 86 | 61 | 7 |
 | `cascades` | 19 | 19 | 1 |
 | `chateaux` | 27 | 23 | 4 |
 | `lacs-plages` | 31 | 26 | 3 |
 | `musees` | 49 | 26 | 9 |
-| `parcs-jardins` | 31 | 17 | 11 |
-| `points-de-vue` | 30 | 27 | 3 |
+| `parcs-jardins` | 32 | 17 | 12 |
+| `points-de-vue` | 29 | 26 | 3 |
 | `que-faire` | 73 | 43 | 4 |
 | `sensations-plein-air` | 71 | 54 | 4 |
 | `sentiers` | 40 | 9 | 13 |
@@ -133,6 +133,7 @@
 | `bases-de-loisirs` | `parc-aventure-mont-blanc-saint-gervais` | `parc` | `generique-accrobranche-3.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `parc-chateau-taninges` | `parc` | `generique-parc.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `parc-de-loisirs-du-pontet` | `parc` | `Lac_de_p%C3%AAche_%40_Parc_de_loisirs_du_Pontet_%40_Val_Montjoie_%2850921651901%29.jpg` | — | json hero (url) |
+| `bases-de-loisirs` | `parc-de-loisirs-les-planards-chamonix` | `familial` | `generique-parc.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `parc-de-peche-domaine-du-moulin-authier` | `parc` | `generique-domaine.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `parc-des-dereches` | `parc` | `Horse_riding_in_the_valley_of_the_Edigan_River.jpg` | — | json hero (url) |
 | `bases-de-loisirs` | `parc-des-dronieres` | `parc` | `Parc_de_Loisirs_des_Droni%C3%A8res_%40_Cruseilles_%2850969087497%29.jpg` | — | json hero (url) |
@@ -315,6 +316,7 @@
 | `parcs-jardins` | `les-aigles-du-leman` | `parc` | `Female_falcon_handler_with_eagle_%2825513995343%29.jpg` | — | json hero (url) |
 | `parcs-jardins` | `parc-animalier-grande-jeanne-annecy` | `parc` | `parc-animalier-grande-jeanne-annecy-hero.jpg` | — | json hero (local) |
 | `parcs-jardins` | `parc-chateau-taninges` | `parc` | `generique-parc.jpg` | — | json hero (local) |
+| `parcs-jardins` | `parc-de-loisirs-les-planards-chamonix` | `familial` | `generique-parc.jpg` | — | json hero (local) |
 | `parcs-jardins` | `parc-de-merlet` | `parc` | `Panorama_depuis_le_parc_de_Merlet.jpg` | — | json hero (url) |
 | `parcs-jardins` | `parc-imperial-annecy` | `parc` | `parc-imperial-annecy-hero.jpg` | — | json hero (local) |
 | `parcs-jardins` | `parc-jean-beauquis-ambilly` | `parc` | `Ambilly_place_mairie.jpg` | — | json hero (url) |
@@ -335,7 +337,6 @@
 | `points-de-vue` | `mont-joly` | `nature` | `Meg%C3%A8ve%2C_depuis_la_cha%C3%AEne_du_Mont-Joly.jpg` | — | json hero (url) |
 | `points-de-vue` | `mont-saleve` | `nature` | `mont-saleve-hero.jpg` | — | json hero (local) |
 | `points-de-vue` | `mont-veyrier` | `nature` | `Chemin_mont_Veyrier_mont_Baron.jpg` | — | json hero (url) |
-| `points-de-vue` | `plateau-de-loex` | `nature` | `plateau-de-loex-hero.jpg` | — | json hero (local) |
 | `points-de-vue` | `plateau-de-solaison` | `nature` | `plateau-de-solaison-hero.jpg` | — | json hero (local) |
 | `points-de-vue` | `plateau-des-glieres` | `nature` | `plateau-des-glieres-hero.jpg` | — | json hero (local) |
 | `points-de-vue` | `pointe-de-miribel` | `nature` | `pointe-de-miribel-hero.jpg` | — | json hero (local) |
