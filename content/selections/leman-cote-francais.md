@@ -16,6 +16,7 @@ Entre Genève et la Suisse d'en face, la rive française du Léman aligne cités
 - [Réserve naturelle du Delta de la Dranse](https://loisirs74.fr/reserve-naturelle-delta-de-la-dranse) — Publier · [md](https://loisirs74.fr/content/reserve-naturelle-delta-de-la-dranse.md)
 - [Base de loisirs de la Beunaz](https://loisirs74.fr/base-de-loisirs-de-la-beunaz) — Saint-Paul-en-Chablais · [md](https://loisirs74.fr/content/base-de-loisirs-de-la-beunaz.md)
 - [Château de Ripaille](https://loisirs74.fr/chateau-ripaille-thonon) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-ripaille-thonon.md)
+- [CGN escale Yvoire](https://loisirs74.fr/croisiere-cgn-yvoire) — Yvoire · [md](https://loisirs74.fr/content/croisiere-cgn-yvoire.md)
 - [Jardin des Cinq Sens](https://loisirs74.fr/jardin-des-cinq-sens) — Yvoire · [md](https://loisirs74.fr/content/jardin-des-cinq-sens.md)
 - [Les Aigles du Léman](https://loisirs74.fr/les-aigles-du-leman) — Sciez · [md](https://loisirs74.fr/content/les-aigles-du-leman.md)
 - [Musée du Chablais](https://loisirs74.fr/musee-du-chablais-thonon-les-bains) — Thonon-les-Bains · [md](https://loisirs74.fr/content/musee-du-chablais-thonon-les-bains.md)
@@ -23,6 +24,5 @@ Entre Genève et la Suisse d'en face, la rive française du Léman aligne cités
 - [Parcours Aventure de Sciez](https://loisirs74.fr/parcours-aventure-de-sciez) — Sciez · [md](https://loisirs74.fr/content/parcours-aventure-de-sciez.md)
 - [Indiana'Ventures Saint-Paul-en-Chablais](https://loisirs74.fr/indiana-ventures-saint-paul-en-chablais) — Saint-Paul-en-Chablais · [md](https://loisirs74.fr/content/indiana-ventures-saint-paul-en-chablais.md)
 - [Thermes d'Évian](https://loisirs74.fr/thermes-evian) — Évian-les-Bains · [md](https://loisirs74.fr/content/thermes-evian.md)
-- [Domaine de Guidou](https://loisirs74.fr/domaine-de-guidou) — Sciez · [md](https://loisirs74.fr/content/domaine-de-guidou.md)
 
 Source: https://loisirs74.fr/que-faire/leman-cote-francais/

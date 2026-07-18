@@ -23,6 +23,6 @@ L'accessibilité ne se devine pas, elle se vérifie : chaque lieu ci-dessous por
 - [Château de Clermont](https://loisirs74.fr/chateau-clermont-genevois) — Clermont · [md](https://loisirs74.fr/content/chateau-clermont-genevois.md)
 - [Château des Rubins](https://loisirs74.fr/chateau-des-rubins-sallanches) — Sallanches · [md](https://loisirs74.fr/content/chateau-des-rubins-sallanches.md)
 - [Château de Montrottier](https://loisirs74.fr/chateau-montrottier-lovagny) — Lovagny · [md](https://loisirs74.fr/content/chateau-montrottier-lovagny.md)
-- [Espace Tairraz](https://loisirs74.fr/espace-tairraz-musee-des-cristaux-chamonix) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/espace-tairraz-musee-des-cristaux-chamonix.md)
+- [CGN escale Yvoire](https://loisirs74.fr/croisiere-cgn-yvoire) — Yvoire · [md](https://loisirs74.fr/content/croisiere-cgn-yvoire.md)
 
 Source: https://loisirs74.fr/que-faire/accessible-pmr-haute-savoie/

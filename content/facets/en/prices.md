@@ -1,13 +1,13 @@
 ---
 facet: prices
 scope: haute-savoie-74
-lieux_documented: 422
-lieux_total: 424
+lieux_documented: 423
+lieux_total: 425
 last_built: 2026-07-18
 source: loisirs74.fr
 ---
 
-# Tarifs — index transversal (424 lieux, 422 documentés)
+# Tarifs — index transversal (425 lieux, 423 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 À partir de 7 € (adulte)
@@ -924,6 +924,10 @@ Fiche: https://loisirs74.fr/maison-de-la-memoire-janny-couttet-chamonix · JSON:
 ## Maison de la Mémoire Paysalp — Viuz-en-Sallaz
 Entrée libre · Animations payantes à la carte
 Fiche: https://loisirs74.fr/maison-de-la-memoire-paysalp · JSON: https://loisirs74.fr/api/lieu/maison-de-la-memoire-paysalp.json
+
+## Maison de la Pomme et du Biscantin — Serraval
+Adulte 4 € · enfant 3 € · gratuit -4 ans (2026)
+Fiche: https://loisirs74.fr/maison-de-la-pomme-biscantin-serraval · JSON: https://loisirs74.fr/api/lieu/maison-de-la-pomme-biscantin-serraval.json
 
 ## Maison du Lieutenant — Servoz
 Entrée libre · Pass Musées CCVCMB 25 €/an (vendu chez les musées payants)

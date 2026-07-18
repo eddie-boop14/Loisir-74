@@ -2,12 +2,12 @@
 facet: hours
 scope: haute-savoie-74
 lieux_documented: 319
-lieux_total: 424
+lieux_total: 425
 last_built: 2026-07-18
 source: loisirs74.fr
 ---
 
-# Horaires — index transversal (424 lieux, 319 documentés)
+# Horaires — index transversal (425 lieux, 319 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 15 juin – 15 sept : tous les jours 10h–19h. 1er janv – 31 mars : lundi au vendredi 14h–18h (fermé 1er janv). 1er avr – 14 juin et 16 sept – 30 sept : lundi au vendredi et dimanche 14h–18h30 (fermé samedi, fermé 1er mai). Oct : lundi au vendredi 14h–18h. Vérifié sur le site officiel le 14 mai 2026 — sous réserve de modifications saisonnières.

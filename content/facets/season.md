@@ -1,13 +1,13 @@
 ---
 facet: season
 scope: haute-savoie-74
-lieux_documented: 421
-lieux_total: 424
+lieux_documented: 422
+lieux_total: 425
 last_built: 2026-07-18
 source: loisirs74.fr
 ---
 
-# Saison — index transversal (424 lieux, 421 documentés)
+# Saison — index transversal (425 lieux, 422 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Toute l'année · Été pour les jardins
@@ -920,6 +920,10 @@ Fiche: https://loisirs74.fr/maison-de-la-memoire-janny-couttet-chamonix · JSON:
 ## Maison de la Mémoire Paysalp — Viuz-en-Sallaz
 Toute l'année Lun-Ven 9h-17h
 Fiche: https://loisirs74.fr/maison-de-la-memoire-paysalp · JSON: https://loisirs74.fr/api/lieu/maison-de-la-memoire-paysalp.json
+
+## Maison de la Pomme et du Biscantin — Serraval
+Toute l'année (vendredi 15h–18h ; tous les jours en semaine l'été)
+Fiche: https://loisirs74.fr/maison-de-la-pomme-biscantin-serraval · JSON: https://loisirs74.fr/api/lieu/maison-de-la-pomme-biscantin-serraval.json
 
 ## Maison du Lieutenant — Servoz
 Vacances scolaires + juillet-août Mer-Sam

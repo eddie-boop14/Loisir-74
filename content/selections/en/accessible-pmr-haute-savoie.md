@@ -23,6 +23,6 @@ Accessibility is not guessed, it is verified: every place below carries a checke
 - [Château de Clermont](https://loisirs74.fr/en/chateau-clermont-genevois) — Clermont · [md](https://loisirs74.fr/content/en/chateau-clermont-genevois.md)
 - [Château des Rubins](https://loisirs74.fr/en/chateau-des-rubins-sallanches) — Sallanches · [md](https://loisirs74.fr/content/en/chateau-des-rubins-sallanches.md)
 - [Château de Montrottier](https://loisirs74.fr/en/chateau-montrottier-lovagny) — Lovagny · [md](https://loisirs74.fr/content/en/chateau-montrottier-lovagny.md)
-- [Espace Tairraz](https://loisirs74.fr/en/espace-tairraz-musee-des-cristaux-chamonix) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/en/espace-tairraz-musee-des-cristaux-chamonix.md)
+- [CGN Yvoire Stop](https://loisirs74.fr/en/croisiere-cgn-yvoire) — Yvoire · [md](https://loisirs74.fr/content/en/croisiere-cgn-yvoire.md)
 
 Source: https://loisirs74.fr/en/what-to-do/wheelchair-accessible-haute-savoie/

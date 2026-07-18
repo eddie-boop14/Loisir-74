@@ -1,21 +1,21 @@
 # Phase 4 — photo assignments (gate artifact)
 
 **Date**: 2026-06-14
-**Total assignments**: 629 (one per (hub × slug) on the FR canonical hub)
+**Total assignments**: 630 (one per (hub × slug) on the FR canonical hub)
 
 ## Per-hub diversity
 
 | hub | fiches | distinct photos | max repeat of one photo |
 |---|---:|---:|---:|
-| `baignade-nautisme` | 50 | 38 | 4 |
+| `baignade-nautisme` | 50 | 39 | 4 |
 | `bases-de-loisirs` | 86 | 61 | 7 |
 | `cascades` | 19 | 19 | 1 |
 | `chateaux` | 27 | 23 | 4 |
 | `lacs-plages` | 31 | 26 | 3 |
-| `musees` | 49 | 26 | 9 |
+| `musees` | 50 | 28 | 9 |
 | `parcs-jardins` | 32 | 17 | 12 |
 | `points-de-vue` | 29 | 26 | 3 |
-| `que-faire` | 73 | 43 | 4 |
+| `que-faire` | 73 | 44 | 4 |
 | `sensations-plein-air` | 71 | 54 | 4 |
 | `sentiers` | 40 | 9 | 13 |
 | `sorties-detente` | 25 | 13 | 3 |
@@ -50,7 +50,7 @@
 | `baignade-nautisme` | `croisiere-bateaux-annecy-annecy` | `aquatique` | `generique-croisiere.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `croisiere-cgn-evian` | `aquatique` | `generique-port-annecy.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `croisiere-cgn-thonon` | `aquatique` | `generique-port-annecy.jpg` | — | json hero (local) |
-| `baignade-nautisme` | `croisiere-cgn-yvoire` | `aquatique` | `generique-port-annecy.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `croisiere-cgn-yvoire` | `aquatique` | `croisiere-cgn-yvoire-hero.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `espace-aquatique-la-clusaz` | `aquatique` | `generique-aquatique-piscine-couverte.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `espace-aquatique-morzine` | `aquatique` | `generique-aquatique-bassin-natation.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `lac-de-passy` | `aquatique` | `Lac_vert_de_passy_%281%29.JPG` | — | json hero (url) |
@@ -245,7 +245,7 @@
 | `musees` | `bourg-et-ruines-chateau-chaumont-chaumont` | `patrimoine` | `bourg-et-ruines-chateau-chaumont-chaumont-hero.jpg` | — | json hero (local) |
 | `musees` | `chateau-comtal-saint-julien-en-genevois` | `patrimoine` | `chateau-comtal-saint-julien-en-genevois-hero.jpg` | — | json hero (local) |
 | `musees` | `chateau-fonbonne-et-herbularius-evian-bains` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
-| `musees` | `ecomusee-bois-foret-thones` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
+| `musees` | `ecomusee-bois-foret-thones` | `patrimoine` | `ecomusee-bois-foret-thones-hero.jpg` | — | json hero (local) |
 | `musees` | `ecomusee-lac-annecy-sevrier` | `patrimoine` | `ecomusee-lac-annecy-sevrier-hero.jpg` | — | json hero (local) |
 | `musees` | `ecomusee-paysalp-viuz-en-sallaz` | `patrimoine` | `generique-musee-moderne.jpg` | — | json hero (local) |
 | `musees` | `ecomusee-peche-et-du-lac-thonon` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
@@ -256,6 +256,7 @@
 | `musees` | `maison-de-barberine-vallorcine` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
 | `musees` | `maison-de-la-memoire-janny-couttet-chamonix` | `patrimoine` | `Alpinistes_Aiguille_du_Midi_03.JPG` | — | json hero (url) |
 | `musees` | `maison-de-la-memoire-paysalp` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
+| `musees` | `maison-de-la-pomme-biscantin-serraval` | `patrimoine` | `maison-de-la-pomme-biscantin-serraval-hero.jpg` | — | json hero (local) |
 | `musees` | `maison-du-lieutenant-servoz` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
 | `musees` | `maison-du-saleve-presilly` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
 | `musees` | `maison-fromage-abondance-abondance` | `patrimoine` | `Meules_d%27abondance_%28cropped%29.jpg` | — | json hero (url) |
@@ -365,7 +366,7 @@
 | `que-faire` | `centre-aquatique-sallanches-mont-blanc` | `aquatique` | `generique-aquatique-toboggan.jpg` | — | json hero (local) |
 | `que-faire` | `centre-nautique-cite-de-l-eau-publier` | `aquatique` | `generique-aquatique-bassin-natation.jpg` | — | json hero (local) |
 | `que-faire` | `centre-nautique-guy-chatel-ayse` | `aquatique` | `generique-aquatique-bassin-natation.jpg` | — | json hero (local) |
-| `que-faire` | `ecomusee-bois-foret-thones` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
+| `que-faire` | `ecomusee-bois-foret-thones` | `patrimoine` | `ecomusee-bois-foret-thones-hero.jpg` | — | json hero (local) |
 | `que-faire` | `ecomusee-paysalp-viuz-en-sallaz` | `patrimoine` | `generique-musee-moderne.jpg` | — | json hero (local) |
 | `que-faire` | `ecomusee-peche-et-du-lac-thonon` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
 | `que-faire` | `escalade-ablok-argonay` | `sensations` | `generique-escalade-bloc-outdoor.jpg` | — | json hero (local) |

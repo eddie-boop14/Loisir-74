@@ -2,12 +2,12 @@
 facet: is_free
 scope: haute-savoie-74
 lieux_documented: 107
-lieux_total: 424
+lieux_total: 425
 last_built: 2026-07-18
 source: loisirs74.fr
 ---
 
-# Gratuité — index transversal (424 lieux, 107 documentés)
+# Gratuité — index transversal (425 lieux, 107 documentés)
 
 ## Abbaye de Sixt — Sixt-Fer-à-Cheval
 Free entry
