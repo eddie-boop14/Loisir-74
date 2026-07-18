@@ -1,13 +1,13 @@
 ---
 facet: prices
 scope: haute-savoie-74
-lieux_documented: 421
-lieux_total: 423
-last_built: 2026-07-17
+lieux_documented: 422
+lieux_total: 424
+last_built: 2026-07-18
 source: loisirs74.fr
 ---
 
-# Tarifs — index transversal (423 lieux, 421 documentés)
+# Tarifs — index transversal (424 lieux, 422 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 À partir de 7 € (adulte)
@@ -280,6 +280,10 @@ Fiche: https://loisirs74.fr/cascade-du-dard · JSON: https://loisirs74.fr/api/li
 ## Cascade du Rouget — Sixt-Fer-à-Cheval
 
 Fiche: https://loisirs74.fr/cascade-du-rouget · JSON: https://loisirs74.fr/api/lieu/cascade-du-rouget.json
+
+## Cascade mystérieuse — Le Grand-Bornand
+Gratuit
+Fiche: https://loisirs74.fr/cascade-mysterieuse-le-grand-bornand · JSON: https://loisirs74.fr/api/lieu/cascade-mysterieuse-le-grand-bornand.json
 
 ## Casino Évian Resort — Évian-les-Bains
 Accès libre 18+ avec pièce identité

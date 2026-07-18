@@ -17,10 +17,10 @@ Du Rouget, « reine des Alpes », aux gorges secrètes du Chablais : la Haute-Sa
 - [Cascade du Dard](https://loisirs74.fr/cascade-du-dard) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/cascade-du-dard.md)
 - [Cascade du Rouget](https://loisirs74.fr/cascade-du-rouget) — Sixt-Fer-à-Cheval · [md](https://loisirs74.fr/content/cascade-du-rouget.md)
 - [Cirque du Fer-à-Cheval](https://loisirs74.fr/cirque-du-fer-a-cheval) — Sixt-Fer-à-Cheval · [md](https://loisirs74.fr/content/cirque-du-fer-a-cheval.md)
+- [Cascade mystérieuse](https://loisirs74.fr/cascade-mysterieuse-le-grand-bornand) — Le Grand-Bornand · [md](https://loisirs74.fr/content/cascade-mysterieuse-le-grand-bornand.md)
 - [Cascade de Fontany](https://loisirs74.fr/cascade-de-fontany-saint-ferreol) — Saint-Ferréol · [md](https://loisirs74.fr/content/cascade-de-fontany-saint-ferreol.md)
 - [Grotte et Cascade de Seythenex](https://loisirs74.fr/grotte-et-cascade-de-seythenex) — Faverges-Seythenex · [md](https://loisirs74.fr/content/grotte-et-cascade-de-seythenex.md)
 - [Gorges du Fier](https://loisirs74.fr/gorges-du-fier) — Lovagny · [md](https://loisirs74.fr/content/gorges-du-fier.md)
 - [Gorges du Pont du Diable](https://loisirs74.fr/gorges-du-pont-du-diable) — La Vernaz · [md](https://loisirs74.fr/content/gorges-du-pont-du-diable.md)
-- [Gorges de la Diosaz](https://loisirs74.fr/gorges-de-la-diosaz) — Servoz · [md](https://loisirs74.fr/content/gorges-de-la-diosaz.md)
 
 Source: https://loisirs74.fr/que-faire/plus-belles-cascades-haute-savoie/

@@ -17,10 +17,10 @@ From the Rouget, 'queen of the Alps', to the Chablais' hidden gorges: Haute-Savo
 - [Cascade du Dard](https://loisirs74.fr/en/cascade-du-dard) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/en/cascade-du-dard.md)
 - [Cascade du Rouget](https://loisirs74.fr/en/cascade-du-rouget) — Sixt-Fer-à-Cheval · [md](https://loisirs74.fr/content/en/cascade-du-rouget.md)
 - [Cirque du Fer-à-Cheval](https://loisirs74.fr/en/cirque-du-fer-a-cheval) — Sixt-Fer-à-Cheval · [md](https://loisirs74.fr/content/en/cirque-du-fer-a-cheval.md)
+- [Cascade mystérieuse](https://loisirs74.fr/en/cascade-mysterieuse-le-grand-bornand) — Le Grand-Bornand · [md](https://loisirs74.fr/content/en/cascade-mysterieuse-le-grand-bornand.md)
 - [Cascade de Fontany](https://loisirs74.fr/en/cascade-de-fontany-saint-ferreol) — Saint-Ferréol · [md](https://loisirs74.fr/content/en/cascade-de-fontany-saint-ferreol.md)
 - [Grotte et Cascade de Seythenex](https://loisirs74.fr/en/grotte-et-cascade-de-seythenex) — Faverges-Seythenex · [md](https://loisirs74.fr/content/en/grotte-et-cascade-de-seythenex.md)
 - [Gorges du Fier](https://loisirs74.fr/en/gorges-du-fier) — Lovagny · [md](https://loisirs74.fr/content/en/gorges-du-fier.md)
 - [Gorges du Pont du Diable](https://loisirs74.fr/en/gorges-du-pont-du-diable) — La Vernaz · [md](https://loisirs74.fr/content/en/gorges-du-pont-du-diable.md)
-- [Gorges de la Diosaz](https://loisirs74.fr/en/gorges-de-la-diosaz) — Servoz · [md](https://loisirs74.fr/content/en/gorges-de-la-diosaz.md)
 
 Source: https://loisirs74.fr/en/what-to-do/best-waterfalls-haute-savoie/

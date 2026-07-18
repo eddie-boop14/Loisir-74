@@ -1,13 +1,13 @@
 ---
 facet: season
 scope: haute-savoie-74
-lieux_documented: 420
-lieux_total: 423
-last_built: 2026-07-17
+lieux_documented: 421
+lieux_total: 424
+last_built: 2026-07-18
 source: loisirs74.fr
 ---
 
-# Saison — index transversal (423 lieux, 420 documentés)
+# Saison — index transversal (424 lieux, 421 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Toute l'année · Été pour les jardins
@@ -280,6 +280,10 @@ Fiche: https://loisirs74.fr/cascade-du-dard · JSON: https://loisirs74.fr/api/li
 ## Cascade du Rouget — Sixt-Fer-à-Cheval
 Mai – juin (fonte des neiges, débit maximal) · Juillet – octobre (accès facile)
 Fiche: https://loisirs74.fr/cascade-du-rouget · JSON: https://loisirs74.fr/api/lieu/cascade-du-rouget.json
+
+## Cascade mystérieuse — Le Grand-Bornand
+Printemps (fonte des neiges) à automne — ouvert 15/04 au 15/11
+Fiche: https://loisirs74.fr/cascade-mysterieuse-le-grand-bornand · JSON: https://loisirs74.fr/api/lieu/cascade-mysterieuse-le-grand-bornand.json
 
 ## Casino Évian Resort — Évian-les-Bains
 Toute l'année

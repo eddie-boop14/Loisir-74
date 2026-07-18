@@ -16,9 +16,9 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/en/ecomusee-lac-annecy-sevrier
 language: en
 facet_json: https://loisirs74.fr/api/lieu/ecomusee-lac-annecy-sevrier.json
-photo_url: /img/generique/generique-musee-moderne.jpg
-photo_type: generic
-photo_author: null
+photo_url: /img/musees/ecomusee-lac-annecy-sevrier-hero.jpg
+photo_type: real
+photo_author: "Bénédicte"
 photo_license: null
 photo_source: null
 last_updated: 2026-06-10

@@ -18,7 +18,7 @@ language: en
 facet_json: https://loisirs74.fr/api/lieu/gorges-de-la-diosaz.json
 photo_url: /img/cascades/gorges-de-la-diosaz-hero.jpg
 photo_type: real
-photo_author: null
+photo_author: "Bénédicte"
 photo_license: null
 photo_source: null
 last_updated: 2026-06-07

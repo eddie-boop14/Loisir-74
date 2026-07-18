@@ -1,7 +1,7 @@
 # Phase 4 — photo assignments (gate artifact)
 
 **Date**: 2026-06-14
-**Total assignments**: 627 (one per (hub × slug) on the FR canonical hub)
+**Total assignments**: 628 (one per (hub × slug) on the FR canonical hub)
 
 ## Per-hub diversity
 
@@ -9,10 +9,10 @@
 |---|---:|---:|---:|
 | `baignade-nautisme` | 50 | 38 | 4 |
 | `bases-de-loisirs` | 85 | 61 | 6 |
-| `cascades` | 18 | 18 | 1 |
+| `cascades` | 19 | 19 | 1 |
 | `chateaux` | 27 | 23 | 4 |
 | `lacs-plages` | 31 | 26 | 3 |
-| `musees` | 49 | 25 | 9 |
+| `musees` | 49 | 26 | 9 |
 | `parcs-jardins` | 31 | 17 | 11 |
 | `points-de-vue` | 30 | 27 | 3 |
 | `que-faire` | 73 | 43 | 4 |
@@ -176,6 +176,7 @@
 | `cascades` | `cascade-du-chinaillon` | `aquatique` | `cascade-du-chinaillon-hero.jpg` | — | json hero (local) |
 | `cascades` | `cascade-du-dard` | `aquatique` | `Cascade_du_Dard_01.jpg` | — | json hero (url) |
 | `cascades` | `cascade-du-rouget` | `aquatique` | `cascade-du-rouget-hero.jpg` | — | json hero (local) |
+| `cascades` | `cascade-mysterieuse-le-grand-bornand` | `aquatique` | `cascade-mysterieuse-le-grand-bornand-hero.jpg` | — | json hero (local) |
 | `cascades` | `cirque-du-fer-a-cheval` | `aquatique` | `cirque-du-fer-a-cheval-hero.jpg` | — | json hero (local) |
 | `cascades` | `gorges-de-la-diosaz` | `aquatique` | `gorges-de-la-diosaz-hero.jpg` | — | json hero (local) |
 | `cascades` | `gorges-du-fier` | `aquatique` | `gorges-du-fier-hero.jpg` | — | json hero (local) |
@@ -244,7 +245,7 @@
 | `musees` | `chateau-comtal-saint-julien-en-genevois` | `patrimoine` | `chateau-comtal-saint-julien-en-genevois-hero.jpg` | — | json hero (local) |
 | `musees` | `chateau-fonbonne-et-herbularius-evian-bains` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
 | `musees` | `ecomusee-bois-foret-thones` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
-| `musees` | `ecomusee-lac-annecy-sevrier` | `patrimoine` | `generique-musee-moderne.jpg` | — | json hero (local) |
+| `musees` | `ecomusee-lac-annecy-sevrier` | `patrimoine` | `ecomusee-lac-annecy-sevrier-hero.jpg` | — | json hero (local) |
 | `musees` | `ecomusee-paysalp-viuz-en-sallaz` | `patrimoine` | `generique-musee-moderne.jpg` | — | json hero (local) |
 | `musees` | `ecomusee-peche-et-du-lac-thonon` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
 | `musees` | `espace-tairraz-musee-des-cristaux-chamonix` | `patrimoine` | `Fluorite-Quartz-164086.jpg` | — | json hero (url) |

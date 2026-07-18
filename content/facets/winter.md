@@ -1,13 +1,13 @@
 ---
 facet: winter
 scope: haute-savoie-74
-lieux_documented: 99
-lieux_total: 423
-last_built: 2026-07-17
+lieux_documented: 100
+lieux_total: 424
+last_built: 2026-07-18
 source: loisirs74.fr
 ---
 
-# Hiver — index transversal (423 lieux, 99 documentés)
+# Hiver — index transversal (424 lieux, 100 documentés)
 
 ## Aire de décollage parapente de Plaine-Joux — Passy
 Vue Mont-Blanc dégagée · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
@@ -92,6 +92,10 @@ Fiche: https://loisirs74.fr/cascade-du-dard · JSON: https://loisirs74.fr/api/li
 ## Cascade du Rouget — Sixt-Fer-à-Cheval
 Accès partiel · Raquettes · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/cascade-du-rouget · JSON: https://loisirs74.fr/api/lieu/cascade-du-rouget.json
+
+## Cascade mystérieuse — Le Grand-Bornand
+Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/cascade-mysterieuse-le-grand-bornand · JSON: https://loisirs74.fr/api/lieu/cascade-mysterieuse-le-grand-bornand.json
 
 ## Le chemin de l'alpage — Parcours de découverte — Habère-Lullin
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
