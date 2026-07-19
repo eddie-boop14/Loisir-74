@@ -18,9 +18,9 @@ language: en
 facet_json: https://loisirs74.fr/api/lieu/telepherique-du-brevent.json
 photo_url: https://upload.wikimedia.org/wikipedia/commons/2/2a/Brevent_cable_car.jpg
 photo_type: real
-photo_author: null
-photo_license: null
-photo_source: null
+photo_author: "Victoria Lunyak"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-09
 source: loisirs74.fr
 ---

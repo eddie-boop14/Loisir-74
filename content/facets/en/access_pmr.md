@@ -3,7 +3,7 @@ facet: access_pmr
 scope: haute-savoie-74
 lieux_documented: 140
 lieux_total: 425
-last_built: 2026-07-18
+last_built: 2026-07-19
 source: loisirs74.fr
 ---
 
