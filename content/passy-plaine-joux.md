@@ -57,6 +57,10 @@ Non renseigné
 ## Saison
 
 Hiver (ski alpin et nordique) · été (randonnée, parapente)
+- Fenêtre d'accès hiver: Ouvert (accès déneigé)
+- Infrastructure hiver: Ski nordique · Ski de fond
+- Panorama enneigé: Vue Mont-Blanc dégagée
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

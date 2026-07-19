@@ -57,6 +57,10 @@ Not specified
 ## Season
 
 Winter (family skiing) · summer (hiking, view of Mont-Blanc)
+- Winter access window: Open (cleared road)
+- Winter infrastructure: Nordic skiing · Cross-country skiing
+- Snow panorama: Clear Mont-Blanc view
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

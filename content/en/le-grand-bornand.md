@@ -57,6 +57,10 @@ Not specified
 ## Season
 
 Winter (alpine & Nordic skiing) · a resort alive all year round
+- Winter access window: Open (cleared road)
+- Winter infrastructure: Nordic skiing · Cross-country skiing · Snowshoeing · Dog sledding · Ski touring
+- Snow panorama: Not specified
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

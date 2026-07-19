@@ -57,6 +57,10 @@ Non renseigné
 ## Saison
 
 Hiver (ski alpin, raquettes) — saison sous réserve d'enneigement
+- Fenêtre d'accès hiver: Ouvert (accès déneigé)
+- Infrastructure hiver: Raquettes · Ski de rando
+- Panorama enneigé: Non renseigné
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

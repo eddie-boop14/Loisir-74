@@ -15,7 +15,9 @@ Actually seeing Mont-Blanc: every place below carries a view of the massif verif
 - [Aiguille du Midi Cable Car](https://loisirs74.fr/en/telepherique-aiguille-du-midi) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/en/telepherique-aiguille-du-midi.md)
 - [Salève Cable Car](https://loisirs74.fr/en/telepherique-du-saleve) — Étrembières · [md](https://loisirs74.fr/content/en/telepherique-du-saleve.md)
 - [Mont Blanc Tramway](https://loisirs74.fr/en/tramway-du-mont-blanc) — Saint-Gervais-les-Bains · [md](https://loisirs74.fr/content/en/tramway-du-mont-blanc.md)
-- [Panoramic Mont-Blanc Cable Car](https://loisirs74.fr/en/telecabine-panoramic-mont-blanc) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/en/telecabine-panoramic-mont-blanc.md)
-- [Table d'orientation de la Cry](https://loisirs74.fr/en/belvedere-panorama-360-combloux-la-cry) — Combloux · [md](https://loisirs74.fr/content/en/belvedere-panorama-360-combloux-la-cry.md)
+- [Combloux](https://loisirs74.fr/en/combloux) — Combloux · [md](https://loisirs74.fr/content/en/combloux.md)
+- [Cordon](https://loisirs74.fr/en/cordon) — Cordon · [md](https://loisirs74.fr/content/en/cordon.md)
+- [Les Gets](https://loisirs74.fr/en/les-gets) — Les Gets · [md](https://loisirs74.fr/content/en/les-gets.md)
+- [Passy Plaine-Joux](https://loisirs74.fr/en/passy-plaine-joux) — Passy · [md](https://loisirs74.fr/content/en/passy-plaine-joux.md)
 
 Source: https://loisirs74.fr/en/what-to-do/best-mont-blanc-viewpoints/

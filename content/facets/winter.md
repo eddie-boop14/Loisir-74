@@ -1,13 +1,13 @@
 ---
 facet: winter
 scope: haute-savoie-74
-lieux_documented: 99
+lieux_documented: 127
 lieux_total: 425
 last_built: 2026-07-18
 source: loisirs74.fr
 ---
 
-# Hiver — index transversal (425 lieux, 99 documentés)
+# Hiver — index transversal (425 lieux, 127 documentés)
 
 ## Aire de décollage parapente de Plaine-Joux — Passy
 Vue Mont-Blanc dégagée · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
@@ -21,6 +21,10 @@ Fiche: https://loisirs74.fr/au-fil-rail-jeu-piste-a-servoz-servoz · JSON: https
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/au-fil-rail-jeu-piste-a-vallorcine-vallorcine · JSON: https://loisirs74.fr/api/lieu/au-fil-rail-jeu-piste-a-vallorcine-vallorcine.json
 
+## Avoriaz — Morzine
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Raquettes · Chiens de traîneau · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/avoriaz · JSON: https://loisirs74.fr/api/lieu/avoriaz.json
+
 ## Balade pédestre - Tour du lac du Môle — La Tour
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/balade-pedestre-tour-lac-mole-tour · JSON: https://loisirs74.fr/api/lieu/balade-pedestre-tour-lac-mole-tour.json
@@ -32,6 +36,10 @@ Fiche: https://loisirs74.fr/belvedere-du-mont-baron · JSON: https://loisirs74.f
 ## Table d'orientation de la Cry — Combloux
 Vue Mont-Blanc dégagée · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/belvedere-panorama-360-combloux-la-cry · JSON: https://loisirs74.fr/api/lieu/belvedere-panorama-360-combloux-la-cry.json
+
+## Bernex — Bernex
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Raquettes · Luge · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/bernex · JSON: https://loisirs74.fr/api/lieu/bernex.json
 
 ## Boucle pédestre Détective Nature (Sentier du Vuache) — Jonzier-Épagny
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
@@ -97,6 +105,14 @@ Fiche: https://loisirs74.fr/cascade-du-rouget · JSON: https://loisirs74.fr/api/
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/cascade-mysterieuse-le-grand-bornand · JSON: https://loisirs74.fr/api/lieu/cascade-mysterieuse-le-grand-bornand.json
 
+## Chamonix-Mont-Blanc — Chamonix-Mont-Blanc
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Ski de rando · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/chamonix-mont-blanc · JSON: https://loisirs74.fr/api/lieu/chamonix-mont-blanc.json
+
+## Châtel — Châtel
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Luge · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/chatel · JSON: https://loisirs74.fr/api/lieu/chatel.json
+
 ## Le chemin de l'alpage — Parcours de découverte — Habère-Lullin
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/chemin-alpage-parcours-decouverte-habere-lullin · JSON: https://loisirs74.fr/api/lieu/chemin-alpage-parcours-decouverte-habere-lullin.json
@@ -133,9 +149,21 @@ Fiche: https://loisirs74.fr/col-des-glieres · JSON: https://loisirs74.fr/api/li
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/col-des-pitons-saleve · JSON: https://loisirs74.fr/api/lieu/col-des-pitons-saleve.json
 
+## Combloux — Combloux
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Ski de rando · Vue Mont-Blanc dégagée · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/combloux · JSON: https://loisirs74.fr/api/lieu/combloux.json
+
+## Cordon — Cordon
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Vue Mont-Blanc dégagée · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/cordon · JSON: https://loisirs74.fr/api/lieu/cordon.json
+
 ## Débaroule — Parcours ludique — La Clusaz
 Fermé (route fermée l'hiver) · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/debaroule-clusaz · JSON: https://loisirs74.fr/api/lieu/debaroule-clusaz.json
+
+## Flaine — Arâches-la-Frasse
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Chiens de traîneau · Ski de rando · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/flaine · JSON: https://loisirs74.fr/api/lieu/flaine.json
 
 ## Gorges de la Diosaz — Servoz
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
@@ -169,6 +197,10 @@ Fiche: https://loisirs74.fr/grp-tour-lac-annecy-annecy · JSON: https://loisirs7
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/grp-tour-pays-mont-blanc-sallanches · JSON: https://loisirs74.fr/api/lieu/grp-tour-pays-mont-blanc-sallanches.json
 
+## Hirmentaz – Les Habères — Bellevaux
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Raquettes · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/hirmentaz-les-haberes · JSON: https://loisirs74.fr/api/lieu/hirmentaz-les-haberes.json
+
 ## Itinéraire pédestre : les bords de l'Arve - De Gaillard à Arthaz — Gaillard
 Ouvert (accès déneigé) · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/itineraire-pedestre-bords-arve-gaillard-a-arthaz-gaillard · JSON: https://loisirs74.fr/api/lieu/itineraire-pedestre-bords-arve-gaillard-a-arthaz-gaillard.json
@@ -177,13 +209,57 @@ Fiche: https://loisirs74.fr/itineraire-pedestre-bords-arve-gaillard-a-arthaz-gai
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/itineraire-pedestre-chemin-bords-dranse-chatel · JSON: https://loisirs74.fr/api/lieu/itineraire-pedestre-chemin-bords-dranse-chatel.json
 
+## La Chapelle-d'Abondance — La Chapelle-d'Abondance
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Raquettes · Luge · Chiens de traîneau · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/la-chapelle-d-abondance · JSON: https://loisirs74.fr/api/lieu/la-chapelle-d-abondance.json
+
+## La Clusaz — La Clusaz
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Raquettes · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/la-clusaz · JSON: https://loisirs74.fr/api/lieu/la-clusaz.json
+
+## Le Grand-Bornand — Le Grand-Bornand
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Raquettes · Chiens de traîneau · Ski de rando · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/le-grand-bornand · JSON: https://loisirs74.fr/api/lieu/le-grand-bornand.json
+
+## Le Reposoir — Le Reposoir
+Ouvert (accès déneigé) · Raquettes · Ski de rando · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/le-reposoir · JSON: https://loisirs74.fr/api/lieu/le-reposoir.json
+
 ## Le Semnoz — Viuz-la-Chiésaz
 Ouvert (accès déneigé) · Ski de fond · Ski nordique · Ski de rando · Raquettes · Luge · Vue Mont-Blanc dégagée · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/le-semnoz · JSON: https://loisirs74.fr/api/lieu/le-semnoz.json
 
+## Les Brasses — Viuz-en-Sallaz
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Raquettes · Luge · Chiens de traîneau · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/les-brasses · JSON: https://loisirs74.fr/api/lieu/les-brasses.json
+
+## Les Carroz — Arâches-la-Frasse
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Raquettes · Luge · Chiens de traîneau · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/les-carroz · JSON: https://loisirs74.fr/api/lieu/les-carroz.json
+
+## Les Contamines-Montjoie — Les Contamines-Montjoie
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Raquettes · Ski de rando · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/les-contamines-montjoie · JSON: https://loisirs74.fr/api/lieu/les-contamines-montjoie.json
+
+## Les Gets — Les Gets
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Chiens de traîneau · Vue Mont-Blanc dégagée · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/les-gets · JSON: https://loisirs74.fr/api/lieu/les-gets.json
+
+## Les Houches — Les Houches
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Raquettes · Luge · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/les-houches · JSON: https://loisirs74.fr/api/lieu/les-houches.json
+
+## Manigod — Manigod
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Raquettes · Luge · Ski de rando · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/manigod · JSON: https://loisirs74.fr/api/lieu/manigod.json
+
 ## Marais de Poisy — Poisy
 Ouvert (accès déneigé) · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/marais-de-poisy · JSON: https://loisirs74.fr/api/lieu/marais-de-poisy.json
+
+## Megève — Megève
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Raquettes · Luge · Ski de rando · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/megeve · JSON: https://loisirs74.fr/api/lieu/megeve.json
 
 ## La mine de la Lappiaz — Morzine
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
@@ -201,9 +277,21 @@ Fiche: https://loisirs74.fr/mont-joly · JSON: https://loisirs74.fr/api/lieu/mon
 Raquettes · Vue Mont-Blanc dégagée · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/mont-saleve · JSON: https://loisirs74.fr/api/lieu/mont-saleve.json
 
+## Mont-Saxonnex — Mont-Saxonnex
+Ouvert (accès déneigé) · Raquettes · Luge · Chiens de traîneau · Ski de rando · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/mont-saxonnex · JSON: https://loisirs74.fr/api/lieu/mont-saxonnex.json
+
 ## Mont Veyrier — Annecy
 Fermé (route fermée l'hiver) · Vue Mont-Blanc dégagée · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/mont-veyrier · JSON: https://loisirs74.fr/api/lieu/mont-veyrier.json
+
+## Morillon — Morillon
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Luge · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/morillon · JSON: https://loisirs74.fr/api/lieu/morillon.json
+
+## Morzine — Morzine
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Raquettes · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/morzine · JSON: https://loisirs74.fr/api/lieu/morzine.json
 
 ## Parcours de marche : Boucle pédestre d'Uffin — Neydens
 Ouvert (accès déneigé) · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
@@ -212,6 +300,10 @@ Fiche: https://loisirs74.fr/parcours-marche-boucle-pedestre-uffin-neydens · JSO
 ## Parcours patrimoine : Se promener à Andilly — Andilly
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/parcours-patrimoine-se-promener-a-andilly-andilly · JSON: https://loisirs74.fr/api/lieu/parcours-patrimoine-se-promener-a-andilly-andilly.json
+
+## Passy Plaine-Joux — Passy
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Vue Mont-Blanc dégagée · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/passy-plaine-joux · JSON: https://loisirs74.fr/api/lieu/passy-plaine-joux.json
 
 ## Plateau de Solaison — Brizon
 Ouvert (accès déneigé) · Ski de fond · Ski nordique · Raquettes · Luge · Panorama alpin · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
@@ -229,6 +321,10 @@ Fiche: https://loisirs74.fr/pointe-de-miribel · JSON: https://loisirs74.fr/api/
 Ouvert (accès déneigé) · Panorama alpin · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/pont-de-la-caille · JSON: https://loisirs74.fr/api/lieu/pont-de-la-caille.json
 
+## Praz de Lys – Sommand — Taninges (et Mieussy)
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Ski de rando · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/praz-de-lys-sommand · JSON: https://loisirs74.fr/api/lieu/praz-de-lys-sommand.json
+
 ## Réserve naturelle du Bout-du-Lac d'Annecy — Doussard
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/reserve-naturelle-bout-du-lac · JSON: https://loisirs74.fr/api/lieu/reserve-naturelle-bout-du-lac.json
@@ -236,6 +332,18 @@ Fiche: https://loisirs74.fr/reserve-naturelle-bout-du-lac · JSON: https://loisi
 ## Réserve naturelle du Delta de la Dranse — Publier
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/reserve-naturelle-delta-de-la-dranse · JSON: https://loisirs74.fr/api/lieu/reserve-naturelle-delta-de-la-dranse.json
+
+## Saint-Gervais-les-Bains — Saint-Gervais-les-Bains
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/saint-gervais-les-bains · JSON: https://loisirs74.fr/api/lieu/saint-gervais-les-bains.json
+
+## Saint-Jean-d'Aulps — Saint-Jean-d'Aulps
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Raquettes · Luge · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/saint-jean-d-aulps · JSON: https://loisirs74.fr/api/lieu/saint-jean-d-aulps.json
+
+## Samoëns — Samoëns
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Raquettes · Luge · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/samoens · JSON: https://loisirs74.fr/api/lieu/samoens.json
 
 ## Secrets de fées - parcours de découverte — Habère-Poche
 Raquettes · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
@@ -368,6 +476,10 @@ Fiche: https://loisirs74.fr/tete-du-parmelan · JSON: https://loisirs74.fr/api/l
 ## Le Thiou à Annecy — Annecy
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/thiou-a-annecy-annecy · JSON: https://loisirs74.fr/api/lieu/thiou-a-annecy-annecy.json
+
+## Thollon-les-Mémises — Thollon-les-Mémises
+Ouvert (accès déneigé) · Ski nordique · Ski de fond · Raquettes · Luge · Ski de rando · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/thollon-les-memises · JSON: https://loisirs74.fr/api/lieu/thollon-les-memises.json
 
 ## Tour du Mont-Blanc — Les Houches
 Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)

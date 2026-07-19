@@ -15,7 +15,9 @@ Voir le Mont-Blanc, vraiment : chaque lieu ci-dessous porte une vue sur le massi
 - [Téléphérique de l'Aiguille du Midi](https://loisirs74.fr/telepherique-aiguille-du-midi) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/telepherique-aiguille-du-midi.md)
 - [Téléphérique du Salève](https://loisirs74.fr/telepherique-du-saleve) — Étrembières · [md](https://loisirs74.fr/content/telepherique-du-saleve.md)
 - [Tramway du Mont-Blanc](https://loisirs74.fr/tramway-du-mont-blanc) — Saint-Gervais-les-Bains · [md](https://loisirs74.fr/content/tramway-du-mont-blanc.md)
-- [Télécabine Panoramic Mont-Blanc](https://loisirs74.fr/telecabine-panoramic-mont-blanc) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/telecabine-panoramic-mont-blanc.md)
-- [Table d'orientation de la Cry](https://loisirs74.fr/belvedere-panorama-360-combloux-la-cry) — Combloux · [md](https://loisirs74.fr/content/belvedere-panorama-360-combloux-la-cry.md)
+- [Combloux](https://loisirs74.fr/combloux) — Combloux · [md](https://loisirs74.fr/content/combloux.md)
+- [Cordon](https://loisirs74.fr/cordon) — Cordon · [md](https://loisirs74.fr/content/cordon.md)
+- [Les Gets](https://loisirs74.fr/les-gets) — Les Gets · [md](https://loisirs74.fr/content/les-gets.md)
+- [Passy Plaine-Joux](https://loisirs74.fr/passy-plaine-joux) — Passy · [md](https://loisirs74.fr/content/passy-plaine-joux.md)
 
 Source: https://loisirs74.fr/que-faire/plus-beaux-points-de-vue-mont-blanc/

@@ -57,6 +57,10 @@ Non renseigné
 ## Saison
 
 Hiver (ski alpin & nordique) · nature en été
+- Fenêtre d'accès hiver: Ouvert (accès déneigé)
+- Infrastructure hiver: Ski nordique · Ski de fond · Raquettes · Luge · Chiens de traîneau
+- Panorama enneigé: Non renseigné
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

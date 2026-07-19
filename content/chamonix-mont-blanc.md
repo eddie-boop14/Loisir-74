@@ -57,6 +57,10 @@ Non renseigné
 ## Saison
 
 Hiver (ski alpin, hors-piste, nordique) · vallée animée toute l'année (alpinisme, randonnée)
+- Fenêtre d'accès hiver: Ouvert (accès déneigé)
+- Infrastructure hiver: Ski nordique · Ski de fond · Ski de rando
+- Panorama enneigé: Non renseigné
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

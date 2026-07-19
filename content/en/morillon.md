@@ -57,6 +57,10 @@ Not specified
 ## Season
 
 Winter (skiing) · lac Bleu and off-slope activities in summer
+- Winter access window: Open (cleared road)
+- Winter infrastructure: Nordic skiing · Cross-country skiing · Sledging
+- Snow panorama: Not specified
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

@@ -57,6 +57,10 @@ Not specified
 ## Season
 
 Winter (family alpine skiing) · hiking and lac Bénit in summer
+- Winter access window: Open (cleared road)
+- Winter infrastructure: Snowshoeing · Sledging · Dog sledding · Ski touring
+- Snow panorama: Not specified
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

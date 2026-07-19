@@ -57,6 +57,10 @@ Non renseigné
 ## Saison
 
 Hiver (ski alpin familial) · randonnée et lac Bénit en été
+- Fenêtre d'accès hiver: Ouvert (accès déneigé)
+- Infrastructure hiver: Raquettes · Luge · Chiens de traîneau · Ski de rando
+- Panorama enneigé: Non renseigné
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

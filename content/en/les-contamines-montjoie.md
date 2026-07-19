@@ -57,6 +57,10 @@ Not specified
 ## Season
 
 Winter (skiing) · a nature village enjoyed year-round
+- Winter access window: Open (cleared road)
+- Winter infrastructure: Nordic skiing · Cross-country skiing · Snowshoeing · Ski touring
+- Snow panorama: Not specified
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

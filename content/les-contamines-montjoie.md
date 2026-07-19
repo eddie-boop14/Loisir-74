@@ -57,6 +57,10 @@ Non renseigné
 ## Saison
 
 Hiver (ski) · village nature apprécié toute l'année
+- Fenêtre d'accès hiver: Ouvert (accès déneigé)
+- Infrastructure hiver: Ski nordique · Ski de fond · Raquettes · Ski de rando
+- Panorama enneigé: Non renseigné
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

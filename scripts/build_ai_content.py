@@ -108,7 +108,7 @@ UNKNOWN = {"fr": "Non renseigné", "en": "Not specified"}
 # ##). Emitted only for WINTER_NODES categories. Values come from facts.winter_*
 # (null-safe; JOB B populates). Controlled vocab — anything off-list is a build
 # error (gate_winter_schema). Frozen: Mont-Blanc, Loi Montagne II verbatim.
-WINTER_NODES = {"sentier", "point-de-vue", "cascade", "telecabine", "voie-verte"}
+WINTER_NODES = {"sentier", "point-de-vue", "cascade", "telecabine", "voie-verte", "station"}
 WINTER_ACCESS = {
     "open": {"fr": "Ouvert (accès déneigé)", "en": "Open (cleared road)", "de": "Geöffnet (Zufahrt geräumt)", "it": "Aperto (accesso sgombrato)", "es": "Abierto (acceso despejado)", "nl": "Open (toegangsweg sneeuwvrij)"},
     "closed": {"fr": "Fermé (route fermée l'hiver)", "en": "Closed (road shut in winter)", "de": "Geschlossen (Straße im Winter gesperrt)", "it": "Chiuso (strada chiusa in inverno)", "es": "Cerrado (carretera cerrada en invierno)", "nl": "Gesloten (weg 's winters dicht)"},
