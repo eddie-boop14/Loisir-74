@@ -73,7 +73,7 @@ def plan_rows():
             skips.append((slug, f"non-WINTER_NODES category [{cat}]"))
             continue
         fk = current_facts(d)
-        changes = []
+        changes, applied = [], []
         for field in FIELDS:
             if field not in spec:
                 continue
@@ -85,11 +85,16 @@ def plan_rows():
             old = fk.get(field)
             if old != new:
                 changes.append((field, old, new))
+            else:
+                # payload value already sits in the fiche — the row is DONE,
+                # not a no-op. Post-apply reports must say so explicitly
+                # (WORK-ORDER v3 lesson: ambiguity here read as fake success).
+                applied.append((field, new))
         if changes is None:
             continue
         acc = spec.get("winter_access")
         rows.append({
-            "slug": slug, "category": cat, "changes": changes,
+            "slug": slug, "category": cat, "changes": changes, "applied": applied,
             "src": spec.get("src", ""), "stage": spec.get("stage"),
             "sensitive": acc in ("closed", "partial"),
         })
@@ -104,32 +109,51 @@ def fmt(v):
     return str(v)
 
 
+def row_state(r):
+    """PENDING (has un-applied changes) · APPLIED (all payload fields live) · EMPTY."""
+    if r["changes"]:
+        return "PENDING"
+    if r["applied"]:
+        return "APPLIED"
+    return "EMPTY"
+
+
 def write_report(rows, skips):
     sens = [r for r in rows if r["sensitive"]]
     rest = [r for r in rows if not r["sensitive"]]
-    n_change = sum(1 for r in rows if r["changes"])
+    n_pending = sum(1 for r in rows if row_state(r) == "PENDING")
+    n_applied = sum(1 for r in rows if row_state(r) == "APPLIED")
+    n_change = n_pending
     L = []
     L.append("# Winter facts — APPLY report (JOB B)\n")
     L.append(f"Payload: `data/winter-facts-verified.json` · generated {TODAY}\n")
-    L.append(f"- Winter nodes touched: **{len(rows)}** · with real changes: **{n_change}** "
-             f"· category/vocab skips: **{len(skips)}**\n")
+    L.append(f"- Winter nodes touched: **{len(rows)}** · PENDING (à appliquer): **{n_pending}** "
+             f"· APPLIED (déjà en ligne): **{n_applied}** · category/vocab skips: **{len(skips)}**\n")
+    L.append("\nÉtats par ligne : `∅ → value` = en attente d'apply · `= value (appliqué)` = "
+             "la valeur du payload est déjà dans la fiche (post-apply). Un rapport où tout "
+             "est APPLIED est un état des lieux, pas un no-op.\n")
     L.append("\n---\n")
-    L.append("\n## ⚑ SENSITIVE — Eddie sign-off required (access = closed / partial)\n")
-    L.append("These are the highest-stakes lines on the site. Nothing below ships until you approve.\n")
-    L.append("\n| slug | field | old → new | source |\n|---|---|---|---|\n")
+    L.append("\n## ⚑ SENSITIVE — access = closed / partial (signature Eddie)\n")
+    L.append("Les lignes les plus lourdes du site. PENDING = rien ne part sans signature ; "
+             "APPLIED = déjà en ligne, la signature confirme l'état publié.\n")
+    L.append("\n| slug | état | field | valeur | source |\n|---|---|---|---|---|\n")
     for r in sens:
         for (f, o, n) in r["changes"]:
-            L.append(f"| `{r['slug']}` | {f} | {fmt(o)} → **{fmt(n)}** | {r['src']} |\n")
+            L.append(f"| `{r['slug']}` | PENDING | {f} | {fmt(o)} → **{fmt(n)}** | {r['src']} |\n")
+        for (f, v) in r["applied"]:
+            L.append(f"| `{r['slug']}` | APPLIED | {f} | = **{fmt(v)}** | {r['src']} |\n")
     if not sens:
-        L.append("| — | — | — | (none) |\n")
+        L.append("| — | — | — | — | (none) |\n")
     L.append("\n---\n")
-    L.append("\n## CONFIRM-grade rows (official sourcing; apply with the batch)\n")
-    L.append("\n| slug | stage | field | old → new | source |\n|---|---|---|---|---|\n")
+    L.append("\n## CONFIRM-grade rows (official sourcing)\n")
+    L.append("\n| slug | stage | état | field | valeur | source |\n|---|---|---|---|---|---|\n")
     for r in rest:
-        if not r["changes"]:
-            L.append(f"| `{r['slug']}` | {r['stage']} | (no change) | — | {r['src']} |\n")
         for (f, o, n) in r["changes"]:
-            L.append(f"| `{r['slug']}` | {r['stage']} | {f} | {fmt(o)} → **{fmt(n)}** | {r['src']} |\n")
+            L.append(f"| `{r['slug']}` | {r['stage']} | PENDING | {f} | {fmt(o)} → **{fmt(n)}** | {r['src']} |\n")
+        for (f, v) in r["applied"]:
+            L.append(f"| `{r['slug']}` | {r['stage']} | APPLIED | {f} | = **{fmt(v)}** | {r['src']} |\n")
+        if not r["changes"] and not r["applied"]:
+            L.append(f"| `{r['slug']}` | {r['stage']} | EMPTY | — | payload sans champ winter | {r['src']} |\n")
     if skips:
         L.append("\n---\n\n## Skipped (category guard / vocab)\n\n")
         for slug, why in skips:
@@ -138,6 +162,21 @@ def write_report(rows, skips):
     with open(REPORT, "w", encoding="utf-8") as f:
         f.write("".join(L))
     return sens, rest, n_change
+
+
+def self_check(rows, applied_before):
+    """LESSON (WORK-ORDER v3): a report that can claim success against an empty
+    target is a liar with a green checkmark. If the corpus carries NO applied
+    winter values AND the diff claims nothing is pending while the payload has
+    winter fields, the report is impossible — exit loudly."""
+    payload_winter_rows = [r for r in rows if r["changes"] or r["applied"]]
+    n_pending = sum(1 for r in rows if row_state(r) == "PENDING")
+    if applied_before == 0 and n_pending == 0 and payload_winter_rows:
+        print("SELF-CHECK FAIL: corpus targets are EMPTY yet the diff reports 0 pending "
+              f"changes against {len(payload_winter_rows)} payload rows carrying winter "
+              "fields. This report is impossible — the differ is comparing the wrong "
+              "thing. Refusing to write a lying report.", file=sys.stderr)
+        sys.exit(1)
 
 
 def do_apply(rows):
@@ -210,9 +249,11 @@ def main():
         if skips:
             print(f"skipped {len(skips)}: " + "; ".join(f"{s} ({w})" for s, w in skips))
     else:
+        self_check(rows, applied_before)
         sens, rest, n_change = write_report(rows, skips)
+        n_applied = sum(1 for r in rows if row_state(r) == "APPLIED")
         print(f"REPORT → {os.path.relpath(REPORT, ROOT)}")
-        print(f"  {len(rows)} winter-node rows · {n_change} with changes · "
+        print(f"  {len(rows)} winter-node rows · PENDING {n_change} · APPLIED {n_applied} · "
               f"{len(sens)} SENSITIVE (closed/partial) · {len(skips)} skips")
 
 
