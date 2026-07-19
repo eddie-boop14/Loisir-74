@@ -32,6 +32,8 @@ jobs:
     timeout-minutes: 60     # 325 fiches × (Google + registry + site fetch) ≈ 15-25 min
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0     # le rebase-retry du push a besoin de l'historique complet
 
       - uses: actions/setup-python@v5
         with:
@@ -68,4 +70,20 @@ jobs:
           # JOB 8 report.
           git add Json/ reports/job8-sweep-demotions.md
           git commit -m "chore: sweep $(date +%F)" || echo "nothing to commit"
-          git push
+          # Push with rebase-retry: the sibling check worker shares main, so a
+          # non-fast-forward race is expected and harmless — rebase and retry
+          # (twice). ANY other failure (auth, protected branch, network) stops
+          # loud on the first attempt: unexpected failure ≠ try harder.
+          n=0
+          until out=$(git push 2>&1); do
+            echo "$out"
+            if ! echo "$out" | grep -qiE "non-fast-forward|fetch first|cannot lock ref"; then
+              echo "push failed for a NON-race reason — stopping loud (no retry)"; exit 1
+            fi
+            n=$((n+1))
+            if [ "$n" -ge 3 ]; then echo "push race persisted after $n rebase retries"; exit 1; fi
+            echo "push rejected by race with sibling worker — rebase retry $n"
+            git pull --rebase origin main || { git rebase --abort; echo "rebase conflict — manual review needed"; exit 1; }
+            sleep $((n * 5))
+          done
+          echo "$out"
