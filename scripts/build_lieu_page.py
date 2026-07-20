@@ -692,8 +692,25 @@ def activities_block(activities):
     )
 
 
-def practical_block(practical, name, commune):
-    """Render the 'Infos pratiques' info-table."""
+# Labels that mean "price/tarif" across the 12 languages (singular AND plural —
+# the practical_info generator used plurals like "Tarifs"/"Ceny"/"Tarifas" that
+# the singular fact-label set misses). Used to suppress the stale practical_info
+# "prices not listed" row once the structured tiers grid owns the price surface
+# (kills the 44 € chip + "non renseigné" contradiction). Explicit vocabulary,
+# not a data scan, so it never catches an adjacent row (e.g. "Ski nordique").
+_TARIF_ROW_LABELS = {s.lower() for s in (
+    "tarif", "tarifs", "price", "prices", "rates", "fare", "fares",
+    "preis", "preise", "prezzo", "prezzi", "tariffa", "tariffe",
+    "precio", "precios", "tarifa", "tarifas", "prijs", "prijzen",
+    "tarief", "tarieven", "cena", "ceny", "preço", "preços",
+    "料金", "السعر", "الأسعار", "מחיר", "מחירים",
+)} | {str(v).strip().lower() for v in (FACT_LABELS_I18N.get("tarif") or {}).values()}
+
+
+def practical_block(practical, name, commune, drop_tarif=False):
+    """Render the 'Infos pratiques' info-table. drop_tarif suppresses the price
+    row (the tiers grid owns it) so a stale 'prices not listed' line can't
+    contradict the grid."""
     if not practical:
         return ""
     rows = []
@@ -701,6 +718,8 @@ def practical_block(practical, name, commune):
     for entry in practical:
         k = entry.get("k", "")
         v = entry.get("v", "")
+        if drop_tarif and str(k).strip().lower() in _TARIF_ROW_LABELS:
+            continue
         extra = ""
         if any(k.lower().startswith(t) for t in addr_terms):
             q = url_q(f"{name}, {commune}, Haute-Savoie, France")
@@ -720,6 +739,85 @@ def practical_block(practical, name, commune):
         '<section class="block"><div class="wrap">'
         f'<div class="kicker reveal">{T("k_practical")}</div>'
         f'<h2 class="reveal">{T("h_practical")}</h2>'
+        f'<div class="info-table reveal">{"".join(rows)}</div></div></section>'
+    )
+
+
+_PROSE_LANGS = set(locales.PROSE)  # fr,en,de,it,es,nl — free FR tier names OK here
+# Tier → controlled category, derived from the FR name (case/accents-insensitive
+# regex). Order matters: first match wins, defaults to 'adulte'.
+_TIER_CAT_RULES = [
+    ("enfant",   r"enfant|child|kind|junior 5|5[\s-]*(?:à|-)\s*1[0-5]|-\s*12 ans"),
+    ("jeune",    r"jeune|youth|16[\s-]*(?:à|-)\s*2[0-9]|étudiant"),
+    ("senior",   r"s[eé]nior|65[\s-]*(?:à|-)|v[eé]t[eé]ran|75 ans"),
+    ("famille",  r"famille|tribu|family|pack"),
+    ("saison",   r"saison|ann[eé]e|abonnement|season"),
+    ("nordique", r"nordi|redevance nordique|nordic pass|ski de fond|fond"),
+    ("debutant", r"d[eé]butant|lutins|espace d[eé]butant|beginner"),
+    ("court",    r"\b4\s*h|4 heures|apr[eè]s-midi|matin|1/2|demi|5\s*h|5 heures|heures cons"),
+]
+_TIER_CAT_RX = [(cat, re.compile(rx, re.I)) for cat, rx in _TIER_CAT_RULES]
+
+
+def _tier_cat(name):
+    n = name or ""
+    for cat, rx in _TIER_CAT_RX:
+        if rx.search(n):
+            return cat
+    return "adulte"
+
+
+def _tier_label(cat, lang):
+    tt = _I18N_LABELS.get("tarif_tiers") or {}
+    row = tt.get(cat) or tt.get("autre") or {}
+    return row.get(lang) or row.get("fr") or cat
+
+
+def _price_str(v, cur):
+    if not isinstance(v, (int, float)):
+        return ""
+    s = f"{v:.2f}".replace(".", ",")
+    return f"{s} {cur}"
+
+
+def tarifs_block(d):
+    """Structured pass-price grid. PROSE langs get the rich FR tier name (+ FR
+    note); FACTS langs (pl,pt,cs,ar,he,ja) get a reviewed-vocabulary category
+    label + the number ONLY — never FR free-text — honouring _vocab_facts'
+    facts-lang doctrine. Numbers are language-independent; heading localized."""
+    tiers = [t for t in (d.get("price_tiers") or []) if isinstance(t, dict) and t.get("price") is not None]
+    if not tiers:
+        return ""
+    cur = {"EUR": "€"}.get(d.get("price_currency"), d.get("price_currency") or "€")
+    is_prose = _LANG in _PROSE_LANGS
+    rows = []
+    seen_cat = set()
+    for t in tiers:
+        price = _price_str(t.get("price"), cur)
+        if is_prose:
+            # PROSE langs: every tier, full FR name + FR note (context intact).
+            k = esc(t.get("name") or "")
+            note = t.get("note")
+            note_html = (f'<span class="tier-note">{esc(note)}</span>' if note else "")
+            v = f'<span class="tier-price">{_bdi(esc(price))}</span>{note_html}'
+        else:
+            # FACTS langs: category label + number only — no FR free-text to
+            # disambiguate day/6-day/secondary-domain products, so show ONE
+            # representative per category (the first = the base pass); the rest
+            # would be ambiguous bare numbers. Honest subset, never invented.
+            cat = _tier_cat(t.get("name"))
+            if cat in seen_cat:
+                continue
+            seen_cat.add(cat)
+            k = esc(_tier_label(cat, _LANG))
+            v = f'<span class="tier-price">{_bdi(esc(price))}</span>'
+        rows.append(f'<div class="info-row"><div class="k">{k}</div>'
+                    f'<div class="v">{v}</div></div>')
+    heading = esc(_fact_label("tarif"))
+    return (
+        '<section class="block"><div class="wrap">'
+        f'<div class="kicker reveal">💶</div>'
+        f'<h2 class="reveal">{heading}</h2>'
         f'<div class="info-table reveal">{"".join(rows)}</div></div></section>'
     )
 
@@ -2441,12 +2539,14 @@ def build_page(d, lang="fr", include_partners=True, fr_prose_fallback=True):
     out.append(hero_block(d))
     out.append(facts_block(L("facts", {}) or {}, first_source_url(d), ap_eff))
     out.append(essentiel_block(d, lang))
+    out.append(tarifs_block(d))
     body_dict = L("body", {}) if isinstance(L("body", {}), dict) else {}
     if not body_dict:
         body_dict = {"what_is": L_body("what_is", "")}
     out.append(body_block(name, body_dict))
     out.append(activities_block(L_body("activities", []) or []))
-    out.append(practical_block(L_body("practical_info", []) or [], name, d["commune"]))
+    out.append(practical_block(L_body("practical_info", []) or [], name, d["commune"],
+                               drop_tarif=bool(d.get("price_tiers"))))
     out.append(how_to_block(L_body("how_to_get_there", {}) or {}, name, d["commune"],
                             d.get("latitude"), d.get("longitude"), d["slug"],
                             d.get("google_place_id")))
