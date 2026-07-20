@@ -4,7 +4,6 @@ From Lake Annecy's medieval keeps to the Chablais' fortified houses, Haute-Savoi
 
 > 'Best' = computed ranking: real photo, free entry, richness of verified facts (hours, access, heritage). No editorial opinion. Updates automatically.
 
-- [Château de Beauregard](https://loisirs74.fr/en/chateau-beauregard-saint-jeoire) — Saint-Jeoire · [md](https://loisirs74.fr/content/en/chateau-beauregard-saint-jeoire.md)
 - [Château de Bellegarde](https://loisirs74.fr/en/chateau-bellegarde-thonon) — Thonon-les-Bains · [md](https://loisirs74.fr/content/en/chateau-bellegarde-thonon.md)
 - [Château de Châtillon-sur-Cluses](https://loisirs74.fr/en/chateau-chatillon-sur-cluses) — Châtillon-sur-Cluses · [md](https://loisirs74.fr/content/en/chateau-chatillon-sur-cluses.md)
 - [Château et Donjon des Seigneurs de Faverges](https://loisirs74.fr/en/chateau-et-donjon-des-seigneurs-de-faverges) — Faverges-Seythenex · [md](https://loisirs74.fr/content/en/chateau-et-donjon-des-seigneurs-de-faverges.md)
@@ -22,5 +21,6 @@ From Lake Annecy's medieval keeps to the Chablais' fortified houses, Haute-Savoi
 - [Château des Sires de Faucigny](https://loisirs74.fr/en/chateau-sires-faucigny-bonneville) — Bonneville · [md](https://loisirs74.fr/content/en/chateau-sires-faucigny-bonneville.md)
 - [Maison Forte de Hautetour](https://loisirs74.fr/en/maison-forte-hautetour-saint-gervais) — Saint-Gervais-les-Bains · [md](https://loisirs74.fr/content/en/maison-forte-hautetour-saint-gervais.md)
 - [Château de Menthon-Saint-Bernard](https://loisirs74.fr/en/chateau-de-menthon-saint-bernard) — Menthon-Saint-Bernard · [md](https://loisirs74.fr/content/en/chateau-de-menthon-saint-bernard.md)
+- [Thermes d'Évian](https://loisirs74.fr/en/thermes-evian) — Évian-les-Bains · [md](https://loisirs74.fr/content/en/thermes-evian.md)
 
 Source: https://loisirs74.fr/en/what-to-do/best-castles-haute-savoie/

@@ -4,7 +4,6 @@ Des donjons médiévaux du lac d'Annecy aux maisons fortes du Chablais, la Haute
 
 > « Plus beaux » = classement calculé : photo réelle, gratuité, richesse des faits vérifiés (horaires, accès, patrimoine). Aucun avis éditorial. Mise à jour automatique.
 
-- [Château de Beauregard](https://loisirs74.fr/chateau-beauregard-saint-jeoire) — Saint-Jeoire · [md](https://loisirs74.fr/content/chateau-beauregard-saint-jeoire.md)
 - [Château de Bellegarde](https://loisirs74.fr/chateau-bellegarde-thonon) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-bellegarde-thonon.md)
 - [Château de Châtillon-sur-Cluses](https://loisirs74.fr/chateau-chatillon-sur-cluses) — Châtillon-sur-Cluses · [md](https://loisirs74.fr/content/chateau-chatillon-sur-cluses.md)
 - [Château et Donjon des Seigneurs de Faverges](https://loisirs74.fr/chateau-et-donjon-des-seigneurs-de-faverges) — Faverges-Seythenex · [md](https://loisirs74.fr/content/chateau-et-donjon-des-seigneurs-de-faverges.md)
@@ -22,5 +21,6 @@ Des donjons médiévaux du lac d'Annecy aux maisons fortes du Chablais, la Haute
 - [Château des Sires de Faucigny](https://loisirs74.fr/chateau-sires-faucigny-bonneville) — Bonneville · [md](https://loisirs74.fr/content/chateau-sires-faucigny-bonneville.md)
 - [Maison Forte de Hautetour](https://loisirs74.fr/maison-forte-hautetour-saint-gervais) — Saint-Gervais-les-Bains · [md](https://loisirs74.fr/content/maison-forte-hautetour-saint-gervais.md)
 - [Château de Menthon-Saint-Bernard](https://loisirs74.fr/chateau-de-menthon-saint-bernard) — Menthon-Saint-Bernard · [md](https://loisirs74.fr/content/chateau-de-menthon-saint-bernard.md)
+- [Thermes d'Évian](https://loisirs74.fr/thermes-evian) — Évian-les-Bains · [md](https://loisirs74.fr/content/thermes-evian.md)
 
 Source: https://loisirs74.fr/que-faire/plus-beaux-chateaux-haute-savoie/

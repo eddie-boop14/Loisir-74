@@ -1,22 +1,22 @@
 # Phase 4 — photo assignments (gate artifact)
 
 **Date**: 2026-06-14
-**Total assignments**: 630 (one per (hub × slug) on the FR canonical hub)
+**Total assignments**: 627 (one per (hub × slug) on the FR canonical hub)
 
 ## Per-hub diversity
 
 | hub | fiches | distinct photos | max repeat of one photo |
 |---|---:|---:|---:|
 | `baignade-nautisme` | 50 | 39 | 4 |
-| `bases-de-loisirs` | 86 | 61 | 7 |
+| `bases-de-loisirs` | 85 | 60 | 7 |
 | `cascades` | 19 | 19 | 1 |
-| `chateaux` | 27 | 23 | 4 |
+| `chateaux` | 26 | 22 | 4 |
 | `lacs-plages` | 31 | 26 | 3 |
 | `musees` | 50 | 28 | 9 |
 | `parcs-jardins` | 32 | 17 | 12 |
 | `points-de-vue` | 29 | 26 | 3 |
 | `que-faire` | 73 | 44 | 4 |
-| `sensations-plein-air` | 71 | 54 | 4 |
+| `sensations-plein-air` | 70 | 53 | 4 |
 | `sentiers` | 40 | 9 | 13 |
 | `sorties-detente` | 25 | 13 | 3 |
 | `sport-jeux` | 52 | 33 | 4 |
@@ -111,7 +111,6 @@
 | `bases-de-loisirs` | `cote-2000-aventure` | `sensations` | `Seilpark_Gantrisch_-_03.jpg` | — | json hero (url) |
 | `bases-de-loisirs` | `criq-parc` | `parc` | `criq-parc-hero.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `devalkart-de-manigod` | `sensations` | `generique-alpine-coaster-2.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `disc-golf-indiana-ventures-samoens` | `sensations` | `generique-disc-golf.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `domaine-de-guidou` | `parc` | `generique-domaine.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `domaine-de-rovoree-la-chataigniere` | `parc` | `Embarcad%C3%A8re_du_Domaine_de_La_Ch%C3%A2taigni%C3%A8re.jpg` | — | json hero (url) |
 | `bases-de-loisirs` | `domaine-du-tornet` | `parc` | `Lac_de_la_Balme-de-Sillingy_%2851056207507%29.jpg` | — | json hero (url) |
@@ -187,7 +186,6 @@
 | `chateaux` | `abbaye-de-sixt` | `patrimoine` | `Sixt_abbey_02.jpg` | — | json hero (url) |
 | `chateaux` | `borne-chateau-vuache-vulbens` | `patrimoine` | `generique-chateau-brume.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-avully-brenthonne` | `patrimoine` | `chateau-avully-brenthonne-hero.jpg` | — | json hero (local) |
-| `chateaux` | `chateau-beauregard-saint-jeoire` | `patrimoine` | `chateau-beauregard-saint-jeoire-hero.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-bellegarde-thonon` | `patrimoine` | `chateau-bellegarde-thonon-hero.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-buffavent-lully` | `patrimoine` | `generique-chateau-toiture.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-chatillon-sur-cluses` | `patrimoine` | `chateau-chatillon-sur-cluses-hero.jpg` | — | json hero (local) |
@@ -458,7 +456,6 @@
 | `sensations-plein-air` | `cote-2000-aventure` | `sensations` | `Seilpark_Gantrisch_-_03.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `debaroule-clusaz` | `nature` | `generique-sentier-sommet-panorama.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `devalkart-de-manigod` | `sensations` | `generique-alpine-coaster-2.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `disc-golf-indiana-ventures-samoens` | `sensations` | `generique-disc-golf.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `grotte-et-cascade-de-seythenex` | `aquatique` | `Grotte_et_cascade_de_Seythenex_10.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `indiana-ventures-saint-paul-en-chablais` | `parc` | `La_plage_de_La_Beunaz.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `k2-parapente-doussard` | `sensations` | `generique-parapente-vol.jpg` | — | json hero (local) |

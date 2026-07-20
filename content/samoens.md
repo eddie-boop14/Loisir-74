@@ -40,7 +40,13 @@ Non renseigné
 
 ## Tarifs
 
-Non renseigné
+- À partir de: 45.6 EUR
+- Journée adulte Grand Massif (15-74 ans): 61 EUR — Tarifs saison 2025-26 — accès Flaine, Les Carroz, Morillon, Samoëns, Sixt ; gratuit -8 ans / 75 ans et + à la journée en caisse sur justificatif
+- Journée réduit Grand Massif (8-14 ans): 48.8 EUR — Tarifs saison 2025-26 — « De 2 à 7 journées consécutives ou non, valable durant l'hiver 2025/2026 » au même prix par jour
+- 4h consécutives adulte Grand Massif: 54.9 EUR — Tarifs saison 2025-26 — « Le pass se déclenche au premier passage aux bornes »
+- Journée adulte pass Villages: 57 EUR — Tarifs saison 2025-26 — « Permet de skier sur les stations des Carroz, Morillon, Samoëns et Sixt »
+- Journée réduit pass Villages (8-14 ans): 45.6 EUR — Tarifs saison 2025-26 — pass Villages (hors Flaine)
+- Abonnement saison adulte Grand Massif (26-74 ans): 1284 EUR — Tarifs saison 2025-26 — « Saison PREM'S jusqu'au 30 Sept. 2025 642 € », « Saison PROMO jusqu'au 15 Nov. 2025 714 € »
 
 ## Accès (PMR)
 

@@ -40,7 +40,13 @@ Not specified
 
 ## Prices
 
-Not specified
+- From: 44 EUR
+- Adulte (26 à 64 ans) 1 jour Avoriaz: 57 EUR — Tarifs saison 2025-26 — du 20 déc. 2025 au 29 mar. 2026, tarif en caisse ; du 30 mar. 2026 au 19 avr. 2026 : 40,00 €
+- Enfant (5 à 16 ans) 1 jour Avoriaz: 44 EUR — Tarifs saison 2025-26 — du 20 déc. 2025 au 29 mar. 2026 ; enfant -5 ans gratuit (forfait à retirer en caisse avec justificatif)
+- Sénior (65 ans et plus) 1 jour Avoriaz: 53 EUR — Tarifs saison 2025-26 — du 20 déc. 2025 au 29 mar. 2026 ; Junior (16 à 25 ans) : 53,00 €
+- Adulte 1 jour Portes du Soleil: 72 EUR — Tarifs saison 2025-26 — du 12 déc. 2025 au 27 mars 2026 ; du 28 mars 2026 au 19 avr. 2026 : 61,00 €
+- Adulte 6 jours Portes du Soleil: 366 EUR — Tarifs saison 2025-26 — du 12 déc. 2025 au 27 mars 2026 ; enfant 275,00 €, junior/sénior 329,00 €
+- Saison Portes du Soleil adulte: 1277 EUR — Tarifs saison 2025-26 — junior/sénior 1 149,00 €, enfant 958,00 € ; carte main-libre obligatoire 3 €
 
 ## Access (PMR)
 

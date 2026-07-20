@@ -40,7 +40,13 @@ Not specified
 
 ## Prices
 
-Not specified
+- From: 17.5 EUR
+- Adulte (15-64 ans) 1 jour Portes du Mont-Blanc: 51.5 EUR — Tarifs saison 2025-26 — « Les tarifs indiqués sont ceux de l'hiver 2025-2026 » ; 4 heures : 48,00 €
+- Enfant (5-14 ans) 1 jour Portes du Mont-Blanc: 44 EUR — Tarifs saison 2025-26 — 4 heures : 41,00 €
+- Senior (65-79 ans) 1 jour Portes du Mont-Blanc: 46.5 EUR — Tarifs saison 2025-26 — 4 heures : 43,00 €
+- Adulte 6 jours Portes du Mont-Blanc: 257.5 EUR — Tarifs saison 2025-26 — enfant 220,00 €, senior 232,50 € ; 7 jours adulte 300,00 €
+- Forfait Débutant journée (tarif unique): 17.5 EUR — Tarifs saison 2025-26 — accès remontées débutants secteurs Combloux, Jaillet, la Giettaz
+- Adulte 1 jour Évasion Mont-Blanc: 63.5 EUR — Tarifs saison 2025-26 — 6 jours adulte 318 €, senior 1 jour 57 €
 
 ## Access (PMR)
 

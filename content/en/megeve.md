@@ -40,7 +40,13 @@ Not specified
 
 ## Prices
 
-Not specified
+- From: 55.5 EUR
+- Adulte 1 jour Évasion Mont Blanc (15-64 ans): 65 EUR — Du 19/12/2026 au 19/03/2027 ; « Première neige et printemps -20 % » : 52 € du 12/12/2026 au 18/12/2026 et du 20/03/2027 au 04/04/2027 ; « Megève skideal » dès 32 € (achat anticipé d'au moins 3 jours)
+- Enfant 1 jour (5-14 ans): 55.5 EUR — Hiver 2026-2027 — « -5 ans : offert » ; 44,50 € en période première neige et printemps
+- Senior 1 jour (65-79 ans): 58.5 EUR — Hiver 2026-2027 — « +80 ans : -50 % sur les forfaits ski adulte Evasion » ; 47 € en période première neige et printemps
+- Adulte 6 jours: 324.5 EUR — Hiver 2026-2027 — « 6 jours promo web ski J-10 » : 289,50 € ; réduction famille -10% dès 4 forfaits avec minimum 2 enfants
+- 4 heures consécutives adulte: 58.5 EUR — Hiver 2026-2027 — 47 € en période première neige et printemps
+- Saison Évasion Mont Blanc adulte: 1189 EUR — Hiver 2026-2027 — « Saison promo jusqu'au 30/11/26 » : 890 € ; forfait nominatif avec photo
 
 ## Access (PMR)
 

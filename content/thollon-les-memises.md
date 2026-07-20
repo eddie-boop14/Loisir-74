@@ -40,7 +40,13 @@ Non renseigné
 
 ## Tarifs
 
-Non renseigné
+- À partir de: 15.5 EUR
+- Journée adulte (16-69 ans): 30 EUR — Tarifs saison 2025-26 — forfaits gratuits pour les moins de 5 ans et les plus de 75 ans, sur justificatif
+- Journée enfant (5-15 ans): 25.5 EUR — Tarifs saison 2025-26 — remontées mécaniques de Thollon-les-Mémises
+- Journée sénior (70-74 ans): 15.5 EUR — Tarifs saison 2025-26 — remontées mécaniques de Thollon-les-Mémises
+- 1/2 journée adulte: 27.5 EUR — Tarifs saison 2025-26 — mini forfait de 15h à 17h : 13 € tarif unique
+- Journée famille (2 adultes + 2 enfants 5-15 ans): 105.5 EUR — Tarifs saison 2025-26 — tarif famille, enfants de 5 à 15 ans
+- Saison Montagnes d'Évian adulte (Thollon + Abondance): 335 EUR — Tarifs saison 2025-26 — « Pass saison hiver 2025/2026 Abondance + Thollon-les-Mémises + été 2026 » ; promo 259 € jusqu'au 19.12.2025 (skipass-abondance.com/fr/tarifs-mde)
 
 ## Accès (PMR)
 

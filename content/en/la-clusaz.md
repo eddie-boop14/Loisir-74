@@ -40,7 +40,13 @@ Not specified
 
 ## Prices
 
-Not specified
+- From: 42 EUR
+- Forfait 1 jour adulte (15-64 ans): 54.5 EUR — Tarifs saison 2025-26 — domaine La Clusaz-Manigod (5 massifs, 125 km), tarif « Dernière minute » ; offre Prem's dès 49,90 € et jusqu'à 29,90 € ; bambin 0-5 ans gratuit
+- Forfait 1 jour enfant (5-14 ans): 42 EUR — Tarifs saison 2025-26 — tarif Dernière minute ; Prem's 37,90 €
+- Forfait 1 jour sénior (65-74 ans): 52 EUR — Tarifs saison 2025-26 — vétéran 75 ans et + : 27,50 € ; 4 heures adulte 49,50 €
+- Forfait saison intégral adulte (25-64 ans): 1075 EUR — Tarifs saison 2025-26 — tarif plein à partir du 22/12/2025 ; Prem's -30% 750 € jusqu'au 16/11/2025, -15% 915 € jusqu'au 21/12/2025
+- Forfait saison intégral enfant (8-14 ans): 800 EUR — Tarifs saison 2025-26 — tarif plein à partir du 22/12/2025 ; Prem's -30% 550 €, -15% 680 € ; jeunes 15-24 ans même tarif
+- Forfait saison access' (lundi au vendredi) adulte: 585 EUR — Tarifs saison 2025-26 — valable toute la saison du lundi au vendredi (vacances incluses) ; Prem's -30% 470 €
 
 ## Access (PMR)
 

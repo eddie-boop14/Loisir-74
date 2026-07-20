@@ -40,7 +40,13 @@ Not specified
 
 ## Prices
 
-Not specified
+- From: 22.5 EUR
+- Journée adulte (caisse): 40 EUR — Tarifs saison 2025-26 — « Tarifs forfaits hiver 2025 / 2026 » ; 38 € sur internet ; support mains libres obligatoire 3 €
+- Journée enfant 5-15 ans (caisse): 31 EUR — Tarifs saison 2025-26 — 29,50 € sur internet ; gratuit moins de 5 ans et plus de 75 ans
+- Journée jeune 16-25 ans / sénior 65-75 ans (caisse): 34 EUR — Tarifs saison 2025-26 — 32,50 € sur internet
+- Forfait 5h adulte (caisse): 36.5 EUR — Tarifs saison 2025-26 — 34,50 € sur internet ; happy hour à partir de 14h30 : 24,50 €
+- Forfait débutant 1 jour: 22.5 EUR — Tarifs saison 2025-26 — accès uniquement aux pistes vertes (Bray, Terchette, Les Lanches) secteur Saint-Jean-d'Aulps
+- Forfait saison adulte: 476 EUR — Tarifs saison 2025-26 — enfant 307 €, jeune/sénior 369 € ; réduction -30% si achat avant le 31 octobre 2025
 
 ## Access (PMR)
 

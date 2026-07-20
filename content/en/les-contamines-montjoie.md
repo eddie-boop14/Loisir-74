@@ -40,7 +40,13 @@ Not specified
 
 ## Prices
 
-Not specified
+- From: 44.5 EUR
+- Adulte journée Les Contamines Hauteluce: 54.5 EUR — Tarifs saison 2025-26 — journées consécutives, 1 jour ; forfait 4h : 48 €
+- Enfant journée (5-14 ans): 44.5 EUR — Tarifs saison 2025-26 — « Les tarifs enfants s'appliquent pour les 5 à 14 ans inclus » ; gratuit -5 ans
+- Senior journée (65-79 ans): 49 EUR — Tarifs saison 2025-26 — « les tarifs seniors pour les adultes de 65 à moins de 80 ans »
+- Adulte 6 jours: 277 EUR — Tarifs saison 2025-26 — 6 jours promo web : 242 € ; enfant 6 jours : 225,50 €
+- Saison adulte Les Contamines: 850 EUR — Tarifs saison 2025-26 — « Saison Prévente (tarif promotionnel valable jusqu'au 20/12/2025) 595 € »
+- Adulte journée Évasion Mont-Blanc: 63.5 EUR — Tarifs saison 2025-26 — « Le forfait Evasion Mont-Blanc vous donne accès à 445 km de piste » ; -10% famille dès 4 forfaits 6 jours
 
 ## Access (PMR)
 

@@ -40,7 +40,13 @@ Not specified
 
 ## Prices
 
-Not specified
+- From: 41 EUR
+- Adulte 1 jour Espace Liberté (Châtel): 55 EUR — Plein tarif haute saison (19 déc. 2026 – 08 janv. 2027 et 06 févr. – 05 mars 2027) ; pré-ouverture 47 € sur internet jusqu'au 19 décembre 2026 ; basse saison 47 € du 20 mars au 18 avr. 2027
+- Enfant 1 jour Espace Liberté: 41 EUR — Plein tarif haute saison ; pré-ouverture / basse saison 35 €
+- Jeune/Senior 1 jour Espace Liberté: 50 EUR — Plein tarif haute saison ; pré-ouverture / basse saison 42 €
+- Adulte 1 jour Portes du Soleil: 69 EUR — Plein tarif haute saison ; basse saison 59 € du 20 mars au 18 avr. 2027
+- Forfait Saison Espace Liberté adulte: 546 EUR — Valable toute la saison hiver 2026/2027, -25 % en pré-ouverture ; Enfant : 410 € — Jeune/Senior : 491 €
+- Forfait Saison Portes du Soleil adulte: 1085 EUR — Valable toute la saison hiver 2026/2027 ; prix pré-ouverture 977 € (-25 %) disponible jusqu'au 30/09/2026 ; Jeune/Senior : 976 €
 
 ## Access (PMR)
 

@@ -40,7 +40,12 @@ Not specified
 
 ## Prices
 
-Not specified
+- From: 54 EUR
+- Journée adulte (15-64 ans) Évasion Mont-Blanc: 63.5 EUR — Tarifs saison 2025-26 — tarif public haute saison, « Période du 20.12.25 au 20.03.26 » ; 57 € en promo web (1er jour)
+- Journée enfant (5-14 ans): 54 EUR — Tarifs saison 2025-26 — haute saison 20.12.25 au 20.03.26 ; 48,50 € en promo web
+- Journée sénior (65-79 ans): 57 EUR — Tarifs saison 2025-26 — haute saison 20.12.25 au 20.03.26 ; 51,50 € en promo web
+- 4 heures consécutives adulte: 57 EUR — Tarifs saison 2025-26 — domaine Évasion Mont-Blanc
+- Forfait famille -10%: 63.5 EUR — Tarifs saison 2025-26 — -10% dès 4 forfaits payants achetés simultanément (min. 2 adultes + 2 jeunes de -18 ans), même durée et même 1er jour ; prix indiqué = base journée adulte avant remise
 
 ## Access (PMR)
 

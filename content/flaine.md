@@ -40,7 +40,13 @@ Non renseigné
 
 ## Tarifs
 
-Non renseigné
+- À partir de: 29.5 EUR
+- Adulte (15-74 ans) 1 journée Grand Massif: 61 EUR — Tarifs saison 2025-26 — pass Flaine, Les Carroz, Morillon, Samoëns, Sixt ; 4h consécutives : 54,90 €
+- Enfant (8-14 ans) 1 journée Grand Massif: 48.8 EUR — Tarifs saison 2025-26 — moins de 8 ans / 75 ans et + : gratuit à la journée en caisse sur justificatif d'âge
+- Adulte (15-74 ans) 1 journée Pass Flaine: 59 EUR — Tarifs saison 2025-26 — station de Flaine uniquement ; 4h consécutives : 53,10 €
+- Enfant (8-14 ans) 1 journée Pass Flaine: 47.2 EUR — Tarifs saison 2025-26 — station de Flaine uniquement
+- Abonnement Saison Grand Massif adulte (26-74 ans): 1284 EUR — Tarifs saison 2025-26 — réduit (8-25 ans) 856 € ; Saison PREM'S 642 € jusqu'au 30 Sept. 2025, Saison PROMO 714 € jusqu'au 15 Nov. 2025
+- Forfait Flaine Débutant 1 journée adulte: 29.5 EUR — Tarifs saison 2025-26 — espace débutant de Flaine ; réduit 23,60 €
 
 ## Accès (PMR)
 

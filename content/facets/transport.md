@@ -1,13 +1,13 @@
 ---
 facet: transport
 scope: haute-savoie-74
-lieux_documented: 281
-lieux_total: 425
+lieux_documented: 280
+lieux_total: 423
 last_built: 2026-07-19
 source: loisirs74.fr
 ---
 
-# Transports — index transversal (425 lieux, 281 documentés)
+# Transports — index transversal (423 lieux, 280 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Abbaye (Cars Région Haute-Savoie · 235 m · lignes N-BAB) ; College H. Corbet (Cars Région Haute-Savoie · 873 m · lignes Y91) ; Chef-lieu (Cars Région Haute-Savoie · 1105 m · lignes N-BAB, Y91)
@@ -380,10 +380,6 @@ Fiche: https://loisirs74.fr/croisiere-cgn-thonon · JSON: https://loisirs74.fr/a
 ## Débaroule — Parcours ludique — La Clusaz
 Parking Ruade (Cars Région Haute-Savoie · 206 m · lignes N-ARAVISBUS) ; Les Tollets (Cars Région Haute-Savoie · 346 m · lignes N-ARAVISBUS) ; Val de Neige (Cars Région Haute-Savoie · 348 m · lignes N-ARAVISBUS)
 Fiche: https://loisirs74.fr/debaroule-clusaz · JSON: https://loisirs74.fr/api/lieu/debaroule-clusaz.json
-
-## Disc Golf de Samoëns — Indiana Ventures — Samoëns
-Pont de Clévieux (Cars Région Haute-Savoie · 456 m · lignes N-CMG, Y94) ; Grand Massif Express (Cars Région Haute-Savoie · 482 m · lignes N-CMG, Y02, Y94) ; Gare Routiere (Cars Région Haute-Savoie · 543 m · lignes N-CMG, Y02, Y94)
-Fiche: https://loisirs74.fr/disc-golf-indiana-ventures-samoens · JSON: https://loisirs74.fr/api/lieu/disc-golf-indiana-ventures-samoens.json
 
 ## Domaine du Tornet — La Balme-de-Sillingy
 LAC DE LA BALME (SIBRA / Cars Région Haute-Savoie · 115 m · lignes 30, Y22) ; LAC DE LA BALME (SIBRA · 163 m) ; Les Grandes Vignes (Cars Région Haute-Savoie · 430 m · lignes Y22)

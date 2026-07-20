@@ -40,7 +40,12 @@ Non renseigné
 
 ## Tarifs
 
-Non renseigné
+- À partir de: 22 EUR
+- Forfait 1 jour adulte (26-64 ans) — Espace Liberté: 45 EUR — Domaine Espace Liberté Portes du Soleil (Châtel, La Chapelle-d'Abondance, Torgon, Morgins secteur Corbeau) : 69 pistes, 120 km ; forfait 5 heures 39 €
+- Forfait 1 jour enfant (5-15 ans) — Espace Liberté: 34 EUR — 5 heures 29 € ; gratuité enfants de moins de 5 ans
+- Forfait 1 jour jeune/sénior (16-25 ans ou +65 ans) — Espace Liberté: 41 EUR — 5 heures 35 €
+- Forfait 1 jour samedi — tarif unique dès 5 ans: 36 EUR — Uniquement le samedi ; 2 jours week-end (samedi + dimanche) tarif unique 69 €
+- Forfait journée skieurs de plus de 75 ans: 22 EUR — Forfait saison Espace Liberté +75 ans 220 € ; saison 2026/2027 : vente flash début avril 2026 ; familles -10% sur le tarif public individuel
 
 ## Accès (PMR)
 

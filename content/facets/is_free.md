@@ -1,13 +1,13 @@
 ---
 facet: is_free
 scope: haute-savoie-74
-lieux_documented: 107
-lieux_total: 425
+lieux_documented: 106
+lieux_total: 423
 last_built: 2026-07-19
 source: loisirs74.fr
 ---
 
-# Gratuité — index transversal (425 lieux, 107 documentés)
+# Gratuité — index transversal (423 lieux, 106 documentés)
 
 ## Abbaye de Sixt — Sixt-Fer-à-Cheval
 Accès libre
@@ -96,10 +96,6 @@ Fiche: https://loisirs74.fr/cascade-du-dard · JSON: https://loisirs74.fr/api/li
 ## Cascade du Rouget — Sixt-Fer-à-Cheval
 Accès libre
 Fiche: https://loisirs74.fr/cascade-du-rouget · JSON: https://loisirs74.fr/api/lieu/cascade-du-rouget.json
-
-## Château de Beauregard — Saint-Jeoire
-Gratuit toute l'année (extérieur)
-Fiche: https://loisirs74.fr/chateau-beauregard-saint-jeoire · JSON: https://loisirs74.fr/api/lieu/chateau-beauregard-saint-jeoire.json
 
 ## Château de Bellegarde — Thonon-les-Bains
 Gratuit toute l'année

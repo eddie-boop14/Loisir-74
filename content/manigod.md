@@ -40,7 +40,13 @@ Non renseigné
 
 ## Tarifs
 
-Non renseigné
+- À partir de: 28.5 EUR
+- Adulte journée (nocturne incluse): 34 EUR — Tarifs saison 2025-26 — domaine de Manigod du 20 décembre 2025 au 3 avril 2026 ; 4 heures consécutives : 28 €
+- Enfant journée (5-14 ans): 28.5 EUR — Tarifs saison 2025-26 — journée nocturne incluse ; gratuit -5 ans sur justificatif en point de vente
+- Sénior journée (65-74 ans): 31.4 EUR — Tarifs saison 2025-26 — journée nocturne incluse ; vétéran +75 ans : 17 €
+- Adulte 6 jours (prix net): 163.2 EUR — Tarifs saison 2025-26 — 6 jours 204 €, remise 20% soit prix net 163,20 € ; extension 1 jour à La Clusaz dès 6 jours : 35 €
+- Saison adulte Manigod: 458 EUR — Tarifs saison 2025-26 — à partir du 20 déc. 2025 ; préventes 320,60 € jusqu'au 13 octobre 2025 ; carte forfait obligatoire 2 €
+- Nordic Pass saison Haute-Savoie adulte (Beauregard): 172 EUR — Tarifs saison 2025-26 — ski de fond plateau de Beauregard : Nordic Pass Haute-Savoie adulte 172 €, préventes 140 €, jeune 5-15 ans 52 € (manigod.com/ski-nordique.html)
 
 ## Accès (PMR)
 

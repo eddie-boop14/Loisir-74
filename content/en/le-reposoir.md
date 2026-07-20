@@ -40,7 +40,12 @@ Not specified
 
 ## Prices
 
-Not specified
+- From: 7 EUR
+- Ski liberté journée adulte: 15 EUR — Tarifs saison 2025-26 — domaine skiable Les 3 villages, ouverture du 20/12/2025 au 08/03/2026 ; valable 1h ou toute la journée ; gratuit -5 ans et +74 ans
+- Ski liberté journée enfant: 11 EUR — Tarifs saison 2025-26 — valable 1h ou toute la journée ; groupement entreprises (CE) 11 €
+- Accès espace débutant: 7 EUR — Tarifs saison 2025-26 — accès espace débutant ; montée simple 2 €
+- Forfait saison adulte: 110 EUR — Tarifs saison 2025-26 — de 110 à 150 € (tarif promotionnel du 1er au 31 décembre 2025)
+- Forfait saison enfant (5-13 ans): 80 EUR — Tarifs saison 2025-26 — de 80 à 120 € (tarif promotionnel du 1er au 31 décembre 2025) ; gratuit -5 ans et +74 ans
 
 ## Access (PMR)
 

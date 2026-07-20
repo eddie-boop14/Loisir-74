@@ -40,7 +40,13 @@ Not specified
 
 ## Prices
 
-Not specified
+- From: 2 EUR
+- Journée adulte (14-74 ans, tarif unique): 15 EUR — Tarifs saison 2025-26 — adulte « à partir de 14 ans jusqu'à 74 ans inclus » ; domaine ouvert du 20 décembre 2025 au 08 mars 2026 (+ week-end 13-14 déc. 2025), sous réserve d'enneigement
+- Journée enfant (5-13 ans): 11 EUR — Tarifs saison 2025-26 — enfant « à partir de 5 ans jusqu'à 13 ans inclus. Gratuit pour les moins de 5 ans »
+- Espace débutants (tarif unique): 7 EUR — Tarifs saison 2025-26 — tarif unique adulte et enfant
+- Saison adulte: 150 EUR — Tarifs saison 2025-26 — « Saison Promo (vente du 1er au 31 décembre) 110 € »
+- Saison enfant: 120 EUR — Tarifs saison 2025-26 — saison promo enfant (vente du 1er au 31 décembre) : 80 €
+- Montée simple: 2 EUR — Tarifs saison 2025-26 — adulte et enfant
 
 ## Access (PMR)
 

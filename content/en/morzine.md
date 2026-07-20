@@ -40,7 +40,13 @@ Not specified
 
 ## Prices
 
-Not specified
+- From: 40 EUR
+- Journée adulte (26-64 ans) Morzine-Les Gets: 50 EUR — Tarifs internet individuels « jusqu'au 19 mars 2027 » ; 42,50 € « à partir du 20 mars 2027 »
+- Journée enfant (5-15 ans): 40 EUR — Tarif internet jusqu'au 19 mars 2027 ; 34 € à partir du 20 mars 2027 ; gratuit -5 ans sur justificatif
+- Journée jeune (16-25 ans): 44 EUR — Tarif internet jusqu'au 19 mars 2027 ; 37,40 € à partir du 20 mars 2027
+- Journée sénior (65-74 ans): 48 EUR — Tarif internet jusqu'au 19 mars 2027 ; 40,80 € à partir du 20 mars 2027 ; super sénior +75 ans : 22 €
+- 5 heures consécutives adulte: 46 EUR — Tarif internet jusqu'au 19 mars 2027
+- Forfait saison adulte Morzine-Les Gets: 915 EUR — 549 € jusqu'au 30/09/2026, 732 € jusqu'au 30/11/2026 ; support mains libres obligatoire 3 € en sus
 
 ## Access (PMR)
 

@@ -40,7 +40,13 @@ Non renseigné
 
 ## Tarifs
 
-Non renseigné
+- À partir de: 15.5 EUR
+- Adulte (15-64 ans) journée secteur Cordon: 25.5 EUR — Tarifs saison 2025-26 — journée 9h00-16h45, grille « TARIFS PUBLICS HIVER 2025 - 2026 » SEM Les Portes du Mont-Blanc
+- Enfant (5-14 ans) journée secteur Cordon: 20.5 EUR — Tarifs saison 2025-26 — journée 9h00-16h45 ; moins de 5 ans : offert
+- Sénior (65-79 ans) journée secteur Cordon: 22.5 EUR — Tarifs saison 2025-26 — journée 9h00-16h45 ; 80 ans et + : -50% du tarif public adulte
+- Adulte après-midi (12h-16h45): 22.5 EUR — Tarifs saison 2025-26 — enfant 17,50 €, sénior 19,00 €
+- Adulte 6 jours consécutifs Cordon: 127.5 EUR — Tarifs saison 2025-26 — enfant 99,50 €, sénior 115,50 € ; 6 jours dont 1 jr PMB : 148,50 €
+- TS lutins et Darbelin 1 jour (tarif unique): 15.5 EUR — Tarifs saison 2025-26 — tarif unique ; offre famille -10% dès 4 forfaits avec 2 enfants min.
 
 ## Accès (PMR)
 

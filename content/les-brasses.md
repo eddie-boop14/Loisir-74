@@ -40,7 +40,13 @@ Non renseigné
 
 ## Tarifs
 
-Non renseigné
+- À partir de: 10.9 EUR
+- Forfait journée alpin adulte (22-64 ans): 32.5 EUR — Tarifs saison 2025-26 — massif des Brasses, ouverture le 20 décembre 2025 ; 29,50 € en ligne ; pass liberté 4 heures 28,50 €
+- Forfait journée alpin enfant (6-15 ans): 24.5 EUR — Tarifs saison 2025-26 — 22,50 € en ligne ; enfant de moins de 6 ans 7 €
+- Forfait journée alpin sénior (+65 ans): 22.5 EUR — Tarifs saison 2025-26 — journée jeune 16-21 ans 27,50 € ; après 15h : 16,50 € adulte
+- Forfait saison alpin adulte (22-64 ans): 399 EUR — Tarifs saison 2025-26 — préventes du 01 oct. au 19 déc. 2025 : 219 € (oct.), 249 € (nov.), 269 € (déc.) ; extension nordique +20 €
+- Forfait journée domaine nordique adulte (16-64 ans): 10.9 EUR — Tarifs saison 2025-26 — redevance nordique ; enfant 5-15 ans 5,30 € ; semaine hors mercredi et vacances 8,50 €
+- Pack Famille alpin (2 adultes + 2 enfants) journée hors vacances: 106 EUR — Tarifs saison 2025-26 — journée hors vacances 106 € au lieu de 114 € ; saison prévente 709 €, saison 1069 €
 
 ## Accès (PMR)
 

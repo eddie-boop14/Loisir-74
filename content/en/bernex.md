@@ -40,7 +40,12 @@ Not specified
 
 ## Prices
 
-Not specified
+- From: 15.5 EUR
+- Adulte (16 à 69 ans) 1 jour: 29.9 EUR — Tarifs saison 2025-26 — tarif en caisse ; 28,80 € exclu web
+- Jeune (5 à 15 ans) 1 jour: 25 EUR — Tarifs saison 2025-26 — tarif en caisse ; 24,00 € exclu web
+- Senior (70 à 74 ans) 1 jour: 15.5 EUR — Tarifs saison 2025-26 — tarif en caisse ; 14,50 € exclu web
+- Adulte 4 heures: 27.5 EUR — Tarifs saison 2025-26 — à partir du premier passage en borne
+- Adulte 6 jours Bernex: 156 EUR — Tarifs saison 2025-26 — jeune 131,50 €, senior 78,50 € ; moins de 5 ans et 75 ans et plus : saison gratuit (+ keycard 2,50 €)
 
 ## Access (PMR)
 

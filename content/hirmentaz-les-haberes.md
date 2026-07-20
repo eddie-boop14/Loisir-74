@@ -40,7 +40,13 @@ Non renseigné
 
 ## Tarifs
 
-Non renseigné
+- À partir de: 27 EUR
+- Forfait journée adulte — Hirmentaz + Les Habères: 35 EUR — Tarifs saison 2025-26 — domaine relié Hirmentaz / Les Habères, ouverture 20 décembre 2025 au 22 mars 2026 ; 5 heures consécutives 30 €
+- Forfait journée enfant (5-15 ans) — Hirmentaz + Les Habères: 27 EUR — Tarifs saison 2025-26 — enfant né entre 2010 et 2020, justificatif obligatoire
+- Forfait journée senior — Hirmentaz + Les Habères: 30 EUR — Tarifs saison 2025-26 — tarif senior ; groupe adulte 31 €, groupe enfant 22,50 €
+- Forfait journée adulte — Hirmentaz seul: 28 EUR — Tarifs saison 2025-26 — domaine Hirmentaz seul ; journée en ligne 27 €, 5 heures 26 €
+- Forfait saison adulte — Hirmentaz + Les Habères: 342 EUR — Tarifs saison 2025-26 — prévente carte jusqu'au 19/12/25 ; enfant 210 €
+- Forfait saison adulte — Hirmentaz seul: 267 EUR — Tarifs saison 2025-26 — prévente saison 206 € ; option saison alpin + nordique 304 €
 
 ## Accès (PMR)
 

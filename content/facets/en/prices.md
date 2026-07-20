@@ -1,13 +1,13 @@
 ---
 facet: prices
 scope: haute-savoie-74
-lieux_documented: 423
-lieux_total: 425
+lieux_documented: 421
+lieux_total: 423
 last_built: 2026-07-19
 source: loisirs74.fr
 ---
 
-# Tarifs — index transversal (425 lieux, 423 documentés)
+# Tarifs — index transversal (423 lieux, 421 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 À partir de 7 € (adulte)
@@ -94,7 +94,7 @@ Gratuit
 Fiche: https://loisirs74.fr/au-fil-rail-jeu-piste-a-vallorcine-vallorcine · JSON: https://loisirs74.fr/api/lieu/au-fil-rail-jeu-piste-a-vallorcine-vallorcine.json
 
 ## Avoriaz — Morzine
-
+Tarifs saison 2025-26 — forfait Avoriaz adulte journée 57 € · Portes du Soleil adulte journée 72 € · saison 1 277 €
 Fiche: https://loisirs74.fr/avoriaz · JSON: https://loisirs74.fr/api/lieu/avoriaz.json
 
 ## Plan d'eau Biotope de Combloux — Combloux
@@ -158,7 +158,7 @@ Fiche: https://loisirs74.fr/base-nautique-sciez-sciez · JSON: https://loisirs74
 Fiche: https://loisirs74.fr/belvedere-du-mont-baron · JSON: https://loisirs74.fr/api/lieu/belvedere-du-mont-baron.json
 
 ## Bernex — Bernex
-
+Tarifs saison 2025-26 — forfait adulte journée 29,90 € · jeune 25 € · 6 jours adulte 156 €
 Fiche: https://loisirs74.fr/bernex · JSON: https://loisirs74.fr/api/lieu/bernex.json
 
 ## Thonon Billard Club (Billard Stella) — Thonon-les-Bains
@@ -318,16 +318,12 @@ Entrée ~3-6 € (à confirmer)
 Fiche: https://loisirs74.fr/centre-nautique-guy-chatel-ayse · JSON: https://loisirs74.fr/api/lieu/centre-nautique-guy-chatel-ayse.json
 
 ## Chamonix-Mont-Blanc — Chamonix-Mont-Blanc
-
+Tarifs saison 2025-26 — Chamonix Le Pass adulte journée dès 47 € (dynamique jusqu'à 59,20 €) · saison 1 648 €
 Fiche: https://loisirs74.fr/chamonix-mont-blanc · JSON: https://loisirs74.fr/api/lieu/chamonix-mont-blanc.json
 
 ## Château d'Avully — Brenthonne
 Adulte 10 € · Étudiant 8 € · Enfant 5-12 ans 5 €
 Fiche: https://loisirs74.fr/chateau-avully-brenthonne · JSON: https://loisirs74.fr/api/lieu/chateau-avully-brenthonne.json
-
-## Château de Beauregard — Saint-Jeoire
-Gratuit toute l'année (extérieur)
-Fiche: https://loisirs74.fr/chateau-beauregard-saint-jeoire · JSON: https://loisirs74.fr/api/lieu/chateau-beauregard-saint-jeoire.json
 
 ## Château de Bellegarde — Thonon-les-Bains
 Gratuit toute l'année
@@ -402,7 +398,7 @@ Fiche: https://loisirs74.fr/chateau-thenieres-ballaison · JSON: https://loisirs
 Fiche: https://loisirs74.fr/chateaux-des-allinges · JSON: https://loisirs74.fr/api/lieu/chateaux-des-allinges.json
 
 ## Châtel — Châtel
-
+Forfait Châtel adulte journée 55 € (Espace Liberté) · Portes du Soleil 69 € · saison 546 €
 Fiche: https://loisirs74.fr/chatel · JSON: https://loisirs74.fr/api/lieu/chatel.json
 
 ## Châtel Accrobranche 1600 — Châtel
@@ -510,11 +506,11 @@ Fiche: https://loisirs74.fr/col-des-glieres · JSON: https://loisirs74.fr/api/li
 Fiche: https://loisirs74.fr/col-des-pitons-saleve · JSON: https://loisirs74.fr/api/lieu/col-des-pitons-saleve.json
 
 ## Combloux — Combloux
-
+Tarifs saison 2025-26 — forfait adulte journée 51,50 € (Portes du Mont-Blanc) · Évasion Mont-Blanc 63,50 € · 6 jours 257,50 €
 Fiche: https://loisirs74.fr/combloux · JSON: https://loisirs74.fr/api/lieu/combloux.json
 
 ## Cordon — Cordon
-
+Tarifs saison 2025-26 — forfait adulte journée 25,50 € (secteur Cordon) · enfant 20,50 € · 6 jours 127,50 €
 Fiche: https://loisirs74.fr/cordon · JSON: https://loisirs74.fr/api/lieu/cordon.json
 
 ## Côte 2000 Aventure — Megève
@@ -548,10 +544,6 @@ Fiche: https://loisirs74.fr/debaroule-clusaz · JSON: https://loisirs74.fr/api/l
 ## Dévalkart de Manigod — Manigod
 Descente ~5-8 € · forfaits multi-descentes
 Fiche: https://loisirs74.fr/devalkart-de-manigod · JSON: https://loisirs74.fr/api/lieu/devalkart-de-manigod.json
-
-## Disc Golf de Samoëns — Indiana Ventures — Samoëns
-Accès libre · location disques ~5-10 € (Indiana Ventures)
-Fiche: https://loisirs74.fr/disc-golf-indiana-ventures-samoens · JSON: https://loisirs74.fr/api/lieu/disc-golf-indiana-ventures-samoens.json
 
 ## Domaine de Guidou — Sciez
 
@@ -662,7 +654,7 @@ Adulte 25 € · Sénior 16 € · 0-4 ans gratuit · forfaits dégressifs
 Fiche: https://loisirs74.fr/filenvol-monnetier-mornex · JSON: https://loisirs74.fr/api/lieu/filenvol-monnetier-mornex.json
 
 ## Flaine — Arâches-la-Frasse
-
+Tarifs saison 2025-26 — forfait Grand Massif adulte journée 61 € · pass Flaine 59 € · saison 1 284 €
 Fiche: https://loisirs74.fr/flaine · JSON: https://loisirs74.fr/api/lieu/flaine.json
 
 ## Fonderie Paccard — Sevrier
@@ -718,7 +710,7 @@ Gratuit toute l'année
 Fiche: https://loisirs74.fr/grp-tour-pays-mont-blanc-sallanches · JSON: https://loisirs74.fr/api/lieu/grp-tour-pays-mont-blanc-sallanches.json
 
 ## Hirmentaz – Les Habères — Bellevaux
-
+Tarifs saison 2025-26 — forfait adulte journée 35 € (domaine relié) · Hirmentaz seul 28 € · saison 342 €
 Fiche: https://loisirs74.fr/hirmentaz-les-haberes · JSON: https://loisirs74.fr/api/lieu/hirmentaz-les-haberes.json
 
 ## Île de Tortuga Vétraz-Monthoux — Vétraz-Monthoux
@@ -806,11 +798,11 @@ Fiche: https://loisirs74.fr/karting-team-bouvier-pringy · JSON: https://loisirs
 Fiche: https://loisirs74.fr/karting-thones · JSON: https://loisirs74.fr/api/lieu/karting-thones.json
 
 ## La Chapelle-d'Abondance — La Chapelle-d'Abondance
-
+Forfait La Chapelle-d'Abondance adulte journée 45 € (Espace Liberté Portes du Soleil) · enfant 34 €
 Fiche: https://loisirs74.fr/la-chapelle-d-abondance · JSON: https://loisirs74.fr/api/lieu/la-chapelle-d-abondance.json
 
 ## La Clusaz — La Clusaz
-
+Tarifs saison 2025-26 — forfait adulte journée 54,50 € (dès 29,90 € en Prem's) · saison intégral 1 075 €
 Fiche: https://loisirs74.fr/la-clusaz · JSON: https://loisirs74.fr/api/lieu/la-clusaz.json
 
 ## La Forêt Enchantée — Sillingy
@@ -866,11 +858,11 @@ Partie ~9-12 € · formules 2-3 parties · groupes/anniversaires
 Fiche: https://loisirs74.fr/laser-game-lasermaxx-sillingy · JSON: https://loisirs74.fr/api/lieu/laser-game-lasermaxx-sillingy.json
 
 ## Le Grand-Bornand — Le Grand-Bornand
-
+Tarifs saison 2025-26 — forfait adulte journée 49 € (guichet, remises en ligne) · saison 722 €
 Fiche: https://loisirs74.fr/le-grand-bornand · JSON: https://loisirs74.fr/api/lieu/le-grand-bornand.json
 
 ## Le Reposoir — Le Reposoir
-
+Tarifs saison 2025-26 — ski liberté journée adulte 15 € (Les 3 villages) · enfant 11 € · saison dès 110 €
 Fiche: https://loisirs74.fr/le-reposoir · JSON: https://loisirs74.fr/api/lieu/le-reposoir.json
 
 ## Le Semnoz — Viuz-la-Chiésaz
@@ -890,23 +882,23 @@ Fiche: https://loisirs74.fr/leman-kid-thonon-les-bains · JSON: https://loisirs7
 Fiche: https://loisirs74.fr/les-aigles-du-leman · JSON: https://loisirs74.fr/api/lieu/les-aigles-du-leman.json
 
 ## Les Brasses — Viuz-en-Sallaz
-
+Tarifs saison 2025-26 — forfait alpin adulte journée 32,50 € · redevance nordique 10,90 € · saison alpin 399 €
 Fiche: https://loisirs74.fr/les-brasses · JSON: https://loisirs74.fr/api/lieu/les-brasses.json
 
 ## Les Carroz — Arâches-la-Frasse
-
+Tarifs saison 2025-26 — forfait Grand Massif adulte journée 61 € · pass Villages 57 € · saison Prem's 642 €
 Fiche: https://loisirs74.fr/les-carroz · JSON: https://loisirs74.fr/api/lieu/les-carroz.json
 
 ## Les Contamines-Montjoie — Les Contamines-Montjoie
-
+Tarifs saison 2025-26 — forfait adulte journée 54,50 € · Évasion Mont-Blanc 63,50 € · saison 850 €
 Fiche: https://loisirs74.fr/les-contamines-montjoie · JSON: https://loisirs74.fr/api/lieu/les-contamines-montjoie.json
 
 ## Les Gets — Les Gets
-
+Forfait Les Gets-Morzine adulte journée 50 € (web) · saison 549 € · Portes du Soleil saison 977 €
 Fiche: https://loisirs74.fr/les-gets · JSON: https://loisirs74.fr/api/lieu/les-gets.json
 
 ## Les Houches — Les Houches
-
+Tarifs saison 2025-26 — forfait adulte journée dès 35,30 € (dynamique jusqu'à 47,20 €) · famille dès 109,40 €
 Fiche: https://loisirs74.fr/les-houches · JSON: https://loisirs74.fr/api/lieu/les-houches.json
 
 ## Luge d'été de La Sambuy — Faverges-Seythenex
@@ -946,7 +938,7 @@ Fiche: https://loisirs74.fr/maison-forte-hautetour-saint-gervais · JSON: https:
 Fiche: https://loisirs74.fr/maison-fromage-abondance-abondance · JSON: https://loisirs74.fr/api/lieu/maison-fromage-abondance-abondance.json
 
 ## Manigod — Manigod
-
+Tarifs saison 2025-26 — forfait alpin adulte journée 34 € · saison 458 € · Nordic Pass saison 74 : 172 €
 Fiche: https://loisirs74.fr/manigod · JSON: https://loisirs74.fr/api/lieu/manigod.json
 
 ## Marais de Poisy — Poisy
@@ -954,7 +946,7 @@ Fiche: https://loisirs74.fr/manigod · JSON: https://loisirs74.fr/api/lieu/manig
 Fiche: https://loisirs74.fr/marais-de-poisy · JSON: https://loisirs74.fr/api/lieu/marais-de-poisy.json
 
 ## Megève — Megève
-
+Forfait Megève adulte journée 65 € (Évasion Mont-Blanc) · skideal dès 32 € · saison 1 189 €
 Fiche: https://loisirs74.fr/megeve · JSON: https://loisirs74.fr/api/lieu/megeve.json
 
 ## La mine de la Lappiaz — Morzine
@@ -974,7 +966,7 @@ Adulte 13 € AR · Enfant 5,80 € AR · Famille 49 €
 Fiche: https://loisirs74.fr/mont-saleve · JSON: https://loisirs74.fr/api/lieu/mont-saleve.json
 
 ## Mont-Saxonnex — Mont-Saxonnex
-
+Tarifs saison 2025-26 — forfait adulte journée 15 € (tarif unique) · enfant 11 € · saison 150 €
 Fiche: https://loisirs74.fr/mont-saxonnex · JSON: https://loisirs74.fr/api/lieu/mont-saxonnex.json
 
 ## Mont Veyrier — Annecy
@@ -990,11 +982,11 @@ Sur devis — individuel, couple, groupe
 Fiche: https://loisirs74.fr/montgolfiere-du-mont-blanc-evian · JSON: https://loisirs74.fr/api/lieu/montgolfiere-du-mont-blanc-evian.json
 
 ## Morillon — Morillon
-
+Tarifs saison 2025-26 — forfait Grand Massif adulte journée 61 € · pass Villages 4 stations 57 € · saison Prem's 642 €
 Fiche: https://loisirs74.fr/morillon · JSON: https://loisirs74.fr/api/lieu/morillon.json
 
 ## Morzine — Morzine
-
+Forfait Morzine-Les Gets adulte journée 50 € · saison 915 € (dès 549 € en prévente)
 Fiche: https://loisirs74.fr/morzine · JSON: https://loisirs74.fr/api/lieu/morzine.json
 
 ## Musée des ailes anciennes — Excenevex
@@ -1194,7 +1186,7 @@ Fiche: https://loisirs74.fr/parcours-patrimoine-se-promener-a-andilly-andilly ·
 Fiche: https://loisirs74.fr/passy-accro-lac · JSON: https://loisirs74.fr/api/lieu/passy-accro-lac.json
 
 ## Passy Plaine-Joux — Passy
-
+Tarifs saison 2025-26 — forfait adulte journée 25,50 € · enfant 22,50 € · saison 222 €
 Fiche: https://loisirs74.fr/passy-plaine-joux · JSON: https://loisirs74.fr/api/lieu/passy-plaine-joux.json
 
 ## Patinoire Jean Régis — Annecy
@@ -1342,7 +1334,7 @@ Fiche: https://loisirs74.fr/pont-de-la-caille · JSON: https://loisirs74.fr/api/
 Fiche: https://loisirs74.fr/port-clerges-base-nautique-thonon-bains · JSON: https://loisirs74.fr/api/lieu/port-clerges-base-nautique-thonon-bains.json
 
 ## Praz de Lys – Sommand — Taninges (et Mieussy)
-
+Tarifs saison 2025-26 — forfait alpin adulte journée 37,50 € · redevance nordique 9 € · saison alpin 369 €
 Fiche: https://loisirs74.fr/praz-de-lys-sommand · JSON: https://loisirs74.fr/api/lieu/praz-de-lys-sommand.json
 
 ## Ecolorado Rafting — Passy
@@ -1374,15 +1366,15 @@ Fiche: https://loisirs74.fr/ruines-chateau-habere-lullin-habere-lullin · JSON: 
 Fiche: https://loisirs74.fr/ruines-chateau-st-michel-houches · JSON: https://loisirs74.fr/api/lieu/ruines-chateau-st-michel-houches.json
 
 ## Saint-Gervais-les-Bains — Saint-Gervais-les-Bains
-
+Tarifs saison 2025-26 — forfait adulte journée 63,50 € (Évasion Mont-Blanc) · enfant 54 € · promo web dès 57 €
 Fiche: https://loisirs74.fr/saint-gervais-les-bains · JSON: https://loisirs74.fr/api/lieu/saint-gervais-les-bains.json
 
 ## Saint-Jean-d'Aulps — Saint-Jean-d'Aulps
-
+Tarifs saison 2025-26 — forfait adulte journée 40 € (Roc d'Enfer) · enfant 31 € · saison 476 €
 Fiche: https://loisirs74.fr/saint-jean-d-aulps · JSON: https://loisirs74.fr/api/lieu/saint-jean-d-aulps.json
 
 ## Samoëns — Samoëns
-
+Tarifs saison 2025-26 — forfait Grand Massif adulte journée 61 € · pass Villages 57 € · saison 1 284 €
 Fiche: https://loisirs74.fr/samoens · JSON: https://loisirs74.fr/api/lieu/samoens.json
 
 ## Secrets de fées - parcours de découverte — Habère-Poche
@@ -1558,7 +1550,7 @@ Fiche: https://loisirs74.fr/thermes-saint-gervais-mont-blanc · JSON: https://lo
 Fiche: https://loisirs74.fr/thiou-a-annecy-annecy · JSON: https://loisirs74.fr/api/lieu/thiou-a-annecy-annecy.json
 
 ## Thollon-les-Mémises — Thollon-les-Mémises
-
+Tarifs saison 2025-26 — forfait adulte journée 30 € · enfant 25,50 € · saison Montagnes d'Évian 335 €
 Fiche: https://loisirs74.fr/thollon-les-memises · JSON: https://loisirs74.fr/api/lieu/thollon-les-memises.json
 
 ## ABYSS — Tir à l'arc Publier — Publier

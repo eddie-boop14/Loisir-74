@@ -1,13 +1,13 @@
 ---
 facet: season
 scope: haute-savoie-74
-lieux_documented: 422
-lieux_total: 425
+lieux_documented: 420
+lieux_total: 423
 last_built: 2026-07-19
 source: loisirs74.fr
 ---
 
-# Saison — index transversal (425 lieux, 422 documentés)
+# Saison — index transversal (423 lieux, 420 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Toute l'année · Été pour les jardins
@@ -325,10 +325,6 @@ Fiche: https://loisirs74.fr/chamonix-mont-blanc · JSON: https://loisirs74.fr/ap
 1er juillet - 31 août (sans RDV) · Toute l'année sur RDV
 Fiche: https://loisirs74.fr/chateau-avully-brenthonne · JSON: https://loisirs74.fr/api/lieu/chateau-avully-brenthonne.json
 
-## Château de Beauregard — Saint-Jeoire
-Toute l'année · Soir pour illumination · JEP septembre
-Fiche: https://loisirs74.fr/chateau-beauregard-saint-jeoire · JSON: https://loisirs74.fr/api/lieu/chateau-beauregard-saint-jeoire.json
-
 ## Château de Bellegarde — Thonon-les-Bains
 Toute l'année · JEP pour intérieur
 Fiche: https://loisirs74.fr/chateau-bellegarde-thonon · JSON: https://loisirs74.fr/api/lieu/chateau-bellegarde-thonon.json
@@ -548,10 +544,6 @@ Fiche: https://loisirs74.fr/debaroule-clusaz · JSON: https://loisirs74.fr/api/l
 ## Dévalkart de Manigod — Manigod
 Été (juin à septembre)
 Fiche: https://loisirs74.fr/devalkart-de-manigod · JSON: https://loisirs74.fr/api/lieu/devalkart-de-manigod.json
-
-## Disc Golf de Samoëns — Indiana Ventures — Samoëns
-Mai à octobre
-Fiche: https://loisirs74.fr/disc-golf-indiana-ventures-samoens · JSON: https://loisirs74.fr/api/lieu/disc-golf-indiana-ventures-samoens.json
 
 ## Domaine de Guidou — Sciez
 Avril – mai (migration) · Septembre – octobre (quiétude) · Hiver (observation oiseaux d'eau)

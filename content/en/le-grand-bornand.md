@@ -40,7 +40,13 @@ Not specified
 
 ## Prices
 
-Not specified
+- From: 34.3 EUR
+- Forfait 1 jour adulte (26-64 ans) — guichet: 49 EUR — Tarifs saison 2025-26 — tarif guichet, ouverture du 13/12/2025 au 10/04/2026 ; forfait 4h 44,60 € ; de 4% à 33% de remise en ligne ; vétéran 75 ans et + 24,50 €
+- Forfait 1 jour enfant (5-11 ans) — guichet: 34.3 EUR — Tarifs saison 2025-26 — gratuit -5 ans ; à partir du 21 mars 2026, gratuit pour tous les enfants de moins de 12 ans
+- Forfait 1 jour jeune (12-25 ans) — guichet: 41.7 EUR — Tarifs saison 2025-26 — tarif guichet
+- Forfait 1 jour senior (65-74 ans) — guichet: 46.6 EUR — Tarifs saison 2025-26 — tarif guichet
+- Forfait saison adulte: 722 EUR — Tarifs saison 2025-26 — tarif à partir du 10 décembre 2025 ; Super Promo 484 € du 01/10 au 11/11/2025, Promo 542 € du 12/11 au 09/12/2025
+- Forfait saison enfant (5-11 ans): 361 EUR — Tarifs saison 2025-26 — tarif à partir du 10 décembre 2025 ; jeune 12-25 ans 542 € ; gratuit -5 ans
 
 ## Access (PMR)
 

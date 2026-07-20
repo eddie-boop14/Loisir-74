@@ -40,7 +40,13 @@ Non renseigné
 
 ## Tarifs
 
-Non renseigné
+- À partir de: 5 EUR
+- Journée alpin adulte (16-75 ans): 37.5 EUR — Tarifs saison 2025-26 — domaine alpin, vente en ligne officielle SPL La Ramaz (« Téléchargez les tarifs 2025-2026 en PDF »)
+- Journée alpin enfant (5-15 ans): 29 EUR — Tarifs saison 2025-26 — gratuit pour les moins de 5 ans et les plus de 75 ans
+- Redevance nordique journée adulte: 9 EUR — Tarifs saison 2025-26 — domaine nordique ; samedi 8,50 €
+- Redevance nordique journée enfant: 5 EUR — Tarifs saison 2025-26 — domaine nordique ; samedi 4 €
+- Forfait saison alpin adulte: 369 EUR — Tarifs saison 2025-26 — « Saison -25% jusqu'au 6/12/2026 » 369 € (adulte)
+- Saison nordique adulte: 77 EUR — Tarifs saison 2025-26 — « Saison jusqu'au 6/12 » 77 € (adulte), 27 € (enfant)
 
 ## Accès (PMR)
 

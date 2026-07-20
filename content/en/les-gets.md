@@ -40,7 +40,13 @@ Not specified
 
 ## Prices
 
-Not specified
+- From: 40 EUR
+- Adulte 1 jour (tarif web) Les Gets-Morzine: 50 EUR — Forfait Ski Hiver 26-27 Les Gets-Morzine — tarif web (56 € en caisse) ; 5h consécutives : 46 €
+- Enfant 1 jour (5-15 ans): 40 EUR — Forfait Ski Hiver 26-27 — tarif web (44 € en caisse) ; gratuit -5 ans sur justificatif
+- Jeune 1 jour (16-25 ans): 44 EUR — Forfait Ski Hiver 26-27 — tarif web ; senior (65-74 ans) : 48 €
+- Adulte 6 jours (tarif web): 276 EUR — Forfait Ski Hiver 26-27 — tarif web (312 € en caisse) ; « Tribu -10% à partir de 4 personnes sur les forfaits 4 jours et + »
+- Saison Les Gets-Morzine adulte: 549 EUR — « Forfait Saison Les Gets-Morzine jusqu'au 30/09/2026 549 € » ; 732 € jusqu'au 30/11/2026 ; enfant 409 €
+- Saison Portes du Soleil adulte: 977 EUR — « Promo avant le 30 septembre 2026 977 € » ; 1108 € avant le 30/11/2026 ; 1303 € à partir du 01/12/2026
 
 ## Access (PMR)
 
