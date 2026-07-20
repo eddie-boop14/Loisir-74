@@ -37,7 +37,12 @@ TODAY = "2026-07-20"
 
 STATES = ("2026-27", "2025-26", "null")
 PREFIX_2526 = "Tarifs saison 2025-26 — "
-LANGS = ("fr", "de", "en", "it", "es", "nl", "pt", "cs")
+# Roster law: the tarif prose must cover EVERY published language, not a frozen
+# literal that silently drifts from the roster. Derived from locales.VISIBLE so
+# a new published lane can never again be left empty (the pl/ja/ar/he gap).
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import locales as _locales  # noqa: E402
+LANGS = tuple(_locales.VISIBLE)
 
 
 def load_json(p):

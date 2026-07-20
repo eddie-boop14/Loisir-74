@@ -72,6 +72,18 @@ def rebuild_catalog_index():
     print(out.stdout.strip() or "(catalog rebuilt)")
 
 
+def tarif_completeness_gate():
+    """Station facts.tarif must cover the full published roster (no 8-vs-12 gap)."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "gate_tarif_completeness.py")],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    print((out.stdout or "").strip() or (out.stderr or "").strip())
+    if out.returncode != 0:
+        print(out.stderr, file=sys.stderr)
+        raise RuntimeError("tarif completeness gate failed")
+
+
 def rebuild_ai_content():
     """Regenerate the AI content layer (content/<slug>.md ×392 + llms.txt +
     llms-full.txt) from JSON truth, so the advertised /content/<slug>.md URLs
@@ -446,6 +458,7 @@ def main():
 
     run("status gate (state machine)", status_gate)
     run("hygiene gate (Tier 1/2 scan)", hygiene_gate)
+    run("tarif roster-completeness gate", tarif_completeness_gate)
     run("render fiche pages", render_all_fiches)
     run("rebuild catalog index", rebuild_catalog_index)
     run("regenerate hubs + homepage nav", rebuild_hubs)

@@ -232,6 +232,13 @@ jobs:
         # door the May import walked through stays shut.
         run: python3 scripts/gate_i18n_leak.py
 
+      - name: Tarif roster-completeness gate (station facts.tarif in ALL published langs)
+        # The "8 vs 12" lesson: a hardcoded LANGS literal drifted from the roster,
+        # leaving pl/ja/ar/he (both RTL, both submitted to Bing) empty in
+        # facts.tarif while CI stayed green. This fails the build if any published
+        # station carries the tarif prose in some published langs but not all.
+        run: python3 scripts/gate_tarif_completeness.py
+
       - name: Lastmod honesty gate (real per-lieu dates, no uniform-stamp anti-pattern)
         # Read-only. data/lastmod.json is derived from git content-commit dates
         # (corpus-wide sweeps excluded) by scripts/derive_lastmod.py and committed
