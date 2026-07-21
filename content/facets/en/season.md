@@ -1,13 +1,13 @@
 ---
 facet: season
 scope: haute-savoie-74
-lieux_documented: 420
-lieux_total: 423
-last_built: 2026-07-20
+lieux_documented: 423
+lieux_total: 426
+last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Saison — index transversal (423 lieux, 420 documentés)
+# Saison — index transversal (426 lieux, 423 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Toute l'année · Été pour les jardins
@@ -757,6 +757,10 @@ Fiche: https://loisirs74.fr/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-
 Avril à octobre
 Fiche: https://loisirs74.fr/jardin-pre-curieux-evian · JSON: https://loisirs74.fr/api/lieu/jardin-pre-curieux-evian.json
 
+## Les Jardins de Lornay — Lornay
+Printemps à automne · accès complet en été (juillet-août)
+Fiche: https://loisirs74.fr/jardins-de-lornay · JSON: https://loisirs74.fr/api/lieu/jardins-de-lornay.json
+
 ## Les Jardins de l'Europe — Annecy
 Toute l'année · couleurs en automne
 Fiche: https://loisirs74.fr/jardins-europe-annecy · JSON: https://loisirs74.fr/api/lieu/jardins-europe-annecy.json
@@ -1077,6 +1081,10 @@ Fiche: https://loisirs74.fr/musee-poterie-savoyarde-filliere · JSON: https://lo
 Printemps à automne
 Fiche: https://loisirs74.fr/musee-prehistoire-geologie-sciez · JSON: https://loisirs74.fr/api/lieu/musee-prehistoire-geologie-sciez.json
 
+## Site de Morette — Musée de la Résistance et Mémorial de la Déportation — La Balme-de-Thuy
+Ouvert du 4 avril au 1er novembre · nécropole toute l'année
+Fiche: https://loisirs74.fr/musee-resistance-morette-la-balme-de-thuy · JSON: https://loisirs74.fr/api/lieu/musee-resistance-morette-la-balme-de-thuy.json
+
 ## Musée du ski ancien — La Chapelle-d'Abondance
 Toute l'année (sur RDV)
 Fiche: https://loisirs74.fr/musee-ski-ancien-chapelle-abondance · JSON: https://loisirs74.fr/api/lieu/musee-ski-ancien-chapelle-abondance.json
@@ -1160,6 +1168,10 @@ Fiche: https://loisirs74.fr/parc-des-dronieres · JSON: https://loisirs74.fr/api
 ## Parc de l'Impérial — Annecy
 Printemps et été (floraisons) · Toute l'année
 Fiche: https://loisirs74.fr/parc-imperial-annecy · JSON: https://loisirs74.fr/api/lieu/parc-imperial-annecy.json
+
+## Parc Jardin des Iris — Annemasse
+Printemps (floraison des iris, vers mai)
+Fiche: https://loisirs74.fr/parc-jardin-des-iris-annemasse · JSON: https://loisirs74.fr/api/lieu/parc-jardin-des-iris-annemasse.json
 
 ## Parc Jean Beauquis — Ambilly
 Toute l'année · Printemps et été pour le biotope

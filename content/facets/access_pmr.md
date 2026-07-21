@@ -1,13 +1,13 @@
 ---
 facet: access_pmr
 scope: haute-savoie-74
-lieux_documented: 140
-lieux_total: 423
-last_built: 2026-07-20
+lieux_documented: 142
+lieux_total: 426
+last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Accès PMR — index transversal (423 lieux, 140 documentés)
+# Accès PMR — index transversal (426 lieux, 142 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Entrée avec marche(s), sans rampe
@@ -265,6 +265,10 @@ Fiche: https://loisirs74.fr/jardin-les-jardins-secrets-vaulx · JSON: https://lo
 Accessible en fauteuil roulant avec aide : accès par bateau électro-solaire, passerelle pour descendre, cheminement possible en fauteuil avec aide (allée gravillonnée).
 Fiche: https://loisirs74.fr/jardin-pre-curieux-evian · JSON: https://loisirs74.fr/api/lieu/jardin-pre-curieux-evian.json
 
+## Les Jardins de Lornay — Lornay
+Site et bâtiment accessibles en fauteuil, WC adapté (source OT).
+Fiche: https://loisirs74.fr/jardins-de-lornay · JSON: https://loisirs74.fr/api/lieu/jardins-de-lornay.json
+
 ## Urban Kart-In La Roche-sur-Foron — La Roche-sur-Foron
 Établissement accessible aux PMR en fauteuil : 10 marches à l'entrée mais rampe fixe extérieure, ascenseur intérieur vers l'étage, places de parking adaptées, sanitaire adapté.
 Fiche: https://loisirs74.fr/karting-indoor-urban-kartin-la-roche · JSON: https://loisirs74.fr/api/lieu/karting-indoor-urban-kartin-la-roche.json
@@ -376,6 +380,10 @@ Fiche: https://loisirs74.fr/musee-paysan-un-site-paysalp-culture-patrimoine-viuz
 ## Musée de Préhistoire et Géologie de Sciez — Sciez
 Site et bâtiment totalement accessibles en fauteuil roulant en autonomie : cheminement de plain-pied, entrée accessible, WC adapté, comptoir d'accueil et parking adaptés.
 Fiche: https://loisirs74.fr/musee-prehistoire-geologie-sciez · JSON: https://loisirs74.fr/api/lieu/musee-prehistoire-geologie-sciez.json
+
+## Site de Morette — Musée de la Résistance et Mémorial de la Déportation — La Balme-de-Thuy
+Accessible en fauteuil avec aide ; place réservée à moins de 100 m ; accueil formé au handicap (source OT).
+Fiche: https://loisirs74.fr/musee-resistance-morette-la-balme-de-thuy · JSON: https://loisirs74.fr/api/lieu/musee-resistance-morette-la-balme-de-thuy.json
 
 ## Muséum des Papillons et Insectes — Faverges-Seythenex
 Toutes les salles sont accessibles aux personnes en fauteuil roulant, y compris les sanitaires.

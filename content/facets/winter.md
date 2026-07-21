@@ -2,12 +2,12 @@
 facet: winter
 scope: haute-savoie-74
 lieux_documented: 127
-lieux_total: 423
-last_built: 2026-07-20
+lieux_total: 426
+last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Hiver — index transversal (423 lieux, 127 documentés)
+# Hiver — index transversal (426 lieux, 127 documentés)
 
 ## Aire de décollage parapente de Plaine-Joux — Passy
 Vue Mont-Blanc dégagée · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)

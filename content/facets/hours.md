@@ -1,13 +1,13 @@
 ---
 facet: hours
 scope: haute-savoie-74
-lieux_documented: 317
-lieux_total: 423
-last_built: 2026-07-20
+lieux_documented: 320
+lieux_total: 426
+last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Horaires — index transversal (423 lieux, 317 documentés)
+# Horaires — index transversal (426 lieux, 320 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 15 juin – 15 sept : tous les jours 10h–19h. 1er janv – 31 mars : lundi au vendredi 14h–18h (fermé 1er janv). 1er avr – 14 juin et 16 sept – 30 sept : lundi au vendredi et dimanche 14h–18h30 (fermé samedi, fermé 1er mai). Oct : lundi au vendredi 14h–18h. Vérifié sur le site officiel le 14 mai 2026 — sous réserve de modifications saisonnières.
@@ -557,6 +557,10 @@ Fiche: https://loisirs74.fr/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-
 Saisonnier avril-octobre. Visites guidées sur créneaux fixes (matin / après-midi). Calendrier précis à confirmer.
 Fiche: https://loisirs74.fr/jardin-pre-curieux-evian · JSON: https://loisirs74.fr/api/lieu/jardin-pre-curieux-evian.json
 
+## Les Jardins de Lornay — Lornay
+Week-ends et jours fériés 10h-17h ; ouverture quotidienne 10h-18h en juillet-août (à confirmer avant chaque saison)
+Fiche: https://loisirs74.fr/jardins-de-lornay · JSON: https://loisirs74.fr/api/lieu/jardins-de-lornay.json
+
 ## Les Jardins de l'Europe — Annecy
 Accès libre 24h/24, toute l'année. Aucune barrière ni gardiennage. Vérifié sur tourisme-annecy.net le 10 juin 2026.
 Fiche: https://loisirs74.fr/jardins-europe-annecy · JSON: https://loisirs74.fr/api/lieu/jardins-europe-annecy.json
@@ -757,6 +761,10 @@ Fiche: https://loisirs74.fr/musee-poterie-savoyarde-filliere · JSON: https://lo
 Ouverture saisonnière (juin-septembre) et sur rendez-vous. Détails sur ville-sciez.fr.
 Fiche: https://loisirs74.fr/musee-prehistoire-geologie-sciez · JSON: https://loisirs74.fr/api/lieu/musee-prehistoire-geologie-sciez.json
 
+## Site de Morette — Musée de la Résistance et Mémorial de la Déportation — La Balme-de-Thuy
+Avril-mai et octobre : week-ends, fériés et vacances scolaires (zone A) sauf lundi, 9h30-12h30 / 13h30-17h ; juin et septembre : mardi-dimanche mêmes horaires ; juillet-août : mardi-dimanche 10h-12h30 / 14h-18h
+Fiche: https://loisirs74.fr/musee-resistance-morette-la-balme-de-thuy · JSON: https://loisirs74.fr/api/lieu/musee-resistance-morette-la-balme-de-thuy.json
+
 ## Musée du ski ancien — La Chapelle-d'Abondance
 Ouvert toute l'année, tous les jours sur demande (réservation obligatoire par SMS en précisant « Musée du Ski » au +33 (0)7 62 21 88 68, au maximum 2 jours avant la visite). Vérifié le 10 juin 2026.
 Fiche: https://loisirs74.fr/musee-ski-ancien-chapelle-abondance · JSON: https://loisirs74.fr/api/lieu/musee-ski-ancien-chapelle-abondance.json
@@ -824,6 +832,10 @@ Fiche: https://loisirs74.fr/parc-de-peche-domaine-du-moulin-authier · JSON: htt
 ## Parc de l'Impérial — Annecy
 Accès libre toute l'année, tous les jours (parc ouvert 24h/24).
 Fiche: https://loisirs74.fr/parc-imperial-annecy · JSON: https://loisirs74.fr/api/lieu/parc-imperial-annecy.json
+
+## Parc Jardin des Iris — Annemasse
+Ouvert tous les jours, toute l'année (parc en accès libre)
+Fiche: https://loisirs74.fr/parc-jardin-des-iris-annemasse · JSON: https://loisirs74.fr/api/lieu/parc-jardin-des-iris-annemasse.json
 
 ## Parc Jean Beauquis — Ambilly
 Juin-juillet-août : 7 h-22 h · avril-mai-septembre-octobre : 7 h-20 h · novembre à mars : 7 h-19 h

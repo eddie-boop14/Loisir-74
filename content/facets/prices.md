@@ -1,13 +1,13 @@
 ---
 facet: prices
 scope: haute-savoie-74
-lieux_documented: 421
-lieux_total: 423
-last_built: 2026-07-20
+lieux_documented: 424
+lieux_total: 426
+last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Tarifs — index transversal (423 lieux, 421 documentés)
+# Tarifs — index transversal (426 lieux, 424 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 À partir de 7 € (adulte)
@@ -761,6 +761,10 @@ Fiche: https://loisirs74.fr/jardin-parc-des-jardins-de-haute-savoie-la-balme-de-
 Adulte ~7-12 € · enfant tarif réduit (à confirmer 2026)
 Fiche: https://loisirs74.fr/jardin-pre-curieux-evian · JSON: https://loisirs74.fr/api/lieu/jardin-pre-curieux-evian.json
 
+## Les Jardins de Lornay — Lornay
+Tarif non communiqué en ligne — à confirmer sur place
+Fiche: https://loisirs74.fr/jardins-de-lornay · JSON: https://loisirs74.fr/api/lieu/jardins-de-lornay.json
+
 ## Les Jardins de l'Europe — Annecy
 Gratuit
 Fiche: https://loisirs74.fr/jardins-europe-annecy · JSON: https://loisirs74.fr/api/lieu/jardins-europe-annecy.json
@@ -1081,6 +1085,10 @@ Fiche: https://loisirs74.fr/musee-poterie-savoyarde-filliere · JSON: https://lo
 Entrée modique (~3-5 €) ou gratuit selon les périodes
 Fiche: https://loisirs74.fr/musee-prehistoire-geologie-sciez · JSON: https://loisirs74.fr/api/lieu/musee-prehistoire-geologie-sciez.json
 
+## Site de Morette — Musée de la Résistance et Mémorial de la Déportation — La Balme-de-Thuy
+Plein 3 € · réduit 2 € · gratuit -8 ans et scolaires (à confirmer)
+Fiche: https://loisirs74.fr/musee-resistance-morette-la-balme-de-thuy · JSON: https://loisirs74.fr/api/lieu/musee-resistance-morette-la-balme-de-thuy.json
+
 ## Musée du ski ancien — La Chapelle-d'Abondance
 4 € unique
 Fiche: https://loisirs74.fr/musee-ski-ancien-chapelle-abondance · JSON: https://loisirs74.fr/api/lieu/musee-ski-ancien-chapelle-abondance.json
@@ -1164,6 +1172,10 @@ Fiche: https://loisirs74.fr/parc-des-dronieres · JSON: https://loisirs74.fr/api
 ## Parc de l'Impérial — Annecy
 À partir de 0 EUR
 Fiche: https://loisirs74.fr/parc-imperial-annecy · JSON: https://loisirs74.fr/api/lieu/parc-imperial-annecy.json
+
+## Parc Jardin des Iris — Annemasse
+Gratuit · parc public en accès libre
+Fiche: https://loisirs74.fr/parc-jardin-des-iris-annemasse · JSON: https://loisirs74.fr/api/lieu/parc-jardin-des-iris-annemasse.json
 
 ## Parc Jean Beauquis — Ambilly
 À partir de 0 EUR

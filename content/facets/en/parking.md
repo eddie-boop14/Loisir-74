@@ -2,12 +2,12 @@
 facet: parking
 scope: haute-savoie-74
 lieux_documented: 246
-lieux_total: 423
-last_built: 2026-07-20
+lieux_total: 426
+last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Parking — index transversal (423 lieux, 246 documentés)
+# Parking — index transversal (426 lieux, 246 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Gratuit sur place

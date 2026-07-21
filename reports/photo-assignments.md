@@ -1,7 +1,7 @@
 # Phase 4 — photo assignments (gate artifact)
 
 **Date**: 2026-06-14
-**Total assignments**: 627 (one per (hub × slug) on the FR canonical hub)
+**Total assignments**: 628 (one per (hub × slug) on the FR canonical hub)
 
 ## Per-hub diversity
 
@@ -12,7 +12,7 @@
 | `cascades` | 19 | 19 | 1 |
 | `chateaux` | 26 | 22 | 4 |
 | `lacs-plages` | 31 | 26 | 3 |
-| `musees` | 50 | 28 | 9 |
+| `musees` | 51 | 28 | 10 |
 | `parcs-jardins` | 32 | 17 | 12 |
 | `points-de-vue` | 29 | 26 | 3 |
 | `que-faire` | 73 | 44 | 4 |
@@ -281,6 +281,7 @@
 | `musees` | `musee-paysan-un-site-paysalp-culture-patrimoine-viuz-en-sallaz` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
 | `musees` | `musee-poterie-savoyarde-filliere` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
 | `musees` | `musee-prehistoire-geologie-sciez` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
+| `musees` | `musee-resistance-morette-la-balme-de-thuy` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
 | `musees` | `musee-ski-ancien-chapelle-abondance` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
 | `musees` | `museum-des-papillons-et-insectes-faverges` | `patrimoine` | `generique-musee-moderne.jpg` | — | json hero (local) |
 | `musees` | `notre-histoire-musee-rumilly-rumilly` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
