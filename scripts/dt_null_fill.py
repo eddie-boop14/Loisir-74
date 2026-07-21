@@ -198,9 +198,12 @@ def write_report(strong, weak, n_cands, fiches, do_livecheck):
     return fillable
 
 
-def do_apply(strong, fiches):
+def do_apply(strong, fiches, min_maj=None):
     n = 0
     for row in strong:
+        # Freshness floor (HANDOFF: Eddie may hold pre-cutoff rows extra-safe).
+        if min_maj and (row["cand"]["maj"] or "") < min_maj:
+            continue
         fills = proposed_fills(row, fiches, True)
         if not fills:
             continue
@@ -237,12 +240,16 @@ def main():
     ap.add_argument("--report", action="store_true")
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--no-livecheck", action="store_true")
+    ap.add_argument("--min-maj", default=None,
+                    help="freshness floor YYYY-MM-DD; DT rows older than this are held")
     args = ap.parse_args()
     cands = load_candidates(args.candidates)
     fiches = load_fiches()
     strong, weak = match(cands, fiches)
     if args.apply:
-        print(f"APPLIED fills on {do_apply(strong, fiches)} fiche(s) (strong, nulls-only, live URLs).")
+        n = do_apply(strong, fiches, args.min_maj)
+        print(f"APPLIED fills on {n} fiche(s) (strong, nulls-only, live URLs"
+              + (f", maj >= {args.min_maj}" if args.min_maj else "") + ").")
     else:
         fillable = write_report(strong, weak, len(cands), fiches, not args.no_livecheck)
         print(f"REPORT -> {os.path.relpath(REPORT, ROOT)}")

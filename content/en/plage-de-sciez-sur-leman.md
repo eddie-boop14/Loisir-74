@@ -60,4 +60,4 @@ May–September (supervised swimming July–August)
 
 ## Official source
 
-https://ville-sciez.fr/port-de-plaisance/activites/plage/
+http://www.destination-leman.com/

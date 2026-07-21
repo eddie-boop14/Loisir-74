@@ -60,4 +60,4 @@ Mai – septembre (baignade surveillée juillet-août)
 
 ## Source officielle
 
-https://ville-sciez.fr/port-de-plaisance/activites/plage/
+http://www.destination-leman.com/
