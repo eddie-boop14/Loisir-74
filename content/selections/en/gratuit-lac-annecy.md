@@ -1,28 +1,28 @@
-# Free things to do around Lake Annecy
+# 無料で楽しむLac d'Annecy：ビーチ、遊歩道、チケット不要のスポット
 
-Touring the lake costs nothing when you know where to go: public beaches, viewpoints, trails and open heritage. Every entry below is a verified sheet whose free entry is a checked fact, not a promise.
+行き先を知っていれば、湖を一周してもお金はかかりません。無料の公共ビーチ、展望スポット、遊歩道、そして自由に入れる史跡。以下の各項目は検証済みの情報シートで、無料であることは約束ではなく確認された事実です。
 
-> Compiled selection: only places whose free entry is verified on the sheet (checked fact). Real photos ranked first. Updates automatically.
+> 自動集計したセレクション。無料であることが情報シートで検証された場所（確認済みの事実）のみを対象とします。実写の写真を優先。自動更新。
 
-- [Belvédère du Mont Baron](https://loisirs74.fr/en/belvedere-du-mont-baron) — Veyrier-du-Lac · [md](https://loisirs74.fr/content/en/belvedere-du-mont-baron.md)
-- [Cascade d'Angon](https://loisirs74.fr/en/cascade-d-angon) — Talloires-Montmin · [md](https://loisirs74.fr/content/en/cascade-d-angon.md)
-- [Jardins de l'Europe](https://loisirs74.fr/en/jardins-europe-annecy) — Annecy · [md](https://loisirs74.fr/content/en/jardins-europe-annecy.md)
-- [Mont Baron](https://loisirs74.fr/en/mont-baron) — Veyrier-du-Lac · [md](https://loisirs74.fr/content/en/mont-baron.md)
-- [Mont Veyrier](https://loisirs74.fr/en/mont-veyrier) — Annecy · [md](https://loisirs74.fr/content/en/mont-veyrier.md)
-- [Parc de l'Imperial](https://loisirs74.fr/en/parc-imperial-annecy) — Annecy · [md](https://loisirs74.fr/content/en/parc-imperial-annecy.md)
-- [Plage d'Albigny](https://loisirs74.fr/en/plage-albigny) — Annecy · [md](https://loisirs74.fr/content/en/plage-albigny.md)
-- [Plage des Marquisats](https://loisirs74.fr/en/plage-des-marquisats) — Annecy · [md](https://loisirs74.fr/content/en/plage-des-marquisats.md)
-- [Col de la Forclaz](https://loisirs74.fr/en/col-de-la-forclaz) — Talloires-Montmin · [md](https://loisirs74.fr/content/en/col-de-la-forclaz.md)
-- [Reedbed Trail](https://loisirs74.fr/en/sentier-des-roselieres) — Saint-Jorioz · [md](https://loisirs74.fr/content/en/sentier-des-roselieres.md)
-- [Parc Animalier La Grande Jeanne](https://loisirs74.fr/en/parc-animalier-grande-jeanne-annecy) — Annecy · [md](https://loisirs74.fr/content/en/parc-animalier-grande-jeanne-annecy.md)
-- [Bout-du-Lac d'Annecy Nature Reserve](https://loisirs74.fr/en/reserve-naturelle-bout-du-lac) — Doussard · [md](https://loisirs74.fr/content/en/reserve-naturelle-bout-du-lac.md)
-- [GR® de Pays Tour du Lac d'Annecy](https://loisirs74.fr/en/grp-tour-lac-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/en/grp-tour-lac-annecy-annecy.md)
-- [Plage d'Angon](https://loisirs74.fr/en/plage-d-angon-talloires) — Talloires-Montmin · [md](https://loisirs74.fr/content/en/plage-d-angon-talloires.md)
-- [Plage de Doussard](https://loisirs74.fr/en/plage-de-doussard) — Doussard · [md](https://loisirs74.fr/content/en/plage-de-doussard.md)
-- [Plage de Duingt](https://loisirs74.fr/en/plage-de-duingt) — Duingt · [md](https://loisirs74.fr/content/en/plage-de-duingt.md)
-- [Plage de La Brune](https://loisirs74.fr/en/plage-de-la-brune-veyrier) — Veyrier-du-Lac · [md](https://loisirs74.fr/content/en/plage-de-la-brune-veyrier.md)
-- [Plage de Sévrier](https://loisirs74.fr/en/plage-de-sevrier) — Sévrier · [md](https://loisirs74.fr/content/en/plage-de-sevrier.md)
-- [Plage de Talloires](https://loisirs74.fr/en/plage-de-talloires) — Talloires-Montmin · [md](https://loisirs74.fr/content/en/plage-de-talloires.md)
-- [Bout du Lac d'Annecy Discovery Trail](https://loisirs74.fr/en/sentier-bout-du-lac-doussard) — Doussard · [md](https://loisirs74.fr/content/en/sentier-bout-du-lac-doussard.md)
+- [Belvédère du Mont Baron](https://loisirs74.fr/ja/belvedere-du-mont-baron) — Veyrier-du-Lac · [md](https://loisirs74.fr/content/belvedere-du-mont-baron.md)
+- [Cascade d'Angon](https://loisirs74.fr/ja/cascade-d-angon) — Talloires-Montmin · [md](https://loisirs74.fr/content/cascade-d-angon.md)
+- [Les Jardins de l'Europe](https://loisirs74.fr/ja/jardins-europe-annecy) — Annecy · [md](https://loisirs74.fr/content/jardins-europe-annecy.md)
+- [Mont Baron](https://loisirs74.fr/ja/mont-baron) — Veyrier-du-Lac · [md](https://loisirs74.fr/content/mont-baron.md)
+- [Mont Veyrier](https://loisirs74.fr/ja/mont-veyrier) — Annecy · [md](https://loisirs74.fr/content/mont-veyrier.md)
+- [Parc de l'Impérial](https://loisirs74.fr/ja/parc-imperial-annecy) — Annecy · [md](https://loisirs74.fr/content/parc-imperial-annecy.md)
+- [Plage d'Albigny](https://loisirs74.fr/ja/plage-albigny) — Annecy · [md](https://loisirs74.fr/content/plage-albigny.md)
+- [Plage des Marquisats](https://loisirs74.fr/ja/plage-des-marquisats) — Annecy · [md](https://loisirs74.fr/content/plage-des-marquisats.md)
+- [Col de la Forclaz](https://loisirs74.fr/ja/col-de-la-forclaz) — Talloires-Montmin · [md](https://loisirs74.fr/content/col-de-la-forclaz.md)
+- [Sentier des Roselières](https://loisirs74.fr/ja/sentier-des-roselieres) — Saint-Jorioz · [md](https://loisirs74.fr/content/sentier-des-roselieres.md)
+- [Parc Animalier La Grande Jeanne](https://loisirs74.fr/ja/parc-animalier-grande-jeanne-annecy) — Annecy · [md](https://loisirs74.fr/content/parc-animalier-grande-jeanne-annecy.md)
+- [Réserve naturelle du Bout-du-Lac d'Annecy](https://loisirs74.fr/ja/reserve-naturelle-bout-du-lac) — Doussard · [md](https://loisirs74.fr/content/reserve-naturelle-bout-du-lac.md)
+- [GR® de Pays Tour du Lac d'Annecy](https://loisirs74.fr/ja/grp-tour-lac-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/grp-tour-lac-annecy-annecy.md)
+- [Plage d'Angon](https://loisirs74.fr/ja/plage-d-angon-talloires) — Talloires-Montmin · [md](https://loisirs74.fr/content/plage-d-angon-talloires.md)
+- [Plage de Doussard](https://loisirs74.fr/ja/plage-de-doussard) — Doussard · [md](https://loisirs74.fr/content/plage-de-doussard.md)
+- [Plage de Duingt](https://loisirs74.fr/ja/plage-de-duingt) — Duingt · [md](https://loisirs74.fr/content/plage-de-duingt.md)
+- [Plage de La Brune](https://loisirs74.fr/ja/plage-de-la-brune-veyrier) — Veyrier-du-Lac · [md](https://loisirs74.fr/content/plage-de-la-brune-veyrier.md)
+- [Plage de Sévrier](https://loisirs74.fr/ja/plage-de-sevrier) — Sévrier · [md](https://loisirs74.fr/content/plage-de-sevrier.md)
+- [Plage de Talloires](https://loisirs74.fr/ja/plage-de-talloires) — Talloires-Montmin · [md](https://loisirs74.fr/content/plage-de-talloires.md)
+- [Sentier pédagogique du Bout du Lac d'Annecy](https://loisirs74.fr/ja/sentier-bout-du-lac-doussard) — Doussard · [md](https://loisirs74.fr/content/sentier-bout-du-lac-doussard.md)
 
-Source: https://loisirs74.fr/en/what-to-do/free-things-lake-annecy/
+Source: https://loisirs74.fr/ja/que-faire/gratuit-lac-annecy/

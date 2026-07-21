@@ -1,24 +1,24 @@
-# Annecy for couples: walks, views and dates
+# カップルで楽しむAnnecy：散歩、パノラマ、二人のためのスポット
 
-The Venice of the Alps works beautifully as a couple: the Thiou quays, sunset viewpoints, cruises and gardens. Compiled from our basin sheets — views, heritage and lakeside calm.
+「アルプスのヴェネツィア」は二人での散策にぴったりです。Thiouの河岸、夕暮れの展望台、クルーズ、そして庭園。この地域の情報シートから編集した厳選 — パノラマ、文化遺産、水辺の穏やかなひととき。
 
-> Compiled selection: couple-friendly categories (viewpoints, gardens, cruises, heritage, outings) around the Annecy basin. Real photos ranked first. Updates automatically.
+> 編集した厳選：Annecy地域で二人のお出かけに向くカテゴリー（展望スポット、庭園、クルーズ、文化遺産、おでかけ）。実際の写真を優先。自動更新。
 
-- [Belvédère du Mont Baron](https://loisirs74.fr/en/belvedere-du-mont-baron) — Veyrier-du-Lac · [md](https://loisirs74.fr/content/en/belvedere-du-mont-baron.md)
-- [Jardins de l'Europe](https://loisirs74.fr/en/jardins-europe-annecy) — Annecy · [md](https://loisirs74.fr/content/en/jardins-europe-annecy.md)
-- [Mont Baron](https://loisirs74.fr/en/mont-baron) — Veyrier-du-Lac · [md](https://loisirs74.fr/content/en/mont-baron.md)
-- [Mont Veyrier](https://loisirs74.fr/en/mont-veyrier) — Annecy · [md](https://loisirs74.fr/content/en/mont-veyrier.md)
-- [Parc de l'Imperial](https://loisirs74.fr/en/parc-imperial-annecy) — Annecy · [md](https://loisirs74.fr/content/en/parc-imperial-annecy.md)
-- [Casino Impérial Palace Annecy](https://loisirs74.fr/en/casino-imperial-palace-annecy) — Annecy · [md](https://loisirs74.fr/content/en/casino-imperial-palace-annecy.md)
-- [Musée-Château d'Annecy](https://loisirs74.fr/en/musee-chateau-annecy) — Annecy · [md](https://loisirs74.fr/content/en/musee-chateau-annecy.md)
-- [Animated Film Museum](https://loisirs74.fr/en/musee-cinema-animation-annecy) — Annecy · [md](https://loisirs74.fr/content/en/musee-cinema-animation-annecy.md)
-- [Palais de l'Île](https://loisirs74.fr/en/palais-de-l-ile-annecy) — Annecy · [md](https://loisirs74.fr/content/en/palais-de-l-ile-annecy.md)
-- [Col de la Forclaz](https://loisirs74.fr/en/col-de-la-forclaz) — Talloires-Montmin · [md](https://loisirs74.fr/content/en/col-de-la-forclaz.md)
-- [Château de Menthon-Saint-Bernard](https://loisirs74.fr/en/chateau-de-menthon-saint-bernard) — Menthon-Saint-Bernard · [md](https://loisirs74.fr/content/en/chateau-de-menthon-saint-bernard.md)
-- [Bout-du-Lac d'Annecy Nature Reserve](https://loisirs74.fr/en/reserve-naturelle-bout-du-lac) — Doussard · [md](https://loisirs74.fr/content/en/reserve-naturelle-bout-du-lac.md)
-- [La Turbine sciences](https://loisirs74.fr/en/la-turbine-sciences-cran-gevrier) — Annecy · [md](https://loisirs74.fr/content/en/la-turbine-sciences-cran-gevrier.md)
-- [Compagnie des Bateaux du Lac d'Annecy](https://loisirs74.fr/en/croisiere-bateaux-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/en/croisiere-bateaux-annecy-annecy.md)
-- [Les 4 Nemours](https://loisirs74.fr/en/cinema-les-4-nemours-annecy) — Annecy · [md](https://loisirs74.fr/content/en/cinema-les-4-nemours-annecy.md)
-- [Megarama Annecy](https://loisirs74.fr/en/cinema-megarama-annecy) — Annecy · [md](https://loisirs74.fr/content/en/cinema-megarama-annecy.md)
+- [Belvédère du Mont Baron](https://loisirs74.fr/ja/belvedere-du-mont-baron) — Veyrier-du-Lac · [md](https://loisirs74.fr/content/belvedere-du-mont-baron.md)
+- [Les Jardins de l'Europe](https://loisirs74.fr/ja/jardins-europe-annecy) — Annecy · [md](https://loisirs74.fr/content/jardins-europe-annecy.md)
+- [Mont Baron](https://loisirs74.fr/ja/mont-baron) — Veyrier-du-Lac · [md](https://loisirs74.fr/content/mont-baron.md)
+- [Mont Veyrier](https://loisirs74.fr/ja/mont-veyrier) — Annecy · [md](https://loisirs74.fr/content/mont-veyrier.md)
+- [Parc de l'Impérial](https://loisirs74.fr/ja/parc-imperial-annecy) — Annecy · [md](https://loisirs74.fr/content/parc-imperial-annecy.md)
+- [Casino Impérial Palace Annecy](https://loisirs74.fr/ja/casino-imperial-palace-annecy) — Annecy · [md](https://loisirs74.fr/content/casino-imperial-palace-annecy.md)
+- [Musée-Château d'Annecy](https://loisirs74.fr/ja/musee-chateau-annecy) — Annecy · [md](https://loisirs74.fr/content/musee-chateau-annecy.md)
+- [Musée du cinéma d'animation](https://loisirs74.fr/ja/musee-cinema-animation-annecy) — Annecy · [md](https://loisirs74.fr/content/musee-cinema-animation-annecy.md)
+- [Palais de l'Île](https://loisirs74.fr/ja/palais-de-l-ile-annecy) — Annecy · [md](https://loisirs74.fr/content/palais-de-l-ile-annecy.md)
+- [Col de la Forclaz](https://loisirs74.fr/ja/col-de-la-forclaz) — Talloires-Montmin · [md](https://loisirs74.fr/content/col-de-la-forclaz.md)
+- [Château de Menthon-Saint-Bernard](https://loisirs74.fr/ja/chateau-de-menthon-saint-bernard) — Menthon-Saint-Bernard · [md](https://loisirs74.fr/content/chateau-de-menthon-saint-bernard.md)
+- [Réserve naturelle du Bout-du-Lac d'Annecy](https://loisirs74.fr/ja/reserve-naturelle-bout-du-lac) — Doussard · [md](https://loisirs74.fr/content/reserve-naturelle-bout-du-lac.md)
+- [La Turbine sciences](https://loisirs74.fr/ja/la-turbine-sciences-cran-gevrier) — Annecy · [md](https://loisirs74.fr/content/la-turbine-sciences-cran-gevrier.md)
+- [Compagnie des Bateaux du Lac d'Annecy](https://loisirs74.fr/ja/croisiere-bateaux-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/croisiere-bateaux-annecy-annecy.md)
+- [Les 4 Nemours](https://loisirs74.fr/ja/cinema-les-4-nemours-annecy) — Annecy · [md](https://loisirs74.fr/content/cinema-les-4-nemours-annecy.md)
+- [Megarama Annecy](https://loisirs74.fr/ja/cinema-megarama-annecy) — Annecy · [md](https://loisirs74.fr/content/cinema-megarama-annecy.md)
 
-Source: https://loisirs74.fr/en/what-to-do/annecy-for-couples/
+Source: https://loisirs74.fr/ja/que-faire/annecy-en-couple/

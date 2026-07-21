@@ -38,7 +38,7 @@ FACT_LABELS = {
     "stroller":    {"fr": "Poussette", "en": "Stroller", "de": "Kinderwagen", "it": "Passeggino", "es": "Carrito", "nl": "Kinderwagen"},
 }
 UI = {
-    "see_fiche":  {"fr": "Voir la fiche →", "en": "See details →", "de": "Zum Steckbrief →", "it": "Vedi la scheda →", "es": "Ver la ficha →", "nl": "Bekijk fiche →"},
+    "see_fiche":  {"fr": "Voir la fiche →", "en": "See details →", "de": "Zum Steckbrief →", "it": "Vedi la scheda →", "es": "Ver la ficha →", "nl": "Bekijk fiche →", "pl": "Zobacz szczegóły →", "pt": "Ver ficha →", "cs": "Zobrazit detail →", "ar": "عرض التفاصيل ←", "he": "לצפייה בפרטים ←", "ja": "詳細を見る →"},
     "voir_fiche": {"fr": "voir fiche", "en": "see details", "de": "siehe Steckbrief", "it": "vedi scheda", "es": "ver ficha", "nl": "zie fiche"},
     "faq":        {"fr": "Questions fréquentes", "en": "Frequently asked questions", "de": "Häufige Fragen", "it": "Domande frequenti", "es": "Preguntas frecuentes", "nl": "Veelgestelde vragen"},
     "verified":   {"fr": "📍 vérifiée", "en": "📍 verified", "de": "📍 geprüft", "it": "📍 verificata", "es": "📍 verificada", "nl": "📍 geverifieerd"},
@@ -351,14 +351,14 @@ REGISTRY2 = os.path.join(ROOT, "data", "intent-registry.json")
 SELECT_MD_DIR = os.path.join(ROOT, "content", "selections")
 
 CHIP_LABELS = {
-    "free":    {"fr": "Gratuit", "en": "Free"},
-    "pmr":     {"fr": "Accès PMR", "en": "Wheelchair access"},
-    "parking": {"fr": "Parking", "en": "Parking"},
-    "winter":  {"fr": "Hiver ✓", "en": "Winter ✓"},
+    "free":    {"fr": "Gratuit", "en": "Free", "de": "Kostenlos", "it": "Gratis", "es": "Gratis", "nl": "Gratis", "pl": "Bezpłatnie", "pt": "Gratuito", "cs": "Zdarma", "ar": "مجاني", "he": "חינם", "ja": "無料"},
+    "pmr":     {"fr": "Accès PMR", "en": "Wheelchair access", "de": "Barrierefrei", "it": "Accessibile", "es": "Accesible", "nl": "Rolstoeltoegankelijk", "pl": "Dostęp dla wózków", "pt": "Acesso para cadeira de rodas", "cs": "Bezbariérový přístup", "ar": "وصول الكراسي المتحركة", "he": "נגישות לכיסא גלגלים", "ja": "車椅子アクセス"},
+    "parking": {"fr": "Parking", "en": "Parking", "de": "Parkplatz", "it": "Parcheggio", "es": "Aparcamiento", "nl": "Parkeren", "pl": "Parking", "pt": "Estacionamento", "cs": "Parkování", "ar": "موقف السيارات", "he": "חניה", "ja": "駐車場"},
+    "winter":  {"fr": "Hiver ✓", "en": "Winter ✓", "de": "Winter ✓", "it": "Inverno ✓", "es": "Invierno ✓", "nl": "Winter ✓", "pl": "Zima ✓", "pt": "Inverno ✓", "cs": "Zima ✓", "ar": "شتاء ✓", "he": "חורף ✓", "ja": "冬 ✓"},
 }
 UI2 = {
-    "criteria": {"fr": "Comment cette sélection est faite", "en": "How this selection is made"},
-    "members":  {"fr": "La sélection", "en": "The selection"},
+    "criteria": {"fr": "Comment cette sélection est faite", "en": "How this selection is made", "de": "Wie diese Auswahl entsteht", "it": "Come nasce questa selezione", "es": "Cómo se hace esta selección", "nl": "Hoe deze selectie tot stand komt", "pl": "Jak powstaje ten wybór", "pt": "Como é feita esta seleção", "cs": "Jak vzniká tento výběr", "ar": "كيف يتم إعداد هذا الاختيار", "he": "כיצד נעשית בחירה זו", "ja": "このセレクションの選び方"},
+    "members":  {"fr": "La sélection", "en": "The selection", "de": "Die Auswahl", "it": "La selezione", "es": "La selección", "nl": "De selectie", "pl": "Wybór", "pt": "A seleção", "cs": "Výběr", "ar": "المختارات", "he": "המבחר", "ja": "セレクション"},
 }
 _DUR_RE = _re.compile(r"(?:(\d+)\s*h(?:\s*(\d{1,2}))?)|(?:(\d{1,3})\s*min)", _re.I)
 

@@ -1,28 +1,28 @@
-# Accessible Haute-Savoie: verified wheelchair-friendly places
+# アクセシブルなHaute-Savoie：検証済みのバリアフリースポット
 
-Accessibility is not guessed, it is verified: every place below carries a checked accessibility status on our sheets — accessible or partially accessible, with detail where it exists. That is this page's entry criterion.
+アクセシビリティは推測するものではなく、検証するものです。以下の各スポットには、私たちの情報シートで確認されたバリアフリー状況が記載されています — アクセス可能、または部分的にアクセス可能、詳細があればそれも。これがこのページの掲載基準です。
 
-> Entry criterion: verified accessibility status on the sheet (accessible or partially accessible). Ranking: real photo, free entry, fact richness. Updates automatically.
+> 掲載基準：情報シート上で検証されたバリアフリー状況（アクセス可能または部分的にアクセス可能）。順位付け：実際の写真、無料であること、事実の豊富さ。自動更新。
 
-- [Plaine-Joux Paragliding Takeoff Area](https://loisirs74.fr/en/aire-de-decollage-parapente-plaine-joux) — Passy · [md](https://loisirs74.fr/content/en/aire-de-decollage-parapente-plaine-joux.md)
-- [Lac aux Dames Leisure Park](https://loisirs74.fr/en/base-de-loisirs-du-lac-aux-dames) — Samoëns · [md](https://loisirs74.fr/content/en/base-de-loisirs-du-lac-aux-dames.md)
-- [Base de loisirs du Lac des Îles](https://loisirs74.fr/en/base-de-loisirs-du-lac-des-iles) — Passy · [md](https://loisirs74.fr/content/en/base-de-loisirs-du-lac-des-iles.md)
-- [Domaine de Rovorée-La Châtaignière](https://loisirs74.fr/en/domaine-de-rovoree-la-chataigniere) — Yvoire · [md](https://loisirs74.fr/content/en/domaine-de-rovoree-la-chataigniere.md)
-- [Domaine du Tornet](https://loisirs74.fr/en/domaine-du-tornet) — La Balme-de-Sillingy · [md](https://loisirs74.fr/content/en/domaine-du-tornet.md)
-- [Lac de Vallon](https://loisirs74.fr/en/lac-de-vallon) — Bellevaux · [md](https://loisirs74.fr/content/en/lac-de-vallon.md)
-- [Dronières Lake](https://loisirs74.fr/en/lac-des-dronieres) — Cruseilles · [md](https://loisirs74.fr/content/en/lac-des-dronieres.md)
-- [Plage d'Albigny](https://loisirs74.fr/en/plage-albigny) — Annecy · [md](https://loisirs74.fr/content/en/plage-albigny.md)
-- [Plage d'Excenevex](https://loisirs74.fr/en/plage-d-excenevex) — Excenevex · [md](https://loisirs74.fr/content/en/plage-d-excenevex.md)
-- [Plage de la Pinède](https://loisirs74.fr/en/plage-de-la-pinede) — Thonon-les-Bains · [md](https://loisirs74.fr/content/en/plage-de-la-pinede.md)
-- [Plage des Marquisats](https://loisirs74.fr/en/plage-des-marquisats) — Annecy · [md](https://loisirs74.fr/content/en/plage-des-marquisats.md)
-- [Villa du Parc](https://loisirs74.fr/en/villa-du-parc-annemasse) — Annemasse · [md](https://loisirs74.fr/content/en/villa-du-parc-annemasse.md)
-- [Reedbed Trail](https://loisirs74.fr/en/sentier-des-roselieres) — Saint-Jorioz · [md](https://loisirs74.fr/content/en/sentier-des-roselieres.md)
-- [Bout-du-Lac d'Annecy Nature Reserve](https://loisirs74.fr/en/reserve-naturelle-bout-du-lac) — Doussard · [md](https://loisirs74.fr/content/en/reserve-naturelle-bout-du-lac.md)
-- [Marais de Poisy](https://loisirs74.fr/en/marais-de-poisy) — Poisy · [md](https://loisirs74.fr/content/en/marais-de-poisy.md)
-- [Casino Impérial Palace Annecy](https://loisirs74.fr/en/casino-imperial-palace-annecy) — Annecy · [md](https://loisirs74.fr/content/en/casino-imperial-palace-annecy.md)
-- [Château de Clermont](https://loisirs74.fr/en/chateau-clermont-genevois) — Clermont · [md](https://loisirs74.fr/content/en/chateau-clermont-genevois.md)
-- [Château des Rubins](https://loisirs74.fr/en/chateau-des-rubins-sallanches) — Sallanches · [md](https://loisirs74.fr/content/en/chateau-des-rubins-sallanches.md)
-- [Château de Montrottier](https://loisirs74.fr/en/chateau-montrottier-lovagny) — Lovagny · [md](https://loisirs74.fr/content/en/chateau-montrottier-lovagny.md)
-- [CGN Yvoire Stop](https://loisirs74.fr/en/croisiere-cgn-yvoire) — Yvoire · [md](https://loisirs74.fr/content/en/croisiere-cgn-yvoire.md)
+- [Aire de décollage parapente de Plaine-Joux](https://loisirs74.fr/ja/aire-de-decollage-parapente-plaine-joux) — Passy · [md](https://loisirs74.fr/content/aire-de-decollage-parapente-plaine-joux.md)
+- [Base de loisirs du Lac aux Dames](https://loisirs74.fr/ja/base-de-loisirs-du-lac-aux-dames) — Samoëns · [md](https://loisirs74.fr/content/base-de-loisirs-du-lac-aux-dames.md)
+- [Base de loisirs du Lac des Îles](https://loisirs74.fr/ja/base-de-loisirs-du-lac-des-iles) — Passy · [md](https://loisirs74.fr/content/base-de-loisirs-du-lac-des-iles.md)
+- [Domaine de Rovorée-La Châtaignière](https://loisirs74.fr/ja/domaine-de-rovoree-la-chataigniere) — Yvoire · [md](https://loisirs74.fr/content/domaine-de-rovoree-la-chataigniere.md)
+- [Domaine du Tornet](https://loisirs74.fr/ja/domaine-du-tornet) — La Balme-de-Sillingy · [md](https://loisirs74.fr/content/domaine-du-tornet.md)
+- [Lac de Vallon](https://loisirs74.fr/ja/lac-de-vallon) — Bellevaux · [md](https://loisirs74.fr/content/lac-de-vallon.md)
+- [Lac des Dronières](https://loisirs74.fr/ja/lac-des-dronieres) — Cruseilles · [md](https://loisirs74.fr/content/lac-des-dronieres.md)
+- [Plage d'Albigny](https://loisirs74.fr/ja/plage-albigny) — Annecy · [md](https://loisirs74.fr/content/plage-albigny.md)
+- [Plage d'Excenevex](https://loisirs74.fr/ja/plage-d-excenevex) — Excenevex · [md](https://loisirs74.fr/content/plage-d-excenevex.md)
+- [Plage de la Pinède](https://loisirs74.fr/ja/plage-de-la-pinede) — Thonon-les-Bains · [md](https://loisirs74.fr/content/plage-de-la-pinede.md)
+- [Plage des Marquisats](https://loisirs74.fr/ja/plage-des-marquisats) — Annecy · [md](https://loisirs74.fr/content/plage-des-marquisats.md)
+- [Villa du Parc](https://loisirs74.fr/ja/villa-du-parc-annemasse) — Annemasse · [md](https://loisirs74.fr/content/villa-du-parc-annemasse.md)
+- [Sentier des Roselières](https://loisirs74.fr/ja/sentier-des-roselieres) — Saint-Jorioz · [md](https://loisirs74.fr/content/sentier-des-roselieres.md)
+- [Réserve naturelle du Bout-du-Lac d'Annecy](https://loisirs74.fr/ja/reserve-naturelle-bout-du-lac) — Doussard · [md](https://loisirs74.fr/content/reserve-naturelle-bout-du-lac.md)
+- [Marais de Poisy](https://loisirs74.fr/ja/marais-de-poisy) — Poisy · [md](https://loisirs74.fr/content/marais-de-poisy.md)
+- [Casino Impérial Palace Annecy](https://loisirs74.fr/ja/casino-imperial-palace-annecy) — Annecy · [md](https://loisirs74.fr/content/casino-imperial-palace-annecy.md)
+- [Château de Clermont](https://loisirs74.fr/ja/chateau-clermont-genevois) — Clermont · [md](https://loisirs74.fr/content/chateau-clermont-genevois.md)
+- [Château des Rubins](https://loisirs74.fr/ja/chateau-des-rubins-sallanches) — Sallanches · [md](https://loisirs74.fr/content/chateau-des-rubins-sallanches.md)
+- [Château de Montrottier](https://loisirs74.fr/ja/chateau-montrottier-lovagny) — Lovagny · [md](https://loisirs74.fr/content/chateau-montrottier-lovagny.md)
+- [CGN escale Yvoire](https://loisirs74.fr/ja/croisiere-cgn-yvoire) — Yvoire · [md](https://loisirs74.fr/content/croisiere-cgn-yvoire.md)
 
-Source: https://loisirs74.fr/en/what-to-do/wheelchair-accessible-haute-savoie/
+Source: https://loisirs74.fr/ja/que-faire/accessible-pmr-haute-savoie/

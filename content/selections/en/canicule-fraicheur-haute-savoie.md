@@ -1,28 +1,28 @@
-# Heatwave in Haute-Savoie: where to cool down
+# Haute-Savoieの猛暑：涼を求めてどこへ？
 
-When the valley swelters, Haute-Savoie has escape routes: shaded waterfalls, gorges, mountain lakes and caves where the temperature drops ten degrees. Compiled from our sheets — water and shade, verified.
+谷が暑さにあえぐとき、Haute-Savoieには逃げ場があります。切り立った滝、渓谷、山の湖、そして気温が10度下がる洞窟。私たちの情報シートから編集した厳選 — 水と日陰は検証済みです。
 
-> Compiled selection: cool-air categories (waterfalls, gorges, lakes, beaches, pools) and caves identified on our sheets. Free entry and real photos ranked first. Updates automatically.
+> 編集した厳選：私たちの情報シートで特定した「涼」のカテゴリー（滝、渓谷、湖、ビーチ、プール）と洞窟。無料であることと実際の写真を優先。自動更新。
 
-- [Cascade d'Angon](https://loisirs74.fr/en/cascade-d-angon) — Talloires-Montmin · [md](https://loisirs74.fr/content/en/cascade-d-angon.md)
-- [Cascade de Chedde](https://loisirs74.fr/en/cascade-de-chedde) — Passy · [md](https://loisirs74.fr/content/en/cascade-de-chedde.md)
-- [Cascade de Doran](https://loisirs74.fr/en/cascade-de-doran) — Sallanches · [md](https://loisirs74.fr/content/en/cascade-de-doran.md)
-- [Cascade de l'Arpenaz](https://loisirs74.fr/en/cascade-de-l-arpenaz) — Sallanches · [md](https://loisirs74.fr/content/en/cascade-de-l-arpenaz.md)
-- [Cascade de la Belle au Bois](https://loisirs74.fr/en/cascade-de-la-belle-au-bois) — Megève · [md](https://loisirs74.fr/content/en/cascade-de-la-belle-au-bois.md)
-- [Cascade de la Diomaz](https://loisirs74.fr/en/cascade-de-la-diomaz) — Bellevaux · [md](https://loisirs74.fr/content/en/cascade-de-la-diomaz.md)
-- [Cascade de Nyon](https://loisirs74.fr/en/cascade-de-nyon) — Morzine · [md](https://loisirs74.fr/content/en/cascade-de-nyon.md)
-- [Cascade des Brochaux](https://loisirs74.fr/en/cascade-des-brochaux) — Montriond · [md](https://loisirs74.fr/content/en/cascade-des-brochaux.md)
-- [Cascade des Fours](https://loisirs74.fr/en/cascade-des-fours) — Sallanches · [md](https://loisirs74.fr/content/en/cascade-des-fours.md)
-- [Cascade du Chinaillon](https://loisirs74.fr/en/cascade-du-chinaillon) — Le Grand-Bornand · [md](https://loisirs74.fr/content/en/cascade-du-chinaillon.md)
-- [Cascade du Dard](https://loisirs74.fr/en/cascade-du-dard) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/en/cascade-du-dard.md)
-- [Cascade du Rouget](https://loisirs74.fr/en/cascade-du-rouget) — Sixt-Fer-à-Cheval · [md](https://loisirs74.fr/content/en/cascade-du-rouget.md)
-- [Cirque du Fer-à-Cheval](https://loisirs74.fr/en/cirque-du-fer-a-cheval) — Sixt-Fer-à-Cheval · [md](https://loisirs74.fr/content/en/cirque-du-fer-a-cheval.md)
-- [Lac Bénit](https://loisirs74.fr/en/lac-benit) — Mont-Saxonnex · [md](https://loisirs74.fr/content/en/lac-benit.md)
-- [Lac Blanc](https://loisirs74.fr/en/lac-blanc) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/en/lac-blanc.md)
-- [Lac Cornu](https://loisirs74.fr/en/lac-cornu) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/en/lac-cornu.md)
-- [Lac de Passy](https://loisirs74.fr/en/lac-de-passy) — Passy · [md](https://loisirs74.fr/content/en/lac-de-passy.md)
-- [Lac de Vallon](https://loisirs74.fr/en/lac-de-vallon) — Bellevaux · [md](https://loisirs74.fr/content/en/lac-de-vallon.md)
-- [Lac des Confins](https://loisirs74.fr/en/lac-des-confins) — La Clusaz · [md](https://loisirs74.fr/content/en/lac-des-confins.md)
-- [Dronières Lake](https://loisirs74.fr/en/lac-des-dronieres) — Cruseilles · [md](https://loisirs74.fr/content/en/lac-des-dronieres.md)
+- [Cascade d'Angon](https://loisirs74.fr/ja/cascade-d-angon) — Talloires-Montmin · [md](https://loisirs74.fr/content/cascade-d-angon.md)
+- [Cascade de Chedde](https://loisirs74.fr/ja/cascade-de-chedde) — Passy · [md](https://loisirs74.fr/content/cascade-de-chedde.md)
+- [Cascade de Doran](https://loisirs74.fr/ja/cascade-de-doran) — Sallanches · [md](https://loisirs74.fr/content/cascade-de-doran.md)
+- [Cascade de l'Arpenaz](https://loisirs74.fr/ja/cascade-de-l-arpenaz) — Sallanches · [md](https://loisirs74.fr/content/cascade-de-l-arpenaz.md)
+- [Cascade de la Belle au Bois](https://loisirs74.fr/ja/cascade-de-la-belle-au-bois) — Megève · [md](https://loisirs74.fr/content/cascade-de-la-belle-au-bois.md)
+- [Cascade de la Diomaz](https://loisirs74.fr/ja/cascade-de-la-diomaz) — Bellevaux · [md](https://loisirs74.fr/content/cascade-de-la-diomaz.md)
+- [Cascade de Nyon](https://loisirs74.fr/ja/cascade-de-nyon) — Morzine · [md](https://loisirs74.fr/content/cascade-de-nyon.md)
+- [Cascade des Brochaux](https://loisirs74.fr/ja/cascade-des-brochaux) — Montriond · [md](https://loisirs74.fr/content/cascade-des-brochaux.md)
+- [Cascade des Fours](https://loisirs74.fr/ja/cascade-des-fours) — Sallanches · [md](https://loisirs74.fr/content/cascade-des-fours.md)
+- [Cascade du Chinaillon](https://loisirs74.fr/ja/cascade-du-chinaillon) — Le Grand-Bornand · [md](https://loisirs74.fr/content/cascade-du-chinaillon.md)
+- [Cascade du Dard](https://loisirs74.fr/ja/cascade-du-dard) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/cascade-du-dard.md)
+- [Cascade du Rouget](https://loisirs74.fr/ja/cascade-du-rouget) — Sixt-Fer-à-Cheval · [md](https://loisirs74.fr/content/cascade-du-rouget.md)
+- [Cirque du Fer-à-Cheval](https://loisirs74.fr/ja/cirque-du-fer-a-cheval) — Sixt-Fer-à-Cheval · [md](https://loisirs74.fr/content/cirque-du-fer-a-cheval.md)
+- [Lac Bénit](https://loisirs74.fr/ja/lac-benit) — Mont-Saxonnex · [md](https://loisirs74.fr/content/lac-benit.md)
+- [Lac Blanc](https://loisirs74.fr/ja/lac-blanc) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/lac-blanc.md)
+- [Lac Cornu](https://loisirs74.fr/ja/lac-cornu) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/lac-cornu.md)
+- [Lac de Passy](https://loisirs74.fr/ja/lac-de-passy) — Passy · [md](https://loisirs74.fr/content/lac-de-passy.md)
+- [Lac de Vallon](https://loisirs74.fr/ja/lac-de-vallon) — Bellevaux · [md](https://loisirs74.fr/content/lac-de-vallon.md)
+- [Lac des Confins](https://loisirs74.fr/ja/lac-des-confins) — La Clusaz · [md](https://loisirs74.fr/content/lac-des-confins.md)
+- [Lac des Dronières](https://loisirs74.fr/ja/lac-des-dronieres) — Cruseilles · [md](https://loisirs74.fr/content/lac-des-dronieres.md)
 
-Source: https://loisirs74.fr/en/what-to-do/heatwave-cool-spots-haute-savoie/
+Source: https://loisirs74.fr/ja/que-faire/canicule-ou-trouver-la-fraicheur/
