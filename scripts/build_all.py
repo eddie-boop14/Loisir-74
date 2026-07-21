@@ -463,8 +463,13 @@ def main():
     run("rebuild catalog index", rebuild_catalog_index)
     run("regenerate hubs + homepage nav", rebuild_hubs)
     run("render commune pages + reciprocal backlinks", rebuild_communes)
-    run("render intent hubs (registry-driven)", rebuild_intent_hubs)
     run("render facts-first full trees (published facts langs: pl)", rebuild_fulltree_langs)
+    # Intent hubs render AFTER the facts-first trees: build_fulltree_lang
+    # clean-slates each facts-lang subtree (shutil.rmtree), so intent pages
+    # written into /pl/ /ar/ … must come afterwards or they'd be wiped. Running
+    # last also lets the que-faire-index + category-hub link injection target
+    # the freshly built localized hubs.
+    run("render intent hubs (registry-driven)", rebuild_intent_hubs)
     run("placement gate vs baseline", placement_gate)
     run("card-diff gate vs snapshot", card_diff_gate)
     run("reachability gate (strict)", reachability_gate)

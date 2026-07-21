@@ -21,7 +21,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
-from build_hubs import hub_locale_map, HUB_DISPLAY  # noqa: E402
+from build_hubs import hub_locale_map, HUB_DISPLAY, HUB_SLUGS_FACTS  # noqa: E402
 import locales  # noqa: E402
 
 REGISTRY = os.path.join(ROOT, "data", "intent-hubs.json")
@@ -463,9 +463,23 @@ def compute_membership(fiches=None):
     return out, fiches
 
 
+def _hub_dir(hub, lang):
+    """Localized directory for a hub in this lang, resolving BOTH renderer lanes:
+    prose langs via hub_locale_map (fr/en/de/it/es/nl), facts langs via
+    HUB_SLUGS_FACTS (pl→co-robic, cs→co-delat, pt→o-que-fazer…). ar/he/ja aren't
+    in either map → FR-canonical dir (their subtrees use the FR slugs), which is
+    exactly where build_fulltree_lang renders them. This keeps the intent pages
+    under the SAME dir as the localized que-faire index (no path mismatch/404)."""
+    if lang == "fr":
+        return hub
+    return (hub_locale_map(hub).get(lang)
+            or (HUB_SLUGS_FACTS.get(lang, {}) or {}).get(hub)
+            or hub)
+
+
 def _qf_prefix(lang):
     """Localized que-faire dir for this lang (fr: que-faire, en: what-to-do…)."""
-    return "que-faire" if lang == "fr" else hub_locale_map("que-faire").get(lang, "que-faire")
+    return _hub_dir("que-faire", lang)
 
 
 def intent_page_url(entry, lang):
@@ -588,7 +602,7 @@ def _inject_hub_bestof(entry, lang):
     anchor = entry.get("hub_anchor")
     if not anchor:
         return
-    hub_dir = anchor if lang == "fr" else (hub_locale_map(anchor).get(lang) or anchor)
+    hub_dir = _hub_dir(anchor, lang)
     path = os.path.join(ROOT, hub_dir, "index.html") if lang == "fr" \
         else os.path.join(ROOT, lang, hub_dir, "index.html")
     if not os.path.exists(path):
