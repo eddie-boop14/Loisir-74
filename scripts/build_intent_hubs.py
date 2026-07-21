@@ -45,6 +45,7 @@ UI = {
     "also":       {"fr": "À lire aussi", "en": "See also", "de": "Siehe auch", "it": "Da leggere anche", "es": "Ver también", "nl": "Zie ook"},
     "guides":     {"fr": "Les guides par lac", "en": "Guides by lake", "de": "Guides nach See", "it": "Guide per lago", "es": "Guías por lago", "nl": "Gidsen per meer"},
     "see_guide":  {"fr": "Voir le guide →", "en": "See the guide →", "de": "Zum Guide →", "it": "Vedi la guida →", "es": "Ver la guía →", "nl": "Bekijk de gids →"},
+    "our_selection": {"fr": "Notre sélection", "en": "Our selection", "de": "Unsere Auswahl", "it": "La nostra selezione", "es": "Nuestra selección", "nl": "Onze selectie", "pl": "Nasz wybór", "pt": "A nossa seleção", "cs": "Náš výběr", "ar": "مختاراتنا", "he": "הבחירה שלנו", "ja": "厳選"},
 }
 
 # Populated by main() so render_hub can resolve linked_hubs by slug.
@@ -576,6 +577,36 @@ def _write_select_md(entry, lang, fiches):
 
 
 MARK2_A, MARK2_B = "<!--intent-pages:start-->", "<!--intent-pages:end-->"
+MARK3_A, MARK3_B = "<!--hub-bestof:start-->", "<!--hub-bestof:end-->"
+
+
+def _inject_hub_bestof(entry, lang):
+    """Reachability from CATEGORY hubs: a best-of page with a natural hub home
+    (registry `hub_anchor`, e.g. plus-belles-cascades → cascades) gets a callout
+    injected into that hub, so a cascades visitor reaches the ranked selection.
+    Localized hub dir per lang; facts langs fall back to the FR-canonical dir."""
+    anchor = entry.get("hub_anchor")
+    if not anchor:
+        return
+    hub_dir = anchor if lang == "fr" else (hub_locale_map(anchor).get(lang) or anchor)
+    path = os.path.join(ROOT, hub_dir, "index.html") if lang == "fr" \
+        else os.path.join(ROOT, lang, hub_dir, "index.html")
+    if not os.path.exists(path):
+        return
+    html = open(path, encoding="utf-8").read()
+    html = _re.sub(r"\s*" + _re.escape(MARK3_A) + r".*?" + _re.escape(MARK3_B), "", html, flags=_re.S)
+    label = esc(L(UI["our_selection"], lang))
+    title = esc(entry["title"][lang])
+    block = (MARK3_A
+             + '<section class="hub-bestof" style="max-width:1080px;margin:14px auto 0;padding:0 18px">'
+             + f'<a href="{intent_page_url(entry, lang)}" style="display:block;background:#eef4f2;'
+             'border:1px solid #d6e6e2;border-radius:12px;padding:12px 16px;color:#1F6E78;'
+             f'font-weight:600;text-decoration:none">★ {label} — {title} →</a></section>' + MARK3_B)
+    if "<main>" in html:
+        html = html.replace("<main>", block + "\n<main>", 1)
+    else:
+        html = html.replace("</body>", block + "\n</body>", 1)
+    open(path, "w", encoding="utf-8").write(html)
 
 
 def _inject_qf_links(pages, lang):
@@ -616,10 +647,18 @@ def build_intent_pages():
             open(out, "w", encoding="utf-8").write(html)
             _write_select_md(entry, lang, fiches)
             written += 1
-    for lang in ("fr", "en"):
+    # Reachability injection — derive langs from what actually built (no
+    # hardcoded ("fr","en") literal that strands new languages, the "line 40"
+    # class of bug). A lang is wired if it has ≥1 buildable page.
+    all_langs = sorted({l for e in membership.values() for l in e["title"]})
+    for lang in all_langs:
         buildable = [e for e in membership.values() if len(e["members"]) >= 6
-                     and e["lead"].get(lang) and e["criteria_note"].get(lang)]
-        _inject_qf_links(buildable, lang)
+                     and e["title"].get(lang) and e["lead"].get(lang) and e["criteria_note"].get(lang)]
+        if not buildable:
+            continue
+        _inject_qf_links(buildable, lang)          # que-faire INDEX → every page
+        for e in buildable:
+            _inject_hub_bestof(e, lang)            # category HUB → its best-of page
     print(f"build_intent_pages: {written} page(s) written; "
           f"skipped(min_items<6): {', '.join(skipped) or 'none'}")
 
