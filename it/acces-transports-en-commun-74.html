@@ -41,7 +41,28 @@ h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin:26px 0 10p
 .q{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0}
 .q summary{font-weight:600;cursor:pointer}.q p{color:var(--ink2);margin:8px 0 2px}
 .note{font-size:12px;color:var(--ink2);margin-top:8px}
-footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--ink2);text-align:center}</style></head><body><div class="wrap">
+.topbar{position:sticky;top:0;z-index:1000;background:var(--cream);border-bottom:1px solid var(--line);padding:8px 18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.topbar .brand{font-weight:800;color:var(--teal);text-decoration:none;white-space:nowrap}
+.crumbs{font-size:13px;color:#6b7a78}
+.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:center}
+.crumbs li{display:flex;align-items:center}
+.crumbs li+li::before{content:"\203A";margin-inline:6px;color:var(--ink2)}
+[dir=rtl] .crumbs li+li::before{content:"\2039"}
+.crumbs a{color:var(--teal2);text-decoration:none}.crumbs a:hover{text-decoration:underline}
+.crumbs [aria-current=page]{color:var(--ink2)}
+@media(max-width:520px){.crumbs{font-size:12px}}
+.keepgoing{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:22px 0}
+.keepgoing h2{margin:0 0 10px;font-size:16px;color:var(--teal);text-transform:none;letter-spacing:0}
+.keepgoing a{display:inline-block;margin:3px 10px 3px 0;color:var(--teal2);font-weight:600;text-decoration:none}
+.keepgoing a.up{display:block;margin:6px 0}
+footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--ink2);text-align:center}
+footer.site{text-align:start}
+.foot-grid{display:flex;flex-wrap:wrap;gap:24px 40px;margin-bottom:14px}
+.foot-col h4{margin:0 0 6px;font-size:13px;color:var(--teal);text-transform:none;letter-spacing:0}
+.foot-col ul{list-style:none;margin:0;padding:0}
+.foot-col li{margin:3px 0}
+.foot-col a{color:var(--teal2);text-decoration:none;font-size:13px}.foot-col a:hover{text-decoration:underline}
+.foot-bottom{border-top:1px solid var(--line);padding-top:10px;color:var(--ink2)}</style></head><body><div class="wrap">
 
 <h1>Bus, treno, battello: gli accessi documentati, luogo per luogo</h1>
 <div class="answer">Molti siti dell&#x27;Haute-Savoie si raggiungono senza auto: linee di bus attorno al Lac d&#x27;Annecy e al Léman, stazioni ferroviarie del Faucigny e della valle di Chamonix-Mont-Blanc, navette stagionali delle stazioni. Questa pagina elenca, luogo per luogo, l&#x27;informazione sui trasporti così come figura su ogni scheda — testo verificato, identico. I luoghi la cui scheda non documenta un collegamento non compaiono qui.</div>

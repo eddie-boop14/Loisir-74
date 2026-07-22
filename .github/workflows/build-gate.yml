@@ -135,6 +135,10 @@ jobs:
         # after build_all so the hub pages have been rendered
         run: python3 scripts/gate_intent_hubs.py
 
+      - name: Intent-nav gate (outbound nav + breadcrumb + placement, all locales)
+        # after build_all so the intent pages + hub injections are rendered
+        run: python3 scripts/gate_intent_nav.py
+
       - name: Baignade-cluster gate (L'essentiel + Plages voisines mesh)
         run: python3 scripts/gate_baignade_cluster.py
 

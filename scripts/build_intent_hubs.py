@@ -48,6 +48,29 @@ UI = {
     "our_selection": {"fr": "Notre sélection", "en": "Our selection", "de": "Unsere Auswahl", "it": "La nostra selezione", "es": "Nuestra selección", "nl": "Onze selectie", "pl": "Nasz wybór", "pt": "A nossa seleção", "cs": "Náš výběr", "ar": "مختاراتنا", "he": "הבחירה שלנו", "ja": "厳選"},
 }
 
+# Outbound-navigation strings — ALL 12 published locales (both templates reuse
+# these; a missing token fails gate_intent_nav, no silent FR fallback).
+NAV_UI = {
+    "home":           {"fr": "Accueil", "en": "Home", "de": "Startseite", "it": "Home", "es": "Inicio", "nl": "Home", "pl": "Strona główna", "pt": "Início", "cs": "Domů", "ar": "الرئيسية", "he": "בית", "ja": "ホーム"},
+    "back_to":        {"fr": "Retour à", "en": "Back to", "de": "Zurück zu", "it": "Torna a", "es": "Volver a", "nl": "Terug naar", "pl": "Powrót do", "pt": "Voltar a", "cs": "Zpět na", "ar": "العودة إلى", "he": "חזרה אל", "ja": "戻る："},
+    "keep_exploring": {"fr": "Continuer l'exploration", "en": "Keep exploring", "de": "Weiter erkunden", "it": "Continua a esplorare", "es": "Seguir explorando", "nl": "Verder verkennen", "pl": "Odkrywaj dalej", "pt": "Continuar a explorar", "cs": "Prozkoumávejte dál", "ar": "واصل الاستكشاف", "he": "המשיכו לחקור", "ja": "探索を続ける"},
+    "all_guides":     {"fr": "Tous les guides", "en": "All guides", "de": "Alle Guides", "it": "Tutte le guide", "es": "Todas las guías", "nl": "Alle gidsen", "pl": "Wszystkie przewodniki", "pt": "Todos os guias", "cs": "Všichni průvodci", "ar": "جميع الأدلة", "he": "כל המדריכים", "ja": "すべてのガイド"},
+}
+FOOTER_UI = {
+    "explore":    {"fr": "Explorer", "en": "Explore", "de": "Entdecken", "it": "Esplora", "es": "Explorar", "nl": "Ontdekken", "pl": "Odkrywaj", "pt": "Explorar", "cs": "Prozkoumat", "ar": "استكشف", "he": "לחקור", "ja": "見つける"},
+    "contribute": {"fr": "Contribuer", "en": "Contribute", "de": "Mitmachen", "it": "Contribuisci", "es": "Contribuir", "nl": "Bijdragen", "pl": "Współtwórz", "pt": "Contribuir", "cs": "Přispět", "ar": "ساهم", "he": "לתרום", "ja": "参加する"},
+    "legal":      {"fr": "Légal", "en": "Legal", "de": "Rechtliches", "it": "Note legali", "es": "Legal", "nl": "Juridisch", "pl": "Informacje prawne", "pt": "Jurídico", "cs": "Právní", "ar": "قانوني", "he": "משפטי", "ja": "法的事項"},
+    "report":     {"fr": "Signaler une erreur", "en": "Report an error", "de": "Fehler melden", "it": "Segnala un errore", "es": "Informar de un error", "nl": "Fout melden", "pl": "Zgłoś błąd", "pt": "Comunicar um erro", "cs": "Nahlásit chybu", "ar": "الإبلاغ عن خطأ", "he": "דיווח על טעות", "ja": "間違いを報告"},
+    "partner":    {"fr": "Devenir partenaire", "en": "Become a partner", "de": "Partner werden", "it": "Diventa partner", "es": "Hazte socio", "nl": "Partner worden", "pl": "Zostań partnerem", "pt": "Torne-se parceiro", "cs": "Stát se partnerem", "ar": "كن شريكًا", "he": "להיות שותף", "ja": "パートナーになる"},
+    "legal_mentions": {"fr": "Mentions légales", "en": "Legal notice", "de": "Impressum", "it": "Note legali", "es": "Aviso legal", "nl": "Juridische kennisgeving", "pl": "Nota prawna", "pt": "Aviso legal", "cs": "Právní upozornění", "ar": "إشعار قانوني", "he": "הודעה משפטית", "ja": "法的通知"},
+    "privacy":    {"fr": "Confidentialité", "en": "Privacy", "de": "Datenschutz", "it": "Privacy", "es": "Privacidad", "nl": "Privacy", "pl": "Prywatność", "pt": "Privacidade", "cs": "Soukromí", "ar": "الخصوصية", "he": "פרטיות", "ja": "プライバシー"},
+}
+# Localized hub display names: HUB_DISPLAY literal covers fr/en/de/it/es/nl;
+# i18n-labels hub_names covers fr/en/pl/pt/cs/ar/he/ja → union = all 12.
+_HUB_NAMES = json.loads(open(os.path.join(ROOT, "data", "i18n-labels.json"),
+                             encoding="utf-8").read()).get("hub_names", {})
+_DIR = locales.DIR
+
 # Populated by main() so render_hub can resolve linked_hubs by slug.
 _ALL_HUBS = {}
 RIVE = {
@@ -91,7 +114,28 @@ h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin:26px 0 10p
 .q{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0}
 .q summary{font-weight:600;cursor:pointer}.q p{color:var(--ink2);margin:8px 0 2px}
 .note{font-size:12px;color:var(--ink2);margin-top:8px}
-footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--ink2);text-align:center}"""
+.topbar{position:sticky;top:0;z-index:1000;background:var(--cream);border-bottom:1px solid var(--line);padding:8px 18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.topbar .brand{font-weight:800;color:var(--teal);text-decoration:none;white-space:nowrap}
+.crumbs{font-size:13px;color:#6b7a78}
+.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:center}
+.crumbs li{display:flex;align-items:center}
+.crumbs li+li::before{content:"\\203A";margin-inline:6px;color:var(--ink2)}
+[dir=rtl] .crumbs li+li::before{content:"\\2039"}
+.crumbs a{color:var(--teal2);text-decoration:none}.crumbs a:hover{text-decoration:underline}
+.crumbs [aria-current=page]{color:var(--ink2)}
+@media(max-width:520px){.crumbs{font-size:12px}}
+.keepgoing{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:22px 0}
+.keepgoing h2{margin:0 0 10px;font-size:16px;color:var(--teal);text-transform:none;letter-spacing:0}
+.keepgoing a{display:inline-block;margin:3px 10px 3px 0;color:var(--teal2);font-weight:600;text-decoration:none}
+.keepgoing a.up{display:block;margin:6px 0}
+footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--ink2);text-align:center}
+footer.site{text-align:start}
+.foot-grid{display:flex;flex-wrap:wrap;gap:24px 40px;margin-bottom:14px}
+.foot-col h4{margin:0 0 6px;font-size:13px;color:var(--teal);text-transform:none;letter-spacing:0}
+.foot-col ul{list-style:none;margin:0;padding:0}
+.foot-col li{margin:3px 0}
+.foot-col a{color:var(--teal2);text-decoration:none;font-size:13px}.foot-col a:hover{text-decoration:underline}
+.foot-bottom{border-top:1px solid var(--line);padding-top:10px;color:var(--ink2)}"""
 
 
 def L(d, lang):
@@ -165,7 +209,7 @@ def render_card(hub, m, fiche, lang):
     )
 
 
-def schema_block(hub, members_fiches, lang):
+def schema_block(hub, members_fiches, lang, breadcrumb=None):
     items = []
     for i, (m, f) in enumerate(members_fiches, 1):
         items.append({"@type": "ListItem", "position": i,
@@ -176,7 +220,87 @@ def schema_block(hub, members_fiches, lang):
          "acceptedAnswer": {"@type": "Answer", "text": L(q["a"], lang)}}
         for q in hub.get("faq", [])]}
     graph = {"@context": "https://schema.org", "@graph": [itemlist, faq]}
+    if breadcrumb:
+        graph["@graph"].append(breadcrumb)
     return json.dumps(graph, ensure_ascii=False)
+
+
+def _dir_attr(lang):
+    return ' dir="rtl"' if _DIR.get(lang) == "rtl" else ""
+
+
+def _hub_label(hub, lang):
+    return (HUB_DISPLAY.get(hub, {}).get(lang)
+            or _HUB_NAMES.get(hub, {}).get(lang)
+            or HUB_DISPLAY.get(hub, {}).get("fr")
+            or _HUB_NAMES.get(hub, {}).get("fr") or hub)
+
+
+def _home_url(lang):
+    return f"{BASE}/" if lang == "fr" else f"{BASE}/{lang}/"
+
+
+def _qf_index_url(lang):
+    pfx = _qf_prefix(lang)
+    return f"{BASE}/{pfx}/" if lang == "fr" else f"{BASE}/{lang}/{pfx}/"
+
+
+def _cat_url(hub, lang):
+    d = _hub_dir(hub, lang)
+    return f"{BASE}/{d}/" if lang == "fr" else f"{BASE}/{lang}/{d}/"
+
+
+def _topbar(lang, crumbs):
+    """Sticky header + visible breadcrumb. crumbs = [(label, url|None)]; the
+    last crumb (url None) renders as aria-current plain text."""
+    lis = []
+    for label, url in crumbs:
+        if url:
+            lis.append(f'<li><a href="{url}">{esc(label)}</a></li>')
+        else:
+            lis.append(f'<li><span aria-current="page">{esc(label)}</span></li>')
+    return (f'<header class="topbar"><a class="brand" href="{_home_url(lang)}">Loisirs 74</a>'
+            f'<nav class="crumbs" aria-label="breadcrumb"><ol>{"".join(lis)}</ol></nav></header>')
+
+
+def _breadcrumb_node(page_url, crumbs):
+    """BreadcrumbList JSON-LD mirroring build_lieu_page (leaf carries no item)."""
+    items = []
+    for i, (label, url) in enumerate(crumbs, 1):
+        el = {"@type": "ListItem", "position": i, "name": label}
+        if url:
+            el["item"] = url
+        items.append(el)
+    return {"@type": "BreadcrumbList", "@id": f"{page_url}#breadcrumb", "itemListElement": items}
+
+
+def _keepgoing(lang, parent_label, parent_url, siblings, qf_url):
+    """The dead-end fix: back-to-parent + sibling pages + all-guides, before footer."""
+    up = (f'<a class="up" href="{parent_url}">↑ {esc(L(NAV_UI["back_to"], lang))} {esc(parent_label)}</a>'
+          if parent_url else "")
+    sib = "".join(f'<a href="{u}">{esc(t)} →</a>' for t, u in siblings)
+    allg = f'<a href="{qf_url}">{esc(L(NAV_UI["all_guides"], lang))} →</a>'
+    return (f'<section class="keepgoing"><h2>{esc(L(NAV_UI["keep_exploring"], lang))}</h2>'
+            f'{up}{sib}<div style="margin-top:8px">{allg}</div></section>')
+
+
+def _linked_footer(lang):
+    """4-column linked footer (site_footer shape); copyright byte-identical."""
+    home, qf = _home_url(lang), _qf_index_url(lang)
+
+    def li(url, label):
+        return f'<li><a href="{url}">{esc(label)}</a></li>'
+    col1 = (f'<div class="foot-col"><h4>{esc(L(FOOTER_UI["explore"], lang))}</h4><ul>'
+            + li(home, L(NAV_UI["home"], lang)) + li(qf, _hub_label("que-faire", lang)) + "</ul></div>")
+    col2 = (f'<div class="foot-col"><h4>{esc(L(FOOTER_UI["contribute"], lang))}</h4><ul>'
+            + li(f"{BASE}/signaler", L(FOOTER_UI["report"], lang))
+            + li(f"{BASE}/devenir-partenaire", L(FOOTER_UI["partner"], lang)) + "</ul></div>")
+    col3 = (f'<div class="foot-col"><h4>{esc(L(FOOTER_UI["legal"], lang))}</h4><ul>'
+            + li(f"{BASE}/mentions-legales", L(FOOTER_UI["legal_mentions"], lang))
+            + li(f"{BASE}/confidentialite", L(FOOTER_UI["privacy"], lang)) + "</ul></div>")
+    return (f'<footer class="site"><div class="foot-grid">{col1}{col2}{col3}</div>'
+            '<div class="foot-bottom">© 2026 · Bleu canard édition · Edmaster &amp; Claudius · '
+            'Tous droits réservés 🦆</div></footer>')
 
 
 def render_hub(hub, lang, fiches):
@@ -244,13 +368,28 @@ def render_hub(hub, lang, fiches):
     foot = L(hub.get("footer_note", {}), lang)
     foot_html = f'<p class="note">{esc(foot)}</p>' if foot else ""
 
-    return f"""<!doctype html><html lang="{lang}"><head>
+    # outbound navigation (topbar + breadcrumb + keepgoing + linked footer)
+    page_url = url_for(hub["slug"], lang)
+    parent_hub = hub.get("category_hub")
+    parent_label = _hub_label(parent_hub or "que-faire", lang)
+    parent_url = _cat_url(parent_hub, lang) if parent_hub else _qf_index_url(lang)
+    crumbs = [(L(NAV_UI["home"], lang), _home_url(lang)),
+              (parent_label, parent_url),
+              (L(hub["h1"], lang), None)]
+    topbar = _topbar(lang, crumbs)
+    breadcrumb = _breadcrumb_node(page_url, crumbs)
+    siblings = [(L(h["h1"], lang), url_for(h["slug"], lang))
+                for h in _ALL_HUBS.values() if h["slug"] != hub["slug"]]
+    keepgoing_html = _keepgoing(lang, parent_label, parent_url, siblings, _qf_index_url(lang))
+    footer_html = _linked_footer(lang)
+
+    return f"""<!doctype html><html lang="{lang}"{_dir_attr(lang)}><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(L(hub["title"], lang))}</title>
 <meta name="description" content="{esc(L(hub["description"], lang))}">
 {head_leaflet}
-<script type="application/ld+json">{schema_block(hub, members_fiches, lang)}</script>
-<style>{CSS}</style></head><body><div class="wrap">
+<script type="application/ld+json">{schema_block(hub, members_fiches, lang, breadcrumb)}</script>
+<style>{CSS}</style></head><body>{topbar}<div class="wrap">
 
 <div class="kicker">{esc(L(hub.get("kicker", {}), lang))}</div>
 <h1>{esc(L(hub["h1"], lang))}</h1>
@@ -269,13 +408,27 @@ def render_hub(hub, lang, fiches):
 <h2 style="color:var(--teal)">{esc(L(UI["faq"], lang))}</h2>
 {faq_html}
 
-<footer>© 2026 · Bleu canard édition · Edmaster &amp; Claudius · Tous droits réservés 🦆</footer>
+{keepgoing_html}
+{footer_html}
 </div>
 {map_script}
 </body></html>"""
 
 
 MARK_A, MARK_B = "<!--intent-hubs:start-->", "<!--intent-hubs:end-->"
+
+
+def _place_above_footer(html, block):
+    """Insert a reachability block where a human sees it: inside <main> if the
+    hub template has one, else immediately ABOVE the page footer (facts-lang
+    hubs have no <main>), else before </body>. Never below the footer. Paired
+    with a leading-\\s* MARK strip so strip+reinsert is a byte-stable fixpoint."""
+    if "<main>" in html:
+        return html.replace("<main>", block + "\n<main>", 1)
+    idx = html.rfind("<footer")
+    if idx != -1:
+        return html[:idx] + "\n" + block + html[idx:]
+    return html.replace("</body>", "\n" + block + "</body>", 1)
 
 
 def inject_category_links(hub_links_by_cat, lang):
@@ -294,7 +447,11 @@ def inject_category_links(hub_links_by_cat, lang):
                  + "".join(f'<a href="{u}" style="display:inline-block;margin:2px 8px 2px 0;color:#1F6E78;font-weight:600">{esc(t)} →</a>'
                           for u, t in links)
                  + '</nav>' + MARK_B)
-        html = html.replace("</body>", "\n" + block + "</body>", 1)
+        # place inside <main> (visible, ~mid-page) not after </body> (below
+        # footer — crawlers count it, humans never see it). Facts-lang hubs
+        # have no <main> → insert just ABOVE the footer instead. Idempotent
+        # MARK strip above → byte-stable.
+        html = _place_above_footer(html, block)
         with open(path, "w", encoding="utf-8") as fh:
             fh.write(html)
 
@@ -528,7 +685,7 @@ CSS2 = CSS + """
 @media(max-width:480px){.card.sel{flex-direction:column}.thumb{width:100%;height:150px}}"""
 
 
-def render_intent_page(entry, lang, fiches, parking, built_langs):
+def render_intent_page(entry, lang, fiches, parking, built_langs, siblings):
     members = [fiches[s] for s in entry["members"] if s in fiches]
     title, lead = entry["title"][lang], entry["lead"][lang]
     note = entry["criteria_note"][lang]
@@ -555,13 +712,24 @@ def render_intent_page(entry, lang, fiches, parking, built_langs):
     canon = intent_page_url(entry, lang)
     alts = "".join(f'<link rel="alternate" hreflang="{l}" href="{intent_page_url(entry, l)}">'
                    for l in built_langs)
-    return f"""<!doctype html><html lang="{lang}"><head>
+    # outbound navigation (topbar + breadcrumb + keepgoing + linked footer)
+    anchor = entry.get("hub_anchor")
+    parent_label = _hub_label(anchor or "que-faire", lang)
+    parent_url = _cat_url(anchor, lang) if anchor else _qf_index_url(lang)
+    crumbs = [(L(NAV_UI["home"], lang), _home_url(lang)),
+              (parent_label, parent_url),
+              (title, None)]
+    graph["@graph"].append(_breadcrumb_node(canon, crumbs))
+    topbar = _topbar(lang, crumbs)
+    keepgoing_html = _keepgoing(lang, parent_label, parent_url, siblings, _qf_index_url(lang))
+    footer_html = _linked_footer(lang)
+    return f"""<!doctype html><html lang="{lang}"{_dir_attr(lang)}><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} · Loisirs 74</title>
 <meta name="description" content="{esc(lead[:158])}">
 <link rel="canonical" href="{canon}">{alts}
 <script type="application/ld+json">{json.dumps(graph, ensure_ascii=False)}</script>
-<style>{CSS2}</style></head><body><div class="wrap">
+<style>{CSS2}</style></head><body>{topbar}<div class="wrap">
 
 <div class="kicker">Loisirs 74 · {esc(_qf_prefix(lang).replace("-", " "))}</div>
 <h1>{esc(title)}</h1>
@@ -571,7 +739,8 @@ def render_intent_page(entry, lang, fiches, parking, built_langs):
 
 {body}
 
-<footer>© 2026 · Bleu canard édition · Edmaster &amp; Claudius · Tous droits réservés 🦆</footer>
+{keepgoing_html}
+{footer_html}
 </div></body></html>"""
 
 
@@ -638,7 +807,9 @@ def _inject_qf_links(pages, lang):
         for e in pages)
     block = (MARK2_A + '<nav class="intent-pages" style="max-width:1080px;margin:18px auto;padding:0 18px">'
              + links + '</nav>' + MARK2_B)
-    html = html.replace("</body>", "\n" + block + "</body>", 1)
+    # inside <main> (visible) not below the footer; facts-lang que-faire index
+    # has no <main> → insert just above the footer.
+    html = _place_above_footer(html, block)
     open(path, "w", encoding="utf-8").write(html)
 
 
@@ -647,13 +818,22 @@ def build_intent_pages():
     parking = set(json.loads(open(os.path.join(ROOT, "data", "parking_index.json"),
                                   encoding="utf-8").read()).keys())
     written, skipped = 0, []
-    for entry in membership.values():
-        built_langs = [l for l in entry["title"] if entry["lead"].get(l) and entry["criteria_note"].get(l)]
+    entries = list(membership.values())
+
+    def _built_langs(e):
+        return [l for l in e["title"] if e["lead"].get(l) and e["criteria_note"].get(l)]
+    for entry in entries:
+        built_langs = _built_langs(entry)
         if len(entry["members"]) < 6:
             skipped.append(f"{entry['id']} ({len(entry['members'])} members)")
             continue
         for lang in built_langs:
-            html = render_intent_page(entry, lang, fiches, parking, built_langs)
+            # sibling intent pages built in this lang (the keepgoing nav)
+            siblings = [(e["title"][lang], intent_page_url(e, lang))
+                        for e in entries
+                        if e["id"] != entry["id"] and len(e["members"]) >= 6
+                        and lang in _built_langs(e)]
+            html = render_intent_page(entry, lang, fiches, parking, built_langs, siblings)
             sub = entry["sub"].get(lang) or entry["sub"]["fr"]
             out = os.path.join(ROOT, _qf_prefix(lang), sub, "index.html") if lang == "fr" \
                 else os.path.join(ROOT, lang, _qf_prefix(lang), sub, "index.html")
