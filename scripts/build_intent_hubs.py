@@ -761,6 +761,21 @@ def _write_select_md(entry, lang, fiches):
 
 MARK2_A, MARK2_B = "<!--intent-pages:start-->", "<!--intent-pages:end-->"
 MARK3_A, MARK3_B = "<!--hub-bestof:start-->", "<!--hub-bestof:end-->"
+MARK4_A, MARK4_B = "<!--hub-intent:start-->", "<!--hub-intent:end-->"
+
+# FIX C — honest category-hub → intent-page links for hubs that carry NO
+# hub_anchor best-of callout. Class B pages only (12-lang, clean — no FR
+# fallback). Conservative: only defensible topical matches are listed; every
+# other empty hub (voies-vertes, baignade-nautisme, sensations-plein-air,
+# sorties-detente, sport-jeux) has no honest single match and is served by the
+# que-faire index instead — relevance beats coverage, no forced matches.
+# The 4 hub_anchor hubs (cascades, points-de-vue, chateaux, stations-de-ski)
+# already carry their best-of callout via _inject_hub_bestof.
+HUB_INTENT_MAP = {
+    "sentiers":         ["randonnees-faciles-lac-annecy"],
+    "telecabines":      ["plus-beaux-points-de-vue-mont-blanc"],
+    "bases-de-loisirs": ["lac-annecy-en-famille"],
+}
 
 
 def _inject_hub_bestof(entry, lang):
@@ -789,6 +804,29 @@ def _inject_hub_bestof(entry, lang):
         html = html.replace("<main>", block + "\n<main>", 1)
     else:
         html = html.replace("</body>", block + "\n</body>", 1)
+    open(path, "w", encoding="utf-8").write(html)
+
+
+def _inject_hub_intent(hub_dir, entries, lang):
+    """FIX C: 'Notre sélection' callout linking honest-match intent pages into a
+    category hub with no hub_anchor best-of. entries = buildable page dicts for
+    this lang. Placed above the footer (byte-stable), 12-lang via Class B pages."""
+    dirn = _hub_dir(hub_dir, lang)
+    path = os.path.join(ROOT, dirn, "index.html") if lang == "fr" \
+        else os.path.join(ROOT, lang, dirn, "index.html")
+    if not os.path.exists(path):
+        return
+    html = open(path, encoding="utf-8").read()
+    html = _re.sub(r"\s*" + _re.escape(MARK4_A) + r".*?" + _re.escape(MARK4_B), "", html, flags=_re.S)
+    label = esc(L(UI["our_selection"], lang))
+    links = "".join(
+        f'<a href="{intent_page_url(e, lang)}" style="display:inline-block;margin:3px 12px 3px 0;'
+        f'color:#1F6E78;font-weight:600;text-decoration:none">★ {esc(e["title"][lang])} →</a>'
+        for e in entries)
+    block = (MARK4_A + '<section class="hub-intent" style="max-width:1080px;margin:14px auto 0;padding:0 18px">'
+             '<div style="background:#eef4f2;border:1px solid #d6e6e2;border-radius:12px;padding:12px 16px">'
+             f'<b style="color:#155059">{label}</b><br>{links}</div></section>' + MARK4_B)
+    html = _place_above_footer(html, block)
     open(path, "w", encoding="utf-8").write(html)
 
 
@@ -853,7 +891,20 @@ def build_intent_pages():
         _inject_qf_links(buildable, lang)          # que-faire INDEX → every page
         for e in buildable:
             _inject_hub_bestof(e, lang)            # category HUB → its best-of page
+    # FIX C — honest category-hub → intent-page links for the empty hubs.
+    by_id = {e["id"]: e for e in membership.values()}
+    fixc = 0
+    for lang in all_langs:
+        for hub_dir, page_ids in HUB_INTENT_MAP.items():
+            ents = [by_id[pid] for pid in page_ids
+                    if pid in by_id and len(by_id[pid]["members"]) >= 6
+                    and by_id[pid]["title"].get(lang) and by_id[pid]["lead"].get(lang)
+                    and by_id[pid]["criteria_note"].get(lang)]
+            if ents:
+                _inject_hub_intent(hub_dir, ents, lang)
+                fixc += 1
     print(f"build_intent_pages: {written} page(s) written; "
+          f"hub-intent callouts: {fixc}; "
           f"skipped(min_items<6): {', '.join(skipped) or 'none'}")
 
 

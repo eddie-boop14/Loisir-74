@@ -179,6 +179,10 @@ def check_hub_placement(viol):
             continue
         for lang in [l for l in e["title"] if e["lead"].get(l) and e["criteria_note"].get(l)]:
             targets.append((B.MARK3_A, _hub_path(B._hub_dir(e["hub_anchor"], lang), lang)))
+    # _inject_hub_intent (FIX C) — built langs × HUB_INTENT_MAP hubs
+    for lang in built_any:
+        for hub_dir in B.HUB_INTENT_MAP:
+            targets.append((B.MARK4_A, _hub_path(B._hub_dir(hub_dir, lang), lang)))
     for mk, path in targets:
         if not os.path.exists(path):
             continue
