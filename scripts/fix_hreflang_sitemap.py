@@ -164,6 +164,33 @@ def build_groups():
     return groups
 
 
+def intent_groups():
+    """Class-B intent pages: que-faire/<slug>/ and its localized-locale variants
+    (e.g. en/what-to-do/<slug>/, de/was-unternehmen/<slug>/). They sit one level
+    deeper than the category hubs, so the depth-1 hub_map() glob never reaches
+    them — which is why all 192 were silently absent from the sitemap even though
+    build_all runs build_intent_hubs BEFORE this step expressly to have them
+    folded in. Each FR page already carries a full, correct hreflang cluster
+    (emitted by build_intent_hubs); read it to assemble the group, keeping only
+    locales whose file is actually on disk.
+
+    Sitemap-only by design: these heads stay owned by build_intent_hubs, so they
+    are added to the URL set here but NOT run through normalize_head."""
+    groups = []
+    for fp in sorted(glob.glob("que-faire/*/index.html")):
+        alts = _parse_alternates(Path(fp).read_text(encoding="utf-8"))
+        fr_url = alts.get("fr") or (BASE + fp[:-len("index.html")])
+        if not url_to_file(fr_url).exists():
+            continue
+        g = {"fr_url": fr_url, "pages": {"fr": (fr_url, url_to_file(fr_url))}}
+        for L in LANGS:
+            u = alts.get(L)
+            if u and url_to_file(u).exists():
+                g["pages"][L] = (u, url_to_file(u))
+        groups.append(g)
+    return groups
+
+
 def canonical_links(g):
     fr_url = g["fr_url"]
     out = [link("fr", fr_url)]
@@ -217,7 +244,10 @@ def main():
         print("  -> applied.")
 
     if do_sitemap:
-        rebuild_sitemap(groups, multilingual)
+        # Fold in the Class-B intent pages (depth-2, missed by build_groups'
+        # discovery) for the sitemap only — their heads are owned by
+        # build_intent_hubs and must not be re-normalized here.
+        rebuild_sitemap(groups, multilingual + intent_groups())
 
 
 def rebuild_sitemap(groups, multilingual):
