@@ -908,5 +908,58 @@ def build_intent_pages():
           f"skipped(min_items<6): {', '.join(skipped) or 'none'}")
 
 
+MARK5_A, MARK5_B = "<!--home-selections:start-->", "<!--home-selections:end-->"
+# FIX D — top intent pages surfaced on the homepage (most authority on the
+# site). Top-6 by search demand; all Class B (12-lang, clean localized URLs).
+HOME_SELECTION_IDS = ["lac-annecy-en-famille", "quand-il-pleut-annecy", "gratuit-lac-annecy",
+                      "1-jour-a-annecy", "plus-belles-cascades-haute-savoie", "chamonix-en-famille"]
+
+
+def inject_home_selections():
+    """FIX D: a compact 'Nos sélections' strip on every published homepage,
+    linking the top intent pages (localized), just above the site footer.
+    Idempotent + byte-stable. Must run LATE (after facet-hub link injection) so
+    no later homepage rewrite strips it."""
+    membership, _ = compute_membership()
+    by_id = {e["id"]: e for e in membership.values()}
+    ents = [by_id[i] for i in HOME_SELECTION_IDS if i in by_id]
+    done = 0
+    for lang in locales.VISIBLE:
+        page_ents = [e for e in ents if len(e["members"]) >= 6 and e["title"].get(lang)
+                     and e["lead"].get(lang) and e["criteria_note"].get(lang)]
+        if not page_ents:
+            continue
+        path = os.path.join(ROOT, "index.html") if lang == "fr" \
+            else os.path.join(ROOT, lang, "index.html")
+        if not os.path.exists(path):
+            continue
+        html = open(path, encoding="utf-8").read()
+        # strip the exact block only (NO leading \s* — the homepage is patched
+        # chrome, not regenerated fresh, so strip+reinsert must be a true
+        # byte-stable fixpoint; eating original whitespace would shift bytes).
+        html = _re.sub(_re.escape(MARK5_A) + r".*?" + _re.escape(MARK5_B), "", html, flags=_re.S)
+        label = esc(L(UI["our_selection"], lang))
+        links = "".join(
+            f'<a href="{intent_page_url(e, lang)}" style="display:inline-block;margin:4px 14px 4px 0;'
+            f'color:#1F6E78;font-weight:600;text-decoration:none">★ {esc(e["title"][lang])} →</a>'
+            for e in page_ents)
+        block = (MARK5_A + f'<section class="home-selections"{_dir_attr(lang)} '
+                 'style="max-width:1080px;margin:26px auto;padding:16px 18px;background:#eef4f2;'
+                 'border:1px solid #d6e6e2;border-radius:14px">'
+                 f'<h2 style="margin:0 0 8px;font-size:17px;color:#155059">{esc(label)}</h2>'
+                 f'<div>{links}</div></section>' + MARK5_B)
+        idx = html.rfind('<footer class="site"')
+        if idx != -1:
+            html = html[:idx] + block + html[idx:]
+        else:
+            html = html.replace("</body>", block + "</body>", 1)
+        open(path, "w", encoding="utf-8").write(html)
+        done += 1
+    print(f"inject_home_selections: strip injected on {done} homepage(s)")
+
+
 if __name__ == "__main__":
-    main()
+    if "--home-selections" in sys.argv:
+        inject_home_selections()
+    else:
+        main()

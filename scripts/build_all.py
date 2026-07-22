@@ -244,6 +244,19 @@ def rebuild_intent_hubs():
     print(out.stdout.strip() or "(intent hubs rebuilt)")
 
 
+def inject_home_selections():
+    """FIX D: late homepage 'Nos sélections' strip (after facet-hub links so it
+    is not stripped by a later homepage rewrite)."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "build_intent_hubs.py"), "--home-selections"],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("inject_home_selections failed")
+    print(out.stdout.strip() or "(home selections injected)")
+
+
 def status_gate():
     """JOB 6 gate: every fiche must have an explicit status (draft|verified|
     published). Print the distribution. Block if any fiche has status=None."""
@@ -478,6 +491,8 @@ def main():
     run("normalize head links (canonical + hreflang + md-alt)", normalize_head_links)
     run("normalize language nav (picker + footer read the visible roster)", normalize_lang_nav)
     run("inject facet-hub homepage links (0-orphan, after lang-nav)", rebuild_facet_hub_links)
+    run("inject intent 'Nos sélections' homepage strip (FIX D, after facet links)",
+        inject_home_selections)
     run("cache-bust runtime /scripts/ includes (content-hash ?v=)", version_runtime_assets)
     if not args.no_site:
         run("build _site/", lambda: subprocess.check_call(
