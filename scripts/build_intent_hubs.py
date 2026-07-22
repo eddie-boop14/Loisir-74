@@ -924,7 +924,7 @@ def inject_home_selections():
     by_id = {e["id"]: e for e in membership.values()}
     ents = [by_id[i] for i in HOME_SELECTION_IDS if i in by_id]
     done = 0
-    for lang in locales.VISIBLE:
+    for lang in locales.VISIBLE:  # isolation-ok: nav strip injected into already-built homepages over the visible roster (no prose render)
         page_ents = [e for e in ents if len(e["members"]) >= 6 and e["title"].get(lang)
                      and e["lead"].get(lang) and e["criteria_note"].get(lang)]
         if not page_ents:
