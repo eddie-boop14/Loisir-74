@@ -153,14 +153,36 @@ def main():
         for slug, d in dirty.items():
             fp = os.path.join(JSON_DIR, f"{slug}.json")
             json.dump(d, open(fp, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-            with open(fp, "a", encoding="utf-8") as f:
-                f.write("")
-        # ensure trailing newline
-        for slug in dirty:
-            fp = os.path.join(JSON_DIR, f"{slug}.json")
-            t = open(fp, encoding="utf-8").read()
-            if not t.endswith("\n"):
+            if not open(fp, encoding="utf-8").read().endswith("\n"):
                 open(fp, "a", encoding="utf-8").write("\n")
+        # Keep the translation payloads in sync — else the revert-guard
+        # (ingest_translations --check) sees the fiche's new what_is diverge from
+        # translations/<lang>.json and blocks CI (a stale payload would revert it).
+        sync_payloads(dirty)
+
+
+def sync_payloads(dirty):
+    """Mirror each edited fiche's body.what_is into translations/<lang>.json for
+    the payload locales (de/en/es/it/nl) so ingest stays idempotent/revert-safe."""
+    n = 0
+    for lang in ("de", "en", "es", "it", "nl"):
+        p = os.path.join(ROOT, "translations", f"{lang}.json")
+        if not os.path.exists(p):
+            continue
+        pay = json.load(open(p, encoding="utf-8"))
+        changed = False
+        for slug, d in dirty.items():
+            body = ((d.get("i18n") or {}).get(lang) or {}).get("body")
+            wi = body.get("what_is") if isinstance(body, dict) else None
+            entry = pay.get(slug)
+            if wi and isinstance(entry, dict) and entry.get("body.what_is") not in (None, wi):
+                entry["body.what_is"] = wi
+                changed = True; n += 1
+        if changed:
+            json.dump(pay, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+            if not open(p, encoding="utf-8").read().endswith("\n"):
+                open(p, "a", encoding="utf-8").write("\n")
+    print(f"payload sync: {n} translations/<lang>.json entries updated")
 
     print(f"\ntotals: whatis-h2={tot['whatis']} activity-id={tot['activity']} "
           f"name_alternates+={tot['alt'][0]} token-not-found={tot['tnf']} already={tot['already']}")
