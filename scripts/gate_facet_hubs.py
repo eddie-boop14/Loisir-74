@@ -62,8 +62,20 @@ def main():
         if f["facet_key"] != "is_free":
             continue
         for slug in B.members_of(f, api, lieux):
-            if B._price_signals_paid((api.get(slug, {}) or {}).get("prices")):
-                viol.append(f"is_free member {slug} has a paid price at source (api/lieu)")
+            # Membership is the derived access_state now, so drift is impossible.
+            # What can still be wrong is the SOURCE: a genuinely-paid place with
+            # schema_org.is_free=True. Flag only a real ENTRY price (prices.from);
+            # optional side costs (guided outings, rental) and free_seasonal peak
+            # prices are legitimate and stay in the hub.
+            if lieux.get(slug, {}).get("access_state") == "free_seasonal":
+                continue
+            frm = ((api.get(slug, {}) or {}).get("prices") or {}).get("from")
+            try:
+                if frm is not None and float(frm) > 0:
+                    viol.append(f"is_free member {slug} has a paid ENTRY price {frm} "
+                                f"at source — schema_org.is_free is likely wrong")
+            except (TypeError, ValueError):
+                pass
 
     for f in html_facets:
         key = f["facet_key"]

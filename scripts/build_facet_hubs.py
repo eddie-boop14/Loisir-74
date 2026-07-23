@@ -30,6 +30,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import locales  # noqa: E402
 import build_ai_content as _bac  # noqa: E402  winter controlled-vocab labels + WINTER_NODES
+import derive_access_cost as _dac  # noqa: E402  the derived access-cost state (free_seasonal badge)
 from build_intent_hubs import CSS, esc, L, url_for  # noqa: E402  reuse chrome + helpers
 
 REGISTRY = os.path.join(ROOT, "data", "facet-hubs.json")
@@ -53,6 +54,13 @@ UI = {
                   "it": "Non specificato", "es": "No especificado", "nl": "Niet vermeld"},
     "free":      {"fr": "Accès libre", "en": "Free entry", "de": "Freier Zugang",
                   "it": "Accesso libero", "es": "Acceso libre", "nl": "Vrije toegang"},
+    "free_seasonal": {
+        "fr": "Gratuit hors saison · payant en été",
+        "en": "Free off-season · paid in summer",
+        "de": "Außerhalb der Saison gratis · im Sommer kostenpflichtig",
+        "it": "Gratuito fuori stagione · a pagamento in estate",
+        "es": "Gratis fuera de temporada · de pago en verano",
+        "nl": "Buiten het seizoen gratis · betaald in de zomer"},
 }
 # coverage line, e.g. "247 sites sur 398 disposent d'une info parking vérifiée."
 COVERAGE = {
@@ -147,12 +155,12 @@ def _price_signals_paid(prices):
 def is_member(facet, slug, api, lieux):
     key, src = facet["facet_key"], facet["source"]
     if src == "manifest_bool":                      # is_free
-        # lieux.json is_free is the entry gate, BUT it has drifted paid on ~26
-        # fiches — cross-check the authoritative fiche price data so a paid site
-        # (escape game, cable car, climbing gym) never renders as "gratuit".
-        if lieux.get(slug, {}).get("is_free") is not True:
-            return False
-        return not _price_signals_paid((api.get(slug, {}) or {}).get("prices"))
+        # The manifest's derived access_state is the single source of truth
+        # (build_catalog_index derives it from authoritative price data, so it can
+        # no longer drift). The free hub carries genuinely-free entry AND
+        # free-off-season/paid-in-peak (free_seasonal, badged); only `paid` and
+        # unmapped are excluded.
+        return lieux.get(slug, {}).get("access_state") in ("free", "free_seasonal")
     return api.get(slug, {}).get(key) is not None   # api non-null
 
 
@@ -173,6 +181,11 @@ def facet_value_text(facet_key, slug, api, fiches, lang):
         a = d.get("access_pmr") or {}
         return (a.get("detail") or a.get("status") or "") if isinstance(a, dict) else ""
     if facet_key == "is_free":
+        # free_seasonal (free off-season, paid in the summer window) gets an
+        # honest badge instead of a bare "Accès libre" — same derivation the
+        # manifest/gate use, so it stays consistent.
+        if _dac.derive(fiches.get(slug, {}) or {})[0] == "free_seasonal":
+            return L(UI["free_seasonal"], lang)
         note = (d.get("prices") or {}).get("note") if isinstance(d.get("prices"), dict) else None
         return note or L(UI["free"], lang)
     if facet_key == "prices":

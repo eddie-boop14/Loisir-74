@@ -162,6 +162,13 @@ jobs:
         # steps below.
         run: python3 scripts/gate_facet_hubs.py
 
+      - name: Access-cost model gate (one derived state per fiche; no string is_free)
+        # HANDOFF-consolidation §2: cost is a single build-derived state
+        # {free|free_seasonal|paid}. Fails on a string-typed is_free (the bug that
+        # rendered 31 paid stations "Free"), an invalid/absent state, a
+        # free_seasonal outside {plage,lac}, or emitted-vs-source drift.
+        run: python3 scripts/gate_access_cost.py
+
       - name: Winter-schema gate (HANDOFF-winter)
         # ## Saison winter bullets only on WINTER_NODES; controlled vocab only
         # (no typos/inference); no subjective snow ratings; equipment line =
