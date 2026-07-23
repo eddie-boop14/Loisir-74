@@ -72,6 +72,17 @@ def rebuild_catalog_index():
     print(out.stdout.strip() or "(catalog rebuilt)")
 
 
+def rebuild_project_state():
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "build_project_state.py")],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("build_project_state failed")
+    print(out.stdout.strip() or "(PROJECT-STATE regenerated)")
+
+
 def tarif_completeness_gate():
     """Station facts.tarif must cover the full published roster (no 8-vs-12 gap)."""
     out = subprocess.run(
@@ -476,7 +487,8 @@ def main():
     run("rebuild catalog index", rebuild_catalog_index)
     run("regenerate hubs + homepage nav", rebuild_hubs)
     run("render commune pages + reciprocal backlinks", rebuild_communes)
-    run("render facts-first full trees (published facts langs: pl)", rebuild_fulltree_langs)
+    run(f"render facts-first full trees (published facts langs: {', '.join(locales.FACTS_PUBLISHED)})",
+        rebuild_fulltree_langs)
     # Intent hubs render AFTER the facts-first trees: build_fulltree_lang
     # clean-slates each facts-lang subtree (shutil.rmtree), so intent pages
     # written into /pl/ /ar/ … must come afterwards or they'd be wiped. Running
@@ -494,6 +506,7 @@ def main():
     run("inject intent 'Nos sélections' homepage strip (FIX D, after facet links)",
         inject_home_selections)
     run("cache-bust runtime /scripts/ includes (content-hash ?v=)", version_runtime_assets)
+    run("regenerate PROJECT-STATE.md (JOB 8 — derived, never authored)", rebuild_project_state)
     if not args.no_site:
         run("build _site/", lambda: subprocess.check_call(
             [sys.executable, str(SCRIPTS / "build_site.py")], cwd=str(ROOT)))
