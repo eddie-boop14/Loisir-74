@@ -23,10 +23,14 @@ Derived rosters (declared order preserved):
                     modes (fr..nl + pl). Picker/hreflang/sitemap consume these.
   VISIBLE_SECONDARY VISIBLE minus root (en,de,it,es,nl,pl).
   FACTS_PUBLISHED   published ∧ render_mode==facts — full facts-first trees owned
-                    by build_fulltree_lang (pl).
-  STAGED_INDEXABLE  staged-indexable pilots (pt,cs). STAGED / HELD as before.
+                    by build_fulltree_lang.
+  STAGED_INDEXABLE  staged-indexable pilots. STAGED / HELD as before.
   ALL_SUBDIR_LANGS  every non-root language code — the /<lang>/ directories, used
                     to skip locale dirs during hub/commune discovery.
+
+Members are DERIVED from data/languages.json and are never enumerated in this
+comment — a typed list drifts (it once said FACTS_PUBLISHED=pl when the tuple
+already returned all six). Run `python3 scripts/locales.py` to print each roster.
 """
 import json
 import os
@@ -72,3 +76,14 @@ def endonyms(langs):
 
 def status(lang):
     return STATUS.get(lang)
+
+
+if __name__ == "__main__":
+    # Print every roster, derived live from data/languages.json — the canonical
+    # answer to "which langs are in X?", so no comment or label ever hard-codes it.
+    for _name in ("VISIBLE", "VISIBLE_SECONDARY", "PROSE", "PROSE_SECONDARY",
+                  "FACTS_PUBLISHED", "STAGED_INDEXABLE", "STAGED", "HELD",
+                  "ALL_SUBDIR_LANGS"):
+        _val = globals().get(_name)
+        if _val is not None:
+            print(f"{_name:18} {', '.join(_val) if _val else '(empty)'}")
