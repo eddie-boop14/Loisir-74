@@ -1,62 +1,77 @@
-# Loisirs 74
-
-**Independent multilingual leisure guide for Haute-Savoie, France.**
-Lakes, waterfalls, viewpoints, leisure parks, cable cars, castles, museums — every fact
-verified against official sources (communes, tourism offices, ONF, IGN, Natura 2000).
-
-🌐 **Live:** [loisirs74.fr](https://loisirs74.fr) · 392 destinations · 6 languages (FR · EN · DE · IT · ES · NL)
-
----
-
-## What this is
-A flat, static site built from structured JSON. Each destination page carries GPS, opening
-hours, access (free/paid), parking, dog policy, accessibility, how to get there (car / public
-transport / bike), best season, on-site activities, and an FAQ — in six languages, with a
-French canonical and `hreflang` alternates.
-
-Editorial rules: official sources only, no aggregators, no fabricated data. Unknown hard
-facts are left null and flagged rather than guessed. French place names are frozen verbatim
-across all languages (Lac d'Annecy, Léman, Mont-Blanc, Haute-Savoie, …).
-
-## How it's built
-JSON is the single source of truth. A Python pipeline renders everything; nothing is
-hand-edited in the built HTML.
-
-```bash
-python3 scripts/build_all.py        # render all fiches ×6 langs, hubs, catalog, communes
-python3 scripts/build_all.py --no-site   # build + gates, skip the _site/ tree
-```
-
-Every push to `main` runs a CI **build gate** (status, hygiene, full render, reachability,
-byte-stable double-build, protected-asset guards) before Netlify deploys. See
-[`ARCHITECTURE.md`](ARCHITECTURE.md) for the full pipeline, the scheduled refresh workflows,
-and how the browser authoring tool (Studio) fits.
-
-## Repo layout (high level)
-```
-Json/            source of truth — one <slug>.json per lieu
-scripts/         build pipeline + audits (Python)
-<lang>/          generated HTML per locale (en/ de/ it/ es/ nl/; FR at root)
-studio.html      browser authoring toolkit (+ studio-*.js modules)
-.github/workflows/  build gate + monthly/weekly refresh agents
-sitemap.xml, robots.txt, robots-ai.txt, llms.txt, .well-known/
-```
-
-## Status
-Active. Catalogue and tooling evolve on `main`; treat the live repo as truth over any doc.
-
-## Contributing / corrections
-Spotted a wrong detail on a destination? Use the **"Signaler une info"** link on any page,
-or open an issue. Partner enquiries: **"Devenir partenaire."**
-
-Editing via the Studio toolkit? Its output enters the repo **only** as a dotted-path patch
-applied with `scripts/apply_studio_patch.py` — never drop a full `<slug>.json` into `Json/`
-(see the Studio ingress rule in [`ARCHITECTURE.md`](ARCHITECTURE.md)).
-
-## License & attribution
-Site content © Bleu canard édition. Open data sources retain their own licenses
-(e.g. DATAtourisme — Etalab Open License; photo credits per `photo-credits.json`).
-Generated and maintained as **Edmaster & Claudius**.
-
----
-*2026 · Bleu canard édition · Edmaster & Claudius · Tous droits réservés* 🦆
+Loisirs 74
+An independent leisure guide for Haute-Savoie, France — 426 places, 12 languages,
+6 026 static pages, every fact traced to an official source.
+🌐 loisirs74.fr
+Lakes, waterfalls, viewpoints, ski resorts, cable cars, castles, museums, greenways. No
+aggregator data, no scraped reviews, no invented opening hours.
+The rule everything else follows
+JSON is the source of truth. The build derives everything else.
+Nothing in the rendered site is written by hand. A wrong comma on a page is fixed in
+Json/<slug>.json or in a builder script, then re-rendered — never patched in the HTML.
+The same rule governs the guide's honesty: if a fact cannot be verified against an official
+source, it stays null and is flagged. Never guessed, never inferred, never filled from a
+reseller. A missing opening time is a gap. A wrong one sends someone to a locked door.
+What a place page carries
+GPS · opening hours · price tiers · free/paid · parking · public transport · accessibility (PMR)
+· dog policy · best season · winter access · on-site activities · FAQ — with a French canonical
+and hreflang alternates across all twelve locales.
+Sources: communes, offices de tourisme, ONF, IGN, FFRandonnée, Natura 2000, DATAtourisme,
+data.gouv.fr, OpenStreetMap, Wikimedia Commons. Tripadvisor, GetYourGuide, Visorando and blogs
+are not valid sources and never enter the corpus.
+French place names are frozen verbatim in every language — Lac d'Annecy, Léman,
+Mont-Blanc, Aiguille du Midi, Haute-Savoie, ViaRhôna, GR®, and all commune names.
+Twelve languages, two render modes
+mode
+locales
+what ships
+prose
+fr en de it es nl
+full editorial text, FAQ, activities
+facts-first
+pl pt cs ar he ja
+verified facts, no generated prose
+French is canonical at the repo root; the other eleven render into <lang>/. ar and he ship
+RTL.
+The roster lives in data/languages.json and is derived through scripts/locales.py.
+Never hardcode the locale count — a CI gate fails the build if you do.
+Pages are queries, not documents
+Beyond the 426 place pages, the site renders a compiled layer where membership is computed,
+never hand-listed:
+16 intent pages — Lac d'Annecy en famille, Quand il pleut à Annecy,
+Canicule : où trouver la fraîcheur, Léman côté français … each defined by a deterministic
+predicate over the corpus in data/intent-registry.json
+8 facet hubs — parking, transport, PMR access, free entry, winter
+~16 thematic and ~22 commune hubs
+Add a place, and every page it qualifies for updates on the next build. No editor maintains a
+list. Each compiled page renders its own selection criteria, so a reader can see why something
+is on it.
+Build
+Bash
+Flat static output. No server, no database, no client-side data fetching — pages are complete
+HTML before a browser ever asks. Deployed on Netlify.
+Every push to main runs a CI build gate: schema, hygiene, full render, locale completeness,
+i18n leak detection, reachability, protected-asset guards, and a byte-stable double build —
+two consecutive builds must produce identical output. 32 gates in scripts/gate_*.py, 8
+workflows in .github/workflows/.
+Two safety rails apply to every automated job: any write touching more than 10 % of the corpus
+aborts with zero writes, and an API failure is recorded as CHECK_FAILED — never as
+CONFIRMED_ABSENT. An error is not data.
+Layout
+Code
+Contributing
+Spotted a wrong detail? Use Signaler une info on any page, or open an issue. Corrections to
+verified facts need a source link — commune, office de tourisme, or operator.
+Partner enquiries: Devenir partenaire.
+Editing through the Studio toolkit? Output enters the repo only as a dotted-path patch via
+scripts/apply_studio_patch.py. Never drop a whole <slug>.json into Json/ — see the Studio
+ingress rule in ARCHITECTURE.md.
+Status
+Active development on main. Treat the live repo as truth over any document, including this
+one. Numbers here were verified at the commit that introduced them and drift is the normal
+state of a growing catalogue.
+Full pipeline, scheduled refresh agents and Studio internals: ARCHITECTURE.md.
+Licence
+Site content © Bleu canard édition. Open data sources keep their own licences — DATAtourisme
+under Etalab Open License, photography credited per photo-credits.json, Wikimedia Commons per
+each file's terms.
+2026 · Bleu canard édition · Edmaster & Claudius · Tous droits réservés 🦆
