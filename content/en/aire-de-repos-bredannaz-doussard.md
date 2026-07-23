@@ -40,7 +40,7 @@ Not specified
 
 ## Prices
 
-Not specified
+Free
 
 ## Access (PMR)
 

@@ -40,7 +40,7 @@ Non renseigné
 
 ## Tarifs
 
-Non renseigné
+Gratuit
 
 ## Accès (PMR)
 
