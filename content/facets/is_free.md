@@ -1,13 +1,13 @@
 ---
 facet: is_free
 scope: haute-savoie-74
-lieux_documented: 106
+lieux_documented: 168
 lieux_total: 426
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Gratuité — index transversal (426 lieux, 106 documentés)
+# Gratuité — index transversal (426 lieux, 168 documentés)
 
 ## Abbaye de Sixt — Sixt-Fer-à-Cheval
 Accès libre
@@ -20,6 +20,22 @@ Fiche: https://loisirs74.fr/aire-de-decollage-parapente-plaine-joux · JSON: htt
 ## Aire de repos de l'ancienne gare de Bredannaz — Doussard
 Accès libre
 Fiche: https://loisirs74.fr/aire-de-repos-bredannaz-doussard · JSON: https://loisirs74.fr/api/lieu/aire-de-repos-bredannaz-doussard.json
+
+## Ancien remparts du château de Lullin — Lullin
+Gratuit
+Fiche: https://loisirs74.fr/ancien-remparts-chateau-lullin-lullin · JSON: https://loisirs74.fr/api/lieu/ancien-remparts-chateau-lullin-lullin.json
+
+## Au Fil du Rail - Jeu de Piste à Servoz — Servoz
+Gratuit
+Fiche: https://loisirs74.fr/au-fil-rail-jeu-piste-a-servoz-servoz · JSON: https://loisirs74.fr/api/lieu/au-fil-rail-jeu-piste-a-servoz-servoz.json
+
+## Au Fil du Rail - Jeu de piste à Vallorcine — Vallorcine
+Gratuit
+Fiche: https://loisirs74.fr/au-fil-rail-jeu-piste-a-vallorcine-vallorcine · JSON: https://loisirs74.fr/api/lieu/au-fil-rail-jeu-piste-a-vallorcine-vallorcine.json
+
+## Balade pédestre - Tour du lac du Môle — La Tour
+Gratuit
+Fiche: https://loisirs74.fr/balade-pedestre-tour-lac-mole-tour · JSON: https://loisirs74.fr/api/lieu/balade-pedestre-tour-lac-mole-tour.json
 
 ## Base de loisirs des Ilettes — Sallanches
 Accès libre
@@ -44,6 +60,22 @@ Fiche: https://loisirs74.fr/base-de-loisirs-du-vuaz-filliere · JSON: https://lo
 ## Belvédère du Mont Baron — Veyrier-du-Lac
 Accès libre
 Fiche: https://loisirs74.fr/belvedere-du-mont-baron · JSON: https://loisirs74.fr/api/lieu/belvedere-du-mont-baron.json
+
+## Table d'orientation de la Cry — Combloux
+Accès libre
+Fiche: https://loisirs74.fr/belvedere-panorama-360-combloux-la-cry · JSON: https://loisirs74.fr/api/lieu/belvedere-panorama-360-combloux-la-cry.json
+
+## Borne du château du Vuache — Vulbens
+Gratuit
+Fiche: https://loisirs74.fr/borne-chateau-vuache-vulbens · JSON: https://loisirs74.fr/api/lieu/borne-chateau-vuache-vulbens.json
+
+## Boucle pédestre Détective Nature (Sentier du Vuache) — Jonzier-Épagny
+Gratuit (livret téléchargeable)
+Fiche: https://loisirs74.fr/boucle-pedestre-detective-nature-jonzier-epagny · JSON: https://loisirs74.fr/api/lieu/boucle-pedestre-detective-nature-jonzier-epagny.json
+
+## Les boucles du Coteau — Publier
+Gratuit
+Fiche: https://loisirs74.fr/boucles-coteau-publier · JSON: https://loisirs74.fr/api/lieu/boucles-coteau-publier.json
 
 ## Cascade d'Angon — Talloires-Montmin
 Accès libre
@@ -97,25 +129,53 @@ Fiche: https://loisirs74.fr/cascade-du-dard · JSON: https://loisirs74.fr/api/li
 Accès libre
 Fiche: https://loisirs74.fr/cascade-du-rouget · JSON: https://loisirs74.fr/api/lieu/cascade-du-rouget.json
 
+## Cascade mystérieuse — Le Grand-Bornand
+Gratuit
+Fiche: https://loisirs74.fr/cascade-mysterieuse-le-grand-bornand · JSON: https://loisirs74.fr/api/lieu/cascade-mysterieuse-le-grand-bornand.json
+
 ## Château de Bellegarde — Thonon-les-Bains
 Gratuit toute l'année
 Fiche: https://loisirs74.fr/chateau-bellegarde-thonon · JSON: https://loisirs74.fr/api/lieu/chateau-bellegarde-thonon.json
+
+## Château de Buffavent — Lully
+Pas de visite intérieure
+Fiche: https://loisirs74.fr/chateau-buffavent-lully · JSON: https://loisirs74.fr/api/lieu/chateau-buffavent-lully.json
 
 ## Château de Châtillon-sur-Cluses — Châtillon-sur-Cluses
 Gratuit toute l'année
 Fiche: https://loisirs74.fr/chateau-chatillon-sur-cluses · JSON: https://loisirs74.fr/api/lieu/chateau-chatillon-sur-cluses.json
 
+## Château comtal de Ternier — Saint-Julien-en-Genevois
+Gratuit
+Fiche: https://loisirs74.fr/chateau-comtal-saint-julien-en-genevois · JSON: https://loisirs74.fr/api/lieu/chateau-comtal-saint-julien-en-genevois.json
+
+## Château de la Croix — Scionzier
+Pas de visite intérieure
+Fiche: https://loisirs74.fr/chateau-croix-scionzier · JSON: https://loisirs74.fr/api/lieu/chateau-croix-scionzier.json
+
 ## Château et Donjon des Seigneurs de Faverges — Faverges-Seythenex
 Accès libre
 Fiche: https://loisirs74.fr/chateau-et-donjon-des-seigneurs-de-faverges · JSON: https://loisirs74.fr/api/lieu/chateau-et-donjon-des-seigneurs-de-faverges.json
+
+## Château de Fonbonne et son Herbularius — Évian-les-Bains
+Gratuit (jardin)
+Fiche: https://loisirs74.fr/chateau-fonbonne-et-herbularius-evian-bains · JSON: https://loisirs74.fr/api/lieu/chateau-fonbonne-et-herbularius-evian-bains.json
 
 ## Château de la Rochette — Lully
 Gratuit toute l'année (extérieur)
 Fiche: https://loisirs74.fr/chateau-la-rochette-lully · JSON: https://loisirs74.fr/api/lieu/chateau-la-rochette-lully.json
 
+## Château de Thénières — Ballaison
+Pas de visite intérieure régulière
+Fiche: https://loisirs74.fr/chateau-thenieres-ballaison · JSON: https://loisirs74.fr/api/lieu/chateau-thenieres-ballaison.json
+
 ## Châteaux des Allinges — Allinges
 Accès libre
 Fiche: https://loisirs74.fr/chateaux-des-allinges · JSON: https://loisirs74.fr/api/lieu/chateaux-des-allinges.json
+
+## Chemin Art Nature d'Andilly — Andilly
+Gratuit
+Fiche: https://loisirs74.fr/chemin-art-nature-andilly-andilly · JSON: https://loisirs74.fr/api/lieu/chemin-art-nature-andilly-andilly.json
 
 ## Cirque du Fer-à-Cheval — Sixt-Fer-à-Cheval
 Accès libre
@@ -157,6 +217,14 @@ Fiche: https://loisirs74.fr/domaine-de-rovoree-la-chataigniere · JSON: https://
 Accès libre
 Fiche: https://loisirs74.fr/domaine-du-tornet · JSON: https://loisirs74.fr/api/lieu/domaine-du-tornet.json
 
+## Église baroque Saint-Nicolas de Combloux — Combloux
+Gratuit (accès libre)
+Fiche: https://loisirs74.fr/eglise-baroque-saint-nicolas-combloux · JSON: https://loisirs74.fr/api/lieu/eglise-baroque-saint-nicolas-combloux.json
+
+## La Ferme du Petit Mont — Bellevaux
+Visite libre gratuite
+Fiche: https://loisirs74.fr/ferme-pedagogique-petit-mont-bellevaux · JSON: https://loisirs74.fr/api/lieu/ferme-pedagogique-petit-mont-bellevaux.json
+
 ## GR® 96 Bornes-Aravis — Saint-Pierre-en-Faucigny
 Gratuit toute l'année
 Fiche: https://loisirs74.fr/gr96-bornes-aravis-haute-savoie · JSON: https://loisirs74.fr/api/lieu/gr96-bornes-aravis-haute-savoie.json
@@ -173,9 +241,29 @@ Fiche: https://loisirs74.fr/grp-tour-lac-annecy-annecy · JSON: https://loisirs7
 Gratuit toute l'année
 Fiche: https://loisirs74.fr/grp-tour-pays-mont-blanc-sallanches · JSON: https://loisirs74.fr/api/lieu/grp-tour-pays-mont-blanc-sallanches.json
 
+## Itinéraire pédestre : les bords de l'Arve - De Gaillard à Arthaz — Gaillard
+Gratuit
+Fiche: https://loisirs74.fr/itineraire-pedestre-bords-arve-gaillard-a-arthaz-gaillard · JSON: https://loisirs74.fr/api/lieu/itineraire-pedestre-bords-arve-gaillard-a-arthaz-gaillard.json
+
+## Itinéraire pédestre - Chemin des bords de Dranse — Châtel
+Gratuit
+Fiche: https://loisirs74.fr/itineraire-pedestre-chemin-bords-dranse-chatel · JSON: https://loisirs74.fr/api/lieu/itineraire-pedestre-chemin-bords-dranse-chatel.json
+
+## Jardin Alpin de Bellevaux — Bellevaux
+Gratuit
+Fiche: https://loisirs74.fr/jardin-alpin-de-bellevaux · JSON: https://loisirs74.fr/api/lieu/jardin-alpin-de-bellevaux.json
+
+## Jardin Alpin des Montets — Vallorcine — Vallorcine
+Accès libre et gratuit
+Fiche: https://loisirs74.fr/jardin-alpin-des-montets-vallorcine · JSON: https://loisirs74.fr/api/lieu/jardin-alpin-des-montets-vallorcine.json
+
 ## Jardin botanique alpin La Jaÿsinia — Samoëns
 Gratuit (entrée libre)
 Fiche: https://loisirs74.fr/jardin-jaysinia-samoens · JSON: https://loisirs74.fr/api/lieu/jardin-jaysinia-samoens.json
+
+## Les Jardins de l'Europe — Annecy
+Gratuit
+Fiche: https://loisirs74.fr/jardins-europe-annecy · JSON: https://loisirs74.fr/api/lieu/jardins-europe-annecy.json
 
 ## Lac Bénit — Mont-Saxonnex
 Accès libre
@@ -225,6 +313,10 @@ Fiche: https://loisirs74.fr/maison-du-lieutenant-servoz · JSON: https://loisirs
 Accès libre
 Fiche: https://loisirs74.fr/marais-de-poisy · JSON: https://loisirs74.fr/api/lieu/marais-de-poisy.json
 
+## La mine de la Lappiaz — Morzine
+Gratuit
+Fiche: https://loisirs74.fr/mine-lappiaz-morzine · JSON: https://loisirs74.fr/api/lieu/mine-lappiaz-morzine.json
+
 ## Mont Baron — Veyrier-du-Lac
 Accès libre
 Fiche: https://loisirs74.fr/mont-baron · JSON: https://loisirs74.fr/api/lieu/mont-baron.json
@@ -237,13 +329,29 @@ Fiche: https://loisirs74.fr/mont-joly · JSON: https://loisirs74.fr/api/lieu/mon
 Accès libre
 Fiche: https://loisirs74.fr/mont-veyrier · JSON: https://loisirs74.fr/api/lieu/mont-veyrier.json
 
+## Musée des ailes anciennes — Excenevex
+Gratuit (don bienvenu)
+Fiche: https://loisirs74.fr/musee-ailes-anciennes-excenevex · JSON: https://loisirs74.fr/api/lieu/musee-ailes-anciennes-excenevex.json
+
+## Musée de la Cordonnerie — Alby-sur-Chéran
+Gratuit
+Fiche: https://loisirs74.fr/musee-cordonnerie-alby-sur-cheran · JSON: https://loisirs74.fr/api/lieu/musee-cordonnerie-alby-sur-cheran.json
+
 ## Musée du Bâtiment — Ville-la-Grand
 Entrée libre · Dons déductibles 66%
 Fiche: https://loisirs74.fr/musee-du-batiment-ville-la-grand · JSON: https://loisirs74.fr/api/lieu/musee-du-batiment-ville-la-grand.json
 
+## Musée des Granges de Servette — Chens-sur-Léman
+Gratuit
+Fiche: https://loisirs74.fr/musee-granges-servette-chens-sur-leman · JSON: https://loisirs74.fr/api/lieu/musee-granges-servette-chens-sur-leman.json
+
 ## Parc Animalier La Grande Jeanne — Annecy
 Accès libre (parc public)
 Fiche: https://loisirs74.fr/parc-animalier-grande-jeanne-annecy · JSON: https://loisirs74.fr/api/lieu/parc-animalier-grande-jeanne-annecy.json
+
+## Parc du Château — Taninges
+Gratuit
+Fiche: https://loisirs74.fr/parc-chateau-taninges · JSON: https://loisirs74.fr/api/lieu/parc-chateau-taninges.json
 
 ## Parc de Loisirs du Pontet — Les Contamines-Montjoie
 Accès libre
@@ -257,6 +365,26 @@ Fiche: https://loisirs74.fr/parc-des-dereches · JSON: https://loisirs74.fr/api/
 Accès libre
 Fiche: https://loisirs74.fr/parc-des-dronieres · JSON: https://loisirs74.fr/api/lieu/parc-des-dronieres.json
 
+## Parc de l'Impérial — Annecy
+Accès libre
+Fiche: https://loisirs74.fr/parc-imperial-annecy · JSON: https://loisirs74.fr/api/lieu/parc-imperial-annecy.json
+
+## Parc Jardin des Iris — Annemasse
+Gratuit · parc public en accès libre
+Fiche: https://loisirs74.fr/parc-jardin-des-iris-annemasse · JSON: https://loisirs74.fr/api/lieu/parc-jardin-des-iris-annemasse.json
+
+## Parc Jean Beauquis — Ambilly
+Accès libre
+Fiche: https://loisirs74.fr/parc-jean-beauquis-ambilly · JSON: https://loisirs74.fr/api/lieu/parc-jean-beauquis-ambilly.json
+
+## Parcours de marche : Boucle pédestre d'Uffin — Neydens
+Accès libre
+Fiche: https://loisirs74.fr/parcours-marche-boucle-pedestre-uffin-neydens · JSON: https://loisirs74.fr/api/lieu/parcours-marche-boucle-pedestre-uffin-neydens.json
+
+## Parcours patrimoine : Se promener à Andilly — Andilly
+Accès libre
+Fiche: https://loisirs74.fr/parcours-patrimoine-se-promener-a-andilly-andilly · JSON: https://loisirs74.fr/api/lieu/parcours-patrimoine-se-promener-a-andilly-andilly.json
+
 ## Plage d'Albigny — Annecy
 Accès libre
 Fiche: https://loisirs74.fr/plage-albigny · JSON: https://loisirs74.fr/api/lieu/plage-albigny.json
@@ -268,6 +396,10 @@ Fiche: https://loisirs74.fr/plage-d-amphion-publier · JSON: https://loisirs74.f
 ## Plage d'Angon — Talloires-Montmin
 Gratuit (parking payant à proximité)
 Fiche: https://loisirs74.fr/plage-d-angon-talloires · JSON: https://loisirs74.fr/api/lieu/plage-d-angon-talloires.json
+
+## Plage du Centre Nautique d'Évian — Évian-les-Bains
+Gratuit hors saison · payant en été
+Fiche: https://loisirs74.fr/plage-d-evian-centre-nautique · JSON: https://loisirs74.fr/api/lieu/plage-d-evian-centre-nautique.json
 
 ## Plage d'Excenevex — Excenevex
 Accès libre
@@ -293,6 +425,10 @@ Fiche: https://loisirs74.fr/plage-de-la-pinede · JSON: https://loisirs74.fr/api
 Gratuit (parking Zone Bleue disque, max 3h)
 Fiche: https://loisirs74.fr/plage-de-margencel-sechex · JSON: https://loisirs74.fr/api/lieu/plage-de-margencel-sechex.json
 
+## Plage de Menthon-Saint-Bernard — Menthon-Saint-Bernard
+Gratuit hors saison · payant en été
+Fiche: https://loisirs74.fr/plage-de-menthon-saint-bernard · JSON: https://loisirs74.fr/api/lieu/plage-de-menthon-saint-bernard.json
+
 ## Plage de Messery — Messery
 Gratuit (parking payant 3 €/jour 1er juin-15 sept, badge)
 Fiche: https://loisirs74.fr/plage-de-messery · JSON: https://loisirs74.fr/api/lieu/plage-de-messery.json
@@ -304,6 +440,10 @@ Fiche: https://loisirs74.fr/plage-de-saint-disdille · JSON: https://loisirs74.f
 ## Plage Municipale de Saint-Gingolph — Saint-Gingolph
 Gratuit
 Fiche: https://loisirs74.fr/plage-de-saint-gingolph · JSON: https://loisirs74.fr/api/lieu/plage-de-saint-gingolph.json
+
+## Plage de Saint-Jorioz — Saint-Jorioz
+Gratuit hors saison · payant en été
+Fiche: https://loisirs74.fr/plage-de-saint-jorioz · JSON: https://loisirs74.fr/api/lieu/plage-de-saint-jorioz.json
 
 ## Plage de Sciez-sur-Léman — Sciez
 Accès libre
@@ -329,6 +469,14 @@ Fiche: https://loisirs74.fr/plage-des-marquisats · JSON: https://loisirs74.fr/a
 Gratuit
 Fiche: https://loisirs74.fr/plage-du-lac-de-montriond · JSON: https://loisirs74.fr/api/lieu/plage-du-lac-de-montriond.json
 
+## Plage de l'Impérial — Annecy
+Gratuit hors saison · payant en été
+Fiche: https://loisirs74.fr/plage-imperial-annecy · JSON: https://loisirs74.fr/api/lieu/plage-imperial-annecy.json
+
+## Plage Municipale de Thonon-les-Bains — Thonon-les-Bains
+Gratuit hors saison · payant en été
+Fiche: https://loisirs74.fr/plage-municipale-thonon · JSON: https://loisirs74.fr/api/lieu/plage-municipale-thonon.json
+
 ## Plaine de loisirs de la Grangette — Thonon-les-Bains
 Accès libre · activités payantes (mini-golf, locations)
 Fiche: https://loisirs74.fr/plaine-de-loisirs-de-la-grangette · JSON: https://loisirs74.fr/api/lieu/plaine-de-loisirs-de-la-grangette.json
@@ -349,6 +497,10 @@ Fiche: https://loisirs74.fr/pointe-de-miribel · JSON: https://loisirs74.fr/api/
 Accès libre
 Fiche: https://loisirs74.fr/pont-de-la-caille · JSON: https://loisirs74.fr/api/lieu/pont-de-la-caille.json
 
+## Port des Clerges - Base Nautique — Thonon-les-Bains
+Accès libre
+Fiche: https://loisirs74.fr/port-clerges-base-nautique-thonon-bains · JSON: https://loisirs74.fr/api/lieu/port-clerges-base-nautique-thonon-bains.json
+
 ## Réserve naturelle du Bout-du-Lac d'Annecy — Doussard
 Gratuit
 Fiche: https://loisirs74.fr/reserve-naturelle-bout-du-lac · JSON: https://loisirs74.fr/api/lieu/reserve-naturelle-bout-du-lac.json
@@ -356,6 +508,14 @@ Fiche: https://loisirs74.fr/reserve-naturelle-bout-du-lac · JSON: https://loisi
 ## Réserve naturelle du Delta de la Dranse — Publier
 Gratuit
 Fiche: https://loisirs74.fr/reserve-naturelle-delta-de-la-dranse · JSON: https://loisirs74.fr/api/lieu/reserve-naturelle-delta-de-la-dranse.json
+
+## Ruines du château d'Habère-Lullin — Habère-Lullin
+Accès libre
+Fiche: https://loisirs74.fr/ruines-chateau-habere-lullin-habere-lullin · JSON: https://loisirs74.fr/api/lieu/ruines-chateau-habere-lullin-habere-lullin.json
+
+## Ruines du château St Michel — Les Houches
+Accès libre
+Fiche: https://loisirs74.fr/ruines-chateau-st-michel-houches · JSON: https://loisirs74.fr/api/lieu/ruines-chateau-st-michel-houches.json
 
 ## Sentier du Balcon du Léman — Cruseilles
 Gratuit toute l'année
@@ -381,21 +541,73 @@ Fiche: https://loisirs74.fr/sentier-des-roselieres · JSON: https://loisirs74.fr
 Gratuit toute l'année
 Fiche: https://loisirs74.fr/sentier-desert-de-plate-passy · JSON: https://loisirs74.fr/api/lieu/sentier-desert-de-plate-passy.json
 
+## Sentier du Baroque — Combloux
+Accès libre
+Fiche: https://loisirs74.fr/sentier-du-baroque-combloux · JSON: https://loisirs74.fr/api/lieu/sentier-du-baroque-combloux.json
+
 ## Sentier des Espagnols / Pas du Roc — Thorens-Glières
 Gratuit toute l'année
 Fiche: https://loisirs74.fr/sentier-espagnols-pas-du-roc-glieres · JSON: https://loisirs74.fr/api/lieu/sentier-espagnols-pas-du-roc-glieres.json
+
+## Sentier géologique de la pointe Percée — Le Grand-Bornand
+Accès libre
+Fiche: https://loisirs74.fr/sentier-geologique-pointe-percee-grand-bornand · JSON: https://loisirs74.fr/api/lieu/sentier-geologique-pointe-percee-grand-bornand.json
 
 ## Sentiers de la Maison du Salève — Présilly
 Gratuit toute l'année
 Fiche: https://loisirs74.fr/sentier-maison-saleve-pomier-presilly · JSON: https://loisirs74.fr/api/lieu/sentier-maison-saleve-pomier-presilly.json
 
+## Sentier du Morclan — Châtel
+Accès libre
+Fiche: https://loisirs74.fr/sentier-morclan-chatel · JSON: https://loisirs74.fr/api/lieu/sentier-morclan-chatel.json
+
+## Sentier des oiseaux — Châtel
+Accès libre
+Fiche: https://loisirs74.fr/sentier-oiseaux-chatel · JSON: https://loisirs74.fr/api/lieu/sentier-oiseaux-chatel.json
+
+## Sentier pédestre : à la découverte du village de la Vernaz — La Vernaz
+Accès libre
+Fiche: https://loisirs74.fr/sentier-pedestre-a-decouverte-village-vernaz-vernaz · JSON: https://loisirs74.fr/api/lieu/sentier-pedestre-a-decouverte-village-vernaz-vernaz.json
+
+## Sentier pédestre de l'Eterlou — Châtel
+Accès libre
+Fiche: https://loisirs74.fr/sentier-pedestre-eterlou-chatel · JSON: https://loisirs74.fr/api/lieu/sentier-pedestre-eterlou-chatel.json
+
+## Sentier pédestre d'interprétation du lac des Plagnes — Abondance
+Accès libre
+Fiche: https://loisirs74.fr/sentier-pedestre-interpretation-lac-plagnes-abondance · JSON: https://loisirs74.fr/api/lieu/sentier-pedestre-interpretation-lac-plagnes-abondance.json
+
+## Sentier pédestre sonore sur les traces des contrebandiers - circuit familles — Châtel
+Accès libre
+Fiche: https://loisirs74.fr/sentier-pedestre-sonore-sur-traces-contrebandiers-circuit-familles-chatel · JSON: https://loisirs74.fr/api/lieu/sentier-pedestre-sonore-sur-traces-contrebandiers-circuit-familles-chatel.json
+
+## Le sentier du renard — Morzine
+Accès libre
+Fiche: https://loisirs74.fr/sentier-renard-morzine · JSON: https://loisirs74.fr/api/lieu/sentier-renard-morzine.json
+
 ## Sentier de la Tournette depuis Montmin — Talloires-Montmin
 Gratuit toute l'année
 Fiche: https://loisirs74.fr/sentier-tournette-montmin · JSON: https://loisirs74.fr/api/lieu/sentier-tournette-montmin.json
 
+## Grotte de Balme — Magland — Magland
+Visite libre gratuite · sortie encadrée ~40-80 € (à confirmer)
+Fiche: https://loisirs74.fr/speleo-grotte-de-balme-magland · JSON: https://loisirs74.fr/api/lieu/speleo-grotte-de-balme-magland.json
+
+## Stelsia Casino — Megève
+Accès libre
+Fiche: https://loisirs74.fr/stelsia-casino-megeve · JSON: https://loisirs74.fr/api/lieu/stelsia-casino-megeve.json
+
+## Suivez la mouche — Alby-sur-Chéran
+Accès libre
+Fiche: https://loisirs74.fr/suivez-mouche-alby-sur-cheran · JSON: https://loisirs74.fr/api/lieu/suivez-mouche-alby-sur-cheran.json
+
 ## Tête du Parmelan — Dingy-Saint-Clair
 Accès libre
 Fiche: https://loisirs74.fr/tete-du-parmelan · JSON: https://loisirs74.fr/api/lieu/tete-du-parmelan.json
+
+## Le Thiou à Annecy — Annecy
+Accès libre
+Fiche: https://loisirs74.fr/thiou-a-annecy-annecy · JSON: https://loisirs74.fr/api/lieu/thiou-a-annecy-annecy.json
 
 ## Tour de Bellecombe — Reignier-Ésery
 Gratuit toute l'année
@@ -409,9 +621,45 @@ Fiche: https://loisirs74.fr/tour-des-langues-thonon · JSON: https://loisirs74.f
 Sentier gratuit · Refuges 60-90 €/nuit demi-pension
 Fiche: https://loisirs74.fr/tour-du-mont-blanc-les-houches · JSON: https://loisirs74.fr/api/lieu/tour-du-mont-blanc-les-houches.json
 
+## Tour du village d'Abondance — Abondance
+Accès libre
+Fiche: https://loisirs74.fr/tour-village-abondance-abondance · JSON: https://loisirs74.fr/api/lieu/tour-village-abondance-abondance.json
+
 ## Véloroute Vallée de l'Arve — Cluses
 Gratuit toute l'année
 Fiche: https://loisirs74.fr/veloroute-vallee-arve-cluses-sallanches · JSON: https://loisirs74.fr/api/lieu/veloroute-vallee-arve-cluses-sallanches.json
+
+## Via ferrata de la Cascade de Bérard — Vallorcine
+Gratuit (équipement personnel ou en location)
+Fiche: https://loisirs74.fr/via-ferrata-berard-vallorcine · JSON: https://loisirs74.fr/api/lieu/via-ferrata-berard-vallorcine.json
+
+## Via ferrata de Curalla — Passy
+Gratuit
+Fiche: https://loisirs74.fr/via-ferrata-curalla-passy · JSON: https://loisirs74.fr/api/lieu/via-ferrata-curalla-passy.json
+
+## Via ferrata de la Tour du Jallouvre — Le Grand-Bornand
+Gratuit (guide optionnel ~120 €/pers)
+Fiche: https://loisirs74.fr/via-ferrata-jallouvre-le-grand-bornand · JSON: https://loisirs74.fr/api/lieu/via-ferrata-jallouvre-le-grand-bornand.json
+
+## Via ferrata du Parc Thermal — Saint-Gervais-les-Bains
+Gratuit / Sorties guidées 50-150 €
+Fiche: https://loisirs74.fr/via-ferrata-parc-thermal-saint-gervais · JSON: https://loisirs74.fr/api/lieu/via-ferrata-parc-thermal-saint-gervais.json
+
+## Via ferrata Yves Pollet-Villard — La Clusaz
+Gratuit
+Fiche: https://loisirs74.fr/via-ferrata-pollet-villard-la-clusaz · JSON: https://loisirs74.fr/api/lieu/via-ferrata-pollet-villard-la-clusaz.json
+
+## Via ferrata du Saix de Miolène — La Chapelle-d'Abondance
+Gratuit
+Fiche: https://loisirs74.fr/via-ferrata-saix-de-miolene-abondance · JSON: https://loisirs74.fr/api/lieu/via-ferrata-saix-de-miolene-abondance.json
+
+## Via ferrata du Mont — Sixt-Fer-à-Cheval
+Gratuit
+Fiche: https://loisirs74.fr/via-ferrata-sixt-fer-a-cheval · JSON: https://loisirs74.fr/api/lieu/via-ferrata-sixt-fer-a-cheval.json
+
+## Via ferrata de Thônes — Thônes
+Gratuit (location matériel env. 15–20 €)
+Fiche: https://loisirs74.fr/via-ferrata-thones · JSON: https://loisirs74.fr/api/lieu/via-ferrata-thones.json
 
 ## ViaRhôna Haute-Savoie — Saint-Gingolph
 Gratuit toute l'année
