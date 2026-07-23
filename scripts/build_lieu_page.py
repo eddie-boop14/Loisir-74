@@ -672,8 +672,12 @@ def activities_block(activities):
         tag = a.get("tag", "")
         desc = a.get("description", "")
         tag_html = f'<span class="activity-tag">{esc(tag)}</span>' if tag else ""
+        # JOB 3 named-entity anchor: a proprietary-name activity (Absurd Game,
+        # Explor Games, Acro'Filet, Visite Découverte) carries a stable id so the
+        # name is a resolvable, matchable fragment. Permanent — never renamed.
+        id_attr = f' id="{attr(a["id"])}"' if a.get("id") else ""
         cards.append(
-            f'<button type="button" class="activity flip" aria-label="{attr(title)}">'
+            f'<button type="button" class="activity flip"{id_attr} aria-label="{attr(title)}">'
             f'<div class="flip-inner">'
             f'<div class="flip-front">'
             f'<h4>{esc(title)}{tag_html}</h4>'
