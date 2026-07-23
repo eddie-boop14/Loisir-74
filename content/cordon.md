@@ -50,11 +50,13 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Partiellement accessible
+- Détail: Une place réservée aux personnes en situation de handicap se situe juste devant le bâtiment de l'Office de Tourisme de Cordon ; l'établissement Cordon Tourisme est accessible aux personnes en situation de handicap. Aucun dispositif handiski sur les pistes mentionné sur les pages officielles consultées.
+- Source: Cordon Tourisme — Site officiel (Accès et transport sur Cordon) — https://www.cordon.fr/hiver/navette.htm
 
 ## Parking
 
-Non renseigné
+Deux parkings pour accéder aux remontées : La Charbonnière (Carrefour du Verney) et Le Dandry, qui est le départ des remontées mécaniques (partie haute du domaine, accès direct à la zone débutant, cours ESF et caisses des forfaits). Navette gratuite reliant le centre-village au parking du Dandry. Gratuité/tarif et capacité des parkings non précisés en verbatim sur la page consultée.
 
 ## Transport
 

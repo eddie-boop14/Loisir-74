@@ -1,13 +1,13 @@
 ---
 facet: hours
 scope: haute-savoie-74
-lieux_documented: 320
+lieux_documented: 329
 lieux_total: 426
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Horaires — index transversal (426 lieux, 320 documentés)
+# Horaires — index transversal (426 lieux, 329 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 15 juin – 15 sept : tous les jours 10h–19h. 1er janv – 31 mars : lundi au vendredi 14h–18h (fermé 1er janv). 1er avr – 14 juin et 16 sept – 30 sept : lundi au vendredi et dimanche 14h–18h30 (fermé samedi, fermé 1er mai). Oct : lundi au vendredi 14h–18h. Vérifié sur le site officiel le 14 mai 2026 — sous réserve de modifications saisonnières.
@@ -112,6 +112,10 @@ Fiche: https://loisirs74.fr/base-nautique-marquisats-annecy · JSON: https://loi
 ## Centre nautique Voile Léman Sciez — Sciez
 Horaires du Centre nautique Voile Léman Sciez : Saison : tous les jours 9h-18h. Hors saison sur réservation. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
 Fiche: https://loisirs74.fr/base-nautique-sciez-sciez · JSON: https://loisirs74.fr/api/lieu/base-nautique-sciez-sciez.json
+
+## Bernex — Bernex
+Caisses des remontées : 8h45–16h hors vacances scolaires, 8h30–17h pendant les vacances scolaires (télésiège du Pré-Richard jusqu'à 16h50/17h10 en descente).
+Fiche: https://loisirs74.fr/bernex · JSON: https://loisirs74.fr/api/lieu/bernex.json
 
 ## Thonon Billard Club (Billard Stella) — Thonon-les-Bains
 Créneaux soirée principalement (semaine et week-end). Horaires précis à confirmer auprès du club.
@@ -344,6 +348,10 @@ Fiche: https://loisirs74.fr/cinema-pathe-annecy · JSON: https://loisirs74.fr/ap
 ## Pathé Archamps — Archamps
 Programmation hebdomadaire renouvelée le mercredi. Séances en soirée toute la semaine, après-midi en cas de jour férié, mercredi, week-end et vacances scolaires.
 Fiche: https://loisirs74.fr/cinema-pathe-archamps-imax · JSON: https://loisirs74.fr/api/lieu/cinema-pathe-archamps-imax.json
+
+## Combloux — Combloux
+Liaison du Jaillet : 9h10–16h45 (vers Combloux), 9h10–16h15 (vers La Giettaz).
+Fiche: https://loisirs74.fr/combloux · JSON: https://loisirs74.fr/api/lieu/combloux.json
 
 ## Côte 2000 Aventure — Megève
 Mi-juillet à fin août : tous les jours 10h00–17h00 (dernier départ). Reste de l'année : sur réservation uniquement. Vérifié sur le site officiel le 14 mai 2026 — sous réserve de modifications saisonnières et fermeture pour météo.
@@ -597,6 +605,10 @@ Fiche: https://loisirs74.fr/karting-team-bouvier-pringy · JSON: https://loisirs
 Ouvert toute l'année sur réservation. Affluence forte vendredi/samedi soir et vacances scolaires d'hiver. Vérifier les créneaux par téléphone.
 Fiche: https://loisirs74.fr/karting-thones · JSON: https://loisirs74.fr/api/lieu/karting-thones.json
 
+## La Clusaz — La Clusaz
+Remontées mécaniques : 9h–16h30.
+Fiche: https://loisirs74.fr/la-clusaz · JSON: https://loisirs74.fr/api/lieu/la-clusaz.json
+
 ## La Forêt Enchantée — Sillingy
 Mer, sam, dim 10h-19h · ven 16h-19h (1er oct → 30 juin)
 Fiche: https://loisirs74.fr/la-foret-enchantee-sillingy · JSON: https://loisirs74.fr/api/lieu/la-foret-enchantee-sillingy.json
@@ -617,6 +629,14 @@ Fiche: https://loisirs74.fr/laser-game-evolution-ville-la-grand · JSON: https:/
 Ouvert toute la semaine ; généralement après-midi et soirée. Horaires étendus le week-end, les vacances scolaires et les jours fériés. Voir site officiel.
 Fiche: https://loisirs74.fr/laser-game-lasermaxx-sillingy · JSON: https://loisirs74.fr/api/lieu/laser-game-lasermaxx-sillingy.json
 
+## Le Grand-Bornand — Le Grand-Bornand
+Remontées mécaniques : 9h–17h.
+Fiche: https://loisirs74.fr/le-grand-bornand · JSON: https://loisirs74.fr/api/lieu/le-grand-bornand.json
+
+## Le Reposoir — Le Reposoir
+Remontées : 9h–17h (7j/7 pendant les vacances scolaires ; mercredi, samedi et dimanche hors vacances).
+Fiche: https://loisirs74.fr/le-reposoir · JSON: https://loisirs74.fr/api/lieu/le-reposoir.json
+
 ## Léman Forest — Saint-Gingolph
 Saison Pâques – Toussaint. Avril/mai/juin/septembre/octobre : week-ends, certains mercredis et presque tous les jours pendant les vacances scolaires. Juillet/août : tous les jours 10h–19h. Horaires détaillés à confirmer sur leman-forest.com/en/schedules/. Vérifié le 21 mai 2026 — sous réserve de modifications saisonnières et météo.
 Fiche: https://loisirs74.fr/leman-forest-saint-gingolph · JSON: https://loisirs74.fr/api/lieu/leman-forest-saint-gingolph.json
@@ -628,6 +648,10 @@ Fiche: https://loisirs74.fr/leman-kid-thonon-les-bains · JSON: https://loisirs7
 ## Les Aigles du Léman — Sciez
 Du 4 au 19 avril : tous les jours 12h00–17h30. Du 20 avril au 31 mai : week-ends et jours fériés 12h00–17h30. Du 1er juin au 3 juillet : 10h00–16h00 en semaine, 12h00–17h30 mercredis et week-ends. Du 4 juillet au 30 août : tous les jours 10h00–18h00. Vérifié sur le site officiel le 14 mai 2026 — sous réserve de modifications saisonnières.
 Fiche: https://loisirs74.fr/les-aigles-du-leman · JSON: https://loisirs74.fr/api/lieu/les-aigles-du-leman.json
+
+## Les Brasses — Viuz-en-Sallaz
+Remontées mécaniques : 9h–16h30, tous les jours.
+Fiche: https://loisirs74.fr/les-brasses · JSON: https://loisirs74.fr/api/lieu/les-brasses.json
 
 ## Maison de Barberine — Vallorcine
 MUSÉE SAISONNIER FERMÉ AU 23 MAI 2026. Réouverture 1er juillet — 31 août 2026 : Lundi-Vendredi 14h30-17h30, Dimanche 15h-17h30. FERMÉ SAMEDI. Ouverture spéciale Journées Européennes du Patrimoine (septembre). Sur rendez-vous pour groupes hors saison. Vérifié sur le site officiel le 23 mai 2026 — sous réserve de modifications saisonnières.
@@ -657,9 +681,17 @@ Fiche: https://loisirs74.fr/maison-forte-hautetour-saint-gervais · JSON: https:
 Hors saison (17 déc-30 avr) : mardi-samedi 9h30-12h et 14h-17h30. Mai-juin et septembre : lundi-samedi 9h30-12h et 14h-18h. Juillet-août : tous les jours 9h30-12h et 14h-18h (sauf dimanche matin). Octobre : mardi-samedi 9h30-12h et 14h-17h30. Fermeture annuelle 1er nov-15 déc. Fermé 25 déc et 1er janv. Vérifié le 10 juin 2026.
 Fiche: https://loisirs74.fr/maison-fromage-abondance-abondance · JSON: https://loisirs74.fr/api/lieu/maison-fromage-abondance-abondance.json
 
+## Manigod — Manigod
+Remontées : 9h–16h30 tous les jours (caisses 8h30–16h30) ; ski nocturne 16h30–20h les vendredis et samedis.
+Fiche: https://loisirs74.fr/manigod · JSON: https://loisirs74.fr/api/lieu/manigod.json
+
 ## La mine de la Lappiaz — Morzine
 Accès libre toute l'année, en fonction des conditions météo et d'enneigement. Praticable principalement de mi-juin à mi-octobre. Vérifié le 10 juin 2026.
 Fiche: https://loisirs74.fr/mine-lappiaz-morzine · JSON: https://loisirs74.fr/api/lieu/mine-lappiaz-morzine.json
+
+## Mont-Saxonnex — Mont-Saxonnex
+Remontées : 9h–17h (tous les jours pendant les vacances scolaires ; mercredi, samedi et dimanche hors vacances).
+Fiche: https://loisirs74.fr/mont-saxonnex · JSON: https://loisirs74.fr/api/lieu/mont-saxonnex.json
 
 ## Montgolfière Annecy — Annecy
 Saison : avril à octobre principalement. Vols matinaux (RDV vers 5h30-7h selon saison). Quelques vols de fin d'après-midi possibles. Sur réservation.
@@ -984,6 +1016,10 @@ Fiche: https://loisirs74.fr/ruines-chateau-habere-lullin-habere-lullin · JSON: 
 ## Ruines du château St Michel — Les Houches
 Accès libre toute l'année, tous les jours, selon les conditions d'enneigement et la praticabilité du sentier.
 Fiche: https://loisirs74.fr/ruines-chateau-st-michel-houches · JSON: https://loisirs74.fr/api/lieu/ruines-chateau-st-michel-houches.json
+
+## Saint-Gervais-les-Bains — Saint-Gervais-les-Bains
+Télécabine de l'Alpin (Le Bettex) : 8h30–17h10, tous les jours.
+Fiche: https://loisirs74.fr/saint-gervais-les-bains · JSON: https://loisirs74.fr/api/lieu/saint-gervais-les-bains.json
 
 ## Secrets de fées - parcours de découverte — Habère-Poche
 Sentiers en accès libre toute l'année. Été (juin-septembre) recommandé pour la version été ; hiver praticable en raquettes selon enneigement.

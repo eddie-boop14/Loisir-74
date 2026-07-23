@@ -50,11 +50,13 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Partiellement accessible
+- Détail: Handiski avec l'ESF (fauteuils-ski adaptés) permettant de découvrir les sensations de glisse. Télécabines de Montjoie accessibles avec un fauteuil pliable. Hébergements, restaurants et commerces certifiés accessibles en fauteuil listés.
+- Source: Office de Tourisme Les Contamines-Montjoie – Vacances et handicap — https://www.lescontamines.com/ete/pratique/vacances-et-handicap
 
 ## Parking
 
-Non renseigné
+En exploitation hiver, la commune maintient plusieurs parkings visiteurs: Parking de la Gorge (à droite des remontées), Parking du Lay (P2 et 2e niveau du P3) et Parking du rond-point des Moranches. Stationnement longue durée (>30 min) au parking sous le chalet podium, au parking du Cressoua et au parking de l'école.
 
 ## Transport
 

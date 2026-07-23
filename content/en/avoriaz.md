@@ -50,11 +50,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Accessible
+- Source: Avoriaz — Site officiel (Tourisme et handicap) — https://www.avoriaz.com/en/staying/pratical-information/tourism-and-disability/
 
 ## Parking
 
-Not specified
+3 parkings couverts (Plateau, Falaise, Proclou), 1 730 places au total, ouverts 24h/24 (8 bornes de recharge au Plateau). Parking extérieur : 600 places, à 800 m de l'entrée de la station, 24h/24 ; gratuit l'été, hiver 1 jour 14€, semaine 82€, saison 390€. Parking des Prodains (télécabine Prodains Express) : 540 places (zones P0 <12h, P1 >12h), gratuit l'été, hiver 1 jour 26€, 7 jours 182€, 45 min gratuites/jour. Parkings couverts hiver : 1re heure gratuite, 1 jour 18€, semaine 100€ ; été 1h 1,20€ à saison 180€.
 
 ## Transport
 

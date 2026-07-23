@@ -23,6 +23,6 @@
 - [Château de Clermont](https://loisirs74.fr/ja/chateau-clermont-genevois) — Clermont · [md](https://loisirs74.fr/content/chateau-clermont-genevois.md)
 - [Château des Rubins](https://loisirs74.fr/ja/chateau-des-rubins-sallanches) — Sallanches · [md](https://loisirs74.fr/content/chateau-des-rubins-sallanches.md)
 - [Château de Montrottier](https://loisirs74.fr/ja/chateau-montrottier-lovagny) — Lovagny · [md](https://loisirs74.fr/content/chateau-montrottier-lovagny.md)
-- [CGN escale Yvoire](https://loisirs74.fr/ja/croisiere-cgn-yvoire) — Yvoire · [md](https://loisirs74.fr/content/croisiere-cgn-yvoire.md)
+- [Combloux](https://loisirs74.fr/ja/combloux) — Combloux · [md](https://loisirs74.fr/content/combloux.md)
 
 Source: https://loisirs74.fr/ja/que-faire/accessible-pmr-haute-savoie/

@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Horaires
 
-Non renseigné
+Remontées mécaniques : 9h–17h.
 
 ## Tarifs
 
@@ -50,11 +50,13 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Accessible
+- Détail: École de ski avec ~6 moniteurs spécialisés handiski et une vingtaine de remontées mécaniques adaptées. Points de rendez-vous au départ du télésiège du Châtelet (Chinaillon) ou au sommet des télécabines du Rosay. Activités tandemski / dualski / handiski (matériel inclus, encadrement qualifié). Forfait accompagnateur -50 % avec carte orange PMR.
+- Source: Le Grand-Bornand (site officiel) — https://en.legrandbornand.com/what-to-do/tandemski-dualski-handiksi-private-lesson-le-grand-bornand-en-5596164/
 
 ## Parking
 
-Non renseigné
+Nombreux parkings gratuits répartis entre le centre-village et le Chinaillon. Réglementation hivernale : stationnement limité à 24h sur un même emplacement en période de chutes de neige (déneigement), interdit sur les aires de retournement des engins ; zones bleues en vigueur. Bornes de recharge électrique disponibles.
 
 ## Transport
 

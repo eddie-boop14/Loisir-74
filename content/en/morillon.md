@@ -49,11 +49,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Partially accessible
+- Source: Grand Massif – Un domaine accessible (Morillon) — https://www.grand-massif.com/domaine-skiable/le-grand-massif-un-domaine-accessible-morillon/
 
 ## Parking
 
-Not specified
+Parkings gratuits (accès par la sortie Cluses de l'autoroute A40). Parkings PMR à Morillon village (au pied de la télécabine) et à Morillon 1100 (bout de station).
 
 ## Transport
 

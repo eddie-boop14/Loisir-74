@@ -50,7 +50,9 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Partiellement accessible
+- Détail: « Praz de Lys Sommand Tourisme est porteur du label TOURISME & HANDICAP depuis 2011 » (4 handicaps : auditif, mental, visuel, moteur). Offices accessibles (entrée de plain-pied, stationnement PMR réservé, banques d'accueil abaissées, fauteuils roulants à disposition, sanitaires adaptés). Documents d'autorisation d'accès aux remontées disponibles. Aucune offre handiski spécifique confirmée en verbatim.
+- Source: Praz de Lys Sommand Tourisme — https://www.prazdelys-sommand.com/tourisme-et-handicap/
 
 ## Parking
 

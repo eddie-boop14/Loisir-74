@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Horaires
 
-Non renseigné
+Caisses des remontées : 8h45–16h hors vacances scolaires, 8h30–17h pendant les vacances scolaires (télésiège du Pré-Richard jusqu'à 16h50/17h10 en descente).
 
 ## Tarifs
 

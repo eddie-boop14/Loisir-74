@@ -1,13 +1,13 @@
 ---
 facet: parking
 scope: haute-savoie-74
-lieux_documented: 246
+lieux_documented: 271
 lieux_total: 426
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Parking — index transversal (426 lieux, 246 documentés)
+# Parking — index transversal (426 lieux, 271 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Gratuit sur place
@@ -60,6 +60,10 @@ Fiche: https://loisirs74.fr/au-fil-rail-jeu-piste-a-servoz-servoz · JSON: https
 ## Au Fil du Rail - Jeu de piste à Vallorcine — Vallorcine
 Gare SNCF du Buet (gratuit)
 Fiche: https://loisirs74.fr/au-fil-rail-jeu-piste-a-vallorcine-vallorcine · JSON: https://loisirs74.fr/api/lieu/au-fil-rail-jeu-piste-a-vallorcine-vallorcine.json
+
+## Avoriaz — Morzine
+3 parkings couverts (Plateau, Falaise, Proclou), 1 730 places au total, ouverts 24h/24 (8 bornes de recharge au Plateau). Parking extérieur : 600 places, à 800 m de l'entrée de la station, 24h/24 ; gratuit l'été, hiver 1 jour 14€, semaine 82€, saison 390€. Parking des Prodains (télécabine Prodains Express) : 540 places (zones P0 <12h, P1 >12h), gratuit l'été, hiver 1 jour 26€, 7 jours 182€, 45 min gratuites/jour. Parkings couverts hiver : 1re heure gratuite, 1 jour 18€, semaine 100€ ; été 1h 1,20€ à saison 180€.
+Fiche: https://loisirs74.fr/avoriaz · JSON: https://loisirs74.fr/api/lieu/avoriaz.json
 
 ## Balade pédestre - Tour du lac du Môle — La Tour
 Parking d'entrée de Saint-Jeoire / La Tour (gratuit)
@@ -209,6 +213,10 @@ Fiche: https://loisirs74.fr/casino-imperial-palace-annecy · JSON: https://loisi
 Parking du casino (gratuit)
 Fiche: https://loisirs74.fr/casino-saint-julien-saint-julien-en-genevois · JSON: https://loisirs74.fr/api/lieu/casino-saint-julien-saint-julien-en-genevois.json
 
+## Chamonix-Mont-Blanc — Chamonix-Mont-Blanc
+3 parkings couverts (Entrèves, Saint-Michel, parking du Mont-Blanc) et 7 parkings enclos (l'Outa, gare SNCF, Grépon, Lionel Terray, Médiathèque, Tennis, Allobroges). Parking Relais du Grépon à l'entrée de Chamonix : garer sa voiture et prendre le bus, accès centre-ville via le minibus Mulet. Au total plus de 42 emplacements de stationnement recensés dans la vallée (10 avec bornes de recharge). Détail des capacités et tarifs (gratuit/payant, hiver/été) non précisé en verbatim sur la page listant les parkings.
+Fiche: https://loisirs74.fr/chamonix-mont-blanc · JSON: https://loisirs74.fr/api/lieu/chamonix-mont-blanc.json
+
 ## Château d'Avully — Brenthonne
 Gratuit à l'entrée du château
 Fiche: https://loisirs74.fr/chateau-avully-brenthonne · JSON: https://loisirs74.fr/api/lieu/chateau-avully-brenthonne.json
@@ -285,6 +293,10 @@ Fiche: https://loisirs74.fr/chateau-thenieres-ballaison · JSON: https://loisirs
 Gratuit (au pied de la colline)
 Fiche: https://loisirs74.fr/chateaux-des-allinges · JSON: https://loisirs74.fr/api/lieu/chateaux-des-allinges.json
 
+## Châtel — Châtel
+Parkings payants avec horodateurs (périodes payantes 15 décembre–30 avril et 1er juillet–31 août, tous les jours) : Parking centre (limité 1h30, payant 8h–19h) ; Parking Meurba sous l'église (limité 9h, payant 8h–19h) ; Parking Etringa au centre aquatique (limité 5h, payant 8h–minuit). Parkings avec abonnement : Lac de Vonnes et Etringa (15 déc–30 avr) — Vonnes 1 jour 10€/semaine 35€/saison 80€ ; Etringa saison 135€. Zones limitées 5 min–2h au centre-village et lac de Vonnes. 23 places réservées CMI réparties sur les parkings. Paiement : espèces, CB, sans contact, appli Flowbird.
+Fiche: https://loisirs74.fr/chatel · JSON: https://loisirs74.fr/api/lieu/chatel.json
+
 ## Châtel Accrobranche 1600 — Châtel
 Parking de la télécabine Super-Châtel
 Fiche: https://loisirs74.fr/chatel-accrobranche-1600-chatel · JSON: https://loisirs74.fr/api/lieu/chatel-accrobranche-1600-chatel.json
@@ -320,6 +332,14 @@ Fiche: https://loisirs74.fr/col-des-glieres · JSON: https://loisirs74.fr/api/li
 ## Le Salève (Col des Pitons) — Collonges-sous-Salève
 Gratuit (parking au col)
 Fiche: https://loisirs74.fr/col-des-pitons-saleve · JSON: https://loisirs74.fr/api/lieu/col-des-pitons-saleve.json
+
+## Combloux — Combloux
+Parking de Cuchet, au pied des pistes du domaine « Les Portes du Mont-Blanc » : 217 places dont 7 places PMR, avec 6 places réservées en bord de piste. Navette gratuite reliant le centre-village au parking de Cuchet.
+Fiche: https://loisirs74.fr/combloux · JSON: https://loisirs74.fr/api/lieu/combloux.json
+
+## Cordon — Cordon
+Deux parkings pour accéder aux remontées : La Charbonnière (Carrefour du Verney) et Le Dandry, qui est le départ des remontées mécaniques (partie haute du domaine, accès direct à la zone débutant, cours ESF et caisses des forfaits). Navette gratuite reliant le centre-village au parking du Dandry. Gratuité/tarif et capacité des parkings non précisés en verbatim sur la page consultée.
+Fiche: https://loisirs74.fr/cordon · JSON: https://loisirs74.fr/api/lieu/cordon.json
 
 ## Côte 2000 Aventure — Megève
 Gratuit (devant l'entrée du parc)
@@ -388,6 +408,10 @@ Fiche: https://loisirs74.fr/ferme-ecomusee-clos-parchet-samoens · JSON: https:/
 ## Filenvol — Monnetier-Mornex
 Gratuit sur place
 Fiche: https://loisirs74.fr/filenvol-monnetier-mornex · JSON: https://loisirs74.fr/api/lieu/filenvol-monnetier-mornex.json
+
+## Flaine — Arâches-la-Frasse
+Trois parkings principaux P1 (Flaine Front de Neige), P2 (Flaine Forum) et P3 (Flaine Forêt) : tarif hiver 5€ entre 30 min et 12h, 10€ entre 12h et 24h, puis 10€ par tranche de 24h ; gratuits en été. Accès gratuit temporaire de 1h30 (ou entre 19h00 et 3h30) pour charger/décharger. Parking du Col de Pierre Carrée : gratuit, accessible en navettes gratuites. Parking du Pavillon d'Accueil ouvert du 4 décembre 2025 au 19 avril 2026, tous les jours 24h/24. 4 bornes de recharge électriques (accès public 24h/24).
+Fiche: https://loisirs74.fr/flaine · JSON: https://loisirs74.fr/api/lieu/flaine.json
 
 ## Fonderie Paccard — Sevrier
 Gratuit sur place
@@ -477,6 +501,14 @@ Fiche: https://loisirs74.fr/karting-rumilly-rumilly · JSON: https://loisirs74.f
 Gratuit sur site
 Fiche: https://loisirs74.fr/karting-team-bouvier-pringy · JSON: https://loisirs74.fr/api/lieu/karting-team-bouvier-pringy.json
 
+## La Chapelle-d'Abondance — La Chapelle-d'Abondance
+Parking gratuit à la station (secteur Le Clos, 74360 La Chapelle-d'Abondance), avec accueil et aire de service camping-cars et stationnement autocars ; parking au centre du village (~20 places, près des commerces, mairie et OT) limité à 2h.
+Fiche: https://loisirs74.fr/la-chapelle-d-abondance · JSON: https://loisirs74.fr/api/lieu/la-chapelle-d-abondance.json
+
+## La Clusaz — La Clusaz
+Parkings couverts payants en hiver (gratuits le reste de l'année) : Salon des Dames (430 places, entrée du village), Bossonnet (85 places, haut du village), Centre Village (330 places). Parking Perrière (haut du village) payant hiver ET été, dédié au stationnement de courte durée. 6 zones gratuites hors village limitées à 24h (Crêt du Merle, Combe des Juments, Etale, Laquais, Chenons, Confins). Horodateurs 0,60 €/15 min.
+Fiche: https://loisirs74.fr/la-clusaz · JSON: https://loisirs74.fr/api/lieu/la-clusaz.json
+
 ## Lac Bénit — Mont-Saxonnex
 Gratuit (Bété, Morsulaz)
 Fiche: https://loisirs74.fr/lac-benit · JSON: https://loisirs74.fr/api/lieu/lac-benit.json
@@ -509,6 +541,14 @@ Fiche: https://loisirs74.fr/lac-des-dronieres · JSON: https://loisirs74.fr/api/
 Gratuit (parking Plaine-Joux)
 Fiche: https://loisirs74.fr/lac-vert-passy · JSON: https://loisirs74.fr/api/lieu/lac-vert-passy.json
 
+## Le Grand-Bornand — Le Grand-Bornand
+Nombreux parkings gratuits répartis entre le centre-village et le Chinaillon. Réglementation hivernale : stationnement limité à 24h sur un même emplacement en période de chutes de neige (déneigement), interdit sur les aires de retournement des engins ; zones bleues en vigueur. Bornes de recharge électrique disponibles.
+Fiche: https://loisirs74.fr/le-grand-bornand · JSON: https://loisirs74.fr/api/lieu/le-grand-bornand.json
+
+## Le Reposoir — Le Reposoir
+La station indique un 'Parking' et une aire de stationnement/borne de service camping-cars parmi ses équipements ; tarif (gratuit/payant), capacité et emplacement précis non indiqués sur le site officiel.
+Fiche: https://loisirs74.fr/le-reposoir · JSON: https://loisirs74.fr/api/lieu/le-reposoir.json
+
 ## Le Semnoz — Viuz-la-Chiésaz
 Gratuit (station)
 Fiche: https://loisirs74.fr/le-semnoz · JSON: https://loisirs74.fr/api/lieu/le-semnoz.json
@@ -524,6 +564,26 @@ Fiche: https://loisirs74.fr/leman-kid-thonon-les-bains · JSON: https://loisirs7
 ## Les Aigles du Léman — Sciez
 Gratuit (Domaine du Guidou, D1005)
 Fiche: https://loisirs74.fr/les-aigles-du-leman · JSON: https://loisirs74.fr/api/lieu/les-aigles-du-leman.json
+
+## Les Brasses — Viuz-en-Sallaz
+Deux parkings gratuits desservant le domaine : Parking de la Chaîne d'Or (accès par Bogève) et Parking des Chênevières (accès par Onnion), au pied des pistes.
+Fiche: https://loisirs74.fr/les-brasses · JSON: https://loisirs74.fr/api/lieu/les-brasses.json
+
+## Les Carroz — Arâches-la-Frasse
+Environ 300 places longue durée, environ 650 places à la journée, et plus de 100 places en zone bleue 2h (disque obligatoire, gratuit à l'Office de Tourisme).
+Fiche: https://loisirs74.fr/les-carroz · JSON: https://loisirs74.fr/api/lieu/les-carroz.json
+
+## Les Contamines-Montjoie — Les Contamines-Montjoie
+En exploitation hiver, la commune maintient plusieurs parkings visiteurs: Parking de la Gorge (à droite des remontées), Parking du Lay (P2 et 2e niveau du P3) et Parking du rond-point des Moranches. Stationnement longue durée (>30 min) au parking sous le chalet podium, au parking du Cressoua et au parking de l'école.
+Fiche: https://loisirs74.fr/les-contamines-montjoie · JSON: https://loisirs74.fr/api/lieu/les-contamines-montjoie.json
+
+## Les Gets — Les Gets
+8 parkings dont le parking souterrain des Chavannes (gratuit en été, payant de décembre à avril, paiement à la sortie/borne). Autres parkings gratuits: entrée du village côté Taninges (~350 places, station Getslib'), parking du village (~100 places) et petits parkings des hameaux (Les Folliets, Sommet des Chavannes, La Turche, Mont-Caly). En hiver, l'hypercentre est en zone bleue (2h max, 8h-18h).
+Fiche: https://loisirs74.fr/les-gets · JSON: https://loisirs74.fr/api/lieu/les-gets.json
+
+## Les Houches — Les Houches
+Parkings au départ des remontées: côté télécabine du Prarion (Lac des Chavants, Verney du Fouilly) et côté téléphérique de Bellevue (Bellevue / Nant-Jorland). Le parking des Chavants est aussi dédié au Tour du Mont-Blanc (forfait 10 jours à 100€, réservation en caisse ou par mail).
+Fiche: https://loisirs74.fr/les-houches · JSON: https://loisirs74.fr/api/lieu/les-houches.json
 
 ## Maison de Barberine — Vallorcine
 Parking Barberine à proximité
@@ -553,6 +613,14 @@ Fiche: https://loisirs74.fr/maison-forte-hautetour-saint-gervais · JSON: https:
 Gratuit sur place et au village
 Fiche: https://loisirs74.fr/maison-fromage-abondance-abondance · JSON: https://loisirs74.fr/api/lieu/maison-fromage-abondance-abondance.json
 
+## Manigod — Manigod
+Tous les parkings de la commune (village, Col de la Croix Fry, Col de Merdassier) sont gratuits. Bornes de recharge pour véhicules électriques présentes (service de recharge payant, stationnement limité à la charge).
+Fiche: https://loisirs74.fr/manigod · JSON: https://loisirs74.fr/api/lieu/manigod.json
+
+## Megève — Megève
+6 parkings couverts et sécurisés (souterrains Office de Tourisme, Village, Rochebrune ; aériens Panoramic, Princesse, Jaillet) + parking aérien clos et nombreuses zones bleues. 30 premières minutes gratuites dans tous les parkings ; abonnements dès 30€/mois. Stationnement payant totalement gratuit pour les PMR munies d'un badge GIC/GIG ou d'une carte mobilité inclusion.
+Fiche: https://loisirs74.fr/megeve · JSON: https://loisirs74.fr/api/lieu/megeve.json
+
 ## La mine de la Lappiaz — Morzine
 Parking d'Avoriaz (payant)
 Fiche: https://loisirs74.fr/mine-lappiaz-morzine · JSON: https://loisirs74.fr/api/lieu/mine-lappiaz-morzine.json
@@ -565,6 +633,10 @@ Fiche: https://loisirs74.fr/mont-baron · JSON: https://loisirs74.fr/api/lieu/mo
 Plusieurs parkings de départ selon itinéraire
 Fiche: https://loisirs74.fr/mont-joly · JSON: https://loisirs74.fr/api/lieu/mont-joly.json
 
+## Mont-Saxonnex — Mont-Saxonnex
+Place de parking enneigée, gratuite, sur le front de neige de la station.
+Fiche: https://loisirs74.fr/mont-saxonnex · JSON: https://loisirs74.fr/api/lieu/mont-saxonnex.json
+
 ## Mont Veyrier — Annecy
 Gratuit (Petit Port, stade Annecy-le-Vieux)
 Fiche: https://loisirs74.fr/mont-veyrier · JSON: https://loisirs74.fr/api/lieu/mont-veyrier.json
@@ -576,6 +648,14 @@ Fiche: https://loisirs74.fr/montgolfiere-annecy · JSON: https://loisirs74.fr/ap
 ## Montgolfières du Mont-Blanc — Évian-les-Bains
 Au point de décollage
 Fiche: https://loisirs74.fr/montgolfiere-du-mont-blanc-evian · JSON: https://loisirs74.fr/api/lieu/montgolfiere-du-mont-blanc-evian.json
+
+## Morillon — Morillon
+Parkings gratuits (accès par la sortie Cluses de l'autoroute A40). Parkings PMR à Morillon village (au pied de la télécabine) et à Morillon 1100 (bout de station).
+Fiche: https://loisirs74.fr/morillon · JSON: https://loisirs74.fr/api/lieu/morillon.json
+
+## Morzine — Morzine
+Parkings souterrains : Office de Tourisme 181 places, Joux Plane 86 places, Pleney 200 places (7h-20h, hauteur max 2,20 m). Parkings extérieurs : Prodains 540 places (accès télécabine d'Avoriaz), Nyon 250 places (gratuit hiver comme été), Nantégué 188 places (ouvert l'hiver, gratuit), Lans 75, Bourg 61, Poste 110, Parc des Sports 101. Stationnement payant l'été du 20 juin au 3 septembre (2h gratuites/jour). Zone bleue gratuite limitée à 1h avec disque.
+Fiche: https://loisirs74.fr/morzine · JSON: https://loisirs74.fr/api/lieu/morzine.json
 
 ## Musée des ailes anciennes — Excenevex
 Gratuit sur place
@@ -725,6 +805,10 @@ Fiche: https://loisirs74.fr/parcours-aventure-de-sciez · JSON: https://loisirs7
 Gratuit (parking de la plage du lac de Passy)
 Fiche: https://loisirs74.fr/passy-accro-lac · JSON: https://loisirs74.fr/api/lieu/passy-accro-lac.json
 
+## Passy Plaine-Joux — Passy
+Grand parking gratuit situé au pied du front de neige, à environ 50 m des caisses des remontées mécaniques. (Capacité exacte non confirmée en verbatim sur la source officielle.)
+Fiche: https://loisirs74.fr/passy-plaine-joux · JSON: https://loisirs74.fr/api/lieu/passy-plaine-joux.json
+
 ## Patinoire Jean Régis — Annecy
 Gratuit sur site
 Fiche: https://loisirs74.fr/patinoire-jean-regis-annecy · JSON: https://loisirs74.fr/api/lieu/patinoire-jean-regis-annecy.json
@@ -841,6 +925,18 @@ Fiche: https://loisirs74.fr/pont-de-la-caille · JSON: https://loisirs74.fr/api/
 Parking sur place
 Fiche: https://loisirs74.fr/port-clerges-base-nautique-thonon-bains · JSON: https://loisirs74.fr/api/lieu/port-clerges-base-nautique-thonon-bains.json
 
+## Saint-Gervais-les-Bains — Saint-Gervais-les-Bains
+Tous les stationnements publics ouverts à la circulation sont gratuits. Parking souterrain 2KM3 : 225 places (150 en zone longue durée, limitée à 7 jours, + 75 en zone bleue limitée à 1h30). Parking du Bettex (aérien) : 185 places. Parkings-relais gratuits reliés aux navettes : Stade au Fayet (200 places) et aux Pratz (55 places). Zones bleues : stationnement limité à 1h30 entre 9h et 18h.
+Fiche: https://loisirs74.fr/saint-gervais-les-bains · JSON: https://loisirs74.fr/api/lieu/saint-gervais-les-bains.json
+
+## Saint-Jean-d'Aulps — Saint-Jean-d'Aulps
+Parking gratuit disponible à proximité du départ de la télécabine de la Grande Terche. (Capacité non indiquée en verbatim sur la source officielle.)
+Fiche: https://loisirs74.fr/saint-jean-d-aulps · JSON: https://loisirs74.fr/api/lieu/saint-jean-d-aulps.json
+
+## Samoëns — Samoëns
+Parking du Grand Massif Express : 800 places. En service du 15 décembre au 15 avril, payant de 9h à 19h (7 € la journée, 1 heure gratuite ; abonnement saison 250 €, tarif réduit 125 € pour les professionnels utilisant la télécabine). Gratuit pour les résidents de Septimont (sur justificatif). Titulaires de carte PMR : stationnement gratuit sur les places dédiées, sans démarche.
+Fiche: https://loisirs74.fr/samoens · JSON: https://loisirs74.fr/api/lieu/samoens.json
+
 ## Sentier du Balcon du Léman — Cruseilles
 Gratuit au départ
 Fiche: https://loisirs74.fr/sentier-balcon-leman-saleve · JSON: https://loisirs74.fr/api/lieu/sentier-balcon-leman-saleve.json
@@ -932,6 +1028,10 @@ Fiche: https://loisirs74.fr/tete-du-parmelan · JSON: https://loisirs74.fr/api/l
 ## Thermes d'Évian — Évian-les-Bains
 Gratuit (sous réserve de disponibilité, parking privé)
 Fiche: https://loisirs74.fr/thermes-evian · JSON: https://loisirs74.fr/api/lieu/thermes-evian.json
+
+## Thollon-les-Mémises — Thollon-les-Mémises
+Parking gratuit au pied de la télécabine (des Mémises) ; parking gratuit à environ 100 m de la télécabine.
+Fiche: https://loisirs74.fr/thollon-les-memises · JSON: https://loisirs74.fr/api/lieu/thollon-les-memises.json
 
 ## Tour de Bellecombe — Reignier-Ésery
 Gratuit route de l'Éculaz

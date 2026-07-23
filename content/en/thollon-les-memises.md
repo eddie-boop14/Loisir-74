@@ -54,7 +54,7 @@ Not specified
 
 ## Parking
 
-Not specified
+Parking gratuit au pied de la télécabine (des Mémises) ; parking gratuit à environ 100 m de la télécabine.
 
 ## Transport
 

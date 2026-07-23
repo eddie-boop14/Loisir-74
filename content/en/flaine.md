@@ -50,11 +50,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Accessible
+- Source: Flaine — Site officiel (Handiski) — https://www.flaine.com/handiski/
 
 ## Parking
 
-Not specified
+Trois parkings principaux P1 (Flaine Front de Neige), P2 (Flaine Forum) et P3 (Flaine Forêt) : tarif hiver 5€ entre 30 min et 12h, 10€ entre 12h et 24h, puis 10€ par tranche de 24h ; gratuits en été. Accès gratuit temporaire de 1h30 (ou entre 19h00 et 3h30) pour charger/décharger. Parking du Col de Pierre Carrée : gratuit, accessible en navettes gratuites. Parking du Pavillon d'Accueil ouvert du 4 décembre 2025 au 19 avril 2026, tous les jours 24h/24. 4 bornes de recharge électriques (accès public 24h/24).
 
 ## Transport
 

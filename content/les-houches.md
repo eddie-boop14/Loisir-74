@@ -48,11 +48,13 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Partiellement accessible
+- Détail: Handiski proposé par l'ESF des Houches en collaboration avec l'association Loisirs Assis Evasion (ski/snowboard assis autonome ou accompagné, matériel adapté). Transport à la demande PMR 'Mobil'bus' (TPMR) tous les jours 6h-20h sur réservation ; bus surbaissés, certains avec rampe.
+- Source: Office de Tourisme Chamonix – Activités adaptées / Tourisme et handicap — https://en.chamonix.com/adapted-activities
 
 ## Parking
 
-Non renseigné
+Parkings au départ des remontées: côté télécabine du Prarion (Lac des Chavants, Verney du Fouilly) et côté téléphérique de Bellevue (Bellevue / Nant-Jorland). Le parking des Chavants est aussi dédié au Tour du Mont-Blanc (forfait 10 jours à 100€, réservation en caisse ou par mail).
 
 ## Transport
 

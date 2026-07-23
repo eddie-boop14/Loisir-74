@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Horaires
 
-Non renseigné
+Remontées : 9h–16h30 tous les jours (caisses 8h30–16h30) ; ski nocturne 16h30–20h les vendredis et samedis.
 
 ## Tarifs
 
@@ -50,11 +50,13 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Partiellement accessible
+- Détail: Cours de ski adaptés, activités accompagnées avec matériel spécifique et avantages PMR sur le domaine skiable. Office de Tourisme du Col de la Croix Fry accessible (4 places PMR + 1 borne de recharge, 2 portes automatiques plain-pied, comptoir abaissé, personnel sensibilisé). Guide d'accessibilité téléchargeable.
+- Source: Office de Tourisme Manigod – Accueil et handicap — https://www.manigod.com/accueil-et-handicap.html
 
 ## Parking
 
-Non renseigné
+Tous les parkings de la commune (village, Col de la Croix Fry, Col de Merdassier) sont gratuits. Bornes de recharge pour véhicules électriques présentes (service de recharge payant, stationnement limité à la charge).
 
 ## Transport
 

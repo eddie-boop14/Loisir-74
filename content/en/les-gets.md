@@ -50,11 +50,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Partially accessible
+- Source: Les Gets – Handiski / Tourisme adapté — https://www.lesgets.com/decouvrir-la-station/station-de-montagne/tourisme-adapte/activites/handiski/
 
 ## Parking
 
-Not specified
+8 parkings dont le parking souterrain des Chavannes (gratuit en été, payant de décembre à avril, paiement à la sortie/borne). Autres parkings gratuits: entrée du village côté Taninges (~350 places, station Getslib'), parking du village (~100 places) et petits parkings des hameaux (Les Folliets, Sommet des Chavannes, La Turche, Mont-Caly). En hiver, l'hypercentre est en zone bleue (2h max, 8h-18h).
 
 ## Transport
 

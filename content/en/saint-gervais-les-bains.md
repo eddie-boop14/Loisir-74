@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Not specified
+Télécabine de l'Alpin (Le Bettex) : 8h30–17h10, tous les jours.
 
 ## Prices
 
@@ -49,11 +49,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Accessible
+- Source: Office de Tourisme de Saint-Gervais Mont-Blanc — https://www.saintgervais.com/je-minforme/une-destination-accessible/
 
 ## Parking
 
-Not specified
+Tous les stationnements publics ouverts à la circulation sont gratuits. Parking souterrain 2KM3 : 225 places (150 en zone longue durée, limitée à 7 jours, + 75 en zone bleue limitée à 1h30). Parking du Bettex (aérien) : 185 places. Parkings-relais gratuits reliés aux navettes : Stade au Fayet (200 places) et aux Pratz (55 places). Zones bleues : stationnement limité à 1h30 entre 9h et 18h.
 
 ## Transport
 

@@ -50,11 +50,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Partially accessible
+- Source: Vallée d'Aulps Tourisme — https://en.valleedaulps.com/explorer/stations/st-jean-daulps-roc-denfer/domaine-skiable/
 
 ## Parking
 
-Not specified
+Parking gratuit disponible à proximité du départ de la télécabine de la Grande Terche. (Capacité non indiquée en verbatim sur la source officielle.)
 
 ## Transport
 

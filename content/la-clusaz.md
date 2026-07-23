@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Horaires
 
-Non renseigné
+Remontées mécaniques : 9h–16h30.
 
 ## Tarifs
 
@@ -50,11 +50,13 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Accessible
+- Détail: Station labellisée handiski. L'ESF La Clusaz propose des cours handiski (tandem-ski, dualski, uniski, GMS ; matériel inclus). Réduction de 50 % sur la plupart des forfaits pour les titulaires de la CMI Invalidité ; accès prioritaire aux remontées pour la CMI Priorité. Plans des pistes adaptés PMR disponibles.
+- Source: La Clusaz (billetterie officielle) — https://forfait.laclusaz.com/fr/forfait-handiski
 
 ## Parking
 
-Non renseigné
+Parkings couverts payants en hiver (gratuits le reste de l'année) : Salon des Dames (430 places, entrée du village), Bossonnet (85 places, haut du village), Centre Village (330 places). Parking Perrière (haut du village) payant hiver ET été, dédié au stationnement de courte durée. 6 zones gratuites hors village limitées à 24h (Crêt du Merle, Combe des Juments, Etale, Laquais, Chenons, Confins). Horodateurs 0,60 €/15 min.
 
 ## Transport
 

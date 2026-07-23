@@ -50,11 +50,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Accessible
+- Source: Les Carroz (site officiel) — https://www.lescarroz.com/tourisme-handicap/
 
 ## Parking
 
-Not specified
+Environ 300 places longue durée, environ 650 places à la journée, et plus de 100 places en zone bleue 2h (disque obligatoire, gratuit à l'Office de Tourisme).
 
 ## Transport
 

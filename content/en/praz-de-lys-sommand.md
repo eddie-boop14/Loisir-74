@@ -50,7 +50,8 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Partially accessible
+- Source: Praz de Lys Sommand Tourisme — https://www.prazdelys-sommand.com/tourisme-et-handicap/
 
 ## Parking
 

@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Horaires
 
-Non renseigné
+Télécabine de l'Alpin (Le Bettex) : 8h30–17h10, tous les jours.
 
 ## Tarifs
 
@@ -49,11 +49,13 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Accessible
+- Détail: 8 remontées prioritaires pour le handiski : télécabine de l'Alpin, télésièges des Monts Rosset, des Nants, du Mont-Joux, de la Croix, des Chattrix, du Christ et de l'Épaule. Handiski enseigné par l'ESF. Parking souterrain 2KM3 et le service ferroviaire « Le Valléen » indiqués comme accessibles ; Tramway du Mont-Blanc accessible. Office de tourisme de plain-pied avec portes larges et banque adaptée.
+- Source: Office de Tourisme de Saint-Gervais Mont-Blanc — https://www.saintgervais.com/je-minforme/une-destination-accessible/
 
 ## Parking
 
-Non renseigné
+Tous les stationnements publics ouverts à la circulation sont gratuits. Parking souterrain 2KM3 : 225 places (150 en zone longue durée, limitée à 7 jours, + 75 en zone bleue limitée à 1h30). Parking du Bettex (aérien) : 185 places. Parkings-relais gratuits reliés aux navettes : Stade au Fayet (200 places) et aux Pratz (55 places). Zones bleues : stationnement limité à 1h30 entre 9h et 18h.
 
 ## Transport
 

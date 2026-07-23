@@ -50,11 +50,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Partially accessible
+- Source: Chamonix Mont-Blanc — Office de Tourisme (Tourisme adapté / handicap) — https://en.chamonix.com/usual-information-services/tourism-and-the-disabled
 
 ## Parking
 
-Not specified
+3 parkings couverts (Entrèves, Saint-Michel, parking du Mont-Blanc) et 7 parkings enclos (l'Outa, gare SNCF, Grépon, Lionel Terray, Médiathèque, Tennis, Allobroges). Parking Relais du Grépon à l'entrée de Chamonix : garer sa voiture et prendre le bus, accès centre-ville via le minibus Mulet. Au total plus de 42 emplacements de stationnement recensés dans la vallée (10 avec bornes de recharge). Détail des capacités et tarifs (gratuit/payant, hiver/été) non précisé en verbatim sur la page listant les parkings.
 
 ## Transport
 

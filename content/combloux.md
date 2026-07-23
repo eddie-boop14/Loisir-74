@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Horaires
 
-Non renseigné
+Liaison du Jaillet : 9h10–16h45 (vers Combloux), 9h10–16h15 (vers La Giettaz).
 
 ## Tarifs
 
@@ -50,11 +50,13 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Accessible
+- Détail: Depuis plus de 15 ans, Combloux (domaine « Les Portes du Mont-Blanc ») a développé des aménagements pour la pratique du handiski. Télésièges conseillés : Beauregard, Pertuis, Ravine, Christomet, Prés, Grande Rare et Tête du Torraz ; télécabine du Jaillet accessible au dual-ski et à l'uni-ski. Parking de Cuchet : 7 places PMR au pied des pistes.
+- Source: Combloux — Office de Tourisme (Les Portes du Mont-Blanc, domaine handiski) — https://www.combloux.com/en/domaines/les-portes-du-mont-blanc-domaine-handiski/
 
 ## Parking
 
-Non renseigné
+Parking de Cuchet, au pied des pistes du domaine « Les Portes du Mont-Blanc » : 217 places dont 7 places PMR, avec 6 places réservées en bord de piste. Navette gratuite reliant le centre-village au parking de Cuchet.
 
 ## Transport
 

@@ -50,11 +50,13 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Partiellement accessible
+- Détail: Handiski avec matériel Uniski, Dual-ski et grands stabilisateurs, moniteurs spécialisés (tous types de handicap). Parkings PMR réservés (dont sommet de la télécabine des Chavannes accessible par route et remontée Perrières Express). Domaine Les Gets-Morzine accessible en fauteuil-ski ; boucles FTT (fauteuil tout-terrain) balisées.
+- Source: Les Gets – Handiski / Tourisme adapté — https://www.lesgets.com/decouvrir-la-station/station-de-montagne/tourisme-adapte/activites/handiski/
 
 ## Parking
 
-Non renseigné
+8 parkings dont le parking souterrain des Chavannes (gratuit en été, payant de décembre à avril, paiement à la sortie/borne). Autres parkings gratuits: entrée du village côté Taninges (~350 places, station Getslib'), parking du village (~100 places) et petits parkings des hameaux (Les Folliets, Sommet des Chavannes, La Turche, Mont-Caly). En hiver, l'hypercentre est en zone bleue (2h max, 8h-18h).
 
 ## Transport
 

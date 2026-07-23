@@ -9,16 +9,16 @@
 - [Les Gets](https://loisirs74.fr/ja/les-gets) — Les Gets · [md](https://loisirs74.fr/content/les-gets.md)
 - [Passy Plaine-Joux](https://loisirs74.fr/ja/passy-plaine-joux) — Passy · [md](https://loisirs74.fr/content/passy-plaine-joux.md)
 - [Avoriaz](https://loisirs74.fr/ja/avoriaz) — Morzine · [md](https://loisirs74.fr/content/avoriaz.md)
-- [Bernex](https://loisirs74.fr/ja/bernex) — Bernex · [md](https://loisirs74.fr/content/bernex.md)
 - [Chamonix-Mont-Blanc](https://loisirs74.fr/ja/chamonix-mont-blanc) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/chamonix-mont-blanc.md)
 - [Châtel](https://loisirs74.fr/ja/chatel) — Châtel · [md](https://loisirs74.fr/content/chatel.md)
 - [Flaine](https://loisirs74.fr/ja/flaine) — Arâches-la-Frasse · [md](https://loisirs74.fr/content/flaine.md)
-- [Hirmentaz – Les Habères](https://loisirs74.fr/ja/hirmentaz-les-haberes) — Bellevaux · [md](https://loisirs74.fr/content/hirmentaz-les-haberes.md)
 - [La Chapelle-d'Abondance](https://loisirs74.fr/ja/la-chapelle-d-abondance) — La Chapelle-d'Abondance · [md](https://loisirs74.fr/content/la-chapelle-d-abondance.md)
 - [La Clusaz](https://loisirs74.fr/ja/la-clusaz) — La Clusaz · [md](https://loisirs74.fr/content/la-clusaz.md)
 - [Le Grand-Bornand](https://loisirs74.fr/ja/le-grand-bornand) — Le Grand-Bornand · [md](https://loisirs74.fr/content/le-grand-bornand.md)
 - [Le Reposoir](https://loisirs74.fr/ja/le-reposoir) — Le Reposoir · [md](https://loisirs74.fr/content/le-reposoir.md)
 - [Les Brasses](https://loisirs74.fr/ja/les-brasses) — Viuz-en-Sallaz · [md](https://loisirs74.fr/content/les-brasses.md)
 - [Les Carroz](https://loisirs74.fr/ja/les-carroz) — Arâches-la-Frasse · [md](https://loisirs74.fr/content/les-carroz.md)
+- [Les Contamines-Montjoie](https://loisirs74.fr/ja/les-contamines-montjoie) — Les Contamines-Montjoie · [md](https://loisirs74.fr/content/les-contamines-montjoie.md)
+- [Les Houches](https://loisirs74.fr/ja/les-houches) — Les Houches · [md](https://loisirs74.fr/content/les-houches.md)
 
 Source: https://loisirs74.fr/ja/que-faire/meilleures-stations-familiales/

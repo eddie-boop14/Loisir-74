@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Not specified
+Remontées : 9h–16h30 tous les jours (caisses 8h30–16h30) ; ski nocturne 16h30–20h les vendredis et samedis.
 
 ## Prices
 
@@ -50,11 +50,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Partially accessible
+- Source: Office de Tourisme Manigod – Accueil et handicap — https://www.manigod.com/accueil-et-handicap.html
 
 ## Parking
 
-Not specified
+Tous les parkings de la commune (village, Col de la Croix Fry, Col de Merdassier) sont gratuits. Bornes de recharge pour véhicules électriques présentes (service de recharge payant, stationnement limité à la charge).
 
 ## Transport
 
