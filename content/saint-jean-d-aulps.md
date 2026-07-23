@@ -50,11 +50,13 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Partiellement accessible
+- Détail: Accès possible sur certaines remontées mécaniques pour snowscoots, handiskis, snowbikes et yooners. Télécabine du Roc d'Enfer accessible aux piétons, VTTistes et parapentistes. Aucun label Tourisme & Handicap ni détail handiplage confirmé.
+- Source: Vallée d'Aulps Tourisme — https://en.valleedaulps.com/explorer/stations/st-jean-daulps-roc-denfer/domaine-skiable/
 
 ## Parking
 
-Non renseigné
+Parking gratuit disponible à proximité du départ de la télécabine de la Grande Terche. (Capacité non indiquée en verbatim sur la source officielle.)
 
 ## Transport
 

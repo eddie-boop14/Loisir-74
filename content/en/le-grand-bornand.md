@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Not specified
+Remontées mécaniques : 9h–17h.
 
 ## Prices
 
@@ -50,11 +50,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Accessible
+- Source: Le Grand-Bornand (site officiel) — https://en.legrandbornand.com/what-to-do/tandemski-dualski-handiksi-private-lesson-le-grand-bornand-en-5596164/
 
 ## Parking
 
-Not specified
+Nombreux parkings gratuits répartis entre le centre-village et le Chinaillon. Réglementation hivernale : stationnement limité à 24h sur un même emplacement en période de chutes de neige (déneigement), interdit sur les aires de retournement des engins ; zones bleues en vigueur. Bornes de recharge électrique disponibles.
 
 ## Transport
 

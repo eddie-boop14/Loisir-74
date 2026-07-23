@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Not specified
+Remontées : 9h–17h (tous les jours pendant les vacances scolaires ; mercredi, samedi et dimanche hors vacances).
 
 ## Prices
 
@@ -50,11 +50,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Partially accessible
+- Source: OT Cluses Arve & Montagnes – Domaine Les 3 Villages, Mont-Saxonnex — https://www.cluses-montagnes-tourisme.com/domaine/domaine-skiable-les-3-villages-mont-saxonnex/
 
 ## Parking
 
-Not specified
+Place de parking enneigée, gratuite, sur le front de neige de la station.
 
 ## Transport
 

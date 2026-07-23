@@ -48,11 +48,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Partially accessible
+- Source: Office de Tourisme Chamonix – Activités adaptées / Tourisme et handicap — https://en.chamonix.com/adapted-activities
 
 ## Parking
 
-Not specified
+Parkings au départ des remontées: côté télécabine du Prarion (Lac des Chavants, Verney du Fouilly) et côté téléphérique de Bellevue (Bellevue / Nant-Jorland). Le parking des Chavants est aussi dédié au Tour du Mont-Blanc (forfait 10 jours à 100€, réservation en caisse ou par mail).
 
 ## Transport
 

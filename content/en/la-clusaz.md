@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Not specified
+Remontées mécaniques : 9h–16h30.
 
 ## Prices
 
@@ -50,11 +50,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Accessible
+- Source: La Clusaz (billetterie officielle) — https://forfait.laclusaz.com/fr/forfait-handiski
 
 ## Parking
 
-Not specified
+Parkings couverts payants en hiver (gratuits le reste de l'année) : Salon des Dames (430 places, entrée du village), Bossonnet (85 places, haut du village), Centre Village (330 places). Parking Perrière (haut du village) payant hiver ET été, dédié au stationnement de courte durée. 6 zones gratuites hors village limitées à 24h (Crêt du Merle, Combe des Juments, Etale, Laquais, Chenons, Confins). Horodateurs 0,60 €/15 min.
 
 ## Transport
 

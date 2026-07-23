@@ -50,11 +50,13 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Partiellement accessible
+- Détail: Ski adapté via l'association Samoëns Handi-Glisse (ski en tandem et autres matériels handisport proposés gratuitement aux personnes en situation de handicap). Office de tourisme accessible (2 places PMR réservées devant le bâtiment, entrée de plain-pied, banque adaptée, prêt de fauteuil, boucle magnétique, guide FALC). Carte interactive avec filtre « Accès PMR », brochure « Samoëns pour tous », registre public d'accessibilité.
+- Source: Samoëns Tourisme — https://www.samoens.com/handicap/
 
 ## Parking
 
-Non renseigné
+Parking du Grand Massif Express : 800 places. En service du 15 décembre au 15 avril, payant de 9h à 19h (7 € la journée, 1 heure gratuite ; abonnement saison 250 €, tarif réduit 125 € pour les professionnels utilisant la télécabine). Gratuit pour les résidents de Septimont (sur justificatif). Titulaires de carte PMR : stationnement gratuit sur les places dédiées, sans démarche.
 
 ## Transport
 

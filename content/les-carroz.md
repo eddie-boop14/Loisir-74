@@ -50,11 +50,13 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Accessible
+- Détail: Programme handiski avec fauteuil handiski et encadrement professionnel (ESF, Safe Mountain). Réduction de 50 % sur les forfaits pour les titulaires d'une carte d'invalidité (80 %+) ou CMI mention 'invalidité'. Places de parking PMR, Office de Tourisme de plain-pied avec portes automatiques et cheminement adapté. Hôtel La Croix de Savoie labellisé 'Tourisme et Handicap' (4 familles de handicap).
+- Source: Les Carroz (site officiel) — https://www.lescarroz.com/tourisme-handicap/
 
 ## Parking
 
-Non renseigné
+Environ 300 places longue durée, environ 650 places à la journée, et plus de 100 places en zone bleue 2h (disque obligatoire, gratuit à l'Office de Tourisme).
 
 ## Transport
 

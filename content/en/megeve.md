@@ -50,11 +50,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Partially accessible
+- Source: Megève Tourisme – Megève station de ski handi-friendly — https://www.megeve-tourisme.fr/organiser-sejour/experiences/handicapes/
 
 ## Parking
 
-Not specified
+6 parkings couverts et sécurisés (souterrains Office de Tourisme, Village, Rochebrune ; aériens Panoramic, Princesse, Jaillet) + parking aérien clos et nombreuses zones bleues. 30 premières minutes gratuites dans tous les parkings ; abonnements dès 30€/mois. Stationnement payant totalement gratuit pour les PMR munies d'un badge GIC/GIG ou d'une carte mobilité inclusion.
 
 ## Transport
 

@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Not specified
+Liaison du Jaillet : 9h10–16h45 (vers Combloux), 9h10–16h15 (vers La Giettaz).
 
 ## Prices
 
@@ -50,11 +50,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Accessible
+- Source: Combloux — Office de Tourisme (Les Portes du Mont-Blanc, domaine handiski) — https://www.combloux.com/en/domaines/les-portes-du-mont-blanc-domaine-handiski/
 
 ## Parking
 
-Not specified
+Parking de Cuchet, au pied des pistes du domaine « Les Portes du Mont-Blanc » : 217 places dont 7 places PMR, avec 6 places réservées en bord de piste. Navette gratuite reliant le centre-village au parking de Cuchet.
 
 ## Transport
 

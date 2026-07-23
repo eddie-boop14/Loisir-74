@@ -50,11 +50,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Partially accessible
+- Source: Office de Tourisme de Passy Mont-Blanc — https://www.passy-mont-blanc.com/en/activites/ski-et-glisse/handiski/
 
 ## Parking
 
-Not specified
+Grand parking gratuit situé au pied du front de neige, à environ 50 m des caisses des remontées mécaniques. (Capacité exacte non confirmée en verbatim sur la source officielle.)
 
 ## Transport
 

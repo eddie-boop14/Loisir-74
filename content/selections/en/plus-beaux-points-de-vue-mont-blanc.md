@@ -11,13 +11,13 @@
 - [Mont Veyrier](https://loisirs74.fr/ja/mont-veyrier) — Annecy · [md](https://loisirs74.fr/content/mont-veyrier.md)
 - [Tête du Parmelan](https://loisirs74.fr/ja/tete-du-parmelan) — Dingy-Saint-Clair · [md](https://loisirs74.fr/content/tete-du-parmelan.md)
 - [Pointe de Miribel](https://loisirs74.fr/ja/pointe-de-miribel) — Villard · [md](https://loisirs74.fr/content/pointe-de-miribel.md)
-- [Mont Salève](https://loisirs74.fr/ja/mont-saleve) — Monnetier-Mornex · [md](https://loisirs74.fr/content/mont-saleve.md)
-- [Téléphérique de l'Aiguille du Midi](https://loisirs74.fr/ja/telepherique-aiguille-du-midi) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/telepherique-aiguille-du-midi.md)
-- [Téléphérique du Salève](https://loisirs74.fr/ja/telepherique-du-saleve) — Étrembières · [md](https://loisirs74.fr/content/telepherique-du-saleve.md)
-- [Tramway du Mont-Blanc](https://loisirs74.fr/ja/tramway-du-mont-blanc) — Saint-Gervais-les-Bains · [md](https://loisirs74.fr/content/tramway-du-mont-blanc.md)
 - [Combloux](https://loisirs74.fr/ja/combloux) — Combloux · [md](https://loisirs74.fr/content/combloux.md)
 - [Cordon](https://loisirs74.fr/ja/cordon) — Cordon · [md](https://loisirs74.fr/content/cordon.md)
 - [Les Gets](https://loisirs74.fr/ja/les-gets) — Les Gets · [md](https://loisirs74.fr/content/les-gets.md)
+- [Mont Salève](https://loisirs74.fr/ja/mont-saleve) — Monnetier-Mornex · [md](https://loisirs74.fr/content/mont-saleve.md)
 - [Passy Plaine-Joux](https://loisirs74.fr/ja/passy-plaine-joux) — Passy · [md](https://loisirs74.fr/content/passy-plaine-joux.md)
+- [Téléphérique de l'Aiguille du Midi](https://loisirs74.fr/ja/telepherique-aiguille-du-midi) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/telepherique-aiguille-du-midi.md)
+- [Téléphérique du Salève](https://loisirs74.fr/ja/telepherique-du-saleve) — Étrembières · [md](https://loisirs74.fr/content/telepherique-du-saleve.md)
+- [Tramway du Mont-Blanc](https://loisirs74.fr/ja/tramway-du-mont-blanc) — Saint-Gervais-les-Bains · [md](https://loisirs74.fr/content/tramway-du-mont-blanc.md)
 
 Source: https://loisirs74.fr/ja/que-faire/plus-beaux-points-de-vue-mont-blanc/

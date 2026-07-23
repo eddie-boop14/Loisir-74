@@ -49,11 +49,13 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Partiellement accessible
+- Détail: Réduction de 50% sur les forfaits (carte d'invalidité >80% ou carte mobilité inclusion 'invalidité' ; accompagnant avec mention 'besoin d'accompagnement'). Remontées mécaniques accessibles aux handiskieurs (liste dédiée en PDF). Parkings PMR (Morillon village au pied de la télécabine, Morillon 1100, Samoëns au pied du GME). Service Handi-Glisse à Samoëns.
+- Source: Grand Massif – Un domaine accessible (Morillon) — https://www.grand-massif.com/domaine-skiable/le-grand-massif-un-domaine-accessible-morillon/
 
 ## Parking
 
-Non renseigné
+Parkings gratuits (accès par la sortie Cluses de l'autoroute A40). Parkings PMR à Morillon village (au pied de la télécabine) et à Morillon 1100 (bout de station).
 
 ## Transport
 

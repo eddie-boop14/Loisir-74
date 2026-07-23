@@ -1,13 +1,13 @@
 ---
 facet: access_pmr
 scope: haute-savoie-74
-lieux_documented: 142
+lieux_documented: 164
 lieux_total: 426
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Accès PMR — index transversal (426 lieux, 142 documentés)
+# Accès PMR — index transversal (426 lieux, 164 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Entrée avec marche(s), sans rampe
@@ -28,6 +28,10 @@ Fiche: https://loisirs74.fr/aquaparc-thonon-piscine-olympique-thonon · JSON: ht
 ## Aquariaz — Morzine
 Aquariaz équipé pour recevoir des personnes handicapées moteur; la personne doit être accompagnée dans l'eau, accès gratuit pour l'accompagnateur.
 Fiche: https://loisirs74.fr/aquariaz · JSON: https://loisirs74.fr/api/lieu/aquariaz.json
+
+## Avoriaz — Morzine
+3 fauteuils-luges (Lugicap) adaptables à tout fauteuil manuel 4 roues pour se déplacer sur les cheminements piétons, disponibles à l'Office de Tourisme, à l'Accueil Station et au sommet du téléphérique des Prodains (sur demande, caution 1 000€). Ski adapté (dualski, uniski) avec ESF Avoriaz 1800 et Évolution 2. Remontées adaptées (compatibles fauteuil), parking réservé, toilettes accessibles, accueil dédié à l'OT. Réductions forfait 50% (+ accompagnant) / 20%.
+Fiche: https://loisirs74.fr/avoriaz · JSON: https://loisirs74.fr/api/lieu/avoriaz.json
 
 ## Plan d'eau Biotope de Combloux — Combloux
 Places PMR (parking Cristaux, Théâtre de verdure), porte d'entrée spécifique PMR, trois WC PMR, accès PMR aux douches et au bassin, appareil de mise à l'eau motorisé et 2 hippocampes.
@@ -97,6 +101,10 @@ Fiche: https://loisirs74.fr/centre-aquatique-sallanches-mont-blanc · JSON: http
 Baignade accessible à tous avec équipements PMR : cabine adaptée dans chaque vestiaire, fauteuil roulant pour transfert et siège hydraulique pour entrer/sortir de l'eau
 Fiche: https://loisirs74.fr/centre-nautique-cite-de-l-eau-publier · JSON: https://loisirs74.fr/api/lieu/centre-nautique-cite-de-l-eau-publier.json
 
+## Chamonix-Mont-Blanc — Chamonix-Mont-Blanc
+Office de Tourisme de Chamonix labellisé Tourisme & Handicap (moteur, auditif, mental) ; OT de Vallorcine également certifié, OT des Houches en préparation. Entrées de plain-pied, parking accessible, banques d'accueil abaissées, fauteuils en prêt, boucle magnétique, LSF, livrets braille. Ski : à Plan Joran – Les Grands Montets, accès en télécabine possible l'hiver pour skieurs en fauteuil (mais pas en piéton/raquettes, arrivée au milieu du domaine). Associations : Loisirs Assis Evasion, Sit N' Ride (Vallorcine), Access Mont-Blanc, My Line.
+Fiche: https://loisirs74.fr/chamonix-mont-blanc · JSON: https://loisirs74.fr/api/lieu/chamonix-mont-blanc.json
+
 ## Château de Clermont — Clermont
 Non accessible en fauteuil roulant ; personnel sensibilisé et visite sensorielle adaptée aux déficiences visuelle, auditive et mentale
 Fiche: https://loisirs74.fr/chateau-clermont-genevois · JSON: https://loisirs74.fr/api/lieu/chateau-clermont-genevois.json
@@ -112,6 +120,10 @@ Fiche: https://loisirs74.fr/chateau-des-rubins-sallanches · JSON: https://loisi
 ## Château de Montrottier — Lovagny
 Château médiéval sans ascenseur, intérieur non accessible en fauteuil ; 1 place PMR au parking et chaises-canne de visite disponibles.
 Fiche: https://loisirs74.fr/chateau-montrottier-lovagny · JSON: https://loisirs74.fr/api/lieu/chateau-montrottier-lovagny.json
+
+## Châtel — Châtel
+Les skieurs en situation de handicap et à mobilité réduite peuvent emprunter la plupart des remontées avec leur matériel. Bureaux des remontées et parkings accessibles avec places gratuites : Lac de Vonnes (bureau équipé, 3 places), Petit-Châtel (2 places), Linga (2 places, accès direct remontée), Pierre-Longue (bureau équipé, 3 places), Pré-la-Joux (2 places). Toilettes et aires de pique-nique accessibles à Pré-la-Joux, Plaine-Dranse, Linga et Petit-Châtel. Liste du matériel de ski assis autorisé téléchargeable. Réductions forfait : 50% (carte CMI invalidité, + accompagnant) / 20% (carte stationnement/priorité).
+Fiche: https://loisirs74.fr/chatel · JSON: https://loisirs74.fr/api/lieu/chatel.json
 
 ## Ciné Actuel — Studio 6 — Annemasse
 Cinéma totalement accessible : accessible en fauteuil en autonomie, ascenseur aux normes, sanitaires adaptés, stationnement PMR, cheminement de plain-pied ; prestations adaptées déficiences auditive (alarme flash), visuelle et mentale.
@@ -144,6 +156,14 @@ Fiche: https://loisirs74.fr/cinema-pathe-annecy · JSON: https://loisirs74.fr/ap
 ## Pathé Archamps — Archamps
 Entrée de plain-pied avec portes automatiques, places de parking adaptées et réservées, toilettes adaptées, boucle à induction magnétique portative, personnel formé.
 Fiche: https://loisirs74.fr/cinema-pathe-archamps-imax · JSON: https://loisirs74.fr/api/lieu/cinema-pathe-archamps-imax.json
+
+## Combloux — Combloux
+Depuis plus de 15 ans, Combloux (domaine « Les Portes du Mont-Blanc ») a développé des aménagements pour la pratique du handiski. Télésièges conseillés : Beauregard, Pertuis, Ravine, Christomet, Prés, Grande Rare et Tête du Torraz ; télécabine du Jaillet accessible au dual-ski et à l'uni-ski. Parking de Cuchet : 7 places PMR au pied des pistes.
+Fiche: https://loisirs74.fr/combloux · JSON: https://loisirs74.fr/api/lieu/combloux.json
+
+## Cordon — Cordon
+Une place réservée aux personnes en situation de handicap se situe juste devant le bâtiment de l'Office de Tourisme de Cordon ; l'établissement Cordon Tourisme est accessible aux personnes en situation de handicap. Aucun dispositif handiski sur les pistes mentionné sur les pages officielles consultées.
+Fiche: https://loisirs74.fr/cordon · JSON: https://loisirs74.fr/api/lieu/cordon.json
 
 ## Compagnie des Bateaux du Lac d'Annecy — Annecy
 Certains bateaux accessibles en fauteuil roulant (grande rampe), d'autres avec marches; WC adaptés sur certains bateaux seulement; appeler avant
@@ -213,6 +233,10 @@ Fiche: https://loisirs74.fr/espace-aquatique-morzine · JSON: https://loisirs74.
 Accessible en fauteuil roulant en autonomie, cheminement de plain-pied, accès facilité par ascenseur depuis le parking Saint-Michel, toilettes et tarif réduit PMR-PSH.
 Fiche: https://loisirs74.fr/espace-tairraz-musee-des-cristaux-chamonix · JSON: https://loisirs74.fr/api/lieu/espace-tairraz-musee-des-cristaux-chamonix.json
 
+## Flaine — Arâches-la-Frasse
+Ski adapté proposé par des moniteurs professionnels avec matériel approprié : ESF (cours handiski individualisé à Flaine Forum) et Flaine Mountain (tandem-ski). Parking gratuit PMR après validation au Pavillon d'Accueil : place dédiée à droite du téléphérique des Grandes Platières à Flaine Forum ; tout emplacement gratuit à Flaine Forêt. Trois toilettes publiques accessibles PMR (Galerie Marchande Flaine Forum, Galerie Marchande Flaine Forêt, Grand Vans). Réduction forfait 50% (carte d'invalidité > 80% ou CMI mention « invalidité » ; accompagnant au même tarif si mention « besoin d'accompagnement »).
+Fiche: https://loisirs74.fr/flaine · JSON: https://loisirs74.fr/api/lieu/flaine.json
+
 ## Fonderie Paccard — Sevrier
 Entrée de plain-pied, sanitaires adaptés
 Fiche: https://loisirs74.fr/fonderie-paccard-sevrier · JSON: https://loisirs74.fr/api/lieu/fonderie-paccard-sevrier.json
@@ -281,6 +305,10 @@ Fiche: https://loisirs74.fr/karting-mont-blanc-passy · JSON: https://loisirs74.
 Ascenseur aux normes (selon fiche OT départementale) ; pas d'autre détail PMR confirmé.
 Fiche: https://loisirs74.fr/karting-onkart-viry · JSON: https://loisirs74.fr/api/lieu/karting-onkart-viry.json
 
+## La Clusaz — La Clusaz
+Station labellisée handiski. L'ESF La Clusaz propose des cours handiski (tandem-ski, dualski, uniski, GMS ; matériel inclus). Réduction de 50 % sur la plupart des forfaits pour les titulaires de la CMI Invalidité ; accès prioritaire aux remontées pour la CMI Priorité. Plans des pistes adaptés PMR disponibles.
+Fiche: https://loisirs74.fr/la-clusaz · JSON: https://loisirs74.fr/api/lieu/la-clusaz.json
+
 ## La Turbine sciences — Annecy
 Site et bâtiment totalement accessibles en fauteuil en autonomie : place PMR, ascenseur, WC adaptés, boucle magnétique à l'accueil ; label Tourisme & Handicap (moteur, mental).
 Fiche: https://loisirs74.fr/la-turbine-sciences-cran-gevrier · JSON: https://loisirs74.fr/api/lieu/la-turbine-sciences-cran-gevrier.json
@@ -292,6 +320,26 @@ Fiche: https://loisirs74.fr/lac-de-vallon · JSON: https://loisirs74.fr/api/lieu
 ## Lac des Dronières — Cruseilles
 Parc/Lac des Dronières : places réservées PMR devant les équipements principaux (piscine, tennis); tour du lac accessible poussette mais sol gravillonné/pente peu adapté au fauteuil manuel
 Fiche: https://loisirs74.fr/lac-des-dronieres · JSON: https://loisirs74.fr/api/lieu/lac-des-dronieres.json
+
+## Le Grand-Bornand — Le Grand-Bornand
+École de ski avec ~6 moniteurs spécialisés handiski et une vingtaine de remontées mécaniques adaptées. Points de rendez-vous au départ du télésiège du Châtelet (Chinaillon) ou au sommet des télécabines du Rosay. Activités tandemski / dualski / handiski (matériel inclus, encadrement qualifié). Forfait accompagnateur -50 % avec carte orange PMR.
+Fiche: https://loisirs74.fr/le-grand-bornand · JSON: https://loisirs74.fr/api/lieu/le-grand-bornand.json
+
+## Les Carroz — Arâches-la-Frasse
+Programme handiski avec fauteuil handiski et encadrement professionnel (ESF, Safe Mountain). Réduction de 50 % sur les forfaits pour les titulaires d'une carte d'invalidité (80 %+) ou CMI mention 'invalidité'. Places de parking PMR, Office de Tourisme de plain-pied avec portes automatiques et cheminement adapté. Hôtel La Croix de Savoie labellisé 'Tourisme et Handicap' (4 familles de handicap).
+Fiche: https://loisirs74.fr/les-carroz · JSON: https://loisirs74.fr/api/lieu/les-carroz.json
+
+## Les Contamines-Montjoie — Les Contamines-Montjoie
+Handiski avec l'ESF (fauteuils-ski adaptés) permettant de découvrir les sensations de glisse. Télécabines de Montjoie accessibles avec un fauteuil pliable. Hébergements, restaurants et commerces certifiés accessibles en fauteuil listés.
+Fiche: https://loisirs74.fr/les-contamines-montjoie · JSON: https://loisirs74.fr/api/lieu/les-contamines-montjoie.json
+
+## Les Gets — Les Gets
+Handiski avec matériel Uniski, Dual-ski et grands stabilisateurs, moniteurs spécialisés (tous types de handicap). Parkings PMR réservés (dont sommet de la télécabine des Chavannes accessible par route et remontée Perrières Express). Domaine Les Gets-Morzine accessible en fauteuil-ski ; boucles FTT (fauteuil tout-terrain) balisées.
+Fiche: https://loisirs74.fr/les-gets · JSON: https://loisirs74.fr/api/lieu/les-gets.json
+
+## Les Houches — Les Houches
+Handiski proposé par l'ESF des Houches en collaboration avec l'association Loisirs Assis Evasion (ski/snowboard assis autonome ou accompagné, matériel adapté). Transport à la demande PMR 'Mobil'bus' (TPMR) tous les jours 6h-20h sur réservation ; bus surbaissés, certains avec rampe.
+Fiche: https://loisirs74.fr/les-houches · JSON: https://loisirs74.fr/api/lieu/les-houches.json
 
 ## Maison de la Mémoire Janny Couttet — Chamonix-Mont-Blanc
 Accès PMR par l'arrière du bâtiment ; ascenseur intérieur desservant les étages ; toilettes adaptées.
@@ -309,13 +357,25 @@ Fiche: https://loisirs74.fr/maison-forte-hautetour-saint-gervais · JSON: https:
 Accès PMR, boucles magnétiques, bandes de guidage, supports FALC et registre d'accessibilité ; ascenseur et toilettes adaptées ; certification S3A (accueil handicap mental).
 Fiche: https://loisirs74.fr/maison-fromage-abondance-abondance · JSON: https://loisirs74.fr/api/lieu/maison-fromage-abondance-abondance.json
 
+## Manigod — Manigod
+Cours de ski adaptés, activités accompagnées avec matériel spécifique et avantages PMR sur le domaine skiable. Office de Tourisme du Col de la Croix Fry accessible (4 places PMR + 1 borne de recharge, 2 portes automatiques plain-pied, comptoir abaissé, personnel sensibilisé). Guide d'accessibilité téléchargeable.
+Fiche: https://loisirs74.fr/manigod · JSON: https://loisirs74.fr/api/lieu/manigod.json
+
 ## Marais de Poisy — Poisy
 Itinéraire familial de 1,5 km, dénivelé 2 m, accessible aux poussettes et aux fauteuils ; premier tronçon en platelage et observatoire adaptés au fauteuil.
 Fiche: https://loisirs74.fr/marais-de-poisy · JSON: https://loisirs74.fr/api/lieu/marais-de-poisy.json
 
+## Megève — Megève
+Station 'handi-friendly': service encadré et professionnel pour découvrir le ski assis ou accompagné en sécurité ; l'ESF propose du matériel adapté (dual-ski et fauteuil uniski). Centre-ville piéton, déneigement régulier des rues et trottoirs ; stationnement gratuit pour les PMR.
+Fiche: https://loisirs74.fr/megeve · JSON: https://loisirs74.fr/api/lieu/megeve.json
+
 ## Mont Salève — Monnetier-Mornex
 Cabine et stations du téléphérique adaptées aux personnes à mobilité réduite.
 Fiche: https://loisirs74.fr/mont-saleve · JSON: https://loisirs74.fr/api/lieu/mont-saleve.json
+
+## Mont-Saxonnex — Mont-Saxonnex
+Domaine/site accessible en fauteuil roulant avec aide ; personnel d'accueil sensibilisé à l'accueil des personnes en situation de handicap. Aucun service handiski mentionné.
+Fiche: https://loisirs74.fr/mont-saxonnex · JSON: https://loisirs74.fr/api/lieu/mont-saxonnex.json
 
 ## Mont Veyrier — Annecy
 Randonnée classée "Très difficile", dénivelé positif 1120 m, terrain glissant et risques de chutes de pierre.
@@ -324,6 +384,14 @@ Fiche: https://loisirs74.fr/mont-veyrier · JSON: https://loisirs74.fr/api/lieu/
 ## Montgolfières du Mont-Blanc — Évian-les-Bains
 Nacelles de vol adaptées aux personnes à mobilité réduite; équipes formées à l'accueil des publics en situation de handicap.
 Fiche: https://loisirs74.fr/montgolfiere-du-mont-blanc-evian · JSON: https://loisirs74.fr/api/lieu/montgolfiere-du-mont-blanc-evian.json
+
+## Morillon — Morillon
+Réduction de 50% sur les forfaits (carte d'invalidité >80% ou carte mobilité inclusion 'invalidité' ; accompagnant avec mention 'besoin d'accompagnement'). Remontées mécaniques accessibles aux handiskieurs (liste dédiée en PDF). Parkings PMR (Morillon village au pied de la télécabine, Morillon 1100, Samoëns au pied du GME). Service Handi-Glisse à Samoëns.
+Fiche: https://loisirs74.fr/morillon · JSON: https://loisirs74.fr/api/lieu/morillon.json
+
+## Morzine — Morzine
+Pratique du handiski possible avec un accompagnateur : « tous les télésièges (hormis le télésiège de la Crusaz), le télécabine du Pleney, le téléphérique de Nyon et le tapis débutant situé au sommet du Pleney peuvent être empruntés pour la pratique du handiski ». Office de tourisme accessible (accès de plain-pied, sanitaires PMR).
+Fiche: https://loisirs74.fr/morzine · JSON: https://loisirs74.fr/api/lieu/morzine.json
 
 ## Musée Archéologique de Viuz-Faverges — Faverges-Seythenex
 Musée entièrement accessible aux personnes à mobilité réduite ou en fauteuil; WC adaptés, parking et dépose réservés (donjon et crypte non accessibles).
@@ -401,6 +469,10 @@ Fiche: https://loisirs74.fr/palais-lumiere · JSON: https://loisirs74.fr/api/lie
 Acces limite en fauteuil: les pentes du site (1500 m) ne conviennent pas au deplacement des fauteuils; terrasse du restaurant accessible de plain-pied avec toilettes attenantes; depose-minute conseillee a l'entree.
 Fiche: https://loisirs74.fr/parc-de-merlet · JSON: https://loisirs74.fr/api/lieu/parc-de-merlet.json
 
+## Passy Plaine-Joux — Passy
+Handiski et tandem-ski proposés avec l'ESF Passy Plaine-Joux. Avec le télésiège du Barmus, les moniteurs ESF de Passy sont spécialement formés à l'enseignement du ski assis (sit-ski) et à l'accompagnement des personnes à mobilité réduite avec un matériel adapté.
+Fiche: https://loisirs74.fr/passy-plaine-joux · JSON: https://loisirs74.fr/api/lieu/passy-plaine-joux.json
+
 ## Patinoire Jean Régis — Annecy
 Acceslibre (complexe Jean Regis): places de parking adaptees et reservees dans l'etablissement, entree de plain-pied d'au moins 80 cm; fiche incomplete (29%).
 Fiche: https://loisirs74.fr/patinoire-jean-regis-annecy · JSON: https://loisirs74.fr/api/lieu/patinoire-jean-regis-annecy.json
@@ -465,9 +537,25 @@ Fiche: https://loisirs74.fr/plage-des-marquisats · JSON: https://loisirs74.fr/a
 Randonnée pédestre classée "Niveau rouge - Difficile", 400 m de dénivelé, sommet à 1581 m.
 Fiche: https://loisirs74.fr/pointe-de-miribel · JSON: https://loisirs74.fr/api/lieu/pointe-de-miribel.json
 
+## Praz de Lys – Sommand — Taninges (et Mieussy)
+« Praz de Lys Sommand Tourisme est porteur du label TOURISME & HANDICAP depuis 2011 » (4 handicaps : auditif, mental, visuel, moteur). Offices accessibles (entrée de plain-pied, stationnement PMR réservé, banques d'accueil abaissées, fauteuils roulants à disposition, sanitaires adaptés). Documents d'autorisation d'accès aux remontées disponibles. Aucune offre handiski spécifique confirmée en verbatim.
+Fiche: https://loisirs74.fr/praz-de-lys-sommand · JSON: https://loisirs74.fr/api/lieu/praz-de-lys-sommand.json
+
 ## Réserve naturelle du Bout-du-Lac d'Annecy — Doussard
 Sentier pédagogique de 1,6 km aménagé depuis 2010, très facile (10 m D+), accessible en fauteuil roulant avec aide et aux poussettes ; panneaux légendés en braille.
 Fiche: https://loisirs74.fr/reserve-naturelle-bout-du-lac · JSON: https://loisirs74.fr/api/lieu/reserve-naturelle-bout-du-lac.json
+
+## Saint-Gervais-les-Bains — Saint-Gervais-les-Bains
+8 remontées prioritaires pour le handiski : télécabine de l'Alpin, télésièges des Monts Rosset, des Nants, du Mont-Joux, de la Croix, des Chattrix, du Christ et de l'Épaule. Handiski enseigné par l'ESF. Parking souterrain 2KM3 et le service ferroviaire « Le Valléen » indiqués comme accessibles ; Tramway du Mont-Blanc accessible. Office de tourisme de plain-pied avec portes larges et banque adaptée.
+Fiche: https://loisirs74.fr/saint-gervais-les-bains · JSON: https://loisirs74.fr/api/lieu/saint-gervais-les-bains.json
+
+## Saint-Jean-d'Aulps — Saint-Jean-d'Aulps
+Accès possible sur certaines remontées mécaniques pour snowscoots, handiskis, snowbikes et yooners. Télécabine du Roc d'Enfer accessible aux piétons, VTTistes et parapentistes. Aucun label Tourisme & Handicap ni détail handiplage confirmé.
+Fiche: https://loisirs74.fr/saint-jean-d-aulps · JSON: https://loisirs74.fr/api/lieu/saint-jean-d-aulps.json
+
+## Samoëns — Samoëns
+Ski adapté via l'association Samoëns Handi-Glisse (ski en tandem et autres matériels handisport proposés gratuitement aux personnes en situation de handicap). Office de tourisme accessible (2 places PMR réservées devant le bâtiment, entrée de plain-pied, banque adaptée, prêt de fauteuil, boucle magnétique, guide FALC). Carte interactive avec filtre « Accès PMR », brochure « Samoëns pour tous », registre public d'accessibilité.
+Fiche: https://loisirs74.fr/samoens · JSON: https://loisirs74.fr/api/lieu/samoens.json
 
 ## Sentier pédagogique du Bout du Lac d'Annecy — Doussard
 Sentier pédagogique de 1,6 km aménagé, très facile (10 m D+), accessible en fauteuil roulant avec aide et aux poussettes ; panneaux d'interprétation traduits en braille.

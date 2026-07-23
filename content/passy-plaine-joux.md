@@ -50,11 +50,13 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Partiellement accessible
+- Détail: Handiski et tandem-ski proposés avec l'ESF Passy Plaine-Joux. Avec le télésiège du Barmus, les moniteurs ESF de Passy sont spécialement formés à l'enseignement du ski assis (sit-ski) et à l'accompagnement des personnes à mobilité réduite avec un matériel adapté.
+- Source: Office de Tourisme de Passy Mont-Blanc — https://www.passy-mont-blanc.com/en/activites/ski-et-glisse/handiski/
 
 ## Parking
 
-Non renseigné
+Grand parking gratuit situé au pied du front de neige, à environ 50 m des caisses des remontées mécaniques. (Capacité exacte non confirmée en verbatim sur la source officielle.)
 
 ## Transport
 

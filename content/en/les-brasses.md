@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Not specified
+Remontées mécaniques : 9h–16h30, tous les jours.
 
 ## Prices
 
@@ -54,7 +54,7 @@ Not specified
 
 ## Parking
 
-Not specified
+Deux parkings gratuits desservant le domaine : Parking de la Chaîne d'Or (accès par Bogève) et Parking des Chênevières (accès par Onnion), au pied des pistes.
 
 ## Transport
 

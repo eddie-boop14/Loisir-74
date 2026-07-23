@@ -50,11 +50,13 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Accessible
+- Détail: Les skieurs en situation de handicap et à mobilité réduite peuvent emprunter la plupart des remontées avec leur matériel. Bureaux des remontées et parkings accessibles avec places gratuites : Lac de Vonnes (bureau équipé, 3 places), Petit-Châtel (2 places), Linga (2 places, accès direct remontée), Pierre-Longue (bureau équipé, 3 places), Pré-la-Joux (2 places). Toilettes et aires de pique-nique accessibles à Pré-la-Joux, Plaine-Dranse, Linga et Petit-Châtel. Liste du matériel de ski assis autorisé téléchargeable. Réductions forfait : 50% (carte CMI invalidité, + accompagnant) / 20% (carte stationnement/priorité).
+- Source: Châtel — Site officiel (Domaine skiable accessible / handi) — https://www.chatel.com/en/skiing/handi/accessible-ski-area/
 
 ## Parking
 
-Non renseigné
+Parkings payants avec horodateurs (périodes payantes 15 décembre–30 avril et 1er juillet–31 août, tous les jours) : Parking centre (limité 1h30, payant 8h–19h) ; Parking Meurba sous l'église (limité 9h, payant 8h–19h) ; Parking Etringa au centre aquatique (limité 5h, payant 8h–minuit). Parkings avec abonnement : Lac de Vonnes et Etringa (15 déc–30 avr) — Vonnes 1 jour 10€/semaine 35€/saison 80€ ; Etringa saison 135€. Zones limitées 5 min–2h au centre-village et lac de Vonnes. 23 places réservées CMI réparties sur les parkings. Paiement : espèces, CB, sans contact, appli Flowbird.
 
 ## Transport
 

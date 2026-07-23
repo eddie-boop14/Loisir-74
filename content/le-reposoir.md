@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Horaires
 
-Non renseigné
+Remontées : 9h–17h (7j/7 pendant les vacances scolaires ; mercredi, samedi et dimanche hors vacances).
 
 ## Tarifs
 
@@ -53,7 +53,7 @@ Non renseigné
 
 ## Parking
 
-Non renseigné
+La station indique un 'Parking' et une aire de stationnement/borne de service camping-cars parmi ses équipements ; tarif (gratuit/payant), capacité et emplacement précis non indiqués sur le site officiel.
 
 ## Transport
 

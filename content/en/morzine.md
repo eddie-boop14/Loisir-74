@@ -50,11 +50,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Partially accessible
+- Source: Office de Tourisme de Morzine-Avoriaz — https://www.morzine-avoriaz.com/sejourner/pratique/infos-pratiques/handi-tourisme/
 
 ## Parking
 
-Not specified
+Parkings souterrains : Office de Tourisme 181 places, Joux Plane 86 places, Pleney 200 places (7h-20h, hauteur max 2,20 m). Parkings extérieurs : Prodains 540 places (accès télécabine d'Avoriaz), Nyon 250 places (gratuit hiver comme été), Nantégué 188 places (ouvert l'hiver, gratuit), Lans 75, Bourg 61, Poste 110, Parc des Sports 101. Stationnement payant l'été du 20 juin au 3 septembre (2h gratuites/jour). Zone bleue gratuite limitée à 1h avec disque.
 
 ## Transport
 

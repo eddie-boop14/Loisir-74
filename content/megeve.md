@@ -50,11 +50,13 @@ Non renseigné
 
 ## Accès (PMR)
 
-Non renseigné
+- Statut: Partiellement accessible
+- Détail: Station 'handi-friendly': service encadré et professionnel pour découvrir le ski assis ou accompagné en sécurité ; l'ESF propose du matériel adapté (dual-ski et fauteuil uniski). Centre-ville piéton, déneigement régulier des rues et trottoirs ; stationnement gratuit pour les PMR.
+- Source: Megève Tourisme – Megève station de ski handi-friendly — https://www.megeve-tourisme.fr/organiser-sejour/experiences/handicapes/
 
 ## Parking
 
-Non renseigné
+6 parkings couverts et sécurisés (souterrains Office de Tourisme, Village, Rochebrune ; aériens Panoramic, Princesse, Jaillet) + parking aérien clos et nombreuses zones bleues. 30 premières minutes gratuites dans tous les parkings ; abonnements dès 30€/mois. Stationnement payant totalement gratuit pour les PMR munies d'un badge GIC/GIG ou d'une carte mobilité inclusion.
 
 ## Transport
 

@@ -50,11 +50,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Partially accessible
+- Source: Samoëns Tourisme — https://www.samoens.com/handicap/
 
 ## Parking
 
-Not specified
+Parking du Grand Massif Express : 800 places. En service du 15 décembre au 15 avril, payant de 9h à 19h (7 € la journée, 1 heure gratuite ; abonnement saison 250 €, tarif réduit 125 € pour les professionnels utilisant la télécabine). Gratuit pour les résidents de Septimont (sur justificatif). Titulaires de carte PMR : stationnement gratuit sur les places dédiées, sans démarche.
 
 ## Transport
 

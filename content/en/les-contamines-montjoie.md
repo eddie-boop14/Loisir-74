@@ -50,11 +50,12 @@ Not specified
 
 ## Access (PMR)
 
-Not specified
+- Status: Partially accessible
+- Source: Office de Tourisme Les Contamines-Montjoie – Vacances et handicap — https://www.lescontamines.com/ete/pratique/vacances-et-handicap
 
 ## Parking
 
-Not specified
+En exploitation hiver, la commune maintient plusieurs parkings visiteurs: Parking de la Gorge (à droite des remontées), Parking du Lay (P2 et 2e niveau du P3) et Parking du rond-point des Moranches. Stationnement longue durée (>30 min) au parking sous le chalet podium, au parking du Cressoua et au parking de l'école.
 
 ## Transport
 
