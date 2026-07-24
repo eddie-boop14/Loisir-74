@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Caisses des remontées : 8h45–16h hors vacances scolaires, 8h30–17h pendant les vacances scolaires (télésiège du Pré-Richard jusqu'à 16h50/17h10 en descente).
+Lift ticket offices: 8:45–16:00 outside school holidays, 8:30–17:00 during school holidays (Pré-Richard chairlift until 16:50/17:10 on the way down).
 
 ## Prices
 

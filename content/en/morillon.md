@@ -50,11 +50,12 @@ Not specified
 ## Access (PMR)
 
 - Status: Partially accessible
+- Detail: 50% discount on lift passes (disability card >80% or mobility inclusion card marked 'invalidité'; companion with the 'besoin d'accompagnement' mention). Ski lifts accessible to adaptive skiers (dedicated list in PDF). Disabled car parks (Morillon village at the foot of the gondola, Morillon 1100, Samoëns at the foot of the GME). Handi-Glisse service at Samoëns.
 - Source: Grand Massif – Un domaine accessible (Morillon) — https://www.grand-massif.com/domaine-skiable/le-grand-massif-un-domaine-accessible-morillon/
 
 ## Parking
 
-Parkings gratuits (accès par la sortie Cluses de l'autoroute A40). Parkings PMR à Morillon village (au pied de la télécabine) et à Morillon 1100 (bout de station).
+Free car parks (access via the Cluses exit of the A40 motorway). Disabled car parks at Morillon village (at the foot of the gondola) and at Morillon 1100 (edge of the resort).
 
 ## Transport
 

@@ -51,11 +51,12 @@ Not specified
 ## Access (PMR)
 
 - Status: Accessible
+- Detail: Adaptive-skiing programme with adaptive-ski chair and professional supervision (ESF, Safe Mountain). 50% discount on lift passes for holders of a disability card (80%+) or a CMI card marked 'invalidité'. Disabled parking spaces, step-free Tourist Office with automatic doors and an adapted pathway. Hôtel La Croix de Savoie holds the 'Tourisme et Handicap' label (4 disability categories).
 - Source: Les Carroz (site officiel) — https://www.lescarroz.com/tourisme-handicap/
 
 ## Parking
 
-Environ 300 places longue durée, environ 650 places à la journée, et plus de 100 places en zone bleue 2h (disque obligatoire, gratuit à l'Office de Tourisme).
+About 300 long-stay spaces, about 650 day spaces, and more than 100 spaces in the 2h blue zone (parking disc required, free at the Tourist Office).
 
 ## Transport
 

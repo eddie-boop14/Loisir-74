@@ -51,11 +51,12 @@ Not specified
 ## Access (PMR)
 
 - Status: Partially accessible
+- Detail: Adaptive skiing with ESF (adapted ski-chairs) to experience the thrill of skiing. Montjoie gondolas accessible with a folding wheelchair. Accommodation, restaurants and shops certified wheelchair-accessible are listed.
 - Source: Office de Tourisme Les Contamines-Montjoie – Vacances et handicap — https://www.lescontamines.com/ete/pratique/vacances-et-handicap
 
 ## Parking
 
-En exploitation hiver, la commune maintient plusieurs parkings visiteurs: Parking de la Gorge (à droite des remontées), Parking du Lay (P2 et 2e niveau du P3) et Parking du rond-point des Moranches. Stationnement longue durée (>30 min) au parking sous le chalet podium, au parking du Cressoua et au parking de l'école.
+During winter operation, the municipality maintains several visitor car parks: Gorge car park (to the right of the lifts), Lay car park (P2 and 2nd level of P3) and Moranches roundabout car park. Long-stay parking (>30 min) at the car park under the podium chalet, at the Cressoua car park and at the school car park.
 
 ## Transport
 

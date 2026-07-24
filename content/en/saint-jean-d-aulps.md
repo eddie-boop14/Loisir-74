@@ -51,11 +51,12 @@ Not specified
 ## Access (PMR)
 
 - Status: Partially accessible
+- Detail: Access possible on certain ski lifts for snowscoots, adaptive skis, snowbikes and yooners. The Roc d'Enfer gondola is accessible to pedestrians, mountain bikers and paragliders. No Tourisme & Handicap label or adaptive-beach detail confirmed.
 - Source: Vallée d'Aulps Tourisme — https://en.valleedaulps.com/explorer/stations/st-jean-daulps-roc-denfer/domaine-skiable/
 
 ## Parking
 
-Parking gratuit disponible à proximité du départ de la télécabine de la Grande Terche. (Capacité non indiquée en verbatim sur la source officielle.)
+Free car park available near the departure of the Grande Terche gondola. (Capacity not indicated verbatim on the official source.)
 
 ## Transport
 

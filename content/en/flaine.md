@@ -51,11 +51,12 @@ Not specified
 ## Access (PMR)
 
 - Status: Accessible
+- Detail: Adaptive skiing offered by professional instructors with suitable equipment: ESF (individualised adaptive-ski lessons at Flaine Forum) and Flaine Mountain (tandem-ski). Free disabled parking after validation at the Pavillon d'Accueil: dedicated space to the right of the Grandes Platières cable car at Flaine Forum; any free space at Flaine Forêt. Three public toilets accessible to people with reduced mobility (Flaine Forum shopping arcade, Flaine Forêt shopping arcade, Grand Vans). Lift pass discount 50% (disability card > 80% or CMI card marked "invalidité"; companion at the same rate if marked "besoin d'accompagnement").
 - Source: Flaine — Site officiel (Handiski) — https://www.flaine.com/handiski/
 
 ## Parking
 
-Trois parkings principaux P1 (Flaine Front de Neige), P2 (Flaine Forum) et P3 (Flaine Forêt) : tarif hiver 5€ entre 30 min et 12h, 10€ entre 12h et 24h, puis 10€ par tranche de 24h ; gratuits en été. Accès gratuit temporaire de 1h30 (ou entre 19h00 et 3h30) pour charger/décharger. Parking du Col de Pierre Carrée : gratuit, accessible en navettes gratuites. Parking du Pavillon d'Accueil ouvert du 4 décembre 2025 au 19 avril 2026, tous les jours 24h/24. 4 bornes de recharge électriques (accès public 24h/24).
+Three main car parks P1 (Flaine Front de Neige), P2 (Flaine Forum) and P3 (Flaine Forêt): winter rate 5€ between 30 min and 12h, 10€ between 12h and 24h, then 10€ per 24h period; free in summer. Temporary free access of 1h30 (or between 19:00 and 3:30) for loading/unloading. Col de Pierre Carrée car park: free, reached by free shuttles. Pavillon d'Accueil car park open from 4 December 2025 to 19 April 2026, every day 24/7. 4 electric charging points (public access 24/7).
 
 ## Transport
 

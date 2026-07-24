@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Remontées mécaniques : 9h–17h.
+Ski lifts: 9:00–17:00.
 
 ## Prices
 
@@ -51,11 +51,12 @@ Remontées mécaniques : 9h–17h.
 ## Access (PMR)
 
 - Status: Accessible
+- Detail: Ski school with ~6 instructors specialising in adaptive skiing and about twenty adapted ski lifts. Meeting points at the departure of the Châtelet chairlift (Chinaillon) or at the top of the Rosay gondolas. Tandemski / dualski / adaptive-ski activities (equipment included, qualified supervision). Companion lift pass -50% with the orange PMR card.
 - Source: Le Grand-Bornand (site officiel) — https://en.legrandbornand.com/what-to-do/tandemski-dualski-handiksi-private-lesson-le-grand-bornand-en-5596164/
 
 ## Parking
 
-Nombreux parkings gratuits répartis entre le centre-village et le Chinaillon. Réglementation hivernale : stationnement limité à 24h sur un même emplacement en période de chutes de neige (déneigement), interdit sur les aires de retournement des engins ; zones bleues en vigueur. Bornes de recharge électrique disponibles.
+Numerous free car parks spread between the village centre and the Chinaillon. Winter regulations: parking limited to 24h in the same spot during snowfall (snow clearing), prohibited on the vehicle turning areas; blue zones in force. Electric charging points available.
 
 ## Transport
 

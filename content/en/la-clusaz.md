@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Remontées mécaniques : 9h–16h30.
+Ski lifts: 9:00–16:30.
 
 ## Prices
 
@@ -51,11 +51,12 @@ Remontées mécaniques : 9h–16h30.
 ## Access (PMR)
 
 - Status: Accessible
+- Detail: Resort with the adaptive-skiing label. ESF La Clusaz offers adaptive-ski lessons (tandem-ski, dualski, uniski, GMS; equipment included). 50% discount on most lift passes for holders of the CMI Invalidité card; priority access to the lifts for the CMI Priorité card. Adapted PMR piste maps available.
 - Source: La Clusaz (billetterie officielle) — https://forfait.laclusaz.com/fr/forfait-handiski
 
 ## Parking
 
-Parkings couverts payants en hiver (gratuits le reste de l'année) : Salon des Dames (430 places, entrée du village), Bossonnet (85 places, haut du village), Centre Village (330 places). Parking Perrière (haut du village) payant hiver ET été, dédié au stationnement de courte durée. 6 zones gratuites hors village limitées à 24h (Crêt du Merle, Combe des Juments, Etale, Laquais, Chenons, Confins). Horodateurs 0,60 €/15 min.
+Covered car parks, paid in winter (free the rest of the year): Salon des Dames (430 spaces, entrance to the village), Bossonnet (85 spaces, top of the village), Centre Village (330 spaces). Perrière car park (top of the village) paid in winter AND summer, dedicated to short-term parking. 6 free zones outside the village limited to 24h (Crêt du Merle, Combe des Juments, Etale, Laquais, Chenons, Confins). Ticket machines 0.60€/15 min.
 
 ## Transport
 

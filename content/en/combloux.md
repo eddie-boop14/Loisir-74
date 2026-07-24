@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Liaison du Jaillet : 9h10–16h45 (vers Combloux), 9h10–16h15 (vers La Giettaz).
+Jaillet link: 9:10–16:45 (towards Combloux), 9:10–16:15 (towards La Giettaz).
 
 ## Prices
 
@@ -51,11 +51,12 @@ Liaison du Jaillet : 9h10–16h45 (vers Combloux), 9h10–16h15 (vers La Giettaz
 ## Access (PMR)
 
 - Status: Accessible
+- Detail: For more than 15 years, Combloux ("Les Portes du Mont-Blanc" ski area) has developed facilities for adaptive skiing. Recommended chairlifts: Beauregard, Pertuis, Ravine, Christomet, Prés, Grande Rare and Tête du Torraz; the Jaillet gondola is accessible for dual-ski and uni-ski. Cuchet car park: 7 disabled spaces at the foot of the slopes.
 - Source: Combloux — Office de Tourisme (Les Portes du Mont-Blanc, domaine handiski) — https://www.combloux.com/en/domaines/les-portes-du-mont-blanc-domaine-handiski/
 
 ## Parking
 
-Parking de Cuchet, au pied des pistes du domaine « Les Portes du Mont-Blanc » : 217 places dont 7 places PMR, avec 6 places réservées en bord de piste. Navette gratuite reliant le centre-village au parking de Cuchet.
+Cuchet car park, at the foot of the slopes of the "Les Portes du Mont-Blanc" ski area: 217 spaces including 7 disabled spaces, with 6 reserved spaces beside the slope. Free shuttle linking the village centre to the Cuchet car park.
 
 ## Transport
 

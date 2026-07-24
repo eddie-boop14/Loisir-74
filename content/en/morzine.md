@@ -51,11 +51,12 @@ Not specified
 ## Access (PMR)
 
 - Status: Partially accessible
+- Detail: Adaptive skiing is possible with a companion: "all the chairlifts (except the Crusaz chairlift), the Pleney gondola, the Nyon cable car and the beginners' carpet lift at the top of the Pleney can be used for adaptive skiing". Accessible Tourist Office (step-free access, PMR toilets).
 - Source: Office de Tourisme de Morzine-Avoriaz — https://www.morzine-avoriaz.com/sejourner/pratique/infos-pratiques/handi-tourisme/
 
 ## Parking
 
-Parkings souterrains : Office de Tourisme 181 places, Joux Plane 86 places, Pleney 200 places (7h-20h, hauteur max 2,20 m). Parkings extérieurs : Prodains 540 places (accès télécabine d'Avoriaz), Nyon 250 places (gratuit hiver comme été), Nantégué 188 places (ouvert l'hiver, gratuit), Lans 75, Bourg 61, Poste 110, Parc des Sports 101. Stationnement payant l'été du 20 juin au 3 septembre (2h gratuites/jour). Zone bleue gratuite limitée à 1h avec disque.
+Underground car parks: Tourist Office 181 spaces, Joux Plane 86 spaces, Pleney 200 spaces (7:00–20:00, max height 2.20 m). Outdoor car parks: Prodains 540 spaces (access to the Avoriaz gondola), Nyon 250 spaces (free in winter as in summer), Nantégué 188 spaces (open in winter, free), Lans 75, Bourg 61, Poste 110, Parc des Sports 101. Paid parking in summer from 20 June to 3 September (2h free/day). Free blue zone limited to 1h with a disc.
 
 ## Transport
 

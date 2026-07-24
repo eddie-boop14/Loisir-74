@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Télécabine de l'Alpin (Le Bettex) : 8h30–17h10, tous les jours.
+Alpin gondola (Le Bettex): 8:30–17:10, every day.
 
 ## Prices
 
@@ -50,11 +50,12 @@ Télécabine de l'Alpin (Le Bettex) : 8h30–17h10, tous les jours.
 ## Access (PMR)
 
 - Status: Accessible
+- Detail: 8 priority lifts for adaptive skiing: Alpin gondola, chairlifts of Monts Rosset, Nants, Mont-Joux, Croix, Chattrix, Christ and Épaule. Adaptive skiing taught by the ESF. The 2KM3 underground car park and the "Le Valléen" rail service are indicated as accessible; the Tramway du Mont-Blanc is accessible. Step-free Tourist Office with wide doors and an adapted counter.
 - Source: Office de Tourisme de Saint-Gervais Mont-Blanc — https://www.saintgervais.com/je-minforme/une-destination-accessible/
 
 ## Parking
 
-Tous les stationnements publics ouverts à la circulation sont gratuits. Parking souterrain 2KM3 : 225 places (150 en zone longue durée, limitée à 7 jours, + 75 en zone bleue limitée à 1h30). Parking du Bettex (aérien) : 185 places. Parkings-relais gratuits reliés aux navettes : Stade au Fayet (200 places) et aux Pratz (55 places). Zones bleues : stationnement limité à 1h30 entre 9h et 18h.
+All public parking open to traffic is free. 2KM3 underground car park: 225 spaces (150 in the long-stay zone, limited to 7 days, + 75 in the blue zone limited to 1h30). Le Bettex car park (above-ground): 185 spaces. Free park-and-ride car parks connected to the shuttles: Stade at Le Fayet (200 spaces) and Les Pratz (55 spaces). Blue zones: parking limited to 1h30 between 9:00 and 18:00.
 
 ## Transport
 

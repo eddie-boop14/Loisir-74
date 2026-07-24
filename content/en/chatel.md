@@ -51,11 +51,12 @@ Not specified
 ## Access (PMR)
 
 - Status: Accessible
+- Detail: Skiers with disabilities and reduced mobility can use most of the lifts with their equipment. Accessible lift offices and car parks with free spaces: Lac de Vonnes (equipped office, 3 spaces), Petit-Châtel (2 spaces), Linga (2 spaces, direct lift access), Pierre-Longue (equipped office, 3 spaces), Pré-la-Joux (2 spaces). Accessible toilets and picnic areas at Pré-la-Joux, Plaine-Dranse, Linga and Petit-Châtel. List of authorised sit-ski equipment available for download. Lift pass discounts: 50% (CMI disability card, + companion) / 20% (parking/priority card).
 - Source: Châtel — Site officiel (Domaine skiable accessible / handi) — https://www.chatel.com/en/skiing/handi/accessible-ski-area/
 
 ## Parking
 
-Parkings payants avec horodateurs (périodes payantes 15 décembre–30 avril et 1er juillet–31 août, tous les jours) : Parking centre (limité 1h30, payant 8h–19h) ; Parking Meurba sous l'église (limité 9h, payant 8h–19h) ; Parking Etringa au centre aquatique (limité 5h, payant 8h–minuit). Parkings avec abonnement : Lac de Vonnes et Etringa (15 déc–30 avr) — Vonnes 1 jour 10€/semaine 35€/saison 80€ ; Etringa saison 135€. Zones limitées 5 min–2h au centre-village et lac de Vonnes. 23 places réservées CMI réparties sur les parkings. Paiement : espèces, CB, sans contact, appli Flowbird.
+Paid car parks with ticket machines (paid periods 15 December–30 April and 1 July–31 August, every day): Centre car park (limited to 1h30, paid 8:00–19:00); Meurba car park below the church (limited to 9h, paid 8:00–19:00); Etringa car park at the aquatic centre (limited to 5h, paid 8:00–midnight). Car parks with a subscription: Lac de Vonnes and Etringa (15 Dec–30 Apr) — Vonnes 1 day 10€/week 35€/season 80€; Etringa season 135€. Zones limited to 5 min–2h in the village centre and at Lac de Vonnes. 23 spaces reserved for CMI holders spread across the car parks. Payment: cash, card, contactless, Flowbird app.
 
 ## Transport
 
