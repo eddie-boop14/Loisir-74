@@ -72,6 +72,19 @@ def rebuild_catalog_index():
     print(out.stdout.strip() or "(catalog rebuilt)")
 
 
+def rebuild_security_txt():
+    """RFC 9116 security.txt. Expires is computed at build time, never typed —
+    a hardcoded date is valid the day it is written and invalid forever after."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "build_security_txt.py")],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("build_security_txt failed")
+    print(out.stdout.strip() or "(security.txt regenerated)")
+
+
 def rebuild_project_state():
     out = subprocess.run(
         [sys.executable, str(SCRIPTS / "build_project_state.py")],
@@ -506,6 +519,8 @@ def main():
     run("inject intent 'Nos sélections' homepage strip (FIX D, after facet links)",
         inject_home_selections)
     run("cache-bust runtime /scripts/ includes (content-hash ?v=)", version_runtime_assets)
+    run("emit .well-known/security.txt (RFC 9116 — Expires must never lapse)",
+        rebuild_security_txt)
     run("regenerate PROJECT-STATE.md (JOB 8 — derived, never authored)", rebuild_project_state)
     if not args.no_site:
         run("build _site/", lambda: subprocess.check_call(

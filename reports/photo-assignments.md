@@ -10,9 +10,9 @@
 | `baignade-nautisme` | 50 | 39 | 4 |
 | `bases-de-loisirs` | 85 | 60 | 7 |
 | `cascades` | 19 | 19 | 1 |
-| `chateaux` | 26 | 22 | 4 |
-| `lacs-plages` | 31 | 26 | 3 |
-| `musees` | 51 | 28 | 10 |
+| `chateaux` | 26 | 23 | 3 |
+| `lacs-plages` | 31 | 27 | 3 |
+| `musees` | 51 | 30 | 8 |
 | `parcs-jardins` | 32 | 17 | 12 |
 | `points-de-vue` | 29 | 26 | 3 |
 | `que-faire` | 73 | 44 | 4 |
@@ -47,7 +47,7 @@
 | `baignade-nautisme` | `centre-aquatique-sallanches-mont-blanc` | `aquatique` | `generique-aquatique-toboggan.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `centre-nautique-cite-de-l-eau-publier` | `aquatique` | `generique-aquatique-bassin-natation.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `centre-nautique-guy-chatel-ayse` | `aquatique` | `generique-aquatique-bassin-natation.jpg` | — | json hero (local) |
-| `baignade-nautisme` | `croisiere-bateaux-annecy-annecy` | `aquatique` | `generique-croisiere.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `croisiere-bateaux-annecy-annecy` | `aquatique` | `croisiere-bateaux-annecy-annecy-hero.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `croisiere-cgn-evian` | `aquatique` | `generique-port-annecy.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `croisiere-cgn-thonon` | `aquatique` | `generique-port-annecy.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `croisiere-cgn-yvoire` | `aquatique` | `croisiere-cgn-yvoire-hero.jpg` | — | json hero (local) |
@@ -62,10 +62,10 @@
 | `baignade-nautisme` | `plage-albigny` | `aquatique` | `Plage_d%27Albigny_%C3%A0_Annecy.jpg` | — | json hero (url) |
 | `baignade-nautisme` | `plage-d-evian-centre-nautique` | `aquatique` | `generique-plage-lac-5.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `plage-d-excenevex` | `aquatique` | `Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG` | — | json hero (url) |
-| `baignade-nautisme` | `plage-de-doussard` | `aquatique` | `generique-plage-lac-3.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `plage-de-doussard` | `aquatique` | `plage-de-doussard-hero.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `plage-de-duingt` | `aquatique` | `generique-plage-lac-1.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `plage-de-menthon-saint-bernard` | `aquatique` | `Plage_municipale_de_Menthon-Saint-Bernard.jpg` | — | json hero (url) |
-| `baignade-nautisme` | `plage-de-messery` | `aquatique` | `generique-plage-lac-7.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `plage-de-messery` | `aquatique` | `plage-de-messery-hero.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `plage-de-saint-disdille` | `aquatique` | `Plage_thonon.jpg` | — | json hero (url) |
 | `baignade-nautisme` | `plage-de-saint-jorioz` | `aquatique` | `plage-de-saint-jorioz-hero.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `plage-de-sciez-sur-leman` | `aquatique` | `Sciez-regate.jpg` | — | json hero (url) |
@@ -199,7 +199,7 @@
 | `chateaux` | `chateau-montrottier-lovagny` | `patrimoine` | `chateau-montrottier-lovagny-hero.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-ripaille-thonon` | `patrimoine` | `chateau-ripaille-thonon-hero.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-sires-faucigny-bonneville` | `patrimoine` | `chateau-sires-faucigny-bonneville-hero.jpg` | — | json hero (local) |
-| `chateaux` | `chateau-sonnaz-thonon-bains` | `patrimoine` | `generique-chateau.jpg` | — | json hero (local) |
+| `chateaux` | `chateau-sonnaz-thonon-bains` | `patrimoine` | `chateau-sonnaz-thonon-bains-hero.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-thenieres-ballaison` | `patrimoine` | `generique-chateau.jpg` | — | json hero (local) |
 | `chateaux` | `chateaux-des-allinges` | `patrimoine` | `Allinges_Chateau_Clocher.jpg` | — | json hero (url) |
 | `chateaux` | `eglise-baroque-saint-nicolas-combloux` | `chateau` | `generique-chateau.jpg` | — | json hero (local) |
@@ -221,18 +221,18 @@
 | `lacs-plages` | `plage-d-angon-talloires` | `aquatique` | `generique-plage-lac-15.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-d-evian-centre-nautique` | `aquatique` | `generique-plage-lac-5.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-d-excenevex` | `aquatique` | `Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG` | — | json hero (url) |
-| `lacs-plages` | `plage-de-doussard` | `aquatique` | `generique-plage-lac-3.jpg` | — | json hero (local) |
+| `lacs-plages` | `plage-de-doussard` | `aquatique` | `plage-de-doussard-hero.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-duingt` | `aquatique` | `generique-plage-lac-1.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-la-brune-veyrier` | `aquatique` | `generique-plage-lac-6.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-la-pinede` | `aquatique` | `Thonon-les-Bains._Promenade_du_L%C3%A9man._2015-06-21.jpg` | — | json hero (url) |
 | `lacs-plages` | `plage-de-margencel-sechex` | `aquatique` | `generique-plage-lac-13.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-menthon-saint-bernard` | `aquatique` | `Plage_municipale_de_Menthon-Saint-Bernard.jpg` | — | json hero (url) |
-| `lacs-plages` | `plage-de-messery` | `aquatique` | `generique-plage-lac-7.jpg` | — | json hero (local) |
+| `lacs-plages` | `plage-de-messery` | `aquatique` | `plage-de-messery-hero.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-saint-disdille` | `aquatique` | `Plage_thonon.jpg` | — | json hero (url) |
 | `lacs-plages` | `plage-de-saint-gingolph` | `aquatique` | `generique-plage-lac-4.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-saint-jorioz` | `aquatique` | `plage-de-saint-jorioz-hero.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-sciez-sur-leman` | `aquatique` | `Sciez-regate.jpg` | — | json hero (url) |
-| `lacs-plages` | `plage-de-sevrier` | `aquatique` | `generique-plage-lac-15.jpg` | — | json hero (local) |
+| `lacs-plages` | `plage-de-sevrier` | `aquatique` | `plage-de-sevrier-hero.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-talloires` | `aquatique` | `generique-plage-lac-13.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-tougues-chens` | `aquatique` | `generique-plage-lac-13.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-des-marquisats` | `aquatique` | `Annecy-8.jpg` | — | json hero (url) |
@@ -273,7 +273,7 @@
 | `musees` | `musee-ermitage-calvaire-megeve` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
 | `musees` | `musee-faune-bellevaux` | `patrimoine` | `Museo_Ecologico_Giovanni_Zanardo_-_Diorama_cervo%2C_Sala_principale.png` | — | json hero (url) |
 | `musees` | `musee-granges-servette-chens-sur-leman` | `patrimoine` | `Grange_en_Albanais%2C_ancienne_commune_de_Chaux-Balmont_%28Haute-Savoie%29.jpg` | — | json hero (url) |
-| `musees` | `musee-horlogerie-et-decolletage-cluses` | `patrimoine` | `Mus%C3%A9e_de_l%27Horlogerie.jpg` | — | json hero (url) |
+| `musees` | `musee-horlogerie-et-decolletage-cluses` | `patrimoine` | `musee-horlogerie-et-decolletage-cluses-hero.jpg` | — | json hero (local) |
 | `musees` | `musee-montagnard-les-houches` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
 | `musees` | `musee-musique-mecanique-gets` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
 | `musees` | `musee-nature-gruffy` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
@@ -281,10 +281,10 @@
 | `musees` | `musee-paysan-un-site-paysalp-culture-patrimoine-viuz-en-sallaz` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
 | `musees` | `musee-poterie-savoyarde-filliere` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
 | `musees` | `musee-prehistoire-geologie-sciez` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
-| `musees` | `musee-resistance-morette-la-balme-de-thuy` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
+| `musees` | `musee-resistance-morette-la-balme-de-thuy` | `patrimoine` | `musee-resistance-morette-la-balme-de-thuy-hero.jpg` | — | json hero (local) |
 | `musees` | `musee-ski-ancien-chapelle-abondance` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
 | `musees` | `museum-des-papillons-et-insectes-faverges` | `patrimoine` | `generique-musee-moderne.jpg` | — | json hero (local) |
-| `musees` | `notre-histoire-musee-rumilly-rumilly` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
+| `musees` | `notre-histoire-musee-rumilly-rumilly` | `patrimoine` | `notre-histoire-musee-rumilly-rumilly-hero.jpg` | — | json hero (local) |
 | `musees` | `palais-de-l-ile-annecy` | `patrimoine` | `Palais_de_l%27%C3%8Ele_%40_Pont_Perri%C3%A8re_%40_Annecy_%2851299713197%29.jpg` | — | json hero (url) |
 | `musees` | `palais-lumiere` | `patrimoine` | `PalaisLumi%C3%A8re-DSCN1105.jpg` | — | json hero (url) |
 | `musees` | `ruines-chateau-habere-lullin-habere-lullin` | `patrimoine` | `generique-chateau-brume.jpg` | — | json hero (local) |
@@ -470,7 +470,7 @@
 | `sensations-plein-air` | `parc-des-dronieres` | `parc` | `Parc_de_Loisirs_des_Droni%C3%A8res_%40_Cruseilles_%2850969087497%29.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `parcours-aventure-de-sciez` | `parc` | `Accrobranche_floreval_2.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `passy-accro-lac` | `divertissement` | `Accrobranche_floreval_2.jpg` | — | json hero (url) |
-| `sensations-plein-air` | `plage-de-sevrier` | `aquatique` | `generique-plage-lac-15.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `plage-de-sevrier` | `aquatique` | `plage-de-sevrier-hero.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `plateau-de-solaison` | `nature` | `plateau-de-solaison-hero.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `rafting-ecolorado-passy-samoens` | `sensations` | `generique-rafting-action.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `rafting-frogs-rafting-dranse` | `sensations` | `generique-rafting-riviere.jpg` | — | json hero (local) |

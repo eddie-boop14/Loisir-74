@@ -18,8 +18,16 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+# GPTBot = OpenAI training crawler (NOT the citation path; that is
+# OAI-SearchBot / ChatGPT-User, which fall under "User-agent: *" above and
+# stay fully allowed). Deny training on the raw markdown + json mirrors;
+# HTML pages remain open so citation is unaffected.
+# Trailing slashes are load-bearing: robots.txt matching is prefix-based, so
+# bare /content would also match a future /content-hub/ HTML page.
 User-agent: GPTBot
 Allow: /
+Disallow: /content/
+Disallow: /api/
 
 User-agent: PerplexityBot
 Allow: /

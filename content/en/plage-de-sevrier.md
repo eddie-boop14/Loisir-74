@@ -16,11 +16,11 @@ google_place_id: "ChIJcwxXNkWQi0cRJ0MWnpGsN00"
 canonical_url: https://loisirs74.fr/en/plage-de-sevrier
 language: en
 facet_json: https://loisirs74.fr/api/lieu/plage-de-sevrier.json
-photo_url: /img/generique/generique-plage-lac-15.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/lacs-plages/plage-de-sevrier-hero.jpg
+photo_type: real
+photo_author: "Chrbenoit"
+photo_license: "CC BY-SA 3.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-24
 source: loisirs74.fr
 ---

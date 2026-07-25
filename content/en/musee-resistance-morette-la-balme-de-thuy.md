@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/en/musee-resistance-morette-la-balme-de-thuy
 language: en
 facet_json: https://loisirs74.fr/api/lieu/musee-resistance-morette-la-balme-de-thuy.json
-photo_url: /img/generique/generique-musee-classique.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/musees/musee-resistance-morette-la-balme-de-thuy-hero.jpg
+photo_type: real
+photo_author: "Martial GAILLARD-GRENADIER"
+photo_license: "CC BY-SA 3.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-07-25
 source: loisirs74.fr
 ---

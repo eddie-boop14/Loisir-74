@@ -1,6 +1,12 @@
 # robots-ai.txt — explicit AI bot policy for loisirs74.fr
 # Spec: https://www.ai-visibility.org.uk/specifications/robots-ai-txt/
-# Last updated: 2026-05-18
+# Last updated: 2026-07-25
+#
+# SUPPLEMENTARY POLICY — robots.txt is authoritative. Major crawlers read
+# robots.txt, not this file. This file documents intent + attribution for
+# AI operators who choose to honour the ai-visibility.org.uk convention.
+# Nothing here may be stricter than robots.txt for a citation bot: every
+# citation agent below is "Allow: /" in both files.
 
 # Default for any AI crawler not explicitly listed
 User-agent: *
@@ -42,10 +48,15 @@ Allow: /
 # TRAINING-restricted (allow citation; do NOT use for model training)
 # ──────────────────────────────────────────────────────────────
 User-agent: GPTBot
-# Allow citation, deny training:
+# GPTBot is OpenAI's TRAINING crawler — it is not the citation path, so this
+# rule cannot affect citation. (Citation runs through OAI-SearchBot and
+# ChatGPT-User, both Allow: / above and in robots.txt.) Denying the raw
+# markdown + json mirrors denies a training slice only; the HTML pages that
+# citation actually reads stay open.
+# Mirrors robots.txt exactly — the two files must not disagree.
 Allow: /
 Disallow: /content/
-# (Content directory holds the raw markdown; deny training while still allowing live citation via HTML pages)
+Disallow: /api/
 
 User-agent: CCBot
 Allow: /

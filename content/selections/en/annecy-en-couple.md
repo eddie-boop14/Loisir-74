@@ -10,6 +10,7 @@
 - [Mont Veyrier](https://loisirs74.fr/ja/mont-veyrier) — Annecy · [md](https://loisirs74.fr/content/mont-veyrier.md)
 - [Parc de l'Impérial](https://loisirs74.fr/ja/parc-imperial-annecy) — Annecy · [md](https://loisirs74.fr/content/parc-imperial-annecy.md)
 - [Casino Impérial Palace Annecy](https://loisirs74.fr/ja/casino-imperial-palace-annecy) — Annecy · [md](https://loisirs74.fr/content/casino-imperial-palace-annecy.md)
+- [Compagnie des Bateaux du Lac d'Annecy](https://loisirs74.fr/ja/croisiere-bateaux-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/croisiere-bateaux-annecy-annecy.md)
 - [Musée-Château d'Annecy](https://loisirs74.fr/ja/musee-chateau-annecy) — Annecy · [md](https://loisirs74.fr/content/musee-chateau-annecy.md)
 - [Musée du cinéma d'animation](https://loisirs74.fr/ja/musee-cinema-animation-annecy) — Annecy · [md](https://loisirs74.fr/content/musee-cinema-animation-annecy.md)
 - [Palais de l'Île](https://loisirs74.fr/ja/palais-de-l-ile-annecy) — Annecy · [md](https://loisirs74.fr/content/palais-de-l-ile-annecy.md)
@@ -17,7 +18,6 @@
 - [Château de Menthon-Saint-Bernard](https://loisirs74.fr/ja/chateau-de-menthon-saint-bernard) — Menthon-Saint-Bernard · [md](https://loisirs74.fr/content/chateau-de-menthon-saint-bernard.md)
 - [Réserve naturelle du Bout-du-Lac d'Annecy](https://loisirs74.fr/ja/reserve-naturelle-bout-du-lac) — Doussard · [md](https://loisirs74.fr/content/reserve-naturelle-bout-du-lac.md)
 - [La Turbine sciences](https://loisirs74.fr/ja/la-turbine-sciences-cran-gevrier) — Annecy · [md](https://loisirs74.fr/content/la-turbine-sciences-cran-gevrier.md)
-- [Compagnie des Bateaux du Lac d'Annecy](https://loisirs74.fr/ja/croisiere-bateaux-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/croisiere-bateaux-annecy-annecy.md)
 - [Les 4 Nemours](https://loisirs74.fr/ja/cinema-les-4-nemours-annecy) — Annecy · [md](https://loisirs74.fr/content/cinema-les-4-nemours-annecy.md)
 - [Megarama Annecy](https://loisirs74.fr/ja/cinema-megarama-annecy) — Annecy · [md](https://loisirs74.fr/content/cinema-megarama-annecy.md)
 
