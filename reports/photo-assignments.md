@@ -155,7 +155,7 @@
 | `bases-de-loisirs` | `via-ferrata-curalla-passy` | `sensations` | `generique-via-ferrata-traversee.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `via-ferrata-jallouvre-le-grand-bornand` | `sensations` | `generique-via-ferrata-lac.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `via-ferrata-parc-thermal-saint-gervais` | `sensations` | `generique-via-ferrata-arete.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `via-ferrata-pollet-villard-la-clusaz` | `sensations` | `generique-via-ferrata-gorge.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `via-ferrata-pollet-villard-la-clusaz` | `sensations` | `via-ferrata-pollet-villard-la-clusaz-hero.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `via-ferrata-saix-de-miolene-abondance` | `sensations` | `generique-via-ferrata-paroi.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `via-ferrata-sixt-fer-a-cheval` | `sensations` | `generique-via-ferrata-paroi.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `via-ferrata-thones` | `sensations` | `generique-via-ferrata-arete.jpg` | — | json hero (local) |
@@ -490,7 +490,7 @@
 | `sensations-plein-air` | `via-ferrata-curalla-passy` | `sensations` | `generique-via-ferrata-traversee.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `via-ferrata-jallouvre-le-grand-bornand` | `sensations` | `generique-via-ferrata-lac.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `via-ferrata-parc-thermal-saint-gervais` | `sensations` | `generique-via-ferrata-arete.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `via-ferrata-pollet-villard-la-clusaz` | `sensations` | `generique-via-ferrata-gorge.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `via-ferrata-pollet-villard-la-clusaz` | `sensations` | `via-ferrata-pollet-villard-la-clusaz-hero.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `via-ferrata-saix-de-miolene-abondance` | `sensations` | `generique-via-ferrata-paroi.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `via-ferrata-sixt-fer-a-cheval` | `sensations` | `generique-via-ferrata-paroi.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `via-ferrata-thones` | `sensations` | `generique-via-ferrata-arete.jpg` | — | json hero (local) |
