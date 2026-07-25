@@ -1142,14 +1142,23 @@ def season_card(d):
 
 
 _SELECTIONS_CACHE = None
-_SELECTIONS_LABEL = {"fr": "Figure dans nos sélections", "en": "Featured in our selections"}
+_SELECTIONS_LABEL = {
+    "fr": "Figure dans nos sélections", "en": "Featured in our selections",
+    "de": "In unseren Auswahlen",       "nl": "Opgenomen in onze selecties",
+    "es": "Aparece en nuestras selecciones", "it": "Presente nelle nostre selezioni",
+    "pl": "W naszych zestawieniach",    "pt": "Presente nas nossas seleções",
+    "cs": "V našich výběrech",          "ar": "يظهر ضمن مختاراتنا",
+    "he": "מופיע במבחרים שלנו",          "ja": "掲載セレクション",
+}
 
 
 def selections_chips(d, lang):
     """HANDOFF-intentpages §5 upward links: chip row linking every intent page
     this fiche is compiled into (registry membership, computed — never curated).
-    Renders only in langs whose intent pages exist (fr/en today). The chip is a
-    plain internal link; partner blocks untouched."""
+    Rendered in every VISIBLE lang: the label above covers all 12, and the
+    per-entry guard below still drops any selection that does not ship in this
+    lang, so a fiche only ever links to a page that actually exists. The chip is
+    a plain internal link; partner blocks untouched."""
     global _SELECTIONS_CACHE
     if lang not in _SELECTIONS_LABEL:
         return ""
