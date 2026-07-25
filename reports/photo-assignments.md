@@ -11,7 +11,7 @@
 | `bases-de-loisirs` | 85 | 60 | 7 |
 | `cascades` | 19 | 19 | 1 |
 | `chateaux` | 26 | 23 | 3 |
-| `lacs-plages` | 31 | 26 | 3 |
+| `lacs-plages` | 31 | 27 | 3 |
 | `musees` | 51 | 30 | 8 |
 | `parcs-jardins` | 32 | 17 | 12 |
 | `points-de-vue` | 29 | 26 | 3 |
@@ -62,7 +62,7 @@
 | `baignade-nautisme` | `plage-albigny` | `aquatique` | `Plage_d%27Albigny_%C3%A0_Annecy.jpg` | — | json hero (url) |
 | `baignade-nautisme` | `plage-d-evian-centre-nautique` | `aquatique` | `generique-plage-lac-5.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `plage-d-excenevex` | `aquatique` | `Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG` | — | json hero (url) |
-| `baignade-nautisme` | `plage-de-doussard` | `aquatique` | `generique-plage-lac-3.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `plage-de-doussard` | `aquatique` | `plage-de-doussard-hero.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `plage-de-duingt` | `aquatique` | `generique-plage-lac-1.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `plage-de-menthon-saint-bernard` | `aquatique` | `Plage_municipale_de_Menthon-Saint-Bernard.jpg` | — | json hero (url) |
 | `baignade-nautisme` | `plage-de-messery` | `aquatique` | `plage-de-messery-hero.jpg` | — | json hero (local) |
@@ -221,7 +221,7 @@
 | `lacs-plages` | `plage-d-angon-talloires` | `aquatique` | `generique-plage-lac-15.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-d-evian-centre-nautique` | `aquatique` | `generique-plage-lac-5.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-d-excenevex` | `aquatique` | `Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG` | — | json hero (url) |
-| `lacs-plages` | `plage-de-doussard` | `aquatique` | `generique-plage-lac-3.jpg` | — | json hero (local) |
+| `lacs-plages` | `plage-de-doussard` | `aquatique` | `plage-de-doussard-hero.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-duingt` | `aquatique` | `generique-plage-lac-1.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-la-brune-veyrier` | `aquatique` | `generique-plage-lac-6.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-la-pinede` | `aquatique` | `Thonon-les-Bains._Promenade_du_L%C3%A9man._2015-06-21.jpg` | — | json hero (url) |
@@ -232,7 +232,7 @@
 | `lacs-plages` | `plage-de-saint-gingolph` | `aquatique` | `generique-plage-lac-4.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-saint-jorioz` | `aquatique` | `plage-de-saint-jorioz-hero.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-sciez-sur-leman` | `aquatique` | `Sciez-regate.jpg` | — | json hero (url) |
-| `lacs-plages` | `plage-de-sevrier` | `aquatique` | `generique-plage-lac-15.jpg` | — | json hero (local) |
+| `lacs-plages` | `plage-de-sevrier` | `aquatique` | `plage-de-sevrier-hero.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-talloires` | `aquatique` | `generique-plage-lac-13.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-tougues-chens` | `aquatique` | `generique-plage-lac-13.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-des-marquisats` | `aquatique` | `Annecy-8.jpg` | — | json hero (url) |
@@ -470,7 +470,7 @@
 | `sensations-plein-air` | `parc-des-dronieres` | `parc` | `Parc_de_Loisirs_des_Droni%C3%A8res_%40_Cruseilles_%2850969087497%29.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `parcours-aventure-de-sciez` | `parc` | `Accrobranche_floreval_2.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `passy-accro-lac` | `divertissement` | `Accrobranche_floreval_2.jpg` | — | json hero (url) |
-| `sensations-plein-air` | `plage-de-sevrier` | `aquatique` | `generique-plage-lac-15.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `plage-de-sevrier` | `aquatique` | `plage-de-sevrier-hero.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `plateau-de-solaison` | `nature` | `plateau-de-solaison-hero.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `rafting-ecolorado-passy-samoens` | `sensations` | `generique-rafting-action.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `rafting-frogs-rafting-dranse` | `sensations` | `generique-rafting-riviere.jpg` | — | json hero (local) |

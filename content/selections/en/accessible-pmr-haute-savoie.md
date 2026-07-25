@@ -13,7 +13,9 @@
 - [Lac des Dronières](https://loisirs74.fr/ja/lac-des-dronieres) — Cruseilles · [md](https://loisirs74.fr/content/lac-des-dronieres.md)
 - [Plage d'Albigny](https://loisirs74.fr/ja/plage-albigny) — Annecy · [md](https://loisirs74.fr/content/plage-albigny.md)
 - [Plage d'Excenevex](https://loisirs74.fr/ja/plage-d-excenevex) — Excenevex · [md](https://loisirs74.fr/content/plage-d-excenevex.md)
+- [Plage de Doussard](https://loisirs74.fr/ja/plage-de-doussard) — Doussard · [md](https://loisirs74.fr/content/plage-de-doussard.md)
 - [Plage de la Pinède](https://loisirs74.fr/ja/plage-de-la-pinede) — Thonon-les-Bains · [md](https://loisirs74.fr/content/plage-de-la-pinede.md)
+- [Plage de Sévrier](https://loisirs74.fr/ja/plage-de-sevrier) — Sévrier · [md](https://loisirs74.fr/content/plage-de-sevrier.md)
 - [Plage des Marquisats](https://loisirs74.fr/ja/plage-des-marquisats) — Annecy · [md](https://loisirs74.fr/content/plage-des-marquisats.md)
 - [Villa du Parc](https://loisirs74.fr/ja/villa-du-parc-annemasse) — Annemasse · [md](https://loisirs74.fr/content/villa-du-parc-annemasse.md)
 - [Sentier des Roselières](https://loisirs74.fr/ja/sentier-des-roselieres) — Saint-Jorioz · [md](https://loisirs74.fr/content/sentier-des-roselieres.md)
@@ -22,7 +24,5 @@
 - [Casino Impérial Palace Annecy](https://loisirs74.fr/ja/casino-imperial-palace-annecy) — Annecy · [md](https://loisirs74.fr/content/casino-imperial-palace-annecy.md)
 - [Château de Clermont](https://loisirs74.fr/ja/chateau-clermont-genevois) — Clermont · [md](https://loisirs74.fr/content/chateau-clermont-genevois.md)
 - [Château des Rubins](https://loisirs74.fr/ja/chateau-des-rubins-sallanches) — Sallanches · [md](https://loisirs74.fr/content/chateau-des-rubins-sallanches.md)
-- [Château de Montrottier](https://loisirs74.fr/ja/chateau-montrottier-lovagny) — Lovagny · [md](https://loisirs74.fr/content/chateau-montrottier-lovagny.md)
-- [Combloux](https://loisirs74.fr/ja/combloux) — Combloux · [md](https://loisirs74.fr/content/combloux.md)
 
 Source: https://loisirs74.fr/ja/que-faire/accessible-pmr-haute-savoie/

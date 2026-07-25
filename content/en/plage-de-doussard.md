@@ -16,11 +16,11 @@ google_place_id: "ChIJxYdY72eUi0cR7lAmIav5o40"
 canonical_url: https://loisirs74.fr/en/plage-de-doussard
 language: en
 facet_json: https://loisirs74.fr/api/lieu/plage-de-doussard.json
-photo_url: /img/generique/generique-plage-lac-3.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/lacs-plages/plage-de-doussard-hero.jpg
+photo_type: real
+photo_author: "B. Brassoud"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-24
 source: loisirs74.fr
 ---
