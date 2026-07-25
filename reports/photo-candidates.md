@@ -43,6 +43,7 @@ can judge fit, not to be pasted.
 | `Lac D'Annecy-Talloires.jpg` | Talloires village + port | Florival fr / Rémi Stosskopf · CC BY-SA 3.0 + GFDL | **1000×750** | below the 1600 hero cap, and it shows the village/port rather than either Talloires beach |
 | `Glaciorium 03.jpg` | Le Glaciorium, Chamonix | Rémih · CC BY-SA 4.0 | 4608×3456 | no Glaciorium fiche; it sits inside the Montenvers/Mer de Glace site and `train-du-montenvers-mer-de-glace` already has a credited hero |
 | `Musee de l'Horlogerie in Cluses (1).jpg` | Musée de l'Horlogerie, Cluses | Tournasol7 · CC BY 4.0 | 3041×4257 | not needed — the fiche already carried a correct, credited photo of the same museum (Ajakane · CC BY-SA 4.0); that one was self-hosted instead. Keep as an alternate. |
+| `Cluses l'Arve.jpg` | the Arve in the cluse at Cluses, winter | Ajakane · CC BY-SA 4.0 | — | right town, wrong subject for the only two candidate fiches. `voie-verte-arve-cluses-thyez` ("boucle familiale 5 km, PMR") and `veloroute-vallee-arve-cluses-sallanches` ("40 km, enrobé lisse, plate") both already carry topically-correct generics showing a greenway and cyclists. A wintry gorge with a road bridge and no visible path would trade subject fidelity for locality and misrepresent the outing. Would fit a Cluses town/river fiche if one is ever created. |
 
 ## Blocked — perfect subject, protected page
 
