@@ -21,6 +21,6 @@ Lac d'Annecyの中世の天守からChablaisの要塞屋敷まで、Haute-Savoie
 - [Château des Sires de Faucigny](https://loisirs74.fr/ja/chateau-sires-faucigny-bonneville) — Bonneville · [md](https://loisirs74.fr/content/chateau-sires-faucigny-bonneville.md)
 - [Maison Forte de Hautetour](https://loisirs74.fr/ja/maison-forte-hautetour-saint-gervais) — Saint-Gervais-les-Bains · [md](https://loisirs74.fr/content/maison-forte-hautetour-saint-gervais.md)
 - [Château de Menthon-Saint-Bernard](https://loisirs74.fr/ja/chateau-de-menthon-saint-bernard) — Menthon-Saint-Bernard · [md](https://loisirs74.fr/content/chateau-de-menthon-saint-bernard.md)
-- [Thermes d'Évian](https://loisirs74.fr/ja/thermes-evian) — Évian-les-Bains · [md](https://loisirs74.fr/content/thermes-evian.md)
+- [Château de Sonnaz](https://loisirs74.fr/ja/chateau-sonnaz-thonon-bains) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-sonnaz-thonon-bains.md)
 
 Source: https://loisirs74.fr/ja/que-faire/plus-beaux-chateaux-haute-savoie/

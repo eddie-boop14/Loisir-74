@@ -23,6 +23,6 @@ Genèveと対岸のスイスの間で、Lémanのフランス側の岸には中�
 - [Musée du Chablais](https://loisirs74.fr/ja/musee-du-chablais-thonon-les-bains) — Thonon-les-Bains · [md](https://loisirs74.fr/content/musee-du-chablais-thonon-les-bains.md)
 - [Palais Lumière](https://loisirs74.fr/ja/palais-lumiere) — Évian-les-Bains · [md](https://loisirs74.fr/content/palais-lumiere.md)
 - [Parcours Aventure de Sciez](https://loisirs74.fr/ja/parcours-aventure-de-sciez) — Sciez · [md](https://loisirs74.fr/content/parcours-aventure-de-sciez.md)
-- [Indiana'Ventures Saint-Paul-en-Chablais](https://loisirs74.fr/ja/indiana-ventures-saint-paul-en-chablais) — Saint-Paul-en-Chablais · [md](https://loisirs74.fr/content/indiana-ventures-saint-paul-en-chablais.md)
+- [Château de Sonnaz](https://loisirs74.fr/ja/chateau-sonnaz-thonon-bains) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-sonnaz-thonon-bains.md)
 
 Source: https://loisirs74.fr/ja/que-faire/leman-cote-francais/

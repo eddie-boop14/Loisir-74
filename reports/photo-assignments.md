@@ -10,9 +10,9 @@
 | `baignade-nautisme` | 50 | 39 | 4 |
 | `bases-de-loisirs` | 85 | 60 | 7 |
 | `cascades` | 19 | 19 | 1 |
-| `chateaux` | 26 | 22 | 4 |
+| `chateaux` | 26 | 23 | 3 |
 | `lacs-plages` | 31 | 26 | 3 |
-| `musees` | 51 | 28 | 10 |
+| `musees` | 51 | 30 | 8 |
 | `parcs-jardins` | 32 | 17 | 12 |
 | `points-de-vue` | 29 | 26 | 3 |
 | `que-faire` | 73 | 44 | 4 |
@@ -199,7 +199,7 @@
 | `chateaux` | `chateau-montrottier-lovagny` | `patrimoine` | `chateau-montrottier-lovagny-hero.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-ripaille-thonon` | `patrimoine` | `chateau-ripaille-thonon-hero.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-sires-faucigny-bonneville` | `patrimoine` | `chateau-sires-faucigny-bonneville-hero.jpg` | — | json hero (local) |
-| `chateaux` | `chateau-sonnaz-thonon-bains` | `patrimoine` | `generique-chateau.jpg` | — | json hero (local) |
+| `chateaux` | `chateau-sonnaz-thonon-bains` | `patrimoine` | `chateau-sonnaz-thonon-bains-hero.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-thenieres-ballaison` | `patrimoine` | `generique-chateau.jpg` | — | json hero (local) |
 | `chateaux` | `chateaux-des-allinges` | `patrimoine` | `Allinges_Chateau_Clocher.jpg` | — | json hero (url) |
 | `chateaux` | `eglise-baroque-saint-nicolas-combloux` | `chateau` | `generique-chateau.jpg` | — | json hero (local) |
@@ -273,7 +273,7 @@
 | `musees` | `musee-ermitage-calvaire-megeve` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
 | `musees` | `musee-faune-bellevaux` | `patrimoine` | `Museo_Ecologico_Giovanni_Zanardo_-_Diorama_cervo%2C_Sala_principale.png` | — | json hero (url) |
 | `musees` | `musee-granges-servette-chens-sur-leman` | `patrimoine` | `Grange_en_Albanais%2C_ancienne_commune_de_Chaux-Balmont_%28Haute-Savoie%29.jpg` | — | json hero (url) |
-| `musees` | `musee-horlogerie-et-decolletage-cluses` | `patrimoine` | `Mus%C3%A9e_de_l%27Horlogerie.jpg` | — | json hero (url) |
+| `musees` | `musee-horlogerie-et-decolletage-cluses` | `patrimoine` | `musee-horlogerie-et-decolletage-cluses-hero.jpg` | — | json hero (local) |
 | `musees` | `musee-montagnard-les-houches` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
 | `musees` | `musee-musique-mecanique-gets` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
 | `musees` | `musee-nature-gruffy` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
@@ -281,10 +281,10 @@
 | `musees` | `musee-paysan-un-site-paysalp-culture-patrimoine-viuz-en-sallaz` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
 | `musees` | `musee-poterie-savoyarde-filliere` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
 | `musees` | `musee-prehistoire-geologie-sciez` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
-| `musees` | `musee-resistance-morette-la-balme-de-thuy` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
+| `musees` | `musee-resistance-morette-la-balme-de-thuy` | `patrimoine` | `musee-resistance-morette-la-balme-de-thuy-hero.jpg` | — | json hero (local) |
 | `musees` | `musee-ski-ancien-chapelle-abondance` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
 | `musees` | `museum-des-papillons-et-insectes-faverges` | `patrimoine` | `generique-musee-moderne.jpg` | — | json hero (local) |
-| `musees` | `notre-histoire-musee-rumilly-rumilly` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
+| `musees` | `notre-histoire-musee-rumilly-rumilly` | `patrimoine` | `notre-histoire-musee-rumilly-rumilly-hero.jpg` | — | json hero (local) |
 | `musees` | `palais-de-l-ile-annecy` | `patrimoine` | `Palais_de_l%27%C3%8Ele_%40_Pont_Perri%C3%A8re_%40_Annecy_%2851299713197%29.jpg` | — | json hero (url) |
 | `musees` | `palais-lumiere` | `patrimoine` | `PalaisLumi%C3%A8re-DSCN1105.jpg` | — | json hero (url) |
 | `musees` | `ruines-chateau-habere-lullin-habere-lullin` | `patrimoine` | `generique-chateau-brume.jpg` | — | json hero (local) |
