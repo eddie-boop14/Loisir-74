@@ -1,0 +1,28 @@
+# Sparse Index: structured-data / claude-code
+# 26 interactions | env: 6 | svc: 2 | agent: 19 | errors: 0
+#1   agent    system      (no content)
+#2   agent    assistant   I'll fetch a place page from the site. Let me start by loading the web tools.
+#3   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 2) -> ok, 53B, 6ms
+#4   agent    system      (no content)
+#5   agent    system      (no content)
+#6   agent    assistant   (thinking)
+#7   env      tool_use    Bash(command: curl -sS -L -A "Mozilla/5.0 (X11; Linux x86_64) ...) -> ok, 319B, 301ms
+#8   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List the URLs of indiv...) -> ok, 1.2KB, 5.3s
+#9   agent    system      (no content)
+#10  agent    system      (no content)
+#11  agent    assistant   (thinking)
+#12  env      tool_use    Bash(command: grep -oE 'href="[^"]*"' home.html | sort -u | he...) -> ok, 3.0KB, 46ms
+#13  agent    system      (no content)
+#14  agent    system      (no content)
+#15  agent    assistant   (thinking)
+#16  env      tool_use    Bash(command: curl -sS -L -A "Mozilla/5.0 (X11; Linux x86_64) ...) -> ok, 355B, 559ms
+#17  env      tool_use    Bash(command: python3 - <<'EOF' import re, json h=open('fiche....) -> ok, 7.2KB, 35ms
+#18  agent    system      (no content)
+#19  agent    system      (no content)
+#20  agent    assistant   (thinking)
+#21  env      tool_use    Bash(command: grep -oE '<meta[^>]*(og:|twitter:|geo\.|ICBM|des...) -> ok, 2.8KB, 134ms
+#22  agent    system      (no content)
+#23  agent    system      (no content)
+#24  agent    assistant   (thinking)
+#25  env,servicetool_use    Bash(command: curl -sS -L -A "Mozilla/5.0" https://loisirs74.f...) -> ok, 1.4KB, 333ms
+#26  agent    assistant   Fetched: **https://loisirs74.fr/chateau-de-menthon-saint-bernard** (read-only...

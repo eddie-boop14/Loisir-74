@@ -1,0 +1,19 @@
+# Sparse Index: ai-discovery / claude-code
+# 17 interactions | env: 0 | svc: 4 | agent: 13 | errors: 0
+#1   agent    system      (no content)
+#2   agent    assistant   I'll fetch the llms.txt file first.
+#3   agent    tool_use    ToolSearch(query: select:WebFetch, max_results: 1) -> ok, 43B, 6ms
+#4   service  tool_use    WebFetch(url: https://loisirs74.fr/llms.txt, prompt: Reproduce the...) -> ok, 1.6KB, 6.5s
+#5   agent    system      (no content)
+#6   agent    system      (no content)
+#7   agent    assistant   The fetch helper balked at verbatim reproduction, so let me ask for the decla...
+#8   service  tool_use    WebFetch(url: https://loisirs74.fr/llms.txt, prompt: List every ma...) -> ok, 3.2KB, 9.2s
+#9   agent    system      (no content)
+#10  agent    system      (no content)
+#11  agent    assistant   Now let me fetch one of the declared resources.
+#12  service  tool_use    WebFetch(url: https://loisirs74.fr/api/lieux.json, prompt: How man...) -> ok, 1.4KB, 4.7s
+#13  agent    system      (no content)
+#14  agent    system      (no content)
+#15  agent    assistant   (thinking)
+#16  service  tool_use    WebFetch(url: https://loisirs74.fr/api/lieu/abbaye-d-aulps.json, p...) -> ok, 1.2KB, 3.4s
+#17  agent    assistant   Read-only fetches only — no forms or bookings. ## What `loisirs74.fr/llms.txt...

@@ -1,0 +1,30 @@
+# Sparse Index: planning / claude-code
+# 28 interactions | env: 0 | svc: 8 | agent: 20 | errors: 0
+#1   agent    system      (no content)
+#2   agent    assistant   I'll research the site to find indoor family activities near Annecy.
+#3   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 6ms
+#4   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List the main navigati...) -> ok, 1.4KB, 5.4s
+#5   agent    system      (no content)
+#6   agent    system      (no content)
+#7   agent    assistant   Good, the site has indoor venues. Let me find the individual venue pages with...
+#8   service  tool_use    WebFetch(url: https://loisirs74.fr/sport-jeux, prompt: List all ve...) -> ok, 1.3KB, 4.7s
+#9   service  tool_use    WebFetch(url: https://loisirs74.fr/musees, prompt: List all museum...) -> ok, 1.2KB, 5.3s
+#10  agent    system      (no content)
+#11  agent    system      (no content)
+#12  agent    assistant   Now let me read the individual venue pages for prices.
+#13  service  tool_use    WebFetch(url: https://loisirs74.fr/la-turbine-sciences-cran-gevrie...) -> ok, 1.3KB, 5.5s
+#14  service  tool_use    WebFetch(url: https://loisirs74.fr/trampoline-bam-freesports-annec...) -> ok, 1.3KB, 5.1s
+#15  service  tool_use    WebFetch(url: https://loisirs74.fr/patinoire-jean-regis-annecy, pr...) -> ok, 915B, 4.4s
+#16  service  tool_use    WebFetch(url: https://loisirs74.fr/musee-chateau-annecy, prompt: G...) -> ok, 1.1KB, 4.7s
+#17  agent    system      (no content)
+#18  agent    system      (no content)
+#19  agent    system      (no content)
+#20  agent    assistant   (thinking)
+#21  service  tool_use    WebFetch(url: https://loisirs74.fr/bowling-le-bowl-annecy, prompt:...) -> ok, 997B, 3.9s
+#22  agent    system      (no content)
+#23  agent    system      (no content)
+#24  agent    system      (no content)
+#25  agent    system      (no content)
+#26  agent    system      (no content)
+#27  agent    system      (no content)
+#28  agent    assistant   Researched loisirs74.fr (read-only — browsed the category listings and venue ...

@@ -1,0 +1,12 @@
+# Sparse Index: comparison / claude-code
+# 10 interactions | env: 0 | svc: 3 | agent: 7 | errors: 0
+#1   agent    system      (no content)
+#2   agent    assistant   I'll browse the site to find the beach information.
+#3   agent    tool_use    ToolSearch(query: select:WebFetch,WebSearch, max_results: 5) -> ok, 53B, 5ms
+#4   service  tool_use    WebFetch(url: https://loisirs74.fr, prompt: List all links and nav...) -> ok, 1.6KB, 5.1s
+#5   service  tool_use    WebFetch(url: https://loisirs74.fr/plage-de-saint-jorioz, prompt: ...) -> ok, 1.4KB, 4.7s
+#6   service  tool_use    WebFetch(url: https://loisirs74.fr/plage-albigny, prompt: Extract ...) -> ok, 1.3KB, 4.8s
+#7   agent    system      (no content)
+#8   agent    system      (no content)
+#9   agent    system      (no content)
+#10  agent    assistant   Compared the two largest Lac d'Annecy beaches listed on the site. ## Entry pr...
