@@ -26,10 +26,10 @@
 | published | **426** |
 | draft | 8 |
 | access-cost: free / free_seasonal / paid | 163 / 5 / 258 |
-| built HTML pages | 6042 |
-| sitemap URLs | 5998 |
+| built HTML pages | 6086 |
+| sitemap URLs | 6042 |
 | facet hubs (data/facet-hubs.json) | 8 |
-| intent pages (data/intent-registry.json) | 20 |
+| intent pages (data/intent-registry.json) | 21 |
 
 ## CI gates (32)
 
