@@ -16,11 +16,11 @@ google_place_id: "ChIJs4LsMPuPi0cR9i39x1RYSAE"
 canonical_url: https://loisirs74.fr/en/croisiere-bateaux-annecy-annecy
 language: en
 facet_json: https://loisirs74.fr/api/lieu/croisiere-bateaux-annecy-annecy.json
-photo_url: /img/generique/generique-croisiere.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/baignade-nautisme/croisiere-bateaux-annecy-annecy-hero.jpg
+photo_type: real
+photo_author: "Guilhem Vellut from Annecy, France"
+photo_license: "CC BY 2.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-24
 source: loisirs74.fr
 ---

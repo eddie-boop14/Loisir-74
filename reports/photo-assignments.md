@@ -47,7 +47,7 @@
 | `baignade-nautisme` | `centre-aquatique-sallanches-mont-blanc` | `aquatique` | `generique-aquatique-toboggan.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `centre-nautique-cite-de-l-eau-publier` | `aquatique` | `generique-aquatique-bassin-natation.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `centre-nautique-guy-chatel-ayse` | `aquatique` | `generique-aquatique-bassin-natation.jpg` | — | json hero (local) |
-| `baignade-nautisme` | `croisiere-bateaux-annecy-annecy` | `aquatique` | `generique-croisiere.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `croisiere-bateaux-annecy-annecy` | `aquatique` | `croisiere-bateaux-annecy-annecy-hero.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `croisiere-cgn-evian` | `aquatique` | `generique-port-annecy.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `croisiere-cgn-thonon` | `aquatique` | `generique-port-annecy.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `croisiere-cgn-yvoire` | `aquatique` | `croisiere-cgn-yvoire-hero.jpg` | — | json hero (local) |
@@ -65,7 +65,7 @@
 | `baignade-nautisme` | `plage-de-doussard` | `aquatique` | `generique-plage-lac-3.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `plage-de-duingt` | `aquatique` | `generique-plage-lac-1.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `plage-de-menthon-saint-bernard` | `aquatique` | `Plage_municipale_de_Menthon-Saint-Bernard.jpg` | — | json hero (url) |
-| `baignade-nautisme` | `plage-de-messery` | `aquatique` | `generique-plage-lac-7.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `plage-de-messery` | `aquatique` | `plage-de-messery-hero.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `plage-de-saint-disdille` | `aquatique` | `Plage_thonon.jpg` | — | json hero (url) |
 | `baignade-nautisme` | `plage-de-saint-jorioz` | `aquatique` | `plage-de-saint-jorioz-hero.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `plage-de-sciez-sur-leman` | `aquatique` | `Sciez-regate.jpg` | — | json hero (url) |
@@ -227,7 +227,7 @@
 | `lacs-plages` | `plage-de-la-pinede` | `aquatique` | `Thonon-les-Bains._Promenade_du_L%C3%A9man._2015-06-21.jpg` | — | json hero (url) |
 | `lacs-plages` | `plage-de-margencel-sechex` | `aquatique` | `generique-plage-lac-13.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-menthon-saint-bernard` | `aquatique` | `Plage_municipale_de_Menthon-Saint-Bernard.jpg` | — | json hero (url) |
-| `lacs-plages` | `plage-de-messery` | `aquatique` | `generique-plage-lac-7.jpg` | — | json hero (local) |
+| `lacs-plages` | `plage-de-messery` | `aquatique` | `plage-de-messery-hero.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-saint-disdille` | `aquatique` | `Plage_thonon.jpg` | — | json hero (url) |
 | `lacs-plages` | `plage-de-saint-gingolph` | `aquatique` | `generique-plage-lac-4.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-saint-jorioz` | `aquatique` | `plage-de-saint-jorioz-hero.jpg` | — | json hero (local) |

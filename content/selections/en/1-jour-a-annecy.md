@@ -10,6 +10,7 @@
 - [Plage d'Albigny](https://loisirs74.fr/ja/plage-albigny) — Annecy · [md](https://loisirs74.fr/content/plage-albigny.md)
 - [Plage des Marquisats](https://loisirs74.fr/ja/plage-des-marquisats) — Annecy · [md](https://loisirs74.fr/content/plage-des-marquisats.md)
 - [Casino Impérial Palace Annecy](https://loisirs74.fr/ja/casino-imperial-palace-annecy) — Annecy · [md](https://loisirs74.fr/content/casino-imperial-palace-annecy.md)
+- [Compagnie des Bateaux du Lac d'Annecy](https://loisirs74.fr/ja/croisiere-bateaux-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/croisiere-bateaux-annecy-annecy.md)
 - [Musée-Château d'Annecy](https://loisirs74.fr/ja/musee-chateau-annecy) — Annecy · [md](https://loisirs74.fr/content/musee-chateau-annecy.md)
 - [Musée du cinéma d'animation](https://loisirs74.fr/ja/musee-cinema-animation-annecy) — Annecy · [md](https://loisirs74.fr/content/musee-cinema-animation-annecy.md)
 - [Palais de l'Île](https://loisirs74.fr/ja/palais-de-l-ile-annecy) — Annecy · [md](https://loisirs74.fr/content/palais-de-l-ile-annecy.md)
@@ -19,7 +20,6 @@
 - [Voie verte du Lac d'Annecy](https://loisirs74.fr/ja/voie-verte-lac-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/voie-verte-lac-annecy-annecy.md)
 - [Base nautique des Marquisats](https://loisirs74.fr/ja/base-nautique-marquisats-annecy) — Annecy · [md](https://loisirs74.fr/content/base-nautique-marquisats-annecy.md)
 - [Le Bowl Bowling Annecy](https://loisirs74.fr/ja/bowling-le-bowl-annecy) — Annecy · [md](https://loisirs74.fr/content/bowling-le-bowl-annecy.md)
-- [Compagnie des Bateaux du Lac d'Annecy](https://loisirs74.fr/ja/croisiere-bateaux-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/croisiere-bateaux-annecy-annecy.md)
 - [Team Bouvier 74 Pringy](https://loisirs74.fr/ja/karting-team-bouvier-pringy) — Annecy · [md](https://loisirs74.fr/content/karting-team-bouvier-pringy.md)
 - [Patinoire Jean Régis](https://loisirs74.fr/ja/patinoire-jean-regis-annecy) — Annecy · [md](https://loisirs74.fr/content/patinoire-jean-regis-annecy.md)
 

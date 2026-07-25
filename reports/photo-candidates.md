@@ -40,6 +40,21 @@ can judge fit, not to be pasted.
 | `Mont Lachat de Thônes @ Plateau de Beauregard (50882607646).jpg` | Mont Lachat / Plateau de Beauregard | Guilhem Vellut · CC BY 2.0 | 5472×3648 | no Beauregard fiche — the stale `plateau-de-beauregard` page was removed in JOB 4 |
 | `La Clusaz Ski Center (FRA) 2020.jpg` | **Tête du Danay @ Espace Nordique des Confins** — the filename is misleading | Guilhem Vellut · CC BY 2.0 | 4240×2539 | `lac-des-confins` already has a credited hero by the same author |
 | `Village @ La Clusaz (15184295068).jpg` | La Clusaz village | Guilhem Vellut · CC BY 2.0 | 2976×3968 | `la-clusaz` station fiche already has a credited hero |
+| `Lac D'Annecy-Talloires.jpg` | Talloires village + port | Florival fr / Rémi Stosskopf · CC BY-SA 3.0 + GFDL | **1000×750** | below the 1600 hero cap, and it shows the village/port rather than either Talloires beach |
+
+## Blocked — perfect subject, protected page
+
+These two are **exact-subject beach photos** for fiches that currently show a
+generic placeholder. `localize_heroes.py` refuses them by design: both fiches
+carry the `cheznousalaplage.com` partner block, so their bytes are frozen and
+hashed by `gate_protected_placements`. Changing a hero there is a commercial
+decision, not a maintenance one — it needs the Edmaster's explicit word plus a
+manifest refresh in the same commit.
+
+| file | fiche | author · licence | size |
+|---|---|---|---|
+| `Plage publique de Sevrier.jpg` | `plage-de-sevrier` (on `generique-plage-lac-15.jpg`) | Chrbenoit · CC BY-SA 3.0 | 3000×4000 |
+| `Plage de Doussard-1 (2017).jpg` | `plage-de-doussard` (on `generique-plage-lac-3.jpg`) | Benoît Brassoud · CC BY-SA 4.0 | 4272×2848 |
 
 ## Rejected — do not use
 
