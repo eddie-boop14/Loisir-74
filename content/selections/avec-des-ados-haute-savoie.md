@@ -4,6 +4,7 @@ Passé douze ans, la balade familiale ne suffit plus : via ferrata, rafting, tyr
 
 > Sélection compilée : catégories et activités sensations identifiées sur nos fiches (via ferrata, canyoning, rafting, tyrolienne, karting, accrobranche…). Photos réelles priorisées. Mise à jour automatique.
 
+- [Via ferrata Yves Pollet-Villard](https://loisirs74.fr/via-ferrata-pollet-villard-la-clusaz) — La Clusaz · [md](https://loisirs74.fr/content/via-ferrata-pollet-villard-la-clusaz.md)
 - [Forêt d'Aventures de Manigod](https://loisirs74.fr/accrobranche-foret-aventures-manigod) — Manigod · [md](https://loisirs74.fr/content/accrobranche-foret-aventures-manigod.md)
 - [Bowling de l'Aérodrome](https://loisirs74.fr/bowling-aerodrome-annemasse) — Annemasse · [md](https://loisirs74.fr/content/bowling-aerodrome-annemasse.md)
 - [Le Bowl Bowling Annecy](https://loisirs74.fr/bowling-le-bowl-annecy) — Annecy · [md](https://loisirs74.fr/content/bowling-le-bowl-annecy.md)
@@ -21,6 +22,5 @@ Passé douze ans, la balade familiale ne suffit plus : via ferrata, rafting, tyr
 - [TNA Cable Park](https://loisirs74.fr/wakepark-tna-cable-park-arenthon) — Arenthon · [md](https://loisirs74.fr/content/wakepark-tna-cable-park-arenthon.md)
 - [Patinoire de La Clusaz](https://loisirs74.fr/patinoire-la-clusaz) — La Clusaz · [md](https://loisirs74.fr/content/patinoire-la-clusaz.md)
 - [Patinoire de Morzine](https://loisirs74.fr/patinoire-morzine) — Morzine · [md](https://loisirs74.fr/content/patinoire-morzine.md)
-- [Grotte de Balme — Magland](https://loisirs74.fr/speleo-grotte-de-balme-magland) — Magland · [md](https://loisirs74.fr/content/speleo-grotte-de-balme-magland.md)
 
 Source: https://loisirs74.fr/que-faire/avec-des-ados-haute-savoie/
