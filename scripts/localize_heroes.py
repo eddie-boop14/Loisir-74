@@ -204,7 +204,10 @@ def resolve_commons_credit(filename, timeout=25):
 
 
 # --- classification into action buckets ------------------------------------
-def classify(fiches):
+def classify(fiches, only=None):
+    """only: optional set of slugs to consider. Narrows the WORK, never the
+    safety checks — `shared` is still computed over every fiche, so a hero
+    shared with a fiche outside the filter is still detected and skipped."""
     shared = shared_hero_urls(fiches)
     allow = load_shared_allow()
     buckets = {"localize": [], "protected": [], "shared": [], "unmapped": []}
@@ -212,6 +215,8 @@ def classify(fiches):
         if not is_hotlinked(d):
             continue
         slug = d["slug"]
+        if only is not None and slug not in only:
+            continue
         url = d["hero_image"]
         rec = {"slug": slug, "fp": fp, "url": url, "d": d,
                "credit_now": (d.get("hero_credit") or "").strip(),
@@ -229,9 +234,9 @@ def classify(fiches):
 
 
 # --- reporting --------------------------------------------------------------
-def run_report(resolve=True):
+def run_report(resolve=True, only=None):
     fiches = load_fiches()
-    buckets, shared = classify(fiches)
+    buckets, shared = classify(fiches, only)
     n = sum(len(v) for v in buckets.values())
     print("=" * 78)
     print(f"localize_heroes --report · {n} hotlinked hero(es) across {len(fiches)} fiches")
@@ -317,9 +322,9 @@ def _fetch(url, timeout=40):
         return r.read()
 
 
-def run_apply():
+def run_apply(only=None):
     fiches = load_fiches()
-    buckets, _shared = classify(fiches)
+    buckets, _shared = classify(fiches, only)
     loc = buckets["localize"]
     print(f"localize_heroes --apply · {len(loc)} localisation target(s)")
 
@@ -386,11 +391,15 @@ def main():
     g.add_argument("--report", action="store_true", help="(default) resolve + tabulate, write nothing")
     g.add_argument("--apply", action="store_true", help="download, self-host, rewrite JSON")
     ap.add_argument("--no-resolve", action="store_true", help="report without Commons API calls (offline)")
+    ap.add_argument("--only", metavar="SLUG[,SLUG...]",
+                    help="restrict to these fiche slugs (the shared/wrong-subject "
+                         "detector still runs against the whole corpus)")
     args = ap.parse_args()
+    only = {x.strip() for x in args.only.split(',') if x.strip()} if args.only else None
 
     if args.apply:
-        return run_apply()
-    run_report(resolve=not args.no_resolve)
+        return run_apply(only)
+    run_report(resolve=not args.no_resolve, only=only)
     return 0
 
 
