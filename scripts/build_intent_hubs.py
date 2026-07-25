@@ -609,6 +609,31 @@ def _season_open(f, month):
     return month in _season_months_text(str(bs))
 
 
+def _hours_text(f):
+    for e in ((f.get("i18n", {}).get("fr") or {}).get("practical_info") or []):
+        if _deaccent(e.get("k") or "").startswith("horaire") and e.get("v"):
+            return str(e["v"])
+    return None
+
+
+_SUN_CLOSED = _re.compile(r"ferme\w*\s+(?:le\s+|les\s+)?dimanche")
+_SUN_OPEN = _re.compile(r"7j/7|tous les jours|du lundi au dimanche|dimanche")
+
+
+def _sunday_open(f):
+    """Honest Sunday predicate: the fiche's own FR hours text must POSITIVELY
+    cover Sunday (7j/7, tous les jours, or a non-negated 'dimanche' mention).
+    Day-silent hours and explicit Sunday closures are excluded — no claim
+    without the fiche saying so. Deterministic."""
+    h = _hours_text(f)
+    if not h:
+        return False
+    t = _deaccent(h)
+    if _SUN_CLOSED.search(t):
+        return False
+    return bool(_SUN_OPEN.search(t))
+
+
 def selector_match(f, sel, sets):
     """Deterministic membership predicate — THE page definition."""
     if f.get("status") != "published":
@@ -637,6 +662,8 @@ def selector_match(f, sel, sets):
         if h is None or h > sel["duration_max_h"]:
             return False
     if sel.get("season_open_month") is not None and not _season_open(f, sel["season_open_month"]):
+        return False
+    if sel.get("sunday_open") and not _sunday_open(f):
         return False
     return True
 
