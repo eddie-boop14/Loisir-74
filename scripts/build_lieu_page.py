@@ -1762,8 +1762,6 @@ def build_ldjson(d, desc_override=""):
     is_free = sch.get("is_free", False)
     place_type = sch.get("type") or "TouristAttraction"
     amenities = L("schema_amenities", None) or sch.get("amenities") or []
-    price = d.get("price_from")
-    booking_url = d.get("booking_url") or d.get("official_site_url") or ""
     faq = L("faq", []) or []
     in_lang = CHROME["in_lang"][_LANG]
     lang_prefix = f"/{_LANG}" if _LANG != "fr" else ""
@@ -1826,13 +1824,12 @@ def build_ldjson(d, desc_override=""):
             {"@type": "LocationFeatureSpecification", "name": str(a), "value": True}
             for a in amenities
         ]
-    if not is_free and price is not None and price > 0:
-        place["offers"] = {
-            "@type": "Offer",
-            "price": price,
-            "priceCurrency": d.get("price_currency", "EUR"),
-            "url": booking_url or page_url,
-        }
+    # NO `offers` here (JOB 5). `offers` is not a schema.org property of Place —
+    # it belongs to Product/Service/Event. Nesting an Offer inside a Place node
+    # made Google reclassify these fiches into its product-snippets system, which
+    # is what surfaced as the "Extraits de produits" report in Search Console.
+    # The price stays where it belongs: visible in the facts table and the FAQ,
+    # with isAccessibleForFree as the machine-readable cost signal.
     graph.append(place)
 
     if faq:
