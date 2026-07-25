@@ -16,7 +16,7 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/en/musee-horlogerie-et-decolletage-cluses
 language: en
 facet_json: https://loisirs74.fr/api/lieu/musee-horlogerie-et-decolletage-cluses.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/5/5b/Mus%C3%A9e_de_l%27Horlogerie.jpg
+photo_url: /img/musees/musee-horlogerie-et-decolletage-cluses-hero.jpg
 photo_type: real
 photo_author: "Ajakane"
 photo_license: "CC BY-SA 4.0"

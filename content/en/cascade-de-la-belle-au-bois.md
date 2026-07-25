@@ -61,6 +61,10 @@ Free (town centre car parks, Place de la Résistance or ice rink)
 ## Season
 
 June – October (closed November – March)
+- Winter access window: Not specified
+- Winter infrastructure: Not specified
+- Snow panorama: Not specified
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

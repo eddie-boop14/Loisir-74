@@ -40,7 +40,7 @@ Open year-round with free access. Supervised July–August (10am–7pm).
 
 ## Prices
 
-Free
+€4.60 (adult) · €2.50 (child under 16)
 
 ## Access (PMR)
 

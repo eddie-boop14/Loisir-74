@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Thonon-les-Bains, Haute-Savoie (74200)
 - GPS: 46.367, 6.473
 - Category: chateau
-- Type: Tour médiévale, fortification urbaine
+- Type: Medieval tower, urban fortification
 
 ## Hours
 
-ACCÈS LIBRE 24h/24, 7j/7, toute l'année à la Tour des Langues aux abords extérieurs uniquement. PAS D'ACCÈS INTÉRIEUR PUBLIC. Port de Rives accessible en permanence, animation maximale juin-septembre. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+FREE ACCESS 24/7, all year, at the Tour des Langues, exterior grounds only. NO PUBLIC INTERIOR ACCESS. Port de Rives accessible at all times, busiest June-September. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Port de Rives (payant haute saison)
+Port de Rives (paid in high season)
 
 ## Transport
 
@@ -59,7 +59,7 @@ Port de Rives (payant haute saison)
 
 ## Season
 
-Toute l'année · Été pour port animé
+All year · Summer for a lively port
 
 ## Official source
 

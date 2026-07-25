@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Clermont, Haute-Savoie (74270)
 - GPS: 46.018, 5.944
 - Category: chateau
-- Type: Château Renaissance italienne, propriété départementale
+- Type: Italian Renaissance castle, departmental property
 
 ## Hours
 
-SAISON CULTURELLE 2026 : 4 AVRIL AU 1er NOVEMBRE. Week-ends + vacances scolaires hors été (avril-juin, sept-nov). Mardi-dimanche en juillet-août. Fermé le lundi (sauf JEP). 10h-12h et 14h-18h. FERMÉ DU 2 NOVEMBRE AU 3 AVRIL pour saison hivernale. Fermetures exceptionnelles canicule (arrêté préfectoral). Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+2026 CULTURAL SEASON: 4 APRIL TO 1 NOVEMBER. Weekends + school holidays outside summer (April-June, Sept-Nov). Tuesday-Sunday in July-August. Closed Mondays (except Heritage Days). 10am-12pm and 2pm-6pm. CLOSED FROM 2 NOVEMBER TO 3 APRIL for winter season. Exceptional closures during heatwaves (prefectural order). Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -53,7 +53,7 @@ SAISON CULTURELLE 2026 : 4 AVRIL AU 1er NOVEMBRE. Week-ends + vacances scolaires
 
 ## Parking
 
-Gratuit à proximité du château
+Free near the castle
 
 ## Transport
 
@@ -63,7 +63,7 @@ Gratuit à proximité du château
 
 ## Season
 
-4 avril - 1er novembre 2026
+4 April - 1 November 2026
 
 ## Official source
 

@@ -18,9 +18,9 @@ language: fr
 facet_json: https://loisirs74.fr/api/lieu/telepherique-du-brevent.json
 photo_url: https://upload.wikimedia.org/wikipedia/commons/2/2a/Brevent_cable_car.jpg
 photo_type: real
-photo_author: null
-photo_license: null
-photo_source: null
+photo_author: "Victoria Lunyak"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-09
 source: loisirs74.fr
 ---
@@ -66,6 +66,10 @@ Parking Les Pélerins (payant, entrée de Chamonix)
 ## Saison
 
 Juillet – mi-septembre (été) · Décembre – avril (ski)
+- Fenêtre d'accès hiver: Non renseigné
+- Infrastructure hiver: Non renseigné
+- Panorama enneigé: Non renseigné
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

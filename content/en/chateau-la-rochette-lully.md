@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Lully, Haute-Savoie (74890)
 - GPS: 46.292, 6.422
 - Category: chateau
-- Type: Château fort XIIIe, ruines en propriété privée
+- Type: 13th-century hill fort, ruins on private property
 
 ## Hours
 
-EXTÉRIEURS LIBRES 24h/24, 7j/7, toute l'année au Château de la Rochette. PROPRIÉTÉ PRIVÉE - accès aux abords seulement (route et chemin communaux). Pas d'accès intérieur. Visite des vestiges depuis l'extérieur uniquement. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+EXTERIOR GROUNDS OPEN 24/7, year-round at Château de la Rochette. PRIVATE PROPERTY - access to the surroundings only (communal road and path). No interior access. The remains can be viewed from outside only. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Impasse du Château (capacité réduite)
+Impasse du Château (limited capacity)
 
 ## Transport
 
@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Toute l'année
+Year-round
 
 ## Official source
 

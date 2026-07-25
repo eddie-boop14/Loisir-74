@@ -81,9 +81,17 @@ def _vocab_facts(d, lang):
         words = re.findall(r"[A-Za-zÀ-ÿ]+", dur)
         if all(w.lower() in {"h", "min", "mn", "a", "r", "km"} for w in words):
             out["duration"] = dur
+    # A genuine per-language tarif SENTENCE (not FR) may exist — e.g. the
+    # station forfait prose written in this exact language. That is a real
+    # translation, not an FR scaffold, so it passes the language-clean bar and
+    # is preferred over the bare price_from number (Eddie's phone test: the
+    # Arabic page must show the Arabic tarif sentence, not just "44 €").
+    loc_tarif = ((d.get("i18n") or {}).get(lang) or {}).get("facts", {}).get("tarif")
     price_from = d.get("price_from")
     cur = {"EUR": "€"}.get(d.get("price_currency"), d.get("price_currency") or "")
-    if isinstance(price_from, (int, float)) and price_from > 0:
+    if isinstance(loc_tarif, str) and loc_tarif.strip():
+        out["tarif"] = loc_tarif
+    elif isinstance(price_from, (int, float)) and price_from > 0:
         out["tarif"] = f"{price_from:.2f}".replace(".", ",") + " " + cur
     elif so.get("is_free") is True:
         out["tarif"] = V("fact_values", "gratuit", lang)

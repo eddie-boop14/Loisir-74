@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Chamonix-Mont-Blanc, Haute-Savoie (74400)
 - GPS: 45.923, 6.8695
 - Category: musee
-- Type: Centre du patrimoine et archives, réseau CCVCMB
+- Type: Heritage and archive centre, CCVCMB network
 
 ## Hours
 
-FERMÉ DU 9 MARS AU 30 JUIN 2026 entre expositions. Réouverture été 2026 (date exacte à confirmer). Horaires habituels saison : Jeudi-Dimanche 14h-18h hors vacances ; Mardi-Dimanche 10h-13h et 14h-18h en juillet-août. Fermé Lundi, 1er janv, 1er mai, 25 déc. Vérifié sur le site officiel le 23 mai 2026 — sous réserve de modifications saisonnières.
+CLOSED FROM 9 MARCH TO 30 JUNE 2026 between exhibitions. Reopens summer 2026 (exact date to be confirmed). Usual season hours: Thursday-Sunday 2pm-6pm outside holidays; Tuesday-Sunday 10am-1pm and 2pm-6pm in July-August. Closed Monday, 1 January, 1 May, 25 December. Verified on the official website on 23 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -54,7 +54,7 @@ FERMÉ DU 9 MARS AU 30 JUIN 2026 entre expositions. Réouverture été 2026 (dat
 
 ## Parking
 
-Parking Mont-Blanc et Saint-Michel payants à proximité
+Paid Mont-Blanc and Saint-Michel car parks nearby
 
 ## Transport
 
@@ -65,7 +65,7 @@ Parking Mont-Blanc et Saint-Michel payants à proximité
 
 ## Season
 
-Réouverture été 2026 (centenaire JO 1924)
+Reopens summer 2026 (1924 Olympics centenary)
 
 ## Official source
 

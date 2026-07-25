@@ -49,6 +49,11 @@
 /scripts/*
   Cache-Control: public, max-age=31536000, immutable
 
+# RFC 9116 security.txt — plain text, refreshed daily by the build
+/.well-known/security.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400
+
 # AI policy headers for all pages
 /*
   X-AI-Policy: citation-allowed, training-restricted

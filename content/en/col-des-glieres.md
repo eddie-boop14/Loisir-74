@@ -57,6 +57,10 @@ Not specified
 ## Season
 
 May–October (summer) · December–March (cross-country skiing)
+- Winter access window: Open (cleared road) — Live status: inforoute74.fr
+- Winter infrastructure: Snowshoeing · Nordic skiing · Cross-country skiing
+- Snow panorama: Alpine panorama
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar) · chains advised for col access
 
 ## Official source
 

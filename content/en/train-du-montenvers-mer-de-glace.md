@@ -16,11 +16,11 @@ google_place_id: "ChIJk8jOuihMiUcRMjQj3Kkyl5Q"
 canonical_url: https://loisirs74.fr/en/train-du-montenvers-mer-de-glace
 language: en
 facet_json: https://loisirs74.fr/api/lieu/train-du-montenvers-mer-de-glace.json
-photo_url: /img/generique/generique-point-de-vue.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/points-de-vue/train-du-montenvers-mer-de-glace-hero.jpg
+photo_type: real
+photo_author: "Tiia Monto"
+photo_license: "CC BY-SA 3.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-21
 source: loisirs74.fr
 ---
@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-23/05–03/07/2026 tous les jours 8h30–17h00 (télécabine fermée jusqu'au 29/05, grotte fermée jusqu'au 5/06) · 04/07–30/08 tous les jours 8h00–17h30 · 31/08–13/09 8h30–17h00 · 14/09–01/11 8h30–16h30 (télécabine fermée 28/09–16/10, grotte fermée 28/09–01/11). Hiver 22/11/2025–13/03/2026 tous les jours 10h00–16h30. Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications saisonnières.
+23/05–03/07/2026 daily 8:30am–5:00pm (cable car closed until 29/05, cave closed until 5/06) · 04/07–30/08 daily 8:00am–5:30pm · 31/08–13/09 8:30am–5:00pm · 14/09–01/11 8:30am–4:30pm (cable car closed 28/09–16/10, cave closed 28/09–01/11). Winter 22/11/2025–13/03/2026 daily 10:00am–4:30pm. Checked on the official website on 21 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -71,6 +71,10 @@ Payant (Mont-Blanc/Planards) ou gratuit (Biolay)
 ## Season
 
 Juin – septembre (visites complètes) · décembre – mars (ambiance hivernale)
+- Winter access window: Open (cleared road)
+- Winter infrastructure: Not specified
+- Snow panorama: Alpine panorama
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

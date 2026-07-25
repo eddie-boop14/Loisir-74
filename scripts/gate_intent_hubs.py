@@ -87,5 +87,74 @@ def main():
     print("✓ registry-driven; ≥3 members each; all locales render; schema valid")
 
 
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# HANDOFF-intentpages — compiled-page rules (§6)
+#   1. every member slug exists + published; zero orphan cards
+#   2. superlative title (meilleur/best/top/…) ⇒ criteria_note rendered
+#   3. determinism: rendered ItemList == selector output (no hand-inserted lieu)
+#   4. min_items ≥ 6 or the page must NOT exist
+#   5. protected placements untouched — proven by gate_protected_placements,
+#      not re-checked here (single authority)
+# ═══════════════════════════════════════════════════════════════════════════
+SUPERLATIVE = re.compile(r"meilleur|plus (belle|beau|beaux|belles)|\bbest\b|\btop\b|beste|migliori|mejores", re.I)
+
+
+def check_intent_pages(viol):
+    import build_intent_hubs as B
+    membership, fiches = B.compute_membership()
+    for e in membership.values():
+        built_langs = [l for l in e["title"] if e["lead"].get(l) and e["criteria_note"].get(l)]
+        for lang in built_langs:
+            sub = e["sub"].get(lang) or e["sub"]["fr"]
+            pfx = B._qf_prefix(lang)
+            p = os.path.join(ROOT, pfx, sub, "index.html") if lang == "fr" \
+                else os.path.join(ROOT, lang, pfx, sub, "index.html")
+            if len(e["members"]) < 6:                                   # rule 4
+                if os.path.exists(p):
+                    viol.append(f"{e['id']}/{lang}: <6 members but page exists")
+                continue
+            if not os.path.exists(p):
+                viol.append(f"{e['id']}/{lang}: page missing"); continue
+            html = open(p, encoding="utf-8").read()
+            for s in e["members"]:                                      # rule 1
+                f = fiches.get(s)
+                if not f or f.get("status") != "published":
+                    viol.append(f"{e['id']}: member {s} missing/unpublished")
+            if SUPERLATIVE.search(e["title"][lang]):                    # rule 2
+                import html as _h
+                note = e["criteria_note"][lang]
+                # the builder emits esc(note) == html.escape(note, quote=True)
+                if _h.escape(note, quote=True) not in html and note not in html:
+                    viol.append(f"{e['id']}/{lang}: superlative title without rendered criteria_note")
+            m = re.search(r'"itemListElement":\s*(\[.*?\])', html, re.S)  # rule 3
+            if m:
+                try:
+                    urls = [it["url"] for it in json.loads(m.group(1))]
+                    want = [B.url_for(s, lang) + "/" for s in e["members"]]
+                    if urls != want:
+                        viol.append(f"{e['id']}/{lang}: ItemList != selector output (determinism)")
+                except Exception:
+                    viol.append(f"{e['id']}/{lang}: ItemList unparsable")
+            else:
+                viol.append(f"{e['id']}/{lang}: no ItemList")
+
+
+_orig_main = main
+
+
+def main():
+    viol = []
+    check_intent_pages(viol)
+    if viol:
+        print(f"::error::{len(viol)} intent-PAGE violation(s):")
+        for v in viol:
+            print(f"    ✗ {v}")
+        sys.exit(1)
+    print("✓ intent pages: members published, criteria law, determinism, min_items")
+    _orig_main()
+
+
 if __name__ == "__main__":
     main()

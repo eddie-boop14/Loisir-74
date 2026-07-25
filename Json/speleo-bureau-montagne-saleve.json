@@ -147,6 +147,11 @@
       "date": "2026-06-15",
       "by": "scripts/pick_generique.py",
       "note": "hero_image → generique-attraction.jpg (category='attraction' · unmatched-attraction → flagged for Part 2)."
+    },
+    {
+      "date": "2026-07-17",
+      "by": "family_ok derivation",
+      "note": "facts.family_ok=false — hard-false: sensations pattern (via ferrata/canyoning/…) (rapport revu par Eddie avant apply)."
     }
   ],
   "i18n": {
@@ -169,7 +174,8 @@
         "tarif": "~40-60 € / personne pour une demi-journée",
         "commune": "Présilly / Salève",
         "duration": "~2 à 4 h",
-        "best_season": "Avril à novembre"
+        "best_season": "Avril à novembre",
+        "family_ok": false
       },
       "body": {
         "what_is": "<p><strong>Le Bureau de la Montagne du Salève</strong> propose des sorties d'initiation à la <strong>spéléologie</strong> dans les grottes et avens du massif du <strong>Salève</strong>, juste au sud-ouest de Genève. Encadrées par des moniteurs diplômés d'État, ces sorties permettent de découvrir un monde souterrain méconnu : galeries calcaires, concrétions, rivières souterraines et une faune cavernicole discrète. Le matériel est fourni (combinaison, casque avec éclairage, baudrier, chaussures éventuellement), et chaque sortie est calibrée selon le niveau du public — famille, adolescents, adultes — et la difficulté du réseau visité.</p><p><strong>Pour qui et pour quoi ?</strong> L'activité s'adresse aussi bien aux familles avec enfants (à partir d'environ 8-10 ans selon la cavité), qu'aux groupes d'amis, EVG/EVJF, scolaires ou entreprises en team-building. Aucune expérience préalable n'est nécessaire pour les sorties découverte. Les sorties durent de 2 à 4 heures selon la formule, avec une marche d'approche, le briefing sécurité, la progression souterraine (ramping, désescalades, parfois petits puits sur corde) et le retour. Pour les plus aguerris, le bureau propose aussi des sorties techniques d'initiation à la descente sur corde.</p><p><strong>Pratique, réservation et accès.</strong> La réservation se fait directement auprès du Bureau de la Montagne par téléphone ou via leur site web. Les sorties ont lieu d'avril à novembre principalement — les conditions hydrologiques influencent le choix des cavités. Les tarifs varient autour de 40-60 € par personne pour une demi-journée, dégressifs en groupe. Il faut prévoir des vêtements qu'on accepte de salir/abîmer sous la combinaison, des chaussures fermées, eau et collation. Le point de rendez-vous est généralement fixé dans le secteur du Salève (Cruseilles, Présilly ou la Croisette).</p>"
@@ -1458,72 +1464,509 @@
         "bike": "Możliwe rowerem dla sportów, ale górskie drogi. Zielona droga Salève jest ograniczona - preferowana jest jazda samochodem."
       },
       "when_to_visit": "Głównie od kwietnia do listopada. Sprawdź warunki wody - niektóre jaskinie są przejezdne w zimie.",
-      "events": "Sezonowe wypady specjalne, weekendowe kursy wprowadzające, wycieczki szkolne przez rezerwację. Okazjonalnie tematyczne wyjazdy nocne."
+      "events": "Sezonowe wypady specjalne, weekendowe kursy wprowadzające, wycieczki szkolne przez rezerwację. Okazjonalnie tematyczne wyjazdy nocne.",
+      "meta_title": "Speleologia na Salève — Bureau de la Montagne | Loisirs 74",
+      "body": {
+        "what_is": "<p><strong>Bureau de la Montagne du Salève — Spéléologie</strong> oferuje <strong>speleologiczne</strong> wyprawy zapoznawcze do jaskiń i szybów masywu <strong>Salève</strong>, położonego tuż na południowy zachód od Genewy. Prowadzone przez wykwalifikowanych przewodników górskich, te wycieczki odsłaniają mało znany podziemny świat: wapienne galerie, nacieki, podziemne rzeki i skrytą faunę jaskiniową. Cały sprzęt jest zapewniony (kombinezon, kask z oświetleniem, uprząż, czasem buty), a każda wyprawa jest dostosowana do grupy — rodzin, nastolatków, dorosłych — oraz trudności odwiedzanej jaskini.</p><p><strong>Dla kogo?</strong> Aktywność jest odpowiednia dla rodzin z dziećmi (od około 8-10 lat, w zależności od jaskini), grup przyjaciół, wieczorów kawalerskich i panieńskich, grup szkolnych lub integracji firmowej. Do wycieczek zapoznawczych nie jest potrzebne żadne wcześniejsze doświadczenie. Wyprawy trwają od 2 do 4 godzin, wliczając dojście, odprawę bezpieczeństwa, poruszanie się pod ziemią (czołganie, łatwe zejścia, czasem krótkie zjazdy na linie) i powrót. Dla doświadczonych speleologów biuro oferuje również wprowadzenie do speleologii pionowej na linie.</p><p><strong>Rezerwacja i dojazd.</strong> Rezerwacji dokonuje się bezpośrednio w Bureau de la Montagne telefonicznie lub przez ich stronę internetową. Wycieczki odbywają się głównie od kwietnia do listopada — poziom wody decyduje o dostępności poszczególnych jaskiń. Ceny wynoszą około €40-60 za osobę za pół dnia, z zniżkami dla grup. Pod kombinezon załóż ubrania, które możesz pobrudzić, zamknięte buty i zabierz wodę oraz przekąskę. Miejsca spotkań znajdują się zazwyczaj w okolicach Salève (Cruseilles, Présilly lub La Croisette).</p>"
+      },
+      "practical_info": [
+        {
+          "k": "Adres",
+          "v": "Miejsce spotkania w okolicach Salève (Cruseilles, Présilly, La Croisette) — potwierdzane przy rezerwacji"
+        },
+        {
+          "k": "Współrzędne GPS",
+          "v": "~46.081° N · ~6.089° E (okolice Salève)"
+        },
+        {
+          "k": "Telefon",
+          "v": "Bezpośredni numer na stronie bureaudesguidesdusaleve.com"
+        },
+        {
+          "k": "Oficjalna strona internetowa",
+          "v": "https://www.bureaudesguidesdusaleve.com/",
+          "verified": "2026-06-07"
+        },
+        {
+          "k": "Godziny otwarcia",
+          "v": "Wycieczki wyłącznie po wcześniejszej rezerwacji, rano lub po południu. Głównie od kwietnia do listopada."
+        },
+        {
+          "k": "Ceny",
+          "v": "Około €40-60 za osobę za pół dnia, w zależności od pakietu. Stawki grupowe i rodzinne na zapytanie."
+        },
+        {
+          "k": "Rezerwacja",
+          "v": "Obowiązkowa, telefonicznie lub przez stronę internetową Bureau de la Montagne du Salève."
+        },
+        {
+          "k": "Czas trwania",
+          "v": "~2 do 4 godz. w zależności od formatu (dojście, odprawa, część podziemna, powrót)"
+        },
+        {
+          "k": "Parking",
+          "v": "Parking przy miejscu spotkania (przy drodze lub na parkingu przy szlaku)."
+        },
+        {
+          "k": "Dostępność",
+          "v": "Aktywność fizyczna wymagająca sprawności — nieodpowiednia dla osób z ograniczoną mobilnością."
+        },
+        {
+          "k": "Dla kogo",
+          "v": "Od około 8-10 lat, w zależności od jaskini. Rodziny, nastolatki, dorośli, grupy, wieczory kawalerskie/panieńskie, seminaria."
+        },
+        {
+          "k": "Języki",
+          "v": "Francuski; angielski w zależności od instruktora."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Czy potrzebuję doświadczenia, aby wybrać się na speleologię na Salève?",
+          "a": "Nie, wycieczki zapoznawcze nie wymagają żadnego wcześniejszego doświadczenia. Instruktor wszystko wyjaśnia, zapewnia sprzęt i dostosowuje tempo do grupy. W przypadku wycieczek technicznych może być wymagany określony poziom umiejętności."
+        },
+        {
+          "q": "Od jakiego wieku mogą uczestniczyć dzieci?",
+          "a": "W zależności od jaskini, od około 8-10 lat. Dzieci muszą czuć się swobodnie w ciasnych i ciemnych przestrzeniach. Przy rezerwacji podaj wiek, aby wybrać najbardziej odpowiednią jaskinię."
+        },
+        {
+          "q": "Ile kosztuje wycieczka speleologiczna?",
+          "a": "Ceny wynoszą około €40-60 za osobę za pół dnia, z zniżkami dla grup. Dokładne ceny na rok 2026 należy potwierdzić z Bureau de la Montagne du Salève."
+        },
+        {
+          "q": "Co jest zapewnione?",
+          "a": "Kombinezon speleologiczny, kask z czołówką, uprząż i lonże. Zabierz zapasowe ubrania, zamknięte buty, które możesz pobrudzić, wodę i przekąskę."
+        },
+        {
+          "q": "Jaka pora roku jest najlepsza na speleologię na Salève?",
+          "a": "Głównie od kwietnia do listopada. Poziom wody w jaskiniach może sprawić, że niektóre będą niedostępne. Biuro dobiera wyprawę na podstawie aktualnych warunków."
+        },
+        {
+          "q": "Czy to jest niebezpieczne lub klaustrofobiczne?",
+          "a": "Wycieczki zapoznawcze są bezpieczne i wybierane ze względu na dostępność. Jeśli cierpisz na silną klaustrofobię, wspomnij o tym — przewodnik dostosuje program lub doradzi. Kask i lampa czołowa szybko dodają pewności siebie."
+        },
+        {
+          "q": "Gdzie jest miejsce spotkania?",
+          "a": "Zazwyczaj w okolicach Salève (Cruseilles, Présilly lub La Croisette), potwierdzane przy rezerwacji. Przyjedź 10-15 minut wcześniej, aby założyć sprzęt."
+        }
+      ]
     },
     "he": {
-      "meta_description": "המדריכים על Salève: גילוי, משפחות, stag/hen. קיט כולל, מדריכים מוסמכים. אפריל-נובמבר.",
+      "meta_description": "יציאות ספלאולוגיה מודרכות ב-Salève: היכרות, משפחות, רווקים/רווקות. ציוד כלול, מדריכים מוסמכים. אפריל-נובמבר.",
       "hero": {
-        "lead": "המדריכים החוצה אל המערות והפירים של Salève, עם מדריכים מוסמכים, ערכת סיפק, משפחה, קבוצה ופורמטים טכניים-intro."
+        "lead": "יציאות ספלאולוגיה מודרכות אל המערות והפירים של Salève, עם מדריכים מוסמכים, ציוד מסופק, פורמטים למשפחות, קבוצות והיכרות טכנית."
       },
-      "hero_alt": "Caving on the Salève - Bureau de la Montagne",
+      "hero_alt": "ספלאולוגיה בסאלב — Bureau de la Montagne",
+      "how_to_get_there": {
+        "car": "מ-Annecy (כ-35 ק\"מ), A41 ולאחר מכן יציאה Cruseilles, כ-40 דקות. מז'נבה (כ-25 ק\"מ), לכיוון Annemasse ולאחר מכן Cruseilles, כ-30 דקות.",
+        "public_transport": "קווים סבירים אל Cruseilles/Présilly מ־Annecy ומ־Annemasse, אך נקודת המפגש מרוחקת לרוב — מומלץ רכב או שיתוף רכב.",
+        "bike": "אפשרי באופניים למי שספורטיבי, אך מדובר בכבישי הרים. השביל הירוק של הסאלב מוגבל — נסיעה ברכב עדיפה."
+      },
+      "when_to_visit": "בעיקר מאפריל עד נובמבר. יש לבדוק את תנאי המים — חלק מהמערות עבירות בחורף.",
+      "events": "יציאות מיוחדות עונתיות, קורסי היכרות בסופי שבוע, טיולי בתי ספר בהזמנה מראש. יציאות לילה נושאיות מדי פעם.",
+      "meta_title": "מערות Salève — משרד ההר | Loisirs 74",
       "activities": [
         {
-          "title": "גילויים בורחים",
-          "description": "נסיעה של 2-3h למערה סלאב נגישה: גלריות, תצורות, מערה. קיצור מלא, התקדמות בפיקוח.",
-          "tag": "Activité"
+          "title": "טיול גילוי לספלאולוגיה",
+          "description": "טעימה בת 2-3 שעות למערת Salève הנגישה: מנהרות, תצורות, בעלי חיים במערה. תדריך מלא, התקדמות בליווי.",
+          "tag": "פעילות"
         },
         {
-          "title": "משפחה בחוץ",
-          "description": "פורמט מתאים למשפחות עם ילדים (מ - 8-10). מערות ללא קושי טכני, קצב קל, כיף וזווית חינוכית.",
-          "tag": "ציבור"
+          "title": "טיול משפחתי",
+          "description": "פורמט המתאים למשפחות עם ילדים (מגיל כ-8-10). מערות ללא קושי טכני, קצב קל, גישה מהנה וחינוכית.",
+          "tag": "ציבורי"
         },
         {
-          "title": "מבוא טכני",
-          "description": "עבור להוט ביותר: היכרות עם חבל, גלריות ארוכות יותר, קל למטה פחמימות. על ידי הזמנה, תלות ברמה.",
+          "title": "היכרות טכנית",
+          "description": "למשתוקקים ביותר: היכרות עם גלישה בחבלים, מסדרונות ארוכים יותר, ירידות קלות. בהזמנה, בהתאם לרמה.",
           "tag": "התקדמות"
         },
         {
-          "title": "ציוד",
-          "description": "חליפת Caving, helmet עם Headlamp, רתום ומלנכרנים: כל ערכות הטכניות כללו. תביאי בגדים נקיים",
-          "tag": "quipement"
+          "title": "ציוד מסופק",
+          "description": "חליפת ספלאולוגיה, קסדה עם פנס ראש, רתמה ורצועות אבטחה: כל הציוד הטכני כלול. יש להביא בגדים להחלפה.",
+          "tag": "ציוד"
         },
         {
           "title": "מדריכים מוסמכים",
-          "description": "OUTINGs בראשות מדריכי ריצוף המדינה המבטיחים בטיחות, הוראה וגילוי של הסביבה המחתרתית.",
-          "tag": "Encadrement"
+          "description": "טיולים בהדרכת מדריכי ספלאולוגיה בעלי הסמכה ממלכתית המבטיחים בטיחות, הוראה וגילוי הסביבה התת-קרקעית.",
+          "tag": "ליווי"
         },
         {
-          "title": "קבוצות, stag/hen, סמינרים",
-          "description": "הזכות לקבוצות של חברים, ימי הולדת, stag/hen, בתי ספר או גיבוש צוות. הנחות קבוצתיות ופורמטי Bespoke.",
+          "title": "קבוצות, רווקים/רווקות, סמינרים",
+          "description": "הפרטה לקבוצות חברים, ימי הולדת, מסיבות רווקים/רווקות, בתי ספר או גיבוש צוותים. הנחות קבוצתיות ופורמטים מותאמים אישית.",
           "tag": "קבוצות"
         },
         {
-          "title": "טיולי חצי יום",
-          "description": "טיול בדרך כלל נמשך חצי יום (3-4h באתר). טיול יום שלם עם פיקניק על פי בקשה.",
-          "tag": "דורה"
+          "title": "טיולים בחצי יום",
+          "description": "הטיולים אורכים בדרך כלל חצי יום (3-4 שעות באתר). טיולים ליום מלא עם פיקניק לפי בקשה.",
+          "tag": "משך זמן"
         },
         {
-          "title": "עונת Caving",
-          "description": "טיולים בעיקר מאפריל עד נובמבר, בהתאם למזג אוויר ו הידרולוגיה. חלק מהמערות נותרו בחורף.",
-          "tag": "קשר"
+          "title": "עונת הספלאולוגיה",
+          "description": "טיולים בעיקר מאפריל עד נובמבר, בהתאם למזג האוויר ולהידרולוגיה של המערות. חלק מהמערות נותרות עבירות בחורף.",
+          "tag": "עונה"
+        }
+      ],
+      "faq": [
+        {
+          "q": "האם אני זקוק לניסיון כדי לרדת למערות בסאלב (Salève)?",
+          "a": "לא, טיולי גילוי אינם דורשים ניסיון קודם. המדריך מסביר הכל, מספק את הציוד ומתאים את הקצב לקבוצה. לטיולים טכניים, ייתכן שיידרש רמה מסוימת."
+        },
+        {
+          "q": "מאיזה גיל ילדים יכולים להשתתף?",
+          "a": "בהתאם למערה, מגיל 8-10 בערך. על הילדים להרגיש בנוח במרחבים לעיתים צרים וחשוכים. יש לציין את הגיל בעת ההזמנה כדי לבחור את המערה המתאימה ביותר."
+        },
+        {
+          "q": "כמה עולה טיול ספלאולוגיה?",
+          "a": "המחירים נעים סביב €40-60 לאדם לחצי יום, עם הנחות לקבוצות. יש לוודא את המחירים המדויקים לשנת 2026 מול Bureau de la Montagne du Salève."
+        },
+        {
+          "q": "מה מסופק?",
+          "a": "חליפת ספלאולוגיה, קסדה עם פנס ראש, רתמה ורצועות אבטחה. יש להביא בגדים להחלפה, נעליים סגורות שלא אכפת לכם שיתלכלכו, מים וחטיף."
+        },
+        {
+          "q": "מהי העונה הטובה ביותר לספיאולוגיה ב-Salève?",
+          "a": "בעיקר מאפריל עד נובמבר. מפלסי המים במערות עלולים להפוך חלקים מהן לבלתי נגישים. המשרד בוחר את הטיול בהתאם לתנאים."
+        },
+        {
+          "q": "האם זה מסוכן או גורם לקלסטרופוביה?",
+          "a": "טיולי הגילוי בטוחים ונבחרים בשל נגישותם. אם אתם סובלים מקלסטרופוביה חמורה, ציינו זאת: המדריך יתאים או ייעץ. הקסדה והפנס מרגיעים במהירות."
+        },
+        {
+          "q": "היכן נקודת המפגש?",
+          "a": "בדרך כלל באזור Salève (Cruseilles, Présilly או La Croisette), מאושר בעת ההזמנה. יש להגיע 10-15 דקות מוקדם לציוד."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "כתובת",
+          "v": "נקודת מפגש באזור סאלב (Cruseilles, Présilly, לה קרואזט) — תאושר בעת ההזמנה"
+        },
+        {
+          "k": "קואורדינטות GPS",
+          "v": "~46.081° N · ~6.089° E (אזור Salève)"
+        },
+        {
+          "k": "טלפון",
+          "v": "ראו bureaudesguidesdusaleve.com למספר ישיר"
+        },
+        {
+          "k": "אתר אינטרנט רשמי",
+          "v": "https://www.bureaudesguidesdusaleve.com/",
+          "verified": "2026-06-07"
+        },
+        {
+          "k": "שעות פתיחה",
+          "v": "טיולים בהזמנה, בבקרים או אחר הצהריים. בעיקר מאפריל עד נובמבר."
+        },
+        {
+          "k": "מחירים",
+          "v": "כ-€40-60 לאדם לחצי יום, בהתאם לחבילה. תעריפים לקבוצות ולמשפחות לפי בקשה."
+        },
+        {
+          "k": "הזמנה",
+          "v": "חיוני, בטלפון או דרך אתר האינטרנט של Bureau de la Montagne du Salève."
+        },
+        {
+          "k": "משך זמן",
+          "v": "~2 עד 4 שעות בהתאם לפורמט (גישה, תדריך, תת-קרקע, חזרה)"
+        },
+        {
+          "k": "חניה",
+          "v": "חניה בנקודת המפגש (חניון בכביש או בראש השביל)."
+        },
+        {
+          "k": "נגישות",
+          "v": "פעילות גופנית הדורשת זריזות — אינה מתאימה לניידות מוגבלת."
+        },
+        {
+          "k": "קהל יעד",
+          "v": "מגיל 8-10 בקירוב בהתאם למערה. משפחות, בני נוער, מבוגרים, קבוצות, מסיבות רווקים/רווקות, סמינרים."
+        },
+        {
+          "k": "שפות",
+          "v": "צרפתית; אנגלית בהתאם למדריך."
+        }
+      ]
+    },
+    "ar": {
+      "meta_title": "كهوف سالیف — مكتب الجبل | أنشطة74",
+      "hero_alt": "استكشاف الكهوف في سالير — مكتب الجبل",
+      "meta_description": "خرجات استكشاف كهوف موجّهة في ساليف: اكتشاف، عائلات، حفلات توديع العزوبية. المعدات مشمولة، مرشدون مؤهلون. من أبريل إلى نوفمبر.",
+      "hero": {
+        "lead": "خرجات استكشاف كهوف موجّهة إلى مغارات وآبار جبل ساليف، مع مدربين مؤهلين، ومعدات متوفرة، وصيغ عائلية وجماعية وتعريفية تقنية."
+      },
+      "activities": [
+        {
+          "title": "رحلة اكتشاف استكشاف الكهوف",
+          "description": "رحلة تجريبية من 2-3 ساعات داخل كهف يسهل الوصول إليه في Salève: أروقة، وتشكيلات صخرية، وحيوانات الكهف. إحاطة كاملة، وتقدم تحت إشراف.",
+          "tag": "النشاط"
+        },
+        {
+          "title": "خرجة عائلية",
+          "description": "صيغة مناسبة للعائلات مع الأطفال (من حوالي 8-10 سنوات). كهوف بدون صعوبة تقنية، وتيرة سهلة، وطابع ممتع وتعليمي.",
+          "tag": "عام"
+        },
+        {
+          "title": "مبادرة تقنية",
+          "description": "للأكثر شغفًا: مبادئ في النزول بالحبال، ممرات أطول، نزول سهل. بالحجز، حسب المستوى.",
+          "tag": "التقدم"
+        },
+        {
+          "title": "المعدات موفَّرة",
+          "description": "بذلة استكشاف الكهوف، خوذة مزودة بمصباح أمامي، حزام وحبال أمان: جميع المعدات التقنية مشمولة. يُرجى إحضار ملابس بديلة.",
+          "tag": "المعدات"
+        },
+        {
+          "title": "مرشدون مؤهلون",
+          "description": "خرجات يقودها مدربو استكشاف كهوف معتمدون من الدولة يضمنون السلامة والتعليم واكتشاف البيئة تحت الأرضية.",
+          "tag": "الإشراف"
+        },
+        {
+          "title": "مجموعات، حفلات توديع العزوبية، ندوات",
+          "description": "حجز خاص لمجموعات الأصدقاء، أعياد الميلاد، حفلات العزوبية، المدارس أو بناء الفريق. تخفيضات للمجموعات وصيغ مخصصة.",
+          "tag": "مجموعات"
+        },
+        {
+          "title": "رحلات نصف يوم",
+          "description": "تستغرق الرحلات عادة نصف يوم (3-4 ساعات في الموقع). رحلات ليوم كامل مع نزهة طعام عند الطلب.",
+          "tag": "المدة"
+        },
+        {
+          "title": "موسم استكشاف الكهوف",
+          "description": "رحلات أساسًا من أبريل إلى نوفمبر، حسب الطقس وهيدرولوجيا الكهوف. تبقى بعض الكهوف قابلة للعبور في الشتاء.",
+          "tag": "الموسم"
         }
       ],
       "how_to_get_there": {
-        "car": "מ Annecy (- 35 ק\"מ), A41 לאחר מכן לצאת Cruseilles - 40 דקות מ ז'נבה (~25 ק\"מ), לעבר Annemasse ואז Cruseilles, 30 דקות.",
-        "public_transport": "קווים רגילים ל- Cruseilles/Présilly מ-Annecy ו- Annemasse, אך נקודת המפגש היא לעתים קרובות מרחוק - מכונית או שיתוף רכב מומלץ.",
-        "bike": "ניתן על ידי אופניים עבור ספורטיבי, אבל אופני הרים. הכביש הירוק Salève מוגבל - נהיגה עדיף."
+        "car": "انطلاقًا من Annecy (~35 كم)، A41 ثم مخرج Cruseilles، ~40 دقيقة. انطلاقًا من جنيف (~25 كم)، باتجاه Annemasse ثم Cruseilles، ~30 دقيقة.",
+        "public_transport": "خطوط منتظمة إلى Cruseilles/Présilly من Annecy وAnnemasse، لكن نقطة اللقاء غالبًا ما تكون بعيدة — يُنصح باستخدام السيارة أو مشاركتها.",
+        "bike": "ممكن بالدراجة للرياضيين، لكن الطرق جبلية. الممر الأخضر لجبل السالاف (Salève) محدود — يُفضَّل استخدام السيارة."
       },
-      "when_to_visit": "בעיקר אפריל עד נובמבר. בדוק את תנאי המים - כמה מערות ניתן לעבור בחורף.",
-      "events": "סיורים מיוחדים עונתיים, קורסי היכרות בסוף השבוע, נסיעות בית הספר על ידי הזמנה. cca  night  night"
+      "when_to_visit": "بشكل رئيسي من أبريل إلى نوفمبر. تحقق من حالة المياه — بعض الكهوف يمكن عبورها في الشتاء.",
+      "events": "خرجات خاصة موسمية، دورات تعريفية في عطلة نهاية الأسبوع، رحلات مدرسية بالحجز. خرجات ليلية ذات طابع خاص من حين لآخر.",
+      "body": {
+        "what_is": "<p><strong>مكتب جبل الساليف</strong> يقدّم <strong>استكشاف الكهوف</strong> رحلات استكشافية إلى كهوف ومنحدرات <strong>ساليف</strong> سلسلة الجبال، جنوب غرب جنيف مباشرة. بقيادة مرشدي جبال معتمدين من الدولة، تكشف هذه الخرجات عالمًا جوفيًا قليل المعرفة: أنفاق جيرية، تشكيلات، أنهار جوفية وحيوانات كهفية خفية. يتم توفير كل المعدات (بدلة كاملة، خوذة مزودة بإضاءة، حزام أمان، وأحيانًا أحذية)، ويتم تكييف كل خرجة حسب المجموعة — عائلات، مراهقون، بالغون — وصعوبة الكهف الذي تتم زيارته.</p><p><strong>لمن هذا موجه؟</strong> هذا النشاط مناسب للعائلات التي لديها أطفال (من حوالي 8-10 سنوات حسب الكهف)، ومجموعات الأصدقاء، وحفلات توديع العزوبية، والمجموعات المدرسية أو أنشطة بناء الفريق للشركات. لا حاجة إلى أي خبرة مسبقة لرحلات الاكتشاف. تستغرق الرحلات من 2 إلى 4 ساعات، بما في ذلك المشي للوصول، والإحاطة الأمنية، والتقدم تحت الأرض (الزحف، والنزول السهل، وأحيانًا مقاطع قصيرة بالحبال) والعودة. بالنسبة لمستكشفي الكهوف ذوي الخبرة، يقدم المكتب أيضًا مقدمات لاستكشاف الكهوف العمودي باستخدام الحبال.</p><p><strong>الحجز والوصول.</strong> يتم الحجز مباشرة مع مكتب الجبل (Bureau de la Montagne) عبر الهاتف أو موقعه الإلكتروني. تُنظَّم الخرجات بشكل أساسي من أبريل إلى نوفمبر — تُحدِّد مستويات المياه الكهوف التي يمكن الوصول إليها. تتراوح الأسعار حوالي 40-60 € للشخص لنصف يوم، مع خصومات للمجموعات. يُنصح بارتداء ملابس لا تمانع في اتساخها تحت البدلة، وأحذية مغلقة، وإحضار الماء ووجبة خفيفة. تكون نقاط اللقاء عادة في منطقة الساليف (Cruseilles، Présilly أو لا كروازيت).</p>"
+      },
+      "faq": [
+        {
+          "q": "هل أحتاج إلى خبرة لاستكشاف الكهوف في Salève؟",
+          "a": "لا، رحلات الاكتشاف لا تتطلب أي خبرة سابقة. يشرح المدرب كل شيء، ويوفر المعدات، ويكيّف الوتيرة مع المجموعة. بالنسبة للرحلات التقنية، قد يكون من الضروري امتلاك مستوى معين."
+        },
+        {
+          "q": "من أي سن يمكن للأطفال المشاركة؟",
+          "a": "حسب الكهف، ابتداءً من حوالي 8-10 سنوات. يجب أن يشعر الأطفال بالراحة في أماكن قد تكون ضيقة ومظلمة أحيانًا. اذكر العمر عند الحجز لاختيار الكهف الأنسب."
+        },
+        {
+          "q": "كم تكلف رحلة استكشاف الكهوف؟",
+          "a": "تتراوح الأسعار بين 40 و60 € للشخص الواحد لنصف يوم، مع تخفيضات للمجموعات. الأسعار الدقيقة لعام 2026 يجب تأكيدها لدى مكتب جبل ساليف."
+        },
+        {
+          "q": "ما الذي يتم توفيره؟",
+          "a": "بذلة استكشاف الكهوف، خوذة مزودة بمصباح أمامي، حزام وحبال أمان. يُرجى إحضار ملابس بديلة، أحذية مغلقة لا تمانع في اتساخها، ماء ووجبة خفيفة."
+        },
+        {
+          "q": "ما هو أفضل موسم لاستكشاف الكهوف في سالييف؟",
+          "a": "بشكل رئيسي من أبريل إلى نوفمبر. قد تجعل مستويات المياه في الكهوف بعضها غير قابل للوصول. يختار المكتب الرحلة بناءً على الظروف."
+        },
+        {
+          "q": "هل هو خطير أو يسبب رهاب الأماكن المغلقة؟",
+          "a": "رحلات الاكتشاف آمنة ومختارة لسهولة الوصول إليها. إذا كنت تعاني من رهاب الأماكن المغلقة بشدة، أخبر المرشد: سيقوم بالتكيف أو تقديم النصح. الخوذة والمصباح يبعثان على الطمأنينة سريعاً."
+        },
+        {
+          "q": "أين نقطة اللقاء؟",
+          "a": "عادة في منطقة Salève (Cruseilles، Présilly أو La Croisette)، يُؤكد عند الحجز. يُرجى الوصول قبل 10-15 دقيقة للتجهيز."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "العنوان",
+          "v": "نقطة اللقاء في منطقة Salève (Cruseilles، Présilly، La Croisette) — يتم تأكيدها عند الحجز"
+        },
+        {
+          "k": "إحداثيات GPS",
+          "v": "~46.081° شمالاً · ~6.089° شرقاً (منطقة Salève)"
+        },
+        {
+          "k": "هاتف",
+          "v": "انظر bureaudesguidesdusaleve.com للحصول على الرقم المباشر"
+        },
+        {
+          "k": "الموقع الرسمي",
+          "v": "https://www.bureaudesguidesdusaleve.com/",
+          "verified": "2026-06-07"
+        },
+        {
+          "k": "ساعات العمل",
+          "v": "رحلات بالحجز المسبق، صباحًا أو بعد الظهر. أساسًا من أبريل إلى نوفمبر."
+        },
+        {
+          "k": "الأسعار",
+          "v": "حوالي €40-60 للشخص لنصف يوم حسب الباقة. أسعار المجموعات والعائلات عند الطلب."
+        },
+        {
+          "k": "الحجز",
+          "v": "ضروري، عبر الهاتف أو من خلال موقع Bureau de la Montagne du Salève."
+        },
+        {
+          "k": "المدة",
+          "v": "~2 إلى 4 ساعات حسب الصيغة (الاقتراب، الإحاطة، تحت الأرض، العودة)"
+        },
+        {
+          "k": "موقف سيارات",
+          "v": "موقف سيارات عند نقطة اللقاء (على الطريق أو عند موقف بداية المسار)."
+        },
+        {
+          "k": "إمكانية الوصول",
+          "v": "نشاط بدني يتطلب رشاقة — غير مناسب لذوي الحركة المحدودة."
+        },
+        {
+          "k": "الجمهور",
+          "v": "من حوالي 8-10 سنوات حسب الكهف. عائلات، مراهقون، بالغون، مجموعات، حفلات العزوبية، ندوات."
+        },
+        {
+          "k": "اللغات",
+          "v": "الفرنسية؛ الإنجليزية حسب المدرب."
+        }
+      ]
     },
-    "ar": {},
     "ja": {
       "meta_title": "Salève Caving - モンテネグロのビューロー・デ・ラ・モンタニュ   Loisirs 74",
       "hero": {
         "lead": "認定インストラクター、キット、家族、グループ、および技術的なイントロフォーマットを備えた、Salèveの洞窟とシャフトにガイド付きケーブアウト。"
       },
       "hero_alt": "サレーヴのキャビング — モンテネグロのビューロー",
-      "events": "季節限定のスペシャル・アウトイング、週末の紹介コース、予約制の学校旅行。 時折テーマの夜の外出。"
+      "events": "季節限定のスペシャル・アウトイング、週末の紹介コース、予約制の学校旅行。 時折テーマの夜の外出。",
+      "meta_description": "サレーヴ山でのガイド付き洞窟探検ツアー:発見コース、ファミリー向け、独身最後のパーティー向け。装備一式込み、有資格ガイド同行。四月から十一月まで。",
+      "how_to_get_there": {
+        "car": "Annecyから(約35km)、A41、続いて出口Cruseilles、約40分。ジュネーブから(約25km)、Annemasse方面、続いてCruseilles、約30分。",
+        "public_transport": "AnnecyとAnnemasseからCruseilles/Présillyへの定期路線がありますが、集合場所は離れていることが多いため、車または乗合での移動をお勧めします。",
+        "bike": "スポーツ好きの方は自転車での移動も可能ですが、山道です。サレーヴのグリーンウェイは限られているため、車での移動が望ましいです。"
+      },
+      "when_to_visit": "主に四月から十一月まで。水のコンディションを確認してください — 一部の洞窟は冬でも通行可能です。",
+      "faq": [
+        {
+          "q": "サレーヴで洞窟探検をするには経験が必要ですか?",
+          "a": "いいえ、体験ツアーには事前の経験は必要ありません。インストラクターがすべてを説明し、装備を提供し、グループに合わせてペースを調整します。技術的なツアーの場合は一定のレベルが必要となることがあります。"
+        },
+        {
+          "q": "子供は何歳から参加できますか?",
+          "a": "洞窟により約8-10歳から。子供は時に狭く暗い空間でも問題なく過ごせる必要があります。予約時に年齢をお伝えいただくと、最適な洞窟をご案内します。"
+        },
+        {
+          "q": "ケイビングの料金はいくらですか？",
+          "a": "半日で一人あたり40~60€程度、団体割引あり。2026年の正確な料金はBureau de la Montagne du Salèveにご確認ください。"
+        },
+        {
+          "q": "何が提供されますか？",
+          "a": "洞窟探検スーツ、ヘッドランプ付きヘルメット、ハーネスとランヤード。着替え、汚れてもよい靴、水と軽食をご持参ください。"
+        },
+        {
+          "q": "サレーヴでの洞窟探検に最適な季節は？",
+          "a": "主に四月から十一月まで。洞窟内の水位により、一部が立ち入り不可能になることがあります。事務局が状況に応じてツアーを選びます。"
+        },
+        {
+          "q": "危険だったり閉所恐怖症の方には向かないですか?",
+          "a": "ディスカバリーツアーは安全性とアクセスのしやすさを考慮して選ばれています。閉所恐怖症がひどい場合はその旨を伝えてください。ガイドが対応するかアドバイスします。ヘルメットとランプはすぐに安心感を与えてくれます。"
+        },
+        {
+          "q": "集合場所はどこですか?",
+          "a": "通常はサレーヴ地区(Cruseilles、Présillyまたはラ・クロワゼット)、予約時に確定します。装備準備のため10~15分前にお越しください。"
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "住所",
+          "v": "サレーヴ地区(Cruseilles、Présilly、ラ・クロワゼット)が集合場所 — 予約時に確定"
+        },
+        {
+          "k": "GPS座標",
+          "v": "~46.081° N・6.089° E（サレーヴエリア）"
+        },
+        {
+          "k": "電話",
+          "v": "直通番号はbureaudesguidesdusaleve.comをご覧ください"
+        },
+        {
+          "k": "公式ウェブサイト",
+          "v": "https://www.bureaudesguidesdusaleve.com/",
+          "verified": "2026-06-07"
+        },
+        {
+          "k": "営業時間",
+          "v": "予約による外出、午前または午後。主に四月から十一月まで。"
+        },
+        {
+          "k": "料金",
+          "v": "パッケージによって異なりますが、半日で一人あたり大体€40-60ほどです。団体・家族向け料金はお問い合わせください。"
+        },
+        {
+          "k": "予約",
+          "v": "電話またはビュロー・ド・ラ・モンターニュ・デュ・サレーヴのウェブサイトから、予約は必須です。"
+        },
+        {
+          "k": "所要時間",
+          "v": "形式により約2〜4時間（アプローチ、ブリーフィング、地下、帰路を含む）"
+        },
+        {
+          "k": "駐車場",
+          "v": "集合場所の駐車場（道路脇または登山口の駐車場）。"
+        },
+        {
+          "k": "アクセシビリティ",
+          "v": "敏捷性を要する身体活動のため、身体の不自由な方には適しません。"
+        },
+        {
+          "k": "対象者",
+          "v": "洞窟により約8~10人から。家族連れ、ティーン、大人、グループ、独身最後のパーティー、セミナーに対応。"
+        },
+        {
+          "k": "言語",
+          "v": "フランス語、インストラクターにより英語。"
+        }
+      ],
+      "activities": [
+        {
+          "title": "洞窟探検の入門ツアー",
+          "description": "誰でも入れるサレーヴの洞窟への2~3時間の体験ツアー:回廊、鍾乳石、洞窟内の動物相。事前説明あり、監督付きで進行。",
+          "tag": "アクティビティ"
+        },
+        {
+          "title": "ファミリーでのお出かけ",
+          "description": "お子様連れのご家族に適した形式(8~10歳から)。技術的な難易度のない洞窟で、ゆったりとしたペース、楽しく教育的な視点。",
+          "tag": "一般公開"
+        },
+        {
+          "title": "技術入門",
+          "description": "より意欲的な方には:ロープ懸垂下降の入門、より長い通路、簡単なダウンクライミング。予約制、レベルにより異なります。",
+          "tag": "難易度の進行"
+        },
+        {
+          "title": "装備貸与",
+          "description": "洞窟探検スーツ、ヘッドランプ付きヘルメット、ハーネスとランヤード:技術装備一式が含まれています。着替えをご持参ください。",
+          "tag": "装備"
+        },
+        {
+          "title": "有資格ガイド",
+          "description": "国家資格を持つケイビングインストラクターが引率し、安全管理、指導、地下環境の発見を行うツアーです。",
+          "tag": "引率"
+        },
+        {
+          "title": "グループ、独身最後のパーティー、セミナー",
+          "description": "友人グループ、誕生日、独身最後のパーティー、学校、チームビルディング向けの貸切利用。団体割引とオーダーメイドプランあり。",
+          "tag": "グループ"
+        },
+        {
+          "title": "半日の小旅行",
+          "description": "ツアーは通常半日(現地で3~4時間)。ピクニック付きの終日ツアーも要望に応じて可能。",
+          "tag": "所要時間"
+        },
+        {
+          "title": "洞窟探検シーズン",
+          "description": "天候や洞窟の水文条件により、主に四月から十一月にかけて行われる旅。冬でも通行可能な洞窟もある。",
+          "tag": "シーズン"
+        }
+      ]
     }
   },
   "data_sources": [
@@ -1560,5 +2003,39 @@
     "source_name": null,
     "checked": "2026-06-26",
     "confidence": null
+  },
+  "freshness": {
+    "checked": "2026-07-19",
+    "status": "OPERATIONAL",
+    "confidence": "high",
+    "flag_reason": "",
+    "outcome": "OK",
+    "google_match": "BUREAU DE LA MONTAGNE DU SALÈVE",
+    "place_id": "ChIJ2c-y3eV4jEcRbm_tL2KXvrE",
+    "google_status": "OPERATIONAL",
+    "website": {
+      "value": "http://bureaumontagnesaleve.com/",
+      "source": "google",
+      "verified": "2026-07-19"
+    },
+    "phone": {
+      "value": "06 85 54 86 94",
+      "source": "google",
+      "verified": "2026-07-19"
+    },
+    "hours": null,
+    "rating": 4.7,
+    "rating_count": 7,
+    "registry": {
+      "state": "NO_MATCH",
+      "siret": null,
+      "closure_date": null
+    },
+    "site_reachable": true,
+    "price_candidates": [
+      "35"
+    ],
+    "gps_drift_m": 782,
+    "needs_price_review": true
   }
 }

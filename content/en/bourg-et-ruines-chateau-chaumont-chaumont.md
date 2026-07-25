@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/en/bourg-et-ruines-chateau-chaumont-chaumont
 language: en
 facet_json: https://loisirs74.fr/api/lieu/bourg-et-ruines-chateau-chaumont-chaumont.json
-photo_url: /img/generique/generique-chateau-brume.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/musees/bourg-et-ruines-chateau-chaumont-chaumont-hero.jpg
+photo_type: real
+photo_author: "Zbh0170"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-10
 source: loisirs74.fr
 ---

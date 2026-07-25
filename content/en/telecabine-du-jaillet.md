@@ -16,11 +16,11 @@ google_place_id: "ChIJXTSGrczii0cRFfaBBZZQt8E"
 canonical_url: https://loisirs74.fr/en/telecabine-du-jaillet
 language: en
 facet_json: https://loisirs74.fr/api/lieu/telecabine-du-jaillet.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg
+photo_url: /img/telecabines/telecabine-du-jaillet-hero.jpg
 photo_type: real
-photo_author: null
-photo_license: null
-photo_source: null
+photo_author: "Guilhem Vellut from Annecy, France"
+photo_license: "CC BY 2.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-04-28
 source: loisirs74.fr
 ---
@@ -68,6 +68,10 @@ Free 7 h (parking disc required)
 ## Season
 
 4 July – 30 August (summer) · Winter ski
+- Winter access window: Not specified
+- Winter infrastructure: Snowshoeing
+- Snow panorama: Not specified
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

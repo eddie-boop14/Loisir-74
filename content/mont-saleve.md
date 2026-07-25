@@ -64,6 +64,10 @@ Non renseigné
 ## Saison
 
 Avril à novembre (téléphérique)
+- Fenêtre d'accès hiver: Non renseigné
+- Infrastructure hiver: Raquettes
+- Panorama enneigé: Vue Mont-Blanc dégagée
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

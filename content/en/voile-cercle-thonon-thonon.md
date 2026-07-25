@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Thonon-les-Bains, Haute-Savoie (74200)
 - GPS: 46.377778, 6.479681
 - Category: base-nautique
-- Type: Club voile Léman + école de voile
+- Type: Sailing club on the Léman + sailing school
 
 ## Hours
 
-Horaires du Cercle de la Voile de Thonon : Cours et stages selon planning - vérifier sur site. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of the Cercle de la Voile de Thonon: Courses depend on the schedule - check on site. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -59,7 +59,7 @@ Gratuit sur site
 
 ## Season
 
-Avril-octobre
+April-October
 
 ## Official source
 

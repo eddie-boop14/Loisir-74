@@ -260,6 +260,9 @@ CHROME = {
     # Footer dates
     "published":       {"fr": "Publié le", "en": "Published", "de": "Veröffentlicht", "it": "Pubblicato il", "es": "Publicado el", "nl": "Gepubliceerd"},
     "updated":         {"fr": "Mis à jour le", "en": "Updated", "de": "Aktualisiert", "it": "Aggiornato il", "es": "Actualizado el", "nl": "Bijgewerkt"},
+    # Share button (PWA-share handoff)
+    "share":           {"fr": "Partager", "en": "Share", "de": "Teilen", "it": "Condividi", "es": "Compartir", "nl": "Delen"},
+    "link_copied":     {"fr": "Lien copié ✓", "en": "Link copied ✓", "de": "Link kopiert ✓", "it": "Link copiato ✓", "es": "Enlace copiado ✓", "nl": "Link gekopieerd ✓"},
     # Generic photo overlay text (CSS post-process)
     "generic":         {"fr": "Générique", "en": "Generic", "de": "Generisch", "it": "Generico", "es": "Genérico", "nl": "Algemeen"},
     # Photo email subject prefix
@@ -275,7 +278,7 @@ CHROME = {
     "f_legal_link":    {"fr": "Mentions légales", "en": "Legal notice", "de": "Impressum", "it": "Note legali", "es": "Avisos legales", "nl": "Wettelijke vermeldingen"},
     "f_privacy":       {"fr": "Confidentialité", "en": "Privacy", "de": "Datenschutz", "it": "Privacy", "es": "Privacidad", "nl": "Privacy"},
     "f_cgv":           {"fr": "CGV", "en": "Terms", "de": "AGB", "it": "Termini", "es": "Términos", "nl": "Algemene voorwaarden"},
-    "f_copyright":     {"fr": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Tous droits réservés", "en": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · All rights reserved", "de": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Alle Rechte vorbehalten", "it": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Tutti i diritti riservati", "es": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Todos los derechos reservados", "nl": "© 2026 Blue Canard Éditions · Edmaster &amp; Claudius · Alle rechten voorbehouden"},
+    "f_copyright":     {"fr": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Tous droits réservés", "en": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · All rights reserved", "de": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Alle Rechte vorbehalten", "it": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Tutti i diritti riservati", "es": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Todos los derechos reservados", "nl": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Alle rechten voorbehouden"},
     "f_promise":       {"fr": "Sans pub. Sans tracking. Sans avis Google.", "en": "No ads. No tracking. No Google reviews.", "de": "Keine Werbung. Kein Tracking. Keine Google-Bewertungen.", "it": "Niente pubblicità. Niente tracking. Niente recensioni Google.", "es": "Sin anuncios. Sin tracking. Sin reseñas de Google.", "nl": "Geen advertenties. Geen tracking. Geen Google reviews."},
 }
 
@@ -310,8 +313,47 @@ for _lg, _vals in _RICH_CHROME["fact_labels"].items():
     for _k, _v in _vals.items():
         FACT_LABELS_I18N[_k][_lg] = _v
 
+# Real per-lieu lastmod (HANDOFF lastmod). Single source: data/lastmod.json,
+# derived by scripts/derive_lastmod.py from git content-commit dates (corpus-wide
+# sweeps excluded). Read by three consumers — the visible jj/mm/aa stamp, the
+# schema.org dateModified (ISO), and (via the manifest) the sitemap. Supersedes
+# the manual date_modified_human field, kept in Json for schema stability.
+try:
+    _LASTMOD = json.loads((REPO / "data" / "lastmod.json").read_text(encoding="utf-8"))
+except Exception:
+    _LASTMOD = {}
+
+# Protected partner domains. A page that will carry one takes the byte-frozen
+# path: it keeps the old manual stamp, gets no dateModified and no share button —
+# so the gate_protected_placements byte-guard stays green with no approval
+# trailer. The handoff defers the new stamp/share on these to Eddie's separately
+# approved commit.
+_PROTECTED_PARTNER_DOMAINS = ("cheznousalaplage.com", "chaletdutornet.com")
+
+# The authoritative set of pages that carry a protected partner domain is the
+# gate's own manifest (reports/protected-placements.md) — the same set it byte-
+# checks. Some placements are injected by cross-fiche promos not present in a
+# fiche's own data, so a data-only heuristic under-detects; the manifest is
+# ground truth. Freeze any fiche whose output path is listed here.
+def _load_protected_pages():
+    p = REPO / "reports" / "protected-placements.md"
+    pages = set()
+    try:
+        for line in p.read_text(encoding="utf-8").splitlines():
+            if line.startswith("| ") and ".html |" in line:
+                cell = line.split("|")[1].strip()
+                if cell and cell != "page":
+                    pages.add(cell)
+    except Exception:
+        pass
+    return pages
+
+
+_PROTECTED_PAGES = _load_protected_pages()
+
 # Module-level locale state set by build_page(d, lang).
 _LANG = "fr"            # current locale
+_FROZEN = False         # current page carries a protected partner → byte-frozen
 _LOC = None             # i18n.<lang> block, frozen-merged with FR fallback below
 _FR = None              # i18n.fr block (fallback source)
 _FALLBACK_FIELDS = set()  # fields where current build fell back to FR
@@ -630,8 +672,12 @@ def activities_block(activities):
         tag = a.get("tag", "")
         desc = a.get("description", "")
         tag_html = f'<span class="activity-tag">{esc(tag)}</span>' if tag else ""
+        # JOB 3 named-entity anchor: a proprietary-name activity (Absurd Game,
+        # Explor Games, Acro'Filet, Visite Découverte) carries a stable id so the
+        # name is a resolvable, matchable fragment. Permanent — never renamed.
+        id_attr = f' id="{attr(a["id"])}"' if a.get("id") else ""
         cards.append(
-            f'<button type="button" class="activity flip" aria-label="{attr(title)}">'
+            f'<button type="button" class="activity flip"{id_attr} aria-label="{attr(title)}">'
             f'<div class="flip-inner">'
             f'<div class="flip-front">'
             f'<h4>{esc(title)}{tag_html}</h4>'
@@ -650,8 +696,25 @@ def activities_block(activities):
     )
 
 
-def practical_block(practical, name, commune):
-    """Render the 'Infos pratiques' info-table."""
+# Labels that mean "price/tarif" across the 12 languages (singular AND plural —
+# the practical_info generator used plurals like "Tarifs"/"Ceny"/"Tarifas" that
+# the singular fact-label set misses). Used to suppress the stale practical_info
+# "prices not listed" row once the structured tiers grid owns the price surface
+# (kills the 44 € chip + "non renseigné" contradiction). Explicit vocabulary,
+# not a data scan, so it never catches an adjacent row (e.g. "Ski nordique").
+_TARIF_ROW_LABELS = {s.lower() for s in (
+    "tarif", "tarifs", "price", "prices", "rates", "fare", "fares",
+    "preis", "preise", "prezzo", "prezzi", "tariffa", "tariffe",
+    "precio", "precios", "tarifa", "tarifas", "prijs", "prijzen",
+    "tarief", "tarieven", "cena", "ceny", "preço", "preços",
+    "料金", "السعر", "الأسعار", "מחיר", "מחירים",
+)} | {str(v).strip().lower() for v in (FACT_LABELS_I18N.get("tarif") or {}).values()}
+
+
+def practical_block(practical, name, commune, drop_tarif=False):
+    """Render the 'Infos pratiques' info-table. drop_tarif suppresses the price
+    row (the tiers grid owns it) so a stale 'prices not listed' line can't
+    contradict the grid."""
     if not practical:
         return ""
     rows = []
@@ -659,6 +722,8 @@ def practical_block(practical, name, commune):
     for entry in practical:
         k = entry.get("k", "")
         v = entry.get("v", "")
+        if drop_tarif and str(k).strip().lower() in _TARIF_ROW_LABELS:
+            continue
         extra = ""
         if any(k.lower().startswith(t) for t in addr_terms):
             q = url_q(f"{name}, {commune}, Haute-Savoie, France")
@@ -678,6 +743,85 @@ def practical_block(practical, name, commune):
         '<section class="block"><div class="wrap">'
         f'<div class="kicker reveal">{T("k_practical")}</div>'
         f'<h2 class="reveal">{T("h_practical")}</h2>'
+        f'<div class="info-table reveal">{"".join(rows)}</div></div></section>'
+    )
+
+
+_PROSE_LANGS = set(locales.PROSE)  # fr,en,de,it,es,nl — free FR tier names OK here
+# Tier → controlled category, derived from the FR name (case/accents-insensitive
+# regex). Order matters: first match wins, defaults to 'adulte'.
+_TIER_CAT_RULES = [
+    ("enfant",   r"enfant|child|kind|junior 5|5[\s-]*(?:à|-)\s*1[0-5]|-\s*12 ans"),
+    ("jeune",    r"jeune|youth|16[\s-]*(?:à|-)\s*2[0-9]|étudiant"),
+    ("senior",   r"s[eé]nior|65[\s-]*(?:à|-)|v[eé]t[eé]ran|75 ans"),
+    ("famille",  r"famille|tribu|family|pack"),
+    ("saison",   r"saison|ann[eé]e|abonnement|season"),
+    ("nordique", r"nordi|redevance nordique|nordic pass|ski de fond|fond"),
+    ("debutant", r"d[eé]butant|lutins|espace d[eé]butant|beginner"),
+    ("court",    r"\b4\s*h|4 heures|apr[eè]s-midi|matin|1/2|demi|5\s*h|5 heures|heures cons"),
+]
+_TIER_CAT_RX = [(cat, re.compile(rx, re.I)) for cat, rx in _TIER_CAT_RULES]
+
+
+def _tier_cat(name):
+    n = name or ""
+    for cat, rx in _TIER_CAT_RX:
+        if rx.search(n):
+            return cat
+    return "adulte"
+
+
+def _tier_label(cat, lang):
+    tt = _I18N_LABELS.get("tarif_tiers") or {}
+    row = tt.get(cat) or tt.get("autre") or {}
+    return row.get(lang) or row.get("fr") or cat
+
+
+def _price_str(v, cur):
+    if not isinstance(v, (int, float)):
+        return ""
+    s = f"{v:.2f}".replace(".", ",")
+    return f"{s} {cur}"
+
+
+def tarifs_block(d):
+    """Structured pass-price grid. PROSE langs get the rich FR tier name (+ FR
+    note); FACTS langs (pl,pt,cs,ar,he,ja) get a reviewed-vocabulary category
+    label + the number ONLY — never FR free-text — honouring _vocab_facts'
+    facts-lang doctrine. Numbers are language-independent; heading localized."""
+    tiers = [t for t in (d.get("price_tiers") or []) if isinstance(t, dict) and t.get("price") is not None]
+    if not tiers:
+        return ""
+    cur = {"EUR": "€"}.get(d.get("price_currency"), d.get("price_currency") or "€")
+    is_prose = _LANG in _PROSE_LANGS
+    rows = []
+    seen_cat = set()
+    for t in tiers:
+        price = _price_str(t.get("price"), cur)
+        if is_prose:
+            # PROSE langs: every tier, full FR name + FR note (context intact).
+            k = esc(t.get("name") or "")
+            note = t.get("note")
+            note_html = (f'<span class="tier-note">{esc(note)}</span>' if note else "")
+            v = f'<span class="tier-price">{_bdi(esc(price))}</span>{note_html}'
+        else:
+            # FACTS langs: category label + number only — no FR free-text to
+            # disambiguate day/6-day/secondary-domain products, so show ONE
+            # representative per category (the first = the base pass); the rest
+            # would be ambiguous bare numbers. Honest subset, never invented.
+            cat = _tier_cat(t.get("name"))
+            if cat in seen_cat:
+                continue
+            seen_cat.add(cat)
+            k = esc(_tier_label(cat, _LANG))
+            v = f'<span class="tier-price">{_bdi(esc(price))}</span>'
+        rows.append(f'<div class="info-row"><div class="k">{k}</div>'
+                    f'<div class="v">{v}</div></div>')
+    heading = esc(_fact_label("tarif"))
+    return (
+        '<section class="block"><div class="wrap">'
+        f'<div class="kicker reveal">💶</div>'
+        f'<h2 class="reveal">{heading}</h2>'
         f'<div class="info-table reveal">{"".join(rows)}</div></div></section>'
     )
 
@@ -952,6 +1096,102 @@ def when_to_visit_block(when, events):
     )
 
 
+def season_card(d):
+    """HANDOFF-winter §5 — compact structured Season card on the fiche, the
+    Google-ranking surface. Emits only for WINTER_NODES categories, FR + EN
+    inline (the other 10 langs route through the translation lane under the
+    winter_* label keys — not hand-jammed here). Reads the SAME i18n.fr.facts
+    winter_* fields as the facet md/json (one source, no divergence). All data
+    null → equipment-only card (verified dept constant; HANDOFF-winter §8 default).
+    Frozen Mont-Blanc / Loi Montagne II verbatim. Never touches partner blocks."""
+    import build_ai_content as _bac
+    if (d.get("category") or "") not in _bac.WINTER_NODES or _LANG not in ("fr", "en"):
+        return ""
+    lang = _LANG
+    fk = (_FR.get("facts") or {}) if isinstance(_FR, dict) else {}
+    L_, unk = _bac.WINTER_LABELS, ("Non renseigné" if lang == "fr" else "Not specified")
+    a = fk.get("winter_access")
+    av = _bac.WINTER_ACCESS[a][lang] if a in _bac.WINTER_ACCESS else unk
+    infra = [_bac.WINTER_INFRA[x][lang] for x in (fk.get("winter_infra") or [])
+             if x in _bac.WINTER_INFRA]
+    iv = " · ".join(infra) if infra else unk
+    sv = fk.get("snow_view")
+    svv = _bac.SNOW_VIEW[sv][lang] if sv in _bac.SNOW_VIEW else unk
+    eq = _bac.EQUIP[lang] + (_bac.EQUIP_COL[lang] if fk.get("col_chains") else "")
+    # JOB B: closed/partial régime or a col → state the régime + delegate live status
+    # to the Département (inforoute74). Plain external link; URL invariant.
+    acc_suffix = ""
+    if _bac.winter_needs_inforoute(fk):
+        acc_suffix = (f' — {esc(_bac.WINTER_LIVE[lang])} '
+                      f'<a href="{_bac.INFOROUTE_URL}" target="_blank" rel="noopener">'
+                      f'{_bac.INFOROUTE_HOST}</a>')
+    rows = [(L_["access"][lang], av, acc_suffix), (L_["infra"][lang], iv, ""),
+            (L_["view"][lang], svv, ""), (L_["equip"][lang], eq, "")]
+    facts = "".join(
+        f'<div class="fact"><div class="k">{esc(k)}</div>'
+        f'<div class="v"><bdi>{esc(v)}{sfx}</bdi></div></div>' for k, v, sfx in rows)
+    kicker = "Hiver" if lang == "fr" else "Winter"
+    head = "Saison hivernale" if lang == "fr" else "Winter season"
+    return (
+        '<section class="block"><div class="wrap">'
+        f'<div class="kicker reveal">{kicker}</div>'
+        f'<h2 class="reveal">{esc(head)}</h2>'
+        f'<div class="facts reveal" data-stagger>{facts}</div>'
+        '</div></section>'
+    )
+
+
+_SELECTIONS_CACHE = None
+_SELECTIONS_LABEL = {
+    "fr": "Figure dans nos sélections", "en": "Featured in our selections",
+    "de": "In unseren Auswahlen",       "nl": "Opgenomen in onze selecties",
+    "es": "Aparece en nuestras selecciones", "it": "Presente nelle nostre selezioni",
+    "pl": "W naszych zestawieniach",    "pt": "Presente nas nossas seleções",
+    "cs": "V našich výběrech",          "ar": "يظهر ضمن مختاراتنا",
+    "he": "מופיע במבחרים שלנו",          "ja": "掲載セレクション",
+}
+
+
+def selections_chips(d, lang):
+    """HANDOFF-intentpages §5 upward links: chip row linking every intent page
+    this fiche is compiled into (registry membership, computed — never curated).
+    Rendered in every VISIBLE lang: the label above covers all 12, and the
+    per-entry guard below still drops any selection that does not ship in this
+    lang, so a fiche only ever links to a page that actually exists. The chip is
+    a plain internal link; partner blocks untouched."""
+    global _SELECTIONS_CACHE
+    if lang not in _SELECTIONS_LABEL:
+        return ""
+    if _SELECTIONS_CACHE is None:
+        import build_intent_hubs as _bih
+        membership, _ = _bih.compute_membership()
+        by_slug = {}
+        for e in membership.values():
+            if len(e["members"]) < 6:      # unbuilt pages (min_items law) — no links
+                continue
+            for s in e["members"]:
+                by_slug.setdefault(s, []).append(e)
+        _SELECTIONS_CACHE = (by_slug, _bih)
+    by_slug, _bih = _SELECTIONS_CACHE
+    entries = by_slug.get(d.get("slug") or "", [])
+    entries = [e for e in entries if e["title"].get(lang) and e["lead"].get(lang)]
+    if not entries:
+        return ""
+    chips = "".join(
+        f'<a class="chip-sel" href="{_bih.intent_page_url(e, lang)}">{esc(e["title"][lang])}</a>'
+        for e in sorted(entries, key=lambda e: e["id"]))
+    return (
+        '<section class="block"><div class="wrap">'
+        f'<div class="kicker reveal">{esc(_SELECTIONS_LABEL[lang])}</div>'
+        f'<div class="reveal" style="display:flex;flex-wrap:wrap;gap:8px">{chips}</div>'
+        '</div></section>'
+        '<style>.chip-sel{display:inline-block;background:var(--surface-2);'
+        'border:1px solid var(--line);border-radius:999px;padding:4px 14px;'
+        'font-size:13px;font-weight:600;color:var(--ink);text-decoration:none}'
+        '.chip-sel:hover{border-color:var(--accent);color:var(--accent)}</style>'
+    )
+
+
 def faq_block(faq):
     if not faq:
         return ""
@@ -1204,9 +1444,12 @@ def gallery_block(name, photos=None):
                 continue
             url = src if src.startswith(("http://", "https://", "/")) else f"/{src}"
             alt = p.get("alt") or name
+            credit = p.get("credit")
+            cred_html = (f'<span class="tile-credit">{esc(credit)}</span>'
+                         if credit else "")
             parts.append(
                 f'<div class="tile"><img src="{attr(url)}" alt="{attr(alt)}" '
-                'loading="lazy" width="600" height="600"></div>'
+                f'loading="lazy" width="600" height="600">{cred_html}</div>'
             )
         tiles = "".join(parts) if parts else placeholder * 6
     else:
@@ -1351,8 +1594,10 @@ def hero_block(d):
     )
 
 
-def action_bar(d):
-    """Sticky bottom action bar (Book / Directions / Official site) — locale-aware."""
+def action_bar(d, frozen=False):
+    """Sticky bottom action bar (Book / Directions / Official site / Share) —
+    locale-aware. `frozen` (protected partner page) drops the Share button so the
+    page stays byte-identical."""
     name = L("name", "")
     commune = d["commune"]
     is_free = d.get("schema_org", {}).get("is_free", False)
@@ -1386,10 +1631,51 @@ def action_bar(d):
             '<path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/>'
             f'</svg><span>{T("official_site")}</span></a>'
         )
+    # Share (PWA-share handoff): native share sheet where available, clipboard
+    # fallback otherwise — never a dead button. Dropped on byte-frozen partner
+    # pages. Each language shares its OWN canonical URL.
+    share = ""
+    if not frozen:
+        actions.append(
+            f'<button type="button" class="share-btn" onclick="shareLieu(this)" '
+            f'data-copied="{attr(T("link_copied"))}">'
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+            'stroke-linecap="round" stroke-linejoin="round">'
+            '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/>'
+            '<circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>'
+            '<line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>'
+            f'<span class="share-label">{T("share")}</span></button>'
+        )
+        share = (
+            # Inlined here (not in style.css) so protected partner pages — which
+            # never receive this block — stay byte-identical without an approval
+            # trailer. style.css is inlined per page, so editing it would touch
+            # every page including the frozen ones.
+            '<style>.action-bar .share-btn{flex:1;display:inline-flex;flex-direction:column;'
+            'align-items:center;justify-content:center;gap:.15rem;padding:.55rem .5rem;'
+            'border-radius:10px;background:var(--surface);border:1px solid var(--line);'
+            'color:var(--ink);font-size:.7rem;font-weight:600;line-height:1.2;text-align:center;'
+            'cursor:pointer;font-family:inherit}.action-bar .share-btn:hover{background:var(--accent);'
+            'color:var(--accent-ink);border-color:var(--accent);transform:translateY(-2px)}'
+            '.action-bar .share-btn svg{width:18px;height:18px;margin-bottom:.1rem}'
+            '.action-bar .share-btn[data-done]{background:var(--good);color:var(--accent-ink);'
+            'border-color:var(--good)}.action-bar .share-btn[data-done] .share-label{display:none}'
+            '.action-bar .share-btn[data-done]::after{content:attr(data-copied)}'
+            '@media (min-width:720px){.action-bar .share-btn{flex-direction:row;font-size:.8125rem;'
+            'padding:.7rem 1rem}.action-bar .share-btn svg{margin:0}}</style>'
+            '<script>function shareLieu(b){'
+            'var u=(document.querySelector(\'link[rel=canonical]\')||{}).href||location.href,'
+            't=document.title;'
+            'if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}'
+            'if(navigator.clipboard){navigator.clipboard.writeText(u).then(function(){'
+            'b.dataset.done="1";setTimeout(function(){delete b.dataset.done;},2000);'
+            '}).catch(function(){window.prompt(b.getAttribute("data-copied"),u);});}'
+            'else{window.prompt(b.getAttribute("data-copied"),u);}}</script>'
+        )
     return (
         '<div class="action-bar" id="actionBar"><div class="wrap">'
         + "".join(actions)
-        + '</div></div>'
+        + '</div></div>' + share
     )
 
 
@@ -1485,8 +1771,6 @@ def build_ldjson(d, desc_override=""):
     is_free = sch.get("is_free", False)
     place_type = sch.get("type") or "TouristAttraction"
     amenities = L("schema_amenities", None) or sch.get("amenities") or []
-    price = d.get("price_from")
-    booking_url = d.get("booking_url") or d.get("official_site_url") or ""
     faq = L("faq", []) or []
     in_lang = CHROME["in_lang"][_LANG]
     lang_prefix = f"/{_LANG}" if _LANG != "fr" else ""
@@ -1536,6 +1820,12 @@ def build_ldjson(d, desc_override=""):
         "publicAccess": bool(sch.get("public_access", True)),
         "image": "",
     }
+    # schema.org dateModified: ISO from the lastmod manifest. Byte-frozen partner
+    # pages are left untouched (keeps gate_protected_placements green).
+    if not _FROZEN:
+        _lm = _lastmod_iso(d)
+        if _lm:
+            place["dateModified"] = _lm
     if lat is not None and lon is not None:
         place["geo"] = {"@type": "GeoCoordinates", "latitude": lat, "longitude": lon}
     if amenities:
@@ -1543,13 +1833,12 @@ def build_ldjson(d, desc_override=""):
             {"@type": "LocationFeatureSpecification", "name": str(a), "value": True}
             for a in amenities
         ]
-    if not is_free and price is not None and price > 0:
-        place["offers"] = {
-            "@type": "Offer",
-            "price": price,
-            "priceCurrency": d.get("price_currency", "EUR"),
-            "url": booking_url or page_url,
-        }
+    # NO `offers` here (JOB 5). `offers` is not a schema.org property of Place —
+    # it belongs to Product/Service/Event. Nesting an Offer inside a Place node
+    # made Google reclassify these fiches into its product-snippets system, which
+    # is what surfaced as the "Extraits de produits" report in Search Console.
+    # The price stays where it belongs: visible in the facts table and the FAQ,
+    # with isAccessibleForFree as the machine-readable cost signal.
     graph.append(place)
 
     if faq:
@@ -2192,6 +2481,42 @@ def plages_voisines_block(d, lang):
             f'<div>{"".join(links)}</div></section>')
 
 
+def _lastmod_iso(d):
+    """ISO YYYY-MM-DD for this fiche from the manifest, or '' if absent."""
+    return _LASTMOD.get(d.get("slug"), "")
+
+
+def _lastmod_display(d):
+    """Visible stamp date `jj/mm/aa`, derived from the manifest; falls back to
+    the manual date_modified_human when the manifest has no entry."""
+    iso = _lastmod_iso(d)
+    if iso:
+        y, m, day = iso.split("-")
+        return f"{day}/{m}/{y[2:]}"
+    return d.get("date_modified_human", "")
+
+
+def _carries_protected_partner(d, lang, include_partners):
+    """True if this render will emit a protected partner domain, so the
+    byte-frozen path applies (keeps gate_protected_placements green with no
+    approval trailer). Primary signal: the page's output path is in the gate
+    manifest (ground truth — covers cross-fiche promo injections). Belt-and-
+    suspenders data heuristic for anything the manifest hasn't captured yet."""
+    slug = d.get("slug") or ""
+    relpath = f"{slug}.html" if lang == "fr" else f"{lang}/{slug}.html"
+    if relpath in _PROTECTED_PAGES:
+        return True
+    ev = EVENT_MODALS.get(slug)
+    if ev and any(dom in ev.get("url", "") for dom in _PROTECTED_PARTNER_DOMAINS):
+        return True
+    if include_partners:
+        blob = (json.dumps(d.get("featured_businesses") or [], ensure_ascii=False)
+                + json.dumps(d.get("partners") or [], ensure_ascii=False))
+        if any(dom in blob for dom in _PROTECTED_PARTNER_DOMAINS):
+            return True
+    return False
+
+
 def build_page(d, lang="fr", include_partners=True, fr_prose_fallback=True):
     """Render the full HTML for fiche `d` in `lang`. Returns html string.
     Fallback-field info (which keys fell back to FR) is exposed via
@@ -2202,9 +2527,10 @@ def build_page(d, lang="fr", include_partners=True, fr_prose_fallback=True):
     are commercial content under a byte-faithful snapshot contract that only
     covers the six live languages; a new language ships without them until
     that contract is explicitly extended."""
-    global LAST_FALLBACK_FIELDS, _STRICT_PROSE
+    global LAST_FALLBACK_FIELDS, _STRICT_PROSE, _FROZEN
     _set_lang(d, lang)
     _STRICT_PROSE = not fr_prose_fallback
+    _FROZEN = _carries_protected_partner(d, lang, include_partners)
     name = L("name", "")
 
     # HANDOFF-35: acces_pmr.detail is FR-authored CONTENT (not a frozen name).
@@ -2223,22 +2549,26 @@ def build_page(d, lang="fr", include_partners=True, fr_prose_fallback=True):
     out.append(hero_block(d))
     out.append(facts_block(L("facts", {}) or {}, first_source_url(d), ap_eff))
     out.append(essentiel_block(d, lang))
+    out.append(tarifs_block(d))
     body_dict = L("body", {}) if isinstance(L("body", {}), dict) else {}
     if not body_dict:
         body_dict = {"what_is": L_body("what_is", "")}
     out.append(body_block(name, body_dict))
     out.append(activities_block(L_body("activities", []) or []))
-    out.append(practical_block(L_body("practical_info", []) or [], name, d["commune"]))
+    out.append(practical_block(L_body("practical_info", []) or [], name, d["commune"],
+                               drop_tarif=bool(d.get("price_tiers"))))
     out.append(how_to_block(L_body("how_to_get_there", {}) or {}, name, d["commune"],
                             d.get("latitude"), d.get("longitude"), d["slug"],
                             d.get("google_place_id")))
     out.append(parking_block(d["slug"], (L("facts", {}) or {}).get("parking")))
     out.append(when_to_visit_block(L_body("when_to_visit", "") or "",
                                    L_body("events", "") or ""))
+    out.append(season_card(d))
     if include_partners:
         out.append(partners_block(d))
     out.append(gallery_block(name, d.get("gallery_photos")))
     out.append(faq_block(L("faq", []) or []))
+    out.append(selections_chips(d, lang))
     _related = related_lieux_block(d.get("related_lieux", []), lang)
     if _related:
         out.append(_related)
@@ -2250,9 +2580,9 @@ def build_page(d, lang="fr", include_partners=True, fr_prose_fallback=True):
         out.append(_carousel)
     out.append(build_footer_block(
         d.get("date_published_human", ""),
-        d.get("date_modified_human", "")
+        d.get("date_modified_human", "") if _FROZEN else _lastmod_display(d)
     ))
-    out.append(action_bar(d))
+    out.append(action_bar(d, frozen=_FROZEN))
     out.append(site_footer())
     out.append(event_modal_block(d))
     out.append(JS)

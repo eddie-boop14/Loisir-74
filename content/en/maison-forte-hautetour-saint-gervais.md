@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Saint-Gervais-les-Bains, Haute-Savoie (74170)
 - GPS: 45.892, 6.713
 - Category: chateau
-- Type: Maison forte XIIIe siècle, pôle culturel et art contemporain
+- Type: 13th-century fortified house, cultural and contemporary art centre
 
 ## Hours
 
-OUVERT TOUTE L'ANNÉE. HORS VACANCES : Mer-Dim 14h-18h, fermé lundi et mardi. SAISONS HAUTES (juillet-août + vacances de Noël + vacances de février) : tous les jours 14h-19h. Fermé 25 décembre et 1er janvier. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+OPEN ALL YEAR ROUND. OUTSIDE HOLIDAYS: Wed-Sun 2pm-6pm, closed Monday and Tuesday. PEAK SEASONS (July-August + Christmas holidays + February holidays): daily 2pm-7pm. Closed 25 December and 1 January. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -52,7 +52,7 @@ OUVERT TOUTE L'ANNÉE. HORS VACANCES : Mer-Dim 14h-18h, fermé lundi et mardi. S
 
 ## Parking
 
-Parking municipal gratuit à 2 min
+Free municipal parking 2 min away
 
 ## Transport
 
@@ -63,7 +63,7 @@ Parking municipal gratuit à 2 min
 
 ## Season
 
-Toute l'année · Carte d'hôte tarif réduit
+All year round · host card gives reduced rate
 
 ## Official source
 

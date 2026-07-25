@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Andilly, Haute-Savoie (74350)
 - GPS: 46.0667, 6.0717
 - Category: parc
-- Type: Parc à thème familial · 4 univers saisonniers
+- Type: Family theme park · 4 seasonal worlds
 
 ## Hours
 
-Les Grandes Médiévales : 23, 24, 25, 30, 31 mai 2026 · Grand Parc été : ouverture le 4 juillet 2026, jusqu'au 30 août — Mer/Jeu/Ven + week-ends 10h–18h (Lun/Mar fermé) · Hameau du Père Noël été : 04/07–30/08, Mer/Jeu/Ven + week-ends 10h–12h & 14h–18h · Grand Parc de Noël : 17/10/2026–03/01/2027 (fermé 25/12 et 01/01) · Hameau Pâques : 04/04–19/04/2026 tous les jours 14h–18h (10h–18h les 4–6 avril). Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications saisonnières.
+Les Grandes Médiévales: 23, 24, 25, 30, 31 May 2026 · Grand Parc summer: opens 4 July 2026, through to 30 August — Wed/Thu/Fri + weekends 10am–6pm (Mon/Tue closed) · Hameau du Père Noël summer: 04/07–30/08, Wed/Thu/Fri + weekends 10am–12pm & 2pm–6pm · Grand Parc de Noël: 17/10/2026–03/01/2027 (closed 25/12 and 01/01) · Easter Hameau: 04/04–19/04/2026 every day 2pm–6pm (10am–6pm on 4–6 April). Verified on the official website on 21 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -64,7 +64,7 @@ Les Grandes Médiévales : 23, 24, 25, 30, 31 mai 2026 · Grand Parc été : ouv
 
 ## Parking
 
-Gratuit sur place
+Free on site
 
 ## Transport
 
@@ -73,7 +73,7 @@ Gratuit sur place
 
 ## Season
 
-Juillet – août (été) · octobre – décembre (Noël)
+July – August (summer) · October – December (Christmas)
 
 ## Official source
 

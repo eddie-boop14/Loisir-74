@@ -16,11 +16,11 @@ google_place_id: "ChIJIwnvpyJNiUcR9sL0MUsClVQ"
 canonical_url: https://loisirs74.fr/en/lac-blanc
 language: en
 facet_json: https://loisirs74.fr/api/lieu/lac-blanc.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b4/Lac_Blanc.JPG
+photo_url: /img/lacs-plages/lac-blanc-hero.jpg
 photo_type: real
-photo_author: "Ermakae"
-photo_license: "CC0"
-photo_source: Wikimedia Commons
+photo_author: "Bénédicte"
+photo_license: null
+photo_source: null
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---

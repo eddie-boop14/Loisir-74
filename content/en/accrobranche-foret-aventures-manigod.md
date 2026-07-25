@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Manigod, Haute-Savoie (74230)
 - GPS: 45.8467, 6.3917
 - Category: accrobranche
-- Type: Parc accrobranche local Aravis
+- Type: Local Aravis treetop adventure park
 
 ## Hours
 
-Horaires du Forêt d'Aventures de Manigod : Mai-juin et septembre-octobre : week-ends + fériés 10h-18h - juillet-août : tous les jours 9h-19h. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of Forêt d'Aventures de Manigod: May-June and September-October: weekends + public holidays 10am-6pm - July-August: every day 9am-7pm. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Mai-octobre
+May-October
 
 ## Official source
 

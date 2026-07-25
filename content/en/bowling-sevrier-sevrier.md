@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Sevrier, Haute-Savoie (74320)
 - GPS: 45.8667, 6.15
 - Category: bowling
-- Type: Bowling - 10 pistes + restaurant
+- Type: Bowling - 10 lanes + restaurant
 
 ## Hours
 
-Horaires du Bowling International d'Annecy-Sevrier : Mar-jeu 16h-1h, ven-sam 16h-3h, dim 14h-23h. Lundi fermé. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of Bowling International d'Annecy-Sevrier: Tue-Thu 4pm-1am, Fri-Sat 4pm-3am, Sun 2pm-11pm. Closed Mondays. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -59,7 +59,7 @@ Gratuit sur site
 
 ## Season
 
-Toute l'année
+All year round
 
 ## Official source
 

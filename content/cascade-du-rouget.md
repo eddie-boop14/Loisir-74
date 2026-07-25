@@ -18,9 +18,9 @@ language: fr
 facet_json: https://loisirs74.fr/api/lieu/cascade-du-rouget.json
 photo_url: /img/cascades/cascade-du-rouget-hero.jpg
 photo_type: real
-photo_author: "Florian Pépellin"
-photo_license: "CC BY-SA 4.0"
-photo_source: Wikimedia Commons
+photo_author: "Bénédicte"
+photo_license: null
+photo_source: null
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---
@@ -59,6 +59,10 @@ Gratuit (parking Nant Sec)
 ## Saison
 
 Mai – juin (fonte des neiges, débit maximal) · Juillet – octobre (accès facile)
+- Fenêtre d'accès hiver: Accès partiel — État en temps réel : inforoute74.fr
+- Infrastructure hiver: Raquettes
+- Panorama enneigé: Non renseigné
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

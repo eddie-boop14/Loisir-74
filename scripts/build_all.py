@@ -72,6 +72,42 @@ def rebuild_catalog_index():
     print(out.stdout.strip() or "(catalog rebuilt)")
 
 
+def rebuild_security_txt():
+    """RFC 9116 security.txt. Expires is computed at build time, never typed —
+    a hardcoded date is valid the day it is written and invalid forever after."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "build_security_txt.py")],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("build_security_txt failed")
+    print(out.stdout.strip() or "(security.txt regenerated)")
+
+
+def rebuild_project_state():
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "build_project_state.py")],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("build_project_state failed")
+    print(out.stdout.strip() or "(PROJECT-STATE regenerated)")
+
+
+def tarif_completeness_gate():
+    """Station facts.tarif must cover the full published roster (no 8-vs-12 gap)."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "gate_tarif_completeness.py")],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    print((out.stdout or "").strip() or (out.stderr or "").strip())
+    if out.returncode != 0:
+        print(out.stderr, file=sys.stderr)
+        raise RuntimeError("tarif completeness gate failed")
+
+
 def rebuild_ai_content():
     """Regenerate the AI content layer (content/<slug>.md ×392 + llms.txt +
     llms-full.txt) from JSON truth, so the advertised /content/<slug>.md URLs
@@ -192,6 +228,31 @@ def rebuild_fulltree_langs():
 # fact_rows, CSS) — it is no longer invoked as a build step.
 
 
+def rebuild_facet_hub_pages():
+    """HANDOFF-facet-hubs: render the 5 HTML facet hubs (FR+PROSE) + 8 md mirrors.
+    Runs BEFORE normalize_head_links so fix_hreflang_sitemap folds the new pages
+    into canonical/hreflang/sitemap."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "build_facet_hubs.py"), "--pages"],
+        cwd=str(ROOT), capture_output=True, text=True)
+    print(out.stdout.strip())
+    if out.returncode != 0:
+        print(out.stderr, file=sys.stderr)
+        raise RuntimeError("build_facet_hubs --pages failed")
+
+
+def rebuild_facet_hub_links():
+    """Inject the facet-hub 0-orphan nav into each locale homepage — AFTER
+    normalize_lang_nav so a later homepage rewrite can't strip the block."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "build_facet_hubs.py"), "--links"],
+        cwd=str(ROOT), capture_output=True, text=True)
+    print(out.stdout.strip())
+    if out.returncode != 0:
+        print(out.stderr, file=sys.stderr)
+        raise RuntimeError("build_facet_hubs --links failed")
+
+
 def rebuild_intent_hubs():
     """Render registry-driven intent-hub pages (data/intent-hubs.json) FR + 5
     locales and link each from its category hub. Runs after hubs/communes (so
@@ -205,6 +266,19 @@ def rebuild_intent_hubs():
         print(out.stdout); print(out.stderr, file=sys.stderr)
         raise RuntimeError("build_intent_hubs failed")
     print(out.stdout.strip() or "(intent hubs rebuilt)")
+
+
+def inject_home_selections():
+    """FIX D: late homepage 'Nos sélections' strip (after facet-hub links so it
+    is not stripped by a later homepage rewrite)."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "build_intent_hubs.py"), "--home-selections"],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("inject_home_selections failed")
+    print(out.stdout.strip() or "(home selections injected)")
 
 
 def status_gate():
@@ -421,19 +495,33 @@ def main():
 
     run("status gate (state machine)", status_gate)
     run("hygiene gate (Tier 1/2 scan)", hygiene_gate)
+    run("tarif roster-completeness gate", tarif_completeness_gate)
     run("render fiche pages", render_all_fiches)
     run("rebuild catalog index", rebuild_catalog_index)
     run("regenerate hubs + homepage nav", rebuild_hubs)
     run("render commune pages + reciprocal backlinks", rebuild_communes)
+    run(f"render facts-first full trees (published facts langs: {', '.join(locales.FACTS_PUBLISHED)})",
+        rebuild_fulltree_langs)
+    # Intent hubs render AFTER the facts-first trees: build_fulltree_lang
+    # clean-slates each facts-lang subtree (shutil.rmtree), so intent pages
+    # written into /pl/ /ar/ … must come afterwards or they'd be wiped. Running
+    # last also lets the que-faire-index + category-hub link injection target
+    # the freshly built localized hubs.
     run("render intent hubs (registry-driven)", rebuild_intent_hubs)
-    run("render facts-first full trees (published facts langs: pl)", rebuild_fulltree_langs)
     run("placement gate vs baseline", placement_gate)
     run("card-diff gate vs snapshot", card_diff_gate)
     run("reachability gate (strict)", reachability_gate)
     run("regenerate AI content layer (content/*.md + llms)", rebuild_ai_content)
+    run("render facet hubs + mirrors (HANDOFF-facet-hubs)", rebuild_facet_hub_pages)
     run("normalize head links (canonical + hreflang + md-alt)", normalize_head_links)
     run("normalize language nav (picker + footer read the visible roster)", normalize_lang_nav)
+    run("inject facet-hub homepage links (0-orphan, after lang-nav)", rebuild_facet_hub_links)
+    run("inject intent 'Nos sélections' homepage strip (FIX D, after facet links)",
+        inject_home_selections)
     run("cache-bust runtime /scripts/ includes (content-hash ?v=)", version_runtime_assets)
+    run("emit .well-known/security.txt (RFC 9116 — Expires must never lapse)",
+        rebuild_security_txt)
+    run("regenerate PROJECT-STATE.md (JOB 8 — derived, never authored)", rebuild_project_state)
     if not args.no_site:
         run("build _site/", lambda: subprocess.check_call(
             [sys.executable, str(SCRIPTS / "build_site.py")], cwd=str(ROOT)))

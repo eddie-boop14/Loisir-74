@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Thonon-les-Bains, Haute-Savoie (74200)
 - GPS: 46.3692, 6.4742
 - Category: plage
-- Type: Plage 3 ha + bassin olympique 50 m + Pavillon Bleu
+- Type: 3-hectare beach + 50 m Olympic pool + Blue Flag
 
 ## Hours
 
-Horaires de la Plage Municipale de Thonon-les-Bains : Du 02/05 au 21/06/2026 : 9h30-19h. Du 22/06 au 30/08/2026 : 9h30-20h. Du 31/08 au 13/09/2026 : 9h30-19h. Source : ville-thonon.fr.. Vérifié sur le site officiel le 24 mai 2026 — sous réserve d'arrêté municipal 2026.
+Hours of the Plage Municipale de Thonon-les-Bains: From 02/05 to 21/06/2026: 9:30am-7pm. From 22/06 to 30/08/2026: 9:30am-8pm. From 31/08 to 13/09/2026: 9:30am-7pm. Source: ville-thonon.fr.. Verified on the official website on 24 May 2026 — subject to the 2026 municipal order.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Selon plage - voir détails
+Depends on the beach - see details
 
 ## Transport
 
@@ -59,7 +59,7 @@ Selon plage - voir détails
 
 ## Season
 
-Juillet - août (surveillance MNS)
+July - August (lifeguard supervision)
 
 ## Official source
 

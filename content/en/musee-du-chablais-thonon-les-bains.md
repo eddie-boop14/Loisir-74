@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Thonon-les-Bains, Haute-Savoie (74200)
 - GPS: 46.37365, 6.47832
 - Category: musee
-- Type: Musée d'histoire régionale dans château XVIIe siècle
+- Type: Regional history museum in a 17th-century château
 
 ## Hours
 
-Saison ouverte le 23 mai 2026. 23 mai - 30 juin 2026 : Mercredi-Vendredi + week-ends 14h30-18h. 1er juillet - 31 août 2026 : tous les jours 10h-12h30 et 14h30-18h. 1er septembre - 15 novembre 2026 : Mercredi-Vendredi + week-ends 14h30-18h. Fermeture annuelle mi-novembre à fin avril. Fermé Lun-Mar hors saison, 1er mai. Vérifié sur le site officiel le 23 mai 2026 — sous réserve de modifications saisonnières.
+Season opens 23 May 2026. 23 May - 30 June 2026: Wednesday-Friday + weekends 2:30pm-6pm. 1 July - 31 August 2026: daily 10am-12:30pm and 2:30pm-6pm. 1 September - 15 November 2026: Wednesday-Friday + weekends 2:30pm-6pm. Annual closure mid-November to end of April. Closed Mon-Tue outside season, 1 May. Verified on the official website 23 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -54,7 +54,7 @@ Saison ouverte le 23 mai 2026. 23 mai - 30 juin 2026 : Mercredi-Vendredi + week-
 
 ## Parking
 
-Place du Château et Place de l'Hôtel-de-Ville à 100 m
+Place du Château and Place de l'Hôtel-de-Ville, 100 m away
 
 ## Transport
 
@@ -65,7 +65,7 @@ Place du Château et Place de l'Hôtel-de-Ville à 100 m
 
 ## Season
 
-Mi-mai à mi-novembre · juillet-août quotidien
+Mid-May to mid-November · daily in July-August
 
 ## Official source
 

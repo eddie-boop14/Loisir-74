@@ -47,8 +47,8 @@ COPY_DIRS = [
 # every local hero 404s live.
 HUB_DIRS = [
     "cascades", "chateaux", "musees", "points-de-vue", "sentiers",
-    "telecabines", "voies-vertes", "lacs-plages", "bases-de-loisirs",
-    "baignade-nautisme", "parcs-jardins", "que-faire",
+    "telecabines", "stations-de-ski", "voies-vertes", "lacs-plages",
+    "bases-de-loisirs", "baignade-nautisme", "parcs-jardins", "que-faire",
     "sensations-plein-air", "sorties-detente", "sport-jeux",
     "img",
 ]
@@ -86,6 +86,7 @@ DENY = {
     "report.csv", "email_queue.csv",
     "translations",                  # JOB 7 translation payloads (intermediate)
     "incoming-generics",             # staging folder for user-sourced générique pics
+    "incoming-benedicte",            # Bénédicte originals + sources/ — never public
     # JOB 11: Studio is dev-only. Lives in repo, never deployed.
     "studio.html",
     "studio-consts.js",

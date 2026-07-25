@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Thonon-les-Bains, Haute-Savoie (74200)
 - GPS: 46.378, 6.489
 - Category: chateau
-- Type: Château médiéval + chartreuse + restauration 1900
+- Type: Medieval château + charterhouse + 1900 restoration
 
 ## Hours
 
-SAISON 2026 : 1er AVRIL AU 2 NOVEMBRE + Noël (22 déc 2025 - 4 janv 2026) + vacances scolaires zone A. Avril-juin et sept-oct : Mer-Dim 14h-17h30. Juillet-août : tous les jours 11h-17h30. Fermé lundi et mardi hors saison. Dernière entrée 1h avant fermeture. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+2026 SEASON: 1 APRIL TO 2 NOVEMBER + Christmas (22 Dec 2025 - 4 Jan 2026) + school holidays zone A. April-June and Sept-Oct: Wed-Sun 2pm-5:30pm. July-August: every day 11am-5:30pm. Closed Mondays and Tuesdays outside season. Last entry 1 hour before closing. Checked on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -54,7 +54,7 @@ Not specified
 
 ## Parking
 
-Gratuit à l'entrée du domaine
+Free at the entrance to the estate
 
 ## Transport
 
@@ -64,7 +64,7 @@ Gratuit à l'entrée du domaine
 
 ## Season
 
-1er avril - 2 novembre 2026
+1 April - 2 November 2026
 
 ## Official source
 

@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Veyrier-du-Lac, Haute-Savoie (74290)
 - GPS: 45.8975, 6.1664
 - Category: plage
-- Type: Plage pelouse 7 000 m² + bancs de sable - Pavillon Bleu
+- Type: Lawn beach, 7,000 m² + sandy banks - Blue Flag
 
 ## Hours
 
-Horaires de la Plage de La Brune : Surveillance MNS Annecy Sauvetage du 1er juillet au 31 août 2026, 11h-19h tous les jours. Hors saison : accès libre non surveillé.. Vérifié sur le site officiel le 24 mai 2026 — sous réserve d'arrêté municipal 2026.
+Opening hours at Plage de La Brune: Annecy Sauvetage lifeguard supervision from 1 July to 31 August 2026, 11am-7pm every day. Off-season: free access, unsupervised.. Verified on the official site on 24 May 2026 — subject to 2026 municipal order.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires de la Plage de La Brune : Surveillance MNS Annecy Sauvetage du 1er juil
 
 ## Parking
 
-Selon plage - voir détails
+Depends on the beach - see details
 
 ## Transport
 
@@ -60,7 +60,7 @@ Selon plage - voir détails
 
 ## Season
 
-Juillet - août (surveillance MNS)
+July - August (lifeguard supervision)
 
 ## Official source
 

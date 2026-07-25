@@ -1,3 +1,11 @@
+# ⚑ DO NOT NARROW THIS GROUP. It is load-bearing for AI citation.
+#
+# OAI-SearchBot and ChatGPT-User (the bots that cite for ChatGPT), plus
+# Claude-Web, anthropic-ai, PerplexityBot-User and Applebot-Extended, have NO
+# dedicated group in this file — they are allowed by this line alone.
+# robots-ai.txt lists them, but major crawlers do not read that file.
+# Narrowing "*" would silently cut them off the citation curve.
+# Any edit here is curve-adjacent: re-check every citation bot before changing it.
 User-agent: *
 Allow: /
 
@@ -18,8 +26,16 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+# GPTBot = OpenAI training crawler (NOT the citation path; that is
+# OAI-SearchBot / ChatGPT-User, which fall under "User-agent: *" above and
+# stay fully allowed). Deny training on the raw markdown + json mirrors;
+# HTML pages remain open so citation is unaffected.
+# Trailing slashes are load-bearing: robots.txt matching is prefix-based, so
+# bare /content would also match a future /content-hub/ HTML page.
 User-agent: GPTBot
 Allow: /
+Disallow: /content/
+Disallow: /api/
 
 User-agent: PerplexityBot
 Allow: /

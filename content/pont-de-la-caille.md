@@ -18,7 +18,7 @@ language: fr
 facet_json: https://loisirs74.fr/api/lieu/pont-de-la-caille.json
 photo_url: /img/points-de-vue/pont-de-la-caille-hero.jpg
 photo_type: real
-photo_author: null
+photo_author: "Bénédicte"
 photo_license: null
 photo_source: null
 last_updated: 2026-04-23
@@ -60,6 +60,10 @@ Gratuit, de chaque côté
 ## Saison
 
 Toute l'année
+- Fenêtre d'accès hiver: Ouvert (accès déneigé)
+- Infrastructure hiver: Non renseigné
+- Panorama enneigé: Panorama alpin
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

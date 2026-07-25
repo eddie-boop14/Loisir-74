@@ -32,7 +32,7 @@ source: loisirs74.fr
 - Commune: Viuz-en-Sallaz, Haute-Savoie (74250)
 - GPS: 46.144, 6.40972
 - Category: musee
-- Type: Écomusée associatif, label écomusée 2003, 8 sites
+- Type: Community-run open-air museum, écomusée label since 2003, 8 sites
 
 ## Hours
 
@@ -54,7 +54,7 @@ Lundi-Vendredi 10h-12h30 et 13h30-17h. Juillet-août : Lundi-Vendredi 10h-18h. F
 
 ## Parking
 
-Gratuit sur place au 628 av. de Savoie
+Free on site at 628 av. de Savoie
 
 ## Transport
 
@@ -65,7 +65,7 @@ Gratuit sur place au 628 av. de Savoie
 
 ## Season
 
-Toute l'année Lun-Ven, juillet-août fermeture à 18h
+Year-round Mon-Fri, closes at 6pm in July-August
 
 ## Official source
 

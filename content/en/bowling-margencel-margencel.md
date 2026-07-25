@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Margencel, Haute-Savoie (74200)
 - GPS: 46.34491, 6.421298
 - Category: bowling
-- Type: Bowling 20 pistes + restaurant
+- Type: 20-lane bowling + restaurant
 
 ## Hours
 
-Horaires du Bowling de Margencel : Lun-jeu 16h-1h, ven-sam 14h-3h, dim 14h-23h. Vacances ouverture 12h. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of Bowling de Margencel: Mon-Thu 4pm-1am, Fri-Sat 2pm-3am, Sun 2pm-11pm. Opens at noon during school holidays. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Toute l'année
+All year round
 
 ## Official source
 

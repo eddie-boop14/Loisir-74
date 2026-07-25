@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Viuz-en-Sallaz, Haute-Savoie (74250)
 - GPS: 46.146, 6.41
 - Category: musee
-- Type: Médiathèque-conservatoire patrimoine alpin, association Paysalp
+- Type: Alpine heritage media library-conservatory, Paysalp association
 
 ## Hours
 
-Lundi à Vendredi 9h-12h30 et 13h30-17h. Mercredi après-midi 13h30-17h. 1er samedi du mois 9h30-17h (ouverture spéciale grand public). Fermé Dimanche et jours fériés. Vérifié sur le site officiel le 23 mai 2026 — sous réserve de modifications saisonnières.
+Monday to Friday 9am-12.30pm and 1.30pm-5pm. Wednesday afternoon 1.30pm-5pm. First Saturday of the month 9.30am-5pm (special opening to the general public). Closed Sunday and public holidays. Verified on the official website on 23 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Parking par l'arrière du bâtiment côté MJC
+Parking at the rear of the building, MJC side
 
 ## Transport
 
@@ -59,7 +59,7 @@ Parking par l'arrière du bâtiment côté MJC
 
 ## Season
 
-Toute l'année Lun-Ven 9h-17h
+All year round, Mon-Fri 9am-5pm
 
 ## Official source
 

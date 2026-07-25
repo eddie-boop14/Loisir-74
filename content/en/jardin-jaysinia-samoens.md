@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Samoëns, Haute-Savoie (74340)
 - GPS: 46.0833, 6.7281
 - Category: jardin
-- Type: Jardin remarquable - direction scientifique MNHN
+- Type: Jardin Remarquable - MNHN scientific direction
 
 ## Hours
 
-Horaires du Jardin botanique alpin La Jaÿsinia : Mai-septembre : tous les jours 10h-19h. Septembre-octobre : 10h-17h. Fermé 15 décembre-15 avril. Fermé en cas de neige/gel/vent/orage. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of the Jardin botanique alpin La Jaÿsinia: May-September: every day 10am-7pm. September-October: 10am-5pm. Closed 15 December-15 April. Closed in case of snow/frost/wind/storm. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Free
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit sur site
 
 ## Season
 
-1er mai - 15 septembre (10h-19h), 16 septembre - 31 octobre (10h-17h)
+1 May - 15 September (10am-7pm), 16 September - 31 October (10am-5pm)
 
 ## Official source
 

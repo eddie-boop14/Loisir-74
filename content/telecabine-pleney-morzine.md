@@ -16,8 +16,8 @@ google_place_id: "ChIJo4ETFscdjEcR7ythfrr5kRo"
 canonical_url: https://loisirs74.fr/telecabine-pleney-morzine
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/telecabine-pleney-morzine.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg
-photo_type: real
+photo_url: /img/generique/generique-telecabine.jpg
+photo_type: generic
 photo_author: null
 photo_license: null
 photo_source: null
@@ -66,6 +66,10 @@ Parkings du village de Morzine
 ## Saison
 
 Juillet – août (été) · Décembre – avril (hiver)
+- Fenêtre d'accès hiver: Ouvert (accès déneigé)
+- Infrastructure hiver: Luge
+- Panorama enneigé: Non renseigné
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

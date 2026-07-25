@@ -16,11 +16,11 @@ google_place_id: "ChIJsSyIJW1CjEcRoxOg9L5XujQ"
 canonical_url: https://loisirs74.fr/en/plage-de-messery
 language: en
 facet_json: https://loisirs74.fr/api/lieu/plage-de-messery.json
-photo_url: /img/generique/generique-plage-lac-7.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/lacs-plages/plage-de-messery-hero.jpg
+photo_type: real
+photo_author: "Vesperal.vertigo"
+photo_license: "CC0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-24
 source: loisirs74.fr
 ---
@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Messery, Haute-Savoie (74140)
 - GPS: 46.351, 6.293
 - Category: plage
-- Type: Plage gazonnée 400 m - presqu'île face à Nyon
+- Type: Grassy beach 400 m - peninsula facing Nyon
 
 ## Hours
 
-Horaires de la Plage de Messery : Accès libre. Baignade NON surveillée (pas de MNS). Hors saison : accès libre.. Vérifié sur le site officiel le 24 mai 2026 — sous réserve d'arrêté municipal 2026.
+Opening hours of Plage de Messery: Free access. Bathing is NOT supervised (no lifeguards). Off-season: free access.. Verified on the official website on 24 May 2026 — subject to municipal decree 2026.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Selon plage - voir détails
+Depends on the beach - see details
 
 ## Transport
 
@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Juillet - août (surveillance MNS)
+July - August (lifeguard supervision)
 
 ## Official source
 

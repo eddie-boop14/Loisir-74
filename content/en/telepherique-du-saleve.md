@@ -16,9 +16,9 @@ google_place_id: "ChIJm3ChWGNwjEcR_x5sMBEMG3s"
 canonical_url: https://loisirs74.fr/en/telepherique-du-saleve
 language: en
 facet_json: https://loisirs74.fr/api/lieu/telepherique-du-saleve.json
-photo_url: /img/generique/generique-point-de-vue.jpg
-photo_type: generic
-photo_author: null
+photo_url: /img/points-de-vue/telepherique-du-saleve-hero.jpg
+photo_type: real
+photo_author: "Bénédicte"
 photo_license: null
 photo_source: null
 last_updated: 2026-06-08
@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Été 01/04–01/11/2026 : Dim-Lun-Mar-Mer 9h00–18h45 (dernière montée 18h30) · Jeu-Ven-Sam 9h00–22h45 (nocturnes). Hiver 17/01–31/03/2026 : Mer/Ven/Sam/Dim 9h00–16h45. Fermeture quinquennale 3/11/2025–16/01/2026 (terminée). Vérifié sur le site officiel le 21 mai 2026 — sous réserve météo.
+Summer 01/04–01/11/2026: Sun-Mon-Tue-Wed 9:00am–6:45pm (last ascent 6:30pm) · Thu-Fri-Sat 9:00am–10:45pm (late nights). Winter 17/01–31/03/2026: Wed/Fri/Sat/Sun 9:00am–4:45pm. Five-yearly closure 3/11/2025–16/01/2026 (completed). Verified on the official website on 21 May 2026 — subject to weather.
 
 ## Prices
 
@@ -74,6 +74,10 @@ Gratuit (gare de départ)
 ## Season
 
 Mai – octobre · soirées Jeu/Ven/Sam toute l'année
+- Winter access window: Not specified
+- Winter infrastructure: Not specified
+- Snow panorama: Clear Mont-Blanc view
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

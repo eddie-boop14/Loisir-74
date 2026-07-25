@@ -16,9 +16,9 @@ google_place_id: "ChIJ_dk2-c6Si0cR9B85G6WIxJ8"
 canonical_url: https://loisirs74.fr/ecomusee-bois-foret-thones
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/ecomusee-bois-foret-thones.json
-photo_url: /img/generique/generique-musee.jpg
-photo_type: generic
-photo_author: null
+photo_url: /img/musees/ecomusee-bois-foret-thones-hero.jpg
+photo_type: real
+photo_author: "Bénédicte"
 photo_license: null
 photo_source: null
 last_updated: 2026-06-06

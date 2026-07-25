@@ -135,6 +135,10 @@ jobs:
         # after build_all so the hub pages have been rendered
         run: python3 scripts/gate_intent_hubs.py
 
+      - name: Intent-nav gate (outbound nav + breadcrumb + placement, all locales)
+        # after build_all so the intent pages + hub injections are rendered
+        run: python3 scripts/gate_intent_nav.py
+
       - name: Baignade-cluster gate (L'essentiel + Plages voisines mesh)
         run: python3 scripts/gate_baignade_cluster.py
 
@@ -150,6 +154,26 @@ jobs:
         # zero fabrication vs Json/ truth. Seeded-defect proof runs in the
         # offline test block above.
         run: python3 scripts/gate_facet_layer.py
+
+      - name: Facet-hubs gate (HANDOFF-facet-hubs — inverted facet layer)
+        # Derived membership (api non-null / is_free true, published only),
+        # displayed values byte-equal the source projection, info-framed titles,
+        # honest md-mirror counts. Pairs with the protected/canonical/byte-stable
+        # steps below.
+        run: python3 scripts/gate_facet_hubs.py
+
+      - name: Access-cost model gate (one derived state per fiche; no string is_free)
+        # HANDOFF-consolidation §2: cost is a single build-derived state
+        # {free|free_seasonal|paid}. Fails on a string-typed is_free (the bug that
+        # rendered 31 paid stations "Free"), an invalid/absent state, a
+        # free_seasonal outside {plage,lac}, or emitted-vs-source drift.
+        run: python3 scripts/gate_access_cost.py
+
+      - name: Winter-schema gate (HANDOFF-winter)
+        # ## Saison winter bullets only on WINTER_NODES; controlled vocab only
+        # (no typos/inference); no subjective snow ratings; equipment line =
+        # verified Loi Montagne II constant; Mont-Blanc / Loi Montagne II frozen.
+        run: python3 scripts/gate_winter_schema.py
 
       - name: Protected-placements byte-guard (HANDOFF-39A-B, EVERY run)
         # sha256 of every partner-carrying page vs the committed manifest
@@ -209,6 +233,30 @@ jobs:
         # builder is an explicit `# isolation-ok:` decision (picker/hreflang/deploy)
         # — so a careless render loop over a facts lang can't merge.
         run: python3 scripts/gate_render_mode_isolation.py
+
+      - name: i18n FR-leak ratchet (no new FR-scaffold in a non-FR lang)
+        # Read-only. A non-FR field byte-identical to i18n.fr (canonical JSON, >60
+        # chars) is an untranslated French scaffold served to that language and to
+        # Google. The known May-import backlog is baselined (reports/i18n-leak-
+        # baseline.json) and only WARNs; ANY leak outside the baseline FAILS the
+        # build. The baseline can only shrink (--tighten after each batch) — so the
+        # door the May import walked through stays shut.
+        run: python3 scripts/gate_i18n_leak.py
+
+      - name: Tarif roster-completeness gate (station facts.tarif in ALL published langs)
+        # The "8 vs 12" lesson: a hardcoded LANGS literal drifted from the roster,
+        # leaving pl/ja/ar/he (both RTL, both submitted to Bing) empty in
+        # facts.tarif while CI stayed green. This fails the build if any published
+        # station carries the tarif prose in some published langs but not all.
+        run: python3 scripts/gate_tarif_completeness.py
+
+      - name: Lastmod honesty gate (real per-lieu dates, no uniform-stamp anti-pattern)
+        # Read-only. data/lastmod.json is derived from git content-commit dates
+        # (corpus-wide sweeps excluded) by scripts/derive_lastmod.py and committed
+        # so renders are deterministic. This asserts ≥15 distinct dates and that no
+        # single date covers >40% of the manifest OR of sitemap.xml — the tripwire
+        # against the 4,434-URL uniform stamp this engine replaced.
+        run: python3 scripts/derive_lastmod.py --verify
 
       - name: Render-verified gate (every +render-ai language has a clean Layer A + B report)
         # Read-only + lightweight: validates reports/render-verify-<lang>.json

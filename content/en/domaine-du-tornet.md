@@ -18,9 +18,9 @@ language: en
 facet_json: https://loisirs74.fr/api/lieu/domaine-du-tornet.json
 photo_url: https://upload.wikimedia.org/wikipedia/commons/7/7f/Lac_de_la_Balme-de-Sillingy_%2851056207507%29.jpg
 photo_type: real
-photo_author: null
-photo_license: null
-photo_source: null
+photo_author: "Guilhem Vellut from Annecy, France"
+photo_license: "CC BY 2.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---
@@ -32,7 +32,7 @@ source: loisirs74.fr
 - Commune: La Balme-de-Sillingy, Haute-Savoie (74330)
 - GPS: 45.970952, 6.032109
 - Category: domaine
-- Type: Domaine de loisirs public
+- Type: Public leisure estate
 
 ## Hours
 
@@ -49,7 +49,7 @@ Not specified
 
 ## Parking
 
-Gratuit (bornes VE + parking autocar)
+Free (EV charging points + coach parking)
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit (bornes VE + parking autocar)
 
 ## Season
 
-Fin mars – mi-avril (cerisiers) · Mai – septembre
+Late March – mid-April (cherry blossoms) · May – September
 
 ## Official source
 

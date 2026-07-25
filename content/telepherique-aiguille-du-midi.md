@@ -16,9 +16,9 @@ google_place_id: "ChIJSbIVSHBOiUcR_tFiv4DRYzI"
 canonical_url: https://loisirs74.fr/telepherique-aiguille-du-midi
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/telepherique-aiguille-du-midi.json
-photo_url: /img/generique/generique-point-de-vue.jpg
-photo_type: generic
-photo_author: null
+photo_url: /img/points-de-vue/telepherique-aiguille-du-midi-hero.jpg
+photo_type: real
+photo_author: "Bénédicte"
 photo_license: null
 photo_source: null
 last_updated: 2026-05-21
@@ -71,6 +71,10 @@ Payant (Grépon, Aiguille du Midi)
 ## Saison
 
 Juin – septembre (été) · décembre – mars (ski)
+- Fenêtre d'accès hiver: Ouvert (accès déneigé)
+- Infrastructure hiver: Non renseigné
+- Panorama enneigé: Vue Mont-Blanc dégagée
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

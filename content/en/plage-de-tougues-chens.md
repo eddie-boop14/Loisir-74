@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Chens-sur-Léman, Haute-Savoie (74140)
 - GPS: 46.323, 6.26
 - Category: plage
-- Type: Plage pelouse + galets ombragée - zone barbecue
+- Type: Shaded lawn + pebble beach - barbecue area
 
 ## Hours
 
-Horaires de la Plage de Tougues : Accès libre. Surveillance MNS à confirmer auprès de la mairie de Chens-sur-Léman (sources contradictoires). Hors saison : accès libre non surveillé.. Vérifié sur le site officiel le 24 mai 2026 — sous réserve d'arrêté municipal 2026.
+Hours of the Plage de Tougues: free access. Lifeguard supervision to be confirmed with the Chens-sur-Léman town hall (contradictory sources). Off-season: free unsupervised access. Verified on the official website on 24 May 2026 — subject to the 2026 municipal order.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Selon plage - voir détails
+Depends on the beach - see details
 
 ## Transport
 
@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Juillet - août (surveillance MNS)
+July - August (lifeguard supervision)
 
 ## Official source
 

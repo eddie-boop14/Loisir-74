@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Annecy, Haute-Savoie (74000)
 - GPS: 45.8975, 6.1261
 - Category: musee
-- Type: Musée d'histoire, art alpin et nature, Monument Historique
+- Type: History museum, alpine art and nature, listed Historic Monument
 
 ## Hours
 
-Jusqu'au 31 mai 2026 : 10h-12h30 et 14h-17h30, fermé mardi. 1er juin – 30 septembre 2026 : 10h30-18h continu, fermé mardi. 1er octobre – 31 décembre 2026 : 10h-12h30 et 14h-17h30, fermé mardi et jours fériés. Dernière entrée 45 min avant fermeture. Fermé 1er janv, lundi Pâques, Ascension, 1er et 8 mai, 1er et 11 nov, 25 déc. Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications saisonnières.
+Until 31 May 2026: 10am-12:30pm and 2pm-5:30pm, closed Tuesday. 1 June – 30 September 2026: 10:30am-6pm continuous, closed Tuesday. 1 October – 31 December 2026: 10am-12:30pm and 2pm-5:30pm, closed Tuesday and public holidays. Last entry 45 min before closing. Closed 1 Jan, Easter Monday, Ascension Day, 1 and 8 May, 1 and 11 Nov, 25 Dec. Verified on the official website 21 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -57,7 +57,7 @@ Not specified
 
 ## Parking
 
-Parking Hôtel-de-Ville (420 places, payant) à 6 min à pied
+Hôtel-de-Ville car park (420 spaces, paid) 6 min on foot
 
 ## Transport
 
@@ -68,7 +68,7 @@ Parking Hôtel-de-Ville (420 places, payant) à 6 min à pied
 
 ## Season
 
-Toute l'année · juin-sept ouverture continue 10h30-18h
+Year-round · June-Sept continuous opening 10:30am-6pm
 
 ## Official source
 

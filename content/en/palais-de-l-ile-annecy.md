@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Annecy, Haute-Savoie (74000)
 - GPS: 45.89858, 6.12683
 - Category: musee
-- Type: Monument Historique 1900, CIAP, musée d'architecture
+- Type: Historic Monument since 1900, CIAP, architecture museum
 
 ## Hours
 
-Jusqu'au 31 mai 2026 : 10h-12h30 et 14h-17h30, fermé mardi. 1er juin – 30 septembre 2026 : 10h30-18h continu, fermé mardi. 1er octobre – 31 décembre 2026 : 10h-12h30 et 14h-17h30, fermé mardi. Fermé 1er janv, lundi Pâques, 1er et 8 mai, Ascension, 1er et 11 nov, 24-25 déc. Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications saisonnières.
+Until 31 May 2026: 10am-12:30pm and 2pm-5:30pm, closed Tuesday. 1 June – 30 September 2026: 10:30am-6pm continuous, closed Tuesday. 1 October – 31 December 2026: 10am-12:30pm and 2pm-5:30pm, closed Tuesday. Closed 1 Jan, Easter Monday, 1 and 8 May, Ascension Day, 1 and 11 Nov, 24-25 Dec. Verified on the official website 21 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -59,7 +59,7 @@ Not specified
 
 ## Parking
 
-Parking Hôtel-de-Ville (420 places, payant) à 3 min à pied
+Hôtel-de-Ville car park (420 spaces, paid) 3 min on foot
 
 ## Transport
 
@@ -70,7 +70,7 @@ Parking Hôtel-de-Ville (420 places, payant) à 3 min à pied
 
 ## Season
 
-Toute l'année · juin-sept ouverture continue 10h30-18h
+Year-round · June-Sept continuous opening 10:30am-6pm
 
 ## Official source
 

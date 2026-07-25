@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Annecy, Haute-Savoie (74000)
 - GPS: 45.9056, 6.1467
 - Category: casino
-- Type: Casino jeux + hôtel 5* + restaurant
+- Type: Casino + 5-star hotel + restaurant
 
 ## Hours
 
-Horaires du Casino Impérial Palace Annecy : Salle des machines à sous : 10h-3h tous les jours. Salle des jeux de table : 21h-3h. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of Casino Impérial Palace Annecy: Slot machine room: 10am-3am every day. Table games room: 9pm-3am. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires du Casino Impérial Palace Annecy : Salle des machines à sous : 10h-3h
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit sur site
 
 ## Season
 
-Toute l'année
+All year round
 
 ## Official source
 

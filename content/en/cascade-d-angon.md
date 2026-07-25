@@ -18,9 +18,9 @@ language: en
 facet_json: https://loisirs74.fr/api/lieu/cascade-d-angon.json
 photo_url: /img/cascades/cascade-d-angon-hero.jpg
 photo_type: real
-photo_author: "Cascade du Rouget"
-photo_license: "Wikimedia Commons"
-photo_source: CC BY-SA
+photo_author: "Guilhem Vellut"
+photo_license: "CC BY 2.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---
@@ -60,6 +60,10 @@ Paid (May to September) · Free off-season
 ## Season
 
 Spring (peak flow) · Summer (cool forest coverage)
+- Winter access window: Not specified
+- Winter infrastructure: Not specified
+- Snow panorama: Not specified
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

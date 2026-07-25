@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Ville-la-Grand, Haute-Savoie (74100)
 - GPS: 46.2025, 6.2675
 - Category: parc
-- Type: Parc de jeux indoor enfants 0-12 ans
+- Type: Indoor play park for children 0-12
 
 ## Hours
 
-Toute l'année : Mercredi, Samedi, Dimanche 10h–19h. Vacances automne, hiver et jours fériés : Mardi au Dimanche 10h–19h. Vacances d'été du 1 juillet au 31 août : Mardi au Dimanche 10h–18h30 (horaires variables selon affluence). Ouvert tous les jours fériés. Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications saisonnières.
+All year round: Wednesday, Saturday, Sunday 10am-7pm. Autumn and winter school holidays and public holidays: Tuesday to Sunday 10am-7pm. Summer holidays from 1 July to 31 August: Tuesday to Sunday 10am-6:30pm (hours may vary with attendance). Open every public holiday. Verified on the official website 21 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -57,7 +57,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur place
+Free on site
 
 ## Transport
 
@@ -68,7 +68,7 @@ Gratuit sur place
 
 ## Season
 
-Toute l'année · jours de pluie idéal
+All year round · ideal on rainy days
 
 ## Official source
 

@@ -21,7 +21,11 @@ def main():
         glob.glob(str(ROOT / "img/*/*-hero.jpg")) +
         glob.glob(str(ROOT / "img/*/*-hero.webp")) +
         glob.glob(str(ROOT / "img/*/*-[0-9].jpg")) +
-        glob.glob(str(ROOT / "img/*/*-[0-9][0-9].jpg"))
+        glob.glob(str(ROOT / "img/*/*-[0-9][0-9].jpg")) +
+        # event affiches (e.g. fete-musique-tornet) match none of the slug
+        # patterns above; a regen without this glob drops their dims and
+        # breaks the protected tornet card (bit us in 4ecaac74a).
+        glob.glob(str(ROOT / "img/events/*.jpg"))
     )
     dims = {}
     for p in paths:

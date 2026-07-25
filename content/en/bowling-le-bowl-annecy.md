@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Annecy, Haute-Savoie (74000)
 - GPS: 45.8983, 6.1167
 - Category: bowling
-- Type: Bowling 16 pistes + restaurant + nightclub
+- Type: 16-lane bowling + restaurant + nightclub
 
 ## Hours
 
-Horaires du Le Bowl Bowling Annecy : Lun-jeu 14h-1h, ven-sam 14h-4h, dim 14h-minuit. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of Le Bowl Bowling Annecy: Mon-Thu 2pm-1am, Fri-Sat 2pm-4am, Sun 2pm-midnight. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires du Le Bowl Bowling Annecy : Lun-jeu 14h-1h, ven-sam 14h-4h, dim 14h-min
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit sur site
 
 ## Season
 
-Toute l'année
+All year round
 
 ## Official source
 

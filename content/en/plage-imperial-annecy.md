@@ -32,15 +32,15 @@ source: loisirs74.fr
 - Commune: Annecy, Haute-Savoie (74000)
 - GPS: 45.9081, 6.1392
 - Category: plage
-- Type: Plage de sable importé + pelouse 17 000 m²
+- Type: Imported sand beach + 17,000 m² lawn
 
 ## Hours
 
-Horaires de la Plage de l'Impérial : Ouverte tous les jours en saison. Surveillance MNS attendue du 5 juillet au 31 août 2026, 11h-19h. Hors saison : accès libre non surveillé.. Vérifié sur le site officiel le 24 mai 2026 — sous réserve d'arrêté municipal 2026.
+Opening hours at Plage de l'Impérial: open every day during the season. Lifeguard supervision expected from 5 July to 31 August 2026, 11am-7pm. Off-season: open access, unsupervised. Verified on the official site on 24 May 2026 — subject to 2026 municipal order.
 
 ## Prices
 
-PAYANTE dès 2026 - tarif à confirmer (mairie évoque 'tarifs très modiques' première année)
+PAID from 2026 - rate to be confirmed (town hall mentions 'very modest rates' in the first year)
 
 ## Access (PMR)
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Selon plage - voir détails
+Depends on the beach - see details
 
 ## Transport
 
@@ -59,7 +59,7 @@ Selon plage - voir détails
 
 ## Season
 
-Juillet - août (surveillance MNS)
+July - August (lifeguard supervision)
 
 ## Official source
 

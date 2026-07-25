@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Servoz, Haute-Savoie (74310)
 - GPS: 45.9396, 6.7673
 - Category: musee
-- Type: Centre d'interprétation gratuit, réseau CCVCMB
+- Type: Free interpretation centre, CCVCMB network
 
 ## Hours
 
-Ouvert pendant les vacances scolaires (toutes zones) Mercredi-Samedi 10h30-18h30. Été (juillet-août) : Mer-Sam 10h30-18h30. Fermé Lun-Mar et Dimanche. NUIT DES MUSÉES samedi 23 mai 2026 à 20h - ouverture exceptionnelle son et lumière. Vérifié sur le site officiel le 23 mai 2026 — sous réserve de modifications saisonnières.
+Open during school holidays (all zones) Wednesday-Saturday 10.30am-6.30pm. Summer (July-August): Wed-Sat 10.30am-6.30pm. Closed Mon-Tue and Sunday. NUIT DES MUSÉES Saturday 23 May 2026 at 8pm - exceptional Sound and Light opening. Verified on the official website on 23 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Parking La Côte à proximité
+La Côte car park nearby
 
 ## Transport
 
@@ -59,7 +59,7 @@ Parking La Côte à proximité
 
 ## Season
 
-Vacances scolaires + juillet-août Mer-Sam
+School holidays + July-August Wed-Sat
 
 ## Official source
 

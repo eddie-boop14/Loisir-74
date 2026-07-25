@@ -18,9 +18,9 @@ language: en
 facet_json: https://loisirs74.fr/api/lieu/plateau-des-glieres.json
 photo_url: /img/points-de-vue/plateau-des-glieres-hero.jpg
 photo_type: real
-photo_author: "Rémih"
-photo_license: "CC BY-SA 4.0"
-photo_source: Wikimedia Commons
+photo_author: "Bénédicte"
+photo_license: null
+photo_source: null
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---
@@ -57,6 +57,10 @@ Not specified
 ## Season
 
 Year-round · Cross-country skiing December – March · Hiking June – September
+- Winter access window: Open (cleared road) — Live status: inforoute74.fr
+- Winter infrastructure: Cross-country skiing · Nordic skiing · Snowshoeing · Dog sledding · Sledging
+- Snow panorama: Alpine panorama
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar) · chains advised for col access
 
 ## Official source
 

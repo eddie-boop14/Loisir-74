@@ -18,9 +18,9 @@ language: fr
 facet_json: https://loisirs74.fr/api/lieu/cirque-du-fer-a-cheval.json
 photo_url: /img/cascades/cirque-du-fer-a-cheval-hero.jpg
 photo_type: real
-photo_author: "Zairon"
-photo_license: "CC BY-SA 4.0"
-photo_source: Wikimedia Commons
+photo_author: "Bénédicte"
+photo_license: null
+photo_source: null
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---
@@ -59,6 +59,10 @@ Payant (7 € env. — au bout de la route)
 ## Saison
 
 Mai – juin (cascades) · Juin – septembre (randonnée)
+- Fenêtre d'accès hiver: Accès partiel — État en temps réel : inforoute74.fr
+- Infrastructure hiver: Ski de fond · Ski nordique · Raquettes
+- Panorama enneigé: Non renseigné
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

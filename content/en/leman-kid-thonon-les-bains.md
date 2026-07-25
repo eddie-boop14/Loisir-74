@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Thonon-les-Bains, Haute-Savoie (74200)
 - GPS: 46.365075, 6.496954
 - Category: parc
-- Type: Parc de jeux indoor enfants 0-12 ans
+- Type: Indoor play park for children aged 0-12
 
 ## Hours
 
-Hors vacances scolaires zone A : Mercredi, Samedi, Dimanche 10h–18h. Vacances scolaires zone A et jours fériés : Mardi au Dimanche 10h–18h. ALERTE : FERMÉ samedi 23 et dimanche 24 mai 2026 (Pentecôte). Snack salé 11h–13h (commandes jusqu'à 12h45). Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications saisonnières.
+Outside Zone A school holidays: Wednesday, Saturday, Sunday 10am-6pm. Zone A school holidays and public holidays: Tuesday to Sunday 10am-6pm. ALERT: CLOSED Saturday 23 and Sunday 24 May 2026 (Whitsun). Savoury snack 11am-1pm (orders taken until 12.45pm). Verified on the official website on 21 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -58,7 +58,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur place
+Free on site
 
 ## Transport
 
@@ -68,7 +68,7 @@ Gratuit sur place
 
 ## Season
 
-Toute l'année · idéal jours pluvieux
+All year round · ideal for rainy days
 
 ## Official source
 

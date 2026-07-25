@@ -16,11 +16,11 @@ google_place_id: "ChIJXTSGrczii0cRFfaBBZZQt8E"
 canonical_url: https://loisirs74.fr/telecabine-du-jaillet
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/telecabine-du-jaillet.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg
+photo_url: /img/telecabines/telecabine-du-jaillet-hero.jpg
 photo_type: real
-photo_author: null
-photo_license: null
-photo_source: null
+photo_author: "Guilhem Vellut from Annecy, France"
+photo_license: "CC BY 2.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-04-28
 source: loisirs74.fr
 ---
@@ -68,6 +68,10 @@ Gratuit 7 h (disque horaire obligatoire)
 ## Saison
 
 4 juillet – 30 août (été) · Hiver ski
+- Fenêtre d'accès hiver: Non renseigné
+- Infrastructure hiver: Raquettes
+- Panorama enneigé: Non renseigné
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

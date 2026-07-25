@@ -16,9 +16,9 @@ google_place_id: "ChIJm3ChWGNwjEcR_x5sMBEMG3s"
 canonical_url: https://loisirs74.fr/telepherique-du-saleve
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/telepherique-du-saleve.json
-photo_url: /img/generique/generique-point-de-vue.jpg
-photo_type: generic
-photo_author: null
+photo_url: /img/points-de-vue/telepherique-du-saleve-hero.jpg
+photo_type: real
+photo_author: "Bénédicte"
 photo_license: null
 photo_source: null
 last_updated: 2026-06-08
@@ -75,6 +75,10 @@ Gratuit (gare de départ)
 ## Saison
 
 Mai – octobre · soirées Jeu/Ven/Sam toute l'année
+- Fenêtre d'accès hiver: Non renseigné
+- Infrastructure hiver: Non renseigné
+- Panorama enneigé: Vue Mont-Blanc dégagée
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

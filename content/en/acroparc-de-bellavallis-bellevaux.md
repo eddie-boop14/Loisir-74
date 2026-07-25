@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Bellevaux, Haute-Savoie (74470)
 - GPS: 46.249443, 6.53159
 - Category: parc
-- Type: Parc accrobranche + location via ferrata
+- Type: Treetop adventure park + via ferrata equipment rental
 
 ## Hours
 
-Saison mai – octobre. 1er mai – 30 juin : week-ends et jours fériés 14h–18h (dernier départ 16h30). 1er juillet – 31 août : tous les jours 9h–18h30 (dernier départ 17h). 1er septembre – 31 octobre : week-ends et jours fériés 14h–18h (dernier départ 16h30). Fermeture saisonnière 1er novembre – 30 avril. Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications saisonnières et météo.
+Season May-October. 1 May – 30 June: weekends and public holidays 2pm-6pm (last departure 4:30pm). 1 July – 31 August: every day 9am-6:30pm (last departure 5pm). 1 September – 31 October: weekends and public holidays 2pm-6pm (last departure 4:30pm). Seasonal closure 1 November – 30 April. Verified on the official website 21 May 2026 — subject to seasonal and weather changes.
 
 ## Prices
 
@@ -57,7 +57,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur place, voitures et autocars
+Free on site, cars and coaches
 
 ## Transport
 
@@ -66,7 +66,7 @@ Gratuit sur place, voitures et autocars
 
 ## Season
 
-Juillet – août (tous les jours) · mai-juin et sept-oct : week-ends
+July-August (every day) · May-June and Sept-Oct: weekends
 
 ## Official source
 

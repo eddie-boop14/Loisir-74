@@ -63,6 +63,10 @@ Not specified
 ## Season
 
 April to November (cable car)
+- Winter access window: Not specified
+- Winter infrastructure: Snowshoeing
+- Snow panorama: Clear Mont-Blanc view
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Chamonix-Mont-Blanc, Haute-Savoie (74400)
 - GPS: 45.928641, 6.873675
 - Category: patinoire
-- Type: Patinoire olympique couverte 60×30m + extérieure 26×56m
+- Type: Olympic covered rink 60×30m + outdoor 26×56m
 
 ## Hours
 
-Horaires du Patinoire Richard Bozon : Hiver 07/02-08/03/2026 : lun, mar, jeu, ven, fériés et week-ends 14h-18h. Mer 14h-18h et 20h-22h. Été : séances réduites. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of Patinoire Richard Bozon: Winter 07/02-08/03/2026: Mon, Tue, Thu, Fri, public holidays and weekends 14h-18h. Wed 14h-18h and 20h-22h. Summer: reduced sessions. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires du Patinoire Richard Bozon : Hiver 07/02-08/03/2026 : lun, mar, jeu, ve
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit sur site
 
 ## Season
 
-Toute l'année (intérieure) + hiver extérieure
+All year round (indoor) + outdoor in winter
 
 ## Official source
 

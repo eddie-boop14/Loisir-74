@@ -1,0 +1,72 @@
+name: Watch station tarifs (détection-only)
+
+# ▶️  Run it: GitHub app/site → your repo → Actions tab → "Watch station tarifs" → Run workflow
+#
+# DÉTECTION-ONLY — première utilisation du watcher générique scripts/watch_sources.py
+# (stations = client #1). Compare les pages tarifs officielles des 28 stations aux
+# snapshots de reports/watch/ et committe un rapport avec témoins + diffs.
+#
+# Ce workflow n'écrit JAMAIS une fiche : aucun chemin ne touche Json/ — vérifiable
+# par lecture (doctrine : watchers detect, humans apply — no exceptions). Une ligne
+# CHANGED = un travail pour la voie moisson supervisée (report→verify→apply,
+# apply_station_tarifs.py) avec des yeux humains.
+#
+# Un cron est acceptable ici (contrairement aux workers Google, HANDOFF-24) :
+# pas d'écriture de fiche, pas de clé externe, et ≥10 % de fetch en panne fait
+# sauter le breaker → run rouge SANS retry, snapshots des lignes en panne intacts
+# (une erreur n'est jamais une donnée).
+on:
+  workflow_dispatch:          # the manual "play" button
+  schedule:
+    - cron: "0 6 1 9,10,11,12,1,2,4 *"   # 1er sept→fév (grilles hiver) + 1er avril (tarifs été)
+
+permissions:
+  contents: write             # commit du rapport + snapshots (reports/ uniquement)
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0     # le rebase-retry du push a besoin de l'historique complet
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scan watched tarif pages
+        run: |
+          set +e
+          python3 scripts/watch_sources.py --date "$(date +%F)" --report-name watch-station-tarifs
+          rc=$?
+          set -e
+          # exit 1 = breaker (≥10 % FETCH_FAILED) ou manifest cassé → run rouge,
+          # rien n'est commité, pas de retry.
+          if [ "$rc" -eq 1 ]; then exit 1; fi
+          echo "scan rc=$rc (0 = unchanged, 2 = CHANGED rows in the report)"
+
+      - name: Commit report + snapshots
+        run: |
+          git config user.name "loisirs74-bot"
+          git config user.email "bot@loisirs74.fr"
+          git add reports/watch reports/watch-station-tarifs-*.md
+          git commit -m "chore: watch station tarifs $(date +%F)" || echo "nothing to commit"
+          # Push with rebase-retry: sibling bot workers share main, so a
+          # non-fast-forward race is expected and harmless — rebase and retry
+          # (twice). ANY other failure (auth, protected branch, network) stops
+          # loud on the first attempt: unexpected failure ≠ try harder.
+          n=0
+          until out=$(git push 2>&1); do
+            echo "$out"
+            if ! echo "$out" | grep -qiE "non-fast-forward|fetch first|cannot lock ref"; then
+              echo "push failed for a NON-race reason — stopping loud (no retry)"; exit 1
+            fi
+            n=$((n+1))
+            if [ "$n" -ge 3 ]; then echo "push race persisted after $n rebase retries"; exit 1; fi
+            echo "push rejected by race with sibling worker — rebase retry $n"
+            git pull --rebase origin main || { git rebase --abort; echo "rebase conflict — manual review needed"; exit 1; }
+            sleep $((n * 5))
+          done
+          echo "$out"

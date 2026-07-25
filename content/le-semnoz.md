@@ -18,9 +18,9 @@ language: fr
 facet_json: https://loisirs74.fr/api/lieu/le-semnoz.json
 photo_url: https://upload.wikimedia.org/wikipedia/commons/2/26/Cr%C3%AAt_de_Chatillon_%40_Semnoz_%2835471373476%29.jpg
 photo_type: real
-photo_author: null
-photo_license: null
-photo_source: null
+photo_author: "Guilhem Vellut from Annecy, France"
+photo_license: "CC BY 2.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-04-23
 source: loisirs74.fr
 ---
@@ -57,6 +57,10 @@ Non renseigné
 ## Saison
 
 Juin – octobre (été) ; décembre – mars (ski)
+- Fenêtre d'accès hiver: Ouvert (accès déneigé)
+- Infrastructure hiver: Ski de fond · Ski nordique · Ski de rando · Raquettes · Luge
+- Panorama enneigé: Vue Mont-Blanc dégagée
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

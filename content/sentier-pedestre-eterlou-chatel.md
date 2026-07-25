@@ -57,6 +57,10 @@ Non renseigné
 ## Saison
 
 1er mai → 31 octobre
+- Fenêtre d'accès hiver: Ouvert (accès déneigé)
+- Infrastructure hiver: Raquettes · Luge
+- Panorama enneigé: Non renseigné
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

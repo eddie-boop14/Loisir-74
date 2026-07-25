@@ -16,11 +16,11 @@ google_place_id: "ChIJ4Tu7QBjwi0cRJOFQXgoTcxA"
 canonical_url: https://loisirs74.fr/en/via-ferrata-pollet-villard-la-clusaz
 language: en
 facet_json: https://loisirs74.fr/api/lieu/via-ferrata-pollet-villard-la-clusaz.json
-photo_url: /img/generique/generique-via-ferrata-gorge.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/que-faire/via-ferrata-pollet-villard-la-clusaz-hero.jpg
+photo_type: real
+photo_author: "Christophe Delaere"
+photo_license: "CC BY 2.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-03
 source: loisirs74.fr
 ---

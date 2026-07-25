@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Montriond, Haute-Savoie (74110)
 - GPS: 46.208824, 6.719607
 - Category: plage
-- Type: Plage lac de montagne 1 072 m - 3e plan d'eau 74
+- Type: Mountain lake beach at 1,072 m - 3rd largest body of water in the 74
 
 ## Hours
 
-Horaires de la Plage du Lac de Montriond : Surveillance MNS juillet-août 2026, tous les jours 11h-18h selon arrêté municipal commune Montriond. Hors saison : accès libre non surveillé.. Vérifié sur le site officiel le 24 mai 2026 — sous réserve d'arrêté municipal 2026.
+Hours of the Plage du Lac de Montriond: lifeguard supervision July-August 2026, daily 11am-6pm per the municipal order of the commune of Montriond. Off-season: free unsupervised access. Verified on the official website on 24 May 2026 — subject to the 2026 municipal order.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Selon plage - voir détails
+Depends on the beach - see details
 
 ## Transport
 
@@ -59,7 +59,7 @@ Selon plage - voir détails
 
 ## Season
 
-Juillet - août (surveillance MNS)
+July - August (lifeguard supervision)
 
 ## Official source
 

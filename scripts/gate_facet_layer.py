@@ -43,7 +43,8 @@ CANON = {
            "## Parking", "## Transport", "## Season", "## Official source"],
 }
 JSON_KEYS = ["name", "commune", "gps", "type", "hours", "prices", "access_pmr",
-             "parking", "transport", "season", "official_url", "last_verified"]
+             "parking", "transport", "season", "winter", "official_url",
+             "last_verified"]
 
 MAX_REPORT = 40
 

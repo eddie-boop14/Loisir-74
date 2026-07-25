@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Ville-la-Grand, Haute-Savoie (74100)
 - GPS: 46.198, 6.262
 - Category: musee
-- Type: Musée associatif des métiers du bâtiment, géré par les Compagnons
+- Type: Association-run museum of building trades, run by the Compagnons
 
 ## Hours
 
-Mercredi à Vendredi 14h30-17h ; Dimanche 9h30-12h30. Fermé Lundi, Mardi, Samedi. Groupes et scolaires sur rendez-vous hors horaires publics. PRUDENCE : musée bénévole, horaires à confirmer avant visite par appel de l'Office de Tourisme des Monts du Genevois 04 50 95 07 54. Vérifié sur le site officiel le 23 mai 2026 — sous réserve de modifications saisonnières.
+Wednesday to Friday 2:30pm-5pm; Sunday 9:30am-12:30pm. Closed Monday, Tuesday, Saturday. Groups and school parties by appointment outside public hours. CAUTION: volunteer-run museum, hours to be confirmed before visiting by calling the Monts du Genevois Tourist Office on 04 50 95 07 54. Verified on the official website 23 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Free
 
 ## Parking
 
-Parking gratuit Place du Porte-Bonheur (140 places)
+Free parking at Place du Porte-Bonheur (140 spaces)
 
 ## Transport
 
@@ -60,7 +60,7 @@ Parking gratuit Place du Porte-Bonheur (140 places)
 
 ## Season
 
-Toute l'année Mer-Ven AM, Dim matin
+Year-round: Wed-Fri afternoon, Sun morning
 
 ## Official source
 

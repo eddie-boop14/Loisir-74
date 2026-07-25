@@ -16,11 +16,11 @@ google_place_id: "ChIJk8jOuihMiUcRMjQj3Kkyl5Q"
 canonical_url: https://loisirs74.fr/train-du-montenvers-mer-de-glace
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/train-du-montenvers-mer-de-glace.json
-photo_url: /img/generique/generique-point-de-vue.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/points-de-vue/train-du-montenvers-mer-de-glace-hero.jpg
+photo_type: real
+photo_author: "Tiia Monto"
+photo_license: "CC BY-SA 3.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-21
 source: loisirs74.fr
 ---
@@ -72,6 +72,10 @@ Payant (Mont-Blanc/Planards) ou gratuit (Biolay)
 ## Saison
 
 Juin – septembre (visites complètes) · décembre – mars (ambiance hivernale)
+- Fenêtre d'accès hiver: Ouvert (accès déneigé)
+- Infrastructure hiver: Non renseigné
+- Panorama enneigé: Panorama alpin
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

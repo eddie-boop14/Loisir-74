@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Thonon-les-Bains, Haute-Savoie (74200)
 - GPS: 46.371, 6.477
 - Category: chateau
-- Type: Tour carrée médiévale, fortification urbaine
+- Type: Medieval square tower, urban fortification
 
 ## Hours
 
-EXTÉRIEURS LIBRES 24h/24, 7j/7, toute l'année au Château de Bellegarde. Intérieurs occupés par le tribunal de Thonon-les-Bains - visites intérieures uniquement lors des Journées Européennes du Patrimoine mi-septembre, gratuites et encadrées. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+EXTERIOR GROUNDS OPEN 24/7, year-round at Château de Bellegarde. Interiors occupied by the Thonon-les-Bains courthouse - interior visits only during European Heritage Days in mid-September, free and guided. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Parkings centre-ville à proximité
+Town-centre car parks nearby
 
 ## Transport
 
@@ -59,7 +59,7 @@ Parkings centre-ville à proximité
 
 ## Season
 
-Toute l'année · JEP pour intérieur
+Year-round · European Heritage Days for interior
 
 ## Official source
 

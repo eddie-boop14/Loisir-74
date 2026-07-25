@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Les Houches, Haute-Savoie (74310)
 - GPS: 45.8902, 6.7993
 - Category: musee
-- Type: Musée d'arts et traditions populaires, réseau CCVCMB
+- Type: Museum of folk arts and traditions, CCVCMB network
 
 ## Hours
 
-ALERTE : MUSÉE FERMÉ EN MAI 2026. Reprise à l'été 2026. Vacances scolaires (toutes zones) : Mercredi-Jeudi-Vendredi 14h-18h. Juillet-août : tous les jours sauf mardi 14h30-18h. Hors vacances : sur réservation Lun-Ven (≥2 personnes). Fermé 1er janv, 1er mai, 25 déc. Vérifié sur le site officiel le 23 mai 2026 — sous réserve de modifications saisonnières.
+ALERT: MUSEUM CLOSED IN MAY 2026. Reopens summer 2026. School holidays (all zones): Wednesday-Thursday-Friday 2pm-6pm. July-August: daily except Tuesday 2:30pm-6pm. Outside holidays: by reservation Mon-Fri (2+ people). Closed 1 Jan, 1 May, 25 Dec. Verified on the official website 23 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -54,7 +54,7 @@ ALERTE : MUSÉE FERMÉ EN MAI 2026. Reprise à l'été 2026. Vacances scolaires 
 
 ## Parking
 
-Parkings Mairie et Freney (Carrefour Contact) gratuits
+Mairie and Freney (Carrefour Contact) free car parks
 
 ## Transport
 
@@ -65,7 +65,7 @@ Parkings Mairie et Freney (Carrefour Contact) gratuits
 
 ## Season
 
-Vacances scolaires + juillet-août quotidien sauf mardi
+School holidays + daily except Tuesday in July-August
 
 ## Official source
 

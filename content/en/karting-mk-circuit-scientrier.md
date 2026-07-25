@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Scientrier, Haute-Savoie (74930)
 - GPS: 46.1083, 6.3667
 - Category: karting
-- Type: Karting outdoor - piste homologuée FFSA catégorie 1
+- Type: Outdoor karting - FFSA category 1 approved track
 
 ## Hours
 
-Horaires du MK Circuit : Mer + week-ends + vacances : 14h-18h. Été : tous les jours 10h-19h. Mars-novembre selon météo. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of MK Circuit: Wed + weekends + school holidays: 2pm-6pm. Summer: every day 10am-7pm. March-November depending on the weather. Verified on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Mars-novembre
+March-November
 
 ## Official source
 

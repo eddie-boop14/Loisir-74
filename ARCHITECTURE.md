@@ -42,6 +42,11 @@ Errors are fixed at **source JSON or builder script**, then re-rendered. Never p
 | `check-loisirs74.yml` | manual + monthly (1st, 06:00) | `check_loisirs74.py` — Google Places per fiche: `place_id`, location, hours; **haversine drift** vs fiche coords. Commits report + updates. |
 | `sweep-loisirs74.yml` | manual + monthly (1st, 07:00) | `sweep_loisirs74.py` — triangulates each fiche vs Google Places + French business registry + official site fetch; writes `freshness` block into JSON. |
 | `review-agent.yml` | manual + weekly (Mon, 06:00) | `review_agent.py` — AI verdicts → `reports/review-verdicts.json` (artifact, **human-gated, never auto-applied**). |
+| `watch-station-tarifs.yml` | manual + 1st of sept–fév + avril | `watch_sources.py` (generic watcher, stations = client #1) — diffs official tarif pages vs `reports/watch/` snapshots → dated report with witnesses. **Detection-only: never writes a fiche**; ≥10 % fetch failures trips the breaker (red run, no retry). |
+
+Doctrine bots : **watchers detect, humans apply — no exceptions.** Une ligne CHANGED
+d'un watcher est un travail pour la voie supervisée report→verify→apply, jamais une
+écriture automatique.
 
 Local audits (read-only, run on demand): `audit_venue_locations.py` (commune/centroid/envelope),
 `audit_hygiene.py`, `audit_breadcrumbs.py`, `audit_hero_themes.py`, `audit_venues_external.py`.

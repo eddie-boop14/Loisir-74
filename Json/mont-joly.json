@@ -61,6 +61,26 @@
         "geo_verified_source",
         "geo_verified_drift_m"
       ]
+    },
+    {
+      "date": "2026-07-16",
+      "by": "JOB B apply",
+      "note": "kill col_chains (piéton/remontée — pas un col routier)"
+    },
+    {
+      "date": "2026-07-16",
+      "by": "JOB B apply",
+      "note": "kill col_chains (piéton/remontée — pas un col routier)"
+    },
+    {
+      "date": "2026-07-16",
+      "by": "JOB B apply",
+      "note": "kill col_chains (piéton/remontée — pas un col routier)"
+    },
+    {
+      "date": "2026-07-16",
+      "by": "JOB B apply",
+      "note": "kill col_chains (piéton/remontée — pas un col routier)"
     }
   ],
   "partners": [
@@ -139,7 +159,12 @@
         "dogs": "Acceptés en laisse",
         "stroller": "Non adapté",
         "duration": "5 h à 8 h aller-retour selon itinéraire",
-        "best_season": "Juin – octobre"
+        "best_season": "Juin – octobre",
+        "winter_infra": [
+          "raquettes",
+          "ski_rando"
+        ],
+        "col_chains": false
       },
       "body": {
         "what_is": "<p>Le <strong>Mont Joly</strong> est un sommet de 2 525 m d'altitude situé dans le massif du Beaufortain, à la limite entre Saint-Gervais-les-Bains, Megève et Les Contamines-Montjoie, en Haute-Savoie. Véritable belvédère naturel face au massif du Mont-Blanc, il offre un panorama exceptionnel à 360° depuis son sommet, où se trouve une table d'orientation. Avec ses pentes vertes qui descendent jusqu'aux villages environnants, le Mont Joly est considéré comme l'un des premiers belvédères de la chaîne du Mont-Blanc.</p><p>Le Mont Joly est accessible par plusieurs itinéraires de randonnée, dont les principaux départs se situent à Saint-Nicolas-de-Véroce (Plateau de la Croix), au Bettex via Les Communailles, au hameau du Planay depuis Megève, ou au Baptieu depuis Les Contamines-Montjoie. La montée, sportive et soutenue, traverse alpages et forêts avant d'atteindre les crêtes minérales du sommet. Les randonneurs chemine parmi les troupeaux d'estive (vaches Tarines et Abondances, chèvres et moutons) dont le lait sert à la fabrication du Beaufort. La portion finale, particulièrement engagée à partir du refuge du Mont Joly, devient plus technique avec des passages raides et rocailleux peu balisés, exigeant une grande vigilance.</p><p>Le sommet est marqué par des installations techniques (relais radio pour le secours en montagne, antennes météorologiques) et une boîte à livre d'or. Les randonneurs peuvent rejoindre le sommet par deux variantes principales : l'Épaule du Mont Joly (voie la plus fréquentée) ou la Panse (itinéraire moins emprunté). L'ascension passe par plusieurs points remarquables : le refuge du Mont Joly (2 002 m), le Mont Géroux (2 288 m), et l'arrivée du télésiège de l'Épaule (fermé l'été). Par temps clair, la visibilité s'étend jusqu'aux massifs les plus éloignés, offrant une lecture unique du relief alpin. Le Mont Joly est également le point culminant de la Diagonale du Mont-Joly, épreuve de vertical kilometer de 4 km et 1 000 m de dénivelé, organisée en version été et hiver.</p>"
@@ -1308,23 +1333,439 @@
         "lead": "Szczyt ikonowy na wysokości 2525 m oferuje 360 ° panoramę nad masywem Mont-Blanc, Beaufortain, Aravis, Fiz i Bauges."
       },
       "hero_alt": "Szczyt Mont Joly na 2525 m z panoramicznym widokiem na masyw Mont-Blanc, Saint-Gervais-les-Bains, Haute-Savoie",
-      "when_to_visit": "Najlepszy okres do wspinaczki Mont Joly rozciąga się od czerwca do października, gdy trasy są bezśnieżne i przejezdne. Lipiec i sierpień oferują najbardziej stabilne warunki, ale również najwyższe liczby gości. Pod koniec maja i na początku czerwca nadal mają trwałe snowfields na wysokich stokach. Wrzesień i na początku października oferują wyjątkowe światło i mniej tłumów, ale dni skraca i górskie zatoki blisko. W zimie, Mont Joly jest dostępny przez trasy narciarskie lub buty śniegowe, ale wymaga dobrej wiedzy terenu i zrozumienia warunków śniegowych. Szczyt jest bardzo narażony na piorun podczas burz: zejść natychmiast, jeśli pogoda się pogorszy."
+      "when_to_visit": "Najlepszy okres do wspinaczki Mont Joly rozciąga się od czerwca do października, gdy trasy są bezśnieżne i przejezdne. Lipiec i sierpień oferują najbardziej stabilne warunki, ale również najwyższe liczby gości. Pod koniec maja i na początku czerwca nadal mają trwałe snowfields na wysokich stokach. Wrzesień i na początku października oferują wyjątkowe światło i mniej tłumów, ale dni skraca i górskie zatoki blisko. W zimie, Mont Joly jest dostępny przez trasy narciarskie lub buty śniegowe, ale wymaga dobrej wiedzy terenu i zrozumienia warunków śniegowych. Szczyt jest bardzo narażony na piorun podczas burz: zejść natychmiast, jeśli pogoda się pogorszy.",
+      "body": {
+        "what_is": "<p><strong>Mont Joly</strong> to szczyt o wysokości 2 525 m n.p.m., położony w masywie Beaufortain, na granicy gmin Saint-Gervais-les-Bains, Megève i Les Contamines-Montjoie, w Haute-Savoie. To prawdziwy naturalny punkt widokowy naprzeciwko masywu Mont-Blanc, oferujący z wierzchołka wyjątkową panoramę 360°, gdzie znajduje się stół orientacyjny. Dzięki zielonym stokom opadającym ku okolicznym wioskom Mont Joly uznawany jest za jeden z najpiękniejszych punktów widokowych w paśmie Mont-Blanc.</p><p>Na Mont Joly prowadzi kilka szlaków turystycznych; główne punkty startowe to Saint-Nicolas-de-Véroce (Plateau de la Croix), Bettex przez Les Communailles, przysiółek Planay od strony Megève lub przysiółek Baptieu od strony Les Contamines-Montjoie. Wspinaczka jest wymagająca i stała — trasa wiedzie przez alpejskie hale i lasy, nim dotrze się do skalisto-mineralnych grzbietów szczytowych. Wędrowcy mijają po drodze letnie stada pasące się na halach (krowy rasy Tarine i Abondance, kozy i owce), których mleko służy do wyrobu sera Beaufort. Końcowy odcinek, szczególnie eksponowany od schroniska Mont Joly wzwyż, staje się bardziej techniczny — strome i skaliste przejścia z nielicznymi oznaczeniami wymagają szczególnej ostrożności.</p><p>Na szczycie znajdują się instalacje techniczne (radiowy przekaźnik ratownictwa górskiego, anteny meteorologiczne) oraz skrzynka z księgą pamiątkową turystów. Na wierzchołek prowadzą dwa główne warianty trasy: Épaule du Mont Joly (najczęściej uczęszczany) lub Panse (mniej uczęszczany). Podczas podejścia mija się kilka charakterystycznych punktów: schronisko Mont Joly (2 002 m), Mont Géroux (2 288 m) oraz górną stację wyciągu krzesełkowego Épaule (nieczynnego w lecie). W pogodne dni widoczność sięga najdalszych masywów, pozwalając na wyjątkowe odczytanie alpejskiej rzeźby terenu. Mont Joly jest również punktem kulminacyjnym Diagonale du Mont-Joly — wyścigu pionowego na 4 km i 1 000 m przewyższenia, rozgrywanego w edycjach letniej i zimowej.</p>"
+      },
+      "activities": [
+        {
+          "title": "Wejście na szczyt",
+          "tag": null,
+          "description": "Wymagające podejście trwające od 5 do 8 godzin w obie strony, w zależności od wybranej trasy. Przewyższenie od 850 do 1 200 m. Kilka możliwych wariantów: przez Épaule, przez Panse lub od strony Mont d'Arbois."
+        },
+        {
+          "title": "Panorama 360°",
+          "tag": null,
+          "description": "Zapierające dech w piersiach widoki na masyw Mont-Blanc, Beaufortain, Aravis, pasmo Fiz, Bauges, a w pogodne dni aż po Écrins. Na szczycie znajduje się stół orientacyjny."
+        },
+        {
+          "title": "Obserwacja alpejskiej fauny",
+          "tag": null,
+          "description": "Szansa na spotkanie świstaków, kozic, orłów przednich i sępów płowych na alpejskich halach i grzbietach. Strefa pasterska czynna latem — wypas bydła, kóz i owiec."
+        },
+        {
+          "title": "Smakołyki w schronisku",
+          "tag": null,
+          "description": "Mont Joly Chalet-Refuge (2 002 m) oferuje tradycyjną kuchnię sabaudzką oraz noclegi na rezerwację (od czerwca do września). Panoramiczne tarasy z widokiem na Mont-Blanc i Charvin."
+        },
+        {
+          "title": "Przejście ku Aiguilles Croches",
+          "tag": null,
+          "description": "Dla doświadczonych turystów: przedłużenie trasy grzbietem w kierunku Aiguilles Croches i Col de Véry. Atmosfera wysokogórska z eksponowanymi przejściami."
+        },
+        {
+          "title": "Trail running i bieg górski",
+          "tag": null,
+          "description": "Mont Joly jest punktem kulminacyjnym Diagonale du Mont-Joly — wyścigu pionowego rozgrywanego w edycjach letniej i zimowej. 4 km, 1 000 m przewyższenia."
+        },
+        {
+          "title": "Skituring i rakiety śnieżne",
+          "tag": null,
+          "description": "Zimą i wiosną Mont Joly jest dostępny na nartach skitourowych lub rakietach śnieżnych. Wyjście z Les Communailles lub Plateau de la Croix. Należy zwracać uwagę na warunki śniegowe."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adres",
+          "v": "Kilka możliwych punktów startowych: Plateau de la Croix (Saint-Nicolas-de-Véroce), Le Bettex (Les Communailles), przysiółek Planay (Megève), przysiółek Baptieu (Les Contamines-Montjoie)"
+        },
+        {
+          "k": "Współrzędne",
+          "v": "45.825959° N — 6.692936° E"
+        },
+        {
+          "k": "Wysokość",
+          "v": "2 525 m n.p.m."
+        },
+        {
+          "k": "Dostępność",
+          "v": "Dostępny od czerwca do października, w zależności od warunków śniegowych. Zimą: wyłącznie skituring lub rakiety śnieżne. Szczyt jest niedostępny przy niestabilnej pokrywie śnieżnej."
+        },
+        {
+          "k": "Cena",
+          "v": "Bezpłatnie"
+        },
+        {
+          "k": "Parking",
+          "v": "Bezpłatny parking przy Plateau de la Croix, Bettex, Planay lub Baptieu, w zależności od wybranej trasy. Ograniczona liczba miejsc w szczycie sezonu."
+        },
+        {
+          "k": "Zwierzęta",
+          "v": "Psy dozwolone na smyczy (alpejskie hale ze stadami pasącymi się latem)"
+        },
+        {
+          "k": "Dostępność dla osób z ograniczeniami ruchowymi",
+          "v": "Niedostępne dla wózków dziecięcych ani wózków inwalidzkich. Wymagający szlak przeznaczony dla doświadczonych turystów."
+        },
+        {
+          "k": "Czas dojścia",
+          "v": "5 do 8 godzin w obie strony, w zależności od trasy i punktu startowego. Podejście: 3 do 4 godzin. Zejście: 2 do 3 godzin."
+        },
+        {
+          "k": "Kontakt",
+          "v": "Biuro Turystyczne Saint-Gervais Mont-Blanc — 04 50 47 76 08"
+        }
+      ],
+      "how_to_get_there": {
+        "car": "Z Sallanches (zjazd A40 nr 20) kierować się na Saint-Gervais-les-Bains, następnie na Saint-Nicolas-de-Véroce (D909). Parking przy Plateau de la Croix. Z Megève dojechać do przysiółka Planay przez Côte 2000 (kierunek Altiport). Z Les Contamines-Montjoie droga Notre-Dame-de-la-Gorge (D902), skręcić w prawo na ścieżkę Echenaz i kontynuować do parkingu Baptieu.",
+        "public_transport": "Sezonowe busy do Saint-Nicolas-de-Véroce z Saint-Gervais-les-Bains (linia 13). Rozkład jazdy na stronie Haute-Savoie Mobilités lub w Biurze Turystycznym.",
+        "bike": "Dojazd rowerem możliwy do parkingów przy punktach startowych (Plateau de la Croix, Bettex, Planay), jednak dalsza część trasy jest wyłącznie piesza."
+      },
+      "faq": [
+        {
+          "q": "Czy wstęp na Mont Joly jest bezpłatny?",
+          "a": "Tak, wejście na Mont Joly jest bezpłatne przez cały rok. Płatna jest jedynie kolej linowa Mont d'Arbois (skracająca trasę od strony Megève)."
+        },
+        {
+          "q": "Którą trasą najlepiej wejść na Mont Joly?",
+          "a": "Na Mont Joly prowadzi kilka szlaków. Wyjście z Plateau de la Croix (Saint-Nicolas-de-Véroce) jest najkrótsze: 4 km, 1 000 m przewyższenia, około 3 godzin podejścia. Z Bettex (Les Communailles): 5 do 6 godzin w obie strony. Z Megève (przysiółek Planay): 6 do 8 godzin w obie strony."
+        },
+        {
+          "q": "Jak trudna jest wycieczka na Mont Joly?",
+          "a": "Wycieczka na Mont Joly jest wymagająca i przeznaczona dla doświadczonych turystów. Przewyższenie od 850 do 1 200 m w zależności od trasy. Nachylenie jest stałe za Pavillon du Mont Joly, a szczytowy odcinek (Épaule lub Panse) charakteryzuje się stromymi, skalistymi przejściami. Niezbędne są solidne buty górskie, woda i ciepłe okrycie."
+        },
+        {
+          "q": "Czy można przenocować na szczycie Mont Joly?",
+          "a": "Nie, na szczycie Mont Joly nie ma schroniska. Mont Joly Chalet-Refuge znajduje się na wysokości 2 002 m, przed ostatnim podejściem szczytowym. Oferuje posiłki i noclegi na rezerwację. Ze schroniska na szczyt trzeba liczyć jeszcze od 1,5 do 2 godzin marszu."
+        },
+        {
+          "q": "Czy psy są dozwolone na Mont Joly?",
+          "a": "Tak, psy są dopuszczone na szlakach Mont Joly, lecz muszą być prowadzone na smyczy — zwłaszcza na alpejskich halach, gdzie od czerwca do września pasą się bydło, kozy i owce. Mont Joly nie leży na terenie rezerwatu przyrody."
+        },
+        {
+          "q": "Kiedy najlepiej wejść na Mont Joly?",
+          "a": "Najlepszy okres na odwiedzenie Mont Joly to od czerwca do października. Lipiec i sierpień oferują najbardziej stabilne warunki. Wrzesień i początek października są idealne dla tych, którzy cenią ciszę i piękne światło. Koniec maja i początek czerwca: możliwe utrzymujące się płaty śniegu. Zimą: wyłącznie skituring lub rakiety śnieżne."
+        },
+        {
+          "q": "Czy Mont Joly jest odpowiedni dla początkujących?",
+          "a": "Mont Joly to wymagająca i eksponowana wycieczka, zarezerwowana dla doświadczonych turystów obytych z terenem górskim. Końcowy odcinek po schronisku jest szczególnie techniczny — rumowisko skalne i strome przejścia ze skąpym oznakowaniem. Początkujący mogą wybrać się do schroniska Mont Joly (2 002 m), skąd roztacza się piękna panorama, bez konieczności dalszego zdobywania szczytu."
+        },
+        {
+          "q": "Czy podczas wejścia można kupić coś do jedzenia?",
+          "a": "Tak, Mont Joly Chalet-Refuge na wysokości 2 002 m oferuje tradycyjną kuchnię sabaudzką od połowy czerwca do końca września. Panoramiczne tarasy, sabaudzkie specjały, codzienne dania dnia. Czynne codziennie w sezonie letnim. Rezerwacja wskazana: 04 50 93 10 10."
+        }
+      ]
     },
     "he": {
-      "meta_title": "Mont Joly - המדריך המלא (Saint-Gervais-les-Bains)",
-      "meta_description": "הפסגה האייקונית ב-2,525 מ' מול Mont-Blanc. טיול מהיר נגיש יוני עד אוקטובר מ Saint-Gervais, Megève או Les Contamines. 360 מעלות פאנורמה בפסגה.",
+      "meta_description": "פסגה איקונית בגובה 2,525 מ' מול Mont-Blanc. טיול מאתגר נגיש מיוני עד אוקטובר משאן-ז'רווה, Megève או לה קונטמין. פנורמה של 360° בפסגה.",
       "hero": {
-        "lead": "הפסגה אייקנית בגובה 2,525 מ\"מ המציע panorama 360 מעלות על מסה Mont-Blanc, Beaufortain, Aravis, Fiz ו- Bauges."
+        "lead": "פסגה איקונית בגובה 2,525 מ' המציעה פנורמה של 360° על מסיפי Mont-Blanc, בופורטן, אראביס, פיז ובוז'."
       },
-      "hero_alt": "Mont Joly הפסגה 2,525 מ' עם נוף פנורמי מעל מסה Mont-Blanc, Saint-Gervais-les-Bains, Haute-Savoie",
-      "when_to_visit": "התקופה הטובה ביותר לטייל Mont Joly משתרעת בין יוני לאוקטובר, כאשר שבילים הם ללא שלג ועבר. יולי ואוגוסט מציעים את התנאים היציבים ביותר, אך גם את מספר המבקרים הגבוה ביותר. מאוחר מאי ובתחילת יוני יש עדיין שדות שלג על מדרונות גבוהים. ספטמבר ובתחילת אוקטובר מציעים אור יוצא דופן ופחות קהל, אבל ימים קצרים ומפלטי הרים קרובים. בחורף, Mont Joly נגיש על ידי סיור סקי או snowshoes, אבל דורש ידע שטח טוב והבנה של תנאי שלג. הפסגה חשופה מאוד לברק במהלך הסערה: לרדת מיד אם מזג האוויר יתדרדר."
+      "hero_alt": "פסגת Mont Joly בגובה 2,525 מ' עם נוף פנורמי אל מסיף Mont-Blanc, Saint-Gervais-les-Bains, Haute-Savoie",
+      "body": {
+        "what_is": "<p><strong>Mont Joly</strong> הוא פסגה בגובה 2,525 מ׳ הממוקמת במסיף Beaufortain, על הגבול בין Saint-Gervais-les-Bains, Megève ו-Les Contamines-Montjoie, ב-Haute-Savoie. נקודת תצפית טבעית אמיתית מול מסיף Mont-Blanc, היא מציעה פנורמה יוצאת דופן של 360° מפסגתה, שם ממוקם שולחן כיוונים. עם מדרונותיה הירוקים היורדים אל הכפרים הסובבים, Mont Joly נחשב לאחת מנקודות התצפית היפות ביותר ברכס Mont-Blanc.</p><p>Mont Joly נגיש דרך מספר מסלולי הליכה, כאשר נקודות ההתחלה העיקריות הן Saint-Nicolas-de-Véroce (Plateau de la Croix), Bettex דרך Les Communailles, כפר Planay מ-Megève, או כפר Baptieu מ-Les Contamines-Montjoie. העלייה מאתגרת ומתמשכת, וחוצה אחו אלפיני ויערות לפני הגעה לרכסים המינרליים של הפסגה. המטיילים הולכים בין עדרי הרעייה הקיציים (פרות Tarine ו-Abondance, עזים וכבשים) שחלבן משמש להכנת גבינת Beaufort. הקטע האחרון, החשוף במיוחד מהמקלט Mont Joly ואילך, הופך לטכני יותר עם מעברים תלולים וסלעיים עם סימון דליל, הדורשים זהירות רבה.</p><p>הפסגה כוללת מתקנים טכניים (ממסר רדיו חילוץ הרים, אנטנות מזג אוויר) ותיבת יומן מבקרים. הולכי רגל יכולים להגיע לפסגה דרך שתי חלופות עיקריות: Épaule du Mont Joly (המסלול הנפוץ ביותר) או Panse (מסלול פחות שימושי). העלייה עוברת דרך מספר נקודות ראויות לציון: מקלט Mont Joly (2,002 מ'), Mont Géroux (2,288 מ'), והגעת מתקן הכיסאות Épaule (סגור בקיץ). בימים בהירים, הנראות משתרעת אל המסיפים המרוחקים ביותר, ומציעה קריאה ייחודית של תבליט האלפים. Mont Joly הוא גם הנקודה השיאית של Diagonale du Mont-Joly, מרוץ קילומטר אנכי של 4 ק\"מ ו-1,000 מ' עלייה, המאורגן בגרסאות קיץ וחורף.</p>"
+      },
+      "how_to_get_there": {
+        "car": "מ-Sallanches (יציאה 20 בכביש A40), יש להגיע ל-Saint-Gervais-les-Bains ואז לסן-ניקולה-דה-ורוס (D909). חניה ברמת דה לה קרואה. מ-Megève, יש להגיע לכפר פלאני דרך קוט 2000 (לכיוון אלטיפור). מ-Les Contamines-Montjoie, יש לקחת את כביש נוטר-דאם-דה-לה-גורז' (D902), לפנות ימינה בשביל אשנז, להמשיך עד חניון בפטיה.",
+        "public_transport": "הסעות עונתיות ל-Saint-Nicolas-de-Véroce מ-Saint-Gervais (קו 13). יש לבדוק את לוחות הזמנים ב-Haute-Savoie Mobilités או במשרד התיירות.",
+        "bike": "גישה באופניים אפשרית לחניוני היציאה (פלאטו דה לה קרואה, בטה, פלנה), אך שאר המסלול הוא ברגל בלבד."
+      },
+      "when_to_visit": "התקופה הטובה ביותר לטיול ב-Mont Joly נמשכת מיוני עד אוקטובר, כשהשבילים נקיים משלג וניתנים למעבר. יולי ואוגוסט מציעים את התנאים היציבים ביותר, אך גם את מספר המבקרים הגבוה ביותר. סוף מאי ותחילת יוני עדיין כוללים שדות שלג מתמשכים במדרונות הגבוהים. ספטמבר ותחילת אוקטובר מציעים תאורה יוצאת דופן ופחות עומס, אך הימים מתקצרים ומקלטי ההרים נסגרים. בחורף, Mont Joly נגיש בסקי טיולים או במגחשי שלג, אך דורש היכרות טובה עם השטח והבנה של תנאי השלג. הפסגה חשופה מאוד לברקים בסופות: יש לרדת מיד אם מזג האוויר מתדרדר.",
+      "faq": [
+        {
+          "q": "האם הכניסה ל-Mont Joly חופשית?",
+          "a": "כן, הגישה ל-Mont Joly חופשית וללא תשלום כל השנה. רק הרכבל Mont d'Arbois (לקיצור המסלול מ-Megève) הוא בתשלום."
+        },
+        {
+          "q": "מהו המסלול הטוב ביותר לטיפוס על Mont Joly?",
+          "a": "Mont Joly נגיש דרך מספר מסלולים. היציאה מ-Plateau de la Croix (Saint-Nicolas-de-Véroce) היא הישירה ביותר: 4 ק\"מ, עלייה של 1,000 מ', כ-3 שעות טיפוס. מ-Bettex (Les Communailles): 5 עד 6 שעות הלוך ושוב. מ-Megève (כפר Planay): 6 עד 8 שעות הלוך ושוב."
+        },
+        {
+          "q": "מהי רמת הקושי של הטיול ב-Mont Joly?",
+          "a": "מסלול ההליכה Mont Joly מאתגר ומיועד להולכי רגל מנוסים. עלייה בגובה של 850 עד 1,200 מ' בהתאם למסלול. השיפוע נמשך לאחר Pavillon du Mont Joly, עם מעברים תלולים וסלעיים בקטע הפסגה (Épaule או Panse). יש להביא נעלי הליכה מתאימות, מים ובגדים חמים."
+        },
+        {
+          "q": "האם אפשר לישון בפסגת Mont Joly?",
+          "a": "לא, אין מקלט הררי בפסגת Mont Joly. מקלט-שאלה Mont Joly ממוקם בגובה 2,002 מ', לפני העלייה הסופית. הוא מציע ארוחות ולינה בהזמנה מראש. מהמקלט, יש לתכנן עוד 1.5 עד 2 שעות נוספות כדי להגיע לפסגה."
+        },
+        {
+          "q": "האם כלבים מותרים ב-Mont Joly?",
+          "a": "כן, כלבים מותרים בשבילי Mont Joly אך חייבים להישאר ברצועה, במיוחד באחו האלפיני שבו רועים בקר, עיזים וכבשים מיוני עד ספטמבר. Mont Joly אינו נמצא בשמורת טבע."
+        },
+        {
+          "q": "מהי העונה הטובה ביותר לטיפוס על Mont Joly?",
+          "a": "התקופה הטובה ביותר עבור Mont Joly נמשכת מיוני עד אוקטובר. יולי ואוגוסט מציעים את התנאים היציבים ביותר. ספטמבר ותחילת אוקטובר אידיאליים לבדידות ולתאורה. סוף מאי ותחילת יוני: שדות שלג מתמשכים. בחורף: רק סקי טיולים או הליכה עם מגחשי שלג."
+        },
+        {
+          "q": "האם Mont Joly מתאים למתחילים?",
+          "a": "Mont Joly הוא טיול הליכה מאתגר וחשוף, שמור למטיילים מנוסים הרגילים בשטח הררי. הקטע האחרון, אחרי המקלט, טכני במיוחד עם מפולות אבנים ומעברים תלולים המסומנים בצורה דלה. מתחילים יכולים לטייל עד למקלט Mont Joly (2,002 מ') וליהנות מהפנורמה מבלי להמשיך אל הפסגה."
+        },
+        {
+          "q": "האם אפשר לקבל אוכל במהלך העלייה?",
+          "a": "כן, השאלה Chalet-Refuge Mont Joly בגובה 2,002 מ' מציע מטבח סבויארי מסורתי מאמצע יוני עד סוף ספטמבר. מרפסות פנורמיות, מומחיות סבויאריות, מנות היום. פתוח מדי יום בעונת הקיץ. מומלץ להזמין: 04 50 93 10 10."
+        }
+      ],
+      "meta_title": "Mont Joly · מדריך מלא (Saint-Gervais-les-Bains)"
     },
-    "ar": {},
+    "ar": {
+      "meta_title": "Mont Joly · الدليل الكامل (Saint-Gervais-les-Bains)",
+      "meta_description": "قمة شهيرة على ارتفاع 2,525 م تواجه Mont-Blanc. رحلة مشي صعبة يمكن الوصول إليها من يونيو إلى أكتوبر انطلاقًا من Saint-Gervais أو Megève أو Les Contamines. بانوراما بزاوية 360° عند القمة.",
+      "hero": {
+        "lead": "قمة شهيرة على ارتفاع 2,525 م تقدم بانوراما بزاوية 360° على سلسلة Mont-Blanc وBeaufortain وAravis وFiz وBauges."
+      },
+      "hero_alt": "قمة Mont Joly على ارتفاع 2,525 م مع إطلالات بانورامية على سلسلة جبال Mont-Blanc، Saint-Gervais-les-Bains، Haute-Savoie",
+      "when_to_visit": "أفضل فترة للمشي في Mont Joly تمتد من يونيو إلى أكتوبر، عندما تكون المسارات خالية من الثلوج وسالكة. يوليو وأغسطس يوفران الظروف الأكثر استقراراً، لكنهما أيضاً يشهدان أعلى عدد من الزوار. أواخر مايو وأوائل يونيو لا تزال بها بقع ثلجية دائمة على المنحدرات العالية. سبتمبر وأوائل أكتوبر يوفران إضاءة استثنائية وازدحاماً أقل، لكن الأيام تقصر وتغلق الملاجئ الجبلية. في الشتاء، يمكن الوصول إلى Mont Joly بالتزلج الجبلي أو أحذية الثلج، لكن ذلك يتطلب معرفة جيدة بالتضاريس وفهماً لظروف الثلج. القمة معرضة جداً للبرق أثناء العواصف: انزل فوراً إذا ساءت الأحوال الجوية.",
+      "activities": [
+        {
+          "title": "مشي إلى القمة",
+          "tag": null,
+          "description": "صعود صعب من 5 إلى 8 ساعات ذهابًا وإيابًا حسب المسار المختار. فرق ارتفاع من 850 إلى 1200 م. عدة خيارات ممكنة: عبر Épaule، عبر Panse، أو انطلاقًا من Mont d'Arbois."
+        },
+        {
+          "title": "استمتع بالبانوراما 360 درجة",
+          "tag": null,
+          "description": "إطلالات خلابة على سلسلة جبال Mont-Blanc وBeaufortain وAravis وسلسلة Fiz وBauges، وفي الأيام الصافية حتى جبال Écrins. طاولة توجيه عند القمة."
+        },
+        {
+          "title": "مراقبة الحياة البرية الجبلية",
+          "tag": null,
+          "description": "فرصة لمشاهدة المرموط، الشامواه، النسور الذهبية ونسور الغريفون في المروج الألبية وعلى الحواف الجبلية. منطقة رعوية نشطة مع رعي الأبقار والماعز والأغنام في الصيف."
+        },
+        {
+          "title": "استراحة ذواقة في الملجأ",
+          "tag": null,
+          "description": "يقدم شاليه-ملجأ Mont Joly (2002 م) مأكولات سافوارية تقليدية وإقامة ليلية بالحجز (من يونيو إلى سبتمبر). شرفات بانورامية تواجه Mont-Blanc وشارفان."
+        },
+        {
+          "title": "عبور نحو Aiguilles Croches",
+          "tag": null,
+          "description": "للمتنزهين ذوي الخبرة: يمكن التمديد عبر الحافة نحو Aiguilles Croches وCol de Véry. أجواء الجبال العالية بممرات مكشوفة."
+        },
+        {
+          "title": "الجري على المسارات والجري في الجبال",
+          "tag": null,
+          "description": "Mont Joly هي النقطة الأعلى في ديياغونال مون-جولي، وهو سباق الكيلومتر العمودي الذي يُنظَّم في نسختين، صيفية وشتوية. المسافة 4 كم، وفارق الارتفاع 1000 م."
+        },
+        {
+          "title": "التزلج الجبلي والمشي بأحذية الثلج",
+          "tag": null,
+          "description": "في الشتاء والربيع، يمكن الوصول إلى Mont Joly عبر التزلج الجبلي أو أحذية الثلج. الانطلاق من Les Communailles أو Plateau de la Croix. يُرجى الانتباه إلى أحوال الثلج."
+        }
+      ],
+      "body": {
+        "what_is": "<p><strong>Mont Joly</strong> هي قمة بارتفاع 2,525 مترًا تقع في سلسلة جبال بوفورتان، على الحدود بين Saint-Gervais-les-Bains وMegève وLes Contamines-Montjoie، في Haute-Savoie. وهي نقطة مراقبة طبيعية حقيقية تواجه سلسلة جبال Mont-Blanc، وتوفر بانوراما استثنائية بزاوية 360 درجة من قمتها، حيث توجد طاولة توجيه. وبفضل منحدراتها الخضراء التي تنحدر نحو القرى المحيطة، تُعد Mont Joly واحدة من أجمل نقاط المشاهدة في سلسلة Mont-Blanc.</p><p>يمكن الوصول إلى Mont Joly عبر عدة مسارات للمشي، بنقاط انطلاق رئيسية في سان نيكولا دو فيروس (هضبة الصليب)، وبيتيكس عبر ليه كوموناي، وقرية بلاناي من Megève، أو قرية بابتيو من Les Contamines-Montjoie. الصعود شاق ومستمر، يعبر المروج الألبية والغابات قبل الوصول إلى النتوءات الصخرية للقمة. يمشي المتنزهون وسط قطعان الرعي الصيفية (أبقار تارين وAbondance والماعز والأغنام) التي يُستخدم حليبها في صنع جبن البوفور. يصبح القسم الأخير، المعرض بشكل خاص من ملجأ Mont Joly فصاعدًا، أكثر تقنية بممرات شديدة الانحدار وصخرية وعلامات إرشادية قليلة، مما يتطلب حذرًا شديدًا.</p><p>تضم القمة تجهيزات تقنية (جهاز إرسال لاسلكي للإنقاذ الجبلي، هوائيات أرصاد جوية) وصندوق دفتر زوار. يمكن للمتنزهين الوصول إلى القمة عبر بديلين رئيسيين: Épaule du Mont Joly (المسار الأكثر ارتياداً) أو Panse (مسار أقل استخداماً). ويمر الصعود بعدة نقاط بارزة: ملجأ Mont Joly (2,002 م)، Mont Géroux (2,288 م)، ووصول تلفريك Épaule (مغلق في الصيف). في الأيام الصافية، تمتد الرؤية إلى أبعد الكتل الجبلية، ما يتيح قراءة فريدة لتضاريس الألب. كما تُعد Mont Joly نقطة الذروة في Diagonale du Mont-Joly، سباق الكيلومتر العمودي بطول 4 كم وفارق ارتفاع 1,000 م، يُنظم بنسختين صيفية وشتوية.</p>"
+      },
+      "practical_info": [
+        {
+          "k": "العنوان",
+          "v": "عدة نقاط انطلاق ممكنة: Plateau de la Croix (سان-نيكولا-دو-فيروس)، وLe Bettex (Les Communailles)، وقرية Planay (Megève)، وقرية Baptieu (Les Contamines-Montjoie)"
+        },
+        {
+          "k": "الإحداثيات",
+          "v": "45.825959° شمالاً — 6.692936° شرقاً"
+        },
+        {
+          "k": "الارتفاع",
+          "v": "2,525 م"
+        },
+        {
+          "k": "الافتتاح",
+          "v": "يمكن الوصول إليه من يونيو إلى أكتوبر حسب أحوال الثلوج. في الشتاء: فقط عبر التزلج الجبلي أو أحذية الثلج. تصبح القمة غير قابلة للوصول في حال عدم استقرار الثلج."
+        },
+        {
+          "k": "السعر",
+          "v": "مجاني"
+        },
+        {
+          "k": "موقف سيارات",
+          "v": "موقف سيارات مجاني عند Plateau de la Croix أو Bettex أو Planay أو Baptieu حسب المسار المختار. سعة محدودة في ذروة الموسم."
+        },
+        {
+          "k": "حيوانات",
+          "v": "الكلاب مقبولة بمقود (مروج جبلية ترعى فيها القطعان في الصيف)"
+        },
+        {
+          "k": "إمكانية الوصول",
+          "v": "لا يمكن الوصول إليه بعربة أطفال أو كرسي متحرك. مسار صعب مخصص للمتنزهين ذوي الخبرة."
+        },
+        {
+          "k": "مدة الوصول",
+          "v": "من 5 إلى 8 ساعات ذهابًا وإيابًا حسب المسار ونقطة الانطلاق. الصعود: من 3 إلى 4 ساعات. النزول: من 2 إلى 3 ساعات."
+        },
+        {
+          "k": "اتصال",
+          "v": "مكتب سياحة سان جيرفيه Mont-Blanc — 04 50 47 76 08"
+        }
+      ],
+      "how_to_get_there": {
+        "car": "انطلاقًا من Sallanches (مخرج A40 رقم 20)، تصل إلى Saint-Gervais-les-Bains ثم سان-نيكولا-دو-فيروس (D909). موقف السيارات عند Plateau de la Croix. من Megève، تصل إلى قرية Planay عبر Côte 2000 (باتجاه المطار المرتفع Altiport). من Les Contamines-Montjoie، خذ طريق نوتردام-دو-لا-غورج (D902)، انعطف يمينًا في ممر Echenaz، وتابع حتى موقف سيارات Baptieu.",
+        "public_transport": "حافلات موسمية إلى سان-نيكولا-دو-فيروس انطلاقًا من سان-جيرفيه (الخط 13). يُرجى التحقق من مواعيد الرحلات لدى Haute-Savoie Mobilités أو مكتب السياحة.",
+        "bike": "يمكن الوصول بالدراجة إلى مواقف الانطلاق (Plateau de la Croix، Bettex، Planay)، لكن بقية المسار سيرًا على الأقدام فقط."
+      },
+      "faq": [
+        {
+          "q": "هل الدخول إلى Mont Joly مجاني؟",
+          "a": "نعم، الوصول إلى Mont Joly مجاني ومجاني بالكامل على مدار السنة. التلفريك المؤدي إلى Mont d'Arbois فقط (لاختصار المسار من Megève) مدفوع الأجر."
+        },
+        {
+          "q": "ما هو أفضل مسار لتسلق Mont Joly؟",
+          "a": "يمكن الوصول إلى Mont Joly عبر عدة مسارات. الانطلاق من هضبة الصليب (سان نيكولا دو فيروس) هو الأكثر مباشرة: 4 كم، 1 000 متر ارتفاع تراكمي، وحوالي 3 ساعات صعودًا. من بيتيكس (ليه كوموناي): من 5 إلى 6 ساعات ذهابًا وإيابًا. من Megève (قرية بلاناي): من 6 إلى 8 ساعات ذهابًا وإيابًا."
+        },
+        {
+          "q": "ما هو مستوى صعوبة مسار Mont Joly؟",
+          "a": "تُعد رحلة Mont Joly صعبة ومخصصة للمشاة ذوي الخبرة. يتراوح فرق الارتفاع بين 850 و1,200 مترًا حسب المسار. يكون الانحدار مستمرًا بعد جناح Mont Joly، مع مقاطع شديدة الانحدار وصخرية في القسم القمي (الكتف أو البطن). يُنصح بإحضار أحذية مشي مناسبة، وماء، وملابس دافئة."
+        },
+        {
+          "q": "هل يمكن المبيت عند قمة Mont Joly؟",
+          "a": "لا، لا يوجد ملجأ عند قمة Mont Joly. يقع Chalet-Refuge Mont Joly على ارتفاع 2,002 م، قبل الصعود الأخير. يوفر وجبات ومبيتاً بالحجز. من الملجأ، احسب من 1,5 إلى 2 ساعة إضافية للوصول إلى القمة."
+        },
+        {
+          "q": "هل يُسمح بالكلاب في Mont Joly؟",
+          "a": "نعم، الكلاب مسموح بها على مسارات Mont Joly ولكن يجب أن تكون مربوطة، خاصة في المروج الألبية حيث ترعى الأبقار والماعز والأغنام من يونيو إلى سبتمبر. لا يقع Mont Joly ضمن محمية طبيعية."
+        },
+        {
+          "q": "ما هو أفضل موسم لتسلق Mont Joly؟",
+          "a": "أفضل فترة لـ Mont Joly تمتد من يونيو إلى أكتوبر. يوليو وأغسطس يوفران الظروف الأكثر استقراراً. سبتمبر وأوائل أكتوبر مثاليان للهدوء والإضاءة. أواخر مايو وأوائل يونيو: بقع ثلجية دائمة. في الشتاء: التزلج الجبلي أو رياضة الأحذية الثلجية فقط."
+        },
+        {
+          "q": "هل Mont Joly مناسب للمبتدئين؟",
+          "a": "Mont Joly مسار مشي صعب ومكشوف، مخصص للمتمرسين المعتادين على التضاريس الجبلية. الجزء الأخير، بعد المأوى، تقني بشكل خاص مع الحصى والممرات الشديدة الانحدار وغير المعلّمة جيدًا. يمكن للمبتدئين السير حتى مأوى Mont Joly (2,002 متر) للاستمتاع بالمنظر البانورامي دون متابعة الصعود إلى القمة."
+        },
+        {
+          "q": "هل يمكن الحصول على طعام أثناء الصعود؟",
+          "a": "نعم، يقدم شاليه-ملجأ Mont Joly الواقع على ارتفاع 2,002 مترًا مأكولات سافوايارد تقليدية من منتصف يونيو حتى نهاية سبتمبر. تراسات بانورامية، تخصصات سافوايارد، وأطباق اليوم. مفتوح يوميًا خلال موسم الصيف. يُنصح بالحجز: 04 50 93 10 10."
+        }
+      ]
+    },
     "ja": {
       "hero": {
         "lead": "Mont-Blancのマシフ、Beaufortain、Aravis、FizおよびBaugesの範囲上の360°パノラマを提供する2,525のm標高のアイコンサミット。"
       },
-      "hero_alt": "Mont Jolyは、Mont-Blancのマッサージ、Saint-Gervais-les-Bains、Haute-Savoieのパノラマビューで2,525mでサミット"
+      "hero_alt": "Mont Jolyは、Mont-Blancのマッサージ、Saint-Gervais-les-Bains、Haute-Savoieのパノラマビューで2,525mでサミット",
+      "when_to_visit": "Mont Jolyをハイキングするのに最適な時期は六月から十月にかけてで、この間は登山道に雪がなく通行可能です。七月と八月は最も安定した気候ですが、来訪者数も最も多くなります。五月下旬から六月初旬にかけては、高所の斜面にまだ雪田が残っています。九月と十月初旬は素晴らしい光と人出の少なさが魅力ですが、日が短くなり山小屋も閉鎖されます。冬季、Mont Jolyにはスキーツアーやスノーシューでアクセスできますが、地形に関する十分な知識と積雪状況の理解が必要です。山頂は嵐の際に落雷の危険に非常にさらされているため、天候が悪化した場合は直ちに下山してください。",
+      "meta_description": "標高2,525mの象徴的な山頂で、Mont-Blancに面しています。サン=ジェルヴェ、Megève、レ・コンタミーヌから六月~十月にアクセス可能な本格的なハイキング。山頂からは360度のパノラマ。",
+      "activities": [
+        {
+          "title": "山頂ハイキング",
+          "tag": null,
+          "description": "選ぶルートによって往復5~8時間かかる本格的な登りです。標高差は850~1,200 m。エポール経由、パンス経由、モン・ダルボワ発など複数のバリエーションがあります。"
+        },
+        {
+          "title": "360度パノラマを楽しむ",
+          "tag": null,
+          "description": "Mont-Blanc山塊、ボーフォルタン、アラヴィス、フィズ山系、ボージュ、そして晴れた日にはエクランまで見渡せる息をのむような絶景。山頂には方位盤があります。"
+        },
+        {
+          "title": "高山の野生動物観察",
+          "tag": null,
+          "description": "高山の草原や尾根でマーモット、シャモア、イヌワシ、ハゲワシを観察できる機会があります。夏には牛、ヤギ、羊が放牧される活発な牧草地帯です。"
+        },
+        {
+          "title": "山小屋でのグルメ休憩",
+          "tag": null,
+          "description": "Mont Joly 山小屋(2002m)では、伝統的なサヴォワ料理と予約制の宿泊(六月から九月)を提供しています。Mont-Blancとシャルヴァンに面したパノラマテラスがあります。"
+        },
+        {
+          "title": "エギーユ・クローシュへの縦走",
+          "tag": null,
+          "description": "経験豊富なハイカー向け:尾根を経由してエギーユ・クローシュとヴェリー峠へと延長するルート。高山の雰囲気と、遮るもののない区間があります。"
+        },
+        {
+          "title": "トレイルランニングとフェルランニング",
+          "tag": null,
+          "description": "Mont Jolyは、夏季版と冬季版で開催される垂直キロメートルレース「ディアゴナル・デュ・モン=ジョリ」の最高到達点です。距離4km、標高差1,000m。"
+        },
+        {
+          "title": "スキーツーリングとスノーシュー",
+          "tag": null,
+          "description": "冬と春には、Mont Jolyへはスキーツーリングまたはスノーシューでアクセス可能です。レ・コミュナイユまたはプラトー・ド・ラ・クロワからの出発。積雪状況に注意してください。"
+        }
+      ],
+      "body": {
+        "what_is": "<p><strong>Mont Joly</strong> は標高2,525メートルの山頂で、ボーフォルタン山塊にあり、Saint-Gervais-les-Bains、Megève、Les Contamines-Montjoieの境界、Haute-Savoieに位置しています。Mont-Blanc山塊に面した真の自然の展望台であり、山頂からは方位盤が設置された素晴らしい360度のパノラマを楽しめます。緑豊かな斜面が周囲の村々へと下っており、Mont JolyはMont-Blanc山系で最も美しい展望地点の一つとされています。</p><p>Mont Jolyへは複数のハイキングルートでアクセス可能。主な出発点はサン=ニコラ=ド=ヴェロス(プラトー・ド・ラ・クロワ)、レ・コミュナイユ経由のベテックス、Megèveからのプラネ集落、またはLes Contamines-Montjoieからのバプティユ集落。登りは険しく持続的で、頂上のミネラル質の稜線に到達する前に高山の草原と森林を横断する。ハイカーは夏の放牧牛(タリーヌ種とAbondance種の牛)、ヤギ、ヒツジの間を歩く。これらの乳はボーフォールチーズの原料となる。Mont Joly山小屋以降、特に露出した最終区間はより難易度が高くなり、標識の少ない急峻で岩がちな箇所があるため十分な注意が必要。</p><p>山頂には技術設備(山岳救助用無線中継、気象観測アンテナ)と登頂記録ボックスが設置されています。ハイカーは主に二つのルートで山頂に到達できます:エポール・デュ・Mont Joly(最も利用されるルート)またはパンス(利用の少ないルート)です。登山道はいくつかの見どころを通過します:Mont Joly避難小屋(標高2,002m)、モン・ジェルー(標高2,288m)、そして(夏季閉鎖される)エポール・リフトの到着地点です。晴れた日にはもっとも遠い山塊まで見渡すことができ、アルプスの地形をユニークな形で読み取ることができます。Mont Jolyはまた、ディアゴナル・デュ・モン・ジョリの最高地点でもあり、夏季と冬季の両方で開催される、距離4km・標高差1,000mのバーティカルキロメートルレースです。</p>"
+      },
+      "practical_info": [
+        {
+          "k": "住所",
+          "v": "複数の出発地点が可能:プラトー・ド・ラ・クロワ(サン=ニコラ=ド=ヴェロース)、ル・ベテックス(レ・コミュノー)、プラネー集落(Megève)、バティユー集落(Les Contamines-Montjoie)"
+        },
+        {
+          "k": "座標",
+          "v": "北緯45.825959°—東経6.692936°"
+        },
+        {
+          "k": "標高",
+          "v": "2,525 m"
+        },
+        {
+          "k": "オープン",
+          "v": "雪の状態により六月から十月までアクセス可能です。冬季はスキーツーリングまたはスノーシューでのみ可能です。積雪が不安定な場合、山頂へのアクセスはできません。"
+        },
+        {
+          "k": "料金",
+          "v": "無料"
+        },
+        {
+          "k": "駐車場",
+          "v": "選択したルートに応じてクロワ高原、ベテックス、プラネー、バプティユーで無料駐車。ピークシーズンは収容台数に限りあり。"
+        },
+        {
+          "k": "動物",
+          "v": "リード着用で犬同伴可(夏季は家畜が放牧される高山牧草地)"
+        },
+        {
+          "k": "アクセシビリティ",
+          "v": "ベビーカーや車椅子ではアクセス不可。経験豊富なハイカー向けの難易度の高いハイキングです。"
+        },
+        {
+          "k": "アクセス所要時間",
+          "v": "ルートと出発地点により往復5~8時間。登り:3~4時間。下り:2~3時間。"
+        },
+        {
+          "k": "お問い合わせ",
+          "v": "サン=ジェルヴェ Mont-Blanc 観光案内所 — 04 50 47 76 08"
+        }
+      ],
+      "how_to_get_there": {
+        "car": "Sallanchesから(A40号線出口20)、Saint-Gervais-les-Bainsへ、続いてサン=ニコラ=ド=ヴェロス(D909号線)へ。プラトー・ド・ラ・クロワに駐車場あり。Megèveからはコート2000(方面:アルティポール)を経てプラネ集落へ。Les Contamines-Montjoieからはノートル=ダム=ド=ラ=ゴルジュ道路(D902号線)を進み、エシュナの小道で右折し、バプティユ駐車場まで進む。",
+        "public_transport": "サン=ジェルヴェからサン=ニコラ=ド=ヴェロースへの季節運行シャトル(13号線)。時刻表はHaute-Savoieモビリテまたは観光局で確認してください。",
+        "bike": "出発地点の駐車場(プラトー・ド・ラ・クロワ、ベテックス、プラネ)までは自転車でアクセス可能ですが、その先は徒歩のみとなります。"
+      },
+      "faq": [
+        {
+          "q": "Mont Jolyへのアクセスは無料ですか?",
+          "a": "はい、Mont Jolyへのアクセスは年間を通じて無料です。Mont d'Arboisロープウェイ（Megèveからのルートを短縮するため）のみ有料です。"
+        },
+        {
+          "q": "Mont Jolyに登る最適なルートは？",
+          "a": "Mont Jolyへは複数のルートでアクセス可能。プラトー・ド・ラ・クロワ(サン=ニコラ=ド=ヴェロス)からの出発が最も直接的:4km、標高差1,000m、登り約3時間。ベテックス(レ・コミュナイユ)から:往復5-6時間。Megève(プラネ集落)から:往復6-8時間。"
+        },
+        {
+          "q": "Mont Jolyハイキングの難易度は？",
+          "a": "Mont Jolyのハイキングは難易度が高く、経験豊富なハイカー向けです。ルートによって標高差850〜1,200m。Mont Jolyの避難小屋（Pavillon）を過ぎると傾斜がきつくなり、山頂区間（エポールまたはパンス）では険しく岩の多い箇所があります。しっかりした登山靴、水、防寒着を持参してください。"
+        },
+        {
+          "q": "Mont Jolyの山頂で宿泊できますか?",
+          "a": "いいえ、Mont Jolyの山頂に山小屋はありません。Mont Jolyシャレ=避難小屋は最後の登り区間の手前、標高2,002mに位置しています。予約制で食事と宿泊を提供しています。山小屋から山頂まではさらに1.5~2時間を見込んでください。"
+        },
+        {
+          "q": "Mont Jolyでは犬を連れて行けますか？",
+          "a": "はい、犬はMont Jolyのトレイルで許可されていますが、特に六月から九月にかけて牛、山羊、羊が放牧される高山の草原ではリードにつないでおく必要があります。Mont Jolyは自然保護区内には位置していません。"
+        },
+        {
+          "q": "Mont Jolyに登るのに最適な季節は？",
+          "a": "Mont Jolyに最適な時期は六月から十月にかけてです。七月と八月が最も安定した気候です。九月と十月上旬は、静けさと光を楽しむのに理想的です。五月下旬から六月上旬:根雪が残ります。冬季:スキーツーリングかスノーシューのみ。"
+        },
+        {
+          "q": "Mont Jolyは初心者に向いていますか?",
+          "a": "Mont Jolyは困難で危険にさらされたハイキングコースで、山岳地形に慣れた経験豊富なハイカー向けです。避難小屋を過ぎた最終区間は特に技術的で、ガレ場と急な標識の少ない箇所があります。初心者は山頂まで行かずにMont Joly避難小屋(標高2,002m)まで登り、パノラマを楽しむことができます。"
+        },
+        {
+          "q": "登り道の途中で食事は取れますか?",
+          "a": "はい、標高2,002mにあるMont Jolyシャレー・ルフュージュでは、六月中旬から九月下旬まで伝統的なサヴォワ料理を提供しています。眺望の良いテラス、サヴォワの名物料理、日替わり料理をご用意。夏季は毎日営業。ご予約をおすすめします：04 50 93 10 10。"
+        }
+      ],
+      "meta_title": "Mont Joly · 完全ガイド（Saint-Gervais-les-Bains）"
     }
   },
   "featured_businesses": [],
@@ -1346,10 +1787,11 @@
     "gps_drift_m": 5
   },
   "freshness": {
-    "checked": "2026-06-05",
+    "checked": "2026-07-19",
     "status": "OPERATIONAL",
     "confidence": "high",
     "flag_reason": "",
+    "outcome": "OK",
     "google_match": "Mont Joly",
     "place_id": "ChIJp5CqoqhZiUcRbv-9Xk8AKhc",
     "google_status": "UNKNOWN",
@@ -1357,7 +1799,7 @@
     "phone": null,
     "hours": null,
     "rating": 4.9,
-    "rating_count": 117,
+    "rating_count": 118,
     "registry": {
       "state": "ACTIF",
       "siret": "10192099900014",

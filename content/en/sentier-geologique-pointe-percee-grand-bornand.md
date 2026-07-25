@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/en/sentier-geologique-pointe-percee-grand-bornand
 language: en
 facet_json: https://loisirs74.fr/api/lieu/sentier-geologique-pointe-percee-grand-bornand.json
-photo_url: /img/generique/generique-sentier-hiver-neige.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/sentiers/sentier-geologique-pointe-percee-grand-bornand-hero.jpg
+photo_type: real
+photo_author: "Guilhem Vellut from Annecy, France"
+photo_license: "CC BY 2.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-10
 source: loisirs74.fr
 ---
@@ -58,6 +58,10 @@ Not specified
 ## Season
 
 June to October depending on snow cover
+- Winter access window: Not specified
+- Winter infrastructure: Not specified
+- Snow panorama: Not specified
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

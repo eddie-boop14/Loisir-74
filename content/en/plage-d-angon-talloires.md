@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Talloires-Montmin, Haute-Savoie (74290)
 - GPS: 45.823629, 6.220921
 - Category: plage
-- Type: Plage pelouse vaste ombragée - vue château de Duingt
+- Type: Vast shaded lawn beach - view of Duingt castle
 
 ## Hours
 
-Horaires de la Plage d'Angon : Surveillance MNS juillet-août 2026, 12h30-18h30 (équivalent 2025). Hors saison : accès libre non surveillé.. Vérifié sur le site officiel le 24 mai 2026 — sous réserve d'arrêté municipal 2026.
+Opening hours at Plage d'Angon: lifeguard supervision July-August 2026, 12:30pm-6:30pm (same as 2025). Off-season: free access, unsupervised.. Verified on the official site on 24 May 2026 — subject to 2026 municipal order.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Selon plage - voir détails
+Depends on the beach - see details
 
 ## Transport
 
@@ -59,7 +59,7 @@ Selon plage - voir détails
 
 ## Season
 
-Juillet - août (surveillance MNS)
+July - August (lifeguard supervision)
 
 ## Official source
 

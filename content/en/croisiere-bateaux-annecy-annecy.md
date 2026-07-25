@@ -16,11 +16,11 @@ google_place_id: "ChIJs4LsMPuPi0cR9i39x1RYSAE"
 canonical_url: https://loisirs74.fr/en/croisiere-bateaux-annecy-annecy
 language: en
 facet_json: https://loisirs74.fr/api/lieu/croisiere-bateaux-annecy-annecy.json
-photo_url: /img/generique/generique-croisiere.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/baignade-nautisme/croisiere-bateaux-annecy-annecy-hero.jpg
+photo_type: real
+photo_author: "Guilhem Vellut from Annecy, France"
+photo_license: "CC BY 2.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-24
 source: loisirs74.fr
 ---
@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Annecy, Haute-Savoie (74000)
 - GPS: 45.9008, 6.1294
 - Category: croisiere
-- Type: Croisière passagers - flotte 5 bateaux 100% électrique-hybride
+- Type: Passenger cruises - fleet of 5 boats, 100% electric-hybrid
 
 ## Hours
 
-Horaires du Compagnie des Bateaux du Lac d'Annecy : Croisières quotidiennes selon saison : haute saison départs toutes les heures 10h-18h ; basse saison départs réduits, vérifier programme. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of the Compagnie des Bateaux du Lac d'Annecy: daily cruises depending on the season: peak season, departures every hour 10am-6pm; off-peak season, reduced departures, check the schedule. Checked on the official website on 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires du Compagnie des Bateaux du Lac d'Annecy : Croisières quotidiennes sel
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit sur site
 
 ## Season
 
-Toute l'année
+Year-round
 
 ## Official source
 

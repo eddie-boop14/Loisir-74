@@ -1,0 +1,75 @@
+---
+slug: samoens
+name: "Samoëns"
+category: station
+category_label: "Station"
+commune: "Samoëns"
+postal_code: "74340"
+department: "Haute-Savoie"
+department_code: "74"
+region: "Auvergne-Rhône-Alpes"
+country: France
+latitude: 46.0836
+longitude: 6.7278
+geo_verified: false
+google_place_id: null
+canonical_url: https://loisirs74.fr/en/samoens
+language: en
+facet_json: https://loisirs74.fr/api/lieu/samoens.json
+photo_url: /img/stations-de-ski/samoens-hero.jpg
+photo_type: real
+photo_author: "Tangopaso"
+photo_license: "Public domain"
+photo_source: Wikimedia Commons
+last_updated: 2026-07-16
+source: loisirs74.fr
+---
+
+# Samoëns
+
+## Facts
+
+- Commune: Samoëns, Haute-Savoie (74340)
+- GPS: 46.0836, 6.7278
+- Category: station
+- Type: Not specified
+
+## Hours
+
+Not specified
+
+## Prices
+
+- From: 45.6 EUR
+- Journée adulte Grand Massif (15-74 ans): 61 EUR — Tarifs saison 2025-26 — accès Flaine, Les Carroz, Morillon, Samoëns, Sixt ; gratuit -8 ans / 75 ans et + à la journée en caisse sur justificatif
+- Journée réduit Grand Massif (8-14 ans): 48.8 EUR — Tarifs saison 2025-26 — « De 2 à 7 journées consécutives ou non, valable durant l'hiver 2025/2026 » au même prix par jour
+- 4h consécutives adulte Grand Massif: 54.9 EUR — Tarifs saison 2025-26 — « Le pass se déclenche au premier passage aux bornes »
+- Journée adulte pass Villages: 57 EUR — Tarifs saison 2025-26 — « Permet de skier sur les stations des Carroz, Morillon, Samoëns et Sixt »
+- Journée réduit pass Villages (8-14 ans): 45.6 EUR — Tarifs saison 2025-26 — pass Villages (hors Flaine)
+- Abonnement saison adulte Grand Massif (26-74 ans): 1284 EUR — Tarifs saison 2025-26 — « Saison PREM'S jusqu'au 30 Sept. 2025 642 € », « Saison PROMO jusqu'au 15 Nov. 2025 714 € »
+
+## Access (PMR)
+
+- Status: Partially accessible
+- Detail: Adaptive skiing via the Samoëns Handi-Glisse association (tandem skiing and other adaptive-sport equipment offered free of charge to people with disabilities). Accessible Tourist Office (2 reserved PMR spaces in front of the building, step-free entrance, adapted counter, wheelchair loan, induction loop, easy-to-read guide). Interactive map with a "PMR Access" filter, "Samoëns pour tous" brochure, public accessibility register.
+- Source: Samoëns Tourisme — https://www.samoens.com/handicap/
+
+## Parking
+
+Grand Massif Express car park: 800 spaces. In service from 15 December to 15 April, paid from 9:00 to 19:00 (7€ per day, 1 hour free; season subscription 250€, reduced rate 125€ for professionals using the gondola). Free for residents of Septimont (on proof). PMR card holders: free parking in the dedicated spaces, no formalities.
+
+## Transport
+
+Not specified
+
+## Season
+
+Winter (skiing) · a lively village all year round
+- Winter access window: Open (cleared road)
+- Winter infrastructure: Nordic skiing · Cross-country skiing · Snowshoeing · Sledging
+- Snow panorama: Not specified
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
+
+## Official source
+
+https://www.samoens.com/

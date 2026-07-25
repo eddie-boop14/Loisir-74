@@ -1,0 +1,75 @@
+---
+slug: passy-plaine-joux
+name: "Passy Plaine-Joux"
+category: station
+category_label: "Station"
+commune: "Passy"
+postal_code: "74190"
+department: "Haute-Savoie"
+department_code: "74"
+region: "Auvergne-Rhône-Alpes"
+country: France
+latitude: 45.955
+longitude: 6.735
+geo_verified: false
+google_place_id: null
+canonical_url: https://loisirs74.fr/passy-plaine-joux
+language: fr
+facet_json: https://loisirs74.fr/api/lieu/passy-plaine-joux.json
+photo_url: /img/stations-de-ski/passy-plaine-joux-hero.jpg
+photo_type: real
+photo_author: "Guilhem Vellut from Annecy, France"
+photo_license: "CC BY 2.0"
+photo_source: Wikimedia Commons
+last_updated: 2026-07-16
+source: loisirs74.fr
+---
+
+# Passy Plaine-Joux
+
+## Faits
+
+- Commune: Passy, Haute-Savoie (74190)
+- GPS: 45.955, 6.735
+- Catégorie: station
+- Type: Non renseigné
+
+## Horaires
+
+Non renseigné
+
+## Tarifs
+
+- À partir de: 22.5 EUR
+- Journée adulte (16-69 ans): 25.5 EUR — Tarifs saison 2025-26 — domaine skiable complet ; station ouverte du 20 décembre 2025 au 29 mars 2026 selon enneigement
+- Journée enfant (5-15 ans): 22.5 EUR — Tarifs saison 2025-26 — domaine skiable complet
+- Journée sénior (70-79 ans): 22.5 EUR — Tarifs saison 2025-26 — domaine skiable complet ; espace débutant seul : 10,50 €
+- 4h consécutives adulte: 23.5 EUR — Tarifs saison 2025-26 — 4 heures consécutives
+- Pack Tribu 4 personnes 1 jour: 85 EUR — Tarifs saison 2025-26 — minimum 1 adulte et 1 enfant entre 5 et 15 ans parmi le groupe
+- Forfait saison adulte plein tarif: 222 EUR — Tarifs saison 2025-26 — tarif promo 177 € avant le 10/12/2025 et du 05/01/2026 au 06/02/2026
+
+## Accès (PMR)
+
+- Statut: Partiellement accessible
+- Détail: Handiski et tandem-ski proposés avec l'ESF Passy Plaine-Joux. Avec le télésiège du Barmus, les moniteurs ESF de Passy sont spécialement formés à l'enseignement du ski assis (sit-ski) et à l'accompagnement des personnes à mobilité réduite avec un matériel adapté.
+- Source: Office de Tourisme de Passy Mont-Blanc — https://www.passy-mont-blanc.com/en/activites/ski-et-glisse/handiski/
+
+## Parking
+
+Grand parking gratuit situé au pied du front de neige, à environ 50 m des caisses des remontées mécaniques. (Capacité exacte non confirmée en verbatim sur la source officielle.)
+
+## Transport
+
+Non renseigné
+
+## Saison
+
+Hiver (ski alpin et nordique) · été (randonnée, parapente)
+- Fenêtre d'accès hiver: Ouvert (accès déneigé)
+- Infrastructure hiver: Ski nordique · Ski de fond
+- Panorama enneigé: Vue Mont-Blanc dégagée
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+
+## Source officielle
+
+https://www.passy-mont-blanc.com

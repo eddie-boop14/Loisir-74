@@ -18,9 +18,9 @@ language: en
 facet_json: https://loisirs74.fr/api/lieu/cascade-du-rouget.json
 photo_url: /img/cascades/cascade-du-rouget-hero.jpg
 photo_type: real
-photo_author: "Florian Pépellin"
-photo_license: "CC BY-SA 4.0"
-photo_source: Wikimedia Commons
+photo_author: "Bénédicte"
+photo_license: null
+photo_source: null
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---
@@ -59,6 +59,10 @@ Free (Nant Sec parking)
 ## Season
 
 May–June (snowmelt, maximum flow) · July–October (easy access)
+- Winter access window: Partial access — Live status: inforoute74.fr
+- Winter infrastructure: Snowshoeing
+- Snow panorama: Not specified
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

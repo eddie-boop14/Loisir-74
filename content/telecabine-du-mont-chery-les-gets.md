@@ -16,11 +16,11 @@ google_place_id: "ChIJoZlrSigDjEcRxVLD7e6372g"
 canonical_url: https://loisirs74.fr/telecabine-du-mont-chery-les-gets
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/telecabine-du-mont-chery-les-gets.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/8/82/T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg
+photo_url: /img/telecabines/telecabine-du-mont-chery-les-gets-hero.jpg
 photo_type: real
-photo_author: null
-photo_license: null
-photo_source: null
+photo_author: "Hesed"
+photo_license: "CC BY-SA 3.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-04-28
 source: loisirs74.fr
 ---
@@ -71,6 +71,10 @@ Parkings village (200 m de la gare aval)
 ## Saison
 
 Juillet – août (randonnée, VTT), décembre – avril (ski)
+- Fenêtre d'accès hiver: Non renseigné
+- Infrastructure hiver: Non renseigné
+- Panorama enneigé: Non renseigné
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

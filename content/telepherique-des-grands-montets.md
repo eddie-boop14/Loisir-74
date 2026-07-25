@@ -18,9 +18,9 @@ language: fr
 facet_json: https://loisirs74.fr/api/lieu/telepherique-des-grands-montets.json
 photo_url: https://upload.wikimedia.org/wikipedia/commons/c/c4/Hike_to_Glacier_d%27Argenti%C3%A8re_-_panoramio_%2861%29.jpg
 photo_type: real
-photo_author: null
-photo_license: null
-photo_source: null
+photo_author: "Patrick Nouhailler's…"
+photo_license: "CC BY-SA 3.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-04-28
 source: loisirs74.fr
 ---
@@ -60,6 +60,10 @@ Parking Grands-Montets (chemin de la Glacière, Argentière)
 ## Saison
 
 Décembre – début mai (ski) · Fermé été 2026
+- Fenêtre d'accès hiver: Fermé (route fermée l'hiver) — État en temps réel : inforoute74.fr
+- Infrastructure hiver: Ski de rando
+- Panorama enneigé: Non renseigné
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 
 ## Source officielle
 

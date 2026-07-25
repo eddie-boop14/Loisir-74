@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Évian-les-Bains, Haute-Savoie (74500)
 - GPS: 46.4019, 6.5856
 - Category: plage
-- Type: Plage 3,5 ha + bassin olympique 50 m + toboggan 160 m
+- Type: Beach 3.5 ha + 50 m Olympic pool + 160 m slide
 
 ## Hours
 
-Horaires de la Plage du Centre Nautique d'Évian : Du 02/05 au 21/09/2026 : tous les jours, horaires variables 9h30-19h/20h selon saison. Surveillance MNS permanente saison.. Vérifié sur le site officiel le 24 mai 2026 — sous réserve d'arrêté municipal 2026.
+Opening hours of Plage du Centre Nautique d'Évian: From 02/05 to 21/09/2026: every day, variable hours 9h30-19h/20h depending on season. Permanent lifeguard supervision in season.. Verified on the official website on 24 May 2026 — subject to municipal decree 2026.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires de la Plage du Centre Nautique d'Évian : Du 02/05 au 21/09/2026 : tous
 
 ## Parking
 
-Selon plage - voir détails
+Depends on the beach - see details
 
 ## Transport
 
@@ -58,7 +58,7 @@ Selon plage - voir détails
 
 ## Season
 
-Juillet - août (surveillance MNS)
+July - August (lifeguard supervision)
 
 ## Official source
 

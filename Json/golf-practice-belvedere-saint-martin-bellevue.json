@@ -93,6 +93,11 @@
       "date": "2026-06-15",
       "by": "scripts/pick_generique.py",
       "note": "hero_image → generique-attraction.jpg (category='attraction' · unmatched-attraction → flagged for Part 2)."
+    },
+    {
+      "date": "2026-07-19",
+      "by": "claudius-fable",
+      "note": "JOB 2 i18n-leak batch : champs FR résiduels traduits (hero_alt/meta_title/schema_amenities) — baseline en résorption."
     }
   ],
   "partners": [
@@ -615,11 +620,11 @@
         }
       ],
       "schema_amenities": [
-        "practice",
-        "putting_green",
-        "bunker",
-        "parking",
-        "lessons"
+        "Driving range",
+        "Putting green",
+        "Bunker",
+        "Parking",
+        "Lessons"
       ]
     },
     "de": {
@@ -850,11 +855,11 @@
         }
       ],
       "schema_amenities": [
-        "practice",
-        "putting_green",
-        "bunker",
-        "parking",
-        "lessons"
+        "Übungsplatz",
+        "Putting-Green",
+        "Bunker",
+        "Parkplatz",
+        "Unterricht"
       ]
     },
     "it": {
@@ -1077,11 +1082,11 @@
         }
       ],
       "schema_amenities": [
-        "practice",
-        "putting_green",
+        "campo pratica",
+        "green da putting",
         "bunker",
-        "parking",
-        "lessons"
+        "parcheggio",
+        "lezioni"
       ]
     },
     "es": {
@@ -1304,11 +1309,11 @@
         }
       ],
       "schema_amenities": [
-        "practice",
-        "putting_green",
+        "prácticas",
+        "green de putt",
         "bunker",
-        "parking",
-        "lessons"
+        "aparcamiento",
+        "clases"
       ]
     },
     "nl": {
@@ -1531,11 +1536,11 @@
         }
       ],
       "schema_amenities": [
-        "practice",
-        "putting_green",
+        "oefenterrein",
+        "putting green",
         "bunker",
-        "parking",
-        "lessons"
+        "parkeren",
+        "lessen"
       ]
     },
     "pt": {
@@ -1826,56 +1831,355 @@
         "bike": "Hilly drogi od Annecy; Fillière Greenway w pobliżu, następnie wspinaczka do golfa."
       },
       "when_to_visit": "Od kwietnia do października na kurs w najlepszych warunkach. Praktyka użytkowa okrągłe dzięki krytych zatok.",
-      "events": "Darmowe degustacje, turnieje amatorskie i dni odkrywcze ogłoszone na oficjalnej stronie."
-    },
-    "he": {
-      "hero_alt": "Golf du Belvédère - Saint-Martin-Bellevue, Haute-Savoie",
+      "events": "Darmowe degustacje, turnieje amatorskie i dni odkrywcze ogłoszone na oficjalnej stronie.",
+      "meta_title": "Golf du Belvédère — driving range i pole 9-dołkowe w pobliżu Annecy | Loisirs 74",
+      "body": {
+        "what_is": "<p><strong>Golf du Belvédère</strong> to szkoła golfa oraz <strong>pole 9-dołkowe</strong> w <strong>Saint-Martin-Bellevue</strong> (gmina Fillière), <strong>15 minut od Annecy</strong>. Obiekt łączy w sobie <strong>nowoczesny, wielopoziomowy driving range</strong> z <strong>zadaszonym i otwartym stanowiskami</strong>, <strong>putting greenem</strong>, <strong>bunkrem treningowym</strong> oraz <strong>strefą do chippingu</strong> — dostępną zarówno dla początkujących, jak i doświadczonych graczy.</p><p><strong>Driving range</strong> można użytkować przez cały rok dzięki zadaszonym stanowiskom, w systemie kubełkowym: <strong>€3 za kubełek</strong>, <strong>€30 za 11</strong>, <strong>€60 za 23</strong>, <strong>€90 za 36</strong>. Pole 9-dołkowe oferuje <strong>atrakcyjne green fees</strong>: <strong>€28 w dni robocze</strong>, <strong>€34 w weekendy</strong> (€32/38 za cały dzień). Idealne, by odkryć golf lub utrzymać formę bez kosztów pola turniejowego.</p><p>Klub cechuje <strong>przyjazna, rodzinna atmosfera</strong> i oferuje <strong>lekcje grupowe oraz indywidualne</strong> z zawodowym instruktorem PGA, kursy dla początkujących oraz <strong>pakiety dla dzieci i grup szkolnych</strong>. <strong>Czynne codziennie oprócz wtorku, 8.30–18.30</strong>. Bezpłatny parking, na miejscu clubhouse i restauracja. Tel. <strong>04 50 60 31 78</strong>.</p>"
+      },
       "activities": [
         {
-          "title": "טווח הפרקטיקה מכוסה",
-          "description": "מפרץ מכוסה ופותח סביב השנה. מערכת דלי פשוטה מגילוי דלי לחבילות רגילות.",
-          "tag": "תרגול בפועל"
+          "title": "Wielopoziomowy zadaszony driving range",
+          "description": "Zadaszone i otwarte stanowiska dostępne przez cały rok. Prosty system kubełkowy — od kubełka odkrywczego po pakiety dla stałych bywalców.",
+          "tag": "driving range"
         },
         {
-          "title": "קורס 9-hole",
-          "description": "קורס נגיש, מוצלח למתחילים ושחקנים בטוחים. 28 יום בשבוע, € 34 בסוף השבוע (9 חורים).",
+          "title": "Pole 9-dołkowe",
+          "description": "Dostępne, zadbane pole dla początkujących i pewnych siebie graczy. €28 w tygodniu, €34 w weekendy (9 dołków).",
+          "tag": "9 dołków"
+        },
+        {
+          "title": "Putting green i strefa do chippingu",
+          "description": "Wydzielona strefa krótkiej gry: duży putting green oraz obszar do chippingu, na którym można doskonalić chipy i pitche.",
+          "tag": "krótka gra"
+        },
+        {
+          "title": "Bunkier treningowy",
+          "description": "Dedykowany bunkier do ćwiczenia uderzeń z piasku — rzadkość na obiekcie tej wielkości.",
+          "tag": "bunkier"
+        },
+        {
+          "title": "Lekcje i kursy",
+          "description": "Lekcje grupowe i indywidualne z instruktorem PGA. Kursy dla początkujących, warsztaty doskonalące, formaty dla dzieci i grup szkolnych.",
+          "tag": "lekcje"
+        },
+        {
+          "title": "Pakiety kubełkowe",
+          "description": "Pakiety 11 / 23 / 36 kubełków dla stałych graczy (€30 / €60 / €90) — opłacalne przy regularnych treningach.",
+          "tag": "pakiety"
+        },
+        {
+          "title": "Clubhouse i restauracja",
+          "description": "Przyjemne miejsce na odpoczynek po rundzie: kawa, jedzenie i widok na pole.",
+          "tag": "clubhouse"
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "Adres",
+          "v": "1116 route du Mont, 74370 Saint-Martin-Bellevue (Fillière)"
+        },
+        {
+          "k": "Współrzędne",
+          "v": "45.9683, 6.1631"
+        },
+        {
+          "k": "Telefon",
+          "v": "04 50 60 31 78"
+        },
+        {
+          "k": "Strona oficjalna",
+          "v": "https://www.golfdubelvedere.fr"
+        },
+        {
+          "k": "Godziny otwarcia",
+          "v": "Codziennie 8.30–18.30 — nieczynne we wtorki",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Cennik driving range",
+          "v": "Kubełek €3 · 11 kubełków €30 · 23 kubełki €60 · 36 kubełków €90",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Green fees — 9 dołków",
+          "v": "Dni robocze €28 (cały dzień €32) · weekendy €34 (cały dzień €38)",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "Rezerwacja",
+          "v": "Driving range bez rezerwacji; green fees i lekcje zalecane przez telefon"
+        },
+        {
+          "k": "Czas trwania",
+          "v": "30 min – 2 godz. na driving range; 1,5–3 godz. na 9 dołkach"
+        },
+        {
+          "k": "Parking",
+          "v": "Bezpłatny na miejscu"
+        },
+        {
+          "k": "Dostępność",
+          "v": "Driving range i clubhouse dostępne; pole częściowo pagórkowate"
+        },
+        {
+          "k": "Dla kogo",
+          "v": "Początkujący, juniorzy, zaawansowani gracze; grupy szkolne i firmowe na życzenie"
+        }
+      ],
+      "faq": [
+        {
+          "q": "Czy muszę być członkiem klubu, żeby korzystać z driving range?",
+          "a": "Nie, driving range jest ogólnodostępny bez konieczności wykupienia członkostwa. Kubełki kosztują €3 każdy i płaci się za nie w recepcji."
+        },
+        {
+          "q": "Jakie są green fees na 9 dołkach?",
+          "a": "€28 w dni robocze i €34 w weekendy za 9 dołków; €32 i €38 za cały dzień. Rezerwacja jest zalecana."
+        },
+        {
+          "q": "Czy klub jest czynny przez cały rok?",
+          "a": "Tak, codziennie od 8.30 do 18.30, z wyjątkiem wtorków. Stan pola zależy od warunków pogodowych."
+        },
+        {
+          "q": "Czy są lekcje dla początkujących?",
+          "a": "Tak, oferujemy lekcje grupowe i indywidualne z instruktorem PGA oraz kursy dla początkujących. Rezerwacja pod numerem 04 50 60 31 78."
+        },
+        {
+          "q": "Czy można wypożyczyć sprzęt?",
+          "a": "Klub zazwyczaj udostępnia podstawowy sprzęt na pierwsze lekcje i próbne zajęcia. Zapytaj w recepcji."
+        },
+        {
+          "q": "Czy rodziny z dziećmi są mile widziane?",
+          "a": "Oczywiście — klub słynie z przyjaznej, rodzinnej atmosfery i oferuje pakiety juniorskie. Odkrywanie golfa od 6–7 roku życia."
+        },
+        {
+          "q": "Czy na miejscu jest restauracja?",
+          "a": "Tak, w clubhouse można zjeść i napić się czegoś — to miłe miejsce zarówno dla graczy, jak i ich gości."
+        }
+      ]
+    },
+    "he": {
+      "meta_description": "מגרש תרגול מודרני עם מדרגות, גרין פאטינג, בונקר אימונים ומגרש 9 חורים ב-Saint-Martin-Bellevue (15 דקות מ-Annecy). דלי כדורים החל מ-€3.",
+      "hero": {
+        "lead": "חמש עשרה דקות מ-Annecy, מגרש אימונים מודרני מדורג (עמדות מקורות ופתוחות), מדשאת פוטינג, בונקר אימון, ומסלול 9 חורים נגיש."
+      },
+      "how_to_get_there": {
+        "car": "מ-Annecy: A41 יציאה 17 (Charvonnex / Pringy) ולאחר מכן D14 עד Saint-Martin-Bellevue, 15 דקות. חניה חינם.",
+        "public_transport": "קו אוטובוס Sibra מספר 16 מ-Annecy ל-Saint-Martin-Bellevue, ולאחר מכן כמה דקות הליכה.",
+        "bike": "כבישים גבעתיים מ-Annecy; שביל ירוק Fillière בקרבת מקום, ולאחר מכן עלייה אל מגרש הגולף."
+      },
+      "when_to_visit": "מאפריל עד אוקטובר למסלול בתנאים הטובים ביותר. אזור התרגול ניתן לשימוש כל השנה הודות למגרשים מקורים.",
+      "events": "מפגשי טעימה חינמיים, טורנירים לחובבים וימי גילוי מוכרזים באתר הרשמי.",
+      "meta_title": "Golf du Belvédère — מגרש אימונים ומסלול 9 חורים ליד Annecy | Loisirs 74",
+      "activities": [
+        {
+          "title": "מגרש אימונים מקורה ומדורג",
+          "description": "תאים מקורים ופתוחים לשימוש כל השנה. מערכת דליים פשוטה, מ'דלי גילוי' ועד חבילות לקבועים.",
+          "tag": "תרגול"
+        },
+        {
+          "title": "מסלול 9 חורים",
+          "description": "מסלול נגיש ומתוחזק היטב למתחילים ולשחקנים בטוחים. €28 בימי חול, €34 בסופי שבוע (9 חורים).",
           "tag": "9 חורים"
         },
         {
-          "title": "מיקום: Green & Cloping Zone",
-          "description": "אזור משחק קצר ייעודי: גדול לשים שטח ירוק השבבים לעבוד צ'יפס ואגנס.",
+          "title": "גרין פאטינג ואזור צ'יפינג",
+          "description": "אזור ייעודי למשחק קצר: גרין פאטינג גדול ואזור צ'יפינג לתרגול חבטות קצרות.",
           "tag": "משחק קצר"
         },
         {
-          "title": "בונקר",
-          "description": "בונקר ייעודי כדי לעבוד יריות חול - נדיר בטווח של גודל זה.",
-          "tag": "בונקר בונקר"
+          "title": "בונקר אימונים",
+          "description": "בונקר ייעודי לתרגול חבטות מחול — נדיר במגרש בגודל כזה.",
+          "tag": "בונקר"
         },
         {
-          "title": "שיעורים ומרפאות",
-          "description": "קבוצה ושיעורים פרטיים עם מורה PGA. מרפאות למתחילים, שיפור קורסים, ילדים / בתי ספר.",
+          "title": "שיעורים וסדנאות",
+          "description": "שיעורים קבוצתיים ופרטיים עם מורה PGA. סדנאות למתחילים, קורסי שיפור, פורמטים לילדים/בתי ספר.",
           "tag": "שיעורים"
         },
         {
           "title": "חבילות תרגול",
-          "description": "11 / 23 / 36 חבילות דלי עבור קבועים (€ 30 / € 60 / € 90) - סביר עבור תרגול תכוף.",
+          "description": "חבילות של 11 / 23 / 36 דליים לחוזרים (€30 / €60 / €90) — משתלם לתרגול תדיר.",
           "tag": "חבילות"
         },
         {
-          "title": "Clubhouse & Restaurant",
-          "description": "מקום ידידותי לאחר הסיבוב: קפה, אוכל, נוף לאורך הקורס.",
-          "tag": "Clubhouse"
+          "title": "מועדון ומסעדה",
+          "description": "מקום ידידותי אחרי הסיבוב: קפה, אוכל, נוף על המגרש.",
+          "tag": "בית מועדון"
+        }
+      ],
+      "faq": [
+        {
+          "q": "האם עליי להיות חבר כדי להשתמש במטווח?",
+          "a": "לא, המתקן פתוח לכולם ללא צורך במנוי. דליים ב-3€ ליחידה, לתשלום בקבלה."
+        },
+        {
+          "q": "מהם דמי המשחק ל-9 חורים?",
+          "a": "€28 בימי חול ו-€34 בסופ״ש עבור 9 חורים; €32 ו-€38 ליום שלם. מומלץ להזמין מראש."
+        },
+        {
+          "q": "האם המועדון פתוח כל השנה?",
+          "a": "כן, מדי יום 8:30 בבוקר - 6:30 בערב, סגור בימי שלישי. תנאי המסלול תלויים במזג האוויר."
+        },
+        {
+          "q": "האם יש שיעורים למתחילים?",
+          "a": "כן, שיעורים קבוצתיים ופרטיים עם מקצוען PGA וכן סדנאות למתחילים. ניתן להזמין בטלפון 04 50 60 31 78."
+        },
+        {
+          "q": "האם הציוד מסופק?",
+          "a": "המועדון בדרך כלל משאיל ציוד למתחילים לשיעורי היכרות ולניסיונות. יש לשאול בקבלה."
+        },
+        {
+          "q": "האם משפחות יכולות לשחק עם הילדים?",
+          "a": "כן, למועדון אווירה משפחתית וידידותית והוא מציע חבילות לנוער. גילוי מגיל 6-7."
+        },
+        {
+          "q": "האם יש מסעדה במקום?",
+          "a": "כן, מועדון עם אוכל ומשקאות מקבל את פני השחקנים והאורחים."
+        }
+      ],
+      "hero_alt": "Golf du Belvédère — Saint-Martin-Bellevue, Haute-Savoie",
+      "body": {
+        "what_is": "<p><strong>Golf du Belvédère</strong> הוא בית ספר לגולף ו- <strong>מסלול 9 חורים</strong> ב <strong>Saint-Martin-Bellevue</strong> (עיריית Fillière), <strong>15 דקות מ-Annecy</strong>. האתר משלב <strong>מטווח אימונים מודרני מדורג</strong> עם <strong>מפרצים מקורים ופתוחים</strong>,  <strong>מדשאת אימון גולף</strong>,  <strong>בונקר תרגול</strong> ו <strong>אזור צ'יפינג</strong> — נגיש למתחילים וגם לשחקנים מנוסים.</p><p>ה <strong>מגרש תרגול</strong> ניתן להשתמש בו לאורך כל השנה הודות למסלוליו המקורים, עם מערכת דליים: <strong>€3 לדלי</strong>, <strong>€30 עבור 11</strong>, <strong>€60 עבור 23</strong>, <strong>€90 עבור 36</strong>. מסלול 9 החורים מציע <strong>דמי משחק אטרקטיביים</strong>: <strong>€28 בימי חול</strong>, <strong>€34 בסופ״ש</strong> (€32/38 ליום). אידיאלי לגילוי הגולף או לשמירה על הרמה ללא התקציב של מגרש אליפות.</p><p>למועדון יש <strong>אווירה מתאימה למשפחות</strong> ומציע <strong>שיעורים קבוצתיים ופרטיים</strong> עם מקצוען PGA, סדנאות למתחילים ו <strong>חבילות לבתי ספר ולילדים</strong>. <strong>פתוח בכל יום פרט ליום שלישי, 8.30 am - 6.30 pm</strong>. חניה חינם, מועדון ומסעדה באתר. טלפון. <strong>04 50 60 31 78</strong>.</p>"
+      }
+    },
+    "ar": {
+      "meta_title": "ملعب Golf du Belvédère — ملعب تدريب وملعب 9 حفر بالقرب من Annecy | Loisirs 74",
+      "meta_description": "ملعب تدريب متدرج حديث، أرضية بَت (putting green)، حفرة رملية للتدريب، وملعب من 9 حفر في Saint-Martin-Bellevue (15 دقيقة من Annecy). سلة كرات ابتداءً من €3.",
+      "hero": {
+        "lead": "على بعد خمس عشرة دقيقة من Annecy، ملعب تدريب حديث متدرج (حجيرات مغطاة ومكشوفة)، ملعب بَتّينغ، حفرة رملية للتدريب وملعب مكون من 9 حفر يسهل الوصول إليه."
+      },
+      "activities": [
+        {
+          "title": "ملعب تدريب مغطى متدرج المستويات",
+          "description": "حارات مغطاة ومكشوفة قابلة للاستخدام طوال العام. نظام دلاء بسيط من دلو الاكتشاف إلى باقات المرتادين.",
+          "tag": "تدريب"
+        },
+        {
+          "title": "ملعب 9 حفر",
+          "description": "ملعب متاح ومُعتنى به جيدًا للمبتدئين واللاعبين الواثقين. 28€ أيام الأسبوع، 34€ في عطلة نهاية الأسبوع (9 حفر).",
+          "tag": "9 حفر"
+        },
+        {
+          "title": "أرضية بَتّينغ ومنطقة تشيبينغ (غولف)",
+          "description": "منطقة مخصصة للعبة القصيرة: أرضية بَتّ واسعة ومنطقة تشيبينغ لتدريب الضربات القصيرة.",
+          "tag": "لعبة قصيرة"
+        },
+        {
+          "title": "حفرة رملية للتمرين (bunker)",
+          "description": "حفرة رملية مخصصة لتدريب ضربات الرمل — نادرة في ملعب بهذا الحجم.",
+          "tag": "مخبأ"
+        },
+        {
+          "title": "دروس وورش تدريبية",
+          "description": "دروس جماعية وخاصة مع مدرب معتمد من PGA. دورات للمبتدئين، دورات لتحسين المستوى، صيغ للأطفال/المدارس.",
+          "tag": "دروس"
+        },
+        {
+          "title": "باقات التمرين",
+          "description": "باقات 11 / 23 / 36 كرة للمعتادين (30 € / 60 € / 90 €) — بأسعار مناسبة للممارسة المتكررة.",
+          "tag": "باقات"
+        },
+        {
+          "title": "نادٍ ومطعم",
+          "description": "مكان ودّي بعد الجولة: قهوة، طعام، وإطلالة على الملعب.",
+          "tag": "النادي"
         }
       ],
       "how_to_get_there": {
-        "car": "מתוך Annecy: A41 יציאה 17 (Charvonnex / Pringy) ולאחר מכן D14 ל- Saint-Martin-Bellevue, 15 דקות. חניה חופשית",
-        "public_transport": "קו אוטובוס סיברה 16 מ Annecy ל- Saint-Martin-Bellevue, ולאחר מכן כמה דקות ברגל.",
-        "bike": "כבישים הרריים מ Annecy; Fillière ירוק סמוך, ואז לטפס לגולף."
+        "car": "انطلاقًا من Annecy: مخرج A41 رقم 17 (Charvonnex / Pringy) ثم D14 حتى Saint-Martin-Bellevue، 15 دقيقة. موقف سيارات مجاني.",
+        "public_transport": "خط حافلة سيبرا رقم 16 من Annecy إلى Saint-Martin-Bellevue، ثم بضع دقائق سيرًا على الأقدام.",
+        "bike": "طرق متموجة من Annecy؛ ممر أخضر Fillière قريب، ثم صعود إلى ملعب الغولف."
       },
-      "when_to_visit": "אפריל עד אוקטובר על המסלול בתנאים הטובים ביותר. התאמנו לאורך כל השנה בזכות מפרץ מכוסה.",
-      "events": "מפגשים טעימים, טורנירים חובבניים וימי גילוי הוכרזו באתר הרשמי."
+      "when_to_visit": "من أبريل إلى أكتوبر للمسار في أفضل الظروف. الممارسة متاحة على مدار السنة بفضل المسارات المغطاة.",
+      "events": "جلسات تجريبية مجانية، بطولات للهواة وأيام اكتشاف مُعلَنة على الموقع الرسمي.",
+      "faq": [
+        {
+          "q": "هل يجب أن أكون عضواً لاستخدام المرمى؟",
+          "a": "لا، الممارسة مفتوحة للجميع دون اشتراك. سلة الكرات €3 للواحدة، تُدفع في الاستقبال."
+        },
+        {
+          "q": "ما هي رسوم اللعب لتسع حفر (9)؟",
+          "a": "€28 أيام الأسبوع و€34 نهاية الأسبوع مقابل 9 حفر؛ €32 و€38 لليوم كاملاً. يُنصح بالحجز مسبقاً."
+        },
+        {
+          "q": "هل النادي مفتوح على مدار العام؟",
+          "a": "نعم، يوميًا من الساعة 8.30 صباحًا حتى 6.30 مساءً، مغلق أيام الثلاثاء. تعتمد ظروف المضمار على حالة الطقس."
+        },
+        {
+          "q": "هل توجد دروس للمبتدئين؟",
+          "a": "نعم، تتوفر دروس جماعية وخاصة مع محترف PGA بالإضافة إلى ورش تدريب للمبتدئين. يُرجى الحجز على الرقم 04 50 60 31 78."
+        },
+        {
+          "q": "هل العتاد متوفر؟",
+          "a": "يوفر النادي عادةً معدات أساسية للدروس والتجارب الأولى. اسأل عند الاستقبال."
+        },
+        {
+          "q": "هل يمكن للعائلات اللعب مع الأطفال؟",
+          "a": "نعم، يتميز النادي بأجواء عائلية ودية ويقدم باقات مخصصة للناشئين. الاكتشاف من سن 6-7 سنوات."
+        },
+        {
+          "q": "هل يوجد مطعم في الموقع؟",
+          "a": "نعم، يرحب النادي الذي يقدم الطعام والمشروبات باللاعبين والضيوف."
+        }
+      ],
+      "hero_alt": "Golf du Belvédère — Saint-Martin-Bellevue، Haute-Savoie",
+      "body": {
+        "what_is": "<p><strong>Golf du Belvédère</strong> هي مدرسة غولف و <strong>ملعب 9 حفر</strong> في <strong>Saint-Martin-Bellevue</strong> (بلدية Fillière)، <strong>15 دقيقة من Annecy</strong>. يجمع الموقع بين <strong>ميدان تدريب حديث متدرج</strong> مع <strong>أقواس مغطاة ومفتوحة</strong>، و <strong>أرضية بَتّ للغولف</strong>، و <strong>حفرة تدريب</strong> و <strong>منطقة تدريب الضربات القصيرة</strong> — يمكن للمبتدئين واللاعبين المتمرسين الوصول إليه على حد سواء.</p><p>الـ <strong>مرمى تدريب</strong> يمكن استخدامه على مدار العام بفضل أرضياته المغطاة، بنظام الدلو: <strong>€3 للدلو الواحد</strong>, <strong>€30 لـ 11</strong>, <strong>€60 لـ23</strong>, <strong>€90 لـ 36</strong>. يقدّم ملعب الغولف المكوّن من 9 حفر <strong>رسوم لعب جذابة على الملعب</strong>: <strong>€28 أيام الأسبوع</strong>, <strong>€34 نهاية الأسبوع</strong> (€32/38 لليوم). مثالي لاكتشاف الغولف أو الحفاظ على مستواك دون ميزانية ملعب بطولة.</p><p>يضم النادي <strong>أجواء مناسبة للعائلات</strong> ويقدّم <strong>دروس جماعية وخاصة</strong> مع محترف من رابطة PGA وحصص تدريبية للمبتدئين و <strong>باقات المدارس والأطفال</strong>. <strong>مفتوح كل يوم باستثناء الثلاثاء، من 8:30 صباحًا حتى 6:30 مساءً</strong>. مواقف سيارات مجانية، ونادٍ ومطعم في الموقع. الهاتف. <strong>04 50 60 31 78</strong>.</p>"
+      },
+      "practical_info": [
+        {
+          "k": "العنوان",
+          "v": "1116 طريق du Mont، 74370 Saint-Martin-Bellevue (Fillière)"
+        },
+        {
+          "k": "الإحداثيات",
+          "v": "45.9683, 6.1631"
+        },
+        {
+          "k": "هاتف",
+          "v": "04 50 60 31 78"
+        },
+        {
+          "k": "الموقع الرسمي",
+          "v": "https://www.golfdubelvedere.fr"
+        },
+        {
+          "k": "المواعيد",
+          "v": "يوميًا من 8:30 صباحًا حتى 6:30 مساءً — مغلق أيام الثلاثاء",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "أسعار التمرين",
+          "v": "سطل 3 € · 11 سطلًا 30 € · 23 سطلًا 60 € · 36 سطلًا 90 €",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "رسوم لعب لـ9 حفر",
+          "v": "أيام الأسبوع 28€ (بالنهار 32€) · نهاية الأسبوع 34€ (بالنهار 38€)",
+          "verified": "2026-06-06"
+        },
+        {
+          "k": "الحجز",
+          "v": "يمكن الحضور مباشرة للتمرين؛ يُنصح بحجز رسوم اللعب والدروس عبر الهاتف"
+        },
+        {
+          "k": "المدة",
+          "v": "30 دقيقة - 2 ساعة للتمرين؛ 1.5-3 ساعة لملعب من 9 حفرات"
+        },
+        {
+          "k": "موقف سيارات",
+          "v": "مجاني في الموقع"
+        },
+        {
+          "k": "إمكانية الوصول",
+          "v": "منطقة التمرين والنادي متاحان؛ الملعب جزئيًا تلّي"
+        },
+        {
+          "k": "الجمهور",
+          "v": "المبتدئون، الناشئون، اللاعبون الواثقون؛ المدارس والشركات عند الطلب"
+        }
+      ]
     },
-    "ar": {},
     "ja": {
       "meta_title": "Golf du Belvédère — Annecy付近の練習と9ホールコース | Loisirs 74",
       "meta_description": "Saint-Martin-Bellevue(Annecyから15分)で緑、練習のバンカー、9ホールのコースを入れる、近代的な階調練習範囲。 €3からボールのバケツ。",
@@ -1946,12 +2250,68 @@
           "q": "レストランはありますか?",
           "a": "はい、クラブハウスではお食事やドリンクを取り揃えております。"
         }
-      ]
+      ],
+      "how_to_get_there": {
+        "car": "アネシーから：A41出口17（Charvonnex / Pringy）を出て、D14でサン・マルタン・ベルヴュへ、15分。無料駐車場。",
+        "public_transport": "AnnecyからSaint-Martin-Bellevueまでのシブラバスライン16、徒歩数分。",
+        "bike": "Annecy;Fillièreの緑道からの丘陵地は、その後、ゴルフに登ります。"
+      },
+      "hero": {
+        "lead": "Annecyから十五分の場所に、モダンな段状の練習場(屋根付きおよび屋外の打席)、パッティンググリーン、練習用バンカー、そして利用しやすい9ホールコースがあります。"
+      },
+      "when_to_visit": "コースの最良のコンディションは四月~十月です。屋根付きレーンのおかげで、年間を通じて練習は可能です。",
+      "hero_alt": "Golf du Belvédère — Saint-Martin-Bellevue、Haute-Savoie",
+      "body": {
+        "what_is": "<p><strong>Golf du Belvédère</strong> はゴルフスクールであり、 <strong>9ホールコース</strong> 〜で <strong>Saint-Martin-Bellevue</strong> (Fillière市)、 <strong>Annecyから15分</strong>。この施設は〜を組み合わせている <strong>近代的な段状練習場</strong> とともに <strong>屋根付きと屋外の両方の区画</strong>、 <strong>パッティンググリーン</strong>、 <strong>練習用バンカー</strong> そして <strong>チッピングエリア</strong> — 初心者からベテランプレイヤーまで利用できます。</p><p>The <strong>練習用レンジ</strong> 通年利用可能な屋根付きの区画があり、バケツ方式を採用している: <strong>バケツ一杯につき3€</strong>, <strong>11人で€30</strong>, <strong>60€(23名分)</strong>, <strong>36回で€90</strong>。9ホールのコースは〜を提供する <strong>魅力的なグリーンフィー</strong>: <strong>平日€28</strong>, <strong>週末€34</strong> （一日€32/38）。ゴルフを発見するのに、あるいはチャンピオンシップコースの予算をかけずに自分のレベルを維持するのに理想的です。</p><p>クラブには <strong>アットホームな雰囲気</strong> そして〜を提供しています <strong>グループレッスンと個人レッスン</strong> PGAプロと共に、初心者向けクリニックや <strong>学校・子供向けパッケージ</strong>。 <strong>火曜日を除く毎日、午前八時三十分から午後六時三十分まで営業(003368)</strong>。無料駐車場、敷地内クラブハウスとレストランあり。電話: <strong>04 50 60 31 78</strong>。</p>"
+      }
     }
   },
   "featured_businesses": [],
   "google_check": null,
-  "freshness": null,
+  "freshness": {
+    "checked": "2026-07-19",
+    "status": "OPERATIONAL",
+    "confidence": "high",
+    "flag_reason": "",
+    "outcome": "OK",
+    "google_match": "Golf du Belvédère - Annecy",
+    "place_id": "ChIJy3xD1E6Pi0cRzCxeKPzqVlo",
+    "google_status": "OPERATIONAL",
+    "website": {
+      "value": "https://www.golfdubelvedere.fr/",
+      "source": "google",
+      "verified": "2026-07-19"
+    },
+    "phone": {
+      "value": "04 50 60 31 78",
+      "source": "google",
+      "verified": "2026-07-19"
+    },
+    "hours": {
+      "value": [
+        "lundi: 08:30 – 18:00",
+        "mardi: Fermé",
+        "mercredi: 08:30 – 18:00",
+        "jeudi: 08:30 – 18:00",
+        "vendredi: 08:30 – 18:00",
+        "samedi: 08:30 – 18:00",
+        "dimanche: 08:30 – 18:00"
+      ],
+      "source": "google",
+      "verified": "2026-07-19"
+    },
+    "rating": 4.4,
+    "rating_count": 127,
+    "registry": {
+      "state": "NO_MATCH",
+      "siret": null,
+      "closure_date": null
+    },
+    "site_reachable": true,
+    "price_candidates": [],
+    "gps_drift_m": 1307,
+    "needs_price_review": false
+  },
   "data_sources": [
     {
       "platform": "DataTourisme",

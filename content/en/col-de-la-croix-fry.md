@@ -60,6 +60,10 @@ Not specified
 ## Season
 
 Winter (skiing) and summer (hiking, cycling)
+- Winter access window: Open (cleared road) — Live status: inforoute74.fr
+- Winter infrastructure: Cross-country skiing · Nordic skiing · Snowshoeing
+- Snow panorama: Clear Mont-Blanc view
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar) · chains advised for col access
 
 ## Official source
 

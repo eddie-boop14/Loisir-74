@@ -16,11 +16,11 @@ google_place_id: "ChIJsSyIJW1CjEcRoxOg9L5XujQ"
 canonical_url: https://loisirs74.fr/plage-de-messery
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/plage-de-messery.json
-photo_url: /img/generique/generique-plage-lac-7.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/lacs-plages/plage-de-messery-hero.jpg
+photo_type: real
+photo_author: "Vesperal.vertigo"
+photo_license: "CC0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-24
 source: loisirs74.fr
 ---

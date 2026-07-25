@@ -67,6 +67,11 @@
       "date": "2026-06-26",
       "by": "geo-backfill",
       "note": "lat/lng backfilled from OSM (real per-venue pin; was commune-centre placeholder (45.9244, 6.7036)). google_check signals stale/unmatched — badge pending a future Google sweep."
+    },
+    {
+      "date": "2026-07-17",
+      "by": "family_ok derivation",
+      "note": "facts.family_ok=false — hard-false: sensations pattern (via ferrata/canyoning/…) (rapport revu par Eddie avant apply)."
     }
   ],
   "partners": [
@@ -146,7 +151,8 @@
         "tarif": "Gratuit",
         "commune": "Passy",
         "duration": "1 h 30 (parcours) + 20 min approche + 40 min retour",
-        "best_season": "Avril à fin octobre"
+        "best_season": "Avril à fin octobre",
+        "family_ok": false
       },
       "body": {
         "what_is": "<p>La <strong>via ferrata de Curalla</strong>, située sur les hauteurs de la commune de Passy à environ 1 420 m d'altitude, est l'une des références du Pays du Mont-Blanc pour l'initiation à la verticalité encadrée. Implantée dans le <strong>massif des Fiz</strong> sur rocher calcaire, elle domine la vallée de l'Arve et offre un panorama exceptionnel face au massif du Mont-Blanc, des Aiguilles de Chamonix au Dôme du Goûter.</p><p>Le parcours s'étend sur <strong>500 mètres de câble</strong> pour un dénivelé d'environ <strong>180 mètres</strong> (départ vers 1 250 m, arrivée vers 1 420 m). Coté <strong>AD+</strong>, il est qualifié de ludique mais sportif : il enchaîne câbles, échelons, traversées sur mains courantes et trois ouvrages aériens emblématiques — un <strong>pont népalais</strong>, une <strong>poutre horizontale</strong> et une <strong>passerelle</strong> — qui font sa réputation auprès des amateurs de sensations. La via est sécurisée par une ligne de vie continue avec brochages réguliers, ce qui en fait une option recommandée pour les débutants encadrés ne souffrant pas de vertige. Comptez environ <strong>1 h 30 sur le câble</strong>, sans la marche d'approche.</p><p>L'accès se fait depuis le hameau du Chemin de Curalla à Passy, avec un parking gratuit ombragé sur la gauche. La marche d'approche, raide, dure environ 20 minutes et chauffe sérieusement les jambes ; le retour au parking par le sentier piéton prend ~40 minutes. L'itinéraire est en accès libre toute l'année mais s'apprécie pleinement d'avril à fin octobre, hors enneigement résiduel. Équipement obligatoire : baudrier, longe double avec absorbeur d'énergie, casque ; un encadrement par un guide de haute montagne ou un moniteur d'escalade est vivement recommandé pour les non-initiés. Taille minimum 1,50 m.</p>"
@@ -1573,65 +1579,355 @@
           "q": "Czy mogę połączyć Curalla z innym via w tym samym dniu?",
           "a": "Tak, Curalla pozwala sobie dobrze w połączeniu z Bérard przez ferrata w Vallorcine lub Saint- Gervais Thermal Park przez popołudnie, każdy w pół dnia. Kilka biur przewodników oferuje ten podwójny program."
         }
-      ]
+      ],
+      "body": {
+        "what_is": "<p><strong>Via Ferrata de Curalla</strong>, położona na stokach powyżej Passy na wysokości około 1 420 m n.p.m., jest jedną z flagowych tras Krainy Mont-Blanc dla tych, którzy chcą pod okiem przewodnika poznać smak wspinaczki pionowej. Wytyczona w masywie <strong>Fiz</strong> na wapiennej skale, góruje nad doliną Arve i oferuje wyjątkową panoramę na masyw Mont-Blanc — od Aiguilles de Chamonix po Dôme du Goûter.</p><p>Trasa liczy <strong>500 metrów liny</strong> przy przewyższeniu wynoszącym około <strong>180 metrów</strong> (start ~1 250 m, koniec ~1 420 m). Sklasyfikowana jako <strong>AD+</strong>, łączy w sobie zabawę z prawdziwą dawką sportu: następują po sobie liny, klamry, poręczówki i trzy emblematyczne elementy napowietrzne — <strong>most nepalski</strong>, <strong>belka pozioma</strong> oraz <strong>kładka</strong> — które uczyniły tę ferratę ulubienicą miłośników adrenaliny. Całą drogę zabezpiecza ciągła lina poręczowa z regularnymi punktami asekuracji, co czyni ją doskonałym wyborem dla początkujących bez lęku wysokości, korzystających z asysty instruktora. Czas pokonania trasy to około <strong>1 h 30 na linie</strong>, bez drogi dojściowej.</p><p>Dojazd prowadzi do przysiółka Chemin de Curalla w Passy, gdzie po lewej stronie znajduje się bezpłatny, zacieniony parking. Podejście jest strome, zajmuje około 20 minut i solidnie rozgrzewa nogi; powrót na parking szlakiem turystycznym trwa około 40 minut. Trasa jest dostępna przez cały rok, ale najlepsze warunki panują od kwietnia do końca października, poza okresami zalegania resztek śniegu. Obowiązkowe wyposażenie: uprząż, podwójna lonża z amortyzatorem, kask; dla osób początkujących zdecydowanie zalecana jest opieka przewodnika wysokogórskiego lub instruktora wspinaczki. Wymagany wzrost minimalny: 1,50 m.</p>"
+      },
+      "activities": [
+        {
+          "title": "Trasa ferraty AD+ o długości 500 m",
+          "tag": null,
+          "description": "500 m liny, 180 m przewyższenia na wapiennej skale masywu Fiz. Zabawna, a jednocześnie sportowa trasa z ciągłą liną poręczową i punktami asekuracyjnymi."
+        },
+        {
+          "title": "Most nepalski",
+          "tag": null,
+          "description": "Emblematyczny element trasy: most wiszący na trzech linach (jedna pod stopami, dwie jako poręcze) wymagający równowagi i opanowania ekspozycji. Niezwykle fotogeniczny na tle Mont-Blanc."
+        },
+        {
+          "title": "Belka pozioma",
+          "tag": null,
+          "description": "Przejście po metalowej belce w balansie, asekurowane liną. Krótki, lecz eksponowany fragment, który dodaje trасie pikanterii."
+        },
+        {
+          "title": "Napowietrzna kładka",
+          "tag": null,
+          "description": "Metalowa kładka zwisająca nad ścianą, pokonywana przypięta do liny poręczowej. Przepiękny widok w dół na dolinę Arve i Sallanches."
+        },
+        {
+          "title": "Panorama na Mont-Blanc",
+          "tag": null,
+          "description": "Przez całą trasę rozciąga się otwarty widok na masyw Mont-Blanc: Aiguille du Midi, Dôme du Goûter, Aiguilles de Chamonix, a w pogodne dni również Aiguille Verte."
+        },
+        {
+          "title": "Wyjście z przewodnikiem",
+          "tag": null,
+          "description": "Kilka biur przewodnickich w Chamonix, Saint-Gervais i Passy oferuje wyjścia z pełnym wyposażeniem. Orientacyjna cena: 70–100 € od osoby za pół dnia."
+        },
+        {
+          "title": "Leśna droga dojściowa",
+          "tag": null,
+          "description": "Strome 20-minutowe podejście przez las z parkingu przy Chemin de Curalla. Oznakowany, zacieniony szlak — idealny do rozgrzewki przed ferratą."
+        },
+        {
+          "title": "Pętla z powrotem szlakiem",
+          "tag": null,
+          "description": "Powrót na parking oznakowanym szlakiem pieszym w około 40 minut — trasa tworzy zamkniętą pętlę, bez potrzeby organizowania transportu wahadłowego."
+        }
+      ],
+      "events": "Via Ferrata de Curalla nie jest miejscem żadnych organizowanych wydarzeń — to ogólnodostępna trasa górska. Biura przewodnickie w Saint-Gervais, Chamonix i Passy organizują sporadycznie zbiorowe wyjścia wprowadzające do ferraty, łącząc niekiedy Curalla przed południem z drugą ferratą po południu (Bérard, Saix de Miolène). Biuro Turystyczne w Passy publikuje letni program aktywności górskich, obejmujący wprowadzenia pod okiem instruktora."
     },
     "he": {
-      "meta_title": "Via Ferrata de Curalla: Passy (Haute-Savoie)",
-      "meta_description": "AD+ באמצעות ferrata של 500 מ' מעל Passy, במסה Fiz, מול Mont-Blanc. גשר נפאל, קרן, שביל. גישה חופשית, פארק מכוניות חינם.",
-      "hero": {
-        "lead": "Via Ferrata de Curalla, כיף עדיין ספורטיבי 500 מ 'תוואי כבל Fiz המוניתif, מול Mont-Blanc. גשר נפאלי, קרן, שביל אווירי."
-      },
-      "hero_alt": "Via Ferrata de Curalla, AD+תוואי עם Mont-Blanc תצוגות Fiz מסה אם ב Passy, Haute-Savoie",
+      "meta_description": "via ferrata ברמת AD+ באורך 500 מ' מעל Passy, במסיף פיז (Fiz), מול Mont-Blanc. גשר נפאלי, קורה, מעבר הליכה. כניסה חופשית, חניון חופשי.",
       "how_to_get_there": {
-        "car": "מ Sallanches או Chamonix, יציאה Passy לאחר מכן בצע את הסימנים \"Chemin de Curalla\" בכפר. פארק מכוניות חינם בסוף הדרך משמאל.",
-        "public_transport": "תחנת SNCF Saint-Gervais-Le Fat אז מונית או Y04 אוטובוס למרכז Passy, ולאחר מכן 30min ללכת אל פארק המכונית Curalla.",
-        "bike": "מסלול Steep ממרכז Sallanches או Passy - מתאים ל- e-MTB בלבד."
+        "car": "מ-Sallanches או משאמוני, יציאה Passy ולאחר מכן לעקוב אחר השילוט 'Chemin de Curalla' בכפר. חניה חינם בסוף הכביש בצד שמאל.",
+        "public_transport": "תחנת רכבת SNCF Saint-Gervais-Le Fayet ולאחר מכן מונית או אוטובוס Y04 אל מרכז Passy, ולאחר מכן הליכה של 30 דקות במעלה החניון Curalla.",
+        "bike": "מסלול תלול מ-Sallanches או ממרכז Passy — מתאים לאופני הרים חשמליים בלבד."
       },
-      "when_to_visit": "העונה עוברת מאפריל עד סוף אוקטובר, עם שיא מחודש יוני עד ספטמבר. אביב (מאי-יוני): סלע יבש לאחר הגשמים, טמפרטורה קרירה אך נעימה, נוכחות מתונה. קיץ (יולי-אוגוסט): מוקדם מאוד להתחיל מומלץ (מ-8 בבוקר) כשהחומה עומדת מול דרום – היא חמה מאוד מ-11 בבוקר. ספטמבר-אוקטובר: תנאים אופטימליים (טמפרטורות משפחתיות, נוכחות מופחתת, אור מוזהב על Mont-Blanc). תמיד להימנע מימי סערה ולאחר גשם כבד (אבן גיר).",
+      "meta_title": "ויה פראטה דה קוראלה · Passy (Haute-Savoie)",
+      "hero": {
+        "lead": "ויה פראטה דה קוראלה, מסלול כבלים כיפי אך ספורטיבי באורך 500 מ' במסיף פיז, מול Mont-Blanc. גשר נפאלי, קורת שיווי משקל, מעבר אווירי."
+      },
+      "hero_alt": "ויה פראטה דה קוראלה, מסלול AD+ עם תצפיות אל Mont-Blanc במסיף פיז (Fiz), ב-Passy, Haute-Savoie",
+      "activities": [
+        {
+          "title": "מסלול ויה פראטה באורך 500 מ' ברמת AD+",
+          "tag": null,
+          "description": "500 מ' של כבל, טיפוס של 180 מ' על סלע גיר במסיב Fiz. מסלול מהנה אך ספורטיבי, עם קו חיים רציף ועוגנים."
+        },
+        {
+          "title": "גשר נפאלי",
+          "tag": null,
+          "description": "מבנה איקוני של המסלול: גשר תלוי בעל שלושה כבלים (אחד להליכה, שניים כמעקות) המחייב שיווי משקל וניהול חשיפה לגובה. מרשים במיוחד לצילום מול Mont-Blanc."
+        },
+        {
+          "title": "קורה אופקית",
+          "tag": null,
+          "description": "חציית קורת מתכת בשיווי משקל, מאובטחת בכבל. מעבר קצר אך חשוף שמוסיף תבלין למסלול."
+        },
+        {
+          "title": "מעבר אוויר",
+          "tag": null,
+          "description": "מעבר מתכת תלוי מעל הקיר, חוצים אותו כשהם מחוברים לחבל ההגנה. נוף מרהיב אל עמק הארב ו-Sallanches."
+        },
+        {
+          "title": "פנורמת Mont-Blanc",
+          "tag": null,
+          "description": "לאורך המסלול, נוף פתוח אל מול מסיב Mont-Blanc: Aiguille du Midi, דום דו גוטה, איגי דה שאמוני, איגי ורט בימים בהירים."
+        },
+        {
+          "title": "פיקוח מודרך",
+          "tag": null,
+          "description": "מספר משרדי מדריכים בשמוני, בסן-ז'רווה וב-Passy מציעים ליווי עם ציוד מסופק. תעריף אינדיקטיבי €70-100 לאדם לחצי יום."
+        },
+        {
+          "title": "טיול גישה ביער",
+          "tag": null,
+          "description": "גישה תלולה של 20 דקות דרך היער מהחניון של Chemin de Curalla. שביל מסומן ומוצל, אידיאלי לחימום לפני הויה."
+        },
+        {
+          "title": "מסלול מעגלי עם שביל חזרה",
+          "tag": null,
+          "description": "חזרה לחניון בשביל מסומן בכ-40 דקות, מה שהופך את המסלול ללולאה שלמה ללא צורך במעבורת."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "כתובת",
+          "v": "התחלת הויה פראטה, שביל קוראלה (Chemin de Curalla), 74190 Passy"
+        },
+        {
+          "k": "קואורדינטות",
+          "v": "45.9244° N — 6.7036° E (חניון התחלה)"
+        },
+        {
+          "k": "גובה",
+          "v": "התחלה ~1,250 מ', סיום ~1,420 מ' (עלייה של 180 מ')"
+        },
+        {
+          "k": "שעות פתיחה / עונה",
+          "v": "פתוח 24/7, ניתן למעבר מאפריל עד סוף אוקטובר מחוץ לעונת השלג. יש להימנע בסופות, גשם כבד או סלע רטוב."
+        },
+        {
+          "k": "מחירים",
+          "v": "חינם לגישה עצמאית. פיקוח משרד המדריכים €70-100/אדם לחצי יום כולל ציוד. השכרת ציוד €15-25/יום ב-Passy או Sallanches."
+        },
+        {
+          "k": "טלפון",
+          "v": "משרד התיירות Passy: +33 4 50 58 80 52 (מידע)"
+        },
+        {
+          "k": "אתר אינטרנט רשמי",
+          "v": "אין אתר רשמי — ראו franceviaferrata.fr או viaferrata-fr.net לטופו מפורט"
+        },
+        {
+          "k": "גישה / חניה",
+          "v": "חניון מוצל חינמי בקצה Chemin de Curalla (מסומן). מוגבל לכ-15 רכבים — יש להגיע מוקדם בקיץ."
+        },
+        {
+          "k": "משך זמן",
+          "v": "גישה 20 דקות (תלולה) + פראטה 1 h 30 + מסלול חזרה 40 דקות. סה\"כ כ-2 h 30 עד 3 h."
+        },
+        {
+          "k": "ציוד נדרש",
+          "v": "חובה: רתמה, רצועת בלימה כפולה עם בולם אנרגיה בתקן UIAA/CE, קסדה, נעלי הליכה. מומלץ: כפפות, 1 ליטר מים, מעיל עמיד לרוח."
+        },
+        {
+          "k": "רמה / קהל יעד",
+          "v": "AD+ — מתחילים בליווי מתקבלים בברכה. גובה מינימלי 1.50 מ'. נדרש כושר גופני טוב עבור הגישה התלולה."
+        },
+        {
+          "k": "הזמנה",
+          "v": "אין צורך בהזמנה. לליווי: יש ליצור קשר עם משרד המדריכים של סן-ז'רווה (04 50 47 76 55) או שאמוני."
+        }
+      ],
+      "when_to_visit": "העונה נמשכת מאפריל עד סוף אוקטובר, עם שיא מיוני עד ספטמבר. אביב (מאי-יוני): סלע יבש לאחר גשמים, טמפרטורות קרירות אך נעימות, עומס מתון. קיץ (יולי-אוגוסט): מומלץ להתחיל מוקדם מאוד (משעה 8 בבוקר) מכיוון שהקיר פונה דרום מלא — נעשה חם מאוד משעה 11. ספטמבר-אוקטובר: תנאים אופטימליים (טמפרטורות נעימות, עומס מופחת, אור זהוב על Mont-Blanc). יש להימנע תמיד מימי סופה ולאחר גשם כבד (סלע גיר חלקלק).",
+      "events": "ה-via ferrata של Curalla אינה מארחת אירועים מאורגנים: זהו מסלול הררי בגישה חופשית. משרדי המדריכים של Saint-Gervais, שאמוני ו-Passy מפעילים מדי פעם יציאות היכרות קבוצתיות ל-via ferrata, לעיתים קרובות בשילוב Curalla בבוקר עם via שנייה אחר הצהריים (Bérard, Saix de Miolène). משרד התיירות של Passy מפרסם תוכנית פעילויות הרים קיצית הכוללת היכרויות מודרכות.",
       "faq": [
         {
-          "q": "האם אני צריך מדריך לקללה באמצעות ferrata?",
-          "a": "הגישה חופשית, אבל מדריך גבוה או מדריך טיפוס מומלץ מאוד למתחילים. לאפשר 70-100 € לאדם למשך חצי יום ב Saint-Gervais, Chamonix או Passy משרדים, ציוד בדרך כלל נכלל."
+          "q": "האם אני זקוק למדריך עבור ויה פראטה Curalla?",
+          "a": "הכניסה חופשית, אך מומלץ בחום להיעזר במדריך הרים מקצועי או מדריך טיפוס למתחילים. יש לתקצב €70-100 לאדם לחצי יום במשרדי המדריכים של סן-ז'רווה, שאמוני או Passy, בדרך כלל כולל ציוד."
         },
         {
-          "q": "באיזו רמה של Curalla באמצעות ferrata?",
-          "a": "The Through Is Classd AD+ (Fairly Hard +): כיף עדיין ספורטיבי. זה דורש כושר טוב עבור הגישה 20min התלולה וניהול חשיפה תקין. מתאים למתחילים מלווים ללא רטיגו."
+          "q": "איזו רמה לפראטה של Curalla?",
+          "a": "הויה מדורגת AD+ (קשה למדי +): כיפית אך ספורטיבית. היא דורשת כושר גופני טוב לגישה התלולה בת 20 הדקות וניהול נכון של החשיפה. מתאימה למתחילים המלווים וללא סחרחורת גבהים."
         },
         {
-          "q": "איזה ציוד לקללה באמצעות ferrata?",
-          "a": "Mandatory: רתום, כפול אנרגיה-absorbing lanyard UIAA/CE מוסמך, helmet, נעלי הליכה. מומלץ: כפפות ferrata, מים (1 L מינימום), עמידות רוח, קטיפה בקיץ (חשיפה)."
+          "q": "אילו ציוד עבור הפראטה של Curalla?",
+          "a": "חובה: רתמה, רצועת בלימה כפולה עם בולם אנרגיה בתקן UIAA/CE, קסדה, נעלי הליכה. מומלץ: כפפות פרטה, מים (מינימום 1 ליטר), מעיל עמיד לרוח, כובע בקיץ (חשיפה דרומית)."
         },
         {
-          "q": "האם קרלה מתאימה לילדים?",
-          "a": "גובה מינימום 1.50 מ', בדרך כלל מתאים לגיל 12-13. ילדים צריכים להיות מפוקחים על ידי מדריך או מבוגר מנוסה, קצר אם משקל < 50 ק\"ג, עם הקדמה האנכיטי."
+          "q": "האם מסלול הויה פרטה קורלה מתאים לילדים?",
+          "a": "גובה מינימלי 1.50 מ׳, המתאים בדרך כלל לגיל 12-13. הילדים חייבים להיות תחת פיקוח מדריך או מבוגר מנוסה, עם חבל קצר אם המשקל נמוך מ-50 ק\"ג, ולאחר היכרות מוקדמת עם תחושת הגובה."
         },
         {
-          "q": "כמה זמן לקללה באמצעות ferrata?",
-          "a": "ניתן 1 h 30 על כבל, 20 דקות גישה תלולה מן הפארק, ו 40 דקות לחזור דרך הנתיב. סה\"כ: 2 h 30 עד 3 h תלוי בקצב ובהמון."
+          "q": "כמה זמן לוקחת הויה פראטה Curalla?",
+          "a": "יש להקצות 1 שעה ו-30 דקות לרכבל, 20 דקות גישה תלולה מהחניון, ו-40 דקות חזרה דרך השביל. סה\"כ: כ-2 שעות ו-30 דקות עד 3 שעות, בהתאם לקצב ולעומס."
         },
         {
-          "q": "האם יש חניה בקללה דרך ferrata?",
-          "a": "כן, פארק מכוניות מחוסל חינם הוא בסוף צ'מין דה קרלה ב Passy, משמאל. היכולת מוגבלת - 15 מכוניות - להגיע מוקדם ביולי-אוגוסט."
+          "q": "האם יש חניה בפרברטה של קורלה?",
+          "a": "כן, חניון מוצל וחינמי נמצא בקצה Chemin de Curalla ב-Passy, בצד שמאל. הקיבולת מוגבלת לכ-15 מכוניות — כדאי להגיע מוקדם ביולי-אוגוסט."
         },
         {
-          "q": "מהי העונה הטובה ביותר עבור Curalla באמצעות ferrata?",
-          "a": "אפריל עד סוף אוקטובר ספטמבר-אוקטובר מציעים תנאים אופטימליים (טמפרטורות משפחתיות, קהל מופחת). בקיץ, להתחיל מוקדם (לפני 9 בבוקר) כשהחומה ניצבת מול דרום וחום מלא מ-11 בבוקר."
+          "q": "מהי העונה הטובה ביותר לפראטה של Curalla?",
+          "a": "מאפריל ועד סוף אוקטובר. ספטמבר-אוקטובר מציעים תנאים אופטימליים (טמפרטורות נעימות, פחות קהל). בקיץ, יש להתחיל מוקדם (לפני השעה 9 בבוקר) שכן הקיר פונה ישירות לדרום ומתחמם בחדות מהשעה 11."
         },
         {
-          "q": "האם ה- Curalla נחשף באמצעות ferrata?",
-          "a": "כן, זה כולל שלושה מעברים אוויריים במיוחד: גשר נפאלי (שעיה תלת-ממדית), קרן מתכת אופקית וכביש מתכת. קו החיים המתמשך מבטיח בטיחות, אך ניהול החשיפה נותר חיוני."
+          "q": "האם מסלול הויה פרטה קורלה חשוף?",
+          "a": "כן, הוא כולל שלושה מעברים אוויריים בולטים במיוחד: גשר נפאלי (תלייה בשלושה כבלים), קורת מתכת אופקית ומעבר מתכת. חבל הביטחון הרציף מבטיח בטיחות, אך ניהול החשיפה נותר חיוני."
         },
         {
-          "q": "איזה סלע לקללה דרך ferrata?",
-          "a": "Limestone of the Fiz Massif, בדרך כלל נשמע ונצמד במזג אוויר יבש. להיות חלקלק במזג אוויר רטוב או גשם: בהחלט להימנע מיציאה לאחר מקלחת או עם איום סופת רעמים."
+          "q": "איזה סוג סלע בפראטה של Curalla?",
+          "a": "אבן גיר של מסיף ה-Fiz, בדרך כלל יציבה ואוחזת היטב במזג אוויר יבש. הופכת חלקלקה במזג אוויר רטוב או בגשם: יש להימנע לחלוטין מיציאות לאחר ממטר או כשקיים איום של סופת רעמים."
         },
         {
-          "q": "האם ניתן לשלב את קרלה עם אחר באותו יום?",
-          "a": "כן, קארילה מלווה את עצמה היטב בשילוב עם Bérard באמצעות ferrata ב Vallorcine או Saint-Gervais Thermal Park דרך אחר הצהריים, כל יום וחצי. כמה משרדי מדריך מציעים תוכנית כפולה זו."
+          "q": "האם ניתן לשלב את Curalla עם via ferrata נוספת באותו יום?",
+          "a": "כן, Curalla משתלב היטב בשילוב עם הויה פראטה Bérard ב-Vallorcine או עם פארק המים התרמיים Saint-Gervais אחר הצהריים, כל אחד כחצי יום. מספר משרדי מדריכים מציעים תוכנית כפולה זו."
         }
       ]
     },
-    "ar": {},
+    "ar": {
+      "hero_alt": "Via Ferrata de Curalla, مسار AD+ مع إطلالات على Mont-Blanc في كتلة Fiz بـ Passy، Haute-Savoie",
+      "meta_title": "فيا فيراتا دو Curalla · Passy (Haute-Savoie)",
+      "meta_description": "via ferrata من مستوى AD+ بطول 500 م فوق Passy، في كتلة Fiz الجبلية، في مواجهة Mont-Blanc. جسر نيبالي، عارضة خشبية، ممشى. الدخول مجاني، موقف سيارات مجاني.",
+      "hero": {
+        "lead": "فيا فيراتا دو Curalla، مسار كابلات ممتع ورياضي بطول 500 متر في سلسلة جبال الفيز، في مواجهة Mont-Blanc. جسر نيبالي، عارضة خشبية، ممر جوي معلق."
+      },
+      "practical_info": [
+        {
+          "k": "العنوان",
+          "v": "بداية فيا فيراتا، طريق كورالا، 74190 Passy"
+        },
+        {
+          "k": "الإحداثيات",
+          "v": "45.9244° N — 6.7036° E (موقف السيارات عند الانطلاق)"
+        },
+        {
+          "k": "الارتفاع",
+          "v": "الانطلاق من حوالي 1,250 م، الوصول حوالي 1,420 م (فرق ارتفاع 180 م)"
+        },
+        {
+          "k": "ساعات العمل / الموسم",
+          "v": "مفتوح 24/7، ويمكن الوصول إليه من أبريل حتى أواخر أكتوبر خارج فترة الثلوج. تجنب الذهاب في العواصف أو الأمطار الغزيرة أو الصخور المبللة."
+        },
+        {
+          "k": "الأسعار",
+          "v": "مجاني للوصول الذاتي. إشراف مكتب المرشدين 70-100 € للشخص لنصف يوم شامل المعدات. تأجير المعدات 15-25 € في اليوم في Passy أو Sallanches."
+        },
+        {
+          "k": "هاتف",
+          "v": "مكتب سياحة Passy: +33 4 50 58 80 52 (للمعلومات)"
+        },
+        {
+          "k": "الموقع الرسمي",
+          "v": "لا يوجد موقع رسمي — راجع franceviaferrata.fr أو viaferrata-fr.net للحصول على خريطة تفصيلية"
+        },
+        {
+          "k": "الوصول / موقف السيارات",
+          "v": "موقف سيارات مجاني مظلل في نهاية Chemin de Curalla (مُشار إليه). محدود بحوالي 15 سيارة - صل مبكرًا في الصيف."
+        },
+        {
+          "k": "المدة",
+          "v": "النهوض: عشرون دقيقة (شديدة الانحدار) + طريق فيراتا ساعة ونصف + طريق العودة أربعون دقيقة. المجموع: من ساعتين ونصف إلى ثلاث ساعات. (00001223334)"
+        },
+        {
+          "k": "المعدات المطلوبة",
+          "v": "إلزامي: حزام أمان، رباط مزدوج ماص للطاقة معتمد وفق UIAA/CE، خوذة، أحذية مشي. يُنصح به: قفازات، 1 لتر ماء، سترة واقية من الرياح."
+        },
+        {
+          "k": "المستوى / الجمهور المستهدف",
+          "v": "AD+ — يُرحب بالمبتدئين برفقة مرافق. الحد الأدنى للطول 1.50 م. لياقة بدنية جيدة مطلوبة للمقاربة الشديدة الانحدار."
+        },
+        {
+          "k": "الحجز",
+          "v": "لا حجز. للإشراف: اتصل بمكتب مرشدي Saint-Gervais (04 50 47 76 55) أو Chamonix."
+        }
+      ],
+      "how_to_get_there": {
+        "car": "انطلاقًا من Sallanches أو شامونيه، مخرج Passy ثم اتبع لافتات 'Chemin de Curalla' في القرية. موقف سيارات مجاني في نهاية الطريق على اليسار.",
+        "public_transport": "محطة SNCF سان جيرفيه-لو فايه ثم سيارة أجرة أو حافلة Y04 إلى وسط Passy، ثم 30 دقيقة مشيًا صعودًا إلى موقف سيارات كورالا.",
+        "bike": "مسار شديد الانحدار من وسط Sallanches أو Passy — مناسب فقط للدراجات الجبلية الكهربائية."
+      },
+      "when_to_visit": "يمتد الموسم من أبريل حتى أواخر أكتوبر، مع ذروة النشاط من يونيو إلى سبتمبر. الربيع (مايو-يونيو): صخر جاف بعد الأمطار، درجات حرارة باردة لكن لطيفة، إقبال معتدل. الصيف (يوليو-أغسطس): يُنصح بالبدء مبكرًا جدًا (من الساعة 8 صباحًا) لأن الجدار يواجه الجنوب بالكامل — تصبح الحرارة شديدة جدًا من الساعة 11 صباحًا. سبتمبر-أكتوبر: ظروف مثالية (درجات حرارة معتدلة، إقبال أقل، ضوء ذهبي على Mont-Blanc). تجنب دائمًا أيام العواصف وما بعد الأمطار الغزيرة (الحجر الجيري الزلق).",
+      "faq": [
+        {
+          "q": "هل أحتاج إلى مرشد لمسار Curalla via ferrata؟",
+          "a": "الوصول مجاني، لكن يُنصح بشدة بمرشد جبال عالية أو مدرب تسلق للمبتدئين. خصص €70-100 للشخص لنصف يوم في مكاتب مرشدي Saint-Gervais أو Chamonix أو Passy، وعادة ما تكون المعدات مشمولة."
+        },
+        {
+          "q": "ما هو المستوى المطلوب لمسار Curalla عبر الصخور (via ferrata)؟",
+          "a": "يُصنف المسار ضمن الدرجة AD+ (صعب نسبياً +): ممتع ورياضي في آن واحد. يتطلب لياقة بدنية جيدة لتحمل صعود شديد الانحدار لمدة 20 دقيقة، وإدارة جيدة للتعرض للارتفاع. مناسب للمبتدئين المرافَقين الذين لا يعانون من الدوار."
+        },
+        {
+          "q": "ما هي المعدات اللازمة لمسار كورالا عبر السلاسل الحديدية؟",
+          "a": "إلزامي: حزام أمان، رباط مزدوج ماص للطاقة معتمد وفق UIAA/CE، خوذة، أحذية مشي. يُنصح به: قفازات مسارات مجهزة، ماء (1 لتر كحد أدنى)، سترة واقية من الرياح، قبعة في الصيف (تعرض جنوبي)."
+        },
+        {
+          "q": "هل مسار via ferrata Curalla مناسب للأطفال؟",
+          "a": "الحد الأدنى للطول 1.50 م، وهو ما يوافق عادة سن 12-13. يجب أن يكون الأطفال تحت إشراف مرشد أو شخص بالغ ذي خبرة، مع ربط قصير إذا كان الوزن < 50 kg، وبعد تمهيد مسبق للتعامل مع العمودية."
+        },
+        {
+          "q": "كم يستغرق via ferrata Curalla؟",
+          "a": "احسبوا 1 ساعة و30 دقيقة على الكابل، و20 دقيقة اقترابًا شديد الانحدار من موقف السيارات، و40 دقيقة عودة عبر المسار. المجموع: حوالي 2 ساعة و30 دقيقة إلى 3 ساعات حسب الإيقاع والازدحام."
+        },
+        {
+          "q": "هل يوجد موقف سيارات عند مسار via ferrata Curalla؟",
+          "a": "نعم، يوجد موقف سيارات مجاني مظلل في نهاية Chemin de Curalla في Passy، على اليسار. السعة محدودة بحوالي 15 سيارة — يُنصح بالوصول مبكرًا في يوليو-أغسطس."
+        },
+        {
+          "q": "ما هو أفضل موسم لممارسة via ferrata كورالا؟",
+          "a": "من أبريل إلى أواخر أكتوبر. يوفر سبتمبر-أكتوبر ظروفًا مثالية (درجات حرارة معتدلة، ازدحام أقل). في الصيف، ابدأ مبكرًا (قبل 9 صباحًا) لأن الجدار يواجه الجنوب تمامًا ويسخن بشدة بدءًا من 11 صباحًا."
+        },
+        {
+          "q": "هل مسار via ferrata Curalla مكشوف (معرّض للارتفاع)؟",
+          "a": "نعم، يتضمن ثلاثة ممرات جوية ملحوظة: جسر نيبالي (تعليق بثلاثة كابلات)، وعارضة معدنية أفقية، وممشى معدني. يضمن حبل الأمان المستمر السلامة، لكن إدارة التعرض للارتفاع تبقى ضرورية."
+        },
+        {
+          "q": "ما هي الصخرة الخاصة بمسار كورالا للتسلق المُجهز (فيا فيراتا)؟",
+          "a": "حجر جيري من كتلة فيز الجبلية، متماسك وثابت عموماً في الطقس الجاف. يصبح زلقاً في الطقس الرطب أو تحت المطر: يجب تجنب الخروج تماماً بعد زخة مطر أو مع احتمال حدوث عاصفة رعدية."
+        },
+        {
+          "q": "هل يمكنني الجمع بين Curalla ومسار via ferrata آخر في نفس اليوم؟",
+          "a": "نعم، يتناسب Curalla جيدًا مع الجمع مع via ferrata Bérard في Vallorcine أو حديقة الحرارة المائية Saint-Gervais Thermal Park في فترة بعد الظهر، كل منهما كنصف يوم. تقدم عدة مكاتب مرشدين هذا البرنامج المزدوج."
+        }
+      ],
+      "body": {
+        "what_is": "<p>الـ <strong>فيا فيراتا دو Curalla</strong>، يقع على المنحدرات فوق Passy على ارتفاع نحو 1,420 مترًا، وهو أحد المراجع في بلاد Mont-Blanc للاكتشاف الموجه لتسلق الجدران العمودية. يقع في <strong>كتلة فيز الجبلية</strong> على صخر كلسي، يطل على وادي Arve ويقترح بانوراما استثنائية تواجه سلسلة جبال Mont-Blanc، من Aiguilles de Chamonix إلى Dôme du Goûter.</p><p>يمتد المسار على مسافة <strong>500 متر من الكابل</strong> لفارق ارتفاع يبلغ تقريبًا <strong>180 مترًا</strong> (البداية عند ~1,250 م، والنهاية عند ~1,420 م). مصنّف <strong>AD+</strong>، يوصف بأنه ممتع ورياضي في آن واحد: يربط بين الكابلات والدرجات المعدنية وعبورات الدرابزين وثلاث منشآت جوية رمزية —  <strong>جسر نيبالي</strong>، و <strong>عارضة أفقية</strong> و <strong>ممر مشاة</strong> — التي صنعت سمعتها بين هواة الإثارة. المسار مؤمَّن بحبل حياة متواصل مزوَّد بنقاط تثبيت منتظمة، مما يجعله خيارًا موصى به للمبتدئين المرافَقين الذين لا يعانون من الدوار. احسب حوالي <strong>1 ساعة و30 دقيقة على الكابل</strong>، باستثناء مسار الاقتراب سيرًا على الأقدام.</p><p>الوصول من قرية Chemin de Curalla في Passy، مع موقف سيارات مظلل مجاني على اليسار. مسار المقاربة شديد الانحدار، يستغرق حوالي 20 دقيقة ويُتعب الساقين بشدة؛ تستغرق العودة إلى موقف السيارات عبر مسار المشي حوالي 40 دقيقة. المسار مفتوح على مدار السنة لكن يُفضَّل الاستمتاع به من أبريل حتى أواخر أكتوبر، خارج ظروف الثلوج المتبقية. المعدات الإلزامية: حزام أمان، مقود مزدوج ماص للطاقة، خوذة؛ يُنصح بشدة بإشراف مرشد جبال عالية أو مدرب تسلق للمبتدئين. الحد الأدنى للطول 1.50 م.</p>"
+      },
+      "activities": [
+        {
+          "title": "مسار via ferrata بطول 500 m بدرجة صعوبة AD+",
+          "tag": null,
+          "description": "500 m من الكابل، و180 m من الارتفاع المكتسب على صخر جيري في سلسلة Fiz الجبلية. مسار ممتع ورياضي في آن واحد، مع خط أمان مستمر ومثبتات."
+        },
+        {
+          "title": "جسر نيبالي",
+          "tag": null,
+          "description": "معلم بارز على المسار: جسر معلق بثلاثة حبال (واحد للسير واثنان للإمساك) يتطلب توازنًا وإدارة للارتفاع. منظر بديع للتصوير في مواجهة Mont-Blanc."
+        },
+        {
+          "title": "عارضة أفقية",
+          "tag": null,
+          "description": "عبور عارضة معدنية بالتوازن، مؤمّنة بكابل. ممر قصير لكنه مكشوف يضيف الإثارة إلى المسار."
+        },
+        {
+          "title": "ممر جوي",
+          "tag": null,
+          "description": "ممر معدني معلق فوق الجدار، يُعبر بربطه إلى خط الأمان. إطلالة عمودية على وادي Arve وSallanches."
+        },
+        {
+          "title": "بانوراما Mont-Blanc",
+          "tag": null,
+          "description": "طوال المسار، إطلالة مفتوحة على سلسلة Mont-Blanc: Aiguille du Midi، Dôme du Goûter، Aiguilles de Chamonix، Aiguille Verte في الأيام الصافية."
+        },
+        {
+          "title": "إشراف موجّه",
+          "tag": null,
+          "description": "تقدم عدة مكاتب مرشدين في شامونيه وسان جيرفيه وPassy إشرافًا مع توفير المعدات. السعر الإرشادي 70-100 € للشخص لنصف يوم."
+        },
+        {
+          "title": "مسار اقتراب عبر الغابة",
+          "tag": null,
+          "description": "مقاربة شديدة الانحدار لمدة 20 دقيقة عبر الغابة من موقف سيارات Chemin de Curalla. مسار معلَّم ومظلل، مثالي للإحماء قبل مسار الفيراتا."
+        },
+        {
+          "title": "حلقة مع مسار عودة",
+          "tag": null,
+          "description": "العودة إلى موقف السيارات عبر مسار مشاة معلَّم خلال حوالي 40 دقيقة، مما يجعل المسار حلقة كاملة دون الحاجة إلى حافلة نقل."
+        }
+      ],
+      "events": "لا يستضيف طريق Curalla المعدني (via ferrata) أي فعاليات منظمة: فهو مسار جبلي مفتوح للجميع مجاناً. تنظم مكاتب الأدلة في سان جرفيه وشامونيه وPassy أحياناً خرجات جماعية تعريفية بالطرق المعدنية، غالباً بالجمع بين Curalla صباحاً وطريق ثانٍ بعد الظهر (Bérard، Saix de Miolène). وينشر مكتب سياحة Passy برنامجاً صيفياً للأنشطة الجبلية يتضمن جولات تعريفية بإشراف مختصين."
+    },
     "ja": {
       "meta_title": "フェラータ・デ・カーラ・Passy(Haute-Savoie)経由",
       "meta_description": "Passyより500mのフェラタを経由してAD+, Fizのマシフィフで, Mont-Blancに直面しています. ネパール橋、梁、歩道。 無料アクセス、無料駐車場。",
@@ -1643,7 +1939,101 @@
         "car": "Sallanches または Chamonix から、Passy を終了し、村の 'Chemin de Curalla' 看板に従ってください。 左側の道路の端にある無料駐車場。",
         "public_transport": "SNCF駅サンジェルヴァイス・レ・フェエット、タクシーまたはY04バスでPassyセンターまで、カーラの駐車場まで徒歩30分。",
         "bike": "Sallanches または Passy 中心部からの急なルート - e-MTB のみに適しています。"
-      }
+      },
+      "practical_info": [
+        {
+          "k": "住所",
+          "v": "ヴィア・フェラータ出発地点、シュマン・ド・キュラーラ、74190 Passy"
+        },
+        {
+          "k": "座標",
+          "v": "45.9244° N — 6.7036° E (出発駐車場)"
+        },
+        {
+          "k": "標高",
+          "v": "出発点標高約1,250m、終点約1,420m(標高差180m)"
+        },
+        {
+          "k": "営業時間／シーズン",
+          "v": "年中無休で24/7営業、四月から十月下旬まで積雪がなければ利用可能。嵐、大雨、濡れた岩場は避けること。"
+        },
+        {
+          "k": "料金",
+          "v": "自主的なアクセスは無料。ガイド事務所による引率は装備込みで一人70〜100€（半日）。装備レンタルはPassyまたはSallanchesで一日15〜25€。"
+        },
+        {
+          "k": "電話",
+          "v": "Passy観光局:+33 4 50 58 80 52(問い合わせ)"
+        },
+        {
+          "k": "公式ウェブサイト",
+          "v": "公式サイトはありません——詳細なトポについてはfranceviaferrata.frまたはviaferrata-fr.netをご参照ください"
+        },
+        {
+          "k": "アクセス／駐車場",
+          "v": "シュマン・ド・キュラーラの突き当たりにある日陰の無料駐車場(標識あり)。約15台限定 — 夏は早めに到着してください。"
+        },
+        {
+          "k": "所要時間",
+          "v": "アプローチ20分（急勾配）＋ヴィアフェラータ1h30＋帰路40分。合計約2h30から3h。"
+        },
+        {
+          "k": "必要な装備",
+          "v": "必須:ハーネス、UIAA/CE認証のダブルエネルギー吸収ランヤード、ヘルメット、ハイキングシューズ。推奨:手袋、水1L、防風ジャケット。"
+        },
+        {
+          "k": "レベル/対象",
+          "v": "AD+ ——引率同伴であれば初心者も歓迎。身長1.50m以上。急な取付きのため良好な体力が必要です。"
+        },
+        {
+          "k": "予約",
+          "v": "予約不要。引率利用の場合:サン=ジェルヴェ・ガイド事務局(04 50 47 76 55)またはシャモニーへお問い合わせください。"
+        }
+      ],
+      "when_to_visit": "シーズンは四月から十月下旬まで続き、六月から九月がピークとなる。春（五月～六月）：雨上がりの乾いた岩、涼しく快適な気温、来訪者はほどほど。夏（七月～八月）：壁が真南を向いているため、非常に早い時間帯（8時から）のスタートが推奨される — 11時頃から非常に暑くなる。九月～十月：最適な条件（穏やかな気温、来訪者の減少、Mont-Blancに差し込む黄金色の光）。嵐の日と大雨の後は常に避けること（滑りやすい石灰岩）。",
+      "faq": [
+        {
+          "q": "クラーラのヴィアフェラータにはガイドが必要ですか?",
+          "a": "アクセスは無料ですが、初心者には高山ガイドまたはクライミングインストラクターの利用が強く推奨されます。サン=ジェルヴェ、シャモニーまたはPassyのガイド事務所での半日の利用には、一人当たり70~100€を見込んでください。装備は通常含まれています。"
+        },
+        {
+          "q": "クラーラ・ヴィア・フェラータはどのレベルが必要ですか？",
+          "a": "このヴィアの難易度はAD+(かなり難しい+)です。楽しくもスポーティです。20分の急な取り付きアプローチには十分な体力が必要で、高度感への適切な対処も求められます。高所恐怖症でない初心者が同伴者付きで挑戦するのに適しています。"
+        },
+        {
+          "q": "クラーラ・ヴィア・フェラータにはどんな装備が必要ですか？",
+          "a": "必須:ハーネス、UIAA/CE認証のダブルエネルギー吸収ランヤード、ヘルメット、ハイキングシューズ。推奨:ヴィアフェラータ用手袋、水(最低1L)、防風着、夏は帽子(南向きのため)。"
+        },
+        {
+          "q": "クラーラ・ヴィアフェラータは子供に向いていますか?",
+          "a": "最低身長1.50m、一般的に12~13歳に相当。子供はガイドまたは経験豊富な大人の監督が必要で、体重が50kg未満の場合はショートロープを使用し、事前に高所での動きに慣れておくこと。"
+        },
+        {
+          "q": "クラーリャ・ヴィアフェラータの所要時間はどのくらいですか？",
+          "a": "ケーブル上で1時間30分、駐車場からの急なアプローチで20分、コース経由での帰路で40分を見込んでください。合計：ペースと混雑状況により約2時間30分から3時間。"
+        },
+        {
+          "q": "キュラーラ・ヴィアフェラータに駐車場はありますか?",
+          "a": "はい、PassyにあるChemin de Curallaの突き当りの左側に、無料の日陰付き駐車場があります。収容台数は約15台に限られているので、七月から八月にかけては早めに到着してください。"
+        },
+        {
+          "q": "クラーラ・ヴィア・フェラータに最適な季節は？",
+          "a": "四月から十月末まで。九月から十月にかけては最適な条件（穏やかな気温、混雑の緩和）が得られます。夏は南向きの壁が11時から強く熱せられるため、早め（午前9時前）に開始してください。"
+        },
+        {
+          "q": "クラーラ・ヴィアフェラータは高度感がありますか?",
+          "a": "はい、特に高度感のある三つの区間があります。ネパール式の吊り橋(三本のケーブルによる吊り構造)、水平な金属製の梁、そして金属製の桟道です。連続した命綱により安全は確保されていますが、高度への対応は依然として重要です。"
+        },
+        {
+          "q": "クラーラ・ヴィア・フェラータの岩質は？",
+          "a": "フィズ山塊の石灰岩は、乾燥した天候では概ね安定してグリップが効きます。雨天や湿った状態では滑りやすくなります:にわか雨の後や雷雨の恐れがある場合は外出を絶対に避けてください。"
+        },
+        {
+          "q": "同じ日にクラーラと他のヴィアフェラータを組み合わせることはできますか？",
+          "a": "はい、CurallaはVallorcineのBérardヴィアフェラータや、午後のSaint-Gervais温泉パークとの組み合わせに適しており、それぞれ半日ずつで楽しめます。複数のガイド事務所がこのダブルプログラムを提供しています。"
+        }
+      ],
+      "events": "キュラーラ・ヴィアフェラータでは組織的なイベントは開催されていません。自由にアクセスできる山岳ルートです。サン=ジェルヴェ、シャモニー、Passyの山岳ガイド事務所が、時折団体向けのヴィアフェラータ入門ツアーを開催しており、多くの場合午前中にキュラーラ、午後に別のヴィアフェラータ(ベラール、サイ・ド・ミオレーヌ)を組み合わせています。Passyツーリズムオフィスは、指導付き入門講座を含む夏の山岳アクティビティプログラムを公開しています。"
     }
   },
   "featured_businesses": [],
@@ -1682,5 +2072,37 @@
     "source_name": null,
     "checked": "2026-06-26",
     "confidence": null
+  },
+  "freshness": {
+    "checked": "2026-07-19",
+    "status": "OPERATIONAL",
+    "confidence": "high",
+    "flag_reason": "",
+    "outcome": "OK",
+    "google_match": "Via Ferrata Curalla",
+    "place_id": "ChIJZ-Kl0rxViUcRll4GfNZCXv8",
+    "google_status": "OPERATIONAL",
+    "website": {
+      "value": "https://www.passy-mont-blanc.com/?via-ferrata-de-curalla-s191925",
+      "source": "google",
+      "verified": "2026-07-19"
+    },
+    "phone": {
+      "value": "04 50 58 80 52",
+      "source": "google",
+      "verified": "2026-07-19"
+    },
+    "hours": null,
+    "rating": 4.8,
+    "rating_count": 134,
+    "registry": {
+      "state": "NO_MATCH",
+      "siret": null,
+      "closure_date": null
+    },
+    "site_reachable": true,
+    "price_candidates": [],
+    "gps_drift_m": 350,
+    "needs_price_review": false
   }
 }

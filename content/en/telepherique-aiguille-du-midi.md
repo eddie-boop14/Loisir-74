@@ -16,9 +16,9 @@ google_place_id: "ChIJSbIVSHBOiUcR_tFiv4DRYzI"
 canonical_url: https://loisirs74.fr/en/telepherique-aiguille-du-midi
 language: en
 facet_json: https://loisirs74.fr/api/lieu/telepherique-aiguille-du-midi.json
-photo_url: /img/generique/generique-point-de-vue.jpg
-photo_type: generic
-photo_author: null
+photo_url: /img/points-de-vue/telepherique-aiguille-du-midi-hero.jpg
+photo_type: real
+photo_author: "Bénédicte"
 photo_license: null
 photo_source: null
 last_updated: 2026-05-21
@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Été 2026 : 13/06–30/06 tous les jours 7h10–17h30 · 1/07–23/08 tous les jours 6h10–18h00 · 24/08–13/09 tous les jours 7h10–17h30 · 14/09–27/09 tous les jours 8h10–17h00 · 28/09–1/11 tous les jours 8h10–16h30. Hiver 2025-2026 : 20/12–29/03 tous les jours 8h10–16h30. Fermeture maintenance annuelle 2/11–18/12/2026. Vérifié sur le site officiel le 21 mai 2026 — sous réserve de modifications saisonnières.
+Summer 2026: 13/06–30/06 every day 7:10am–5:30pm · 1/07–23/08 every day 6:10am–6:00pm · 24/08–13/09 every day 7:10am–5:30pm · 14/09–27/09 every day 8:10am–5:00pm · 28/09–1/11 every day 8:10am–4:30pm. Winter 2025-2026: 20/12–29/03 every day 8:10am–4:30pm. Annual maintenance closure 2/11–18/12/2026. Verified on the official website on 21 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -70,6 +70,10 @@ Payant (Grépon, Aiguille du Midi)
 ## Season
 
 Juin – septembre (été) · décembre – mars (ski)
+- Winter access window: Open (cleared road)
+- Winter infrastructure: Not specified
+- Snow panorama: Clear Mont-Blanc view
+- Equipment mandated: Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)
 
 ## Official source
 

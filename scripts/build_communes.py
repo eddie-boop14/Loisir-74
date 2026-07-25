@@ -260,6 +260,30 @@ def load_fiche(slug):
     return _FICHE[slug]
 
 
+# statuses held out of render (build_all_locales does the same) — a commune
+# page must never link to a fiche that no _site page exists for, or the
+# link-integrity gate trips (the commune-404 bug class).
+HELD_STATUS = ("draft", "unverified")
+
+
+def load_communes():
+    """Load the commune manifest, dropping any lieu whose fiche is held out of
+    render (status draft/unverified) so a demoted fiche can never leave a 404
+    on a commune page. lieux_count is recomputed to match. Missing-Json entries
+    are kept so main()'s drift check still reports them loudly."""
+    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    for c in manifest["communes"]:
+        kept = []
+        for l in c["lieux"]:
+            p = ROOT / "Json" / f"{l['slug']}.json"
+            if p.exists() and load_fiche(l["slug"]).get("status") in HELD_STATUS:
+                continue
+            kept.append(l)
+        c["lieux"] = kept
+        c["lieux_count"] = len(kept)
+    return manifest["communes"]
+
+
 # ---------------------------------------------------------------- JSON-LD
 
 def jsonld_itemlist(c, lang, url, alts):
@@ -533,8 +557,7 @@ def build_for_lang(lang):
     the reciprocal backlinks onto that language's fiches. Called by
     build_fulltree_lang after the lang's hubs exist (template lift source)."""
     register_facts_lang(lang)
-    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    communes = manifest["communes"]
+    communes = load_communes()
     intros = json.loads(INTROS.read_text(encoding="utf-8")) if INTROS.exists() else {}
     written = 0
     for c in communes:
@@ -558,8 +581,7 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
-    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    communes = manifest["communes"]
+    communes = load_communes()
     intros = json.loads(INTROS.read_text(encoding="utf-8")) if INTROS.exists() else {}
 
     # reconcile: every commune's live lieux must match the manifest

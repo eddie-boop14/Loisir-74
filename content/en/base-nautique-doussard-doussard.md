@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Doussard, Haute-Savoie (74210)
 - GPS: 45.7833, 6.2167
 - Category: base-nautique
-- Type: Base nautique multi-opérateurs - voile + wake + paddle
+- Type: Multi-operator water sports base - sailing + wake + paddle
 
 ## Hours
 
-Horaires du Base nautique de Doussard : Locations et cours saison été 9h-19h. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Opening hours of Base nautique de Doussard: Rentals and lessons, summer season 9am-7pm. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires du Base nautique de Doussard : Locations et cours saison été 9h-19h. 
 
 ## Parking
 
-Gratuit sur site
+Free on site
 
 ## Transport
 
@@ -60,7 +60,7 @@ Gratuit sur site
 
 ## Season
 
-Mai-septembre
+May-September
 
 ## Official source
 

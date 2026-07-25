@@ -18,9 +18,9 @@ language: fr
 facet_json: https://loisirs74.fr/api/lieu/plateau-des-glieres.json
 photo_url: /img/points-de-vue/plateau-des-glieres-hero.jpg
 photo_type: real
-photo_author: "Rémih"
-photo_license: "CC BY-SA 4.0"
-photo_source: Wikimedia Commons
+photo_author: "Bénédicte"
+photo_license: null
+photo_source: null
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---
@@ -57,6 +57,10 @@ Non renseigné
 ## Saison
 
 Toute l'année · Ski de fond décembre – mars · Randonnée juin – septembre
+- Fenêtre d'accès hiver: Ouvert (accès déneigé) — État en temps réel : inforoute74.fr
+- Infrastructure hiver: Ski de fond · Ski nordique · Raquettes · Chiens de traîneau · Luge
+- Panorama enneigé: Panorama alpin
+- Équipement obligatoire: Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars) · chaînes conseillées pour l'accès au col
 
 ## Source officielle
 

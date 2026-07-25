@@ -26,7 +26,8 @@
   "verify_flags": [
     "Accès route forestière en été : période d'ouverture à reconfirmer auprès de l'Office de Tourisme des Alpes du Léman.",
     "Calendrier ski nordique et raquettes hiver à vérifier en saison.",
-    "ACCES_PMR_UNVERIFIED"
+    "ACCES_PMR_UNVERIFIED",
+    "LOCALISATION ERRONÉE — la fiche situe le plateau en Vallée Verte (Habère-Poche/Mégevette) : aucun Loëx n'existe là-bas ; le vrai Plateau de Loëx est sur Taninges/Les Gets/Verchaix (~1 350 m, Natura 2000). Dépubliée le 18/07/2026 (décision Eddie), re-recherche complète à venir."
   ],
   "date_published_human": "1 juin 2026",
   "date_modified_human": "7 juin 2026",
@@ -57,6 +58,16 @@
       "date": "2026-06-09",
       "by": "claude-seed-dt-partners",
       "note": "Seeded 3 partner cards from DataTourisme proximity (within 10.0 km)."
+    },
+    {
+      "date": "2026-07-18",
+      "by": "claudius-fable",
+      "note": "Dépublication (status→draft, décision Eddie) : localisation erronée détectée pendant la passe hiver stage-4 — le contenu mélange le Plateau de Loëx (Taninges/Les Gets/Verchaix) avec la Vallée Verte. Fiche à réécrire sur le vrai lieu (sources Praz de Lys Sommand Tourisme) avant republication. winter_access laissé null."
+    },
+    {
+      "date": "2026-07-19",
+      "by": "claudius-fable",
+      "note": "JOB 2 i18n-leak batch : champs FR résiduels traduits (hero_alt/meta_title/schema_amenities) — baseline en résorption."
     }
   ],
   "partners": [
@@ -150,7 +161,12 @@
         "tarif": "Accès libre · forfait nordique en hiver",
         "commune": "Habère-Poche / Mégevette",
         "duration": "Demi-journée à journée",
-        "best_season": "Mai-octobre (été) · décembre-mars (ski)"
+        "best_season": "Mai-octobre (été) · décembre-mars (ski)",
+        "winter_infra": [
+          "raquettes",
+          "ski_nordique",
+          "ski_fond"
+        ]
       },
       "body": {
         "what_is": "<p>Le <strong>Plateau de Loëx</strong> est un vaste replat d'alpage perché à environ <strong>1 150 m d'altitude</strong>, au-dessus de la <strong>Vallée Verte</strong>, entre les communes d'<strong>Habère-Poche</strong>, <strong>Mégevette</strong> et <strong>Onnion</strong>. C'est l'un des balcons les plus paisibles des <strong>Alpes du Léman</strong>, avec des panoramas remarquables sur le <strong>Léman</strong>, les <strong>Voirons</strong> et, par temps clair, le massif du <strong>Mont-Blanc</strong>.</p><p>L'été, le plateau se découvre à pied par de nombreux <strong>sentiers familiaux</strong> qui sillonnent les pâturages et les forêts d'épicéas : boucles courtes au départ des chalets d'alpage, traversées plus longues vers les <strong>Voirons</strong> ou la <strong>Pointe de Miribel</strong>. Les vaches d'Abondance pâturent en liberté ; on peut s'arrêter dans les fermes d'alpage qui produisent reblochon et tomme. Aires de pique-nique et points d'eau jalonnent le site.</p><p>L'hiver, Loëx devient un <strong>site nordique</strong> très apprécié de la Vallée Verte avec un réseau de <strong>pistes de ski de fond damées</strong> et des <strong>itinéraires raquettes</strong> balisés (forfait nordique). Le calme et l'absence d'équipements lourds en font un site idéal pour les familles et les débutants. La route d'accès depuis Habère-Poche est généralement fermée l'hiver — accès navette ou ski de fond depuis le bas.</p>"
@@ -449,12 +465,12 @@
         }
       ],
       "schema_amenities": [
-        "outdoor",
-        "viewpoint",
-        "hiking",
-        "cross_country_skiing",
-        "family_friendly",
-        "parking"
+        "Outdoor",
+        "Viewpoint",
+        "Hiking",
+        "Cross-country skiing",
+        "Family-friendly",
+        "Parking"
       ]
     },
     "de": {
@@ -611,12 +627,12 @@
         }
       ],
       "schema_amenities": [
-        "outdoor",
-        "viewpoint",
-        "hiking",
-        "cross_country_skiing",
-        "family_friendly",
-        "parking"
+        "Im Freien",
+        "Aussichtspunkt",
+        "Wandern",
+        "Skilanglauf",
+        "Familienfreundlich",
+        "Parkplatz"
       ]
     },
     "it": {
@@ -774,11 +790,11 @@
       ],
       "schema_amenities": [
         "outdoor",
-        "viewpoint",
-        "hiking",
-        "cross_country_skiing",
-        "family_friendly",
-        "parking"
+        "punto panoramico",
+        "escursionismo",
+        "sci di fondo",
+        "adatto alle famiglie",
+        "parcheggio"
       ]
     },
     "es": {
@@ -935,12 +951,12 @@
         }
       ],
       "schema_amenities": [
-        "outdoor",
-        "viewpoint",
-        "hiking",
-        "cross_country_skiing",
-        "family_friendly",
-        "parking"
+        "exterior",
+        "mirador",
+        "senderismo",
+        "esquí de fondo",
+        "apto para familias",
+        "aparcamiento"
       ]
     },
     "nl": {
@@ -1097,12 +1113,12 @@
         }
       ],
       "schema_amenities": [
-        "outdoor",
-        "viewpoint",
-        "hiking",
-        "cross_country_skiing",
-        "family_friendly",
-        "parking"
+        "buiten",
+        "uitzichtpunt",
+        "wandelen",
+        "langlaufen",
+        "gezinsvriendelijk",
+        "parkeren"
       ]
     },
     "pt": {
@@ -1496,69 +1512,319 @@
         "bike": "Wymagająca wspinaczka metrem / rowerem drogowym z Habère-Poche (~ 500 m wysokości). Trasy żwiru na płaskowyżu."
       },
       "when_to_visit": "Lato (od połowy czerwca do połowy października) dla turystyki pieszej i kwitnących pastwisk; zima (od grudnia do marca) dla narciarstwa nordyckiego. Unikaj wietrznych dni w zimie.",
-      "events": "Festiwal alpejskich pastwisk latem (daty się różnią); nocne wyjazdy śnieżne oferowane przez biuro turystyczne zimą."
+      "events": "Festiwal alpejskich pastwisk latem (daty się różnią); nocne wyjazdy śnieżne oferowane przez biuro turystyczne zimą.",
+      "faq": [
+        {
+          "q": "Czy wstęp na plateau jest płatny?",
+          "a": "Nie, latem wstęp jest bezpłatny. Zimą przejazd po przygotowanych trasach wymaga posiadania karnetu nordic."
+        },
+        {
+          "q": "Czy można tam dojechać samochodem?",
+          "a": "Tak, latem drogą leśną z Habère-Poche lub Mégevette. Zimą droga jest zazwyczaj zamknięta i dostęp możliwy jest jedynie na nartach lub rakietach śnieżnych."
+        },
+        {
+          "q": "Czy jest tam noclegi?",
+          "a": "W sezonie działają alpejskie schroniska i gîtes, a szeroka oferta noclegowa dostępna jest również w Habère-Poche, Habère-Lullin i Boëge."
+        },
+        {
+          "q": "Czy można przybyć z psem?",
+          "a": "Tak, pod warunkiem trzymania go na smyczy — szczególnie w pobliżu stad i psów pasterskich (patous)."
+        },
+        {
+          "q": "Czy Plateau de Loëx jest odpowiednie dla dzieci?",
+          "a": "Tak, krótkie pętle i łagodny teren są idealne dla rodzin z dziećmi. Maluchy będą mogły zobaczyć krowy, świstaki i górskie kwiaty."
+        },
+        {
+          "q": "Jaki poziom zaawansowania wymagany jest na nartach biegowych?",
+          "a": "Trasy zielone i niebieskie są odpowiednie dla początkujących; bardziej doświadczeni narciarze mogą skorzystać z dłuższych pętli."
+        },
+        {
+          "q": "Czy można swobodnie urządzać pikniki?",
+          "a": "Tak, na nieogrodzonych terenach pastwiskowych. Należy szanować przebywające tam stada i zabrać ze sobą wszystkie śmieci."
+        }
+      ]
     },
     "he": {
-      "meta_title": "Plateau de Loëx - alpine Pastures, Walking & Nordic סקי (Vallée Verte)",
-      "meta_description": "אורכו של אלפים מעל Valée Verte: Lake Geneva ו- Mont-Blanc צפיות, שבילי משפחה בקיץ, סקי חוצה-ארצי ו snowshoeing בחורף. גישה חופשית",
+      "meta_description": "רמת מרעה אלפינית מעל Vallée Verte: נוף לאגם ז'נבה ול-Mont-Blanc, שבילים משפחתיים בקיץ, סקי צולב ונעלי שלג בחורף. גישה חופשית.",
+      "when_to_visit": "הקיץ (מאמצע יוני עד אמצע אוקטובר) לטיולים רגליים ולמרעה פורח; החורף (דצמבר-מרץ) לסקי נורדי. יש להימנע מימים סוערים בחורף.",
+      "events": "פסטיבל המרעה האלפיני בקיץ (תאריך משתנה); יציאות מודרכות עם נעלי שלג בלילה מוצעות על ידי לשכת התיירות בחורף.",
+      "meta_title": "Plateau de Loëx — מרעים אלפיניים, טיולים רגליים וסקי נורדי (Vallée Verte)",
       "hero": {
-        "lead": "רמה רחבה של דולפינים בין Habère-Poche לבין Mégevette: panoramas, שבילי הליכה עדינים, סקי חוצה-ארצ ו snowshoeing בחורף."
+        "lead": "רמה אלפינית רחבה בין Habère-Poche למז'בט: פנורמות, שבילי הליכה נוחים, סקי חתירה והליכה עם נעלי שלג בחורף."
       },
-      "hero_alt": "Plateau de Loëx - Valée Verte, Haute-Savoie",
       "body": {
-        "what_is": "<p>The The The <strong>Plateau de Loëx</strong> היא דירת דולפינים עצומה בסביבה <strong>1,150 m</strong>מעל <strong>תגית: Verte</strong>בין <strong>Habère-Poche</strong>, <strong>Mégevette</strong> ו <strong>על</strong>זהו אחד המרפסות השלווה ביותר של <strong>תגית: Léman</strong>עם השקפות מדהימות <strong>אגם ז'נבה</strong>, <strong>ברזל</strong> רידג', וביום בהיר, <strong>Mont-Blanc</strong> טווח.</p><p>בקיץ, הרמה נחקרת ברגל באמצעות רבים <strong>שבילים ידידותיים למשפחה</strong> מתפתלים דרך יערות וערעור: לולאות קצרות מן הצ'יפס האלפים, מעברים ארוכים יותר אל מעברים <strong>ברזל</strong> או <strong>תגית: Mirbel</strong>פרות Abondance מתפוגגות בחופשיות; חוות אלפיניות מוכרות גרוטבון וטונימה גבינה באתר. אזורי פיקניק ונקודות מים עושים את הרמה.</p><p>בחורף Loëx הופך פופולרי <strong>אתר Nordic</strong> עם החתן <strong>מסלולי סקי ברחבי הארץ</strong> מסומן <strong>snowshoe Itineraries</strong> (מעבר לא חוקי נדרש). ההגדרה רגועה, נמוכה-טק הופכת את זה אידיאלי עבור משפחות למתחילים. כביש הגישה מ Habère-Poche הוא בדרך כלל סגור בחורף - גישה על ידי הסעה או על סקי מן העמק.</p>"
+        "what_is": "<p>ה <strong>Plateau de Loëx</strong> הוא מישור מרעה אלפיני נרחב בגובה של כ- <strong>1,150 מ'</strong>, מעל ה <strong>Vallée Verte</strong>, בין <strong>Habère-Poche</strong>, <strong>מגבט</strong> ו <strong>אוניון</strong>. זוהי אחת המרפסות השלוות ביותר של ה <strong>האלפים של Léman</strong>, עם נופים יוצאי דופן על <strong>אגם ז'נבה</strong>, ה <strong>וורון</strong> הרכס וביום בהיר, ה <strong>Mont-Blanc</strong> רכס.</p><p>בקיץ הרמה נחקרת ברגל דרך שבילים רבים <strong>שבילים מתאימים למשפחות</strong> מתפתל בין מרעים ויערות אשוחים: מסלולים קצרים משאלה'ות ההרים, מעברים ארוכים יותר אל ה <strong>וורון</strong> או ה <strong>פואנט דה מיריבל</strong>. פרות Abondance רועות בחופשיות; חוות אלפיניות מוכרות במקום גבינת רבלושון וגבינת טום. אזורי פיקניק ונקודות מים פזורים על פני הרמה.</p><p>בחורף הופך Loëx לפופולרי <strong>אתר נורדי</strong> עם מטופחים <strong>מסלולי סקי רוחב</strong> ומסומן <strong>מסלולי הליכה עם נעלי שלג</strong> (נדרש כרטיס נורדי). הסביבה השקטה ודלת הטכנולוגיה הופכת אותו לאידיאלי למשפחות ולמתחילים. כביש הגישה מ-Habère-Poche סגור בדרך כלל בחורף — גישה באמצעות הסעה או על סקי מהעמק.</p>"
       },
       "activities": [
         {
-          "title": "טיול משפחתי",
-          "description": "לולאות ממושמעות באמצעות מרעה אלפינית: שביל חקלאי, מעגל צ'לט, מתאים לילדים מ-6-7 יוג.",
+          "title": "טיולי רגל משפחתיים",
+          "description": "מסלולים מסומנים דרך מרעה אלפיני: שביל חווה, מסלול שאלה, מתאים לילדים מגיל 6-7.",
           "tag": "טיולי הליכה"
         },
         {
           "title": "פיקניק אלפיני",
-          "description": "שולחנות וניקוי מצלצל בין פרות Abondance ועצי גילוח - הגדרת טבע 100%.",
+          "description": "שולחנות וקרחות יער מוצלות בין פרות Abondance ועצי אשוח — סביבה טבעית ב-100%.",
           "tag": "פיקניק"
         },
         {
-          "title": "סקי קרוס-מדינה",
-          "description": "מסלולים נבונים בחורף: לולאות קלאסיות ומשקפות, מתחילים עד ביניים.",
+          "title": "סקי רוחב",
+          "description": "מסלולי סקי נורדי מוכשרים בחורף: מסלולי קלאסי וסקייטינג, ממתחילים ועד רמת ביניים.",
           "tag": "סקי נורדי"
         },
         {
-          "title": "שלג",
-          "description": "נתיבי שלג ממושמעים דרך יערות ומרעה מכוסים שלג - אווירה שקטה מובטחת.",
-          "tag": "שלג"
+          "title": "הליכה עם נעלי שלג",
+          "description": "מסלולי מבטי שלג מסומנים דרך יערות ומרעה מכוסה שלג — אווירה שקטה מובטחת.",
+          "tag": "נעלי שלג"
         },
         {
-          "title": "חיות מחמד ופלורה",
-          "description": "Marmots, ראפרים ופרחים הרים (gentians, Martagon Lilies) דרך עונות השנה.",
-          "tag": "הטבע"
+          "title": "חיות בר וצומח",
+          "description": "מרמיטות, עופות דורסים ופרחי הרים (גנטיאנות, שושני מרטגון) לאורך העונות.",
+          "tag": "טבע"
         },
         {
-          "title": "ביקור בחווה אלפיני",
-          "description": "כמה חוות למכור בית החווה reblochon, tomme ו érac בקיץ.",
+          "title": "ביקור בחווה אלפינית",
+          "description": "מספר חוות מוכרות רבלושון, טום וסראק חקלאיים בקיץ.",
           "tag": "אוכל מקומי"
         },
         {
-          "title": "צילום צילום",
-          "description": "סאנסטס מעל אגם ז'נבה ואלפינגלו ב- Mont-Blanc - האהוב על הצלם.",
-          "tag": "panorama"
+          "title": "צילום",
+          "description": "שקיעות מעל אגם ז'נבה וזוהר אלפיני על Mont-Blanc — האהוב על צלמים.",
+          "tag": "פנורמה"
         },
         {
-          "title": "אופני הרים וחצץ",
-          "description": "מסלולי היער פתוחים ל- MTB בקיץ - קל לנתיבי ביניים.",
-          "tag": "MTB"
+          "title": "רכיבה על אופני הרים וגְרֶייבֶל",
+          "description": "שבילי יער פתוחים לאופני הרים בקיץ — מסלולים קלים עד בינוניים.",
+          "tag": "רכיבת הרים (MTB)"
         }
       ],
       "how_to_get_there": {
-        "car": "מ Annecy: A41 עד Annemasse, ולאחר מכן D903 לכיוון Boëge / Habère-Poche, בערך 1h15. ז'נבה: A40 יציאה Annemasse-Bonneville, ולאחר מכן D903/D12 ל- Habère-Poche, כ-50 דקות. כביש יער לרמה בקיץ",
-        "public_transport": "אין שירות רגיל לרמה; אוטובוסים לרוץ ל- Habère-Poche מ- Annemasse, ואז מונית/carpool.",
-        "bike": "הביקוש לטפס על אופניים MTB / כביש מ Habère-Poche (~500 מ\"ג גובה). מסלולים חמים על הרמה עצמה."
+        "car": "מ-Annecy: A41 עד Annemasse, ואז D903 לכיוון בואז' / Habère-Poche, כ-1h15. מז'נבה: A40 יציאה Annemasse-Bonneville, ואז D903 / D12 עד Habère-Poche, כ-50 דקות. כביש יער עד הרמה בקיץ.",
+        "public_transport": "אין שירות סדיר לרמה; אוטובוסים פועלים ל-Habère-Poche מ-Annemasse, ולאחר מכן מונית/נסיעה משותפת.",
+        "bike": "טיפוס מאתגר באופני הרים/כביש מ-Habère-Poche (כ-500 מ' עלייה). מסלולי חצץ על הרמה עצמה."
       },
-      "when_to_visit": "קיץ (באמצע יוני עד אמצע אוקטובר) לטיולים ולפריחה מרעה; חורף (דצמבר-מרץ) עבור סקי לאודי. הימנעו מימי רוח בחורף.",
-      "events": "פסטיבל מרעה אלפיני בקיץ (תאריך משתנה); שלג מונחה בשעות הלילה המוצעים על ידי משרד התיירות בחורף."
+      "faq": [
+        {
+          "q": "האם הכניסה לרמה בתשלום?",
+          "a": "לא, כניסה חופשית בקיץ. בחורף נדרש כרטיס נורדי כדי להשתמש במסלולים המטופחים."
+        },
+        {
+          "q": "האם אפשר להגיע לשם ברכב?",
+          "a": "כן בקיץ דרך דרך יער מ-Habère-Poche או ממז'ווט (Mégevette). בחורף הדרך סגורה בדרך כלל והגישה היא על סקי או במגשי שלג."
+        },
+        {
+          "q": "האם יש לינה?",
+          "a": "כמה שאלות אלפיניות וג'יטים בעונה, בנוסף למגוון רחב של אירוח ב-Habère-Poche, ב-Habère-Lullin ובבואז'."
+        },
+        {
+          "q": "האם כלבים מותרים?",
+          "a": "כן, ברצועה, במיוחד סביב עדרים וכלבי שמירה על עדרים (patous)."
+        },
+        {
+          "q": "האם הרמה מתאימה לילדים?",
+          "a": "כן, המסלולים הקצרים והשטח המתון אידיאליים למשפחות. הילדים יראו פרות, מרמיטות ופרחי בר."
+        },
+        {
+          "q": "איזו רמה לסקי רוחב?",
+          "a": "מסלולים ירוקים וכחולים מתאימים למתחילים; מסלולים ארוכים יותר זמינים לסקאים מנוסים יותר."
+        },
+        {
+          "q": "האם אפשר לערוך פיקניק באופן חופשי?",
+          "a": "כן, באזורי מרעה לא גדורים. יש לכבד את העדרים ולקחת את הפסולת שלכם איתכם."
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "כתובת",
+          "v": "Plateau de Loëx, 74420 Habère-Poche (דרך יער מ-Habère-Poche או Mégevette)"
+        },
+        {
+          "k": "קואורדינטות",
+          "v": "46.2747, 6.4983"
+        },
+        {
+          "k": "טלפון",
+          "v": "לשכת התיירות האלפים של Léman: +33 4 50 39 54 74"
+        },
+        {
+          "k": "אתר רשמי",
+          "v": "https://www.alpesduleman.com"
+        },
+        {
+          "k": "שעות פתיחה",
+          "v": "כניסה חופשית כל השנה; הכביש פתוח בקיץ; גישה בחורף דרך האתר הנורדי"
+        },
+        {
+          "k": "מחירים",
+          "v": "חינם בקיץ; כרטיס נורדי בחורף (תעריפים במרכז הנורדי)",
+          "verified": "2026-06-07"
+        },
+        {
+          "k": "הזמנה",
+          "v": "ללא עבור טיולי הליכה; כרטיס סקי/מגשי שלג במרכז הנורדי"
+        },
+        {
+          "k": "משך זמן",
+          "v": "חצי יום למסלול קל, יום שלם לחקירה מעמיקה יותר"
+        },
+        {
+          "k": "חניה",
+          "v": "חניה בקול דה קו ובמורדות המישור (חינם בקיץ, בתשלום בחורף)"
+        },
+        {
+          "k": "נגישות",
+          "v": "שבילים טבעיים, לא מותאמים לכיסאות גלגלים; חלק מהדרכים הרחבות מתאימות לעגלות שטח"
+        },
+        {
+          "k": "קהל יעד",
+          "v": "משפחות, מטיילים, גולשי סקי חוצה ארץ, חובבי טבע"
+        },
+        {
+          "k": "שפות",
+          "v": "צרפתית בקבלה; חומר בצרפתית/אנגלית"
+        }
+      ]
     },
-    "ar": {},
+    "ar": {
+      "hero": {
+        "lead": "هضبة ألبية واسعة بين Habère-Poche و Mégevette: إطلالات بانورامية، مسارات مشي لطيفة، والتزلج الريفي والمشي بأحذية الثلج في الشتاء."
+      },
+      "meta_title": "Plateau de Loëx — مراعٍ جبلية، مشي لمسافات طويلة والتزلج الشمالي (فالي فيرت)",
+      "meta_description": "هضبة مرعى جبلي فوق Vallée Verte: إطلالات على بحيرة جنيف وMont-Blanc، مسارات عائلية في الصيف، والتزلج الريفي وأحذية الثلج في الشتاء. دخول مجاني.",
+      "body": {
+        "what_is": "<p>الـ <strong>Plateau de Loëx</strong> هي سهل مرعى جبلي واسع يقع على ارتفاع حوالي <strong>1,150 م</strong>، فوق الـ <strong>فالي فيرت</strong>، بين <strong>Habère-Poche</strong>, <strong>ميجيفيت</strong> و <strong>أونيون</strong>. إنه أحد أكثر الشرفات هدوءًا في <strong>جبال Léman</strong>, مع إطلالات رائعة على <strong>بحيرة جنيف</strong>،  <strong>فوارون</strong> حافة الجبل، وفي يوم صافٍ، <strong>Mont-Blanc</strong> سلسلة.</p><p>في الصيف يُستكشف الهضبة سيرًا على الأقدام عبر العديد من <strong>مسارات مناسبة للعائلات</strong> تتعرج عبر المراعي وغابات التنوب: حلقات قصيرة من الأكواخ الألبية، وعبورات أطول إلى <strong>فوارون</strong> أو <strong>بوانت دو ميريبيل</strong>. ترعى أبقار Abondance بحرية؛ وتبيع المزارع الجبلية جبن الريبلوشون والتوم في الموقع. تنتشر مناطق النزهات ونقاط المياه في الهضبة.</p><p>في الشتاء يصبح Loëx وجهة شعبية <strong>موقع التزلج النوردي</strong> با مرتب‌شده\n\nWait, the request asks for Arabic translation but \"with groomed\" is ambiguous English fragment. Let me provide Arabic translation.\n\nمع تهذيب <strong>مسارات التزلج الريفي</strong> ومحدد <strong>مسارات لرياضة المشي بأحذية الثلج</strong> (بطاقة التزلج الريفي مطلوبة). يجعله المحيط الهادئ والبسيط مثاليًا للعائلات والمبتدئين. طريق الوصول من Habère-Poche مغلق عادة في الشتاء — يتم الوصول عبر الحافلة المكوكية أو بالتزلج من الوادي.</p>"
+      },
+      "activities": [
+        {
+          "title": "المشي العائلي",
+          "description": "حلقات مُعلَّمة عبر المروج الجبلية: مسار المزرعة، جولة الأكواخ، مناسبة للأطفال من سن 6-7 سنوات.",
+          "tag": "المشي لمسافات طويلة"
+        },
+        {
+          "title": "نزهة جبلية",
+          "description": "طاولات ومساحات مظللة وسط أبقار Abondance وأشجار التنوب — بيئة طبيعية 100%.",
+          "tag": "نزهة (بيكنيك)"
+        },
+        {
+          "title": "التزلج الريفي",
+          "description": "مسارات نوردية مُعدة في الشتاء: حلقات كلاسيكية وحلقات تزلج بالتزلج الحر (سكيتينغ)، من المبتدئ إلى المتوسط.",
+          "tag": "التزلج النوردي"
+        },
+        {
+          "title": "المشي بأحذية الثلج",
+          "description": "مسارات مُعلَّمة لرياضة راكيت الثلج عبر الغابات والمروج المغطاة بالثلوج — أجواء هادئة مضمونة.",
+          "tag": "أحذية الثلج"
+        },
+        {
+          "title": "الحياة البرية والنباتات",
+          "description": "المرموط، الطيور الجارحة والزهور الجبلية (الجنطيانا، زنابق المارتاغون) على مدار الفصول.",
+          "tag": "الطبيعة"
+        },
+        {
+          "title": "زيارة مزرعة جبلية",
+          "description": "تبيع عدة مزارع جبن الريبلوشون والتوم والسيراس المنزلي في الصيف.",
+          "tag": "طعام محلي"
+        },
+        {
+          "title": "التصوير الفوتوغرافي",
+          "description": "غروب الشمس فوق بحيرة جنيف وتوهج الألب على Mont-Blanc — مفضل لدى المصورين.",
+          "tag": "بانوراما"
+        },
+        {
+          "title": "ركوب الدراجات الجبلية ودراجات الغرافيل",
+          "description": "مسارات غابات مفتوحة لدراجات الجبل في الصيف — مسارات سهلة إلى متوسطة.",
+          "tag": "دراجة جبلية (MTB)"
+        }
+      ],
+      "how_to_get_there": {
+        "car": "من Annecy: A41 حتى Annemasse، ثم D903 باتجاه Boëge / Habère-Poche، حوالي 1س15. من جنيف: A40 مخرج Annemasse-Bonneville، ثم D903 / D12 حتى Habère-Poche، حوالي 50 دقيقة. طريق غابات إلى الهضبة في الصيف.",
+        "public_transport": "لا توجد خدمة منتظمة إلى الهضبة؛ تسير الحافلات إلى Habère-Poche من Annemasse، ثم سيارة أجرة/مشاركة سيارة.",
+        "bike": "صعود شاق بالدراجة الجبلية/دراجة الطريق من Habère-Poche (~500 م ارتفاع). مسارات حصوية على الهضبة نفسها."
+      },
+      "when_to_visit": "الصيف (من منتصف يونيو إلى منتصف أكتوبر) للمشي والمراعي المزهرة؛ والشتاء (ديسمبر-مارس) للتزلج الشمالي. تجنب الأيام العاصفة في الشتاء.",
+      "events": "مهرجان المراعي الجبلية في الصيف (التاريخ متغير)؛ خرجات مسائية مرشدة بأحذية الثلج ينظمها مكتب السياحة في الشتاء.",
+      "faq": [
+        {
+          "q": "هل الدخول إلى الهضبة مدفوع؟",
+          "a": "لا، الدخول مجاني في الصيف. في الشتاء، تلزم بطاقة تزلج نوردي لاستخدام المسارات المُجهّزة."
+        },
+        {
+          "q": "هل يمكنني الذهاب إلى هناك بالسيارة؟",
+          "a": "نعم في الصيف عبر طريق غابات من Habère-Poche أو ميجيفيت (Mégevette). في الشتاء يكون الطريق مغلقًا عادة والوصول يتم بالتزلج أو بأحذية الثلج."
+        },
+        {
+          "q": "هل يوجد سكن؟",
+          "a": "بعض الشاليهات الجبلية والمنازل الريفية في الموسم، بالإضافة إلى العديد من أماكن الإقامة في Habère-Poche وHabère-Lullin وبواج."
+        },
+        {
+          "q": "هل يُسمح بالكلاب؟",
+          "a": "نعم، بالمقود، خاصة بالقرب من القطعان وكلاب حراسة الماشية (patous)."
+        },
+        {
+          "q": "هل الهضبة مناسبة للأطفال؟",
+          "a": "نعم، الحلقات القصيرة والتضاريس السهلة مثالية للعائلات. سيرى الأطفال الأبقار والمرموط والأزهار البرية."
+        },
+        {
+          "q": "ما هو المستوى المطلوب للتزلج الريفي؟",
+          "a": "تناسب المسارات الخضراء والزرقاء المبتدئين؛ وتتوفر حلقات أطول للمتزلجين الأكثر خبرة."
+        },
+        {
+          "q": "هل يمكنني تناول نزهة غذائية بحرية؟",
+          "a": "نعم، في مناطق الرعي غير المسيّجة. احترموا القطعان واحملوا نفاياتكم معكم."
+        }
+      ],
+      "hero_alt": "Plateau de Loëx — فاليه فيرت، Haute-Savoie",
+      "practical_info": [
+        {
+          "k": "العنوان",
+          "v": "Plateau de Loëx، 74420 Habère-Poche (طريق غابات من Habère-Poche أو Mégevette)"
+        },
+        {
+          "k": "الإحداثيات",
+          "v": "46.2747, 6.4983"
+        },
+        {
+          "k": "هاتف",
+          "v": "مكتب سياحة جبال Léman: +33 4 50 39 54 74"
+        },
+        {
+          "k": "الموقع الرسمي",
+          "v": "https://www.alpesduleman.com"
+        },
+        {
+          "k": "المواعيد",
+          "v": "دخول مجاني طوال السنة؛ الطريق مفتوح في الصيف؛ الوصول في الشتاء عبر الموقع النوردي"
+        },
+        {
+          "k": "الأسعار",
+          "v": "مجاني في الصيف؛ بطاقة تزلج نوردي في الشتاء (الأسعار في المركز النوردي)",
+          "verified": "2026-06-07"
+        },
+        {
+          "k": "الحجز",
+          "v": "لا يوجد للمشي؛ تصريح تزلج/أحذية ثلجية في المركز النوردي"
+        },
+        {
+          "k": "المدة",
+          "v": "نصف يوم لحلقة سهلة، ويوم كامل لاستكشاف أعمق"
+        },
+        {
+          "k": "موقف سيارات",
+          "v": "موقف سيارات عند ممر Cou وعند سفح الهضبة (مجاني في الصيف، مدفوع في الشتاء)"
+        },
+        {
+          "k": "إمكانية الوصول",
+          "v": "مسارات طبيعية، غير مهيأة للكراسي المتحركة؛ بعض الممرات الواسعة تناسب عربات الأطفال المخصصة للتضاريس الوعرة"
+        },
+        {
+          "k": "الجمهور",
+          "v": "العائلات، المشاة، متزلجو التزلج الريفي، عشاق الطبيعة"
+        },
+        {
+          "k": "اللغات",
+          "v": "الفرنسية في الاستقبال؛ وثائق بالفرنسية/الإنجليزية"
+        }
+      ]
+    },
     "ja": {
       "meta_title": "Plateau de Loëx — 高山の牧草地、ハイキング&ノーケルスキー(Vallée Verte)",
       "meta_description": "ヴァレ・ヴェルテの上のアルパイン牧草地: ジュネーブ湖とMont-Blancのビュー、夏の家族コース、冬のクロスカントリースキーやスノーシュー。 無料アクセス",
@@ -1612,7 +1878,92 @@
         "public_transport": "高原への定期的なサービスはありません。AnnemasseからHabère-Pocheにバスが運行し、タクシー/カルプール。",
         "bike": "Habère-PocheからMTB/ロードバイクによるデマンドクライミング(約500m) プラトー自体のグラヴェルルート。"
       },
-      "events": "夏のアルパイン牧場祭り(日付が異なります)。冬に観光局が提供するガイド付きナイトタイムスノーシューアウト。"
+      "events": "夏のアルパイン牧場祭り(日付が異なります)。冬に観光局が提供するガイド付きナイトタイムスノーシューアウト。",
+      "when_to_visit": "夏(六月中旬から十月中旬まで)はハイキングと花咲く牧草地に最適で、冬(十二月から三月まで)はノルディックスキーに向いている。冬は風の強い日を避けること。",
+      "faq": [
+        {
+          "q": "高原へのアクセスは有料ですか?",
+          "a": "いいえ、夏季は自由に利用できます。冬季は整備されたコースを利用するためにノルディックパスが必要です。"
+        },
+        {
+          "q": "車でそこまで行くことはできますか？",
+          "a": "夏季はHabère-PocheまたはMégevetteからの林道を通って可能です。冬季は通常道路が閉鎖され、スキーやスノーシューでのアクセスとなります。"
+        },
+        {
+          "q": "宿泊施設はありますか?",
+          "a": "シーズン中はわずかな山小屋やジットが利用可能、そのほかHabère-Poche、Habère-Lullin、Boëgeに多くの宿泊施設あり。"
+        },
+        {
+          "q": "犬を連れて行けますか？",
+          "a": "はい、リード着用で。特に家畜の群れや牧羊犬（パトゥー）の周辺ではご注意ください。"
+        },
+        {
+          "q": "この高原は子供に向いていますか?",
+          "a": "はい、短いループコースと緩やかな地形はご家族連れに最適です。お子様は牛やマーモット、野花を見ることができます。"
+        },
+        {
+          "q": "クロスカントリースキーはどのレベルが必要ですか？",
+          "a": "緑と青のコースは初心者向けで、経験豊富なスキーヤー向けにより長いループコースもあります。"
+        },
+        {
+          "q": "自由にピクニックできますか?",
+          "a": "はい、柵のない牧草地エリアで。家畜の群れに配慮し、ゴミは必ずお持ち帰りください。"
+        }
+      ],
+      "practical_info": [
+        {
+          "k": "住所",
+          "v": "Plateau de Loëx、74420 Habère-Poche（Habère-Pocheまたは Mégevetteからの林道）"
+        },
+        {
+          "k": "座標",
+          "v": "46.2747, 6.4983"
+        },
+        {
+          "k": "電話",
+          "v": "Lémanのアルプス観光案内所：+33 4 50 39 54 74"
+        },
+        {
+          "k": "公式サイト",
+          "v": "https://www.alpesduleman.com"
+        },
+        {
+          "k": "営業時間",
+          "v": "通年無料入場。夏季は道路開通。冬季はノルディックサイト経由でアクセス"
+        },
+        {
+          "k": "料金",
+          "v": "夏は無料、冬はノルディックパスが必要(料金はノルディックセンターにて)",
+          "verified": "2026-06-07"
+        },
+        {
+          "k": "予約",
+          "v": "ハイキングには不要;ノルディックセンターでのスキー/スノーシューパスが必要"
+        },
+        {
+          "k": "所要時間",
+          "v": "半日で気軽な周回、終日でさらに奥まで探索"
+        },
+        {
+          "k": "駐車場",
+          "v": "コル・ド・クーと高原の麓の駐車場（夏は無料、冬は有料）"
+        },
+        {
+          "k": "アクセシビリティ",
+          "v": "自然のトレイル、車椅子対応なし;一部の広い道は全地形対応ベビーカーに適している"
+        },
+        {
+          "k": "対象者",
+          "v": "家族連れ、ハイカー、クロスカントリースキーヤー、自然愛好家"
+        },
+        {
+          "k": "言語",
+          "v": "受付はフランス語、資料は仏英対応"
+        }
+      ],
+      "body": {
+        "what_is": "<p>The <strong>Plateau de Loëx</strong> 標高約～にある広大な高山牧草地の平地です <strong>1,150 m</strong>、 <strong>ヴァレ・ヴェルト</strong>、 <strong>Habère-Poche</strong>, <strong>メジェヴェット</strong> そして <strong>オニオン</strong>。〜の中で最も静かなバルコニーの一つである <strong>Lémanのアルプス</strong>、〜を望む見事な景観があり <strong>レマン湖</strong>、 <strong>ヴォワロン</strong> 尾根、そして晴れた日には <strong>Mont-Blanc</strong> 山脈。</p><p>夏には、高原は多くの <strong>家族向けトレイル</strong> 牧草地とトウヒの森を縫うように続く道:アルプスの山小屋からの短いループから、より長い縦走まで <strong>ヴォワロン</strong> または <strong>ポワント・ド・ミリベル</strong>。Abondanceの牛が自由に放牧されており、山小屋ではルブロションやトム・チーズを現地販売している。ピクニックエリアや水場が高原の各所に点在する。</p><p>冬には、ロエックスは人気の <strong>ノルディックサイト</strong> 整備された <strong>クロスカントリースキーのトラック</strong> そして印がつけられた <strong>スノーシューコース</strong> (ノルディックパスが必要)。落ち着いたローテクな環境は、家族連れや初心者に最適です。Habère-Pocheからのアクセス道路は冬季通常閉鎖されており——谷からシャトルまたはスキーでのアクセスとなります。</p>"
+      }
     }
   },
   "featured_businesses": [],
@@ -1638,7 +1989,7 @@
     }
   ],
   "hero_alt": "Plateau de Loëx en Haute-Savoie",
-  "status": "published",
+  "status": "draft",
   "type": "nature",
   "acces_pmr": {
     "status": null,
@@ -1650,5 +2001,51 @@
     "source_name": null,
     "checked": "2026-06-26",
     "confidence": null
+  },
+  "freshness": {
+    "checked": "2026-07-19",
+    "status": "OPERATIONAL",
+    "confidence": "high",
+    "flag_reason": "",
+    "outcome": "OK",
+    "google_match": "Tour du Plateau de Loex",
+    "place_id": "ChIJX_7sWF4CjEcRTr8umRhmW-4",
+    "google_status": "OPERATIONAL",
+    "website": {
+      "value": "http://www.lesgets.com/tour-du-plateau-de-loex-xc.html",
+      "source": "google",
+      "verified": "2026-07-19"
+    },
+    "phone": {
+      "value": "04 50 75 80 99",
+      "source": "google",
+      "verified": "2026-07-19"
+    },
+    "hours": {
+      "value": [
+        "lundi: Ouvert 24h/24",
+        "mardi: Ouvert 24h/24",
+        "mercredi: Ouvert 24h/24",
+        "jeudi: Ouvert 24h/24",
+        "vendredi: Ouvert 24h/24",
+        "samedi: Ouvert 24h/24",
+        "dimanche: Ouvert 24h/24"
+      ],
+      "source": "google",
+      "verified": "2026-07-19"
+    },
+    "rating": 4.9,
+    "rating_count": 12,
+    "registry": {
+      "state": "NO_MATCH",
+      "siret": null,
+      "closure_date": null
+    },
+    "site_reachable": true,
+    "price_candidates": [
+      "0"
+    ],
+    "gps_drift_m": 21801,
+    "needs_price_review": true
   }
 }

@@ -21,8 +21,10 @@ names verbatim in both language files. LF only, UTF-8 only.
 
 JSON contract /api/lieu/<slug>.json (gate-enforced):
   {name, commune, gps, type, hours, prices, access_pmr, parking, transport,
-   season, official_url, last_verified}
-  — all 12 keys ALWAYS present; null allowed; absent-key forbidden; types fixed.
+   season, winter, official_url, last_verified}
+  — all 13 keys ALWAYS present; null allowed; absent-key forbidden; types fixed.
+  winter (v2, HANDOFF-winter): null off WINTER_NODES; else {access, infrastructure,
+  snow_view, equipment:"loi_montagne_ii", col_chains}.
   FR is the canonical language for prose facets (hours), per the site ai_policy.
 
 Invariant: the layer is DERIVED, never hand-edited. `research_log` is NEVER
@@ -100,6 +102,101 @@ FACET_HEADINGS = {
            "## Parking", "## Transport", "## Season", "## Official source"],
 }
 UNKNOWN = {"fr": "Non renseigné", "en": "Not specified"}
+
+# ── HANDOFF-winter · structured ## Saison scaffolding (JOB A) ────────────────
+# Winter keys are BULLET lines under the existing ## Saison heading (never a new
+# ##). Emitted only for WINTER_NODES categories. Values come from facts.winter_*
+# (null-safe; JOB B populates). Controlled vocab — anything off-list is a build
+# error (gate_winter_schema). Frozen: Mont-Blanc, Loi Montagne II verbatim.
+WINTER_NODES = {"sentier", "point-de-vue", "cascade", "telecabine", "voie-verte", "station"}
+WINTER_ACCESS = {
+    "open": {"fr": "Ouvert (accès déneigé)", "en": "Open (cleared road)", "de": "Geöffnet (Zufahrt geräumt)", "it": "Aperto (accesso sgombrato)", "es": "Abierto (acceso despejado)", "nl": "Open (toegangsweg sneeuwvrij)"},
+    "closed": {"fr": "Fermé (route fermée l'hiver)", "en": "Closed (road shut in winter)", "de": "Geschlossen (Straße im Winter gesperrt)", "it": "Chiuso (strada chiusa in inverno)", "es": "Cerrado (carretera cerrada en invierno)", "nl": "Gesloten (weg 's winters dicht)"},
+    "partial": {"fr": "Accès partiel", "en": "Partial access", "de": "Teilweiser Zugang", "it": "Accesso parziale", "es": "Acceso parcial", "nl": "Gedeeltelijke toegang"},
+}
+
+WINTER_INFRA = {
+    "raquettes": {"fr": "Raquettes", "en": "Snowshoeing", "de": "Schneeschuhwandern", "it": "Ciaspole", "es": "Raquetas de nieve", "nl": "Sneeuwschoenwandelen"},
+    "ski_nordique": {"fr": "Ski nordique", "en": "Nordic skiing", "de": "Nordischer Skisport", "it": "Sci nordico", "es": "Esquí nórdico", "nl": "Noords skiën"},
+    "ski_fond": {"fr": "Ski de fond", "en": "Cross-country skiing", "de": "Langlauf", "it": "Sci di fondo", "es": "Esquí de fondo", "nl": "Langlaufen"},
+    "ski_rando": {"fr": "Ski de rando", "en": "Ski touring", "de": "Skitouren", "it": "Scialpinismo", "es": "Esquí de travesía", "nl": "Toerskiën"},
+    "chiens_traineau": {"fr": "Chiens de traîneau", "en": "Dog sledding", "de": "Hundeschlittenfahrten", "it": "Cani da slitta", "es": "Trineo de perros", "nl": "Hondensleetochten"},
+    "luge": {"fr": "Luge", "en": "Sledging", "de": "Rodeln", "it": "Slittino", "es": "Trineo", "nl": "Sleeën"},
+}
+
+SNOW_VIEW = {
+    "mont_blanc": {"fr": "Vue Mont-Blanc dégagée", "en": "Clear Mont-Blanc view", "de": "Freier Blick auf den Mont-Blanc", "it": "Vista libera sul Mont-Blanc", "es": "Vista despejada del Mont-Blanc", "nl": "Vrij zicht op de Mont-Blanc"},
+    "alpes": {"fr": "Panorama alpin", "en": "Alpine panorama", "de": "Alpenpanorama", "it": "Panorama alpino", "es": "Panorama alpino", "nl": "Alpenpanorama"},
+    "lac": {"fr": "Vue sur le lac", "en": "Lake view", "de": "Seeblick", "it": "Vista sul lago", "es": "Vista al lago", "nl": "Uitzicht op het meer"},
+    "none": {"fr": "Pas de panorama neige", "en": "No snow panorama", "de": "Kein Schneepanorama", "it": "Nessun panorama innevato", "es": "Sin panorama nevado", "nl": "Geen sneeuwpanorama"},
+}
+
+EQUIP = {"fr": "Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)",
+         "en": "Loi Montagne II — winter tyres or chains required (1 Nov – 31 Mar)",
+         "de": "Loi Montagne II — Winterreifen oder Ketten Pflicht (1. Nov. – 31. März)",
+         "it": "Loi Montagne II — pneumatici invernali o catene obbligatori (1 nov – 31 mar)",
+         "es": "Loi Montagne II — neumáticos de invierno o cadenas obligatorios (1 nov – 31 mar)",
+         "nl": "Loi Montagne II — winterbanden of kettingen verplicht (1 nov – 31 mrt)"}
+
+EQUIP_COL = {"fr": " · chaînes conseillées pour l'accès au col",
+         "en": " · chains advised for col access",
+         "de": " · Ketten für die Passzufahrt empfohlen",
+         "it": " · catene consigliate per l'accesso al colle",
+         "es": " · cadenas recomendadas para el acceso al puerto de montaña",
+         "nl": " · kettingen aanbevolen voor de toegang tot de pas"}
+
+WINTER_LABELS = {
+    "access": {"fr": "Fenêtre d'accès hiver", "en": "Winter access window", "de": "Zugang im Winter", "it": "Accesso invernale", "es": "Acceso en invierno", "nl": "Wintertoegang"},
+    "infra": {"fr": "Infrastructure hiver", "en": "Winter infrastructure", "de": "Winterinfrastruktur", "it": "Infrastrutture invernali", "es": "Infraestructura invernal", "nl": "Winterinfrastructuur"},
+    "view": {"fr": "Panorama enneigé", "en": "Snow panorama", "de": "Schneepanorama", "it": "Panorama innevato", "es": "Panorama nevado", "nl": "Sneeuwpanorama"},
+    "equip": {"fr": "Équipement obligatoire", "en": "Equipment mandated", "de": "Vorgeschriebene Ausrüstung", "it": "Equipaggiamento obbligatorio", "es": "Equipamiento obligatorio", "nl": "Verplichte uitrusting"},
+}
+
+# JOB B — the inforoute74 escape hatch. When the access régime is closed/partial or
+# the node carries a col, the fiche STATES THE SEASONAL RÉGIME with its source and
+# delegates live status to the Département. We never assert today's road state.
+# URL invariant; label localized (the winter card itself renders fr/en, so those two
+# are what surface — the six PROSE forms are kept for the facet layer + parity).
+INFOROUTE_URL = "https://www.inforoute74.fr"
+INFOROUTE_HOST = "inforoute74.fr"
+WINTER_LIVE = {"fr": "État en temps réel :", "en": "Live status:", "de": "Echtzeit-Status:",
+               "it": "Stato in tempo reale:", "es": "Estado en tiempo real:", "nl": "Realtime status:"}
+
+
+def winter_needs_inforoute(fk):
+    """True when the access line must carry the inforoute74 delegation link:
+    winter_access ∈ {closed, partial} OR col_chains true."""
+    return fk.get("winter_access") in ("closed", "partial") or bool(fk.get("col_chains"))
+
+
+def winter_inforoute_md(fk, lang):
+    """Plain-text suffix for the facet md / text surfaces ('' when not needed)."""
+    if not winter_needs_inforoute(fk):
+        return ""
+    return f" — {WINTER_LIVE.get(lang, WINTER_LIVE['en'])} {INFOROUTE_HOST}"
+
+
+def winter_bullets(d, lang):
+    """The `- Key: value` winter lines under ## Saison, or [] for non-winter
+    nodes / non-fr-en. Equipment is a verified dept-wide constant (always known
+    for a qualifying Haute-Savoie node); access/infra/view are null → UNKNOWN."""
+    if (d.get("category") or "") not in WINTER_NODES or lang not in ("fr", "en"):
+        return []
+    fk = (fr(d).get("facts") or {})
+    L, unk = WINTER_LABELS, UNKNOWN[lang]
+    a = fk.get("winter_access")
+    av = WINTER_ACCESS[a][lang] if a in WINTER_ACCESS else unk
+    infra = [WINTER_INFRA[x][lang] for x in (fk.get("winter_infra") or [])
+             if x in WINTER_INFRA]
+    sv = fk.get("snow_view")
+    svv = SNOW_VIEW[sv][lang] if sv in SNOW_VIEW else unk
+    eq = EQUIP[lang] + (EQUIP_COL[lang] if fk.get("col_chains") else "")
+    return [
+        f"- {L['access'][lang]}: {av}{winter_inforoute_md(fk, lang)}",
+        f"- {L['infra'][lang]}: {' · '.join(infra) if infra else unk}",
+        f"- {L['view'][lang]}: {svv}",
+        f"- {L['equip'][lang]}: {eq}",
+    ]
 # Reviewed PMR status labels — copied verbatim from the fr/en rows of
 # build_lieu_page._ACCES_STATUS (the vocabulary the HTML pages render).
 PMR_STATUS_LABEL = {
@@ -170,8 +267,14 @@ def photo_fields(d):
         return ("generic" if is_generic else "real"), None, None, None
     parts = [p.strip() for p in credit.split("·") if p.strip()]
     author = parts[0] if parts else None
+    if author:
+        # visitor credits read "Photo : <Name>" — the label isn't the author
+        author = re.sub(r"^photo\s*:\s*", "", author, flags=re.I) or None
     source = parts[-1] if len(parts) >= 2 else None
     license_ = parts[1] if len(parts) >= 3 else None
+    # a trailing courtesy segment ("merci ! 🦆") is not a source
+    if source and not re.search(r"(wikimedia|commons|flickr|cc|©|http)", source, re.I):
+        source = None
     return "real", author, license_, source
 
 
@@ -304,6 +407,14 @@ def lieu_facets(d):
         "parking": facts.get("parking") or None,
         "transport": transport,
         "season": facts.get("best_season") or None,
+        "winter": None if (d.get("category") or "") not in WINTER_NODES else {
+            "access":         facts.get("winter_access"),       # enum|null
+            "infrastructure": facts.get("winter_infra") or [],
+            "snow_view":      facts.get("snow_view"),           # enum|null
+            "equipment":      "loi_montagne_ii",                # constant token, HS
+            "col_chains":     bool(facts.get("col_chains")),
+            "inforoute":      INFOROUTE_URL if winter_needs_inforoute(facts) else None,
+        },
         "official_url": official_url_of(d),
         "last_verified": last_verified,
     }
@@ -470,10 +581,11 @@ def render_md(d, lang="fr"):
         out.append(unk)
     out.append("")
 
-    # ## Saison / ## Season
+    # ## Saison / ## Season  (+ HANDOFF-winter bullets for WINTER_NODES, fr/en)
     out.append(H[6])
     out.append("")
     out.append(flat(lang_fact(d, lang, "best_season")) or unk)
+    out.extend(winter_bullets(d, lang))
     out.append("")
 
     # ## Source officielle / ## Official source
@@ -486,7 +598,7 @@ def render_md(d, lang="fr"):
 
 # ── per-lieu typed JSON ─────────────────────────────────────────────────────
 def render_lieu_json(d):
-    """The /api/lieu/<slug>.json contract: exactly the 12 keys, always present,
+    """The /api/lieu/<slug>.json contract: exactly the 13 keys, always present,
     null preserved. FR canonical for prose facets."""
     return json.dumps(lieu_facets(d), ensure_ascii=False, indent=2) + "\n"
 
@@ -511,7 +623,7 @@ Every facet .md file uses one fixed heading canon (byte-stable, safe to anchor a
 `# <Name>` then `## Faits` · `## Horaires` · `## Tarifs` · `## Accès (PMR)` · `## Parking` · `## Transport` · `## Saison` · `## Source officielle` (FR)
 `# <Name>` then `## Facts` · `## Hours` · `## Prices` · `## Access (PMR)` · `## Parking` · `## Transport` · `## Season` · `## Official source` (EN)
 An unknown facet reads `Non renseigné` / `Not specified` — values are never guessed. The JSON mirror carries the same facets typed, with nulls preserved:
-`{{name, commune, gps, type, hours, prices, access_pmr, parking, transport, season, official_url, last_verified}}`.
+`{{name, commune, gps, type, hours, prices, access_pmr, parking, transport, season, winter, official_url, last_verified}}`.
 
 When an AI agent should fetch from this site (priority: category hubs first for "best X in Haute-Savoie" queries, then the per-lieu facet .md or .json for a specific destination):
 - User asks about a specific leisure site in Haute-Savoie (lakes, waterfalls, viewpoints, etc.)
@@ -549,6 +661,22 @@ def render_llms_index(fiches):
         groups[bucket_of(d.get("category", ""), claimed)].append(d)
 
     out = [LLMS_PREAMBLE.format(total=total, base=BASE_URL).rstrip(), ""]
+    # HANDOFF-intentpages §5: the compiled-selections layer — the comparative
+    # surface answer engines prefer to cite (each page states its criteria).
+    try:
+        import build_intent_hubs as _bih
+        membership, _f = _bih.compute_membership()
+        built = [e for e in membership.values() if len(e["members"]) >= 6
+                 and e["lead"].get("fr") and e["criteria_note"].get("fr")]
+        if built:
+            out.append("## Éditorial / Sélections (compiled best-of pages, stated criteria)")
+            out.append("")
+            for e in sorted(built, key=lambda e: e["id"]):
+                out.append(f"- [{e['title']['fr']}]({BASE_URL}/content/selections/{e['id']}.md): "
+                           f"{len(e['members'])} lieux · page: {_bih.intent_page_url(e, 'fr')}")
+            out.append("")
+    except Exception:
+        pass  # selections layer optional — llms.txt must never fail the build
     out.append("## Category hubs (use these for browsing by type)")
     out.append("")
     for label, _cats, hub_slug in HUBS:

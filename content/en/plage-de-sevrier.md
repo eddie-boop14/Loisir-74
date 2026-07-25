@@ -16,11 +16,11 @@ google_place_id: "ChIJcwxXNkWQi0cRJ0MWnpGsN00"
 canonical_url: https://loisirs74.fr/en/plage-de-sevrier
 language: en
 facet_json: https://loisirs74.fr/api/lieu/plage-de-sevrier.json
-photo_url: /img/generique/generique-plage-lac-15.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/lacs-plages/plage-de-sevrier-hero.jpg
+photo_type: real
+photo_author: "Chrbenoit"
+photo_license: "CC BY-SA 3.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-24
 source: loisirs74.fr
 ---
@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Sévrier, Haute-Savoie (74320)
 - GPS: 45.8631, 6.1453
 - Category: plage
-- Type: Plage pelouse + graviers fins - rénovée récemment
+- Type: Lawn + fine gravel beach - recently renovated
 
 ## Hours
 
-Horaires de la Plage de Sévrier : Surveillance MNS du 27 juin au 31 août 2026 (équivalent 2025), 10h15-12h30 et 13h30-17h45. Hors saison : accès libre non surveillé.. Vérifié sur le site officiel le 24 mai 2026 — sous réserve d'arrêté municipal 2026.
+Opening hours at Plage de Sévrier: lifeguard supervision from 27 June to 31 August 2026 (same as 2025), 10:15am-12:30pm and 1:30pm-5:45pm. Off-season: free access, unsupervised.. Verified on the official site on 24 May 2026 — subject to 2026 municipal order.
 
 ## Prices
 
@@ -49,7 +49,7 @@ Horaires de la Plage de Sévrier : Surveillance MNS du 27 juin au 31 août 2026 
 
 ## Parking
 
-Selon plage - voir détails
+Depends on the beach - see details
 
 ## Transport
 
@@ -60,7 +60,7 @@ Selon plage - voir détails
 
 ## Season
 
-Juillet - août (surveillance MNS)
+July - August (lifeguard supervision)
 
 ## Official source
 

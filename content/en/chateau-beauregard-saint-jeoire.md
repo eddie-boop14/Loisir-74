@@ -32,11 +32,11 @@ source: loisirs74.fr
 - Commune: Saint-Jeoire, Haute-Savoie (74490)
 - GPS: 46.128, 6.413
 - Category: chateau
-- Type: Maison forte médiévale, propriété religieuse
+- Type: Medieval fortified house, religious property
 
 ## Hours
 
-EXTÉRIEURS LIBRES 24h/24, 7j/7, toute l'année au Château de Beauregard. Illumination nocturne automatique. Intérieurs occupés par la Fraternité Eucharistein, visites uniquement lors des Journées Européennes du Patrimoine mi-septembre. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+EXTERIOR GROUNDS OPEN 24/7, year-round at Château de Beauregard. Automatic night illumination. Interiors occupied by the Fraternité Eucharistein, visits only during European Heritage Days in mid-September. Verified on the official website 24 May 2026 — subject to seasonal changes.
 
 ## Prices
 
@@ -48,7 +48,7 @@ Not specified
 
 ## Parking
 
-Gratuit aux abords
+Free nearby
 
 ## Transport
 
@@ -56,7 +56,7 @@ Not specified
 
 ## Season
 
-Toute l'année · Soir pour illumination · JEP septembre
+Year-round · Evening for illumination · European Heritage Days in September
 
 ## Official source
 
