@@ -51,11 +51,12 @@ Not specified
 ## Access (PMR)
 
 - Status: Partially accessible
+- Detail: Chamonix Tourist Office holds the Tourisme & Handicap label (motor, hearing, mental); the Vallorcine Tourist Office is also certified, and the Les Houches Tourist Office is in preparation. Step-free entrances, accessible parking, lowered reception desks, wheelchairs on loan, induction loop, LSF sign language, braille booklets. Skiing: at Plan Joran – Les Grands Montets, gondola access is possible in winter for wheelchair skiers (but not for pedestrians/snowshoers, arriving in the middle of the ski area). Associations: Loisirs Assis Evasion, Sit N' Ride (Vallorcine), Access Mont-Blanc, My Line.
 - Source: Chamonix Mont-Blanc — Office de Tourisme (Tourisme adapté / handicap) — https://en.chamonix.com/usual-information-services/tourism-and-the-disabled
 
 ## Parking
 
-3 parkings couverts (Entrèves, Saint-Michel, parking du Mont-Blanc) et 7 parkings enclos (l'Outa, gare SNCF, Grépon, Lionel Terray, Médiathèque, Tennis, Allobroges). Parking Relais du Grépon à l'entrée de Chamonix : garer sa voiture et prendre le bus, accès centre-ville via le minibus Mulet. Au total plus de 42 emplacements de stationnement recensés dans la vallée (10 avec bornes de recharge). Détail des capacités et tarifs (gratuit/payant, hiver/été) non précisé en verbatim sur la page listant les parkings.
+3 covered car parks (Entrèves, Saint-Michel, Mont-Blanc car park) and 7 enclosed car parks (l'Outa, SNCF station, Grépon, Lionel Terray, Médiathèque, Tennis, Allobroges). Grépon Park & Ride at the entrance to Chamonix: park your car and take the bus, town-centre access via the Mulet minibus. In total more than 42 parking areas recorded across the valley (10 with charging points). Detailed capacities and prices (free/paid, winter/summer) not specified verbatim on the page listing the car parks.
 
 ## Transport
 

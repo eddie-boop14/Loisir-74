@@ -53,7 +53,7 @@ Not specified
 
 ## Parking
 
-Parking gratuit à la station (secteur Le Clos, 74360 La Chapelle-d'Abondance), avec accueil et aire de service camping-cars et stationnement autocars ; parking au centre du village (~20 places, près des commerces, mairie et OT) limité à 2h.
+Free car park at the resort (Le Clos sector, 74360 La Chapelle-d'Abondance), with a reception area and service/parking area for motorhomes and coaches; car park in the village centre (~20 spaces, near the shops, town hall and Tourist Office) limited to 2h.
 
 ## Transport
 

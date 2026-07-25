@@ -51,11 +51,12 @@ Not specified
 ## Access (PMR)
 
 - Status: Accessible
+- Detail: 3 sledge-chairs (Lugicap) that fit any 4-wheel manual wheelchair for getting around on the pedestrian paths, available at the Tourist Office, the Resort Reception and at the top of the Prodains cable car (on request, 1,000€ deposit). Adapted skiing (dualski, uniski) with ESF Avoriaz 1800 and Évolution 2. Adapted lifts (wheelchair-compatible), reserved parking, accessible toilets, dedicated reception at the Tourist Office. Lift pass discounts 50% (+ companion) / 20%.
 - Source: Avoriaz — Site officiel (Tourisme et handicap) — https://www.avoriaz.com/en/staying/pratical-information/tourism-and-disability/
 
 ## Parking
 
-3 parkings couverts (Plateau, Falaise, Proclou), 1 730 places au total, ouverts 24h/24 (8 bornes de recharge au Plateau). Parking extérieur : 600 places, à 800 m de l'entrée de la station, 24h/24 ; gratuit l'été, hiver 1 jour 14€, semaine 82€, saison 390€. Parking des Prodains (télécabine Prodains Express) : 540 places (zones P0 <12h, P1 >12h), gratuit l'été, hiver 1 jour 26€, 7 jours 182€, 45 min gratuites/jour. Parkings couverts hiver : 1re heure gratuite, 1 jour 18€, semaine 100€ ; été 1h 1,20€ à saison 180€.
+3 covered car parks (Plateau, Falaise, Proclou), 1,730 spaces in total, open 24/7 (8 charging points at Plateau). Outdoor car park: 600 spaces, 800 m from the resort entrance, 24/7; free in summer, in winter 1 day 14€, week 82€, season 390€. Prodains car park (Prodains Express gondola): 540 spaces (zones P0 <12h, P1 >12h), free in summer, in winter 1 day 26€, 7 days 182€, 45 min free/day. Covered car parks in winter: 1st hour free, 1 day 18€, week 100€; in summer 1h 1.20€ up to season 180€.
 
 ## Transport
 

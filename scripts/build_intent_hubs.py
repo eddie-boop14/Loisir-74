@@ -560,6 +560,55 @@ def _facet_richness(f):
     return min(filled, 8) / 8.0
 
 
+# ── season predicate — deterministic parse of the free-text best_season lane ──
+import unicodedata as _ud  # noqa: E402
+
+_MONTHS = {"janvier": 1, "fevrier": 2, "mars": 3, "avril": 4, "mai": 5,
+           "juin": 6, "juillet": 7, "aout": 8, "septembre": 9, "octobre": 10,
+           "novembre": 11, "decembre": 12}
+_SEASONS = {"printemps": {3, 4, 5}, "ete": {6, 7, 8},
+            "automne": {9, 10, 11}, "hiver": {12, 1, 2}}
+_MLIST = list(_MONTHS)
+_RANGE_RE = _re.compile(r"(" + "|".join(_MLIST) + r")\s*(?:-| a | au )\s*("
+                        + "|".join(_MLIST) + r")")
+
+
+def _deaccent(s):
+    out = "".join(c for c in _ud.normalize("NFD", s)
+                  if _ud.category(c) != "Mn").lower()
+    # Apostrophes (straight + curly) → space so "toute l'annee" reads as tokens.
+    return out.replace("'", " ").replace("’", " ")
+
+
+def _season_months_text(raw):
+    """The set of calendar months a free-text best_season phrase covers.
+    Year-round short-circuits to all twelve; season words and French month
+    ranges (incl. wrap) and standalone months union in. Deterministic."""
+    t = _deaccent(raw)
+    months = set(range(1, 13)) if "toute l annee" in t else set()
+    for word, ms in _SEASONS.items():
+        if word in t:
+            months |= ms
+    t2 = _re.sub(r"[–—\-]", " - ", t)
+    for m in _RANGE_RE.finditer(t2):
+        a, b = _MONTHS[m.group(1)], _MONTHS[m.group(2)]
+        months |= (set(range(a, b + 1)) if a <= b
+                   else set(range(a, 13)) | set(range(1, b + 1)))
+    for word in _MLIST:
+        if _re.search(r"\b" + word + r"\b", t2):
+            months.add(_MONTHS[word])
+    return months
+
+
+def _season_open(f, month):
+    bs = _fr_facts(f).get("best_season")
+    if not bs:
+        return False
+    if isinstance(bs, list):
+        bs = " · ".join(str(x) for x in bs)
+    return month in _season_months_text(str(bs))
+
+
 def selector_match(f, sel, sets):
     """Deterministic membership predicate — THE page definition."""
     if f.get("status") != "published":
@@ -587,6 +636,8 @@ def selector_match(f, sel, sets):
         h = _duration_hours(f)
         if h is None or h > sel["duration_max_h"]:
             return False
+    if sel.get("season_open_month") is not None and not _season_open(f, sel["season_open_month"]):
+        return False
     return True
 
 
@@ -594,11 +645,26 @@ _SCORES = {"has_real_photo": _real_photo, "is_free": _is_free,
            "facet_richness": _facet_richness, "pmr": _is_pmr, "winter": _has_winter}
 
 
-def rank_members(slugs, fiches, ranking):
+def rank_members(slugs, fiches, ranking, diversify_by=None):
     def key(s):
         f = fiches[s]
         return tuple(-float(_SCORES[r](f)) for r in ranking if r in _SCORES) + (s,)
-    return sorted(slugs, key=key)
+    ordered = sorted(slugs, key=key)
+    if diversify_by != "category":
+        return ordered
+    # Opt-in only: round-robin across categories so a season-wide pool doesn't
+    # surface 11 cascades in a row. Score order is preserved WITHIN each category
+    # and categories cycle in first-appearance (i.e. best-ranked) order — fully
+    # deterministic, so the gate's "ItemList == selector output" still holds.
+    buckets = {}
+    for s in ordered:
+        buckets.setdefault(fiches[s].get("category") or "", []).append(s)
+    out = []
+    while any(buckets.values()):
+        for cat in list(buckets):
+            if buckets[cat]:
+                out.append(buckets[cat].pop(0))
+    return out
 
 
 def compute_membership(fiches=None):
@@ -615,7 +681,8 @@ def compute_membership(fiches=None):
     out = {}
     for e in reg["pages"]:
         matched = [s for s, f in fiches.items() if selector_match(f, e["selector"], sets)]
-        members = rank_members(matched, fiches, e["ranking"])[: e.get("max_items", 20)]
+        members = rank_members(matched, fiches, e["ranking"],
+                               e.get("diversify_by"))[: e.get("max_items", 20)]
         out[e["id"]] = {**e, "members": members}
     return out, fiches
 

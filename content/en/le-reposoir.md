@@ -36,7 +36,7 @@ source: loisirs74.fr
 
 ## Hours
 
-Remontées : 9h–17h (7j/7 pendant les vacances scolaires ; mercredi, samedi et dimanche hors vacances).
+Lifts: 9:00–17:00 (7 days a week during school holidays; Wednesday, Saturday and Sunday outside holidays).
 
 ## Prices
 
@@ -53,7 +53,7 @@ Not specified
 
 ## Parking
 
-La station indique un 'Parking' et une aire de stationnement/borne de service camping-cars parmi ses équipements ; tarif (gratuit/payant), capacité et emplacement précis non indiqués sur le site officiel.
+The resort lists a 'Car park' and a motorhome parking/service area among its facilities; rate (free/paid), capacity and exact location not indicated on the official website.
 
 ## Transport
 

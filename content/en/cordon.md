@@ -51,11 +51,12 @@ Not specified
 ## Access (PMR)
 
 - Status: Partially accessible
+- Detail: A space reserved for people with disabilities is located right in front of the Cordon Tourist Office building; the Cordon Tourisme premises are accessible to people with disabilities. No adaptive-skiing facilities on the slopes mentioned on the official pages consulted.
 - Source: Cordon Tourisme — Site officiel (Accès et transport sur Cordon) — https://www.cordon.fr/hiver/navette.htm
 
 ## Parking
 
-Deux parkings pour accéder aux remontées : La Charbonnière (Carrefour du Verney) et Le Dandry, qui est le départ des remontées mécaniques (partie haute du domaine, accès direct à la zone débutant, cours ESF et caisses des forfaits). Navette gratuite reliant le centre-village au parking du Dandry. Gratuité/tarif et capacité des parkings non précisés en verbatim sur la page consultée.
+Two car parks to access the lifts: La Charbonnière (Carrefour du Verney) and Le Dandry, which is the departure point of the ski lifts (upper part of the ski area, direct access to the beginners' zone, ESF lessons and lift pass offices). Free shuttle linking the village centre to the Dandry car park. Free/paid status and capacity of the car parks not specified verbatim on the page consulted.
 
 ## Transport
 

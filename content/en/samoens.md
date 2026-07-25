@@ -51,11 +51,12 @@ Not specified
 ## Access (PMR)
 
 - Status: Partially accessible
+- Detail: Adaptive skiing via the Samoëns Handi-Glisse association (tandem skiing and other adaptive-sport equipment offered free of charge to people with disabilities). Accessible Tourist Office (2 reserved PMR spaces in front of the building, step-free entrance, adapted counter, wheelchair loan, induction loop, easy-to-read guide). Interactive map with a "PMR Access" filter, "Samoëns pour tous" brochure, public accessibility register.
 - Source: Samoëns Tourisme — https://www.samoens.com/handicap/
 
 ## Parking
 
-Parking du Grand Massif Express : 800 places. En service du 15 décembre au 15 avril, payant de 9h à 19h (7 € la journée, 1 heure gratuite ; abonnement saison 250 €, tarif réduit 125 € pour les professionnels utilisant la télécabine). Gratuit pour les résidents de Septimont (sur justificatif). Titulaires de carte PMR : stationnement gratuit sur les places dédiées, sans démarche.
+Grand Massif Express car park: 800 spaces. In service from 15 December to 15 April, paid from 9:00 to 19:00 (7€ per day, 1 hour free; season subscription 250€, reduced rate 125€ for professionals using the gondola). Free for residents of Septimont (on proof). PMR card holders: free parking in the dedicated spaces, no formalities.
 
 ## Transport
 

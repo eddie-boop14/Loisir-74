@@ -51,11 +51,12 @@ Not specified
 ## Access (PMR)
 
 - Status: Partially accessible
+- Detail: Adaptive skiing and tandem-ski offered with ESF Passy Plaine-Joux. With the Barmus chairlift, the ESF Passy instructors are specially trained in teaching seated skiing (sit-ski) and in supporting people with reduced mobility with adapted equipment.
 - Source: Office de Tourisme de Passy Mont-Blanc — https://www.passy-mont-blanc.com/en/activites/ski-et-glisse/handiski/
 
 ## Parking
 
-Grand parking gratuit situé au pied du front de neige, à environ 50 m des caisses des remontées mécaniques. (Capacité exacte non confirmée en verbatim sur la source officielle.)
+Large free car park located at the foot of the snow front, about 50 m from the ski lift ticket offices. (Exact capacity not confirmed verbatim on the official source.)
 
 ## Transport
 

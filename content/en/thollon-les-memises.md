@@ -54,7 +54,7 @@ Not specified
 
 ## Parking
 
-Parking gratuit au pied de la télécabine (des Mémises) ; parking gratuit à environ 100 m de la télécabine.
+Free car park at the foot of the (Mémises) gondola; free car park about 100 m from the gondola.
 
 ## Transport
 

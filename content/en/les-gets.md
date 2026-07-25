@@ -51,11 +51,12 @@ Not specified
 ## Access (PMR)
 
 - Status: Partially accessible
+- Detail: Adaptive skiing with Uniski, Dual-ski and large stabilisers, specialised instructors (all types of disability). Reserved disabled car parks (including the top of the Chavannes gondola, reachable by road and the Perrières Express lift). The Les Gets-Morzine area is accessible on a ski-chair; signposted FTT (all-terrain wheelchair) loops.
 - Source: Les Gets – Handiski / Tourisme adapté — https://www.lesgets.com/decouvrir-la-station/station-de-montagne/tourisme-adapte/activites/handiski/
 
 ## Parking
 
-8 parkings dont le parking souterrain des Chavannes (gratuit en été, payant de décembre à avril, paiement à la sortie/borne). Autres parkings gratuits: entrée du village côté Taninges (~350 places, station Getslib'), parking du village (~100 places) et petits parkings des hameaux (Les Folliets, Sommet des Chavannes, La Turche, Mont-Caly). En hiver, l'hypercentre est en zone bleue (2h max, 8h-18h).
+8 car parks including the underground Chavannes car park (free in summer, paid from December to April, payment at exit/machine). Other free car parks: village entrance on the Taninges side (~350 spaces, Getslib' station), village car park (~100 spaces) and small hamlet car parks (Les Folliets, Sommet des Chavannes, La Turche, Mont-Caly). In winter, the town centre is a blue zone (2h max, 8:00–18:00).
 
 ## Transport
 
