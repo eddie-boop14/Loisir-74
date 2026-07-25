@@ -1,8 +1,8 @@
-# レマン湖畔で何をする？トノン、エヴィアンとフランス側湖岸のすべて
+# Léman湖畔で何をする？Thonon、Évianとフランス側湖岸のすべて
 
-温泉、ビーチ、城、湖岸の散策路 — シエからメイユリーまで、トノン・レ・バンとエヴィアン・レ・バンを通るレマン湖のオート＝サヴォワ側湖岸は、一年を通して楽しめます。このページは湖岸の各コミューンにある検証済みの場所をすべて集めたものです。各施設データから自動で編集されており、一度書いたきり見直されないリストではありません。
+温泉、ビーチ、城、湖岸の散策路 — SciezからMeillerieまで、Thonon-les-BainsとÉvian-les-Bainsを通るLéman湖のHaute-Savoie側湖岸は、一年を通して楽しめます。このページは湖岸の各コミューンにある検証済みの場所をすべて集めたものです。各施設データから自動で編集されており、一度書いたきり見直されないリストではありません。
 
-> 検証済みの各施設データから編集したセレクション：レマン湖のフランス側湖岸のコミューン（Thonon-les-Bains, Évian-les-Bains, Publier, Neuvecelle, Maxilly-sur-Léman, Lugrin, Meillerie, Saint-Paul-en-Chablais, Sciez, Yvoire, Excenevex, Nernier, Messery, Chens-sur-Léman, Douvaine, Anthy-sur-Léman, Margencel）にある公開済みの場所すべて。並び順は実写真・無料・情報の充実度で、カテゴリーが交互になるようにしています。データが更新されるたびに自動で反映されます。
+> 検証済みの各施設データから編集したセレクション：Léman湖のフランス側湖岸のコミューン（Thonon-les-Bains, Évian-les-Bains, Publier, Neuvecelle, Maxilly-sur-Léman, Lugrin, Meillerie, Saint-Paul-en-Chablais, Sciez, Yvoire, Excenevex, Nernier, Messery, Chens-sur-Léman, Douvaine, Anthy-sur-Léman, Margencel）にある公開済みの場所すべて。並び順は実写真・無料・情報の充実度で、カテゴリーが交互になるようにしています。データが更新されるたびに自動で反映されます。
 
 - [Château de Bellegarde](https://loisirs74.fr/ja/chateau-bellegarde-thonon) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-bellegarde-thonon.md)
 - [Domaine de Rovorée-La Châtaignière](https://loisirs74.fr/ja/domaine-de-rovoree-la-chataigniere) — Yvoire · [md](https://loisirs74.fr/content/domaine-de-rovoree-la-chataigniere.md)
