@@ -16,12 +16,12 @@
 | `parcs-jardins` | 32 | 17 | 12 |
 | `points-de-vue` | 29 | 26 | 3 |
 | `que-faire` | 73 | 44 | 4 |
-| `sensations-plein-air` | 70 | 53 | 4 |
+| `sensations-plein-air` | 70 | 56 | 3 |
 | `sentiers` | 40 | 9 | 13 |
 | `sorties-detente` | 25 | 13 | 3 |
 | `sport-jeux` | 52 | 33 | 4 |
 | `stations-de-ski` | 28 | 28 | 1 |
-| `telecabines` | 12 | 8 | 5 |
+| `telecabines` | 12 | 12 | 1 |
 | `voies-vertes` | 5 | 5 | 1 |
 
 ## Per-fiche assignments
@@ -478,10 +478,10 @@
 | `sensations-plein-air` | `speleo-bureau-montagne-saleve` | `sensations` | `generique-speleo-explorateurs.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `speleo-grotte-de-balme-magland` | `sensations` | `generique-speleo-grande-salle.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `tactiq-aventure-cruseilles` | `parc` | `generique-accrobranche-4.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `telecabine-des-chavannes-les-gets` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
-| `sensations-plein-air` | `telecabine-du-jaillet` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
-| `sensations-plein-air` | `telecabine-du-mont-chery-les-gets` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
-| `sensations-plein-air` | `telecabine-pleney-morzine` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `telecabine-des-chavannes-les-gets` | `nature` | `telecabine-des-chavannes-les-gets-hero.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `telecabine-du-jaillet` | `nature` | `telecabine-du-jaillet-hero.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `telecabine-du-mont-chery-les-gets` | `nature` | `telecabine-du-mont-chery-les-gets-hero.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `telecabine-pleney-morzine` | `nature` | `generique-telecabine.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `telepherique-du-brevent` | `nature` | `Brevent_cable_car.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `tramway-du-mont-blanc` | `nature` | `Tramway_Mont-Blanc.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `tyrolienne-fantasticable-chatel` | `sensations` | `generique-accrobranche-8.jpg` | — | json hero (local) |
@@ -639,12 +639,12 @@
 | `stations-de-ski` | `saint-jean-d-aulps` | `montagne` | `saint-jean-d-aulps-hero.jpg` | — | json hero (local) |
 | `stations-de-ski` | `samoens` | `montagne` | `samoens-hero.jpg` | — | json hero (local) |
 | `stations-de-ski` | `thollon-les-memises` | `montagne` | `thollon-les-memises-hero.jpg` | — | json hero (local) |
-| `telecabines` | `telecabine-des-chavannes-les-gets` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
-| `telecabines` | `telecabine-du-jaillet` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
-| `telecabines` | `telecabine-du-mont-chery-les-gets` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
+| `telecabines` | `telecabine-des-chavannes-les-gets` | `nature` | `telecabine-des-chavannes-les-gets-hero.jpg` | — | json hero (local) |
+| `telecabines` | `telecabine-du-jaillet` | `nature` | `telecabine-du-jaillet-hero.jpg` | — | json hero (local) |
+| `telecabines` | `telecabine-du-mont-chery-les-gets` | `nature` | `telecabine-du-mont-chery-les-gets-hero.jpg` | — | json hero (local) |
 | `telecabines` | `telecabine-panoramic-mont-blanc` | `nature` | `generique-point-de-vue.jpg` | — | json hero (local) |
-| `telecabines` | `telecabine-pleney-morzine` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
-| `telecabines` | `telecabine-super-chatel` | `nature` | `T%C3%A9l%C3%A9cabine_Panoramic_Mont-Blanc_Pointe_Helbronner.jpg` | — | json hero (url) |
+| `telecabines` | `telecabine-pleney-morzine` | `nature` | `generique-telecabine.jpg` | — | json hero (local) |
+| `telecabines` | `telecabine-super-chatel` | `nature` | `telecabine-super-chatel-hero.jpg` | — | json hero (local) |
 | `telecabines` | `telepherique-aiguille-du-midi` | `nature` | `telepherique-aiguille-du-midi-hero.jpg` | — | json hero (local) |
 | `telecabines` | `telepherique-des-grands-montets` | `nature` | `Hike_to_Glacier_d%27Argenti%C3%A8re_-_panoramio_%2861%29.jpg` | — | json hero (url) |
 | `telecabines` | `telepherique-du-brevent` | `nature` | `Brevent_cable_car.jpg` | — | json hero (url) |

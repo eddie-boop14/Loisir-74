@@ -14,7 +14,7 @@ Le dimanche, beaucoup de portes se ferment — pas toutes. Cette page ne liste q
 - [Casino Impérial Palace Annecy](https://loisirs74.fr/casino-imperial-palace-annecy) — Annecy · [md](https://loisirs74.fr/content/casino-imperial-palace-annecy.md)
 - [Grotte et Cascade de Seythenex](https://loisirs74.fr/grotte-et-cascade-de-seythenex) — Faverges-Seythenex · [md](https://loisirs74.fr/content/grotte-et-cascade-de-seythenex.md)
 - [Plage de Saint-Jorioz](https://loisirs74.fr/plage-de-saint-jorioz) — Saint-Jorioz · [md](https://loisirs74.fr/content/plage-de-saint-jorioz.md)
-- [Télécabine du Pléney](https://loisirs74.fr/telecabine-pleney-morzine) — Morzine · [md](https://loisirs74.fr/content/telecabine-pleney-morzine.md)
+- [Télécabine de Super-Châtel](https://loisirs74.fr/telecabine-super-chatel) — Châtel · [md](https://loisirs74.fr/content/telecabine-super-chatel.md)
 - [Le Reposoir](https://loisirs74.fr/le-reposoir) — Le Reposoir · [md](https://loisirs74.fr/content/le-reposoir.md)
 - [Jardin botanique alpin La Jaÿsinia](https://loisirs74.fr/jardin-jaysinia-samoens) — Samoëns · [md](https://loisirs74.fr/content/jardin-jaysinia-samoens.md)
 - [Plage de La Brune](https://loisirs74.fr/plage-de-la-brune-veyrier) — Veyrier-du-Lac · [md](https://loisirs74.fr/content/plage-de-la-brune-veyrier.md)
