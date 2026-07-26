@@ -83,8 +83,15 @@ Checked 2026-07-25:
 - **Commune hubs** (`chatel/`, `morzine/`, `bellevaux/` …) — no hero slot at all;
   they are card grids fed by member fiches. Would need a feature first.
 - **Category hubs** (`telecabines/`, `points-de-vue/`, `stations-de-ski/` …) —
-  they *do* have a `--hero-img` CSS slot and it is **empty on every one**. A real
-  unused surface, but filling it is a design decision, not a photo swap.
+  they carry a `--hub-hero-img` banner. **CORRECTION (2026-07-26):** an earlier
+  entry here claimed this slot was "empty on every one". That was wrong — it was
+  a bad grep (the property is `--hub-hero-img`, not `--hero-img`). The slot was
+  populated but **15 category hubs pointed at root-level paths**
+  (`/generique-cascade.jpg`) that do not exist, so the banner silently rendered
+  as bare tint. Repaired to `/img/generique/…` across all 12 locales.
+  Commune hubs were never affected — `build_communes.py` rewrites their banner,
+  and it already prefers a real member photo where one exists
+  (e.g. `evian-les-bains` now shows the `jardin-pre-curieux-evian` hero).
 - **Intent pages** — no page-level hero; imagery comes from member fiche cards.
   So fixing a fiche hero improves every intent page and hub that lists it, in all
   12 locales. That is the leverage: fix the fiche, not the page.
