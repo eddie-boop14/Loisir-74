@@ -173,8 +173,8 @@ a commercial decision needing the Edmaster's word plus a manifest refresh.
 
 | slug | photo state | verdict |
 |---|---|---|
-| `plage-de-duingt` | 5472×3648, credit verified | **clean — blocked only by protection** |
-| `voie-verte-lac-annecy-annecy` | 3264×2448, credit verified | **clean — blocked only by protection** |
+| `plage-de-duingt` | 5472×3648, credit verified | **APPLIED** under `EDMASTER-APPROVED` — Rémih · CC BY-SA 4.0 |
+| `voie-verte-lac-annecy-annecy` | 3264×2448, credit verified | **APPLIED** under `EDMASTER-APPROVED` — Florian Pépellin · CC BY-SA 4.0 |
 | `plage-de-la-brune-veyrier` | 1024×683, `*_*` credit | held on quality too |
 | `plage-imperial-annecy` | 1024×683, `*_*` credit | held on quality too |
 | `plage-de-talloires` | 640×427 | held on quality too |

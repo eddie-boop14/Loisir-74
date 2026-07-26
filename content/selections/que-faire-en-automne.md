@@ -22,7 +22,7 @@ Cascades gonflées par les pluies, forêts qui rougissent, panoramas dégagés e
 - [Lac de Passy](https://loisirs74.fr/lac-de-passy) — Passy · [md](https://loisirs74.fr/content/lac-de-passy.md)
 - [Villa du Parc](https://loisirs74.fr/villa-du-parc-annemasse) — Annemasse · [md](https://loisirs74.fr/content/villa-du-parc-annemasse.md)
 - [Sentier des Espagnols / Pas du Roc](https://loisirs74.fr/sentier-espagnols-pas-du-roc-glieres) — Thorens-Glières · [md](https://loisirs74.fr/content/sentier-espagnols-pas-du-roc-glieres.md)
-- [Voie verte du Chablais (vallée d'Abondance)](https://loisirs74.fr/voie-verte-du-chablais) — Abondance · [md](https://loisirs74.fr/content/voie-verte-du-chablais.md)
+- [Voie verte du Lac d'Annecy](https://loisirs74.fr/voie-verte-lac-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/voie-verte-lac-annecy-annecy.md)
 - [Col des Aravis](https://loisirs74.fr/col-des-aravis) — La Clusaz · [md](https://loisirs74.fr/content/col-des-aravis.md)
 - [Cascade de l'Arpenaz](https://loisirs74.fr/cascade-de-l-arpenaz) — Sallanches · [md](https://loisirs74.fr/content/cascade-de-l-arpenaz.md)
 - [Château de la Rochette](https://loisirs74.fr/chateau-la-rochette-lully) — Lully · [md](https://loisirs74.fr/content/chateau-la-rochette-lully.md)

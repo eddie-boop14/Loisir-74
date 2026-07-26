@@ -20,9 +20,9 @@ L'accessibilité ne se devine pas, elle se vérifie : chaque lieu ci-dessous por
 - [Plage de Sévrier](https://loisirs74.fr/plage-de-sevrier) — Sévrier · [md](https://loisirs74.fr/content/plage-de-sevrier.md)
 - [Plage des Marquisats](https://loisirs74.fr/plage-des-marquisats) — Annecy · [md](https://loisirs74.fr/content/plage-des-marquisats.md)
 - [Villa du Parc](https://loisirs74.fr/villa-du-parc-annemasse) — Annemasse · [md](https://loisirs74.fr/content/villa-du-parc-annemasse.md)
+- [Voie verte du Lac d'Annecy](https://loisirs74.fr/voie-verte-lac-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/voie-verte-lac-annecy-annecy.md)
 - [Sentier des Roselières](https://loisirs74.fr/sentier-des-roselieres) — Saint-Jorioz · [md](https://loisirs74.fr/content/sentier-des-roselieres.md)
 - [Réserve naturelle du Bout-du-Lac d'Annecy](https://loisirs74.fr/reserve-naturelle-bout-du-lac) — Doussard · [md](https://loisirs74.fr/content/reserve-naturelle-bout-du-lac.md)
 - [Marais de Poisy](https://loisirs74.fr/marais-de-poisy) — Poisy · [md](https://loisirs74.fr/content/marais-de-poisy.md)
-- [Le Thiou à Annecy](https://loisirs74.fr/thiou-a-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/thiou-a-annecy-annecy.md)
 
 Source: https://loisirs74.fr/que-faire/accessible-pmr-haute-savoie/

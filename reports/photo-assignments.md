@@ -63,7 +63,7 @@
 | `baignade-nautisme` | `plage-d-evian-centre-nautique` | `aquatique` | `generique-plage-lac-5.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `plage-d-excenevex` | `aquatique` | `Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG` | — | json hero (url) |
 | `baignade-nautisme` | `plage-de-doussard` | `aquatique` | `plage-de-doussard-hero.jpg` | — | json hero (local) |
-| `baignade-nautisme` | `plage-de-duingt` | `aquatique` | `generique-plage-lac-1.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `plage-de-duingt` | `aquatique` | `plage-de-duingt-hero.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `plage-de-menthon-saint-bernard` | `aquatique` | `Plage_municipale_de_Menthon-Saint-Bernard.jpg` | — | json hero (url) |
 | `baignade-nautisme` | `plage-de-messery` | `aquatique` | `plage-de-messery-hero.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `plage-de-saint-disdille` | `aquatique` | `Plage_thonon.jpg` | — | json hero (url) |
@@ -222,7 +222,7 @@
 | `lacs-plages` | `plage-d-evian-centre-nautique` | `aquatique` | `generique-plage-lac-5.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-d-excenevex` | `aquatique` | `Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG` | — | json hero (url) |
 | `lacs-plages` | `plage-de-doussard` | `aquatique` | `plage-de-doussard-hero.jpg` | — | json hero (local) |
-| `lacs-plages` | `plage-de-duingt` | `aquatique` | `generique-plage-lac-1.jpg` | — | json hero (local) |
+| `lacs-plages` | `plage-de-duingt` | `aquatique` | `plage-de-duingt-hero.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-la-brune-veyrier` | `aquatique` | `generique-plage-lac-6.jpg` | — | json hero (local) |
 | `lacs-plages` | `plage-de-la-pinede` | `aquatique` | `Thonon-les-Bains._Promenade_du_L%C3%A9man._2015-06-21.jpg` | — | json hero (url) |
 | `lacs-plages` | `plage-de-margencel-sechex` | `aquatique` | `generique-plage-lac-13.jpg` | — | json hero (local) |
@@ -655,4 +655,4 @@
 | `voies-vertes` | `viarhona-haute-savoie-saint-gingolph-seyssel` | `nature` | `viarhona-haute-savoie-saint-gingolph-seyssel-hero.jpg` | — | json hero (local) |
 | `voies-vertes` | `voie-verte-arve-cluses-thyez` | `nature` | `generique-voie-verte-famille-kids.jpg` | — | json hero (local) |
 | `voies-vertes` | `voie-verte-du-chablais` | `nature` | `voie-verte-du-chablais-hero.jpg` | — | json hero (local) |
-| `voies-vertes` | `voie-verte-lac-annecy-annecy` | `nature` | `generique-voie-verte-cyclistes-lac.jpg` | — | json hero (local) |
+| `voies-vertes` | `voie-verte-lac-annecy-annecy` | `nature` | `voie-verte-lac-annecy-annecy-hero.jpg` | — | json hero (local) |
