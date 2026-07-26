@@ -23,6 +23,6 @@ L'accessibilité ne se devine pas, elle se vérifie : chaque lieu ci-dessous por
 - [Sentier des Roselières](https://loisirs74.fr/sentier-des-roselieres) — Saint-Jorioz · [md](https://loisirs74.fr/content/sentier-des-roselieres.md)
 - [Réserve naturelle du Bout-du-Lac d'Annecy](https://loisirs74.fr/reserve-naturelle-bout-du-lac) — Doussard · [md](https://loisirs74.fr/content/reserve-naturelle-bout-du-lac.md)
 - [Marais de Poisy](https://loisirs74.fr/marais-de-poisy) — Poisy · [md](https://loisirs74.fr/content/marais-de-poisy.md)
-- [Casino Impérial Palace Annecy](https://loisirs74.fr/casino-imperial-palace-annecy) — Annecy · [md](https://loisirs74.fr/content/casino-imperial-palace-annecy.md)
+- [Le Thiou à Annecy](https://loisirs74.fr/thiou-a-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/thiou-a-annecy-annecy.md)
 
 Source: https://loisirs74.fr/que-faire/accessible-pmr-haute-savoie/

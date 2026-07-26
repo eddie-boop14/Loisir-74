@@ -153,3 +153,38 @@ integration step should state that re-processing is required.**
 flickr-username placeholder a previous job was raised to eliminate. It arrives
 via Openverse/flickr sourcing, and those five are also all exactly 1024×683.
 Worth fixing at the Studio source rather than one batch at a time.
+
+### Studio batch 2 — 2026-07-26 (16 patches): 8 applied, 7 held
+
+Applied: `sentier-cascades-sixt-fer-a-cheval`, **`telecabine-panoramic-mont-blanc`**,
+`thermes-saint-gervais-mont-blanc`, `thiou-a-annecy-annecy`,
+`tour-du-mont-blanc-les-houches`, `via-ferrata-berard-vallorcine`,
+`via-ferrata-thones`, `viarhona-haute-savoie-saint-gingolph-seyssel`.
+
+`telecabine-panoramic-mont-blanc` closes a loop: this is the fiche whose own
+photo was being used on five *other* télécabines (fixed in PR #67). It sat on a
+generic placeholder while its picture was misattributed elsewhere. It now has a
+real photo of itself — Rémih · CC BY-SA 4.0.
+
+#### ⚑ Held on PROTECTED partner pages — 2 are otherwise CLEAN
+
+`localize_heroes.py` refuses protected pages by design; changing a hero there is
+a commercial decision needing the Edmaster's word plus a manifest refresh.
+
+| slug | photo state | verdict |
+|---|---|---|
+| `plage-de-duingt` | 5472×3648, credit verified | **clean — blocked only by protection** |
+| `voie-verte-lac-annecy-annecy` | 3264×2448, credit verified | **clean — blocked only by protection** |
+| `plage-de-la-brune-veyrier` | 1024×683, `*_*` credit | held on quality too |
+| `plage-imperial-annecy` | 1024×683, `*_*` credit | held on quality too |
+| `plage-de-talloires` | 640×427 | held on quality too |
+
+#### Held on quality — 2
+
+| slug | why |
+|---|---|
+| `speleo-grotte-de-balme-magland` | 1024×768, `*_*` credit |
+| `vitam-neydens` | 1021×605 — under the 1200 floor |
+
+**The `*_*` + 1024×683 signature appears again** (3 more here, 8 across both
+batches). Same Openverse/flickr path, same two defects together.

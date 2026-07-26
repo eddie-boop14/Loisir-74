@@ -16,11 +16,11 @@ google_place_id: "ChIJ8fPcCk1QiUcRs90OOlb-KUY"
 canonical_url: https://loisirs74.fr/tour-du-mont-blanc-les-houches
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/tour-du-mont-blanc-les-houches.json
-photo_url: /img/generique/generique-sentier-foret-alpine.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/sentiers/tour-du-mont-blanc-les-houches-hero.jpg
+photo_type: real
+photo_author: "Catteridge"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-24
 source: loisirs74.fr
 ---

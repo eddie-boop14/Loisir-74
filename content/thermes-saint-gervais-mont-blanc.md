@@ -16,11 +16,11 @@ google_place_id: "ChIJaZGBPwJXiUcR_vFmxwZAA_4"
 canonical_url: https://loisirs74.fr/thermes-saint-gervais-mont-blanc
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/thermes-saint-gervais-mont-blanc.json
-photo_url: /img/generique/generique-spa-jardin-tropical.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/que-faire/thermes-saint-gervais-mont-blanc-hero.jpg
+photo_type: real
+photo_author: "EmilienM42"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-01
 source: loisirs74.fr
 ---

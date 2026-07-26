@@ -18,11 +18,11 @@
 - [Sentier des Roselières](https://loisirs74.fr/ja/sentier-des-roselieres) — Saint-Jorioz · [md](https://loisirs74.fr/content/sentier-des-roselieres.md)
 - [Parc Animalier La Grande Jeanne](https://loisirs74.fr/ja/parc-animalier-grande-jeanne-annecy) — Annecy · [md](https://loisirs74.fr/content/parc-animalier-grande-jeanne-annecy.md)
 - [Réserve naturelle du Bout-du-Lac d'Annecy](https://loisirs74.fr/ja/reserve-naturelle-bout-du-lac) — Doussard · [md](https://loisirs74.fr/content/reserve-naturelle-bout-du-lac.md)
+- [Le Thiou à Annecy](https://loisirs74.fr/ja/thiou-a-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/thiou-a-annecy-annecy.md)
 - [GR® de Pays Tour du Lac d'Annecy](https://loisirs74.fr/ja/grp-tour-lac-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/grp-tour-lac-annecy-annecy.md)
 - [Plage d'Angon](https://loisirs74.fr/ja/plage-d-angon-talloires) — Talloires-Montmin · [md](https://loisirs74.fr/content/plage-d-angon-talloires.md)
 - [Plage de Duingt](https://loisirs74.fr/ja/plage-de-duingt) — Duingt · [md](https://loisirs74.fr/content/plage-de-duingt.md)
 - [Plage de La Brune](https://loisirs74.fr/ja/plage-de-la-brune-veyrier) — Veyrier-du-Lac · [md](https://loisirs74.fr/content/plage-de-la-brune-veyrier.md)
 - [Plage de Talloires](https://loisirs74.fr/ja/plage-de-talloires) — Talloires-Montmin · [md](https://loisirs74.fr/content/plage-de-talloires.md)
-- [Sentier pédagogique du Bout du Lac d'Annecy](https://loisirs74.fr/ja/sentier-bout-du-lac-doussard) — Doussard · [md](https://loisirs74.fr/content/sentier-bout-du-lac-doussard.md)
 
 Source: https://loisirs74.fr/ja/que-faire/gratuit-lac-annecy/

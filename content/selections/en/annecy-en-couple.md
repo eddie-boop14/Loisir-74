@@ -18,7 +18,7 @@
 - [Château de Menthon-Saint-Bernard](https://loisirs74.fr/ja/chateau-de-menthon-saint-bernard) — Menthon-Saint-Bernard · [md](https://loisirs74.fr/content/chateau-de-menthon-saint-bernard.md)
 - [Réserve naturelle du Bout-du-Lac d'Annecy](https://loisirs74.fr/ja/reserve-naturelle-bout-du-lac) — Doussard · [md](https://loisirs74.fr/content/reserve-naturelle-bout-du-lac.md)
 - [La Turbine sciences](https://loisirs74.fr/ja/la-turbine-sciences-cran-gevrier) — Annecy · [md](https://loisirs74.fr/content/la-turbine-sciences-cran-gevrier.md)
+- [Le Thiou à Annecy](https://loisirs74.fr/ja/thiou-a-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/thiou-a-annecy-annecy.md)
 - [Les 4 Nemours](https://loisirs74.fr/ja/cinema-les-4-nemours-annecy) — Annecy · [md](https://loisirs74.fr/content/cinema-les-4-nemours-annecy.md)
-- [Megarama Annecy](https://loisirs74.fr/ja/cinema-megarama-annecy) — Annecy · [md](https://loisirs74.fr/content/cinema-megarama-annecy.md)
 
 Source: https://loisirs74.fr/ja/que-faire/annecy-en-couple/

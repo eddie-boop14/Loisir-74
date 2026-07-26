@@ -23,6 +23,6 @@
 - [Sentier des Roselières](https://loisirs74.fr/ja/sentier-des-roselieres) — Saint-Jorioz · [md](https://loisirs74.fr/content/sentier-des-roselieres.md)
 - [Réserve naturelle du Bout-du-Lac d'Annecy](https://loisirs74.fr/ja/reserve-naturelle-bout-du-lac) — Doussard · [md](https://loisirs74.fr/content/reserve-naturelle-bout-du-lac.md)
 - [Marais de Poisy](https://loisirs74.fr/ja/marais-de-poisy) — Poisy · [md](https://loisirs74.fr/content/marais-de-poisy.md)
-- [Casino Impérial Palace Annecy](https://loisirs74.fr/ja/casino-imperial-palace-annecy) — Annecy · [md](https://loisirs74.fr/content/casino-imperial-palace-annecy.md)
+- [Le Thiou à Annecy](https://loisirs74.fr/ja/thiou-a-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/thiou-a-annecy-annecy.md)
 
 Source: https://loisirs74.fr/ja/que-faire/accessible-pmr-haute-savoie/

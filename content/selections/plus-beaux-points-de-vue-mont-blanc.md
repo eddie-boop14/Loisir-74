@@ -16,8 +16,8 @@ Voir le Mont-Blanc, vraiment : chaque lieu ci-dessous porte une vue sur le massi
 - [Les Gets](https://loisirs74.fr/les-gets) — Les Gets · [md](https://loisirs74.fr/content/les-gets.md)
 - [Mont Salève](https://loisirs74.fr/mont-saleve) — Monnetier-Mornex · [md](https://loisirs74.fr/content/mont-saleve.md)
 - [Passy Plaine-Joux](https://loisirs74.fr/passy-plaine-joux) — Passy · [md](https://loisirs74.fr/content/passy-plaine-joux.md)
+- [Télécabine Panoramic Mont-Blanc](https://loisirs74.fr/telecabine-panoramic-mont-blanc) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/telecabine-panoramic-mont-blanc.md)
 - [Téléphérique de l'Aiguille du Midi](https://loisirs74.fr/telepherique-aiguille-du-midi) — Chamonix-Mont-Blanc · [md](https://loisirs74.fr/content/telepherique-aiguille-du-midi.md)
 - [Téléphérique du Salève](https://loisirs74.fr/telepherique-du-saleve) — Étrembières · [md](https://loisirs74.fr/content/telepherique-du-saleve.md)
-- [Tramway du Mont-Blanc](https://loisirs74.fr/tramway-du-mont-blanc) — Saint-Gervais-les-Bains · [md](https://loisirs74.fr/content/tramway-du-mont-blanc.md)
 
 Source: https://loisirs74.fr/que-faire/plus-beaux-points-de-vue-mont-blanc/

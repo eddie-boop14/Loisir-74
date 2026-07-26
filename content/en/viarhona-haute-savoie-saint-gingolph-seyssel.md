@@ -16,11 +16,11 @@ google_place_id: "ChIJqQx4PQCdjkcR2jpAlc8J0BA"
 canonical_url: https://loisirs74.fr/en/viarhona-haute-savoie-saint-gingolph-seyssel
 language: en
 facet_json: https://loisirs74.fr/api/lieu/viarhona-haute-savoie-saint-gingolph-seyssel.json
-photo_url: /img/generique/generique-voie-verte.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/voies-vertes/viarhona-haute-savoie-saint-gingolph-seyssel-hero.jpg
+photo_type: real
+photo_author: "Joelgrandcollot"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-24
 source: loisirs74.fr
 ---
