@@ -16,11 +16,11 @@ google_place_id: "ChIJlQA7qBtPiUcR-v_mYmedm88"
 canonical_url: https://loisirs74.fr/en/telecabine-panoramic-mont-blanc
 language: en
 facet_json: https://loisirs74.fr/api/lieu/telecabine-panoramic-mont-blanc.json
-photo_url: /img/generique/generique-point-de-vue.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/points-de-vue/telecabine-panoramic-mont-blanc-hero.jpg
+photo_type: real
+photo_author: "Rémih"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-21
 source: loisirs74.fr
 ---

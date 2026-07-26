@@ -8,7 +8,7 @@ Marcher au-dessus du lac sans viser un sommet : sentiers, belvédères et boucle
 - [Mont Baron](https://loisirs74.fr/mont-baron) — Veyrier-du-Lac · [md](https://loisirs74.fr/content/mont-baron.md)
 - [Sentier des Roselières](https://loisirs74.fr/sentier-des-roselieres) — Saint-Jorioz · [md](https://loisirs74.fr/content/sentier-des-roselieres.md)
 - [Réserve naturelle du Bout-du-Lac d'Annecy](https://loisirs74.fr/reserve-naturelle-bout-du-lac) — Doussard · [md](https://loisirs74.fr/content/reserve-naturelle-bout-du-lac.md)
-- [Sentier pédagogique du Bout du Lac d'Annecy](https://loisirs74.fr/sentier-bout-du-lac-doussard) — Doussard · [md](https://loisirs74.fr/content/sentier-bout-du-lac-doussard.md)
 - [Le Thiou à Annecy](https://loisirs74.fr/thiou-a-annecy-annecy) — Annecy · [md](https://loisirs74.fr/content/thiou-a-annecy-annecy.md)
+- [Sentier pédagogique du Bout du Lac d'Annecy](https://loisirs74.fr/sentier-bout-du-lac-doussard) — Doussard · [md](https://loisirs74.fr/content/sentier-bout-du-lac-doussard.md)
 
 Source: https://loisirs74.fr/que-faire/randonnees-faciles-lac-annecy/

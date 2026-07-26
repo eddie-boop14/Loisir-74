@@ -107,3 +107,84 @@ Heaviest generic categories: `attraction` (85), `sentier` (37), `musee` (30),
 These are what keeps `gate_hero_integrity` red (99 violations). The 74 hotlinks
 are the cheapest win — they already have a photo, it just is not self-hosted or
 credited, and `--only` now allows doing them in small reviewable batches.
+
+---
+
+## Studio Photothèque batch — 2026-07-26 (21 patches)
+
+Eleven applied, ten held. Every credit was re-resolved from the **Commons API**,
+never trusted from the patch file.
+
+### Two workflow deviations, deliberate
+
+**1. Heroes went to `/img/<hub>/`, not the repo root.** The studio README says
+"drop `<slug>-hero.jpg` into the repo root" and the patches carried
+`hero_image: "/<slug>-hero.jpg"`. But `build_lieu_page.py:1500` states the
+invariant plainly — *hero_image is always a full URL, a `/img/`-prefixed path,
+or empty* — and a root path falls through to a branch commented "Legacy
+absolute path — safety net". **Zero of 434 live fiches use a root hero.**
+
+**2. Every image was re-processed, not copied.** Dropping the raw file also
+skips the 1600px cap, the EXIF strip and the **WebP sibling** that every other
+hero has; pages reference `<slug>-hero.webp`, so a bare copy would emit a
+broken WebP reference. Each was run through `localize_heroes._process_and_save`,
+the same pipeline the de-hotlinker uses, then applied through
+`apply_studio_patch.py` — the sanctioned ingress.
+
+**→ Studio should emit `/img/<hub>/<slug>-hero.jpg` and ship a WebP, or the
+integration step should state that re-processing is required.**
+
+### Held — 10
+
+| slug | why |
+|---|---|
+| `montgolfiere-annecy` (v2) | **not a JPEG — HEIC/HEIF renamed `.jpg`**; most browsers cannot render it. Also `source_url: null` and `hero_credit: null`. |
+| `montgolfiere-annecy` (v1) | 1024×683 and `*_*` credit placeholder |
+| `base-nautique-marquisats-annecy` | 1024×683, `*_*` credit |
+| `cinema-pathe-annecy` | 1024×683, `*_*` credit |
+| `domaine-de-guidou` | 1024×683, `*_*` credit |
+| `chateau-thenieres-ballaison` | 1024×683, `*_*` credit |
+| `jardin-alpin-de-bellevaux` | 644×483 — too small |
+| `bungee-bun-j-ride-saint-jean-de-sixt` | 604×402 — too small |
+| `maison-du-saleve-presilly` | Commons returns **attribution-required-but-no-author**; the patch wrote `unknown` as the author. A guessed credit is never written. |
+| `ferme-ecomusee-clos-parchet-samoens` | credit **truncated mid-sentence** to `"Please credit : Xavier "` — the photographer is **Xavier Caré**, and he states a required credit format. The machine licence field (`CC BY 3.0`) also contradicts the licence in his own text (`CC-BY-SA`). Needs a human call. |
+
+**The `*_*` pattern is back.** Five patches carry it — the same broken
+flickr-username placeholder a previous job was raised to eliminate. It arrives
+via Openverse/flickr sourcing, and those five are also all exactly 1024×683.
+Worth fixing at the Studio source rather than one batch at a time.
+
+### Studio batch 2 — 2026-07-26 (16 patches): 8 applied, 7 held
+
+Applied: `sentier-cascades-sixt-fer-a-cheval`, **`telecabine-panoramic-mont-blanc`**,
+`thermes-saint-gervais-mont-blanc`, `thiou-a-annecy-annecy`,
+`tour-du-mont-blanc-les-houches`, `via-ferrata-berard-vallorcine`,
+`via-ferrata-thones`, `viarhona-haute-savoie-saint-gingolph-seyssel`.
+
+`telecabine-panoramic-mont-blanc` closes a loop: this is the fiche whose own
+photo was being used on five *other* télécabines (fixed in PR #67). It sat on a
+generic placeholder while its picture was misattributed elsewhere. It now has a
+real photo of itself — Rémih · CC BY-SA 4.0.
+
+#### ⚑ Held on PROTECTED partner pages — 2 are otherwise CLEAN
+
+`localize_heroes.py` refuses protected pages by design; changing a hero there is
+a commercial decision needing the Edmaster's word plus a manifest refresh.
+
+| slug | photo state | verdict |
+|---|---|---|
+| `plage-de-duingt` | 5472×3648, credit verified | **APPLIED** under `EDMASTER-APPROVED` — Rémih · CC BY-SA 4.0 |
+| `voie-verte-lac-annecy-annecy` | 3264×2448, credit verified | **APPLIED** under `EDMASTER-APPROVED` — Florian Pépellin · CC BY-SA 4.0 |
+| `plage-de-la-brune-veyrier` | 1024×683, `*_*` credit | held on quality too |
+| `plage-imperial-annecy` | 1024×683, `*_*` credit | held on quality too |
+| `plage-de-talloires` | 640×427 | held on quality too |
+
+#### Held on quality — 2
+
+| slug | why |
+|---|---|
+| `speleo-grotte-de-balme-magland` | 1024×768, `*_*` credit |
+| `vitam-neydens` | 1021×605 — under the 1200 floor |
+
+**The `*_*` + 1024×683 signature appears again** (3 more here, 8 across both
+batches). Same Openverse/flickr path, same two defects together.

@@ -16,11 +16,11 @@ google_place_id: "ChIJT1OA1SaqjkcRpHlHctLf5ZI"
 canonical_url: https://loisirs74.fr/jardin-jaysinia-samoens
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/jardin-jaysinia-samoens.json
-photo_url: /img/generique/generique-parc.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/parcs-jardins/jardin-jaysinia-samoens-hero.jpg
+photo_type: real
+photo_author: "Jean-Pol GRANDMONT"
+photo_license: "CC BY-SA 3.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-24
 source: loisirs74.fr
 ---

@@ -16,11 +16,11 @@ google_place_id: "ChIJgWAsaY6Pi0cR5cBGHHQ6QJU"
 canonical_url: https://loisirs74.fr/voie-verte-lac-annecy-annecy
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/voie-verte-lac-annecy-annecy.json
-photo_url: /img/generique/generique-voie-verte-cyclistes-lac.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/voies-vertes/voie-verte-lac-annecy-annecy-hero.jpg
+photo_type: real
+photo_author: "Florian Pépellin"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-24
 source: loisirs74.fr
 ---

@@ -16,11 +16,11 @@ google_place_id: "ChIJOVRGXIk-jEcRDKTqpC09UGk"
 canonical_url: https://loisirs74.fr/en/ecomusee-peche-et-du-lac-thonon
 language: en
 facet_json: https://loisirs74.fr/api/lieu/ecomusee-peche-et-du-lac-thonon.json
-photo_url: /img/generique/generique-musee-grande-galerie.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/musees/ecomusee-peche-et-du-lac-thonon-hero.jpg
+photo_type: real
+photo_author: "Nanoxyde"
+photo_license: "CC BY-SA 3.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-23
 source: loisirs74.fr
 ---

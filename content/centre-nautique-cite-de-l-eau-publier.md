@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/centre-nautique-cite-de-l-eau-publier
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/centre-nautique-cite-de-l-eau-publier.json
-photo_url: /img/generique/generique-aquatique-bassin-natation.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/baignade-nautisme/centre-nautique-cite-de-l-eau-publier-hero.jpg
+photo_type: real
+photo_author: "Grooggy"
+photo_license: "CC BY-SA 3.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-07
 source: loisirs74.fr
 ---

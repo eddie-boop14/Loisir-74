@@ -11,6 +11,8 @@ Des donjons médiévaux du lac d'Annecy aux maisons fortes du Chablais, la Haute
 - [Châteaux des Allinges](https://loisirs74.fr/chateaux-des-allinges) — Allinges · [md](https://loisirs74.fr/content/chateaux-des-allinges.md)
 - [Tour des Langues](https://loisirs74.fr/tour-des-langues-thonon) — Thonon-les-Bains · [md](https://loisirs74.fr/content/tour-des-langues-thonon.md)
 - [Abbaye de Sixt](https://loisirs74.fr/abbaye-de-sixt) — Sixt-Fer-à-Cheval · [md](https://loisirs74.fr/content/abbaye-de-sixt.md)
+- [Château de Buffavent](https://loisirs74.fr/chateau-buffavent-lully) — Lully · [md](https://loisirs74.fr/content/chateau-buffavent-lully.md)
+- [Château de la Croix](https://loisirs74.fr/chateau-croix-scionzier) — Scionzier · [md](https://loisirs74.fr/content/chateau-croix-scionzier.md)
 - [Abbaye d'Aulps](https://loisirs74.fr/abbaye-d-aulps) — Saint-Jean-d'Aulps · [md](https://loisirs74.fr/content/abbaye-d-aulps.md)
 - [Château d'Avully](https://loisirs74.fr/chateau-avully-brenthonne) — Brenthonne · [md](https://loisirs74.fr/content/chateau-avully-brenthonne.md)
 - [Château de Clermont](https://loisirs74.fr/chateau-clermont-genevois) — Clermont · [md](https://loisirs74.fr/content/chateau-clermont-genevois.md)
@@ -20,7 +22,5 @@ Des donjons médiévaux du lac d'Annecy aux maisons fortes du Chablais, la Haute
 - [Château de Ripaille](https://loisirs74.fr/chateau-ripaille-thonon) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-ripaille-thonon.md)
 - [Château des Sires de Faucigny](https://loisirs74.fr/chateau-sires-faucigny-bonneville) — Bonneville · [md](https://loisirs74.fr/content/chateau-sires-faucigny-bonneville.md)
 - [Maison Forte de Hautetour](https://loisirs74.fr/maison-forte-hautetour-saint-gervais) — Saint-Gervais-les-Bains · [md](https://loisirs74.fr/content/maison-forte-hautetour-saint-gervais.md)
-- [Château de Menthon-Saint-Bernard](https://loisirs74.fr/chateau-de-menthon-saint-bernard) — Menthon-Saint-Bernard · [md](https://loisirs74.fr/content/chateau-de-menthon-saint-bernard.md)
-- [Château de Sonnaz](https://loisirs74.fr/chateau-sonnaz-thonon-bains) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-sonnaz-thonon-bains.md)
 
 Source: https://loisirs74.fr/que-faire/plus-beaux-chateaux-haute-savoie/

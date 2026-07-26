@@ -16,11 +16,11 @@ google_place_id: "ChIJhXuX4IWrjkcR3XyIfgvI2-k"
 canonical_url: https://loisirs74.fr/sentier-cascades-sixt-fer-a-cheval
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/sentier-cascades-sixt-fer-a-cheval.json
-photo_url: /img/generique/generique-sentier-hiver-neige.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/sentiers/sentier-cascades-sixt-fer-a-cheval-hero.jpg
+photo_type: real
+photo_author: "Kakapo 74"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-24
 source: loisirs74.fr
 ---

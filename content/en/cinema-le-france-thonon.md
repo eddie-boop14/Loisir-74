@@ -16,11 +16,11 @@ google_place_id: "ChIJk_8GcYk-jEcRgJa65CqrCAQ"
 canonical_url: https://loisirs74.fr/en/cinema-le-france-thonon
 language: en
 facet_json: https://loisirs74.fr/api/lieu/cinema-le-france-thonon.json
-photo_url: /img/generique/generique-cinema-4.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/sorties-detente/cinema-le-france-thonon-hero.jpg
+photo_type: real
+photo_author: "Krzysztof Golik"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-07
 source: loisirs74.fr
 ---

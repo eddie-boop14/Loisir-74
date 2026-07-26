@@ -16,11 +16,11 @@ google_place_id: "ChIJ47oh2Bvzi0cR1aa3pBBpSzc"
 canonical_url: https://loisirs74.fr/via-ferrata-thones
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/via-ferrata-thones.json
-photo_url: /img/generique/generique-via-ferrata-arete.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/que-faire/via-ferrata-thones-hero.jpg
+photo_type: real
+photo_author: "Guilhem Vellut from Annecy, France"
+photo_license: "CC BY 2.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-03
 source: loisirs74.fr
 ---

@@ -16,11 +16,11 @@ google_place_id: "ChIJ__-7wjxujEcRGDJj815cses"
 canonical_url: https://loisirs74.fr/musee-du-batiment-ville-la-grand
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/musee-du-batiment-ville-la-grand.json
-photo_url: /img/generique/generique-musee-grande-galerie.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/musees/musee-du-batiment-ville-la-grand-hero.jpg
+photo_type: real
+photo_author: "Poinssart, J., graveur"
+photo_license: "CC0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-23
 source: loisirs74.fr
 ---

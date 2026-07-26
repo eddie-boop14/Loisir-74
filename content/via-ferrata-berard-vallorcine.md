@@ -16,11 +16,11 @@ google_place_id: "ChIJldZL_0azjkcRVzPFbPg_2Mo"
 canonical_url: https://loisirs74.fr/via-ferrata-berard-vallorcine
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/via-ferrata-berard-vallorcine.json
-photo_url: /img/generique/generique-via-ferrata-groupe.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/que-faire/via-ferrata-berard-vallorcine-hero.jpg
+photo_type: real
+photo_author: "Rémih"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-08
 source: loisirs74.fr
 ---

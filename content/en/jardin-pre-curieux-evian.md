@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/en/jardin-pre-curieux-evian
 language: en
 facet_json: https://loisirs74.fr/api/lieu/jardin-pre-curieux-evian.json
-photo_url: /img/generique/generique-jardin-detente-1.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/que-faire/jardin-pre-curieux-evian-hero.jpg
+photo_type: real
+photo_author: "Laurent DAUNE"
+photo_license: "Public domain"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-07
 source: loisirs74.fr
 ---
