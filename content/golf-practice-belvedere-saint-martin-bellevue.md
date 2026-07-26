@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/golf-practice-belvedere-saint-martin-bellevue
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/golf-practice-belvedere-saint-martin-bellevue.json
-photo_url: /img/generique/generique-golf.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/que-faire/golf-practice-belvedere-saint-martin-bellevue-hero.jpg
+photo_type: real
+photo_author: "Guilhem Vellut from Annecy, France"
+photo_license: "CC BY 2.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-06
 source: loisirs74.fr
 ---

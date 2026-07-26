@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/chateau-croix-scionzier
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/chateau-croix-scionzier.json
-photo_url: /img/generique/generique-chateau.jpg
-photo_type: generic
-photo_author: null
-photo_license: null
-photo_source: null
+photo_url: /img/chateaux/chateau-croix-scionzier-hero.jpg
+photo_type: real
+photo_author: "Ajakane"
+photo_license: "CC0"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-10
 source: loisirs74.fr
 ---

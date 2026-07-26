@@ -18,11 +18,11 @@ Entre Genève et la Suisse d'en face, la rive française du Léman aligne cités
 - [Base de loisirs de la Beunaz](https://loisirs74.fr/base-de-loisirs-de-la-beunaz) — Saint-Paul-en-Chablais · [md](https://loisirs74.fr/content/base-de-loisirs-de-la-beunaz.md)
 - [Château de Ripaille](https://loisirs74.fr/chateau-ripaille-thonon) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-ripaille-thonon.md)
 - [CGN escale Yvoire](https://loisirs74.fr/croisiere-cgn-yvoire) — Yvoire · [md](https://loisirs74.fr/content/croisiere-cgn-yvoire.md)
+- [Écomusée de la pêche et du lac](https://loisirs74.fr/ecomusee-peche-et-du-lac-thonon) — Thonon-les-Bains · [md](https://loisirs74.fr/content/ecomusee-peche-et-du-lac-thonon.md)
 - [Jardin des Cinq Sens](https://loisirs74.fr/jardin-des-cinq-sens) — Yvoire · [md](https://loisirs74.fr/content/jardin-des-cinq-sens.md)
 - [Les Aigles du Léman](https://loisirs74.fr/les-aigles-du-leman) — Sciez · [md](https://loisirs74.fr/content/les-aigles-du-leman.md)
 - [Musée du Chablais](https://loisirs74.fr/musee-du-chablais-thonon-les-bains) — Thonon-les-Bains · [md](https://loisirs74.fr/content/musee-du-chablais-thonon-les-bains.md)
 - [Palais Lumière](https://loisirs74.fr/palais-lumiere) — Évian-les-Bains · [md](https://loisirs74.fr/content/palais-lumiere.md)
 - [Parcours Aventure de Sciez](https://loisirs74.fr/parcours-aventure-de-sciez) — Sciez · [md](https://loisirs74.fr/content/parcours-aventure-de-sciez.md)
-- [Château de Sonnaz](https://loisirs74.fr/chateau-sonnaz-thonon-bains) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-sonnaz-thonon-bains.md)
 
 Source: https://loisirs74.fr/que-faire/leman-cote-francais/

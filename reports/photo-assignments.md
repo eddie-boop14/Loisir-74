@@ -7,18 +7,18 @@
 
 | hub | fiches | distinct photos | max repeat of one photo |
 |---|---:|---:|---:|
-| `baignade-nautisme` | 50 | 39 | 4 |
+| `baignade-nautisme` | 50 | 40 | 4 |
 | `bases-de-loisirs` | 85 | 60 | 7 |
 | `cascades` | 19 | 19 | 1 |
-| `chateaux` | 26 | 23 | 3 |
+| `chateaux` | 26 | 24 | 2 |
 | `lacs-plages` | 31 | 27 | 3 |
-| `musees` | 51 | 30 | 8 |
-| `parcs-jardins` | 32 | 17 | 12 |
+| `musees` | 51 | 34 | 7 |
+| `parcs-jardins` | 32 | 19 | 11 |
 | `points-de-vue` | 29 | 26 | 3 |
-| `que-faire` | 73 | 44 | 4 |
+| `que-faire` | 73 | 47 | 4 |
 | `sensations-plein-air` | 70 | 56 | 3 |
 | `sentiers` | 40 | 9 | 13 |
-| `sorties-detente` | 25 | 13 | 3 |
+| `sorties-detente` | 25 | 14 | 3 |
 | `sport-jeux` | 52 | 33 | 4 |
 | `stations-de-ski` | 28 | 28 | 1 |
 | `telecabines` | 12 | 12 | 1 |
@@ -45,7 +45,7 @@
 | `baignade-nautisme` | `centre-aquatique-cluses` | `aquatique` | `generique-aquatique-piscine-couverte.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `centre-aquatique-forme-d-o-chatel` | `aquatique` | `generique-thermes-hammam.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `centre-aquatique-sallanches-mont-blanc` | `aquatique` | `generique-aquatique-toboggan.jpg` | — | json hero (local) |
-| `baignade-nautisme` | `centre-nautique-cite-de-l-eau-publier` | `aquatique` | `generique-aquatique-bassin-natation.jpg` | — | json hero (local) |
+| `baignade-nautisme` | `centre-nautique-cite-de-l-eau-publier` | `aquatique` | `centre-nautique-cite-de-l-eau-publier-hero.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `centre-nautique-guy-chatel-ayse` | `aquatique` | `generique-aquatique-bassin-natation.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `croisiere-bateaux-annecy-annecy` | `aquatique` | `croisiere-bateaux-annecy-annecy-hero.jpg` | — | json hero (local) |
 | `baignade-nautisme` | `croisiere-cgn-evian` | `aquatique` | `generique-port-annecy.jpg` | — | json hero (local) |
@@ -187,10 +187,10 @@
 | `chateaux` | `borne-chateau-vuache-vulbens` | `patrimoine` | `generique-chateau-brume.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-avully-brenthonne` | `patrimoine` | `chateau-avully-brenthonne-hero.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-bellegarde-thonon` | `patrimoine` | `chateau-bellegarde-thonon-hero.jpg` | — | json hero (local) |
-| `chateaux` | `chateau-buffavent-lully` | `patrimoine` | `generique-chateau-toiture.jpg` | — | json hero (local) |
+| `chateaux` | `chateau-buffavent-lully` | `patrimoine` | `chateau-buffavent-lully-hero.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-chatillon-sur-cluses` | `patrimoine` | `chateau-chatillon-sur-cluses-hero.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-clermont-genevois` | `patrimoine` | `chateau-clermont-genevois-hero.jpg` | — | json hero (local) |
-| `chateaux` | `chateau-croix-scionzier` | `patrimoine` | `generique-chateau.jpg` | — | json hero (local) |
+| `chateaux` | `chateau-croix-scionzier` | `patrimoine` | `chateau-croix-scionzier-hero.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-de-menthon-saint-bernard` | `patrimoine` | `Ch%C3%A2teau_de_Menthon-Saint-Bernard_%28novembre_2024%29.JPG` | — | json hero (url) |
 | `chateaux` | `chateau-de-thorens` | `patrimoine` | `Filli%C3%A8re%C2%B0Thorens-Gli%C3%A8res_-_74570_-_2019.06.04_-_Ch%C3%A2teau_de_Thorens_%28vue_de_face%29_%C2%A9_Anthony_Levrot.jpg` | — | json hero (url) |
 | `chateaux` | `chateau-des-rubins-sallanches` | `patrimoine` | `chateau-des-rubins-sallanches-hero.jpg` | — | json hero (local) |
@@ -246,7 +246,7 @@
 | `musees` | `ecomusee-bois-foret-thones` | `patrimoine` | `ecomusee-bois-foret-thones-hero.jpg` | — | json hero (local) |
 | `musees` | `ecomusee-lac-annecy-sevrier` | `patrimoine` | `ecomusee-lac-annecy-sevrier-hero.jpg` | — | json hero (local) |
 | `musees` | `ecomusee-paysalp-viuz-en-sallaz` | `patrimoine` | `generique-musee-moderne.jpg` | — | json hero (local) |
-| `musees` | `ecomusee-peche-et-du-lac-thonon` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
+| `musees` | `ecomusee-peche-et-du-lac-thonon` | `patrimoine` | `ecomusee-peche-et-du-lac-thonon-hero.jpg` | — | json hero (local) |
 | `musees` | `espace-tairraz-musee-des-cristaux-chamonix` | `patrimoine` | `Fluorite-Quartz-164086.jpg` | — | json hero (url) |
 | `musees` | `ferme-ecomusee-clos-parchet-samoens` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
 | `musees` | `fonderie-paccard-sevrier` | `patrimoine` | `fonderie-paccard-sevrier-hero.jpg` | — | json hero (local) |
@@ -261,16 +261,16 @@
 | `musees` | `musee-ailes-anciennes-excenevex` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
 | `musees` | `musee-archeologique-viuz-faverges` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
 | `musees` | `musee-art-et-folklore-regional-fessy` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
-| `musees` | `musee-art-sacre-saint-gervais-bains` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
+| `musees` | `musee-art-sacre-saint-gervais-bains` | `patrimoine` | `musee-art-sacre-saint-gervais-bains-hero.jpg` | — | json hero (local) |
 | `musees` | `musee-chateau-annecy` | `patrimoine` | `Castle_%40_Old_City_of_Annecy_%2815186413279%29.jpg` | — | json hero (url) |
 | `musees` | `musee-cinema-animation-annecy` | `patrimoine` | `Haras_national_d%27Annecy_%28portail%29.JPG` | — | json hero (url) |
 | `musees` | `musee-cinema-philippe-piccot-douvaine` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
 | `musees` | `musee-cordonnerie-alby-sur-cheran` | `patrimoine` | `Poin%C3%A7on_de_cordonnier_-_1.jpg` | — | json hero (url) |
 | `musees` | `musee-departemental-sapeurs-pompiers-haute-savoie-sciez` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
-| `musees` | `musee-du-batiment-ville-la-grand` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
+| `musees` | `musee-du-batiment-ville-la-grand` | `patrimoine` | `musee-du-batiment-ville-la-grand-hero.jpg` | — | json hero (local) |
 | `musees` | `musee-du-chablais-thonon-les-bains` | `patrimoine` | `musee-du-chablais-thonon-les-bains-hero.jpg` | — | json hero (local) |
 | `musees` | `musee-du-mont-blanc-chamonix` | `patrimoine` | `Descent_from_Mont-Blanc_in_1787.jpg` | — | json hero (url) |
-| `musees` | `musee-ermitage-calvaire-megeve` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |
+| `musees` | `musee-ermitage-calvaire-megeve` | `patrimoine` | `musee-ermitage-calvaire-megeve-hero.jpg` | — | json hero (local) |
 | `musees` | `musee-faune-bellevaux` | `patrimoine` | `Museo_Ecologico_Giovanni_Zanardo_-_Diorama_cervo%2C_Sala_principale.png` | — | json hero (url) |
 | `musees` | `musee-granges-servette-chens-sur-leman` | `patrimoine` | `Grange_en_Albanais%2C_ancienne_commune_de_Chaux-Balmont_%28Haute-Savoie%29.jpg` | — | json hero (url) |
 | `musees` | `musee-horlogerie-et-decolletage-cluses` | `patrimoine` | `musee-horlogerie-et-decolletage-cluses-hero.jpg` | — | json hero (local) |
@@ -305,10 +305,10 @@
 | `parcs-jardins` | `jardin-alpin-des-montets-vallorcine` | `nature` | `generique-parc.jpg` | — | json hero (local) |
 | `parcs-jardins` | `jardin-cimes-passy` | `nature` | `generique-parc.jpg` | — | json hero (local) |
 | `parcs-jardins` | `jardin-des-cinq-sens` | `nature` | `Yvoire_Jardin_Cinq_Sens.jpg` | — | json hero (url) |
-| `parcs-jardins` | `jardin-jaysinia-samoens` | `nature` | `generique-parc.jpg` | — | json hero (local) |
+| `parcs-jardins` | `jardin-jaysinia-samoens` | `nature` | `jardin-jaysinia-samoens-hero.jpg` | — | json hero (local) |
 | `parcs-jardins` | `jardin-les-jardins-secrets-vaulx` | `nature` | `generique-parc.jpg` | — | json hero (local) |
 | `parcs-jardins` | `jardin-parc-des-jardins-de-haute-savoie-la-balme-de-sillingy` | `nature` | `generique-jardin-detente-1.jpg` | — | json hero (local) |
-| `parcs-jardins` | `jardin-pre-curieux-evian` | `nature` | `generique-jardin-detente-1.jpg` | — | json hero (local) |
+| `parcs-jardins` | `jardin-pre-curieux-evian` | `nature` | `jardin-pre-curieux-evian-hero.jpg` | — | json hero (local) |
 | `parcs-jardins` | `jardins-europe-annecy` | `nature` | `Ile_aux_Cygnes_%40_Lake_%40_Jardins_de_l%27Europe_%40_Annecy_%2835501071035%29.jpg` | — | json hero (url) |
 | `parcs-jardins` | `la-foret-enchantee-sillingy` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
 | `parcs-jardins` | `leman-forest-saint-gingolph` | `parc` | `generique-accrobranche-6.jpg` | — | json hero (local) |
@@ -363,11 +363,11 @@
 | `que-faire` | `centre-aquatique-cluses` | `aquatique` | `generique-aquatique-piscine-couverte.jpg` | — | json hero (local) |
 | `que-faire` | `centre-aquatique-forme-d-o-chatel` | `aquatique` | `generique-thermes-hammam.jpg` | — | json hero (local) |
 | `que-faire` | `centre-aquatique-sallanches-mont-blanc` | `aquatique` | `generique-aquatique-toboggan.jpg` | — | json hero (local) |
-| `que-faire` | `centre-nautique-cite-de-l-eau-publier` | `aquatique` | `generique-aquatique-bassin-natation.jpg` | — | json hero (local) |
+| `que-faire` | `centre-nautique-cite-de-l-eau-publier` | `aquatique` | `centre-nautique-cite-de-l-eau-publier-hero.jpg` | — | json hero (local) |
 | `que-faire` | `centre-nautique-guy-chatel-ayse` | `aquatique` | `generique-aquatique-bassin-natation.jpg` | — | json hero (local) |
 | `que-faire` | `ecomusee-bois-foret-thones` | `patrimoine` | `ecomusee-bois-foret-thones-hero.jpg` | — | json hero (local) |
 | `que-faire` | `ecomusee-paysalp-viuz-en-sallaz` | `patrimoine` | `generique-musee-moderne.jpg` | — | json hero (local) |
-| `que-faire` | `ecomusee-peche-et-du-lac-thonon` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
+| `que-faire` | `ecomusee-peche-et-du-lac-thonon` | `patrimoine` | `ecomusee-peche-et-du-lac-thonon-hero.jpg` | — | json hero (local) |
 | `que-faire` | `escalade-ablok-argonay` | `sensations` | `generique-escalade-bloc-outdoor.jpg` | — | json hero (local) |
 | `que-faire` | `escalade-atome-annecy` | `sensations` | `generique-escalade-bouldering.jpg` | — | json hero (local) |
 | `que-faire` | `escalade-climb-up-annecy` | `sensations` | `generique-escalade-bloc-outdoor.jpg` | — | json hero (local) |
@@ -403,7 +403,7 @@
 | `que-faire` | `musee-archeologique-viuz-faverges` | `patrimoine` | `generique-musee.jpg` | — | json hero (local) |
 | `que-faire` | `musee-chateau-annecy` | `patrimoine` | `Castle_%40_Old_City_of_Annecy_%2815186413279%29.jpg` | — | json hero (url) |
 | `que-faire` | `musee-cinema-animation-annecy` | `patrimoine` | `Haras_national_d%27Annecy_%28portail%29.JPG` | — | json hero (url) |
-| `que-faire` | `musee-du-batiment-ville-la-grand` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
+| `que-faire` | `musee-du-batiment-ville-la-grand` | `patrimoine` | `musee-du-batiment-ville-la-grand-hero.jpg` | — | json hero (local) |
 | `que-faire` | `musee-du-chablais-thonon-les-bains` | `patrimoine` | `musee-du-chablais-thonon-les-bains-hero.jpg` | — | json hero (local) |
 | `que-faire` | `musee-du-mont-blanc-chamonix` | `patrimoine` | `Descent_from_Mont-Blanc_in_1787.jpg` | — | json hero (url) |
 | `que-faire` | `musee-montagnard-les-houches` | `patrimoine` | `generique-musee-grande-galerie.jpg` | — | json hero (local) |
@@ -544,7 +544,7 @@
 | `sorties-detente` | `cinema-cine-chateau-bonneville` | `divertissement` | `generique-cinema-3.jpg` | — | json hero (local) |
 | `sorties-detente` | `cinema-cine-leman-thonon` | `divertissement` | `generique-cinema-3.jpg` | — | json hero (local) |
 | `sorties-detente` | `cinema-cine-mont-blanc-sallanches` | `divertissement` | `generique-cinema.jpg` | — | json hero (local) |
-| `sorties-detente` | `cinema-le-france-thonon` | `divertissement` | `generique-cinema-4.jpg` | — | json hero (local) |
+| `sorties-detente` | `cinema-le-france-thonon` | `divertissement` | `cinema-le-france-thonon-hero.jpg` | — | json hero (local) |
 | `sorties-detente` | `cinema-le-parc-la-roche-sur-foron` | `divertissement` | `generique-cinema-4.jpg` | — | json hero (local) |
 | `sorties-detente` | `cinema-le-vox-chamonix` | `divertissement` | `generique-cinema.jpg` | — | json hero (local) |
 | `sorties-detente` | `cinema-les-4-nemours-annecy` | `divertissement` | `generique-cinema-2.jpg` | — | json hero (local) |
@@ -578,7 +578,7 @@
 | `sport-jeux` | `escape-game-issue-secrete-anthy-sur-leman` | `divertissement` | `generique-escape-game-cadenas.jpg` | — | json hero (local) |
 | `sport-jeux` | `escape-game-la-grande-evasion-annecy` | `divertissement` | `generique-escape-game-cadenas.jpg` | — | json hero (local) |
 | `sport-jeux` | `escape-game-mysteres-du-lac-annecy` | `divertissement` | `generique-escape-game-exit.jpg` | — | json hero (local) |
-| `sport-jeux` | `golf-practice-belvedere-saint-martin-bellevue` | `sensations` | `generique-golf.jpg` | — | json hero (local) |
+| `sport-jeux` | `golf-practice-belvedere-saint-martin-bellevue` | `sensations` | `golf-practice-belvedere-saint-martin-bellevue-hero.jpg` | — | json hero (local) |
 | `sport-jeux` | `karting-indoor-urban-kartin-la-roche` | `divertissement` | `generique-karting-outdoor-track.jpg` | — | json hero (local) |
 | `sport-jeux` | `karting-mk-circuit-scientrier` | `divertissement` | `generique-karting-outdoor-aerial.jpg` | — | json hero (local) |
 | `sport-jeux` | `karting-mont-blanc-passy` | `divertissement` | `generique-karting-outdoor-3kids.jpg` | — | json hero (local) |

@@ -18,11 +18,11 @@ Genèveと対岸のスイスの間で、Lémanのフランス側の岸には中�
 - [Base de loisirs de la Beunaz](https://loisirs74.fr/ja/base-de-loisirs-de-la-beunaz) — Saint-Paul-en-Chablais · [md](https://loisirs74.fr/content/base-de-loisirs-de-la-beunaz.md)
 - [Château de Ripaille](https://loisirs74.fr/ja/chateau-ripaille-thonon) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-ripaille-thonon.md)
 - [CGN escale Yvoire](https://loisirs74.fr/ja/croisiere-cgn-yvoire) — Yvoire · [md](https://loisirs74.fr/content/croisiere-cgn-yvoire.md)
+- [Écomusée de la pêche et du lac](https://loisirs74.fr/ja/ecomusee-peche-et-du-lac-thonon) — Thonon-les-Bains · [md](https://loisirs74.fr/content/ecomusee-peche-et-du-lac-thonon.md)
 - [Jardin des Cinq Sens](https://loisirs74.fr/ja/jardin-des-cinq-sens) — Yvoire · [md](https://loisirs74.fr/content/jardin-des-cinq-sens.md)
 - [Les Aigles du Léman](https://loisirs74.fr/ja/les-aigles-du-leman) — Sciez · [md](https://loisirs74.fr/content/les-aigles-du-leman.md)
 - [Musée du Chablais](https://loisirs74.fr/ja/musee-du-chablais-thonon-les-bains) — Thonon-les-Bains · [md](https://loisirs74.fr/content/musee-du-chablais-thonon-les-bains.md)
 - [Palais Lumière](https://loisirs74.fr/ja/palais-lumiere) — Évian-les-Bains · [md](https://loisirs74.fr/content/palais-lumiere.md)
 - [Parcours Aventure de Sciez](https://loisirs74.fr/ja/parcours-aventure-de-sciez) — Sciez · [md](https://loisirs74.fr/content/parcours-aventure-de-sciez.md)
-- [Château de Sonnaz](https://loisirs74.fr/ja/chateau-sonnaz-thonon-bains) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-sonnaz-thonon-bains.md)
 
 Source: https://loisirs74.fr/ja/que-faire/leman-cote-francais/

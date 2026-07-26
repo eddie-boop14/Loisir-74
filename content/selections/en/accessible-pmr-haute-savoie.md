@@ -9,8 +9,10 @@
 - [Base de loisirs du Lac des Îles](https://loisirs74.fr/ja/base-de-loisirs-du-lac-des-iles) — Passy · [md](https://loisirs74.fr/content/base-de-loisirs-du-lac-des-iles.md)
 - [Domaine de Rovorée-La Châtaignière](https://loisirs74.fr/ja/domaine-de-rovoree-la-chataigniere) — Yvoire · [md](https://loisirs74.fr/content/domaine-de-rovoree-la-chataigniere.md)
 - [Domaine du Tornet](https://loisirs74.fr/ja/domaine-du-tornet) — La Balme-de-Sillingy · [md](https://loisirs74.fr/content/domaine-du-tornet.md)
+- [Jardin botanique alpin La Jaÿsinia](https://loisirs74.fr/ja/jardin-jaysinia-samoens) — Samoëns · [md](https://loisirs74.fr/content/jardin-jaysinia-samoens.md)
 - [Lac de Vallon](https://loisirs74.fr/ja/lac-de-vallon) — Bellevaux · [md](https://loisirs74.fr/content/lac-de-vallon.md)
 - [Lac des Dronières](https://loisirs74.fr/ja/lac-des-dronieres) — Cruseilles · [md](https://loisirs74.fr/content/lac-des-dronieres.md)
+- [Musée du Bâtiment](https://loisirs74.fr/ja/musee-du-batiment-ville-la-grand) — Ville-la-Grand · [md](https://loisirs74.fr/content/musee-du-batiment-ville-la-grand.md)
 - [Plage d'Albigny](https://loisirs74.fr/ja/plage-albigny) — Annecy · [md](https://loisirs74.fr/content/plage-albigny.md)
 - [Plage d'Excenevex](https://loisirs74.fr/ja/plage-d-excenevex) — Excenevex · [md](https://loisirs74.fr/content/plage-d-excenevex.md)
 - [Plage de Doussard](https://loisirs74.fr/ja/plage-de-doussard) — Doussard · [md](https://loisirs74.fr/content/plage-de-doussard.md)
@@ -22,7 +24,5 @@
 - [Réserve naturelle du Bout-du-Lac d'Annecy](https://loisirs74.fr/ja/reserve-naturelle-bout-du-lac) — Doussard · [md](https://loisirs74.fr/content/reserve-naturelle-bout-du-lac.md)
 - [Marais de Poisy](https://loisirs74.fr/ja/marais-de-poisy) — Poisy · [md](https://loisirs74.fr/content/marais-de-poisy.md)
 - [Casino Impérial Palace Annecy](https://loisirs74.fr/ja/casino-imperial-palace-annecy) — Annecy · [md](https://loisirs74.fr/content/casino-imperial-palace-annecy.md)
-- [Château de Clermont](https://loisirs74.fr/ja/chateau-clermont-genevois) — Clermont · [md](https://loisirs74.fr/content/chateau-clermont-genevois.md)
-- [Château des Rubins](https://loisirs74.fr/ja/chateau-des-rubins-sallanches) — Sallanches · [md](https://loisirs74.fr/content/chateau-des-rubins-sallanches.md)
 
 Source: https://loisirs74.fr/ja/que-faire/accessible-pmr-haute-savoie/
