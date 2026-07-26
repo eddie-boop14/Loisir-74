@@ -72,6 +72,20 @@ def rebuild_catalog_index():
     print(out.stdout.strip() or "(catalog rebuilt)")
 
 
+def sync_home_cards():
+    """Homepage card images derive from Json/ heroes. index.html is authored
+    chrome that no builder regenerates, so without this step every photo added
+    to a fiche makes the homepage staler — never fresher."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "sync_home_cards.py"), "--apply"],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("sync_home_cards failed")
+    print(out.stdout.strip().splitlines()[-1] if out.stdout.strip() else "(home cards synced)")
+
+
 def rebuild_security_txt():
     """RFC 9116 security.txt. Expires is computed at build time, never typed —
     a hardcoded date is valid the day it is written and invalid forever after."""
@@ -519,6 +533,8 @@ def main():
     run("inject intent 'Nos sélections' homepage strip (FIX D, after facet links)",
         inject_home_selections)
     run("cache-bust runtime /scripts/ includes (content-hash ?v=)", version_runtime_assets)
+    run("sync homepage card images from Json/ heroes (derived, never authored)",
+        sync_home_cards)
     run("emit .well-known/security.txt (RFC 9116 — Expires must never lapse)",
         rebuild_security_txt)
     run("regenerate PROJECT-STATE.md (JOB 8 — derived, never authored)", rebuild_project_state)
