@@ -4,6 +4,7 @@ Lac d'Annecyの中世の天守からChablaisの要塞屋敷まで、Haute-Savoie
 
 > 「最も美しい」＝算出されたランキング：実際の写真、無料であること、検証済みの事実の豊富さ（開館時間、アクセス、文化遺産）。編集上の主観は一切なし。自動更新。
 
+- [Château de Beauregard](https://loisirs74.fr/ja/chateau-beauregard-saint-jeoire) — Saint-Jeoire · [md](https://loisirs74.fr/content/chateau-beauregard-saint-jeoire.md)
 - [Château de Bellegarde](https://loisirs74.fr/ja/chateau-bellegarde-thonon) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-bellegarde-thonon.md)
 - [Château de Châtillon-sur-Cluses](https://loisirs74.fr/ja/chateau-chatillon-sur-cluses) — Châtillon-sur-Cluses · [md](https://loisirs74.fr/content/chateau-chatillon-sur-cluses.md)
 - [Château et Donjon des Seigneurs de Faverges](https://loisirs74.fr/ja/chateau-et-donjon-des-seigneurs-de-faverges) — Faverges-Seythenex · [md](https://loisirs74.fr/content/chateau-et-donjon-des-seigneurs-de-faverges.md)
@@ -21,6 +22,5 @@ Lac d'Annecyの中世の天守からChablaisの要塞屋敷まで、Haute-Savoie
 - [Château de Montrottier](https://loisirs74.fr/ja/chateau-montrottier-lovagny) — Lovagny · [md](https://loisirs74.fr/content/chateau-montrottier-lovagny.md)
 - [Château de Ripaille](https://loisirs74.fr/ja/chateau-ripaille-thonon) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-ripaille-thonon.md)
 - [Château des Sires de Faucigny](https://loisirs74.fr/ja/chateau-sires-faucigny-bonneville) — Bonneville · [md](https://loisirs74.fr/content/chateau-sires-faucigny-bonneville.md)
-- [Maison Forte de Hautetour](https://loisirs74.fr/ja/maison-forte-hautetour-saint-gervais) — Saint-Gervais-les-Bains · [md](https://loisirs74.fr/content/maison-forte-hautetour-saint-gervais.md)
 
 Source: https://loisirs74.fr/ja/que-faire/plus-beaux-chateaux-haute-savoie/

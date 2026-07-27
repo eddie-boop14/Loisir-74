@@ -1,13 +1,13 @@
 ---
 facet: parking
 scope: haute-savoie-74
-lieux_documented: 271
-lieux_total: 426
+lieux_documented: 272
+lieux_total: 429
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Parking — index transversal (426 lieux, 271 documentés)
+# Parking — index transversal (429 lieux, 272 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Gratuit sur place
@@ -220,6 +220,10 @@ Fiche: https://loisirs74.fr/chamonix-mont-blanc · JSON: https://loisirs74.fr/ap
 ## Château d'Avully — Brenthonne
 Gratuit à l'entrée du château
 Fiche: https://loisirs74.fr/chateau-avully-brenthonne · JSON: https://loisirs74.fr/api/lieu/chateau-avully-brenthonne.json
+
+## Château de Beauregard — Saint-Jeoire
+Gratuit aux abords
+Fiche: https://loisirs74.fr/chateau-beauregard-saint-jeoire · JSON: https://loisirs74.fr/api/lieu/chateau-beauregard-saint-jeoire.json
 
 ## Château de Bellegarde — Thonon-les-Bains
 Parkings centre-ville à proximité

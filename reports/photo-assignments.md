@@ -1,7 +1,7 @@
 # Phase 4 — photo assignments (gate artifact)
 
 **Date**: 2026-06-14
-**Total assignments**: 628 (one per (hub × slug) on the FR canonical hub)
+**Total assignments**: 630 (one per (hub × slug) on the FR canonical hub)
 
 ## Per-hub diversity
 
@@ -10,11 +10,11 @@
 | `baignade-nautisme` | 50 | 40 | 4 |
 | `bases-de-loisirs` | 85 | 61 | 7 |
 | `cascades` | 19 | 19 | 1 |
-| `chateaux` | 26 | 24 | 2 |
+| `chateaux` | 27 | 25 | 2 |
 | `lacs-plages` | 31 | 27 | 3 |
 | `musees` | 51 | 34 | 7 |
 | `parcs-jardins` | 32 | 19 | 11 |
-| `points-de-vue` | 29 | 28 | 2 |
+| `points-de-vue` | 30 | 29 | 2 |
 | `que-faire` | 73 | 48 | 4 |
 | `sensations-plein-air` | 70 | 58 | 3 |
 | `sentiers` | 40 | 11 | 12 |
@@ -186,6 +186,7 @@
 | `chateaux` | `abbaye-de-sixt` | `patrimoine` | `Sixt_abbey_02.jpg` | — | json hero (url) |
 | `chateaux` | `borne-chateau-vuache-vulbens` | `patrimoine` | `generique-chateau-brume.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-avully-brenthonne` | `patrimoine` | `chateau-avully-brenthonne-hero.jpg` | — | json hero (local) |
+| `chateaux` | `chateau-beauregard-saint-jeoire` | `patrimoine` | `chateau-beauregard-saint-jeoire-hero.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-bellegarde-thonon` | `patrimoine` | `chateau-bellegarde-thonon-hero.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-buffavent-lully` | `patrimoine` | `chateau-buffavent-lully-hero.jpg` | — | json hero (local) |
 | `chateaux` | `chateau-chatillon-sur-cluses` | `patrimoine` | `chateau-chatillon-sur-cluses-hero.jpg` | — | json hero (local) |
@@ -337,6 +338,7 @@
 | `points-de-vue` | `mont-joly` | `nature` | `Meg%C3%A8ve%2C_depuis_la_cha%C3%AEne_du_Mont-Joly.jpg` | — | json hero (url) |
 | `points-de-vue` | `mont-saleve` | `nature` | `mont-saleve-hero.jpg` | — | json hero (local) |
 | `points-de-vue` | `mont-veyrier` | `nature` | `Chemin_mont_Veyrier_mont_Baron.jpg` | — | json hero (url) |
+| `points-de-vue` | `plateau-de-loex` | `nature` | `plateau-de-loex-hero.jpg` | — | json hero (local) |
 | `points-de-vue` | `plateau-de-solaison` | `nature` | `plateau-de-solaison-hero.jpg` | — | json hero (local) |
 | `points-de-vue` | `plateau-des-glieres` | `nature` | `plateau-des-glieres-hero.jpg` | — | json hero (local) |
 | `points-de-vue` | `pointe-de-miribel` | `nature` | `pointe-de-miribel-hero.jpg` | — | json hero (local) |

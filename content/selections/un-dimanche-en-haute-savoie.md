@@ -4,7 +4,7 @@ Le dimanche, beaucoup de portes se ferment — pas toutes. Cette page ne liste q
 
 > Sélection compilée depuis nos fiches vérifiées : uniquement les lieux dont le champ horaires couvre explicitement le dimanche (« 7j/7 », « tous les jours » ou dimanche nommé, hors mention « fermé le dimanche »), selon la saison indiquée sur chaque fiche. Les lieux aux horaires muets sur les jours sont exclus. Classement : photo réelle, gratuité, richesse des informations, avec alternance des catégories. Mise à jour automatique.
 
-- [Château de Bellegarde](https://loisirs74.fr/chateau-bellegarde-thonon) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-bellegarde-thonon.md)
+- [Château de Beauregard](https://loisirs74.fr/chateau-beauregard-saint-jeoire) — Saint-Jeoire · [md](https://loisirs74.fr/content/chateau-beauregard-saint-jeoire.md)
 - [Jardin botanique alpin La Jaÿsinia](https://loisirs74.fr/jardin-jaysinia-samoens) — Samoëns · [md](https://loisirs74.fr/content/jardin-jaysinia-samoens.md)
 - [Musée du Bâtiment](https://loisirs74.fr/musee-du-batiment-ville-la-grand) — Ville-la-Grand · [md](https://loisirs74.fr/content/musee-du-batiment-ville-la-grand.md)
 - [Parc de l'Impérial](https://loisirs74.fr/parc-imperial-annecy) — Annecy · [md](https://loisirs74.fr/content/parc-imperial-annecy.md)
@@ -25,7 +25,7 @@ Le dimanche, beaucoup de portes se ferment — pas toutes. Cette page ne liste q
 - [MK Circuit](https://loisirs74.fr/karting-mk-circuit-scientrier) — Scientrier · [md](https://loisirs74.fr/content/karting-mk-circuit-scientrier.md)
 - [Patinoire Jean Régis](https://loisirs74.fr/patinoire-jean-regis-annecy) — Annecy · [md](https://loisirs74.fr/content/patinoire-jean-regis-annecy.md)
 - [Ponton de l'Embarcadère Wakepark](https://loisirs74.fr/wakepark-ponton-embarcadere-saint-jorioz) — Saint-Jorioz · [md](https://loisirs74.fr/content/wakepark-ponton-embarcadere-saint-jorioz.md)
-- [Château de Châtillon-sur-Cluses](https://loisirs74.fr/chateau-chatillon-sur-cluses) — Châtillon-sur-Cluses · [md](https://loisirs74.fr/content/chateau-chatillon-sur-cluses.md)
+- [Château de Bellegarde](https://loisirs74.fr/chateau-bellegarde-thonon) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-bellegarde-thonon.md)
 - [Jardin des Cimes](https://loisirs74.fr/jardin-cimes-passy) — Passy · [md](https://loisirs74.fr/content/jardin-cimes-passy.md)
 - [Musée des Granges de Servette](https://loisirs74.fr/musee-granges-servette-chens-sur-leman) — Chens-sur-Léman · [md](https://loisirs74.fr/content/musee-granges-servette-chens-sur-leman.md)
 

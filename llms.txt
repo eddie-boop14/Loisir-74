@@ -2,7 +2,7 @@
 
 > Independent guide to public leisure sites in Haute-Savoie, France. Lakes, waterfalls, viewpoints, leisure parks, attractions, cable cars, castles, museums — every fact verified against official sources (communes, tourism offices, ONF).
 
-Loisirs 74 catalogs 426 leisure destinations in the Haute-Savoie department (74), French Alps. Each destination exposes three machine surfaces (below) plus HTML pages in 12 languages (French canonical).
+Loisirs 74 catalogs 429 leisure destinations in the Haute-Savoie department (74), French Alps. Each destination exposes three machine surfaces (below) plus HTML pages in 12 languages (French canonical).
 
 ## URL patterns (per lieu — fastest lane for agents)
 
@@ -32,7 +32,7 @@ Content quality signals: Every fact has a cited source. No marketing language. I
 
 ## Discovery files
 
-- [llms-full.txt — full content concatenated](https://loisirs74.fr/llms-full.txt): All 426 leisure sites' FR facet md — single file for full ingestion.
+- [llms-full.txt — full content concatenated](https://loisirs74.fr/llms-full.txt): All 429 leisure sites' FR facet md — single file for full ingestion.
 - [API — lieux index JSON](https://loisirs74.fr/api/lieux.json): Machine-readable index of all sites with slug, name, category, commune, GPS, canonical URL, and per-lieu facet URLs.
 - [Sitemap index](https://loisirs74.fr/sitemap.xml): Standard XML sitemap with lastmod, hreflang, image entries.
 - [.well-known/ai-info.json](https://loisirs74.fr/.well-known/ai-info.json): Discovery manifest with all AI-related endpoints.
@@ -61,20 +61,33 @@ Content quality signals: Every fact has a cited source. No marketing language. I
 - [Randonnées faciles autour du lac d'Annecy (2h30 max)](https://loisirs74.fr/content/selections/randonnees-faciles-lac-annecy.md): 6 lieux · page: https://loisirs74.fr/que-faire/randonnees-faciles-lac-annecy/
 - [Un dimanche en Haute-Savoie : les lieux ouverts, vérifiés](https://loisirs74.fr/content/selections/un-dimanche-en-haute-savoie.md): 24 lieux · page: https://loisirs74.fr/que-faire/un-dimanche/
 
+<!-- facet-indexes:start -->
+## Facet indexes (cross-cutting answers in one fetch)
+Use these when the question spans many sites (e.g. "which waterfalls have parking"):
+- [Parking, all sites](https://loisirs74.fr/content/facets/parking.md)
+- [Public transport access](https://loisirs74.fr/content/facets/transport.md)
+- [PMR access info](https://loisirs74.fr/content/facets/access_pmr.md)
+- [Free-entry sites](https://loisirs74.fr/content/facets/is_free.md)
+- [Winter info](https://loisirs74.fr/content/facets/winter.md)
+- [Opening hours](https://loisirs74.fr/content/facets/hours.md)
+- [Prices](https://loisirs74.fr/content/facets/prices.md)
+- [Season](https://loisirs74.fr/content/facets/season.md)
+<!-- facet-indexes:end -->
+
 ## Category hubs (use these for browsing by type)
 
 - [Lacs & plages](https://loisirs74.fr/content/lacs.md): 31 lieux.
 - [Cascades](https://loisirs74.fr/content/cascades.md): 19 lieux.
 - [Bases de loisirs](https://loisirs74.fr/content/bases-de-loisirs.md): 34 lieux.
-- [Points de vue](https://loisirs74.fr/content/points-de-vue.md): 27 lieux.
+- [Points de vue](https://loisirs74.fr/content/points-de-vue.md): 28 lieux.
 - [Téléphériques & télécabines](https://loisirs74.fr/content/telecabines.md): 8 lieux.
-- [Châteaux](https://loisirs74.fr/content/chateaux.md): 25 lieux.
+- [Châteaux](https://loisirs74.fr/content/chateaux.md): 26 lieux.
 - [Sentiers](https://loisirs74.fr/content/sentiers.md): 40 lieux.
 - [Voies vertes](https://loisirs74.fr/content/voies-vertes.md): 5 lieux.
 - [Musées](https://loisirs74.fr/content/musees.md): 51 lieux.
-- [Attractions & loisirs](https://loisirs74.fr/content/attractions.md): 186 lieux.
+- [Attractions & loisirs](https://loisirs74.fr/content/attractions.md): 187 lieux.
 
-## All lieux by category (426 total)
+## All lieux by category (429 total)
 
 ### Lacs & plages (31 lieux)
 
@@ -169,7 +182,7 @@ Content quality signals: Every fact has a cited source. No marketing language. I
 - [Vitam Neydens (Neydens)](https://loisirs74.fr/content/vitam-neydens.md): Centre de loisirs UCPA à 15 min de Genève : 25 m, 9 toboggans, balnéo, spa, escalade 14 m, plaine de jeux. Aquatique adulte journée 29 €, 4 h 25 €.
 - [Île de Tortuga Vétraz-Monthoux (Vétraz-Monthoux)](https://loisirs74.fr/content/ile-de-tortuga-vetraz-monthoux.md): Plus grand parc indoor du Genevois pour enfants 0-12 ans. Entrée 14,90 € (>95 cm), 9,90 € (-95 cm), -12 mois gratuit, 1 adulte gratuit/enfant payant.
 
-### Points de vue (27 lieux)
+### Points de vue (28 lieux)
 
 - [Aire de décollage parapente de Plaine-Joux (Passy)](https://loisirs74.fr/content/aire-de-decollage-parapente-plaine-joux.md): L'un des plus beaux sites de vol libre au monde face au Mont-Blanc. Accès voiture 1360 m, accessible fauteuil, parapente et deltaplane. Gratuit,…
 - [Belvédère du Mont Baron (Veyrier-du-Lac)](https://loisirs74.fr/content/belvedere-du-mont-baron.md): Plateforme panoramique à 1254 m, vestige de l'ancien téléphérique du Mont Veyrier. Vue plongeante 180° sur le lac d'Annecy, Bauges et Mont-Blanc.…
@@ -186,6 +199,7 @@ Content quality signals: Every fact has a cited source. No marketing language. I
 - [Mont Joly (Saint-Gervais-les-Bains)](https://loisirs74.fr/content/mont-joly.md): Sommet emblématique à 2 525 m face au Mont-Blanc. Randonnée sportive accessible de juin à octobre depuis Saint-Gervais, Megève ou Les Contamines.…
 - [Mont Salève (Monnetier-Mornex)](https://loisirs74.fr/content/mont-saleve.md): Massif préalpin à 1 379 m surnommé « Balcon de Genève » : téléphérique depuis Étrembières (13 € adulte), 250 km de sentiers, site Natura 2000.
 - [Mont Veyrier (Annecy)](https://loisirs74.fr/content/mont-veyrier.md): Sommet emblématique à 1 291 m dominant le lac d'Annecy avec vue 360° sur les Bauges, les Aravis et le Mont-Blanc. Sentier des Crêtes, accès libre…
+- [Plateau de Loëx (Habère-Poche)](https://loisirs74.fr/content/plateau-de-loex.md): Plateau d'alpage au-dessus de la Vallée Verte : panorama Léman/Mont-Blanc, sentiers familiaux l'été, ski de fond et raquettes l'hiver. Accès libre.
 - [Plateau de Solaison (Brizon)](https://loisirs74.fr/content/plateau-de-solaison.md): Alpage du massif des Bornes à 1 507 m au-dessus de Brizon : randonnées familiales (Pointe d'Andey, Lac Bénit), ski de fond et raquettes en hiver.
 - [Plateau des Glières (Fillière)](https://loisirs74.fr/content/plateau-des-glieres.md): Plateau calcaire à 1 450 m d'altitude, haut lieu de la Résistance en 1944. Monument national, sentier historique, ski de fond, randonnée. Accès libre.
 - [Pointe de Miribel (Villard)](https://loisirs74.fr/content/pointe-de-miribel.md): Randonnée familiale au sommet emblématique du Chablais (1 581 m). Vue panoramique 360° sur le Léman et le Mont-Blanc, patrimoine religieux…
@@ -210,12 +224,13 @@ Content quality signals: Every fact has a cited source. No marketing language. I
 - [Téléphérique des Grands Montets (Chamonix-Mont-Blanc)](https://loisirs74.fr/content/telepherique-des-grands-montets.md): Le domaine des Grands Montets est en pleine reconstruction après l'incendie de 2018. Nouveau 3S prévu en décembre 2026. Accès hivernal via Plan Joran…
 - [Téléphérique du Brévent (Chamonix-Mont-Blanc)](https://loisirs74.fr/content/telepherique-du-brevent.md): Le Brévent (2 525 m) face au Mont Blanc depuis Chamonix. AR adulte 41,20 €, horaires été, réservation directe chez l'exploitant Compagnie du…
 
-### Châteaux (25 lieux)
+### Châteaux (26 lieux)
 
 - [Abbaye d'Aulps (Saint-Jean-d'Aulps)](https://loisirs74.fr/content/abbaye-d-aulps.md): Abbaye cistercienne du XIe siècle avec centre d'interprétation et visite 3D. Tarifs : 7 € adulte, 3,50 € enfant. Ouvert toute l'année à…
 - [Abbaye de Sixt (Sixt-Fer-à-Cheval)](https://loisirs74.fr/content/abbaye-de-sixt.md): Abbaye du XIIᵉ siècle inscrite Monument Historique. Exposition estivale gratuite, église du XIIIᵉ siècle et logis abbatial restauré. Visite libre à…
 - [Borne du château du Vuache (Vulbens)](https://loisirs74.fr/content/borne-chateau-vuache-vulbens.md): Dernier vestige du château seigneurial du Vuache à Vulbens : borne en pierre datée de 1579, au pied de l'escalier près de l'église — accès libre…
 - [Château d'Avully (Brenthonne)](https://loisirs74.fr/content/chateau-avully-brenthonne.md): Maison forte XIVe siècle restaurée par la famille Guyon depuis 1971 : douves en eau, pont-levis, peintures murales médiévales, escape game. Adulte 10…
+- [Château de Beauregard (Saint-Jeoire)](https://loisirs74.fr/content/chateau-beauregard-saint-jeoire.md): Maison forte XIIe-XIIIe famille de La Fléchère 8 siècles, illuminé la nuit. Extérieurs libres, visites JEP. Communauté Eucharistein. Saint-Jeoire 74.
 - [Château de Bellegarde (Thonon-les-Bains)](https://loisirs74.fr/content/chateau-bellegarde-thonon.md): Dernier vestige fortifications médiévales Thonon : porte des Lombards, tour carrée, frises rabelaisiennes XIXe. Extérieurs libres, visites JEP…
 - [Château de Buffavent (Lully)](https://loisirs74.fr/content/chateau-buffavent-lully.md): Maison forte du XVe siècle inscrite MH 1944 à Lully (Chablais) : quatre tours rondes à poivrière, prise par les Genevois en 1590. Visible de…
 - [Château de Châtillon-sur-Cluses (Châtillon-sur-Cluses)](https://loisirs74.fr/content/chateau-chatillon-sur-cluses.md): Ruines château fort Xe-XIIe résidence Sires de Faucigny avant Bonneville. Col 862 m, sentier 15-20 min. Accès libre toute l'année, rénovation en…
@@ -343,7 +358,7 @@ Content quality signals: Every fact has a cited source. No marketing language. I
 - [Écomusée du Lac d'Annecy (Sevrier)](https://loisirs74.fr/content/ecomusee-lac-annecy-sevrier.md): Musée immersif à Sevrier sur les Savoyards du XIXe siècle au bord du lac d'Annecy : parcours ludiques, jeux-énigmes pour familles. Adulte 7 €,…
 - [Écomusée Paysalp (Viuz-en-Sallaz)](https://loisirs74.fr/content/ecomusee-paysalp-viuz-en-sallaz.md): Écomusée du patrimoine paysan du Faucigny depuis 1980, label écomusée 2003. 8 sites, 500 m² immersifs sur la vie 1850-1950. Adulte 7 €, gratuit -5…
 
-### Attractions & loisirs (186 lieux)
+### Attractions & loisirs (187 lieux)
 
 - [Ablok Annecy (Argonay) (Argonay)](https://loisirs74.fr/content/escalade-ablok-argonay.md): Ablok Argonay : grande salle de bloc d'escalade indoor près d'Annecy, secteurs renouvelés, pan, cours, location et anniversaires.
 - [ABYSS — Tir à l'arc Publier (Publier)](https://loisirs74.fr/content/tir-a-l-arc-abyss-publier.md): Tir à l'arc à Publier près d'Évian : initiation encadrée, cours réguliers, séances ponctuelles. Matériel fourni, à partir de 8 ans.
@@ -396,6 +411,7 @@ Content quality signals: Every fact has a cited source. No marketing language. I
 - [Cortigrimpe (Metz-Tessy)](https://loisirs74.fr/content/escalade-cortigrimpe-metz-tessy.md): Salle d'escalade indoor à Epagny Metz-Tessy : 1 000 m² de bloc, voies 8-10 m, autobelays, murs extérieurs en été et restaurant-bistrot sur place.
 - [Criq'Parc (Saint-Jorioz)](https://loisirs74.fr/content/criq-parc.md): Parc de jeux dans les arbres pour enfants 3-12 ans à Saint-Jorioz, bord du lac d'Annecy. Tarifs dès 13 €/enfant, réservation en ligne sur le site…
 - [Côte 2000 Aventure (Megève)](https://loisirs74.fr/content/cote-2000-aventure.md): Parc accrobranche à 1 450 m d'altitude à Megève : 70 ateliers dont tyrolienne de 90 m, surf dans les arbres, parcours enfants dès 5 ans. Sécurité…
+- [Disc Golf de Samoëns — Indiana Ventures (Samoëns)](https://loisirs74.fr/content/disc-golf-indiana-ventures-samoens.md): Parcours de disc golf à Samoëns : 9 ou 18 paniers en pleine nature, accès libre, location de disques par Indiana Ventures.
 - [Dévalkart de Manigod (Manigod)](https://loisirs74.fr/content/devalkart-de-manigod.md): Dévalkart de Manigod : luge sur rails à la station de Manigod / La Croix-Fry. Descente sur rails plusieurs centaines de mètres, accès télésiège, été.
 - [e-MOTION Concept (Annecy)](https://loisirs74.fr/content/simulateur-emotion-concept-annecy.md): Centre de 8 simulateurs de pilotage automobile (Rallye, GT, F1) avec espace paddock à Annecy. Baquet, retour de force, écran 180°. Sessions 15 min à…
 - [Ecolorado Rafting (Passy)](https://loisirs74.fr/content/rafting-ecolorado-passy-samoens.md): Rafting, hydrospeed, canoraft et airboat sur le Giffre, l'Arve et la Dranse depuis deux bases à Passy et Samoëns. Sorties encadrées pour tous niveaux.

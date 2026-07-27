@@ -1,13 +1,13 @@
 ---
 facet: hours
 scope: haute-savoie-74
-lieux_documented: 329
-lieux_total: 426
+lieux_documented: 332
+lieux_total: 429
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Horaires — index transversal (426 lieux, 329 documentés)
+# Horaires — index transversal (429 lieux, 332 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 15 juin – 15 sept : tous les jours 10h–19h. 1er janv – 31 mars : lundi au vendredi 14h–18h (fermé 1er janv). 1er avr – 14 juin et 16 sept – 30 sept : lundi au vendredi et dimanche 14h–18h30 (fermé samedi, fermé 1er mai). Oct : lundi au vendredi 14h–18h. Vérifié sur le site officiel le 14 mai 2026 — sous réserve de modifications saisonnières.
@@ -221,6 +221,10 @@ Fiche: https://loisirs74.fr/centre-nautique-guy-chatel-ayse · JSON: https://loi
 OUVERTURE 2026 : Visite TOUTE L'ANNÉE sur rendez-vous (individuel et groupes). 1er JUILLET - 31 AOÛT : ouvert lundi-vendredi 13h30-18h SANS rendez-vous. Week-ends en juillet-août sur réservation. Réservation préalable par téléphone ou chateauavully.com. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
 Fiche: https://loisirs74.fr/chateau-avully-brenthonne · JSON: https://loisirs74.fr/api/lieu/chateau-avully-brenthonne.json
 
+## Château de Beauregard — Saint-Jeoire
+EXTÉRIEURS LIBRES 24h/24, 7j/7, toute l'année au Château de Beauregard. Illumination nocturne automatique. Intérieurs occupés par la Fraternité Eucharistein, visites uniquement lors des Journées Européennes du Patrimoine mi-septembre. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
+Fiche: https://loisirs74.fr/chateau-beauregard-saint-jeoire · JSON: https://loisirs74.fr/api/lieu/chateau-beauregard-saint-jeoire.json
+
 ## Château de Bellegarde — Thonon-les-Bains
 EXTÉRIEURS LIBRES 24h/24, 7j/7, toute l'année au Château de Bellegarde. Intérieurs occupés par le tribunal de Thonon-les-Bains - visites intérieures uniquement lors des Journées Européennes du Patrimoine mi-septembre, gratuites et encadrées. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
 Fiche: https://loisirs74.fr/chateau-bellegarde-thonon · JSON: https://loisirs74.fr/api/lieu/chateau-bellegarde-thonon.json
@@ -384,6 +388,10 @@ Fiche: https://loisirs74.fr/debaroule-clusaz · JSON: https://loisirs74.fr/api/l
 ## Dévalkart de Manigod — Manigod
 Ouvert principalement de juin à septembre (selon météo et conditions station). Horaires journaliers affichés en station.
 Fiche: https://loisirs74.fr/devalkart-de-manigod · JSON: https://loisirs74.fr/api/lieu/devalkart-de-manigod.json
+
+## Disc Golf de Samoëns — Indiana Ventures — Samoëns
+Saison estivale (env. mai-octobre selon enneigement), accès libre journée.
+Fiche: https://loisirs74.fr/disc-golf-indiana-ventures-samoens · JSON: https://loisirs74.fr/api/lieu/disc-golf-indiana-ventures-samoens.json
 
 ## Écomusée du Bois et de la Forêt — Thônes
 Visite libre 14h30-17h30 (avril-juin et sept-oct) · horaires élargis en juillet-août
@@ -984,6 +992,10 @@ Fiche: https://loisirs74.fr/plage-municipale-thonon · JSON: https://loisirs74.f
 ## Plaine de loisirs de la Grangette — Thonon-les-Bains
 Plaine accessible librement toute l'année ; baignade surveillée en juillet-août ; mini-golf et locations en saison
 Fiche: https://loisirs74.fr/plaine-de-loisirs-de-la-grangette · JSON: https://loisirs74.fr/api/lieu/plaine-de-loisirs-de-la-grangette.json
+
+## Plateau de Loëx — Habère-Poche
+Accès libre toute l'année ; route ouverte en saison estivale ; accès hivernal par site nordique
+Fiche: https://loisirs74.fr/plateau-de-loex · JSON: https://loisirs74.fr/api/lieu/plateau-de-loex.json
 
 ## Port des Clerges - Base Nautique — Thonon-les-Bains
 Base ouverte selon créneaux des clubs résidents. Consulter Chablais Aviron Thonon pour les sorties d'initiation.
