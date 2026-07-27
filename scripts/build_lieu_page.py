@@ -2047,6 +2047,50 @@ def event_modal_block(d):
     )
 
 
+# ── footer "Explorer" column: the intent-guide layer ────────────────────────
+# GSC coverage 2026-07-27: the five practical guides (PMR, parking, gratuit,
+# hiver, transports) each had exactly ONE internal link (homepage) — near-
+# orphans that Google crawls and declines to index. The footer is the honest
+# place for them: sitewide reach, zero per-fiche authoring. Labels are DERIVED
+# from each guide's own rendered <h1> (text before the first " :"), per locale
+# — never authored here, so they can't rot when a guide is retitled.
+FOOTER_GUIDE_SLUGS = (
+    "sorties-gratuites-haute-savoie",
+    "sorties-famille-enfants-haute-savoie",
+    "acces-pmr-haute-savoie",
+    "parking-sites-loisirs-74",
+    "acces-transports-en-commun-74",
+    "infos-hiver-haute-savoie",
+)
+_FOOTER_GUIDES_CACHE = {}   # lang -> [(href, label)]
+
+
+def _footer_guides(lang):
+    """(href, label) pairs for the guide links, derived from the built pages.
+    A guide exists per-locale for the six prose langs only; facts langs link
+    the FR original (same fallback rule as the legal links). A guide whose
+    HTML is missing renders nothing — the footer never links a 404."""
+    if lang in _FOOTER_GUIDES_CACHE:
+        return _FOOTER_GUIDES_CACHE[lang]
+    out = []
+    for slug in FOOTER_GUIDE_SLUGS:
+        for lp_try in ([f"/{lang}", ""] if lang != "fr" else [""]):
+            p = REPO / lp_try.lstrip("/") / f"{slug}.html"
+            if not p.is_file():
+                continue
+            m = re.search(r"<h1[^>]*>(.*?)</h1>",
+                          p.read_text(encoding="utf-8"), re.S)
+            if not m:
+                continue
+            label = re.sub(r"<[^>]+>", "", m.group(1))
+            label = html_lib.unescape(label).split(":")[0].split(" — ")[0].strip()
+            if label:
+                out.append((f"{BASE_URL}{lp_try}/{slug}", label))
+            break
+    _FOOTER_GUIDES_CACHE[lang] = out
+    return out
+
+
 def site_footer():
     """Locale-aware <footer class='site'>. URLs prefixed by current locale."""
     lp = f"/{_LANG}" if _LANG != "fr" else ""
@@ -2054,10 +2098,12 @@ def site_footer():
     # exist per-locale for the six only; a facts-lang rich tree links the FR
     # originals instead of 404ing on /<lang>/… (link-integrity gate).
     legal_lp = "" if _STRICT_PROSE else lp
+    guide_lis = "".join(f'<li><a href="{attr(h)}">{esc(t)}</a></li>'
+                        for h, t in _footer_guides(_LANG))
     return (
         '<footer class="site"><div class="wrap"><div class="foot-grid">'
         f'<div class="foot-col"><a class="brand" href="{BASE_URL}{lp}/" style="margin-bottom:.85rem"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a><p>{T("f_tagline")}</p></div>'
-        f'<div class="foot-col"><h4>{T("f_explore")}</h4><ul><li><a href="{BASE_URL}{lp}/">{T("home")}</a></li></ul></div>'
+        f'<div class="foot-col"><h4>{T("f_explore")}</h4><ul><li><a href="{BASE_URL}{lp}/">{T("home")}</a></li>{guide_lis}</ul></div>'
         f'<div class="foot-col"><h4>{T("f_contribute")}</h4><ul><li><a href="mailto:photos@loisirs74.fr">{T("f_send_photos")}</a></li><li><a href="{BASE_URL}{legal_lp}/signaler">{T("f_report")}</a></li><li><a href="{BASE_URL}{legal_lp}/devenir-partenaire">{T("f_become_p")}</a></li></ul></div>'
         f'<div class="foot-col"><h4>{T("f_legal")}</h4><ul><li><a href="{BASE_URL}{legal_lp}/mentions-legales">{T("f_legal_link")}</a></li><li><a href="{BASE_URL}{legal_lp}/confidentialite">{T("f_privacy")}</a></li><li><a href="{BASE_URL}{legal_lp}/cgv">{T("f_cgv")}</a></li></ul></div>'
         f'</div><div class="foot-bottom"><span class="credit">{T("f_copyright")}</span><span>{T("f_promise")}</span></div></div></footer>'
@@ -2260,27 +2306,46 @@ def _build_related_index():
             "lat": lat, "lon": lon, "official_url": d.get("official_site_url") or "",
         }
     rel = {s: _compute_related(s, idx) for s in idx}
-    # bidirectional top-up: every fiche should appear in ≥1 carousel (append,
-    # don't bump, so we never re-orphan another). Loop until stable.
-    for _ in range(6):
+    # Reciprocity floor: every fiche appears in ≥ _REL_FLOOR carousels, not
+    # just ≥1. GSC coverage 2026-07-27: the crawled-not-indexed tail is the
+    # weakly-linked tail (p10 = 7 inlinks vs median 12) — pure nearest-3
+    # geometry starves fiches on the edge of a dense cluster, because their
+    # neighbours' nearest-3 are always someone else. Fix: fiches below the
+    # floor are placed into the carousels of their nearest hosts, replacing
+    # the host's 6th slot — but never a slot held by another below-floor
+    # fiche (we don't rob the poor to pay the poor). Deterministic; loops to
+    # a fixed point (bounded — each pass only raises the minimum).
+    _REL_FLOOR = 3
+    for _ in range(8):
         inbound = {s: 0 for s in idx}
         for rels in rel.values():
             for r in rels:
                 if r in inbound:
                     inbound[r] += 1
-        zero = sorted(s for s, n in inbound.items() if n == 0)
-        if not zero:
+        starved = sorted(s for s, n in inbound.items() if n < _REL_FLOOR)
+        if not starved:
             break
-        for s in zero:
-            best, bd = None, float("inf")
-            for o, od in idx.items():
-                if o == s or s in rel[o]:
-                    continue
-                dist = _haversine(idx[s]["lat"], idx[s]["lon"], od["lat"], od["lon"])
-                if dist < bd:
-                    bd, best = dist, o
-            if best:
-                rel[best] = rel[best][:5] + [s]
+        moved = False
+        for s in starved:
+            need = _REL_FLOOR - inbound[s]
+            hosts = sorted(
+                (o for o in idx if o != s and s not in rel[o]),
+                key=lambda o: (_haversine(idx[s]["lat"], idx[s]["lon"],
+                                          idx[o]["lat"], idx[o]["lon"]), o))
+            for o in hosts:
+                if need <= 0:
+                    break
+                victim = rel[o][5] if len(rel[o]) == 6 else None
+                if victim is not None and inbound.get(victim, 0) <= _REL_FLOOR:
+                    continue    # would re-starve someone at/below the floor
+                rel[o] = rel[o][:5] + [s]
+                if victim is not None:
+                    inbound[victim] -= 1
+                inbound[s] += 1
+                need -= 1
+                moved = True
+        if not moved:
+            break
     _REL_INDEX, _REL_MAP = idx, rel
 
 
