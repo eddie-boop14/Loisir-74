@@ -72,6 +72,20 @@ def rebuild_catalog_index():
     print(out.stdout.strip() or "(catalog rebuilt)")
 
 
+def inject_analytics():
+    """Cloudflare Web Analytics beacon on every published page. Wired in so a
+    newly-emitted fiche/hub/intent page cannot ship without it — and so a
+    foreign property's token can never sit here unnoticed."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "inject_analytics.py"), "--apply"],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("inject_analytics failed")
+    print(out.stdout.strip().splitlines()[0] if out.stdout.strip() else "(beacon injected)")
+
+
 def sync_home_cards():
     """Homepage card images derive from Json/ heroes. index.html is authored
     chrome that no builder regenerates, so without this step every photo added
@@ -537,6 +551,7 @@ def main():
         sync_home_cards)
     run("emit .well-known/security.txt (RFC 9116 — Expires must never lapse)",
         rebuild_security_txt)
+    run("inject Cloudflare Web Analytics beacon (every published page)", inject_analytics)
     run("regenerate PROJECT-STATE.md (JOB 8 — derived, never authored)", rebuild_project_state)
     if not args.no_site:
         run("build _site/", lambda: subprocess.check_call(
