@@ -814,6 +814,16 @@ def main():
         sys.exit(1)
 
     fiches = [json.load(open(f, encoding="utf-8")) for f in files]
+    # The AI surface mirrors the HTML surface: published only. A draft fiche
+    # has no rendered page, so listing it here advertises a canonical_url that
+    # 404s — GSC coverage 2026-07-27 caught Google crawling 3 draft slugs ×12
+    # langs from llms.txt. Drafts rejoin every surface the moment they flip to
+    # status:published; nothing else to do.
+    drafts = [d["slug"] for d in fiches if d.get("status") != "published"]
+    fiches = [d for d in fiches if d.get("status") == "published"]
+    if drafts:
+        print(f"build_ai_content: excluded {len(drafts)} non-published: "
+              + ", ".join(sorted(drafts)))
     md_by_slug = {d["slug"]: render_md(d, "fr") for d in fiches}
     md_en_by_slug = {d["slug"]: render_md(d, "en") for d in fiches}
     json_by_slug = {d["slug"]: render_lieu_json(d) for d in fiches}

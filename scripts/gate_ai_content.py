@@ -31,8 +31,18 @@ def main():
     ap.add_argument("--root", default=ROOT)
     args = ap.parse_args()
 
-    slugs = sorted(os.path.basename(f)[:-5]
-                   for f in glob.glob(os.path.join(args.json_dir, "*.json")))
+    # Corpus = published fiches only, mirroring build_ai_content.py: a draft
+    # has no rendered HTML, so the AI surface must not advertise it (its
+    # canonical_url would be a live 404 — GSC coverage 2026-07-27).
+    slugs = []
+    for f in glob.glob(os.path.join(args.json_dir, "*.json")):
+        try:
+            with open(f, encoding="utf-8") as fh:
+                if json.load(fh).get("status") == "published":
+                    slugs.append(os.path.basename(f)[:-5])
+        except Exception:
+            slugs.append(os.path.basename(f)[:-5])  # unreadable → let later gates scream
+    slugs = sorted(slugs)
     n = len(slugs)
     if n == 0:
         print(f"::error::no fiches under {args.json_dir}/", file=sys.stderr)

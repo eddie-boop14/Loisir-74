@@ -1,13 +1,13 @@
 ---
 facet: prices
 scope: haute-savoie-74
-lieux_documented: 424
-lieux_total: 426
+lieux_documented: 427
+lieux_total: 429
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Tarifs — index transversal (426 lieux, 424 documentés)
+# Tarifs — index transversal (429 lieux, 427 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 À partir de 7 € (adulte)
@@ -325,6 +325,10 @@ Fiche: https://loisirs74.fr/chamonix-mont-blanc · JSON: https://loisirs74.fr/ap
 Adulte 10 € · Étudiant 8 € · Enfant 5-12 ans 5 €
 Fiche: https://loisirs74.fr/chateau-avully-brenthonne · JSON: https://loisirs74.fr/api/lieu/chateau-avully-brenthonne.json
 
+## Château de Beauregard — Saint-Jeoire
+Gratuit toute l'année (extérieur)
+Fiche: https://loisirs74.fr/chateau-beauregard-saint-jeoire · JSON: https://loisirs74.fr/api/lieu/chateau-beauregard-saint-jeoire.json
+
 ## Château de Bellegarde — Thonon-les-Bains
 Gratuit toute l'année
 Fiche: https://loisirs74.fr/chateau-bellegarde-thonon · JSON: https://loisirs74.fr/api/lieu/chateau-bellegarde-thonon.json
@@ -544,6 +548,10 @@ Fiche: https://loisirs74.fr/debaroule-clusaz · JSON: https://loisirs74.fr/api/l
 ## Dévalkart de Manigod — Manigod
 Descente ~5-8 € · forfaits multi-descentes
 Fiche: https://loisirs74.fr/devalkart-de-manigod · JSON: https://loisirs74.fr/api/lieu/devalkart-de-manigod.json
+
+## Disc Golf de Samoëns — Indiana Ventures — Samoëns
+Accès libre · location disques ~5-10 € (Indiana Ventures)
+Fiche: https://loisirs74.fr/disc-golf-indiana-ventures-samoens · JSON: https://loisirs74.fr/api/lieu/disc-golf-indiana-ventures-samoens.json
 
 ## Domaine de Guidou — Sciez
 
@@ -1324,6 +1332,10 @@ Fiche: https://loisirs74.fr/plage-municipale-thonon · JSON: https://loisirs74.f
 ## Plaine de loisirs de la Grangette — Thonon-les-Bains
 Accès libre · activités payantes (mini-golf, locations)
 Fiche: https://loisirs74.fr/plaine-de-loisirs-de-la-grangette · JSON: https://loisirs74.fr/api/lieu/plaine-de-loisirs-de-la-grangette.json
+
+## Plateau de Loëx — Habère-Poche
+Accès libre · forfait nordique en hiver
+Fiche: https://loisirs74.fr/plateau-de-loex · JSON: https://loisirs74.fr/api/lieu/plateau-de-loex.json
 
 ## Plateau de Solaison — Brizon
 Accès libre

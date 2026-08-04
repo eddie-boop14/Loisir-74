@@ -1,13 +1,13 @@
 ---
 facet: winter
 scope: haute-savoie-74
-lieux_documented: 127
-lieux_total: 426
+lieux_documented: 128
+lieux_total: 429
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Hiver — index transversal (426 lieux, 127 documentés)
+# Hiver — index transversal (429 lieux, 128 documentés)
 
 ## Aire de décollage parapente de Plaine-Joux — Passy
 Vue Mont-Blanc dégagée · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
@@ -304,6 +304,10 @@ Fiche: https://loisirs74.fr/parcours-patrimoine-se-promener-a-andilly-andilly ·
 ## Passy Plaine-Joux — Passy
 Ouvert (accès déneigé) · Ski nordique · Ski de fond · Vue Mont-Blanc dégagée · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
 Fiche: https://loisirs74.fr/passy-plaine-joux · JSON: https://loisirs74.fr/api/lieu/passy-plaine-joux.json
+
+## Plateau de Loëx — Habère-Poche
+Raquettes · Ski nordique · Ski de fond · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)
+Fiche: https://loisirs74.fr/plateau-de-loex · JSON: https://loisirs74.fr/api/lieu/plateau-de-loex.json
 
 ## Plateau de Solaison — Brizon
 Ouvert (accès déneigé) · Ski de fond · Ski nordique · Raquettes · Luge · Panorama alpin · Loi Montagne II — pneus hiver ou chaînes obligatoires (1 nov – 31 mars)

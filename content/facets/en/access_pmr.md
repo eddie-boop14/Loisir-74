@@ -2,12 +2,12 @@
 facet: access_pmr
 scope: haute-savoie-74
 lieux_documented: 164
-lieux_total: 426
+lieux_total: 429
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Accès PMR — index transversal (426 lieux, 164 documentés)
+# Accès PMR — index transversal (429 lieux, 164 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Entrée avec marche(s), sans rampe

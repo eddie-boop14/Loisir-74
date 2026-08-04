@@ -1,13 +1,13 @@
 ---
 facet: season
 scope: haute-savoie-74
-lieux_documented: 423
-lieux_total: 426
+lieux_documented: 426
+lieux_total: 429
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Saison — index transversal (426 lieux, 423 documentés)
+# Saison — index transversal (429 lieux, 426 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Toute l'année · Été pour les jardins
@@ -325,6 +325,10 @@ Fiche: https://loisirs74.fr/chamonix-mont-blanc · JSON: https://loisirs74.fr/ap
 1er juillet - 31 août (sans RDV) · Toute l'année sur RDV
 Fiche: https://loisirs74.fr/chateau-avully-brenthonne · JSON: https://loisirs74.fr/api/lieu/chateau-avully-brenthonne.json
 
+## Château de Beauregard — Saint-Jeoire
+Toute l'année · Soir pour illumination · JEP septembre
+Fiche: https://loisirs74.fr/chateau-beauregard-saint-jeoire · JSON: https://loisirs74.fr/api/lieu/chateau-beauregard-saint-jeoire.json
+
 ## Château de Bellegarde — Thonon-les-Bains
 Toute l'année · JEP pour intérieur
 Fiche: https://loisirs74.fr/chateau-bellegarde-thonon · JSON: https://loisirs74.fr/api/lieu/chateau-bellegarde-thonon.json
@@ -544,6 +548,10 @@ Fiche: https://loisirs74.fr/debaroule-clusaz · JSON: https://loisirs74.fr/api/l
 ## Dévalkart de Manigod — Manigod
 Été (juin à septembre)
 Fiche: https://loisirs74.fr/devalkart-de-manigod · JSON: https://loisirs74.fr/api/lieu/devalkart-de-manigod.json
+
+## Disc Golf de Samoëns — Indiana Ventures — Samoëns
+Mai à octobre
+Fiche: https://loisirs74.fr/disc-golf-indiana-ventures-samoens · JSON: https://loisirs74.fr/api/lieu/disc-golf-indiana-ventures-samoens.json
 
 ## Domaine de Guidou — Sciez
 Avril – mai (migration) · Septembre – octobre (quiétude) · Hiver (observation oiseaux d'eau)
@@ -1320,6 +1328,10 @@ Fiche: https://loisirs74.fr/plage-municipale-thonon · JSON: https://loisirs74.f
 ## Plaine de loisirs de la Grangette — Thonon-les-Bains
 Mai-septembre
 Fiche: https://loisirs74.fr/plaine-de-loisirs-de-la-grangette · JSON: https://loisirs74.fr/api/lieu/plaine-de-loisirs-de-la-grangette.json
+
+## Plateau de Loëx — Habère-Poche
+Mai-octobre (été) · décembre-mars (ski)
+Fiche: https://loisirs74.fr/plateau-de-loex · JSON: https://loisirs74.fr/api/lieu/plateau-de-loex.json
 
 ## Plateau de Solaison — Brizon
 Juin-octobre (été) ; déc-mars (ski de fond)
