@@ -641,6 +641,12 @@ def selector_match(f, sel, sets):
     communes = sel.get("communes") or (sets.get(sel["communes_set"]) if sel.get("communes_set") else None)
     if communes and f.get("commune") not in communes:
         return False
+    # Exclusion — the 'loin de la foule' lane (2026-08: SMB agency de-markets
+    # the saturated cores and pushes the 82% unknown; this selector key is how
+    # a page states 'NOT the honeypots' as a verifiable criterion).
+    excl = sel.get("communes_exclude") or (sets.get(sel["communes_exclude_set"]) if sel.get("communes_exclude_set") else None)
+    if excl and f.get("commune") in excl:
+        return False
     cats, pats = sel.get("categories"), sel.get("slug_patterns_extra")
     if cats or pats:
         in_cat = bool(cats) and f.get("category") in cats
