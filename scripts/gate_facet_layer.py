@@ -224,16 +224,26 @@ def main():
         sys.exit(1)
 
     violations = []
+    skipped = 0
     for f in files:
         d = json.load(open(f, encoding="utf-8"))
+        # Corpus = published only, mirroring build_ai_content.py: a draft has
+        # no HTML page, so the AI surface deliberately omits it (its advertised
+        # canonical would be a live 404 — GSC coverage 2026-07-27). Same rule
+        # as gate_ai_content; this gate missed the memo until build-gate
+        # 2264d300 went red on the 5 draft fiches' absent surfaces.
+        if d.get("status") != "published":
+            skipped += 1
+            continue
         slug = d.get("slug") or os.path.basename(f)[:-5]
         frozen = ((d.get("i18n") or {}).get("fr") or {}).get("name") or slug
         check_md(os.path.join(args.content_dir, f"{slug}.md"), "fr", frozen, violations)
         check_md(os.path.join(args.content_dir, "en", f"{slug}.md"), "en", frozen, violations)
         check_json(os.path.join(args.root, "api", "lieu", f"{slug}.json"), d, violations)
 
-    print(f"gate_facet_layer: {len(files)} fiches × (md FR + md EN + json) checked "
-          f"against the byte-verbatim canon")
+    print(f"gate_facet_layer: {len(files) - skipped} published fiches × (md FR + "
+          f"md EN + json) checked against the byte-verbatim canon"
+          + (f" ({skipped} non-published excluded)" if skipped else ""))
     if not violations:
         print("✓ facet layer strict-clean: headings byte-verbatim in order, "
               "JSON contract complete and typed, zero fabrication")
