@@ -323,7 +323,8 @@
 # 3) the 8 draft fiches that llms.txt advertised until today (404 since crawl
 #    2026-07-20..24) → localized hub or commune page. Non-forced rules: the day
 #    a draft publishes, its real page wins automatically.
-# 4) one crawler-ghost from a pre-June escape bug (source is clean today).
+# 4) (dropped) the pre-June crawler-ghost URL: its "=" breaks Netlify's parser
+#    (read as a query param). One stale June-4 crawl — let it 404 out naturally.
 /de/lacs-plages                                   /de/seen/                               301
 /de/lacs-plages/                                  /de/seen/                               301
 /it/lacs-plages                                   /it/laghi/                              301
@@ -598,7 +599,6 @@
 /ar/viarhona-ev17-bas-chablais-thonon             /ar/voies-vertes/                       301
 /he/viarhona-ev17-bas-chablais-thonon             /he/voies-vertes/                       301
 /ja/viarhona-ev17-bas-chablais-thonon             /ja/voies-vertes/                       301
-/es/musee-archeologique-viuz-faverges%3E%3Clink%20rel=/es/musee-archeologique-viuz-faverges   301
 
 # 5 terroir fiches: still draft (no hero photo yet — publish blocks on the
 # photo, not the status; see PR). Their llms.txt ghosts 301 until then.
