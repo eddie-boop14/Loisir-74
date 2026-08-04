@@ -1,13 +1,13 @@
 ---
 facet: is_free
 scope: haute-savoie-74
-lieux_documented: 170
-lieux_total: 429
+lieux_documented: 175
+lieux_total: 434
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Gratuité — index transversal (429 lieux, 170 documentés)
+# Gratuité — index transversal (434 lieux, 175 documentés)
 
 ## Abbaye de Sixt — Sixt-Fer-à-Cheval
 Free entry
@@ -24,6 +24,10 @@ Fiche: https://loisirs74.fr/aire-de-repos-bredannaz-doussard · JSON: https://lo
 ## Ancien remparts du château de Lullin — Lullin
 Gratuit
 Fiche: https://loisirs74.fr/ancien-remparts-chateau-lullin-lullin · JSON: https://loisirs74.fr/api/lieu/ancien-remparts-chateau-lullin-lullin.json
+
+## L'Atelier Chocolat — Faverges-Seythenex
+Free entry
+Fiche: https://loisirs74.fr/atelier-chocolat-faverges-seythenex · JSON: https://loisirs74.fr/api/lieu/atelier-chocolat-faverges-seythenex.json
 
 ## Au Fil du Rail - Jeu de Piste à Servoz — Servoz
 Gratuit
@@ -76,6 +80,10 @@ Fiche: https://loisirs74.fr/boucle-pedestre-detective-nature-jonzier-epagny · J
 ## Les boucles du Coteau — Publier
 Gratuit
 Fiche: https://loisirs74.fr/boucles-coteau-publier · JSON: https://loisirs74.fr/api/lieu/boucles-coteau-publier.json
+
+## Brasserie Artisanale du Léman — Allinges
+Free entry
+Fiche: https://loisirs74.fr/brasserie-artisanale-du-leman-allinges · JSON: https://loisirs74.fr/api/lieu/brasserie-artisanale-du-leman-allinges.json
 
 ## Cascade d'Angon — Talloires-Montmin
 Free entry
@@ -208,6 +216,18 @@ Fiche: https://loisirs74.fr/col-des-glieres · JSON: https://loisirs74.fr/api/li
 ## Le Salève (Col des Pitons) — Collonges-sous-Salève
 Free entry
 Fiche: https://loisirs74.fr/col-des-pitons-saleve · JSON: https://loisirs74.fr/api/lieu/col-des-pitons-saleve.json
+
+## Coopérative Fruitière du Mont Salève — Cruseilles
+Free entry
+Fiche: https://loisirs74.fr/cooperative-fruitiere-mont-saleve-cruseilles · JSON: https://loisirs74.fr/api/lieu/cooperative-fruitiere-mont-saleve-cruseilles.json
+
+## Le Farto – Coopérative du Reblochon Fermier — Thônes
+Free entry
+Fiche: https://loisirs74.fr/cooperative-reblochon-le-farto-thones · JSON: https://loisirs74.fr/api/lieu/cooperative-reblochon-le-farto-thones.json
+
+## Distillerie des Aravis — La Clusaz
+Free entry
+Fiche: https://loisirs74.fr/distillerie-des-aravis-la-clusaz · JSON: https://loisirs74.fr/api/lieu/distillerie-des-aravis-la-clusaz.json
 
 ## Domaine de Guidou — Sciez
 Free entry

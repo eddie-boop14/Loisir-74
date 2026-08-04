@@ -1,13 +1,13 @@
 ---
 facet: hours
 scope: haute-savoie-74
-lieux_documented: 332
-lieux_total: 429
+lieux_documented: 336
+lieux_total: 434
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Horaires — index transversal (429 lieux, 332 documentés)
+# Horaires — index transversal (434 lieux, 336 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 15 juin – 15 sept : tous les jours 10h–19h. 1er janv – 31 mars : lundi au vendredi 14h–18h (fermé 1er janv). 1er avr – 14 juin et 16 sept – 30 sept : lundi au vendredi et dimanche 14h–18h30 (fermé samedi, fermé 1er mai). Oct : lundi au vendredi 14h–18h. Vérifié sur le site officiel le 14 mai 2026 — sous réserve de modifications saisonnières.
@@ -56,6 +56,10 @@ Fiche: https://loisirs74.fr/arcade-art-of-pinball-poisy · JSON: https://loisirs
 ## Funky Factory Thonon — Thonon-les-Bains
 Toute l'année, généralement après-midi et soirée. Horaires étendus week-end. Voir site.
 Fiche: https://loisirs74.fr/arcade-funky-factory-thonon · JSON: https://loisirs74.fr/api/lieu/arcade-funky-factory-thonon.json
+
+## L'Atelier Chocolat — Faverges-Seythenex
+Tous les jours 9h30–19h30 (boutique) · période hivernale (02/01–01/02) sur rendez-vous
+Fiche: https://loisirs74.fr/atelier-chocolat-faverges-seythenex · JSON: https://loisirs74.fr/api/lieu/atelier-chocolat-faverges-seythenex.json
 
 ## Atelier Poterie Chez El' Annecy — Annecy
 Selon calendrier des stages et cours, généralement après-midi et soirée, mercredi et samedi pour les enfants. Voir chez-el.com.
@@ -152,6 +156,10 @@ Fiche: https://loisirs74.fr/bowling-margencel-margencel · JSON: https://loisirs
 ## Bowling International d'Annecy-Sevrier — Sevrier
 Horaires du Bowling International d'Annecy-Sevrier : Mar-jeu 16h-1h, ven-sam 16h-3h, dim 14h-23h. Lundi fermé. Vérifié sur le site officiel le 24 mai 2026 — sous réserve de modifications saisonnières.
 Fiche: https://loisirs74.fr/bowling-sevrier-sevrier · JSON: https://loisirs74.fr/api/lieu/bowling-sevrier-sevrier.json
+
+## Brasserie Artisanale du Léman — Allinges
+À confirmer (TapRoom/boutique)
+Fiche: https://loisirs74.fr/brasserie-artisanale-du-leman-allinges · JSON: https://loisirs74.fr/api/lieu/brasserie-artisanale-du-leman-allinges.json
 
 ## Bun-J-Ride Saint-Jean-de-Sixt — Saint-Jean-de-Sixt
 Sessions saisonnières (mai-octobre), créneaux à réserver. Horaires précis sur demande.
@@ -357,6 +365,10 @@ Fiche: https://loisirs74.fr/cinema-pathe-archamps-imax · JSON: https://loisirs7
 Liaison du Jaillet : 9h10–16h45 (vers Combloux), 9h10–16h15 (vers La Giettaz).
 Fiche: https://loisirs74.fr/combloux · JSON: https://loisirs74.fr/api/lieu/combloux.json
 
+## Coopérative Fruitière du Mont Salève — Cruseilles
+Toute l'année, tous les jours de 9h à 12h sauf le dimanche
+Fiche: https://loisirs74.fr/cooperative-fruitiere-mont-saleve-cruseilles · JSON: https://loisirs74.fr/api/lieu/cooperative-fruitiere-mont-saleve-cruseilles.json
+
 ## Côte 2000 Aventure — Megève
 Mi-juillet à fin août : tous les jours 10h00–17h00 (dernier départ). Reste de l'année : sur réservation uniquement. Vérifié sur le site officiel le 14 mai 2026 — sous réserve de modifications saisonnières et fermeture pour météo.
 Fiche: https://loisirs74.fr/cote-2000-aventure · JSON: https://loisirs74.fr/api/lieu/cote-2000-aventure.json
@@ -392,6 +404,10 @@ Fiche: https://loisirs74.fr/devalkart-de-manigod · JSON: https://loisirs74.fr/a
 ## Disc Golf de Samoëns — Indiana Ventures — Samoëns
 Saison estivale (env. mai-octobre selon enneigement), accès libre journée.
 Fiche: https://loisirs74.fr/disc-golf-indiana-ventures-samoens · JSON: https://loisirs74.fr/api/lieu/disc-golf-indiana-ventures-samoens.json
+
+## Distillerie des Aravis — La Clusaz
+À confirmer auprès de la distillerie (reprise récente)
+Fiche: https://loisirs74.fr/distillerie-des-aravis-la-clusaz · JSON: https://loisirs74.fr/api/lieu/distillerie-des-aravis-la-clusaz.json
 
 ## Écomusée du Bois et de la Forêt — Thônes
 Visite libre 14h30-17h30 (avril-juin et sept-oct) · horaires élargis en juillet-août

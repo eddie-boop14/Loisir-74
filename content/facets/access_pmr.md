@@ -1,13 +1,13 @@
 ---
 facet: access_pmr
 scope: haute-savoie-74
-lieux_documented: 164
-lieux_total: 429
+lieux_documented: 166
+lieux_total: 434
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Accès PMR — index transversal (429 lieux, 164 documentés)
+# Accès PMR — index transversal (434 lieux, 166 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Entrée avec marche(s), sans rampe
@@ -160,6 +160,14 @@ Fiche: https://loisirs74.fr/cinema-pathe-archamps-imax · JSON: https://loisirs7
 ## Combloux — Combloux
 Depuis plus de 15 ans, Combloux (domaine « Les Portes du Mont-Blanc ») a développé des aménagements pour la pratique du handiski. Télésièges conseillés : Beauregard, Pertuis, Ravine, Christomet, Prés, Grande Rare et Tête du Torraz ; télécabine du Jaillet accessible au dual-ski et à l'uni-ski. Parking de Cuchet : 7 places PMR au pied des pistes.
 Fiche: https://loisirs74.fr/combloux · JSON: https://loisirs74.fr/api/lieu/combloux.json
+
+## Coopérative Fruitière du Mont Salève — Cruseilles
+Entrée de plain-pied (≥80 cm), cheminement vers l'accueil de plain-pied, places de parking adaptées et réservées ; pas de toilettes adaptées.
+Fiche: https://loisirs74.fr/cooperative-fruitiere-mont-saleve-cruseilles · JSON: https://loisirs74.fr/api/lieu/cooperative-fruitiere-mont-saleve-cruseilles.json
+
+## Le Farto – Coopérative du Reblochon Fermier — Thônes
+Accessible en fauteuil roulant avec aide ; mention « Tourisme adapté » sur la fiche office de tourisme.
+Fiche: https://loisirs74.fr/cooperative-reblochon-le-farto-thones · JSON: https://loisirs74.fr/api/lieu/cooperative-reblochon-le-farto-thones.json
 
 ## Cordon — Cordon
 Une place réservée aux personnes en situation de handicap se situe juste devant le bâtiment de l'Office de Tourisme de Cordon ; l'établissement Cordon Tourisme est accessible aux personnes en situation de handicap. Aucun dispositif handiski sur les pistes mentionné sur les pages officielles consultées.

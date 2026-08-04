@@ -25,8 +25,8 @@ Le dimanche, beaucoup de portes se ferment — pas toutes. Cette page ne liste q
 - [MK Circuit](https://loisirs74.fr/karting-mk-circuit-scientrier) — Scientrier · [md](https://loisirs74.fr/content/karting-mk-circuit-scientrier.md)
 - [Patinoire Jean Régis](https://loisirs74.fr/patinoire-jean-regis-annecy) — Annecy · [md](https://loisirs74.fr/content/patinoire-jean-regis-annecy.md)
 - [Ponton de l'Embarcadère Wakepark](https://loisirs74.fr/wakepark-ponton-embarcadere-saint-jorioz) — Saint-Jorioz · [md](https://loisirs74.fr/content/wakepark-ponton-embarcadere-saint-jorioz.md)
+- [L'Atelier Chocolat](https://loisirs74.fr/atelier-chocolat-faverges-seythenex) — Faverges-Seythenex · [md](https://loisirs74.fr/content/atelier-chocolat-faverges-seythenex.md)
 - [Château de Bellegarde](https://loisirs74.fr/chateau-bellegarde-thonon) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-bellegarde-thonon.md)
 - [Jardin des Cimes](https://loisirs74.fr/jardin-cimes-passy) — Passy · [md](https://loisirs74.fr/content/jardin-cimes-passy.md)
-- [Musée des Granges de Servette](https://loisirs74.fr/musee-granges-servette-chens-sur-leman) — Chens-sur-Léman · [md](https://loisirs74.fr/content/musee-granges-servette-chens-sur-leman.md)
 
 Source: https://loisirs74.fr/que-faire/un-dimanche/

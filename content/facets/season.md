@@ -1,13 +1,13 @@
 ---
 facet: season
 scope: haute-savoie-74
-lieux_documented: 426
-lieux_total: 429
+lieux_documented: 431
+lieux_total: 434
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Saison — index transversal (429 lieux, 426 documentés)
+# Saison — index transversal (434 lieux, 431 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Toute l'année · Été pour les jardins
@@ -72,6 +72,10 @@ Fiche: https://loisirs74.fr/arcade-art-of-pinball-poisy · JSON: https://loisirs
 ## Funky Factory Thonon — Thonon-les-Bains
 Toute l'année
 Fiche: https://loisirs74.fr/arcade-funky-factory-thonon · JSON: https://loisirs74.fr/api/lieu/arcade-funky-factory-thonon.json
+
+## L'Atelier Chocolat — Faverges-Seythenex
+Toute l'année
+Fiche: https://loisirs74.fr/atelier-chocolat-faverges-seythenex · JSON: https://loisirs74.fr/api/lieu/atelier-chocolat-faverges-seythenex.json
 
 ## Atelier Poterie Chez El' Annecy — Annecy
 Toute l'année
@@ -196,6 +200,10 @@ Fiche: https://loisirs74.fr/bowling-margencel-margencel · JSON: https://loisirs
 ## Bowling International d'Annecy-Sevrier — Sevrier
 Toute l'année
 Fiche: https://loisirs74.fr/bowling-sevrier-sevrier · JSON: https://loisirs74.fr/api/lieu/bowling-sevrier-sevrier.json
+
+## Brasserie Artisanale du Léman — Allinges
+Toute l'année
+Fiche: https://loisirs74.fr/brasserie-artisanale-du-leman-allinges · JSON: https://loisirs74.fr/api/lieu/brasserie-artisanale-du-leman-allinges.json
 
 ## Bun-J-Ride Saint-Jean-de-Sixt — Saint-Jean-de-Sixt
 Mai à octobre
@@ -513,6 +521,14 @@ Fiche: https://loisirs74.fr/col-des-pitons-saleve · JSON: https://loisirs74.fr/
 Hiver (ski) · village animé toute l'année
 Fiche: https://loisirs74.fr/combloux · JSON: https://loisirs74.fr/api/lieu/combloux.json
 
+## Coopérative Fruitière du Mont Salève — Cruseilles
+Toute l'année
+Fiche: https://loisirs74.fr/cooperative-fruitiere-mont-saleve-cruseilles · JSON: https://loisirs74.fr/api/lieu/cooperative-fruitiere-mont-saleve-cruseilles.json
+
+## Le Farto – Coopérative du Reblochon Fermier — Thônes
+Toute l'année
+Fiche: https://loisirs74.fr/cooperative-reblochon-le-farto-thones · JSON: https://loisirs74.fr/api/lieu/cooperative-reblochon-le-farto-thones.json
+
 ## Cordon — Cordon
 Hiver (ski en famille) · été (randonnée, vue sur le Mont-Blanc)
 Fiche: https://loisirs74.fr/cordon · JSON: https://loisirs74.fr/api/lieu/cordon.json
@@ -552,6 +568,10 @@ Fiche: https://loisirs74.fr/devalkart-de-manigod · JSON: https://loisirs74.fr/a
 ## Disc Golf de Samoëns — Indiana Ventures — Samoëns
 Mai à octobre
 Fiche: https://loisirs74.fr/disc-golf-indiana-ventures-samoens · JSON: https://loisirs74.fr/api/lieu/disc-golf-indiana-ventures-samoens.json
+
+## Distillerie des Aravis — La Clusaz
+Toute l'année (station)
+Fiche: https://loisirs74.fr/distillerie-des-aravis-la-clusaz · JSON: https://loisirs74.fr/api/lieu/distillerie-des-aravis-la-clusaz.json
 
 ## Domaine de Guidou — Sciez
 Avril – mai (migration) · Septembre – octobre (quiétude) · Hiver (observation oiseaux d'eau)

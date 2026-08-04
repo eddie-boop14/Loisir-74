@@ -1,7 +1,7 @@
 # Phase 4 — photo assignments (gate artifact)
 
 **Date**: 2026-06-14
-**Total assignments**: 630 (one per (hub × slug) on the FR canonical hub)
+**Total assignments**: 635 (one per (hub × slug) on the FR canonical hub)
 
 ## Per-hub diversity
 
@@ -18,7 +18,7 @@
 | `que-faire` | 73 | 48 | 4 |
 | `sensations-plein-air` | 70 | 58 | 3 |
 | `sentiers` | 40 | 11 | 12 |
-| `sorties-detente` | 25 | 15 | 3 |
+| `sorties-detente` | 30 | 20 | 3 |
 | `sport-jeux` | 52 | 33 | 4 |
 | `stations-de-ski` | 28 | 28 | 1 |
 | `telecabines` | 12 | 12 | 1 |
@@ -536,9 +536,11 @@
 | `sentiers` | `suivez-mouche-alby-sur-cheran` | `nature` | `generique-sentier-foret.jpg` | — | json hero (local) |
 | `sentiers` | `tour-du-mont-blanc-les-houches` | `nature` | `tour-du-mont-blanc-les-houches-hero.jpg` | — | json hero (local) |
 | `sentiers` | `tour-village-abondance-abondance` | `nature` | `generique-sentier-hiver-neige.jpg` | — | json hero (local) |
+| `sorties-detente` | `atelier-chocolat-faverges-seythenex` | `gourmandise` | `generique-chocolaterie.jpg` | — | json hero (local) |
 | `sorties-detente` | `atelier-poterie-chez-el-annecy` | `divertissement` | `generique-atelier-poterie-mains.jpg` | — | json hero (local) |
 | `sorties-detente` | `atelier-poterie-du-prunier-thones` | `divertissement` | `generique-atelier-poterie-mains.jpg` | — | json hero (local) |
 | `sorties-detente` | `atelier-poterie-ryokan-thones` | `divertissement` | `generique-atelier-poterie-mains.jpg` | — | json hero (local) |
+| `sorties-detente` | `brasserie-artisanale-du-leman-allinges` | `terroir` | `generique-brasserie.jpg` | — | json hero (local) |
 | `sorties-detente` | `casino-evian-resort-evian` | `divertissement` | `generique-casino.jpg` | — | json hero (local) |
 | `sorties-detente` | `casino-imperial-palace-annecy` | `divertissement` | `casino-imperial-palace-annecy-hero.jpg` | — | json hero (local) |
 | `sorties-detente` | `casino-saint-julien-saint-julien-en-genevois` | `divertissement` | `generique-casino-2.jpg` | — | json hero (local) |
@@ -553,6 +555,9 @@
 | `sorties-detente` | `cinema-megarama-annecy` | `divertissement` | `generique-cinema-3.jpg` | — | json hero (local) |
 | `sorties-detente` | `cinema-pathe-annecy` | `divertissement` | `generique-cinema-4.jpg` | — | json hero (local) |
 | `sorties-detente` | `cinema-pathe-archamps-imax` | `divertissement` | `generique-cinema-2.jpg` | — | json hero (local) |
+| `sorties-detente` | `cooperative-fruitiere-mont-saleve-cruseilles` | `terroir` | `generique-fromagerie-boutique.jpg` | — | json hero (local) |
+| `sorties-detente` | `cooperative-reblochon-le-farto-thones` | `terroir` | `generique-fromagerie-cave.jpg` | — | json hero (local) |
+| `sorties-detente` | `distillerie-des-aravis-la-clusaz` | `terroir` | `generique-distillerie.jpg` | — | json hero (local) |
 | `sorties-detente` | `grand-casino-annemasse-annemasse` | `divertissement` | `generique-casino.jpg` | — | json hero (local) |
 | `sorties-detente` | `maison-fromage-abondance-abondance` | `patrimoine` | `Meules_d%27abondance_%28cropped%29.jpg` | — | json hero (url) |
 | `sorties-detente` | `musee-poterie-savoyarde-filliere` | `patrimoine` | `generique-musee-classique.jpg` | — | json hero (local) |

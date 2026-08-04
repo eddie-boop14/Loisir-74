@@ -2,12 +2,12 @@
 facet: prices
 scope: haute-savoie-74
 lieux_documented: 427
-lieux_total: 429
+lieux_total: 434
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Tarifs — index transversal (429 lieux, 427 documentés)
+# Tarifs — index transversal (434 lieux, 427 documentés)
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 À partir de 7 € (adulte)

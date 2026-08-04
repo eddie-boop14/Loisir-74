@@ -14,6 +14,7 @@ La Clusaz, Le Grand-Bornand, Saint-Jean-de-Sixt, Manigod et les vallées de Thô
 - [Forêt d'Aventures de Manigod](https://loisirs74.fr/accrobranche-foret-aventures-manigod) — Manigod · [md](https://loisirs74.fr/content/accrobranche-foret-aventures-manigod.md)
 - [Espace Aquatique de La Clusaz](https://loisirs74.fr/espace-aquatique-la-clusaz) — La Clusaz · [md](https://loisirs74.fr/content/espace-aquatique-la-clusaz.md)
 - [Patinoire de La Clusaz](https://loisirs74.fr/patinoire-la-clusaz) — La Clusaz · [md](https://loisirs74.fr/content/patinoire-la-clusaz.md)
+- [Distillerie des Aravis](https://loisirs74.fr/distillerie-des-aravis-la-clusaz) — La Clusaz · [md](https://loisirs74.fr/content/distillerie-des-aravis-la-clusaz.md)
 - [Karting Indoor des Aravis](https://loisirs74.fr/karting-thones) — Thônes · [md](https://loisirs74.fr/content/karting-thones.md)
 - [Cascade mystérieuse](https://loisirs74.fr/cascade-mysterieuse-le-grand-bornand) — Le Grand-Bornand · [md](https://loisirs74.fr/content/cascade-mysterieuse-le-grand-bornand.md)
 - [Col des Aravis](https://loisirs74.fr/col-des-aravis) — La Clusaz · [md](https://loisirs74.fr/content/col-des-aravis.md)
@@ -21,6 +22,7 @@ La Clusaz, Le Grand-Bornand, Saint-Jean-de-Sixt, Manigod et les vallées de Thô
 - [Débaroule — Parcours ludique](https://loisirs74.fr/debaroule-clusaz) — La Clusaz · [md](https://loisirs74.fr/content/debaroule-clusaz.md)
 - [Le Grand-Bornand](https://loisirs74.fr/le-grand-bornand) — Le Grand-Bornand · [md](https://loisirs74.fr/content/le-grand-bornand.md)
 - [Écomusée du Bois et de la Forêt](https://loisirs74.fr/ecomusee-bois-foret-thones) — Thônes · [md](https://loisirs74.fr/content/ecomusee-bois-foret-thones.md)
+- [Le Farto – Coopérative du Reblochon Fermier](https://loisirs74.fr/cooperative-reblochon-le-farto-thones) — Thônes · [md](https://loisirs74.fr/content/cooperative-reblochon-le-farto-thones.md)
 - [Cascade de Fontany](https://loisirs74.fr/cascade-de-fontany-saint-ferreol) — Saint-Ferréol · [md](https://loisirs74.fr/content/cascade-de-fontany-saint-ferreol.md)
 - [Tête du Parmelan](https://loisirs74.fr/tete-du-parmelan) — Dingy-Saint-Clair · [md](https://loisirs74.fr/content/tete-du-parmelan.md)
 - [Via ferrata de la Tour du Jallouvre](https://loisirs74.fr/via-ferrata-jallouvre-le-grand-bornand) — Le Grand-Bornand · [md](https://loisirs74.fr/content/via-ferrata-jallouvre-le-grand-bornand.md)
@@ -32,7 +34,5 @@ La Clusaz, Le Grand-Bornand, Saint-Jean-de-Sixt, Manigod et les vallées de Thô
 - [Bun-J-Ride Saint-Jean-de-Sixt](https://loisirs74.fr/bungee-bun-j-ride-saint-jean-de-sixt) — Saint-Jean-de-Sixt · [md](https://loisirs74.fr/content/bungee-bun-j-ride-saint-jean-de-sixt.md)
 - [Escape Canyon](https://loisirs74.fr/canyoning-escape-canyon) — La Clusaz · [md](https://loisirs74.fr/content/canyoning-escape-canyon.md)
 - [Nordic Event 74 — Chiens de traîneau Le Grand-Bornand](https://loisirs74.fr/chiens-de-traineau-nordic-event-74) — Le Grand-Bornand · [md](https://loisirs74.fr/content/chiens-de-traineau-nordic-event-74.md)
-- [Dévalkart de Manigod](https://loisirs74.fr/devalkart-de-manigod) — Manigod · [md](https://loisirs74.fr/content/devalkart-de-manigod.md)
-- [Grandbo Archerie — Tir à l'arc Le Grand-Bornand](https://loisirs74.fr/tir-a-l-arc-grandbo-archerie-le-grand-bornand) — Le Grand-Bornand · [md](https://loisirs74.fr/content/tir-a-l-arc-grandbo-archerie-le-grand-bornand.md)
 
 Source: https://loisirs74.fr/que-faire/dans-les-aravis/
