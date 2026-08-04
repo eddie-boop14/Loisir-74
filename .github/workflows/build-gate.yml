@@ -290,9 +290,14 @@ jobs:
 
       - name: Upload _site/ as artifact (optional review)
         if: success()
+        # 2026-08-04: this OPTIONAL step was the only red in runs #385-388 —
+        # the ~800 MB artifact filled the Actions storage quota and every
+        # upload died in 1s, painting a fully-green pipeline red. Optional
+        # means optional: never block the run on it, and keep 2 days not 7.
+        continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
           name: site-${{ github.sha }}
           path: _site/
-          retention-days: 7
+          retention-days: 2
           if-no-files-found: error
