@@ -532,6 +532,14 @@ def _duration_hours(fiche):
     return best
 
 
+def _dogs_ok(f):
+    """Documented-accepted only: 'Acceptés…', 'Tolérés…', 'Oui…'. 'Non admis',
+    'interdits' and undocumented policies are excluded — the page promises the
+    dog is WELCOME, so silence is a no. Leash wording renders on each fiche."""
+    v = (_fr_facts(f).get("dogs") or "")
+    return isinstance(v, str) and v.strip().lower().startswith(("accept", "tolér", "toler", "oui"))
+
+
 def _fr_facts(f):
     return f.get("i18n", {}).get("fr", {}).get("facts") or {}
 
@@ -658,6 +666,8 @@ def selector_match(f, sel, sets):
     if sel.get("family_ok") and _fr_facts(f).get("family_ok") is not True:
         return False
     if sel.get("pmr") and not _is_pmr(f):
+        return False
+    if sel.get("dogs_ok") and not _dogs_ok(f):
         return False
     if sel.get("snow_view") and _fr_facts(f).get("snow_view") != sel["snow_view"]:
         return False
