@@ -1,6 +1,6 @@
 Loisirs 74
-An independent leisure guide for Haute-Savoie, France — 426 places, 12 languages,
-6 026 static pages, every fact traced to an official source.
+An independent leisure guide for Haute-Savoie, France — 434 places, 12 languages,
+6 100+ static pages, every fact traced to an official source.
 🌐 loisirs74.fr
 Lakes, waterfalls, viewpoints, ski resorts, cable cars, castles, museums, greenways. No
 aggregator data, no scraped reviews, no invented opening hours.
@@ -37,7 +37,7 @@ Never hardcode the locale count — a CI gate fails the build if you do.
 Pages are queries, not documents
 Beyond the 426 place pages, the site renders a compiled layer where membership is computed,
 never hand-listed:
-16 intent pages — Lac d'Annecy en famille, Quand il pleut à Annecy,
+26 intent pages — Lac d'Annecy en famille, Quand il pleut à Annecy,
 Canicule : où trouver la fraîcheur, Léman côté français … each defined by a deterministic
 predicate over the corpus in data/intent-registry.json
 8 facet hubs — parking, transport, PMR access, free entry, winter
