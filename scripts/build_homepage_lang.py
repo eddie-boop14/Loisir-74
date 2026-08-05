@@ -16,6 +16,7 @@ no /xx/legal 404s). The six live locales are never touched by this module.
 Run: python3 scripts/build_homepage_lang.py <lang>   (writes <lang>/index.html)
 """
 import json
+import siteconfig  # HANDOFF-73: per-site identity
 import re
 import sys
 import html as _html
@@ -26,7 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import locales  # noqa: E402
 import build_hubs as H  # noqa: E402
 
-BASE = "https://loisirs74.fr"
+BASE = siteconfig.BASE_URL
 
 _LEGAL_FR_ROOT = [  # (key in legal_labels, FR root page — the strict chrome routing)
     ("legal", "mentions-legales"),

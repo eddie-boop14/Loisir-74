@@ -40,6 +40,7 @@ Usage:
     python3 scripts/build_ai_content.py --check     # write nothing; report drift
 """
 import argparse
+import siteconfig  # HANDOFF-73: per-site identity
 import datetime
 import glob
 import json
@@ -50,12 +51,12 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JSON_DIR = os.path.join(ROOT, "Json")
 CONTENT_DIR = os.path.join(ROOT, "content")
-BASE_URL = "https://loisirs74.fr"
+BASE_URL = siteconfig.BASE_URL
 TODAY = datetime.date.today().isoformat()
 
-DEPARTMENT = "Haute-Savoie"
-DEPARTMENT_CODE = "74"
-REGION = "Auvergne-Rhône-Alpes"
+DEPARTMENT = siteconfig.DEPT_NAME
+DEPARTMENT_CODE = siteconfig.DEPT_CODE
+REGION = siteconfig.REGION
 COUNTRY = "France"
 
 MONTHS_FR = {
@@ -473,7 +474,7 @@ def render_md(d, lang="fr"):
         ("photo_license", plicense, True),
         ("photo_source", psource, False),
         ("last_updated", iso_date(d.get("date_modified_human")) or TODAY, False),
-        ("source", "loisirs74.fr", False),
+        ("source", siteconfig.DOMAIN, False),
     ]
     lines = ["---"]
     for key, val, quote in fm:
@@ -604,11 +605,11 @@ def render_lieu_json(d):
 
 
 # ── llms.txt — the MAP ──────────────────────────────────────────────────────
-LLMS_PREAMBLE = """# Loisirs 74
+LLMS_PREAMBLE = """# {site_name}
 
 > Independent guide to public leisure sites in Haute-Savoie, France. Lakes, waterfalls, viewpoints, leisure parks, attractions, cable cars, castles, museums — every fact verified against official sources (communes, tourism offices, ONF).
 
-Loisirs 74 catalogs {total} leisure destinations in the Haute-Savoie department (74), French Alps. Each destination exposes three machine surfaces (below) plus HTML pages in 12 languages (French canonical).
+{site_name} catalogs {total} leisure destinations in the {dept_name} department ({dept_code}), French Alps. Each destination exposes three machine surfaces (below) plus HTML pages in 12 languages (French canonical).
 
 ## URL patterns (per lieu — fastest lane for agents)
 
@@ -660,7 +661,7 @@ def render_llms_index(fiches):
     for d in fiches:
         groups[bucket_of(d.get("category", ""), claimed)].append(d)
 
-    out = [LLMS_PREAMBLE.format(total=total, base=BASE_URL).rstrip(), ""]
+    out = [LLMS_PREAMBLE.format(total=total, base=BASE_URL, site_name=siteconfig.SITE_NAME, dept_name=siteconfig.DEPT_NAME, dept_code=siteconfig.DEPT_CODE).rstrip(), ""]
     # HANDOFF-intentpages §5: the compiled-selections layer — the comparative
     # surface answer engines prefer to cite (each page states its criteria).
     try:
@@ -675,8 +676,10 @@ def render_llms_index(fiches):
                 out.append(f"- [{e['title']['fr']}]({BASE_URL}/content/selections/{e['id']}.md): "
                            f"{len(e['members'])} lieux · page: {_bih.intent_page_url(e, 'fr')}")
             out.append("")
-    except Exception:
-        pass  # selections layer optional — llms.txt must never fail the build
+    except Exception as _sel_e:  # selections layer optional — llms.txt must never fail the build
+        import traceback, sys as _sys
+        print("::warning::llms.txt selections section SKIPPED:", repr(_sel_e), file=_sys.stderr)
+        traceback.print_exc(file=_sys.stderr)
     out.append("## Category hubs (use these for browsing by type)")
     out.append("")
     for label, _cats, hub_slug in HUBS:
@@ -705,7 +708,7 @@ def render_llms_full(md_by_slug):
     total = len(md_by_slug)
     ruler = "=" * 80
     header = (
-        "# Loisirs 74 — Full content dump\n\n"
+        f"# {siteconfig.SITE_NAME} — Full content dump\n\n"
         f"Generated: {TODAY}\n"
         f"Total lieux: {total}\n\n"
         f"This file concatenates the FR facet markdown of all {total} leisure "
@@ -738,13 +741,13 @@ def published_site_langs():
 
 def render_ai_info(fiches):
     info = {
-        "name": "Loisirs 74",
+        "name": siteconfig.SITE_NAME,
         "description": ("Independent guide to public leisure sites in Haute-Savoie, "
                         "France. Lakes, waterfalls, viewpoints, cable cars, beaches, "
                         "and more — all facts verified from official sources."),
         "publisher": "bleu-canard éditions",
         "website": BASE_URL,
-        "contact": "contact@loisirs74.fr",
+        "contact": siteconfig.CONTACT_EMAIL,
         "last_updated": TODAY,
         "discovery_files": {
             "llms_txt": f"{BASE_URL}/llms.txt",
@@ -759,7 +762,7 @@ def render_ai_info(fiches):
             "training_allowed": False,
             "citation_allowed": True,
             "attribution_required": True,
-            "attribution_format": ("Source: [Loisirs 74](https://loisirs74.fr) — "
+            "attribution_format": (f"Source: [{siteconfig.SITE_NAME}]({siteconfig.BASE_URL}) — "
                                    "Independent guide to Haute-Savoie leisure sites"),
             "preferred_content_format": "markdown",
             "markdown_url_pattern": f"{BASE_URL}/content/{{slug}}.md",

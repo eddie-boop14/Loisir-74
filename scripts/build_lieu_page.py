@@ -16,6 +16,7 @@ translated via the CHROME table.
 Produces a single-file HTML page at <out_dir>/<slug>.html.
 """
 import argparse
+import siteconfig  # HANDOFF-73: per-site identity
 import html as html_lib
 import json
 import math
@@ -31,7 +32,7 @@ import locales  # noqa: E402
 import assets  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
-BASE_URL = "https://loisirs74.fr"
+BASE_URL = siteconfig.BASE_URL
 
 
 # Authored inline HTML allowed in prose fields (HANDOFF-23). A string carrying
@@ -1381,7 +1382,7 @@ def _invite_card(p, slug):
         '<article class="partner-invite">'
         f'<div class="invite-icon" aria-hidden="true">{icon}</div>'
         f'<h4>{esc(title)}</h4><p>{esc(desc)}</p>'
-        f'<a class="cta" href="https://loisirs74.fr{lang_prefix}/devenir-partenaire?lieu={attr(slug)}">'
+        f'<a class="cta" href="{BASE_URL}{lang_prefix}/devenir-partenaire?lieu={attr(slug)}">'
         f'{T("become_partner")} {SVG_ARROW}</a>'
         '</article>'
     )
@@ -1737,7 +1738,7 @@ def facts_title(d):
     if t and name.lower().startswith(t.lower()):
         t = ""
     core = f"{t} {name}".strip()
-    return f"{core} · {commune} | Loisirs 74" if commune else f"{core} | Loisirs 74"
+    return f"{core} · {commune} | {siteconfig.SITE_NAME}" if commune else f"{core} | {siteconfig.SITE_NAME}"
 
 
 def facts_meta(d):
@@ -1782,7 +1783,7 @@ def build_ldjson(d, desc_override=""):
             "@type": "WebSite",
             "@id": f"{BASE_URL}/#website",
             "url": site_url,
-            "name": "Loisirs 74",
+            "name": siteconfig.SITE_NAME,
             "inLanguage": in_lang,
         },
         {
@@ -1938,7 +1939,7 @@ def build_head(d):
 <meta property="og:description" content="{attr(desc)}">
 <meta property="og:url" content="{page_url}">
 <meta property="og:locale" content="{og_loc}">
-<meta property="og:site_name" content="Loisirs 74">
+<meta property="og:site_name" content="{siteconfig.SITE_NAME}">
 <meta property="og:image:alt" content="{attr(hero_alt)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{attr(name)}">
@@ -1984,7 +1985,7 @@ def build_header(d):
     return f"""<body>
 <a class="skip" href="#main">{T("skip")}</a>
 <header class="site"><div class="wrap">
-  <a class="brand" href="{site_url}" aria-label="Loisirs 74"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a>
+  <a class="brand" href="{site_url}" aria-label="{siteconfig.SITE_NAME}"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>{siteconfig.SITE_NAME}</span></a>
   <nav><details class="lang-picker"><summary aria-label="{T("lang_choose")}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>{T("lang_label")}</summary><div class="lang-menu">{pick_html}</div></details></nav>
 </div></header>
 <main id="main">
@@ -2102,7 +2103,7 @@ def site_footer():
                         for h, t in _footer_guides(_LANG))
     return (
         '<footer class="site"><div class="wrap"><div class="foot-grid">'
-        f'<div class="foot-col"><a class="brand" href="{BASE_URL}{lp}/" style="margin-bottom:.85rem"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>Loisirs 74</span></a><p>{T("f_tagline")}</p></div>'
+        f'<div class="foot-col"><a class="brand" href="{BASE_URL}{lp}/" style="margin-bottom:.85rem"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>{siteconfig.SITE_NAME}</span></a><p>{T("f_tagline")}</p></div>'
         f'<div class="foot-col"><h4>{T("f_explore")}</h4><ul><li><a href="{BASE_URL}{lp}/">{T("home")}</a></li>{guide_lis}</ul></div>'
         f'<div class="foot-col"><h4>{T("f_contribute")}</h4><ul><li><a href="mailto:photos@loisirs74.fr">{T("f_send_photos")}</a></li><li><a href="{BASE_URL}{legal_lp}/signaler">{T("f_report")}</a></li><li><a href="{BASE_URL}{legal_lp}/devenir-partenaire">{T("f_become_p")}</a></li></ul></div>'
         f'<div class="foot-col"><h4>{T("f_legal")}</h4><ul><li><a href="{BASE_URL}{legal_lp}/mentions-legales">{T("f_legal_link")}</a></li><li><a href="{BASE_URL}{legal_lp}/confidentialite">{T("f_privacy")}</a></li><li><a href="{BASE_URL}{legal_lp}/cgv">{T("f_cgv")}</a></li></ul></div>'
@@ -2145,7 +2146,7 @@ def related_lieux_block(related, lang):
         nm = _related_name(slug, lang)
         if not nm:
             continue
-        url = f"https://loisirs74.fr{prefix}/{slug}"
+        url = f"{BASE_URL}{prefix}/{slug}"
         items.append(f'<li><a href="{attr(url)}">{esc(nm)}</a></li>')
     if not items:
         return ""
@@ -2363,7 +2364,7 @@ def _render_rel_card(slug, lang, labels):
     img = _rel_img_src(d["hero_image"])
     ref = ' referrerpolicy="no-referrer"' if img.startswith(("http://", "https://")) else ""
     prefix = "" if lang == "fr" else f"/{lang}"
-    fiche_url = f"https://loisirs74.fr{prefix}/{slug}"
+    fiche_url = f"{BASE_URL}{prefix}/{slug}"
     maps_q = quote(f"{name}, {commune}, Haute-Savoie".strip(", "), safe="")
     maps_url = f"https://www.google.com/maps/dir/?api=1&destination={maps_q}"
     desc_html = f'<p class="card-desc">{esc(desc)}</p>' if desc else ""

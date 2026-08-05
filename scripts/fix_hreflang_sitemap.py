@@ -7,6 +7,7 @@ file existence (not from the existing, partly-buggy on-page blocks), then:
 Default (no flag): dry-run report + validation only.
 """
 import re
+import siteconfig  # HANDOFF-73: per-site identity
 import sys
 import glob
 from pathlib import Path
@@ -14,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import locales  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-BASE = "https://loisirs74.fr/"
+BASE = siteconfig.BASE_URL + "/"
 LANGS = list(locales.VISIBLE_SECONDARY)
 LINK_RE = re.compile(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">')
 RUN_RE = re.compile(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">(?:\n<link rel="alternate" hreflang="[^"]*" href="[^"]*">)*')
@@ -441,12 +442,12 @@ def rebuild_sitemap(groups, multilingual):
         member_dates.append(date_map.get("scripts/build_hubs.py") or "")
         hub_max = max(d for d in member_dates if d) if any(member_dates) else None
         for lang, slug in HUB_SLUGS_PER_LANG[canon].items():
-            url = f"https://loisirs74.fr/{slug}/" if lang == "fr" else f"https://loisirs74.fr/{lang}/{slug}/"
+            url = f"{BASE}/{slug}/" if lang == "fr" else f"{BASE}/{lang}/{slug}/"
             hub_date[url] = hub_max
     # Curated hubs (que-faire, sensations-plein-air): take build_hubs date as proxy
     for canon in ("que-faire", "sensations-plein-air"):
         for lang, slug in HUB_SLUGS_PER_LANG[canon].items():
-            url = f"https://loisirs74.fr/{slug}/" if lang == "fr" else f"https://loisirs74.fr/{lang}/{slug}/"
+            url = f"{BASE}/{slug}/" if lang == "fr" else f"{BASE}/{lang}/{slug}/"
             hub_date[url] = date_map.get("scripts/build_hubs.py")
 
     homepage_dates = [date_map.get(p) for p in structural_paths]
@@ -454,7 +455,7 @@ def rebuild_sitemap(groups, multilingual):
 
     def lastmod_for(u):
         # Strip protocol/host
-        tail = u.replace("https://loisirs74.fr", "").lstrip("/").rstrip("/")
+        tail = u.replace(BASE, "").lstrip("/").rstrip("/")
         # 1) Real (non-boundary) git date of the URL's source
         if tail == "" or tail in set(locales.VISIBLE_SECONDARY):
             if homepage_max:

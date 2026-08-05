@@ -21,6 +21,7 @@ of the repo root. This script:
 Idempotent: two consecutive runs produce identical _site/.
 """
 import json
+import siteconfig  # HANDOFF-73: per-site identity
 import re
 import shutil
 import sys
@@ -207,7 +208,7 @@ def filter_sitemap(path, site_root):
         if not m:
             kept_blocks.append(blk); continue
         url = m.group(1)
-        p = url[len("https://loisirs74.fr/"):]
+        p = url[len(siteconfig.BASE_URL + "/"):]
         if not p:
             target = site_root / "index.html"
         elif p.endswith("/"):

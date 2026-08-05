@@ -27,6 +27,7 @@ Usage:
     python3 scripts/inject_analytics.py --apply
 """
 import argparse
+import siteconfig  # HANDOFF-73: per-site identity
 import glob
 import os
 import re
@@ -36,7 +37,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP_DIRS = ("_site", ".git", "node_modules", "scripts", "reports", "Json", "api", "content")
 
 # loisirs74.fr — Cloudflare Web Analytics. NOT any partner property's token.
-TOKEN = "4deae63f065c49418bc6b21258187d78"
+TOKEN = siteconfig.CF_BEACON_TOKEN
 
 SNIPPET = (
     "<!-- Cloudflare Web Analytics -->"

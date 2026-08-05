@@ -30,6 +30,7 @@ Examples:
   python3 scripts/indexnow_ping.py --urls one.txt --send    # fire a list
 """
 import argparse
+import siteconfig  # HANDOFF-73: per-site identity
 import datetime
 import json
 import os
@@ -41,7 +42,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import locales  # noqa: E402
 
-HOST = "loisirs74.fr"
+HOST = siteconfig.DOMAIN
 KEY = "e8aa76cdaf4348d390571ff658e649ca"
 KEY_LOCATION = f"https://{HOST}/{KEY}.txt"
 ENDPOINT = "https://api.indexnow.org/indexnow"

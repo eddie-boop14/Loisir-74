@@ -25,6 +25,7 @@ Usage:
     # then: python3 scripts/fix_hreflang_sitemap.py --apply --sitemap
 """
 from __future__ import annotations
+import siteconfig  # HANDOFF-73: per-site identity
 
 import argparse
 import html as html_lib
@@ -41,7 +42,7 @@ import assets  # noqa: E402
 
 LANGS = list(locales.PROSE)          # render axis: commune pages built per prose lang
 VIS = list(locales.VISIBLE)          # isolation-ok: nav/hreflang lists the visible roster (incl. pl facts tree)
-BASE = "https://loisirs74.fr"
+BASE = siteconfig.BASE_URL
 MANIFEST = ROOT / "data" / "commune-layer.json"
 INTROS = ROOT / "data" / "commune-intros.json"
 NEARME_LABELS = json.loads((ROOT / "data" / "nearme-labels.json").read_text(encoding="utf-8"))
@@ -331,7 +332,7 @@ def jsonld_collection(c, lang, url):
         "url": url,
         "name": c["commune"],
         "inLanguage": lang,
-        "isPartOf": {"@type": "WebSite", "url": f"{BASE}/", "name": "Loisirs 74"},
+        "isPartOf": {"@type": "WebSite", "url": f"{BASE}/", "name": siteconfig.SITE_NAME},
         "numberOfItems": c["lieux_count"],
     }
     return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False, indent=2) + "</script>"
@@ -344,7 +345,7 @@ def render_page(c, lang, intros):
     commune = c["commune"]
     alts = {l: commune_url(slug, l) for l in VIS}
     url = alts[lang]
-    title = f"{_title_q(lang, commune)} · Loisirs 74"
+    title = f"{_title_q(lang, commune)} · {siteconfig.SITE_NAME}"
     if lang in STRICT_LANGS:
         # strict prose: a facts language shows its OWN intro or none at all —
         # the FR fallback below is for the six live locales only.
@@ -414,13 +415,13 @@ def render_page(c, lang, intros):
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,50;1,9..144,300..500,50&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 {lift_style(lang, hero_css)}
 <meta property="og:type" content="website"/>
-<meta property="og:site_name" content="Loisirs 74"/>
+<meta property="og:site_name" content="{siteconfig.SITE_NAME}"/>
 <meta property="og:locale" content="{OG_LOCALE[lang]}"/>
 <meta property="og:url" content="{url}"/>
 <meta property="og:title" content="{attr(title)}"/>
 <meta property="og:description" content="{attr(meta_desc)}"/>
-<meta content="https://loisirs74.fr/og-image.jpg" property="og:image"/>
-<meta content="https://loisirs74.fr/og-image.jpg" name="twitter:image"/>
+<meta content="{BASE}/og-image.jpg" property="og:image"/>
+<meta content="{BASE}/og-image.jpg" name="twitter:image"/>
 {jsonld_itemlist(c, lang, url, alts)}
 {jsonld_collection(c, lang, url)}
 </head>"""

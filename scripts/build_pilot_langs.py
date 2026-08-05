@@ -22,6 +22,7 @@ CRITICAL ISOLATION (so it can never disturb the 6 ranking languages):
 Frozen FR proper nouns verbatim. Protected fiches never rendered.
 """
 import html as _h
+import siteconfig  # HANDOFF-73: per-site identity
 import json
 import os
 import sys
@@ -34,7 +35,7 @@ LABELS = json.loads(open(os.path.join(ROOT, "data", "i18n-labels.json"), encodin
 LIVE6 = set(locales.VISIBLE)  # isolation-ok: exclude visible langs from the pilot
 RTL = set(LABELS["_meta"].get("rtl", []))
 PROTECTED = {"chez-nous-a-la-plage", "chalet-du-tornet"}
-BASE = "https://loisirs74.fr"
+BASE = siteconfig.BASE_URL
 # HANDOFF-11 — the Latin pilot is flipped INDEXABLE to start the GSC clock:
 # self-canonical + index,follow + listed in sitemap (own URLs only), but kept
 # OUT of the 6 live languages' hreflang clusters. RTL (ar/he) stay excluded.

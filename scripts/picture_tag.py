@@ -5,6 +5,7 @@ bakes real width/height to kill CLS — looked up from
 `data/img-dims.json` (built by `scripts/build_img_dims.py`).
 """
 from __future__ import annotations
+import siteconfig  # HANDOFF-73: per-site identity
 
 import html as _html
 import json
@@ -38,7 +39,7 @@ def _local_rel(img_src):
     """
     if not img_src:
         return None
-    for pre in ("https://loisirs74.fr/", "/"):
+    for pre in (siteconfig.BASE_URL + "/", "/"):
         if img_src.startswith(pre):
             rel = img_src[len(pre):].lstrip("/")
             if rel and (ROOT / rel).exists():

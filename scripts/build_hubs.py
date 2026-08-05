@@ -17,6 +17,7 @@ We DO NOT touch:
 Idempotent: two consecutive runs produce identical files.
 """
 import argparse
+import siteconfig  # HANDOFF-73: per-site identity
 import json
 import re
 import sys
@@ -179,10 +180,10 @@ def pick_photo(d, photo_index, used_in_hub):
         return (hero, None, hero.rsplit("/", 1)[-1], "json hero (url)")
     # Local path hero ("/<slug>-hero.jpg" or "/generique-X.jpg")
     if hero.startswith("/"):
-        return (f"https://loisirs74.fr{hero}", None,
+        return (f"{siteconfig.BASE_URL}{hero}", None,
                 hero.lstrip("/").rsplit("/", 1)[-1], "json hero (local)")
     # Bare filename (e.g. "generique-aquatique-toboggan.jpg")
-    return (f"https://loisirs74.fr/{hero}", None, hero, "json hero (bare)")
+    return (f"{siteconfig.BASE_URL}/{hero}", None, hero, "json hero (bare)")
 
 
 # ---------------------------------------------------------------------------
@@ -388,7 +389,7 @@ def patch_hub_head(html, canon, lang, slug, descriptions):
     # 3) OG block (og:type, og:site_name, og:locale, og:url, og:title,
     # og:description). og:image stays where it is. Idempotent — replace
     # an existing block of our 6 tags or insert before og:image.
-    url = f"https://loisirs74.fr/{slug}/" if lang == "fr" else f"https://loisirs74.fr/{lang}/{slug}/"
+    url = f"{siteconfig.BASE_URL}/{slug}/" if lang == "fr" else f"{siteconfig.BASE_URL}/{lang}/{slug}/"
     og_html = (
         f'<meta property="og:type" content="website"/>\n'
         f'<meta property="og:site_name" content="Loisirs 74"/>\n'
@@ -415,7 +416,7 @@ def patch_hub_head(html, canon, lang, slug, descriptions):
         # inject everything including og:image before </head>.
         html = html.replace(
             '</head>',
-            og_html + '\n<meta property="og:image" content="https://loisirs74.fr/og-image.jpg"/>\n</head>',
+            og_html + '\n<meta property="og:image" content=siteconfig.BASE_URL + "/og-image.jpg"/>\n</head>',
             1,
         )
     return html
@@ -479,19 +480,19 @@ def fiche_card_html(d, lang, slug, picked_photo=None):
         if hero.startswith(("http://", "https://", "//")):
             img_src = hero
         elif hero.startswith("/"):
-            img_src = f"https://loisirs74.fr{hero}"
+            img_src = f"{siteconfig.BASE_URL}{hero}"
         elif hero:
-            img_src = f"https://loisirs74.fr/{hero}"
+            img_src = f"{siteconfig.BASE_URL}/{hero}"
         else:
             cat = d.get("category") or "attraction"
-            img_src = f"https://loisirs74.fr/img/generique/generique-{cat}.jpg"
+            img_src = f"{siteconfig.BASE_URL}/img/generique/generique-{cat}.jpg"
 
     if lang in STRICT_LANGS:
         alt = loc.get("hero_alt") or name   # never FR alt prose on a facts page
     else:
         alt = (loc.get("hero_alt") or fr.get("hero_alt") or name)
     lang_prefix = f"/{lang}" if lang != "fr" else ""
-    fiche_url = f"https://loisirs74.fr{lang_prefix}/{slug}"
+    fiche_url = f"{siteconfig.BASE_URL}{lang_prefix}/{slug}"
     official = d.get("official_site_url") or ""
     lat = d.get("latitude"); lon = d.get("longitude")
     from urllib.parse import quote
@@ -883,7 +884,7 @@ def build_hub_itemlist(union, fr_hub, lang, hub_slug):
     string (indent=2). Deterministic: members are already slug-sorted in
     `union`. Replaces the previously-static, drift-prone block."""
     prefix = "" if lang == "fr" else f"/{lang}"
-    hub_url = f"https://loisirs74.fr{prefix}/{hub_slug}/"
+    hub_url = f"{siteconfig.BASE_URL}{prefix}/{hub_slug}/"
     display = HUB_DISPLAY[fr_hub][lang]
     elements = []
     for i, (slug, d) in enumerate(union, start=1):
@@ -893,7 +894,7 @@ def build_hub_itemlist(union, fr_hub, lang, hub_slug):
         item = {
             "@type": "TouristAttraction",
             "name": name,
-            "url": f"https://loisirs74.fr{prefix}/{slug}",
+            "url": f"{siteconfig.BASE_URL}{prefix}/{slug}",
         }
         commune = d.get("commune")
         if commune:
@@ -973,7 +974,7 @@ def patch_homepage_sorties(lang):
     if not cards:
         return False
     prefix = f"/{lang}" if lang != "fr" else ""
-    hub_url = f"https://loisirs74.fr{prefix}/{hub_slug}/"
+    hub_url = f"{siteconfig.BASE_URL}{prefix}/{hub_slug}/"
     h2 = _html.escape(HUB_DISPLAY["sorties-detente"][lang], quote=False)
     subline = _html.escape(SORTIES_SUBLINE.get(lang, SORTIES_SUBLINE["fr"]), quote=False)
     sa = re.search(r'<a class="see-all"[^>]*>(.*?)<svg', html, re.S)
@@ -1069,13 +1070,13 @@ def patch_homepage_completeness(lang):
     #    hub. Deterministic order (ALL_BASE_HUBS) ⇒ idempotent.
     prefix = f"/{lang}" if lang != "fr" else ""
     pj_slug = hub_locale_map("parcs-jardins").get(lang) or "parcs-jardins"
-    pj_url = f"https://loisirs74.fr{prefix}/{pj_slug}/"
+    pj_url = f"{siteconfig.BASE_URL}{prefix}/{pj_slug}/"
     missing = []
     for hub in ALL_BASE_HUBS:
         slug = hub_locale_map(hub).get(lang) or hub
         if not (base / slug / "index.html").exists():
             continue
-        url = f"https://loisirs74.fr{prefix}/{slug}/"
+        url = f"{siteconfig.BASE_URL}{prefix}/{slug}/"
         if url not in html:
             missing.append(f'<li><a href="{url}">{HUB_DISPLAY[hub][lang]}</a></li>')
     if missing:
@@ -1241,7 +1242,7 @@ def render_facts_hub_page(fr_hub, lang, union, communes_in_hub, has_free):
     accueil = il["ui_chrome"]["accueil"][lang]
     display = HUB_DISPLAY[fr_hub][lang]
     lang_slug = hub_slug_for(fr_hub, lang)
-    url = f"https://loisirs74.fr/{lang}/{lang_slug}/"
+    url = f"{siteconfig.BASE_URL}/{lang}/{lang_slug}/"
 
     html = (ROOT / fr_hub / "index.html").read_text(encoding="utf-8")
 
@@ -1264,8 +1265,8 @@ def render_facts_hub_page(fr_hub, lang, union, communes_in_hub, has_free):
                   f'<link rel="canonical" href="{url}">', html, count=1)
 
     # --- header: brand link, near-me labels, language picker ------------------
-    html = html.replace('<a class="brand" href="https://loisirs74.fr/">',
-                        f'<a class="brand" href="https://loisirs74.fr/{lang}/">', 1)
+    html = html.replace('<a class="brand" href=siteconfig.BASE_URL + "/">',
+                        f'<a class="brand" href="{siteconfig.BASE_URL}/{lang}/">', 1)
     html = re.sub(r'<!--nearme:start-->.*?<!--nearme:end-->',
                   lambda _m: f'<!--nearme:start-->{_nearme_button_html(lang)}<!--nearme:end-->',
                   html, flags=re.S, count=1)
@@ -1275,7 +1276,7 @@ def render_facts_hub_page(fr_hub, lang, union, communes_in_hub, has_free):
     ends = _loc.endonyms(_loc.VISIBLE)  # isolation-ok: picker endonyms for the full roster
     cur_attr = 'aria-current="true" '
     menu = "".join(
-        f'<a {cur_attr if l == lang else ""}href="{alts.get(l, "https://loisirs74.fr/")}" '
+        f'<a {cur_attr if l == lang else ""}href="{alts.get(l, "{siteconfig.BASE_URL}/")}" '
         f'hreflang="{l}">{ends[l]}</a>' for l in _loc.VISIBLE)  # isolation-ok: roster nav
     html = re.sub(
         r'<details class="lang-picker">\s*<summary>.*?</summary>\s*<div class="lang-menu">.*?</div>\s*</details>',
@@ -1286,7 +1287,7 @@ def render_facts_hub_page(fr_hub, lang, union, communes_in_hub, has_free):
     # --- breadcrumb ------------------------------------------------------------
     html = re.sub(
         r'(<nav aria-label="breadcrumb" class="crumb">\s*)<a href="https://loisirs74\.fr/">[^<]*</a>(\s*<span class="sep">/</span>\s*)<b>[^<]*</b>',
-        lambda m: f'{m.group(1)}<a href="https://loisirs74.fr/{lang}/">{_html.escape(accueil, quote=False)}</a>'
+        lambda m: f'{m.group(1)}<a href="{siteconfig.BASE_URL}/{lang}/">{_html.escape(accueil, quote=False)}</a>'
                   f'{m.group(2)}<b>{_html.escape(display, quote=False)}</b>',
         html, count=1)
 
@@ -1321,11 +1322,11 @@ def render_facts_hub_page(fr_hub, lang, union, communes_in_hub, has_free):
         def _cat_link(m):
             path = m.group(1)
             if path == "":
-                return f'<a href="https://loisirs74.fr/{lang}/">'
+                return f'<a href="{siteconfig.BASE_URL}/{lang}/">'
             if (ROOT / path / "index.html").exists() and path in HUB_DISPLAY:
-                return f'<a href="https://loisirs74.fr/{lang}/{hub_slug_for(path, lang)}/">'
+                return f'<a href="{siteconfig.BASE_URL}/{lang}/{hub_slug_for(path, lang)}/">'
             if (ROOT / path / "index.html").exists():
-                return f'<a href="https://loisirs74.fr/{lang}/{hub_slug_for(path, lang)}/">'
+                return f'<a href="{siteconfig.BASE_URL}/{lang}/{hub_slug_for(path, lang)}/">'
             return m.group(0)
         f_html = re.sub(r'<a href="https://loisirs74\.fr/([a-z0-9-]*)/?">', _cat_link, f_html)
         for fr_lbl, key in [("Mentions légales", "legal"), ("Confidentialité", "privacy"),
@@ -1351,7 +1352,7 @@ def render_facts_hub_page(fr_hub, lang, union, communes_in_hub, has_free):
         html = html.replace(foot.group(0), f_html, 1)
         # language column: one entry per visible language, this page's own alternates
         new_ul = "<ul>" + "".join(
-            f'<li><a href="{alts.get(l, "https://loisirs74.fr/")}" hreflang="{l}">{ends[l]}</a></li>'
+            f'<li><a href="{alts.get(l, "{siteconfig.BASE_URL}/")}" hreflang="{l}">{ends[l]}</a></li>'
             for l in _loc.VISIBLE) + "</ul>"  # isolation-ok: roster nav
         html = re.sub(
             r'<ul>(?:\s*<li><a href="[^"]*" hreflang="[a-z-]+">[^<]*</a></li>\s*)+</ul>',
