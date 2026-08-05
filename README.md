@@ -75,3 +75,9 @@ Site content © Bleu canard édition. Open data sources keep their own licences 
 under Etalab Open License, photography credited per photo-credits.json, Wikimedia Commons per
 each file's terms.
 2026 · Bleu canard édition · Edmaster & Claudius · Tous droits réservés 🦆
+## License
+
+Source-available, not open source: read and learn freely; redeploying the engine,
+republishing the editorial corpus, or reusing photos needs written permission —
+see [LICENSE.md](LICENSE.md). The facts about public places belong to everyone;
+the machine that serves them belongs to us. 🦆

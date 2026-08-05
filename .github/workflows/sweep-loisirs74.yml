@@ -52,6 +52,7 @@ jobs:
 
       - name: Upload report artifacts
         if: always()        # upload even if the script errored partway
+        continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
           name: sweep-reports-${{ github.run_id }}

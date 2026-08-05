@@ -65,6 +65,7 @@ jobs:
 
       - name: Upload ping log (audit trail)
         if: github.event.inputs.mode == 'send'
+        continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
           name: indexnow-ping-log-${{ github.run_id }}

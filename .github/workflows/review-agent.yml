@@ -39,6 +39,7 @@ jobs:
 
       - name: Upload verdicts artifact
         if: always()
+        continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
           name: review-verdicts-${{ github.run_id }}
