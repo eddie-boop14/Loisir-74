@@ -43,6 +43,9 @@ import assets  # noqa: E402
 LANGS = list(locales.PROSE)          # render axis: commune pages built per prose lang
 VIS = list(locales.VISIBLE)          # isolation-ok: nav/hreflang lists the visible roster (incl. pl facts tree)
 BASE = siteconfig.BASE_URL
+# "loisirs74.fr" -> "loisirs74": the lowercase wordmark used in the commune
+# page chrome. Derived, so a new site never hand-edits it.
+BRAND_SHORT = siteconfig.DOMAIN.split(".")[0]
 MANIFEST = ROOT / "data" / "commune-layer.json"
 INTROS = ROOT / "data" / "commune-intros.json"
 NEARME_LABELS = json.loads((ROOT / "data" / "nearme-labels.json").read_text(encoding="utf-8"))
@@ -299,7 +302,7 @@ def jsonld_itemlist(c, lang, url, alts):
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": c["commune"],
-                "addressRegion": "Haute-Savoie",
+                "addressRegion": siteconfig.DEPT_NAME,
                 "addressCountry": "FR",
             },
         }
@@ -426,7 +429,7 @@ def render_page(c, lang, intros):
 {jsonld_collection(c, lang, url)}
 </head>"""
 
-    catcher = f"{c['lieux_count']} {C['places_in'][lang]} {commune} · Haute-Savoie"
+    catcher = f"{c['lieux_count']} {C['places_in'][lang]} {commune} · {siteconfig.DEPT_NAME}"
     fs = _filter_strings(lang)
     intro_section = (
         '<section aria-label="intro" class="hub-intro">\n'
@@ -448,7 +451,7 @@ def render_page(c, lang, intros):
 <circle cx="28" cy="10" fill="#e07a3f" r="2.5"></circle>
 </svg>
 </span>
-<span><b>loisirs74</b> <i>· Haute-Savoie</i></span>
+<span><b>{BRAND_SHORT}</b> <i>· {siteconfig.DEPT_NAME}</i></span>
 </a>
 {nearme_button(lang, "margin-left:auto")}
 <details class="lang-picker">

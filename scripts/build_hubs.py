@@ -192,136 +192,18 @@ def pick_photo(d, photo_index, used_in_hub):
 # (90 entries, 120-160 chars, frozen FR place names, QA-gated by Eddie)
 # ---------------------------------------------------------------------------
 
-HUB_TITLE = {
-    "cascades": {
-        "fr": "Cascades & gorges de Haute-Savoie · Loisirs 74",
-        "en": "Waterfalls & gorges of Haute-Savoie · Loisirs 74",
-        "de": "Wasserfälle & Schluchten · Haute-Savoie · Loisirs 74",
-        "it": "Cascate & gole della Haute-Savoie · Loisirs 74",
-        "es": "Cascadas y gargantas de Haute-Savoie · Loisirs 74",
-        "nl": "Watervallen & kloven · Haute-Savoie · Loisirs 74",
-    },
-    "chateaux": {
-        "fr": "Châteaux de Haute-Savoie · Loisirs 74",
-        "en": "Castles of Haute-Savoie · Loisirs 74",
-        "de": "Schlösser der Haute-Savoie · Loisirs 74",
-        "it": "Castelli della Haute-Savoie · Loisirs 74",
-        "es": "Castillos de Haute-Savoie · Loisirs 74",
-        "nl": "Kastelen van Haute-Savoie · Loisirs 74",
-    },
-    "musees": {
-        "fr": "Musées de Haute-Savoie · Loisirs 74",
-        "en": "Museums of Haute-Savoie · Loisirs 74",
-        "de": "Museen in Haute-Savoie · Loisirs 74",
-        "it": "Musei della Haute-Savoie · Loisirs 74",
-        "es": "Museos de Haute-Savoie · Loisirs 74",
-        "nl": "Musea van Haute-Savoie · Loisirs 74",
-    },
-    "points-de-vue": {
-        "fr": "Points de vue de Haute-Savoie · Loisirs 74",
-        "en": "Viewpoints of Haute-Savoie · Loisirs 74",
-        "de": "Aussichtspunkte · Haute-Savoie · Loisirs 74",
-        "it": "Punti panoramici · Haute-Savoie · Loisirs 74",
-        "es": "Miradores de Haute-Savoie · Loisirs 74",
-        "nl": "Uitzichtpunten · Haute-Savoie · Loisirs 74",
-    },
-    "stations-de-ski": {
-        "fr": "Stations de ski de Haute-Savoie · Loisirs 74",
-        "en": "Ski resorts of Haute-Savoie · Loisirs 74",
-        "de": "Skigebiete der Haute-Savoie · Loisirs 74",
-        "it": "Stazioni sciistiche della Haute-Savoie · Loisirs 74",
-        "es": "Estaciones de esquí de Haute-Savoie · Loisirs 74",
-        "nl": "Skigebieden van Haute-Savoie · Loisirs 74",
-    },
-    "sentiers": {
-        "fr": "Sentiers de randonnée · Haute-Savoie · Loisirs 74",
-        "en": "Hiking trails · Haute-Savoie · Loisirs 74",
-        "de": "Wanderwege · Haute-Savoie · Loisirs 74",
-        "it": "Sentieri escursionistici · Haute-Savoie · Loisirs 74",
-        "es": "Senderos · Haute-Savoie · Loisirs 74",
-        "nl": "Wandelpaden · Haute-Savoie · Loisirs 74",
-    },
-    "telecabines": {
-        "fr": "Télécabines de Haute-Savoie · Loisirs 74",
-        "en": "Cable cars of Haute-Savoie · Loisirs 74",
-        "de": "Seilbahnen in Haute-Savoie · Loisirs 74",
-        "it": "Funivie della Haute-Savoie · Loisirs 74",
-        "es": "Teleféricos · Haute-Savoie · Loisirs 74",
-        "nl": "Kabelbanen · Haute-Savoie · Loisirs 74",
-    },
-    "voies-vertes": {
-        "fr": "Voies vertes de Haute-Savoie · Loisirs 74",
-        "en": "Greenways of Haute-Savoie · Loisirs 74",
-        "de": "Grüne Wege · Haute-Savoie · Loisirs 74",
-        "it": "Vie verdi della Haute-Savoie · Loisirs 74",
-        "es": "Vías verdes · Haute-Savoie · Loisirs 74",
-        "nl": "Fietsroutes · Haute-Savoie · Loisirs 74",
-    },
-    "lacs-plages": {
-        "fr": "Lacs & plages de Haute-Savoie · Loisirs 74",
-        "en": "Lakes & beaches · Haute-Savoie · Loisirs 74",
-        "de": "Seen & Strände · Haute-Savoie · Loisirs 74",
-        "it": "Laghi & spiagge · Haute-Savoie · Loisirs 74",
-        "es": "Lagos & playas · Haute-Savoie · Loisirs 74",
-        "nl": "Meren & stranden · Haute-Savoie · Loisirs 74",
-    },
-    "bases-de-loisirs": {
-        "fr": "Bases de loisirs · Haute-Savoie · Loisirs 74",
-        "en": "Leisure parks · Haute-Savoie · Loisirs 74",
-        "de": "Freizeitparks · Haute-Savoie · Loisirs 74",
-        "it": "Aree ricreative · Haute-Savoie · Loisirs 74",
-        "es": "Áreas de ocio · Haute-Savoie · Loisirs 74",
-        "nl": "Recreatieparken · Haute-Savoie · Loisirs 74",
-    },
-    "baignade-nautisme": {
-        "fr": "Baignade & nautisme · Haute-Savoie · Loisirs 74",
-        "en": "Swimming & watersports · Haute-Savoie · Loisirs 74",
-        "de": "Baden & Wassersport · Haute-Savoie · Loisirs 74",
-        "it": "Nuoto & sport acquatici · Haute-Savoie · Loisirs 74",
-        "es": "Baño & deportes acuáticos · Haute-Savoie · Loisirs 74",
-        "nl": "Zwemmen & watersport · Haute-Savoie · Loisirs 74",
-    },
-    "parcs-jardins": {
-        "fr": "Parcs & jardins de Haute-Savoie · Loisirs 74",
-        "en": "Parks & gardens of Haute-Savoie · Loisirs 74",
-        "de": "Parks & Gärten · Haute-Savoie · Loisirs 74",
-        "it": "Parchi & giardini · Haute-Savoie · Loisirs 74",
-        "es": "Parques & jardines · Haute-Savoie · Loisirs 74",
-        "nl": "Parken & tuinen · Haute-Savoie · Loisirs 74",
-    },
-    "que-faire": {
-        "fr": "Que faire en Haute-Savoie · Loisirs 74",
-        "en": "What to do in Haute-Savoie · Loisirs 74",
-        "de": "Was tun in der Haute-Savoie · Loisirs 74",
-        "it": "Cosa fare in Haute-Savoie · Loisirs 74",
-        "es": "Qué hacer en Haute-Savoie · Loisirs 74",
-        "nl": "Wat te doen in Haute-Savoie · Loisirs 74",
-    },
-    "sensations-plein-air": {
-        "fr": "Sensations plein air · Haute-Savoie · Loisirs 74",
-        "en": "Outdoor thrills · Haute-Savoie · Loisirs 74",
-        "de": "Outdoor-Nervenkitzel · Haute-Savoie · Loisirs 74",
-        "it": "Brividi all'aria aperta · Haute-Savoie · Loisirs 74",
-        "es": "Sensaciones al aire libre · Haute-Savoie · Loisirs 74",
-        "nl": "Buitenavontuur · Haute-Savoie · Loisirs 74",
-    },
-    "sorties-detente": {
-        "fr": "Sorties & détente · Haute-Savoie · Loisirs 74",
-        "en": "Outings & relax · Haute-Savoie · Loisirs 74",
-        "de": "Ausflüge & Erholung · Haute-Savoie · Loisirs 74",
-        "it": "Uscite & relax · Haute-Savoie · Loisirs 74",
-        "es": "Salidas & relax · Haute-Savoie · Loisirs 74",
-        "nl": "Uitstapjes & ontspanning · Haute-Savoie · Loisirs 74",
-    },
-    "sport-jeux": {
-        "fr": "Sports & jeux · Haute-Savoie · Loisirs 74",
-        "en": "Sports & games · Haute-Savoie · Loisirs 74",
-        "de": "Sport & Spiele · Haute-Savoie · Loisirs 74",
-        "it": "Sport & giochi · Haute-Savoie · Loisirs 74",
-        "es": "Deportes & juegos · Haute-Savoie · Loisirs 74",
-        "nl": "Sport & spelen · Haute-Savoie · Loisirs 74",
-    },
-}
+# Hub titles are AUTHORED content, so they live in data/hub-titles.json, not
+# here. {dept} / {site} come from site.config.json — that is the whole reason a
+# second departement can reuse this engine instead of forking it.
+def _load_hub_titles():
+    p = ROOT / "data" / "hub-titles.json"
+    raw = json.loads(p.read_text(encoding="utf-8"))["titles"]
+    dept, site = siteconfig.DEPT_NAME, siteconfig.SITE_NAME
+    return {h: {l: s.replace("{dept}", dept).replace("{site}", site)
+                for l, s in v.items()} for h, v in raw.items()}
+
+
+HUB_TITLE = _load_hub_titles()
 
 OG_LOCALE_TAG = {
     "fr": "fr_FR", "en": "en_US", "de": "de_DE",
@@ -499,11 +381,11 @@ def fiche_card_html(d, lang, slug, picked_photo=None):
     # Name+commune first → Maps resolves to the real POI; a stored coord can be
     # a centroid/label point and pins off-venue. Coords = last-resort fallback.
     if name and commune:
-        maps_url = f"https://www.google.com/maps/search/?api=1&amp;query={quote(name + ', ' + commune + ', Haute-Savoie, France')}"
+        maps_url = f"https://www.google.com/maps/search/?api=1&amp;query={quote(name + ', ' + commune + ', ' + siteconfig.DEPT_NAME + ', France')}"
     elif lat is not None and lon is not None:
         maps_url = f"https://www.google.com/maps/search/?api=1&amp;query={lat},{lon}"
     else:
-        maps_url = f"https://www.google.com/maps/search/?api=1&amp;query={quote((name or '') + ', ' + (commune or '') + ', Haute-Savoie, France')}"
+        maps_url = f"https://www.google.com/maps/search/?api=1&amp;query={quote((name or '') + ', ' + (commune or '') + ', ' + siteconfig.DEPT_NAME + ', France')}"
 
     actions = [
         f'<a href="{maps_url}" rel="noopener" target="_blank">{CHROME["google_maps"][lang]}</a>'
@@ -901,7 +783,7 @@ def build_hub_itemlist(union, fr_hub, lang, hub_slug):
             item["address"] = {
                 "@type": "PostalAddress",
                 "addressLocality": commune,
-                "addressRegion": "Haute-Savoie",
+                "addressRegion": siteconfig.DEPT_NAME,
                 "addressCountry": "FR",
             }
         lat, lng = d.get("latitude"), d.get("longitude")
@@ -915,7 +797,7 @@ def build_hub_itemlist(union, fr_hub, lang, hub_slug):
         "@type": "ItemList",
         "@id": hub_url + "#itemlist",
         "name": display,
-        "description": f"{display} · Haute-Savoie",
+        "description": f"{display} · {siteconfig.DEPT_NAME}",
         "numberOfItems": len(elements),
         "itemListOrder": "https://schema.org/ItemListOrderAscending",
         "inLanguage": lang,
@@ -1173,7 +1055,7 @@ def register_facts_lang(lang):
     for hub in HUB_DISPLAY:
         HUB_DISPLAY[hub][lang] = il["hub_names"][hub][lang]
     for hub in HUB_TITLE:
-        HUB_TITLE[hub][lang] = f'{il["hub_names"][hub][lang]} · Haute-Savoie · Loisirs 74'
+        HUB_TITLE[hub][lang] = f'{il["hub_names"][hub][lang]} · {siteconfig.DEPT_NAME} · {siteconfig.SITE_NAME}'
     OG_LOCALE_TAG[lang] = _FACTS_OG[lang]
     SORTIES_SUBLINE[lang] = sc["homepage"][lang]["sorties_sub"]
     STRICT_LANGS.add(lang)
@@ -1186,7 +1068,7 @@ def facts_hub_descriptions(lang):
     sc = _data("site-chrome-langs.json")
     il = _data("i18n-labels.json")
     tail = sc["commune_chrome"][lang]["meta_tail"]
-    return {hub: {lang: f'{il["hub_names"][hub][lang]} · Haute-Savoie. {tail}'}
+    return {hub: {lang: f'{il["hub_names"][hub][lang]} · {siteconfig.DEPT_NAME}. {tail}'}
             for hub in HUB_DISPLAY}
 
 

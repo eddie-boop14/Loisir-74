@@ -192,6 +192,25 @@ def main():
                 "creator": (rec.get(col.get("creator", "")) or "").strip() if "creator" in col else "",
             })
 
+    # One row per POI. `dt_id` is the DATAtourisme URI — the record's primary
+    # key — so two rows sharing it are the same POI emitted twice by the source,
+    # not two places. Savoie's export does this ~84 times (Haute-Savoie's does
+    # not). Dropping the repeat is an output-integrity fix, NOT a filter change:
+    # the SET of POI kept is identical, and the 74 output is byte-for-byte
+    # unchanged (verified: 3012 rows, 3012 unique URIs, 0 dropped). Left in, the
+    # duplicates would feed an editor the same place twice and manufacture the
+    # exact "twin" defect gate_no_duplicate_lieux.py exists to prevent.
+    # Never silent: the count is always printed.
+    seen, deduped, dropped = set(), [], 0
+    for r in rows:
+        key = r["dt_id"] or f'{r["name"]}#{r["cp_commune"]}'
+        if key in seen:
+            dropped += 1
+            continue
+        seen.add(key)
+        deduped.append(r)
+    rows = deduped
+
     rows.sort(key=lambda r: (r["cp_commune"], r["name"]))
     out_path = Path(args.out) if args.out else REPO / "data" / f"dt-ara-{dept}-candidates.json"
     payload = {
@@ -210,6 +229,7 @@ def main():
         communes[r["cp_commune"]] = communes.get(r["cp_commune"], 0) + 1
     print(f"\nscanned {scanned} POI · {in_dept} in dept {dept} · {len(rows)} kept "
           f"(leisure/heritage gate)")
+    print(f"duplicate source rows dropped (same dt_id): {dropped}")
     try:
         shown = out_path.relative_to(REPO)
     except ValueError:

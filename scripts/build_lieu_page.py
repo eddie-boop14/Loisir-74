@@ -280,6 +280,7 @@ CHROME = {
     "f_privacy":       {"fr": "Confidentialité", "en": "Privacy", "de": "Datenschutz", "it": "Privacy", "es": "Privacidad", "nl": "Privacy"},
     "f_cgv":           {"fr": "CGV", "en": "Terms", "de": "AGB", "it": "Termini", "es": "Términos", "nl": "Algemene voorwaarden"},
     "f_copyright":     {"fr": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Tous droits réservés", "en": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · All rights reserved", "de": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Alle Rechte vorbehalten", "it": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Tutti i diritti riservati", "es": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Todos los derechos reservados", "nl": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Alle rechten voorbehouden"},
+    "f_sister":        {"fr": "Aussi en", "en": "Also in", "de": "Auch in", "it": "Anche in", "es": "También en", "nl": "Ook in", "pl": "Również w", "pt": "Também em", "cs": "Také v", "ar": "أيضًا في", "he": "גם ב", "ja": "こちらも"},
     "f_promise":       {"fr": "Sans pub. Sans tracking. Sans avis Google.", "en": "No ads. No tracking. No Google reviews.", "de": "Keine Werbung. Kein Tracking. Keine Google-Bewertungen.", "it": "Niente pubblicità. Niente tracking. Niente recensioni Google.", "es": "Sin anuncios. Sin tracking. Sin reseñas de Google.", "nl": "Geen advertenties. Geen tracking. Geen Google reviews."},
 }
 
@@ -2092,6 +2093,35 @@ def _footer_guides(lang):
     return out
 
 
+def sister_link_html():
+    """One line in the footer pointing at the sibling département's site.
+
+    Config-driven and OFF unless site.config.json carries a `sister` block, on
+    purpose: a sitewide footer link is ~6 100 links from this site: pointing
+    that at a domain that does not resolve yet would be 6 100 dead links, and
+    switching it on before the sibling has content buys nothing. Add the block
+    the day the sibling goes live — that is the whole flip.
+
+        "sister": {"name": "Loisirs 73", "url": "https://loisirs73.fr",
+                   "dept": "Savoie"}
+
+    Deliberately NOT rel="nofollow": this is a genuine same-publisher
+    relationship, disclosed as such, not a link scheme. Deliberately ONE line,
+    not a column: the honest value between the two sites is contextual
+    page-to-page linking (shared GR®, cols, "30 min away"), not footer bulk.
+    """
+    sis = getattr(siteconfig, "SISTER", None)
+    if not sis or not sis.get("url") or not sis.get("name"):
+        return ""
+    dept = esc(sis.get("dept") or "")
+    # French puts a space before a colon; English and the rest do not. Japanese
+    # takes no space around the label either.
+    lead = "" if _LANG == "ja" else " "
+    colon = " : " if _LANG == "fr" else ": "
+    return (f'<span class="sister">{T("f_sister")}{lead}{dept}{colon}'
+            f'<a href="{attr(sis["url"])}">{esc(sis["name"])}</a></span>')
+
+
 def site_footer():
     """Locale-aware <footer class='site'>. URLs prefixed by current locale."""
     lp = f"/{_LANG}" if _LANG != "fr" else ""
@@ -2107,7 +2137,7 @@ def site_footer():
         f'<div class="foot-col"><h4>{T("f_explore")}</h4><ul><li><a href="{BASE_URL}{lp}/">{T("home")}</a></li>{guide_lis}</ul></div>'
         f'<div class="foot-col"><h4>{T("f_contribute")}</h4><ul><li><a href="mailto:photos@loisirs74.fr">{T("f_send_photos")}</a></li><li><a href="{BASE_URL}{legal_lp}/signaler">{T("f_report")}</a></li><li><a href="{BASE_URL}{legal_lp}/devenir-partenaire">{T("f_become_p")}</a></li></ul></div>'
         f'<div class="foot-col"><h4>{T("f_legal")}</h4><ul><li><a href="{BASE_URL}{legal_lp}/mentions-legales">{T("f_legal_link")}</a></li><li><a href="{BASE_URL}{legal_lp}/confidentialite">{T("f_privacy")}</a></li><li><a href="{BASE_URL}{legal_lp}/cgv">{T("f_cgv")}</a></li></ul></div>'
-        f'</div><div class="foot-bottom"><span class="credit">{T("f_copyright")}</span><span>{T("f_promise")}</span></div></div></footer>'
+        f'</div><div class="foot-bottom"><span class="credit">{T("f_copyright")}</span>{sister_link_html()}<span>{T("f_promise")}</span></div></div></footer>'
     )
 
 

@@ -42,3 +42,8 @@ CONTACT_EMAIL = _req("contact_email")
 PHOTOS_EMAIL = _req("photos_email")
 CF_BEACON_TOKEN = _cfg.get("cf_beacon_token", "")
 REGION = _cfg.get("region", "")
+
+# Optional sibling site. Absent = no cross-link rendered anywhere. See
+# build_lieu_page.sister_link_html() for why this stays off until the sibling
+# actually resolves.
+SISTER = _cfg.get("sister") or None
