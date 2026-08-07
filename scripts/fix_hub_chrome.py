@@ -90,7 +90,7 @@ def patch_one_hub(html, hub_canon, lang):
     hub_label_loc = HUB_DISPLAY[hub_canon][lang]
 
     # 1. Breadcrumb root link target + label: <a href="https://loisirs74.fr/">Accueil</a>
-    pat = '<a href=siteconfig.BASE_URL + "/">Accueil</a>'
+    pat = f'<a href="{siteconfig.BASE_URL}/">Accueil</a>'
     new = f'<a href="{siteconfig.BASE_URL}/{lang}/">{home}</a>'
     if pat in html:
         html = html.replace(pat, new, 1)

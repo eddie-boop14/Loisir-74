@@ -298,7 +298,7 @@ def patch_hub_head(html, canon, lang, slug, descriptions):
         # inject everything including og:image before </head>.
         html = html.replace(
             '</head>',
-            og_html + '\n<meta property="og:image" content=siteconfig.BASE_URL + "/og-image.jpg"/>\n</head>',
+            og_html + f'\n<meta property="og:image" content="{siteconfig.BASE_URL}/og-image.jpg"/>\n</head>',
             1,
         )
     return html
@@ -1147,7 +1147,7 @@ def render_facts_hub_page(fr_hub, lang, union, communes_in_hub, has_free):
                   f'<link rel="canonical" href="{url}">', html, count=1)
 
     # --- header: brand link, near-me labels, language picker ------------------
-    html = html.replace('<a class="brand" href=siteconfig.BASE_URL + "/">',
+    html = html.replace(f'<a class="brand" href="{siteconfig.BASE_URL}/">',
                         f'<a class="brand" href="{siteconfig.BASE_URL}/{lang}/">', 1)
     html = re.sub(r'<!--nearme:start-->.*?<!--nearme:end-->',
                   lambda _m: f'<!--nearme:start-->{_nearme_button_html(lang)}<!--nearme:end-->',
@@ -1158,7 +1158,7 @@ def render_facts_hub_page(fr_hub, lang, union, communes_in_hub, has_free):
     ends = _loc.endonyms(_loc.VISIBLE)  # isolation-ok: picker endonyms for the full roster
     cur_attr = 'aria-current="true" '
     menu = "".join(
-        f'<a {cur_attr if l == lang else ""}href="{alts.get(l, "{siteconfig.BASE_URL}/")}" '
+        f'<a {cur_attr if l == lang else ""}href="{alts.get(l, siteconfig.BASE_URL + "/")}" '
         f'hreflang="{l}">{ends[l]}</a>' for l in _loc.VISIBLE)  # isolation-ok: roster nav
     html = re.sub(
         r'<details class="lang-picker">\s*<summary>.*?</summary>\s*<div class="lang-menu">.*?</div>\s*</details>',
@@ -1234,7 +1234,7 @@ def render_facts_hub_page(fr_hub, lang, union, communes_in_hub, has_free):
         html = html.replace(foot.group(0), f_html, 1)
         # language column: one entry per visible language, this page's own alternates
         new_ul = "<ul>" + "".join(
-            f'<li><a href="{alts.get(l, "{siteconfig.BASE_URL}/")}" hreflang="{l}">{ends[l]}</a></li>'
+            f'<li><a href="{alts.get(l, siteconfig.BASE_URL + "/")}" hreflang="{l}">{ends[l]}</a></li>'
             for l in _loc.VISIBLE) + "</ul>"  # isolation-ok: roster nav
         html = re.sub(
             r'<ul>(?:\s*<li><a href="[^"]*" hreflang="[a-z-]+">[^<]*</a></li>\s*)+</ul>',
