@@ -23,6 +23,19 @@ handoffs/reports, **not** pipeline inputs.
 - `dt-candidates.json` — 3056 DATAtourisme candidates not yet in the catalog (ingest queue).
 - `photo-credits.json` — per-slug hero author/license/credit.
 
+## Per-site identity (HANDOFF-73 phase 1)
+`site.config.json` (repo root) is the ONLY place the site's identity lives:
+domain, base URL, site name, department, region, imprint, e-mails, beacon token.
+Engine scripts read it via `scripts/siteconfig.py` (fails loudly if absent) —
+grep proof: no functional `loisirs74.fr` / `Loisirs 74` literal remains in
+`scripts/*.py` outside comments, docstrings, UA strings and translator prompts.
+Proven byte-identical: 10,767 rendered files + AI surfaces, fresh-build vs
+fresh-build, before/after the extraction (2026-08-05).
+**Phase 2 (open):** hub title/meta dicts in `build_hubs.py` (~99 authored
+per-lang strings), intent/commune editorial defaults, and `data/` naming are
+still 74-authored content living engine-side — they move to `data/` when the
+73 lands. The engine is the franchise; this file is the franchisee.
+
 ## Build pipeline (Python — the live renderer)
 Entry point: `scripts/build_all.py` (Netlify build command). Chain:
 1. `build_all_locales.py` → `build_lieu_page.build_page(d, lang)` — renders every fiche ×6 langs.

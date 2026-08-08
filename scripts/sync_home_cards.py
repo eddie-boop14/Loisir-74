@@ -36,6 +36,7 @@ Usage:
     python3 scripts/sync_home_cards.py --apply
 """
 import argparse
+import siteconfig  # HANDOFF-73 phase 4: per-site domain
 import json
 import re
 import sys
@@ -45,7 +46,7 @@ ROOT = Path(__file__).resolve().parent.parent
 JSON_DIR = ROOT / "Json"
 
 CARD_RE = re.compile(
-    r'(<a class="card-photo" href="https://loisirs74\.fr/(?:[a-z]{2}/)?([a-z0-9-]+)">\s*'
+    r'(<a class="card-photo" href="' + siteconfig.SITE_URL_RE + r'/(?:[a-z]{2}/)?([a-z0-9-]+)">\s*'
     r'<picture><source srcset=")([^"]+)("[^>]*>\s*<img src=")([^"]+)(")',
     re.S,
 )

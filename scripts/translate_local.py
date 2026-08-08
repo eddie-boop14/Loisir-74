@@ -30,6 +30,7 @@ USAGE (manual only — NEVER a cron):
     python3 scripts/translate_local.py --lang pl --patch-submit   # paid, go'd
 """
 import argparse
+import siteconfig  # HANDOFF-73 phase 5: per-site identity
 import datetime
 import json
 import re
@@ -513,7 +514,7 @@ def patch_requests(lang, flags):
     reqs, routing = [], {}
     i = 0
     sysblock = (f"You translate short tourism text segments into "
-                f"{tb.LANG_NAMES[lang]} for loisirs74.fr (source segments are "
+                f"{tb.LANG_NAMES[lang]} for {siteconfig.DOMAIN} (source segments are "
                 "English or French). Reply with ONLY the translated segment - "
                 "no quotes, no commentary. Any token of the form XQV<number>Z "
                 "is a masked proper name: copy every one through VERBATIM, "

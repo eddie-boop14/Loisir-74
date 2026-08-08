@@ -19,6 +19,7 @@ Schema (compact, designed for browser fetch + filter):
 The Photothèque uses this to surface fiches still on generics.
 """
 import json
+import siteconfig  # HANDOFF-73: per-site identity
 import glob
 import re
 import os
@@ -106,12 +107,12 @@ def main():
             "postal_code": d.get("postal_code") or "",
             "latitude": d.get("latitude"),
             "longitude": d.get("longitude"),
-            "urls": {"fr": f"https://loisirs74.fr/{slug}",
-                     **{l: f"https://loisirs74.fr/{l}/{slug}" for l in LANGS}},
+            "urls": {"fr": f"{siteconfig.BASE_URL}/{slug}",
+                     **{l: f"{siteconfig.BASE_URL}/{l}/{slug}" for l in LANGS}},
             # HANDOFF-39 facet layer: per-lieu machine surfaces (md FR/EN + typed JSON)
-            "facet_md": f"https://loisirs74.fr/content/{slug}.md",
-            "facet_md_en": f"https://loisirs74.fr/content/en/{slug}.md",
-            "facet_json": f"https://loisirs74.fr/api/lieu/{slug}.json",
+            "facet_md": f"{siteconfig.BASE_URL}/content/{slug}.md",
+            "facet_md_en": f"{siteconfig.BASE_URL}/content/en/{slug}.md",
+            "facet_json": f"{siteconfig.BASE_URL}/api/lieu/{slug}.json",
         }
         if hero:
             item["photo"] = hero

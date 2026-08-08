@@ -22,6 +22,7 @@ by fix_hreflang_sitemap.py downstream. No timestamps/random → byte-stable
 (md `last_built` is the corpus's newest lastmod date, a committed stable value).
 """
 import html as _html
+import siteconfig  # HANDOFF-73: per-site identity
 import json
 import os
 import sys
@@ -39,7 +40,7 @@ JSON_DIR = os.path.join(ROOT, "Json")
 LIEUX = os.path.join(ROOT, "lieux.json")
 LASTMOD = os.path.join(ROOT, "data", "lastmod.json")
 FACET_MD_DIR = os.path.join(ROOT, "content", "facets")
-BASE = "https://loisirs74.fr"
+BASE = siteconfig.BASE_URL
 LANGS = locales.PROSE
 
 UI = {
@@ -337,7 +338,7 @@ def render_md(facet, members, api, fiches, lang, total, built):
                   "is_free": "Gratuité", "winter": "Hiver", "hours": "Horaires",
                   "prices": "Tarifs", "season": "Saison"}[key]
     out = [f"---\nfacet: {key}\nscope: haute-savoie-74\nlieux_documented: {len(members)}\n"
-           f"lieux_total: {total}\nlast_built: {built}\nsource: loisirs74.fr\n---\n",
+           f"lieux_total: {total}\nlast_built: {built}\nsource: {siteconfig.DOMAIN}\n---\n",
            f"# {head_label} — index transversal ({total} lieux, {len(members)} documentés)\n"]
     for s in members:
         name = fr_name(fiches, s)
@@ -369,7 +370,7 @@ def wire_discovery(facets):
         t = re.sub(re.escape(A) + r".*?" + re.escape(Z) + r"\n*", "", t, flags=re.S)  # strip old (incl. markers + trailing blanks)
         lines = [A, "## Facet indexes (cross-cutting answers in one fetch)",
                  "Use these when the question spans many sites (e.g. \"which waterfalls have parking\"):"]
-        lines += [f"- [{FACET_MD_LABEL[k]}](https://loisirs74.fr/content/facets/{k}.md)" for k in keys]
+        lines += [f"- [{FACET_MD_LABEL[k]}]({BASE}/content/facets/{k}.md)" for k in keys]
         lines.append(Z)
         block = "\n".join(lines) + "\n\n"
         if "## Category hubs" in t:
@@ -381,7 +382,7 @@ def wire_discovery(facets):
     ai_p = os.path.join(ROOT, ".well-known", "ai-info.json")
     if os.path.exists(ai_p):
         d = json.loads(open(ai_p, encoding="utf-8").read())
-        d["facet_indexes"] = {"url_pattern": "https://loisirs74.fr/content/facets/{facet}.md",
+        d["facet_indexes"] = {"url_pattern": BASE + "/content/facets/{facet}.md",
                               "facets": keys}
         with open(ai_p, "w", encoding="utf-8") as fh:
             json.dump(d, fh, ensure_ascii=False, indent=2)

@@ -22,6 +22,7 @@ CRITICAL ISOLATION (so it can never disturb the 6 ranking languages):
 Frozen FR proper nouns verbatim. Protected fiches never rendered.
 """
 import html as _h
+import siteconfig  # HANDOFF-73: per-site identity
 import json
 import os
 import sys
@@ -34,7 +35,7 @@ LABELS = json.loads(open(os.path.join(ROOT, "data", "i18n-labels.json"), encodin
 LIVE6 = set(locales.VISIBLE)  # isolation-ok: exclude visible langs from the pilot
 RTL = set(LABELS["_meta"].get("rtl", []))
 PROTECTED = {"chez-nous-a-la-plage", "chalet-du-tornet"}
-BASE = "https://loisirs74.fr"
+BASE = siteconfig.BASE_URL
 # HANDOFF-11 — the Latin pilot is flipped INDEXABLE to start the GSC clock:
 # self-canonical + index,follow + listed in sitemap (own URLs only), but kept
 # OUT of the 6 live languages' hreflang clusters. RTL (ar/he) stay excluded.
@@ -140,11 +141,11 @@ def render(d, lang):
     schema = {"@context": "https://schema.org", "@type": "TouristAttraction",
               "name": name, "inLanguage": lang,
               "address": {"@type": "PostalAddress", "addressLocality": commune,
-                          "addressRegion": "Haute-Savoie", "addressCountry": "FR"}}
+                          "addressRegion": siteconfig.DEPT_NAME, "addressCountry": "FR"}}
     if d.get("latitude") and d.get("longitude"):
         schema["geo"] = {"@type": "GeoCoordinates", "latitude": d["latitude"], "longitude": d["longitude"]}
-    title = f"{name} · {commune} — loisirs74"
-    meta_desc = (descriptor + (", " if descriptor else "") + commune + " (Haute-Savoie).").strip()
+    title = f"{name} · {commune} — {siteconfig.DOMAIN.split('.')[0]}"
+    meta_desc = (descriptor + (", " if descriptor else "") + commune + f" ({siteconfig.DEPT_NAME}).").strip()
     indexable = lang in INDEXABLE
     self_url = f"{BASE}/{lang}/{d['slug']}"
     robots = "index,follow" if indexable else "noindex,nofollow"

@@ -21,6 +21,7 @@ of the repo root. This script:
 Idempotent: two consecutive runs produce identical _site/.
 """
 import json
+import siteconfig  # HANDOFF-73: per-site identity
 import re
 import shutil
 import sys
@@ -203,11 +204,11 @@ def filter_sitemap(path, site_root):
     kept_blocks = []
     dropped = 0
     for blk in blocks:
-        m = re.search(r"<loc>(https://loisirs74\.fr/[^<]*)</loc>", blk)
+        m = re.search(r"<loc>(" + siteconfig.SITE_URL_RE + r"/[^<]*)</loc>", blk)
         if not m:
             kept_blocks.append(blk); continue
         url = m.group(1)
-        p = url[len("https://loisirs74.fr/"):]
+        p = url[len(siteconfig.BASE_URL + "/"):]
         if not p:
             target = site_root / "index.html"
         elif p.endswith("/"):
@@ -343,8 +344,17 @@ def main():
     for _name in RUNTIME_JS:
         _sp = REPO / "scripts" / _name
         if _sp.exists():
-            shutil.copy2(_sp, sdst / _name)
-            print(f"  + scripts/{_name}")
+            # Runtime JS cannot import siteconfig, so the origin is a
+            # placeholder in source and is substituted here at publish time.
+            _txt = _sp.read_text(encoding="utf-8")
+            _n = _txt.count("__SITE_ORIGIN__")
+            if _n:
+                _txt = _txt.replace("__SITE_ORIGIN__", siteconfig.BASE_URL)
+                (sdst / _name).write_text(_txt, encoding="utf-8")
+                shutil.copystat(_sp, sdst / _name)
+            else:
+                shutil.copy2(_sp, sdst / _name)
+            print(f"  + scripts/{_name}" + (f" (origin substituted x{_n})" if _n else ""))
 
     print("Copying locale trees (en/de/it/es/nl/pl)...")
     for L in LOCALES:

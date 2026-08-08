@@ -23,6 +23,7 @@ Usage:
     python3 scripts/gate_link_integrity.py
 """
 import os
+import siteconfig  # HANDOFF-73: per-site identity
 import re
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -31,7 +32,7 @@ from collections import defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(ROOT, "_site")
-HOST = "loisirs74.fr"
+HOST = siteconfig.DOMAIN
 
 LINK_RE = re.compile(r'(?:href|src)\s*=\s*"([^"]+)"', re.I)
 
@@ -143,7 +144,7 @@ def check_homepage_hubs():
             hub_file = os.path.join(SITE, *(([lang] if lang != "fr" else []) + [slug, "index.html"]))
             if not os.path.exists(hub_file):
                 continue   # hub not built for this locale → not expected on homepage
-            if f"https://loisirs74.fr{prefix}/{slug}/" not in html:
+            if f"{siteconfig.BASE_URL}{prefix}/{slug}/" not in html:
                 bad.append(f"{lang} homepage does not link hub /{slug}/")
     return bad
 

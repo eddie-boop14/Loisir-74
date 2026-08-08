@@ -16,6 +16,7 @@ no /xx/legal 404s). The six live locales are never touched by this module.
 Run: python3 scripts/build_homepage_lang.py <lang>   (writes <lang>/index.html)
 """
 import json
+import siteconfig  # HANDOFF-73: per-site identity
 import re
 import sys
 import html as _html
@@ -26,7 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import locales  # noqa: E402
 import build_hubs as H  # noqa: E402
 
-BASE = "https://loisirs74.fr"
+BASE = siteconfig.BASE_URL
 
 _LEGAL_FR_ROOT = [  # (key in legal_labels, FR root page — the strict chrome routing)
     ("legal", "mentions-legales"),
@@ -146,14 +147,14 @@ def render_homepage(lang):
     # --- footer -----------------------------------------------------------------
     foot = re.search(r'<footer class="site">.*?</footer>', html, re.S).group(0)
     new_foot = foot
-    new_foot = re.sub(r'(<h3>Loisirs 74</h3>\s*<p>).*?(</p>)',
+    new_foot = re.sub(r'(<h3>' + siteconfig.SITE_NAME_RE + r'</h3>\s*<p>).*?(</p>)',
                       lambda m: m.group(1) + e(hp["foot_blurb"]) + m.group(2), new_foot, flags=re.S)
     new_foot = new_foot.replace(f'<h3>{en["foot_categories_h3"]}</h3>', f'<h3>{e(hp["foot_categories_h3"])}</h3>')
     new_foot = new_foot.replace(f'<h3>{en["foot_language_h3"]}</h3>', f'<h3>{e(hp["foot_language_h3"])}</h3>')
     new_foot = new_foot.replace(f'<h3>{en["foot_legal_h3"]}</h3>', f'<h3>{e(hp["foot_legal_h3"])}</h3>')
     # legal column -> FR root pages, translated labels (BEFORE the /en/ rewrite)
     new_foot = re.sub(
-        r'<ul>\s*(?:<li><a href="https://loisirs74\.fr/en/(?:legal|privacy|terms|report|partner)">[^<]*</a></li>\s*)+</ul>',
+        r'<ul>\s*(?:<li><a href="' + siteconfig.SITE_URL_RE + r'/en/(?:legal|privacy|terms|report|partner)">[^<]*</a></li>\s*)+</ul>',
         "<ul>\n          " + _legal_lis(hp["legal_labels"]) + "\n        </ul>",
         new_foot, count=1)
     # language column -> the full visible roster, homepage equivalents
@@ -163,7 +164,7 @@ def render_homepage(lang):
             u=(BASE + "/") if l == "fr" else f"{BASE}/{l}/", l=l, n=ends[l])
         for l in locales.VISIBLE)  # isolation-ok: roster nav
     new_foot = re.sub(
-        r'<ul>\s*(?:<li><a href="https://loisirs74\.fr/(?:[a-z]{2}/)?" hreflang="[a-z-]+">[^<]*</a></li>\s*)+</ul>',
+        r'<ul>\s*(?:<li><a href="' + siteconfig.SITE_URL_RE + r'/(?:[a-z]{2}/)?" hreflang="[a-z-]+">[^<]*</a></li>\s*)+</ul>',
         "<ul>\n " + lang_lis + "\n </ul>", new_foot, count=1)
     # categories column: relabel each hub link from the reviewed hub names
     # (the EN footer uses its own label variants — match by URL, not by text;
@@ -176,7 +177,7 @@ def render_homepage(lang):
             return f'{m.group(0)[:m.group(0).index(">", m.group(0).index("href")) + 1]}{e(H.HUB_DISPLAY[fr_hub][lang])}</a></li>'
         return m.group(0)
 
-    new_foot = re.sub(r'<li><a href="https://loisirs74\.fr/en/([a-z0-9-]+)/">[^<]*</a></li>',
+    new_foot = re.sub(r'<li><a href="' + siteconfig.SITE_URL_RE + r'/en/([a-z0-9-]+)/">[^<]*</a></li>',
                       _cat_li, new_foot)
     new_foot = new_foot.replace('>Weather: clear<', f'>{e(hp["str"]["footstate_clear"])}<')
     html = html.replace(foot, new_foot, 1)
@@ -188,7 +189,7 @@ def render_homepage(lang):
 
     def card_repl(m):
         card = m.group(0)
-        sm = re.search(r'href="https://loisirs74\.fr/en/([a-z0-9-]+)"', card)
+        sm = re.search(r'href="' + siteconfig.SITE_URL_RE + r'/en/([a-z0-9-]+)"', card)
         d = _load_fiche(sm.group(1)) if sm else None
         # A card whose fiche is gone or unpublished has NO page in this tree
         # (the tree is fully regenerated from Json/) — drop it rather than
@@ -232,7 +233,7 @@ def render_homepage(lang):
             return f'"{BASE}/{lang}/{slug}/"'   # commune dirs share slugs
         return f'"{BASE}/{lang}/{path}"'        # fiche pages share slugs
 
-    html = re.sub(r'"https://loisirs74\.fr/en/([^"]*)"', url_repl, html)
+    html = re.sub(r'"' + siteconfig.SITE_URL_RE + r'/en/([^"]*)"', url_repl, html)
 
     # header near-me + language picker if present in the homepage chrome
     html = re.sub(r'<!--nearme:start-->.*?<!--nearme:end-->',

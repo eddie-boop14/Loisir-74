@@ -47,6 +47,7 @@ Protected fiches are data-carrying like any other — their placement blocks
 are untouched (we only ADD i18n.<lang> prose fields).
 """
 import argparse
+import siteconfig  # HANDOFF-73 phase 5: per-site identity
 import datetime
 import glob
 import json
@@ -94,7 +95,7 @@ PROSE_FIELDS = ["meta_title", "meta_description", "hero", "hero_alt", "body",
 # Core frozen nouns — stay VERBATIM untranslated in every language.
 # Communes + each fiche's frozen FR name are added programmatically.
 CORE_FROZEN = ["Lac d'Annecy", "Léman", "Mont-Blanc", "Aiguille du Midi",
-               "Haute-Savoie", "ViaRhôna", "GR®", "Faucigny", "Loisirs 74"]
+               siteconfig.DEPT_NAME, "ViaRhôna", "GR®", "Faucigny", siteconfig.SITE_NAME]
 
 TAG_RE = re.compile(r"<\s*/?\s*([a-zA-Z][a-zA-Z0-9]*)")
 
@@ -174,7 +175,7 @@ def system_prompt(lang, communes):
            "proper names and all numbers exactly as-is — the renderer handles "
            "bidi isolation; do not add RLM/LRM marks.") if lang in RTL_LANGS else ""
     return (
-        f"You translate tourism prose for loisirs74.fr from French to "
+        f"You translate tourism prose for {siteconfig.DOMAIN} from French to "
         f"{LANG_NAMES[lang]}.\n"
         "You receive a JSON object; return ONLY the same JSON object with every "
         "string value translated. Rules:\n"

@@ -25,6 +25,7 @@ Usage:
     # then: python3 scripts/fix_hreflang_sitemap.py --apply --sitemap
 """
 from __future__ import annotations
+import siteconfig  # HANDOFF-73: per-site identity
 
 import argparse
 import html as html_lib
@@ -41,7 +42,10 @@ import assets  # noqa: E402
 
 LANGS = list(locales.PROSE)          # render axis: commune pages built per prose lang
 VIS = list(locales.VISIBLE)          # isolation-ok: nav/hreflang lists the visible roster (incl. pl facts tree)
-BASE = "https://loisirs74.fr"
+BASE = siteconfig.BASE_URL
+# "loisirs74.fr" -> "loisirs74": the lowercase wordmark used in the commune
+# page chrome. Derived, so a new site never hand-edits it.
+BRAND_SHORT = siteconfig.DOMAIN.split(".")[0]
 MANIFEST = ROOT / "data" / "commune-layer.json"
 INTROS = ROOT / "data" / "commune-intros.json"
 NEARME_LABELS = json.loads((ROOT / "data" / "nearme-labels.json").read_text(encoding="utf-8"))
@@ -298,7 +302,7 @@ def jsonld_itemlist(c, lang, url, alts):
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": c["commune"],
-                "addressRegion": "Haute-Savoie",
+                "addressRegion": siteconfig.DEPT_NAME,
                 "addressCountry": "FR",
             },
         }
@@ -331,7 +335,7 @@ def jsonld_collection(c, lang, url):
         "url": url,
         "name": c["commune"],
         "inLanguage": lang,
-        "isPartOf": {"@type": "WebSite", "url": f"{BASE}/", "name": "Loisirs 74"},
+        "isPartOf": {"@type": "WebSite", "url": f"{BASE}/", "name": siteconfig.SITE_NAME},
         "numberOfItems": c["lieux_count"],
     }
     return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False, indent=2) + "</script>"
@@ -344,7 +348,7 @@ def render_page(c, lang, intros):
     commune = c["commune"]
     alts = {l: commune_url(slug, l) for l in VIS}
     url = alts[lang]
-    title = f"{_title_q(lang, commune)} · Loisirs 74"
+    title = f"{_title_q(lang, commune)} · {siteconfig.SITE_NAME}"
     if lang in STRICT_LANGS:
         # strict prose: a facts language shows its OWN intro or none at all —
         # the FR fallback below is for the six live locales only.
@@ -414,18 +418,18 @@ def render_page(c, lang, intros):
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,50;1,9..144,300..500,50&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 {lift_style(lang, hero_css)}
 <meta property="og:type" content="website"/>
-<meta property="og:site_name" content="Loisirs 74"/>
+<meta property="og:site_name" content="{siteconfig.SITE_NAME}"/>
 <meta property="og:locale" content="{OG_LOCALE[lang]}"/>
 <meta property="og:url" content="{url}"/>
 <meta property="og:title" content="{attr(title)}"/>
 <meta property="og:description" content="{attr(meta_desc)}"/>
-<meta content="https://loisirs74.fr/og-image.jpg" property="og:image"/>
-<meta content="https://loisirs74.fr/og-image.jpg" name="twitter:image"/>
+<meta content="{BASE}/og-image.jpg" property="og:image"/>
+<meta content="{BASE}/og-image.jpg" name="twitter:image"/>
 {jsonld_itemlist(c, lang, url, alts)}
 {jsonld_collection(c, lang, url)}
 </head>"""
 
-    catcher = f"{c['lieux_count']} {C['places_in'][lang]} {commune} · Haute-Savoie"
+    catcher = f"{c['lieux_count']} {C['places_in'][lang]} {commune} · {siteconfig.DEPT_NAME}"
     fs = _filter_strings(lang)
     intro_section = (
         '<section aria-label="intro" class="hub-intro">\n'
@@ -447,7 +451,7 @@ def render_page(c, lang, intros):
 <circle cx="28" cy="10" fill="#e07a3f" r="2.5"></circle>
 </svg>
 </span>
-<span><b>loisirs74</b> <i>· Haute-Savoie</i></span>
+<span><b>{BRAND_SHORT}</b> <i>· {siteconfig.DEPT_NAME}</i></span>
 </a>
 {nearme_button(lang, "margin-left:auto")}
 <details class="lang-picker">

@@ -19,6 +19,7 @@ Usage:
     python3 scripts/audit_venues_external.py --refresh  # clear cache
 """
 import json
+import siteconfig  # HANDOFF-73 phase 5: per-site identity
 import glob
 import os
 import sys
@@ -34,7 +35,7 @@ CACHE_DIR = os.path.join(ROOT, ".audit-cache")
 REPORT = os.path.join(ROOT, "venue-audit-external.md")
 
 NOMINATIM = "https://nominatim.openstreetmap.org/search"
-USER_AGENT = "Loisirs74-Audit/1.0 (contact: photos@loisirs74.fr)"
+USER_AGENT = f"{siteconfig.SITE_NAME.replace(' ', '')}-Audit/1.0 (contact: {siteconfig.PHOTOS_EMAIL})"
 
 
 def norm(s):

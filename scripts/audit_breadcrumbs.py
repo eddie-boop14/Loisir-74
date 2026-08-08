@@ -11,6 +11,7 @@ Inventory every breadcrumb across all rendered HTML pages and report:
 NO writes. Output to reports/job-A-breadcrumb-audit.md.
 """
 import json
+import siteconfig  # HANDOFF-73: per-site identity
 import re
 import sys
 from collections import Counter, defaultdict
@@ -143,8 +144,8 @@ def url_to_filepath(url):
     """Resolve a fully-qualified loisirs74.fr URL to its file in repo root."""
     if not url:
         return None
-    if url.startswith("https://loisirs74.fr/"):
-        p = url[len("https://loisirs74.fr/"):]
+    if url.startswith(siteconfig.BASE_URL + "/"):
+        p = url[len(siteconfig.BASE_URL + "/"):]
     elif url.startswith("/"):
         p = url[1:]
     else:
@@ -221,7 +222,7 @@ def main():
         # Cross-locale: locale prefix differs from page lang
         for href, label in items:
             if not href: continue
-            m = re.match(r"https://loisirs74\.fr/([a-z]{2})/", href)
+            m = re.match(r"https://" + siteconfig.DOMAIN_RE + r"/([a-z]{2})/", href)
             if m:
                 href_lang = m.group(1)
             else:

@@ -15,6 +15,7 @@ Each hub is linked from its category hub (so reachability stays 0-orphan); flat
 fix_hreflang_sitemap.py downstream. No timestamps/random → byte-stable.
 """
 import html as _html
+import siteconfig  # HANDOFF-73: per-site identity
 import json
 import os
 import sys
@@ -26,7 +27,7 @@ import locales  # noqa: E402
 
 REGISTRY = os.path.join(ROOT, "data", "intent-hubs.json")
 JSON_DIR = os.path.join(ROOT, "Json")
-BASE = "https://loisirs74.fr"
+BASE = siteconfig.BASE_URL
 LANGS = locales.PROSE
 
 FACT_LABELS = {
@@ -259,7 +260,7 @@ def _topbar(lang, crumbs):
             lis.append(f'<li><a href="{url}">{esc(label)}</a></li>')
         else:
             lis.append(f'<li><span aria-current="page">{esc(label)}</span></li>')
-    return (f'<header class="topbar"><a class="brand" href="{_home_url(lang)}">Loisirs 74</a>'
+    return (f'<header class="topbar"><a class="brand" href="{_home_url(lang)}">{siteconfig.SITE_NAME}</a>'
             f'<nav class="crumbs" aria-label="breadcrumb"><ol>{"".join(lis)}</ol></nav></header>')
 
 
@@ -835,13 +836,13 @@ def render_intent_page(entry, lang, fiches, parking, built_langs, siblings):
     footer_html = _linked_footer(lang)
     return f"""<!doctype html><html lang="{lang}"{_dir_attr(lang)}><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{esc(title)} · Loisirs 74</title>
+<title>{esc(title)} · {siteconfig.SITE_NAME}</title>
 <meta name="description" content="{esc(lead[:158])}">
 <link rel="canonical" href="{canon}">{alts}
 <script type="application/ld+json">{json.dumps(graph, ensure_ascii=False)}</script>
 <style>{CSS2}</style></head><body>{topbar}<div class="wrap">
 
-<div class="kicker">Loisirs 74 · {esc(_qf_prefix(lang).replace("-", " "))}</div>
+<div class="kicker">{siteconfig.SITE_NAME} · {esc(_qf_prefix(lang).replace("-", " "))}</div>
 <h1>{esc(title)}</h1>
 <p class="lead">{esc(lead)}</p>
 
@@ -861,7 +862,7 @@ def _write_select_md(entry, lang, fiches):
     for f in members:
         nm = fiche_name(f, lang)
         lines.append(f"- [{nm}]({url_for(f['slug'], lang)}) — {f.get('commune', '')}"
-                     f" · [md](https://loisirs74.fr/content/{'en/' if lang == 'en' else ''}{f['slug']}.md)")
+                     f" · [md]({BASE}/content/{'en/' if lang == 'en' else ''}{f['slug']}.md)")
     lines += ["", f"Source: {intent_page_url(entry, lang)}", ""]
     out = os.path.join(SELECT_MD_DIR, f"{entry['id']}.md") if lang == "fr" \
         else os.path.join(SELECT_MD_DIR, "en", f"{entry['id']}.md")

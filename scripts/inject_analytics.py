@@ -27,6 +27,7 @@ Usage:
     python3 scripts/inject_analytics.py --apply
 """
 import argparse
+import siteconfig  # HANDOFF-73: per-site identity
 import glob
 import os
 import re
@@ -36,7 +37,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP_DIRS = ("_site", ".git", "node_modules", "scripts", "reports", "Json", "api", "content")
 
 # loisirs74.fr — Cloudflare Web Analytics. NOT any partner property's token.
-TOKEN = "4deae63f065c49418bc6b21258187d78"
+TOKEN = siteconfig.CF_BEACON_TOKEN
 
 SNIPPET = (
     "<!-- Cloudflare Web Analytics -->"
@@ -90,7 +91,7 @@ def main():
     print(f"inject_analytics: {seen} page(s) scanned · {verb}add {added} · {verb}repair {repaired}")
     if foreign:
         for tok, n in foreign.items():
-            print(f"  ⚑ FOREIGN TOKEN found on {n} page(s): {tok} — rewritten to loisirs74.fr's")
+            print(f"  ⚑ FOREIGN TOKEN found on {n} page(s): {tok} — rewritten to {siteconfig.DOMAIN}'s")
     if skipped_nobody:
         print(f"  skipped (no </body>): {skipped_nobody}")
     if not args.apply and (added or repaired):

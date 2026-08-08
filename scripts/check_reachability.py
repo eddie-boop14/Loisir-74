@@ -15,6 +15,7 @@ Algorithm:
   3. Report unreachable nodes per locale.
 """
 import argparse
+import siteconfig  # HANDOFF-73 phase 5: per-site identity
 import re
 import sys
 from collections import deque
@@ -71,7 +72,7 @@ def links_in(path, lang):
     cur_prefix = f"/{lang}/" if lang != "fr" else "/"
     skip_prefixes = tuple(f"/{L}/" for L in ALL_LANGS if L != lang)
     for href in re.findall(r'href=["\']([^"\']+)["\']', h):
-        m = re.match(r"(?:https?://(?:www\.)?loisirs74\.fr)?(/[^\"' ]*)", href)
+        m = re.match(r"(?:https?://(?:www\.)?" + siteconfig.DOMAIN_RE + r")?(/[^\"' ]*)", href)
         if not m:
             continue
         p = m.group(1).split("#")[0].split("?")[0]

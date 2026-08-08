@@ -20,6 +20,7 @@ Strings localized (per hub × 5 locales):
   - Filter panel: Commune / Accès / Tri labels + their options
 """
 import re
+import siteconfig  # HANDOFF-73: per-site identity
 from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -89,8 +90,8 @@ def patch_one_hub(html, hub_canon, lang):
     hub_label_loc = HUB_DISPLAY[hub_canon][lang]
 
     # 1. Breadcrumb root link target + label: <a href="https://loisirs74.fr/">Accueil</a>
-    pat = '<a href="https://loisirs74.fr/">Accueil</a>'
-    new = f'<a href="https://loisirs74.fr/{lang}/">{home}</a>'
+    pat = f'<a href="{siteconfig.BASE_URL}/">Accueil</a>'
+    new = f'<a href="{siteconfig.BASE_URL}/{lang}/">{home}</a>'
     if pat in html:
         html = html.replace(pat, new, 1)
         n += 1

@@ -14,6 +14,7 @@ import glob
 import json
 import os
 import re
+import siteconfig  # HANDOFF-73 phase 4: per-site domain
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -113,7 +114,7 @@ def check_page(label, lang, path, viol):
     # 5. anti-sink: >=1 link to a category hub or que-faire
     qf = B._qf_index_url(lang)
     hub_link = (f'href="{qf}"' in html
-                or bool(re.search(r'href="https://loisirs74\.fr/(?:[a-z]{2}/)?[a-z-]+/"', keep)))
+                or bool(re.search(r'href="' + siteconfig.SITE_URL_RE + r'/(?:[a-z]{2}/)?[a-z-]+/"', keep)))
     if not hub_link:
         viol.append(f"{tag}: anti-sink — no link to a hub or que-faire")
 

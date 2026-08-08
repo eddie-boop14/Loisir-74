@@ -35,6 +35,7 @@ drop unnamed + unknown noise. Also drop clearly non-public lots
 (access=private / access=no).
 """
 from __future__ import annotations
+import siteconfig  # HANDOFF-73 phase 5: per-site identity
 
 import argparse
 import glob
@@ -53,7 +54,7 @@ CACHE = DATA_DIR / "_osm_cache" / "parking_74.json"
 OUT_PATH = DATA_DIR / "parking_index.json"
 
 OVERPASS = "https://overpass-api.de/api/interpreter"
-UA = "Loisirs74-parking-index/1.0 (photos@loisirs74.fr)"
+UA = f"{siteconfig.SITE_NAME.replace(' ', '')}-parking-index/1.0 ({siteconfig.PHOTOS_EMAIL})"
 
 # Haute-Savoie bbox (S, W, N, E).
 BBOX = (45.55, 5.75, 46.45, 7.10)
