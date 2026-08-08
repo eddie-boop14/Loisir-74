@@ -37,11 +37,25 @@ SITE_NAME = _req("site_name")                # Loisirs 74
 DEPARTMENT = _req("department")              # {"code": "74", "name": "Haute-Savoie"}
 DEPT_CODE = DEPARTMENT["code"]
 DEPT_NAME = DEPARTMENT["name"]
+DEPT_NAME_I18N = DEPARTMENT.get("name_i18n") or {}
+
+
+def dept_name(lang):
+    """Department name in `lang`, falling back to the French form.
+
+    The 74 renders "Alta Savoia" in Italian and "Alta Saboya" in Spanish but
+    keeps "Haute-Savoie" elsewhere, so the name cannot be a single constant.
+    A site that freezes the French form in every language simply omits
+    department.name_i18n and every language falls back to DEPT_NAME.
+    """
+    return DEPT_NAME_I18N.get(lang, DEPT_NAME)
 IMPRINT = _req("imprint")
 CONTACT_EMAIL = _req("contact_email")
 PHOTOS_EMAIL = _req("photos_email")
 CF_BEACON_TOKEN = _cfg.get("cf_beacon_token", "")
 REGION = _cfg.get("region", "")
+ANCHOR_CITY = _cfg.get("anchor_city", "")
+ADJACENT_SCOPE_NOTE = _cfg.get("adjacent_scope_note", "")
 
 # Optional sibling site. Absent = no cross-link rendered anywhere. See
 # build_lieu_page.sister_link_html() for why this stays off until the sibling

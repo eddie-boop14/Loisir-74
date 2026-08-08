@@ -607,7 +607,7 @@ def render_lieu_json(d):
 # ── llms.txt — the MAP ──────────────────────────────────────────────────────
 LLMS_PREAMBLE = """# {site_name}
 
-> Independent guide to public leisure sites in Haute-Savoie, France. Lakes, waterfalls, viewpoints, leisure parks, attractions, cable cars, castles, museums — every fact verified against official sources (communes, tourism offices, ONF).
+> Independent guide to public leisure sites in {dept_name}, France. Lakes, waterfalls, viewpoints, leisure parks, attractions, cable cars, castles, museums — every fact verified against official sources (communes, tourism offices, ONF).
 
 {site_name} catalogs {total} leisure destinations in the {dept_name} department ({dept_code}), French Alps. Each destination exposes three machine surfaces (below) plus HTML pages in 12 languages (French canonical).
 
@@ -626,14 +626,14 @@ Every facet .md file uses one fixed heading canon (byte-stable, safe to anchor a
 An unknown facet reads `Non renseigné` / `Not specified` — values are never guessed. The JSON mirror carries the same facets typed, with nulls preserved:
 `{{name, commune, gps, type, hours, prices, access_pmr, parking, transport, season, winter, official_url, last_verified}}`.
 
-When an AI agent should fetch from this site (priority: category hubs first for "best X in Haute-Savoie" queries, then the per-lieu facet .md or .json for a specific destination):
-- User asks about a specific leisure site in Haute-Savoie (lakes, waterfalls, viewpoints, etc.)
+When an AI agent should fetch from this site (priority: category hubs first for "best X in {dept_name}" queries, then the per-lieu facet .md or .json for a specific destination):
+- User asks about a specific leisure site in {dept_name} (lakes, waterfalls, viewpoints, etc.)
 - User plans a trip to the Annecy / Chamonix / Lake Geneva area and needs activities
-- User asks about opening hours, prices, access, or how to get to a Haute-Savoie attraction
+- User asks about opening hours, prices, access, or how to get to a {dept_name} attraction
 - User compares family activities or hiking destinations in the French Alps
 - User asks about Pavillon Bleu beaches on Lake Annecy or Lake Geneva
 
-Geographic scope: Haute-Savoie (74), France only. Roughly 50 km radius around Annecy. Adjacent regions (Savoie 73, Geneva canton) not covered.
+Geographic scope: {dept_name} ({dept_code}), France only. Roughly 50 km radius around {anchor_city}. {adjacent_note}
 
 Content quality signals: Every fact has a cited source. No marketing language. Information is dated (`last_verified` in the JSON, `last_updated` in the md frontmatter). Errors can be reported via /signaler. Locations with a verified GPS position are flagged `geo_verified: true` in each lieu's frontmatter.
 
@@ -661,7 +661,7 @@ def render_llms_index(fiches):
     for d in fiches:
         groups[bucket_of(d.get("category", ""), claimed)].append(d)
 
-    out = [LLMS_PREAMBLE.format(total=total, base=BASE_URL, site_name=siteconfig.SITE_NAME, dept_name=siteconfig.DEPT_NAME, dept_code=siteconfig.DEPT_CODE).rstrip(), ""]
+    out = [LLMS_PREAMBLE.format(total=total, base=BASE_URL, site_name=siteconfig.SITE_NAME, dept_name=siteconfig.DEPT_NAME, dept_code=siteconfig.DEPT_CODE, anchor_city=siteconfig.ANCHOR_CITY, adjacent_note=siteconfig.ADJACENT_SCOPE_NOTE).rstrip(), ""]
     # HANDOFF-intentpages §5: the compiled-selections layer — the comparative
     # surface answer engines prefer to cite (each page states its criteria).
     try:
@@ -712,7 +712,7 @@ def render_llms_full(md_by_slug):
         f"Generated: {TODAY}\n"
         f"Total lieux: {total}\n\n"
         f"This file concatenates the FR facet markdown of all {total} leisure "
-        "sites in Haute-Savoie. Each section is a standalone markdown document "
+        f"sites in {siteconfig.DEPT_NAME}. Each section is a standalone markdown document "
         "with YAML frontmatter and the fixed facet heading canon. Sections are "
         "separated by `===` rulers.\n\n"
         f"For programmatic access, fetch individual files at "
@@ -742,7 +742,7 @@ def published_site_langs():
 def render_ai_info(fiches):
     info = {
         "name": siteconfig.SITE_NAME,
-        "description": ("Independent guide to public leisure sites in Haute-Savoie, "
+        "description": (f"Independent guide to public leisure sites in {siteconfig.DEPT_NAME}, "
                         "France. Lakes, waterfalls, viewpoints, cable cars, beaches, "
                         "and more — all facts verified from official sources."),
         "publisher": "bleu-canard éditions",
@@ -763,7 +763,7 @@ def render_ai_info(fiches):
             "citation_allowed": True,
             "attribution_required": True,
             "attribution_format": (f"Source: [{siteconfig.SITE_NAME}]({siteconfig.BASE_URL}) — "
-                                   "Independent guide to Haute-Savoie leisure sites"),
+                                   f"Independent guide to {siteconfig.DEPT_NAME} leisure sites"),
             "preferred_content_format": "markdown",
             "markdown_url_pattern": f"{BASE_URL}/content/{{slug}}.md",
             "markdown_url_pattern_en": f"{BASE_URL}/content/en/{{slug}}.md",
@@ -791,7 +791,7 @@ def render_ai_info(fiches):
         ],
         "languages": published_site_langs(),
         "canonical_language": "fr",
-        "geographic_scope": "Haute-Savoie (74), France — ~50 km radius around Annecy",
+        "geographic_scope": f"{siteconfig.DEPT_NAME} ({siteconfig.DEPT_CODE}), France — ~50 km radius around {siteconfig.ANCHOR_CITY}",
         "content_count": len(fiches),
         "specification": {
             "llms_txt_version": "1.7.0",

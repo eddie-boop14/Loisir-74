@@ -269,7 +269,7 @@ CHROME = {
     # Photo email subject prefix
     "photos_subject":  {"fr": "Photos%20—%20", "en": "Photos%20—%20", "de": "Fotos%20—%20", "it": "Foto%20—%20", "es": "Fotos%20—%20", "nl": "Foto%27s%20—%20"},
     # Site footer columns
-    "f_tagline":       {"fr": "Guide indépendant des lieux de loisirs en Haute-Savoie. 100% gratuit. 100% vérifié.", "en": "Independent guide to leisure spots in Haute-Savoie. 100% free. 100% verified.", "de": "Unabhängiger Freizeit-Guide für Haute-Savoie. 100% kostenlos. 100% geprüft.", "it": "Guida indipendente ai luoghi di svago in Alta Savoia. 100% gratis. 100% verificato.", "es": "Guía independiente de los lugares de ocio en Alta Saboya. 100% gratis. 100% verificado.", "nl": "Onafhankelijke gids voor vrijetijdsbestedingen in Haute-Savoie. Gratis. Geverifieerd."},
+    "f_tagline":       {"fr": f"Guide indépendant des lieux de loisirs en {siteconfig.dept_name('fr')}. 100% gratuit. 100% vérifié.", "en": f"Independent guide to leisure spots in {siteconfig.dept_name('en')}. 100% free. 100% verified.", "de": f"Unabhängiger Freizeit-Guide für {siteconfig.dept_name('de')}. 100% kostenlos. 100% geprüft.", "it": f"Guida indipendente ai luoghi di svago in {siteconfig.dept_name('it')}. 100% gratis. 100% verificato.", "es": f"Guía independiente de los lugares de ocio en {siteconfig.dept_name('es')}. 100% gratis. 100% verificado.", "nl": f"Onafhankelijke gids voor vrijetijdsbestedingen in {siteconfig.dept_name('nl')}. Gratis. Geverifieerd."},
     "f_explore":       {"fr": "Explorer", "en": "Explore", "de": "Entdecken", "it": "Esplora", "es": "Explorar", "nl": "Verkennen"},
     "f_contribute":    {"fr": "Contribuer", "en": "Contribute", "de": "Beitragen", "it": "Contribuisci", "es": "Contribuir", "nl": "Bijdragen"},
     "f_send_photos":   {"fr": "Envoyer des photos", "en": "Send photos", "de": "Fotos senden", "it": "Invia foto", "es": "Enviar fotos", "nl": "Foto&#39;s sturen"},
@@ -728,7 +728,7 @@ def practical_block(practical, name, commune, drop_tarif=False):
             continue
         extra = ""
         if any(k.lower().startswith(t) for t in addr_terms):
-            q = url_q(f"{name}, {commune}, Haute-Savoie, France")
+            q = url_q(f"{name}, {commune}, {siteconfig.DEPT_NAME}, France")
             extra = (
                 f' <a href="https://www.google.com/maps/search/?api=1&query={q}" '
                 'target="_blank" rel="noopener" class="inline-link">'
@@ -863,11 +863,11 @@ def maps_query(d, name, commune):
     destination=lat,lng does NOT snap to the place). Coords = last-resort
     fallback only."""
     if name and commune:
-        return url_q(f"{name}, {commune}, Haute-Savoie, France")
+        return url_q(f"{name}, {commune}, {siteconfig.DEPT_NAME}, France")
     lat, lng = d.get("latitude"), d.get("longitude")
     if lat is not None and lng is not None:
         return f"{lat},{lng}"
-    return url_q(f"{name or ''}, {commune or ''}, Haute-Savoie, France")
+    return url_q(f"{name or ''}, {commune or ''}, {siteconfig.DEPT_NAME}, France")
 
 
 def maps_place_param(d, kind):
@@ -914,11 +914,11 @@ def how_to_block(how, name, commune, lat=None, lng=None, slug=None, place_id=Non
     # Name+commune first so Maps resolves to the real POI; a stored coord can be
     # a centroid/label point and pins off-venue. Coords = last-resort fallback.
     if name and commune:
-        dest = url_q(f"{name}, {commune}, Haute-Savoie, France")
+        dest = url_q(f"{name}, {commune}, {siteconfig.DEPT_NAME}, France")
     elif lat is not None and lng is not None:
         dest = f"{lat},{lng}"
     else:
-        dest = url_q(f"{name or ''}, {commune or ''}, Haute-Savoie, France")
+        dest = url_q(f"{name or ''}, {commune or ''}, {siteconfig.DEPT_NAME}, France")
     # Canonical-POI pin: routes the how-card directions to the real place
     # regardless of the stored coordinate. Empty when no google_place_id.
     pid_param = f"&destination_place_id={url_q(place_id)}" if place_id else ""
@@ -1750,7 +1750,7 @@ def facts_meta(d):
     name = fr.get("name") or d.get("slug", "")
     commune = d.get("commune") or ""
     t = _type_label(d)
-    place = f"{name}, {commune} (Haute-Savoie)." if commune else f"{name} (Haute-Savoie)."
+    place = f"{name}, {commune} ({siteconfig.DEPT_NAME})." if commune else f"{name} ({siteconfig.DEPT_NAME})."
     parts = [f"{t} — {place}" if t else place]
     price = _facts_price(d)
     if price:
@@ -1815,7 +1815,7 @@ def build_ldjson(d, desc_override=""):
             "@type": "PostalAddress",
             "addressLocality": commune,
             "postalCode": str(postal),
-            "addressRegion": "Haute-Savoie",
+            "addressRegion": siteconfig.DEPT_NAME,
             "addressCountry": "FR",
         },
         "isAccessibleForFree": bool(is_free),
@@ -2395,7 +2395,7 @@ def _render_rel_card(slug, lang, labels):
     ref = ' referrerpolicy="no-referrer"' if img.startswith(("http://", "https://")) else ""
     prefix = "" if lang == "fr" else f"/{lang}"
     fiche_url = f"{BASE_URL}{prefix}/{slug}"
-    maps_q = quote(f"{name}, {commune}, Haute-Savoie".strip(", "), safe="")
+    maps_q = quote(f"{name}, {commune}, {siteconfig.DEPT_NAME}".strip(", "), safe="")
     maps_url = f"https://www.google.com/maps/dir/?api=1&destination={maps_q}"
     desc_html = f'<p class="card-desc">{esc(desc)}</p>' if desc else ""
     actions = [f'<a href="{maps_url}" target="_blank" rel="noopener">{_REL_PIN}<span>{labels["route"]}</span></a>']
@@ -2459,9 +2459,9 @@ _VOIS = {"fr": "Plages voisines", "en": "Nearby beaches", "de": "Strände in der
          "it": "Spiagge vicine", "es": "Playas cercanas", "nl": "Stranden in de buurt"}
 _GUIDE = {"fr": "Voir le guide baignade", "en": "Swimming guide", "de": "Bade-Guide",
           "it": "Guida balneazione", "es": "Guía de baño", "nl": "Zwemgids"}
-_ALLSPOTS = {"fr": "Où se baigner en Haute-Savoie", "en": "Where to swim in Haute-Savoie",
-             "de": "Baden in Haute-Savoie", "it": "Dove fare il bagno in Alta Savoia",
-             "es": "Dónde bañarse en Alta Saboya", "nl": "Zwemmen in Haute-Savoie"}
+_ALLSPOTS = {"fr": f"Où se baigner en {siteconfig.dept_name('fr')}", "en": f"Where to swim in {siteconfig.dept_name('en')}",
+             "de": f"Baden in {siteconfig.dept_name('de')}", "it": f"Dove fare il bagno in {siteconfig.dept_name('it')}",
+             "es": f"Dónde bañarse en {siteconfig.dept_name('es')}", "nl": f"Zwemmen in {siteconfig.dept_name('nl')}"}
 _CH_SURV = {"fr": "Surveillance", "en": "Lifeguard", "de": "Aufsicht", "it": "Sorveglianza",
             "es": "Vigilancia", "nl": "Toezicht"}
 _CH_VOIRFICHE = {"fr": "voir fiche", "en": "see details", "de": "siehe Steckbrief",
