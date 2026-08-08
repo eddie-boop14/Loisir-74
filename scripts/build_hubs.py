@@ -104,7 +104,7 @@ def hub_locale_map(hub_dir):
     h = p.read_text(encoding="utf-8")
     m = {"fr": hub_dir}
     for mt in re.finditer(
-        r'<link rel="alternate" hreflang="([^"]+)" href="https://loisirs74\.fr/(?:([a-z]+)/)?([a-z-]+)/?"',
+        r'<link rel="alternate" hreflang="([^"]+)" href="' + siteconfig.SITE_URL_RE + r'/(?:([a-z]+)/)?([a-z-]+)/?"',
         h
     ):
         lang, prefix, name = mt.group(1), mt.group(2), mt.group(3)
@@ -274,7 +274,7 @@ def patch_hub_head(html, canon, lang, slug, descriptions):
     url = f"{siteconfig.BASE_URL}/{slug}/" if lang == "fr" else f"{siteconfig.BASE_URL}/{lang}/{slug}/"
     og_html = (
         f'<meta property="og:type" content="website"/>\n'
-        f'<meta property="og:site_name" content="Loisirs 74"/>\n'
+        f'<meta property="og:site_name" content="{siteconfig.SITE_NAME}"/>\n'
         f'<meta property="og:locale" content="{OG_LOCALE_TAG[lang]}"/>\n'
         f'<meta property="og:url" content="{url}"/>\n'
         f'<meta property="og:title" content="{_attr_escape(new_title)}"/>\n'
@@ -694,7 +694,7 @@ def existing_hub_fiches(html_path, exclude_chrome):
     h = html_path.read_text(encoding="utf-8")
     # Strip locale prefix for matching
     slugs = set()
-    for m in re.finditer(r'href="https://loisirs74\.fr/(?:[a-z]+/)?([a-z0-9-]+)/?"', h):
+    for m in re.finditer(r'href="' + siteconfig.SITE_URL_RE + r'/(?:[a-z]+/)?([a-z0-9-]+)/?"', h):
         slugs.add(m.group(1))
     return slugs - exclude_chrome
 
@@ -753,8 +753,8 @@ def _hub_cards_by_slug(hub_html):
     out = {}
     for m in re.finditer(r'<article class="card"[^>]*>.*?</article>', hub_html, re.S):
         block = m.group(0)
-        sm = (re.search(r'href="https://loisirs74\.fr/(?:[a-z]{2}/)?([a-z0-9-]+)"\s+class="card-photo"', block)
-              or re.search(r'class="card-photo"\s+href="https://loisirs74\.fr/(?:[a-z]{2}/)?([a-z0-9-]+)"', block))
+        sm = (re.search(r'href="' + siteconfig.SITE_URL_RE + r'/(?:[a-z]{2}/)?([a-z0-9-]+)"\s+class="card-photo"', block)
+              or re.search(r'class="card-photo"\s+href="' + siteconfig.SITE_URL_RE + r'/(?:[a-z]{2}/)?([a-z0-9-]+)"', block))
         if sm:
             out[sm.group(1)] = block
     return out
@@ -1084,7 +1084,7 @@ def hub_slug_for(fr_hub, lang):
     p = ROOT / fr_hub / "index.html"
     h = p.read_text(encoding="utf-8")
     m = re.search(
-        rf'<link rel="alternate" hreflang="{lang}" href="https://loisirs74\.fr/(?:[a-z]+/)?([a-z0-9-]+)/?"', h)
+        rf'<link rel="alternate" hreflang="{lang}" href="{siteconfig.SITE_URL_RE}/(?:[a-z]+/)?([a-z0-9-]+)/?"', h)
     return m.group(1) if m else fr_hub
 
 
@@ -1168,7 +1168,7 @@ def render_facts_hub_page(fr_hub, lang, union, communes_in_hub, has_free):
 
     # --- breadcrumb ------------------------------------------------------------
     html = re.sub(
-        r'(<nav aria-label="breadcrumb" class="crumb">\s*)<a href="https://loisirs74\.fr/">[^<]*</a>(\s*<span class="sep">/</span>\s*)<b>[^<]*</b>',
+        r'(<nav aria-label="breadcrumb" class="crumb">\s*)<a href="' + siteconfig.SITE_URL_RE + r'/">[^<]*</a>(\s*<span class="sep">/</span>\s*)<b>[^<]*</b>',
         lambda m: f'{m.group(1)}<a href="{siteconfig.BASE_URL}/{lang}/">{_html.escape(accueil, quote=False)}</a>'
                   f'{m.group(2)}<b>{_html.escape(display, quote=False)}</b>',
         html, count=1)
@@ -1195,7 +1195,7 @@ def render_facts_hub_page(fr_hub, lang, union, communes_in_hub, has_free):
     foot = re.search(r'<footer class="site">.*?</footer>', html, re.S)
     if foot:
         f_html = foot.group(0)
-        f_html = re.sub(r'(<h4>Loisirs 74</h4>\s*<p>).*?(</p>)',
+        f_html = re.sub(r'(<h4>' + siteconfig.SITE_NAME_RE + r'</h4>\s*<p>).*?(</p>)',
                         lambda m: m.group(1) + e(hp["foot_blurb"]) + m.group(2), f_html, flags=re.S)
         f_html = f_html.replace('<h4>Catégories</h4>', f'<h4>{e(hp["foot_categories_h3"])}</h4>')
         f_html = f_html.replace('<h4>Langue</h4>', f'<h4>{e(hp["foot_language_h3"])}</h4>')
@@ -1210,7 +1210,7 @@ def render_facts_hub_page(fr_hub, lang, union, communes_in_hub, has_free):
             if (ROOT / path / "index.html").exists():
                 return f'<a href="{siteconfig.BASE_URL}/{lang}/{hub_slug_for(path, lang)}/">'
             return m.group(0)
-        f_html = re.sub(r'<a href="https://loisirs74\.fr/([a-z0-9-]*)/?">', _cat_link, f_html)
+        f_html = re.sub(r'<a href="' + siteconfig.SITE_URL_RE + r'/([a-z0-9-]*)/?">', _cat_link, f_html)
         for fr_lbl, key in [("Mentions légales", "legal"), ("Confidentialité", "privacy"),
                             ("CGV", "terms"), ("Signaler une info", "report"),
                             ("Devenir partenaire", "partner")]:

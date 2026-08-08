@@ -61,3 +61,15 @@ ADJACENT_SCOPE_NOTE = _cfg.get("adjacent_scope_note", "")
 # build_lieu_page.sister_link_html() for why this stays off until the sibling
 # actually resolves.
 SISTER = _cfg.get("sister") or None
+
+# Regex-safe forms. Engine scripts parse their OWN rendered HTML looking for
+# site URLs; those patterns must be built from the configured domain, never
+# from a literal. Kept as constants so call sites concatenate rather than
+# f-string — several of those patterns contain {n} quantifiers.
+import re as _re
+
+DOMAIN_RE = _re.escape(DOMAIN)                 # loisirs74\.fr
+SITE_URL_RE = "https://" + DOMAIN_RE           # https://loisirs74\.fr
+SITE_NAME_RE = _re.escape(SITE_NAME)           # Loisirs\ 74
+WORDMARK = DOMAIN.split(".")[0]                # loisirs74
+

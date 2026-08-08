@@ -204,7 +204,7 @@ def filter_sitemap(path, site_root):
     kept_blocks = []
     dropped = 0
     for blk in blocks:
-        m = re.search(r"<loc>(https://loisirs74\.fr/[^<]*)</loc>", blk)
+        m = re.search(r"<loc>(" + siteconfig.SITE_URL_RE + r"/[^<]*)</loc>", blk)
         if not m:
             kept_blocks.append(blk); continue
         url = m.group(1)

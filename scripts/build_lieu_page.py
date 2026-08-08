@@ -224,7 +224,7 @@ CHROME = {
     "source_official":  {"fr": "Source officielle", "en": "Official source", "de": "Offizielle Quelle", "it": "Fonte ufficiale", "es": "Fuente oficial", "nl": "Officiële bron"},
     # Earn-only geo ✅ badge (derive_geo_verified.py). Gold = verified-only per
     # J4-BRAND. Label translates; the place name is frozen and not in the label.
-    "geo_verified":     {"fr": "Position vérifiée par loisirs74.fr", "en": "Location verified by loisirs74.fr", "de": "Standort geprüft von loisirs74.fr", "it": "Posizione verificata da loisirs74.fr", "es": "Ubicación verificada por loisirs74.fr", "nl": "Locatie geverifieerd door loisirs74.fr"},
+    "geo_verified":     {"fr": f"Position vérifiée par {siteconfig.DOMAIN}", "en": f"Location verified by {siteconfig.DOMAIN}", "de": f"Standort geprüft von {siteconfig.DOMAIN}", "it": f"Posizione verificata da {siteconfig.DOMAIN}", "es": f"Ubicación verificada por {siteconfig.DOMAIN}", "nl": f"Locatie geverifieerd door {siteconfig.DOMAIN}"},
     # Event modal (per-fiche promo for the venue's own event)
     "ev_intro":  {"fr": "Le lieu de cette page organise", "en": "The venue on this page is hosting", "de": "Der Ort dieser Seite veranstaltet", "it": "Il luogo di questa pagina organizza", "es": "El lugar de esta página organiza", "nl": "De locatie op deze pagina organiseert"},
     "ev_cta":    {"fr": "Voir l&#39;événement", "en": "See the event", "de": "Zur Veranstaltung", "it": "Scopri l&#39;evento", "es": "Ver el evento", "nl": "Bekijk het evenement"},
@@ -253,7 +253,7 @@ CHROME = {
     "qmark":           {"fr": " ?", "en": "?", "de": "?", "it": "?", "es": "?", "nl": "?"},
     # Gallery invite
     "g_been_q":        {"fr": "Vous y êtes allé ?", "en": "Been there?", "de": "Schon dort gewesen?", "it": "Ci sei stato?", "es": "¿Ha estado allí?", "nl": "Bent u er geweest?"},
-    "g_invite":        {"fr": "Partagez vos photos — nous les ajoutons à cette page avec votre crédit. Tag #loisirs74 ou écrivez à", "en": "Share your photos — we&#39;ll add them to this page with credit. Tag #loisirs74 or email", "de": "Teilen Sie Ihre Fotos — wir fügen sie mit Bildnachweis hinzu. Tag #loisirs74 oder schreiben Sie an", "it": "Condividi le tue foto — le aggiungiamo con il tuo credito. Tag #loisirs74 o scrivi a", "es": "Comparta sus fotos — las añadimos con crédito. Tag #loisirs74 o escriba a", "nl": "Deel uw foto&#39;s — wij voegen ze met credit toe. Tag #loisirs74 of mail naar"},
+    "g_invite":        {"fr": f"Partagez vos photos — nous les ajoutons à cette page avec votre crédit. Tag #{siteconfig.WORDMARK} ou écrivez à", "en": f"Share your photos — we&#39;ll add them to this page with credit. Tag #{siteconfig.WORDMARK} or email", "de": f"Teilen Sie Ihre Fotos — wir fügen sie mit Bildnachweis hinzu. Tag #{siteconfig.WORDMARK} oder schreiben Sie an", "it": f"Condividi le tue foto — le aggiungiamo con il tuo credito. Tag #{siteconfig.WORDMARK} o scrivi a", "es": f"Comparta sus fotos — las añadimos con crédito. Tag #{siteconfig.WORDMARK} o escriba a", "nl": f"Deel uw foto&#39;s — wij voegen ze met credit toe. Tag #{siteconfig.WORDMARK} of mail naar"},
     # Sources caveat
     "src_caveat":      {"fr": "Vérifications multi-sources à la date de publication. Les informations peuvent évoluer — confirmez auprès du gestionnaire officiel avant un déplacement.", "en": "Multi-source verification at publication. Information may change — confirm with the official operator before travelling.", "de": "Mehrquellen-Verifizierung zum Veröffentlichungsdatum. Informationen können sich ändern — bestätigen Sie diese vor der Anreise beim offiziellen Betreiber.", "it": "Verifica multi-fonte alla data di pubblicazione. Le informazioni possono cambiare — confermare con il gestore ufficiale prima del viaggio.", "es": "Verificación multi-fuente en la fecha de publicación. La información puede cambiar — confirme con el operador oficial antes de viajar.", "nl": "Multi-bron verificatie bij publicatie. Informatie kan veranderen — bevestig bij de officiële beheerder vóór vertrek."},
     "data_partial":    {"fr": "Données partielles :", "en": "Partial data:", "de": "Teildaten:", "it": "Dati parziali:", "es": "Datos parciales:", "nl": "Gedeeltelijke gegevens:"},
@@ -1467,8 +1467,8 @@ def gallery_block(name, photos=None):
         '<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>'
         '<circle cx="12" cy="13" r="4"/></svg></div>'
         f'<p><strong>{T("g_been_q")}</strong> {T("g_invite")} '
-        f'<a href="mailto:photos@loisirs74.fr?subject={T("photos_subject")}{url_q(name)}">'
-        'photos@loisirs74.fr</a></p></div></div></section>'
+        f'<a href="mailto:{siteconfig.PHOTOS_EMAIL}?subject={T("photos_subject")}{url_q(name)}">'
+        f'{siteconfig.PHOTOS_EMAIL}</a></p></div></div></section>'
     )
 
 
@@ -2135,7 +2135,7 @@ def site_footer():
         '<footer class="site"><div class="wrap"><div class="foot-grid">'
         f'<div class="foot-col"><a class="brand" href="{BASE_URL}{lp}/" style="margin-bottom:.85rem"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>{siteconfig.SITE_NAME}</span></a><p>{T("f_tagline")}</p></div>'
         f'<div class="foot-col"><h4>{T("f_explore")}</h4><ul><li><a href="{BASE_URL}{lp}/">{T("home")}</a></li>{guide_lis}</ul></div>'
-        f'<div class="foot-col"><h4>{T("f_contribute")}</h4><ul><li><a href="mailto:photos@loisirs74.fr">{T("f_send_photos")}</a></li><li><a href="{BASE_URL}{legal_lp}/signaler">{T("f_report")}</a></li><li><a href="{BASE_URL}{legal_lp}/devenir-partenaire">{T("f_become_p")}</a></li></ul></div>'
+        f'<div class="foot-col"><h4>{T("f_contribute")}</h4><ul><li><a href="mailto:{siteconfig.PHOTOS_EMAIL}">{T("f_send_photos")}</a></li><li><a href="{BASE_URL}{legal_lp}/signaler">{T("f_report")}</a></li><li><a href="{BASE_URL}{legal_lp}/devenir-partenaire">{T("f_become_p")}</a></li></ul></div>'
         f'<div class="foot-col"><h4>{T("f_legal")}</h4><ul><li><a href="{BASE_URL}{legal_lp}/mentions-legales">{T("f_legal_link")}</a></li><li><a href="{BASE_URL}{legal_lp}/confidentialite">{T("f_privacy")}</a></li><li><a href="{BASE_URL}{legal_lp}/cgv">{T("f_cgv")}</a></li></ul></div>'
         f'</div><div class="foot-bottom"><span class="credit">{T("f_copyright")}</span>{sister_link_html()}<span>{T("f_promise")}</span></div></div></footer>'
     )
