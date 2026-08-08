@@ -101,7 +101,7 @@
     var cards = ranked.map(function (x) {
       var r = x.r, d = x.d;
       var dist = d < 1 ? Math.round(d * 1000) + " m" : d.toFixed(1) + " " + L.km;
-      var href = "https://loisirs74.fr" + pre + "/" + r.slug;
+      var href = "__SITE_ORIGIN__" + pre + "/" + r.slug;
       var photo = r.photo
         ? '<img src="' + esc(r.photo) + '" alt="" loading="lazy" decoding="async">'
         : '<div class="near-card-noimg"></div>';

@@ -344,8 +344,17 @@ def main():
     for _name in RUNTIME_JS:
         _sp = REPO / "scripts" / _name
         if _sp.exists():
-            shutil.copy2(_sp, sdst / _name)
-            print(f"  + scripts/{_name}")
+            # Runtime JS cannot import siteconfig, so the origin is a
+            # placeholder in source and is substituted here at publish time.
+            _txt = _sp.read_text(encoding="utf-8")
+            _n = _txt.count("__SITE_ORIGIN__")
+            if _n:
+                _txt = _txt.replace("__SITE_ORIGIN__", siteconfig.BASE_URL)
+                (sdst / _name).write_text(_txt, encoding="utf-8")
+                shutil.copystat(_sp, sdst / _name)
+            else:
+                shutil.copy2(_sp, sdst / _name)
+            print(f"  + scripts/{_name}" + (f" (origin substituted x{_n})" if _n else ""))
 
     print("Copying locale trees (en/de/it/es/nl/pl)...")
     for L in LOCALES:
