@@ -1,6 +1,6 @@
 # robots-ai.txt — explicit AI bot policy for loisirs74.fr
 # Spec: https://www.ai-visibility.org.uk/specifications/robots-ai-txt/
-# Last updated: 2026-07-25
+# Last updated: 2026-08-10
 #
 # SUPPLEMENTARY POLICY — robots.txt is authoritative. Major crawlers read
 # robots.txt, not this file. This file documents intent + attribution for
@@ -8,11 +8,16 @@
 # Nothing here may be stricter than robots.txt for a citation bot: every
 # citation agent below is "Allow: /" in both files.
 
-# Default for any AI crawler not explicitly listed
+# Default for any AI crawler not explicitly listed.
+# Mirrors the "User-agent: *" group in robots.txt EXACTLY, .html variants
+# included — robots.txt matching is prefix-based but not extension-aware, so
+# /merci-signalement alone does not cover /merci-signalement.html.
 User-agent: *
 Allow: /
 Disallow: /merci-signalement
 Disallow: /merci-partenaire
+Disallow: /merci-signalement.html
+Disallow: /merci-partenaire.html
 
 # ──────────────────────────────────────────────────────────────
 # CITATION-allowed (these bots can read and cite our content)
