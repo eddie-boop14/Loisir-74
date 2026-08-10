@@ -58,10 +58,14 @@ User-agent: GPTBot
 # ChatGPT-User, both Allow: / above and in robots.txt.) Denying the raw
 # markdown + json mirrors denies a training slice only; the HTML pages that
 # citation actually reads stay open.
+# /llms-full.txt is the same corpus as /content/ in one file; denying the
+# mirrors while leaving the dump open would make the rule cosmetic. It is a
+# file, not a directory — no trailing slash. /llms.txt (the map) stays open.
 # Mirrors robots.txt exactly — the two files must not disagree.
 Allow: /
 Disallow: /content/
 Disallow: /api/
+Disallow: /llms-full.txt
 
 User-agent: CCBot
 Allow: /

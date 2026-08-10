@@ -54,6 +54,38 @@ CONTENT_DIR = os.path.join(ROOT, "content")
 BASE_URL = siteconfig.BASE_URL
 TODAY = datetime.date.today().isoformat()
 
+
+def training_denied_paths():
+    """The paths robots.txt actually denies the training crawler, read from
+    robots.txt itself.
+
+    ai_policy.training_allowed=False is a claim; this is the evidence for it.
+    Deriving instead of restating means the manifest can never drift from the
+    file that does the enforcing — the exact failure this repo keeps hitting
+    when one surface is authored and another is generated. Fails loudly rather
+    than emitting an empty list, because "no denied paths" and "I could not
+    find the group" must never look the same to a reader.
+    """
+    robots = os.path.join(ROOT, "robots.txt")
+    with open(robots, encoding="utf-8") as fh:
+        lines = fh.read().splitlines()
+    denied, in_group = [], False
+    for line in lines:
+        stripped = line.split("#")[0].strip()
+        if not stripped:
+            continue
+        key, _, value = stripped.partition(":")
+        key, value = key.strip().lower(), value.strip()
+        if key == "user-agent":
+            in_group = value.lower() == "gptbot"
+        elif in_group and key == "disallow" and value:
+            denied.append(value)
+    if not denied:
+        raise SystemExit("::error::build_ai_content: no GPTBot Disallow rules found in "
+                         "robots.txt — ai_policy.training_allowed=False would be "
+                         "unenforced. Refusing to publish a claim we do not keep.")
+    return denied
+
 DEPARTMENT = siteconfig.DEPT_NAME
 DEPARTMENT_CODE = siteconfig.DEPT_CODE
 REGION = siteconfig.REGION
@@ -757,9 +789,16 @@ def render_ai_info(fiches):
             "robots_ai_txt": f"{BASE_URL}/robots-ai.txt",
             "lieu_index_json": f"{BASE_URL}/api/lieux.json",
             "ai_info_json": f"{BASE_URL}/.well-known/ai-info.json",
+            # RFC 9116 — a real IETF standard, unlike the rest of this list.
+            # Its Expires is recomputed by build_security_txt.py on every build.
+            "security_txt": f"{BASE_URL}/.well-known/security.txt",
         },
         "ai_policy": {
             "training_allowed": False,
+            # Read out of robots.txt at build time, never restated by hand, so
+            # the claim above always matches what is actually enforced.
+            "training_denied_paths": training_denied_paths(),
+            "training_enforced_by": f"{BASE_URL}/robots.txt",
             "citation_allowed": True,
             "attribution_required": True,
             "attribution_format": (f"Source: [{siteconfig.SITE_NAME}]({siteconfig.BASE_URL}) — "

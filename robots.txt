@@ -32,10 +32,15 @@ Allow: /
 # HTML pages remain open so citation is unaffected.
 # Trailing slashes are load-bearing: robots.txt matching is prefix-based, so
 # bare /content would also match a future /content-hub/ HTML page.
+# /llms-full.txt is the same corpus as /content/ in a single 811 KB file —
+# denying the mirrors while leaving the dump open would make the training
+# rule cosmetic. It is a file, not a directory: no trailing slash, and it
+# must not gain one. /llms.txt (the map, not the corpus) stays open.
 User-agent: GPTBot
 Allow: /
 Disallow: /content/
 Disallow: /api/
+Disallow: /llms-full.txt
 
 User-agent: PerplexityBot
 Allow: /

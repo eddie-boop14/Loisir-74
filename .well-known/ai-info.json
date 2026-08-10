@@ -12,10 +12,17 @@
     "robots_txt": "https://loisirs74.fr/robots.txt",
     "robots_ai_txt": "https://loisirs74.fr/robots-ai.txt",
     "lieu_index_json": "https://loisirs74.fr/api/lieux.json",
-    "ai_info_json": "https://loisirs74.fr/.well-known/ai-info.json"
+    "ai_info_json": "https://loisirs74.fr/.well-known/ai-info.json",
+    "security_txt": "https://loisirs74.fr/.well-known/security.txt"
   },
   "ai_policy": {
     "training_allowed": false,
+    "training_denied_paths": [
+      "/content/",
+      "/api/",
+      "/llms-full.txt"
+    ],
+    "training_enforced_by": "https://loisirs74.fr/robots.txt",
     "citation_allowed": true,
     "attribution_required": true,
     "attribution_format": "Source: [Loisirs 74](https://loisirs74.fr) — Independent guide to Haute-Savoie leisure sites",
