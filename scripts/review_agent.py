@@ -28,6 +28,7 @@ Pricing (Haiku 4.5, 2026-06):
 """
 
 from __future__ import annotations
+import siteconfig  # HANDOFF-73 phase 5: per-site identity
 
 import argparse
 import datetime as _dt
@@ -150,7 +151,7 @@ def load_queue(path: Path) -> tuple[list[dict[str, Any]], bool]:
 # -----------------------------------------------------------------------------
 
 SYSTEM_PROMPT = (
-    "You are an editorial reviewer for loisirs74.fr, a Haute-Savoie tourism "
+    f"You are an editorial reviewer for {siteconfig.DOMAIN}, a {siteconfig.DEPT_NAME} tourism "
     "catalogue. You are auditing fiches against weekly sweep signals "
     "(Google Places, the French business registry, and direct fetches of "
     "official sites). Your verdicts get human-reviewed before any changes "
@@ -247,7 +248,7 @@ def _now_z() -> str:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="loisirs74 AI review agent")
+    parser = argparse.ArgumentParser(description=f"{siteconfig.WORDMARK} AI review agent")
     parser.add_argument(
         "--dry-run",
         action="store_true",

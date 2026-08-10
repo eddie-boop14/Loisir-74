@@ -22,6 +22,11 @@ from pathlib import Path
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# These tests load scripts by file path (spec_from_file_location), which —
+# unlike running `python3 scripts/x.py` — does NOT put scripts/ on sys.path.
+# A target's own `import siteconfig` would then fail. Put it there explicitly.
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+
 
 def _load():
     spec = importlib.util.spec_from_file_location(

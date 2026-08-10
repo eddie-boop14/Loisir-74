@@ -38,6 +38,7 @@ Usage:
   python3 scripts/audit_sources.py --no-fetch       # use cache only (offline)
 """
 import argparse
+import siteconfig  # HANDOFF-73 phase 5: per-site identity
 import datetime
 import glob
 import hashlib
@@ -57,7 +58,7 @@ CACHE_DIR = os.path.join(ROOT, "cache", "source-audit")
 REPORT_MD = os.path.join(ROOT, "reports", "source-audit.md")
 REPORT_JSON = os.path.join(ROOT, "reports", "source-audit.json")
 TODAY = datetime.date.today().isoformat()
-UA = "Mozilla/5.0 (compatible; loisirs74-source-audit/1.0; +https://loisirs74.fr)"
+UA = f"Mozilla/5.0 (compatible; {siteconfig.WORDMARK}-source-audit/1.0; +{siteconfig.BASE_URL})"
 TIMEOUT = 12
 RATE_LIMIT_S = 0.4
 # Drift (m) beyond which a name-matched entity's stored coordinate implies the

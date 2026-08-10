@@ -1,5 +1,5 @@
 /* ============================================================
-   loisirs74 — moteur de tri
+   moteur de tri
    météo (cadre) → catégorie (groupe) → lieu (ordre)
    Couche horaires : CÂBLÉE MAIS DORMANTE.
    Une fiche sans `horaires` ne montre aucun badge ouvert/fermé.

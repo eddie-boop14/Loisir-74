@@ -20,6 +20,7 @@ difflib; GPS haversine.
   WEAK   : fuzzy 0.70-0.90 or commune-only -> SUGGESTED, never auto-filled.
 """
 import argparse
+import siteconfig  # HANDOFF-73 phase 5: per-site identity
 import glob
 import json
 import math
@@ -134,7 +135,7 @@ def url_live(url):
     for method in ("HEAD", "GET"):
         try:
             req = urllib.request.Request(url, method=method, headers={
-                "User-Agent": "Mozilla/5.0 (loisirs74 dt-null-fill link-check)"})
+                "User-Agent": f"Mozilla/5.0 ({siteconfig.WORDMARK} dt-null-fill link-check)"})
             with urllib.request.urlopen(req, timeout=15) as resp:
                 return 200 <= resp.status < 400
         except Exception:  # noqa: BLE001

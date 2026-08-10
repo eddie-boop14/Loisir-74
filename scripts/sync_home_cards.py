@@ -58,6 +58,7 @@ Usage:
 2026 · Bleu canard édition · Edmaster & Claudius 🦆
 """
 import argparse
+import siteconfig  # HANDOFF-73 phase 4: per-site domain
 import json
 import re
 import sys
@@ -67,8 +68,11 @@ ROOT = Path(__file__).resolve().parent.parent
 JSON_DIR = ROOT / "Json"
 
 # The whole <a class="card-photo"> block, whatever markup it wraps.
+# Host comes from siteconfig (HANDOFF-73 phase 4) — the old literal domain
+# would have matched nothing on the 73.
 CARD_BLOCK = re.compile(
-    r'<a class="card-photo" href="https://loisirs74\.fr/(?:([a-z]{2})/)?([a-z0-9-]+)">(.*?)</a>',
+    r'<a class="card-photo" href="' + siteconfig.SITE_URL_RE
+    + r'/(?:([a-z]{2})/)?([a-z0-9-]+)">(.*?)</a>',
     re.S,
 )
 SOURCE_RE = re.compile(r'(<source srcset=")([^"]+)(")')
@@ -110,7 +114,7 @@ def esc_attr(s):
              .replace("<", "&lt;").replace(">", "&gt;").replace("'", "&#x27;"))
 
 
-SITE = "https://loisirs74.fr"
+SITE = siteconfig.BASE_URL
 
 
 def bare(u):

@@ -141,11 +141,11 @@ def render(d, lang):
     schema = {"@context": "https://schema.org", "@type": "TouristAttraction",
               "name": name, "inLanguage": lang,
               "address": {"@type": "PostalAddress", "addressLocality": commune,
-                          "addressRegion": "Haute-Savoie", "addressCountry": "FR"}}
+                          "addressRegion": siteconfig.DEPT_NAME, "addressCountry": "FR"}}
     if d.get("latitude") and d.get("longitude"):
         schema["geo"] = {"@type": "GeoCoordinates", "latitude": d["latitude"], "longitude": d["longitude"]}
-    title = f"{name} · {commune} — loisirs74"
-    meta_desc = (descriptor + (", " if descriptor else "") + commune + " (Haute-Savoie).").strip()
+    title = f"{name} · {commune} — {siteconfig.DOMAIN.split('.')[0]}"
+    meta_desc = (descriptor + (", " if descriptor else "") + commune + f" ({siteconfig.DEPT_NAME}).").strip()
     indexable = lang in INDEXABLE
     self_url = f"{BASE}/{lang}/{d['slug']}"
     robots = "index,follow" if indexable else "noindex,nofollow"

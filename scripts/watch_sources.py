@@ -37,6 +37,7 @@ Usage:
   --dry-run writes the report but leaves snapshots untouched.
 """
 import argparse
+import siteconfig  # HANDOFF-73 phase 5: per-site identity
 import difflib
 import hashlib
 import json
@@ -48,8 +49,8 @@ import urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MANIFEST = os.path.join(ROOT, "data", "watch-sources.json")
 SNAP_DIR = os.path.join(ROOT, "reports", "watch")
-UA = ("Mozilla/5.0 (compatible; loisirs74-watch/1.0; "
-      "+https://loisirs74.fr) source-change-detector")
+UA = (f"Mozilla/5.0 (compatible; {siteconfig.WORDMARK}-watch/1.0; "
+      f"+{siteconfig.BASE_URL}) source-change-detector")
 TIMEOUT = 30
 BREAKER_PCT = 10  # ≥10 % FETCH_FAILED → run fails loud
 

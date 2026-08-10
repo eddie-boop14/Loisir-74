@@ -38,6 +38,7 @@ GUARDRAILS (house law — non-negotiable)
 Read-only in --report. Exit non-zero only on a hard/usage error.
 """
 import argparse
+import siteconfig  # HANDOFF-73 phase 5: per-site identity
 import html
 import json
 import os
@@ -61,7 +62,7 @@ CREDIT_SEP = " · "
 COMMONS_TAG = "Wikimedia Commons"
 SHARED_ALLOW = ROOT / "data" / "hero-shared-allow.json"
 USER_AGENT = ("Loisirs74-hero-localizer/1.0 "
-              "(https://loisirs74.fr; contact: eddy.raset@gmail.com)")
+              f"({siteconfig.BASE_URL}; contact: {siteconfig.CONTACT_EMAIL})")
 API = "https://commons.wikimedia.org/w/api.php"
 
 # Protected — hard skip + assertion. The two partner domains mark their

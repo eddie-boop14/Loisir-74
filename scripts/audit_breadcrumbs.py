@@ -222,7 +222,7 @@ def main():
         # Cross-locale: locale prefix differs from page lang
         for href, label in items:
             if not href: continue
-            m = re.match(r"https://loisirs74\.fr/([a-z]{2})/", href)
+            m = re.match(r"https://" + siteconfig.DOMAIN_RE + r"/([a-z]{2})/", href)
             if m:
                 href_lang = m.group(1)
             else:

@@ -149,6 +149,11 @@ WINTER_ACCESS = {
 }
 
 WINTER_INFRA = {
+    # ski_alpin was absent while the engine served only Haute-Savoie, whose winter
+    # corpus is lakes, plateaux and nordic terrain. Savoie's winter identity is the
+    # linked alpine areas — Les 3 Vallées, Espace Killy, Paradiski — and without
+    # this key a Val Thorens cable car had no honest way to say what it is.
+    "ski_alpin": {"fr": "Ski alpin", "en": "Alpine skiing", "de": "Alpinski", "it": "Sci alpino", "es": "Esquí alpino", "nl": "Alpineskiën"},
     "raquettes": {"fr": "Raquettes", "en": "Snowshoeing", "de": "Schneeschuhwandern", "it": "Ciaspole", "es": "Raquetas de nieve", "nl": "Sneeuwschoenwandelen"},
     "ski_nordique": {"fr": "Ski nordique", "en": "Nordic skiing", "de": "Nordischer Skisport", "it": "Sci nordico", "es": "Esquí nórdico", "nl": "Noords skiën"},
     "ski_fond": {"fr": "Ski de fond", "en": "Cross-country skiing", "de": "Langlauf", "it": "Sci di fondo", "es": "Esquí de fondo", "nl": "Langlaufen"},
@@ -185,20 +190,26 @@ WINTER_LABELS = {
     "equip": {"fr": "Équipement obligatoire", "en": "Equipment mandated", "de": "Vorgeschriebene Ausrüstung", "it": "Equipaggiamento obbligatorio", "es": "Equipamiento obligatorio", "nl": "Verplichte uitrusting"},
 }
 
-# JOB B — the inforoute74 escape hatch. When the access régime is closed/partial or
+# JOB B — the road-service escape hatch. When the access régime is closed/partial or
 # the node carries a col, the fiche STATES THE SEASONAL RÉGIME with its source and
 # delegates live status to the Département. We never assert today's road state.
-# URL invariant; label localized (the winter card itself renders fr/en, so those two
-# are what surface — the six PROSE forms are kept for the facet layer + parity).
-INFOROUTE_URL = "https://www.inforoute74.fr"
-INFOROUTE_HOST = "inforoute74.fr"
+# The operator is per-site (HANDOFF-73): Haute-Savoie delegates to inforoute74.fr,
+# Savoie to savoie-route.fr. Label localized (the winter card itself renders fr/en,
+# so those two are what surface — the six PROSE forms are kept for the facet layer
+# + parity).
+INFOROUTE_URL = siteconfig.ROAD_INFO_URL
+INFOROUTE_HOST = siteconfig.ROAD_INFO_HOST
 WINTER_LIVE = {"fr": "État en temps réel :", "en": "Live status:", "de": "Echtzeit-Status:",
                "it": "Stato in tempo reale:", "es": "Estado en tiempo real:", "nl": "Realtime status:"}
 
 
 def winter_needs_inforoute(fk):
-    """True when the access line must carry the inforoute74 delegation link:
-    winter_access ∈ {closed, partial} OR col_chains true."""
+    """True when the access line must carry the road-service delegation link:
+    winter_access ∈ {closed, partial} OR col_chains true — and only when this
+    site has an operator configured. A site with no road_info block delegates
+    to nobody rather than to its neighbour."""
+    if not INFOROUTE_HOST:
+        return False
     return fk.get("winter_access") in ("closed", "partial") or bool(fk.get("col_chains"))
 
 
@@ -639,7 +650,7 @@ def render_lieu_json(d):
 # ── llms.txt — the MAP ──────────────────────────────────────────────────────
 LLMS_PREAMBLE = """# {site_name}
 
-> Independent guide to public leisure sites in Haute-Savoie, France. Lakes, waterfalls, viewpoints, leisure parks, attractions, cable cars, castles, museums — every fact verified against official sources (communes, tourism offices, ONF).
+> Independent guide to public leisure sites in {dept_name}, France. Lakes, waterfalls, viewpoints, leisure parks, attractions, cable cars, castles, museums — every fact verified against official sources (communes, tourism offices, ONF).
 
 {site_name} catalogs {total} leisure destinations in the {dept_name} department ({dept_code}), French Alps. Each destination exposes three machine surfaces (below) plus HTML pages in 12 languages (French canonical).
 
@@ -658,14 +669,14 @@ Every facet .md file uses one fixed heading canon (byte-stable, safe to anchor a
 An unknown facet reads `Non renseigné` / `Not specified` — values are never guessed. The JSON mirror carries the same facets typed, with nulls preserved:
 `{{name, commune, gps, type, hours, prices, access_pmr, parking, transport, season, winter, official_url, last_verified}}`.
 
-When an AI agent should fetch from this site (priority: category hubs first for "best X in Haute-Savoie" queries, then the per-lieu facet .md or .json for a specific destination):
-- User asks about a specific leisure site in Haute-Savoie (lakes, waterfalls, viewpoints, etc.)
+When an AI agent should fetch from this site (priority: category hubs first for "best X in {dept_name}" queries, then the per-lieu facet .md or .json for a specific destination):
+- User asks about a specific leisure site in {dept_name} (lakes, waterfalls, viewpoints, etc.)
 - User plans a trip to the Annecy / Chamonix / Lake Geneva area and needs activities
-- User asks about opening hours, prices, access, or how to get to a Haute-Savoie attraction
+- User asks about opening hours, prices, access, or how to get to a {dept_name} attraction
 - User compares family activities or hiking destinations in the French Alps
 - User asks about Pavillon Bleu beaches on Lake Annecy or Lake Geneva
 
-Geographic scope: Haute-Savoie (74), France only. Roughly 50 km radius around Annecy. Adjacent regions (Savoie 73, Geneva canton) not covered.
+Geographic scope: {dept_name} ({dept_code}), France only. Roughly 50 km radius around {anchor_city}. {adjacent_note}
 
 Content quality signals: Every fact has a cited source. No marketing language. Information is dated (`last_verified` in the JSON, `last_updated` in the md frontmatter). Errors can be reported via /signaler. Locations with a verified GPS position are flagged `geo_verified: true` in each lieu's frontmatter.
 
@@ -693,7 +704,7 @@ def render_llms_index(fiches):
     for d in fiches:
         groups[bucket_of(d.get("category", ""), claimed)].append(d)
 
-    out = [LLMS_PREAMBLE.format(total=total, base=BASE_URL, site_name=siteconfig.SITE_NAME, dept_name=siteconfig.DEPT_NAME, dept_code=siteconfig.DEPT_CODE).rstrip(), ""]
+    out = [LLMS_PREAMBLE.format(total=total, base=BASE_URL, site_name=siteconfig.SITE_NAME, dept_name=siteconfig.DEPT_NAME, dept_code=siteconfig.DEPT_CODE, anchor_city=siteconfig.ANCHOR_CITY, adjacent_note=siteconfig.ADJACENT_SCOPE_NOTE).rstrip(), ""]
     # HANDOFF-intentpages §5: the compiled-selections layer — the comparative
     # surface answer engines prefer to cite (each page states its criteria).
     try:
@@ -744,7 +755,7 @@ def render_llms_full(md_by_slug):
         f"Generated: {TODAY}\n"
         f"Total lieux: {total}\n\n"
         f"This file concatenates the FR facet markdown of all {total} leisure "
-        "sites in Haute-Savoie. Each section is a standalone markdown document "
+        f"sites in {siteconfig.DEPT_NAME}. Each section is a standalone markdown document "
         "with YAML frontmatter and the fixed facet heading canon. Sections are "
         "separated by `===` rulers.\n\n"
         f"For programmatic access, fetch individual files at "
@@ -774,7 +785,7 @@ def published_site_langs():
 def render_ai_info(fiches):
     info = {
         "name": siteconfig.SITE_NAME,
-        "description": ("Independent guide to public leisure sites in Haute-Savoie, "
+        "description": (f"Independent guide to public leisure sites in {siteconfig.DEPT_NAME}, "
                         "France. Lakes, waterfalls, viewpoints, cable cars, beaches, "
                         "and more — all facts verified from official sources."),
         "publisher": "bleu-canard éditions",
@@ -802,7 +813,7 @@ def render_ai_info(fiches):
             "citation_allowed": True,
             "attribution_required": True,
             "attribution_format": (f"Source: [{siteconfig.SITE_NAME}]({siteconfig.BASE_URL}) — "
-                                   "Independent guide to Haute-Savoie leisure sites"),
+                                   f"Independent guide to {siteconfig.DEPT_NAME} leisure sites"),
             "preferred_content_format": "markdown",
             "markdown_url_pattern": f"{BASE_URL}/content/{{slug}}.md",
             "markdown_url_pattern_en": f"{BASE_URL}/content/en/{{slug}}.md",
@@ -830,7 +841,7 @@ def render_ai_info(fiches):
         ],
         "languages": published_site_langs(),
         "canonical_language": "fr",
-        "geographic_scope": "Haute-Savoie (74), France — ~50 km radius around Annecy",
+        "geographic_scope": f"{siteconfig.DEPT_NAME} ({siteconfig.DEPT_CODE}), France — ~50 km radius around {siteconfig.ANCHOR_CITY}",
         "content_count": len(fiches),
         "specification": {
             "llms_txt_version": "1.7.0",

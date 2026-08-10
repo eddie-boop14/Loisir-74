@@ -37,13 +37,48 @@ SITE_NAME = _req("site_name")                # Loisirs 74
 DEPARTMENT = _req("department")              # {"code": "74", "name": "Haute-Savoie"}
 DEPT_CODE = DEPARTMENT["code"]
 DEPT_NAME = DEPARTMENT["name"]
+DEPT_NAME_I18N = DEPARTMENT.get("name_i18n") or {}
+
+
+def dept_name(lang):
+    """Department name in `lang`, falling back to the French form.
+
+    The 74 renders "Alta Savoia" in Italian and "Alta Saboya" in Spanish but
+    keeps "Haute-Savoie" elsewhere, so the name cannot be a single constant.
+    A site that freezes the French form in every language simply omits
+    department.name_i18n and every language falls back to DEPT_NAME.
+    """
+    return DEPT_NAME_I18N.get(lang, DEPT_NAME)
 IMPRINT = _req("imprint")
 CONTACT_EMAIL = _req("contact_email")
 PHOTOS_EMAIL = _req("photos_email")
 CF_BEACON_TOKEN = _cfg.get("cf_beacon_token", "")
 REGION = _cfg.get("region", "")
+ANCHOR_CITY = _cfg.get("anchor_city", "")
+ADJACENT_SCOPE_NOTE = _cfg.get("adjacent_scope_note", "")
+
+# The département's own live road/pass service. Winter access lines state the
+# SEASONAL régime and delegate today's state to this operator — we never assert
+# a road is open right now. Hardcoding it shipped Haute-Savoie's inforoute74.fr
+# onto 18 Savoie pages, telling a driver at the Col de l'Iseran to check the
+# wrong département. Absent = no delegation link is rendered at all.
+_ri = _cfg.get("road_info") or {}
+ROAD_INFO_URL = _ri.get("url") or ""
+ROAD_INFO_HOST = _ri.get("host") or ""
 
 # Optional sibling site. Absent = no cross-link rendered anywhere. See
 # build_lieu_page.sister_link_html() for why this stays off until the sibling
 # actually resolves.
 SISTER = _cfg.get("sister") or None
+
+# Regex-safe forms. Engine scripts parse their OWN rendered HTML looking for
+# site URLs; those patterns must be built from the configured domain, never
+# from a literal. Kept as constants so call sites concatenate rather than
+# f-string — several of those patterns contain {n} quantifiers.
+import re as _re
+
+DOMAIN_RE = _re.escape(DOMAIN)                 # loisirs74\.fr
+SITE_URL_RE = "https://" + DOMAIN_RE           # https://loisirs74\.fr
+SITE_NAME_RE = _re.escape(SITE_NAME)           # Loisirs\ 74
+WORDMARK = DOMAIN.split(".")[0]                # loisirs74
+

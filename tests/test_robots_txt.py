@@ -18,6 +18,8 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+import siteconfig  # HANDOFF-73: per-site identity — the host was hardcoded here
 KNOWN = {"user-agent", "allow", "disallow", "sitemap", "crawl-delay"}
 
 
@@ -25,6 +27,23 @@ def main():
     path = os.path.join(ROOT, "robots.txt")
     text = open(path, encoding="utf-8").read()
     errors = []
+
+    # A site that has not launched yet asserts the OPPOSITE contract. The
+    # FLIP-AT-LAUNCH marker means the site-wide block is deliberate: a thin
+    # placeholder must not be indexed, and neither must the *.netlify.app
+    # preview domain. Testing such a file for "no Disallow: /" and "exactly
+    # one Sitemap" reports five failures for a file that is exactly right.
+    if "FLIP-AT-LAUNCH" in text:
+        blocked = re.search(r"^User-agent:\s*\*\s*$.*?^Disallow:\s*/\s*$",
+                            text, re.M | re.S)
+        if not blocked:
+            print("::error::robots.txt carries the FLIP-AT-LAUNCH marker but "
+                  "does NOT block the site — that marker is the only thing "
+                  "keeping a pre-launch placeholder out of the index")
+            sys.exit(1)
+        print("robots.txt: pre-launch (FLIP-AT-LAUNCH) — site-wide block "
+              "present and correct; launched-shape checks deferred")
+        return
 
     groups = {}          # ua -> list of (directive, value)
     current_uas = []
@@ -73,12 +92,13 @@ def main():
         errors.append(f"expected exactly 1 Sitemap line, found {len(sitemaps)}")
     else:
         i, v = sitemaps[0]
-        if not v.startswith("https://loisirs74.fr/"):
-            errors.append(f"line {i}: Sitemap must be absolute on loisirs74.fr: {v!r}")
+        if not v.startswith(siteconfig.BASE_URL + "/"):
+            errors.append(f"line {i}: Sitemap must be absolute on "
+                          f"{siteconfig.DOMAIN}: {v!r}")
 
     # 5. AI fast-lane advertisement intact (comment lines, HANDOFF-39 blocker 3)
-    for needle in ("https://loisirs74.fr/llms.txt",
-                   "https://loisirs74.fr/api/lieux.json"):
+    for needle in (siteconfig.BASE_URL + "/llms.txt",
+                   siteconfig.BASE_URL + "/api/lieux.json"):
         if needle not in text:
             errors.append(f"AI fast-lane advertisement lost: {needle} not in robots.txt")
 

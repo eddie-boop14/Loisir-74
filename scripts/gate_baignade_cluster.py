@@ -14,6 +14,7 @@ import glob
 import json
 import os
 import re
+import siteconfig  # HANDOFF-73 phase 4: per-site domain
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import locales  # noqa: E402
@@ -31,7 +32,7 @@ def page_path(slug, lang):
 
 def resolves(href):
     """An absolute loisirs74.fr link resolves to a built file."""
-    m = re.match(r"https://loisirs74\.fr(/.*)?$", href)
+    m = re.match(r"https://" + siteconfig.DOMAIN_RE + r"(/.*)?$", href)
     if not m:
         return True  # external / non-site — out of scope
     path = (m.group(1) or "/").split("#")[0].split("?")[0].strip("/")

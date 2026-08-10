@@ -882,11 +882,12 @@ MARK4_A, MARK4_B = "<!--hub-intent:start-->", "<!--hub-intent:end-->"
 # que-faire index instead — relevance beats coverage, no forced matches.
 # The 4 hub_anchor hubs (cascades, points-de-vue, chateaux, stations-de-ski)
 # already carry their best-of callout via _inject_hub_bestof.
-HUB_INTENT_MAP = {
-    "sentiers":         ["randonnees-faciles-lac-annecy"],
-    "telecabines":      ["plus-beaux-points-de-vue-mont-blanc"],
-    "bases-de-loisirs": ["lac-annecy-en-famille"],
-}
+# HANDOFF-73: per-site content, so it lives in data/, not here. Hardcoded, it
+# followed the engine into Savoie and put "Les plus beaux points de vue sur le
+# Mont-Blanc" on that site's télécabines hub in six locales.
+_HIM_PATH = os.path.join(ROOT, "data", "hub-intent-map.json")
+HUB_INTENT_MAP = ((json.load(open(_HIM_PATH, encoding="utf-8")).get("map") or {})
+                  if os.path.exists(_HIM_PATH) else {})
 
 
 def _inject_hub_bestof(entry, lang):

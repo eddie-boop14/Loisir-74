@@ -224,7 +224,7 @@ CHROME = {
     "source_official":  {"fr": "Source officielle", "en": "Official source", "de": "Offizielle Quelle", "it": "Fonte ufficiale", "es": "Fuente oficial", "nl": "Officiële bron"},
     # Earn-only geo ✅ badge (derive_geo_verified.py). Gold = verified-only per
     # J4-BRAND. Label translates; the place name is frozen and not in the label.
-    "geo_verified":     {"fr": "Position vérifiée par loisirs74.fr", "en": "Location verified by loisirs74.fr", "de": "Standort geprüft von loisirs74.fr", "it": "Posizione verificata da loisirs74.fr", "es": "Ubicación verificada por loisirs74.fr", "nl": "Locatie geverifieerd door loisirs74.fr"},
+    "geo_verified":     {"fr": f"Position vérifiée par {siteconfig.DOMAIN}", "en": f"Location verified by {siteconfig.DOMAIN}", "de": f"Standort geprüft von {siteconfig.DOMAIN}", "it": f"Posizione verificata da {siteconfig.DOMAIN}", "es": f"Ubicación verificada por {siteconfig.DOMAIN}", "nl": f"Locatie geverifieerd door {siteconfig.DOMAIN}"},
     # Event modal (per-fiche promo for the venue's own event)
     "ev_intro":  {"fr": "Le lieu de cette page organise", "en": "The venue on this page is hosting", "de": "Der Ort dieser Seite veranstaltet", "it": "Il luogo di questa pagina organizza", "es": "El lugar de esta página organiza", "nl": "De locatie op deze pagina organiseert"},
     "ev_cta":    {"fr": "Voir l&#39;événement", "en": "See the event", "de": "Zur Veranstaltung", "it": "Scopri l&#39;evento", "es": "Ver el evento", "nl": "Bekijk het evenement"},
@@ -253,7 +253,7 @@ CHROME = {
     "qmark":           {"fr": " ?", "en": "?", "de": "?", "it": "?", "es": "?", "nl": "?"},
     # Gallery invite
     "g_been_q":        {"fr": "Vous y êtes allé ?", "en": "Been there?", "de": "Schon dort gewesen?", "it": "Ci sei stato?", "es": "¿Ha estado allí?", "nl": "Bent u er geweest?"},
-    "g_invite":        {"fr": "Partagez vos photos — nous les ajoutons à cette page avec votre crédit. Tag #loisirs74 ou écrivez à", "en": "Share your photos — we&#39;ll add them to this page with credit. Tag #loisirs74 or email", "de": "Teilen Sie Ihre Fotos — wir fügen sie mit Bildnachweis hinzu. Tag #loisirs74 oder schreiben Sie an", "it": "Condividi le tue foto — le aggiungiamo con il tuo credito. Tag #loisirs74 o scrivi a", "es": "Comparta sus fotos — las añadimos con crédito. Tag #loisirs74 o escriba a", "nl": "Deel uw foto&#39;s — wij voegen ze met credit toe. Tag #loisirs74 of mail naar"},
+    "g_invite":        {"fr": f"Partagez vos photos — nous les ajoutons à cette page avec votre crédit. Tag #{siteconfig.WORDMARK} ou écrivez à", "en": f"Share your photos — we&#39;ll add them to this page with credit. Tag #{siteconfig.WORDMARK} or email", "de": f"Teilen Sie Ihre Fotos — wir fügen sie mit Bildnachweis hinzu. Tag #{siteconfig.WORDMARK} oder schreiben Sie an", "it": f"Condividi le tue foto — le aggiungiamo con il tuo credito. Tag #{siteconfig.WORDMARK} o scrivi a", "es": f"Comparta sus fotos — las añadimos con crédito. Tag #{siteconfig.WORDMARK} o escriba a", "nl": f"Deel uw foto&#39;s — wij voegen ze met credit toe. Tag #{siteconfig.WORDMARK} of mail naar"},
     # Sources caveat
     "src_caveat":      {"fr": "Vérifications multi-sources à la date de publication. Les informations peuvent évoluer — confirmez auprès du gestionnaire officiel avant un déplacement.", "en": "Multi-source verification at publication. Information may change — confirm with the official operator before travelling.", "de": "Mehrquellen-Verifizierung zum Veröffentlichungsdatum. Informationen können sich ändern — bestätigen Sie diese vor der Anreise beim offiziellen Betreiber.", "it": "Verifica multi-fonte alla data di pubblicazione. Le informazioni possono cambiare — confermare con il gestore ufficiale prima del viaggio.", "es": "Verificación multi-fuente en la fecha de publicación. La información puede cambiar — confirme con el operador oficial antes de viajar.", "nl": "Multi-bron verificatie bij publicatie. Informatie kan veranderen — bevestig bij de officiële beheerder vóór vertrek."},
     "data_partial":    {"fr": "Données partielles :", "en": "Partial data:", "de": "Teildaten:", "it": "Dati parziali:", "es": "Datos parciales:", "nl": "Gedeeltelijke gegevens:"},
@@ -269,7 +269,7 @@ CHROME = {
     # Photo email subject prefix
     "photos_subject":  {"fr": "Photos%20—%20", "en": "Photos%20—%20", "de": "Fotos%20—%20", "it": "Foto%20—%20", "es": "Fotos%20—%20", "nl": "Foto%27s%20—%20"},
     # Site footer columns
-    "f_tagline":       {"fr": "Guide indépendant des lieux de loisirs en Haute-Savoie. 100% gratuit. 100% vérifié.", "en": "Independent guide to leisure spots in Haute-Savoie. 100% free. 100% verified.", "de": "Unabhängiger Freizeit-Guide für Haute-Savoie. 100% kostenlos. 100% geprüft.", "it": "Guida indipendente ai luoghi di svago in Alta Savoia. 100% gratis. 100% verificato.", "es": "Guía independiente de los lugares de ocio en Alta Saboya. 100% gratis. 100% verificado.", "nl": "Onafhankelijke gids voor vrijetijdsbestedingen in Haute-Savoie. Gratis. Geverifieerd."},
+    "f_tagline":       {"fr": f"Guide indépendant des lieux de loisirs en {siteconfig.dept_name('fr')}. 100% gratuit. 100% vérifié.", "en": f"Independent guide to leisure spots in {siteconfig.dept_name('en')}. 100% free. 100% verified.", "de": f"Unabhängiger Freizeit-Guide für {siteconfig.dept_name('de')}. 100% kostenlos. 100% geprüft.", "it": f"Guida indipendente ai luoghi di svago in {siteconfig.dept_name('it')}. 100% gratis. 100% verificato.", "es": f"Guía independiente de los lugares de ocio en {siteconfig.dept_name('es')}. 100% gratis. 100% verificado.", "nl": f"Onafhankelijke gids voor vrijetijdsbestedingen in {siteconfig.dept_name('nl')}. Gratis. Geverifieerd."},
     "f_explore":       {"fr": "Explorer", "en": "Explore", "de": "Entdecken", "it": "Esplora", "es": "Explorar", "nl": "Verkennen"},
     "f_contribute":    {"fr": "Contribuer", "en": "Contribute", "de": "Beitragen", "it": "Contribuisci", "es": "Contribuir", "nl": "Bijdragen"},
     "f_send_photos":   {"fr": "Envoyer des photos", "en": "Send photos", "de": "Fotos senden", "it": "Invia foto", "es": "Enviar fotos", "nl": "Foto&#39;s sturen"},
@@ -280,7 +280,13 @@ CHROME = {
     "f_privacy":       {"fr": "Confidentialité", "en": "Privacy", "de": "Datenschutz", "it": "Privacy", "es": "Privacidad", "nl": "Privacy"},
     "f_cgv":           {"fr": "CGV", "en": "Terms", "de": "AGB", "it": "Termini", "es": "Términos", "nl": "Algemene voorwaarden"},
     "f_copyright":     {"fr": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Tous droits réservés", "en": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · All rights reserved", "de": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Alle Rechte vorbehalten", "it": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Tutti i diritti riservati", "es": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Todos los derechos reservados", "nl": "© 2026 Bleu canard édition · Edmaster &amp; Claudius · Alle rechten voorbehouden"},
-    "f_sister":        {"fr": "Aussi en", "en": "Also in", "de": "Auch in", "it": "Anche in", "es": "También en", "nl": "Ook in", "pl": "Również w", "pt": "Também em", "cs": "Také v", "ar": "أيضًا في", "he": "גם ב", "ja": "こちらも"},
+    # The sibling line states the SHARED STANDARD, not the mere existence of another
+    # site. "Also in Haute-Savoie" is a directory entry: it gives a reader no reason
+    # to click. Both sites verify every fact against an official source and disclose
+    # contradictions instead of picking one — that is the thing worth carrying across
+    # the link, and it is true on both sides. No hierarchy, no family metaphor, and
+    # nothing that drifts. Renders as: {label} {dept} : {site}.
+    "f_sister":        {"fr": "Même exigence en", "en": "Same standard in", "de": "Gleicher Anspruch in", "it": "Stesso rigore in", "es": "El mismo rigor en", "nl": "Dezelfde maatstaf in", "pl": "Ten sam standard w", "pt": "O mesmo rigor em", "cs": "Stejný standard v", "ar": "المعيار نفسه في", "he": "אותו סטנדרט ב", "ja": "同じ基準で"},
     "f_promise":       {"fr": "Sans pub. Sans tracking. Sans avis Google.", "en": "No ads. No tracking. No Google reviews.", "de": "Keine Werbung. Kein Tracking. Keine Google-Bewertungen.", "it": "Niente pubblicità. Niente tracking. Niente recensioni Google.", "es": "Sin anuncios. Sin tracking. Sin reseñas de Google.", "nl": "Geen advertenties. Geen tracking. Geen Google reviews."},
 }
 
@@ -728,7 +734,7 @@ def practical_block(practical, name, commune, drop_tarif=False):
             continue
         extra = ""
         if any(k.lower().startswith(t) for t in addr_terms):
-            q = url_q(f"{name}, {commune}, Haute-Savoie, France")
+            q = url_q(f"{name}, {commune}, {siteconfig.DEPT_NAME}, France")
             extra = (
                 f' <a href="https://www.google.com/maps/search/?api=1&query={q}" '
                 'target="_blank" rel="noopener" class="inline-link">'
@@ -863,11 +869,11 @@ def maps_query(d, name, commune):
     destination=lat,lng does NOT snap to the place). Coords = last-resort
     fallback only."""
     if name and commune:
-        return url_q(f"{name}, {commune}, Haute-Savoie, France")
+        return url_q(f"{name}, {commune}, {siteconfig.DEPT_NAME}, France")
     lat, lng = d.get("latitude"), d.get("longitude")
     if lat is not None and lng is not None:
         return f"{lat},{lng}"
-    return url_q(f"{name or ''}, {commune or ''}, Haute-Savoie, France")
+    return url_q(f"{name or ''}, {commune or ''}, {siteconfig.DEPT_NAME}, France")
 
 
 def maps_place_param(d, kind):
@@ -914,11 +920,11 @@ def how_to_block(how, name, commune, lat=None, lng=None, slug=None, place_id=Non
     # Name+commune first so Maps resolves to the real POI; a stored coord can be
     # a centroid/label point and pins off-venue. Coords = last-resort fallback.
     if name and commune:
-        dest = url_q(f"{name}, {commune}, Haute-Savoie, France")
+        dest = url_q(f"{name}, {commune}, {siteconfig.DEPT_NAME}, France")
     elif lat is not None and lng is not None:
         dest = f"{lat},{lng}"
     else:
-        dest = url_q(f"{name or ''}, {commune or ''}, Haute-Savoie, France")
+        dest = url_q(f"{name or ''}, {commune or ''}, {siteconfig.DEPT_NAME}, France")
     # Canonical-POI pin: routes the how-card directions to the real place
     # regardless of the stored coordinate. Empty when no google_place_id.
     pid_param = f"&destination_place_id={url_q(place_id)}" if place_id else ""
@@ -1121,7 +1127,9 @@ def season_card(d):
     svv = _bac.SNOW_VIEW[sv][lang] if sv in _bac.SNOW_VIEW else unk
     eq = _bac.EQUIP[lang] + (_bac.EQUIP_COL[lang] if fk.get("col_chains") else "")
     # JOB B: closed/partial régime or a col → state the régime + delegate live status
-    # to the Département (inforoute74). Plain external link; URL invariant.
+    # to the Département's own road service (siteconfig.ROAD_INFO_*). Plain external
+    # link. Per-site: sending a Savoie driver to Haute-Savoie's service is a wrong
+    # answer dressed as a helpful one.
     acc_suffix = ""
     if _bac.winter_needs_inforoute(fk):
         acc_suffix = (f' — {esc(_bac.WINTER_LIVE[lang])} '
@@ -1467,8 +1475,8 @@ def gallery_block(name, photos=None):
         '<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>'
         '<circle cx="12" cy="13" r="4"/></svg></div>'
         f'<p><strong>{T("g_been_q")}</strong> {T("g_invite")} '
-        f'<a href="mailto:photos@loisirs74.fr?subject={T("photos_subject")}{url_q(name)}">'
-        'photos@loisirs74.fr</a></p></div></div></section>'
+        f'<a href="mailto:{siteconfig.PHOTOS_EMAIL}?subject={T("photos_subject")}{url_q(name)}">'
+        f'{siteconfig.PHOTOS_EMAIL}</a></p></div></div></section>'
     )
 
 
@@ -1750,7 +1758,7 @@ def facts_meta(d):
     name = fr.get("name") or d.get("slug", "")
     commune = d.get("commune") or ""
     t = _type_label(d)
-    place = f"{name}, {commune} (Haute-Savoie)." if commune else f"{name} (Haute-Savoie)."
+    place = f"{name}, {commune} ({siteconfig.DEPT_NAME})." if commune else f"{name} ({siteconfig.DEPT_NAME})."
     parts = [f"{t} — {place}" if t else place]
     price = _facts_price(d)
     if price:
@@ -1815,7 +1823,7 @@ def build_ldjson(d, desc_override=""):
             "@type": "PostalAddress",
             "addressLocality": commune,
             "postalCode": str(postal),
-            "addressRegion": "Haute-Savoie",
+            "addressRegion": siteconfig.DEPT_NAME,
             "addressCountry": "FR",
         },
         "isAccessibleForFree": bool(is_free),
@@ -2135,7 +2143,7 @@ def site_footer():
         '<footer class="site"><div class="wrap"><div class="foot-grid">'
         f'<div class="foot-col"><a class="brand" href="{BASE_URL}{lp}/" style="margin-bottom:.85rem"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>{siteconfig.SITE_NAME}</span></a><p>{T("f_tagline")}</p></div>'
         f'<div class="foot-col"><h4>{T("f_explore")}</h4><ul><li><a href="{BASE_URL}{lp}/">{T("home")}</a></li>{guide_lis}</ul></div>'
-        f'<div class="foot-col"><h4>{T("f_contribute")}</h4><ul><li><a href="mailto:photos@loisirs74.fr">{T("f_send_photos")}</a></li><li><a href="{BASE_URL}{legal_lp}/signaler">{T("f_report")}</a></li><li><a href="{BASE_URL}{legal_lp}/devenir-partenaire">{T("f_become_p")}</a></li></ul></div>'
+        f'<div class="foot-col"><h4>{T("f_contribute")}</h4><ul><li><a href="mailto:{siteconfig.PHOTOS_EMAIL}">{T("f_send_photos")}</a></li><li><a href="{BASE_URL}{legal_lp}/signaler">{T("f_report")}</a></li><li><a href="{BASE_URL}{legal_lp}/devenir-partenaire">{T("f_become_p")}</a></li></ul></div>'
         f'<div class="foot-col"><h4>{T("f_legal")}</h4><ul><li><a href="{BASE_URL}{legal_lp}/mentions-legales">{T("f_legal_link")}</a></li><li><a href="{BASE_URL}{legal_lp}/confidentialite">{T("f_privacy")}</a></li><li><a href="{BASE_URL}{legal_lp}/cgv">{T("f_cgv")}</a></li></ul></div>'
         f'</div><div class="foot-bottom"><span class="credit">{T("f_copyright")}</span>{sister_link_html()}<span>{T("f_promise")}</span></div></div></footer>'
     )
@@ -2395,7 +2403,7 @@ def _render_rel_card(slug, lang, labels):
     ref = ' referrerpolicy="no-referrer"' if img.startswith(("http://", "https://")) else ""
     prefix = "" if lang == "fr" else f"/{lang}"
     fiche_url = f"{BASE_URL}{prefix}/{slug}"
-    maps_q = quote(f"{name}, {commune}, Haute-Savoie".strip(", "), safe="")
+    maps_q = quote(f"{name}, {commune}, {siteconfig.DEPT_NAME}".strip(", "), safe="")
     maps_url = f"https://www.google.com/maps/dir/?api=1&destination={maps_q}"
     desc_html = f'<p class="card-desc">{esc(desc)}</p>' if desc else ""
     actions = [f'<a href="{maps_url}" target="_blank" rel="noopener">{_REL_PIN}<span>{labels["route"]}</span></a>']
@@ -2459,9 +2467,9 @@ _VOIS = {"fr": "Plages voisines", "en": "Nearby beaches", "de": "Strände in der
          "it": "Spiagge vicine", "es": "Playas cercanas", "nl": "Stranden in de buurt"}
 _GUIDE = {"fr": "Voir le guide baignade", "en": "Swimming guide", "de": "Bade-Guide",
           "it": "Guida balneazione", "es": "Guía de baño", "nl": "Zwemgids"}
-_ALLSPOTS = {"fr": "Où se baigner en Haute-Savoie", "en": "Where to swim in Haute-Savoie",
-             "de": "Baden in Haute-Savoie", "it": "Dove fare il bagno in Alta Savoia",
-             "es": "Dónde bañarse en Alta Saboya", "nl": "Zwemmen in Haute-Savoie"}
+_ALLSPOTS = {"fr": f"Où se baigner en {siteconfig.dept_name('fr')}", "en": f"Where to swim in {siteconfig.dept_name('en')}",
+             "de": f"Baden in {siteconfig.dept_name('de')}", "it": f"Dove fare il bagno in {siteconfig.dept_name('it')}",
+             "es": f"Dónde bañarse en {siteconfig.dept_name('es')}", "nl": f"Zwemmen in {siteconfig.dept_name('nl')}"}
 _CH_SURV = {"fr": "Surveillance", "en": "Lifeguard", "de": "Aufsicht", "it": "Sorveglianza",
             "es": "Vigilancia", "nl": "Toezicht"}
 _CH_VOIRFICHE = {"fr": "voir fiche", "en": "see details", "de": "siehe Steckbrief",

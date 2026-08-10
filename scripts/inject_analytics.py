@@ -91,7 +91,7 @@ def main():
     print(f"inject_analytics: {seen} page(s) scanned · {verb}add {added} · {verb}repair {repaired}")
     if foreign:
         for tok, n in foreign.items():
-            print(f"  ⚑ FOREIGN TOKEN found on {n} page(s): {tok} — rewritten to loisirs74.fr's")
+            print(f"  ⚑ FOREIGN TOKEN found on {n} page(s): {tok} — rewritten to {siteconfig.DOMAIN}'s")
     if skipped_nobody:
         print(f"  skipped (no </body>): {skipped_nobody}")
     if not args.apply and (added or repaired):

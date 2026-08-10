@@ -21,6 +21,11 @@ import tempfile
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCRIPTS = os.path.join(ROOT, "scripts")
 
+# These tests load scripts by file path (spec_from_file_location), which —
+# unlike running `python3 scripts/x.py` — does NOT put scripts/ on sys.path.
+# A target's own `import siteconfig` would then fail. Put it there explicitly.
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+
 
 def _load(name):
     spec = importlib.util.spec_from_file_location(name, os.path.join(SCRIPTS, f"{name}.py"))
