@@ -86,6 +86,21 @@ def inject_analytics():
     print(out.stdout.strip().splitlines()[0] if out.stdout.strip() else "(beacon injected)")
 
 
+def preload_hub_hero():
+    """The hub/commune banner is a CSS background, so the preload scanner cannot
+    see it and the LCP waits for the stylesheet round-trip. Wired in because
+    build_communes regenerates those pages every run: injected by hand, the tag
+    would survive exactly until the next build."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "preload_hub_hero.py"), "--apply"],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("preload_hub_hero failed")
+    print(out.stdout.strip().splitlines()[0] if out.stdout.strip() else "(hub banners preloaded)")
+
+
 def sync_home_cards():
     """Homepage card images derive from Json/ heroes. index.html is authored
     chrome that no builder regenerates, so without this step every photo added
@@ -551,6 +566,8 @@ def main():
         sync_home_cards)
     run("emit .well-known/security.txt (RFC 9116 — Expires must never lapse)",
         rebuild_security_txt)
+    run("preload the hub/commune banner (CSS background — invisible to the preload scanner)",
+        preload_hub_hero)
     run("inject Cloudflare Web Analytics beacon (every published page)", inject_analytics)
     run("regenerate PROJECT-STATE.md (JOB 8 — derived, never authored)", rebuild_project_state)
     if not args.no_site:

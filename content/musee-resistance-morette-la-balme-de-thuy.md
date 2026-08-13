@@ -21,7 +21,7 @@ photo_type: real
 photo_author: "Martial GAILLARD-GRENADIER"
 photo_license: "CC BY-SA 3.0"
 photo_source: Wikimedia Commons
-last_updated: 2026-08-10
+last_updated: 2026-08-13
 source: loisirs74.fr
 ---
 
