@@ -86,6 +86,21 @@ def inject_analytics():
     print(out.stdout.strip().splitlines()[0] if out.stdout.strip() else "(beacon injected)")
 
 
+def emit_collision_redirects():
+    """Eleven slugs are both a page and a section (morzine.html + morzine/).
+    Netlify lets the flat file win and 301s the directory away, hiding every
+    commune page behind its station page. Regenerated from the filesystem each
+    build so a new station over an existing commune is covered automatically."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "emit_collision_redirects.py"), "--apply"],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("emit_collision_redirects failed")
+    print(out.stdout.strip().splitlines()[0] if out.stdout.strip() else "(collision rules emitted)")
+
+
 def preload_hub_hero():
     """The hub/commune banner is a CSS background, so the preload scanner cannot
     see it and the LCP waits for the stylesheet round-trip. Wired in because
@@ -566,6 +581,8 @@ def main():
         sync_home_cards)
     run("emit .well-known/security.txt (RFC 9116 — Expires must never lapse)",
         rebuild_security_txt)
+    run("force directory URLs a flat .html shadows (the commune/station collision)",
+        emit_collision_redirects)
     run("preload the hub/commune banner (CSS background — invisible to the preload scanner)",
         preload_hub_hero)
     run("inject Cloudflare Web Analytics beacon (every published page)", inject_analytics)
