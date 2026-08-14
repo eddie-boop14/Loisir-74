@@ -149,6 +149,24 @@ C = {  # chrome labels (commune name itself is frozen, never translated)
     "langues":   {"fr": "6 langues", "en": "6 languages", "de": "6 Sprachen", "it": "6 lingue", "es": "6 idiomas", "nl": "6 talen"},
     "places_in": {"fr": "lieux de loisirs à", "en": "leisure spots in", "de": "Freizeitorte in", "it": "luoghi per il tempo libero a", "es": "lugares de ocio en", "nl": "vrijetijdsplekken in"},
     "backlink":  {"fr": "À", "en": "In", "de": "In", "it": "A", "es": "En", "nl": "In"},
+    # The six live locales; the facts-langs are merged in from
+    # data/site-chrome-langs.json by register_facts_lang(), which only copies
+    # keys that already exist here — so this entry is what makes the other six
+    # reachable at all.
+    "station_route": {
+        "fr": {"kicker": "La station", "heading": "{commune}, la station",
+               "cta": "Découvrir la station →"},
+        "en": {"kicker": "The resort", "heading": "{commune}, the resort",
+               "cta": "Explore the resort →"},
+        "de": {"kicker": "Der Ferienort", "heading": "{commune}, der Ferienort",
+               "cta": "Ferienort entdecken →"},
+        "it": {"kicker": "La località", "heading": "{commune}, la località",
+               "cta": "Scopri la località →"},
+        "es": {"kicker": "La estación", "heading": "{commune}, la estación",
+               "cta": "Descubrir la estación →"},
+        "nl": {"kicker": "De bestemming", "heading": "{commune}, de bestemming",
+               "cta": "Ontdek de bestemming →"},
+    },
     "meta_tail": {"fr": "Toutes les activités et lieux de loisirs à découvrir.", "en": "All the activities and leisure spots to discover.", "de": "Alle Aktivitäten und Freizeitorte zum Entdecken.", "it": "Tutte le attività e i luoghi per il tempo libero da scoprire.", "es": "Todas las actividades y lugares de ocio por descubrir.", "nl": "Alle activiteiten en vrijetijdsplekken om te ontdekken."},
 }
 
@@ -223,9 +241,52 @@ def template_html(lang):
     return _TEMPLATE_CACHE[lang]
 
 
-def lift_style(lang, hero_css):
+STATION_CSS = """
+/* station route — the commune's own resort page, surfaced as a real card.
+   Tokens only, no new colours: it has to read as part of the set, not a
+   bolt-on. Stacked on mobile, photo-left from 760px. */
+.station-route{padding:clamp(1.1rem,3vw,1.9rem) 0}
+.station-card{display:grid;grid-template-columns:1fr;background:var(--snow);\
+border:1px solid var(--line);border-radius:var(--radius-lg,18px);overflow:hidden;\
+box-shadow:0 10px 30px rgba(28,24,20,.10);text-decoration:none;color:inherit;\
+transition:transform .25s ease,box-shadow .25s ease}
+.station-card:hover,.station-card:focus-visible{transform:translateY(-3px);\
+box-shadow:0 16px 40px rgba(28,24,20,.17)}
+.station-card__media{position:relative;aspect-ratio:16/10;overflow:hidden;\
+background:var(--paper-3)}
+.station-card__media img{width:100%;height:100%;object-fit:cover;display:block}
+.station-card__badge{position:absolute;inset-inline-start:.85rem;top:.85rem;\
+background:var(--pine);color:var(--snow);font-size:.72rem;letter-spacing:.07em;\
+text-transform:uppercase;padding:.34rem .72rem;border-radius:999px;\
+box-shadow:0 2px 8px rgba(28,24,20,.25)}
+.station-card__body{padding:clamp(1rem,2.6vw,1.65rem);display:flex;\
+flex-direction:column;justify-content:center;gap:.45rem}
+.station-card__body h2{margin:0;font-size:clamp(1.22rem,3.2vw,1.72rem);\
+line-height:1.2;color:var(--ink)}
+.station-card__lead{margin:0;color:var(--ink-2);line-height:1.55;\
+font-size:clamp(.94rem,2.2vw,1rem)}
+.station-card__cta{display:inline-flex;align-items:center;gap:.35rem;\
+margin-top:.2rem;font-weight:600;color:var(--accent)}
+.station-card:hover .station-card__cta{color:var(--lake-deep)}
+@media(min-width:760px){
+.station-card{grid-template-columns:minmax(0,44%) minmax(0,1fr)}
+.station-card__media{aspect-ratio:auto;min-height:250px;height:100%}
+}
+@media(prefers-reduced-motion:reduce){
+.station-card{transition:none}
+.station-card:hover,.station-card:focus-visible{transform:none}
+}
+"""
+
+
+def lift_style(lang, hero_css, with_station=False):
     style = re.search(r"<style>.*?</style>", template_html(lang), re.S).group(0)
     style = re.sub(r'--hub-hero-img:url\("[^"]*"\)', f'--hub-hero-img:url("{hero_css}")', style, count=1)
+    # Appended here rather than added to the hub templates, and only for the 11
+    # communes that actually render the card: the other 23 would carry ~1 KB of
+    # inline CSS for markup they never emit, on every one of their 12 locales.
+    if with_station:
+        style = style.replace("</style>", STATION_CSS + "</style>", 1)
     return style
 
 
@@ -354,6 +415,99 @@ def jsonld_collection(c, lang, url):
 
 # ---------------------------------------------------------------- page render
 
+_IMG_DIMS = None
+
+
+def _img_dims(path):
+    """Intrinsic size for an /img/ path, so the card reserves its box and the
+    photo cannot shift the page in. Returns None when unknown — an absent
+    width/height is better than a guessed one."""
+    global _IMG_DIMS
+    if _IMG_DIMS is None:
+        fp = ROOT / "data" / "img-dims.json"
+        _IMG_DIMS = json.loads(fp.read_text(encoding="utf-8")) if fp.exists() else {}
+    wh = _IMG_DIMS.get(path.lstrip("/"))
+    return tuple(wh) if isinstance(wh, list) and len(wh) == 2 else None
+
+
+def station_route_html(c, lang):
+    """The commune's own station page, surfaced as a full card.
+
+    WHY THIS EXISTS
+      Eleven communes are also ski stations, and the station fiche shares the
+      commune's slug: morzine/index.html (the commune) and morzine.html (the
+      station). Until now the commune page had NO link to its station — not one
+      of the eleven — so a visitor landing on the commune page had no route to
+      the richer page, and the station page's ~1,850 words earned nothing from
+      the commune's inbound links.
+
+      This matters most in winter. The station pages are the seasonal bet;
+      the commune page is where the "que faire à …" traffic arrives.
+
+    WHAT IT RENDERS
+      A real card, not a footer line: the station's own hero photo, its
+      localized name, its own lead paragraph, and a CTA — all read from the
+      station fiche, so it stays true per locale without a second copy of the
+      prose to maintain.
+
+    Emitted only when the commune HAS a station fiche (category "station") with
+    a hero on disk. The other 23 communes render nothing, silently — this is a
+    property of eleven communes, not a hole in the rest.
+    """
+    # Most communes have no same-slug fiche at all — load_fiche raises for
+    # those, and "no station here" is the normal case, not an error.
+    if not (ROOT / "Json" / f"{c['slug']}.json").is_file():
+        return ""
+    d = load_fiche(c["slug"])
+    if not d or d.get("category") != "station":
+        return ""
+    if not (ROOT / f"{c['slug']}.html").is_file():
+        return ""          # the station page must actually be published
+    hero = (d.get("hero_image") or "").strip()
+    if not hero.startswith("/") or not (ROOT / hero.lstrip("/")).exists():
+        return ""          # never ship a card with a broken or hotlinked photo
+
+    words = (C.get("station_route") or {}).get(lang) or {}
+    if not words:
+        return ""
+
+    i18n = d.get("i18n", {})
+    loc = i18n.get(lang) or i18n.get("fr") or {}
+    fr = i18n.get("fr") or {}
+    name = loc.get("name") or fr.get("name") or c["commune"]
+    heroblk = loc.get("hero") if isinstance(loc.get("hero"), dict) else {}
+    lead = (heroblk.get("lead") or "").strip()
+    if not lead:
+        frhero = fr.get("hero") if isinstance(fr.get("hero"), dict) else {}
+        lead = (frhero.get("lead") or "").strip()
+    alt = (loc.get("hero_alt") or fr.get("hero_alt") or name).strip()
+
+    url = f"{BASE}/{c['slug']}" if lang == "fr" else f"{BASE}/{lang}/{c['slug']}"
+    dims = _img_dims(hero)
+    dim_attr = f' width="{dims[0]}" height="{dims[1]}"' if dims else ""
+    webp = re.sub(r"\.(jpg|jpeg|png)$", ".webp", hero)
+    picture = (f'<picture><source srcset="{attr(webp)}" type="image/webp">'
+               f'<img src="{attr(hero)}" alt="{attr(alt)}"{dim_attr} '
+               f'loading="lazy" decoding="async"></picture>') \
+        if (ROOT / webp.lstrip("/")).exists() else \
+        (f'<img src="{attr(hero)}" alt="{attr(alt)}"{dim_attr} '
+         f'loading="lazy" decoding="async">')
+
+    heading = words["heading"].replace("{commune}", name)
+    return (
+        f'<section aria-labelledby="station-route-h" class="station-route">\n'
+        f'<div class="wrap">\n'
+        f'<a class="station-card" href="{attr(url)}">\n'
+        f'<div class="station-card__media">{picture}'
+        f'<span class="station-card__badge">{esc(words["kicker"])}</span></div>\n'
+        f'<div class="station-card__body">\n'
+        f'<h2 id="station-route-h">{esc(heading)}</h2>\n'
+        f'<p class="station-card__lead">{esc(lead)}</p>\n'
+        f'<span class="station-card__cta">{esc(words["cta"])}</span>\n'
+        f'</div>\n</a>\n</div>\n</section>'
+    )
+
+
 def render_page(c, lang, intros):
     slug = c["slug"]
     commune = c["commune"]
@@ -368,6 +522,7 @@ def render_page(c, lang, intros):
         intro = intros.get(slug, {}).get(lang) or intros.get(slug, {}).get("fr") or ""
     meta_desc = f"{_title_q(lang, commune)} {c['lieux_count']} {C['places_in'][lang]} {commune}. {C['meta_tail'][lang]}"
     hero_css = pick_hero_css(c)
+    station_html = station_route_html(c, lang)
 
     # hreflang blocks (both forms, matching the hub template)
     hl1 = "\n".join(f'<link rel="alternate" hreflang="{l}" href="{alts[l]}">' for l in VIS) \
@@ -427,7 +582,7 @@ def render_page(c, lang, intros):
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,50;1,9..144,300..500,50&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-{lift_style(lang, hero_css)}
+{lift_style(lang, hero_css, with_station=bool(station_html))}
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="{siteconfig.SITE_NAME}"/>
 <meta property="og:locale" content="{OG_LOCALE[lang]}"/>
@@ -484,6 +639,7 @@ def render_page(c, lang, intros):
 </div>
 </section>
 {intro_section}
+{station_html}
 <div class="filter-bar">
 <div class="wrap">
 <div class="filter-bar__head">
