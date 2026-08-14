@@ -106,17 +106,20 @@ def main():
     args = ap.parse_args()
 
     pairs = collisions()
-    if not pairs:
-        print("emit_collision_redirects: no slug collisions — nothing to force")
-        return 0
 
-    # Pad each column to its OWN longest entry. Sharing one width lets a long
-    # target run past it and butt straight into the status —
-    # "…/index.html200!" — which Netlify cannot parse. Two spaces minimum,
-    # always, so alignment can never eat the separator.
-    uw = max(len(u) for u, _ in pairs) + 2
-    tw = max(len(t) for _, t in pairs) + 2
-    lines = HEADER + [f"{u:<{uw}}{t:<{tw}}200!" for u, t in pairs] + [END, ""]
+    # NO RULES ARE EMITTED. Verified live 2026-08-15: Netlify matches
+    # _redirects paths WITHOUT regard to trailing slash, so a forced rewrite
+    # for /morzine/ also captured /morzine — both URLs served the commune page
+    # and the station pages vanished from production. The reverse of the bug
+    # this script existed to fix, and worse. On Netlify, /x and /x/ cannot be
+    # made to serve different content via _redirects at all; separating the
+    # eleven pairs needs different URLs (or an edge function), not rules.
+    # The empty managed block stays so the sweep below retires any rules a
+    # previous version wrote.
+    lines = HEADER + [
+        "# (intentionally empty — Netlify matches these paths slash-insensitively;",
+        "#  forced rewrites here shadowed the station pages. See this script.)",
+        END, ""]
     block = "\n".join(lines)
 
     text = REDIRECTS.read_text(encoding="utf-8")
@@ -132,11 +135,10 @@ def main():
     if changed and args.apply:
         REDIRECTS.write_text(new, encoding="utf-8")
 
-    slugs = sorted({u.strip("/").split("/")[-1] for u, _ in pairs})
-    verb = "wrote" if (changed and args.apply) else ("would write" if changed else "unchanged —")
-    print(f"emit_collision_redirects: {verb} {len(pairs)} force rule(s) "
-          f"for {len(slugs)} slug(s) across {len(pairs) // max(len(slugs), 1)} locale(s)")
-    print(f"  {', '.join(slugs)}")
+    verb = "swept" if (changed and args.apply) else ("would sweep" if changed else "block already empty —")
+    print(f"emit_collision_redirects: {verb} the managed block EMPTY "
+          f"({len(pairs)} collision pair(s) detected, 0 rules emitted by design — "
+          "Netlify matches these paths slash-insensitively; see docstring)")
     if changed and not args.apply:
         print("  report only — re-run with --apply to write")
     return 0
