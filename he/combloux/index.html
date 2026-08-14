@@ -235,6 +235,29 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 .transport-row .t-v{font-size:.82rem}
 .transport-block p{font-size:.8rem;color:var(--ink-3)}
 .commune-count{display:none}
+
+/* station route — the commune's own resort page, surfaced as a real card.
+   Tokens only, no new colours: it has to read as part of the set, not a
+   bolt-on. Stacked on mobile, photo-left from 760px. */
+.station-route{padding:clamp(1.1rem,3vw,1.9rem) 0}
+.station-card{display:grid;grid-template-columns:1fr;background:var(--snow);border:1px solid var(--line);border-radius:var(--radius-lg,18px);overflow:hidden;box-shadow:0 10px 30px rgba(28,24,20,.10);text-decoration:none;color:inherit;transition:transform .25s ease,box-shadow .25s ease}
+.station-card:hover,.station-card:focus-visible{transform:translateY(-3px);box-shadow:0 16px 40px rgba(28,24,20,.17)}
+.station-card__media{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--paper-3)}
+.station-card__media img{width:100%;height:100%;object-fit:cover;display:block}
+.station-card__badge{position:absolute;inset-inline-start:.85rem;top:.85rem;background:var(--pine);color:var(--snow);font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;padding:.34rem .72rem;border-radius:999px;box-shadow:0 2px 8px rgba(28,24,20,.25)}
+.station-card__body{padding:clamp(1rem,2.6vw,1.65rem);display:flex;flex-direction:column;justify-content:center;gap:.45rem}
+.station-card__body h2{margin:0;font-size:clamp(1.22rem,3.2vw,1.72rem);line-height:1.2;color:var(--ink)}
+.station-card__lead{margin:0;color:var(--ink-2);line-height:1.55;font-size:clamp(.94rem,2.2vw,1rem)}
+.station-card__cta{display:inline-flex;align-items:center;gap:.35rem;margin-top:.2rem;font-weight:600;color:var(--accent)}
+.station-card:hover .station-card__cta{color:var(--lake-deep)}
+@media(min-width:760px){
+.station-card{grid-template-columns:minmax(0,44%) minmax(0,1fr)}
+.station-card__media{aspect-ratio:auto;min-height:250px;height:100%}
+}
+@media(prefers-reduced-motion:reduce){
+.station-card{transition:none}
+.station-card:hover,.station-card:focus-visible{transform:none}
+}
 </style>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Loisirs 74"/>
@@ -391,6 +414,18 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 </div>
 </section>
 
+<section aria-labelledby="station-route-h" class="station-route">
+<div class="wrap">
+<a class="station-card" href="https://loisirs74.fr/he/combloux">
+<div class="station-card__media"><picture><source srcset="/img/stations-de-ski/combloux-hero.webp" type="image/webp"><img src="/img/stations-de-ski/combloux-hero.jpg" alt="Combloux, כפר ב-Haute-Savoie על מרפסת נוף מול Mont-Blanc מתחת לשלג" width="1600" height="1064" loading="lazy" decoding="async"></picture><span class="station-card__badge">אתר הנופש</span></div>
+<div class="station-card__body">
+<h2 id="station-route-h">Combloux — אתר הנופש</h2>
+<p class="station-card__lead">כפר-אתר נופש משפחתי ב-Haute-Savoie, על מרפסת נוף מול Mont-Blanc: 100 km של מסלולים באזור Portes du Mont-Blanc, המחובר ל-Évasion Mont-Blanc, ומגוון עשיר של פעילויות מחוץ לסקי (בריכה ביולוגית, שביל הבארוק).</p>
+<span class="station-card__cta">לגלות את אתר הנופש ←</span>
+</div>
+</a>
+</div>
+</section>
 <div class="filter-bar">
 <div class="wrap">
 <div class="filter-bar__head">
