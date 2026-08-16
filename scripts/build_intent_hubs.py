@@ -1065,7 +1065,7 @@ def inject_home_selections():
             f'color:#9fd3e0;font-weight:600;text-decoration:none">★ {esc(e["title"][lang])} →</a>'
             for e in page_ents)
         block = (MARK5_A + f'<section class="home-selections"{_dir_attr(lang)} '
-                 'style="max-width:1080px;margin:26px auto;padding:18px 20px;background:#14333a;'
+                 'style="position:relative;z-index:2;max-width:1080px;margin:26px auto;padding:18px 20px;background:#14333a;'
                  'border:1px solid #2b5560;border-radius:14px">'
                  f'<h2 style="margin:0 0 10px;font-size:17px;color:#f4ede0">{esc(label)}</h2>'
                  f'<div>{links}</div></section>' + MARK5_B)

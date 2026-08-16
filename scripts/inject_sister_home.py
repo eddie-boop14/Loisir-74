@@ -146,7 +146,7 @@ def card_for(lang, sis):
                      'decoding="async" style="border-radius:14px;flex-shrink:0">')
     return (
         f'{MARK_A}<section class="sister-dept"{dir_attr} aria-labelledby="sister-dept-h" '
-        'style="max-width:1080px;margin:30px auto;padding:0 18px">'
+        'style="position:relative;z-index:2;max-width:1080px;margin:30px auto;padding:0 18px">'
         '<div style="background:#fdfaf3;border:1px solid #d9cdb3;border-radius:18px;'
         'padding:clamp(18px,4vw,26px);display:flex;flex-wrap:wrap;gap:18px;align-items:center;'
         'box-shadow:0 10px 30px rgba(28,24,20,.12)">'
