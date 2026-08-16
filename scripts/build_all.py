@@ -339,6 +339,22 @@ def inject_home_selections():
     print(out.stdout.strip() or "(home selections injected)")
 
 
+def inject_sister_home():
+    """The sister-site line on the 12 homepages — the fiche footers get it
+    from their builder, but homepages are authored chrome, so without this
+    step arming `sister` in site.config.json covers every page except the one
+    people check first. Config-driven both ways: removing the block removes
+    the line here too."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "inject_sister_home.py"), "--apply"],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("inject_sister_home failed")
+    print(out.stdout.strip().splitlines()[0] if out.stdout.strip() else "(sister line injected)")
+
+
 def status_gate():
     """JOB 6 gate: every fiche must have an explicit status (draft|verified|
     published). Print the distribution. Block if any fiche has status=None."""
@@ -576,6 +592,8 @@ def main():
     run("inject facet-hub homepage links (0-orphan, after lang-nav)", rebuild_facet_hub_links)
     run("inject intent 'Nos sélections' homepage strip (FIX D, after facet links)",
         inject_home_selections)
+    run("inject the sister-site line on the homepages (config-driven, both ways)",
+        inject_sister_home)
     run("cache-bust runtime /scripts/ includes (content-hash ?v=)", version_runtime_assets)
     run("sync homepage card images from Json/ heroes (derived, never authored)",
         sync_home_cards)
