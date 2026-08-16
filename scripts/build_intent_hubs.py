@@ -1051,14 +1051,23 @@ def inject_home_selections():
         # byte-stable fixpoint; eating original whitespace would shift bytes).
         html = _re.sub(_re.escape(MARK5_A) + r".*?" + _re.escape(MARK5_B), "", html, flags=_re.S)
         label = esc(L(UI["our_selection"], lang))
+        # Locked dark surface + locked light text — the footer's dark-mode
+        # recipe (patch-footer-darkmode.py). The previous pale-mint box
+        # (#eef4f2 with #1F6E78 links) died two ways: phone forced-dark
+        # darkened the box but left the already-dark teal links dark →
+        # dark-on-dark, an invisible ~350px block above the footer; and in
+        # light rendering #eef4f2 on the #f6f1e7 page was near-camouflage.
+        # Auto-dark leaves dark backgrounds and light text alone, so this
+        # renders identically everywhere, and the deep-canard surface reads
+        # as the footer zone's opening rather than a floating patch.
         links = "".join(
-            f'<a href="{intent_page_url(e, lang)}" style="display:inline-block;margin:4px 14px 4px 0;'
-            f'color:#1F6E78;font-weight:600;text-decoration:none">★ {esc(e["title"][lang])} →</a>'
+            f'<a href="{intent_page_url(e, lang)}" style="display:inline-block;margin:5px 16px 5px 0;'
+            f'color:#9fd3e0;font-weight:600;text-decoration:none">★ {esc(e["title"][lang])} →</a>'
             for e in page_ents)
         block = (MARK5_A + f'<section class="home-selections"{_dir_attr(lang)} '
-                 'style="max-width:1080px;margin:26px auto;padding:16px 18px;background:#eef4f2;'
-                 'border:1px solid #d6e6e2;border-radius:14px">'
-                 f'<h2 style="margin:0 0 8px;font-size:17px;color:#155059">{esc(label)}</h2>'
+                 'style="max-width:1080px;margin:26px auto;padding:18px 20px;background:#14333a;'
+                 'border:1px solid #2b5560;border-radius:14px">'
+                 f'<h2 style="margin:0 0 10px;font-size:17px;color:#f4ede0">{esc(label)}</h2>'
                  f'<div>{links}</div></section>' + MARK5_B)
         idx = html.rfind('<footer class="site"')
         if idx != -1:
