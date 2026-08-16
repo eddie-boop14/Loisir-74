@@ -1,33 +1,41 @@
 #!/usr/bin/env python3
-"""inject_sister_home.py — the sister-site line on the 12 homepages.
+"""inject_sister_home.py — the "L'autre département" card on the 12 homepages.
 
-WHY
-  The phase-2 sister machinery promises "one line in the footer bottom, in
-  all 12 languages". build_lieu_page delivers it on every fiche (5,208
-  pages) — but the homepages are hand-authored chrome that no builder
-  regenerates, so arming the `sister` block put the line everywhere EXCEPT
-  the page people actually check. Meanwhile loisirs73.fr shows its
-  loisirs74 backlink on its own homepage. This closes the asymmetry.
+WHY A CARD AND NOT A LINE
+  loisirs73.fr presents the 74 with a full card before its footer: a kicker
+  ("L'AUTRE DÉPARTEMENT"), the sibling's name and département, one editorial
+  sentence stating the shared standard, and an "Ouvrir loisirs74.fr" button.
+  The first version of this script rendered a one-line footer mention — which
+  the owner had explicitly ruled out ("not a one-line footer job") and rightly
+  sent back. This is the mirror of the 73's treatment, on the 74.
 
-WHAT IT RENDERS
-  The exact line the fiche footers already carry, appended inside the
-  homepage's <div class="foot-bottom"> after the © span:
+  The fiche pages keep their one-line footer mention (build_lieu_page's
+  sister_link_html — that IS the right weight on 5,208 interior pages);
+  the homepage gets the full card.
 
-      Même exigence en Savoie : <a href="https://loisirs73.fr">Loisirs 73</a>
+WHAT IT RENDERS, per homepage, localized (12 languages)
 
-  Wording comes from build_lieu_page.CHROME["f_sister"] — the reviewed
-  12-language strings that already ship — with the same punctuation rules
-  (French space-colon; Japanese no lead space). Nothing is retranslated.
-  Colors are hardcoded light-on-dark, the footer's own dark-mode recipe:
-  the homepage footer zone is dark in every render mode, and a var-driven
-  color is exactly what made the footer invisible once before.
+      [icon]  L'AUTRE DÉPARTEMENT
+              Loisirs 73 · Savoie
+              Même éditeur, même règle : chaque fait vérifié auprès d'une
+              source officielle… Passez la frontière départementale.
+                                              [ Ouvrir loisirs73.fr → ]
+
+  The body sentence is the 73's own editorial text mirrored back; the six
+  facts-language versions came through the DeepL flow (2026-08-16, FR
+  source), same as the station-route strings. The icon is the 73's real
+  app icon, SELF-HOSTED at /img/loisirs73-icon.png — never hotlinked.
+
+  Colors are locked hex, no CSS vars: cream card (#fdfaf3) with dark text,
+  deep-canard button (#14333a) with light text. The homepage's lower zone
+  renders dark and its cards render cream in every mode the owner's phone
+  has produced — this card behaves exactly like the site's own cards, and
+  a var-driven color in this zone has been invisible twice already.
 
 CONFIG-DRIVEN, BOTH WAYS
-  siteconfig.SISTER present  → the fenced line is inserted or repaired.
-  siteconfig.SISTER absent   → the fenced line is REMOVED. Disarming the
-  config must disarm every surface, or the flip stops being one flip.
-
-Idempotent: marker-fenced, byte-stable on re-run.
+  siteconfig.SISTER present → card inserted or repaired (fenced, idempotent).
+  siteconfig.SISTER absent  → card removed. One flip arms every surface,
+  one removal disarms every surface.
 
 Usage:
     python3 scripts/inject_sister_home.py            # report, writes nothing
@@ -43,11 +51,77 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import siteconfig  # noqa: E402
-import build_lieu_page as BL  # noqa: E402  reuse the reviewed f_sister strings
 
 ROOT = Path(__file__).resolve().parent.parent
 MARK_A, MARK_B = "<!--sister-home:start-->", "<!--sister-home:end-->"
-FENCE_RE = re.compile(re.escape(MARK_A) + r".*?" + re.escape(MARK_B), re.S)
+FENCE_RE = re.compile(re.escape(MARK_A) + r".*?" + re.escape(MARK_B) + r"\n?", re.S)
+ICON = "/img/loisirs73-icon.png"
+
+RTL = {"ar", "he"}
+
+# kicker / body / cta. fr = the 73's editorial text mirrored verbatim;
+# en/de/it/es/nl authored against it; pl/pt/cs/ar/he/ja via DeepL (FR source,
+# free API, 2026-08-16) — same reviewed-flow as the station-route strings.
+COPY = {
+    "fr": ("L'autre département",
+           "Même éditeur, même règle : chaque fait vérifié auprès d'une source "
+           "officielle, et les contradictions affichées plutôt qu'arbitrées. "
+           "Passez la frontière départementale.",
+           "Ouvrir loisirs73.fr"),
+    "en": ("The other département",
+           "Same publisher, same rule: every fact checked against an official "
+           "source, and contradictions shown rather than settled. Cross the "
+           "departmental border.",
+           "Open loisirs73.fr"),
+    "de": ("Das andere Departement",
+           "Gleicher Herausgeber, gleiche Regel: jeder Fakt an einer "
+           "offiziellen Quelle geprüft, Widersprüche werden angezeigt statt "
+           "entschieden. Überqueren Sie die Departementsgrenze.",
+           "loisirs73.fr öffnen"),
+    "it": ("L'altro dipartimento",
+           "Stesso editore, stessa regola: ogni fatto verificato su una fonte "
+           "ufficiale, e le contraddizioni mostrate anziché arbitrate. "
+           "Attraversate il confine dipartimentale.",
+           "Apri loisirs73.fr"),
+    "es": ("El otro departamento",
+           "Mismo editor, misma regla: cada dato verificado con una fuente "
+           "oficial, y las contradicciones se muestran en lugar de "
+           "arbitrarse. Cruza la frontera departamental.",
+           "Abrir loisirs73.fr"),
+    "nl": ("Het andere departement",
+           "Zelfde uitgever, zelfde regel: elk feit gecontroleerd bij een "
+           "officiële bron, en tegenstrijdigheden worden getoond in plaats "
+           "van beslecht. Steek de departementsgrens over.",
+           "Open loisirs73.fr"),
+    "pl": ("Inny departament",
+           "Ten sam wydawca, te same zasady: każda informacja zweryfikowana "
+           "w oficjalnym źródle, a sprzeczności przedstawiane wprost, a nie "
+           "rozstrzygane. Przekrocz granicę departamentu.",
+           "Otwórz stronę loisirs73.fr"),
+    "pt": ("O outro departamento",
+           "A mesma editora, a mesma regra: cada facto é verificado junto de "
+           "uma fonte oficial e as contradições são apresentadas em vez de "
+           "serem resolvidas. Atravesse a fronteira departamental.",
+           "Aceda a loisirs73.fr"),
+    "cs": ("Jiný departement",
+           "Stejný vydavatel, stejná zásada: každá informace je ověřena u "
+           "oficiálního zdroje a rozpory jsou uvedeny, nikoli zamlčovány. "
+           "Překročte hranici departementu.",
+           "Otevřít loisirs73.fr"),
+    "ar": ("المقاطعة الأخرى",
+           "نفس الناشر، نفس القاعدة: يتم التحقق من كل حقيقة من مصدر رسمي، "
+           "ويتم عرض التناقضات بدلاً من التغاضي عنها. اعبروا حدود المقاطعة.",
+           "افتحوا موقع loisirs73.fr"),
+    "he": ("המחוז האחר",
+           'אותו מו"ל, אותו כלל: כל עובדה נבדקת מול מקור רשמי, והסתירות '
+           "מוצגות כפי שהן, במקום שיישבו. חצו את גבול המחוז.",
+           "היכנסו לאתר loisirs73.fr"),
+    "ja": ("もう一つの県",
+           "同じ出版社、同じルール：すべての事実は公式情報源で確認され、"
+           "矛盾点は恣意的に調整するのではなく、そのまま掲載されています。"
+           "県の境界を越えてみましょう。",
+           "loisirs73.frを開く"),
+}
 
 
 def esc(s):
@@ -61,21 +135,38 @@ def homepages():
             yield sub.name, sub / "index.html"
 
 
-def line_for(lang, sis):
-    label = BL.CHROME["f_sister"].get(lang) or BL.CHROME["f_sister"]["fr"]
-    dept = esc(sis.get("dept") or "")
-    # Same rules as build_lieu_page.sister_link_html: French puts a space
-    # before the colon, Japanese takes no space before the département name.
-    lead = "" if lang == "ja" else " "
-    colon = " : " if lang == "fr" else ": "
-    return (f'{MARK_A}<span class="sister" style="color:rgba(245,241,232,.72)">'
-            f'{label}{lead}{dept}{colon}'
-            f'<a href="{esc(sis["url"])}" style="color:#9fd3e0;font-weight:600;'
-            f'text-decoration:none">{esc(sis["name"])}</a></span>{MARK_B}')
+def card_for(lang, sis):
+    kicker, body, cta = COPY.get(lang) or COPY["fr"]
+    arrow = "←" if lang in RTL else "→"
+    dir_attr = ' dir="rtl"' if lang in RTL else ""
+    title = f'{sis["name"]} · {sis.get("dept", "")}'.rstrip(" ·")
+    icon_html = ""
+    if (ROOT / ICON.lstrip("/")).is_file():
+        icon_html = (f'<img src="{ICON}" alt="" width="56" height="56" loading="lazy" '
+                     'decoding="async" style="border-radius:14px;flex-shrink:0">')
+    return (
+        f'{MARK_A}<section class="sister-dept"{dir_attr} aria-labelledby="sister-dept-h" '
+        'style="max-width:1080px;margin:30px auto;padding:0 18px">'
+        '<div style="background:#fdfaf3;border:1px solid #d9cdb3;border-radius:18px;'
+        'padding:clamp(18px,4vw,26px);display:flex;flex-wrap:wrap;gap:18px;align-items:center;'
+        'box-shadow:0 10px 30px rgba(28,24,20,.12)">'
+        f'{icon_html}'
+        '<div style="flex:1 1 320px;min-width:0">'
+        f'<p style="margin:0 0 4px;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;'
+        f'color:#7a6b58;font-weight:700">{esc(kicker)}</p>'
+        f'<h2 id="sister-dept-h" style="margin:0 0 8px;font-size:clamp(1.15rem,3vw,1.45rem);'
+        f'color:#1c1814">{esc(title)}</h2>'
+        f'<p style="margin:0;color:#3d342a;line-height:1.55">{esc(body)}</p>'
+        '</div>'
+        f'<a href="{esc(sis["url"])}" rel="noopener" style="display:inline-flex;align-items:center;'
+        'gap:.5rem;background:#14333a;color:#f4ede0;font-weight:600;text-decoration:none;'
+        f'padding:.78rem 1.25rem;border-radius:999px;flex-shrink:0">{esc(cta)} {arrow}</a>'
+        f'</div></section>{MARK_B}'
+    )
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Sister-site line on the homepages.")
+    ap = argparse.ArgumentParser(description="Sister-département card on the homepages.")
     ap.add_argument("--apply", action="store_true", help="write changes (default: report only)")
     args = ap.parse_args()
 
@@ -89,34 +180,34 @@ def main():
 
         if not armed:
             if has:
-                new = FENCE_RE.sub("", html)
                 removed += 1
                 if args.apply:
-                    page.write_text(new, encoding="utf-8")
+                    page.write_text(FENCE_RE.sub("", html), encoding="utf-8")
             continue
 
-        want = line_for(lang, sis)
-        if has:
-            if has.group(0) == want:
-                ok += 1
-                continue
-            new = FENCE_RE.sub(want, html, count=1)
-        else:
-            m = re.search(r'(<div class="foot-bottom">.*?)(</div>)', html, re.S)
-            if not m:
-                no_anchor += 1
-                continue
-            new = html[:m.end(1)] + "\n" + want + "\n" + html[m.end(1):]
+        want = card_for(lang, sis)
+        # sweep any previous fence wherever it sits (v1 lived inside
+        # foot-bottom), then insert fresh directly before the footer — the
+        # 73's card occupies exactly that slot.
+        stripped = FENCE_RE.sub("", html)
+        idx = stripped.rfind('<footer class="site"')
+        if idx == -1:
+            no_anchor += 1
+            continue
+        new = stripped[:idx] + want + "\n" + stripped[idx:]
+        if new == html:
+            ok += 1
+            continue
         changed += 1
         if args.apply:
             page.write_text(new, encoding="utf-8")
 
     verb = "" if args.apply else "would "
     state = "armed" if armed else "DISARMED (no sister block in site.config.json)"
-    print(f"inject_sister_home [{state}]: {verb}write {changed} · already correct {ok} "
+    print(f"inject_sister_home [{state}]: {verb}write {changed} card(s) · already correct {ok} "
           f"· {verb}remove {removed}")
     if no_anchor:
-        print(f"  ⚑ no <div class=\"foot-bottom\"> anchor on {no_anchor} homepage(s) — not injected")
+        print(f"  ⚑ no <footer class=\"site\"> anchor on {no_anchor} homepage(s) — not injected")
     if not args.apply and (changed or removed):
         print("  report only — re-run with --apply to write")
     return 0
