@@ -418,11 +418,14 @@ def inject_homepage_links(html_facets, lang):
     html = open(path, encoding="utf-8").read()
     html = re.sub(r"\s*" + re.escape(MARK_A) + r".*?" + re.escape(MARK_B), "", html, flags=re.S)
     links = "".join(
-        f'<a href="{url_for(f["hub_slug"], lang)}" style="display:inline-block;margin:2px 10px 2px 0;color:#1F6E78;font-weight:600">{esc(f["i18n"][lang]["h1"])} →</a>'
+        f'<a href="{url_for(f["hub_slug"], lang)}" style="display:inline-block;margin:3px 12px 3px 0;color:#9fd3e0;font-weight:600;text-decoration:none">{esc(f["i18n"][lang]["h1"])} →</a>'
         for f in html_facets)
     block = (MARK_A + f'<nav class="facet-hubs" aria-label="{esc(L(UI["guides"], lang))}" '
-             'style="max-width:760px;margin:18px auto;padding:0 18px">'
-             + f'<strong style="display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#1F6E78;margin-bottom:4px">{esc(L(UI["guides"], lang))}</strong>'
+             # position+z-index: the homepage's fixed .sky layer (z-index:0) paints over
+             # any non-positioned content — this nav sat invisible beneath it, after the
+             # footer, since it first shipped. Locked light colors for the dark zone.
+             'style="position:relative;z-index:2;max-width:760px;margin:18px auto 34px;padding:0 18px">'
+             + f'<strong style="display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,241,232,.55);margin-bottom:5px">{esc(L(UI["guides"], lang))}</strong>'
              + links + '</nav>' + MARK_B)
     html = html.replace("</body>", "\n" + block + "</body>", 1)
     with open(path, "w", encoding="utf-8") as fh:

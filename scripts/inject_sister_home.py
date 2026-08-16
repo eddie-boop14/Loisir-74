@@ -124,6 +124,26 @@ COPY = {
 }
 
 
+# "what you'll find" count frame — {count} swapped in at render. fr authored;
+# en/de/it/es/nl authored against it; pl/pt/cs/ar/he/ja via DeepL (FR source,
+# 2026-08-16). pl/cs plural forms agree with counts ending 2-4 (73 does);
+# revisit if the sibling's count moves into another plural class.
+FRAME = {
+    "fr": "{count} lieux vérifiés en Savoie",
+    "en": "{count} verified places in Savoie",
+    "de": "{count} geprüfte Orte in Savoie",
+    "it": "{count} luoghi verificati in Savoia",
+    "es": "{count} lugares verificados en Saboya",
+    "nl": "{count} geverifieerde plekken in Savoie",
+    "pl": "{count} sprawdzone miejsca w Sabaudii",
+    "pt": "{count} locais inspecionados na Saboia",
+    "cs": "{count} prověřených míst v Savojsku",
+    "ar": "{count} موقعاً تم فحصها في سافوا",
+    "he": "{count} אתרים שנבדקו בסבואה",
+    "ja": "サヴォワ県で調査済みの{count}カ所",
+}
+
+
 def esc(s):
     return html_lib.escape(str(s), quote=True)
 
@@ -140,6 +160,15 @@ def card_for(lang, sis):
     arrow = "←" if lang in RTL else "→"
     dir_attr = ' dir="rtl"' if lang in RTL else ""
     title = f'{sis["name"]} · {sis.get("dept", "")}'.rstrip(" ·")
+    # the "top picks" line: what the reader will find, before how it is served.
+    what_html = ""
+    count, highlights = sis.get("count"), sis.get("highlights") or []
+    if count and highlights:
+        frame = (FRAME.get(lang) or FRAME["fr"]).replace("{count}", str(count))
+        colon = " : " if lang == "fr" else ("：" if lang == "ja" else ": ")
+        names = " · ".join(esc(h) for h in highlights)
+        what_html = (f'<p style="margin:0 0 7px;color:#1c1814;font-weight:600;line-height:1.5">'
+                     f'{esc(frame)}{colon}{names}…</p>')
     icon_html = ""
     if (ROOT / ICON.lstrip("/")).is_file():
         icon_html = (f'<img src="{ICON}" alt="" width="56" height="56" loading="lazy" '
@@ -156,6 +185,7 @@ def card_for(lang, sis):
         f'color:#7a6b58;font-weight:700">{esc(kicker)}</p>'
         f'<h2 id="sister-dept-h" style="margin:0 0 8px;font-size:clamp(1.15rem,3vw,1.45rem);'
         f'color:#1c1814">{esc(title)}</h2>'
+        f'{what_html}'
         f'<p style="margin:0;color:#3d342a;line-height:1.55">{esc(body)}</p>'
         '</div>'
         f'<a href="{esc(sis["url"])}" rel="noopener" style="display:inline-flex;align-items:center;'
