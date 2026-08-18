@@ -16,9 +16,9 @@ google_place_id: "ChIJqWbJ1P6Pi0cRfaJpxJjcjYc"
 canonical_url: https://loisirs74.fr/montgolfiere-annecy
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/montgolfiere-annecy.json
-photo_url: /img/generique/generique-montgolfiere.jpg
-photo_type: generic
-photo_author: null
+photo_url: /img/que-faire/montgolfiere-annecy-hero.jpg
+photo_type: real
+photo_author: "Bénédicte"
 photo_license: null
 photo_source: null
 last_updated: 2026-06-08

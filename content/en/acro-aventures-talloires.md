@@ -16,11 +16,11 @@ google_place_id: "ChIJR3WMMkqSi0cRn-4M6CgRHow"
 canonical_url: https://loisirs74.fr/en/acro-aventures-talloires
 language: en
 facet_json: https://loisirs74.fr/api/lieu/acro-aventures-talloires.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/c/c1/Acro%27Aventures_%40_Planfait_%2850935328546%29.jpg
+photo_url: /img/que-faire/acro-aventures-talloires-hero.jpg
 photo_type: real
-photo_author: "Guilhem Vellut from Annecy, France"
-photo_license: "CC BY 2.0"
-photo_source: Wikimedia Commons
+photo_author: "Bénédicte"
+photo_license: null
+photo_source: null
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---

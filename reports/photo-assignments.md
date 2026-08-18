@@ -8,7 +8,7 @@
 | hub | fiches | distinct photos | max repeat of one photo |
 |---|---:|---:|---:|
 | `baignade-nautisme` | 50 | 40 | 4 |
-| `bases-de-loisirs` | 85 | 61 | 7 |
+| `bases-de-loisirs` | 85 | 62 | 7 |
 | `cascades` | 19 | 19 | 1 |
 | `chateaux` | 27 | 25 | 2 |
 | `lacs-plages` | 31 | 27 | 3 |
@@ -16,7 +16,7 @@
 | `parcs-jardins` | 32 | 19 | 11 |
 | `points-de-vue` | 30 | 29 | 2 |
 | `que-faire` | 73 | 48 | 4 |
-| `sensations-plein-air` | 70 | 58 | 3 |
+| `sensations-plein-air` | 70 | 59 | 3 |
 | `sentiers` | 40 | 11 | 12 |
 | `sorties-detente` | 30 | 20 | 3 |
 | `sport-jeux` | 52 | 33 | 4 |
@@ -81,7 +81,7 @@
 | `bases-de-loisirs` | `accrobranche-foret-aventures-manigod` | `parc` | `generique-accrobranche-11.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `accrobranche-la-foret-magique-chamonix` | `sensations` | `generique-accrobranche-1.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `acro-aventures-reignier` | `parc` | `Accrobranche_floreval_2.jpg` | — | json hero (url) |
-| `bases-de-loisirs` | `acro-aventures-talloires` | `parc` | `Acro%27Aventures_%40_Planfait_%2850935328546%29.jpg` | — | json hero (url) |
+| `bases-de-loisirs` | `acro-aventures-talloires` | `parc` | `acro-aventures-talloires-hero.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `acroparc-de-bellavallis-bellevaux` | `parc` | `generique-accrobranche-6.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `alpine-coaster-les-planards-chamonix` | `sensations` | `generique-alpine-coaster-2.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `base-de-loisirs-de-la-beunaz` | `parc` | `La_plage_de_La_Beunaz.jpg` | — | json hero (url) |
@@ -124,7 +124,7 @@
 | `bases-de-loisirs` | `la-foret-enchantee-sillingy` | `divertissement` | `generique-attraction.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `leman-forest-saint-gingolph` | `parc` | `generique-accrobranche-6.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `leman-kid-thonon-les-bains` | `parc` | `generique-parc.jpg` | — | json hero (local) |
-| `bases-de-loisirs` | `montgolfiere-annecy` | `sensations` | `generique-montgolfiere.jpg` | — | json hero (local) |
+| `bases-de-loisirs` | `montgolfiere-annecy` | `sensations` | `montgolfiere-annecy-hero.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `montgolfiere-du-mont-blanc-evian` | `sensations` | `generique-montgolfiere.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `paintball-chamonix` | `sensations` | `generique-paintball-action.jpg` | — | json hero (local) |
 | `bases-de-loisirs` | `paintball-fiz-passy` | `sensations` | `generique-paintball-bunkers.jpg` | — | json hero (local) |
@@ -429,7 +429,7 @@
 | `sensations-plein-air` | `accrobranche-foret-aventures-manigod` | `parc` | `generique-accrobranche-11.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `accrobranche-la-foret-magique-chamonix` | `sensations` | `generique-accrobranche-1.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `acro-aventures-reignier` | `parc` | `Accrobranche_floreval_2.jpg` | — | json hero (url) |
-| `sensations-plein-air` | `acro-aventures-talloires` | `parc` | `Acro%27Aventures_%40_Planfait_%2850935328546%29.jpg` | — | json hero (url) |
+| `sensations-plein-air` | `acro-aventures-talloires` | `parc` | `acro-aventures-talloires-hero.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `acroparc-de-bellavallis-bellevaux` | `parc` | `generique-accrobranche-6.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `aire-de-decollage-parapente-plaine-joux` | `nature` | `Aire_de_d%C3%A9collage_de_parapentes_%40_Passy_Plaine-Joux_%2851062114852%29.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `alpine-coaster-les-planards-chamonix` | `sensations` | `generique-alpine-coaster-2.jpg` | — | json hero (local) |
@@ -465,7 +465,7 @@
 | `sensations-plein-air` | `le-semnoz` | `nature` | `Cr%C3%AAt_de_Chatillon_%40_Semnoz_%2835471373476%29.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `mont-baron` | `nature` | `Mont_Baron_%40_Veyrier-du-Lac_%2851213738648%29.jpg` | — | json hero (url) |
 | `sensations-plein-air` | `mont-saleve` | `nature` | `mont-saleve-hero.jpg` | — | json hero (local) |
-| `sensations-plein-air` | `montgolfiere-annecy` | `sensations` | `generique-montgolfiere.jpg` | — | json hero (local) |
+| `sensations-plein-air` | `montgolfiere-annecy` | `sensations` | `montgolfiere-annecy-hero.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `montgolfiere-du-mont-blanc-evian` | `sensations` | `generique-montgolfiere.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `parc-aventure-mont-blanc-saint-gervais` | `parc` | `generique-accrobranche-3.jpg` | — | json hero (local) |
 | `sensations-plein-air` | `parc-de-loisirs-du-pontet` | `parc` | `Lac_de_p%C3%AAche_%40_Parc_de_loisirs_du_Pontet_%40_Val_Montjoie_%2850921651901%29.jpg` | — | json hero (url) |
