@@ -35,7 +35,29 @@ from pathlib import Path
 from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
-MANIFEST = ROOT / "incoming-benedicte" / "manifest.json"
+INCOMING = ROOT / "incoming-benedicte"
+
+
+def _find_manifest():
+    """incoming-benedicte/manifest.json, or exactly one batch folder's.
+
+    The HANDOFF instruction has always been "drop the folder into
+    incoming-benedicte/" — the August batch arrives as
+    incoming-benedicte/benedicte-2026-08/manifest.json and the July code
+    only looked at the top level. Two batches at once is ambiguous and
+    stops the run rather than guessing.
+    """
+    top = INCOMING / "manifest.json"
+    if top.exists():
+        return top
+    found = sorted(INCOMING.glob("*/manifest.json"))
+    if len(found) == 1:
+        return found[0]
+    raise SystemExit(f"::error::expected exactly one manifest under {INCOMING}, "
+                     f"found {len(found)}")
+
+
+MANIFEST = _find_manifest()
 QUAR = ROOT / "reports" / "photo-quarantine"
 SOURCES = ROOT / "reports" / "photo-sources"
 
@@ -130,14 +152,19 @@ def main():
     # (idempotent) instead of shipping a gallery with holes.
     incomplete = {it["slug"] for it in items
                   if it["role"] in ("hero", "gallery")
-                  and not (ROOT / it["file"]).exists()}
+                  and not (ROOT / it["file"]).exists()
+                  and not (MANIFEST.parent / it["file"]).exists()}
     for slug in sorted(incomplete):
         print(f"!! DEFERRED {slug}: publish file(s) missing — re-run after upload")
 
     # 1. route files + collect Json edits
     hero_of, gallery_of = {}, {}
     for it in items:
+        # July's manifest carried ROOT-relative paths; the documented contract
+        # (and August's manifest) uses filenames relative to the batch folder.
         src = ROOT / it["file"]
+        if not src.exists():
+            src = MANIFEST.parent / it["file"]
         slug, role = it["slug"], it["role"]
         if role in ("spare", "parked") or (slug in incomplete and role != "source"):
             continue
@@ -159,7 +186,9 @@ def main():
             process(src, dest, GALLERY_MAX)
             gallery_of.setdefault(slug, []).append(
                 {"src": f"/img/{bucket}/{slug}-{n}.jpg",
-                 "alt": it["alt_fr"], "credit": it["credit"]})
+                 # the docstring's contract says `alt`; July's manifest said
+                 # `alt_fr`. Accept both, refuse neither-silently.
+                 "alt": it.get("alt_fr") or it["alt"], "credit": it["credit"]})
         print(f"routed {it['file']} -> {dest.relative_to(ROOT)}")
 
     # 2. Json updates
