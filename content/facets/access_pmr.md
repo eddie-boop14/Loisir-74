@@ -1,13 +1,17 @@
 ---
 facet: access_pmr
 scope: haute-savoie-74
-lieux_documented: 166
-lieux_total: 434
+lieux_documented: 167
+lieux_total: 435
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Accès PMR — index transversal (434 lieux, 166 documentés)
+# Accès PMR — index transversal (435 lieux, 167 documentés)
+
+## Abbaye d'Abondance — Abondance
+Non accessible en fauteuil roulant ; stationnement PMR réservé, boucles magnétiques, livret FALC, certification S3A, registre d'accessibilité.
+Fiche: https://loisirs74.fr/abbaye-d-abondance · JSON: https://loisirs74.fr/api/lieu/abbaye-d-abondance.json
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Entrée avec marche(s), sans rampe

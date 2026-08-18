@@ -1,13 +1,17 @@
 ---
 facet: season
 scope: haute-savoie-74
-lieux_documented: 431
-lieux_total: 434
+lieux_documented: 432
+lieux_total: 435
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Saison — index transversal (434 lieux, 431 documentés)
+# Saison — index transversal (435 lieux, 432 documentés)
+
+## Abbaye d'Abondance — Abondance
+Toute l'année · fermé 31 oct. – 20 déc.
+Fiche: https://loisirs74.fr/abbaye-d-abondance · JSON: https://loisirs74.fr/api/lieu/abbaye-d-abondance.json
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Toute l'année · Été pour les jardins

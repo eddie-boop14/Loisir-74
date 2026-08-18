@@ -1,7 +1,7 @@
 # Phase 4 — photo assignments (gate artifact)
 
 **Date**: 2026-06-14
-**Total assignments**: 635 (one per (hub × slug) on the FR canonical hub)
+**Total assignments**: 636 (one per (hub × slug) on the FR canonical hub)
 
 ## Per-hub diversity
 
@@ -10,7 +10,7 @@
 | `baignade-nautisme` | 50 | 40 | 4 |
 | `bases-de-loisirs` | 85 | 62 | 7 |
 | `cascades` | 19 | 19 | 1 |
-| `chateaux` | 27 | 25 | 2 |
+| `chateaux` | 28 | 26 | 2 |
 | `lacs-plages` | 31 | 27 | 3 |
 | `musees` | 51 | 34 | 7 |
 | `parcs-jardins` | 32 | 19 | 11 |
@@ -182,6 +182,7 @@
 | `cascades` | `gorges-du-fier` | `aquatique` | `gorges-du-fier-hero.jpg` | — | json hero (local) |
 | `cascades` | `gorges-du-pont-du-diable` | `aquatique` | `Pont_du_Diable_13072015_14.jpg` | — | json hero (url) |
 | `cascades` | `grotte-et-cascade-de-seythenex` | `aquatique` | `Grotte_et_cascade_de_Seythenex_10.jpg` | — | json hero (url) |
+| `chateaux` | `abbaye-d-abondance` | `patrimoine` | `abbaye-d-abondance-hero.jpg` | — | json hero (local) |
 | `chateaux` | `abbaye-d-aulps` | `patrimoine` | `Aulps_abbey_01.jpg` | — | json hero (url) |
 | `chateaux` | `abbaye-de-sixt` | `patrimoine` | `Sixt_abbey_02.jpg` | — | json hero (url) |
 | `chateaux` | `borne-chateau-vuache-vulbens` | `patrimoine` | `generique-chateau-brume.jpg` | — | json hero (local) |

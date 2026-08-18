@@ -1,13 +1,17 @@
 ---
 facet: hours
 scope: haute-savoie-74
-lieux_documented: 336
-lieux_total: 434
+lieux_documented: 337
+lieux_total: 435
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Horaires — index transversal (434 lieux, 336 documentés)
+# Horaires — index transversal (435 lieux, 337 documentés)
+
+## Abbaye d'Abondance — Abondance
+Mai, juin et septembre : tous les jours 9h30–12h et 14h–18h. Juillet–août : tous les jours 9h30–12h30 et 14h–18h. 22 décembre – 30 avril et octobre : du lundi au vendredi 14h–17h. Fermeture annuelle du 31 octobre au 20 décembre ; fermé le 25 décembre et le 1er janvier. Vérifié sur le site officiel le 18 août 2026 — sous réserve de modification.
+Fiche: https://loisirs74.fr/abbaye-d-abondance · JSON: https://loisirs74.fr/api/lieu/abbaye-d-abondance.json
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 15 juin – 15 sept : tous les jours 10h–19h. 1er janv – 31 mars : lundi au vendredi 14h–18h (fermé 1er janv). 1er avr – 14 juin et 16 sept – 30 sept : lundi au vendredi et dimanche 14h–18h30 (fermé samedi, fermé 1er mai). Oct : lundi au vendredi 14h–18h. Vérifié sur le site officiel le 14 mai 2026 — sous réserve de modifications saisonnières.

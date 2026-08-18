@@ -1,13 +1,17 @@
 ---
 facet: parking
 scope: haute-savoie-74
-lieux_documented: 272
-lieux_total: 434
+lieux_documented: 273
+lieux_total: 435
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Parking — index transversal (434 lieux, 272 documentés)
+# Parking — index transversal (435 lieux, 273 documentés)
+
+## Abbaye d'Abondance — Abondance
+Parking du village à proximité · places PMR réservées
+Fiche: https://loisirs74.fr/abbaye-d-abondance · JSON: https://loisirs74.fr/api/lieu/abbaye-d-abondance.json
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 Gratuit sur place

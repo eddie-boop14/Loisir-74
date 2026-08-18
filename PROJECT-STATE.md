@@ -22,11 +22,11 @@
 
 | metric | value |
 |---|---|
-| fiche JSONs (total) | **434** |
-| published | **434** |
-| access-cost: free / free_seasonal / paid | 170 / 5 / 259 |
-| built HTML pages | 6242 |
-| sitemap URLs | 6198 |
+| fiche JSONs (total) | **435** |
+| published | **435** |
+| access-cost: free / free_seasonal / paid | 170 / 5 / 260 |
+| built HTML pages | 6254 |
+| sitemap URLs | 6210 |
 | facet hubs (data/facet-hubs.json) | 8 |
 | intent pages (data/intent-registry.json) | 26 |
 

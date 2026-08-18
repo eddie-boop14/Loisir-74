@@ -14,6 +14,7 @@ Lac d'Annecyの中世の天守からChablaisの要塞屋敷まで、Haute-Savoie
 - [Abbaye de Sixt](https://loisirs74.fr/ja/abbaye-de-sixt) — Sixt-Fer-à-Cheval · [md](https://loisirs74.fr/content/abbaye-de-sixt.md)
 - [Château de Buffavent](https://loisirs74.fr/ja/chateau-buffavent-lully) — Lully · [md](https://loisirs74.fr/content/chateau-buffavent-lully.md)
 - [Château de la Croix](https://loisirs74.fr/ja/chateau-croix-scionzier) — Scionzier · [md](https://loisirs74.fr/content/chateau-croix-scionzier.md)
+- [Abbaye d'Abondance](https://loisirs74.fr/ja/abbaye-d-abondance) — Abondance · [md](https://loisirs74.fr/content/abbaye-d-abondance.md)
 - [Abbaye d'Aulps](https://loisirs74.fr/ja/abbaye-d-aulps) — Saint-Jean-d'Aulps · [md](https://loisirs74.fr/content/abbaye-d-aulps.md)
 - [Château d'Avully](https://loisirs74.fr/ja/chateau-avully-brenthonne) — Brenthonne · [md](https://loisirs74.fr/content/chateau-avully-brenthonne.md)
 - [Château de Clermont](https://loisirs74.fr/ja/chateau-clermont-genevois) — Clermont · [md](https://loisirs74.fr/content/chateau-clermont-genevois.md)
@@ -21,6 +22,5 @@ Lac d'Annecyの中世の天守からChablaisの要塞屋敷まで、Haute-Savoie
 - [Château des Rubins](https://loisirs74.fr/ja/chateau-des-rubins-sallanches) — Sallanches · [md](https://loisirs74.fr/content/chateau-des-rubins-sallanches.md)
 - [Château de Montrottier](https://loisirs74.fr/ja/chateau-montrottier-lovagny) — Lovagny · [md](https://loisirs74.fr/content/chateau-montrottier-lovagny.md)
 - [Château de Ripaille](https://loisirs74.fr/ja/chateau-ripaille-thonon) — Thonon-les-Bains · [md](https://loisirs74.fr/content/chateau-ripaille-thonon.md)
-- [Château des Sires de Faucigny](https://loisirs74.fr/ja/chateau-sires-faucigny-bonneville) — Bonneville · [md](https://loisirs74.fr/content/chateau-sires-faucigny-bonneville.md)
 
 Source: https://loisirs74.fr/ja/que-faire/plus-beaux-chateaux-haute-savoie/

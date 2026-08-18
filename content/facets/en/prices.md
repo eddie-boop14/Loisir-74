@@ -1,13 +1,17 @@
 ---
 facet: prices
 scope: haute-savoie-74
-lieux_documented: 427
-lieux_total: 434
+lieux_documented: 428
+lieux_total: 435
 last_built: 2026-07-21
 source: loisirs74.fr
 ---
 
-# Tarifs — index transversal (434 lieux, 427 documentés)
+# Tarifs — index transversal (435 lieux, 428 documentés)
+
+## Abbaye d'Abondance — Abondance
+6 € adulte · 5 € réduit · DUO Maison du Fromage 10 €
+Fiche: https://loisirs74.fr/abbaye-d-abondance · JSON: https://loisirs74.fr/api/lieu/abbaye-d-abondance.json
 
 ## Abbaye d'Aulps — Saint-Jean-d'Aulps
 À partir de 7 € (adulte)
