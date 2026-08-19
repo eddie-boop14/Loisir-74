@@ -180,7 +180,7 @@
 | `cascades` | `cirque-du-fer-a-cheval` | `aquatique` | `cirque-du-fer-a-cheval-hero.jpg` | — | json hero (local) |
 | `cascades` | `gorges-de-la-diosaz` | `aquatique` | `gorges-de-la-diosaz-hero.jpg` | — | json hero (local) |
 | `cascades` | `gorges-du-fier` | `aquatique` | `gorges-du-fier-hero.jpg` | — | json hero (local) |
-| `cascades` | `gorges-du-pont-du-diable` | `aquatique` | `Pont_du_Diable_13072015_14.jpg` | — | json hero (url) |
+| `cascades` | `gorges-du-pont-du-diable` | `aquatique` | `gorges-du-pont-du-diable-hero.jpg` | — | json hero (local) |
 | `cascades` | `grotte-et-cascade-de-seythenex` | `aquatique` | `Grotte_et_cascade_de_Seythenex_10.jpg` | — | json hero (url) |
 | `chateaux` | `abbaye-d-abondance` | `patrimoine` | `abbaye-d-abondance-hero.jpg` | — | json hero (local) |
 | `chateaux` | `abbaye-d-aulps` | `patrimoine` | `Aulps_abbey_01.jpg` | — | json hero (url) |

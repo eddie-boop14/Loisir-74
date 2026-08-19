@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/gorges-du-pont-du-diable
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/gorges-du-pont-du-diable.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/9/93/Pont_du_Diable_13072015_14.jpg
+photo_url: /img/cascades/gorges-du-pont-du-diable-hero.jpg
 photo_type: real
-photo_author: "Vassil"
-photo_license: "CC0"
-photo_source: Wikimedia Commons
+photo_author: "Bénédicte"
+photo_license: null
+photo_source: null
 last_updated: 2026-06-25
 source: loisirs74.fr
 ---
