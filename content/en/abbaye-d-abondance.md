@@ -11,7 +11,7 @@ region: "Auvergne-Rhône-Alpes"
 country: France
 latitude: 46.281209
 longitude: 6.720272
-geo_verified: true
+geo_verified: false
 google_place_id: null
 canonical_url: https://loisirs74.fr/en/abbaye-d-abondance
 language: en
@@ -49,6 +49,7 @@ Mai, juin et septembre : tous les jours 9h30–12h et 14h–18h. Juillet–août
 ## Access (PMR)
 
 - Status: Not accessible
+- Source: Abondance Patrimoine — Abbaye d'Abondance (officiel) — https://www.abondance-patrimoine.fr/fr/labbaye-abondance/informations-pratiques.html
 
 ## Parking
 
