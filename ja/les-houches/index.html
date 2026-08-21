@@ -4,6 +4,7 @@
 <head>
 <link rel="preload" as="image" href="/img/generique/generique-musee-grande-galerie.jpg" fetchpriority="high"><!--hub-hero-->
 <link rel="canonical" href="https://loisirs74.fr/ja/les-houches/">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="alternate" hreflang="fr" href="https://loisirs74.fr/les-houches/">
 <link rel="alternate" hreflang="en" href="https://loisirs74.fr/en/les-houches/">
 <link rel="alternate" hreflang="de" href="https://loisirs74.fr/de/les-houches/">
@@ -235,7 +236,7 @@ footer.site::before{content:"";position:absolute;left:0;right:0;top:-1px;height:
 .transport-row .t-v{font-size:.82rem}
 .transport-block p{font-size:.8rem;color:var(--ink-3)}
 .commune-count{display:none}
-
+html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
 /* station route — the commune's own resort page, surfaced as a real card.
    Tokens only, no new colours: it has to read as part of the set, not a
    bolt-on. Stacked on mobile, photo-left from 760px. */
