@@ -16,7 +16,7 @@ google_place_id: "ChIJN5o4x7aLi0cR_y8Ej-eyTyY"
 canonical_url: https://loisirs74.fr/chateau-de-thorens
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/chateau-de-thorens.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/1/13/Filli%C3%A8re%C2%B0Thorens-Gli%C3%A8res_-_74570_-_2019.06.04_-_Ch%C3%A2teau_de_Thorens_%28vue_de_face%29_%C2%A9_Anthony_Levrot.jpg
+photo_url: /img/chateaux/chateau-de-thorens-hero.jpg
 photo_type: real
 photo_author: "Anthony Levrot"
 photo_license: "CC BY-SA 4.0"

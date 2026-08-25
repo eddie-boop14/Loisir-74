@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/jardins-europe-annecy
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/jardins-europe-annecy.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/f/ff/Ile_aux_Cygnes_%40_Lake_%40_Jardins_de_l%27Europe_%40_Annecy_%2835501071035%29.jpg
+photo_url: /img/bases-de-loisirs/jardins-europe-annecy-hero.jpg
 photo_type: real
-photo_author: "Île aux Cygnes — Jardins de l'Europe, Annecy"
-photo_license: "Wikimedia Commons"
-photo_source: CC BY-SA
+photo_author: "Guilhem Vellut from Annecy, France"
+photo_license: "CC BY 2.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-10
 source: loisirs74.fr
 ---

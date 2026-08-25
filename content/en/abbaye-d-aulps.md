@@ -16,7 +16,7 @@ google_place_id: "ChIJMU17UAEcjEcRJL6u6JYPYxY"
 canonical_url: https://loisirs74.fr/en/abbaye-d-aulps
 language: en
 facet_json: https://loisirs74.fr/api/lieu/abbaye-d-aulps.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/1/11/Aulps_abbey_01.jpg
+photo_url: /img/chateaux/abbaye-d-aulps-hero.jpg
 photo_type: real
 photo_author: "Krzysztof Golik"
 photo_license: "CC BY-SA 4.0"

@@ -16,7 +16,7 @@ google_place_id: "ChIJyVPEsZ5ViUcRdX5jViN87kA"
 canonical_url: https://loisirs74.fr/en/aire-de-decollage-parapente-plaine-joux
 language: en
 facet_json: https://loisirs74.fr/api/lieu/aire-de-decollage-parapente-plaine-joux.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/0/0e/Aire_de_d%C3%A9collage_de_parapentes_%40_Passy_Plaine-Joux_%2851062114852%29.jpg
+photo_url: /img/points-de-vue/aire-de-decollage-parapente-plaine-joux-hero.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"

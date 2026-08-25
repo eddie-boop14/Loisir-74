@@ -16,11 +16,11 @@ google_place_id: "ChIJsfZeYQA_jEcRvJ7vtBGKOS8"
 canonical_url: https://loisirs74.fr/plage-de-la-pinede
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/plage-de-la-pinede.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/e/e2/Thonon-les-Bains._Promenade_du_L%C3%A9man._2015-06-21.jpg
+photo_url: /img/lacs-plages/plage-de-la-pinede-hero.jpg
 photo_type: real
-photo_author: "Alpine lake"
-photo_license: "Wikimedia Commons"
-photo_source: CC BY-SA
+photo_author: "Espirat"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---

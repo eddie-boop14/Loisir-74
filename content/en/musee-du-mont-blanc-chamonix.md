@@ -16,11 +16,11 @@ google_place_id: "ChIJpfowznVOiUcRZj__-vwg_-I"
 canonical_url: https://loisirs74.fr/en/musee-du-mont-blanc-chamonix
 language: en
 facet_json: https://loisirs74.fr/api/lieu/musee-du-mont-blanc-chamonix.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b7/Descent_from_Mont-Blanc_in_1787.jpg
+photo_url: /img/musees/musee-du-mont-blanc-chamonix-hero.jpg
 photo_type: real
 photo_author: "Christian von Mechel"
-photo_license: "Domaine public"
-photo_source: via Wikimedia Commons
+photo_license: "Public domain"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-06
 source: loisirs74.fr
 ---

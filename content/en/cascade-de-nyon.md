@@ -16,7 +16,7 @@ google_place_id: "ChIJTcMZqqwCjEcRZeyXrhZlVqo"
 canonical_url: https://loisirs74.fr/en/cascade-de-nyon
 language: en
 facet_json: https://loisirs74.fr/api/lieu/cascade-de-nyon.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/9/9b/Cascade_de_Nyon_%2812%29.jpg
+photo_url: /img/cascades/cascade-de-nyon-hero.jpg
 photo_type: real
 photo_author: "Krzysztof Golik"
 photo_license: "CC BY-SA 4.0"

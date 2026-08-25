@@ -16,10 +16,10 @@ google_place_id: "ChIJ11EHIAD_i0cRreRdlx7AlbI"
 canonical_url: https://loisirs74.fr/base-de-loisirs-des-ilettes
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/base-de-loisirs-des-ilettes.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/f/f9/Sallanches-69%C2%A9studio_k.jpg
+photo_url: /img/bases-de-loisirs/base-de-loisirs-des-ilettes-hero.jpg
 photo_type: real
-photo_author: "Alpine meadow"
-photo_license: null
+photo_author: "Ville de Sallanches"
+photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr

@@ -16,7 +16,7 @@ google_place_id: "ChIJQeenW0FOiUcRZlLKIxds2Fk"
 canonical_url: https://loisirs74.fr/cascade-du-dard
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/cascade-du-dard.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/7/79/Cascade_du_Dard_01.jpg
+photo_url: /img/cascades/cascade-du-dard-hero.jpg
 photo_type: real
 photo_author: "Rémih"
 photo_license: "CC BY-SA 4.0"

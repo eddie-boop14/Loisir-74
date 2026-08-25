@@ -16,7 +16,7 @@ google_place_id: "ChIJCUPGRmeXi0cRDi2JsQo7hOE"
 canonical_url: https://loisirs74.fr/en/le-semnoz
 language: en
 facet_json: https://loisirs74.fr/api/lieu/le-semnoz.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/2/26/Cr%C3%AAt_de_Chatillon_%40_Semnoz_%2835471373476%29.jpg
+photo_url: /img/points-de-vue/le-semnoz-hero.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"

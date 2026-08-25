@@ -16,11 +16,11 @@ google_place_id: "ChIJkdF0NPX9i0cRzRWKHsVdidc"
 canonical_url: https://loisirs74.fr/en/lac-de-passy
 language: en
 facet_json: https://loisirs74.fr/api/lieu/lac-de-passy.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b2/Lac_vert_de_passy_%281%29.JPG
+photo_url: /img/lacs-plages/lac-de-passy-hero.jpg
 photo_type: real
-photo_author: "Alpine lake"
-photo_license: "Wikimedia Commons"
-photo_source: CC BY-SA
+photo_author: "Mangatome"
+photo_license: "CC BY-SA 3.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---

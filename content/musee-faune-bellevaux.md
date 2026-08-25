@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/musee-faune-bellevaux
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/musee-faune-bellevaux.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/2/2d/Museo_Ecologico_Giovanni_Zanardo_-_Diorama_cervo%2C_Sala_principale.png
+photo_url: /img/musees/musee-faune-bellevaux-hero.jpg
 photo_type: real
 photo_author: "Museo Ecologico Giovanni Zanardo"
 photo_license: "CC0"
-photo_source: via Wikimedia Commons
+photo_source: Wikimedia Commons
 last_updated: 2026-06-10
 source: loisirs74.fr
 ---

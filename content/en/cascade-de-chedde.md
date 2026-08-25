@@ -16,11 +16,11 @@ google_place_id: "ChIJ09s43bdXiUcR5xcNnAiJZ7I"
 canonical_url: https://loisirs74.fr/en/cascade-de-chedde
 language: en
 facet_json: https://loisirs74.fr/api/lieu/cascade-de-chedde.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/a/a3/Cascade_de_Cheddes_-_btv1b10123413v.jpg
+photo_url: /img/cascades/cascade-de-chedde-hero.jpg
 photo_type: real
-photo_author: "Cascade du Rouget"
-photo_license: "Wikimedia Commons"
-photo_source: CC BY-SA
+photo_author: "Ferrand, Henri (1853-1926). Photographe"
+photo_license: "Public domain"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-08
 source: loisirs74.fr
 ---

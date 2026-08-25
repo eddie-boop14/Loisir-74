@@ -16,9 +16,9 @@ google_place_id: "ChIJF-WRBYarjkcRy7H98SpkIu8"
 canonical_url: https://loisirs74.fr/abbaye-de-sixt
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/abbaye-de-sixt.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/4/47/Sixt_abbey_02.jpg
+photo_url: /img/chateaux/abbaye-de-sixt-hero.jpg
 photo_type: real
-photo_author: "Laurent Vriez"
+photo_author: "Krzysztof Golik"
 photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-05-14

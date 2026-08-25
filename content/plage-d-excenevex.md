@@ -16,11 +16,11 @@ google_place_id: "ChIJIaRfIi5AjEcR1EDMx_AyY3w"
 canonical_url: https://loisirs74.fr/plage-d-excenevex
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/plage-d-excenevex.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/c/cd/Rive_du_L%C3%A9man_%C3%A0_Excenevex_%28juin_2019%29.JPG
+photo_url: /img/lacs-plages/plage-d-excenevex-hero.jpg
 photo_type: real
-photo_author: "Alpine lake"
-photo_license: "Wikimedia Commons"
-photo_source: CC BY-SA
+photo_author: "Florian Pépellin"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---

@@ -16,9 +16,9 @@ google_place_id: "ChIJCaYNGsFRiUcRdoSNZlguMPs"
 canonical_url: https://loisirs74.fr/parc-de-merlet
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/parc-de-merlet.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/f/f0/Panorama_depuis_le_parc_de_Merlet.jpg
+photo_url: /img/que-faire/parc-de-merlet-hero.jpg
 photo_type: real
-photo_author: "Florian Pépellin"
+photo_author: "Antimuonium"
 photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-05-14

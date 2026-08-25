@@ -16,11 +16,11 @@ google_place_id: "ChIJXfn88Y3qi0cRHHNS7_qRBWY"
 canonical_url: https://loisirs74.fr/chateau-et-donjon-des-seigneurs-de-faverges
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/chateau-et-donjon-des-seigneurs-de-faverges.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/c/c1/Chambellon_%40_Pont_de_Seythenex.jpg
+photo_url: /img/chateaux/chateau-et-donjon-des-seigneurs-de-faverges-hero.jpg
 photo_type: real
-photo_author: "Alpine castle"
-photo_license: "Wikimedia Commons"
-photo_source: CC BY-SA
+photo_author: "Rémih"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---

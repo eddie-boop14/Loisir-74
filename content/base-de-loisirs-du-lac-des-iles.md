@@ -16,10 +16,10 @@ google_place_id: "ChIJx9-Ob_QBjEcRKxOrcbs1SS4"
 canonical_url: https://loisirs74.fr/base-de-loisirs-du-lac-des-iles
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/base-de-loisirs-du-lac-des-iles.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/bd/Les_ARAVIS_depuis_le_LAC_DE_PASSY_-_panoramio.jpg
+photo_url: /img/bases-de-loisirs/base-de-loisirs-du-lac-des-iles-hero.jpg
 photo_type: real
-photo_author: "Alpine meadow"
-photo_license: null
+photo_author: "CEDRIC BRUN (Capture…"
+photo_license: "CC BY 3.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr

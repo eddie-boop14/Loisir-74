@@ -16,11 +16,11 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/en/parc-jean-beauquis-ambilly
 language: en
 facet_json: https://loisirs74.fr/api/lieu/parc-jean-beauquis-ambilly.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b9/Ambilly_place_mairie.jpg
+photo_url: /img/bases-de-loisirs/parc-jean-beauquis-ambilly-hero.jpg
 photo_type: real
-photo_author: "Place de la Mairie d'Ambilly"
-photo_license: "Wikimedia Commons"
-photo_source: CC BY-SA
+photo_author: "YvesGallard"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-06-10
 source: loisirs74.fr
 ---

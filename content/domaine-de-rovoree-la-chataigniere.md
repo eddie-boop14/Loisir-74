@@ -16,10 +16,10 @@ google_place_id: "ChIJb45-yitBjEcRq1kUG12_flM"
 canonical_url: https://loisirs74.fr/domaine-de-rovoree-la-chataigniere
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/domaine-de-rovoree-la-chataigniere.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/f/f8/Embarcad%C3%A8re_du_Domaine_de_La_Ch%C3%A2taigni%C3%A8re.jpg
+photo_url: /img/bases-de-loisirs/domaine-de-rovoree-la-chataigniere-hero.jpg
 photo_type: real
-photo_author: "Alpine meadow"
-photo_license: null
+photo_author: "Chrbenoit"
+photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr

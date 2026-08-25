@@ -16,7 +16,7 @@ google_place_id: "ChIJj4Dz3IHqi0cRwXd_gjFdNmU"
 canonical_url: https://loisirs74.fr/en/grotte-et-cascade-de-seythenex
 language: en
 facet_json: https://loisirs74.fr/api/lieu/grotte-et-cascade-de-seythenex.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/7/7f/Grotte_et_cascade_de_Seythenex_10.jpg
+photo_url: /img/cascades/grotte-et-cascade-de-seythenex-hero.jpg
 photo_type: real
 photo_author: "Rémih"
 photo_license: "CC BY-SA 4.0"

@@ -16,11 +16,11 @@ google_place_id: "ChIJw3BMGl-mjkcRAKwda4eoeuE"
 canonical_url: https://loisirs74.fr/en/cascade-des-brochaux
 language: en
 facet_json: https://loisirs74.fr/api/lieu/cascade-des-brochaux.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/e/e0/Cascade_des_Brochaux.jpg
+photo_url: /img/cascades/cascade-des-brochaux-hero.jpg
 photo_type: real
-photo_author: "Cascade d'Arpenaz"
-photo_license: "Wikimedia Commons"
-photo_source: CC BY-SA
+photo_author: "Nouill"
+photo_license: "CC BY 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---

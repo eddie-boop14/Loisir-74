@@ -16,7 +16,7 @@ google_place_id: "ChIJNfRTZBiOi0cR2IAMVUtz444"
 canonical_url: https://loisirs74.fr/mont-baron
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/mont-baron.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b9/Mont_Baron_%40_Veyrier-du-Lac_%2851213738648%29.jpg
+photo_url: /img/points-de-vue/mont-baron-hero.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"

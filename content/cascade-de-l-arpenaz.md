@@ -16,9 +16,9 @@ google_place_id: "ChIJpdph5Ez-i0cRacAmd2ohbgU"
 canonical_url: https://loisirs74.fr/cascade-de-l-arpenaz
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/cascade-de-l-arpenaz.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/7/74/Cascade_de_l%27Arpenaz.jpg
+photo_url: /img/cascades/cascade-de-l-arpenaz-hero.jpg
 photo_type: real
-photo_author: "Zairon"
+photo_author: "Aiguilledumidi"
 photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-05-14

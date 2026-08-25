@@ -16,7 +16,7 @@ google_place_id: "ChIJ5bRNx_uPi0cRXMaH2xyev9g"
 canonical_url: https://loisirs74.fr/en/palais-de-l-ile-annecy
 language: en
 facet_json: https://loisirs74.fr/api/lieu/palais-de-l-ile-annecy.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/0/0d/Palais_de_l%27%C3%8Ele_%40_Pont_Perri%C3%A8re_%40_Annecy_%2851299713197%29.jpg
+photo_url: /img/musees/palais-de-l-ile-annecy-hero.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"

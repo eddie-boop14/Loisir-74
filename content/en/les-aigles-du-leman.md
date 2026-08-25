@@ -16,10 +16,10 @@ google_place_id: "ChIJAy1AVaZqjEcRenkqC5JcF3c"
 canonical_url: https://loisirs74.fr/en/les-aigles-du-leman
 language: en
 facet_json: https://loisirs74.fr/api/lieu/les-aigles-du-leman.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/8/80/Female_falcon_handler_with_eagle_%2825513995343%29.jpg
+photo_url: /img/que-faire/les-aigles-du-leman-hero.jpg
 photo_type: real
-photo_author: "Forest park"
-photo_license: null
+photo_author: "Thomas Quine"
+photo_license: "CC BY 2.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr

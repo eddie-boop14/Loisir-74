@@ -16,10 +16,10 @@ google_place_id: "ChIJpU84Np2Ui0cRyYR7wBPmwGE"
 canonical_url: https://loisirs74.fr/col-de-la-forclaz
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/col-de-la-forclaz.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/1/1b/Plateforme_de_d%C3%A9collage_de_deltaplane_%40_Col_de_la_Forclaz.jpg
+photo_url: /img/points-de-vue/col-de-la-forclaz-hero.jpg
 photo_type: real
-photo_author: "Guilhem Vellut from Annecy, France"
-photo_license: "CC BY 2.0"
+photo_author: "Rémih"
+photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-06-06
 source: loisirs74.fr

@@ -16,7 +16,7 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/en/musee-granges-servette-chens-sur-leman
 language: en
 facet_json: https://loisirs74.fr/api/lieu/musee-granges-servette-chens-sur-leman.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/a/ab/Grange_en_Albanais%2C_ancienne_commune_de_Chaux-Balmont_%28Haute-Savoie%29.jpg
+photo_url: /img/musees/musee-granges-servette-chens-sur-leman-hero.jpg
 photo_type: real
 photo_author: "Ricrac"
 photo_license: "CC BY-SA 3.0"

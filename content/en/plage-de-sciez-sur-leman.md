@@ -16,11 +16,11 @@ google_place_id: "ChIJl7KSVUBBjEcR3c4sxWhojuY"
 canonical_url: https://loisirs74.fr/en/plage-de-sciez-sur-leman
 language: en
 facet_json: https://loisirs74.fr/api/lieu/plage-de-sciez-sur-leman.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/a/a1/Sciez-regate.jpg
+photo_url: /img/lacs-plages/plage-de-sciez-sur-leman-hero.jpg
 photo_type: real
-photo_author: "Alpine lake"
-photo_license: "Wikimedia Commons"
-photo_source: CC BY-SA
+photo_author: "SciezChablais"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---

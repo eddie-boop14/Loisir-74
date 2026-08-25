@@ -16,11 +16,11 @@ google_place_id: "ChIJp8pw77Z4jEcRL1ObubQD6Sg"
 canonical_url: https://loisirs74.fr/grand-parc-d-andilly
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/grand-parc-d-andilly.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b5/Les_Grandes_M%C3%A9di%C3%A9vales_d%27Andilly_2016.jpg
+photo_url: /img/bases-de-loisirs/grand-parc-d-andilly-hero.jpg
 photo_type: real
-photo_author: "Les Grandes Médiévales d'Andilly 2016"
-photo_license: "Wikimedia Commons"
-photo_source: CC BY-SA
+photo_author: "A.Moneger"
+photo_license: "CC BY-SA 4.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-21
 source: loisirs74.fr
 ---

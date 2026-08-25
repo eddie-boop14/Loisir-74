@@ -16,7 +16,7 @@ google_place_id: "ChIJpfowznVOiUcRZj__-vwg_-I"
 canonical_url: https://loisirs74.fr/espace-tairraz-musee-des-cristaux-chamonix
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/espace-tairraz-musee-des-cristaux-chamonix.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/7/7f/Fluorite-Quartz-164086.jpg
+photo_url: /img/musees/espace-tairraz-musee-des-cristaux-chamonix-hero.jpg
 photo_type: real
 photo_author: "Robert M. Lavinsky"
 photo_license: "CC BY-SA 3.0"

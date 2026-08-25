@@ -16,7 +16,7 @@ google_place_id: "ChIJBwp6XBeqjkcRWBEV8MIflTw"
 canonical_url: https://loisirs74.fr/en/base-de-loisirs-du-lac-aux-dames
 language: en
 facet_json: https://loisirs74.fr/api/lieu/base-de-loisirs-du-lac-aux-dames.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/9/98/Lac_aux_Dames_%C3%A0_Samo%C3%ABns_en_%C3%A9t%C3%A9_%28juillet_2023%29_1.JPG
+photo_url: /img/bases-de-loisirs/base-de-loisirs-du-lac-aux-dames-hero.jpg
 photo_type: real
 photo_author: "Florian Pépellin"
 photo_license: "CC BY-SA 4.0"

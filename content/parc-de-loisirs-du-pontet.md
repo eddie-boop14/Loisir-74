@@ -16,7 +16,7 @@ google_place_id: "ChIJFZd6u0VZiUcRi_BGGReT-bw"
 canonical_url: https://loisirs74.fr/parc-de-loisirs-du-pontet
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/parc-de-loisirs-du-pontet.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/5/53/Lac_de_p%C3%AAche_%40_Parc_de_loisirs_du_Pontet_%40_Val_Montjoie_%2850921651901%29.jpg
+photo_url: /img/bases-de-loisirs/parc-de-loisirs-du-pontet-hero.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"

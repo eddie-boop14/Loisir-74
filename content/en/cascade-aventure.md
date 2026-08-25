@@ -16,10 +16,10 @@ google_place_id: "ChIJ91E8ZFMdjEcR18UIjKdaMN0"
 canonical_url: https://loisirs74.fr/en/cascade-aventure
 language: en
 facet_json: https://loisirs74.fr/api/lieu/cascade-aventure.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/5/5a/Cascade_de_Nyon_%282%29.jpg
+photo_url: /img/que-faire/cascade-aventure-hero.jpg
 photo_type: real
-photo_author: "Forest park"
-photo_license: null
+photo_author: "Krzysztof Golik"
+photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr

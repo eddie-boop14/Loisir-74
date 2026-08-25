@@ -16,10 +16,10 @@ google_place_id: "ChIJxRfISFQjjEcR_mghO5_lIHQ"
 canonical_url: https://loisirs74.fr/en/thermes-evian
 language: en
 facet_json: https://loisirs74.fr/api/lieu/thermes-evian.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/3/3d/Anciens_thermes_Evian_5.jpg
+photo_url: /img/chateaux/thermes-evian-hero.jpg
 photo_type: real
-photo_author: "Romainbehar"
-photo_license: "CC0"
+photo_author: "Camster"
+photo_license: "CC BY-SA 3.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr

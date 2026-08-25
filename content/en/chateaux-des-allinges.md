@@ -16,10 +16,10 @@ google_place_id: "ChIJVzQPRX0VjEcRHB5KkJ1ofho"
 canonical_url: https://loisirs74.fr/en/chateaux-des-allinges
 language: en
 facet_json: https://loisirs74.fr/api/lieu/chateaux-des-allinges.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/f/fa/Allinges_Chateau_Clocher.jpg
+photo_url: /img/chateaux/chateaux-des-allinges-hero.jpg
 photo_type: real
-photo_author: "Guilhem Vellut from Annecy, France"
-photo_license: "CC BY 2.0"
+photo_author: "MetallYZA"
+photo_license: "CC BY-SA 3.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr

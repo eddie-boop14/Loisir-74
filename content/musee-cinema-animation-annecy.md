@@ -16,7 +16,7 @@ google_place_id: "ChIJ2QXW5fyPi0cRSGYO7Ii1Toc"
 canonical_url: https://loisirs74.fr/musee-cinema-animation-annecy
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/musee-cinema-animation-annecy.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/c/c2/Haras_national_d%27Annecy_%28portail%29.JPG
+photo_url: /img/musees/musee-cinema-animation-annecy-hero.jpg
 photo_type: real
 photo_author: "Florian Pépellin"
 photo_license: "CC BY-SA 3.0"

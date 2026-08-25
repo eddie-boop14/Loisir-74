@@ -16,10 +16,10 @@ google_place_id: "ChIJp5CqoqhZiUcRbv-9Xk8AKhc"
 canonical_url: https://loisirs74.fr/mont-joly
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/mont-joly.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/5/54/Meg%C3%A8ve%2C_depuis_la_cha%C3%AEne_du_Mont-Joly.jpg
+photo_url: /img/points-de-vue/mont-joly-hero.jpg
 photo_type: real
-photo_author: "DimiTalen"
-photo_license: "CC0"
+photo_author: "CBougault"
+photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr

@@ -16,7 +16,7 @@ google_place_id: "ChIJd2DZIuH7i0cRvZw5fqWjkGo"
 canonical_url: https://loisirs74.fr/cascade-des-fours
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/cascade-des-fours.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/6/68/Cascade_des_Fours_%40_Lanch%C3%A9ron.jpg
+photo_url: /img/cascades/cascade-des-fours-hero.jpg
 photo_type: real
 photo_author: "Rémih"
 photo_license: "CC BY-SA 4.0"

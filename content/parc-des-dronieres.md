@@ -16,7 +16,7 @@ google_place_id: "ChIJLWAM7PSHi0cRaMVzv1jqmcs"
 canonical_url: https://loisirs74.fr/parc-des-dronieres
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/parc-des-dronieres.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/a/a9/Parc_de_Loisirs_des_Droni%C3%A8res_%40_Cruseilles_%2850969087497%29.jpg
+photo_url: /img/bases-de-loisirs/parc-des-dronieres-hero.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"

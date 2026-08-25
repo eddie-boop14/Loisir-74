@@ -16,9 +16,9 @@ google_place_id: "ChIJk4KJ11QjjEcRB83us5XRw5U"
 canonical_url: https://loisirs74.fr/en/palais-lumiere
 language: en
 facet_json: https://loisirs74.fr/api/lieu/palais-lumiere.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b0/PalaisLumi%C3%A8re-DSCN1105.jpg
+photo_url: /img/musees/palais-lumiere-hero.jpg
 photo_type: real
-photo_author: "Camster"
+photo_author: "Pintopc"
 photo_license: "CC BY-SA 3.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-05-14

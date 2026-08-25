@@ -16,10 +16,10 @@ google_place_id: "ChIJgWkgJUIdjEcRxxg58g7ztCY"
 canonical_url: https://loisirs74.fr/en/parc-des-dereches
 language: en
 facet_json: https://loisirs74.fr/api/lieu/parc-des-dereches.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/7/70/Horse_riding_in_the_valley_of_the_Edigan_River.jpg
+photo_url: /img/bases-de-loisirs/parc-des-dereches-hero.jpg
 photo_type: real
-photo_author: "Alpine meadow"
-photo_license: null
+photo_author: "Obakeneko"
+photo_license: "CC BY 3.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr

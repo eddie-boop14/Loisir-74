@@ -16,7 +16,7 @@ google_place_id: "ChIJoV28AM9NiUcRMLDUMj-MWlw"
 canonical_url: https://loisirs74.fr/telepherique-du-brevent
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/telepherique-du-brevent.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/2/2a/Brevent_cable_car.jpg
+photo_url: /img/telecabines/telepherique-du-brevent-hero.jpg
 photo_type: real
 photo_author: "Victoria Lunyak"
 photo_license: "CC BY-SA 4.0"

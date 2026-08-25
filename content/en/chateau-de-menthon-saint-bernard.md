@@ -16,10 +16,10 @@ google_place_id: "ChIJ03CfKyeSi0cR1y0C3G70XBw"
 canonical_url: https://loisirs74.fr/en/chateau-de-menthon-saint-bernard
 language: en
 facet_json: https://loisirs74.fr/api/lieu/chateau-de-menthon-saint-bernard.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/6/6b/Ch%C3%A2teau_de_Menthon-Saint-Bernard_%28novembre_2024%29.JPG
+photo_url: /img/chateaux/chateau-de-menthon-saint-bernard-hero.jpg
 photo_type: real
-photo_author: "Rémih"
-photo_license: "CC BY-SA 3.0"
+photo_author: "Florian Pépellin"
+photo_license: "CC BY-SA 4.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr

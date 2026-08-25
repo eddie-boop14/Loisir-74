@@ -16,10 +16,10 @@ google_place_id: "ChIJDaC6rkVZiUcRJOF8CHVw76c"
 canonical_url: https://loisirs74.fr/en/cote-2000-aventure
 language: en
 facet_json: https://loisirs74.fr/api/lieu/cote-2000-aventure.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/d/de/Seilpark_Gantrisch_-_03.jpg
+photo_url: /img/que-faire/cote-2000-aventure-hero.jpg
 photo_type: real
-photo_author: "Forest park"
-photo_license: null
+photo_author: "David Haberthür from bern, Switzerland"
+photo_license: "CC BY 2.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr

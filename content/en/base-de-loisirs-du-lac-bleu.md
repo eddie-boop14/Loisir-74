@@ -16,10 +16,10 @@ google_place_id: "ChIJx9-Ob_QBjEcRKxOrcbs1SS4"
 canonical_url: https://loisirs74.fr/en/base-de-loisirs-du-lac-bleu
 language: en
 facet_json: https://loisirs74.fr/api/lieu/base-de-loisirs-du-lac-bleu.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/5/5c/Morillon_-_vue_sur_le_lac_bleu_et_le_criou.jpg
+photo_url: /img/bases-de-loisirs/base-de-loisirs-du-lac-bleu-hero.jpg
 photo_type: real
-photo_author: "Alpine meadow"
-photo_license: null
+photo_author: "No machine-readable author provided. Abr~commonswiki assumed (based on copyright claims)."
+photo_license: "CC BY-SA 2.5"
 photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr

@@ -16,7 +16,7 @@ google_place_id: "ChIJJZgeeHhSiUcRkseb_TGzEVA"
 canonical_url: https://loisirs74.fr/lac-cornu
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/lac-cornu.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/6/6a/Lac_Cornu_%40_Hike_to_Lacs_des_Ch%C3%A9serys%2C_Lac_Blanc%2C_Lac_Cornu_%26_Lacs_Noirs_%40_Chamonix_%2815174603960%29.jpg
+photo_url: /img/lacs-plages/lac-cornu-hero.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"

@@ -16,7 +16,7 @@ google_place_id: "ChIJCfE9AFKmjkcRtUid52Houpg"
 canonical_url: https://loisirs74.fr/aquariaz
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/aquariaz.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/c/c0/Aquariaz.jpg
+photo_url: /img/que-faire/aquariaz-hero.jpg
 photo_type: real
 photo_author: "User:Avoriaz"
 photo_license: "CC BY-SA 3.0"

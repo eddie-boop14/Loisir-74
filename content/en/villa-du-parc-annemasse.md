@@ -16,7 +16,7 @@ google_place_id: "ChIJS_Lrh9VxjEcR9QmQ6sZ__YI"
 canonical_url: https://loisirs74.fr/en/villa-du-parc-annemasse
 language: en
 facet_json: https://loisirs74.fr/api/lieu/villa-du-parc-annemasse.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/2/25/Villa_du_Parc_Centre_d%27Art_Contemporain_%40_Parc_Municipal_Claudius_Montessuit_%40_Annemasse_%2851002169198%29.jpg
+photo_url: /img/musees/villa-du-parc-annemasse-hero.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"

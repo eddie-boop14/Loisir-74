@@ -16,7 +16,7 @@ google_place_id: "ChIJXT1F2ZVMiUcR7yARTOxQD20"
 canonical_url: https://loisirs74.fr/en/telepherique-des-grands-montets
 language: en
 facet_json: https://loisirs74.fr/api/lieu/telepherique-des-grands-montets.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/c/c4/Hike_to_Glacier_d%27Argenti%C3%A8re_-_panoramio_%2861%29.jpg
+photo_url: /img/telecabines/telepherique-des-grands-montets-hero.jpg
 photo_type: real
 photo_author: "Patrick Nouhailler's…"
 photo_license: "CC BY-SA 3.0"

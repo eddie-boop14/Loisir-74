@@ -16,11 +16,11 @@ google_place_id: "ChIJ1SRYpf15jEcRkmWuXaV7SxM"
 canonical_url: https://loisirs74.fr/en/col-des-pitons-saleve
 language: en
 facet_json: https://loisirs74.fr/api/lieu/col-des-pitons-saleve.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/6/68/La_Tour_des_Pitons%2C_point_culminant_du_Sal%C3%A8ve_%281379m%29.JPG
+photo_url: /img/points-de-vue/col-des-pitons-saleve-hero.jpg
 photo_type: real
-photo_author: "Mont Blanc panorama"
-photo_license: "Wikimedia Commons"
-photo_source: CC BY-SA
+photo_author: "Martial GAILLARD-GRENADIER"
+photo_license: "CC BY-SA 3.0"
+photo_source: Wikimedia Commons
 last_updated: 2026-05-14
 source: loisirs74.fr
 ---

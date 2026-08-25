@@ -16,7 +16,7 @@ google_place_id: "ChIJ5bRNx_uPi0cRTpk8wBmOJH0"
 canonical_url: https://loisirs74.fr/musee-chateau-annecy
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/musee-chateau-annecy.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/9/9c/Castle_%40_Old_City_of_Annecy_%2815186413279%29.jpg
+photo_url: /img/musees/musee-chateau-annecy-hero.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"

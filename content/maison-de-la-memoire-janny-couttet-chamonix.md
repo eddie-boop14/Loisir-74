@@ -16,7 +16,7 @@ google_place_id: "ChIJw1r2WnZOiUcRoVq4kwbvEao"
 canonical_url: https://loisirs74.fr/maison-de-la-memoire-janny-couttet-chamonix
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/maison-de-la-memoire-janny-couttet-chamonix.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/4/4c/Alpinistes_Aiguille_du_Midi_03.JPG
+photo_url: /img/musees/maison-de-la-memoire-janny-couttet-chamonix-hero.jpg
 photo_type: real
 photo_author: "Benh LIEU SONG"
 photo_license: "CC BY-SA 3.0"

@@ -16,10 +16,10 @@ google_place_id: "ChIJP-4wnZpBjEcRv-HOdgfmKm4"
 canonical_url: https://loisirs74.fr/en/jardin-des-cinq-sens
 language: en
 facet_json: https://loisirs74.fr/api/lieu/jardin-des-cinq-sens.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/d/d9/Yvoire_Jardin_Cinq_Sens.jpg
+photo_url: /img/que-faire/jardin-des-cinq-sens-hero.jpg
 photo_type: real
-photo_author: "Krzysztof Golik"
-photo_license: "CC BY-SA 4.0"
+photo_author: "_YvoireWiki_09.jpg derivative work: Jd5s"
+photo_license: "CC BY-SA 3.0"
 photo_source: Wikimedia Commons
 last_updated: 2026-06-06
 source: loisirs74.fr

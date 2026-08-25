@@ -16,7 +16,7 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/maison-fromage-abondance-abondance
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/maison-fromage-abondance-abondance.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/3/34/Meules_d%27abondance_%28cropped%29.jpg
+photo_url: /img/musees/maison-fromage-abondance-abondance-hero.jpg
 photo_type: real
 photo_author: "Frédérique Voisin-Demery from Grenoble, France"
 photo_license: "CC BY 2.0"

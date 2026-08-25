@@ -16,7 +16,7 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/en/musee-cordonnerie-alby-sur-cheran
 language: en
 facet_json: https://loisirs74.fr/api/lieu/musee-cordonnerie-alby-sur-cheran.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/5/58/Poin%C3%A7on_de_cordonnier_-_1.jpg
+photo_url: /img/musees/musee-cordonnerie-alby-sur-cheran-hero.jpg
 photo_type: real
 photo_author: "Clément Bucco-Lechat"
 photo_license: "CC BY-SA 3.0"
