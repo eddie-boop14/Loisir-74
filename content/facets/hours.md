@@ -3,7 +3,7 @@ facet: hours
 scope: haute-savoie-74
 lieux_documented: 337
 lieux_total: 435
-last_built: 2026-07-21
+last_built: 2026-08-19
 source: loisirs74.fr
 ---
 
