@@ -101,6 +101,24 @@ def emit_collision_redirects():
     print(out.stdout.strip().splitlines()[0] if out.stdout.strip() else "(collision rules emitted)")
 
 
+def mark_sponsored_links():
+    """rel=sponsored on every PAID placement link, sitewide.
+
+    Runs with the beacon pass, for the same reason: partner links are emitted by
+    several builders, so a template-level fix silently misses the next builder
+    added. An unqualified paid link is a Google link scheme, devalued
+    algorithmically with no manual action to warn you — invisible from outside.
+    Editorial source citations are untouched and keep passing their vote."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "mark_sponsored_links.py"), "--apply"],
+        capture_output=True, text=True,
+    )
+    print(out.stdout.strip() or "(sponsored links marked)")
+    if out.returncode != 0:
+        print(out.stderr.strip())
+        raise RuntimeError("mark_sponsored_links failed")
+
+
 def preload_hub_hero():
     """The hub/commune banner is a CSS background, so the preload scanner cannot
     see it and the LCP waits for the stylesheet round-trip. Wired in because
@@ -604,6 +622,8 @@ def main():
     run("preload the hub/commune banner (CSS background — invisible to the preload scanner)",
         preload_hub_hero)
     run("inject Cloudflare Web Analytics beacon (every published page)", inject_analytics)
+    run("mark paid-placement links rel=sponsored (Google link-spam policy)",
+        mark_sponsored_links)
     run("regenerate PROJECT-STATE.md (JOB 8 — derived, never authored)", rebuild_project_state)
     if not args.no_site:
         run("build _site/", lambda: subprocess.check_call(

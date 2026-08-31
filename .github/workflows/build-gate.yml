@@ -258,6 +258,13 @@ jobs:
         # against the 4,434-URL uniform stamp this engine replaced.
         run: python3 scripts/derive_lastmod.py --verify
 
+      - name: Sponsored-link gate (paid placements must not pass PageRank)
+        # A paid link without rel=sponsored is a Google link scheme, devalued by
+        # SpamBrain with NO manual action to warn you — Search Console stays green
+        # while the site sinks. Editorial source citations are deliberately not
+        # checked: they must keep passing their vote.
+        run: python3 scripts/gate_sponsored_links.py
+
       - name: Render-verified gate (every +render-ai language has a clean Layer A + B report)
         # Read-only + lightweight: validates reports/render-verify-<lang>.json
         # (no browser in CI). The heavy headless-render + vision pass that PRODUCES
