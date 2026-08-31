@@ -288,6 +288,32 @@ def rebuild_sitemap(groups, multilingual):
         print(f"dropping {len(dupes)} non-self-canonical urls: {sorted(dupes)}")
     all_urls -= dupes
 
+    # Drop directory URLs that a flat .html shadows at the same path.
+    #
+    # Netlify serves <slug>.html for /<slug> and 301s /<slug>/ onto it, so where
+    # BOTH <slug>.html and <slug>/index.html exist the directory URL never
+    # returns 200 — it redirects. Advertising it in the sitemap tells Google to
+    # crawl a redirect: wasted budget and a contradictory signal, and it is why
+    # "Page avec redirection" kept climbing (1 → 378 between June and August).
+    # The dupe check above cannot see these because it compares canonicals with
+    # rstrip("/"), which makes /x and /x/ look identical.
+    #
+    # 11 slugs collide on this site (station fiche vs commune page) × 12 locales.
+    # NOTE: the commune page behind each shadowed URL stays unreachable — that is
+    # a routing problem this pass does not pretend to fix; it only stops us
+    # advertising a URL that redirects. See POSTMORTEM §6.
+    shadowed = set()
+    for u in all_urls:
+        if not u.endswith("/") or u == BASE + "/":
+            continue
+        flat = ROOT / (u[len(BASE):].rstrip("/") + ".html")
+        if flat.exists():
+            shadowed.add(u)
+    if shadowed:
+        print(f"dropping {len(shadowed)} sitemap urls shadowed by a flat .html "
+              f"(they 301): {sorted(shadowed)[:4]}{' …' if len(shadowed) > 4 else ''}")
+    all_urls -= shadowed
+
     def sort_key(u):
         return (u.count("/"), u)
 

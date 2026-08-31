@@ -26,11 +26,11 @@
 | published | **435** |
 | access-cost: free / free_seasonal / paid | 170 / 5 / 260 |
 | built HTML pages | 6254 |
-| sitemap URLs | 6210 |
+| sitemap URLs | 6078 |
 | facet hubs (data/facet-hubs.json) | 8 |
 | intent pages (data/intent-registry.json) | 26 |
 
-## CI gates (33)
+## CI gates (34)
 
 Every push to `main` runs `build_all` behind the build gate. Standalone gate scripts:
 
@@ -40,6 +40,7 @@ Every push to `main` runs `build_all` behind the build gate. Standalone gate scr
 - `gate_baignade_cluster.py`
 - `gate_bot_commit_sanity.py`
 - `gate_canonical_selfref.py`
+- `gate_cross_site_links.py`
 - `gate_duck_quacks.py`
 - `gate_facet_hubs.py`
 - `gate_facet_layer.py`

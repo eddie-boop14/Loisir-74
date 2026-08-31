@@ -2197,13 +2197,24 @@ def sister_link_html():
         "sister": {"name": "Loisirs 73", "url": "https://loisirs73.fr",
                    "dept": "Savoie"}
 
-    Deliberately NOT rel="nofollow": this is a genuine same-publisher
-    relationship, disclosed as such, not a link scheme. Deliberately ONE line,
-    not a column: the honest value between the two sites is contextual
-    page-to-page linking (shared GR®, cols, "30 min away"), not footer bulk.
+    OFF BY DEFAULT since 2026-08-31, and this docstring already knew why:
+    "the honest value between the two sites is contextual page-to-page linking
+    (shared GR®, cols, '30 min away'), not footer bulk." It shipped as footer
+    bulk anyway — ~10,400 sitewide links into a site the same person owns,
+    reciprocated from the other side. Each ingredient is innocent alone;
+    together, sitewide + reciprocal + same owner is the shape Google's link
+    spam policy calls an excessive link exchange. And PageRank flowing between
+    two properties you own cannot help you rank, so the risk carried a
+    structurally zero upside.
+
+    Set `sister.footer_link: true` in site.config.json to bring it back — the
+    contextual placements (homepage card, proximity cards) are unaffected and
+    are where the real value always was.
     """
     sis = getattr(siteconfig, "SISTER", None)
     if not sis or not sis.get("url") or not sis.get("name"):
+        return ""
+    if not sis.get("footer_link"):
         return ""
     dept = esc(sis.get("dept") or "")
     # French puts a space before a colon; English and the rest do not. Japanese

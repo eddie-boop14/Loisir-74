@@ -188,7 +188,7 @@ def card_for(lang, sis):
         f'{what_html}'
         f'<p style="margin:0;color:#3d342a;line-height:1.55">{esc(body)}</p>'
         '</div>'
-        f'<a href="{esc(sis["url"])}" rel="noopener" style="display:inline-flex;align-items:center;'
+        f'<a href="{esc(sis["url"])}" rel="nofollow noopener" style="display:inline-flex;align-items:center;'
         'gap:.5rem;background:#14333a;color:#f4ede0;font-weight:600;text-decoration:none;'
         f'padding:.78rem 1.25rem;border-radius:999px;flex-shrink:0">{esc(cta)} {arrow}</a>'
         f'</div></section>{MARK_B}'

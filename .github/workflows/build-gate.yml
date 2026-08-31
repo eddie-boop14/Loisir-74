@@ -258,6 +258,12 @@ jobs:
         # against the 4,434-URL uniform stamp this engine replaced.
         run: python3 scripts/derive_lastmod.py --verify
 
+      - name: Cross-site link gate (sister links must not pass PageRank)
+        # Sitewide + reciprocal + same owner is an excessive link exchange, and
+        # PageRank between two sites the same person owns cannot help either
+        # rank. The reader-facing cards stay; only their vote is withheld.
+        run: python3 scripts/gate_cross_site_links.py
+
       - name: Sponsored-link gate (paid placements must not pass PageRank)
         # A paid link without rel=sponsored is a Google link scheme, devalued by
         # SpamBrain with NO manual action to warn you — Search Console stays green
