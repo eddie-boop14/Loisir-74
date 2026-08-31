@@ -1,6 +1,7 @@
 # POST-MORTEM — loisirs74.fr loses 96% of Google in one day
 
-**Written:** 2026-08-31 · **Status:** cause identified with high confidence, fix shipped, recovery unverified
+**Written:** 2026-08-31 · **Last updated:** 2026-08-31 (all §6 crawl/honesty items shipped)
+**Status:** most-likely cause identified and fixed; causation inferred, not proven; recovery unverified
 **Sister incident:** loisirs73.fr collapsed three days earlier, *different cause*, documented in §7
 
 ---
@@ -187,16 +188,35 @@ A post-pass rather than a template edit because cards are emitted by several bui
 
 `scripts/gate_sponsored_links.py` fails CI if a promotional link ever ships unqualified, and **imports its detection from the marking pass** so check and fix cannot drift.
 
-### 5.2 Everything else shipped in the same window
+### 5.2 The four crawl-and-honesty fixes (31 Aug)
+
+Shipped together after the link work, on the reasoning that each is correct on
+its own merits whether or not it touches the collapse.
+
+| fix | before | after |
+|---|---|---|
+| **Reveal opacity trap** | 39 of 45 content blocks at `opacity:0` for a JS-rendering client that never scrolls | **0 of 45.** The reveal is motion-only now — `transform` still slides content in, `opacity` is never animated, so text is visible to any client regardless of scroll |
+| **Shadowed sitemap URLs** | 132 directory URLs advertised while 301ing to their station page | dropped; sitemap 6,210 → **6,078** |
+| **Phantom `SearchAction`** | 10 homepages declared a sitelinks searchbox for a search that does not exist | removed; JSON-LD re-parses on every file |
+| **Cross-link exchange** | 10,464 followed anchors into the sibling (74), 3,072 back (73) | **24** and **1,380**, every one `rel=nofollow`; footer bulk gone, reader-facing cards kept |
+
+The opacity fix is the one worth dwelling on. W3 made content visible to
+*non-rendering* AI fetchers, which was half the problem and the less important
+half: Googlebot **does** render JS, so it stamped `html.js`, switched the no-JS
+escape off, and looked at a page whose blocks were transparent. Six days of
+work aimed at machine readers had left the one machine reader that pays the
+bills looking at nothing. Measured in headless Chromium, JS on, no scroll.
+
+### 5.3 Everything else shipped in the same window
 
 | change | why |
 |---|---|
 | Tier classifier rewritten | bare `fond` read "Fonderie" as cross-country ski; `(16-75 ans)` read as senior; "Moins de 3 ans" priced as Adult in six languages. 40 of 515 labels reclassified. |
-| 58 Wikimedia heroes self-hosted | analytics put every poor-LCP element on hotlinked heroes (11.0 s on the Seythenex cascade). LCP "good" 94% → **96%**. |
+| 58 Wikimedia heroes self-hosted | Cloudflare CWV put every poor-LCP element on hotlinked heroes (11.0 s on the Seythenex cascade). LCP "good" 94% → **96%**. |
 | `lastmod` manifest repaired | CI had been red since **Aug 18** — the Abbaye d'Abondance fiche shipped without a manifest entry. Also refreshed 87 stale dates. |
 | loisirs73 analytics | every page shipped a Cloudflare beacon with an **empty token** — cost with no data. |
 
-### 5.3 Mistakes made during this investigation
+### 5.4 Mistakes made during this investigation
 
 Recorded because a post-mortem that only documents the system is half a post-mortem.
 
@@ -205,20 +225,38 @@ Recorded because a post-mortem that only documents the system is half a post-mor
 3. **Pushed to `main` without checking CI**, which had been red since Aug 18.
 4. **Broke CI with the first sponsored-link commit** — the marking pass ran *after* the byte-comparison gates, so the card-diff gate compared an unmarked card against a marked snapshot and failed all 12 slug × locale pairs, each off by exactly 19 bytes (`" sponsored nofollow"`). Fixed by moving the pass before the gates.
 5. **Shipped 1,050+ wrongly-nofollowed internal links.** The structural rule swept up the invite card's own CTA to `/devenir-partenaire`, written as an absolute URL. Nofollowing internal navigation is strictly worse than doing nothing. Fixed with a self-host guard shared by the pass and the gate.
-6. **Clobbered a divergent engine file.** Copying the 74's `siteconfig.py` onto the 73 silently dropped `SISTER_PROXIMITY_KM` and `BBOX`, wiping sister cards from 830 pages. Caught in diff review before pushing; restored and patched surgically.
+6. **Understated the promotional scope by 14×.** A domain allowlist caught 528 links; the real footprint was 7,374 across 2,016 pages. A list was the wrong shape of rule — it had to be structural.
+7. **Clobbered a divergent engine file — twice.** Copying the 74's `siteconfig.py` onto the 73 dropped `SISTER_PROXIMITY_KM` and `BBOX`, wiping sister cards from 830 pages. Later, copying `build_lieu_page.py` the same way destroyed 236 lines of 73-only code (`_sister_rel_cards`, `modifier_faq`, `full_faq`). Both caught in diff review before pushing. **These two engines have genuinely diverged; copying files between them is not safe and must not be done again.**
+8. **Left the Cloudflare evidence out of the first draft of this document.** It had informed two findings and was cited only in the provenance line. Corrected in §3bis after the publisher caught it.
 
 ---
 
 ## 6 · WHAT IS STILL OPEN
 
-- **Causation is unproven.** The link footprint is the only mechanism found that explains the Google/Bing divergence, and it is a real policy violation that had to be fixed regardless — but it remains correlational until rankings move. **Position is the metric to watch**, not impressions: if it climbs from 37 back toward 10, this was it.
-- ~~**Googlebot sees most of the page at opacity 0.**~~ **FIXED 2026-08-31.** The reveal is now motion-only: `transform` still slides content in, `opacity` is never animated. Measured in headless Chromium, JS on, no scroll: 39 of 45 blocks hidden → **0**. Original finding kept below for the record.
-  -  39 of 45 content blocks sit at `opacity: 0` for a JS-rendering client that does not scroll. W3 fixed this for non-rendering AI fetchers only; Googlebot renders JS, stamps `html.js`, and the no-JS escape switches off. **Pre-existing — identical before W3/W4, so not the cause** — but arguably the more consequential half of the problem.
-- **11 commune pages unreachable — PARTLY ADDRESSED 2026-08-31.** The 132 shadowed URLs no longer appear in the sitemap (6,210 → 6,078), so we have stopped telling Google to crawl a redirect. The underlying routing problem stands: `chamonix-mont-blanc`, `chatel`, `combloux`, `la-clusaz`, `le-grand-bornand`, `les-gets`, `les-houches`, `megeve`, `morzine`, `saint-gervais-les-bains`, `samoens` exist as both a flat station page and a commune directory. Netlify lets the flat file win, so every commune directory 301s to its station page — 11 × 12 locales = **132 pages of distinct content Google can never fetch**, with both URLs advertised in the sitemap.
-- ~~**A phantom `SearchAction`.**~~ **FIXED 2026-08-31** — removed from all 10 homepages that carried it; JSON-LD re-parses everywhere.
-  - Original: All 12 homepages declare a sitelinks searchbox pointing at `/?q={search_term_string}`. There is no search on the site.
-- **The sitewide cross-link exchange — CUT 2026-08-31.** ~10,440 followed footer links into loisirs73.fr, reciprocated 1,692 times. Sitewide + reciprocal + same owner is an excessive link exchange with structurally zero upside: PageRank between two sites one person owns cannot make either rank. Footer line off; homepage card and 30 km proximity cards kept with `rel=nofollow`. 74: 10,464 anchors → 24. 73: 3,072 → 1,380. `gate_cross_site_links.py` added on both.
-- **Apidae card removal deferred, deliberately.** Nofollowing already takes the link risk to zero; deleting the cards buys no further protection and would change 2,000 pages while we are trying to read whether the fix worked. One variable at a time.
+**Causation is unproven.** The promotional-link footprint is the only mechanism
+found that explains why Google fell 96% while Bing moved 4%, and it was a real
+policy violation that had to be fixed regardless — but it stays correlational
+until rankings move. **Position is the metric to watch**, not impressions: if it
+climbs from 37 back toward 10, this was it.
+
+**The 11 commune pages are still unreachable.** The sitemap no longer advertises
+their redirecting URLs, which stops the crawl waste — but the underlying routing
+problem stands. `chamonix-mont-blanc`, `chatel`, `combloux`, `la-clusaz`,
+`le-grand-bornand`, `les-gets`, `les-houches`, `megeve`, `morzine`,
+`saint-gervais-les-bains` and `samoens` each exist as both a flat station page
+and a commune directory; Netlify lets the flat file win, so 11 × 12 locales =
+**132 pages of distinct content Google can never fetch**. Fixing it means moving
+the commune page to a non-colliding path — a URL change, deliberately not taken
+mid-incident.
+
+**The Apidae cards are still there, deliberately.** Nofollowing already took the
+link risk to zero; deleting 1,088 cards buys no further protection and would
+change 2,000 pages while we are trying to read whether the link fix worked. One
+variable at a time.
+
+**A scraper is still walking the site.** Chinese, `m.baidu.com` and direct,
+1.00 pages per visit, currently crawling `/devenir-partenaire` across every
+locale. It is analytics noise and crawl-budget waste, not a ranking problem.
 
 ---
 
@@ -244,6 +282,7 @@ Trailing-slash collapse rules were added at **09:08** and reverted at **22:28** 
 |---|---|
 | `gate_sponsored_links.py` | any promotional link shipping able to pass PageRank |
 | `gate_redirect_selfloop.py` (73) | a redirect rule pointing at itself modulo a trailing slash |
+| `gate_cross_site_links.py` (both) | a link to the sibling site shipping able to pass PageRank |
 
 Both are read-only, both are wired into CI on the repo they protect. The sponsored gate shares its detection with the marking pass by import.
 
