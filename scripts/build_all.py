@@ -600,6 +600,11 @@ def main():
     # last also lets the que-faire-index + category-hub link injection target
     # the freshly built localized hubs.
     run("render intent hubs (registry-driven)", rebuild_intent_hubs)
+    # BEFORE the byte-comparison gates: the protected-card snapshots record the
+    # final shipped bytes, and rel=sponsored is part of them. Marking after the
+    # gates compares an unmarked card against a marked snapshot and fails CI.
+    run("mark paid-placement links rel=sponsored (before the byte gates)",
+        mark_sponsored_links)
     run("placement gate vs baseline", placement_gate)
     run("card-diff gate vs snapshot", card_diff_gate)
     run("reachability gate (strict)", reachability_gate)
@@ -622,7 +627,7 @@ def main():
     run("preload the hub/commune banner (CSS background — invisible to the preload scanner)",
         preload_hub_hero)
     run("inject Cloudflare Web Analytics beacon (every published page)", inject_analytics)
-    run("mark paid-placement links rel=sponsored (Google link-spam policy)",
+    run("re-mark paid-placement links (safety net: pages rendered after the gates)",
         mark_sponsored_links)
     run("regenerate PROJECT-STATE.md (JOB 8 — derived, never authored)", rebuild_project_state)
     if not args.no_site:
