@@ -76,6 +76,18 @@ HOST_RE = re.compile(
 
 # Any external anchor (skip mailto:, tel:, and same-page/internal refs).
 EXT_A_RE = re.compile(r'<a\b[^>]*\bhref="https?://[^"]*"[^>]*>', re.I)
+
+# Our own host, never marked. An absolute self-link (the invite card's
+# "devenir-partenaire" CTA is written with BASE_URL) is INTERNAL navigation, not
+# promotion: nofollowing it only stops link equity flowing through our own site
+# and tells Google we distrust our own page. Relative hrefs never match
+# EXT_A_RE at all; this guard is for the absolute ones.
+SELF_RE = re.compile(r'\bhref="https?://(?:[^"/?#]*\.)?'
+                     + re.escape(siteconfig.DOMAIN) + r'(?:[/?#"])', re.I)
+
+
+def _is_self(tag: str) -> bool:
+    return bool(SELF_RE.search(tag))
 REL_RE = re.compile(r'\brel="([^"]*)"', re.I)
 REQUIRED = ("sponsored", "nofollow")
 
@@ -103,6 +115,8 @@ def _mark_cards(html):
 
         def fix_a(am):
             nonlocal n
+            if _is_self(am.group(0)):
+                return am.group(0)
             out = qualify(am.group(0))
             if out != am.group(0):
                 n += 1

@@ -47,7 +47,10 @@ def promotional_anchors(html):
     """Every anchor the marking pass would qualify, by the same two rules."""
     hits = []
     for cm in M.CARD_RE.finditer(html):
-        hits.extend(M.EXT_A_RE.findall(cm.group(0)))
+        # Absolute links to our OWN host inside a card are internal navigation
+        # (the invite CTA), not promotion — the marking pass leaves them alone
+        # and so must this, or the gate fails on links it is right to skip.
+        hits.extend(a for a in M.EXT_A_RE.findall(cm.group(0)) if not M._is_self(a))
     if M.HOST_RE is not None:
         hits.extend(M.HOST_RE.findall(html))
     return hits
