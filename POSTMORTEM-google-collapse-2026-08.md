@@ -93,6 +93,58 @@ That single comparison eliminated every technical hypothesis at once and reframe
 
 ---
 
+## 3bis · CLOUDFLARE: THE DASHBOARD THAT LIED, AND THE REAL-USER CONFIRMATION
+
+Cloudflare Web Analytics deserves its own section because it did two jobs, and
+the first one nearly hid the problem.
+
+### It lied by omission — a bot flood masked the drop
+
+The headline barely moved: 4.73k page views (Aug 4–25) → 4.65k (Aug 16–30).
+Flat. Except the composition had inverted completely:
+
+| | Aug 4–25 | Aug 16–30 |
+|---|---|---|
+| China | 400 | **2,650** |
+| "Unknown" browser | 520 | **2,610** |
+| Desktop / Mobile | 1,410 / 3,250 | **3,220 / 1,380** ⟵ inverted |
+| Direct / Google | 1,040 / 2,560 | **2,970 / 1,060** |
+
+The new window was *shorter* (14 days vs 21) yet China went 400 → 2,650, with
+page views exactly equal to visits — **1.00 pages per visit**, Unknown browser,
+Unknown OS, Desktop, arriving direct or from `m.baidu.com`. A scraper, not
+people. It is still running: in the Aug 28–31 window it walked
+`/devenir-partenaire` across every locale.
+
+**Read the headline and you would conclude nothing happened.** Strip the bots
+and human traffic had already fallen a third before the cliff even landed. Any
+future reading of this dashboard has to be France-first; the totals are noise.
+
+### Then it confirmed the collapse in real visits, not impressions
+
+GSC measures impressions. Cloudflare measures humans arriving. They agree:
+
+| window | Google referrals/day | France page views/day |
+|---|---|---|
+| Aug 4–25 | 122 | 135 |
+| Aug 16–30 | 76 | 91 |
+| Aug 24–31 | 38 | 56 |
+| **Aug 28–31** | **4** | **31** |
+
+**Google referrals −97%. Real French page views −77%.** Independent of Search
+Console, on different infrastructure, measuring a different thing. The collapse
+is not a reporting artefact in any dataset.
+
+### What it also bought
+
+The first Cloudflare export (Aug 4–25) is what triggered the hero work: its
+Core Web Vitals debug view put every poor-LCP element on a hotlinked
+`upload.wikimedia.org` hero — 11.0 s on the Seythenex cascade. Self-hosting 58
+of them moved LCP "good" from 94% to 96%. That fix came from this data and
+nothing else.
+
+---
+
 ## 4 · WHAT WE FOUND
 
 ### 4.1 A promotional link footprint passing full PageRank
@@ -160,9 +212,12 @@ Recorded because a post-mortem that only documents the system is half a post-mor
 ## 6 · WHAT IS STILL OPEN
 
 - **Causation is unproven.** The link footprint is the only mechanism found that explains the Google/Bing divergence, and it is a real policy violation that had to be fixed regardless — but it remains correlational until rankings move. **Position is the metric to watch**, not impressions: if it climbs from 37 back toward 10, this was it.
-- **Googlebot sees most of the page at opacity 0.** 39 of 45 content blocks sit at `opacity: 0` for a JS-rendering client that does not scroll. W3 fixed this for non-rendering AI fetchers only; Googlebot renders JS, stamps `html.js`, and the no-JS escape switches off. **Pre-existing — identical before W3/W4, so not the cause** — but arguably the more consequential half of the problem.
-- **11 commune pages unreachable.** `chamonix-mont-blanc`, `chatel`, `combloux`, `la-clusaz`, `le-grand-bornand`, `les-gets`, `les-houches`, `megeve`, `morzine`, `saint-gervais-les-bains`, `samoens` exist as both a flat station page and a commune directory. Netlify lets the flat file win, so every commune directory 301s to its station page — 11 × 12 locales = **132 pages of distinct content Google can never fetch**, with both URLs advertised in the sitemap.
-- **A phantom `SearchAction`.** All 12 homepages declare a sitelinks searchbox pointing at `/?q={search_term_string}`. There is no search on the site.
+- ~~**Googlebot sees most of the page at opacity 0.**~~ **FIXED 2026-08-31.** The reveal is now motion-only: `transform` still slides content in, `opacity` is never animated. Measured in headless Chromium, JS on, no scroll: 39 of 45 blocks hidden → **0**. Original finding kept below for the record.
+  -  39 of 45 content blocks sit at `opacity: 0` for a JS-rendering client that does not scroll. W3 fixed this for non-rendering AI fetchers only; Googlebot renders JS, stamps `html.js`, and the no-JS escape switches off. **Pre-existing — identical before W3/W4, so not the cause** — but arguably the more consequential half of the problem.
+- **11 commune pages unreachable — PARTLY ADDRESSED 2026-08-31.** The 132 shadowed URLs no longer appear in the sitemap (6,210 → 6,078), so we have stopped telling Google to crawl a redirect. The underlying routing problem stands: `chamonix-mont-blanc`, `chatel`, `combloux`, `la-clusaz`, `le-grand-bornand`, `les-gets`, `les-houches`, `megeve`, `morzine`, `saint-gervais-les-bains`, `samoens` exist as both a flat station page and a commune directory. Netlify lets the flat file win, so every commune directory 301s to its station page — 11 × 12 locales = **132 pages of distinct content Google can never fetch**, with both URLs advertised in the sitemap.
+- ~~**A phantom `SearchAction`.**~~ **FIXED 2026-08-31** — removed from all 10 homepages that carried it; JSON-LD re-parses everywhere.
+  - Original: All 12 homepages declare a sitelinks searchbox pointing at `/?q={search_term_string}`. There is no search on the site.
+- **The sitewide cross-link exchange — CUT 2026-08-31.** ~10,440 followed footer links into loisirs73.fr, reciprocated 1,692 times. Sitewide + reciprocal + same owner is an excessive link exchange with structurally zero upside: PageRank between two sites one person owns cannot make either rank. Footer line off; homepage card and 30 km proximity cards kept with `rel=nofollow`. 74: 10,464 anchors → 24. 73: 3,072 → 1,380. `gate_cross_site_links.py` added on both.
 - **Apidae card removal deferred, deliberately.** Nofollowing already takes the link risk to zero; deleting the cards buys no further protection and would change 2,000 pages while we are trying to read whether the fix worked. One variable at a time.
 
 ---
