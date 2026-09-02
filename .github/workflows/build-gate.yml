@@ -209,6 +209,14 @@ jobs:
         # HANDOFF-39A-C2: after build_site so it checks the publish tree.
         run: python3 scripts/gate_redirect_shadows.py
 
+      - name: Redirect self-loop gate (no rule points at itself)
+        # Reads _redirects and nothing else, so it cannot go green on a broken
+        # tree the way the shadow gate above can. loisirs73.fr shipped 816 rules
+        # of this shape with every gate green and lost 1,548 pages for 13h20m.
+        run: |
+          python3 tests/test_gate_redirect_selfloop.py
+          python3 scripts/gate_redirect_selfloop.py
+
       - name: Published-verified gate
         # Read-only. No status:"unverified" fiche may appear in catalog-index.json,
         # api/lieux.json, sitemap.xml, or any hub index.html. No-op while 0 fiches

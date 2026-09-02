@@ -1,6 +1,6 @@
 # POST-MORTEM — loisirs74.fr loses 96% of Google in one day
 
-**Written:** 2026-08-31 · **Last updated:** 2026-08-31 (all §6 crawl/honesty items shipped)
+**Written:** 2026-08-31 · **Last updated:** 2026-09-02 (Aug 28 coverage export: the index was never touched)
 **Status:** most-likely cause identified and fixed; causation inferred, not proven; recovery unverified
 **Sister incident:** loisirs73.fr collapsed three days earlier, *different cause*, documented in §7
 
@@ -73,7 +73,19 @@ Verdict: not the cause. One pre-existing finding surfaced and remains open — s
 - Googlebot fetches every runtime script (`duck.js`, `nearme.js`, `l74sort.js`) with **200**. No `Disallow` touches `/scripts/`, CSS, or any content directory. CSS is inline.
 - **Cloaking test:** both sites return **byte-identical** responses to a Googlebot user-agent and to a browser, on the homepage and `robots.txt`.
 - **Manual actions:** *Aucun problème détecté* on both properties.
-- **Indexing:** 5,366 pages in the index and *rising* through Aug 21. The HTTPS report — the freshest Google data available, running to **Aug 30** — shows **0 problems** and validated pages climbing (579 → 687) straight through the crash. Google never disengaged.
+- **Indexing:** 5,366 pages in the index and *rising* through Aug 21. The HTTPS report — running to **Aug 30** — shows **0 problems** and validated pages climbing (579 → 687) straight through the crash. Google never disengaged.
+- **Deindexing — ruled out outright** by the coverage export of **2 Sept**, which is the first one whose data covers the crash days themselves (coverage lags ~5 days; its last row is Aug 28):
+
+  | date | indexed | not indexed | impressions |
+  |---|---|---|---|
+  | Aug 21 | 5,366 | 894 | 4,643 |
+  | Aug 26 | 5,387 | 906 | 5,095 |
+  | **Aug 27** | **5,387** | 906 | **210** |
+  | **Aug 28** | **5,387** | 906 | **143** |
+
+  On Aug 28, with traffic down 97%, Google was still holding **5,387 pages in the index — flat, and 21 higher than a week earlier.** It never dropped a page. Every issue bucket moved by noise or improved in the same window (404s 59 → 55; "duplicate, Google chose a different canonical" 1 → 0; noindex flat at 16, all of them deliberate — thank-you pages, CGV, `signaler-info`, `studio`).
+
+  **This is the difference between a removal and a demotion, and it decides what recovery means.** Google kept every page, kept reading them, and stopped serving them. Nothing has to be rediscovered, re-crawled or re-indexed; the corpus is intact and sitting there. It has to be re-scored. That is a reassessment cycle, not a rebuild — and it is the signature of algorithmic ranking enforcement, not of a technical fault, which corroborates §3 independently of Bing.
 
 ---
 
@@ -233,11 +245,38 @@ Recorded because a post-mortem that only documents the system is half a post-mor
 
 ## 6 · WHAT IS STILL OPEN
 
-**Causation is unproven.** The promotional-link footprint is the only mechanism
-found that explains why Google fell 96% while Bing moved 4%, and it was a real
-policy violation that had to be fixed regardless — but it stays correlational
-until rankings move. **Position is the metric to watch**, not impressions: if it
-climbs from 37 back toward 10, this was it.
+**Causation is unproven, and will stay that way.** The promotional-link
+footprint is the only mechanism found that explains why Google fell 96% while
+Bing moved 4%, and it was a real policy violation that had to be fixed
+regardless — but it stays correlational until rankings move. **Position is the
+metric to watch**, not impressions: if it climbs from 37 back toward 10, this
+was it.
+
+The reason it cannot be proven is structural, and worth stating so nobody
+re-opens this expecting a confirmation that does not exist. **Algorithmic
+actions are never announced.** A *manual* action — a human reviewer at Google
+applying a penalty — produces a Search Console message, an entry in the Manual
+Actions report, and a reconsideration request button. An *algorithmic* one
+(SpamBrain, the link spam updates, a core update) produces nothing at all: no
+message, no flag, no report entry, no indication that any system acted, and no
+notification if it lifts. So *Aucun problème détecté* on 31 Aug was true and
+uninformative in the same breath — it ruled out a manual action and ruled out
+nothing else.
+
+The asymmetry is worth naming because it is backwards from what intuition
+expects: **the loud failure mode is the recoverable one.** A manual action comes
+with a description of the problem and a human who re-reviews. The silent one has
+no description, no appeal, and no confirmation — you change what you believe
+caused it and wait. It also means the evidence here is as good as this class of
+incident ever gets, not a weak substitute for a proof that was available and
+skipped: the link footprint remains the best-supported explanation, and a core
+update rolling out at the end of August remains the standing alternative.
+
+**Nothing in Google's tooling would have warned us — before, during, or after.**
+The only detection system in play was the owner watching the curve and saying
+*something is off, I think I made a fall*. That was the alarm, and it fired
+correctly twice before it was believed (§2.1). Any future monitoring has to
+assume the same: the graph is the alert, because there is no other.
 
 **The 11 commune pages are still unreachable.** The sitemap no longer advertises
 their redirecting URLs, which stops the crawl waste — but the underlying routing
@@ -254,9 +293,26 @@ link risk to zero; deleting 1,088 cards buys no further protection and would
 change 2,000 pages while we are trying to read whether the link fix worked. One
 variable at a time.
 
-**A scraper is still walking the site.** Chinese, `m.baidu.com` and direct,
-1.00 pages per visit, currently crawling `/devenir-partenaire` across every
-locale. It is analytics noise and crawl-budget waste, not a ranking problem.
+**A scraper is still walking the site, and it is accelerating.** Chinese,
+`m.baidu.com` and direct, ~1.0 pages per visit. It ran ~243 visits/day over
+Aug 28–31; over **Sep 1–2 it was 403 of 450 visits — 90% of everything the
+dashboard showed**, with 402 "direct", 385 "Unknown" browser AND "Unknown" OS,
+and 96% desktop. Cloudflare Web Analytics is a JS beacon, so headless Chrome
+gets counted as traffic.
+
+It is analytics noise and crawl-budget waste, not a ranking problem — but it is
+noise loud enough to make the dashboard unreadable, so the reading rule from
+§3bis is now permanent: **filter Country ≠ China before reading any total, and
+filter Referer = `www.google.com` to compare against GSC.** Nothing else in
+that dashboard maps onto a Search Console number.
+
+That comparison, done on the Sep 1–2 window, is itself a confirmation: **Google
+sent 4 visits in 24 hours**, against GSC's ~143–210 impressions/day at ~1.77%
+CTR = 2.5–3.7 clicks. The two tools agree exactly. In the same window Bing sent
+11 and Ecosia (Bing's index) 9 — **20 against Google's 4, a 5:1 inversion** on
+an independent measurement, on different infrastructure, from the one in §3.
+Cloudflare's Bot Fight Mode would drop most of the scraper if the noise ever
+costs more than it does today.
 
 ---
 
@@ -281,10 +337,12 @@ Trailing-slash collapse rules were added at **09:08** and reverted at **22:28** 
 | gate | catches |
 |---|---|
 | `gate_sponsored_links.py` | any promotional link shipping able to pass PageRank |
-| `gate_redirect_selfloop.py` (73) | a redirect rule pointing at itself modulo a trailing slash |
 | `gate_cross_site_links.py` (both) | a link to the sibling site shipping able to pass PageRank |
+| `gate_redirect_selfloop.py` (**both**, 2 Sept) | a redirect rule pointing at itself modulo a trailing slash |
 
-Both are read-only, both are wired into CI on the repo they protect. The sponsored gate shares its detection with the marking pass by import.
+All three are read-only and wired into CI on the repo they protect. The sponsored gate shares its detection with the marking pass by import, so gate and fix cannot drift.
+
+**The self-loop gate now runs on the 74 as well, which never had the bug.** That is the point: the 74 runs the same platform and the same `_redirects` file, with 552 rules; the only thing it lacked was the guard. A lesson that cost the sister site 1,548 pages should not have to be paid for twice. Its version derives the self-host from `siteconfig.DOMAIN` rather than hardcoding it — the 73's does hardcode, which is the older habit the engine/content split exists to end. It ships with `tests/test_gate_redirect_selfloop.py`, which fires it on the six shapes that cause the loop (including the unforced variant, which only *defers* it) and clears six that must not trip, among them a `loisirs74.fr.evil.com` lookalike host. **A guard written after an incident is worth nothing until it has been shown to fire on the thing that caused it.**
 
 The common property of both incidents is worth stating plainly: **the page looked perfect, every existing gate was green, and Search Console reported no problem.** Failures this quiet have to be made loud in CI, because nothing outside the build will tell you.
 
