@@ -30,7 +30,7 @@
 | facet hubs (data/facet-hubs.json) | 8 |
 | intent pages (data/intent-registry.json) | 26 |
 
-## CI gates (34)
+## CI gates (35)
 
 Every push to `main` runs `build_all` behind the build gate. Standalone gate scripts:
 
@@ -61,6 +61,7 @@ Every push to `main` runs `build_all` behind the build gate. Standalone gate scr
 - `gate_no_key_drop.py`
 - `gate_protected_placements.py`
 - `gate_published_verified.py`
+- `gate_redirect_selfloop.py`
 - `gate_redirect_shadows.py`
 - `gate_render_mode_isolation.py`
 - `gate_render_verified.py`

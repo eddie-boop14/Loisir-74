@@ -21,7 +21,7 @@ photo_type: generic
 photo_author: null
 photo_license: null
 photo_source: null
-last_updated: 2026-08-31
+last_updated: 2026-09-03
 source: loisirs74.fr
 ---
 
