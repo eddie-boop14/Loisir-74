@@ -48,6 +48,11 @@ jobs:
           echo "scan rc=$rc (0 = unchanged, 2 = CHANGED rows in the report)"
 
       - name: Commit report + snapshots
+        # always(): a tripped breaker must not take the evidence with it. On
+        # 2026-09-05 the run named three dead URLs in the report and then
+        # discarded it by exiting 1 before this step. The run may still go red;
+        # the report is committed either way.
+        if: always()
         run: |
           git config user.name "loisirs74-bot"
           git config user.email "bot@loisirs74.fr"

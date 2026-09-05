@@ -52,7 +52,13 @@ SNAP_DIR = os.path.join(ROOT, "reports", "watch")
 UA = (f"Mozilla/5.0 (compatible; {siteconfig.WORDMARK}-watch/1.0; "
       f"+{siteconfig.BASE_URL}) source-change-detector")
 TIMEOUT = 30
-BREAKER_PCT = 10  # ≥10 % FETCH_FAILED → run fails loud
+BREAKER_PCT = 10  # ≥10 % FETCH_FAILED → candidate for the breaker
+BREAKER_HOMOGENEITY = 0.80  # …and ≥80 % of those failures share ONE error class.
+# Both conditions, because "mass failure is a fact about the fetcher" is only
+# true when the failures look ALIKE. A broken fetcher fails the same way on
+# every host (URLError on all, 403 on all). Three different errors on three
+# independent hosts — 2026-09-05: two 404s and one DH_KEY_TOO_SMALL — are three
+# facts about three websites, which is the thing this watcher exists to find.
 
 EURO_LINE = re.compile(r"\d+(?:[.,]\d+)?\s*€|€\s*\d+(?:[.,]\d+)?")
 TAG = re.compile(r"<(script|style|noscript)\b.*?</\1\s*>|<[^>]+>", re.S | re.I)
@@ -156,7 +162,16 @@ def main():
     for st, *_ in rows:
         counts[st] = counts.get(st, 0) + 1
     changed = counts.get("CHANGED", 0)
-    breaker = n_fetched and (100 * n_failed / n_fetched) >= BREAKER_PCT
+    fail_classes = [w.split(":", 1)[0].strip()
+                    for st, _s, _u, w, _d in rows if st == "FETCH_FAILED"]
+    tally = {}
+    for c in fail_classes:
+        tally[c] = tally.get(c, 0) + 1
+    dominant = max(tally.values()) if tally else 0
+    homogeneous = bool(fail_classes) and dominant / len(fail_classes) >= BREAKER_HOMOGENEITY
+    breaker = bool(n_fetched
+                   and (100 * n_failed / n_fetched) >= BREAKER_PCT
+                   and homogeneous)
 
     # report — every row shows its witness (URL + matched snippet)
     L = [f"# Watch sources — {args.report_name} · {args.date}\n\n",
@@ -185,12 +200,21 @@ def main():
         if st in ("CHANGED", "FETCH_FAILED"):
             print(f"  {st:12} {slug}  {url}  — {witness}",
                   file=sys.stderr if st == "FETCH_FAILED" else sys.stdout)
+    # A FETCH_FAILED that does not trip the breaker exits 2, which this
+    # workflow treats as success — correct, a moved page is not our outage.
+    # But a green run nobody opens is the same silence as a binned report:
+    # the 2026-09-05 failures were only ever seen because the run went red.
+    # ::warning:: puts each one in the run's Annotations panel, so a moved
+    # page is visible on the summary without being fatal.
+    for st, slug, url, witness, _ in rows:
+        if st == "FETCH_FAILED":
+            print(f"::warning title=watch {slug} unreachable::{url} — {witness}")
     if breaker:
         print(f"[watch] CIRCUIT BREAKER: {n_failed}/{n_fetched} fetches failed "
               f"(≥{BREAKER_PCT}%) — mass failure is a fact about the fetcher. "
               "Exit 1, no retry.", file=sys.stderr)
         sys.exit(1)
-    sys.exit(2 if changed else 0)
+    sys.exit(2 if (changed or n_failed) else 0)
 
 
 if __name__ == "__main__":
