@@ -1,7 +1,7 @@
 # POST-MORTEM — loisirs74.fr loses 96% of Google in one day
 
-**Written:** 2026-08-31 · **Last updated:** 2026-09-02 (Aug 28 coverage export: the index was never touched)
-**Status:** most-likely cause identified and fixed; causation inferred, not proven; recovery unverified
+**Written:** 2026-08-31 · **Last updated:** 2026-09-18 (§2.5 corrected: 610 pages left the index on 5 Sept)
+**Status:** most-likely cause identified and fixed; causation inferred, not proven; **no recovery after three weeks** — position flat at ~45 (was 10.7), and 610 pages left the index on 5 Sept
 **Sister incident:** loisirs73.fr collapsed three days earlier, *different cause*, documented in §7
 
 ---
@@ -74,7 +74,13 @@ Verdict: not the cause. One pre-existing finding surfaced and remains open — s
 - **Cloaking test:** both sites return **byte-identical** responses to a Googlebot user-agent and to a browser, on the homepage and `robots.txt`.
 - **Manual actions:** *Aucun problème détecté* on both properties.
 - **Indexing:** 5,366 pages in the index and *rising* through Aug 21. The HTTPS report — running to **Aug 30** — shows **0 problems** and validated pages climbing (579 → 687) straight through the crash. Google never disengaged.
-- **Deindexing — ruled out outright** by the coverage export of **2 Sept**, which is the first one whose data covers the crash days themselves (coverage lags ~5 days; its last row is Aug 28):
+- **Deindexing — ruled out for the crash itself, then it happened anyway nine days later.**
+  This entry said "ruled out outright" from 2 Sept until 18 Sept. That was true of the
+  window it described and false about the site by the time anyone read it again. Both
+  halves are kept here, in order, because the correction is the finding.
+
+  **What the crash looked like** (coverage export of 2 Sept, the first whose data reaches
+  the crash days; coverage lags ~5 days, so its last row is Aug 28):
 
   | date | indexed | not indexed | impressions |
   |---|---|---|---|
@@ -83,9 +89,40 @@ Verdict: not the cause. One pre-existing finding surfaced and remains open — s
   | **Aug 27** | **5,387** | 906 | **210** |
   | **Aug 28** | **5,387** | 906 | **143** |
 
-  On Aug 28, with traffic down 97%, Google was still holding **5,387 pages in the index — flat, and 21 higher than a week earlier.** It never dropped a page. Every issue bucket moved by noise or improved in the same window (404s 59 → 55; "duplicate, Google chose a different canonical" 1 → 0; noindex flat at 16, all of them deliberate — thank-you pages, CGV, `signaler-info`, `studio`).
+  On Aug 28, with traffic down 97%, Google still held **5,387 pages — flat, and 21 higher
+  than a week earlier.** Every issue bucket moved by noise or improved (404s 59 → 55;
+  "duplicate, Google chose a different canonical" 1 → 0; noindex flat at 16, all
+  deliberate — thank-you pages, CGV, `signaler-info`, `studio`). The collapse itself was a
+  **demotion, not a removal**: Google kept every page, kept reading them, stopped serving
+  them. That is the signature of algorithmic ranking enforcement rather than a technical
+  fault, and it corroborates §3 independently of Bing. **That part still stands.**
 
-  **This is the difference between a removal and a demotion, and it decides what recovery means.** Google kept every page, kept reading them, and stopped serving them. Nothing has to be rediscovered, re-crawled or re-indexed; the corpus is intact and sitting there. It has to be re-scored. That is a reassessment cycle, not a rebuild — and it is the signature of algorithmic ranking enforcement, not of a technical fault, which corroborates §3 independently of Bing.
+  **What happened on 5 September** (coverage export of 18 Sept):
+
+  | date | indexed | not indexed |
+  |---|---|---|
+  | Sep 4 | 5,441 | 898 |
+  | **Sep 5** | **4,831** | **1,547** |
+
+  **610 pages left the index in a single day**, and one bucket absorbed them:
+  *Explorée, actuellement non indexée* went **289 → 909 (+620)** while everything else
+  stayed flat (canonical 128, noindex 16, redirect errors 8, duplicates 2; redirects
+  403 → 438, 404s 52 → 46). So the demotion held for five weeks and then turned into a
+  removal — five days after the link fixes shipped, which is close enough to invite a
+  causal reading and not close enough to support one.
+
+  **Which pages.** The drilldown for that exact bucket, pulled 14 Sept, is almost entirely
+  the non-French trees — `/pt/abbaye-de-sixt`, `/pt/trilhos/`, `/ar/stelsia-casino-megeve`,
+  `/pl/co-robic/leman-cote-francais/`, `/de/was-unternehmen/…`, `/en/croisiere-cgn-evian`.
+  That sample was taken when the bucket held 288 rows; the 620 that fell afterwards are
+  *inferred* to be more of the same and a fresh drilldown would settle it. If the
+  inference holds, the verdict is not a penalty but an assessment: **435 venues rendered
+  into 12 locales is not, to Google, 6,254 pages of value.**
+
+  **The lesson about this document, not about the site:** a post-mortem written while the
+  incident is still running states findings with a shelf life. "Ruled out outright" was
+  the strongest claim in §2, and it aged out in thirteen days. Anything here that rests on
+  a bounded observation window should be read with its date attached.
 
 ---
 
@@ -240,17 +277,48 @@ Recorded because a post-mortem that only documents the system is half a post-mor
 6. **Understated the promotional scope by 14×.** A domain allowlist caught 528 links; the real footprint was 7,374 across 2,016 pages. A list was the wrong shape of rule — it had to be structural.
 7. **Clobbered a divergent engine file — twice.** Copying the 74's `siteconfig.py` onto the 73 dropped `SISTER_PROXIMITY_KM` and `BBOX`, wiping sister cards from 830 pages. Later, copying `build_lieu_page.py` the same way destroyed 236 lines of 73-only code (`_sister_rel_cards`, `modifier_faq`, `full_faq`). Both caught in diff review before pushing. **These two engines have genuinely diverged; copying files between them is not safe and must not be done again.**
 8. **Left the Cloudflare evidence out of the first draft of this document.** It had informed two findings and was cited only in the provenance line. Corrected in §3bis after the publisher caught it.
+9. **Wrote "deindexing — ruled out outright" into §2.5 while the incident was still running.** It was the strongest claim in §2 and it survived thirteen days: on 5 Sept, 610 pages left the index. The observation was sound for its window (Aug 21–28) and the wording was not — "ruled out" describes a closed question, and this one was open. Corrected in §2.5, which now keeps both halves in order. **The general fault: a finding drawn from a bounded window was stated as a permanent property of the site.** Anything in this document resting on a date range should be read with that range attached.
+10. **Suggested Cloudflare Bot Fight Mode for the Chinese scraper.** It needs the domain proxied through Cloudflare. loisirs74.fr resolves on Netlify DNS (`dns1–4.p05.nsone.net` — NS1, which is what Netlify DNS is built on), loisirs73.fr on Namecheap, and even officiallink.org — a Cloudflare *zone* — returns no `cf-ray`, so it is DNS-only too. **None of the three is proxied; the advice was unavailable on all of them.** Cloudflare Web Analytics is a JS beacon and works from any host, which is why the numbers arrive and the blocking does not. The §3bis reading rule (filter Country ≠ China) remains the only real answer.
+11. **Diagnosed a Cloudflare zero as a token mismatch without checking the token.** officiallink.org showed 0 page views 8 hours after its Web Analytics site was created; the reasoning — a fresh site entry mints a fresh token while the page keeps the old one — was sound, matched `inject_analytics.py`'s own documented failure mode, and was wrong. The tokens were identical. Installation was clean throughout: no CSP, beacon 200, snippet correctly placed before `</body>`. The actual answer was arithmetic — 8 hours of collection at ~2 visits/day is 0.67 expected visits, so **zero was a coin flip**. A plausible mechanism is not a diagnosis until the cheap check that would refute it has been run.
 
 ---
 
 ## 6 · WHAT IS STILL OPEN
 
+### 6.0 · Three weeks after the fixes: the verdict so far (18 Sept)
+
+Position was the metric named below, and it has now had three weeks to answer.
+It has not.
+
+| | position | impressions | clicks/day |
+|---|---|---|---|
+| Aug 26 — last normal day | **10.7** | 5,095 | 90 |
+| Sep 3 — worst | 63.4 | 300 | 4 |
+| **Sep 5–11 mean** | **45.1** (range 40.9–50.5) | ~100 | **~2** |
+
+The fixes stopped the slide — 63.4 back to the forties, held for ten days — and
+did not reverse it. **Flat at 45 is the honest reading.** Google AI citations are
+flat too, about 11/day against roughly 600 before.
+
+One confound named explicitly, because §2.1 got this wrong twice: impressions
+fell 106 → 66 over Sep 7–11, which looks like fresh punishment and is not. Bing
+fell 618 → 485 across the same days, and Bing is untouched by any of this. Both
+engines declining together is end-of-season demand for a Haute-Savoie leisure
+site in mid-September. **The control says it, not the author.**
+
+Bing meanwhile keeps widening the gap: ~9 clicks/day against Google's ~2, ~550
+impressions/day against ~100, and an AI-citation record of **372 on 14 Sept**.
+Its query base also broadened from one topic to four — Lac Blanc still dominant
+at 48% citation share, joined by Aiguille du Midi and the Mont Blanc trains,
+**including German-language queries at up to 81.8% share**. Those are the same
+`/de/` pages Google dropped from its index on 5 Sept (§2.5). Same corpus, same
+week, opposite verdicts from two engines.
+
 **Causation is unproven, and will stay that way.** The promotional-link
 footprint is the only mechanism found that explains why Google fell 96% while
 Bing moved 4%, and it was a real policy violation that had to be fixed
-regardless — but it stays correlational until rankings move. **Position is the
-metric to watch**, not impressions: if it climbs from 37 back toward 10, this
-was it.
+regardless — but it stays correlational until rankings move, and after three
+weeks they have not.
 
 The reason it cannot be proven is structural, and worth stating so nobody
 re-opens this expecting a confirmation that does not exist. **Algorithmic
@@ -287,6 +355,43 @@ and a commune directory; Netlify lets the flat file win, so 11 × 12 locales =
 **132 pages of distinct content Google can never fetch**. Fixing it means moving
 the commune page to a non-colliding path — a URL change, deliberately not taken
 mid-incident.
+
+**620 translated pages are out of the index and the decision is yours, not
+technical.** §2.5 records the drop. Nothing is broken — Google crawled the
+`/pt/`, `/ar/`, `/pl/`, `/de/` and `/en/` pages and judged them not worth
+indexing. There are three honest responses and no obviously right one: leave it
+(they cost nothing to keep and Bing's AI is citing the German ones at 81.8%
+share); thin the roster to the locales that earn (Spain 124 and Italy 110 clicks
+in August were real); or deepen the translations so they stop reading as the same
+facts twelve times. **Do not decide this from inside the incident** — it is a
+product question wearing an SEO costume, and the reassessment is still running.
+
+**4,193 followed links point at parameter URLs.** Every fiche carries a partner
+CTA to `/devenir-partenaire?lieu=<slug>` — 4,193 links across 707 pages, no
+`rel`, correctly canonicalised so nothing duplicates in the index (they are most
+of the 128 in *Autre page avec balise canonique correcte*). Harmless for ranking;
+it spends crawl budget on parameter URLs that all resolve to one page, on a site
+where 909 real pages sit in *crawled, not indexed*. A `rel="nofollow"` on that
+CTA, or moving `lieu` to a fragment, closes it without touching the UX.
+
+**68.4 MB of hero images ship at camera resolution.** 188 hero `.webp`, median
+299 KB, the largest **6240×4160 at 3.9 MB**, displayed in a box ~600px wide.
+August self-hosted them — which fixed the hotlinking — and shipped the originals.
+Cloudflare's 7–14 Sept window puts LCP at 94% good, P75 1,376ms, but every
+flagged element is that hero and P99 is **6,804ms**. The markup is already
+correct (`fetchpriority="high"`, `aspect-ratio:4/3` reserving space, no lazy
+hero), so this is purely file weight: resizing to ~1600px would take 68 MB to
+roughly 8–12 MB. Unlike everything else here it has nothing to do with the
+reassessment — it is pure user experience, and it is the largest single
+performance win available.
+
+**CLS is 23% poor in the field and unreproduced.** Same Cloudflare window:
+`#main` shifting 0.19–0.97 and `a.brand` at 0.96 — the latter on *both* sites,
+which points at the sticky header. Served the built tree locally and drove
+headless Chromium with CPU throttling, latency emulation and a 390px viewport on
+two flagged pages: **CLS 0 every time.** That null is not evidence of health —
+the hero never became the LCP element under emulation, so the test was not
+faithful to the field. Recorded as unexplained rather than dressed up.
 
 **The Apidae cards are still there, deliberately.** Nofollowing already took the
 link risk to zero; deleting 1,088 cards buys no further protection and would
@@ -327,6 +432,20 @@ The cause is documented in the repo's own gate, written after the fact:
 > On 2026-08-19, 816 rules of the first shape shipped with all 33 gates green and **took every fiche on loisirs73.fr off the internet — 129 lieux × 12 locales, ERR_TOO_MANY_REDIRECTS, on the canonical URL as much as the phantom.**
 
 Trailing-slash collapse rules were added at **09:08** and reverted at **22:28** — **13 hours 20 minutes** during which roughly 1,548 pages served infinite redirect loops. Netlify matches paths regardless of trailing slash, so `/x/ → /x` is a rule pointing at itself. Googlebot crawled during the window; the index reflected it five days later.
+
+**The 73 was also still hiding its own content, and nobody noticed for four
+days.** The `opacity:0` reveal trap (§5.2) was repaired on the 74 on 31 Aug and
+not carried across. Measured on the 73's build before the fix: **846 pages
+carrying 29,956 `.reveal` blocks and 3,078 `.hammer` word-spans — 33,034 elements
+shipping transparent** until an IntersectionObserver fired. On one fiche, 47 of
+70. Fixed 4 Sept with the same six-rule change, written against the 73's own
+stylesheet rather than copied (see mistake 7), and verified in headless Chromium
+with a negative control so the check was known to be able to fail: the pre-fix
+page reported 47 hidden of 70 animated, the shipped build 0 of 70.
+
+Found while reading a Cloudflare Web Vitals export about a different metric
+entirely. Its CLS figure rested on six page views and was noise; the defect
+underneath it was not.
 
 **The 73 has no promotional link problem at all** — zero partner cards, and its outbound links are editorial citations that must keep their vote. Two sites, two unrelated causes, three days apart.
 
