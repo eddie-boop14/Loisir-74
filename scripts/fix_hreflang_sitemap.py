@@ -15,6 +15,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import locales  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
+
+# Set from --settled in main(); see _uncommitted_html().
+SETTLED = False
 BASE = siteconfig.BASE_URL + "/"
 LANGS = list(locales.VISIBLE_SECONDARY)
 LINK_RE = re.compile(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">')
@@ -203,8 +206,14 @@ def canonical_links(g):
 
 
 def main():
+    global SETTLED
     apply = "--apply" in sys.argv
     do_sitemap = "--sitemap" in sys.argv
+    # --settled: the caller guarantees no further step will rewrite HTML, so
+    # "differs from HEAD" means "this build changed this page" and can move
+    # <lastmod> to today. Without it the dirty check is off (see
+    # _uncommitted_html).
+    SETTLED = "--settled" in sys.argv
     groups = build_groups()
 
     multilingual = [g for g in groups if len(g["pages"]) > 1 and not is_noindex(g)]
@@ -337,6 +346,28 @@ def rebuild_sitemap(groups, multilingual):
     #     (that's just checkout time).
     #   * Only a URL that has never been in the sitemap gets stamped today —
     #     for a genuinely new page, that's the truth.
+    #
+    # THE SOURCE DATE IS NOT THE WHOLE TRUTH (2026-09-27).
+    #   The rule above dates a URL by when its LIEU DATA changed, which is
+    #   right for the two other consumers of that date — the visible
+    #   "Mis à jour le" stamp and schema.org dateModified. It is wrong for
+    #   <lastmod>, which answers a different question: when did the RESOURCE
+    #   AT THIS URL last change? Chrome/template/CSS work never touches Json,
+    #   so by construction it never moved the date — and the opacity fix
+    #   (31 Aug) rewrote every page's bytes while the sitemap went on telling
+    #   Google nothing had happened since July.
+    #
+    #   Measured 27 Sept: sitemap newest <lastmod> 2026-08-19 against a real
+    #   last change of 2026-09-19; 4,026 URLs still stamped July. Meanwhile
+    #   61% of the pages Google had filed under "crawled, currently not
+    #   indexed" were last fetched 60+ days ago — its verdict predates every
+    #   repair, because nothing ever told it to come back.
+    #
+    #   So <lastmod> is now max(source date, OUTPUT date), where the output
+    #   date is the commit date of the built HTML itself. That is still not
+    #   mtime and still never uniform: only a page whose committed bytes
+    #   actually changed moves, and the byte-stable double build in CI
+    #   guarantees an unchanged page re-renders identically.
     import datetime, subprocess, json as _json, re as _re
     from collections import defaultdict
 
@@ -388,6 +419,118 @@ def rebuild_sitemap(groups, multilingual):
             elif line.strip() and current:
                 out.setdefault(line.strip(), current)
         return out
+
+    # A commit touching more built pages than this is a cross-cutting sweep
+    # (a CSS change, a re-render), not an edit to any one page.
+    #
+    # The threshold is a SHARE of the corpus, not a flat count, and it is
+    # pinned just under the tripwire it exists to respect: derive_lastmod
+    # --verify rejects a sitemap where one date covers >40 % of URLs, so a
+    # commit that alone would breach that is the sweep, and nothing smaller
+    # is. A flat 200 was far too strict — it threw away 49ed6fa1 (the hero
+    # re-encode, 1,536 pages, 25 %), where every one of those pages really
+    # did change: new image bytes at new dimensions. That is the opposite of
+    # chrome. What must stay out is 48b0ff6a (the opacity fix, 5,232 pages,
+    # 86 %) and its kind, which the share test still rejects.
+    SWEEP_SHARE = 0.35
+
+    def _page_total():
+        try:
+            res = subprocess.run(["git", "ls-files", "*.html"], cwd=str(ROOT),
+                                 capture_output=True, text=True, check=True)
+            n = sum(1 for l in res.stdout.splitlines() if l.strip())
+            return n or 1
+        except Exception:
+            return 1
+
+    SWEEP_MAX = max(200, int(_page_total() * SWEEP_SHARE))
+
+    def _output_dates():
+        """{built html path: 'YYYY-MM-DD'} — when the RENDERED page last
+        changed, from the commit date of the file itself. Same boundary
+        exclusion as _git_dates: on a shallow clone the boundary commit
+        appears to add the whole tree, and inheriting that would be the
+        blanket stamp in a new costume.
+
+        One `git log` over all history, newest first, setdefault per path —
+        0.3 s for 6,254 pages. A page the walk cannot date simply has no
+        output date and falls through to the source date below."""
+        boundary = _shallow_boundary_shas()
+        out = {}
+        try:
+            res = subprocess.run(
+                ["git", "log", "--name-only", "--format=COMMIT %H %cs"],
+                cwd=str(ROOT), capture_output=True, text=True, check=True,
+            )
+        except Exception:
+            return {}
+        current = None
+        per_commit = {}
+        for line in res.stdout.splitlines():
+            if line.startswith("COMMIT "):
+                sha, date = line[len("COMMIT "):].strip().split(" ", 1)
+                current = None if sha in boundary else (sha, date)
+            elif current and line.endswith(".html"):
+                out.setdefault(line.strip(), current)
+                per_commit.setdefault(current[0], set()).add(line.strip())
+
+        # A commit that rewrote most of the tree is a SWEEP, not a page event.
+        # This is the same judgement derive_lastmod makes with BULK_MAX for the
+        # content date, applied to output: the 31 Aug opacity fix touched 5,241
+        # files, and crediting every one of them to that day republishes the
+        # uniform-stamp anti-pattern with a new justification. Its own
+        # --verify tripwire catches it at >40 %, and it is right to.
+        # A page whose only output history is a sweep keeps its source date.
+        sweeps = {sha for sha, files in per_commit.items()
+                  if len(files) > SWEEP_MAX}
+        return {p: d for p, (sha, d) in out.items() if sha not in sweeps}
+
+    def _uncommitted_html():
+        """Built pages that differ from HEAD right now. The commit that
+        carries a change does not exist while that change is being built, so
+        without this every edit would publish a <lastmod> one commit stale.
+
+        ONLY MEANINGFUL ON A SETTLED TREE (--settled). Inside build_all,
+        normalize_head_links runs mid-pipeline: eleven HTML-mutating steps
+        still follow it (lang nav, facet links, home selections, sister line,
+        asset cache-bust, collision redirects, hero preload, the analytics
+        beacon, the sponsored re-mark). At that moment nearly every page
+        legitimately differs from HEAD because the build has not finished
+        writing it — not because anything changed. Trusting it there stamped
+        5,868 of 6,078 URLs with today (2026-09-26) and derive_lastmod
+        --verify rejected the sitemap at 96 % > 40 %, which is exactly what
+        that tripwire is for. So the dirty set is consulted only when the
+        caller asserts the tree is final; build_all re-runs this script with
+        --sitemap --settled as its last sitemap step."""
+        if not SETTLED:
+            return set()
+        try:
+            res = subprocess.run(["git", "diff", "--name-only", "HEAD", "--", "*.html"],
+                                 cwd=str(ROOT), capture_output=True, text=True, check=True)
+        except Exception:
+            return set()
+        return {l.strip() for l in res.stdout.splitlines() if l.strip()}
+
+    _out_dates = _output_dates()
+    _dirty_html = _uncommitted_html()
+    _today = datetime.date.today().isoformat()
+
+    def _built_paths(u):
+        """The file(s) that could serve this URL, repo-relative."""
+        tail = u.replace(BASE, "").strip("/")
+        if not tail:
+            return ["index.html"]
+        return [f"{tail}.html", f"{tail}/index.html"]
+
+    def output_date_for(u):
+        best = None
+        for p in _built_paths(u):
+            if p in _dirty_html:
+                return _today          # changed in this very build
+            d = _out_dates.get(p)
+            if d and (best is None or d > best):
+                best = d
+        return best
 
     # Source-paths: every Json/ file + the two build scripts we treat as
     # "structural source" for hubs/homepages.
@@ -479,24 +622,24 @@ def rebuild_sitemap(groups, multilingual):
     homepage_dates = [date_map.get(p) for p in structural_paths]
     homepage_max = max(d for d in homepage_dates if d) if any(homepage_dates) else None
 
-    def lastmod_for(u):
-        # Strip protocol/host
+    def source_date_for(u):
+        """When the URL's underlying LIEU DATA last changed, or None."""
         tail = u.replace(BASE, "").lstrip("/").rstrip("/")
-        # 1) Real (non-boundary) git date of the URL's source
         if tail == "" or tail in set(locales.VISIBLE_SECONDARY):
-            if homepage_max:
-                return homepage_max
-        elif u in hub_date and hub_date[u]:
+            return homepage_max or None
+        if u in hub_date and hub_date[u]:
             return hub_date[u]
-        else:
-            parts = tail.split("/")
-            if parts[0] in set(locales.VISIBLE_SECONDARY) and len(parts) >= 2:
-                slug = parts[1]
-            else:
-                slug = parts[0]
-            src = f"Json/{slug}.json"
-            if date_map.get(src):
-                return date_map[src]
+        parts = tail.split("/")
+        slug = parts[1] if (parts[0] in set(locales.VISIBLE_SECONDARY)
+                            and len(parts) >= 2) else parts[0]
+        return date_map.get(f"Json/{slug}.json") or None
+
+    def lastmod_for(u):
+        # 1) The later of: when the data changed, and when the page did.
+        #    Both are real commit dates; neither is mtime or a blanket stamp.
+        cands = [d for d in (source_date_for(u), output_date_for(u)) if d]
+        if cands:
+            return max(cands)
         # 2) Carry the previously committed lastmod forward — never mtime,
         #    never a blanket stamp.
         if u in _prev:

@@ -568,6 +568,26 @@ def assert_idempotent():
 
 # ---- main -------------------------------------------------------------------
 
+def restamp_sitemap_lastmod():
+    """Re-derive sitemap <lastmod> ONCE THE TREE IS SETTLED.
+
+    normalize_head_links rebuilds the sitemap mid-pipeline, with eleven
+    HTML-mutating steps still to come, so at that point "this page differs
+    from HEAD" only means "the build has not finished writing it". This last
+    pass runs after the final HTML mutator (mark_sponsored_links), where the
+    same comparison is the truth we actually want: the pages this build
+    really changed. --sitemap without --apply, so it touches sitemap.xml and
+    no HTML — nothing can slip past the byte gates that already ran."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "fix_hreflang_sitemap.py"), "--sitemap", "--settled"],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("fix_hreflang_sitemap (settled lastmod restamp) failed")
+    print(out.stdout.strip() or "(sitemap lastmod restamped)")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--no-site", action="store_true",
@@ -631,6 +651,8 @@ def main():
     run("inject Cloudflare Web Analytics beacon (every published page)", inject_analytics)
     run("re-mark promotional links (safety net: pages rendered after the gates)",
         mark_sponsored_links)
+    run("re-derive sitemap <lastmod> on the settled tree (after the last HTML mutator)",
+        restamp_sitemap_lastmod)
     run("regenerate PROJECT-STATE.md (JOB 8 — derived, never authored)", rebuild_project_state)
     if not args.no_site:
         run("build _site/", lambda: subprocess.check_call(
