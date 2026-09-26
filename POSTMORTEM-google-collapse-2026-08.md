@@ -111,13 +111,15 @@ Verdict: not the cause. One pre-existing finding surfaced and remains open — s
   removal — five days after the link fixes shipped, which is close enough to invite a
   causal reading and not close enough to support one.
 
-  **Which pages.** The drilldown for that exact bucket, pulled 14 Sept, is almost entirely
-  the non-French trees — `/pt/abbaye-de-sixt`, `/pt/trilhos/`, `/ar/stelsia-casino-megeve`,
-  `/pl/co-robic/leman-cote-francais/`, `/de/was-unternehmen/…`, `/en/croisiere-cgn-evian`.
-  That sample was taken when the bucket held 288 rows; the 620 that fell afterwards are
-  *inferred* to be more of the same and a fresh drilldown would settle it. If the
-  inference holds, the verdict is not a penalty but an assessment: **435 venues rendered
-  into 12 locales is not, to Google, 6,254 pages of value.**
+  **Which pages — the inference was wrong, and the fresh drilldown settled it against me.**
+  A sample pulled 14 Sept looked like almost entirely the non-French trees —
+  `/pt/abbaye-de-sixt`, `/ar/stelsia-casino-megeve`, `/pl/co-robic/leman-cote-francais/`,
+  `/en/croisiere-cgn-evian` — and this section said so, flagging it as inferred. It was
+  not inference from 288 rows; it was reading the top of a locale-sorted export. The full
+  1,080-row table shows **French at 11.4% of the bucket and hit proportionally harder than
+  the translations, 24% of French URLs against 17% of non-French.** The comforting version
+  — "Google is just discounting our machine-translated long tail" — is false. It is
+  rejecting the original French at a higher rate than the rest.
 
   **The lesson about this document, not about the site:** a post-mortem written while the
   incident is still running states findings with a shelf life. "Ruled out outright" was
@@ -280,6 +282,9 @@ Recorded because a post-mortem that only documents the system is half a post-mor
 9. **Wrote "deindexing — ruled out outright" into §2.5 while the incident was still running.** It was the strongest claim in §2 and it survived thirteen days: on 5 Sept, 610 pages left the index. The observation was sound for its window (Aug 21–28) and the wording was not — "ruled out" describes a closed question, and this one was open. Corrected in §2.5, which now keeps both halves in order. **The general fault: a finding drawn from a bounded window was stated as a permanent property of the site.** Anything in this document resting on a date range should be read with that range attached.
 10. **Suggested Cloudflare Bot Fight Mode for the Chinese scraper.** It needs the domain proxied through Cloudflare. loisirs74.fr resolves on Netlify DNS (`dns1–4.p05.nsone.net` — NS1, which is what Netlify DNS is built on), loisirs73.fr on Namecheap, and even officiallink.org — a Cloudflare *zone* — returns no `cf-ray`, so it is DNS-only too. **None of the three is proxied; the advice was unavailable on all of them.** Cloudflare Web Analytics is a JS beacon and works from any host, which is why the numbers arrive and the blocking does not. The §3bis reading rule (filter Country ≠ China) remains the only real answer.
 11. **Diagnosed a Cloudflare zero as a token mismatch without checking the token.** officiallink.org showed 0 page views 8 hours after its Web Analytics site was created; the reasoning — a fresh site entry mints a fresh token while the page keeps the old one — was sound, matched `inject_analytics.py`'s own documented failure mode, and was wrong. The tokens were identical. Installation was clean throughout: no CSP, beacon 200, snippet correctly placed before `</body>`. The actual answer was arithmetic — 8 hours of collection at ~2 visits/day is 0.67 expected visits, so **zero was a coin flip**. A plausible mechanism is not a diagnosis until the cheap check that would refute it has been run.
+12. **Read the top of a locale-sorted export and called it a sample.** §2.5 said the pages leaving the index were "almost entirely the non-French trees". The full 1,080-row drilldown shows French at 11.4% of the bucket and rejected at a *higher* rate than the translations (24% against 17%). The entry was even flagged as inferred, which made it feel rigorous; the flag was on the wrong thing. Sorting is not sampling.
+13. **Excluded a real change as a sweep with a flat threshold.** The first `<lastmod>` cut discarded any commit touching more than 200 built pages, which threw away the hero re-encode — 1,536 pages whose images genuinely changed, at 25% of the corpus. A flat file count cannot serve two corpora 4× apart in size. The threshold is now a share, pinned just under the ">40% of URLs on one date" tripwire it exists to respect.
+14. **Trusted a mid-pipeline working tree.** The same cut asked "does this page differ from HEAD?" from inside `normalize_head_links`, with eleven HTML-mutating steps still to come — so "differs" meant "the build has not finished writing it". It stamped 5,868 of 6,078 URLs with today. The repo's own `--verify` caught it at 96% before it could ship, which is the only reason this is a footnote and not a fifteenth entry about deindexing. The restamp now runs after the last mutator. Then the corrected version still had no cap on the in-flight build: on the 73 it would have stamped 684 pages (47%) for a corrected date string. **Both halves of a rule need the same guard; excluding past sweeps while waving through the present one is not a rule, it is a coincidence.**
 
 ---
 
@@ -448,6 +453,113 @@ entirely. Its CLS figure rested on six page views and was noise; the defect
 underneath it was not.
 
 **The 73 has no promotional link problem at all** — zero partner cards, and its outbound links are editorial citations that must keep their vote. Two sites, two unrelated causes, three days apart.
+
+---
+
+## 7bis · 27 SEPTEMBER: THREE INSTRUMENTS, READ TOGETHER
+
+Everything below is Google's or Cloudflare's own measurement of us, not ours of
+ourselves. Three exports landed the same day and they disagree with the story
+this document told for most of September.
+
+### The Breadcrumbs valid-items series dates the 73's collapse to four days
+
+Rich-result items are only retained for pages that are indexed, so the count is
+an independent read on index membership — and a blunter one than the coverage
+buckets, which lag about five days.
+
+| loisirs73.fr | valid breadcrumb items |
+|---|---|
+| 12 Aug | 0 |
+| 13 Aug | 48 |
+| 21–22 Aug | **280** (peak) |
+| 23 Aug | 243 |
+| 24 Aug | 125 |
+| 25 Aug | 86 |
+| 26 Aug | 61 |
+| 27 Aug → 25 Sept | **48, unchanged for a month** |
+
+83% of the 73's structured-data footprint went in **four days, 23–27 August**,
+and has not moved an item since. That is a sharper date than anything the
+coverage exports gave, and it lands on the far side of the redirect window
+(§7), not inside it.
+
+Two cross-checks say the instrument is sound. **All 48 surviving items are in
+the indexed set, and not one of the 1,124 dropped pages across both sites has a
+valid breadcrumb** — 0 of 640 on the 73, 0 of 484 on the 74. And the *markup*
+does not predict survival at all: 68.6% of the 73's dropped pages carry
+`BreadcrumbList` against 59.5% of the indexed ones. Dropped pages have it more
+often. Fifth structural hypothesis, same result as the other four.
+
+The 74's series says the bleed stopped: peak 740 on 3 Sept, bottom **465 on 15
+Sept**, then 466 / 472 / 473 / 474 / 471 / 469 / 468 / 475 — flat with noise for
+ten days, marginally up. "Losing pages by the day" stopped being true on 15
+September.
+
+### The two sites are failing in opposite ways, and only one is crawl-starved
+
+From the Coverage drilldowns, by month of last crawl:
+
+| | crawled Aug | crawled Sept |
+|---|---|---|
+| **73** indexed (575) | 570 | **5** |
+| **73** dropped (640) | 500 | **140** |
+| **74** indexed (1,000 sample) | 0 | **1,000** (12–22 Sept) |
+| **74** dropped (484) | 302 | 97 |
+
+On the **74**, indexed ⇔ crawled recently and dropped ⇔ last seen a median of 42
+days ago. That is crawl starvation, and a truthful `<lastmod>` speaks to it
+directly — which is what a1bbaaae and e47a834e ship.
+
+On the **73** it is the reverse and it is worse. Google is not staying away. It
+re-crawled the pages it had **already rejected 140 times in September against 5
+re-crawls of the indexed ones** — coming back, looking, and declining. No
+`<lastmod>` fixes that. It also has nothing new to find: **no Json commit has
+landed on the 73 since 21 August**, ten editing days in the repository's whole
+history and then five weeks of silence.
+
+This also resolves an apparent paradox recorded mid-investigation — that the
+73's dropped pages were crawled *more* recently than its indexed ones (median 37
+days against 44). It is not freshness. Both cohorts were crawled in the same
+August wave; the dropped ones are being re-audited afterwards.
+
+### Cloudflare, 28 Aug – 27 Sept: 93% of the traffic is not people
+
+9,320 visits with "exclude bots" already on:
+
+| | visits |
+|---|---|
+| China | **7,740 (83%)** |
+| Singapore | 700 |
+| **France** | **610** |
+| Switzerland / United States | 70 / 70 |
+
+Browser *Unknown* 7,510. OS *Unknown* 7,510. Device Desktop 8,840. Referer
+direct 8,130 plus `m.baidu.com` 540. Top paths `/en/devenir-partenaire` 220,
+`/it/devenir-partenaire` 140, `/de/devenir-partenaire` 140.
+
+An automated crawl from one region with no browser fingerprint, working the
+become-a-partner pages across locales, and Cloudflare's own bot filter does not
+catch it. The real human number is France + Switzerland, **about 700 visits in
+30 days, 23 a day** — which is what finally reconciles this dashboard with GSC,
+and confirms §3bis's "bot flood masked the drop" was not a one-off in August.
+Google is not in the top five referers. Bing, Yahoo and Ecosia are.
+
+### Is any page safe?
+
+No, and the honest answer matters more than a reassuring one. French is hit
+harder than the translations (24% against 17%). Quality does not predict
+survival: against the indexed control set the *dropped* pages are longer (1,057
+median words against 964), carry more FAQ entries (6 against 5), more sourced
+facts (6 against 5), twice the rate of real photographs (0.21 against 0.10) and
+fewer missing heroes (0.36 against 0.45). Google dropped the better half. The
+best page inspected by hand — `voie-verte-du-lac-du-bourget`, citing AF3V and
+France Vélo Tourisme and reconciling three conflicting distances — is in the
+dropped list.
+
+Pages that are demonstrably safe exist only off these two domains:
+chaletdutornet.com (16.7% CTR), officiallink.org `el-greco-museum` (position
+7.63) and `palais-des-beaux-arts-de-lille` (position 9.19).
 
 ---
 
