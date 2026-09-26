@@ -509,7 +509,20 @@ def rebuild_sitemap(groups, multilingual):
                                  cwd=str(ROOT), capture_output=True, text=True, check=True)
         except Exception:
             return set()
-        return {l.strip() for l in res.stdout.splitlines() if l.strip()}
+        dirty = {l.strip() for l in res.stdout.splitlines() if l.strip()}
+        # A BUILD CAN BE A SWEEP TOO. The same share test that disqualifies a
+        # past commit must apply to the one in flight, or the rule launders a
+        # sweep through the working tree. It cost nothing on the build that
+        # shipped a1bbaaae (0 pages dirty), and it caught the very next one on
+        # the 73, where refilling the lastmod manifest rewrote the visible
+        # "Mis à jour le" stamp on 684 of 1,446 pages and would have put 47%
+        # of that sitemap on one date. Sweep pages keep their source and
+        # output dates, which is what actually changed about them.
+        if len(dirty) > SWEEP_MAX:
+            print(f"sitemap lastmod: this build changed {len(dirty)} pages "
+                  f"(> {SWEEP_MAX}) — treated as a sweep, not per-page edits")
+            return set()
+        return dirty
 
     _out_dates = _output_dates()
     _dirty_html = _uncommitted_html()
