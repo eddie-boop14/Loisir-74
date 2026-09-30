@@ -16,7 +16,7 @@ google_place_id: "ChIJf-v8FtIjjEcRNfJWD7gsUrA"
 canonical_url: https://loisirs74.fr/en/indiana-ventures-saint-paul-en-chablais
 language: en
 facet_json: https://loisirs74.fr/api/lieu/indiana-ventures-saint-paul-en-chablais.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/2/21/La_plage_de_La_Beunaz.jpg
+photo_url: https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/La_plage_de_La_Beunaz.jpg/960px-La_plage_de_La_Beunaz.jpg
 photo_type: real
 photo_author: "Forest park"
 photo_license: null

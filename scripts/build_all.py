@@ -588,6 +588,12 @@ def restamp_sitemap_lastmod():
     print(out.stdout.strip() or "(sitemap lastmod restamped)")
 
 
+def wikimedia_thumb_gate():
+    """No hotlinked Commons ORIGINAL in Json/ — scaled derivatives only."""
+    subprocess.check_call([sys.executable, str(SCRIPTS / "gate_wikimedia_thumbs.py")],
+                          cwd=str(ROOT))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--no-site", action="store_true",
@@ -610,6 +616,7 @@ def main():
     run("status gate (state machine)", status_gate)
     run("hygiene gate (Tier 1/2 scan)", hygiene_gate)
     run("tarif roster-completeness gate", tarif_completeness_gate)
+    run("wikimedia thumbnail gate (no hotlinked Commons originals)", wikimedia_thumb_gate)
     run("render fiche pages", render_all_fiches)
     run("rebuild catalog index", rebuild_catalog_index)
     run("regenerate hubs + homepage nav", rebuild_hubs)

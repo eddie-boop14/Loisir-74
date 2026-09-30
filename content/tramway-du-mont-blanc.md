@@ -16,7 +16,7 @@ google_place_id: "ChIJ33HhWUtXiUcRCPzvUxwxqAI"
 canonical_url: https://loisirs74.fr/tramway-du-mont-blanc
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/tramway-du-mont-blanc.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/e/e3/Tramway_Mont-Blanc.jpg
+photo_url: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Tramway_Mont-Blanc.jpg/960px-Tramway_Mont-Blanc.jpg
 photo_type: real
 photo_author: null
 photo_license: null

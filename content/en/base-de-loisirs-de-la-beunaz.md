@@ -16,7 +16,7 @@ google_place_id: "ChIJX6T2EckjjEcR4u9zJcAisvM"
 canonical_url: https://loisirs74.fr/en/base-de-loisirs-de-la-beunaz
 language: en
 facet_json: https://loisirs74.fr/api/lieu/base-de-loisirs-de-la-beunaz.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/2/21/La_plage_de_La_Beunaz.jpg
+photo_url: https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/La_plage_de_La_Beunaz.jpg/960px-La_plage_de_La_Beunaz.jpg
 photo_type: real
 photo_author: "Alpine meadow"
 photo_license: null
