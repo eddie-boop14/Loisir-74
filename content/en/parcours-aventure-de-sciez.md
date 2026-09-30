@@ -16,7 +16,7 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/en/parcours-aventure-de-sciez
 language: en
 facet_json: https://loisirs74.fr/api/lieu/parcours-aventure-de-sciez.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg
+photo_url: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Accrobranche_floreval_2.jpg/960px-Accrobranche_floreval_2.jpg
 photo_type: real
 photo_author: "Forest park"
 photo_license: null

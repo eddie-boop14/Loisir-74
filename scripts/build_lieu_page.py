@@ -1931,6 +1931,40 @@ def _split_rules(css):
 
 
 def critical_css(css):
+    """DISABLED 30 Sept 2026 — kept for the record, not called by build_head.
+
+    The split put ~5 KB of hand-picked rules in <head> and the full 28 KB sheet
+    after </main>, 56 KB into a 95 KB document. Measured in headless Chromium
+    against a server delivering the HTML in 16 KB chunks 250 ms apart — which is
+    what a phone on a slow link actually receives, and the condition every
+    earlier attempt to reproduce this missed by testing on a fast local socket:
+
+        fiche, split on        CLS 0.9383   (deterministic, 6/6 runs)
+        homepage / hubs        CLS 0        (their CSS was always in <head>)
+
+    Cloudflare's field data agreed to three decimals — `main` shifting 0.925,
+    CLS 45% poor — while a PageSpeed lab run showed 0.058, because a lab run
+    usually finishes parsing before it paints.
+
+    Widening the keep-set does not fix it. Adding the language picker (whose
+    `.lang-menu{display:none}` lived only in the deferred sheet, so the header
+    rendered all twelve language links inline) took the header out of the shift
+    sources and moved CLS 0.9383 -> 0.9110: the hero then shifted instead. The
+    above-the-fold region is not a list of selectors anyone can keep correct by
+    hand, and the keep-set's own comment — that a demoted rule "costs a few
+    unstyled milliseconds, never correctness" — was the assumption that made
+    this invisible for six weeks.
+
+    The split also never paid for itself. The sheet is INLINE either way, so
+    there is no request to save; the only saving was parse time for 28 KB,
+    which is a millisecond or two. And it cost bytes rather than saving them:
+    every page shipped the critical copy AND the full sheet, ~5 KB of pure
+    duplication per page across 6,254 pages.
+
+    So the head carries the whole sheet and the body carries none. First paint
+    happens a parse later and is CORRECT, instead of happening earlier and
+    being thrown away.
+    """
     out = []
     for prelude, body in _split_rules(css):
         if prelude.startswith("@media"):
@@ -2003,8 +2037,10 @@ def build_head(d):
                 "\n[dir=rtl] h1.hammer{direction:ltr;text-align:right}")
 
     ldjson = build_ldjson(d, desc_override=desc)
-    crit = critical_css(css)
-    _DEFER["css"], _DEFER["ldjson"] = css, ldjson
+    # THE SPLIT IS OFF (30 Sept 2026). See critical_css's docstring: the head
+    # now carries the whole sheet, and only the JSON-LD is deferred.
+    crit = css
+    _DEFER["ldjson"] = ldjson
     hero_alt = L("hero_alt", name)
 
     return f"""<!doctype html>
@@ -2079,7 +2115,7 @@ def build_header(d):
 <a class="skip" href="#main">{T("skip")}</a>
 <header class="site"><div class="wrap">
   <a class="brand" href="{site_url}" aria-label="{siteconfig.SITE_NAME}"><span class="mark" aria-hidden="true"><img src="/logo.png" alt="" width="30" height="30" style="border-radius:7px;display:block;"></span><span>{siteconfig.SITE_NAME}</span></a>
-  <nav><details class="lang-picker"><summary aria-label="{T("lang_choose")}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>{T("lang_label")}</summary><div class="lang-menu">{pick_html}</div></details></nav>
+  <nav><details class="lang-picker"><summary aria-label="{T("lang_choose")}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>{T("lang_label")}</summary><div class="lang-menu">{pick_html}</div></details></nav>
 </div></header>
 <main id="main">
 <div class="wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="{site_url}">{T("home")}</a><span class="sep">/</span>{crumb_mid}<span class="sep">/</span><span aria-current="page">{esc(name)}</span></nav></div>"""
@@ -2781,7 +2817,6 @@ def build_page(d, lang="fr", include_partners=True, fr_prose_fallback=True):
         d.get("date_published_human", ""),
         d.get("date_modified_human", "") if _FROZEN else _lastmod_display(d)
     ))
-    out.append(f'<style>{_DEFER.pop("css")}</style>')
     out.append(f'<script type="application/ld+json">{_DEFER.pop("ldjson")}</script>')
     out.append(action_bar(d, frozen=_FROZEN))
     out.append(site_footer())

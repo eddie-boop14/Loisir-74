@@ -16,7 +16,7 @@ google_place_id: "ChIJwTIFEcrsi0cRaQLxGffmgjQ"
 canonical_url: https://loisirs74.fr/en/mont-veyrier
 language: en
 facet_json: https://loisirs74.fr/api/lieu/mont-veyrier.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg
+photo_url: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg/960px-Chemin_mont_Veyrier_mont_Baron.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"

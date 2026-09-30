@@ -16,7 +16,7 @@ google_place_id: "ChIJof6xaPX9i0cRV64vq-ZEcng"
 canonical_url: https://loisirs74.fr/passy-accro-lac
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/passy-accro-lac.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b8/Accrobranche_floreval_2.jpg
+photo_url: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Accrobranche_floreval_2.jpg/960px-Accrobranche_floreval_2.jpg
 photo_type: real
 photo_author: "Forest park"
 photo_license: null

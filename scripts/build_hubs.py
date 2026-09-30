@@ -942,9 +942,13 @@ def patch_homepage_nearme(lang):
     if '/scripts/nearme.js' in html:
         return False
     tag = assets.script_tag("nearme.js")
-    l74 = '<script src="/scripts/l74sort.js"></script>'
-    if l74 in html:
-        html = html.replace(l74, l74 + "\n" + tag, 1)
+    # Match the l74sort include however it is currently written: version_assets
+    # stamps a ?v=<hash> onto it, and it carries `defer` since 30 Sept (it was
+    # the one runtime script without it — PageSpeed measured 570 ms of blocked
+    # render). An exact-string match silently fell through to the </body> branch.
+    m = re.search(r'<script src="/scripts/l74sort\.js(?:\?v=[A-Za-z0-9]+)?"[^>]*></script>', html)
+    if m:
+        html = html.replace(m.group(0), m.group(0) + "\n" + tag, 1)
     elif "</body>" in html:
         html = html.replace("</body>", tag + "\n</body>", 1)
     else:

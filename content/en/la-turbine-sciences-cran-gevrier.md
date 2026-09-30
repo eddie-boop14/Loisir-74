@@ -16,7 +16,7 @@ google_place_id: null
 canonical_url: https://loisirs74.fr/en/la-turbine-sciences-cran-gevrier
 language: en
 facet_json: https://loisirs74.fr/api/lieu/la-turbine-sciences-cran-gevrier.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/3/36/La_Turbine_%40_Cran-G%C3%A9vrier_%2824160730078%29.jpg
+photo_url: https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/La_Turbine_%40_Cran-G%C3%A9vrier_%2824160730078%29.jpg/960px-La_Turbine_%40_Cran-G%C3%A9vrier_%2824160730078%29.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"

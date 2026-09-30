@@ -16,7 +16,7 @@ google_place_id: "ChIJkz4ZDpGRi0cR17utsV2DS0M"
 canonical_url: https://loisirs74.fr/plage-de-menthon-saint-bernard
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/plage-de-menthon-saint-bernard.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/d/dd/Plage_municipale_de_Menthon-Saint-Bernard.jpg
+photo_url: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Plage_municipale_de_Menthon-Saint-Bernard.jpg/960px-Plage_municipale_de_Menthon-Saint-Bernard.jpg
 photo_type: real
 photo_author: "Chrbenoit"
 photo_license: "CC BY-SA 4.0"

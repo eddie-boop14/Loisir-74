@@ -16,7 +16,7 @@ google_place_id: "ChIJrVhSxuGPi0cRrYl7wZFRM8U"
 canonical_url: https://loisirs74.fr/plage-des-marquisats
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/plage-des-marquisats.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/b/b2/Annecy-8.jpg
+photo_url: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Annecy-8.jpg/960px-Annecy-8.jpg
 photo_type: real
 photo_author: "Lac d'Annecy"
 photo_license: null

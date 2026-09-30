@@ -16,7 +16,7 @@ google_place_id: "ChIJUwn1VOKDi0cRbG_lHaBeAJg"
 canonical_url: https://loisirs74.fr/domaine-du-tornet
 language: fr
 facet_json: https://loisirs74.fr/api/lieu/domaine-du-tornet.json
-photo_url: https://upload.wikimedia.org/wikipedia/commons/7/7f/Lac_de_la_Balme-de-Sillingy_%2851056207507%29.jpg
+photo_url: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Lac_de_la_Balme-de-Sillingy_%2851056207507%29.jpg/960px-Lac_de_la_Balme-de-Sillingy_%2851056207507%29.jpg
 photo_type: real
 photo_author: "Guilhem Vellut from Annecy, France"
 photo_license: "CC BY 2.0"

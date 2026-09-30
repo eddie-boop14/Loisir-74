@@ -258,6 +258,13 @@ jobs:
         # station carries the tarif prose in some published langs but not all.
         run: python3 scripts/gate_tarif_completeness.py
 
+      - name: Wikimedia thumbnail gate (no hotlinked Commons originals)
+        # The 12 Commons files this site hotlinks weighed 54.4 MB as originals —
+        # one of them 8.98 MB at 4864x3648, rendered by the homepage in a card
+        # 270 CSS px wide. Scaled derivatives of the same files carry the same
+        # licence and credit and cost 2.8 MB. Read-only, offline.
+        run: python3 scripts/gate_wikimedia_thumbs.py
+
       - name: Lastmod honesty gate (real per-lieu dates, no uniform-stamp anti-pattern)
         # Read-only. data/lastmod.json is derived from git content-commit dates
         # (corpus-wide sweeps excluded) by scripts/derive_lastmod.py and committed
