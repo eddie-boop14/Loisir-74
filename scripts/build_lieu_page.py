@@ -1403,7 +1403,26 @@ def _invite_card(p, slug):
         '<article class="partner-invite">'
         f'<div class="invite-icon" aria-hidden="true">{icon}</div>'
         f'<h4>{esc(title)}</h4><p>{esc(desc)}</p>'
-        f'<a class="cta" href="{BASE_URL}{lang_prefix}/devenir-partenaire?lieu={attr(slug)}">'
+        # NO ?lieu= PARAMETER (14 Oct 2026). It generated 4,193 distinct URLs —
+        # one per lieu per locale — and NOTHING EVER READ IT: devenir-partenaire
+        # carries no URLSearchParams, no script touching location.search, and a
+        # free-text "Lieu(x) concerné(s)" field the visitor fills in by hand. So
+        # it bought nothing and cost a duplicate URL for every link.
+        #
+        # Google's 14 Oct coverage shows the bill: 128 of them sitting in "Autre
+        # page avec balise canonique correcte" with the validation failed. The
+        # canonical was always right and Google always honoured it — these were
+        # never indexed in error. What they consumed was crawl budget, on a site
+        # where 777 of 1,000 sampled not-indexed pages had not been fetched since
+        # July.
+        #
+        # Deliberately NOT rel="nofollow": these are our own internal links, and
+        # mistake 5 in the post-mortem is 1,050 of them wrongly nofollowed.
+        # Dropping the parameter removes the duplicate instead of asking Google
+        # to ignore it. If the prefill is ever wanted for real, the shape is a
+        # fragment (#lieu=…, never sent to the server, never a separate URL)
+        # plus the few lines of JS that would actually read it.
+        f'<a class="cta" href="{BASE_URL}{lang_prefix}/devenir-partenaire">'
         f'{T("become_partner")} {SVG_ARROW}</a>'
         '</article>'
     )
