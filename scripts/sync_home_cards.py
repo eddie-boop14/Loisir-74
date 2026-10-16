@@ -117,6 +117,12 @@ def esc_attr(s):
 SITE = siteconfig.BASE_URL
 
 
+# The card widths picture_tag emits — the single place that decides them.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from picture_tag import _CARD_WIDTHS  # noqa: E402
+_VARIANT_SUFFIXES = tuple(f"-{w}.webp" for w in _CARD_WIDTHS)
+
+
 def bare(u):
     """Domain-agnostic path. The homepage mixes absolute and relative forms for
     the same file; they are the same picture and must not count as drift."""
@@ -127,6 +133,27 @@ def like(existing, new):
     """Write `new` in whichever style this card already uses, so a card that is
     already correct is never rewritten just to change its URL form."""
     return SITE + new if existing.startswith(SITE) else new
+
+
+def primary(srcset):
+    """The full-size candidate of a srcset — the one that is not a card-sized
+    `-NNN.webp` derivative — with any width descriptor stripped.
+
+    A <source srcset> used to hold a single URL, and this script compared that
+    string to the hero directly. Since build_card_variants it can hold several
+    (`x-600.webp 600w, x.webp 1600w`), and the whole string never equals one
+    URL: so every card already showing the RIGHT photo looked like drift, had
+    its srcset flattened to a bare URL, and was left with an orphaned `sizes`
+    attribute pointing at candidates that no longer existed. Six homepage cards
+    were found in exactly that state. Compare the photo, not the string."""
+    cands = [c.strip().split()[0] for c in srcset.split(",") if c.strip()]
+    # Match the EXACT card widths, never "-<digits>.webp": the generic library
+    # numbers its images (generique-plage-lac-4.webp, generique-cinema-4.webp),
+    # and a loose pattern took the full-size file for a variant too — 13 cards
+    # flipped back and forth between this script and upgrade_card_pictures on
+    # every build until it was caught.
+    full = [c for c in cands if not c.endswith(_VARIANT_SUFFIXES)]
+    return (full or cands or [srcset])[0]
 
 
 def main():
@@ -173,10 +200,17 @@ def main():
 
             new = inner
             if has_picture:
-                new = SOURCE_RE.sub(
-                    lambda s: s.group(1) + (s.group(2) if bare(s.group(2)) == webp
-                                            else like(s.group(2), webp)) + s.group(3),
-                    new, count=1)
+                # Same photo → leave the srcset (and its card variants) alone.
+                # Different photo → point at the new hero and DROP `sizes`, which
+                # described candidates that are now gone; upgrade_card_pictures
+                # runs next and re-derives both from the new hero's variants.
+                src_tag = re.search(r'<source[^>]*>', new)
+                if src_tag and bare(primary(SOURCE_RE.search(src_tag.group(0)).group(2))) != webp:
+                    cur = primary(SOURCE_RE.search(src_tag.group(0)).group(2))
+                    fixed = SOURCE_RE.sub(lambda s: s.group(1) + like(cur, webp) + s.group(3),
+                                          src_tag.group(0), count=1)
+                    fixed = re.sub(r'\s+sizes="[^"]*"', "", fixed)
+                    new = new.replace(src_tag.group(0), fixed, 1)
             new = IMG_SRC_RE.sub(
                 lambda s: s.group(1) + (s.group(2) if bare(s.group(2)) == hero
                                         else like(s.group(2), hero)) + s.group(3),

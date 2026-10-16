@@ -594,6 +594,32 @@ def wikimedia_thumb_gate():
                           cwd=str(ROOT))
 
 
+def build_card_variants():
+    """600 px card derivatives beside every hero (scripts/build_card_variants.py).
+    Runs BEFORE any page renders: picture_tag only offers a variant that exists
+    on disk, so a page rendered first would ship without its srcset. Cheap on a
+    clean tree — a source-hash manifest skips every unchanged image undecoded."""
+    out = subprocess.run([sys.executable, str(SCRIPTS / "build_card_variants.py"), "--apply"],
+                         capture_output=True, text=True, cwd=str(ROOT))
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("build_card_variants failed")
+    print(out.stdout.strip())
+
+
+def upgrade_card_pictures():
+    """Render every local homepage card image through picture_tag. Runs right
+    after sync_home_cards: that decides WHICH photo a card shows, this decides
+    HOW it is written — including the 600w srcset, which the homepage could
+    never receive while it was authored chrome patched by regex."""
+    out = subprocess.run([sys.executable, str(SCRIPTS / "upgrade_card_pictures.py"), "--apply"],
+                         capture_output=True, text=True, cwd=str(ROOT))
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("upgrade_card_pictures failed")
+    print(out.stdout.strip())
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--no-site", action="store_true",
@@ -617,6 +643,7 @@ def main():
     run("hygiene gate (Tier 1/2 scan)", hygiene_gate)
     run("tarif roster-completeness gate", tarif_completeness_gate)
     run("wikimedia thumbnail gate (no hotlinked Commons originals)", wikimedia_thumb_gate)
+    run("card-sized image variants (before any page renders)", build_card_variants)
     run("render fiche pages", render_all_fiches)
     run("rebuild catalog index", rebuild_catalog_index)
     run("regenerate hubs + homepage nav", rebuild_hubs)
@@ -649,6 +676,8 @@ def main():
     run("cache-bust runtime /scripts/ includes (content-hash ?v=)", version_runtime_assets)
     run("sync homepage card images from Json/ heroes (derived, never authored)",
         sync_home_cards)
+    run("render homepage card images through picture_tag (srcset, after sync)",
+        upgrade_card_pictures)
     run("emit .well-known/security.txt (RFC 9116 — Expires must never lapse)",
         rebuild_security_txt)
     run("force directory URLs a flat .html shadows (the commune/station collision)",
