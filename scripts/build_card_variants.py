@@ -43,6 +43,15 @@ from. A stem whose source hash matches and whose variant exists is skipped
 WITHOUT decoding — hashing 247 MB takes about a second, re-encoding it at
 method=6 takes ten minutes. A replaced hero changes its hash and is redone.
 
+PILLOW IS IMPORTED ONLY WHEN SOMETHING MUST BE ENCODED. CI installs no Pillow,
+and this was the first build step to need it: e8d1d5c76e went red on main for
+exactly that. A clean tree needs none — every stem is a manifest hit, including
+the ones that deliberately get NO variant, recorded as "<hash>:none" so they
+skip undecoded too. And when a stem IS stale and Pillow is absent, the run
+FAILS, naming it. Installing Pillow in CI would be the wrong fix: CI would
+regenerate the variant inside its throwaway checkout and pass, while the stale
+-600.webp in the repo went on serving the OLD photo through the srcset.
+
     python3 scripts/build_card_variants.py [--apply] [--report]
 """
 from __future__ import annotations
@@ -51,8 +60,6 @@ import io
 import os
 import sys
 from pathlib import Path
-
-from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 IMG = ROOT / "img"
@@ -86,8 +93,9 @@ def sources():
     return [best[k] for k in sorted(best)]
 
 
-def encode(im: Image.Image, width: int) -> bytes | None:
+def encode(im, width: int) -> bytes | None:
     """Resize to `width` and encode to webp in memory. None if it would upscale."""
+    from PIL import Image
     if im.width <= width:
         return None
     h = round(im.height * width / im.width)
@@ -110,15 +118,23 @@ def main():
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8")) if MANIFEST.exists() else {}
     new_manifest = {}
     written = skipped = cached = 0
+    stale: list[str] = []
     before = after = 0
     for src in sources():
         rel_stem = os.path.relpath(os.path.splitext(str(src))[0], ROOT)
         h = _sha(src)
         targets = [Path(f"{os.path.splitext(str(src))[0]}-{w}.webp") for w in WIDTHS]
-        # Fast path: same source as last time and its variants are on disk.
-        if manifest.get(rel_stem) == h and all(t.exists() for t in targets):
-            new_manifest[rel_stem] = h
+        # Fast path: same source as last time, and either its variants are on
+        # disk or it was judged not to need one. No decode, no Pillow.
+        rec = manifest.get(rel_stem)
+        if rec == f"{h}:none" or (rec == h and all(t.exists() for t in targets)):
+            new_manifest[rel_stem] = rec
             cached += 1
+            continue
+        try:
+            from PIL import Image
+        except ImportError:
+            stale.append(rel_stem)
             continue
         try:
             with Image.open(src) as im:
@@ -146,9 +162,17 @@ def main():
                     written += 1
                     if apply:
                         dst.write_bytes(data)
-            new_manifest[rel_stem] = h
+            made = all(t.exists() for t in targets) if apply else True
+            new_manifest[rel_stem] = h if made else f"{h}:none"
         except Exception as e:                       # noqa: BLE001
             print(f"  !! {src}: {e}", file=sys.stderr)
+    if stale:
+        print(f"card variants: {len(stale)} stale and Pillow is not installed — "
+              "regenerate locally with `python3 scripts/build_card_variants.py --apply` "
+              "and commit the result:", file=sys.stderr)
+        for st in stale[:20]:
+            print(f"    {st}", file=sys.stderr)
+        sys.exit(1)
     if apply:
         MANIFEST.write_text(json.dumps(dict(sorted(new_manifest.items())), indent=0) + "\n",
                             encoding="utf-8")
