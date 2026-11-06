@@ -375,6 +375,21 @@ def inject_sister_home():
     print(out.stdout.strip().splitlines()[0] if out.stdout.strip() else "(sister line injected)")
 
 
+def inject_family_footer():
+    """The "part of the Officiallink family" footer line (scripts/
+    inject_family_footer.py). It is followed on the 12 homepages and nofollow
+    everywhere else. Runs after every page has rendered, so no builder writes
+    a footer after it. Config-driven both ways."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "inject_family_footer.py"), "--apply"],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("inject_family_footer failed")
+    print(out.stdout.strip())
+
+
 def status_gate():
     """JOB 6 gate: every fiche must have an explicit status (draft|verified|
     published). Print the distribution. Block if any fiche has status=None."""
@@ -685,6 +700,8 @@ def main():
     run("preload the hub/commune banner (CSS background — invisible to the preload scanner)",
         preload_hub_hero)
     run("inject Cloudflare Web Analytics beacon (every published page)", inject_analytics)
+    run("inject the Officiallink family footer line (followed on homepages only)",
+        inject_family_footer)
     run("re-mark promotional links (safety net: pages rendered after the gates)",
         mark_sponsored_links)
     run("re-derive sitemap <lastmod> on the settled tree (after the last HTML mutator)",
