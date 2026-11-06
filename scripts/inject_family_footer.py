@@ -1,22 +1,27 @@
 #!/usr/bin/env python3
-"""inject_family_footer.py: the "Part of the Officiallink family" footer line.
+"""inject_family_footer.py: the "An officiallink.org project" footer line.
 
 WHAT IT RENDERS
-  One short line in every page footer, localized from the first path segment
-  (/en/, /de/, ...; anything else is French):
+  The eVTOL sites' footer line, same wording and shape, localized from the
+  first path segment (/en/, /de/, ...; anything else is French):
 
-      Fait partie de la famille Officiallink
+      Un projet d'officiallink.org. Pourquoi ce site existe →
+      An officiallink.org project. Why it exists →
 
-  The line goes just above the footer's bottom bar (<div class="foot-bottom">).
-  On the pages that have no bottom bar (legal pages and forms), it goes just
-  before </footer>.
+  Two links: officiallink.org and its /why/ page (the /fr/ versions on French
+  pages, the only other language officiallink.org has). Wording for en, fr,
+  de and ar is copied from qatarevtol.com; the other eight are DeepL.
+
+  The line sits directly under the copyright: right after the bottom bar
+  (<div class="foot-bottom">) when the footer has one; otherwise at the end
+  of the footer's wrapper; otherwise just before </footer>.
 
 WHY ONLY THE HOMEPAGES PASS PAGERANK
   The same owner runs every site involved. A followed link on all 6,000+ pages
   is the sitewide "excessive link exchange" pattern behind the August 2026
   collapse (see POSTMORTEM-google-collapse-2026-08.md). The 12 homepages
-  (/index.html and /<lang>/index.html) carry a followed link. Every other page
-  carries rel="nofollow". Visitors see the same line everywhere.
+  (/index.html and /<lang>/index.html) carry followed links. Every other page
+  carries rel="nofollow" on both. Visitors see the same line everywhere.
 
 CONFIG-DRIVEN, BOTH WAYS
   If siteconfig.FAMILY is present, the line is inserted or repaired. The block
@@ -41,11 +46,12 @@ import siteconfig  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 MARK_A, MARK_B = "<!--family:start-->", "<!--family:end-->"
-FENCE_RE = re.compile(re.escape(MARK_A) + r".*?" + re.escape(MARK_B) + r"\n?", re.S)
+FENCE_RE = re.compile(re.escape(MARK_A) + r".*?" + re.escape(MARK_B), re.S)
 SKIP_TOP = {"reports", "scripts", "_site", "scratchpad", "tests", "node_modules",
             "incoming-generics", ".git"}
-ANCHORS = ('<div class="foot-bottom">', "</footer>")
-
+FOOT_BOTTOM_RE = re.compile(r'<div class="foot-bottom">.*?</div>', re.S)
+LINK_STYLE = "color:inherit;text-decoration:underline;text-underline-offset:2px"
+LINE_STYLE = "margin-top:.75rem;font-size:.75rem;opacity:.85"
 
 def lang_of(rel, phrases):
     first = rel.split("/", 1)[0]
@@ -60,24 +66,44 @@ def is_homepage(rel, phrases):
 
 
 def render(fam, lang, followed):
-    phrase = fam["phrase"].get(lang) or fam["phrase"]["fr"]
+    """The eVTOL sites' footer line, word for word in en/fr/de/ar:
+    An <a>officiallink.org</a> project. <a>Why it exists →</a>"""
+    before, after, why = fam["copy"].get(lang) or fam["copy"]["fr"]
+    base = fam["url"] + fam.get("locale_paths", {}).get(lang, "")
     rel = "" if followed else ' rel="nofollow"'
-    return (f'{MARK_A}<p class="family" style="margin:0 0 1rem;font-size:.8rem;opacity:.85">'
-            f'{html_lib.escape(phrase)} <a href="{html_lib.escape(fam["url"])}"{rel}>'
-            f'{html_lib.escape(fam["name"])}</a></p>{MARK_B}')
+    esc = lambda t: html_lib.escape(t, quote=False)
+    attr = html_lib.escape
+    a = lambda href, text: (f'<a style="{LINK_STYLE}" href="{attr(href)}"{rel}>'
+                            f'{esc(text)}</a>')
+    return (f'{MARK_A}<div class="family" style="{LINE_STYLE}">{esc(before)}'
+            f'{a(base, fam["label"])}{esc(after)} {a(base + fam["why_path"], why)}'
+            f'</div>{MARK_B}')
 
 
-def process(text, block):
+def insertion_point(text):
+    """Directly under the copyright, wherever this footer keeps it:
+    after the bottom bar when there is one; otherwise at the end of the
+    footer's wrapper (</div></footer>); otherwise just before </footer>."""
+    end = text.index("</footer>")
+    bars = list(FOOT_BOTTOM_RE.finditer(text, 0, end))
+    if len(bars) == 1:
+        return bars[0].end()
+    if len(bars) > 1:
+        return None
+    m = list(re.finditer(r"</div>\s*</footer>", text))
+    return m[0].start() if len(m) == 1 else end
+
+
+def process(text, fam, lang, followed):
     stripped = FENCE_RE.sub("", text)
-    if block is None:
+    if not fam:
         return stripped
     if stripped.count("</footer>") != 1:
         return None
-    for anchor in ANCHORS:
-        if stripped.count(anchor) == 1:
-            i = stripped.index(anchor)
-            return stripped[:i] + block + stripped[i:]
-    return None
+    i = insertion_point(stripped)
+    if i is None:
+        return None
+    return stripped[:i] + render(fam, lang, followed) + stripped[i:]
 
 
 def main():
@@ -85,7 +111,7 @@ def main():
     ap.add_argument("--apply", action="store_true")
     args = ap.parse_args()
     fam = siteconfig.FAMILY
-    phrases = (fam or {}).get("phrase") or {}
+    phrases = (fam or {}).get("copy") or {}
     changed = followed = skipped = total = 0
     for dirpath, dirnames, filenames in os.walk(ROOT):
         rel_dir = os.path.relpath(dirpath, ROOT)
@@ -100,12 +126,9 @@ def main():
             if '<footer class="site"' not in text and MARK_A not in text:
                 continue
             total += 1
-            block = None
-            if fam:
-                home = is_homepage(rel, phrases)
-                followed += home
-                block = render(fam, lang_of(rel, phrases), home)
-            new = process(text, block)
+            home = bool(fam) and is_homepage(rel, phrases)
+            followed += home
+            new = process(text, fam, lang_of(rel, phrases), home)
             if new is None:
                 skipped += 1
                 print(f"  SKIP (footer anchor not unique): {rel}", file=sys.stderr)
