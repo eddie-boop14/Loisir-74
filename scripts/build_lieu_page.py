@@ -891,12 +891,28 @@ def owner_pin(slug):
         except FileNotFoundError:
             _PINS = {}
     p = _PINS.get(slug or "")
-    return p if p and p.get("by") == "Eddie" and p.get("url") else None
+    if not (p and p.get("by") == "Eddie" and p.get("url")):
+        return None
+    if "commune" not in p:   # for a label with no address ("Semnoz"), routes add our commune
+        try:
+            p["commune"] = json.loads((REPO / "Json" / f"{slug}.json").read_text(encoding="utf-8")).get("commune") or ""
+        except (OSError, ValueError):
+            p["commune"] = ""
+    return p
 
 
 def _pin_coords(pin):
+    """Where a route to the owner's pin should go: the pin's coordinates when
+    the link carried them, else Google's own label for the place he pinned
+    ("Lac Blanc, 74400 Chamonix"), which resolves to that place, not a guess
+    built from our name and commune."""
     if pin and pin.get("lat") is not None and pin.get("lon") is not None:
         return f"{pin['lat']},{pin['lon']}"
+    lab = (pin or {}).get("label") or ""
+    if lab and not lab.islower():   # an all-lowercase label is the search he typed, not Google's name
+        if "," not in lab and pin.get("commune"):
+            lab = f"{lab}, {pin['commune']}"
+        return url_q(lab)
     return None
 
 

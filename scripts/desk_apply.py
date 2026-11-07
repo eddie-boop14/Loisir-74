@@ -20,8 +20,11 @@ PINS (ruling, 7 Nov 2026: "real pin, not random coords from an API")
     - one link given to two places: refused for both, both cards stay open;
     - a link that is already another place's pin: refused;
     - the same link again: unchanged (applying twice changes nothing).
-  The link is followed to the place it opens, and the pinned place's own
-  coordinates (!3d…!4d…, else @lat,lon) are stored with it. A pin outside
+  The link is followed (a plain redirect, with a declared user agent) to the
+  place it opens. Google's label for that place is stored ("Lac Blanc, 74400
+  Chamonix"): routes go to it. Share links carry no coordinates, and reading
+  them out of Google's page would mean scraping it, which we do not do; when a
+  /maps/place/ link does carry !3d…!4d… or @lat,lon, those are stored too. A pin outside
   Haute-Savoie's bounding box is refused, because it is almost certainly a
   paste for the wrong place. A pin more than 15 km from the stored position is
   kept but flagged in the report.
@@ -94,6 +97,18 @@ def coords_from(url):
     return (round(float(m.group(1)), 6), round(float(m.group(2)), 6)) if m else (None, None)
 
 
+def label_from(url):
+    """Google's own label for the pinned place: the /maps/place/<label>/ segment
+    of the URL the share link opens ("Lac Blanc, 74400 Chamonix")."""
+    m = re.search(r"/maps/place/([^/?#]+)", url or "")
+    return urllib.parse.unquote_plus(m.group(1)).strip() if m else None
+
+
+def clean(url):
+    """A share link without its tracking query (?g_st=…): same place, stable key."""
+    return url.split("?")[0] if "maps.app.goo.gl" in url or "goo.gl/maps" in url else url
+
+
 def km(a, b, c, d):
     p1, p2 = math.radians(a), math.radians(c)
     h = math.sin((p2 - p1) / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(math.radians(d - b) / 2) ** 2
@@ -163,9 +178,12 @@ def main():
                     report.append({"id": aid, "result": "refused", "why": f"the link did not open ({e.__class__.__name__}); copy it again from Google Maps"}); continue
             if lat is not None and not (BBOX[0] <= lat <= BBOX[1] and BBOX[2] <= lon <= BBOX[3]):
                 report.append({"id": aid, "result": "refused", "why": f"the pin is outside Haute-Savoie ({lat}, {lon}): probably another place"}); continue
-            entry = {"url": url, "given_on": on, "by": "Eddie"}
+            entry = {"url": clean(url), "given_on": on, "by": "Eddie"}
             if resolved:
-                entry["resolved"] = resolved
+                entry["resolved"] = resolved.split("?")[0]
+                lab = label_from(resolved)
+                if lab:
+                    entry["label"] = lab
             if lat is not None:
                 entry["lat"], entry["lon"] = lat, lon
             if cur:
@@ -174,8 +192,8 @@ def main():
             slat, slon = stored.get(slug, (None, None))
             if lat is not None and slat is not None and km(lat, lon, slat, slon) > FAR_KM:
                 note = f"pin is {km(lat, lon, slat, slon):.0f} km from the old position: check it is the right place"
-            elif lat is None and not args.no_network:
-                note = "no coordinates in the link: map buttons use it, distances keep the old position"
+            elif lat is None and not entry.get("label") and not args.no_network:
+                note = "the link opened no place page: map buttons use the link, routes keep the old target"
             pins[slug] = entry
             report.append({"id": aid, "result": "applied", **({"note": note} if note else {})})
         elif kind == "call":
