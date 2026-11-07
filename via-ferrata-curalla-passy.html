@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/via-ferrata-curalla-passy.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/via-ferrata-curalla-passy.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">À proximité</p>
-    <h2>À proximité</h2>
+    <h2>À 1 km d'ici…</h2>
     <p class="lead">D'autres lieux à explorer dans le coin et dans la même catégorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/sentier-desert-de-plate-passy" class="card-photo">
       <img src="/img/generique/generique-sentier-sommet-panorama.jpg" alt="Sentier de randonnée alpin Sentier du Désert de Platé à Passy Haute-Savoie - 6,5 km aller-retour · 870 m D+ difficile" loading="lazy">
-      <span class="card-tag">Gratuit</span>
+      <span class="card-tag">1 km · Gratuit</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/sentier-desert-de-plate-passy" class="title">Sentier du Désert de Platé</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/jardin-cimes-passy" class="card-photo">
       <img src="/img/generique/generique-parc.jpg" alt="Jardin alpin paysager face Mont-Blanc Jardin des Cimes à Passy Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">1 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/jardin-cimes-passy" class="title">Jardin des Cimes</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cascade-de-chedde" class="card-photo">
       <img src="/img/cascades/cascade-de-chedde-hero.jpg" alt="Cascade de Chedde en forme de cœur, torrent Ugine, Passy-Chedde, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuit</span>
+      <span class="card-tag">1 km · Gratuit</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cascade-de-chedde" class="title">Cascade de Chedde</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/paintball-fiz-passy" class="card-photo">
       <img src="/img/generique/generique-paintball-bunkers.jpg" alt="Paintball Fiz — paintball à Passy, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">2 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/paintball-fiz-passy" class="title">Paintball Fiz</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/passy-accro-lac" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Accrobranche_floreval_2.jpg/960px-Accrobranche_floreval_2.jpg" alt="Parcours accrobranche en forêt avec tyroliennes au bord du lac de Passy, face au massif du Mont-Blanc, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">2 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/passy-accro-lac" class="title">Passy Accro Lac</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/canyoning-yaute-canyon" class="card-photo">
       <img src="/img/generique/generique-canyoning-5.jpg" alt="Yaute Canyon — canyoning dans les Aravis et autour d&#x27;Annecy" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">2 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/canyoning-yaute-canyon" class="title">Yaute Canyon</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Caché tout près</h3><ul><li><a href="https://loisirs74.fr/aire-de-decollage-parapente-plaine-joux">Aire de décollage parapente de Plaine-Joux</a><span>Passy · 4 km</span></li><li><a href="https://loisirs74.fr/base-de-loisirs-du-lac-des-iles">Base de loisirs du Lac des Îles</a><span>Passy · 4 km</span></li><li><a href="https://loisirs74.fr/lac-de-passy">Lac de Passy</a><span>Passy · 4 km</span></li></ul></div><div class="disc"><h3>Des lacs qui valent le détour</h3><ul><li><a href="https://loisirs74.fr/lac-vert-passy">Lac Vert</a><span>Passy · 5 km</span></li><li><a href="https://loisirs74.fr/lac-cornu">Lac Cornu</a><span>Chamonix-Mont-Blanc · 12 km</span></li><li><a href="https://loisirs74.fr/lac-blanc">Lac Blanc</a><span>Chamonix-Mont-Blanc · 16 km</span></li></ul></div><div class="disc"><h3>Si vous avez aimé, essayez…</h3><ul><li><a href="https://loisirs74.fr/via-ferrata-berard-vallorcine">Via ferrata de la Cascade de Bérard</a><span>Vallorcine · 19 km</span></li><li><a href="https://loisirs74.fr/via-ferrata-pollet-villard-la-clusaz">Via ferrata Yves Pollet-Villard</a><span>La Clusaz · 20 km</span></li><li><a href="https://loisirs74.fr/cascade-aventure">Cascade Aventure</a><span>Morzine · 25 km</span></li></ul></div><p class="disc-note">Distances à vol d'oiseau, d'un lieu à l'autre.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publié le 3 juin 2026</span><span class="sep">·</span><span>Mis à jour le 26/06/26</span></p></div></main>

@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/plage-de-la-pinede.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/plage-de-la-pinede.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Naar inhoud springen</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">In de buurt</p>
-    <h2>In de buurt</h2>
+    <h2>Op 1 km hiervandaan…</h2>
     <p class="lead">Andere plekken om te ontdekken in de buurt en in dezelfde categorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/nl/aquaparc-thonon-piscine-olympique-thonon" class="card-photo">
       <img src="/img/generique/generique-aquatique-piscine-exterieur.jpg" alt="Piscine Olympique de Thonon — aquapark / overdekt zwembad in Thonon-les-Bains, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">1 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/aquaparc-thonon-piscine-olympique-thonon" class="title">Piscine Olympique de Thonon</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/ecomusee-peche-et-du-lac-thonon" class="card-photo">
       <img src="/img/musees/ecomusee-peche-et-du-lac-thonon-hero.jpg" alt="Traditionele houten visserskoten aan de Port de Rives in Thonon waar het Ecomuseum van de visserij en het meer is gevestigd, aan de voet van het Château de Rives" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">2 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/ecomusee-peche-et-du-lac-thonon" class="title">Ecomuseum van de visserij en het meer</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/chateau-ripaille-thonon" class="card-photo">
       <img src="/img/chateaux/chateau-ripaille-thonon-hero.jpg" alt="Kasteel van Ripaille met zijn 4 torens en versterkte ringmuur uit de 14e eeuw, gerestaureerd 1892-1903 op het 53 ha grote domein aan het Meer van Genève, Thonon" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">2 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/chateau-ripaille-thonon" class="title">Kasteel van Ripaille</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/plage-de-saint-disdille" class="card-photo">
       <img src="/img/lacs-plages/plage-de-saint-disdille-hero.jpg" alt="Plage de Saint-Disdille aan het Meer van Genève met zone in de schaduw van kastanjes, Thonon-les-Bains, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">2 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/plage-de-saint-disdille" class="title">Plage de Saint-Disdille</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/plage-de-sciez-sur-leman" class="card-photo">
       <img src="/img/lacs-plages/plage-de-sciez-sur-leman-hero.jpg" alt="Grasstrand van Sciez-sur-Léman met zicht op het meer, bij de jachthaven, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">9 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/plage-de-sciez-sur-leman" class="title">Plage de Sciez-sur-Léman</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/plage-d-excenevex" class="card-photo">
       <img src="/img/lacs-plages/plage-d-excenevex-hero.jpg" alt="Fijn zandstrand van Excenevex aan het Meer van Genève met zicht op de Dent d&#x27;Oche en de Zwitserse Alpen, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">11 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/plage-d-excenevex" class="title">Plage d'Excenevex</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Vlakbij verstopt</h3><ul><li><a href="https://loisirs74.fr/nl/musee-du-chablais-thonon-les-bains">Museum van het Chablais</a><span>Thonon-les-Bains · 2 km</span></li><li><a href="https://loisirs74.fr/nl/chateau-sonnaz-thonon-bains">Kasteel Sonnaz</a><span>Thonon-les-Bains · 2 km</span></li><li><a href="https://loisirs74.fr/nl/plaine-de-loisirs-de-la-grangette">Recreatiepark La Grangette</a><span>Thonon-les-Bains · 2 km</span></li></ul></div><div class="disc"><h3>Uitzichtpunten die zeker een omweg waard zijn</h3><ul><li><a href="https://loisirs74.fr/nl/reserve-naturelle-delta-de-la-dranse">Natuurreservaat Delta van de Dranse</a><span>Publier · 3 km</span></li><li><a href="https://loisirs74.fr/nl/plateau-de-loex">Plateau de Loëx</a><span>Habère-Poche · 13 km</span></li><li><a href="https://loisirs74.fr/nl/pointe-de-miribel">Pointe de Miribel</a><span>Villard · 20 km</span></li></ul></div><div class="disc"><h3>Als je dit leuk vond, probeer dan eens…</h3><ul><li><a href="https://loisirs74.fr/nl/lac-de-vallon">Lac de Vallon</a><span>Bellevaux · 21 km</span></li><li><a href="https://loisirs74.fr/nl/lac-benit">Lac Bénit</a><span>Mont-Saxonnex · 41 km</span></li><li><a href="https://loisirs74.fr/nl/lac-des-dronieres">Lac des Dronières</a><span>Cruseilles · 48 km</span></li></ul></div><p class="disc-note">Afstanden in vogelvlucht, van de ene plaats naar de andere.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Gepubliceerd 14 mai 2026</span><span class="sep">·</span><span>Bijgewerkt 14/06/26</span></p></div></main>

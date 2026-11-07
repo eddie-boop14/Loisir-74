@@ -108,6 +108,8 @@
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
 
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
+
 [dir=rtl] a.skip{left:auto;inset-inline-start:-9999px}
 [dir=rtl] a.skip:focus{inset-inline-start:0}
 [dir=rtl] h1.hammer{direction:ltr;text-align:right}</style>
@@ -117,7 +119,7 @@
 <link rel="alternate" type="text/markdown" href="/content/chiens-de-traineau-granges-de-heidi-passy.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/chiens-de-traineau-granges-de-heidi-passy.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">דלג לתוכן</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">ראו גם</p>
-    <h2>ראו גם</h2>
-    <p class="lead"></p>
+    <h2>במרחק 2 ק"מ מכאן…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/he/cascade-de-l-arpenaz" class="card-photo">
       <img src="/img/cascades/cascade-de-l-arpenaz-hero.jpg" alt="Cascade de l&#x27;Arpenaz, מפל בגובה 270 מטר על צוק גיר, Sallanches, Haute-Savoie" loading="lazy">
-      <span class="card-tag">חינם</span>
+      <span class="card-tag">2 km · חינם</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/cascade-de-l-arpenaz" class="title">Cascade de l'Arpenaz</a>
@@ -201,7 +210,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/les-carroz" class="card-photo">
       <img src="/img/stations-de-ski/les-carroz-hero.jpg" alt="תחום הסקי של Les Carroz, שער הכניסה ל-Grand Massif" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">4 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/les-carroz" class="title">Les Carroz</a>
@@ -215,7 +224,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/cascade-de-doran" class="card-photo">
       <img src="/img/cascades/cascade-de-doran-hero.jpg" alt="Cascade de Doran הצונח 70 מטרים דרך יער עלים רחבים, Sallanches, Haute-Savoie" loading="lazy">
-      <span class="card-tag">חינם</span>
+      <span class="card-tag">4 km · חינם</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/cascade-de-doran" class="title">Cascade de Doran</a>
@@ -229,7 +238,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/speleo-grotte-de-balme-magland" class="card-photo">
       <img src="/img/generique/generique-speleo-grande-salle.jpg" alt="Grotte de Balme — Magland, עמק Arve, Haute-Savoie" loading="lazy">
-      <span class="card-tag">חינם</span>
+      <span class="card-tag">6 km · חינם</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/speleo-grotte-de-balme-magland" class="title">Grotte de Balme — Magland</a>
@@ -243,7 +252,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/chiens-de-traineau-evasion-nordique-les-carroz" class="card-photo">
       <img src="/img/generique/generique-chiens-de-traineau-1.jpg" alt="Evasion Nordique — רתימת כלבי מזחלת ב-Les Carroz d&#x27;Arâches" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">7 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/chiens-de-traineau-evasion-nordique-les-carroz" class="title">Evasion Nordique — Chiens de traîneau Les Carroz</a>
@@ -257,7 +266,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/via-ferrata-curalla-passy" class="card-photo">
       <img src="/img/generique/generique-via-ferrata-traversee.jpg" alt="ויה פראטה דה קוראלה, מסלול AD+ עם תצפיות אל Mont-Blanc במסיף פיז (Fiz), ב-Passy, Haute-Savoie" loading="lazy">
-      <span class="card-tag">חינם</span>
+      <span class="card-tag">7 km · חינם</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/via-ferrata-curalla-passy" class="title">Via ferrata de Curalla</a>
@@ -268,6 +277,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>מוסתר ממש קרוב</h3><ul><li><a href="https://loisirs74.fr/he/base-de-loisirs-des-ilettes">Base de loisirs des Ilettes</a><span>Sallanches · 5 km</span></li><li><a href="https://loisirs74.fr/he/grp-tour-pays-mont-blanc-sallanches">GR® de Pays Tour du Pays du Mont-Blanc</a><span>Sallanches · 6 km</span></li><li><a href="https://loisirs74.fr/he/chateau-des-rubins-sallanches">Château des Rubins</a><span>Sallanches · 6 km</span></li></ul></div><div class="disc"><h3>מפלים ששווים ביקור</h3><ul><li><a href="https://loisirs74.fr/he/cascade-de-chedde">Cascade de Chedde</a><span>Passy · 8 km</span></li><li><a href="https://loisirs74.fr/he/cascade-des-fours">Cascade des Fours</a><span>Sallanches · 8 km</span></li><li><a href="https://loisirs74.fr/he/gorges-de-la-diosaz">Gorges de la Diosaz</a><span>Servoz · 12 km</span></li></ul></div><div class="disc"><h3>אם אהבתם, נסו…</h3><ul><li><a href="https://loisirs74.fr/he/parc-de-merlet">Parc de Merlet</a><span>Les Houches · 17 km</span></li><li><a href="https://loisirs74.fr/he/via-ferrata-pollet-villard-la-clusaz">Via ferrata Yves Pollet-Villard</a><span>La Clusaz · 19 km</span></li><li><a href="https://loisirs74.fr/he/cote-2000-aventure">Côte 2000 Aventure</a><span>Megève · 19 km</span></li></ul></div><p class="disc-note">מרחקים בקו אווירי, ממקום למקום.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>פורסם בתאריך 3 juin 2026</span><span class="sep">·</span><span>עודכן בתאריך 26/06/26</span></p></div></main>

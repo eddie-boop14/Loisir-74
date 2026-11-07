@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/reserve-naturelle-bout-du-lac.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/reserve-naturelle-bout-du-lac.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Cerca</p>
-    <h2>Cerca</h2>
+    <h2>A 1 km de aquí…</h2>
     <p class="lead">Otros lugares para explorar en la zona y en la misma categoría</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/es/base-nautique-doussard-doussard" class="card-photo">
       <img src="/img/generique/generique-barque-aviron.jpg" alt="Base náutica multioperador – vela + wake + paddle – Base Náutica de Doussard, Alta Saboya 74" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">1 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/base-nautique-doussard-doussard" class="title">Base Náutica de Doussard</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/sentier-bout-du-lac-doussard" class="card-photo">
       <img src="/img/generique/generique-sentier-foret-alpine.jpg" alt="Sendero de interpretación - accesible desde 2010 - Bout du Lac d&#x27;Annecy en Doussard, Haute-Savoie - bucle accesible de 1,6 km · bucle completo de 7 km, muy fácil" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">1 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/sentier-bout-du-lac-doussard" class="title">Sendero pedagógico del Bout du Lac d'Annecy</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/aire-de-repos-bredannaz-doussard" class="card-photo">
       <img src="/img/generique/generique-voie-verte-famille-kids.jpg" alt="La Voie Verte du Lac d&#x27;Annecy a la altura de Bredannaz, en el municipio de Doussard" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">1 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/aire-de-repos-bredannaz-doussard" class="title">Aire de repos de l'ancienne gare de Bredannaz</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/col-de-la-forclaz" class="card-photo">
       <img src="/img/points-de-vue/col-de-la-forclaz-hero.jpg" alt="Col de la Forclaz a 1.147 m, balcón panorámico sobre el lago de Annecy desde Talloires-Montmin" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">4 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/col-de-la-forclaz" class="title">Col de la Forclaz</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/le-semnoz" class="card-photo">
       <img src="/img/points-de-vue/le-semnoz-hero.jpg" alt="Le Semnoz sobre Annecy, Alta Saboya" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">9 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/le-semnoz" class="title">Le Semnoz</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/belvedere-du-mont-baron" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg/960px-Chemin_mont_Veyrier_mont_Baron.jpg" alt="Belvédère du Mont Baron con vista panorámica sobre el lago de Annecy y los macizos de los Bauges, Veyrier-du-Lac, Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">13 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/belvedere-du-mont-baron" class="title">Belvédère du Mont Baron</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Escondido muy cerca</h3><ul><li><a href="https://loisirs74.fr/es/musee-archeologique-viuz-faverges">Museo Arqueológico de Viuz-Faverges</a><span>Faverges-Seythenex · 7 km</span></li><li><a href="https://loisirs74.fr/es/cascade-de-fontany-saint-ferreol">Cascade de Fontany</a><span>Saint-Ferréol · 7 km</span></li><li><a href="https://loisirs74.fr/es/chateau-et-donjon-des-seigneurs-de-faverges">Château et Donjon des Seigneurs de Faverges</a><span>Faverges-Seythenex · 7 km</span></li></ul></div><div class="disc"><h3>Cascadas que merecen una visita</h3><ul><li><a href="https://loisirs74.fr/es/cascade-d-angon">Cascade d'Angon</a><span>Talloires-Montmin · 6 km</span></li><li><a href="https://loisirs74.fr/es/grotte-et-cascade-de-seythenex">Grotte et Cascade de Seythenex</a><span>Faverges-Seythenex · 9 km</span></li><li><a href="https://loisirs74.fr/es/gorges-du-fier">Gorges du Fier</a><span>Lovagny · 19 km</span></li></ul></div><div class="disc"><h3>Si te ha gustado, prueba…</h3><ul><li><a href="https://loisirs74.fr/es/mont-veyrier">Mont Veyrier</a><span>Annecy · 15 km</span></li><li><a href="https://loisirs74.fr/es/col-de-la-croix-fry">Col de la Croix-Fry</a><span>Manigod · 18 km</span></li><li><a href="https://loisirs74.fr/es/tete-du-parmelan">Tête du Parmelan</a><span>Dingy-Saint-Clair · 20 km</span></li></ul></div><p class="disc-note">Distancias en línea recta, de un lugar a otro.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publicado el 1 juin 2026</span><span class="sep">·</span><span>Actualizado el 19/07/26</span></p></div></main>

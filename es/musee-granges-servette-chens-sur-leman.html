@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/musee-granges-servette-chens-sur-leman.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/musee-granges-servette-chens-sur-leman.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Cerca</p>
-    <h2>Cerca</h2>
+    <h2>A 2 km de aquí…</h2>
     <p class="lead">Otros lugares para explorar en la zona y en la misma categoría</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/es/plage-de-tougues-chens" class="card-photo">
       <img src="/img/generique/generique-plage-lac-13.jpg" alt="Playa sombreada de césped y guijarros con zona de barbacoa: Plage de Tougues en Chens-sur-Léman, Lago Lemán, Alta Saboya 74" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">2 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/plage-de-tougues-chens" class="title">Plage de Tougues</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/chateau-thenieres-ballaison" class="card-photo">
       <img src="/img/generique/generique-chateau.jpg" alt="Castillo de Thénières en Ballaison, capricho pseudo-medieval del s. XIX con torres sobre el Lago Lemán" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">4 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/chateau-thenieres-ballaison" class="title">Castillo de Thénières</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/plage-de-messery" class="card-photo">
       <img src="/img/lacs-plages/plage-de-messery-hero.jpg" alt="Playa de césped de 400 m en la península frente a Nyon: Plage de Messery, Lago Lemán, Alta Saboya 74" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">5 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/plage-de-messery" class="title">Plage de Messery</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/musee-cinema-philippe-piccot-douvaine" class="card-photo">
       <img src="/img/generique/generique-musee.jpg" alt="Museo del Cine Philippe Piccot en Douvaine, colección de proyectores cinematográficos Buisse-Bottazzi de 1946 a 2007" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">3 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/musee-cinema-philippe-piccot-douvaine" class="title">Museo del Cine Philippe Piccot</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/musee-ailes-anciennes-excenevex" class="card-photo">
       <img src="/img/generique/generique-musee-grande-galerie.jpg" alt="Museo de las Alas Antiguas en Excenevex, aviones y helicópteros en restauración a orillas del Lemán" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">7 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/musee-ailes-anciennes-excenevex" class="title">Museo de las Alas Antiguas</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/musee-departemental-sapeurs-pompiers-haute-savoie-sciez" class="card-photo">
       <img src="/img/generique/generique-musee.jpg" alt="Museo Departamental de Bomberos de Alta Saboya en el Domaine de Guidou en Sciez, a orillas del Lemán" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">9 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/musee-departemental-sapeurs-pompiers-haute-savoie-sciez" class="title">Museo Departamental de Bomberos de Alta Saboya</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Escondido muy cerca</h3><ul><li><a href="https://loisirs74.fr/es/plage-d-excenevex">Playa de Excenevex</a><span>Excenevex · 8 km</span></li><li><a href="https://loisirs74.fr/es/domaine-de-guidou">Domaine de Guidou</a><span>Sciez · 9 km</span></li><li><a href="https://loisirs74.fr/es/musee-prehistoire-geologie-sciez">Musée de Préhistoire et Géologie de Sciez</a><span>Sciez · 9 km</span></li></ul></div><div class="disc"><h3>Lagos que merecen una visita</h3><ul><li><a href="https://loisirs74.fr/es/plage-de-sciez-sur-leman">Plage de Sciez-sur-Léman</a><span>Sciez · 10 km</span></li><li><a href="https://loisirs74.fr/es/plage-de-la-pinede">Plage de la Pinède</a><span>Thonon-les-Bains · 19 km</span></li><li><a href="https://loisirs74.fr/es/plage-de-saint-disdille">Plage de Saint-Disdille</a><span>Thonon-les-Bains · 20 km</span></li></ul></div><div class="disc"><h3>Si te ha gustado, prueba…</h3><ul><li><a href="https://loisirs74.fr/es/musee-du-chablais-thonon-les-bains">Musée du Chablais</a><span>Thonon-les-Bains · 17 km</span></li><li><a href="https://loisirs74.fr/es/ecomusee-peche-et-du-lac-thonon">Ecomuseo de la pesca y del lago</a><span>Thonon-les-Bains · 18 km</span></li><li><a href="https://loisirs74.fr/es/musee-faune-bellevaux">Museo de la Fauna</a><span>Bellevaux · 21 km</span></li></ul></div><p class="disc-note">Distancias en línea recta, de un lugar a otro.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publicado el 10 juin 2026</span><span class="sep">·</span><span>Actualizado el 26/06/26</span></p></div></main>

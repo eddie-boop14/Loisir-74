@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/domaine-de-rovoree-la-chataigniere.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/domaine-de-rovoree-la-chataigniere.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,23 @@ Ici se déroule la vie quotidienne du collectif d’artistes, la porte est grand
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Nelle vicinanze</p>
-    <h2>Nelle vicinanze</h2>
+    <h2>A 1 km da qui…</h2>
     <p class="lead">Altri luoghi da esplorare nei dintorni e nella stessa categoria</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/it/jardin-des-cinq-sens" class="card-photo">
       <img src="/img/que-faire/jardin-des-cinq-sens-hero.jpg" alt="Labirinto vegetale del Jardin des Cinq Sens a Yvoire, con carpini e meli palizzati" loading="lazy">
-      <span class="card-tag">A pagamento</span>
+      <span class="card-tag">1 km · A pagamento</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/jardin-des-cinq-sens" class="title">Jardin des Cinq Sens</a>
@@ -201,7 +211,7 @@ Ici se déroule la vie quotidienne du collectif d’artistes, la porte est grand
 <article class="card">
     <a href="https://loisirs74.fr/it/croisiere-cgn-yvoire" class="card-photo">
       <img src="/img/sorties-detente/croisiere-cgn-yvoire-hero.jpg" alt="Il Lemano davanti a Yvoire: il masso Pierre d&#x27;Equarre tra l&#x27;acqua blu e la riva svizzera" loading="lazy">
-      <span class="card-tag">A pagamento</span>
+      <span class="card-tag">1 km · A pagamento</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/croisiere-cgn-yvoire" class="title">Scalo CGN Yvoire</a>
@@ -215,7 +225,7 @@ Ici se déroule la vie quotidienne du collectif d’artistes, la porte est grand
 <article class="card">
     <a href="https://loisirs74.fr/it/plage-d-excenevex" class="card-photo">
       <img src="/img/lacs-plages/plage-d-excenevex-hero.jpg" alt="Spiaggia di sabbia fine di Excenevex sul lago Lemano con vista sulla Dent d&#x27;Oche e le Alpi svizzere, Alta Savoia" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">3 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/plage-d-excenevex" class="title">Plage d'Excenevex</a>
@@ -229,7 +239,7 @@ Ici se déroule la vie quotidienne du collectif d’artistes, la porte est grand
 <article class="card">
     <a href="https://loisirs74.fr/it/domaine-de-guidou" class="card-photo">
       <img src="/img/generique/generique-domaine.jpg" alt="Prato inondabile e osservatorio ornitologico del Domaine de Guidou a Sciez, sito Natura 2000 sulle rive del lago Lemano" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">5 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/domaine-de-guidou" class="title">Domaine de Guidou</a>
@@ -243,7 +253,7 @@ Ici se déroule la vie quotidienne du collectif d’artistes, la porte est grand
 <article class="card">
     <a href="https://loisirs74.fr/it/port-clerges-base-nautique-thonon-bains" class="card-photo">
       <img src="/img/generique/generique-paddle-aviron-detail.jpg" alt="Base nautica delle Clerges a Thonon-les-Bains, imbarcazioni di canottaggio sul Lago di Ginevra" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">10 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/port-clerges-base-nautique-thonon-bains" class="title">Port des Clerges - Base Nautica</a>
@@ -257,7 +267,7 @@ Ici se déroule la vie quotidienne du collectif d’artistes, la porte est grand
 <article class="card">
     <a href="https://loisirs74.fr/it/plaine-de-loisirs-de-la-grangette" class="card-photo">
       <img src="/img/bases-de-loisirs/plaine-de-loisirs-de-la-grangette-hero.jpg" alt="Area ricreativa La Grangette — Thonon-les-Bains, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">12 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/plaine-de-loisirs-de-la-grangette" class="title">Plaine de loisirs de la Grangette</a>
@@ -268,6 +278,7 @@ Ici se déroule la vie quotidienne du collectif d’artistes, la porte est grand
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Nascosto proprio lì vicino</h3><ul><li><a href="https://loisirs74.fr/it/musee-ailes-anciennes-excenevex">Museo delle Ali Antiche</a><span>Excenevex · 3 km</span></li><li><a href="https://loisirs74.fr/it/plage-de-messery">Plage de Messery</a><span>Messery · 4 km</span></li><li><a href="https://loisirs74.fr/it/musee-departemental-sapeurs-pompiers-haute-savoie-sciez">Museo Dipartimentale dei Vigili del Fuoco dell'Alta Savoia</a><span>Sciez · 5 km</span></li></ul></div><div class="disc"><h3>Laghi che meritano una visita</h3><ul><li><a href="https://loisirs74.fr/it/plage-de-sciez-sur-leman">Plage de Sciez-sur-Léman</a><span>Sciez · 5 km</span></li><li><a href="https://loisirs74.fr/it/plage-de-la-pinede">Plage de la Pinède</a><span>Thonon-les-Bains · 12 km</span></li><li><a href="https://loisirs74.fr/it/plage-de-saint-disdille">Plage de Saint-Disdille</a><span>Thonon-les-Bains · 13 km</span></li></ul></div><div class="disc"><h3>Se vi è piaciuto, provate…</h3><ul><li><a href="https://loisirs74.fr/it/base-de-loisirs-de-la-beunaz">Base di svaghi della Beunaz</a><span>Saint-Paul-en-Chablais · 23 km</span></li><li><a href="https://loisirs74.fr/it/parc-des-dereches">Parc des Dérêches</a><span>Morzine · 36 km</span></li><li><a href="https://loisirs74.fr/it/parc-des-dronieres">Parc des Dronières</a><span>Cruseilles · 40 km</span></li></ul></div><p class="disc-note">Distanze in linea d'aria, da un luogo all'altro.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Pubblicato il 14 mai 2026</span><span class="sep">·</span><span>Aggiornato il 10/06/26</span></p></div></main>

@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/leman-forest-saint-gingolph.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/leman-forest-saint-gingolph.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Przejdź do treści</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Zobacz też</p>
-    <h2>Zobacz też</h2>
-    <p class="lead"></p>
+    <h2>W odległości 1 km stąd…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/pl/plage-de-saint-gingolph" class="card-photo">
       <img src="/img/generique/generique-plage-lac-4.jpg" alt="Plaża miejska na granicy frankoszwajcarskiej: Plage Municipale de Saint-Gingolph nad jeziorem Genewa, Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">1 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/plage-de-saint-gingolph" class="title">Plage Municipale de Saint-Gingolph</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/grp-littoral-leman-saint-gingolph" class="card-photo">
       <img src="/img/generique/generique-sentier-sommet-panorama.jpg" alt="GR® de Pays (GRP) szlak spacerowy GR® de Pays Littoral du Léman w Saint-Gingolph, Haute-Savoie - ~ 50 km · 4 etapy, umiarkowany" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">1 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/grp-littoral-leman-saint-gingolph" class="title">GR® de Pays Littoral du Léman</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/viarhona-haute-savoie-saint-gingolph-seyssel" class="card-photo">
       <img src="/img/voies-vertes/viarhona-haute-savoie-saint-gingolph-seyssel-hero.jpg" alt="ViaRhôna EV17 EuroVelo greenway crossing Haute-Savoie from Saint-Gingolph on Lake Geneva to Seyssel on the Rhône" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">1 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/viarhona-haute-savoie-saint-gingolph-seyssel" class="title">ViaRhôna Haute-Savoie</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/leman-kid-thonon-les-bains" class="card-photo">
       <img src="/img/generique/generique-parc.jpg" alt="Wielopoziomowe struktury zabaw w krytym parku dla dzieci Léman Kid w Thonon-les-Bains" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">23 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/leman-kid-thonon-les-bains" class="title">Léman Kid</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/acroparc-de-bellavallis-bellevaux" class="card-photo">
       <img src="/img/generique/generique-accrobranche-6.jpg" alt="Kurs zipliny i drzewa w lesie parku przygodowego Acroparc de Bellavallis w Bellevaux" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">25 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/acroparc-de-bellavallis-bellevaux" class="title">Acroparc de Bellavallis</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/thollon-les-memises" class="card-photo">
       <img src="/img/stations-de-ski/thollon-les-memises-hero.jpg" alt="Plateau des Mémises i jego panorama na jezioro Léman, nad Thollon-les-Mémises" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">6 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/thollon-les-memises" class="title">Thollon-les-Mémises</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Ukryte tuż obok</h3><ul><li><a href="https://loisirs74.fr/pl/musee-ski-ancien-chapelle-abondance">Musée du ski ancien</a><span>La Chapelle-d'Abondance · 11 km</span></li><li><a href="https://loisirs74.fr/pl/abbaye-d-abondance">Abbaye d'Abondance</a><span>Abondance · 13 km</span></li><li><a href="https://loisirs74.fr/pl/voie-verte-du-chablais">Voie verte du Chablais (vallée d'Abondance)</a><span>Abondance · 13 km</span></li></ul></div><div class="disc"><h3>Kolejki linowe, które warto zobaczyć</h3><ul><li><a href="https://loisirs74.fr/pl/telecabine-super-chatel">Télécabine de Super-Châtel</a><span>Châtel · 13 km</span></li><li><a href="https://loisirs74.fr/pl/telecabine-pleney-morzine">Télécabine du Pléney</a><span>Morzine · 24 km</span></li><li><a href="https://loisirs74.fr/pl/telecabine-des-chavannes-les-gets">Télécabine des Chavannes</a><span>Les Gets · 27 km</span></li></ul></div><div class="disc"><h3>Jeśli Ci się podobało, spróbuj…</h3><ul><li><a href="https://loisirs74.fr/pl/parc-jean-beauquis-ambilly">Parc Jean Beauquis</a><span>Ambilly · 49 km</span></li><li><a href="https://loisirs74.fr/pl/grand-parc-d-andilly">Grand Parc d'Andilly</a><span>Andilly · 66 km</span></li><li><a href="https://loisirs74.fr/pl/parc-imperial-annecy">Parc de l'Impérial</a><span>Annecy · 73 km</span></li></ul></div><p class="disc-note">Odległości w linii prostej między poszczególnymi miejscami.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Opublikowano dnia 21 mai 2026</span><span class="sep">·</span><span>Zaktualizowano dnia 11/07/26</span></p></div></main>

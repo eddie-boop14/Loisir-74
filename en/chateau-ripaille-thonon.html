@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/chateau-ripaille-thonon.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/chateau-ripaille-thonon.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Nearby</p>
-    <h2>Nearby</h2>
+    <h2>1 km from here…</h2>
     <p class="lead">Other places to explore in the area and in the same category</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/en/plaine-de-loisirs-de-la-grangette" class="card-photo">
       <img src="/img/bases-de-loisirs/plaine-de-loisirs-de-la-grangette-hero.jpg" alt="Grangette Leisure Park — Thonon-les-Bains, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Free</span>
+      <span class="card-tag">1 km · Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/plaine-de-loisirs-de-la-grangette" class="title">Grangette Leisure Park</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/en/voile-cercle-thonon-thonon" class="card-photo">
       <img src="/img/generique/generique-voile-sunset-1.jpg" alt="Lake Geneva sailing club and sailing school - Cercle de la Voile de Thonon at Thonon-les-Bains, Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">Paid</span>
+      <span class="card-tag">1 km · Paid</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/voile-cercle-thonon-thonon" class="title">Thonon Sailing Club</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/en/ecomusee-peche-et-du-lac-thonon" class="card-photo">
       <img src="/img/musees/ecomusee-peche-et-du-lac-thonon-hero.jpg" alt="Traditional wooden fishermen&#x27;s huts at the Port de Rives in Thonon housing the Écomusée de la pêche et du lac at the foot of the Château de Rives" loading="lazy">
-      <span class="card-tag">Paid</span>
+      <span class="card-tag">1 km · Paid</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/ecomusee-peche-et-du-lac-thonon" class="title">Fishing and Lake Ecomuseum</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/en/chateau-sonnaz-thonon-bains" class="card-photo">
       <img src="/img/chateaux/chateau-sonnaz-thonon-bains-hero.jpg" alt="Château de Sonnaz at Thonon-les-Bains, home to the Chablais Museum, facing Lake Geneva" loading="lazy">
-      <span class="card-tag">Paid</span>
+      <span class="card-tag">1 km · Paid</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/chateau-sonnaz-thonon-bains" class="title">Château de Sonnaz</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/en/chateau-bellegarde-thonon" class="card-photo">
       <img src="/img/chateaux/chateau-bellegarde-thonon-hero.jpg" alt="Medieval square tower of the Château de Bellegarde guarding the Porte des Lombards, last remnant of the fortifications of Thonon-les-Bains, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Free</span>
+      <span class="card-tag">1 km · Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/chateau-bellegarde-thonon" class="title">Château de Bellegarde</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/en/tour-des-langues-thonon" class="card-photo">
       <img src="/img/chateaux/tour-des-langues-thonon-hero.jpg" alt="14th-century medieval tower known as Tour des Langues at the Port de Rives in Thonon-les-Bains on the shore of Lake Geneva, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Free</span>
+      <span class="card-tag">2 km · Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/tour-des-langues-thonon" class="title">Tour des Langues</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Hidden nearby</h3><ul><li><a href="https://loisirs74.fr/en/musee-du-chablais-thonon-les-bains">Musée du Chablais</a><span>Thonon-les-Bains · 1 km</span></li><li><a href="https://loisirs74.fr/en/plage-municipale-thonon">Plage Municipale de Thonon-les-Bains</a><span>Thonon-les-Bains · 1 km</span></li><li><a href="https://loisirs74.fr/en/port-clerges-base-nautique-thonon-bains">Port des Clerges - Watersports Centre</a><span>Thonon-les-Bains · 2 km</span></li></ul></div><div class="disc"><h3>Lakes that are well worth a visit</h3><ul><li><a href="https://loisirs74.fr/en/plage-de-la-pinede">Plage de la Pinède</a><span>Thonon-les-Bains · 2 km</span></li><li><a href="https://loisirs74.fr/en/plage-de-saint-disdille">Plage de Saint-Disdille</a><span>Thonon-les-Bains · 3 km</span></li><li><a href="https://loisirs74.fr/en/plage-de-sciez-sur-leman">Plage de Sciez-sur-Léman</a><span>Sciez · 8 km</span></li></ul></div><div class="disc"><h3>If you enjoyed this, why not try…</h3><ul><li><a href="https://loisirs74.fr/en/abbaye-d-aulps">Abbaye d'Aulps</a><span>Saint-Jean-d'Aulps · 20 km</span></li><li><a href="https://loisirs74.fr/en/abbaye-d-abondance">Abondance Abbey</a><span>Abondance · 21 km</span></li><li><a href="https://loisirs74.fr/en/chateau-beauregard-saint-jeoire">Château de Beauregard</a><span>Saint-Jeoire · 28 km</span></li></ul></div><p class="disc-note">Distances as the crow flies, from one place to another.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Published 24 mai 2026</span><span class="sep">·</span><span>Updated 12/07/26</span></p></div></main>

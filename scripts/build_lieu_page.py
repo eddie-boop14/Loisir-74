@@ -1526,6 +1526,18 @@ def clean_eyebrow(badge, is_free):
     return T("free_dot") if is_free else T("paid_dot")
 
 
+_OWN_PHOTO_MARKERS = json.loads((REPO / "data" / "own-photos.json").read_text(
+    encoding="utf-8"))["credit_markers"]
+
+
+def _own_photo(d):
+    """The main photo is Bénédicte's or the owner's (data/own-photos.json):
+    such a fiche gets the photo-led hero, a wider photo column and one slow
+    3 % zoom, which the global reduced-motion rule already neutralises."""
+    credit = d.get("hero_credit") or ""
+    return any(m in credit for m in _OWN_PHOTO_MARKERS)
+
+
 def hero_block(d):
     """Render the hero section (locale-aware)."""
     name = L("name", "")
@@ -1618,7 +1630,7 @@ def hero_block(d):
         )
 
     return (
-        '<section class="hero"><div class="wrap"><div class="grid">'
+        f'<section class="{"hero real-photo" if _own_photo(d) else "hero"}"><div class="wrap"><div class="grid">'
         '<div>'
         f'<span class="eyebrow reveal"><span class="dot"></span>{esc(eyebrow_text)}</span>'
         f'{hammer_h1(name)}'
@@ -2465,7 +2477,8 @@ def _build_related_index():
     for d in fiches:
         slug, cat = d["slug"], d["category"]
         lat, lon = d.get("latitude"), d.get("longitude")
-        if lat is None or lon is None:
+        approx = lat is None or lon is None
+        if approx:
             if cat not in centroid:
                 continue
             lat, lon = centroid[cat]
@@ -2493,6 +2506,10 @@ def _build_related_index():
             "alts": alts, "hero_image": d.get("hero_image") or f"/{slug}-hero.jpg",
             "is_free": (d.get("schema_org", {}) or {}).get("is_free", False),
             "lat": lat, "lon": lon, "official_url": d.get("official_site_url") or "",
+            # Discovery blocks: a distance is printed only between two REAL
+            # coordinates, never from a category centroid.
+            "approx": approx, "commune_fr": d.get("commune") or "",
+            "real_photo": "generique" not in (d.get("hero_image") or ""),
         }
     rel = {s: _compute_related(s, idx) for s in idx}
     # Reciprocity floor: every fiche appears in ≥ _REL_FLOOR carousels, not
@@ -2544,11 +2561,14 @@ def _rel_img_src(hero):
     return hero if hero.startswith(("http://", "https://", "/")) else f"/{hero}"
 
 
-def _render_rel_card(slug, lang, labels):
+def _render_rel_card(slug, lang, labels, km=None):
     d = _REL_INDEX[slug]
-    name, commune = d["names"][lang], d["communes"][lang]
-    desc, alt = d["descs"][lang], d["alts"][lang]
+    name = d["names"].get(lang) or d["names"]["fr"]
+    commune = d["communes"].get(lang) or d["communes"]["fr"]
+    desc, alt = d["descs"].get(lang, ""), d["alts"].get(lang) or name
     tag = labels["free"] if d["is_free"] else labels["paid"]
+    if km is not None:
+        tag = f"{km} km · {tag}"
     img = _rel_img_src(d["hero_image"])
     ref = ' referrerpolicy="no-referrer"' if img.startswith(("http://", "https://")) else ""
     prefix = "" if lang == "fr" else f"/{lang}"
@@ -2587,13 +2607,134 @@ def related_carousel(d, lang):
     if not rels:
         return ""
     labels = _REL_LABELS.get(lang, _REL_LABELS["fr"])
-    cards = "\n".join(_render_rel_card(s, lang, labels) for s in rels if s in _REL_INDEX)
+    rels = [s for s in rels if s in _REL_INDEX]
+    kms = {s: _disc_km(slug, s) for s in rels}
+    cards = "\n".join(_render_rel_card(s, lang, labels, kms[s]) for s in rels)
     if not cards:
         return ""
-    return (f'<section class="block related" id="related">\n  <style>\n{_REL_CSS}\n</style>\n'
+    dl = _disc_labels(lang)
+    known = [k for k in kms.values() if k is not None]
+    h2 = dl["near"].replace("{n}", str(min(known))) if known else labels["h2"]
+    lead = f'    <p class="lead">{labels["lead"]}</p>\n' if labels["lead"] else ""
+    return (f'<section class="block related" id="related">\n  <style>\n{_REL_CSS}\n{_DISC_CSS}\n</style>\n'
             f'  <div class="wrap">\n    <p class="kicker">{labels["kicker"]}</p>\n'
-            f'    <h2>{labels["h2"]}</h2>\n    <p class="lead">{labels["lead"]}</p>\n'
-            f'    <div class="carousel">{cards}</div>\n  </div>\n</section>')
+            f'    <h2>{esc(h2)}</h2>\n{lead}'
+            f'    <div class="carousel">{cards}</div>\n{_disc_lists(slug, rels, lang)}  </div>\n</section>')
+
+
+# ---------------------------------------------------------------------------
+# Discovery blocks (owner brief, 2026-11-07): "treasure-map language" under the
+# proximity carousel. Every line is computed from published Json/: distances
+# are between the two attractions (never the visitor), "hidden" means outside
+# the intent registry's HOTSPOTS communes, and nothing shows a distance unless
+# both places have real coordinates. The six carousel cards stay exactly the
+# reciprocity-floored set above, so the internal-link graph Google relies on
+# is unchanged; these lists only ADD links.
+# ---------------------------------------------------------------------------
+_DISC = json.loads((REPO / "data" / "discovery-labels.json").read_text(encoding="utf-8"))["labels"]
+def _disc_fold(t):
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFD", t or "")
+                   if unicodedata.category(c) != "Mn").casefold()
+
+
+# Folded: Json/ spells "Sevrier", the registry "Sévrier".
+_DISC_HOTSPOTS = {_disc_fold(c) for c in json.loads((REPO / "data" / "intent-registry.json").read_text(
+    encoding="utf-8"))["_meta"]["commune_sets"]["HOTSPOTS"]}
+_DISC_HIDDEN_CATS = {"cascade", "point-de-vue", "sentier", "lac", "voie-verte", "jardin",
+                     "parc", "domaine", "chateau", "musee", "divers", "plage"}
+_DISC_SUBJECTS = ("lac", "point-de-vue", "cascade", "telecabine")
+_DISC_CACHE = {}
+_DISC_CSS = """.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}"""
+
+
+def _disc_labels(lang):
+    return _DISC.get(lang) or _DISC["fr"]
+
+
+def _disc_km(a, b):
+    """Whole km between two attractions, or None when either position is a
+    category centroid (an invented distance is worse than none)."""
+    da, db = _REL_INDEX.get(a), _REL_INDEX.get(b)
+    if not da or not db or da["approx"] or db["approx"]:
+        return None
+    return max(1, round(_haversine(da["lat"], da["lon"], db["lat"], db["lon"])))
+
+
+def _disc_pick(slug, shown):
+    """Language-independent picks for one fiche, cached: (hidden, subject,
+    detour, liked), each a list of (km, slug)."""
+    if slug in _DISC_CACHE:
+        return _DISC_CACHE[slug]
+    me = _REL_INDEX[slug]
+    if me["approx"]:
+        _DISC_CACHE[slug] = ([], None, [], [])
+        return _DISC_CACHE[slug]
+    others = sorted((_haversine(me["lat"], me["lon"], d["lat"], d["lon"]), s)
+                    for s, d in _REL_INDEX.items() if s != slug and not d["approx"])
+    used = set(shown) | {slug}
+
+    def take(cands, n=3):
+        out = []
+        for dist, s in cands:
+            if s not in used and len(out) < n:
+                out.append((max(1, round(dist)), s))
+                used.add(s)
+        return out
+
+    hidden = take((dist, s) for dist, s in others if dist <= 20
+                  and _REL_INDEX[s]["category"] in _DISC_HIDDEN_CATS
+                  and _disc_fold(_REL_INDEX[s]["commune_fr"]) not in _DISC_HOTSPOTS)
+    subject, best = None, None
+    for cat in _DISC_SUBJECTS:
+        if cat == me["category"]:
+            continue
+        pool = [(dist, s) for dist, s in others if dist <= 35 and s not in used
+                and _REL_INDEX[s]["category"] == cat]
+        if len(pool) >= 2:
+            score = (-len(pool[:3]), pool[0][0])
+            if best is None or score < best:
+                subject, best = cat, score
+    detour = take((dist, s) for dist, s in others if dist <= 35
+                  and _REL_INDEX[s]["category"] == subject) if subject else []
+    liked = take(sorted(((dist, s) for dist, s in others if dist > 15
+                         and _REL_INDEX[s]["category"] == me["category"]),
+                        key=lambda x: (not _REL_INDEX[x[1]]["real_photo"], x[0])))
+    _DISC_CACHE[slug] = (hidden, subject, detour, liked)
+    return _DISC_CACHE[slug]
+
+
+def _disc_lists(slug, shown, lang):
+    hidden, subject, detour, liked = _disc_pick(slug, shown)
+    dl = _disc_labels(lang)
+    prefix = "" if lang == "fr" else f"/{lang}"
+
+    def block(title, picks):
+        if not picks:
+            return ""
+        items = []
+        for km, s in picks:
+            d = _REL_INDEX[s]
+            name = d["names"].get(lang) or d["names"]["fr"]
+            commune = d["communes"].get(lang) or d["communes"]["fr"]
+            items.append(f'<li><a href="{BASE_URL}{prefix}/{s}">{esc(name)}</a>'
+                         f'<span>{esc(commune)} · {km} km</span></li>')
+        return f'<div class="disc"><h3>{esc(title)}</h3><ul>{"".join(items)}</ul></div>'
+
+    body = (block(dl["hidden"], hidden)
+            + (block(dl["detour_" + subject], detour) if subject else "")
+            + block(dl["liked"], liked))
+    if not body:
+        return ""
+    return (f'    <div class="disc-grid reveal">{body}'
+            f'<p class="disc-note">{esc(dl["crow"])}</p></div>\n')
 
 
 # ---------------------------------------------------------------------------

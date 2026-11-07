@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/base-de-loisirs-du-vuaz-filliere.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/base-de-loisirs-du-vuaz-filliere.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Nelle vicinanze</p>
-    <h2>Nelle vicinanze</h2>
+    <h2>A 3 km da qui…</h2>
     <p class="lead">Altri luoghi da esplorare nei dintorni e nella stessa categoria</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/it/tete-du-parmelan" class="card-photo">
       <img src="/img/points-de-vue/tete-du-parmelan-hero.jpg" alt="Vista dalla Tête du Parmelan con la sua croce di vetta e il rifugio Camille Dunant che sovrasta Annecy, massiccio delle Bornes, Alta Savoia" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">3 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/tete-du-parmelan" class="title">Tête du Parmelan</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/it/chateau-de-thorens" class="card-photo">
       <img src="/img/chateaux/chateau-de-thorens-hero.jpg" alt="Facciata del Château de Thorens con le sue torri medievali e l&#x27;architettura barocca, Fillière, Alta Savoia" loading="lazy">
-      <span class="card-tag">A pagamento</span>
+      <span class="card-tag">4 km · A pagamento</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/chateau-de-thorens" class="title">Château de Thorens</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/it/musee-poterie-savoyarde-filliere" class="card-photo">
       <img src="/img/generique/generique-musee-classique.jpg" alt="Museo della Ceramica Savoiarda a Évires (Fillière), Plateau des Bornes, Alta Savoia" loading="lazy">
-      <span class="card-tag">A pagamento</span>
+      <span class="card-tag">5 km · A pagamento</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/musee-poterie-savoyarde-filliere" class="title">Museo della Ceramica Savoiarda</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/it/parc-imperial-annecy" class="card-photo">
       <img src="/img/bases-de-loisirs/parc-imperial-annecy-hero.jpg" alt="Pavone maschio che esibisce il suo piumaggio al Parc de l&#x27;Impérial ad Annecy, parco pubblico in riva al lago" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">13 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/parc-imperial-annecy" class="title">Parc de l'Impérial</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/it/jardins-europe-annecy" class="card-photo">
       <img src="/img/bases-de-loisirs/jardins-europe-annecy-hero.jpg" alt="Île aux Cygnes vista dai Jardins de l&#x27;Europe, sulle sponde del lago di Annecy con gli alberi centenari dell&#x27;arboreto" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">14 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/jardins-europe-annecy" class="title">Giardini d'Europa</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/it/ereel-annecy-sillingy" class="card-photo">
       <img src="/img/generique/generique-vr-multi-joueurs.jpg" alt="Giocatore immerso nella VR su una stazione individuale al centro di realtà virtuale E.réel a Sillingy vicino ad Annecy" loading="lazy">
-      <span class="card-tag">A pagamento</span>
+      <span class="card-tag">15 km · A pagamento</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/ereel-annecy-sillingy" class="title">E.réel Annecy</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Nascosto proprio lì vicino</h3><ul><li><a href="https://loisirs74.fr/it/sentier-decouverte-plateau-glieres-thorens-glieres">Sentiero scoperta del Plateau des Glières</a><span>Thorens-Glières · 5 km</span></li><li><a href="https://loisirs74.fr/it/col-des-glieres">Col des Glières</a><span>Fillière · 7 km</span></li><li><a href="https://loisirs74.fr/it/sentier-espagnols-pas-du-roc-glieres">Sentier des Espagnols / Pas du Roc</a><span>Thorens-Glières · 8 km</span></li></ul></div><div class="disc"><h3>Punti panoramici che meritano una visita</h3><ul><li><a href="https://loisirs74.fr/it/mont-veyrier">Mont Veyrier</a><span>Annecy · 10 km</span></li><li><a href="https://loisirs74.fr/it/plateau-des-glieres">Plateau des Glières</a><span>Fillière · 10 km</span></li><li><a href="https://loisirs74.fr/it/pont-de-la-caille">Pont de la Caille</a><span>Cruseilles · 11 km</span></li></ul></div><div class="disc"><h3>Se vi è piaciuto, provate…</h3><ul><li><a href="https://loisirs74.fr/it/grand-parc-d-andilly">Grand Parc d'Andilly</a><span>Andilly · 16 km</span></li><li><a href="https://loisirs74.fr/it/parc-jean-beauquis-ambilly">Parc Jean Beauquis</a><span>Ambilly · 23 km</span></li><li><a href="https://loisirs74.fr/it/vitam-neydens">Vitam Neydens</a><span>Neydens · 18 km</span></li></ul></div><p class="disc-note">Distanze in linea d'aria, da un luogo all'altro.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Pubblicato il 21 mai 2026</span><span class="sep">·</span><span>Aggiornato il 11/07/26</span></p></div></main>

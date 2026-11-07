@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/abbaye-d-abondance.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/abbaye-d-abondance.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site"><div class="wrap">
@@ -134,7 +136,7 @@
 </div></header>
 <main id="main">
 <div class="wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="https://loisirs74.fr/en/">Home</a><span class="sep">/</span><a href="https://loisirs74.fr/en/castles/">Castles</a><span class="sep">/</span><span aria-current="page">Abondance Abbey</span></nav></div><!--commune-link:start--><div class="wrap" style="margin:.2rem 0 .6rem"><a class="commune-link" href="https://loisirs74.fr/en/abondance/" style="display:inline-block;font-size:.85rem;font-weight:600;color:var(--accent)">← In Abondance</a></div><!--commune-link:end-->
-<section class="hero"><div class="wrap"><div class="grid"><div><span class="eyebrow reveal"><span class="dot"></span>Paid · Book online</span><h1 class="hammer"><span class="w">Abondance</span> <span class="w"><em>Abbey</em></span></h1><p class="lede reveal">Founded in 1108 by Augustinian canons, Abondance Abbey preserves a cloister with 15th-century wall paintings unique in the northern Alps, an abbey church with trompe-l'œil décor and the permanent exhibition “From History to Art” — nine centuries of sacred heritage from the Abondance valley.</p><div class="cta-row reveal"><a href="https://www.abondance-patrimoine.fr/fr/" class="btn btn-primary" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v3a3 3 0 0 0 0 6v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3a3 3 0 0 0 0-6V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><line x1="13" y1="5" x2="13" y2="7"/><line x1="13" y1="11" x2="13" y2="13"/><line x1="13" y1="17" x2="13" y2="19"/></svg>Book</a><a href="https://www.google.com/maps/search/?api=1&query=Abondance%20Abbey%2C%20Abondance%2C%20Haute-Savoie%2C%20France" class="btn btn-ghost" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>View on map</a><a href="https://www.abondance-patrimoine.fr/fr/" class="btn btn-ghost" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>Official site</a></div></div><div class="reveal"><div class="hero-img"><picture><source srcset="/img/chateaux/abbaye-d-abondance-hero.webp" type="image/webp"><img src="/img/chateaux/abbaye-d-abondance-hero.jpg" alt="Chevet and towers of Abondance Abbey seen from the monastery gardens, Abondance valley, Haute-Savoie" width="900" height="1600" fetchpriority="high"></picture></div><div class="hero-credit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>Photo : Bénédicte · merci ! 🦆</div></div></div></div></section>
+<section class="hero real-photo"><div class="wrap"><div class="grid"><div><span class="eyebrow reveal"><span class="dot"></span>Paid · Book online</span><h1 class="hammer"><span class="w">Abondance</span> <span class="w"><em>Abbey</em></span></h1><p class="lede reveal">Founded in 1108 by Augustinian canons, Abondance Abbey preserves a cloister with 15th-century wall paintings unique in the northern Alps, an abbey church with trompe-l'œil décor and the permanent exhibition “From History to Art” — nine centuries of sacred heritage from the Abondance valley.</p><div class="cta-row reveal"><a href="https://www.abondance-patrimoine.fr/fr/" class="btn btn-primary" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v3a3 3 0 0 0 0 6v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3a3 3 0 0 0 0-6V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><line x1="13" y1="5" x2="13" y2="7"/><line x1="13" y1="11" x2="13" y2="13"/><line x1="13" y1="17" x2="13" y2="19"/></svg>Book</a><a href="https://www.google.com/maps/search/?api=1&query=Abondance%20Abbey%2C%20Abondance%2C%20Haute-Savoie%2C%20France" class="btn btn-ghost" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>View on map</a><a href="https://www.abondance-patrimoine.fr/fr/" class="btn btn-ghost" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>Official site</a></div></div><div class="reveal"><div class="hero-img"><picture><source srcset="/img/chateaux/abbaye-d-abondance-hero.webp" type="image/webp"><img src="/img/chateaux/abbaye-d-abondance-hero.jpg" alt="Chevet and towers of Abondance Abbey seen from the monastery gardens, Abondance valley, Haute-Savoie" width="900" height="1600" fetchpriority="high"></picture></div><div class="hero-credit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>Photo : Bénédicte · merci ! 🦆</div></div></div></div></section>
 <section class="block"><div class="wrap"><div class="kicker reveal">At a glance</div><div class="facts reveal" data-stagger><div class="fact"><div class="k">Type</div><div class="v">Abbey · Cloister and exhibition</div></div><div class="fact"><div class="k">Access</div><div class="v">Paid</div></div><div class="fact"><div class="k">Price</div><div class="v">€6 adult · €5 reduced · DUO with the Cheese House €10</div></div><div class="fact"><div class="k">Best season</div><div class="v">Year-round · closed 31 Oct – 20 Dec</div></div><div class="fact"><div class="k">Parking</div><div class="v">Village car park nearby · reserved disabled spaces</div></div><div class="fact"><div class="k">Animals</div><div class="v">Not allowed (guide dogs excepted)</div></div><div class="fact"><div class="k">Town</div><div class="v">Abondance</div></div><div class="fact"><div class="k">Altitude</div><div class="v">934 m</div></div><div class="fact"><div class="k">Wheelchair access</div><div class="v">Not accessible <a class="inline-link" href="https://www.abondance-patrimoine.fr/fr/labbaye-abondance/informations-pratiques.html" target="_blank" rel="noopener">Source: Abondance Patrimoine — Abbaye d'Abondance (officiel)</a></div></div></div><p class="fact-source reveal"><a href="https://www.abondance-patrimoine.fr/fr/" target="_blank" rel="noopener">Official source →</a></p></div></section>
 
 <section class="block"><div class="wrap"><div class="kicker reveal">💶</div><h2 class="reveal">Price</h2><div class="info-table reveal"><div class="info-row"><div class="k">Entrée plein tarif</div><div class="v"><span class="tier-price">6,00 €</span><span class="tier-note">Visite libre</span></div></div><div class="info-row"><div class="k">Tarif réduit</div><div class="v"><span class="tier-price">5,00 €</span><span class="tier-note">Étudiants, demandeurs d'emploi, personnes en situation de handicap, familles</span></div></div><div class="info-row"><div class="k">Enfant 6–18 ans</div><div class="v"><span class="tier-price">2,50 €</span><span class="tier-note">En visite guidée</span></div></div><div class="info-row"><div class="k">Billet DUO Abbaye + Maison du Fromage</div><div class="v"><span class="tier-price">10,00 €</span><span class="tier-note">Dès 6 ans</span></div></div></div></div></section>
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Nearby</p>
-    <h2>Nearby</h2>
+    <h2>1 km from here…</h2>
     <p class="lead">Other places to explore in the area and in the same category</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/en/tour-village-abondance-abondance" class="card-photo">
       <img src="/img/generique/generique-sentier-hiver-neige.jpg" alt="Tour of Abondance village with view of the bell tower and the Vallée d&#x27;Abondance" loading="lazy">
-      <span class="card-tag">Free</span>
+      <span class="card-tag">1 km · Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/tour-village-abondance-abondance" class="title">Tour of Abondance Village</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/en/voie-verte-du-chablais" class="card-photo">
       <img src="/img/voies-vertes/voie-verte-du-chablais-hero.jpg" alt="Chablais Greenway — Abondance Valley, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Free</span>
+      <span class="card-tag">1 km · Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/voie-verte-du-chablais" class="title">Chablais Greenway (Abondance Valley)</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/en/maison-fromage-abondance-abondance" class="card-photo">
       <img src="/img/musees/maison-fromage-abondance-abondance-hero.jpg" alt="Abondance Cheese House at Abondance, sensory route on the AOP cheese with tasting and ripening cellars" loading="lazy">
-      <span class="card-tag">Paid</span>
+      <span class="card-tag">1 km · Paid</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/maison-fromage-abondance-abondance" class="title">Abondance Cheese House</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/en/abbaye-d-aulps" class="card-photo">
       <img src="/img/chateaux/abbaye-d-aulps-hero.jpg" alt="Remains of the Abbaye d&#x27;Aulps abbatial church with classified monumental façade, Saint-Jean-d&#x27;Aulps, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Paid</span>
+      <span class="card-tag">7 km · Paid</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/abbaye-d-aulps" class="title">Abbaye d'Aulps</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/en/thermes-evian" class="card-photo">
       <img src="/img/chateaux/thermes-evian-hero.jpg" alt="Wellness area of Thermes d&#x27;Évian with views of Lake Léman, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Paid</span>
+      <span class="card-tag">17 km · Paid</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/thermes-evian" class="title">Thermes d'Évian</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/en/chateaux-des-allinges" class="card-photo">
       <img src="/img/chateaux/chateaux-des-allinges-hero.jpg" alt="Ruins of Château-Neuf d&#x27;Allinges with panoramic view over Lake Léman and the Prealps, Allinges, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Free</span>
+      <span class="card-tag">20 km · Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/chateaux-des-allinges" class="title">Châteaux des Allinges</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Hidden nearby</h3><ul><li><a href="https://loisirs74.fr/en/sentier-pedestre-interpretation-lac-plagnes-abondance">Lac des Plagnes Interpretive Trail</a><span>Abondance · 5 km</span></li><li><a href="https://loisirs74.fr/en/musee-ski-ancien-chapelle-abondance">Old Ski Museum</a><span>La Chapelle-d'Abondance · 7 km</span></li><li><a href="https://loisirs74.fr/en/sentier-pedestre-eterlou-chatel">Eterlou Walking Trail</a><span>Châtel · 7 km</span></li></ul></div><div class="disc"><h3>Waterfalls that are well worth a visit</h3><ul><li><a href="https://loisirs74.fr/en/gorges-du-pont-du-diable">Gorges du Pont du Diable</a><span>La Vernaz · 9 km</span></li><li><a href="https://loisirs74.fr/en/cascade-des-brochaux">Cascade des Brochaux</a><span>Montriond · 9 km</span></li><li><a href="https://loisirs74.fr/en/cascade-de-nyon">Cascade de Nyon</a><span>Morzine · 13 km</span></li></ul></div><div class="disc"><h3>If you enjoyed this, why not try…</h3><ul><li><a href="https://loisirs74.fr/en/chateau-ripaille-thonon">Château de Ripaille</a><span>Thonon-les-Bains · 21 km</span></li><li><a href="https://loisirs74.fr/en/chateau-bellegarde-thonon">Château de Bellegarde</a><span>Thonon-les-Bains · 21 km</span></li><li><a href="https://loisirs74.fr/en/chateau-sonnaz-thonon-bains">Château de Sonnaz</a><span>Thonon-les-Bains · 21 km</span></li></ul></div><p class="disc-note">Distances as the crow flies, from one place to another.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Published 18 août 2026</span><span class="sep">·</span><span>Updated 19/08/26</span></p></div></main>

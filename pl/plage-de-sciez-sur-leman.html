@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/plage-de-sciez-sur-leman.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/plage-de-sciez-sur-leman.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Przejdź do treści</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Zobacz też</p>
-    <h2>Zobacz też</h2>
-    <p class="lead"></p>
+    <h2>W odległości 1 km stąd…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/pl/paintball-zone-74-perrignier" class="card-photo">
       <img src="/img/generique/generique-paintball-masque.jpg" alt="Paintball Zone 74 - paintball w Perrignier, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">1 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/paintball-zone-74-perrignier" class="title">Paintball Zone 74</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/domaine-de-guidou" class="card-photo">
       <img src="/img/generique/generique-domaine.jpg" alt="Podłogowa łąka i obserwatorium obserwacji ptaków w Domaine de Guidou w Sciez, miejscu Natura 2000 nad brzegiem jeziora Genewa" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">1 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/domaine-de-guidou" class="title">Domaine de Guidou</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/musee-departemental-sapeurs-pompiers-haute-savoie-sciez" class="card-photo">
       <img src="/img/generique/generique-musee.jpg" alt="Haute-Savoie Muzeum Strażaków w Domaine de Guidou w Sciez, na brzegu Léman" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">1 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/musee-departemental-sapeurs-pompiers-haute-savoie-sciez" class="title">Musée Départemental des Sapeurs-Pompiers de Haute-Savoie</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/plage-d-excenevex" class="card-photo">
       <img src="/img/lacs-plages/plage-d-excenevex-hero.jpg" alt="Plage d&#x27;Excenevex plaża piaszczysta nad jeziorem Genewa z widokiem na Dent d &#x27;Oche i Alpy Szwajcarskie, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">3 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/plage-d-excenevex" class="title">Plage d'Excenevex</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/plage-de-la-pinede" class="card-photo">
       <img src="/img/lacs-plages/plage-de-la-pinede-hero.jpg" alt="Naturalna żwirowa linia brzegowa Plage de la Pinède nad jeziorem Léman, Thonon-les-Bains, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">9 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/plage-de-la-pinede" class="title">Plage de la Pinède</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/plage-de-saint-disdille" class="card-photo">
       <img src="/img/lacs-plages/plage-de-saint-disdille-hero.jpg" alt="Plage de Saint-Disdille nad jeziorem Léman z zacienionym obszarem pod drzewami kasztanowymi, Thonon-les-Bains, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">11 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/plage-de-saint-disdille" class="title">Plage de Saint-Disdille</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Ukryte tuż obok</h3><ul><li><a href="https://loisirs74.fr/pl/musee-prehistoire-geologie-sciez">Musée de Préhistoire et Géologie de Sciez</a><span>Sciez · 2 km</span></li><li><a href="https://loisirs74.fr/pl/plage-de-margencel-sechex">Plage de Margencel - Port de Séchex</a><span>Margencel · 2 km</span></li><li><a href="https://loisirs74.fr/pl/musee-ailes-anciennes-excenevex">Musée des ailes anciennes</a><span>Excenevex · 3 km</span></li></ul></div><div class="disc"><h3>Punkty widokowe, które warto odwiedzić</h3><ul><li><a href="https://loisirs74.fr/pl/reserve-naturelle-delta-de-la-dranse">Réserve naturelle du Delta de la Dranse</a><span>Publier · 11 km</span></li><li><a href="https://loisirs74.fr/pl/plateau-de-loex">Plateau de Loëx</a><span>Habère-Poche · 11 km</span></li><li><a href="https://loisirs74.fr/pl/pointe-de-miribel">Pointe de Miribel</a><span>Villard · 15 km</span></li></ul></div><div class="disc"><h3>Jeśli Ci się podobało, spróbuj…</h3><ul><li><a href="https://loisirs74.fr/pl/lac-de-vallon">Lac de Vallon</a><span>Bellevaux · 19 km</span></li><li><a href="https://loisirs74.fr/pl/lac-benit">Lac Bénit</a><span>Mont-Saxonnex · 36 km</span></li><li><a href="https://loisirs74.fr/pl/lac-des-dronieres">Lac des Dronières</a><span>Cruseilles · 39 km</span></li></ul></div><p class="disc-note">Odległości w linii prostej między poszczególnymi miejscami.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Opublikowano dnia 14 mai 2026</span><span class="sep">·</span><span>Zaktualizowano dnia 21/07/26</span></p></div></main>

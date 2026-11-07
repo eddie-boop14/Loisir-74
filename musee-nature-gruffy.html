@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/musee-nature-gruffy.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/musee-nature-gruffy.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">À proximité</p>
-    <h2>À proximité</h2>
+    <h2>À 3 km d'ici…</h2>
     <p class="lead">D'autres lieux à explorer dans le coin et dans la même catégorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/le-semnoz" class="card-photo">
       <img src="/img/points-de-vue/le-semnoz-hero.jpg" alt="Le Semnoz au-dessus d&#x27;Annecy, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuit</span>
+      <span class="card-tag">3 km · Gratuit</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/le-semnoz" class="title">Le Semnoz</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/suivez-mouche-alby-sur-cheran" class="card-photo">
       <img src="/img/generique/generique-sentier-foret.jpg" alt="Circuit Suivez la mouche dans le village d&#x27;Alby-sur-Chéran, traces de cordonniers au sol" loading="lazy">
-      <span class="card-tag">Gratuit</span>
+      <span class="card-tag">4 km · Gratuit</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/suivez-mouche-alby-sur-cheran" class="title">Suivez la mouche</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/sentier-des-roselieres" class="card-photo">
       <img src="/img/sentiers/sentier-des-roselieres-hero.jpg" alt="Sentier des Roselières — Saint-Jorioz, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuit</span>
+      <span class="card-tag">9 km · Gratuit</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/sentier-des-roselieres" class="title">Sentier des Roselières</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/musee-cordonnerie-alby-sur-cheran" class="card-photo">
       <img src="/img/musees/musee-cordonnerie-alby-sur-cheran-hero.jpg" alt="Musée de la Cordonnerie sous les arcades de la place du Trophée à Alby-sur-Chéran, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuit</span>
+      <span class="card-tag">4 km · Gratuit</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/musee-cordonnerie-alby-sur-cheran" class="title">Musée de la Cordonnerie</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/fonderie-paccard-sevrier" class="card-photo">
       <img src="/img/musees/fonderie-paccard-sevrier-hero.jpg" alt="Bronze et cloches dans l&#x27;atelier de la Fonderie Paccard à Sevrier au bord du lac d&#x27;Annecy" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">9 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/fonderie-paccard-sevrier" class="title">Fonderie Paccard</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ecomusee-lac-annecy-sevrier" class="card-photo">
       <img src="/img/musees/ecomusee-lac-annecy-sevrier-hero.jpg" alt="Salle d&#x27;exposition de l&#x27;Écomusée du Lac d&#x27;Annecy : frise « La Savoie au fil du temps », tarare et costumes savoyards" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">10 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ecomusee-lac-annecy-sevrier" class="title">Écomusée du Lac d'Annecy</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Caché tout près</h3><ul><li><a href="https://loisirs74.fr/notre-histoire-musee-rumilly-rumilly">Notre Histoire - Musée de Rumilly</a><span>Rumilly · 12 km</span></li><li><a href="https://loisirs74.fr/gorges-du-fier">Gorges du Fier</a><span>Lovagny · 12 km</span></li><li><a href="https://loisirs74.fr/chateau-montrottier-lovagny">Château de Montrottier</a><span>Lovagny · 12 km</span></li></ul></div><div class="disc"><h3>Des lacs qui valent le détour</h3><ul><li><a href="https://loisirs74.fr/plage-de-saint-jorioz">Plage de Saint-Jorioz</a><span>Saint-Jorioz · 9 km</span></li><li><a href="https://loisirs74.fr/plage-de-menthon-saint-bernard">Plage de Menthon-Saint-Bernard</a><span>Menthon-Saint-Bernard · 13 km</span></li><li><a href="https://loisirs74.fr/plage-des-marquisats">Plage des Marquisats</a><span>Annecy · 13 km</span></li></ul></div><div class="disc"><h3>Si vous avez aimé, essayez…</h3><ul><li><a href="https://loisirs74.fr/ecomusee-bois-foret-thones">Écomusée du Bois et de la Forêt</a><span>Thônes · 20 km</span></li><li><a href="https://loisirs74.fr/musee-resistance-morette-la-balme-de-thuy">Site de Morette — Musée de la Résistance et Mémorial de la Déportation</a><span>La Balme-de-Thuy · 21 km</span></li><li><a href="https://loisirs74.fr/maison-de-la-pomme-biscantin-serraval">Maison de la Pomme et du Biscantin</a><span>Serraval · 22 km</span></li></ul></div><p class="disc-note">Distances à vol d'oiseau, d'un lieu à l'autre.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publié le 10 juin 2026</span><span class="sep">·</span><span>Mis à jour le 21/06/26</span></p></div></main>

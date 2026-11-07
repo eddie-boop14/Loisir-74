@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/cascade-d-angon.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/cascade-d-angon.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">本文へスキップ</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">関連情報</p>
-    <h2>関連情報</h2>
-    <p class="lead"></p>
+    <h2>ここから1 km先……</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/ja/plage-de-talloires" class="card-photo">
       <img src="/img/generique/generique-plage-lac-13.jpg" alt="250x200 m の砂および浸水プール、ダイビング ボードおよびスライドが付いている芝生のビーチ: Annecy、Haute-Savoie 74 湖の Plage de Talloires" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">1 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/plage-de-talloires" class="title">Plage de Talloires</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/plage-d-angon-talloires" class="card-photo">
       <img src="/img/generique/generique-plage-lac-15.jpg" alt="シャトー・ド・Duingtを望む広い日陰の芝生ビーチ:Annecy湖畔のTalloires-MontminにあるPlage d&#x27;Angon、Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">1 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/plage-d-angon-talloires" class="title">Plage d'Angon</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/plage-de-duingt" class="card-photo">
       <img src="/img/lacs-plages/plage-de-duingt-hero.jpg" alt="シャトー・デ・Duingtに面した120 m芝生のビーチ:Plage de Duingt湖Annecy、Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">1 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/plage-de-duingt" class="title">Plage de Duingt</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/cascade-de-fontany-saint-ferreol" class="card-photo">
       <img src="/img/cascades/cascade-de-fontany-saint-ferreol-hero.jpg" alt="Saint-Ferréolの森に包まれたCascade de Fontany" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">9 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/cascade-de-fontany-saint-ferreol" class="title">Cascade de Fontany</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/grotte-et-cascade-de-seythenex" class="card-photo">
       <img src="/img/cascades/grotte-et-cascade-de-seythenex-hero.jpg" alt="Seythenexの洞窟、石灰岩地質形成の地下のギャラリー、Bauges Massif、Haute-Savoie" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">13 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/grotte-et-cascade-de-seythenex" class="title">Grotte et Cascade de Seythenex</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/gorges-du-fier" class="card-photo">
       <img src="/img/cascades/gorges-du-fier-hero.jpg" alt="LovagnyのGorges du Fier、Haute-Savoie" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">15 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/gorges-du-fier" class="title">Gorges du Fier</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>すぐそばに隠れている</h3><ul><li><a href="https://loisirs74.fr/ja/ecomusee-bois-foret-thones">Écomusée du Bois et de la Forêt</a><span>Thônes · 7 km</span></li><li><a href="https://loisirs74.fr/ja/musee-resistance-morette-la-balme-de-thuy">Site de Morette — レジスタンス博物館と強制移送記念館</a><span>La Balme-de-Thuy · 9 km</span></li><li><a href="https://loisirs74.fr/ja/parc-de-peche-domaine-du-moulin-authier">Domaine du Moulin Authier — Parc de pêche</a><span>Haute-Savoie · 9 km</span></li></ul></div><div class="disc"><h3>立ち寄る価値のある展望台</h3><ul><li><a href="https://loisirs74.fr/ja/col-de-la-forclaz">Col de la Forclaz</a><span>Talloires-Montmin · 3 km</span></li><li><a href="https://loisirs74.fr/ja/reserve-naturelle-bout-du-lac">Réserve naturelle du Bout-du-Lac d'Annecy</a><span>Doussard · 6 km</span></li><li><a href="https://loisirs74.fr/ja/belvedere-du-mont-baron">Belvédère du Mont Baron</a><span>Veyrier-du-Lac · 8 km</span></li></ul></div><div class="disc"><h3>気に入っていただけたら、こちらもぜひお試しください…</h3><ul><li><a href="https://loisirs74.fr/ja/cascade-du-chinaillon">Cascade du Chinaillon</a><span>Le Grand-Bornand · 22 km</span></li><li><a href="https://loisirs74.fr/ja/cascade-mysterieuse-le-grand-bornand">Cascade mystérieuse</a><span>Le Grand-Bornand · 22 km</span></li><li><a href="https://loisirs74.fr/ja/cascade-des-fours">Cascade des Fours</a><span>Sallanches · 29 km</span></li></ul></div><p class="disc-note">ある場所から別の場所までの直線距離。</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>公開日 14 mai 2026</span><span class="sep">·</span><span>更新日 18/07/26</span></p></div></main>

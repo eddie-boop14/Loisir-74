@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/jardin-pre-curieux-evian.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/jardin-pre-curieux-evian.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site"><div class="wrap">
@@ -181,15 +183,23 @@ Vous découvrirez grâce au commentaire à bord les principaux monuments et lieu
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Nearby</p>
-    <h2>Nearby</h2>
+    <h2>1 km from here…</h2>
     <p class="lead">Other places to explore in the area and in the same category</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/en/thermes-evian" class="card-photo">
       <img src="/img/chateaux/thermes-evian-hero.jpg" alt="Wellness area of Thermes d&#x27;Évian with views of Lake Léman, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Paid</span>
+      <span class="card-tag">1 km · Paid</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/thermes-evian" class="title">Thermes d'Évian</a>
@@ -203,7 +213,7 @@ Vous découvrirez grâce au commentaire à bord les principaux monuments et lieu
 <article class="card">
     <a href="https://loisirs74.fr/en/croisiere-cgn-evian" class="card-photo">
       <img src="/img/generique/generique-port-annecy.jpg" alt="Lake Geneva passenger cruise — N1 Lausanne–Évian line, CGN Évian stop at Évian-les-Bains, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Paid</span>
+      <span class="card-tag">1 km · Paid</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/croisiere-cgn-evian" class="title">CGN Évian Stop</a>
@@ -217,7 +227,7 @@ Vous découvrirez grâce au commentaire à bord les principaux monuments et lieu
 <article class="card">
     <a href="https://loisirs74.fr/en/casino-evian-resort-evian" class="card-photo">
       <img src="/img/generique/generique-casino.jpg" alt="Historic Belle Époque gaming casino – Casino Évian Resort at Évian-les-Bains, Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">Paid</span>
+      <span class="card-tag">1 km · Paid</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/casino-evian-resort-evian" class="title">Casino Évian Resort</a>
@@ -231,7 +241,7 @@ Vous découvrirez grâce au commentaire à bord les principaux monuments et lieu
 <article class="card">
     <a href="https://loisirs74.fr/en/montgolfiere-du-mont-blanc-evian" class="card-photo">
       <img src="/img/generique/generique-montgolfiere.jpg" alt="Hot-air balloon in flight over Lake Geneva and the Mont Blanc massif, Évian, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Paid</span>
+      <span class="card-tag">1 km · Paid</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/montgolfiere-du-mont-blanc-evian" class="title">Montgolfières du Mont-Blanc</a>
@@ -245,7 +255,7 @@ Vous découvrirez grâce au commentaire à bord les principaux monuments et lieu
 <article class="card">
     <a href="https://loisirs74.fr/en/tir-a-l-arc-abyss-publier" class="card-photo">
       <img src="/img/generique/generique-tir-arc-fleche-cible.jpg" alt="ABYSS — archery in Publier" loading="lazy">
-      <span class="card-tag">Paid</span>
+      <span class="card-tag">5 km · Paid</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/tir-a-l-arc-abyss-publier" class="title">ABYSS — Archery Publier</a>
@@ -259,7 +269,7 @@ Vous découvrirez grâce au commentaire à bord les principaux monuments et lieu
 <article class="card">
     <a href="https://loisirs74.fr/en/indiana-ventures-saint-paul-en-chablais" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/La_plage_de_La_Beunaz.jpg/960px-La_plage_de_La_Beunaz.jpg" alt="Treetop course at Indiana&#x27;Ventures, Beunaz Beach, Saint-Paul-en-Chablais, Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Paid</span>
+      <span class="card-tag">6 km · Paid</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/indiana-ventures-saint-paul-en-chablais" class="title">Indiana'Ventures Saint-Paul-en-Chablais</a>
@@ -270,6 +280,7 @@ Vous découvrirez grâce au commentaire à bord les principaux monuments et lieu
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Hidden nearby</h3><ul><li><a href="https://loisirs74.fr/en/palais-lumiere">Palais Lumière</a><span>Évian-les-Bains · 1 km</span></li><li><a href="https://loisirs74.fr/en/plage-d-evian-centre-nautique">Plage du Centre Nautique d'Évian</a><span>Évian-les-Bains · 1 km</span></li><li><a href="https://loisirs74.fr/en/chateau-fonbonne-et-herbularius-evian-bains">Château de Fonbonne and its Herbularius</a><span>Évian-les-Bains · 1 km</span></li></ul></div><div class="disc"><h3>Viewpoints that are well worth a visit</h3><ul><li><a href="https://loisirs74.fr/en/reserve-naturelle-delta-de-la-dranse">Dranse Delta Nature Reserve</a><span>Publier · 6 km</span></li><li><a href="https://loisirs74.fr/en/plateau-de-loex">Plateau de Loëx</a><span>Habère-Poche · 16 km</span></li><li><a href="https://loisirs74.fr/en/pointe-de-miribel">Pointe de Miribel</a><span>Villard · 23 km</span></li></ul></div><div class="disc"><h3>If you enjoyed this, why not try…</h3><ul><li><a href="https://loisirs74.fr/en/les-aigles-du-leman">Les Aigles du Léman</a><span>Sciez · 18 km</span></li><li><a href="https://loisirs74.fr/en/parcours-aventure-de-sciez">Parcours Aventure de Sciez</a><span>Sciez · 18 km</span></li><li><a href="https://loisirs74.fr/en/jardin-des-cinq-sens">Jardin des Cinq Sens</a><span>Yvoire · 20 km</span></li></ul></div><p class="disc-note">Distances as the crow flies, from one place to another.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Published 1 juin 2026</span><span class="sep">·</span><span>Updated 26/07/26</span></p></div></main>

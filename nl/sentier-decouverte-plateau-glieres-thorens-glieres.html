@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/sentier-decouverte-plateau-glieres-thorens-glieres.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/sentier-decouverte-plateau-glieres-thorens-glieres.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Naar inhoud springen</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">In de buurt</p>
-    <h2>In de buurt</h2>
+    <h2>Op 2 km hiervandaan…</h2>
     <p class="lead">Andere plekken om te ontdekken in de buurt en in dezelfde categorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/nl/col-des-glieres" class="card-photo">
       <img src="/img/points-de-vue/col-des-glieres-hero.jpg" alt="Glières-plateau in de zomer met uitzicht op de alpenweiden en het Nationaal Verzetsmonument, Fillière, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">2 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/col-des-glieres" class="title">Col des Glières</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/tete-du-parmelan" class="card-photo">
       <img src="/img/points-de-vue/tete-du-parmelan-hero.jpg" alt="Uitzicht vanaf de Tête du Parmelan met topkruis en het Camille Dunant-refugehuis boven Annecy, Bornes-massief, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">4 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/tete-du-parmelan" class="title">Tête du Parmelan</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/base-de-loisirs-du-vuaz-filliere" class="card-photo">
       <img src="/img/generique/generique-plage-lac-14.jpg" alt="Speeltuin en picknicktafels van het gratis recreatiegebied Le Vuaz in Aviernoz aan de voet van de Parmelan" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">5 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/base-de-loisirs-du-vuaz-filliere" class="title">Base de loisirs du Vuaz</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/sentier-espagnols-pas-du-roc-glieres" class="card-photo">
       <img src="/img/sentiers/sentier-espagnols-pas-du-roc-glieres-hero.jpg" alt="Sentier des Espagnols / Pas du Roc op het Plateau des Glières in Thorens-Glières, met kliftrappen uitgehakt in 1830 door Spaanse Republikeinen en strategische passage van de Maquis des Glières in 1944, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">11 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/sentier-espagnols-pas-du-roc-glieres" class="title">Sentier des Espagnols / Pas du Roc</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/debaroule-clusaz" class="card-photo">
       <img src="/img/generique/generique-sentier-sommet-panorama.jpg" alt="Speels pad Débaroule in La Clusaz met 7 houten-balletjes-modules door het alpenbos" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">12 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/debaroule-clusaz" class="title">Débaroule — Speels parcours</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/gr96-bornes-aravis-haute-savoie" class="card-photo">
       <img src="/img/generique/generique-sentier-foret-alpine.jpg" alt="GR® 96 Bornes-Aravis-pad met witte en rode FFRandonnée-markering door de bergmassieven van de Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">14 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/gr96-bornes-aravis-haute-savoie" class="title">GR® 96 Bornes-Aravis</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Vlakbij verstopt</h3><ul><li><a href="https://loisirs74.fr/nl/plateau-des-glieres">Plateau des Glières</a><span>Fillière · 5 km</span></li><li><a href="https://loisirs74.fr/nl/chateau-de-thorens">Kasteel van Thorens</a><span>Fillière · 8 km</span></li><li><a href="https://loisirs74.fr/nl/musee-resistance-morette-la-balme-de-thuy">Site de Morette — Museum van het Verzet en Gedenkteken van de Deportatie</a><span>La Balme-de-Thuy · 8 km</span></li></ul></div><div class="disc"><h3>Uitzichtpunten die zeker een omweg waard zijn</h3><ul><li><a href="https://loisirs74.fr/nl/mont-veyrier">Mont Veyrier</a><span>Annecy · 11 km</span></li><li><a href="https://loisirs74.fr/nl/belvedere-du-mont-baron">Belvédère du Mont Baron</a><span>Veyrier-du-Lac · 12 km</span></li><li><a href="https://loisirs74.fr/nl/mont-baron">Mont Baron</a><span>Veyrier-du-Lac · 12 km</span></li></ul></div><div class="disc"><h3>Als je dit leuk vond, probeer dan eens…</h3><ul><li><a href="https://loisirs74.fr/nl/sentier-geologique-pointe-percee-grand-bornand">Geologisch pad Pointe Percée</a><span>Le Grand-Bornand · 17 km</span></li><li><a href="https://loisirs74.fr/nl/sentier-des-roselieres">Rietkraagpad</a><span>Saint-Jorioz · 20 km</span></li><li><a href="https://loisirs74.fr/nl/sentier-cascades-sixt-fer-a-cheval">Watervallenpad van Sixt</a><span>Sixt-Fer-à-Cheval · 38 km</span></li></ul></div><p class="disc-note">Afstanden in vogelvlucht, van de ene plaats naar de andere.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Gepubliceerd 24 mai 2026</span><span class="sep">·</span><span>Bijgewerkt 18/07/26</span></p></div></main>

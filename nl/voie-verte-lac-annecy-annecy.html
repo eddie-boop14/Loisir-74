@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/voie-verte-lac-annecy-annecy.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/voie-verte-lac-annecy-annecy.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Naar inhoud springen</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">In de buurt</p>
-    <h2>In de buurt</h2>
+    <h2>Op 1 km hiervandaan…</h2>
     <p class="lead">Andere plekken om te ontdekken in de buurt en in dezelfde categorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/nl/plage-imperial-annecy" class="card-photo">
       <img src="/img/generique/generique-plage-lac-10.jpg" alt="Plage de l&#x27;Impérial in Annecy aan het Lac d&#x27;Annecy in Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">1 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/plage-imperial-annecy" class="title">Plage de l'Impérial</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/escalade-atome-annecy" class="card-photo">
       <img src="/img/generique/generique-escalade-bouldering.jpg" alt="Atome Annecy — klimhal in Annecy, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">1 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/escalade-atome-annecy" class="title">Atome Climbing Annecy</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/musee-cinema-animation-annecy" class="card-photo">
       <img src="/img/musees/musee-cinema-animation-annecy-hero.jpg" alt="Cité internationale van de animatiefilm in het Haras van Annecy, toekomstig Museum van de animatiefilm door Devaux et Devaux architecten" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">1 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/musee-cinema-animation-annecy" class="title">Museum van de animatiefilm</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/veloroute-vallee-arve-cluses-sallanches" class="card-photo">
       <img src="/img/generique/generique-voie-verte-cyclistes-riviere.jpg" alt="Fietsroute Arve-vallei V61 Léman-Mont-Blanc vrijliggende groene route doorheen het industriële dal tegenover het Mont-Blanc-massief Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">38 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/veloroute-vallee-arve-cluses-sallanches" class="title">Fietsroute Vallée de l'Arve</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/voie-verte-arve-cluses-thyez" class="card-photo">
       <img src="/img/generique/generique-voie-verte-famille-kids.jpg" alt="Lokale familie-groene-route Wandelpromenade langs de Arve Cluses-Thyez in Cluses Haute-Savoie - 2 × 2,5 km heen · lus 5 km zeer makkelijk" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">38 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/voie-verte-arve-cluses-thyez" class="title">Wandelpromenade langs de Arve Cluses-Thyez</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/voie-verte-du-chablais" class="card-photo">
       <img src="/img/voies-vertes/voie-verte-du-chablais-hero.jpg" alt="Groene route van het Chablais — Abondance-vallei, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">61 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/voie-verte-du-chablais" class="title">Groene route van het Chablais (Abondance-vallei)</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Vlakbij verstopt</h3><ul><li><a href="https://loisirs74.fr/nl/parc-de-peche-domaine-du-moulin-authier">Domaine du Moulin Authier — Visvijverpark</a><span>Haute-Savoie · 2 km</span></li><li><a href="https://loisirs74.fr/nl/marais-de-poisy">Marais de Poisy</a><span>Poisy · 5 km</span></li><li><a href="https://loisirs74.fr/nl/ereel-annecy-sillingy">E.réel Annecy</a><span>Sillingy · 5 km</span></li></ul></div><div class="disc"><h3>Meren die een omweg waard zijn</h3><ul><li><a href="https://loisirs74.fr/nl/plage-albigny">Plage d'Albigny</a><span>Annecy · 2 km</span></li><li><a href="https://loisirs74.fr/nl/plage-des-marquisats">Plage des Marquisats</a><span>Annecy · 3 km</span></li><li><a href="https://loisirs74.fr/nl/plage-de-menthon-saint-bernard">Plage de Menthon-Saint-Bernard</a><span>Menthon-Saint-Bernard · 7 km</span></li></ul></div><div class="disc"><h3>Als je dit leuk vond, probeer dan eens…</h3><ul><li><a href="https://loisirs74.fr/nl/viarhona-haute-savoie-saint-gingolph-seyssel">ViaRhôna Haute-Savoie</a><span>Saint-Gingolph · 74 km</span></li></ul></div><p class="disc-note">Afstanden in vogelvlucht, van de ene plaats naar de andere.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Gepubliceerd 24 mai 2026</span><span class="sep">·</span><span>Bijgewerkt 24 mai 2026</span></p></div></main>

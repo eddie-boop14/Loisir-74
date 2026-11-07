@@ -108,6 +108,8 @@
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
 
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
+
 [dir=rtl] a.skip{left:auto;inset-inline-start:-9999px}
 [dir=rtl] a.skip:focus{inset-inline-start:0}
 [dir=rtl] h1.hammer{direction:ltr;text-align:right}</style>
@@ -117,7 +119,7 @@
 <link rel="alternate" type="text/markdown" href="/content/atelier-poterie-du-prunier-thones.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/atelier-poterie-du-prunier-thones.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">الانتقال إلى المحتوى</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">اطّلع أيضًا</p>
-    <h2>اطّلع أيضًا</h2>
-    <p class="lead"></p>
+    <h2>على بعد 1 كيلومتر من هنا…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/ar/musee-patrimonial-pays-thones-fondateurs-francois-et-lucien-cochat-thones" class="card-photo">
       <img src="/img/generique/generique-musee-classique.jpg" alt="متحف التراث في Pays de Thônes - المؤسسان François وLucien Cochat، Haute-Savoie" loading="lazy">
-      <span class="card-tag">مدفوع</span>
+      <span class="card-tag">1 km · مدفوع</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/musee-patrimonial-pays-thones-fondateurs-francois-et-lucien-cochat-thones" class="title">Musée Patrimonial du Pays de Thônes - Fondateurs : François et Lucien Cochat</a>
@@ -201,7 +210,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/ecomusee-bois-foret-thones" class="card-photo">
       <img src="/img/musees/ecomusee-bois-foret-thones-hero.jpg" alt="قاعة « عبر وادٍ حرجي » في Écomusée du Bois et de la Forêt في Thônes" loading="lazy">
-      <span class="card-tag">مدفوع</span>
+      <span class="card-tag">2 km · مدفوع</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/ecomusee-bois-foret-thones" class="title">Écomusée du Bois et de la Forêt</a>
@@ -215,7 +224,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/karting-thones" class="card-photo">
       <img src="/img/generique/generique-karting-indoor-motion.jpg" alt="Karting Indoor des Aravis — كارتينغ في Thônes، وادي أرافيس" loading="lazy">
-      <span class="card-tag">مدفوع</span>
+      <span class="card-tag">3 km · مدفوع</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/karting-thones" class="title">Karting Indoor des Aravis</a>
@@ -229,7 +238,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/atelier-poterie-ryokan-thones" class="card-photo">
       <img src="/img/generique/generique-atelier-poterie-mains.jpg" alt="ورشة Atelier Ryokan — ورشة الفخار في Thônes، Haute-Savoie" loading="lazy">
-      <span class="card-tag">مدفوع</span>
+      <span class="card-tag">1 km · مدفوع</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/atelier-poterie-ryokan-thones" class="title">Atelier Ryokan</a>
@@ -243,7 +252,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/via-ferrata-thones" class="card-photo">
       <img src="/img/que-faire/via-ferrata-thones-hero.jpg" alt="طريق فيراتا Thônes، طريق فيراتا في Haute-Savoie" loading="lazy">
-      <span class="card-tag">مجاني</span>
+      <span class="card-tag">1 km · مجاني</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/via-ferrata-thones" class="title">Via ferrata de Thônes</a>
@@ -257,7 +266,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/bungee-bun-j-ride-saint-jean-de-sixt" class="card-photo">
       <img src="/img/generique/generique-bungee.jpg" alt="Bun-J-Ride Saint-Jean-de-Sixt — قفزة البندول في جبال آراڤيس" loading="lazy">
-      <span class="card-tag">مدفوع</span>
+      <span class="card-tag">6 km · مدفوع</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/bungee-bun-j-ride-saint-jean-de-sixt" class="title">Bun-J-Ride Saint-Jean-de-Sixt</a>
@@ -268,6 +277,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>مخبأ في مكان قريب جدًا</h3><ul><li><a href="https://loisirs74.fr/ar/musee-resistance-morette-la-balme-de-thuy">Site de Morette — متحف المقاومة والنصب التذكاري للترحيل</a><span>La Balme-de-Thuy · 4 km</span></li><li><a href="https://loisirs74.fr/ar/col-de-la-croix-fry">Col de la Croix-Fry</a><span>Manigod · 6 km</span></li><li><a href="https://loisirs74.fr/ar/debaroule-clusaz">Débaroule — Parcours ludique</a><span>La Clusaz · 9 km</span></li></ul></div><div class="disc"><h3>شلالات تستحق الزيارة</h3><ul><li><a href="https://loisirs74.fr/ar/cascade-d-angon">Cascade d'Angon</a><span>Talloires-Montmin · 10 km</span></li><li><a href="https://loisirs74.fr/ar/cascade-de-fontany-saint-ferreol">Cascade de Fontany</a><span>Saint-Ferréol · 11 km</span></li><li><a href="https://loisirs74.fr/ar/cascade-du-chinaillon">Cascade du Chinaillon</a><span>Le Grand-Bornand · 13 km</span></li></ul></div><div class="disc"><h3>إذا أعجبك هذا، جرب...</h3><ul><li><a href="https://loisirs74.fr/ar/montgolfiere-annecy">Montgolfière Annecy</a><span>Annecy · 16 km</span></li><li><a href="https://loisirs74.fr/ar/golf-practice-belvedere-saint-martin-bellevue">Golf du Belvédère</a><span>Saint-Martin-Bellevue · 16 km</span></li><li><a href="https://loisirs74.fr/ar/parc-animalier-grande-jeanne-annecy">Parc Animalier La Grande Jeanne</a><span>Annecy · 17 km</span></li></ul></div><p class="disc-note">المسافات بخط مستقيم، من مكان إلى آخر.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>نُشر في 3 juin 2026</span><span class="sep">·</span><span>حُدّث في 26/06/26</span></p></div></main>

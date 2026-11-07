@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/laser-game-lasermaxx-sillingy.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/laser-game-lasermaxx-sillingy.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,23 @@ Vous admirerez un magnifique panorama sur les Al.</p><a class="cta" href="http:/
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Cerca</p>
-    <h2>Cerca</h2>
+    <h2>A 1 km de aquí…</h2>
     <p class="lead">Otros lugares para explorar en la zona y en la misma categoría</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/es/ereel-annecy-sillingy" class="card-photo">
       <img src="/img/generique/generique-vr-multi-joueurs.jpg" alt="Jugador inmerso en VR en una estación individual del centro de realidad virtual E.réel en Sillingy, cerca de Annecy" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">2 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/ereel-annecy-sillingy" class="title">E.réel Annecy</a>
@@ -201,7 +211,7 @@ Vous admirerez un magnifique panorama sur les Al.</p><a class="cta" href="http:/
 <article class="card">
     <a href="https://loisirs74.fr/es/domaine-du-tornet" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Lac_de_la_Balme-de-Sillingy_%2851056207507%29.jpg/960px-Lac_de_la_Balme-de-Sillingy_%2851056207507%29.jpg" alt="Domaine du Tornet en La Balme-de-Sillingy: lago y cerezos, Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">2 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/domaine-du-tornet" class="title">Domaine du Tornet</a>
@@ -215,7 +225,7 @@ Vous admirerez un magnifique panorama sur les Al.</p><a class="cta" href="http:/
 <article class="card">
     <a href="https://loisirs74.fr/es/marais-de-poisy" class="card-photo">
       <img src="/img/points-de-vue/marais-de-poisy-hero.jpg" alt="Marais de Poisy en Poisy, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">3 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/marais-de-poisy" class="title">Marais de Poisy</a>
@@ -229,7 +239,7 @@ Vous admirerez un magnifique panorama sur les Al.</p><a class="cta" href="http:/
 <article class="card">
     <a href="https://loisirs74.fr/es/vr-ereel-annecy-sillingy" class="card-photo">
       <img src="/img/generique/generique-vr-multi-joueurs.jpg" alt="EREEL VR Sillingy — sala VR en Sillingy, Alta Saboya" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">1 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/vr-ereel-annecy-sillingy" class="title">EREEL VR Sillingy</a>
@@ -243,7 +253,7 @@ Vous admirerez un magnifique panorama sur les Al.</p><a class="cta" href="http:/
 <article class="card">
     <a href="https://loisirs74.fr/es/escalade-space-bloc-sillingy" class="card-photo">
       <img src="/img/generique/generique-escalade-wall.jpg" alt="Space Bloc sala de búlder en Sillingy cerca de Annecy, Alta Saboya" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">1 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/escalade-space-bloc-sillingy" class="title">Space Bloc</a>
@@ -257,7 +267,7 @@ Vous admirerez un magnifique panorama sur les Al.</p><a class="cta" href="http:/
 <article class="card">
     <a href="https://loisirs74.fr/es/la-foret-enchantee-sillingy" class="card-photo">
       <img src="/img/generique/generique-attraction.jpg" alt="La Forêt Enchantée — área de juego cubierta, Sillingy, Haute-Savoie" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">2 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/la-foret-enchantee-sillingy" class="title">La Forêt Enchantée</a>
@@ -268,6 +278,7 @@ Vous admirerez un magnifique panorama sur les Al.</p><a class="cta" href="http:/
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Escondido muy cerca</h3><ul><li><a href="https://loisirs74.fr/es/pont-de-la-caille">Pont de la Caille</a><span>Cruseilles · 7 km</span></li><li><a href="https://loisirs74.fr/es/gorges-du-fier">Gorges du Fier</a><span>Lovagny · 7 km</span></li><li><a href="https://loisirs74.fr/es/chateau-montrottier-lovagny">Château de Montrottier</a><span>Lovagny · 7 km</span></li></ul></div><div class="disc"><h3>Miradores que merecen una visita</h3><ul><li><a href="https://loisirs74.fr/es/thiou-a-annecy-annecy">El Thiou en Annecy</a><span>Annecy · 9 km</span></li><li><a href="https://loisirs74.fr/es/mont-veyrier">Mont Veyrier</a><span>Annecy · 10 km</span></li><li><a href="https://loisirs74.fr/es/mont-baron">Mont Baron</a><span>Veyrier-du-Lac · 11 km</span></li></ul></div><div class="disc"><h3>Si te ha gustado, prueba…</h3><ul><li><a href="https://loisirs74.fr/es/criq-parc">Criq'Parc</a><span>Saint-Jorioz · 16 km</span></li><li><a href="https://loisirs74.fr/es/acro-aventures-talloires">Acro'Aventures Talloires</a><span>Talloires-Montmin · 17 km</span></li><li><a href="https://loisirs74.fr/es/via-ferrata-thones">Vía ferrata de Thônes</a><span>Thônes · 22 km</span></li></ul></div><p class="disc-note">Distancias en línea recta, de un lugar a otro.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publicado el 1 juin 2026</span><span class="sep">·</span><span>Actualizado el 7 juin 2026</span></p></div></main>

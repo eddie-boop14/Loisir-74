@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/lac-des-dronieres.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/lac-des-dronieres.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="site"><div class="wrap">
@@ -184,15 +186,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Cerca</p>
-    <h2>Cerca</h2>
+    <h2>A 1 km de aquí…</h2>
     <p class="lead">Otros lugares para explorar en la zona y en la misma categoría</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/es/parc-des-dronieres" class="card-photo">
       <img src="/img/bases-de-loisirs/parc-des-dronieres-hero.jpg" alt="Parc des Dronières con su lago, senderos forestales y parque de fauna, Cruseilles, Alta Saboya" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">1 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/parc-des-dronieres" class="title">Parc des Dronières</a>
@@ -206,7 +216,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/tactiq-aventure-cruseilles" class="card-photo">
       <img src="/img/generique/generique-accrobranche-4.jpg" alt="Parque de aventura Tactiq Aventure en el bosque de Dronières en Cruseilles" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">1 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/tactiq-aventure-cruseilles" class="title">Tactiq Aventure</a>
@@ -220,7 +230,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/sentier-balcon-leman-saleve" class="card-photo">
       <img src="/img/generique/generique-sentier-sommet-panorama.jpg" alt="Sendero de cresta GR Sentier du Balcon du Léman en Cruseilles, Haute-Savoie - ~15 km Croisette-Cruseilles, moderada a difícil" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">1 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/sentier-balcon-leman-saleve" class="title">Sendero Balcón del Lemán</a>
@@ -234,7 +244,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/plage-albigny" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Plage_d%27Albigny_%C3%A0_Annecy.jpg" alt="Plage d&#x27;Albigny a orillas del lago de Annecy con césped y vista a las montañas, barrio Albigny, Annecy" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">15 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/plage-albigny" class="title">Plage d'Albigny</a>
@@ -248,7 +258,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/plage-des-marquisats" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Annecy-8.jpg/960px-Annecy-8.jpg" alt="Playa con césped de Marquisats a orillas del lago de Annecy con bañistas y vista a las montañas, Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">16 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/plage-des-marquisats" class="title">Plage des Marquisats</a>
@@ -262,7 +272,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/plage-de-menthon-saint-bernard" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Plage_municipale_de_Menthon-Saint-Bernard.jpg/960px-Plage_municipale_de_Menthon-Saint-Bernard.jpg" alt="Playa municipal de Menthon-Saint-Bernard a orillas del lago de Annecy con vista al Semnoz, Alta Saboya" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">20 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/plage-de-menthon-saint-bernard" class="title">Plage de Menthon-Saint-Bernard</a>
@@ -273,6 +283,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Escondido muy cerca</h3><ul><li><a href="https://loisirs74.fr/es/pont-de-la-caille">Pont de la Caille</a><span>Cruseilles · 3 km</span></li><li><a href="https://loisirs74.fr/es/sentier-pedestre-sens-et-decouverte-animaux-ferme-copponex">Sendero peatonal: sentidos y descubrimiento de los animales de granja</a><span>Copponex · 4 km</span></li><li><a href="https://loisirs74.fr/es/maison-du-saleve-presilly">Maison du Salève</a><span>Présilly · 4 km</span></li></ul></div><div class="disc"><h3>Miradores que merecen una visita</h3><ul><li><a href="https://loisirs74.fr/es/mont-saleve">Monte Salève</a><span>Monnetier-Mornex · 10 km</span></li><li><a href="https://loisirs74.fr/es/col-des-pitons-saleve">Le Salève (Col des Pitons)</a><span>Collonges-sous-Salève · 12 km</span></li><li><a href="https://loisirs74.fr/es/marais-de-poisy">Marais de Poisy</a><span>Poisy · 12 km</span></li></ul></div><div class="disc"><h3>Si te ha gustado, prueba…</h3><ul><li><a href="https://loisirs74.fr/es/plage-de-saint-jorioz">Plage de Saint-Jorioz</a><span>Saint-Jorioz · 23 km</span></li><li><a href="https://loisirs74.fr/es/lac-benit">Lac Bénit</a><span>Mont-Saxonnex · 30 km</span></li><li><a href="https://loisirs74.fr/es/lac-des-confins">Lac des Confins</a><span>La Clusaz · 31 km</span></li></ul></div><p class="disc-note">Distancias en línea recta, de un lugar a otro.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publicado el 23 avril 2026</span><span class="sep">·</span><span>Actualizado el 26/06/26</span></p></div></main>

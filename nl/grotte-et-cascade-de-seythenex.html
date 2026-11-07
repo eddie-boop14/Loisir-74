@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/grotte-et-cascade-de-seythenex.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/grotte-et-cascade-de-seythenex.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Naar inhoud springen</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,23 @@ Snack rapide ou plat.</p><a class="cta" href="http://www.grotte-cascade-seythene
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">In de buurt</p>
-    <h2>In de buurt</h2>
+    <h2>Op 2 km hiervandaan…</h2>
     <p class="lead">Andere plekken om te ontdekken in de buurt en in dezelfde categorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/nl/museum-des-papillons-et-insectes-faverges" class="card-photo">
       <img src="/img/generique/generique-musee-moderne.jpg" alt="Kleurrijke vitrines met exotische vlinders in het Vlinder- en Insectenmuseum van het Château de Faverges, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">2 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/museum-des-papillons-et-insectes-faverges" class="title">Vlinder- en Insectenmuseum van Faverges</a>
@@ -201,7 +211,7 @@ Snack rapide ou plat.</p><a class="cta" href="http://www.grotte-cascade-seythene
 <article class="card">
     <a href="https://loisirs74.fr/nl/chateau-et-donjon-des-seigneurs-de-faverges" class="card-photo">
       <img src="/img/chateaux/chateau-et-donjon-des-seigneurs-de-faverges-hero.jpg" alt="Donjon van de Heren van Faverges op de binnenplaats van het kasteel, ronde toren uit de 13e eeuw ingeschreven als Historisch Monument" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">2 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/chateau-et-donjon-des-seigneurs-de-faverges" class="title">Kasteel en Donjon van de Heren van Faverges</a>
@@ -215,7 +225,7 @@ Snack rapide ou plat.</p><a class="cta" href="http://www.grotte-cascade-seythene
 <article class="card">
     <a href="https://loisirs74.fr/nl/luge-ete-sambuy-faverges-seythenex" class="card-photo">
       <img src="/img/que-faire/luge-ete-sambuy-faverges-seythenex-hero.jpg" alt="De karretjes van de zomerbobslee van La Sambuy bij de start, Seythenex" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">2 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/luge-ete-sambuy-faverges-seythenex" class="title">Luge d'été de La Sambuy</a>
@@ -229,7 +239,7 @@ Snack rapide ou plat.</p><a class="cta" href="http://www.grotte-cascade-seythene
 <article class="card">
     <a href="https://loisirs74.fr/nl/cascade-de-fontany-saint-ferreol" class="card-photo">
       <img src="/img/cascades/cascade-de-fontany-saint-ferreol-hero.jpg" alt="De Cascade de Fontany in haar beboste omgeving in Saint-Ferréol" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">5 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/cascade-de-fontany-saint-ferreol" class="title">Cascade de Fontany</a>
@@ -243,7 +253,7 @@ Snack rapide ou plat.</p><a class="cta" href="http://www.grotte-cascade-seythene
 <article class="card">
     <a href="https://loisirs74.fr/nl/cascade-d-angon" class="card-photo">
       <img src="/img/cascades/cascade-d-angon-hero.jpg" alt="De waterval van Angon in zijn smalle rotskloof, boven Talloires" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">13 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/cascade-d-angon" class="title">Cascade d'Angon</a>
@@ -257,7 +267,7 @@ Snack rapide ou plat.</p><a class="cta" href="http://www.grotte-cascade-seythene
 <article class="card">
     <a href="https://loisirs74.fr/nl/gorges-du-fier" class="card-photo">
       <img src="/img/cascades/gorges-du-fier-hero.jpg" alt="Gorges du Fier in Lovagny, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">27 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/gorges-du-fier" class="title">Gorges du Fier</a>
@@ -268,6 +278,7 @@ Snack rapide ou plat.</p><a class="cta" href="http://www.grotte-cascade-seythene
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Vlakbij verstopt</h3><ul><li><a href="https://loisirs74.fr/nl/musee-archeologique-viuz-faverges">Archeologisch Museum van Viuz-Faverges</a><span>Faverges-Seythenex · 3 km</span></li><li><a href="https://loisirs74.fr/nl/maison-de-la-pomme-biscantin-serraval">Maison de la Pomme et du Biscantin</a><span>Serraval · 7 km</span></li><li><a href="https://loisirs74.fr/nl/ecomusee-bois-foret-thones">Écomusée du Bois et de la Forêt</a><span>Thônes · 16 km</span></li></ul></div><div class="disc"><h3>Uitzichtpunten die zeker een omweg waard zijn</h3><ul><li><a href="https://loisirs74.fr/nl/reserve-naturelle-bout-du-lac">Natuurreservaat Bout-du-Lac d'Annecy</a><span>Doussard · 9 km</span></li><li><a href="https://loisirs74.fr/nl/col-de-la-forclaz">Col de la Forclaz</a><span>Talloires-Montmin · 9 km</span></li><li><a href="https://loisirs74.fr/nl/le-semnoz">Le Semnoz</a><span>Viuz-la-Chiésaz · 18 km</span></li></ul></div><div class="disc"><h3>Als je dit leuk vond, probeer dan eens…</h3><ul><li><a href="https://loisirs74.fr/nl/cascade-du-chinaillon">Cascade du Chinaillon</a><span>Le Grand-Bornand · 28 km</span></li><li><a href="https://loisirs74.fr/nl/cascade-mysterieuse-le-grand-bornand">Cascade mystérieuse</a><span>Le Grand-Bornand · 28 km</span></li><li><a href="https://loisirs74.fr/nl/cascade-de-la-belle-au-bois">Cascade de la Belle au Bois</a><span>Megève · 29 km</span></li></ul></div><p class="disc-note">Afstanden in vogelvlucht, van de ene plaats naar de andere.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Gepubliceerd 14 mai 2026</span><span class="sep">·</span><span>Bijgewerkt 18/07/26</span></p></div></main>

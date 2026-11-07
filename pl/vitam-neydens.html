@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/vitam-neydens.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/vitam-neydens.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Przejdź do treści</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Zobacz też</p>
-    <h2>Zobacz też</h2>
-    <p class="lead"></p>
+    <h2>W odległości 1 km stąd…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/pl/parcours-marche-boucle-pedestre-uffin-neydens" class="card-photo">
       <img src="/img/generique/generique-sentier-automne-rouge.jpg" alt="Pętla spacerowa w Neydens, panorama nad równiną Genewską i salewą" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">1 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/parcours-marche-boucle-pedestre-uffin-neydens" class="title">Parcours de marche : Boucle pédestre d'Uffin</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/cinema-pathe-archamps-imax" class="card-photo">
       <img src="/img/generique/generique-cinema-2.jpg" alt="Pathé Archamps - kino w Archamps, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">1 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/cinema-pathe-archamps-imax" class="title">Pathé Archamps</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/spa-vitam-bien-etre-neydens" class="card-photo">
       <img src="/img/generique/generique-spa-jardin-tropical.jpg" alt="Vitam Wellness &amp; Spa - Neydens, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">1 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/spa-vitam-bien-etre-neydens" class="title">Vitam Bien-être &amp; Spa</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/tropicaland-viry" class="card-photo">
       <img src="/img/generique/generique-parc.jpg" alt="Rzeźba tyranozaura w gęstej dżungli parku dinozaurów Tropicaland w Viry" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">5 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/tropicaland-viry" class="title">Tropicaland</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/grand-parc-d-andilly" class="card-photo">
       <img src="/img/bases-de-loisirs/grand-parc-d-andilly-hero.jpg" alt="Rycerz w zbroi na przybranym w czaprak rumaku podczas turnieju w Grandes Médiévales d&#x27;Andilly, Grand Parc d&#x27;Andilly" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">7 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/grand-parc-d-andilly" class="title">Grand Parc d'Andilly</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/filenvol-monnetier-mornex" class="card-photo">
       <img src="/img/generique/generique-parc.jpg" alt="Katamaran sieci zawieszone między drzewami w parku Filenvol u podnóża Petit Salève w Monnetier-Mornex" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">10 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/filenvol-monnetier-mornex" class="title">Filenvol</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Ukryte tuż obok</h3><ul><li><a href="https://loisirs74.fr/pl/chateau-comtal-saint-julien-en-genevois">Château comtal de Ternier</a><span>Saint-Julien-en-Genevois · 2 km</span></li><li><a href="https://loisirs74.fr/pl/sentier-maison-saleve-pomier-presilly">Sentiers de la Maison du Salève</a><span>Présilly · 3 km</span></li><li><a href="https://loisirs74.fr/pl/col-des-pitons-saleve">Le Salève (Col des Pitons)</a><span>Collonges-sous-Salève · 4 km</span></li></ul></div><div class="disc"><h3>Punkty widokowe, które warto odwiedzić</h3><ul><li><a href="https://loisirs74.fr/pl/mont-saleve">Mont Salève</a><span>Monnetier-Mornex · 6 km</span></li><li><a href="https://loisirs74.fr/pl/telepherique-du-saleve">Téléphérique du Salève</a><span>Étrembières · 8 km</span></li><li><a href="https://loisirs74.fr/pl/pont-de-la-caille">Pont de la Caille</a><span>Cruseilles · 12 km</span></li></ul></div><div class="disc"><h3>Jeśli Ci się podobało, spróbuj…</h3><ul><li><a href="https://loisirs74.fr/pl/parc-imperial-annecy">Parc de l'Impérial</a><span>Annecy · 25 km</span></li><li><a href="https://loisirs74.fr/pl/jardins-europe-annecy">Les Jardins de l'Europe</a><span>Annecy · 25 km</span></li><li><a href="https://loisirs74.fr/pl/c5-kids-party-ville-la-grand">C5 Kids Party</a><span>Ville-la-Grand · 15 km</span></li></ul></div><p class="disc-note">Odległości w linii prostej między poszczególnymi miejscami.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Opublikowano dnia 21 mai 2026</span><span class="sep">·</span><span>Zaktualizowano dnia 12/07/26</span></p></div></main>

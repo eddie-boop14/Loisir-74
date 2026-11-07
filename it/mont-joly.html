@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/mont-joly.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/mont-joly.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,23 @@ Eté : Hôtel-restaurant familial avec piscine extérieure et jardin.</p><a clas
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Nelle vicinanze</p>
-    <h2>Nelle vicinanze</h2>
+    <h2>A 2 km da qui…</h2>
     <p class="lead">Altri luoghi da esplorare nei dintorni e nella stessa categoria</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/it/parc-de-loisirs-du-pontet" class="card-photo">
       <img src="/img/bases-de-loisirs/parc-de-loisirs-du-pontet-hero.jpg" alt="Parco di Divertimenti del Pontet con lago di montagna e spazi verdi, Les Contamines-Montjoie, ai piedi del massiccio del Mont-Blanc" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">2 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/parc-de-loisirs-du-pontet" class="title">Parco di Divertimenti del Pontet</a>
@@ -201,7 +211,7 @@ Eté : Hôtel-restaurant familial avec piscine extérieure et jardin.</p><a clas
 <article class="card">
     <a href="https://loisirs74.fr/it/les-contamines-montjoie" class="card-photo">
       <img src="/img/stations-de-ski/les-contamines-montjoie-hero.jpg" alt="Il comprensorio sciistico di Les Contamines-Montjoie ai piedi del Mont-Blanc" loading="lazy">
-      <span class="card-tag">A pagamento</span>
+      <span class="card-tag">3 km · A pagamento</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/les-contamines-montjoie" class="title">Les Contamines-Montjoie</a>
@@ -215,7 +225,7 @@ Eté : Hôtel-restaurant familial avec piscine extérieure et jardin.</p><a clas
 <article class="card">
     <a href="https://loisirs74.fr/it/cote-2000-aventure" class="card-photo">
       <img src="/img/que-faire/cote-2000-aventure-hero.jpg" alt="Percorso avventura tra gli alberi a Côte 2000 Aventure, Megève, Haute-Savoie" loading="lazy">
-      <span class="card-tag">A pagamento</span>
+      <span class="card-tag">3 km · A pagamento</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/cote-2000-aventure" class="title">Côte 2000 Aventure</a>
@@ -229,7 +239,7 @@ Eté : Hôtel-restaurant familial avec piscine extérieure et jardin.</p><a clas
 <article class="card">
     <a href="https://loisirs74.fr/it/belvedere-panorama-360-combloux-la-cry" class="card-photo">
       <img src="/img/generique/generique-point-de-vue.jpg" alt="Table d&#x27;orientation de la Cry" loading="lazy">
-      <span class="card-tag">A pagamento</span>
+      <span class="card-tag">9 km · A pagamento</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/belvedere-panorama-360-combloux-la-cry" class="title">Table d'orientation de la Cry</a>
@@ -243,7 +253,7 @@ Eté : Hôtel-restaurant familial avec piscine extérieure et jardin.</p><a clas
 <article class="card">
     <a href="https://loisirs74.fr/it/aire-de-decollage-parapente-plaine-joux" class="card-photo">
       <img src="/img/points-de-vue/aire-de-decollage-parapente-plaine-joux-hero.jpg" alt="Parapendii multicolori al decollo di Plaine-Joux di fronte al Monte Bianco, Passy, Alta Savoia" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">14 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/aire-de-decollage-parapente-plaine-joux" class="title">Area di decollo parapendio di Plaine-Joux</a>
@@ -257,7 +267,7 @@ Eté : Hôtel-restaurant familial avec piscine extérieure et jardin.</p><a clas
 <article class="card">
     <a href="https://loisirs74.fr/it/telecabine-panoramic-mont-blanc" class="card-photo">
       <img src="/img/points-de-vue/telecabine-panoramic-mont-blanc-hero.jpg" alt="Telecabina Panoramic Mont-Blanc che attraversa il ghiacciaio del Géant tra l&#x27;Aiguille du Midi e la Punta Helbronner" loading="lazy">
-      <span class="card-tag">A pagamento</span>
+      <span class="card-tag">17 km · A pagamento</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/telecabine-panoramic-mont-blanc" class="title">Telecabina Panoramic Mont-Blanc</a>
@@ -268,6 +278,7 @@ Eté : Hôtel-restaurant familial avec piscine extérieure et jardin.</p><a clas
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Nascosto proprio lì vicino</h3><ul><li><a href="https://loisirs74.fr/it/musee-art-sacre-saint-gervais-bains">Museo d'arte sacra</a><span>Saint-Gervais-les-Bains · 4 km</span></li><li><a href="https://loisirs74.fr/it/cascade-de-la-belle-au-bois">Cascade de la Belle au Bois</a><span>Megève · 6 km</span></li><li><a href="https://loisirs74.fr/it/musee-ermitage-calvaire-megeve">Museo dell'Eremo del Calvario</a><span>Megève · 6 km</span></li></ul></div><div class="disc"><h3>Funivie che meritano una visita</h3><ul><li><a href="https://loisirs74.fr/it/telecabine-du-jaillet">Telecabina del Jaillet</a><span>Megève · 7 km</span></li><li><a href="https://loisirs74.fr/it/tramway-du-mont-blanc">Tramway del Monte Bianco</a><span>Saint-Gervais-les-Bains · 8 km</span></li><li><a href="https://loisirs74.fr/it/telepherique-du-brevent">Funivia del Brévent</a><span>Chamonix-Mont-Blanc · 17 km</span></li></ul></div><div class="disc"><h3>Se vi è piaciuto, provate…</h3><ul><li><a href="https://loisirs74.fr/it/telepherique-aiguille-du-midi">Funivia dell'Aiguille du Midi</a><span>Chamonix-Mont-Blanc · 17 km</span></li><li><a href="https://loisirs74.fr/it/train-du-montenvers-mer-de-glace">Treno del Montenvers - Mer de Glace</a><span>Chamonix-Mont-Blanc · 18 km</span></li><li><a href="https://loisirs74.fr/it/col-des-aravis">Col des Aravis</a><span>La Clusaz · 18 km</span></li></ul></div><p class="disc-note">Distanze in linea d'aria, da un luogo all'altro.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Pubblicato il 14 mai 2026</span><span class="sep">·</span><span>Aggiornato il 18/07/26</span></p></div></main>

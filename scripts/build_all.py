@@ -406,6 +406,36 @@ def inject_home_hero():
     print(out.stdout.strip())
 
 
+def inject_motion():
+    """One small motion standard on every page with cards (scripts/
+    inject_motion.py): a 3 px lift, a 3 % photo zoom, a 2 px pin nudge, and
+    nothing at all under prefers-reduced-motion. Runs after every renderer
+    and patcher that writes cards."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "inject_motion.py"), "--apply"],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("inject_motion failed")
+    print(out.stdout.strip())
+
+
+def inject_hub_photos():
+    """One real photo (Bénédicte's or the owner's) on each category hub banner,
+    in every language (scripts/inject_hub_photos.py, data/hub-photos.json).
+    Runs BEFORE preload_hub_hero, which preloads whatever --hub-hero-img
+    names."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "inject_hub_photos.py"), "--apply"],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("inject_hub_photos failed")
+    print(out.stdout.strip())
+
+
 def status_gate():
     """JOB 6 gate: every fiche must have an explicit status (draft|verified|
     published). Print the distribution. Block if any fiche has status=None."""
@@ -715,8 +745,12 @@ def main():
         rebuild_security_txt)
     run("force directory URLs a flat .html shadows (the commune/station collision)",
         emit_collision_redirects)
+    run("real photo on each category hub banner (before the banner preload)",
+        inject_hub_photos)
     run("preload the hub/commune banner (CSS background — invisible to the preload scanner)",
         preload_hub_hero)
+    run("one small motion standard on every page with cards (after the last card writer)",
+        inject_motion)
     run("inject Cloudflare Web Analytics beacon (every published page)", inject_analytics)
     run("inject the Officiallink family footer line (followed on homepages only)",
         inject_family_footer)

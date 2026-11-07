@@ -108,6 +108,8 @@
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
 
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
+
 [dir=rtl] a.skip{left:auto;inset-inline-start:-9999px}
 [dir=rtl] a.skip:focus{inset-inline-start:0}
 [dir=rtl] h1.hammer{direction:ltr;text-align:right}</style>
@@ -117,7 +119,7 @@
 <link rel="alternate" type="text/markdown" href="/content/flaine.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/flaine.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">דלג לתוכן</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">ראו גם</p>
-    <h2>ראו גם</h2>
-    <p class="lead"></p>
+    <h2>במרחק 4 ק"מ מכאן…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/he/chiens-de-traineau-granges-de-heidi-passy" class="card-photo">
       <img src="/img/generique/generique-chiens-de-traineau-2.jpg" alt="צוות כלבים נורדי על שלג בפליין-ז&#x27;וף, Les Granges de Heidi, Passy, Haute-Savoie" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">5 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/chiens-de-traineau-granges-de-heidi-passy" class="title">Les Granges de Heidi</a>
@@ -201,7 +210,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/cascade-de-l-arpenaz" class="card-photo">
       <img src="/img/cascades/cascade-de-l-arpenaz-hero.jpg" alt="Cascade de l&#x27;Arpenaz, מפל בגובה 270 מטר על צוק גיר, Sallanches, Haute-Savoie" loading="lazy">
-      <span class="card-tag">חינם</span>
+      <span class="card-tag">5 km · חינם</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/cascade-de-l-arpenaz" class="title">Cascade de l'Arpenaz</a>
@@ -215,7 +224,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/chiens-de-traineau-evasion-nordique-les-carroz" class="card-photo">
       <img src="/img/generique/generique-chiens-de-traineau-1.jpg" alt="Evasion Nordique — רתימת כלבי מזחלת ב-Les Carroz d&#x27;Arâches" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">6 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/chiens-de-traineau-evasion-nordique-les-carroz" class="title">Evasion Nordique — Chiens de traîneau Les Carroz</a>
@@ -229,7 +238,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/les-carroz" class="card-photo">
       <img src="/img/stations-de-ski/les-carroz-hero.jpg" alt="תחום הסקי של Les Carroz, שער הכניסה ל-Grand Massif" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">4 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/les-carroz" class="title">Les Carroz</a>
@@ -243,7 +252,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/passy-plaine-joux" class="card-photo">
       <img src="/img/stations-de-ski/passy-plaine-joux-hero.jpg" alt="אזור Passy Plaine-Joux מול massif du Mont-Blanc" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">6 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/passy-plaine-joux" class="title">Passy Plaine-Joux</a>
@@ -257,7 +266,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/morillon" class="card-photo">
       <img src="/img/stations-de-ski/morillon-hero.jpg" alt="הכפר Morillon ורמת plateau des Esserts ב-Grand Massif" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">9 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/morillon" class="title">Morillon</a>
@@ -268,6 +277,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>מוסתר ממש קרוב</h3><ul><li><a href="https://loisirs74.fr/he/aire-de-decollage-parapente-plaine-joux">Aire de décollage parapente de Plaine-Joux</a><span>Passy · 7 km</span></li><li><a href="https://loisirs74.fr/he/jardin-cimes-passy">Jardin des Cimes</a><span>Passy · 7 km</span></li><li><a href="https://loisirs74.fr/he/base-de-loisirs-des-ilettes">Base de loisirs des Ilettes</a><span>Sallanches · 8 km</span></li></ul></div><div class="disc"><h3>אגמים שכדאי לבקר בהם</h3><ul><li><a href="https://loisirs74.fr/he/lac-vert-passy">Lac Vert</a><span>Passy · 8 km</span></li><li><a href="https://loisirs74.fr/he/lac-de-passy">Lac de Passy</a><span>Passy · 10 km</span></li><li><a href="https://loisirs74.fr/he/lac-cornu">Lac Cornu</a><span>Chamonix-Mont-Blanc · 13 km</span></li></ul></div><div class="disc"><h3>אם אהבתם, נסו…</h3><ul><li><a href="https://loisirs74.fr/he/chamonix-mont-blanc">Chamonix-Mont-Blanc</a><span>Chamonix-Mont-Blanc · 16 km</span></li><li><a href="https://loisirs74.fr/he/megeve">Megève</a><span>Megève · 17 km</span></li><li><a href="https://loisirs74.fr/he/mont-saxonnex">Mont-Saxonnex</a><span>Mont-Saxonnex · 17 km</span></li></ul></div><p class="disc-note">מרחקים בקו אווירי, ממקום למקום.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>פורסם בתאריך 15 juillet 2026</span><span class="sep">·</span><span>עודכן בתאריך 24/07/26</span></p></div></main>

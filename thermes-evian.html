@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/thermes-evian.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/thermes-evian.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">À proximité</p>
-    <h2>À proximité</h2>
+    <h2>À 1 km d'ici…</h2>
     <p class="lead">D'autres lieux à explorer dans le coin et dans la même catégorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/jardin-pre-curieux-evian" class="card-photo">
       <img src="/img/que-faire/jardin-pre-curieux-evian-hero.jpg" alt="Jardins du Pré Curieux — Évian, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">1 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/jardin-pre-curieux-evian" class="title">Jardins du Pré Curieux</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/montgolfiere-du-mont-blanc-evian" class="card-photo">
       <img src="/img/generique/generique-montgolfiere.jpg" alt="Montgolfière en vol au-dessus du lac Léman et du massif du Mont-Blanc, Évian, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">1 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/montgolfiere-du-mont-blanc-evian" class="title">Montgolfières du Mont-Blanc</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/croisiere-cgn-evian" class="card-photo">
       <img src="/img/generique/generique-port-annecy.jpg" alt="Croisière passagers Léman - ligne N1 Lausanne-Évian CGN escale Évian à Évian-les-Bains Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">1 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/croisiere-cgn-evian" class="title">CGN escale Évian</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/chateau-ripaille-thonon" class="card-photo">
       <img src="/img/chateaux/chateau-ripaille-thonon-hero.jpg" alt="Château de Ripaille avec ses 4 tours et son enceinte fortifiée XIVe siècle restaurée 1892-1903 sur le domaine de 53 hectares au bord du lac Léman Thonon" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">8 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/chateau-ripaille-thonon" class="title">Château de Ripaille</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/chateau-sonnaz-thonon-bains" class="card-photo">
       <img src="/img/chateaux/chateau-sonnaz-thonon-bains-hero.jpg" alt="Château de Sonnaz au cœur de Thonon-les-Bains, abritant le Musée du Chablais et l&#x27;Office de Tourisme, vue sur le lac Léman, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">9 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/chateau-sonnaz-thonon-bains" class="title">Château de Sonnaz</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/chateau-bellegarde-thonon" class="card-photo">
       <img src="/img/chateaux/chateau-bellegarde-thonon-hero.jpg" alt="Tour carrée médiévale du Château de Bellegarde gardant la porte des Lombards dernier vestige des fortifications de Thonon-les-Bains Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuit</span>
+      <span class="card-tag">9 km · Gratuit</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/chateau-bellegarde-thonon" class="title">Château de Bellegarde</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Caché tout près</h3><ul><li><a href="https://loisirs74.fr/palais-lumiere">Palais Lumière</a><span>Évian-les-Bains · 1 km</span></li><li><a href="https://loisirs74.fr/plage-d-evian-centre-nautique">Plage du Centre Nautique d'Évian</a><span>Évian-les-Bains · 1 km</span></li><li><a href="https://loisirs74.fr/chateau-fonbonne-et-herbularius-evian-bains">Château de Fonbonne et son Herbularius</a><span>Évian-les-Bains · 1 km</span></li></ul></div><div class="disc"><h3>Des points de vue qui valent le détour</h3><ul><li><a href="https://loisirs74.fr/reserve-naturelle-delta-de-la-dranse">Réserve naturelle du Delta de la Dranse</a><span>Publier · 6 km</span></li><li><a href="https://loisirs74.fr/plateau-de-loex">Plateau de Loëx</a><span>Habère-Poche · 16 km</span></li><li><a href="https://loisirs74.fr/pointe-de-miribel">Pointe de Miribel</a><span>Villard · 23 km</span></li></ul></div><div class="disc"><h3>Si vous avez aimé, essayez…</h3><ul><li><a href="https://loisirs74.fr/abbaye-d-abondance">Abbaye d'Abondance</a><span>Abondance · 17 km</span></li><li><a href="https://loisirs74.fr/chateau-la-rochette-lully">Château de la Rochette</a><span>Lully · 18 km</span></li><li><a href="https://loisirs74.fr/abbaye-d-aulps">Abbaye d'Aulps</a><span>Saint-Jean-d'Aulps · 18 km</span></li></ul></div><p class="disc-note">Distances à vol d'oiseau, d'un lieu à l'autre.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publié le 14 mai 2026</span><span class="sep">·</span><span>Mis à jour le 04/07/26</span></p></div></main>

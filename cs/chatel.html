@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/chatel.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/chatel.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Přejít k obsahu</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Viz také</p>
-    <h2>Viz také</h2>
-    <p class="lead"></p>
+    <h2>1 km odtud…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/cs/centre-aquatique-forme-d-o-chatel" class="card-photo">
       <img src="/img/generique/generique-thermes-hammam.jpg" alt="Forme d&#x27;O — aquapark Châtel, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">1 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/centre-aquatique-forme-d-o-chatel" class="title">Forme d'O Châtel</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/sentier-pedestre-sonore-sur-traces-contrebandiers-circuit-familles-chatel" class="card-photo">
       <img src="/img/generique/generique-sentier-hiver-neige.jpg" alt="Zvukový trail pašeráků v Châtel, start u Lac de Vonnes a Vieille Douane" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">1 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/sentier-pedestre-sonore-sur-traces-contrebandiers-circuit-familles-chatel" class="title">Sentier pédestre sonore sur les traces des contrebandiers - circuit familles</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/telecabine-super-chatel" class="card-photo">
       <img src="/img/telecabines/telecabine-super-chatel-hero.jpg" alt="Kabina Télécabine de Super-Châtel nad letními alpskými loukami s pohořím Dents du Midi v pozadí" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">1 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/telecabine-super-chatel" class="title">Télécabine de Super-Châtel</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/la-chapelle-d-abondance" class="card-photo">
       <img src="/img/stations-de-ski/la-chapelle-d-abondance-hero.jpg" alt="Vesnické středisko La Chapelle-d&#x27;Abondance v vallée d&#x27;Abondance" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">5 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/la-chapelle-d-abondance" class="title">La Chapelle-d'Abondance</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/avoriaz" class="card-photo">
       <img src="/img/stations-de-ski/avoriaz-hero.jpg" alt="Pěší středisko Avoriaz a jeho lyžařská oblast Portes du Soleil" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">9 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/avoriaz" class="title">Avoriaz</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/morzine" class="card-photo">
       <img src="/img/stations-de-ski/morzine-hero.jpg" alt="Horská vesnice-středisko Morzine v oblasti Portes du Soleil" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">14 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/morzine" class="title">Morzine</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Skryté hned poblíž</h3><ul><li><a href="https://loisirs74.fr/cs/sentier-morclan-chatel">Sentier du Morclan</a><span>Châtel · 1 km</span></li><li><a href="https://loisirs74.fr/cs/chatel-accrobranche-1600-chatel">Châtel Accrobranche 1600</a><span>Châtel · 2 km</span></li><li><a href="https://loisirs74.fr/cs/musee-ski-ancien-chapelle-abondance">Musée du ski ancien</a><span>La Chapelle-d'Abondance · 4 km</span></li></ul></div><div class="disc"><h3>Vodopády, které stojí za to vidět</h3><ul><li><a href="https://loisirs74.fr/cs/cascade-des-brochaux">Cascade des Brochaux</a><span>Montriond · 8 km</span></li><li><a href="https://loisirs74.fr/cs/cascade-de-nyon">Cascade de Nyon</a><span>Morzine · 14 km</span></li><li><a href="https://loisirs74.fr/cs/gorges-du-pont-du-diable">Gorges du Pont du Diable</a><span>La Vernaz · 18 km</span></li></ul></div><div class="disc"><h3>Pokud se vám to líbilo, zkuste…</h3><ul><li><a href="https://loisirs74.fr/cs/bernex">Bernex</a><span>Bernex · 16 km</span></li><li><a href="https://loisirs74.fr/cs/thollon-les-memises">Thollon-les-Mémises</a><span>Thollon-les-Mémises · 17 km</span></li><li><a href="https://loisirs74.fr/cs/les-gets">Les Gets</a><span>Les Gets · 17 km</span></li></ul></div><p class="disc-note">Vzdálenosti vzdušnou čarou mezi jednotlivými místy.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publikováno dne 16 juillet 2026</span><span class="sep">·</span><span>Aktualizováno dne 24/07/26</span></p></div></main>

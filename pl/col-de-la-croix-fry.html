@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/col-de-la-croix-fry.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/col-de-la-croix-fry.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Przejdź do treści</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Zobacz też</p>
-    <h2>Zobacz też</h2>
-    <p class="lead"></p>
+    <h2>W odległości 1 km stąd…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/pl/bungee-bun-j-ride-saint-jean-de-sixt" class="card-photo">
       <img src="/img/generique/generique-bungee.jpg" alt="Bun-J-Ride Saint-Jean-de-Sixt - saut pendulaire dans les Aravis" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">1 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/bungee-bun-j-ride-saint-jean-de-sixt" class="title">Bun-J-Ride Saint-Jean-de-Sixt</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/manigod" class="card-photo">
       <img src="/img/stations-de-ski/manigod-hero.jpg" alt="Wioska-kurort Manigod i przełęcz Col de la Croix-Fry w masywie Aravis" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">3 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/manigod" class="title">Manigod</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/patinoire-la-clusaz" class="card-photo">
       <img src="/img/generique/generique-patinoire-skater.jpg" alt="Lodowisko La Clusaz - Place du Pré de Foire, La Clusaz, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">3 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/patinoire-la-clusaz" class="title">Patinoire de La Clusaz</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/col-des-aravis" class="card-photo">
       <img src="/img/points-de-vue/col-des-aravis-hero.jpg" alt="Col des Aravis między La Clusaz a La Giettaz, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">5 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/col-des-aravis" class="title">Col des Aravis</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/plateau-des-glieres" class="card-photo">
       <img src="/img/points-de-vue/plateau-des-glieres-hero.jpg" alt="Płaskowyż Glières z Narodowym Pomnikiem Ruchu Oporu Gilioliego" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">10 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/plateau-des-glieres" class="title">Plateau des Glières</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/col-des-glieres" class="card-photo">
       <img src="/img/points-de-vue/col-des-glieres-hero.jpg" alt="Glières Plateau w lecie z widokiem na łąki alpejskie i National Monument of the Resistance, Fillière, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">11 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/col-des-glieres" class="title">Col des Glières</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Ukryte tuż obok</h3><ul><li><a href="https://loisirs74.fr/pl/debaroule-clusaz">Débaroule — Parcours ludique</a><span>La Clusaz · 3 km</span></li><li><a href="https://loisirs74.fr/pl/musee-patrimonial-pays-thones-fondateurs-francois-et-lucien-cochat-thones">Musée Patrimonial du Pays de Thônes - Fondateurs : François et Lucien Cochat</a><span>Thônes · 6 km</span></li><li><a href="https://loisirs74.fr/pl/lac-des-confins">Lac des Confins</a><span>La Clusaz · 7 km</span></li></ul></div><div class="disc"><h3>Wodospady, które warto zobaczyć</h3><ul><li><a href="https://loisirs74.fr/pl/cascade-du-chinaillon">Cascade du Chinaillon</a><span>Le Grand-Bornand · 10 km</span></li><li><a href="https://loisirs74.fr/pl/cascade-mysterieuse-le-grand-bornand">Cascade mystérieuse</a><span>Le Grand-Bornand · 10 km</span></li><li><a href="https://loisirs74.fr/pl/cascade-de-fontany-saint-ferreol">Cascade de Fontany</a><span>Saint-Ferréol · 13 km</span></li></ul></div><div class="disc"><h3>Jeśli Ci się podobało, spróbuj…</h3><ul><li><a href="https://loisirs74.fr/pl/tete-du-parmelan">Tête du Parmelan</a><span>Dingy-Saint-Clair · 15 km</span></li><li><a href="https://loisirs74.fr/pl/belvedere-du-mont-baron">Belvédère du Mont Baron</a><span>Veyrier-du-Lac · 17 km</span></li><li><a href="https://loisirs74.fr/pl/plateau-de-solaison">Plateau de Solaison</a><span>Brizon · 18 km</span></li></ul></div><p class="disc-note">Odległości w linii prostej między poszczególnymi miejscami.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Opublikowano dnia 05 juin 2026</span><span class="sep">·</span><span>Zaktualizowano dnia 18/07/26</span></p></div></main>

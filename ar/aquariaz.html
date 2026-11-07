@@ -108,6 +108,8 @@
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
 
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
+
 [dir=rtl] a.skip{left:auto;inset-inline-start:-9999px}
 [dir=rtl] a.skip:focus{inset-inline-start:0}
 [dir=rtl] h1.hammer{direction:ltr;text-align:right}</style>
@@ -117,7 +119,7 @@
 <link rel="alternate" type="text/markdown" href="/content/aquariaz.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/aquariaz.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">الانتقال إلى المحتوى</a>
 <header class="site"><div class="wrap">
@@ -181,15 +183,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">اطّلع أيضًا</p>
-    <h2>اطّلع أيضًا</h2>
-    <p class="lead"></p>
+    <h2>على بعد 1 كيلومتر من هنا…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/ar/avoriaz" class="card-photo">
       <img src="/img/stations-de-ski/avoriaz-hero.jpg" alt="المحطة المخصّصة للمشاة Avoriaz ومجالها التزلجي في Portes du Soleil" loading="lazy">
-      <span class="card-tag">مدفوع</span>
+      <span class="card-tag">1 km · مدفوع</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/avoriaz" class="title">Avoriaz</a>
@@ -203,7 +212,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/mine-lappiaz-morzine" class="card-photo">
       <img src="/img/generique/generique-sentier-hiver-neige.jpg" alt="منجم أردواز Lappiaz السابق فوق Avoriaz في Morzine بـHaute-Savoie، مسار تفسيري" loading="lazy">
-      <span class="card-tag">مجاني</span>
+      <span class="card-tag">1 km · مجاني</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/mine-lappiaz-morzine" class="title">La mine de la Lappiaz</a>
@@ -217,7 +226,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/cascade-des-brochaux" class="card-photo">
       <img src="/img/cascades/cascade-des-brochaux-hero.jpg" alt="شلال Cascade des Brochaux مع حوضه الطبيعي، مسار المشي لمسافات طويلة ينطلق من Les Lindarets، Montriond، Haute-Savoie" loading="lazy">
-      <span class="card-tag">مجاني</span>
+      <span class="card-tag">2 km · مجاني</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/cascade-des-brochaux" class="title">Cascade des Brochaux</a>
@@ -231,7 +240,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/cascade-aventure" class="card-photo">
       <img src="/img/que-faire/cascade-aventure-hero.jpg" alt="Cascade Aventure، حديقة مغامرات على قمم الأشجار وأنشطة في الهواء الطلق بالقرب من شلال نيون في Morzine، Haute-Savoie" loading="lazy">
-      <span class="card-tag">مدفوع</span>
+      <span class="card-tag">6 km · مدفوع</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/cascade-aventure" class="title">Cascade Aventure</a>
@@ -245,7 +254,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/tyrolienne-fantasticable-chatel" class="card-photo">
       <img src="/img/generique/generique-accrobranche-8.jpg" alt="Châtel Fantasticable، خط تزلج عملاق فوق Plaine Dranse، Haute-Savoie" loading="lazy">
-      <span class="card-tag">مدفوع</span>
+      <span class="card-tag">8 km · مدفوع</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/tyrolienne-fantasticable-chatel" class="title">Fantasticable de Châtel</a>
@@ -259,7 +268,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/chiens-de-traineau-la-patte-nordic-les-gets" class="card-photo">
       <img src="/img/generique/generique-chiens-de-traineau-1.jpg" alt="فريق كلاب هاسكي على الثلج في Les Gets، La Patte Nordic، Haute-Savoie" loading="lazy">
-      <span class="card-tag">مدفوع</span>
+      <span class="card-tag">9 km · مدفوع</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/chiens-de-traineau-la-patte-nordic-les-gets" class="title">La Patte Nordic</a>
@@ -270,6 +279,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>مخبأ في مكان قريب جدًا</h3><ul><li><a href="https://loisirs74.fr/ar/sentier-oiseaux-chatel">Sentier des oiseaux</a><span>Châtel · 3 km</span></li><li><a href="https://loisirs74.fr/ar/plage-du-lac-de-montriond">Plage du Lac de Montriond</a><span>Montriond · 5 km</span></li><li><a href="https://loisirs74.fr/ar/sentier-pedestre-eterlou-chatel">Sentier pédestre de l'Eterlou</a><span>Châtel · 5 km</span></li></ul></div><div class="disc"><h3>تلفريك تستحق الزيارة</h3><ul><li><a href="https://loisirs74.fr/ar/telecabine-pleney-morzine">Télécabine du Pléney</a><span>Morzine · 5 km</span></li><li><a href="https://loisirs74.fr/ar/telecabine-des-chavannes-les-gets">Télécabine des Chavannes</a><span>Les Gets · 9 km</span></li><li><a href="https://loisirs74.fr/ar/telecabine-du-mont-chery-les-gets">Télécabine du Mont-Chéry</a><span>Les Gets · 9 km</span></li></ul></div><div class="disc"><h3>إذا أعجبك هذا، جرب...</h3><ul><li><a href="https://loisirs74.fr/ar/via-ferrata-berard-vallorcine">Via ferrata de la Cascade de Bérard</a><span>Vallorcine · 22 km</span></li><li><a href="https://loisirs74.fr/ar/indiana-ventures-saint-paul-en-chablais">Indiana'Ventures Saint-Paul-en-Chablais</a><span>Saint-Paul-en-Chablais · 22 km</span></li><li><a href="https://loisirs74.fr/ar/jardin-pre-curieux-evian">Jardins du Pré Curieux</a><span>Évian-les-Bains · 27 km</span></li></ul></div><p class="disc-note">المسافات بخط مستقيم، من مكان إلى آخر.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>نُشر في 14 mai 2026</span><span class="sep">·</span><span>حُدّث في 06/06/26</span></p></div></main>

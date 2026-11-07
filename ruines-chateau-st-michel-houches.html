@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/ruines-chateau-st-michel-houches.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/ruines-chateau-st-michel-houches.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">À proximité</p>
-    <h2>À proximité</h2>
+    <h2>À 1 km d'ici…</h2>
     <p class="lead">D'autres lieux à explorer dans le coin et dans la même catégorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/au-fil-rail-jeu-piste-a-servoz-servoz" class="card-photo">
       <img src="/img/generique/generique-sentier-automne-orange.jpg" alt="Jeu de piste Au Fil du Rail à Servoz dans la vallée de Chamonix, parcours familial gratuit autour de la gare SNCF, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuit</span>
+      <span class="card-tag">1 km · Gratuit</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/au-fil-rail-jeu-piste-a-servoz-servoz" class="title">Au Fil du Rail - Jeu de Piste à Servoz</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/gorges-de-la-diosaz" class="card-photo">
       <img src="/img/cascades/gorges-de-la-diosaz-hero.jpg" alt="Au cœur des Gorges de la Diosaz : cascade et vasque émeraude entre les hautes parois rocheuses" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">1 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/gorges-de-la-diosaz" class="title">Gorges de la Diosaz</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/lac-vert-passy" class="card-photo">
       <img src="/img/lacs-plages/lac-vert-passy-hero.jpg" alt="Lac Vert de Passy avec eaux émeraude et rochers affleurants, vue sur le Mont-Blanc, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuit</span>
+      <span class="card-tag">3 km · Gratuit</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/lac-vert-passy" class="title">Lac Vert</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/maison-du-lieutenant-servoz" class="card-photo">
       <img src="/img/generique/generique-musee-classique.jpg" alt="Façade en pierre et bois de la Maison du Lieutenant, plus ancienne maison de la vallée de Chamonix, dans le hameau du Mont à Servoz" loading="lazy">
-      <span class="card-tag">Gratuit</span>
+      <span class="card-tag">2 km · Gratuit</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/maison-du-lieutenant-servoz" class="title">Maison du Lieutenant</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/musee-montagnard-les-houches" class="card-photo">
       <img src="/img/generique/generique-musee-grande-galerie.jpg" alt="Façade en bois et pierre de la maison de 1750 abritant le Musée Montagnard des Houches au cœur du village" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">4 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/musee-montagnard-les-houches" class="title">Musée Montagnard des Houches</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/maison-de-la-memoire-janny-couttet-chamonix" class="card-photo">
       <img src="/img/musees/maison-de-la-memoire-janny-couttet-chamonix-hero.jpg" alt="Façade en granit de l&#x27;ancienne Maison des Sœurs abritant la Maison de la Mémoire et du Patrimoine Janny Couttet rue des Moulins à Chamonix" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">8 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/maison-de-la-memoire-janny-couttet-chamonix" class="title">Maison de la Mémoire Janny Couttet</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Caché tout près</h3><ul><li><a href="https://loisirs74.fr/aire-de-decollage-parapente-plaine-joux">Aire de décollage parapente de Plaine-Joux</a><span>Passy · 4 km</span></li><li><a href="https://loisirs74.fr/jardin-cimes-passy">Jardin des Cimes</a><span>Passy · 5 km</span></li><li><a href="https://loisirs74.fr/maison-forte-hautetour-saint-gervais">Maison Forte de Hautetour</a><span>Saint-Gervais-les-Bains · 5 km</span></li></ul></div><div class="disc"><h3>Des téléphériques qui valent le détour</h3><ul><li><a href="https://loisirs74.fr/tramway-du-mont-blanc">Tramway du Mont-Blanc</a><span>Saint-Gervais-les-Bains · 5 km</span></li><li><a href="https://loisirs74.fr/telepherique-du-brevent">Téléphérique du Brévent</a><span>Chamonix-Mont-Blanc · 7 km</span></li><li><a href="https://loisirs74.fr/telecabine-du-jaillet">Télécabine du Jaillet</a><span>Megève · 13 km</span></li></ul></div><div class="disc"><h3>Si vous avez aimé, essayez…</h3><ul><li><a href="https://loisirs74.fr/musee-horlogerie-et-decolletage-cluses">Musée de l'Horlogerie et du Décolletage</a><span>Cluses · 21 km</span></li><li><a href="https://loisirs74.fr/maison-de-la-pomme-biscantin-serraval">Maison de la Pomme et du Biscantin</a><span>Serraval · 36 km</span></li><li><a href="https://loisirs74.fr/ecomusee-bois-foret-thones">Écomusée du Bois et de la Forêt</a><span>Thônes · 37 km</span></li></ul></div><p class="disc-note">Distances à vol d'oiseau, d'un lieu à l'autre.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publié le 10 juin 2026</span><span class="sep">·</span><span>Mis à jour le 04/07/26</span></p></div></main>

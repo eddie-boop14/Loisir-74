@@ -108,6 +108,8 @@
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
 
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
+
 [dir=rtl] a.skip{left:auto;inset-inline-start:-9999px}
 [dir=rtl] a.skip:focus{inset-inline-start:0}
 [dir=rtl] h1.hammer{direction:ltr;text-align:right}</style>
@@ -117,7 +119,7 @@
 <link rel="alternate" type="text/markdown" href="/content/plage-de-tougues-chens.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/plage-de-tougues-chens.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">דלג לתוכן</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">ראו גם</p>
-    <h2>ראו גם</h2>
-    <p class="lead"></p>
+    <h2>במרחק 2 ק"מ מכאן…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/he/musee-granges-servette-chens-sur-leman" class="card-photo">
       <img src="/img/musees/musee-granges-servette-chens-sur-leman-hero.jpg" alt="מוזיאון Granges de Servette ב-Chens-sur-Léman, אמנות עכשווית וכלי עבודה כפריים באסמים משוחזרים" loading="lazy">
-      <span class="card-tag">חינם</span>
+      <span class="card-tag">2 km · חינם</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/musee-granges-servette-chens-sur-leman" class="title">Musée des Granges de Servette</a>
@@ -201,7 +210,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/musee-cinema-philippe-piccot-douvaine" class="card-photo">
       <img src="/img/generique/generique-musee.jpg" alt="מוזיאון הקולנוע פיליפ פיקו ב-Douvaine, אוסף מקרנים של Buisse-Bottazzi משנת 1946 עד 2007" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">5 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/musee-cinema-philippe-piccot-douvaine" class="title">Musée du Cinéma Philippe Piccot</a>
@@ -215,7 +224,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/chateau-thenieres-ballaison" class="card-photo">
       <img src="/img/generique/generique-chateau.jpg" alt="Château de Thénières ב-Ballaison, מבנה גחמני מהמאה ה-19 בסגנון פסבדו-ימי-ביניים עם מגדלים מעל אגם ז&#x27;נבה" loading="lazy">
-      <span class="card-tag">חינם</span>
+      <span class="card-tag">5 km · חינם</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/chateau-thenieres-ballaison" class="title">Château de Thénières</a>
@@ -229,7 +238,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/plage-de-messery" class="card-photo">
       <img src="/img/lacs-plages/plage-de-messery-hero.jpg" alt="חוף דשא באורך 400 מ&#x27; בחצי האי מול Nyon: Plage de Messery על אגם ג&#x27;נבה, Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">חינם</span>
+      <span class="card-tag">4 km · חינם</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/plage-de-messery" class="title">Plage de Messery</a>
@@ -243,7 +252,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/plage-de-margencel-sechex" class="card-photo">
       <img src="/img/generique/generique-plage-lac-13.jpg" alt="חוף דשא טבעי בשפך הרדון: Plage de Margencel - Port de Séchex ב-Margencel על אגם ז&#x27;נבה, Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">חינם</span>
+      <span class="card-tag">13 km · חינם</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/plage-de-margencel-sechex" class="title">Plage de Margencel - Port de Séchex</a>
@@ -257,7 +266,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/plage-municipale-thonon" class="card-photo">
       <img src="/img/generique/generique-plage-lac-15.jpg" alt="חוף בשטח 3 הקטר עם בריכה אולימפית 50 מ&#x27;, דגל כחול: Plage Municipale de Thonon-les-Bains על אגם ג&#x27;נבה, Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">17 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/plage-municipale-thonon" class="title">Plage Municipale de Thonon-les-Bains</a>
@@ -268,6 +277,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>מוסתר ממש קרוב</h3><ul><li><a href="https://loisirs74.fr/he/musee-ailes-anciennes-excenevex">Musée des ailes anciennes</a><span>Excenevex · 8 km</span></li><li><a href="https://loisirs74.fr/he/plage-d-excenevex">Plage d'Excenevex</a><span>Excenevex · 8 km</span></li><li><a href="https://loisirs74.fr/he/musee-departemental-sapeurs-pompiers-haute-savoie-sciez">Musée Départemental des Sapeurs-Pompiers de Haute-Savoie</a><span>Sciez · 9 km</span></li></ul></div><div class="disc"><h3>אגמים שכדאי לבקר בהם</h3><ul><li><a href="https://loisirs74.fr/he/plage-de-sciez-sur-leman">Plage de Sciez-sur-Léman</a><span>Sciez · 10 km</span></li><li><a href="https://loisirs74.fr/he/plage-de-la-pinede">Plage de la Pinède</a><span>Thonon-les-Bains · 19 km</span></li><li><a href="https://loisirs74.fr/he/plage-de-saint-disdille">Plage de Saint-Disdille</a><span>Thonon-les-Bains · 21 km</span></li></ul></div><div class="disc"><h3>אם אהבתם, נסו…</h3><ul><li><a href="https://loisirs74.fr/he/plage-de-sevrier">Plage de Sévrier</a><span>Sévrier · 52 km</span></li><li><a href="https://loisirs74.fr/he/plage-de-duingt">Plage de Duingt</a><span>Duingt · 55 km</span></li><li><a href="https://loisirs74.fr/he/plage-de-doussard">Plage de Doussard</a><span>Doussard · 59 km</span></li></ul></div><p class="disc-note">מרחקים בקו אווירי, ממקום למקום.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>פורסם בתאריך 24 mai 2026</span><span class="sep">·</span><span>עודכן בתאריך 12/07/26</span></p></div></main>

@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/chateau-montrottier-lovagny.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/chateau-montrottier-lovagny.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,23 @@ Réparations toutes marques.</p><a class="cta" href="http://www.lentrepotduvelo.
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">In der Nähe</p>
-    <h2>In der Nähe</h2>
+    <h2>1 km von hier entfernt…</h2>
     <p class="lead">Weitere Orte in der Umgebung und in derselben Kategorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/de/gorges-du-fier" class="card-photo">
       <img src="/img/cascades/gorges-du-fier-hero.jpg" alt="Gorges du Fier in Lovagny, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Kostenpflichtig</span>
+      <span class="card-tag">1 km · Kostenpflichtig</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/gorges-du-fier" class="title">Gorges du Fier</a>
@@ -201,7 +211,7 @@ Réparations toutes marques.</p><a class="cta" href="http://www.lentrepotduvelo.
 <article class="card">
     <a href="https://loisirs74.fr/de/arcade-art-of-pinball-poisy" class="card-photo">
       <img src="/img/generique/generique-pinball.jpg" alt="Art of Pinball Poisy — Flipper- &amp; Arcade-Halle in Poisy, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Kostenpflichtig</span>
+      <span class="card-tag">5 km · Kostenpflichtig</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/arcade-art-of-pinball-poisy" class="title">Art of Pinball Poisy</a>
@@ -215,7 +225,7 @@ Réparations toutes marques.</p><a class="cta" href="http://www.lentrepotduvelo.
 <article class="card">
     <a href="https://loisirs74.fr/de/piscine-ile-bleue-seynod" class="card-photo">
       <img src="/img/generique/generique-aquatique-piscine-couverte.jpg" alt="Piscine L&#x27;Île Bleue Hallenbad mit ausfahrbarem Dach, Seynod, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Kostenpflichtig</span>
+      <span class="card-tag">5 km · Kostenpflichtig</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/piscine-ile-bleue-seynod" class="title">Piscine L'Île Bleue</a>
@@ -229,7 +239,7 @@ Réparations toutes marques.</p><a class="cta" href="http://www.lentrepotduvelo.
 <article class="card">
     <a href="https://loisirs74.fr/de/chateau-de-menthon-saint-bernard" class="card-photo">
       <img src="/img/chateaux/chateau-de-menthon-saint-bernard-hero.jpg" alt="Château de Menthon-Saint-Bernard überragt den Lac d&#x27;Annecy mit seinen mittelalterlichen Türmen und romantischer Architektur des 19. Jahrhunderts" loading="lazy">
-      <span class="card-tag">Kostenpflichtig</span>
+      <span class="card-tag">14 km · Kostenpflichtig</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/chateau-de-menthon-saint-bernard" class="title">Château de Menthon-Saint-Bernard</a>
@@ -243,7 +253,7 @@ Réparations toutes marques.</p><a class="cta" href="http://www.lentrepotduvelo.
 <article class="card">
     <a href="https://loisirs74.fr/de/chateau-de-thorens" class="card-photo">
       <img src="/img/chateaux/chateau-de-thorens-hero.jpg" alt="Fassade des Château de Thorens mit seinen mittelalterlichen Türmen und barocker Architektur, Fillière, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Kostenpflichtig</span>
+      <span class="card-tag">15 km · Kostenpflichtig</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/chateau-de-thorens" class="title">Château de Thorens</a>
@@ -257,7 +267,7 @@ Réparations toutes marques.</p><a class="cta" href="http://www.lentrepotduvelo.
 <article class="card">
     <a href="https://loisirs74.fr/de/chateau-clermont-genevois" class="card-photo">
       <img src="/img/chateaux/chateau-clermont-genevois-hero.jpg" alt="Renaissance-Innenhof des Château de Clermont mit drei Etagen Arkadengalerien nach Vorbild des Palazzo Farnese in Caprarola, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Kostenpflichtig</span>
+      <span class="card-tag">15 km · Kostenpflichtig</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/chateau-clermont-genevois" class="title">Château de Clermont</a>
@@ -268,6 +278,7 @@ Réparations toutes marques.</p><a class="cta" href="http://www.lentrepotduvelo.
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Ganz in der Nähe versteckt</h3><ul><li><a href="https://loisirs74.fr/de/marais-de-poisy">Marais de Poisy</a><span>Poisy · 5 km</span></li><li><a href="https://loisirs74.fr/de/ereel-annecy-sillingy">E.réel Annecy</a><span>Sillingy · 6 km</span></li><li><a href="https://loisirs74.fr/de/domaine-du-tornet">Domaine du Tornet</a><span>La Balme-de-Sillingy · 8 km</span></li></ul></div><div class="disc"><h3>Aussichtspunkte, die einen Abstecher wert sind</h3><ul><li><a href="https://loisirs74.fr/de/thiou-a-annecy-annecy">Der Thiou in Annecy</a><span>Annecy · 7 km</span></li><li><a href="https://loisirs74.fr/de/mont-baron">Mont Baron</a><span>Veyrier-du-Lac · 10 km</span></li><li><a href="https://loisirs74.fr/de/mont-veyrier">Mont Veyrier</a><span>Annecy · 11 km</span></li></ul></div><div class="disc"><h3>Wenn es Ihnen gefallen hat, probieren Sie doch mal …</h3><ul><li><a href="https://loisirs74.fr/de/chateau-et-donjon-des-seigneurs-de-faverges">Château et Donjon des Seigneurs de Faverges</a><span>Faverges-Seythenex · 26 km</span></li><li><a href="https://loisirs74.fr/de/chateau-sires-faucigny-bonneville">Château des Sires de Faucigny</a><span>Bonneville · 35 km</span></li><li><a href="https://loisirs74.fr/de/chateau-beauregard-saint-jeoire">Château de Beauregard</a><span>Saint-Jeoire · 39 km</span></li></ul></div><p class="disc-note">Entfernungen in Luftlinie von einem Ort zum anderen.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Veröffentlicht 24 mai 2026</span><span class="sep">·</span><span>Aktualisiert 11/07/26</span></p></div></main>

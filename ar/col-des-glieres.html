@@ -108,6 +108,8 @@
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
 
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
+
 [dir=rtl] a.skip{left:auto;inset-inline-start:-9999px}
 [dir=rtl] a.skip:focus{inset-inline-start:0}
 [dir=rtl] h1.hammer{direction:ltr;text-align:right}</style>
@@ -117,7 +119,7 @@
 <link rel="alternate" type="text/markdown" href="/content/col-des-glieres.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/col-des-glieres.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">الانتقال إلى المحتوى</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">اطّلع أيضًا</p>
-    <h2>اطّلع أيضًا</h2>
-    <p class="lead"></p>
+    <h2>على بعد 2 كيلومتر من هنا…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/ar/sentier-decouverte-plateau-glieres-thorens-glieres" class="card-photo">
       <img src="/img/generique/generique-sentier-hiver-neige.jpg" alt="مسار تفسيري تاريخي - مسار اكتشاف Plateau des Glières في Thorens-Glières، Haute-Savoie - حلقة 4 كم، 11 لوحة، سهل جدًا" loading="lazy">
-      <span class="card-tag">مجاني</span>
+      <span class="card-tag">2 km · مجاني</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/sentier-decouverte-plateau-glieres-thorens-glieres" class="title">Sentier de découverte du Plateau des Glières</a>
@@ -201,7 +210,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/base-de-loisirs-du-vuaz-filliere" class="card-photo">
       <img src="/img/generique/generique-plage-lac-14.jpg" alt="ملعب أطفال وطاولات نزهة في منطقة الترفيه المجانية فواز في أفيرنو، عند سفح جبل بارملان" loading="lazy">
-      <span class="card-tag">مجاني</span>
+      <span class="card-tag">7 km · مجاني</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/base-de-loisirs-du-vuaz-filliere" class="title">Base de loisirs du Vuaz</a>
@@ -215,7 +224,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/chiens-de-traineau-nordic-event-74" class="card-photo">
       <img src="/img/generique/generique-chiens-de-traineau-2.jpg" alt="حدث الكلاب الزلاجة Nordic Event 74 في Le Grand-Bornand" loading="lazy">
-      <span class="card-tag">مدفوع</span>
+      <span class="card-tag">8 km · مدفوع</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/chiens-de-traineau-nordic-event-74" class="title">Nordic Event 74 — Chiens de traîneau Le Grand-Bornand</a>
@@ -229,7 +238,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/plateau-des-glieres" class="card-photo">
       <img src="/img/points-de-vue/plateau-des-glieres-hero.jpg" alt="مرج هضبة Glières والنصب الوطني للمقاومة للنحات Gilioli" loading="lazy">
-      <span class="card-tag">مجاني</span>
+      <span class="card-tag">3 km · مجاني</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/plateau-des-glieres" class="title">Plateau des Glières</a>
@@ -243,7 +252,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/tete-du-parmelan" class="card-photo">
       <img src="/img/points-de-vue/tete-du-parmelan-hero.jpg" alt="منظر من Tête du Parmelan مع صليب القمة وملجأ Camille Dunant المطل على Annecy، سلسلة جبال Bornes، Haute-Savoie" loading="lazy">
-      <span class="card-tag">مجاني</span>
+      <span class="card-tag">6 km · مجاني</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/tete-du-parmelan" class="title">Tête du Parmelan</a>
@@ -257,7 +266,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/plateau-de-solaison" class="card-photo">
       <img src="/img/points-de-vue/plateau-de-solaison-hero.jpg" alt="Plateau de Solaison — مرعى جبلي في Brizon، سلسلة جبال بورن، Haute-Savoie" loading="lazy">
-      <span class="card-tag">مجاني</span>
+      <span class="card-tag">10 km · مجاني</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/plateau-de-solaison" class="title">Plateau de Solaison</a>
@@ -268,6 +277,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>مخبأ في مكان قريب جدًا</h3><ul><li><a href="https://loisirs74.fr/ar/base-de-loisirs-orange-montisel-saint-sixt">Base de loisirs Orange Montisel</a><span>Saint-Sixt · 8 km</span></li><li><a href="https://loisirs74.fr/ar/cascade-du-chinaillon">Cascade du Chinaillon</a><span>Le Grand-Bornand · 8 km</span></li><li><a href="https://loisirs74.fr/ar/cascade-mysterieuse-le-grand-bornand">Cascade mystérieuse</a><span>Le Grand-Bornand · 8 km</span></li></ul></div><div class="disc"><h3>بحيرات تستحق الزيارة</h3><ul><li><a href="https://loisirs74.fr/ar/lac-des-confins">Lac des Confins</a><span>La Clusaz · 12 km</span></li><li><a href="https://loisirs74.fr/ar/lac-benit">Lac Bénit</a><span>Mont-Saxonnex · 15 km</span></li><li><a href="https://loisirs74.fr/ar/plage-albigny">Plage d'Albigny</a><span>Annecy · 16 km</span></li></ul></div><div class="disc"><h3>إذا أعجبك هذا، جرب...</h3><ul><li><a href="https://loisirs74.fr/ar/thiou-a-annecy-annecy">Le Thiou à Annecy</a><span>Annecy · 17 km</span></li><li><a href="https://loisirs74.fr/ar/pont-de-la-caille">Pont de la Caille</a><span>Cruseilles · 18 km</span></li><li><a href="https://loisirs74.fr/ar/col-de-la-forclaz">Col de la Forclaz</a><span>Talloires-Montmin · 19 km</span></li></ul></div><p class="disc-note">المسافات بخط مستقيم، من مكان إلى آخر.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>نُشر في 14 mai 2026</span><span class="sep">·</span><span>حُدّث في 18/07/26</span></p></div></main>

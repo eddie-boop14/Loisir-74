@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/fonderie-paccard-sevrier.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/fonderie-paccard-sevrier.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">À proximité</p>
-    <h2>À proximité</h2>
+    <h2>À 1 km d'ici…</h2>
     <p class="lead">D'autres lieux à explorer dans le coin et dans la même catégorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/plage-de-saint-jorioz" class="card-photo">
       <img src="/img/lacs-plages/plage-de-saint-jorioz-hero.jpg" alt="Plage de Saint-Jorioz au bord du lac d&#x27;Annecy avec sable naturel, pelouses et vue sur les Dents de Lanfon et la Tournette" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">1 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/plage-de-saint-jorioz" class="title">Plage de Saint-Jorioz</a>
@@ -201,7 +211,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/criq-parc" class="card-photo">
       <img src="/img/que-faire/criq-parc-hero.jpg" alt="Enfants jouant dans les ateliers en filet du Criq&#x27;Parc, parc de jeux en forêt à Saint-Jorioz, au bord du lac d&#x27;Annecy" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">2 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/criq-parc" class="title">Criq'Parc</a>
@@ -215,7 +225,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/grp-tour-lac-annecy-annecy" class="card-photo">
       <img src="/img/generique/generique-sentier-sommet-panorama.jpg" alt="Sentier GR® de Pays Tour du Lac d&#x27;Annecy randonneur sur les hauteurs du lac avec vue sur le sommet de la Tournette et le massif des Bauges Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuit</span>
+      <span class="card-tag">2 km · Gratuit</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/grp-tour-lac-annecy-annecy" class="title">GR® de Pays Tour du Lac d'Annecy</a>
@@ -229,7 +239,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ecomusee-lac-annecy-sevrier" class="card-photo">
       <img src="/img/musees/ecomusee-lac-annecy-sevrier-hero.jpg" alt="Salle d&#x27;exposition de l&#x27;Écomusée du Lac d&#x27;Annecy : frise « La Savoie au fil du temps », tarare et costumes savoyards" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">2 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ecomusee-lac-annecy-sevrier" class="title">Écomusée du Lac d'Annecy</a>
@@ -243,7 +253,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/musee-chateau-annecy" class="card-photo">
       <img src="/img/musees/musee-chateau-annecy-hero.jpg" alt="Façade et tour du Musée-Château d&#x27;Annecy dominant la vieille ville et le lac depuis son éperon rocheux" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">6 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/musee-chateau-annecy" class="title">Musée-Château d'Annecy</a>
@@ -257,7 +267,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/palais-de-l-ile-annecy" class="card-photo">
       <img src="/img/musees/palais-de-l-ile-annecy-hero.jpg" alt="Palais de l&#x27;Île sur son îlot rocheux dans le canal du Thiou, monument emblématique du centre historique d&#x27;Annecy" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">6 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/palais-de-l-ile-annecy" class="title">Palais de l'Île</a>
@@ -268,6 +278,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Caché tout près</h3><ul><li><a href="https://loisirs74.fr/le-semnoz">Le Semnoz</a><span>Viuz-la-Chiésaz · 6 km</span></li><li><a href="https://loisirs74.fr/parc-de-peche-domaine-du-moulin-authier">Domaine du Moulin Authier — Parc de pêche</a><span>Haute-Savoie · 6 km</span></li><li><a href="https://loisirs74.fr/musee-nature-gruffy">Musée de la Nature</a><span>Gruffy · 9 km</span></li></ul></div><div class="disc"><h3>Des lacs qui valent le détour</h3><ul><li><a href="https://loisirs74.fr/plage-de-menthon-saint-bernard">Plage de Menthon-Saint-Bernard</a><span>Menthon-Saint-Bernard · 3 km</span></li><li><a href="https://loisirs74.fr/plage-des-marquisats">Plage des Marquisats</a><span>Annecy · 6 km</span></li><li><a href="https://loisirs74.fr/plage-albigny">Plage d'Albigny</a><span>Annecy · 7 km</span></li></ul></div><div class="disc"><h3>Si vous avez aimé, essayez…</h3><ul><li><a href="https://loisirs74.fr/notre-histoire-musee-rumilly-rumilly">Notre Histoire - Musée de Rumilly</a><span>Rumilly · 16 km</span></li><li><a href="https://loisirs74.fr/maison-de-la-pomme-biscantin-serraval">Maison de la Pomme et du Biscantin</a><span>Serraval · 16 km</span></li><li><a href="https://loisirs74.fr/bourg-et-ruines-chateau-chaumont-chaumont">Bourg et ruines du château de Chaumont</a><span>Chaumont · 26 km</span></li></ul></div><p class="disc-note">Distances à vol d'oiseau, d'un lieu à l'autre.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publié le 21 mai 2026</span><span class="sep">·</span><span>Mis à jour le 24/07/26</span></p></div></main>

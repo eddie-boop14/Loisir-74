@@ -108,6 +108,8 @@
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
 
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
+
 [dir=rtl] a.skip{left:auto;inset-inline-start:-9999px}
 [dir=rtl] a.skip:focus{inset-inline-start:0}
 [dir=rtl] h1.hammer{direction:ltr;text-align:right}</style>
@@ -117,7 +119,7 @@
 <link rel="alternate" type="text/markdown" href="/content/maison-de-barberine-vallorcine.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/maison-de-barberine-vallorcine.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">דלג לתוכן</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">ראו גם</p>
-    <h2>ראו גם</h2>
-    <p class="lead"></p>
+    <h2>במרחק 2 ק"מ מכאן…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/he/jardin-alpin-des-montets-vallorcine" class="card-photo">
       <img src="/img/generique/generique-parc.jpg" alt="הגן האלפיני של מונטה — קול דה מונטה, Vallorcine" loading="lazy">
-      <span class="card-tag">חינם</span>
+      <span class="card-tag">2 km · חינם</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/jardin-alpin-des-montets-vallorcine" class="title">Jardin Alpin des Montets — Vallorcine</a>
@@ -201,7 +210,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/au-fil-rail-jeu-piste-a-vallorcine-vallorcine" class="card-photo">
       <img src="/img/generique/generique-sentier-hiver-neige.jpg" alt="ציד אוצרות Au Fil du Rail ב-Vallorcine בעמק שאמוני, מסלול משפחתי של 3 ק&quot;מ סביב הכפר" loading="lazy">
-      <span class="card-tag">חינם</span>
+      <span class="card-tag">4 km · חינם</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/au-fil-rail-jeu-piste-a-vallorcine-vallorcine" class="title">Au Fil du Rail - Jeu de piste à Vallorcine</a>
@@ -215,7 +224,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/via-ferrata-berard-vallorcine" class="card-photo">
       <img src="/img/que-faire/via-ferrata-berard-vallorcine-hero.jpg" alt="Via ferrata de la Cascade de Bérard, מסלול AD+ עם גשרים תלויים (טיבטיים) מעל הנחל ב-Vallorcine, Haute-Savoie" loading="lazy">
-      <span class="card-tag">חינם</span>
+      <span class="card-tag">4 km · חינם</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/via-ferrata-berard-vallorcine" class="title">Via ferrata de la Cascade de Bérard</a>
@@ -229,7 +238,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/musee-du-mont-blanc-chamonix" class="card-photo">
       <img src="/img/musees/musee-du-mont-blanc-chamonix-hero.jpg" alt="חזית ה-Chamonix Palace משנת 1913, שמאכסן את ה-Musée du Mont-Blanc העתידי, בשדרת Michel Croz בשאמוני" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">15 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/musee-du-mont-blanc-chamonix" class="title">Musée du Mont-Blanc</a>
@@ -243,7 +252,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/maison-de-la-memoire-janny-couttet-chamonix" class="card-photo">
       <img src="/img/musees/maison-de-la-memoire-janny-couttet-chamonix-hero.jpg" alt="חזית גרניט של בית האחיות לשעבר, המאכסן את Maison de la Mémoire et du Patrimoine Janny Couttet ברחוב des Moulins ב-Chamonix" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">15 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/maison-de-la-memoire-janny-couttet-chamonix" class="title">Maison de la Mémoire Janny Couttet</a>
@@ -257,7 +266,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/espace-tairraz-musee-des-cristaux-chamonix" class="card-photo">
       <img src="/img/musees/espace-tairraz-musee-des-cristaux-chamonix-hero.jpg" alt="ויטרינות תצוגה של גבישים ומינרלים של Mont-Blanc ב-Espace Tairraz במרכז שאמוני" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">15 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/espace-tairraz-musee-des-cristaux-chamonix" class="title">Espace Tairraz</a>
@@ -268,6 +277,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>מוסתר ממש קרוב</h3><ul><li><a href="https://loisirs74.fr/he/cirque-du-fer-a-cheval">Cirque du Fer-à-Cheval</a><span>Sixt-Fer-à-Cheval · 11 km</span></li><li><a href="https://loisirs74.fr/he/sentier-cascades-sixt-fer-a-cheval">Sentier des Cascades de Sixt</a><span>Sixt-Fer-à-Cheval · 12 km</span></li><li><a href="https://loisirs74.fr/he/cascade-du-rouget">Cascade du Rouget</a><span>Sixt-Fer-à-Cheval · 13 km</span></li></ul></div><div class="disc"><h3>אגמים שכדאי לבקר בהם</h3><ul><li><a href="https://loisirs74.fr/he/lac-blanc">Lac Blanc</a><span>Chamonix-Mont-Blanc · 9 km</span></li><li><a href="https://loisirs74.fr/he/lac-cornu">Lac Cornu</a><span>Chamonix-Mont-Blanc · 13 km</span></li><li><a href="https://loisirs74.fr/he/lac-vert-passy">Lac Vert</a><span>Passy · 18 km</span></li></ul></div><div class="disc"><h3>אם אהבתם, נסו…</h3><ul><li><a href="https://loisirs74.fr/he/musee-art-sacre-saint-gervais-bains">Musée d'art Sacré</a><span>Saint-Gervais-les-Bains · 28 km</span></li><li><a href="https://loisirs74.fr/he/musee-horlogerie-et-decolletage-cluses">Musée de l'Horlogerie et du Décolletage</a><span>Cluses · 28 km</span></li><li><a href="https://loisirs74.fr/he/maison-fromage-abondance-abondance">Maison du Fromage Abondance</a><span>Abondance · 31 km</span></li></ul></div><p class="disc-note">מרחקים בקו אווירי, ממקום למקום.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>פורסם בתאריך 23 mai 2026</span><span class="sep">·</span><span>עודכן בתאריך 11/07/26</span></p></div></main>

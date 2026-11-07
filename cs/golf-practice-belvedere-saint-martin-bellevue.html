@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/golf-practice-belvedere-saint-martin-bellevue.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/golf-practice-belvedere-saint-martin-bellevue.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Přejít k obsahu</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Viz také</p>
-    <h2>Viz také</h2>
-    <p class="lead"></p>
+    <h2>1 km odtud…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/cs/sentier-espagnols-pas-du-roc-glieres" class="card-photo">
       <img src="/img/sentiers/sentier-espagnols-pas-du-roc-glieres-hero.jpg" alt="Historická trasa - Plateau des Glières - Sentier des Espagnols / Pas du Roc v Thorens-Glières, Haute-Savoie - okruh 8 km, převýšení 600 m, střední náročnost" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">1 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/sentier-espagnols-pas-du-roc-glieres" class="title">Sentier des Espagnols / Pas du Roc</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/chateau-de-thorens" class="card-photo">
       <img src="/img/chateaux/chateau-de-thorens-hero.jpg" alt="Průčelí Château de Thorens se středověkými věžemi a barokní architekturou, Fillière, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">3 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/chateau-de-thorens" class="title">Château de Thorens</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/karting-team-bouvier-pringy" class="card-photo">
       <img src="/img/generique/generique-karting-outdoor-aerial.jpg" alt="Neziskový klub kartingu a motokrosu Team Bouvier 74 Pringy v Annecy, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">4 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/karting-team-bouvier-pringy" class="title">Team Bouvier 74 Pringy</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/escalade-ablok-argonay" class="card-photo">
       <img src="/img/generique/generique-escalade-bloc-outdoor.jpg" alt="Lezecká tělocvična Ablok Annecy (Argonay) v Argonay" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">3 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/escalade-ablok-argonay" class="title">Ablok Annecy (Argonay)</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/full-land-annecy" class="card-photo">
       <img src="/img/generique/generique-attraction.jpg" alt="Full Land Annecy" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">3 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/full-land-annecy" class="title">Full Land Annecy</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/trampoline-bam-freesports-annecy" class="card-photo">
       <img src="/img/generique/generique-trampoline-park-saut.jpg" alt="Bam Freesports Annecy — trampolínový park v Annecy" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">4 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/trampoline-bam-freesports-annecy" class="title">Bam Freesports Annecy</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Skryté hned poblíž</h3><ul><li><a href="https://loisirs74.fr/cs/pont-de-la-caille">Pont de la Caille</a><span>Cruseilles · 6 km</span></li><li><a href="https://loisirs74.fr/cs/base-de-loisirs-du-vuaz-filliere">Base de loisirs du Vuaz</a><span>Fillière · 7 km</span></li><li><a href="https://loisirs74.fr/cs/tete-du-parmelan">Tête du Parmelan</a><span>Dingy-Saint-Clair · 7 km</span></li></ul></div><div class="disc"><h3>Vyhlídky, které stojí za to navštívit</h3><ul><li><a href="https://loisirs74.fr/cs/mont-veyrier">Mont Veyrier</a><span>Annecy · 6 km</span></li><li><a href="https://loisirs74.fr/cs/marais-de-poisy">Marais de Poisy</a><span>Poisy · 7 km</span></li><li><a href="https://loisirs74.fr/cs/mont-baron">Mont Baron</a><span>Veyrier-du-Lac · 7 km</span></li></ul></div><div class="disc"><h3>Pokud se vám to líbilo, zkuste…</h3><ul><li><a href="https://loisirs74.fr/cs/criq-parc">Criq'Parc</a><span>Saint-Jorioz · 15 km</span></li><li><a href="https://loisirs74.fr/cs/via-ferrata-thones">Via ferrata de Thônes</a><span>Thônes · 15 km</span></li><li><a href="https://loisirs74.fr/cs/acro-aventures-reignier">Acro'Aventures Reignier</a><span>Reignier-Ésery · 20 km</span></li></ul></div><p class="disc-note">Vzdálenosti vzdušnou čarou mezi jednotlivými místy.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publikováno dne 3 juin 2026</span><span class="sep">·</span><span>Aktualizováno dne 26/07/26</span></p></div></main>

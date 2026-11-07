@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/chateau-chatillon-sur-cluses.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/chateau-chatillon-sur-cluses.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Przejdź do treści</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Zobacz też</p>
-    <h2>Zobacz też</h2>
-    <p class="lead"></p>
+    <h2>W odległości 2 km stąd…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/pl/veloroute-vallee-arve-cluses-sallanches" class="card-photo">
       <img src="/img/generique/generique-voie-verte-cyclistes-riviere.jpg" alt="Arve Valley Cycle Route V61 Jezioro Geneva- Mont-Blanc zielone przejście przez dolinę przemysłową w kierunku Mont-Blanc, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">2 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/veloroute-vallee-arve-cluses-sallanches" class="title">Véloroute Vallée de l'Arve</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/voie-verte-arve-cluses-thyez" class="card-photo">
       <img src="/img/generique/generique-voie-verte-famille-kids.jpg" alt="Local family greenway - Arve Riverside Walk Cluses- Thyez at Cluses, Haute-Savoie - 2 x 2,5 km w jedną stronę, 5 km pętla, bardzo łatwe" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">2 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/voie-verte-arve-cluses-thyez" class="title">Promenade du bord d'Arve Cluses-Thyez</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/centre-aquatique-cluses" class="card-photo">
       <img src="/img/generique/generique-aquatique-piscine-couverte.jpg" alt="Centre Aquatique Intercommunal de Cluses - Cluses, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">2 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/centre-aquatique-cluses" class="title">Centre Aquatique Intercommunal de Cluses</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/chateau-croix-scionzier" class="card-photo">
       <img src="/img/chateaux/chateau-croix-scionzier-hero.jpg" alt="Château de la Croix w Scionzier, 16-wieczny fortyfikowany dwór z widokiem na dolinę Arve w Faucigny" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">3 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/chateau-croix-scionzier" class="title">Château de la Croix</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/chateau-beauregard-saint-jeoire" class="card-photo">
       <img src="/img/chateaux/chateau-beauregard-saint-jeoire-hero.jpg" alt="Prostokątne 12. wieczne utrzymanie Château de Beauregard oświetlone w nocy w miejscowości Saint-Jeoire-en- Faucigny, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">14 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/chateau-beauregard-saint-jeoire" class="title">Château de Beauregard</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/abbaye-de-sixt" class="card-photo">
       <img src="/img/chateaux/abbaye-de-sixt-hero.jpg" alt="Abbaye de Sixt i jego 13. wieczny kościół opactwa, Sixt-Fer-à-Cheval, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">15 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/abbaye-de-sixt" class="title">Abbaye de Sixt</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Ukryte tuż obok</h3><ul><li><a href="https://loisirs74.fr/pl/musee-horlogerie-et-decolletage-cluses">Musée de l'Horlogerie et du Décolletage</a><span>Cluses · 3 km</span></li><li><a href="https://loisirs74.fr/pl/parc-chateau-taninges">Parc du Château</a><span>Taninges · 3 km</span></li><li><a href="https://loisirs74.fr/pl/base-de-loisirs-du-lac-bleu">Base de loisirs du Lac Bleu</a><span>Morillon · 8 km</span></li></ul></div><div class="disc"><h3>Jeziora, które warto odwiedzić</h3><ul><li><a href="https://loisirs74.fr/pl/lac-benit">Lac Bénit</a><span>Mont-Saxonnex · 8 km</span></li><li><a href="https://loisirs74.fr/pl/lac-de-vallon">Lac de Vallon</a><span>Bellevaux · 15 km</span></li><li><a href="https://loisirs74.fr/pl/lac-de-passy">Lac de Passy</a><span>Passy · 20 km</span></li></ul></div><div class="disc"><h3>Jeśli Ci się podobało, spróbuj…</h3><ul><li><a href="https://loisirs74.fr/pl/chateau-des-rubins-sallanches">Château des Rubins</a><span>Sallanches · 17 km</span></li><li><a href="https://loisirs74.fr/pl/chateau-sires-faucigny-bonneville">Château des Sires de Faucigny</a><span>Bonneville · 17 km</span></li><li><a href="https://loisirs74.fr/pl/abbaye-d-aulps">Abbaye d'Aulps</a><span>Saint-Jean-d'Aulps · 19 km</span></li></ul></div><p class="disc-note">Odległości w linii prostej między poszczególnymi miejscami.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Opublikowano dnia 24 mai 2026</span><span class="sep">·</span><span>Zaktualizowano dnia 11/07/26</span></p></div></main>

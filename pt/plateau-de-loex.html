@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/plateau-de-loex.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/plateau-de-loex.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Saltar para o conteúdo</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Ver também</p>
-    <h2>Ver também</h2>
-    <p class="lead"></p>
+    <h2>A 2 km daqui…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/pt/ancien-remparts-chateau-lullin-lullin" class="card-photo">
       <img src="/img/generique/generique-chateau.jpg" alt="Antiga muralha de encinto do Ancien remparts du château de Lullin com seteiras, vestígio medieval visível na aldeia" loading="lazy">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">2 km · Gratuito</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/ancien-remparts-chateau-lullin-lullin" class="title">Ancien remparts du château de Lullin</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pt/secrets-fees-parcours-decouverte-habere-poche" class="card-photo">
       <img src="/img/generique/generique-sentier-hiver-neige.jpg" alt="Percursos de descoberta Secrets de fées no Plateau des Moises em Habère-Poche no Vallée Verte" loading="lazy">
-      <span class="card-tag">Pago</span>
+      <span class="card-tag">3 km · Pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/secrets-fees-parcours-decouverte-habere-poche" class="title">Secrets de fées - parcours de découverte</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pt/ferme-pedagogique-petit-mont-bellevaux" class="card-photo">
       <img src="/img/generique/generique-famille-balade.jpg" alt="La Ferme du Petit Mont, quinta de cabras biológica e pedagógica em Bellevaux, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">3 km · Gratuito</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/ferme-pedagogique-petit-mont-bellevaux" class="title">La Ferme du Petit Mont</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pt/pointe-de-miribel" class="card-photo">
       <img src="/img/points-de-vue/pointe-de-miribel-hero.jpg" alt="Pointe de Miribel em Villard, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">7 km · Gratuito</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/pointe-de-miribel" class="title">Pointe de Miribel</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pt/reserve-naturelle-delta-de-la-dranse" class="card-photo">
       <img src="/img/points-de-vue/reserve-naturelle-delta-de-la-dranse-hero.jpg" alt="Réserve naturelle du Delta de la Dranse" loading="lazy">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">12 km · Gratuito</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/reserve-naturelle-delta-de-la-dranse" class="title">Réserve naturelle du Delta de la Dranse</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pt/telepherique-du-saleve" class="card-photo">
       <img src="/img/points-de-vue/telepherique-du-saleve-hero.jpg" alt="Cabine do Téléphérique du Salève a subir em direção a Genebra, ao lago Léman e à cadeia do Mont-Blanc" loading="lazy">
-      <span class="card-tag">Pago</span>
+      <span class="card-tag">27 km · Pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/telepherique-du-saleve" class="title">Téléphérique du Salève</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Escondido bem perto</h3><ul><li><a href="https://loisirs74.fr/pt/musee-faune-bellevaux">Musée de la Faune</a><span>Bellevaux · 3 km</span></li><li><a href="https://loisirs74.fr/pt/acroparc-de-bellavallis-bellevaux">Acroparc de Bellavallis</a><span>Bellevaux · 4 km</span></li><li><a href="https://loisirs74.fr/pt/chemin-alpage-parcours-decouverte-habere-lullin">Le chemin de l'alpage — Parcours de découverte</a><span>Habère-Lullin · 5 km</span></li></ul></div><div class="disc"><h3>Lagos que merecem uma visita</h3><ul><li><a href="https://loisirs74.fr/pt/lac-de-vallon">Lac de Vallon</a><span>Bellevaux · 8 km</span></li><li><a href="https://loisirs74.fr/pt/plage-de-sciez-sur-leman">Plage de Sciez-sur-Léman</a><span>Sciez · 11 km</span></li><li><a href="https://loisirs74.fr/pt/plage-de-la-pinede">Plage de la Pinède</a><span>Thonon-les-Bains · 13 km</span></li></ul></div><div class="disc"><h3>Se gostou, experimente…</h3><ul><li><a href="https://loisirs74.fr/pt/plateau-de-solaison">Plateau de Solaison</a><span>Brizon · 27 km</span></li><li><a href="https://loisirs74.fr/pt/mont-saleve">Mont Salève</a><span>Monnetier-Mornex · 30 km</span></li><li><a href="https://loisirs74.fr/pt/col-des-pitons-saleve">Le Salève (Col des Pitons)</a><span>Collonges-sous-Salève · 30 km</span></li></ul></div><p class="disc-note">Distâncias em linha reta, de um local a outro.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publicado em 1 juin 2026</span><span class="sep">·</span><span>Atualizado em 27/07/26</span></p></div></main>

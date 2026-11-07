@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/boucles-coteau-publier.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/boucles-coteau-publier.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Naar inhoud springen</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">In de buurt</p>
-    <h2>In de buurt</h2>
+    <h2>Op 1 km hiervandaan…</h2>
     <p class="lead">Andere plekken om te ontdekken in de buurt en in dezelfde categorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/nl/centre-nautique-cite-de-l-eau-publier" class="card-photo">
       <img src="/img/baignade-nautisme/centre-nautique-cite-de-l-eau-publier-hero.jpg" alt="Watercentrum Cité de l&#x27;Eau — Publier" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">1 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/centre-nautique-cite-de-l-eau-publier" class="title">Watercentrum Cité de l'Eau — Publier</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/plage-d-amphion-publier" class="card-photo">
       <img src="/img/generique/generique-plage-lac-4.jpg" alt="Plage Municipale d&#x27;Amphion in Publier aan het Lac Léman in Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">1 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/plage-d-amphion-publier" class="title">Plage Municipale d'Amphion</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/tir-a-l-arc-abyss-publier" class="card-photo">
       <img src="/img/generique/generique-tir-arc-fleche-cible.jpg" alt="ABYSS — boogschieten in Publier" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">1 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/tir-a-l-arc-abyss-publier" class="title">ABYSS — Boogschieten Publier</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/sentier-pedestre-a-decouverte-village-vernaz-vernaz" class="card-photo">
       <img src="/img/generique/generique-sentier-automne-orange.jpg" alt="Ontdekkingswandelpad door het dorp La Vernaz, Vallée d&#x27;Aulps" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">10 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/sentier-pedestre-a-decouverte-village-vernaz-vernaz" class="title">Ontdekkingswandelpad door het dorp La Vernaz</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/secrets-fees-parcours-decouverte-habere-poche" class="card-photo">
       <img src="/img/generique/generique-sentier-hiver-neige.jpg" alt="Paden Secrets de fées op het Plateau des Moises bij Habère-Poche in de Vallée Verte" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">15 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/secrets-fees-parcours-decouverte-habere-poche" class="title">Secrets de fées - Ontdekkingspaden</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/chemin-alpage-parcours-decouverte-habere-lullin" class="card-photo">
       <img src="/img/generique/generique-sentier-hiver-neige.jpg" alt="Pad van de alpenweide ontdekkingsroute in Habère-Lullin in de Vallée Verte, alpenweiden en 8 themapanelen" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">19 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/chemin-alpage-parcours-decouverte-habere-lullin" class="title">Pad van de alpenweide — Ontdekkingsroute</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Vlakbij verstopt</h3><ul><li><a href="https://loisirs74.fr/nl/reserve-naturelle-delta-de-la-dranse">Natuurreservaat Delta van de Dranse</a><span>Publier · 2 km</span></li><li><a href="https://loisirs74.fr/nl/plage-de-saint-disdille">Plage de Saint-Disdille</a><span>Thonon-les-Bains · 3 km</span></li><li><a href="https://loisirs74.fr/nl/base-nautique-evian-bains">Watersportbasis van Évian-les-Bains</a><span>Évian-les-Bains · 3 km</span></li></ul></div><div class="disc"><h3>Meren die een omweg waard zijn</h3><ul><li><a href="https://loisirs74.fr/nl/plage-de-la-pinede">Plage de la Pinède</a><span>Thonon-les-Bains · 4 km</span></li><li><a href="https://loisirs74.fr/nl/plage-de-sciez-sur-leman">Plage de Sciez-sur-Léman</a><span>Sciez · 13 km</span></li><li><a href="https://loisirs74.fr/nl/plage-d-excenevex">Plage d'Excenevex</a><span>Excenevex · 15 km</span></li></ul></div><div class="disc"><h3>Als je dit leuk vond, probeer dan eens…</h3><ul><li><a href="https://loisirs74.fr/nl/sentier-cascades-sixt-fer-a-cheval">Watervallenpad van Sixt</a><span>Sixt-Fer-à-Cheval · 43 km</span></li><li><a href="https://loisirs74.fr/nl/sentier-geologique-pointe-percee-grand-bornand">Geologisch pad Pointe Percée</a><span>Le Grand-Bornand · 47 km</span></li><li><a href="https://loisirs74.fr/nl/sentier-espagnols-pas-du-roc-glieres">Sentier des Espagnols / Pas du Roc</a><span>Thorens-Glières · 56 km</span></li></ul></div><p class="disc-note">Afstanden in vogelvlucht, van de ene plaats naar de andere.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Gepubliceerd 10 juin 2026</span><span class="sep">·</span><span>Bijgewerkt 13/06/26</span></p></div></main>

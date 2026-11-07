@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/ruines-chateau-habere-lullin-habere-lullin.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/ruines-chateau-habere-lullin-habere-lullin.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Přejít k obsahu</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Viz také</p>
-    <h2>Viz také</h2>
-    <p class="lead"></p>
+    <h2>1 km odtud…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/cs/chemin-alpage-parcours-decouverte-habere-lullin" class="card-photo">
       <img src="/img/generique/generique-sentier-hiver-neige.jpg" alt="Le chemin de l&#x27;alpage — Parcours de découverte v Habère-Lullin ve Vallée Verte, horské pastviny a 8 tematických panelů" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">1 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/chemin-alpage-parcours-decouverte-habere-lullin" class="title">Le chemin de l'alpage — Parcours de découverte</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/pointe-de-miribel" class="card-photo">
       <img src="/img/points-de-vue/pointe-de-miribel-hero.jpg" alt="Pointe de Miribel ve Villard, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">2 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/pointe-de-miribel" class="title">Pointe de Miribel</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/secrets-fees-parcours-decouverte-habere-poche" class="card-photo">
       <img src="/img/generique/generique-sentier-hiver-neige.jpg" alt="Secrets de fées - parcours de découverte na Plateau des Moises v Habère-Poche ve Vallée Verte" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">4 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/secrets-fees-parcours-decouverte-habere-poche" class="title">Secrets de fées - parcours de découverte</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/musee-art-et-folklore-regional-fessy" class="card-photo">
       <img src="/img/generique/generique-musee-classique.jpg" alt="Musée d&#x27;art et de folklore régional ve Fessy, zemědělská usedlost z 18. stol. s 20 000 venkovskými předměty ze sbírky Bernarda Lacroixe" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">6 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/musee-art-et-folklore-regional-fessy" class="title">Musée d'art et de folklore régional</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/musee-faune-bellevaux" class="card-photo">
       <img src="/img/musees/musee-faune-bellevaux-hero.jpg" alt="Dioráma s horskou faunou v rekonstruovaném přírodním prostředí – ilustrace" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">6 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/musee-faune-bellevaux" class="title">Musée de la Faune</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/ancien-remparts-chateau-lullin-lullin" class="card-photo">
       <img src="/img/generique/generique-chateau.jpg" alt="Ancien remparts du château de Lullin se střílnami, středověký pozůstatek viditelný ve vesnici" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">8 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/ancien-remparts-chateau-lullin-lullin" class="title">Ancien remparts du château de Lullin</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Skryté hned poblíž</h3><ul><li><a href="https://loisirs74.fr/cs/plateau-de-loex">Plateau de Loëx</a><span>Habère-Poche · 6 km</span></li><li><a href="https://loisirs74.fr/cs/chateau-avully-brenthonne">Château d'Avully</a><span>Brenthonne · 6 km</span></li><li><a href="https://loisirs74.fr/cs/acroparc-de-bellavallis-bellevaux">Acroparc de Bellavallis</a><span>Bellevaux · 6 km</span></li></ul></div><div class="disc"><h3>Jezera, která stojí za návštěvu</h3><ul><li><a href="https://loisirs74.fr/cs/lac-de-vallon">Lac de Vallon</a><span>Bellevaux · 8 km</span></li><li><a href="https://loisirs74.fr/cs/plage-de-sciez-sur-leman">Plage de Sciez-sur-Léman</a><span>Sciez · 13 km</span></li><li><a href="https://loisirs74.fr/cs/plage-d-excenevex">Plage d'Excenevex</a><span>Excenevex · 14 km</span></li></ul></div><div class="disc"><h3>Pokud se vám to líbilo, zkuste…</h3><ul><li><a href="https://loisirs74.fr/cs/musee-du-batiment-ville-la-grand">Musée du Bâtiment</a><span>Ville-la-Grand · 15 km</span></li><li><a href="https://loisirs74.fr/cs/musee-du-chablais-thonon-les-bains">Musée du Chablais</a><span>Thonon-les-Bains · 16 km</span></li><li><a href="https://loisirs74.fr/cs/musee-granges-servette-chens-sur-leman">Musée des Granges de Servette</a><span>Chens-sur-Léman · 16 km</span></li></ul></div><p class="disc-note">Vzdálenosti vzdušnou čarou mezi jednotlivými místy.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publikováno dne 10 juin 2026</span><span class="sep">·</span><span>Aktualizováno dne 19/07/26</span></p></div></main>

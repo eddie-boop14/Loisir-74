@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/musee-du-mont-blanc-chamonix.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/musee-du-mont-blanc-chamonix.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Naar inhoud springen</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">In de buurt</p>
-    <h2>In de buurt</h2>
+    <h2>Op 1 km hiervandaan…</h2>
     <p class="lead">Andere plekken om te ontdekken in de buurt en in dezelfde categorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/nl/parc-de-loisirs-les-planards-chamonix" class="card-photo">
       <img src="/img/generique/generique-parc.jpg" alt="Het recreatiepark Les Planards in Chamonix, alpine coaster-rodelbaan en attracties aan de bosrand" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">1 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/parc-de-loisirs-les-planards-chamonix" class="title">Parc de loisirs de Chamonix — Les Planards</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/train-du-montenvers-mer-de-glace" class="card-photo">
       <img src="/img/points-de-vue/train-du-montenvers-mer-de-glace-hero.jpg" alt="Rode tandradtrein van Montenvers in het station van Chamonix tegenover het Mont-Blanc-massief, toegang tot de Mer de Glace" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">1 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/train-du-montenvers-mer-de-glace" class="title">Trein van Montenvers - Mer de Glace</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/chamonix-mont-blanc" class="card-photo">
       <img src="/img/stations-de-ski/chamonix-mont-blanc-hero.jpg" alt="Het dal van Chamonix en de aiguilles, gezien vanaf de col de Voza" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">1 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/chamonix-mont-blanc" class="title">Chamonix-Mont-Blanc</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/maison-de-la-memoire-janny-couttet-chamonix" class="card-photo">
       <img src="/img/musees/maison-de-la-memoire-janny-couttet-chamonix-hero.jpg" alt="Granieten gevel van het voormalige Zusterhuis, sinds 2011 het Huis van de Herinnering en het Erfgoed Janny Couttet in de rue des Moulins in Chamonix" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">1 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/maison-de-la-memoire-janny-couttet-chamonix" class="title">Maison de la Mémoire Janny Couttet</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/espace-tairraz-musee-des-cristaux-chamonix" class="card-photo">
       <img src="/img/musees/espace-tairraz-musee-des-cristaux-chamonix-hero.jpg" alt="Vitrines met kristallen en mineralen uit de Mont-Blanc in de Espace Tairraz in het centrum van Chamonix" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">1 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/espace-tairraz-musee-des-cristaux-chamonix" class="title">Espace Tairraz</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/nl/musee-montagnard-les-houches" class="card-photo">
       <img src="/img/generique/generique-musee-grande-galerie.jpg" alt="Hout- en steenfontaal van het huis uit 1750 dat het Bergmuseum van Les Houches herbergt in het hart van het dorp" loading="lazy">
-      <span class="card-tag">Betaald</span>
+      <span class="card-tag">7 km · Betaald</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/nl/musee-montagnard-les-houches" class="title">Bergmuseum van Les Houches</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Vlakbij verstopt</h3><ul><li><a href="https://loisirs74.fr/nl/lac-vert-passy">Lac Vert</a><span>Passy · 10 km</span></li><li><a href="https://loisirs74.fr/nl/aire-de-decollage-parapente-plaine-joux">Startplaats paragliding Plaine-Joux</a><span>Passy · 11 km</span></li><li><a href="https://loisirs74.fr/nl/jardin-cimes-passy">Jardin des Cimes</a><span>Passy · 12 km</span></li></ul></div><div class="disc"><h3>Uitzichtpunten die zeker een omweg waard zijn</h3><ul><li><a href="https://loisirs74.fr/nl/telecabine-panoramic-mont-blanc">Kabelbaan Panoramic Mont-Blanc</a><span>Chamonix-Mont-Blanc · 1 km</span></li><li><a href="https://loisirs74.fr/nl/telepherique-aiguille-du-midi">Luchtkabelbaan Aiguille du Midi</a><span>Chamonix-Mont-Blanc · 1 km</span></li><li><a href="https://loisirs74.fr/nl/mont-joly">Mont Joly</a><span>Saint-Gervais-les-Bains · 18 km</span></li></ul></div><div class="disc"><h3>Als je dit leuk vond, probeer dan eens…</h3><ul><li><a href="https://loisirs74.fr/nl/musee-ermitage-calvaire-megeve">Museum van de Kluis van de Calvarieberg</a><span>Megève · 20 km</span></li><li><a href="https://loisirs74.fr/nl/musee-horlogerie-et-decolletage-cluses">Museum van Uurwerk en Verspaning</a><span>Cluses · 27 km</span></li><li><a href="https://loisirs74.fr/nl/maison-fromage-abondance-abondance">Kaashuis Abondance</a><span>Abondance · 42 km</span></li></ul></div><p class="disc-note">Afstanden in vogelvlucht, van de ene plaats naar de andere.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Gepubliceerd 23 mai 2026</span><span class="sep">·</span><span>Bijgewerkt 11/07/26</span></p></div></main>

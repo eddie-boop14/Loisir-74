@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/cascade-des-fours.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/cascade-des-fours.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">In der Nähe</p>
-    <h2>In der Nähe</h2>
+    <h2>4 km von hier entfernt…</h2>
     <p class="lead">Weitere Orte in der Umgebung und in derselben Kategorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/de/cordon" class="card-photo">
       <img src="/img/stations-de-ski/cordon-hero.jpg" alt="Das Dorf Cordon mit seinem direkten Blick auf die Mont-Blanc-Kette" loading="lazy">
-      <span class="card-tag">Kostenpflichtig</span>
+      <span class="card-tag">4 km · Kostenpflichtig</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/cordon" class="title">Cordon</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/de/sentier-geologique-pointe-percee-grand-bornand" class="card-photo">
       <img src="/img/sentiers/sentier-geologique-pointe-percee-grand-bornand-hero.jpg" alt="Geologischer Lehrpfad Pointe Percée in den Aravis ab dem Col des Annes, Le Grand-Bornand" loading="lazy">
-      <span class="card-tag">Kostenlos</span>
+      <span class="card-tag">5 km · Kostenlos</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/sentier-geologique-pointe-percee-grand-bornand" class="title">Geologischer Lehrpfad Pointe Percée</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/de/grp-tour-pays-mont-blanc-sallanches" class="card-photo">
       <img src="/img/generique/generique-sentier-foret-alpine.jpg" alt="GR® de Pays (GRP) Wanderschleife GR® de Pays Tour du Pays du Mont-Blanc in Sallanches, Haute-Savoie – ca. 165 km · Pays du Mont-Blanc, mittel bis schwer" loading="lazy">
-      <span class="card-tag">Kostenlos</span>
+      <span class="card-tag">5 km · Kostenlos</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/grp-tour-pays-mont-blanc-sallanches" class="title">GR® de Pays Tour du Pays du Mont-Blanc</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/de/cascade-de-doran" class="card-photo">
       <img src="/img/cascades/cascade-de-doran-hero.jpg" alt="Cascade de Doran fällt 70 Meter hoch mitten in einem Laubwald herab, Sallanches, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Kostenlos</span>
+      <span class="card-tag">5 km · Kostenlos</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/cascade-de-doran" class="title">Cascade de Doran</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/de/cascade-de-l-arpenaz" class="card-photo">
       <img src="/img/cascades/cascade-de-l-arpenaz-hero.jpg" alt="Cascade de l&#x27;Arpenaz, 270 m hoher Wasserfall über Kalkfelsen, Sallanches, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Kostenlos</span>
+      <span class="card-tag">8 km · Kostenlos</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/cascade-de-l-arpenaz" class="title">Cascade de l'Arpenaz</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/de/cascade-du-chinaillon" class="card-photo">
       <img src="/img/cascades/cascade-du-chinaillon-hero.jpg" alt="Cascade du Chinaillon in einer engen Schlucht im Buchenwald, Le Grand-Bornand Chinaillon, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Kostenlos</span>
+      <span class="card-tag">10 km · Kostenlos</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/cascade-du-chinaillon" class="title">Cascade du Chinaillon</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Ganz in der Nähe versteckt</h3><ul><li><a href="https://loisirs74.fr/de/base-de-loisirs-des-ilettes">Base de loisirs des Ilettes</a><span>Sallanches · 6 km</span></li><li><a href="https://loisirs74.fr/de/chateau-des-rubins-sallanches">Château des Rubins</a><span>Sallanches · 6 km</span></li><li><a href="https://loisirs74.fr/de/lac-des-confins">Lac des Confins</a><span>La Clusaz · 7 km</span></li></ul></div><div class="disc"><h3>Aussichtspunkte, die einen Abstecher wert sind</h3><ul><li><a href="https://loisirs74.fr/de/belvedere-panorama-360-combloux-la-cry">Table d'orientation de la Cry</a><span>Combloux · 7 km</span></li><li><a href="https://loisirs74.fr/de/col-de-la-colombiere">Col de la Colombière</a><span>Le Reposoir · 9 km</span></li><li><a href="https://loisirs74.fr/de/col-des-aravis">Col des Aravis</a><span>La Clusaz · 10 km</span></li></ul></div><div class="disc"><h3>Wenn es Ihnen gefallen hat, probieren Sie doch mal …</h3><ul><li><a href="https://loisirs74.fr/de/gorges-de-la-diosaz">Gorges de la Diosaz</a><span>Servoz · 16 km</span></li><li><a href="https://loisirs74.fr/de/cascade-du-rouget">Cascade du Rouget</a><span>Sixt-Fer-à-Cheval · 21 km</span></li><li><a href="https://loisirs74.fr/de/cirque-du-fer-a-cheval">Cirque du Fer-à-Cheval</a><span>Sixt-Fer-à-Cheval · 23 km</span></li></ul></div><p class="disc-note">Entfernungen in Luftlinie von einem Ort zum anderen.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Veröffentlicht 14 mai 2026</span><span class="sep">·</span><span>Aktualisiert 18/07/26</span></p></div></main>

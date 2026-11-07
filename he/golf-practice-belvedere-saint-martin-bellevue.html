@@ -108,6 +108,8 @@
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
 
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
+
 [dir=rtl] a.skip{left:auto;inset-inline-start:-9999px}
 [dir=rtl] a.skip:focus{inset-inline-start:0}
 [dir=rtl] h1.hammer{direction:ltr;text-align:right}</style>
@@ -117,7 +119,7 @@
 <link rel="alternate" type="text/markdown" href="/content/golf-practice-belvedere-saint-martin-bellevue.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/golf-practice-belvedere-saint-martin-bellevue.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">דלג לתוכן</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">ראו גם</p>
-    <h2>ראו גם</h2>
-    <p class="lead"></p>
+    <h2>במרחק 1 ק"מ מכאן…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/he/sentier-espagnols-pas-du-roc-glieres" class="card-photo">
       <img src="/img/sentiers/sentier-espagnols-pas-du-roc-glieres-hero.jpg" alt="מסלול היסטורי - רמת Glières - Sentier des Espagnols / Pas du Roc ב-Thorens-Glières, Haute-Savoie - מעגל של 8 ק&quot;מ, עלייה של 600 מ&#x27;, רמת קושי בינונית" loading="lazy">
-      <span class="card-tag">חינם</span>
+      <span class="card-tag">1 km · חינם</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/sentier-espagnols-pas-du-roc-glieres" class="title">Sentier des Espagnols / Pas du Roc</a>
@@ -201,7 +210,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/chateau-de-thorens" class="card-photo">
       <img src="/img/chateaux/chateau-de-thorens-hero.jpg" alt="חזית Château de Thorens עם מגדליה מימי הביניים ואדריכלות ברוקית, Fillière, Haute-Savoie" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">3 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/chateau-de-thorens" class="title">Château de Thorens</a>
@@ -215,7 +224,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/karting-team-bouvier-pringy" class="card-photo">
       <img src="/img/generique/generique-karting-outdoor-aerial.jpg" alt="מועדון קארטינג ומוטוקרוס ללא מטרות רווח Team Bouvier 74 Pringy ב-Annecy, Haute-Savoie" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">4 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/karting-team-bouvier-pringy" class="title">Team Bouvier 74 Pringy</a>
@@ -229,7 +238,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/escalade-ablok-argonay" class="card-photo">
       <img src="/img/generique/generique-escalade-bloc-outdoor.jpg" alt="חדר הטיפוס Ablok ב-Argonay" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">3 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/escalade-ablok-argonay" class="title">Ablok Annecy (Argonay)</a>
@@ -243,7 +252,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/full-land-annecy" class="card-photo">
       <img src="/img/generique/generique-attraction.jpg" alt="Full Land Annecy" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">3 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/full-land-annecy" class="title">Full Land Annecy</a>
@@ -257,7 +266,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/trampoline-bam-freesports-annecy" class="card-photo">
       <img src="/img/generique/generique-trampoline-park-saut.jpg" alt="Bam Freesports Annecy — פארק טרמפולינות ב-Annecy" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">4 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/trampoline-bam-freesports-annecy" class="title">Bam Freesports Annecy</a>
@@ -268,6 +277,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>מוסתר ממש קרוב</h3><ul><li><a href="https://loisirs74.fr/he/pont-de-la-caille">Pont de la Caille</a><span>Cruseilles · 6 km</span></li><li><a href="https://loisirs74.fr/he/base-de-loisirs-du-vuaz-filliere">Base de loisirs du Vuaz</a><span>Fillière · 7 km</span></li><li><a href="https://loisirs74.fr/he/tete-du-parmelan">Tête du Parmelan</a><span>Dingy-Saint-Clair · 7 km</span></li></ul></div><div class="disc"><h3>תצפיות ששווה לעצור בהן</h3><ul><li><a href="https://loisirs74.fr/he/mont-veyrier">Mont Veyrier</a><span>Annecy · 6 km</span></li><li><a href="https://loisirs74.fr/he/marais-de-poisy">Marais de Poisy</a><span>Poisy · 7 km</span></li><li><a href="https://loisirs74.fr/he/mont-baron">Mont Baron</a><span>Veyrier-du-Lac · 7 km</span></li></ul></div><div class="disc"><h3>אם אהבתם, נסו…</h3><ul><li><a href="https://loisirs74.fr/he/criq-parc">Criq'Parc</a><span>Saint-Jorioz · 15 km</span></li><li><a href="https://loisirs74.fr/he/via-ferrata-thones">Via ferrata de Thônes</a><span>Thônes · 15 km</span></li><li><a href="https://loisirs74.fr/he/acro-aventures-reignier">Acro'Aventures Reignier</a><span>Reignier-Ésery · 20 km</span></li></ul></div><p class="disc-note">מרחקים בקו אווירי, ממקום למקום.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>פורסם בתאריך 3 juin 2026</span><span class="sep">·</span><span>עודכן בתאריך 26/07/26</span></p></div></main>

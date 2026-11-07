@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/le-semnoz.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/le-semnoz.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">本文へスキップ</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">関連情報</p>
-    <h2>関連情報</h2>
-    <p class="lead"></p>
+    <h2>ここから3 km先……</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/ja/musee-nature-gruffy" class="card-photo">
       <img src="/img/generique/generique-musee-classique.jpg" alt="Gruffyの自然博物館、Haute-Savoieの野生動物と蜂、Annecy湖の近く" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">3 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/musee-nature-gruffy" class="title">Musée de la Nature</a>
@@ -201,7 +210,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/sentier-des-roselieres" class="card-photo">
       <img src="/img/sentiers/sentier-des-roselieres-hero.jpg" alt="リードベッド・トレイル — Saint-Jorioz、Haute-Savoie" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">6 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/sentier-des-roselieres" class="title">Sentier des Roselières</a>
@@ -215,7 +224,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/criq-parc" class="card-photo">
       <img src="/img/que-faire/criq-parc-hero.jpg" alt="湖Annecyの海岸でSaint-Joriozの森林遊び場であるCriq&#x27;Parcで遊んでいる子供" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">6 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/criq-parc" class="title">Criq'Parc</a>
@@ -229,7 +238,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/reserve-naturelle-bout-du-lac" class="card-photo">
       <img src="/img/points-de-vue/reserve-naturelle-bout-du-lac-hero.jpg" alt="ブー＝デュ＝Lac d&#x27;Annecy自然保護区 — Doussard、Haute-Savoie" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">9 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/reserve-naturelle-bout-du-lac" class="title">Réserve naturelle du Bout-du-Lac d'Annecy</a>
@@ -243,7 +252,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/thiou-a-annecy-annecy" class="card-photo">
       <img src="/img/points-de-vue/thiou-a-annecy-annecy-hero.jpg" alt="ポン・デ・アムールスから見たAnnecyの古い町を渡るティオ" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">11 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/thiou-a-annecy-annecy" class="title">Le Thiou à Annecy</a>
@@ -257,7 +266,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/col-de-la-forclaz" class="card-photo">
       <img src="/img/points-de-vue/col-de-la-forclaz-hero.jpg" alt="Col de la Forclazは1,147のm、Talloires-Montminからの湖Annecy上のパノラマのバルコニーで" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">11 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/col-de-la-forclaz" class="title">Col de la Forclaz</a>
@@ -268,6 +277,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>すぐそばに隠れている</h3><ul><li><a href="https://loisirs74.fr/ja/musee-cordonnerie-alby-sur-cheran">Musée de la Cordonnerie</a><span>Alby-sur-Chéran · 6 km</span></li><li><a href="https://loisirs74.fr/ja/suivez-mouche-alby-sur-cheran">Suivez la mouche</a><span>Alby-sur-Chéran · 6 km</span></li><li><a href="https://loisirs74.fr/ja/parc-de-peche-domaine-du-moulin-authier">Domaine du Moulin Authier — Parc de pêche</a><span>Haute-Savoie · 11 km</span></li></ul></div><div class="disc"><h3>立ち寄る価値のある湖</h3><ul><li><a href="https://loisirs74.fr/ja/plage-de-saint-jorioz">Plage de Saint-Jorioz</a><span>Saint-Jorioz · 6 km</span></li><li><a href="https://loisirs74.fr/ja/plage-de-menthon-saint-bernard">Plage de Menthon-Saint-Bernard</a><span>Menthon-Saint-Bernard · 10 km</span></li><li><a href="https://loisirs74.fr/ja/plage-des-marquisats">Plage des Marquisats</a><span>Annecy · 10 km</span></li></ul></div><div class="disc"><h3>気に入っていただけたら、こちらもぜひお試しください…</h3><ul><li><a href="https://loisirs74.fr/ja/marais-de-poisy">Marais de Poisy</a><span>Poisy · 15 km</span></li><li><a href="https://loisirs74.fr/ja/tete-du-parmelan">Tête du Parmelan</a><span>Dingy-Saint-Clair · 21 km</span></li><li><a href="https://loisirs74.fr/ja/pont-de-la-caille">Pont de la Caille</a><span>Cruseilles · 23 km</span></li></ul></div><p class="disc-note">ある場所から別の場所までの直線距離。</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>公開日 23 avril 2026</span><span class="sep">·</span><span>更新日 19/07/26</span></p></div></main>

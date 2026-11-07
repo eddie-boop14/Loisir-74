@@ -108,6 +108,8 @@
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
 
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
+
 [dir=rtl] a.skip{left:auto;inset-inline-start:-9999px}
 [dir=rtl] a.skip:focus{inset-inline-start:0}
 [dir=rtl] h1.hammer{direction:ltr;text-align:right}</style>
@@ -117,7 +119,7 @@
 <link rel="alternate" type="text/markdown" href="/content/marais-de-poisy.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/marais-de-poisy.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">דלג לתוכן</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">ראו גם</p>
-    <h2>ראו גם</h2>
-    <p class="lead"></p>
+    <h2>במרחק 1 ק"מ מכאן…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/he/ereel-annecy-sillingy" class="card-photo">
       <img src="/img/generique/generique-vr-multi-joueurs.jpg" alt="שחקן שקוע במציאות מדומה בעמדה אישית במרכז המציאות המדומה E.réel ב-Sillingy ליד Annecy" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">1 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/ereel-annecy-sillingy" class="title">E.réel Annecy</a>
@@ -201,7 +210,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/arcade-art-of-pinball-poisy" class="card-photo">
       <img src="/img/generique/generique-pinball.jpg" alt="Art of Pinball Poisy — פינבול וארקייד ב-Poisy, Haute-Savoie" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">1 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/arcade-art-of-pinball-poisy" class="title">Art of Pinball Poisy</a>
@@ -215,7 +224,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/escalade-cortigrimpe-metz-tessy" class="card-photo">
       <img src="/img/generique/generique-escalade-outdoor-falaise.jpg" alt="Cortigrimpe, חדר טיפוס מקורה וביסטרו ב-Epagny Metz-Tessy, Haute-Savoie" loading="lazy">
-      <span class="card-tag">בתשלום</span>
+      <span class="card-tag">2 km · בתשלום</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/escalade-cortigrimpe-metz-tessy" class="title">Cortigrimpe</a>
@@ -229,7 +238,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/thiou-a-annecy-annecy" class="card-photo">
       <img src="/img/points-de-vue/thiou-a-annecy-annecy-hero.jpg" alt="ה-Thiou חוצה את העיר העתיקה של Annecy, כפי שנראה מ-Pont des Amours" loading="lazy">
-      <span class="card-tag">חינם</span>
+      <span class="card-tag">6 km · חינם</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/thiou-a-annecy-annecy" class="title">Le Thiou à Annecy</a>
@@ -243,7 +252,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/mont-veyrier" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Chemin_mont_Veyrier_mont_Baron.jpg/960px-Chemin_mont_Veyrier_mont_Baron.jpg" alt="נוף פנורמי מפסגת Mont Veyrier על אגם Annecy ומסיף הבוז&#x27; (Bauges), Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">חינם</span>
+      <span class="card-tag">8 km · חינם</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/mont-veyrier" class="title">Mont Veyrier</a>
@@ -257,7 +266,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/he/mont-baron" class="card-photo">
       <img src="/img/points-de-vue/mont-baron-hero.jpg" alt="נוף פנורמי מפסגת Mont Baron הצופה על אגם Annecy ומסיף הבוז&#x27; (Bauges), Veyrier-du-Lac, Haute-Savoie" loading="lazy">
-      <span class="card-tag">חינם</span>
+      <span class="card-tag">8 km · חינם</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/he/mont-baron" class="title">Mont Baron</a>
@@ -268,6 +277,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>מוסתר ממש קרוב</h3><ul><li><a href="https://loisirs74.fr/he/domaine-du-tornet">Domaine du Tornet</a><span>La Balme-de-Sillingy · 5 km</span></li><li><a href="https://loisirs74.fr/he/gorges-du-fier">Gorges du Fier</a><span>Lovagny · 5 km</span></li><li><a href="https://loisirs74.fr/he/chateau-montrottier-lovagny">Château de Montrottier</a><span>Lovagny · 5 km</span></li></ul></div><div class="disc"><h3>אגמים שכדאי לבקר בהם</h3><ul><li><a href="https://loisirs74.fr/he/plage-albigny">Plage d'Albigny</a><span>Annecy · 7 km</span></li><li><a href="https://loisirs74.fr/he/plage-des-marquisats">Plage des Marquisats</a><span>Annecy · 7 km</span></li><li><a href="https://loisirs74.fr/he/lac-des-dronieres">Lac des Dronières</a><span>Cruseilles · 12 km</span></li></ul></div><div class="disc"><h3>אם אהבתם, נסו…</h3><ul><li><a href="https://loisirs74.fr/he/le-semnoz">Le Semnoz</a><span>Viuz-la-Chiésaz · 15 km</span></li><li><a href="https://loisirs74.fr/he/col-de-la-forclaz">Col de la Forclaz</a><span>Talloires-Montmin · 19 km</span></li><li><a href="https://loisirs74.fr/he/col-des-glieres">Col des Glières</a><span>Fillière · 20 km</span></li></ul></div><p class="disc-note">מרחקים בקו אווירי, ממקום למקום.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>פורסם בתאריך 05 juin 2026</span><span class="sep">·</span><span>עודכן בתאריך 19/07/26</span></p></div></main>

@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/aquaparc-thonon-piscine-olympique-thonon.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/aquaparc-thonon-piscine-olympique-thonon.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Cerca</p>
-    <h2>Cerca</h2>
+    <h2>A 1 km de aquí…</h2>
     <p class="lead">Otros lugares para explorar en la zona y en la misma categoría</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/es/ecomusee-peche-et-du-lac-thonon" class="card-photo">
       <img src="/img/musees/ecomusee-peche-et-du-lac-thonon-hero.jpg" alt="Casetas de madera tradicionales de los pescadores del Port de Rives en Thonon que albergan el Écomusée de la pêche et du lac al pie del castillo de Rives" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">1 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/ecomusee-peche-et-du-lac-thonon" class="title">Ecomuseo de la pesca y del lago</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/voile-cercle-thonon-thonon" class="card-photo">
       <img src="/img/generique/generique-voile-sunset-1.jpg" alt="Club de vela del Lago Lemán y escuela de vela - Cercle de la Voile de Thonon en Thonon-les-Bains, Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">1 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/voile-cercle-thonon-thonon" class="title">Club de Vela de Thonon</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/plage-de-la-pinede" class="card-photo">
       <img src="/img/lacs-plages/plage-de-la-pinede-hero.jpg" alt="Riberas naturales de guijarros de la Plage de la Pinède a orillas del lago Léman, Thonon-les-Bains, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">1 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/plage-de-la-pinede" class="title">Plage de la Pinède</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/centre-nautique-cite-de-l-eau-publier" class="card-photo">
       <img src="/img/baignade-nautisme/centre-nautique-cite-de-l-eau-publier-hero.jpg" alt="Centro náutico Cité de l&#x27;Eau — Publier" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">5 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/centre-nautique-cite-de-l-eau-publier" class="title">Centro náutico Cité de l'Eau — Publier</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/espace-aquatique-morzine" class="card-photo">
       <img src="/img/generique/generique-aquatique-bassin-natation.jpg" alt="El centro acuático Espace Aquatique de Morzine en la Route du Palais des Sports, Morzine, Alta Saboya" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">29 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/espace-aquatique-morzine" class="title">Espace Aquatique de Morzine</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/aquaparc-chateau-bleu-annemasse" class="card-photo">
       <img src="/img/generique/generique-aquatique-toboggan.jpg" alt="Centro Acuático Château Bleu en Annemasse - piscinas de 25 m y 50 m, hammam, sauna y área de bienestar en Alta Saboya 74" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">29 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/aquaparc-chateau-bleu-annemasse" class="title">Centro Acuático Château Bleu</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Escondido muy cerca</h3><ul><li><a href="https://loisirs74.fr/es/chateau-ripaille-thonon">Château de Ripaille</a><span>Thonon-les-Bains · 1 km</span></li><li><a href="https://loisirs74.fr/es/musee-du-chablais-thonon-les-bains">Musée du Chablais</a><span>Thonon-les-Bains · 1 km</span></li><li><a href="https://loisirs74.fr/es/chateau-sonnaz-thonon-bains">Castillo de Sonnaz</a><span>Thonon-les-Bains · 1 km</span></li></ul></div><div class="disc"><h3>Lagos que merecen una visita</h3><ul><li><a href="https://loisirs74.fr/es/plage-de-saint-disdille">Plage de Saint-Disdille</a><span>Thonon-les-Bains · 2 km</span></li><li><a href="https://loisirs74.fr/es/plage-de-sciez-sur-leman">Plage de Sciez-sur-Léman</a><span>Sciez · 9 km</span></li><li><a href="https://loisirs74.fr/es/plage-d-excenevex">Playa de Excenevex</a><span>Excenevex · 10 km</span></li></ul></div><div class="disc"><h3>Si te ha gustado, prueba…</h3><ul><li><a href="https://loisirs74.fr/es/centre-nautique-guy-chatel-ayse">Centre Nautique Guy Châtel</a><span>Ayse · 36 km</span></li><li><a href="https://loisirs74.fr/es/centre-aquatique-cluses">Centre Aquatique Intercommunal de Cluses</a><span>Cluses · 37 km</span></li><li><a href="https://loisirs74.fr/es/centre-aquatique-sallanches-mont-blanc">Centro Acuático Sallanches Mont-Blanc</a><span>Sallanches · 52 km</span></li></ul></div><p class="disc-note">Distancias en línea recta, de un lugar a otro.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publicado el 24 mai 2026</span><span class="sep">·</span><span>Actualizado el 11/07/26</span></p></div></main>

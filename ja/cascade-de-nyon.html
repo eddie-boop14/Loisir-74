@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/cascade-de-nyon.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/cascade-de-nyon.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">本文へスキップ</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">関連情報</p>
-    <h2>関連情報</h2>
-    <p class="lead"></p>
+    <h2>ここから1 km先……</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/ja/cascade-aventure" class="card-photo">
       <img src="/img/que-faire/cascade-aventure-hero.jpg" alt="Morzine、Haute-Savoie、Haute-Savoie の Nyon の滝の近くでCascade Aventure、ツリートップの冒険公園および屋外活動" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">1 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/cascade-aventure" class="title">Cascade Aventure</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/sentier-renard-morzine" class="card-photo">
       <img src="/img/generique/generique-sentier-hiver-neige.jpg" alt="Morzineのフォックス・トレイル(Dranse, Nyon alpine)" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">1 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/sentier-renard-morzine" class="title">Le sentier du renard</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/morzine" class="card-photo">
       <img src="/img/stations-de-ski/morzine-hero.jpg" alt="Portes du Soleil エリアにある村里型スキーリゾート Morzine" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">2 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/morzine" class="title">Morzine</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/cascade-des-brochaux" class="card-photo">
       <img src="/img/cascades/cascade-des-brochaux-hero.jpg" alt="天然プールを備え、Les Lindaretsから始まるハイキングコースのあるCascade des Brochaux、Montriond、Haute-Savoie" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">7 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/cascade-des-brochaux" class="title">Cascade des Brochaux</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/cascade-de-la-diomaz" class="card-photo">
       <img src="/img/cascades/cascade-de-la-diomaz-hero.jpg" alt="Cascade de la Diomazと天然のポットホールは、バロン湖、Bellevaux、Haute-Savoieの近くで刻まれています" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">13 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/cascade-de-la-diomaz" class="title">Cascade de la Diomaz</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/cirque-du-fer-a-cheval" class="card-photo">
       <img src="/img/cascades/cirque-du-fer-a-cheval-hero.jpg" alt="石灰岩の断崖と滝を有するCirque du Fer-à-Cheval、Sixt-Fer-à-Cheval、Haute-Savoie" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">13 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/cirque-du-fer-a-cheval" class="title">Cirque du Fer-à-Cheval</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>すぐそばに隠れている</h3><ul><li><a href="https://loisirs74.fr/ja/parc-des-dereches">Parc des Dérêches</a><span>Morzine · 2 km</span></li><li><a href="https://loisirs74.fr/ja/musee-musique-mecanique-gets">Musée de la Musique Mécanique</a><span>Les Gets · 3 km</span></li><li><a href="https://loisirs74.fr/ja/plage-du-lac-de-montriond">Plage du Lac de Montriond</a><span>Montriond · 5 km</span></li></ul></div><div class="disc"><h3>立ち寄る価値のあるロープウェイ</h3><ul><li><a href="https://loisirs74.fr/ja/telecabine-pleney-morzine">Télécabine du Pléney</a><span>Morzine · 2 km</span></li><li><a href="https://loisirs74.fr/ja/telecabine-des-chavannes-les-gets">Télécabine des Chavannes</a><span>Les Gets · 3 km</span></li><li><a href="https://loisirs74.fr/ja/telecabine-du-mont-chery-les-gets">Télécabine du Mont-Chéry</a><span>Les Gets · 4 km</span></li></ul></div><div class="disc"><h3>気に入っていただけたら、こちらもぜひお試しください…</h3><ul><li><a href="https://loisirs74.fr/ja/gorges-du-pont-du-diable">Gorges du Pont du Diable</a><span>La Vernaz · 17 km</span></li><li><a href="https://loisirs74.fr/ja/cascade-de-l-arpenaz">Cascade de l'Arpenaz</a><span>Sallanches · 22 km</span></li><li><a href="https://loisirs74.fr/ja/cascade-de-doran">Cascade de Doran</a><span>Sallanches · 24 km</span></li></ul></div><p class="disc-note">ある場所から別の場所までの直線距離。</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>公開日 14 mai 2026</span><span class="sep">·</span><span>更新日 18/07/26</span></p></div></main>

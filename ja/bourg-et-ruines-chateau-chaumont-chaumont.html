@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/bourg-et-ruines-chateau-chaumont-chaumont.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/bourg-et-ruines-chateau-chaumont-chaumont.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">本文へスキップ</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">関連情報</p>
-    <h2>関連情報</h2>
-    <p class="lead"></p>
+    <h2>ここから2 km先……</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/ja/chateau-clermont-genevois" class="card-photo">
       <img src="/img/chateaux/chateau-clermont-genevois-hero.jpg" alt="カプラローラのファルネーゼ宮殿にインスパイアされた、三層のアーケード回廊を持つChâteau de Clermontのルネサンス様式の中庭、Haute-Savoie" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">2 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/chateau-clermont-genevois" class="title">Château de Clermont</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/boucle-pedestre-detective-nature-jonzier-epagny" class="card-photo">
       <img src="/img/generique/generique-sentier-hiver-neige.jpg" alt="Jonzier-Épagnyのヴュアッシュ・ネイチャートレイルにあるデテクティヴ・ナチュール・ファミリー周回コース、Haute-Savoieに解説パネルあり" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">4 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/boucle-pedestre-detective-nature-jonzier-epagny" class="title">Boucle pédestre Détective Nature (Sentier du Vuache)</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/borne-chateau-vuache-vulbens" class="card-photo">
       <img src="/img/generique/generique-chateau-brume.jpg" alt="1579年の日付が刻まれた石標で、VulbensにあったVuache城の唯一の遺構、Haute-Savoieの教会の階段のふもとにあります。" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">8 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/borne-chateau-vuache-vulbens" class="title">Borne du château du Vuache</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/maison-du-saleve-presilly" class="card-photo">
       <img src="/img/generique/generique-musee.jpg" alt="山塊の麓、PrésillyにあるMaison du Salèveを収容する旧ミケルヌ農家のファサード" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">12 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/maison-du-saleve-presilly" class="title">Maison du Salève</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/chateau-comtal-saint-julien-en-genevois" class="card-photo">
       <img src="/img/musees/chateau-comtal-saint-julien-en-genevois-hero.jpg" alt="Haute-Savoieにある、Saint-Julien-en-Genevoisを見下ろす丘の上に建つテルニエ伯爵城の遺構" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">15 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/chateau-comtal-saint-julien-en-genevois" class="title">Château comtal de Ternier</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/la-turbine-sciences-cran-gevrier" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/La_Turbine_%40_Cran-G%C3%A9vrier_%2824160730078%29.jpg/960px-La_Turbine_%40_Cran-G%C3%A9vrier_%2824160730078%29.jpg" alt="La Turbine sciences — プラス・コーラス、クラン=ジュヴリエ(Annecy)、Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">18 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/la-turbine-sciences-cran-gevrier" class="title">La Turbine sciences</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>すぐそばに隠れている</h3><ul><li><a href="https://loisirs74.fr/ja/sentier-pedestre-sens-et-decouverte-animaux-ferme-copponex">Sentier pédestre : sens et découverte des animaux de la ferme</a><span>Copponex · 9 km</span></li><li><a href="https://loisirs74.fr/ja/domaine-du-tornet">Domaine du Tornet</a><span>La Balme-de-Sillingy · 9 km</span></li><li><a href="https://loisirs74.fr/ja/parcours-patrimoine-se-promener-a-andilly-andilly">Parcours patrimoine : Se promener à Andilly</a><span>Andilly · 9 km</span></li></ul></div><div class="disc"><h3>立ち寄る価値のある展望台</h3><ul><li><a href="https://loisirs74.fr/ja/pont-de-la-caille">Pont de la Caille</a><span>Cruseilles · 12 km</span></li><li><a href="https://loisirs74.fr/ja/marais-de-poisy">Marais de Poisy</a><span>Poisy · 14 km</span></li><li><a href="https://loisirs74.fr/ja/col-des-pitons-saleve">Le Salève (Col des Pitons)</a><span>Collonges-sous-Salève · 19 km</span></li></ul></div><div class="disc"><h3>気に入っていただけたら、こちらもぜひお試しください…</h3><ul><li><a href="https://loisirs74.fr/ja/notre-histoire-musee-rumilly-rumilly">Notre Histoire - Musée de Rumilly</a><span>Rumilly · 19 km</span></li><li><a href="https://loisirs74.fr/ja/musee-cinema-animation-annecy">Musée du cinéma d'animation</a><span>Annecy · 20 km</span></li><li><a href="https://loisirs74.fr/ja/palais-de-l-ile-annecy">Palais de l'Île</a><span>Annecy · 20 km</span></li></ul></div><p class="disc-note">ある場所から別の場所までの直線距離。</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>公開日 10 juin 2026</span><span class="sep">·</span><span>更新日 14/07/26</span></p></div></main>

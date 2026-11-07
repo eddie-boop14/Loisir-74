@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/col-de-la-colombiere.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/col-de-la-colombiere.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Nearby</p>
-    <h2>Nearby</h2>
+    <h2>2 km from here…</h2>
     <p class="lead">Other places to explore in the area and in the same category</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/en/via-ferrata-jallouvre-le-grand-bornand" class="card-photo">
       <img src="/img/generique/generique-via-ferrata-lac.jpg" alt="Via Ferrata de la Tour du Jallouvre in Le Grand-Bornand, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Free</span>
+      <span class="card-tag">2 km · Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/via-ferrata-jallouvre-le-grand-bornand" class="title">Via Ferrata de la Tour du Jallouvre</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/en/cascade-du-chinaillon" class="card-photo">
       <img src="/img/cascades/cascade-du-chinaillon-hero.jpg" alt="Cascade du Chinaillon tumbling down a narrow gorge in the beech forest, Grand-Bornand Chinaillon, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Free</span>
+      <span class="card-tag">4 km · Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/cascade-du-chinaillon" class="title">Cascade du Chinaillon</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/en/cascade-mysterieuse-le-grand-bornand" class="card-photo">
       <img src="/img/cascades/cascade-mysterieuse-le-grand-bornand-hero.jpg" alt="The Cascade mystérieuse plunging into its narrow gorge between the fir trees, Le Grand-Bornand" loading="lazy">
-      <span class="card-tag">Free</span>
+      <span class="card-tag">4 km · Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/cascade-mysterieuse-le-grand-bornand" class="title">Cascade mystérieuse</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/en/plateau-de-solaison" class="card-photo">
       <img src="/img/points-de-vue/plateau-de-solaison-hero.jpg" alt="Plateau de Solaison — alpine pasture at Brizon, Bornes massif, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Free</span>
+      <span class="card-tag">6 km · Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/plateau-de-solaison" class="title">Plateau de Solaison</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/en/plateau-des-glieres" class="card-photo">
       <img src="/img/points-de-vue/plateau-des-glieres-hero.jpg" alt="The Glières plateau meadow with Gilioli&#x27;s National Monument to the Resistance" loading="lazy">
-      <span class="card-tag">Free</span>
+      <span class="card-tag">9 km · Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/plateau-des-glieres" class="title">Plateau des Glières</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/en/col-des-glieres" class="card-photo">
       <img src="/img/points-de-vue/col-des-glieres-hero.jpg" alt="Glières Plateau in summer with views of alpine meadows and the National Monument to the Resistance, Fillière, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Free</span>
+      <span class="card-tag">11 km · Free</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/en/col-des-glieres" class="title">Col des Glières</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Hidden nearby</h3><ul><li><a href="https://loisirs74.fr/en/sentier-geologique-pointe-percee-grand-bornand">Pointe Percée Geological Trail</a><span>Le Grand-Bornand · 4 km</span></li><li><a href="https://loisirs74.fr/en/lac-benit">Lac Bénit</a><span>Mont-Saxonnex · 5 km</span></li><li><a href="https://loisirs74.fr/en/lac-des-confins">Lac des Confins</a><span>La Clusaz · 8 km</span></li></ul></div><div class="disc"><h3>Waterfalls that are well worth a visit</h3><ul><li><a href="https://loisirs74.fr/en/cascade-des-fours">Cascade des Fours</a><span>Sallanches · 9 km</span></li><li><a href="https://loisirs74.fr/en/cascade-de-doran">Cascade de Doran</a><span>Sallanches · 10 km</span></li><li><a href="https://loisirs74.fr/en/cascade-de-l-arpenaz">Cascade de l'Arpenaz</a><span>Sallanches · 13 km</span></li></ul></div><div class="disc"><h3>If you enjoyed this, why not try…</h3><ul><li><a href="https://loisirs74.fr/en/tete-du-parmelan">Tête du Parmelan</a><span>Dingy-Saint-Clair · 17 km</span></li><li><a href="https://loisirs74.fr/en/aire-de-decollage-parapente-plaine-joux">Plaine-Joux Paragliding Takeoff Area</a><span>Passy · 21 km</span></li><li><a href="https://loisirs74.fr/en/mont-veyrier">Mont Veyrier</a><span>Annecy · 24 km</span></li></ul></div><p class="disc-note">Distances as the crow flies, from one place to another.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Published 05 juin 2026</span><span class="sep">·</span><span>Updated 19/07/26</span></p></div></main>

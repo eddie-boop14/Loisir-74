@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/borne-chateau-vuache-vulbens.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/borne-chateau-vuache-vulbens.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Přejít k obsahu</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Viz také</p>
-    <h2>Viz také</h2>
-    <p class="lead"></p>
+    <h2>4 km odtud…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/cs/karting-onkart-viry" class="card-photo">
       <img src="/img/generique/generique-karting-outdoor-track.jpg" alt="Onkart Viry — venkovní karting ve Viry, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">4 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/karting-onkart-viry" class="title">Onkart Viry</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/boucle-pedestre-detective-nature-jonzier-epagny" class="card-photo">
       <img src="/img/generique/generique-sentier-hiver-neige.jpg" alt="Rodinný okruh Boucle pédestre Détective Nature na Sentier du Vuache v Jonzier-Épagny s naučnými tabulemi v Haute-Savoie" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">5 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/boucle-pedestre-detective-nature-jonzier-epagny" class="title">Boucle pédestre Détective Nature (Sentier du Vuache)</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/bourg-et-ruines-chateau-chaumont-chaumont" class="card-photo">
       <img src="/img/musees/bourg-et-ruines-chateau-chaumont-chaumont-hero.jpg" alt="Ruiny středověkého Château de Chaumont a historická vesnice nad údolím Rhôny v Haute-Savoie" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">8 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/bourg-et-ruines-chateau-chaumont-chaumont" class="title">Bourg et ruines du château de Chaumont</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/chateau-clermont-genevois" class="card-photo">
       <img src="/img/chateaux/chateau-clermont-genevois-hero.jpg" alt="Renesanční vnitřní nádvoří Château de Clermont se třemi patry arkádových galerií inspirovaných Palazzo Farnese v Caprarole, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">9 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/chateau-clermont-genevois" class="title">Château de Clermont</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/chateau-montrottier-lovagny" class="card-photo">
       <img src="/img/chateaux/chateau-montrottier-lovagny-hero.jpg" alt="Válcová věž z 15. století a novogotická fasáda Château de Montrottier nad krajinářským parkem v Lovagny nad soutěskou Fier" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">24 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/chateau-montrottier-lovagny" class="title">Château de Montrottier</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/chateau-de-thorens" class="card-photo">
       <img src="/img/chateaux/chateau-de-thorens-hero.jpg" alt="Průčelí Château de Thorens se středověkými věžemi a barokní architekturou, Fillière, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">26 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/chateau-de-thorens" class="title">Château de Thorens</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Skryté hned poblíž</h3><ul><li><a href="https://loisirs74.fr/cs/tropicaland-viry">Tropicaland</a><span>Viry · 10 km</span></li><li><a href="https://loisirs74.fr/cs/parcours-patrimoine-se-promener-a-andilly-andilly">Parcours patrimoine : Se promener à Andilly</a><span>Andilly · 11 km</span></li><li><a href="https://loisirs74.fr/cs/chemin-art-nature-andilly-andilly">Chemin Art Nature d'Andilly</a><span>Andilly · 11 km</span></li></ul></div><div class="disc"><h3>Jezera, která stojí za návštěvu</h3><ul><li><a href="https://loisirs74.fr/cs/lac-des-dronieres">Lac des Dronières</a><span>Cruseilles · 16 km</span></li><li><a href="https://loisirs74.fr/cs/plage-albigny">Plage d'Albigny</a><span>Annecy · 28 km</span></li><li><a href="https://loisirs74.fr/cs/plage-des-marquisats">Plage des Marquisats</a><span>Annecy · 28 km</span></li></ul></div><div class="disc"><h3>Pokud se vám to líbilo, zkuste…</h3><ul><li><a href="https://loisirs74.fr/cs/chateau-sires-faucigny-bonneville">Château des Sires de Faucigny</a><span>Bonneville · 33 km</span></li><li><a href="https://loisirs74.fr/cs/chateau-de-menthon-saint-bernard">Château de Menthon-Saint-Bernard</a><span>Menthon-Saint-Bernard · 34 km</span></li><li><a href="https://loisirs74.fr/cs/chateau-beauregard-saint-jeoire">Château de Beauregard</a><span>Saint-Jeoire · 38 km</span></li></ul></div><p class="disc-note">Vzdálenosti vzdušnou čarou mezi jednotlivými místy.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publikováno dne 10 juin 2026</span><span class="sep">·</span><span>Aktualizováno dne 21/06/26</span></p></div></main>

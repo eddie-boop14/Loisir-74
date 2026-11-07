@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/cascade-de-la-belle-au-bois.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/cascade-de-la-belle-au-bois.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Saltar para o conteúdo</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Ver também</p>
-    <h2>Ver também</h2>
-    <p class="lead"></p>
+    <h2>A 1 km daqui…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/pt/musee-ermitage-calvaire-megeve" class="card-photo">
       <img src="/img/musees/musee-ermitage-calvaire-megeve-hero.jpg" alt="Musée de l&#x27;Ermitage du Calvaire em Megève, centro de interpretação das 14 capelas do Calvário de 1840-1878" loading="lazy">
-      <span class="card-tag">Pago</span>
+      <span class="card-tag">1 km · Pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/musee-ermitage-calvaire-megeve" class="title">Musée de l'Ermitage du Calvaire</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pt/patinoire-palais-megeve" class="card-photo">
       <img src="/img/generique/generique-patinoire-skater.jpg" alt="Pista de gelo olímpica do complexo Le Palais, Patinoire du Palais Megève em Megève, Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">Pago</span>
+      <span class="card-tag">1 km · Pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/patinoire-palais-megeve" class="title">Patinoire du Palais Megève</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pt/stelsia-casino-megeve" class="card-photo">
       <img src="/img/generique/generique-casino-2.jpg" alt="Stelsia Casino Megève no coração da aldeia, 192 rue Charles Feige" loading="lazy">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">1 km · Gratuito</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/stelsia-casino-megeve" class="title">Stelsia Casino</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pt/cascade-de-chedde" class="card-photo">
       <img src="/img/cascades/cascade-de-chedde-hero.jpg" alt="Cascade de Chedde cascata em forma de coração, torrente Ugine, Passy-Chedde, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">10 km · Gratuito</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/cascade-de-chedde" class="title">Cascade de Chedde</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pt/cascade-des-fours" class="card-photo">
       <img src="/img/cascades/cascade-des-fours-hero.jpg" alt="Vista da Cascade des Fours na Combe des Fours, maciço dos Aravis, Sallanches, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">11 km · Gratuito</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/cascade-des-fours" class="title">Cascade des Fours</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pt/cote-2000-aventure" class="card-photo">
       <img src="/img/que-faire/cote-2000-aventure-hero.jpg" alt="Percurso de escalada em árvores no Côte 2000 Aventure, Megève, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Pago</span>
+      <span class="card-tag">4 km · Pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/cote-2000-aventure" class="title">Côte 2000 Aventure</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Escondido bem perto</h3><ul><li><a href="https://loisirs74.fr/pt/belvedere-panorama-360-combloux-la-cry">Table d'orientation de la Cry</a><span>Combloux · 5 km</span></li><li><a href="https://loisirs74.fr/pt/sentier-du-baroque-combloux">Sentier du Baroque</a><span>Combloux · 5 km</span></li><li><a href="https://loisirs74.fr/pt/eglise-baroque-saint-nicolas-combloux">Église baroque Saint-Nicolas de Combloux</a><span>Combloux · 5 km</span></li></ul></div><div class="disc"><h3>Teleféricos que valem a pena visitar</h3><ul><li><a href="https://loisirs74.fr/pt/telecabine-du-jaillet">Télécabine du Jaillet</a><span>Megève · 2 km</span></li><li><a href="https://loisirs74.fr/pt/tramway-du-mont-blanc">Tramway du Mont-Blanc</a><span>Saint-Gervais-les-Bains · 8 km</span></li><li><a href="https://loisirs74.fr/pt/telepherique-du-brevent">Téléphérique du Brévent</a><span>Chamonix-Mont-Blanc · 19 km</span></li></ul></div><div class="disc"><h3>Se gostou, experimente…</h3><ul><li><a href="https://loisirs74.fr/pt/cascade-du-chinaillon">Cascade du Chinaillon</a><span>Le Grand-Bornand · 19 km</span></li><li><a href="https://loisirs74.fr/pt/cascade-mysterieuse-le-grand-bornand">Cascade mystérieuse</a><span>Le Grand-Bornand · 19 km</span></li><li><a href="https://loisirs74.fr/pt/cascade-du-dard">Cascade du Dard</a><span>Chamonix-Mont-Blanc · 21 km</span></li></ul></div><p class="disc-note">Distâncias em linha reta, de um local a outro.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publicado em 14 mai 2026</span><span class="sep">·</span><span>Atualizado em 04/07/26</span></p></div></main>

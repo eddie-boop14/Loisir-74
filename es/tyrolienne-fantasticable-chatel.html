@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/tyrolienne-fantasticable-chatel.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/tyrolienne-fantasticable-chatel.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Cerca</p>
-    <h2>Cerca</h2>
+    <h2>A 2 km de aquí…</h2>
     <p class="lead">Otros lugares para explorar en la zona y en la misma categoría</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/es/sentier-pedestre-sonore-sur-traces-contrebandiers-circuit-familles-chatel" class="card-photo">
       <img src="/img/generique/generique-sentier-hiver-neige.jpg" alt="Sendero sonoro de los contrabandistas en Châtel, salida en el Lac de Vonnes y la Vieille Douane" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">2 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/sentier-pedestre-sonore-sur-traces-contrebandiers-circuit-familles-chatel" class="title">Sendero sonoro tras las huellas de los contrabandistas - circuito familiar</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/chatel" class="card-photo">
       <img src="/img/stations-de-ski/chatel-hero.jpg" alt="El dominio esquiable de Châtel en las Portes du Soleil" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">2 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/chatel" class="title">Châtel</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/centre-aquatique-forme-d-o-chatel" class="card-photo">
       <img src="/img/generique/generique-thermes-hammam.jpg" alt="Forme d&#x27;O — centro acuático de Châtel, Alta Saboya" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">2 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/centre-aquatique-forme-d-o-chatel" class="title">Forme d'O Châtel</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/chiens-de-traineau-a-ton-etoile-la-chapelle-dabondance" class="card-photo">
       <img src="/img/generique/generique-chiens-de-traineau-1.jpg" alt="À Ton Étoile perros de trineo La Chapelle-d&#x27;Abondance" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">4 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/chiens-de-traineau-a-ton-etoile-la-chapelle-dabondance" class="title">À Ton Étoile — Perros de trineo La Chapelle-d'Abondance</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/via-ferrata-saix-de-miolene-abondance" class="card-photo">
       <img src="/img/generique/generique-via-ferrata-paroi.jpg" alt="Vía ferrata du Saix de Miolène, vía ferrata en Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">6 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/via-ferrata-saix-de-miolene-abondance" class="title">Vía ferrata du Saix de Miolène</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/es/aquariaz" class="card-photo">
       <img src="/img/que-faire/aquariaz-hero.jpg" alt="Piscinas y vegetación tropical del centro acuático Aquariaz en Avoriaz, Alta Saboya" loading="lazy">
-      <span class="card-tag">De pago</span>
+      <span class="card-tag">8 km · De pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/es/aquariaz" class="title">Aquariaz</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Escondido muy cerca</h3><ul><li><a href="https://loisirs74.fr/es/sentier-morclan-chatel">Sendero del Morclan</a><span>Châtel · 3 km</span></li><li><a href="https://loisirs74.fr/es/itineraire-pedestre-chemin-bords-dranse-chatel">Itinerario pedestre – Camino de las orillas del Dranse</a><span>Châtel · 3 km</span></li><li><a href="https://loisirs74.fr/es/sentier-pedestre-eterlou-chatel">Sendero peatonal del Eterlou</a><span>Châtel · 3 km</span></li></ul></div><div class="disc"><h3>Teleféricos que merecen una visita</h3><ul><li><a href="https://loisirs74.fr/es/telecabine-super-chatel">Telecabina de Super-Châtel</a><span>Châtel · 2 km</span></li><li><a href="https://loisirs74.fr/es/telecabine-pleney-morzine">Telecabina del Pléney</a><span>Morzine · 12 km</span></li><li><a href="https://loisirs74.fr/es/telecabine-des-chavannes-les-gets">Telecabina de Chavannes</a><span>Les Gets · 16 km</span></li></ul></div><div class="disc"><h3>Si te ha gustado, prueba…</h3><ul><li><a href="https://loisirs74.fr/es/indiana-ventures-saint-paul-en-chablais">Indiana'Ventures Saint-Paul-en-Chablais</a><span>Saint-Paul-en-Chablais · 18 km</span></li><li><a href="https://loisirs74.fr/es/jardin-pre-curieux-evian">Jardines del Pré Curieux</a><span>Évian-les-Bains · 24 km</span></li><li><a href="https://loisirs74.fr/es/via-ferrata-berard-vallorcine">Via Ferrata de la Cascade de Bérard</a><span>Vallorcine · 27 km</span></li></ul></div><p class="disc-note">Distancias en línea recta, de un lugar a otro.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publicado el 3 juin 2026</span><span class="sep">·</span><span>Actualizado el 15/06/26</span></p></div></main>

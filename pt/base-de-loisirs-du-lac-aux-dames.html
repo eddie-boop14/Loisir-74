@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/base-de-loisirs-du-lac-aux-dames.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/base-de-loisirs-du-lac-aux-dames.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Saltar para o conteúdo</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Ver também</p>
-    <h2>Ver também</h2>
-    <p class="lead"></p>
+    <h2>A 1 km daqui…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/pt/ferme-ecomusee-clos-parchet-samoens" class="card-photo">
       <img src="/img/generique/generique-musee-grande-galerie.jpg" alt="Ferme Écomusée du Clos Parchet em Samoëns, quinta tradicional de 1815 com coleção de utensílios rurais" loading="lazy">
-      <span class="card-tag">Pago</span>
+      <span class="card-tag">1 km · Pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/ferme-ecomusee-clos-parchet-samoens" class="title">Ferme Écomusée du Clos Parchet</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pt/samoens" class="card-photo">
       <img src="/img/stations-de-ski/samoens-hero.jpg" alt="A vila de Samoëns e o acesso ao domínio esquiável do Grand Massif" loading="lazy">
-      <span class="card-tag">Pago</span>
+      <span class="card-tag">2 km · Pago</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/samoens" class="title">Samoëns</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pt/jardin-jaysinia-samoens" class="card-photo">
       <img src="/img/parcs-jardins/jardin-jaysinia-samoens-hero.jpg" alt="Jardin Remarquable sob a direção científica do MNHN — Jardin botanique alpin La Jaÿsinia em Samoëns, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">2 km · Gratuito</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/jardin-jaysinia-samoens" class="title">Jardin botanique alpin La Jaÿsinia</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pt/base-de-loisirs-du-lac-bleu" class="card-photo">
       <img src="/img/bases-de-loisirs/base-de-loisirs-du-lac-bleu-hero.jpg" alt="Base de loisirs du Lac Bleu com praia de areia e relvados sombreados, Morillon, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">3 km · Gratuito</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/base-de-loisirs-du-lac-bleu" class="title">Base de loisirs du Lac Bleu</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pt/parc-des-dereches" class="card-photo">
       <img src="/img/bases-de-loisirs/parc-des-dereches-hero.jpg" alt="Trilhos do Parc des Dérêches ao longo do Dranse, Morzine, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">9 km · Gratuito</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/parc-des-dereches" class="title">Parc des Dérêches</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pt/base-de-loisirs-des-ilettes" class="card-photo">
       <img src="/img/bases-de-loisirs/base-de-loisirs-des-ilettes-hero.jpg" alt="Base de loisirs des Ilettes com os seus três lagos e relvados verdes, Sallanches, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuito</span>
+      <span class="card-tag">18 km · Gratuito</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pt/base-de-loisirs-des-ilettes" class="title">Base de loisirs des Ilettes</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Escondido bem perto</h3><ul><li><a href="https://loisirs74.fr/pt/abbaye-de-sixt">Abbaye de Sixt</a><span>Sixt-Fer-à-Cheval · 7 km</span></li><li><a href="https://loisirs74.fr/pt/cascade-du-rouget">Cascade du Rouget</a><span>Sixt-Fer-à-Cheval · 7 km</span></li><li><a href="https://loisirs74.fr/pt/cascade-de-nyon">Cascade de Nyon</a><span>Morzine · 7 km</span></li></ul></div><div class="disc"><h3>Teleféricos que valem a pena visitar</h3><ul><li><a href="https://loisirs74.fr/pt/telecabine-du-mont-chery-les-gets">Télécabine du Mont-Chéry</a><span>Les Gets · 7 km</span></li><li><a href="https://loisirs74.fr/pt/telecabine-des-chavannes-les-gets">Télécabine des Chavannes</a><span>Les Gets · 7 km</span></li><li><a href="https://loisirs74.fr/pt/telecabine-pleney-morzine">Télécabine du Pléney</a><span>Morzine · 9 km</span></li></ul></div><div class="disc"><h3>Se gostou, experimente…</h3><ul><li><a href="https://loisirs74.fr/pt/base-de-loisirs-du-lac-des-iles">Base de loisirs du Lac des Îles</a><span>Passy · 21 km</span></li><li><a href="https://loisirs74.fr/pt/base-de-loisirs-de-la-beunaz">Base de loisirs de la Beunaz</a><span>Saint-Paul-en-Chablais · 27 km</span></li><li><a href="https://loisirs74.fr/pt/parc-de-loisirs-du-pontet">Parc de Loisirs du Pontet</a><span>Les Contamines-Montjoie · 31 km</span></li></ul></div><p class="disc-note">Distâncias em linha reta, de um local a outro.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publicado em 14 mai 2026</span><span class="sep">·</span><span>Atualizado em 04/07/26</span></p></div></main>

@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/col-de-la-colombiere.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/col-de-la-colombiere.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Přejít k obsahu</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Viz také</p>
-    <h2>Viz také</h2>
-    <p class="lead"></p>
+    <h2>2 km odtud…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/cs/via-ferrata-jallouvre-le-grand-bornand" class="card-photo">
       <img src="/img/generique/generique-via-ferrata-lac.jpg" alt="Via Ferrata de la Tour du Jallouvre v Le Grand-Bornand, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">2 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/via-ferrata-jallouvre-le-grand-bornand" class="title">Via ferrata de la Tour du Jallouvre</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/cascade-du-chinaillon" class="card-photo">
       <img src="/img/cascades/cascade-du-chinaillon-hero.jpg" alt="Cascade du Chinaillon padající úzkou soutěskou v bukovém lese, Grand-Bornand Chinaillon, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">4 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/cascade-du-chinaillon" class="title">Cascade du Chinaillon</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/cascade-mysterieuse-le-grand-bornand" class="card-photo">
       <img src="/img/cascades/cascade-mysterieuse-le-grand-bornand-hero.jpg" alt="Cascade mystérieuse padající úzkou soutěskou mezi jedlemi, Le Grand-Bornand" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">4 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/cascade-mysterieuse-le-grand-bornand" class="title">Cascade mystérieuse</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/plateau-de-solaison" class="card-photo">
       <img src="/img/points-de-vue/plateau-de-solaison-hero.jpg" alt="Plateau de Solaison — alpská louka v Brizon, pohoří Bornes, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">6 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/plateau-de-solaison" class="title">Plateau de Solaison</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/plateau-des-glieres" class="card-photo">
       <img src="/img/points-de-vue/plateau-des-glieres-hero.jpg" alt="Náhorní plošina Glières s Giliolého Národním památníkem odboje" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">9 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/plateau-des-glieres" class="title">Plateau des Glières</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/col-des-glieres" class="card-photo">
       <img src="/img/points-de-vue/col-des-glieres-hero.jpg" alt="Col des Glières" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">11 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/col-des-glieres" class="title">Col des Glières</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Skryté hned poblíž</h3><ul><li><a href="https://loisirs74.fr/cs/sentier-geologique-pointe-percee-grand-bornand">Sentier géologique de la pointe Percée</a><span>Le Grand-Bornand · 4 km</span></li><li><a href="https://loisirs74.fr/cs/lac-benit">Lac Bénit</a><span>Mont-Saxonnex · 5 km</span></li><li><a href="https://loisirs74.fr/cs/lac-des-confins">Lac des Confins</a><span>La Clusaz · 8 km</span></li></ul></div><div class="disc"><h3>Vodopády, které stojí za to vidět</h3><ul><li><a href="https://loisirs74.fr/cs/cascade-des-fours">Cascade des Fours</a><span>Sallanches · 9 km</span></li><li><a href="https://loisirs74.fr/cs/cascade-de-doran">Cascade de Doran</a><span>Sallanches · 10 km</span></li><li><a href="https://loisirs74.fr/cs/cascade-de-l-arpenaz">Cascade de l'Arpenaz</a><span>Sallanches · 13 km</span></li></ul></div><div class="disc"><h3>Pokud se vám to líbilo, zkuste…</h3><ul><li><a href="https://loisirs74.fr/cs/tete-du-parmelan">Tête du Parmelan</a><span>Dingy-Saint-Clair · 17 km</span></li><li><a href="https://loisirs74.fr/cs/aire-de-decollage-parapente-plaine-joux">Aire de décollage parapente de Plaine-Joux</a><span>Passy · 21 km</span></li><li><a href="https://loisirs74.fr/cs/mont-veyrier">Mont Veyrier</a><span>Annecy · 24 km</span></li></ul></div><p class="disc-note">Vzdálenosti vzdušnou čarou mezi jednotlivými místy.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publikováno dne 05 juin 2026</span><span class="sep">·</span><span>Aktualizováno dne 19/07/26</span></p></div></main>

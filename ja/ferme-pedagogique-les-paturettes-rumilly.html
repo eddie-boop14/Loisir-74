@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/ferme-pedagogique-les-paturettes-rumilly.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/ferme-pedagogique-les-paturettes-rumilly.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">本文へスキップ</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">関連情報</p>
-    <h2>関連情報</h2>
-    <p class="lead"></p>
+    <h2>ここから2 km先……</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/ja/notre-histoire-musee-rumilly-rumilly" class="card-photo">
       <img src="/img/musees/notre-histoire-musee-rumilly-rumilly-hero.jpg" alt="ノートルヒストワール - Rumilly博物館、旧製造所、Haute-Savoie" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">5 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/notre-histoire-musee-rumilly-rumilly" class="title">Notre Histoire - Musée de Rumilly</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/karting-rumilly-rumilly" class="card-photo">
       <img src="/img/generique/generique-karting-outdoor-aerial.jpg" alt="Haute-SavoieのKarting de Rumillyで2 FFSA承認されたトラックが付いている屋外のkarting" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">7 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/karting-rumilly-rumilly" class="title">Karting de Rumilly</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/chateau-montrottier-lovagny" class="card-photo">
       <img src="/img/chateaux/chateau-montrottier-lovagny-hero.jpg" alt="第15世紀の円筒状保持とChâteau de Montrottierのネオゴシックファサードは、Fier Gorgesの上のLovagnyで景色を望む" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">8 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/chateau-montrottier-lovagny" class="title">Château de Montrottier</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/jardins-de-lornay" class="card-photo">
       <img src="/img/generique/generique-parc.jpg" alt="Les Jardins de Lornay — Haute-Savoie の竹園と段々の庭園" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">2 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/jardins-de-lornay" class="title">ロルネ庭園（Les Jardins de Lornay）</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/jardin-les-jardins-secrets-vaulx" class="card-photo">
       <img src="/img/generique/generique-parc.jpg" alt="Les Jardins Secrets — Vaulxにある特筆すべき庭園" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">10 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/jardin-les-jardins-secrets-vaulx" class="title">Les Jardins Secrets</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/escalade-space-bloc-sillingy" class="card-photo">
       <img src="/img/generique/generique-escalade-wall.jpg" alt="Annecy近くのSillingyにあるSpace Blocボルダリングジム、Haute-Savoie" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">11 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/escalade-space-bloc-sillingy" class="title">Space Bloc</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>すぐそばに隠れている</h3><ul><li><a href="https://loisirs74.fr/ja/gorges-du-fier">Gorges du Fier</a><span>Lovagny · 8 km</span></li><li><a href="https://loisirs74.fr/ja/domaine-du-tornet">Domaine du Tornet</a><span>La Balme-de-Sillingy · 11 km</span></li><li><a href="https://loisirs74.fr/ja/ereel-annecy-sillingy">E.réel Annecy</a><span>Sillingy · 12 km</span></li></ul></div><div class="disc"><h3>立ち寄る価値のある展望台</h3><ul><li><a href="https://loisirs74.fr/ja/marais-de-poisy">Marais de Poisy</a><span>Poisy · 12 km</span></li><li><a href="https://loisirs74.fr/ja/thiou-a-annecy-annecy">Le Thiou à Annecy</a><span>Annecy · 15 km</span></li><li><a href="https://loisirs74.fr/ja/le-semnoz">Le Semnoz</a><span>Viuz-la-Chiésaz · 17 km</span></li></ul></div><div class="disc"><h3>気に入っていただけたら、こちらもぜひお試しください…</h3><ul><li><a href="https://loisirs74.fr/ja/golf-practice-belvedere-saint-martin-bellevue">Golf du Belvédère</a><span>Saint-Martin-Bellevue · 19 km</span></li><li><a href="https://loisirs74.fr/ja/criq-parc">Criq'Parc</a><span>Saint-Jorioz · 19 km</span></li><li><a href="https://loisirs74.fr/ja/acro-aventures-talloires">Acro'Aventures Talloires</a><span>Talloires-Montmin · 23 km</span></li></ul></div><p class="disc-note">ある場所から別の場所までの直線距離。</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>公開日 3 juin 2026</span><span class="sep">·</span><span>更新日 04/07/26</span></p></div></main>

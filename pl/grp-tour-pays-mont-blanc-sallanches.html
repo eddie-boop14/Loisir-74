@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/grp-tour-pays-mont-blanc-sallanches.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/grp-tour-pays-mont-blanc-sallanches.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Przejdź do treści</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Zobacz też</p>
-    <h2>Zobacz też</h2>
-    <p class="lead"></p>
+    <h2>W odległości 1 km stąd…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/pl/cinema-cine-mont-blanc-sallanches" class="card-photo">
       <img src="/img/generique/generique-cinema.jpg" alt="Ciné Mont-Blanc - kino w Sallanches, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">1 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/cinema-cine-mont-blanc-sallanches" class="title">Ciné Mont-Blanc</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/chateau-des-rubins-sallanches" class="card-photo">
       <img src="/img/chateaux/chateau-des-rubins-sallanches-hero.jpg" alt="Średniowieczna fasada rezydencji Château des Rubins w Sallanches w 14. wieku, odnowiona 2019- 2021 roku, w budynku Observatoire des Alpes, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">1 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/chateau-des-rubins-sallanches" class="title">Château des Rubins</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/base-de-loisirs-des-ilettes" class="card-photo">
       <img src="/img/bases-de-loisirs/base-de-loisirs-des-ilettes-hero.jpg" alt="Base de loisirs des Ilettes z trzema jeziorami i zielonymi trawnikami, Sallanches, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">1 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/base-de-loisirs-des-ilettes" class="title">Base de loisirs des Ilettes</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/sentier-du-baroque-combloux" class="card-photo">
       <img src="/img/generique/generique-sentier-foret-alpine.jpg" alt="Sentier du Baroque" loading="lazy">
-      <span class="card-tag">Płatne</span>
+      <span class="card-tag">5 km · Płatne</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/sentier-du-baroque-combloux" class="title">Sentier du Baroque</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/sentier-desert-de-plate-passy" class="card-photo">
       <img src="/img/generique/generique-sentier-sommet-panorama.jpg" alt="Alpejski szlak turystyczny – Sentier du Désert de Platé w Passy, Haute-Savoie – 6,5 km w obie strony, 870 m przewyższenia, trudny" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">5 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/sentier-desert-de-plate-passy" class="title">Sentier du Désert de Platé</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/pl/sentier-geologique-pointe-percee-grand-bornand" class="card-photo">
       <img src="/img/sentiers/sentier-geologique-pointe-percee-grand-bornand-hero.jpg" alt="Ścieżka geologiczna Pointe Percee w zakresie Aravis od Col des Annes, Le Grand-Bornand" loading="lazy">
-      <span class="card-tag">Bezpłatnie</span>
+      <span class="card-tag">9 km · Bezpłatnie</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/pl/sentier-geologique-pointe-percee-grand-bornand" class="title">Sentier géologique de la pointe Percée</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Ukryte tuż obok</h3><ul><li><a href="https://loisirs74.fr/pl/base-de-loisirs-du-lac-des-iles">Base de loisirs du Lac des Îles</a><span>Passy · 3 km</span></li><li><a href="https://loisirs74.fr/pl/lac-de-passy">Lac de Passy</a><span>Passy · 4 km</span></li><li><a href="https://loisirs74.fr/pl/cascade-de-doran">Cascade de Doran</a><span>Sallanches · 4 km</span></li></ul></div><div class="disc"><h3>Wodospady, które warto zobaczyć</h3><ul><li><a href="https://loisirs74.fr/pl/cascade-de-l-arpenaz">Cascade de l'Arpenaz</a><span>Sallanches · 4 km</span></li><li><a href="https://loisirs74.fr/pl/cascade-de-chedde">Cascade de Chedde</a><span>Passy · 5 km</span></li><li><a href="https://loisirs74.fr/pl/cascade-des-fours">Cascade des Fours</a><span>Sallanches · 5 km</span></li></ul></div><div class="disc"><h3>Jeśli Ci się podobało, spróbuj…</h3><ul><li><a href="https://loisirs74.fr/pl/sentier-cascades-sixt-fer-a-cheval">Sentier des Cascades de Sixt</a><span>Sixt-Fer-à-Cheval · 17 km</span></li><li><a href="https://loisirs74.fr/pl/sentier-espagnols-pas-du-roc-glieres">Sentier des Espagnols / Pas du Roc</a><span>Thorens-Glières · 37 km</span></li><li><a href="https://loisirs74.fr/pl/sentier-des-roselieres">Sentier des Roselières</a><span>Saint-Jorioz · 39 km</span></li></ul></div><p class="disc-note">Odległości w linii prostej między poszczególnymi miejscami.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Opublikowano dnia 24 mai 2026</span><span class="sep">·</span><span>Zaktualizowano dnia 11/07/26</span></p></div></main>

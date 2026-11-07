@@ -108,6 +108,8 @@
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
 
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
+
 [dir=rtl] a.skip{left:auto;inset-inline-start:-9999px}
 [dir=rtl] a.skip:focus{inset-inline-start:0}
 [dir=rtl] h1.hammer{direction:ltr;text-align:right}</style>
@@ -117,7 +119,7 @@
 <link rel="alternate" type="text/markdown" href="/content/les-contamines-montjoie.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/les-contamines-montjoie.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">الانتقال إلى المحتوى</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">اطّلع أيضًا</p>
-    <h2>اطّلع أيضًا</h2>
-    <p class="lead"></p>
+    <h2>على بعد 1 كيلومتر من هنا…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/ar/parc-de-loisirs-du-pontet" class="card-photo">
       <img src="/img/bases-de-loisirs/parc-de-loisirs-du-pontet-hero.jpg" alt="Parc de Loisirs du Pontet ببحيرته الجبلية ومساحاته الخضراء، Les Contamines-Montjoie، عند سفح كتلة Mont-Blanc الجبلية" loading="lazy">
-      <span class="card-tag">مجاني</span>
+      <span class="card-tag">1 km · مجاني</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/parc-de-loisirs-du-pontet" class="title">Parc de Loisirs du Pontet</a>
@@ -201,7 +210,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/mont-joly" class="card-photo">
       <img src="/img/points-de-vue/mont-joly-hero.jpg" alt="قمة Mont Joly على ارتفاع 2,525 م مع إطلالات بانورامية على سلسلة جبال Mont-Blanc، Saint-Gervais-les-Bains، Haute-Savoie" loading="lazy">
-      <span class="card-tag">مجاني</span>
+      <span class="card-tag">3 km · مجاني</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/mont-joly" class="title">Mont Joly</a>
@@ -215,7 +224,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/musee-art-sacre-saint-gervais-bains" class="card-photo">
       <img src="/img/musees/musee-art-sacre-saint-gervais-bains-hero.jpg" alt="متحف الفن المقدس في سان-نيكولا-دو-فيروس، منحوتات سافوية باروكية في مبنى دار الكهنوت السابق الذي يعود إلى القرن الثامن عشر (18)" loading="lazy">
-      <span class="card-tag">مدفوع</span>
+      <span class="card-tag">4 km · مدفوع</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/musee-art-sacre-saint-gervais-bains" class="title">Musée d'art Sacré</a>
@@ -229,7 +238,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/saint-gervais-les-bains" class="card-photo">
       <img src="/img/stations-de-ski/saint-gervais-les-bains-hero.jpg" alt="منطقة التزلج في Saint-Gervais-les-Bains في مواجهة Mont-Blanc" loading="lazy">
-      <span class="card-tag">مدفوع</span>
+      <span class="card-tag">8 km · مدفوع</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/saint-gervais-les-bains" class="title">Saint-Gervais-les-Bains</a>
@@ -243,7 +252,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/les-houches" class="card-photo">
       <img src="/img/stations-de-ski/les-houches-hero.jpg" alt="قرية Les Houches في الوادي ويعلوها كتلة Mont Blanc الجبلية" loading="lazy">
-      <span class="card-tag">مدفوع</span>
+      <span class="card-tag">9 km · مدفوع</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/les-houches" class="title">Les Houches</a>
@@ -257,7 +266,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ar/megeve" class="card-photo">
       <img src="/img/stations-de-ski/megeve-hero.jpg" alt="منطقة التزلج في Megève بين قطاعي Rochebrune وMont d&#x27;Arbois" loading="lazy">
-      <span class="card-tag">مدفوع</span>
+      <span class="card-tag">10 km · مدفوع</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ar/megeve" class="title">Megève</a>
@@ -268,6 +277,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>مخبأ في مكان قريب جدًا</h3><ul><li><a href="https://loisirs74.fr/ar/maison-forte-hautetour-saint-gervais">Maison Forte de Hautetour</a><span>Saint-Gervais-les-Bains · 8 km</span></li><li><a href="https://loisirs74.fr/ar/cascade-de-la-belle-au-bois">Cascade de la Belle au Bois</a><span>Megève · 8 km</span></li><li><a href="https://loisirs74.fr/ar/thermes-saint-gervais-mont-blanc">Thermes de Saint-Gervais Mont-Blanc</a><span>Saint-Gervais-les-Bains · 9 km</span></li></ul></div><div class="disc"><h3>تلفريك تستحق الزيارة</h3><ul><li><a href="https://loisirs74.fr/ar/tramway-du-mont-blanc">Tramway du Mont-Blanc</a><span>Saint-Gervais-les-Bains · 9 km</span></li><li><a href="https://loisirs74.fr/ar/telecabine-du-jaillet">Télécabine du Jaillet</a><span>Megève · 10 km</span></li><li><a href="https://loisirs74.fr/ar/telepherique-du-brevent">Téléphérique du Brévent</a><span>Chamonix-Mont-Blanc · 15 km</span></li></ul></div><div class="disc"><h3>إذا أعجبك هذا، جرب...</h3><ul><li><a href="https://loisirs74.fr/ar/chamonix-mont-blanc">Chamonix-Mont-Blanc</a><span>Chamonix-Mont-Blanc · 16 km</span></li><li><a href="https://loisirs74.fr/ar/flaine">Flaine</a><span>Arâches-la-Frasse · 20 km</span></li><li><a href="https://loisirs74.fr/ar/les-carroz">Les Carroz</a><span>Arâches-la-Frasse · 24 km</span></li></ul></div><p class="disc-note">المسافات بخط مستقيم، من مكان إلى آخر.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>نُشر في 16 juillet 2026</span><span class="sep">·</span><span>حُدّث في 24/07/26</span></p></div></main>

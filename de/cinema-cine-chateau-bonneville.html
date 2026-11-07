@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/cinema-cine-chateau-bonneville.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/cinema-cine-chateau-bonneville.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,23 @@ Joris, Rachel et Benoît vous accueillent avec le sourire dans leur pizzeria.</p
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">In der Nähe</p>
-    <h2>In der Nähe</h2>
+    <h2>1 km von hier entfernt…</h2>
     <p class="lead">Weitere Orte in der Umgebung und in derselben Kategorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/de/centre-nautique-guy-chatel-ayse" class="card-photo">
       <img src="/img/generique/generique-aquatique-bassin-natation.jpg" alt="Centre Nautique Guy Châtel" loading="lazy">
-      <span class="card-tag">Kostenpflichtig</span>
+      <span class="card-tag">1 km · Kostenpflichtig</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/centre-nautique-guy-chatel-ayse" class="title">Centre Nautique Guy Châtel</a>
@@ -201,7 +211,7 @@ Joris, Rachel et Benoît vous accueillent avec le sourire dans leur pizzeria.</p
 <article class="card">
     <a href="https://loisirs74.fr/de/gr96-bornes-aravis-haute-savoie" class="card-photo">
       <img src="/img/generique/generique-sentier-foret-alpine.jpg" alt="Fernwanderweg GR® 96 Bornes-Aravis in Saint-Pierre-en-Faucigny, Haute-Savoie – insgesamt 207 km · ca. 80 km in der Haute-Savoie, mittel bis schwer" loading="lazy">
-      <span class="card-tag">Kostenlos</span>
+      <span class="card-tag">1 km · Kostenlos</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/gr96-bornes-aravis-haute-savoie" class="title">GR® 96 Bornes-Aravis</a>
@@ -215,7 +225,7 @@ Joris, Rachel et Benoît vous accueillent avec le sourire dans leur pizzeria.</p
 <article class="card">
     <a href="https://loisirs74.fr/de/wakepark-tna-cable-park-arenthon" class="card-photo">
       <img src="/img/generique/generique-wakeboard-1.jpg" alt="Wasserski-Lift - einziger echter Cable-Park von Savoyen - TNA Cable Park in Arenthon, Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">Kostenpflichtig</span>
+      <span class="card-tag">3 km · Kostenpflichtig</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/wakepark-tna-cable-park-arenthon" class="title">TNA Cable Park</a>
@@ -229,7 +239,7 @@ Joris, Rachel et Benoît vous accueillent avec le sourire dans leur pizzeria.</p
 <article class="card">
     <a href="https://loisirs74.fr/de/cinema-le-parc-la-roche-sur-foron" class="card-photo">
       <img src="/img/generique/generique-cinema-4.jpg" alt="Le Parc — Kino in La Roche-sur-Foron, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Kostenpflichtig</span>
+      <span class="card-tag">7 km · Kostenpflichtig</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/cinema-le-parc-la-roche-sur-foron" class="title">Le Parc</a>
@@ -243,7 +253,7 @@ Joris, Rachel et Benoît vous accueillent avec le sourire dans leur pizzeria.</p
 <article class="card">
     <a href="https://loisirs74.fr/de/cinema-cine-actuel-studio6-annemasse" class="card-photo">
       <img src="/img/generique/generique-cinema.jpg" alt="Ciné Actuel — Studio 6 — Kino in Annemasse, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Kostenpflichtig</span>
+      <span class="card-tag">18 km · Kostenpflichtig</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/cinema-cine-actuel-studio6-annemasse" class="title">Ciné Actuel — Studio 6</a>
@@ -257,7 +267,7 @@ Joris, Rachel et Benoît vous accueillent avec le sourire dans leur pizzeria.</p
 <article class="card">
     <a href="https://loisirs74.fr/de/cinema-cine-mont-blanc-sallanches" class="card-photo">
       <img src="/img/generique/generique-cinema.jpg" alt="Ciné Mont-Blanc — Kino in Sallanches, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Kostenpflichtig</span>
+      <span class="card-tag">23 km · Kostenpflichtig</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/de/cinema-cine-mont-blanc-sallanches" class="title">Ciné Mont-Blanc</a>
@@ -268,6 +278,7 @@ Joris, Rachel et Benoît vous accueillent avec le sourire dans leur pizzeria.</p
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Ganz in der Nähe versteckt</h3><ul><li><a href="https://loisirs74.fr/de/plateau-de-solaison">Plateau de Solaison</a><span>Brizon · 5 km</span></li><li><a href="https://loisirs74.fr/de/chateau-beauregard-saint-jeoire">Château de Beauregard</a><span>Saint-Jeoire · 5 km</span></li><li><a href="https://loisirs74.fr/de/chateau-sires-faucigny-bonneville">Château des Sires de Faucigny</a><span>Bonneville · 6 km</span></li></ul></div><div class="disc"><h3>Seen, die einen Abstecher wert sind</h3><ul><li><a href="https://loisirs74.fr/de/lac-benit">Lac Bénit</a><span>Mont-Saxonnex · 9 km</span></li><li><a href="https://loisirs74.fr/de/lac-des-confins">Lac des Confins</a><span>La Clusaz · 19 km</span></li><li><a href="https://loisirs74.fr/de/lac-de-vallon">Lac de Vallon</a><span>Bellevaux · 19 km</span></li></ul></div><div class="disc"><h3>Wenn es Ihnen gefallen hat, probieren Sie doch mal …</h3><ul><li><a href="https://loisirs74.fr/de/cinema-le-france-thonon">Le France</a><span>Thonon-les-Bains · 33 km</span></li><li><a href="https://loisirs74.fr/de/cinema-pathe-archamps-imax">Pathé Archamps</a><span>Archamps · 23 km</span></li><li><a href="https://loisirs74.fr/de/cinema-pathe-annecy">Pathé Annecy</a><span>Annecy · 29 km</span></li></ul></div><p class="disc-note">Entfernungen in Luftlinie von einem Ort zum anderen.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Veröffentlicht 3 juin 2026</span><span class="sep">·</span><span>Aktualisiert 15/06/26</span></p></div></main>

@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/tir-a-l-arc-grandbo-archerie-le-grand-bornand.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/tir-a-l-arc-grandbo-archerie-le-grand-bornand.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site"><div class="wrap">
@@ -177,15 +179,23 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Nelle vicinanze</p>
-    <h2>Nelle vicinanze</h2>
+    <h2>A 1 km da qui…</h2>
     <p class="lead">Altri luoghi da esplorare nei dintorni e nella stessa categoria</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/it/le-grand-bornand" class="card-photo">
       <img src="/img/stations-de-ski/le-grand-bornand-hero.jpg" alt="Il comprensorio sciistico di Le Grand-Bornand e Chinaillon nel Massif des Aravis" loading="lazy">
-      <span class="card-tag">A pagamento</span>
+      <span class="card-tag">1 km · A pagamento</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/le-grand-bornand" class="title">Le Grand-Bornand</a>
@@ -199,7 +209,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/it/cascade-du-chinaillon" class="card-photo">
       <img src="/img/cascades/cascade-du-chinaillon-hero.jpg" alt="Cascade du Chinaillon che precipita in una gola stretta nella foresta di faggi, Le Grand-Bornand Chinaillon, Alta Savoia" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">2 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/cascade-du-chinaillon" class="title">Cascade du Chinaillon</a>
@@ -213,7 +223,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/it/cascade-mysterieuse-le-grand-bornand" class="card-photo">
       <img src="/img/cascades/cascade-mysterieuse-le-grand-bornand-hero.jpg" alt="La Cascade mystérieuse che si getta nella sua stretta gola tra gli abeti, Le Grand-Bornand" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">2 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/cascade-mysterieuse-le-grand-bornand" class="title">Cascade mystérieuse</a>
@@ -227,7 +237,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/it/chiens-de-traineau-nordic-event-74" class="card-photo">
       <img src="/img/generique/generique-chiens-de-traineau-2.jpg" alt="Nordic Event 74 cani da slitta Le Grand-Bornand" loading="lazy">
-      <span class="card-tag">A pagamento</span>
+      <span class="card-tag">1 km · A pagamento</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/chiens-de-traineau-nordic-event-74" class="title">Nordic Event 74 — Cani da slitta Le Grand-Bornand</a>
@@ -241,7 +251,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/it/canyoning-escape-canyon" class="card-photo">
       <img src="/img/generique/generique-canyoning-3.jpg" alt="Escape Canyon — canyoning a La Clusaz, Alta Savoia" loading="lazy">
-      <span class="card-tag">A pagamento</span>
+      <span class="card-tag">5 km · A pagamento</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/canyoning-escape-canyon" class="title">Escape Canyon</a>
@@ -255,7 +265,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/it/via-ferrata-jallouvre-le-grand-bornand" class="card-photo">
       <img src="/img/generique/generique-via-ferrata-lac.jpg" alt="Via Ferrata de la Tour du Jallouvre a Le Grand-Bornand, Alta Savoia" loading="lazy">
-      <span class="card-tag">Gratis</span>
+      <span class="card-tag">5 km · Gratis</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/it/via-ferrata-jallouvre-le-grand-bornand" class="title">Via Ferrata de la Tour du Jallouvre</a>
@@ -266,6 +276,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Nascosto proprio lì vicino</h3><ul><li><a href="https://loisirs74.fr/it/debaroule-clusaz">Débaroule — Percorso ludico</a><span>La Clusaz · 5 km</span></li><li><a href="https://loisirs74.fr/it/plateau-des-glieres">Plateau des Glières</a><span>Fillière · 5 km</span></li><li><a href="https://loisirs74.fr/it/lac-des-confins">Lac des Confins</a><span>La Clusaz · 5 km</span></li></ul></div><div class="disc"><h3>Punti panoramici che meritano una visita</h3><ul><li><a href="https://loisirs74.fr/it/col-de-la-colombiere">Col de la Colombière</a><span>Le Reposoir · 6 km</span></li><li><a href="https://loisirs74.fr/it/col-des-glieres">Col des Glières</a><span>Fillière · 8 km</span></li><li><a href="https://loisirs74.fr/it/col-de-la-croix-fry">Col de la Croix-Fry</a><span>Manigod · 8 km</span></li></ul></div><div class="disc"><h3>Se vi è piaciuto, provate…</h3><ul><li><a href="https://loisirs74.fr/it/acro-aventures-talloires">Acro'Aventures Talloires</a><span>Talloires-Montmin · 19 km</span></li><li><a href="https://loisirs74.fr/it/golf-practice-belvedere-saint-martin-bellevue">Golf du Belvédère</a><span>Saint-Martin-Bellevue · 21 km</span></li><li><a href="https://loisirs74.fr/it/passy-accro-lac">Passy Accro Lac</a><span>Passy · 21 km</span></li></ul></div><p class="disc-note">Distanze in linea d'aria, da un luogo all'altro.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Pubblicato il 3 juin 2026</span><span class="sep">·</span><span>Aggiornato il 15/06/26</span></p></div></main>

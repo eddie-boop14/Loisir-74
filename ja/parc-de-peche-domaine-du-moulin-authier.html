@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/parc-de-peche-domaine-du-moulin-authier.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/parc-de-peche-domaine-du-moulin-authier.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">本文へスキップ</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">関連情報</p>
-    <h2>関連情報</h2>
-    <p class="lead"></p>
+    <h2>ここから1 km先……</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/ja/lancer-de-hache-l-hachez-vous-annecy" class="card-photo">
       <img src="/img/generique/generique-lancer-de-hache.jpg" alt="L&#x27;Hachez-Vous Annecy — Annecyのアックススロー" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">1 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/lancer-de-hache-l-hachez-vous-annecy" class="title">L'Hachez-Vous Annecy</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/parc-imperial-annecy" class="card-photo">
       <img src="/img/bases-de-loisirs/parc-imperial-annecy-hero.jpg" alt="AnnecyのParc de l&#x27;Impérial、湖畔の公共公園で羽を飾る男性の孔雀" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">1 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/parc-imperial-annecy" class="title">Parc de l'Impérial</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/casino-imperial-palace-annecy" class="card-photo">
       <img src="/img/sorties-detente/casino-imperial-palace-annecy-hero.jpg" alt="カジノ+5つ星ホテル+レストラン – AnnecyのCasino Impérial Palace Annecy、Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">1 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/casino-imperial-palace-annecy" class="title">Casino Impérial Palace Annecy</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/domaine-du-tornet" class="card-photo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Lac_de_la_Balme-de-Sillingy_%2851056207507%29.jpg/960px-Lac_de_la_Balme-de-Sillingy_%2851056207507%29.jpg" alt="La Balme-de-SillingyのDomaine du Tornet:湖と桜の木々、Haute-Savoie" loading="lazy" referrerpolicy="no-referrer">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">12 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/domaine-du-tornet" class="title">Domaine du Tornet</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/parc-des-dronieres" class="card-photo">
       <img src="/img/bases-de-loisirs/parc-des-dronieres-hero.jpg" alt="湖、森の遊歩道、動物園を備えたParc des Dronières、Cruseilles、Haute-Savoie" loading="lazy">
-      <span class="card-tag">無料</span>
+      <span class="card-tag">16 km · 無料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/parc-des-dronieres" class="title">Parc des Dronières</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/ja/tactiq-aventure-cruseilles" class="card-photo">
       <img src="/img/generique/generique-accrobranche-4.jpg" alt="Cruseillesのドローニレスの森のTactiq Aventureツリートップアドベンチャーパーク" loading="lazy">
-      <span class="card-tag">有料</span>
+      <span class="card-tag">16 km · 有料</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ja/tactiq-aventure-cruseilles" class="title">Tactiq Aventure</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>すぐそばに隠れている</h3><ul><li><a href="https://loisirs74.fr/ja/marais-de-poisy">Marais de Poisy</a><span>Poisy · 7 km</span></li><li><a href="https://loisirs74.fr/ja/ereel-annecy-sillingy">E.réel Annecy</a><span>Sillingy · 7 km</span></li><li><a href="https://loisirs74.fr/ja/sentier-espagnols-pas-du-roc-glieres">Sentier des Espagnols / Pas du Roc</a><span>Thorens-Glières · 7 km</span></li></ul></div><div class="disc"><h3>立ち寄る価値のある湖</h3><ul><li><a href="https://loisirs74.fr/ja/plage-albigny">Plage d'Albigny</a><span>Annecy · 1 km</span></li><li><a href="https://loisirs74.fr/ja/plage-des-marquisats">Plage des Marquisats</a><span>Annecy · 1 km</span></li><li><a href="https://loisirs74.fr/ja/plage-de-menthon-saint-bernard">Plage de Menthon-Saint-Bernard</a><span>Menthon-Saint-Bernard · 5 km</span></li></ul></div><div class="disc"><h3>気に入っていただけたら、こちらもぜひお試しください…</h3><ul><li><a href="https://loisirs74.fr/ja/base-de-loisirs-des-ilettes">Base de loisirs des Ilettes</a><span>Sallanches · 38 km</span></li><li><a href="https://loisirs74.fr/ja/base-de-loisirs-du-lac-des-iles">Base de loisirs du Lac des Îles</a><span>Passy · 40 km</span></li><li><a href="https://loisirs74.fr/ja/parc-de-loisirs-du-pontet">Parc de Loisirs du Pontet</a><span>Les Contamines-Montjoie · 45 km</span></li></ul></div><p class="disc-note">ある場所から別の場所までの直線距離。</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>公開日 1 juin 2026</span><span class="sep">·</span><span>更新日 7 juin 2026</span></p></div></main>

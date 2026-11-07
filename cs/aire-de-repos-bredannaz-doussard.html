@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/aire-de-repos-bredannaz-doussard.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/aire-de-repos-bredannaz-doussard.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Přejít k obsahu</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Viz také</p>
-    <h2>Viz také</h2>
-    <p class="lead"></p>
+    <h2>1 km odtud…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/cs/reserve-naturelle-bout-du-lac" class="card-photo">
       <img src="/img/points-de-vue/reserve-naturelle-bout-du-lac-hero.jpg" alt="Přírodní rezervace Bout-du-Lac d&#x27;Annecy — Doussard, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">1 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/reserve-naturelle-bout-du-lac" class="title">Réserve naturelle du Bout-du-Lac d'Annecy</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/base-nautique-doussard-doussard" class="card-photo">
       <img src="/img/generique/generique-barque-aviron.jpg" alt="Centrum vodních sportů s více provozovateli – plachtění + wake + paddle v Base nautique de Doussard, Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">1 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/base-nautique-doussard-doussard" class="title">Base nautique de Doussard</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/sentier-bout-du-lac-doussard" class="card-photo">
       <img src="/img/generique/generique-sentier-foret-alpine.jpg" alt="Naučná stezka – bezbariérová od roku 2010 – Bout du Lac d&#x27;Annecy v Doussard, Haute-Savoie – bezbariérová smyčka 1,6 km, celý okruh 7 km, velmi snadná" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">1 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/sentier-bout-du-lac-doussard" class="title">Sentier pédagogique du Bout du Lac d'Annecy</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/k2-parapente-doussard" class="card-photo">
       <img src="/img/generique/generique-parapente-vol.jpg" alt="K2 Parapente Doussard — tandemový paragliding nad Lac d&#x27;Annecy" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">1 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/k2-parapente-doussard" class="title">K2 Parapente Doussard</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/escalade-la-crique-annecy" class="card-photo">
       <img src="/img/generique/generique-escalade-bouldering.jpg" alt="La Crique — Criq&#x27;Bloc a Criq&#x27;Parc, lezení u Lac d&#x27;Annecy" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">5 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/escalade-la-crique-annecy" class="title">La Crique — Criq'Bloc &amp; Criq'Parc</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/criq-parc" class="card-photo">
       <img src="/img/que-faire/criq-parc-hero.jpg" alt="Criq&#x27;Parc" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">6 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/criq-parc" class="title">Criq'Parc</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Skryté hned poblíž</h3><ul><li><a href="https://loisirs74.fr/cs/musee-archeologique-viuz-faverges">Musée Archéologique de Viuz-Faverges</a><span>Faverges-Seythenex · 7 km</span></li><li><a href="https://loisirs74.fr/cs/cascade-de-fontany-saint-ferreol">Cascade de Fontany</a><span>Saint-Ferréol · 7 km</span></li><li><a href="https://loisirs74.fr/cs/chateau-et-donjon-des-seigneurs-de-faverges">Château et Donjon des Seigneurs de Faverges</a><span>Faverges-Seythenex · 8 km</span></li></ul></div><div class="disc"><h3>Vyhlídky, které stojí za to navštívit</h3><ul><li><a href="https://loisirs74.fr/cs/col-de-la-forclaz">Col de la Forclaz</a><span>Talloires-Montmin · 4 km</span></li><li><a href="https://loisirs74.fr/cs/le-semnoz">Le Semnoz</a><span>Viuz-la-Chiésaz · 9 km</span></li><li><a href="https://loisirs74.fr/cs/belvedere-du-mont-baron">Belvédère du Mont Baron</a><span>Veyrier-du-Lac · 12 km</span></li></ul></div><div class="disc"><h3>Pokud se vám to líbilo, zkuste…</h3><ul><li><a href="https://loisirs74.fr/cs/golf-practice-belvedere-saint-martin-bellevue">Golf du Belvédère</a><span>Saint-Martin-Bellevue · 21 km</span></li><li><a href="https://loisirs74.fr/cs/via-ferrata-pollet-villard-la-clusaz">Via ferrata Yves Pollet-Villard</a><span>La Clusaz · 21 km</span></li><li><a href="https://loisirs74.fr/cs/cote-2000-aventure">Côte 2000 Aventure</a><span>Megève · 34 km</span></li></ul></div><p class="disc-note">Vzdálenosti vzdušnou čarou mezi jednotlivými místy.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publikováno dne 15 juillet 2026</span><span class="sep">·</span><span>Aktualizováno dne 23/07/26</span></p></div></main>

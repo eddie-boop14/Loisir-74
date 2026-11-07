@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/chateau-beauregard-saint-jeoire.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/chateau-beauregard-saint-jeoire.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="site"><div class="wrap">
@@ -179,15 +181,23 @@ Toutes les informations qui vous permettrons de passer un excellent séjour chez
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">À proximité</p>
-    <h2>À proximité</h2>
+    <h2>À 1 km d'ici…</h2>
     <p class="lead">D'autres lieux à explorer dans le coin et dans la même catégorie</p>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/balade-pedestre-tour-lac-mole-tour" class="card-photo">
       <img src="/img/generique/generique-sentier-automne-orange.jpg" alt="Sentier autour du lac du Môle à La Tour en Haute-Savoie, boucle pédestre familiale accessible PMR au pied du Môle, Faucigny" loading="lazy">
-      <span class="card-tag">Gratuit</span>
+      <span class="card-tag">1 km · Gratuit</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/balade-pedestre-tour-lac-mole-tour" class="title">Balade pédestre - Tour du lac du Môle</a>
@@ -201,7 +211,7 @@ Toutes les informations qui vous permettrons de passer un excellent séjour chez
 <article class="card">
     <a href="https://loisirs74.fr/ecomusee-paysalp-viuz-en-sallaz" class="card-photo">
       <img src="/img/generique/generique-musee-moderne.jpg" alt="Reconstitution d&#x27;intérieur paysan savoyard du XIXe siècle à l&#x27;Écomusée Paysalp à Viuz-en-Sallaz" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">2 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/ecomusee-paysalp-viuz-en-sallaz" class="title">Écomusée Paysalp</a>
@@ -215,7 +225,7 @@ Toutes les informations qui vous permettrons de passer un excellent séjour chez
 <article class="card">
     <a href="https://loisirs74.fr/musee-paysan-un-site-paysalp-culture-patrimoine-viuz-en-sallaz" class="card-photo">
       <img src="/img/generique/generique-musee-grande-galerie.jpg" alt="Musée Paysan PAYSALP à Viuz-en-Sallaz, scénographie immersive de la vie paysanne, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">2 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/musee-paysan-un-site-paysalp-culture-patrimoine-viuz-en-sallaz" class="title">Le Musée Paysan, un site de PAYSALP Culture &amp; Patrimoine</a>
@@ -229,7 +239,7 @@ Toutes les informations qui vous permettrons de passer un excellent séjour chez
 <article class="card">
     <a href="https://loisirs74.fr/chateau-sires-faucigny-bonneville" class="card-photo">
       <img src="/img/chateaux/chateau-sires-faucigny-bonneville-hero.jpg" alt="Tour Noire 21 m et Tour Blanche 15 m subsistant du Château des Sires de Faucigny construit vers 1260 à Bonneville Haute-Savoie" loading="lazy">
-      <span class="card-tag">Payant</span>
+      <span class="card-tag">4 km · Payant</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/chateau-sires-faucigny-bonneville" class="title">Château des Sires de Faucigny</a>
@@ -243,7 +253,7 @@ Toutes les informations qui vous permettrons de passer un excellent séjour chez
 <article class="card">
     <a href="https://loisirs74.fr/tour-bellecombe-reignier" class="card-photo">
       <img src="/img/generique/generique-chateau-brume.jpg" alt="Donjon carré XIIe-XIIIe siècle de 25 mètres de hauteur de la Tour de Bellecombe à Reignier-Ésery vestige d&#x27;un château médiéval de péage sur l&#x27;Arve Haute-Savoie" loading="lazy">
-      <span class="card-tag">Gratuit</span>
+      <span class="card-tag">11 km · Gratuit</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/tour-bellecombe-reignier" class="title">Tour de Bellecombe</a>
@@ -257,7 +267,7 @@ Toutes les informations qui vous permettrons de passer un excellent séjour chez
 <article class="card">
     <a href="https://loisirs74.fr/chateau-croix-scionzier" class="card-photo">
       <img src="/img/chateaux/chateau-croix-scionzier-hero.jpg" alt="Château de la Croix à Scionzier en Haute-Savoie, maison forte du XVIe siècle classée Monument Historique 1994, visible depuis la route" loading="lazy">
-      <span class="card-tag">Gratuit</span>
+      <span class="card-tag">13 km · Gratuit</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/chateau-croix-scionzier" class="title">Château de la Croix</a>
@@ -268,6 +278,7 @@ Toutes les informations qui vous permettrons de passer un excellent séjour chez
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Caché tout près</h3><ul><li><a href="https://loisirs74.fr/maison-de-la-memoire-paysalp">Maison de la Mémoire Paysalp</a><span>Viuz-en-Sallaz · 2 km</span></li><li><a href="https://loisirs74.fr/gr96-bornes-aravis-haute-savoie">GR® 96 Bornes-Aravis</a><span>Saint-Pierre-en-Faucigny · 7 km</span></li><li><a href="https://loisirs74.fr/pointe-de-miribel">Pointe de Miribel</a><span>Villard · 10 km</span></li></ul></div><div class="disc"><h3>Des points de vue qui valent le détour</h3><ul><li><a href="https://loisirs74.fr/plateau-de-solaison">Plateau de Solaison</a><span>Brizon · 11 km</span></li><li><a href="https://loisirs74.fr/col-de-la-colombiere">Col de la Colombière</a><span>Le Reposoir · 16 km</span></li><li><a href="https://loisirs74.fr/plateau-de-loex">Plateau de Loëx</a><span>Habère-Poche · 18 km</span></li></ul></div><div class="disc"><h3>Si vous avez aimé, essayez…</h3><ul><li><a href="https://loisirs74.fr/chateau-avully-brenthonne">Château d'Avully</a><span>Brenthonne · 16 km</span></li><li><a href="https://loisirs74.fr/chateau-buffavent-lully">Château de Buffavent</a><span>Lully · 18 km</span></li><li><a href="https://loisirs74.fr/chateau-la-rochette-lully">Château de la Rochette</a><span>Lully · 18 km</span></li></ul></div><p class="disc-note">Distances à vol d'oiseau, d'un lieu à l'autre.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publié le 24 mai 2026</span><span class="sep">·</span><span>Mis à jour le 27/07/26</span></p></div></main>

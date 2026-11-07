@@ -107,6 +107,8 @@
 .plages-voisines a.fiche{display:inline-block;margin:4px 10px 4px 0;color:var(--accent);font-weight:600}
 .plages-voisines a.fiche:hover{text-decoration:underline;text-underline-offset:3px}
 [dir=rtl] .plages-voisines a.fiche{margin:4px 0 4px 10px}html:not(.js) .reveal,html:not(.js) .reveal[data-stagger] > *,html:not(.js) .hammer .w{opacity:1 !important;transform:none !important}
+
+@media (min-width:880px){.hero.real-photo .grid{grid-template-columns:1fr 1.25fr}}.hero.real-photo .hero-img img{animation:rp-breathe 16s var(--ease) both}@keyframes rp-breathe{from{transform:scale(1)}to{transform:scale(1.03)}}
 </style>
 <meta property="og:image" content="https://loisirs74.fr/og-image.jpg">
 <meta name="twitter:image" content="https://loisirs74.fr/og-image.jpg">
@@ -114,7 +116,7 @@
 <link rel="alternate" type="text/markdown" href="/content/sentier-tournette-montmin.md" title="Markdown version">
 <meta name="ai:content-url" content="https://loisirs74.fr/content/sentier-tournette-montmin.md">
 <meta name="ai:policy-url" content="https://loisirs74.fr/.well-known/ai-info.json">
-</head>
+<!--motion:start--><style>.card:hover{transform:translateY(-3px)}.card:hover .card-photo img{transform:scale(1.03)}.card .card-commune svg{transition:transform .3s ease}.card:hover .card-commune svg{transform:translateY(-2px)}@media (prefers-reduced-motion:reduce){.card,.card .card-photo img,.card .card-commune svg,.hh-card,.glance-tile{transition:none!important}.card:hover,.card:hover .card-photo img,.card:hover .card-commune svg,.hh-card:hover,.glance-tile:hover{transform:none!important}}</style><!--motion:end--></head>
 <body>
 <a class="skip" href="#main">Přejít k obsahu</a>
 <header class="site"><div class="wrap">
@@ -176,15 +178,22 @@
 .related .card-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.3rem;padding:.5rem .6rem;border-radius:8px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);text-decoration:none;transition:all .2s}
 .related .card-actions a:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .related .card-actions a svg{width:13px !important;height:13px !important}
+.related .disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem 1.5rem;margin-top:2rem}
+.related .disc h3{font-size:1rem;font-weight:800;letter-spacing:-.005em;margin:0 0 .55rem;color:var(--ink)}
+.related .disc ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.related .disc li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem .75rem;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.related .disc a{color:var(--ink);font-weight:600;text-decoration:none}
+.related .disc a:hover{color:var(--accent)}
+.related .disc span{font-size:.8rem;color:var(--ink-mute);white-space:nowrap}
+.related .disc-note{grid-column:1/-1;margin:.25rem 0 0;font-size:.75rem;color:var(--ink-mute)}
 </style>
   <div class="wrap">
     <p class="kicker">Viz také</p>
-    <h2>Viz také</h2>
-    <p class="lead"></p>
+    <h2>2 km odtud…</h2>
     <div class="carousel"><article class="card">
     <a href="https://loisirs74.fr/cs/acro-aventures-talloires" class="card-photo">
       <img src="/img/que-faire/acro-aventures-talloires-hero.jpg" alt="Lanová stezka v korunách stromů s výhledem na Lac d&#x27;Annecy v Acro&#x27;Aventures Talloires, Haute-Savoie" loading="lazy">
-      <span class="card-tag">Placené</span>
+      <span class="card-tag">2 km · Placené</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/acro-aventures-talloires" class="title">Acro'Aventures Talloires</a>
@@ -198,7 +207,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/cascade-d-angon" class="card-photo">
       <img src="/img/cascades/cascade-d-angon-hero.jpg" alt="Vodopád Angon v úzkém skalním koridoru nad Talloires" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">2 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/cascade-d-angon" class="title">Cascade d'Angon</a>
@@ -212,7 +221,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/plage-de-talloires" class="card-photo">
       <img src="/img/generique/generique-plage-lac-13.jpg" alt="Pláž 250×200 m s pískem, trávníkem, brouzdalištem, skokanskými můstky a toboganem: Plage de Talloires na Lac d&#x27;Annecy, Haute-Savoie 74" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">2 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/plage-de-talloires" class="title">Plage de Talloires</a>
@@ -226,7 +235,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/sentier-bout-du-lac-doussard" class="card-photo">
       <img src="/img/generique/generique-sentier-foret-alpine.jpg" alt="Naučná stezka – bezbariérová od roku 2010 – Bout du Lac d&#x27;Annecy v Doussard, Haute-Savoie – bezbariérová smyčka 1,6 km, celý okruh 7 km, velmi snadná" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">7 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/sentier-bout-du-lac-doussard" class="title">Sentier pédagogique du Bout du Lac d'Annecy</a>
@@ -240,7 +249,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/sentier-des-roselieres" class="card-photo">
       <img src="/img/sentiers/sentier-des-roselieres-hero.jpg" alt="Sentier des Roselières" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">7 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/sentier-des-roselieres" class="title">Sentier des Roselières</a>
@@ -254,7 +263,7 @@
 <article class="card">
     <a href="https://loisirs74.fr/cs/grp-tour-lac-annecy-annecy" class="card-photo">
       <img src="/img/generique/generique-sentier-sommet-panorama.jpg" alt="GR® de Pays Tour du Lac d&#x27;Annecy" loading="lazy">
-      <span class="card-tag">Zdarma</span>
+      <span class="card-tag">8 km · Zdarma</span>
     </a>
     <div class="card-body">
       <a href="https://loisirs74.fr/cs/grp-tour-lac-annecy-annecy" class="title">GR® de Pays Tour du Lac d'Annecy</a>
@@ -265,6 +274,7 @@
       </div>
     </div>
   </article></div>
+    <div class="disc-grid reveal"><div class="disc"><h3>Skryté hned poblíž</h3><ul><li><a href="https://loisirs74.fr/cs/ecomusee-bois-foret-thones">Écomusée du Bois et de la Forêt</a><span>Thônes · 5 km</span></li><li><a href="https://loisirs74.fr/cs/musee-resistance-morette-la-balme-de-thuy">Site de Morette — Muzeum odboje a Památník deportace</a><span>La Balme-de-Thuy · 7 km</span></li><li><a href="https://loisirs74.fr/cs/musee-patrimonial-pays-thones-fondateurs-francois-et-lucien-cochat-thones">Musée Patrimonial du Pays de Thônes - Fondateurs : François et Lucien Cochat</a><span>Thônes · 8 km</span></li></ul></div><div class="disc"><h3>Vyhlídky, které stojí za to navštívit</h3><ul><li><a href="https://loisirs74.fr/cs/col-de-la-forclaz">Col de la Forclaz</a><span>Talloires-Montmin · 3 km</span></li><li><a href="https://loisirs74.fr/cs/reserve-naturelle-bout-du-lac">Réserve naturelle du Bout-du-Lac d'Annecy</a><span>Doussard · 7 km</span></li><li><a href="https://loisirs74.fr/cs/belvedere-du-mont-baron">Belvédère du Mont Baron</a><span>Veyrier-du-Lac · 8 km</span></li></ul></div><div class="disc"><h3>Pokud se vám to líbilo, zkuste…</h3><ul><li><a href="https://loisirs74.fr/cs/sentier-espagnols-pas-du-roc-glieres">Sentier des Espagnols / Pas du Roc</a><span>Thorens-Glières · 16 km</span></li><li><a href="https://loisirs74.fr/cs/sentier-geologique-pointe-percee-grand-bornand">Sentier géologique de la pointe Percée</a><span>Le Grand-Bornand · 26 km</span></li><li><a href="https://loisirs74.fr/cs/tour-du-mont-blanc-les-houches">Tour du Mont-Blanc</a><span>Les Houches · 43 km</span></li></ul></div><p class="disc-note">Vzdálenosti vzdušnou čarou mezi jednotlivými místy.</p></div>
   </div>
 </section>
 <div class="wrap"><p class="meta"><span>Publikováno dne 24 mai 2026</span><span class="sep">·</span><span>Aktualizováno dne 18/07/26</span></p></div></main>
