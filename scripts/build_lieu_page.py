@@ -874,12 +874,42 @@ HOW_MODE = {
 }
 
 
+_PINS = None
+
+
+def owner_pin(slug):
+    """The owner's own map pin for this place (data/pins.json), or None.
+
+    Only a pin the owner placed and checked counts (ruling, 7 Nov 2026: real
+    pins, never coordinates from an API sweep). Its lat/lon are the pinned
+    place's own coordinates, read from the link he gave, so they beat every
+    stored coordinate and every place id."""
+    global _PINS
+    if _PINS is None:
+        try:
+            _PINS = json.loads((REPO / "data" / "pins.json").read_text(encoding="utf-8")).get("pins", {})
+        except FileNotFoundError:
+            _PINS = {}
+    p = _PINS.get(slug or "")
+    return p if p and p.get("by") == "Eddie" and p.get("url") else None
+
+
+def _pin_coords(pin):
+    if pin and pin.get("lat") is not None and pin.get("lon") is not None:
+        return f"{pin['lat']},{pin['lon']}"
+    return None
+
+
 def maps_query(d, name, commune):
     """Maps deep-link target. Prefer the name+commune query so Maps resolves to
     the real POI in its index — a stored coord can be a commune centroid / OSM
     label point / rounded value and drops a literal pin off-venue (a
     destination=lat,lng does NOT snap to the place). Coords = last-resort
-    fallback only."""
+    fallback only. The owner's pin, when there is one, comes first: its
+    coordinates are the place itself, not a guess."""
+    pc = _pin_coords(owner_pin(d.get("slug")))
+    if pc:
+        return pc
     if name and commune:
         return url_q(f"{name}, {commune}, {siteconfig.DEPT_NAME}, France")
     lat, lng = d.get("latitude"), d.get("longitude")
@@ -896,6 +926,8 @@ def maps_place_param(d, kind):
     canonical POI — so a stale/off-venue stored coordinate is irrelevant for
     directions. google_place_id is derived by derive_geo_verified.py and exists
     on every fiche that has a Google place_id (independent of geo_verified)."""
+    if owner_pin(d.get("slug")):
+        return ""   # his pin wins over the API's place id
     pid = d.get("google_place_id")
     return f"&{kind}_place_id={url_q(pid)}" if pid else ""
 
@@ -940,6 +972,9 @@ def how_to_block(how, name, commune, lat=None, lng=None, slug=None, place_id=Non
     # Canonical-POI pin: routes the how-card directions to the real place
     # regardless of the stored coordinate. Empty when no google_place_id.
     pid_param = f"&destination_place_id={url_q(place_id)}" if place_id else ""
+    pc = _pin_coords(owner_pin(slug))
+    if pc:   # the owner's pin: route to the place itself
+        dest, pid_param = pc, ""
     cards = []
     for key in ("car", "public_transport", "bike"):
         text = how.get(key)
@@ -1612,7 +1647,7 @@ def hero_block(d):
             f'<line x1="13" y1="17" x2="13" y2="19"/></svg>{T("book")}</a>'
         )
     cta_buttons.append(
-        f'<a href="https://www.google.com/maps/search/?api=1&query={maps_query(d, name, commune)}{maps_place_param(d, "query")}" class="btn btn-ghost" '
+        f'<a href="{attr(owner_pin(d.get("slug"))["url"]) if owner_pin(d.get("slug")) else "https://www.google.com/maps/search/?api=1&query=" + maps_query(d, name, commune) + maps_place_param(d, "query")}" class="btn btn-ghost" '
         'target="_blank" rel="noopener">'
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
         'stroke-linecap="round" stroke-linejoin="round">'
@@ -2477,6 +2512,9 @@ def _build_related_index():
     for d in fiches:
         slug, cat = d["slug"], d["category"]
         lat, lon = d.get("latitude"), d.get("longitude")
+        pin = owner_pin(slug)
+        if pin and pin.get("lat") is not None:
+            lat, lon = pin["lat"], pin["lon"]   # the owner's pin beats stored coords
         approx = lat is None or lon is None
         if approx:
             if cat not in centroid:
@@ -2574,7 +2612,7 @@ def _render_rel_card(slug, lang, labels, km=None):
     prefix = "" if lang == "fr" else f"/{lang}"
     fiche_url = f"{BASE_URL}{prefix}/{slug}"
     maps_q = quote(f"{name}, {commune}, {siteconfig.DEPT_NAME}".strip(", "), safe="")
-    maps_url = f"https://www.google.com/maps/dir/?api=1&destination={maps_q}"
+    maps_url = f"https://www.google.com/maps/dir/?api=1&destination={_pin_coords(owner_pin(slug)) or maps_q}"
     desc_html = f'<p class="card-desc">{esc(desc)}</p>' if desc else ""
     actions = [f'<a href="{maps_url}" target="_blank" rel="noopener">{_REL_PIN}<span>{labels["route"]}</span></a>']
     if d["official_url"]:
