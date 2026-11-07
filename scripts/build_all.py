@@ -390,6 +390,22 @@ def inject_family_footer():
     print(out.stdout.strip())
 
 
+def inject_home_hero():
+    """"What shall we do today?" block in the 12 homepage heroes (scripts/
+    inject_home_hero.py): question, place search, three intent cards whose
+    counts are read from their target pages. Runs after the intent hubs and
+    the other homepage mutators, so its targets exist and nothing rewrites
+    the hero after it."""
+    out = subprocess.run(
+        [sys.executable, str(SCRIPTS / "inject_home_hero.py"), "--apply"],
+        capture_output=True, text=True, cwd=str(ROOT)
+    )
+    if out.returncode != 0:
+        print(out.stdout); print(out.stderr, file=sys.stderr)
+        raise RuntimeError("inject_home_hero failed")
+    print(out.stdout.strip())
+
+
 def status_gate():
     """JOB 6 gate: every fiche must have an explicit status (draft|verified|
     published). Print the distribution. Block if any fiche has status=None."""
@@ -688,6 +704,8 @@ def main():
         inject_home_selections)
     run("inject the sister-site line on the homepages (config-driven, both ways)",
         inject_sister_home)
+    run("inject the homepage hero search + intent cards (after the intent hubs)",
+        inject_home_hero)
     run("cache-bust runtime /scripts/ includes (content-hash ?v=)", version_runtime_assets)
     run("sync homepage card images from Json/ heroes (derived, never authored)",
         sync_home_cards)
