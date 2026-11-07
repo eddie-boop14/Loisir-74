@@ -129,6 +129,7 @@ def main():
 
     pins_doc = json.loads(PINS.read_text(encoding="utf-8"))
     pins = pins_doc["pins"]
+    held = pins_doc.setdefault("held", {})   # the owner's holds: same link never re-applied
     calls_doc = (json.loads(CALLS.read_text(encoding="utf-8")) if CALLS.exists()
                  else {"_note": "Owner's answers to the desk's call cards (\"Still open?\"), written by scripts/desk_apply.py. A record, not an action: nothing is unpublished from here.", "calls": {}})
     known = {p.stem for p in (ROOT / "Json").glob("*.json")}
@@ -165,6 +166,9 @@ def main():
             owner = next((s for s, p in pins.items() if s != slug and norm(p.get("url", "")) == norm(url)), None)
             if owner:
                 report.append({"id": aid, "result": "refused", "why": f"already the pin of {owner}"}); continue
+            hold = held.get(slug)
+            if hold and norm(hold.get("url", "")) == norm(url):
+                report.append({"id": aid, "result": "unchanged", "note": "on hold: " + hold.get("why", "")}); continue
             cur = pins.get(slug)
             if cur and norm(cur.get("url", "")) == norm(url):
                 report.append({"id": aid, "result": "unchanged"}); continue
@@ -195,6 +199,7 @@ def main():
             elif lat is None and not entry.get("label") and not args.no_network:
                 note = "the link opened no place page: map buttons use the link, routes keep the old target"
             pins[slug] = entry
+            held.pop(slug, None)   # a new link from him replaces the hold
             report.append({"id": aid, "result": "applied", **({"note": note} if note else {})})
         elif kind == "call":
             ans = (a.get("answer") or "").strip()
@@ -211,6 +216,7 @@ def main():
     applied = sum(r["result"] == "applied" for r in report)
     if args.apply and applied:
         pins_doc["pins"] = dict(sorted(pins.items()))
+        pins_doc["held"] = dict(sorted(held.items()))
         PINS.write_text(json.dumps(pins_doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         calls_doc["calls"] = dict(sorted(calls_doc["calls"].items()))
         CALLS.write_text(json.dumps(calls_doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
